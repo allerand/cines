@@ -1,0 +1,13 @@
+{
+  "_comment": "Cine Lorca publica su programación como imagen en Wix. Editá este archivo cada semana cuando salga la nueva programación. Los horarios se aplican a todos los días del rango [period_start, period_end].",
+  "period_start": "2026-05-07",
+  "period_end": "2026-05-13",
+  "films": [
+    {"title": "Padre, madre, hermana, hermano", "times": ["16:00", "22:25"]},
+    {"title": "Sueños de Oslo", "times": ["14:10", "20:10"]},
+    {"title": "El drama", "times": ["14:00", "22:10"]},
+    {"title": "Calle Málaga", "times": ["18:05"]},
+    {"title": "El diablo viste a la moda 2", "times": ["18:00", "20:15"]},
+    {"title": "Gioia mia: un verano en Sicilia", "times": ["16:15"]}
+  ]
+}

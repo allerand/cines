@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cartelera — Cines de Arte · Buenos Aires</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #0a0a0a;
+      --bg2:       #111;
+      --bg3:       #1a1a1a;
+      --border:    #2a2a2a;
+      --text:      #e0e0e0;
+      --muted:     #666;
+      --accent:    #00d060;
+      --accent2:   #00a04a;
+      --hover-row: #161616;
+      --font:      -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+
+    html { font-size: 14px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      border-bottom: 1px solid var(--border);
+      padding: 1.4rem 2rem;
+      display: flex;
+      align-items: baseline;
+      gap: 1.2rem;
+    }
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--text);
+    }
+    header .subtitle {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .updated-badge {
+      margin-left: auto;
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+
+    /* ── Day tabs ── */
+    .day-tabs-wrap {
+      border-bottom: 1px solid var(--border);
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .day-tabs-wrap::-webkit-scrollbar { display: none; }
+
+    .day-tabs {
+      display: flex;
+      padding: 0 1.5rem;
+      gap: 0;
+      width: max-content;
+    }
+
+    .day-tab {
+      padding: 0.85rem 1.2rem;
+      cursor: pointer;
+      font-size: 0.82rem;
+      color: var(--muted);
+      border-bottom: 2px solid transparent;
+      transition: color 0.15s, border-color 0.15s;
+      white-space: nowrap;
+      user-select: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.15rem;
+    }
+    .day-tab .day-name {
+      font-weight: 600;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .day-tab .day-date {
+      font-size: 0.75rem;
+    }
+    .day-tab .day-count {
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+    .day-tab:hover { color: var(--text); }
+    .day-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+    .day-tab.active .day-count { color: var(--accent2); }
+    .day-tab.today .day-name::before {
+      content: "•";
+      color: var(--accent);
+      margin-right: 0.25rem;
+    }
+
+    /* ── Filters bar ── */
+    .filters {
+      padding: 0.8rem 2rem;
+      display: flex;
+      gap: 0.6rem;
+      align-items: center;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    .filter-label {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-right: 0.3rem;
+    }
+    .filter-btn {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+    .filter-btn:hover { color: var(--text); border-color: #444; }
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
+      font-weight: 600;
+    }
+    .search-input {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+      font-size: 0.78rem;
+      font-family: inherit;
+      margin-left: auto;
+      width: 14rem;
+      transition: border-color 0.12s;
+    }
+    .search-input:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .search-input::placeholder { color: var(--muted); }
+
+    /* ── Main content ── */
+    main { padding: 1.5rem 2rem; }
+
+    .day-section { display: none; }
+    .day-section.visible { display: block; }
+
+    .section-header {
+      font-size: 0.75rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 1rem;
+    }
+
+    /* ── Table ── */
+    .screening-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.83rem;
+    }
+    .screening-table th {
+      text-align: left;
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      padding: 0.5rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    .screening-table td {
+      padding: 0.65rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: middle;
+    }
+    .screening-table tr:last-child td { border-bottom: none; }
+    .screening-table tbody tr:hover td { background: var(--hover-row); }
+
+    .col-hora   { width: 5rem; }
+    .col-cine   { width: 9rem; }
+    .col-film   { }
+    .col-ciclo  { width: 10rem; color: var(--muted); }
+    .col-dir    { width: 12rem; color: var(--muted); }
+    .col-pais   { width: 7rem; color: var(--muted); }
+    .col-anio   { width: 4rem; color: var(--muted); text-align: right; }
+    .col-dur    { width: 4.5rem; color: var(--muted); text-align: right; }
+    .col-lb     { width: 6rem; text-align: center; }
+
+    .hora-tag {
+      font-variant-numeric: tabular-nums;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+    .hora-tag.unknown { color: var(--muted); font-weight: 400; font-size: 0.78rem; }
+
+    .cine-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 0.18rem 0.5rem;
+      border-radius: 2px;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .cine-malba    { border-color: #2a3a4a; color: #6aaecc; }
+    .cine-lugones  { border-color: #3a2a1a; color: #cc8844; }
+    .cine-cacode   { border-color: #1a2a1a; color: #66bb66; }
+    .cine-lorca    { border-color: #2a1a2a; color: #aa66aa; }
+    .cine-york     { border-color: #2a2a1a; color: #bbbb44; }
+    .cine-munro    { border-color: #1a3a3a; color: #66bbbb; }
+    .cine-lumiton  { border-color: #3a1a1a; color: #cc6666; }
+
+    .film-title {
+      font-weight: 500;
+      color: var(--text);
+    }
+    .film-meta-row {
+      margin-top: 0.25rem;
+    }
+    .ticket-link {
+      font-size: 0.7rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .ticket-link:hover { text-decoration: underline; }
+    .ciclo-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    .lb-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      padding: 0.25rem 0.55rem;
+      border-radius: 4px;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      transition: all 0.12s;
+      white-space: nowrap;
+    }
+    .lb-link:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
+    }
+    .lb-link:hover .lb-dots span { opacity: 1; }
+    .lb-link.no-link {
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .lb-dots {
+      display: inline-flex;
+      gap: 2px;
+      align-items: center;
+    }
+    .lb-dots span {
+      display: block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+    .lb-dots span:nth-child(1) { background: #ef8232; }
+    .lb-dots span:nth-child(2) { background: #00d060; }
+    .lb-dots span:nth-child(3) { background: #40bcf4; }
+
+    /* ── Empty state ── */
+    .empty {
+      padding: 3rem 0;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    /* ── Loading ── */
+    #loading {
+      position: fixed; inset: 0;
+      background: var(--bg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      z-index: 100;
+    }
+    #loading.hidden { display: none; }
+    .spinner {
+      width: 2rem; height: 2rem;
+      border: 2px solid var(--border);
+      border-top-color: var(--accent);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    #loading p { color: var(--muted); font-size: 0.8rem; }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      header { padding: 1rem 1rem; }
+      main { padding: 1rem; }
+      .filters { padding: 0.6rem 1rem; }
+      .day-tabs { padding: 0 0.5rem; }
+      .col-ciclo, .col-dir, .col-pais, .col-anio, .col-dur { display: none; }
+      .screening-table th, .screening-table td { padding: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div id="loading">
+  <div class="spinner"></div>
+  <p>Cargando cartelera…</p>
+</div>
+
+<header>
+  <h1>Cartelera</h1>
+  <span class="subtitle">Cines de arte · Buenos Aires</span>
+  <span class="updated-badge" id="updated-badge"></span>
+</header>
+
+<div class="day-tabs-wrap">
+  <div class="day-tabs" id="day-tabs"></div>
+</div>
+
+<div class="filters" id="filters">
+  <span class="filter-label">Cine</span>
+  <button class="filter-btn active" data-cine="all">Todos</button>
+  <button class="filter-btn" data-cine="MALBA">MALBA</button>
+  <button class="filter-btn" data-cine="Sala Lugones">Lugones</button>
+  <button class="filter-btn" data-cine="Cacodelphia">Cacodelphia</button>
+  <button class="filter-btn" data-cine="Cine Lorca">Lorca</button>
+  <button class="filter-btn" data-cine="Cine York">York</button>
+  <button class="filter-btn" data-cine="Centro Cultural Munro">Munro</button>
+  <button class="filter-btn" data-cine="Lumiton">Lumiton</button>
+  <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
+</div>
+
+<main id="main"></main>
+
+<script>
+const DAYS_ES = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
+const MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun',
+                   'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+
+let allScreenings = [];
+let activeDay = null;
+let activeCine = 'all';
+let searchQuery = '';
+
+// ── Carga de datos ──────────────────────────────────────────────
+
+async function loadData() {
+  try {
+    const res = await fetch('../data/cartelera.json?t=' + Date.now());
+    const data = await res.json();
+    allScreenings = data.screenings || [];
+
+    const updated = data.updated
+      ? new Date(data.updated).toLocaleString('es-AR', {
+          day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'
+        })
+      : '';
+    document.getElementById('updated-badge').textContent =
+      updated ? 'Actualizado ' + updated : '';
+
+    buildDayTabs();
+    document.getElementById('loading').classList.add('hidden');
+  } catch (e) {
+    document.getElementById('loading').innerHTML =
+      '<p style="color:#c44">Error al cargar cartelera.json.<br>Ejecutá <code>python run.py</code> primero.</p>';
+  }
+}
+
+// ── Días ──────────────────────────────────────────────────────
+
+function buildDayTabs() {
+  const dates = [...new Set(
+    allScreenings
+      .map(s => s.fecha)
+      .filter(f => /^\d{4}-\d{2}-\d{2}$/.test(f))
+  )].sort();
+
+  const container = document.getElementById('day-tabs');
+  container.innerHTML = '';
+
+  // Tab "Sin fecha" si hay funciones sin fecha
+  const withoutDate = allScreenings.filter(s => s.fecha === 'Sin fecha');
+
+  const todayStr = (() => {
+    const t = new Date();
+    return `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
+  })();
+
+  dates.forEach((fecha, i) => {
+    const [y, m, d] = fecha.split('-').map(Number);
+    const dateObj = new Date(y, m - 1, d);
+    const dayName = DAYS_ES[dateObj.getDay()];
+    const monthName = MONTHS_ES[m - 1];
+    const count = allScreenings.filter(s => s.fecha === fecha).length;
+
+    const tab = document.createElement('div');
+    tab.className = 'day-tab' + (fecha === todayStr ? ' today' : '');
+    tab.dataset.fecha = fecha;
+    tab.innerHTML = `
+      <span class="day-name">${dayName}</span>
+      <span class="day-date">${d} ${monthName}</span>
+      <span class="day-count">${count} func.</span>
+    `;
+    tab.addEventListener('click', () => selectDay(fecha));
+    container.appendChild(tab);
+
+    if (i === 0) selectDay(fecha);
+  });
+
+  if (withoutDate.length > 0) {
+    const tab = document.createElement('div');
+    tab.className = 'day-tab';
+    tab.dataset.fecha = 'Sin fecha';
+    tab.innerHTML = `
+      <span class="day-name">—</span>
+      <span class="day-date">Sin fecha</span>
+      <span class="day-count">${withoutDate.length} func.</span>
+    `;
+    tab.addEventListener('click', () => selectDay('Sin fecha'));
+    container.appendChild(tab);
+  }
+}
+
+function selectDay(fecha) {
+  activeDay = fecha;
+  document.querySelectorAll('.day-tab').forEach(t => {
+    t.classList.toggle('active', t.dataset.fecha === fecha);
+  });
+  renderTable();
+}
+
+// ── Filtro por cine ──────────────────────────────────────────
+
+document.getElementById('filters').addEventListener('click', e => {
+  const btn = e.target.closest('.filter-btn');
+  if (!btn) return;
+  activeCine = btn.dataset.cine;
+  document.querySelectorAll('.filter-btn').forEach(b =>
+    b.classList.toggle('active', b.dataset.cine === activeCine)
+  );
+  renderTable();
+});
+
+document.getElementById('search-input').addEventListener('input', e => {
+  searchQuery = e.target.value.trim().toLowerCase();
+  renderTable();
+});
+
+// ── Render ───────────────────────────────────────────────────
+
+function cineCssClass(cine) {
+  if (cine === 'MALBA') return 'cine-malba';
+  if (cine === 'Sala Lugones') return 'cine-lugones';
+  if (cine === 'Cacodelphia') return 'cine-cacode';
+  if (cine === 'Cine Lorca') return 'cine-lorca';
+  if (cine === 'Cine York') return 'cine-york';
+  if (cine === 'Centro Cultural Munro') return 'cine-munro';
+  if (cine === 'Lumiton') return 'cine-lumiton';
+  return '';
+}
+
+function escapeHtml(s) {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// Películas de países hispanohablantes: el título original ES el español, así
+// que respetamos title_es en lugar de la versión inglesa de Letterboxd
+const SPANISH_SPEAKING = [
+  'argentina', 'españa', 'spain', 'méxico', 'mexico', 'chile', 'uruguay',
+  'colombia', 'perú', 'peru', 'venezuela', 'ecuador', 'bolivia', 'paraguay',
+  'cuba', 'guatemala', 'honduras', 'nicaragua', 'costa rica', 'panamá', 'panama',
+  'república dominicana', 'el salvador', 'puerto rico',
+];
+
+function normalizeAllCaps(t) {
+  if (!t) return '';
+  if (t === t.toUpperCase() && t.length > 3) {
+    return t.charAt(0) + t.slice(1).toLowerCase();
+  }
+  return t;
+}
+
+function displayTitle(s) {
+  const lb = s.title_en || '';
+  const local = s.title_es || '';
+  const country = (s.country || '').toLowerCase();
+  const isSpanish = SPANISH_SPEAKING.some(c => country.includes(c));
+  // Película hispanohablante: respetar el título local (es el original)
+  if (isSpanish && local) return normalizeAllCaps(local);
+  // Sino, preferir la versión de Letterboxd (con casing correcto)
+  if (lb && s.letterboxd) return lb;
+  return normalizeAllCaps(local) || lb;
+}
+
+function renderTable() {
+  const main = document.getElementById('main');
+
+  let rows = allScreenings.filter(s => s.fecha === activeDay);
+  if (activeCine !== 'all') {
+    rows = rows.filter(s => s.cine === activeCine);
+  }
+  if (searchQuery) {
+    rows = rows.filter(s => {
+      const hay = [s.title_es, s.title_en, s.director, s.ciclo]
+        .filter(Boolean).join(' ').toLowerCase();
+      return hay.includes(searchQuery);
+    });
+  }
+
+  if (rows.length === 0) {
+    main.innerHTML = '<div class="empty">No hay funciones para este día con los filtros seleccionados.</div>';
+    return;
+  }
+
+  const tbody = rows.map(s => {
+    const horaClass = (s.hora === '??' || !s.hora) ? 'hora-tag unknown' : 'hora-tag';
+    const horaText = (s.hora === '??' || !s.hora) ? 'S/H' : s.hora;
+    const cineClass = cineCssClass(s.cine);
+
+    let filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>`;
+    if (s.ticket_url) {
+      filmCell += `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank" rel="noopener">Entradas →</a></div>`;
+    }
+
+    const lbHref = s.letterboxd || '';
+    const lbClass = lbHref ? 'lb-link' : 'lb-link no-link';
+    const lbAttr  = lbHref ? `href="${escapeHtml(lbHref)}" target="_blank" rel="noopener"` : '';
+
+    const ciclo = s.ciclo ? `<span class="ciclo-tag">${escapeHtml(s.ciclo)}</span>` : '';
+
+    return `<tr>
+      <td class="col-hora"><span class="${horaClass}">${horaText}</span></td>
+      <td class="col-cine"><span class="cine-tag ${cineClass}">${escapeHtml(s.cine)}</span></td>
+      <td class="col-film">${filmCell}</td>
+      <td class="col-ciclo">${ciclo}</td>
+      <td class="col-dir">${escapeHtml(s.director || '')}</td>
+      <td class="col-pais">${escapeHtml(s.country || '')}</td>
+      <td class="col-anio">${s.year || ''}</td>
+      <td class="col-dur">${s.duration ? s.duration + ' min' : ''}</td>
+      <td class="col-lb"><a class="${lbClass}" ${lbAttr}><span class="lb-dots"><span></span><span></span><span></span></span></a></td>
+    </tr>`;
+  }).join('');
+
+  main.innerHTML = `
+    <table class="screening-table">
+      <thead>
+        <tr>
+          <th class="col-hora">Hora</th>
+          <th class="col-cine">Cine</th>
+          <th class="col-film">Película</th>
+          <th class="col-ciclo">Ciclo</th>
+          <th class="col-dir">Director</th>
+          <th class="col-pais">País</th>
+          <th class="col-anio">Año</th>
+          <th class="col-dur">Duración</th>
+          <th class="col-lb"><span class="lb-dots" style="display:inline-flex;vertical-align:middle;margin-right:0.35rem"><span></span><span></span><span></span></span>Letterboxd</th>
+        </tr>
+      </thead>
+      <tbody>${tbody}</tbody>
+    </table>
+  `;
+}
+
+loadData();
+</script>
+</body>
+</html>

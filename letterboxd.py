@@ -1,0 +1,475 @@
+"""
+Enriquecimiento con datos de Letterboxd:
+  - URL exacta de la película
+  - Título en inglés
+  - Director
+  - País de origen
+  - Año
+
+Estrategia:
+  1. Construir slug desde el título → probar URL directa
+  2. Si falla → buscar con playwright en letterboxd.com/search/
+  3. Parsear la página de la película para obtener metadatos
+"""
+
+import asyncio
+import json
+import re
+import unicodedata
+import urllib.error
+import urllib.request
+from pathlib import Path
+from typing import Optional
+
+from bs4 import BeautifulSoup
+from playwright.async_api import Page
+
+UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+)
+
+# Ciclos y programas que NO son películas individuales
+NON_FILMS = {
+    "generación del 60", "generacion del 60",
+    "revista caligari", "cineclub nocturna",
+    "canapé session", "canape session",
+    "ciclo", "session", "película sorpresa",
+    "cielos rojos", "claude chabrol bis", "érase una vez con",
+}
+
+
+def is_non_film(title: str) -> bool:
+    t = title.lower()
+    return any(nf in t for nf in NON_FILMS)
+
+
+def slugify(text: str) -> str:
+    """'El Príncipe de Nanawa' → 'el-principe-de-nanawa'"""
+    text = unicodedata.normalize("NFKD", text)
+    text = text.encode("ascii", "ignore").decode("ascii")
+    text = text.lower()
+    text = re.sub(r"[^\w\s-]", "", text)
+    text = re.sub(r"[\s_]+", "-", text)
+    text = re.sub(r"-+", "-", text).strip("-")
+    return text
+
+
+def fetch_film_page(url: str) -> Optional[BeautifulSoup]:
+    """Intenta cargar una página de Letterboxd con requests. None si falla."""
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            if r.status == 200:
+                return BeautifulSoup(r.read().decode("utf-8", errors="replace"), "html.parser")
+    except (urllib.error.HTTPError, urllib.error.URLError, OSError):
+        pass
+    return None
+
+
+def parse_film_soup(soup: BeautifulSoup, url: str) -> Optional[dict]:
+    """
+    Extrae metadatos de la página de una película de Letterboxd.
+    Selectores verificados:
+      title:    h1.headline-1 > span.name  (h1.site-logo is the branding)
+      director: a[href*="/director/"]
+      year:     a[href*="/films/year/"]
+      country:  a[href*="/films/country/"]
+    """
+    # h1.site-logo contains "Letterboxd — Your life in film" — skip it
+    title_h1 = soup.find("h1", class_="headline-1")
+    if title_h1:
+        span = title_h1.find("span", class_="name")
+        title_en = span.get_text(strip=True) if span else title_h1.get_text(strip=True)
+    else:
+        # Fallback: parse <title> tag "Film Name (Year) — Letterboxd"
+        title_tag = soup.find("title")
+        if not title_tag:
+            return None
+        title_en = re.sub(r"\s*\(\d{4}\).*$", "", title_tag.get_text(strip=True)).strip()
+        if not title_en:
+            return None
+
+    director_links = soup.find_all("a", href=re.compile(r"/director/"))
+    seen_dirs: list[str] = []
+    for a in director_links:
+        name = a.get_text(strip=True)
+        if name and name not in seen_dirs:
+            seen_dirs.append(name)
+    director = ", ".join(seen_dirs[:3])
+
+    year_link = soup.find("a", href=re.compile(r"/films/year/\d+"))
+    year: Optional[int] = None
+    if year_link:
+        m = re.search(r"/films/year/(\d{4})", year_link["href"])
+        if m:
+            year = int(m.group(1))
+
+    country_links = soup.find_all("a", href=re.compile(r"/films/country/"))
+    countries = [a.get_text(strip=True) for a in country_links if a.get_text(strip=True)]
+    country = ", ".join(countries[:2]) if countries else ""
+
+    # Duration in minutes — Letterboxd shows "97 mins" in p.text-link.text-footer
+    duration: Optional[int] = None
+    footer = soup.find("p", class_=re.compile(r"text-footer"))
+    if footer:
+        dm = re.search(r"(\d+)\s*mins?\b", footer.get_text(" ", strip=True))
+        if dm:
+            duration = int(dm.group(1))
+
+    return {
+        "url": url,
+        "title_en": title_en,
+        "director": director,
+        "country": country,
+        "year": year,
+        "duration": duration,
+    }
+
+
+async def search_letterboxd(page: Page, query: str) -> Optional[str]:
+    """
+    Busca en letterboxd.com/search/ con playwright y devuelve la URL de la primera película.
+    (urllib devuelve 403 en el search endpoint de Letterboxd)
+    """
+    from urllib.parse import quote_plus
+    search_url = f"https://letterboxd.com/search/{quote_plus(query)}/"
+    try:
+        await page.goto(search_url, wait_until="domcontentloaded", timeout=20000)
+        await page.wait_for_timeout(1500)
+    except Exception:
+        return None
+
+    html = await page.content()
+    soup = BeautifulSoup(html, "html.parser")
+
+    for a in soup.find_all("a", href=re.compile(r"^/film/")):
+        href = a["href"]
+        if re.match(r"^/film/[^/]+/?$", href):
+            return "https://letterboxd.com" + href.rstrip("/") + "/"
+
+    return None
+
+
+class LetterboxdCache:
+    """Cache persistente en JSON para evitar re-consultas."""
+
+    def __init__(self, cache_path: Path):
+        self.path = cache_path
+        self._data: dict = {}
+        if cache_path.exists():
+            try:
+                self._data = json.loads(cache_path.read_text())
+            except Exception:
+                self._data = {}
+
+    def get(self, key: str) -> Optional[dict]:
+        return self._data.get(key.lower())
+
+    def set(self, key: str, meta: dict) -> None:
+        self._data[key.lower()] = meta
+        self.path.write_text(json.dumps(self._data, ensure_ascii=False, indent=2))
+
+    def has(self, key: str) -> bool:
+        return key.lower() in self._data
+
+
+def _name_overlap(a: str, b: str) -> bool:
+    """True si dos nombres comparten al menos una palabra significativa (>3 chars)."""
+    if not a or not b:
+        return False
+    aw = {w for w in re.split(r"[\s,;.\-]+", a.lower()) if len(w) > 3}
+    bw = {w for w in re.split(r"[\s,;.\-]+", b.lower()) if len(w) > 3}
+    return bool(aw & bw)
+
+
+def _validate_meta(meta: dict, hint_year: Optional[int], hint_director: str) -> bool:
+    """
+    Decide si el match de Letterboxd es coherente con la metadata del cine.
+      - Si hint_year ±2 difiere del LB year → rechazar
+      - Si hint_director y LB director no comparten ninguna palabra → rechazar
+    Sin hints, no se rechaza.
+    """
+    if hint_year and meta.get("year"):
+        if abs(int(meta["year"]) - int(hint_year)) > 2:
+            return False
+    if hint_director and meta.get("director"):
+        if not _name_overlap(hint_director, meta["director"]):
+            return False
+    return True
+
+
+_SPANISH_STOPWORDS = {"el", "la", "los", "las", "un", "una", "de", "del", "y", "a"}
+
+
+def _normalize_for_imdb(query: str) -> str:
+    """
+    IMDB suggestion API funciona mejor sin acentos y sin stopwords ES.
+    Ej: "La hija de Drácula" → "hija dracula" → matchea Dracula's Daughter (1936).
+    """
+    s = unicodedata.normalize("NFKD", query)
+    s = s.encode("ascii", "ignore").decode("ascii").lower()
+    words = [w for w in re.split(r"[^a-z0-9]+", s) if w and w not in _SPANISH_STOPWORDS]
+    return " ".join(words)
+
+
+def imdb_suggest(query: str) -> list[dict]:
+    """
+    Llama al endpoint público de autocomplete de IMDB y devuelve hasta 5
+    candidatos: [{'tt', 'title', 'year'}, ...]. No requiere auth ni JS.
+    Normaliza la query removiendo stopwords ES y acentos.
+    """
+    import urllib.parse, json
+    normalized = _normalize_for_imdb(query)
+    q = re.sub(r"[^a-z0-9]+", "_", normalized).strip("_")
+    if not q:
+        return []
+    first = q[0]
+    url = f"https://v3.sg.media-imdb.com/suggestion/{first}/{urllib.parse.quote(q)}.json"
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    try:
+        data = json.loads(urllib.request.urlopen(req, timeout=10).read())
+    except Exception:
+        return []
+    out: list[dict] = []
+    for d in data.get("d", [])[:5]:
+        tt = d.get("id", "")
+        if tt.startswith("tt"):
+            out.append({
+                "tt": tt,
+                "title": d.get("l", ""),
+                "year": d.get("y"),
+            })
+    return out
+
+
+def letterboxd_url_from_imdb(tt: str) -> Optional[str]:
+    """
+    LB acepta /imdb/ttXXXXXX/ y redirige a la película. Devuelve la URL final
+    (https://letterboxd.com/film/SLUG/) o None.
+    """
+    url = f"https://letterboxd.com/imdb/{tt}/"
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    try:
+        resp = urllib.request.urlopen(req, timeout=10)
+        final = resp.url
+        if "/film/" in final:
+            return final.rstrip("/") + "/"
+    except Exception:
+        pass
+    return None
+
+
+# Throttle para DDG — la API HTML rate-limita rápido si pegamos consecutivo
+_ddg_last_call = 0.0
+
+
+def search_ddg_letterboxd(query: str, min_delay: float = 4.0) -> list[str]:
+    """
+    Busca en DuckDuckGo HTML y devuelve URLs letterboxd.com/film/SLUG/ de los
+    primeros resultados. Aplica throttle para evitar bloqueo.
+    """
+    global _ddg_last_call
+    import time, urllib.parse
+    elapsed = time.monotonic() - _ddg_last_call
+    if elapsed < min_delay:
+        time.sleep(min_delay - elapsed)
+    _ddg_last_call = time.monotonic()
+
+    url = "https://html.duckduckgo.com/html/?q=" + urllib.parse.quote_plus(query)
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    try:
+        html = urllib.request.urlopen(req, timeout=15).read().decode("utf-8", "replace")
+    except Exception:
+        return []
+    soup = BeautifulSoup(html, "html.parser")
+    urls: list[str] = []
+    for a in soup.find_all("a", href=True):
+        h = a["href"]
+        if "uddg=" in h:
+            m = re.search(r"uddg=([^&]+)", h)
+            if m:
+                decoded = urllib.parse.unquote(m.group(1))
+                mm = re.search(r"(https?://letterboxd\.com/film/[^/&?#]+/?)", decoded)
+                if mm:
+                    u = mm.group(1).rstrip("/") + "/"
+                    if u not in urls:
+                        urls.append(u)
+        else:
+            mm = re.search(r"(https?://letterboxd\.com/film/[^/&?#]+/?)", h)
+            if mm:
+                u = mm.group(1).rstrip("/") + "/"
+                if u not in urls:
+                    urls.append(u)
+    return urls[:5]
+
+
+async def enrich_title(
+    title: str,
+    page: Page,
+    cache: LetterboxdCache,
+    delay: float = 1.0,
+    hint_year: Optional[int] = None,
+    hint_director: str = "",
+    hint_original: str = "",
+) -> dict:
+    """
+    Dado un título y, opcionalmente, hints (año, director, título original) que el
+    cine ya scrapeó, devuelve metadatos de Letterboxd. Usa caché y valida contra
+    los hints para descartar matches incorrectos.
+
+    Estrategia:
+      1. Slug directo del título original (si hay) → fetch + validar
+      2. Slug con `-YEAR` (si hay año) → fetch + validar
+      3. Slug del título local → fetch + validar
+      4. Letterboxd internal search → fetch + validar
+      5. DuckDuckGo (con throttle) `letterboxd <title> <director>` → fetch + validar
+      6. Si nada validó pero la búsqueda interna devolvió SOMETHING (sin hints),
+         aceptarlo como mejor esfuerzo.
+    """
+    if is_non_film(title):
+        return _empty_meta(title)
+
+    if cache.has(title):
+        return cache.get(title)
+
+    search_title = title.title() if title == title.upper() else title
+    candidates: list[str] = []
+
+    def _try_url(u: str) -> Optional[dict]:
+        s = fetch_film_page(u)
+        return parse_film_soup(s, u) if s else None
+
+    # 1. slug del título original (si lo tenemos)
+    if hint_original:
+        candidates.append(f"https://letterboxd.com/film/{slugify(hint_original)}/")
+        if hint_year:
+            candidates.append(f"https://letterboxd.com/film/{slugify(hint_original)}-{hint_year}/")
+
+    # 2. slug del título local + año
+    base_slug = slugify(search_title)
+    if hint_year:
+        candidates.append(f"https://letterboxd.com/film/{base_slug}-{hint_year}/")
+    candidates.append(f"https://letterboxd.com/film/{base_slug}/")
+
+    fallback_meta: Optional[dict] = None  # mejor esfuerzo si nada valida
+
+    for u in candidates:
+        m = _try_url(u)
+        if not m:
+            continue
+        if _validate_meta(m, hint_year, hint_director):
+            cache.set(title, m)
+            return m
+        fallback_meta = fallback_meta or m
+
+    # 4. Letterboxd internal search — devuelve TODOS los matches, validamos cada uno
+    # OJO: agregar año al query rompe la búsqueda interna; usar sólo el título
+    await asyncio.sleep(delay)
+    search_q = hint_original or search_title
+    try:
+        from urllib.parse import quote_plus
+        await page.goto(
+            f"https://letterboxd.com/search/films/{quote_plus(search_q)}/",
+            wait_until="domcontentloaded", timeout=20000,
+        )
+        await page.wait_for_timeout(1500)
+        soup = BeautifulSoup(await page.content(), "html.parser")
+        seen_hrefs: list[str] = []
+        for a in soup.find_all("a", href=re.compile(r"^/film/")):
+            href = a["href"]
+            if re.match(r"^/film/[^/]+/?$", href) and href not in seen_hrefs:
+                seen_hrefs.append(href)
+                if len(seen_hrefs) >= 5:
+                    break
+        for href in seen_hrefs:
+            u = "https://letterboxd.com" + href.rstrip("/") + "/"
+            await asyncio.sleep(0.5)
+            m = _try_url(u)
+            if not m:
+                continue
+            if _validate_meta(m, hint_year, hint_director):
+                cache.set(title, m)
+                return m
+            fallback_meta = fallback_meta or m
+    except Exception:
+        pass
+
+    # 5. IMDB suggestion API → LB via /imdb/tt redirect.
+    # IMDB matchea mejor que LB para títulos en español traducidos y pelis
+    # nuevas. La API de suggestions sólo acepta el título (NO funciona con
+    # director appended). Probamos título original si lo tenemos, luego local.
+    imdb_queries: list[str] = []
+    if hint_original:
+        imdb_queries.append(f"{hint_original} {hint_year}" if hint_year else hint_original)
+        imdb_queries.append(hint_original)
+    imdb_queries.append(f"{search_title} {hint_year}" if hint_year else search_title)
+    if hint_year:
+        imdb_queries.append(search_title)
+
+    seen_tt: set[str] = set()
+    for q in imdb_queries:
+        for cand in imdb_suggest(q):
+            if cand["tt"] in seen_tt:
+                continue
+            seen_tt.add(cand["tt"])
+            cand_year = cand.get("year")
+            # Filtros pre-fetch para evitar requests inútiles
+            if hint_year and cand_year:
+                try:
+                    if abs(int(cand_year) - int(hint_year)) > 2:
+                        continue
+                except (TypeError, ValueError):
+                    pass
+            elif not hint_year and cand_year:
+                # Sin hint, asumimos que la peli es estreno reciente: descartar
+                # films viejos para evitar falsos positivos como
+                # "Sueños de Oslo" → "Men Are from Mars..." (2014)
+                try:
+                    if int(cand_year) < 2020:
+                        continue
+                except (TypeError, ValueError):
+                    pass
+            lb_url = letterboxd_url_from_imdb(cand["tt"])
+            if not lb_url:
+                continue
+            m = _try_url(lb_url)
+            if not m:
+                continue
+            if _validate_meta(m, hint_year, hint_director):
+                cache.set(title, m)
+                return m
+            fallback_meta = fallback_meta or m
+
+    # 6. DuckDuckGo fallback (con throttle, último recurso)
+    if hint_director:
+        q = f"letterboxd {search_title} {hint_director}"
+        for u in search_ddg_letterboxd(q):
+            m = _try_url(u)
+            if not m:
+                continue
+            if _validate_meta(m, hint_year, hint_director):
+                cache.set(title, m)
+                return m
+            fallback_meta = fallback_meta or m
+
+    # 6. Si no validamos nada pero teníamos algún match razonable y NO hay hints
+    # estrictos, aceptarlo como mejor esfuerzo
+    if fallback_meta and not (hint_year or hint_director):
+        cache.set(title, fallback_meta)
+        return fallback_meta
+
+    empty = _empty_meta(title)
+    cache.set(title, empty)
+    return empty
+
+
+def _empty_meta(title: str) -> dict:
+    return {
+        "url": "",
+        "title_en": title,
+        "director": "",
+        "country": "",
+        "year": None,
+        "duration": None,
+    }
