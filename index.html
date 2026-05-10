@@ -381,7 +381,7 @@ let searchQuery = '';
 
 async function loadData() {
   try {
-    const res = await fetch('../data/cartelera.json?t=' + Date.now());
+    const res = await fetch('data/cartelera.json?t=' + Date.now());
     const data = await res.json();
     allScreenings = data.screenings || [];
 
