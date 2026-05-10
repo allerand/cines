@@ -1,0 +1,26 @@
+# Servir solo lo necesario para el browser. El resto del repo (código del
+# scraper, configs internas, .git) queda excluido del deploy.
+
+.git/**
+.github/**
+.claude/**
+.wrangler/**
+.vscode/**
+.idea/**
+
+# Código Python (corre en GitHub Actions, no en el browser)
+*.py
+__pycache__/**
+requirements.txt
+setup_cron.sh
+
+# Archivos internos de Wrangler / config local
+wrangler.jsonc
+.assetsignore
+.gitignore
+
+# Solo el cartelera.json se sirve; el cache y logs no son para público
+data/cache.json
+data/test_cache.json
+data/lorca_manual.json
+data/cron.log
