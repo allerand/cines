@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cartelera — Cines de Arte · Buenos Aires</title>
+  <title>Cartelera — Cines · Buenos Aires</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -238,6 +238,15 @@
     .film-meta-row {
       margin-top: 0.25rem;
     }
+    /* Meta inline (director · año · duración · ciclo) — solo visible en mobile
+       cuando las columnas correspondientes están ocultas */
+    .film-meta-inline {
+      display: none;
+      font-size: 0.72rem;
+      color: var(--muted);
+      margin-top: 0.18rem;
+      line-height: 1.35;
+    }
     .ticket-link {
       font-size: 0.7rem;
       color: var(--accent);
@@ -331,7 +340,18 @@
       .filters { padding: 0.6rem 1rem; }
       .day-tabs { padding: 0 0.5rem; }
       .col-ciclo, .col-dir, .col-pais, .col-anio, .col-dur { display: none; }
-      .screening-table th, .screening-table td { padding: 0.5rem; }
+      .col-cine { width: 5rem; }
+      .col-hora { width: 4rem; }
+      .col-lb   { width: 3rem; }
+      .screening-table th, .screening-table td { padding: 0.45rem 0.4rem; }
+      .film-meta-inline { display: block; }
+      /* En mobile, el badge del cine y la "Entradas →" más compactos */
+      .cine-tag { font-size: 0.62rem; padding: 0.12rem 0.35rem; }
+      .lb-link { padding: 0.2rem 0.35rem; }
+      .lb-link span { width: 5px; height: 5px; }
+      /* Ocultar texto "Letterboxd" del header en mobile, dejar solo dots */
+      .col-lb .lb-dots + span,
+      .col-lb th > *:not(.lb-dots) { display: none; }
     }
   </style>
 </head>
@@ -344,7 +364,7 @@
 
 <header>
   <h1>Cartelera</h1>
-  <span class="subtitle">Cines de arte · Buenos Aires</span>
+  <span class="subtitle">Cines · Buenos Aires</span>
   <span class="updated-badge" id="updated-badge"></span>
 </header>
 
@@ -502,13 +522,17 @@ function escapeHtml(s) {
     .replace(/"/g, '&quot;');
 }
 
-// Películas de países hispanohablantes: el título original ES el español, así
-// que respetamos title_es en lugar de la versión inglesa de Letterboxd
-const SPANISH_SPEAKING = [
+// Países donde el título original NO es inglés — respetamos el title_es local
+// (que ya es el título original o su traducción al castellano usada en BA)
+// en vez de la versión en inglés de Letterboxd
+const ORIGINAL_LANG_COUNTRIES = [
+  // Hispanohablantes
   'argentina', 'españa', 'spain', 'méxico', 'mexico', 'chile', 'uruguay',
   'colombia', 'perú', 'peru', 'venezuela', 'ecuador', 'bolivia', 'paraguay',
   'cuba', 'guatemala', 'honduras', 'nicaragua', 'costa rica', 'panamá', 'panama',
   'república dominicana', 'el salvador', 'puerto rico',
+  // Lusófonos (las salas suelen mostrar el título original en portugués)
+  'brasil', 'brazil', 'portugal',
 ];
 
 function normalizeAllCaps(t) {
@@ -523,9 +547,9 @@ function displayTitle(s) {
   const lb = s.title_en || '';
   const local = s.title_es || '';
   const country = (s.country || '').toLowerCase();
-  const isSpanish = SPANISH_SPEAKING.some(c => country.includes(c));
-  // Película hispanohablante: respetar el título local (es el original)
-  if (isSpanish && local) return normalizeAllCaps(local);
+  const keepLocal = ORIGINAL_LANG_COUNTRIES.some(c => country.includes(c));
+  // País no anglosajón: respetar el título local (suele ser el original)
+  if (keepLocal && local) return normalizeAllCaps(local);
   // Sino, preferir la versión de Letterboxd (con casing correcto)
   if (lb && s.letterboxd) return lb;
   return normalizeAllCaps(local) || lb;
@@ -557,6 +581,20 @@ function renderTable() {
     const cineClass = cineCssClass(s.cine);
 
     let filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>`;
+    // Línea inline para mobile (cuando dir/pais/año/duración/ciclo están ocultos)
+    const inlineParts = [
+      s.director,
+      s.year,
+      s.duration ? s.duration + ' min' : '',
+      s.country,
+    ].filter(Boolean);
+    if (inlineParts.length) {
+      filmCell += `<div class="film-meta-inline">${escapeHtml(inlineParts.join(' · '))}${
+        s.ciclo ? ` <em>· ${escapeHtml(s.ciclo)}</em>` : ''
+      }</div>`;
+    } else if (s.ciclo) {
+      filmCell += `<div class="film-meta-inline"><em>${escapeHtml(s.ciclo)}</em></div>`;
+    }
     if (s.ticket_url) {
       filmCell += `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank" rel="noopener">Entradas →</a></div>`;
     }

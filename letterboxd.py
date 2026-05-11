@@ -174,13 +174,17 @@ class LetterboxdCache:
         return key.lower() in self._data
 
 
+_STOPWORDS_NAME = {"de", "del", "la", "el", "los", "las", "y", "and", "the"}
+
+
 def _name_overlap(a: str, b: str) -> bool:
     """True si dos nombres comparten al menos una palabra significativa (>3 chars)."""
     if not a or not b:
         return False
-    aw = {w for w in re.split(r"[\s,;.\-]+", a.lower()) if len(w) > 3}
-    bw = {w for w in re.split(r"[\s,;.\-]+", b.lower()) if len(w) > 3}
-    return bool(aw & bw)
+    def words(s: str) -> set[str]:
+        norm = unicodedata.normalize("NFKD", s.lower()).encode("ascii", "ignore").decode("ascii")
+        return {w for w in re.split(r"[\s,;.\-]+", norm) if len(w) > 3 and w not in _STOPWORDS_NAME}
+    return bool(words(a) & words(b))
 
 
 def _validate_meta(meta: dict, hint_year: Optional[int], hint_director: str) -> bool:
@@ -188,13 +192,18 @@ def _validate_meta(meta: dict, hint_year: Optional[int], hint_director: str) -> 
     Decide si el match de Letterboxd es coherente con la metadata del cine.
       - Si hint_year ±2 difiere del LB year → rechazar
       - Si hint_director y LB director no comparten ninguna palabra → rechazar
+      - Si meta no trae director ni year, no podemos validar → rechazar también
+        cuando hay hint_director (mejor empty que wrong)
     Sin hints, no se rechaza.
     """
     if hint_year and meta.get("year"):
         if abs(int(meta["year"]) - int(hint_year)) > 2:
             return False
-    if hint_director and meta.get("director"):
-        if not _name_overlap(hint_director, meta["director"]):
+    if hint_director:
+        lb_director = meta.get("director") or ""
+        if not lb_director:
+            return False  # sin LB director y con hint, no podemos confirmar → rechazar
+        if not _name_overlap(hint_director, lb_director):
             return False
     return True
 
@@ -330,8 +339,16 @@ async def enrich_title(
     if is_non_film(title):
         return _empty_meta(title)
 
+    # Cache hit: solo lo devolvemos si validá contra los hints actuales.
+    # Si los hints cambiaron (ej. ahora tenemos director del scraper), re-enrich.
     if cache.has(title):
-        return cache.get(title)
+        cached = cache.get(title)
+        if not cached.get("url"):
+            # Empty cached → re-intentar siempre por si la red estaba caída
+            pass
+        elif _validate_meta(cached, hint_year, hint_director):
+            return cached
+        # else: la entry cacheada NO matchea hints actuales → re-enrich
 
     search_title = title.title() if title == title.upper() else title
     candidates: list[str] = []
@@ -409,7 +426,11 @@ async def enrich_title(
 
     seen_tt: set[str] = set()
     for q in imdb_queries:
-        for cand in imdb_suggest(q):
+        candidates_imdb = list(imdb_suggest(q))
+        # Sin hint_year, preferir las pelis MÁS NUEVAS (estrenos típicos en Lorca/Cacodelphia)
+        if not hint_year:
+            candidates_imdb.sort(key=lambda c: c.get("year") or 0, reverse=True)
+        for cand in candidates_imdb:
             if cand["tt"] in seen_tt:
                 continue
             seen_tt.add(cand["tt"])

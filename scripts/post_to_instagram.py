@@ -99,7 +99,7 @@ def build_caption(date_str: str) -> str:
     lines = [
         f"🎬 cartelera de hoy — {day} {d} de {month}",
         "",
-        "todos los horarios de los cines de arte de buenos aires",
+        "todos los horarios de las salas de cine de buenos aires",
         "malba · lugones · cacodelphia · lorca · york · munro · lumiton",
     ]
     if top_lines:

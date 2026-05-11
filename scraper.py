@@ -781,15 +781,31 @@ def fetch_lumiton_evento_meta(url: str) -> dict:
                 out["original_title"] = re.sub(r"\s+", " ", sib).strip()
 
     # Country / duration / year: live in <div class="text-sm">
+    # Format variations:
+    #   "Argentina. 103 min. 2004."
+    #   "EE.UU.. 101 min. 1939."
+    #   "Argentina, España. 87 min. Ficción. 2023."   ← género extra entre min y year
+    #   "Singapur, Taiwán. 126'. 2024."               ← apóstrofe en vez de "min"
     text_sm = soup.select_one("div.text-sm")
     if text_sm:
         line = re.sub(r"\s+", " ", text_sm.get_text(" ", strip=True))
-        # Format: "COUNTRY. NN min. YYYY." (COUNTRY may have own dots e.g. "EE.UU.")
-        m = re.match(r"^(.+?)\.{1,2}\s*(\d+)\s*min\.\s*(\d{4})", line)
-        if m:
-            out["country"] = m.group(1).strip().rstrip(".").strip()
-            out["duration"] = int(m.group(2))
-            out["year"] = int(m.group(3))
+
+        # Duración: el primer "NN min" o "NN'" en la línea
+        md = re.search(r"\b(\d{1,3})\s*(?:min\b|['′])", line)
+        if md:
+            out["duration"] = int(md.group(1))
+
+        # Año: ÚLTIMO 19XX/20XX en la línea (suele venir al final)
+        years = re.findall(r"\b(19\d{2}|20\d{2})\b", line)
+        if years:
+            out["year"] = int(years[-1])
+
+        # País: lo que está antes de "NN min" (o "NN'")
+        if md:
+            country_chunk = line[: md.start()].rstrip()
+            country_chunk = country_chunk.rstrip(".").strip()
+            if country_chunk:
+                out["country"] = country_chunk
 
     return out
 

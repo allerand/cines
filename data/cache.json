@@ -84,11 +84,12 @@
     "year": 2025
   },
   "la mujer sin cabeza": {
-    "url": "https://letterboxd.com/film/la-mujer-sin-cabeza/",
+    "url": "https://letterboxd.com/film/the-headless-woman/",
     "title_en": "The Headless Woman",
-    "director": "René Cardona",
-    "country": "Mexico",
-    "year": 1944
+    "director": "Lucrecia Martel",
+    "country": "Argentina, France",
+    "year": 2008,
+    "duration": 87
   },
   "peões": {
     "url": "https://letterboxd.com/film/peoes/",
@@ -126,11 +127,12 @@
     "year": 2025
   },
   "ven a mi casa esta navidad": {
-    "url": "https://letterboxd.com/film/ven-a-mi-casa-esta-navidad/",
-    "title_en": "Ven a mi casa esta Navidad",
-    "director": "Marisa Paniagua",
-    "country": "Spain",
-    "year": 2015
+    "url": "https://letterboxd.com/film/ven-a-mi-casa-esta-navidad-2023/",
+    "title_en": "Come To My Home This Christmas",
+    "director": "Sabrina Campos",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 83
   },
   "últimas conversas": {
     "url": "https://letterboxd.com/film/ultimas-conversas/",
@@ -168,11 +170,12 @@
     "year": 2023
   },
   "nuestra tierra": {
-    "url": "https://letterboxd.com/film/nuestra-tierra/",
-    "title_en": "Our Island",
-    "director": "Ronny A. Sosa",
-    "country": "Dominican Republic",
-    "year": 2025
+    "url": "https://letterboxd.com/film/our-land-2025-1/",
+    "title_en": "Our Land",
+    "director": "Lucrecia Martel",
+    "country": "Argentina, Denmark",
+    "year": 2025,
+    "duration": 119
   },
   "un futuro brillante": {
     "url": "https://letterboxd.com/film/un-futuro-brillante/",
@@ -189,11 +192,12 @@
     "year": 2011
   },
   "claudia": {
-    "url": "https://letterboxd.com/film/claudia/",
+    "url": "https://letterboxd.com/film/claudia-2019/",
     "title_en": "Claudia",
-    "director": "Edmund Goulding",
-    "country": "USA",
-    "year": 1943
+    "director": "Sebastián De Caro",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 87
   },
   "miss carbón": {
     "url": "https://letterboxd.com/film/miss-carbon/",
@@ -203,18 +207,20 @@
     "year": 2025
   },
   "recordá esto": {
-    "url": "https://letterboxd.com/film/recorda-esto/",
-    "title_en": "Recordá esto",
+    "url": "",
+    "title_en": "RECORDÁ ESTO",
     "director": "",
     "country": "",
-    "year": 2024
+    "year": null,
+    "duration": null
   },
   "alemania": {
-    "url": "https://letterboxd.com/film/alemania/",
+    "url": "https://letterboxd.com/film/alemania-2023/",
     "title_en": "Alemania",
-    "director": "",
-    "country": "",
-    "year": 2010
+    "director": "María Zanetti",
+    "country": "Argentina, Spain",
+    "year": 2023,
+    "duration": 87
   },
   "shunko": {
     "url": "https://letterboxd.com/film/shunko/",
@@ -238,18 +244,20 @@
     "year": 2004
   },
   "los ladrones del tiempo": {
-    "url": "",
-    "title_en": "LOS LADRONES DEL TIEMPO",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/time-bandits/",
+    "title_en": "Time Bandits",
+    "director": "Terry Gilliam",
+    "country": "UK",
+    "year": 1981,
+    "duration": 116
   },
   "mientras la ciudad duerme": {
-    "url": "https://letterboxd.com/film/mientras-la-ciudad-duerme/",
-    "title_en": "While the City Sleeps",
-    "director": "Homero Guadarrama",
-    "country": "Mexico",
-    "year": 1996
+    "url": "https://letterboxd.com/film/the-asphalt-jungle/",
+    "title_en": "The Asphalt Jungle",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1950,
+    "duration": 113
   },
   "la crónica francesa": {
     "url": "",
@@ -266,11 +274,12 @@
     "year": null
   },
   "tempestad de pasiones": {
-    "url": "",
-    "title_en": "Tempestad de pasiones",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/clash-by-night/",
+    "title_en": "Clash by Night",
+    "director": "Fritz Lang",
+    "country": "USA",
+    "year": 1952,
+    "duration": 105
   },
   "el gran hotel budapest": {
     "url": "",
@@ -287,11 +296,12 @@
     "year": null
   },
   "amantes en el cielo": {
-    "url": "",
-    "title_en": "AMANTES EN EL CIELO",
-    "director": "",
+    "url": "https://letterboxd.com/film/lovers-in-the-sky/",
+    "title_en": "Lovers in the Sky",
+    "director": "Fermin de la Serna",
     "country": "",
-    "year": null
+    "year": 2025,
+    "duration": 77
   },
   "los excéntricos tenenbaums": {
     "url": "",
@@ -340,7 +350,8 @@
     "title_en": "Tres veces Ana",
     "director": "",
     "country": "",
-    "year": null
+    "year": null,
+    "duration": null
   },
   "the storm: el secreto del gran barco negro": {
     "url": "",
@@ -354,14 +365,16 @@
     "title_en": "EL LADO MUTANTE DE LA FUERZA",
     "director": "",
     "country": "",
-    "year": null
+    "year": null,
+    "duration": null
   },
   "el drama": {
-    "url": "",
-    "title_en": "El drama",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/the-drama/",
+    "title_en": "The Drama",
+    "director": "Kristoffer Borgli",
+    "country": "USA",
+    "year": 2026,
+    "duration": 105
   },
   "the evil dead": {
     "url": "https://letterboxd.com/film/the-evil-dead/",
@@ -371,11 +384,12 @@
     "year": 1981
   },
   "la novia de primavera": {
-    "url": "",
-    "title_en": "LA NOVIA DE PRIMAVERA",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/spring-bride/",
+    "title_en": "Spring Bride",
+    "director": "Carlos Hugo Christensen",
+    "country": "Argentina",
+    "year": 1942,
+    "duration": 68
   },
   "patrulla del clima": {
     "url": "https://letterboxd.com/film/patrulla-del-clima/",
@@ -385,11 +399,12 @@
     "year": 2025
   },
   "función especial: un buen día + después de un buen día": {
-    "url": "",
-    "title_en": "FUNCIÓN ESPECIAL: UN BUEN DÍA + DESPUÉS DE UN BUEN DÍA",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/despues-de-un-buen-dia/",
+    "title_en": "Después de un buen día",
+    "director": "Néstor Frenkel",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 85
   },
   "jfk": {
     "url": "https://letterboxd.com/film/jfk/",
@@ -399,18 +414,20 @@
     "year": 1991
   },
   "moon, mi amigo el panda": {
-    "url": "",
-    "title_en": "MOON, MI AMIGO EL PANDA",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/moon-the-panda/",
+    "title_en": "Moon the Panda",
+    "director": "Gilles de Maistre",
+    "country": "France",
+    "year": 2025,
+    "duration": 99
   },
   "carapachay, una historia de barrio": {
     "url": "",
     "title_en": "CARAPACHAY, UNA HISTORIA DE BARRIO",
     "director": "",
     "country": "",
-    "year": null
+    "year": null,
+    "duration": null
   },
   "the players vs. ángeles caídos": {
     "url": "https://letterboxd.com/film/the-players-vs-angeles-caidos/",
@@ -420,25 +437,28 @@
     "year": 1969
   },
   "los inundados": {
-    "url": "https://letterboxd.com/film/los-inundados/",
-    "title_en": "Los Inundados",
-    "director": "Grupo Ojo Obrero",
+    "url": "https://letterboxd.com/film/flooded-out/",
+    "title_en": "Flooded Out",
+    "director": "Fernando Birri",
     "country": "Argentina",
-    "year": 2003
+    "year": 1962,
+    "duration": 87
   },
   "jurado #2": {
-    "url": "",
-    "title_en": "JURADO #2",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/juror-2/",
+    "title_en": "Juror #2",
+    "director": "Clint Eastwood",
+    "country": "USA",
+    "year": 2024,
+    "duration": 114
   },
   "padre, madre, hermana, hermano": {
-    "url": "",
-    "title_en": "Padre, madre, hermana, hermano",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/father-mother-sister-brother/",
+    "title_en": "Father Mother Sister Brother",
+    "director": "Jim Jarmusch",
+    "country": "USA, France",
+    "year": 2025,
+    "duration": 110
   },
   "calle málaga": {
     "url": "https://letterboxd.com/film/calle-malaga/",
@@ -462,46 +482,52 @@
     "year": 2025
   },
   "el encuentro": {
-    "url": "https://letterboxd.com/film/el-encuentro/",
-    "title_en": "El Encuentro",
-    "director": "Alfonso Rodríguez Zorrilla",
-    "country": "",
-    "year": 2017
+    "url": "https://letterboxd.com/film/el-encuentro-1964/",
+    "title_en": "El encuentro",
+    "director": "Dino Minniti",
+    "country": "Argentina",
+    "year": 1964,
+    "duration": 74
   },
   "extraño río": {
-    "url": "",
-    "title_en": "Extraño río",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/strange-river/",
+    "title_en": "Strange River",
+    "director": "Jaume Claret Muxart",
+    "country": "Germany, Spain",
+    "year": 2025,
+    "duration": 106
   },
   "encuentro con teresa villaverde": {
     "url": "",
     "title_en": "Encuentro con Teresa Villaverde",
     "director": "",
     "country": "",
-    "year": null
+    "year": null,
+    "duration": null
   },
   "cuestión de honor": {
-    "url": "https://letterboxd.com/film/cuestion-de-honor/",
-    "title_en": "Cuestión de honor",
-    "director": "",
-    "country": "",
-    "year": 1993
+    "url": "https://letterboxd.com/film/a-few-good-men/",
+    "title_en": "A Few Good Men",
+    "director": "Rob Reiner",
+    "country": "USA",
+    "year": 1992,
+    "duration": 138
   },
   "el club del terror": {
-    "url": "",
-    "title_en": "El club del terror",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/vamp/",
+    "title_en": "Vamp",
+    "director": "Richard Wenk",
+    "country": "USA",
+    "year": 1986,
+    "duration": 93
   },
   "ojos extraños": {
-    "url": "",
-    "title_en": "Ojos extraños",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/stranger-eyes/",
+    "title_en": "Stranger Eyes",
+    "director": "Yeo Siew Hua",
+    "country": "France, Singapore",
+    "year": 2024,
+    "duration": 126
   },
   "almas perdidas": {
     "url": "",
@@ -518,18 +544,20 @@
     "year": null
   },
   "gioia mia: un verano en sicilia": {
-    "url": "",
-    "title_en": "Gioia mia: un verano en Sicilia",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/sweetheart-2025-3/",
+    "title_en": "Sweetheart",
+    "director": "Margherita Spampinato",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 90
   },
   "ponyo y el secreto de la sirenita": {
-    "url": "",
-    "title_en": "PONYO Y EL SECRETO DE LA SIRENITA",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/ponyo/",
+    "title_en": "Ponyo",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 2008,
+    "duration": 100
   },
   "el bruto": {
     "url": "https://letterboxd.com/film/el-bruto/",
@@ -618,5 +646,13 @@
     "country": "",
     "year": 2024,
     "duration": 79
+  },
+  "los inadaptados": {
+    "url": "https://letterboxd.com/film/the-misfits/",
+    "title_en": "The Misfits",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1961,
+    "duration": 124
   }
 }
