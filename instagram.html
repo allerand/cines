@@ -92,20 +92,13 @@
     font-size: 44px; font-weight: 700;
     font-variant-numeric: tabular-nums;
     color: var(--text); line-height: 1;
-    /* alineado con la baseline del título (badge queda inline) */
-    padding-top: 6px;
+    /* Push down para que la baseline de la hora se alinee con la del título
+       (el badge del cine queda arriba, no contra la hora) */
+    padding-top: 28px;
   }
-  .film-time.unknown { color: var(--muted); font-size: 22px; font-weight: 400; }
+  .film-time.unknown { color: var(--muted); font-size: 22px; font-weight: 400; padding-top: 36px; }
 
-  .film-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
-
-  /* Row con badge inline con título — alinea verticalmente con la hora */
-  .film-title-row {
-    display: flex;
-    align-items: baseline;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
+  .film-body { display: flex; flex-direction: column; gap: 8px; min-width: 0; }
 
   .film-cine {
     display: inline-block;
@@ -113,9 +106,8 @@
     border: 1px solid var(--border); border-radius: 3px;
     color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em;
     font-weight: 500;
-    flex-shrink: 0;
-    /* Pequeño offset para que el badge se vea centrado con la x-height del título */
-    transform: translateY(-6px);
+    width: fit-content;
+    margin-bottom: 0;
   }
   .cine-malba    { border-color: #2a3a4a; color: #6aaecc; }
   .cine-lugones  { border-color: #3a2a1a; color: #cc8844; }
@@ -127,9 +119,9 @@
 
   /* Lowercase para el contenido (no para badges/labels uppercase) */
   .film-title {
-    font-size: 32px; font-weight: 500; line-height: 1.2;
+    font-size: 32px; font-weight: 500; line-height: 1.15;
     color: var(--text); text-transform: lowercase;
-    display: inline;
+    display: block;
   }
   .film-director { font-size: 22px; font-weight: 500; color: var(--text); line-height: 1.3; text-transform: lowercase; }
   .film-meta { font-size: 16px; color: var(--muted); line-height: 1.4; }
@@ -340,10 +332,8 @@ function renderSlide(slideNum) {
       return `<div class="film">
         <div class="${horaClass}">${horaText}</div>
         <div class="film-body">
-          <div class="film-title-row">
-            <span class="film-cine ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>
-            <span class="film-title">${escapeHtml(displayTitle(s))}</span>
-          </div>
+          <span class="film-cine ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>
+          <div class="film-title">${escapeHtml(displayTitle(s))}</div>
           ${s.director ? `<div class="film-director">${escapeHtml(s.director)}</div>` : ''}
           ${yearDur ? `<div class="film-meta">${escapeHtml(yearDur)}</div>` : ''}
           ${s.ciclo ? `<div class="film-ciclo">${escapeHtml(s.ciclo)}</div>` : ''}
