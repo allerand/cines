@@ -100,7 +100,7 @@ def build_caption(date_str: str) -> str:
         f"🎬 cartelera de hoy — {day} {d} de {month}",
         "",
         "todos los horarios de las salas de cine de buenos aires",
-        "malba · lugones · cacodelphia · lorca · york · munro · lumiton",
+        "malba · lugones · cacodelphia · lorca · york · munro · lumiton · cosmos",
     ]
     if top_lines:
         lines.append("")
@@ -110,7 +110,7 @@ def build_caption(date_str: str) -> str:
         "",
         "👉 sitedigo.com — cartelera completa y links a entradas",
         "",
-        "#cine #cineindependiente #cinearg #buenosaires #cartelera #malba #salalugones #cacodelphia #cinelorca #cineyork #lumiton",
+        "#cine #cineindependiente #cinearg #buenosaires #cartelera #malba #salalugones #cacodelphia #cinelorca #cineyork #lumiton #cinecosmos",
     ]
     return "\n".join(lines)
 

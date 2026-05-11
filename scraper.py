@@ -736,6 +736,129 @@ def scrape_lorca() -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
+# Cine Cosmos UBA  (cinecosmos.uba.ar — sitio estático con detalle por peli)
+# ---------------------------------------------------------------------------
+
+COSMOS_DAY_ABBREV = {
+    "lu": 0, "lun": 0,
+    "ma": 1, "mar": 1,
+    "mi": 2, "mie": 2, "mié": 2, "mier": 2,
+    "ju": 3, "jue": 3,
+    "vi": 4, "vie": 4,
+    "sa": 5, "sab": 5, "sá": 5, "sáb": 5,
+    "do": 6, "dom": 6,
+}
+
+
+def scrape_cosmos(semanas: int = 2) -> list[Screening]:
+    """
+    Scrapea cinecosmos.uba.ar. La home lista las pelis con links
+    `?c=main&a=Detalle&idPelicula=NNN`. Cada detalle tiene:
+        "Dirección: NAME  Año: YYYY  País: PAIS  Duración: NNm
+         Ju - Vi - Sá - Do - Lu - Ma - Mi | HH:MM"
+    Generamos una Screening por cada (día válido en el rango, hora).
+    """
+    BASE = "https://www.cinecosmos.uba.ar/"
+    try:
+        home = fetch_html(BASE)
+    except Exception:
+        return []
+
+    # IDs únicos de películas en la home
+    ids: list[str] = []
+    seen_ids: set[str] = set()
+    for a in home.find_all("a", href=re.compile(r"idPelicula=\d+")):
+        m = re.search(r"idPelicula=(\d+)", a["href"])
+        if m and m.group(1) not in seen_ids:
+            seen_ids.add(m.group(1))
+            ids.append(m.group(1))
+
+    result: list[Screening] = []
+    today = date.today()
+    end = today + timedelta(weeks=semanas)
+
+    for film_id in ids:
+        try:
+            soup = fetch_html(f"{BASE}?c=main&a=Detalle&idPelicula={film_id}")
+        except Exception:
+            continue
+        text = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
+
+        # Title — primer h1/h2 o link al detalle dentro de la propia página
+        title = ""
+        for tag in ("h1", "h2", "h3"):
+            el = soup.find(tag)
+            if el:
+                t = el.get_text(strip=True)
+                if t and t.lower() != "cine cosmos":
+                    title = t
+                    break
+        if not title:
+            continue
+
+        director = ""
+        m = re.search(r"Direcci[óo]n\s*:\s*([^\n]+?)\s+A[ñn]o\s*:", text)
+        if m:
+            director = m.group(1).strip()
+
+        year: Optional[int] = None
+        m = re.search(r"A[ñn]o\s*:\s*(\d{4})", text)
+        if m:
+            year = int(m.group(1))
+
+        country = ""
+        m = re.search(r"Pa[íi]s\s*:\s*([^\n]+?)\s+Duraci[óo]n\s*:", text)
+        if m:
+            country = m.group(1).strip()
+
+        duration: Optional[int] = None
+        m = re.search(r"Duraci[óo]n\s*:\s*(\d{1,3})\s*m\b", text)
+        if m:
+            duration = int(m.group(1))
+
+        # Bloques de horario: "Día1 - Día2 - ... | HH:MM"
+        # Puede haber varios: "Ju - Vi | 19:00 Sá - Do | 16:30"
+        slot_re = re.compile(
+            r"((?:(?:Lu|Ma|Mi|Mié|Mier|Ju|Vi|S[áa]|Do)\b\s*-?\s*)+)\|\s*(\d{1,2}):(\d{2})",
+            re.IGNORECASE,
+        )
+        slots: list[tuple[set[int], str]] = []
+        for m in slot_re.finditer(text):
+            days_chunk = m.group(1).lower()
+            weekdays: set[int] = set()
+            for tok in re.findall(r"[a-záéí]+", days_chunk):
+                if tok in COSMOS_DAY_ABBREV:
+                    weekdays.add(COSMOS_DAY_ABBREV[tok])
+            if not weekdays:
+                continue
+            hora = f"{int(m.group(2)):02d}:{m.group(3)}"
+            slots.append((weekdays, hora))
+
+        if not slots:
+            continue
+
+        # Expandir a fechas concretas
+        d = today
+        while d <= end:
+            for weekdays, hora in slots:
+                if d.weekday() in weekdays:
+                    result.append(Screening(
+                        cine="Cine Cosmos",
+                        title=title,
+                        fecha=d.isoformat(),
+                        hora=hora,
+                        ticket_url=f"{BASE}?c=main&a=Detalle&idPelicula={film_id}",
+                        director=director,
+                        country=country,
+                        year=year,
+                        duration=duration,
+                    ))
+            d += timedelta(days=1)
+
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Lumiton  (lumiton.ar/agenda-presencial/) — devuelve funciones de los 3
 # venues de la fundación Lumiton: Cine York, Centro Cultural Munro y Lumiton.
 # ---------------------------------------------------------------------------

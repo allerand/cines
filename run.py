@@ -36,7 +36,7 @@ UA = (
 async def run_scraper(semanas: int = 2) -> None:
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
-        scrape_lorca, scrape_lumiton_agenda,
+        scrape_lorca, scrape_lumiton_agenda, scrape_cosmos,
     )
 
     print("🎬 Cargando Cine Lorca (manual)...", end=" ", flush=True)
@@ -56,6 +56,14 @@ async def run_scraper(semanas: int = 2) -> None:
         print(", ".join(f"{cine}: {n}" for cine, n in c.items()) or "0")
     except Exception as e:
         lumiton_screenings = []
+        print(f"error — {e}")
+
+    print("🎬 Scrapeando Cine Cosmos UBA...", end=" ", flush=True)
+    try:
+        cosmos_screenings = scrape_cosmos(semanas)
+        print(f"{len(cosmos_screenings)} funciones")
+    except Exception as e:
+        cosmos_screenings = []
         print(f"error — {e}")
     from letterboxd import LetterboxdCache, enrich_title
 
@@ -78,6 +86,7 @@ async def run_scraper(semanas: int = 2) -> None:
 
         all_screenings.extend(lorca_screenings)
         all_screenings.extend(lumiton_screenings)
+        all_screenings.extend(cosmos_screenings)
 
         for name, fn in [
             ("Sala Lugones", lambda p: scrape_lugones(p)),

@@ -116,6 +116,7 @@
   .cine-york     { border-color: #2a2a1a; color: #bbbb44; }
   .cine-munro    { border-color: #1a3a3a; color: #66bbbb; }
   .cine-lumiton  { border-color: #3a1a1a; color: #cc6666; }
+  .cine-cosmos   { border-color: #3a3a1a; color: #ccbb44; }
 
   /* Lowercase para el contenido (no para badges/labels uppercase) */
   .film-title {
@@ -158,6 +159,7 @@
       <option value="Cine York">York</option>
       <option value="Centro Cultural Munro">Munro</option>
       <option value="Lumiton">Lumiton</option>
+      <option value="Cine Cosmos">Cosmos</option>
     </select>
   </label>
   <label>Formato
@@ -234,6 +236,7 @@ function cineCssClass(cine) {
   if (cine === 'Cine York') return 'cine-york';
   if (cine === 'Centro Cultural Munro') return 'cine-munro';
   if (cine === 'Lumiton') return 'cine-lumiton';
+  if (cine === 'Cine Cosmos') return 'cine-cosmos';
   return '';
 }
 

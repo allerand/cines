@@ -2,8 +2,8 @@ name: Scrape cartelera
 
 on:
   schedule:
-    # 13:00 UTC = 10:00 Buenos Aires (UTC-3). Corre todos los días.
-    - cron: '0 13 * * *'
+    # 13:30 UTC = 10:30 Buenos Aires (UTC-3). Corre todos los días.
+    - cron: '30 13 * * *'
   workflow_dispatch:  # permite triggear manual desde la UI de GitHub
 
 permissions:
