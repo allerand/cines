@@ -110,15 +110,19 @@ def build_caption(date_str: str) -> str:
         "",
         "👉 sitedigo.com — cartelera completa y links a entradas",
         "",
-        "#cinedearte #cineindependiente #cinearg #buenosaires #malba #salalugones #cacodelphia #cinelorca #cineyork #lumiton",
+        "#cine #cineindependiente #cinearg #buenosaires #cartelera #malba #salalugones #cacodelphia #cinelorca #cineyork #lumiton",
     ]
     return "\n".join(lines)
 
 
 def post_carousel(date_str: str, dry_run: bool = False) -> None:
-    user_id = os.environ["IG_USER_ID"]
-    token = os.environ["IG_ACCESS_TOKEN"]
-    base = os.environ["PUBLIC_BASE_URL"].rstrip("/")
+    # En dry-run dejamos defaults razonables; en real, exigimos las vars.
+    user_id = os.environ.get("IG_USER_ID", "")
+    token = os.environ.get("IG_ACCESS_TOKEN", "")
+    base = os.environ.get(
+        "PUBLIC_BASE_URL",
+        "https://raw.githubusercontent.com/allerand/cines/main",
+    ).rstrip("/")
 
     post_dir = HERE / "posts" / date_str
     slides = sorted(post_dir.glob("slide-*.png"))
