@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cartelera · Imagen Instagram</title>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg:        #0a0a0a;
+    --bg2:       #111;
+    --bg3:       #1a1a1a;
+    --border:    #2a2a2a;
+    --text:      #e0e0e0;
+    --muted:     #666;
+    --accent:    #00d060;
+    --font:      -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  }
+  html, body { background: #222; font-family: var(--font); color: var(--text); min-height: 100vh; }
+  body { display: flex; flex-direction: column; align-items: center; gap: 24px; padding: 30px; }
+
+  /* ── Controles (no salen en la imagen) ── */
+  .controls {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    background: #111; padding: 14px 18px; border-radius: 8px;
+    border: 1px solid var(--border);
+    align-items: center;
+  }
+  .controls label { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .controls input, .controls select, .controls button {
+    background: var(--bg3); color: var(--text);
+    border: 1px solid var(--border); border-radius: 4px;
+    padding: 6px 10px; font-size: 0.85rem; font-family: inherit;
+  }
+  .controls button {
+    background: var(--accent); color: #000; font-weight: 600; cursor: pointer;
+    border-color: var(--accent); padding: 6px 16px;
+  }
+  .controls button:hover { filter: brightness(1.1); }
+  .controls button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  /* ── Wrapper para escalar la post a viewport ── */
+  .stage {
+    display: flex; justify-content: center;
+    transform-origin: top center;
+  }
+
+  /* ── Post (lo que se exporta) ── */
+  .post {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+    padding: 80px 70px 70px;
+    display: flex;
+    flex-direction: column;
+    /* tamaños se setean por JS según formato */
+  }
+  .post.portrait { width: 1080px; height: 1350px; }
+  .post.square   { width: 1080px; height: 1080px; }
+  .post.story    { width: 1080px; height: 1920px; padding: 100px 70px 100px; }
+
+  .post-header {
+    display: flex; flex-direction: column; gap: 8px;
+    padding-bottom: 32px; border-bottom: 2px solid var(--border);
+    margin-bottom: 24px;
+  }
+  .post-brand {
+    font-size: 64px; font-weight: 700; letter-spacing: -0.02em;
+    color: var(--text); line-height: 1;
+  }
+  .post-date {
+    font-size: 26px; font-weight: 400; color: var(--muted);
+    letter-spacing: 0.02em;
+  }
+  .post-cinefilter {
+    font-size: 18px; color: var(--accent); margin-top: 4px;
+    text-transform: uppercase; letter-spacing: 0.1em; font-weight: 600;
+  }
+
+  .post-films { flex: 1; display: flex; flex-direction: column; overflow: hidden; }
+
+  .film {
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    gap: 22px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: start;
+  }
+  .film:last-child { border-bottom: none; }
+
+  .film-time {
+    font-size: 44px; font-weight: 700;
+    font-variant-numeric: tabular-nums;
+    color: var(--text); line-height: 1;
+    padding-top: 4px;
+  }
+  .film-time.unknown { color: var(--muted); font-size: 22px; font-weight: 400; }
+
+  .film-body { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+
+  .film-cine {
+    display: inline-block;
+    font-size: 14px; padding: 3px 9px;
+    border: 1px solid var(--border); border-radius: 3px;
+    color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em;
+    font-weight: 500;
+    width: fit-content;
+  }
+  .cine-malba    { border-color: #2a3a4a; color: #6aaecc; }
+  .cine-lugones  { border-color: #3a2a1a; color: #cc8844; }
+  .cine-cacode   { border-color: #1a2a1a; color: #66bb66; }
+  .cine-lorca    { border-color: #2a1a2a; color: #aa66aa; }
+  .cine-york     { border-color: #2a2a1a; color: #bbbb44; }
+  .cine-munro    { border-color: #1a3a3a; color: #66bbbb; }
+  .cine-lumiton  { border-color: #3a1a1a; color: #cc6666; }
+
+  /* Lowercase para el contenido (no para badges/labels uppercase) */
+  .film-title { font-size: 32px; font-weight: 500; line-height: 1.2; color: var(--text); text-transform: lowercase; }
+  .film-director { font-size: 22px; font-weight: 500; color: var(--text); line-height: 1.3; text-transform: lowercase; }
+  .film-meta { font-size: 16px; color: var(--muted); line-height: 1.4; }
+  .film-ciclo { font-size: 14px; color: var(--muted); font-style: italic; margin-top: 2px; text-transform: lowercase; }
+
+  .post-footer {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 18px; border-top: 1px solid var(--border); margin-top: 16px;
+    color: var(--muted); font-size: 16px; letter-spacing: 0.02em;
+  }
+  .post-footer .url { color: var(--accent); font-weight: 600; }
+  .post-footer .slide-num { color: var(--text); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+  .empty { padding: 60px 0; text-align: center; color: var(--muted); font-size: 24px; }
+
+  .slides-controls { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+  .slides-controls button {
+    padding: 6px 10px; font-size: 0.85rem;
+  }
+  .slide-indicator { color: var(--muted); font-size: 0.8rem; }
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <label>Día <input type="date" id="date"></label>
+  <label>Cine
+    <select id="cine">
+      <option value="all">Todos</option>
+      <option value="MALBA">MALBA</option>
+      <option value="Sala Lugones">Lugones</option>
+      <option value="Cacodelphia">Cacodelphia</option>
+      <option value="Cine Lorca">Lorca</option>
+      <option value="Cine York">York</option>
+      <option value="Centro Cultural Munro">Munro</option>
+      <option value="Lumiton">Lumiton</option>
+    </select>
+  </label>
+  <label>Formato
+    <select id="format">
+      <option value="portrait">Portrait 1080×1350 (feed)</option>
+      <option value="square">Square 1080×1080 (feed)</option>
+      <option value="story">Story 1080×1920</option>
+    </select>
+  </label>
+  <div class="slides-controls">
+    <button id="prev-slide">←</button>
+    <span class="slide-indicator" id="slide-indicator">1 / 1</span>
+    <button id="next-slide">→</button>
+  </div>
+  <button id="download">⬇ Descargar slide actual</button>
+  <button id="download-all">⬇ Descargar todos</button>
+</div>
+
+<div class="stage" id="stage">
+  <div class="post portrait" id="post">
+    <div class="post-header">
+      <div class="post-brand">la cartelera de hoy</div>
+      <div class="post-date" id="post-date">—</div>
+      <div class="post-cinefilter" id="post-cinefilter" hidden></div>
+    </div>
+    <div class="post-films" id="post-films"></div>
+    <div class="post-footer">
+      <span>cines de arte · buenos aires</span>
+      <span><span class="slide-num" id="post-slide-num"></span> <span class="url">sitedigo.com</span></span>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script>
+const DAYS_ES = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+const MONTHS_ES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+                   'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+const SPANISH_SPEAKING = ['argentina','españa','spain','méxico','mexico','chile','uruguay',
+  'colombia','perú','peru','venezuela','ecuador','bolivia','paraguay','cuba','guatemala',
+  'honduras','nicaragua','costa rica','panamá','panama','república dominicana',
+  'el salvador','puerto rico'];
+
+let allScreenings = [];
+let currentSlide = 1;
+let totalSlides = 1;
+
+function escapeHtml(s) {
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function normalizeAllCaps(t) {
+  if (!t) return '';
+  if (t === t.toUpperCase() && t.length > 3) return t.charAt(0) + t.slice(1).toLowerCase();
+  return t;
+}
+
+function displayTitle(s) {
+  const lb = s.title_en || '';
+  const local = s.title_es || '';
+  const country = (s.country || '').toLowerCase();
+  const isSpanish = SPANISH_SPEAKING.some(c => country.includes(c));
+  if (isSpanish && local) return normalizeAllCaps(local);
+  if (lb && s.letterboxd) return lb;
+  return normalizeAllCaps(local) || lb;
+}
+
+function cineCssClass(cine) {
+  if (cine === 'MALBA') return 'cine-malba';
+  if (cine === 'Sala Lugones') return 'cine-lugones';
+  if (cine === 'Cacodelphia') return 'cine-cacode';
+  if (cine === 'Cine Lorca') return 'cine-lorca';
+  if (cine === 'Cine York') return 'cine-york';
+  if (cine === 'Centro Cultural Munro') return 'cine-munro';
+  if (cine === 'Lumiton') return 'cine-lumiton';
+  return '';
+}
+
+async function loadData() {
+  const res = await fetch('data/cartelera.json?t=' + Date.now());
+  const data = await res.json();
+  allScreenings = data.screenings || [];
+
+  // URL params permiten control desde scripts (generate_posts.py):
+  //   ?date=2026-05-10&cine=all&format=portrait&slide=2
+  const params = new URLSearchParams(location.search);
+  const dates = [...new Set(allScreenings.map(s => s.fecha).filter(f => /^\d{4}-\d{2}-\d{2}$/.test(f)))].sort();
+  const today = new Date();
+  const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
+  const def = dates.includes(todayStr) ? todayStr : (dates[0] || todayStr);
+  document.getElementById('date').value = params.get('date') || def;
+  if (params.get('cine')) document.getElementById('cine').value = params.get('cine');
+  if (params.get('format')) document.getElementById('format').value = params.get('format');
+  render();
+  if (params.get('slide')) renderSlide(parseInt(params.get('slide'), 10) || 1);
+
+  // Marker para que scripts headless sepan que el render terminó
+  document.body.dataset.ready = 'true';
+}
+
+// Helpers globales para controlar desde scripts headless
+window.cartelera = {
+  setSlide: (n) => renderSlide(n),
+  totalSlides: () => totalSlides,
+  setDate: (d) => { document.getElementById('date').value = d; render(); },
+  setCine: (c) => { document.getElementById('cine').value = c; render(); },
+  setFormat: (f) => { document.getElementById('format').value = f; render(); },
+};
+
+// Heurística: cuántas pelis entran por slide según el formato.
+// Conservador para que entren limpias incluso con director + año + ciclo.
+function filmsPerSlide(format) {
+  if (format === 'square') return 5;
+  if (format === 'portrait') return 6;
+  if (format === 'story') return 10;
+  return 6;
+}
+
+function getFilteredRows() {
+  const date = document.getElementById('date').value;
+  const cine = document.getElementById('cine').value;
+  let rows = allScreenings.filter(s => s.fecha === date);
+  if (cine !== 'all') rows = rows.filter(s => s.cine === cine);
+  rows.sort((a, b) => (a.hora || '99').localeCompare(b.hora || '99'));
+  return rows;
+}
+
+function renderSlide(slideNum) {
+  const date = document.getElementById('date').value;
+  const cine = document.getElementById('cine').value;
+  const format = document.getElementById('format').value;
+
+  // Aplicar formato al post
+  const post = document.getElementById('post');
+  post.className = 'post ' + format;
+
+  // Fecha legible (sub-título)
+  if (date && /^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    const [y, m, d] = date.split('-').map(Number);
+    const dt = new Date(y, m - 1, d);
+    const dayName = DAYS_ES[dt.getDay()];
+    const monthName = MONTHS_ES[m - 1];
+    document.getElementById('post-date').textContent = `${dayName} ${d} de ${monthName}`.toLowerCase();
+  } else {
+    document.getElementById('post-date').textContent = '—';
+  }
+
+  // Filtro cine sub-label
+  const cf = document.getElementById('post-cinefilter');
+  if (cine !== 'all') { cf.textContent = cine; cf.hidden = false; }
+  else { cf.hidden = true; }
+
+  const rows = getFilteredRows();
+  const perSlide = filmsPerSlide(format);
+  totalSlides = Math.max(1, Math.ceil(rows.length / perSlide));
+  if (slideNum < 1) slideNum = 1;
+  if (slideNum > totalSlides) slideNum = totalSlides;
+  currentSlide = slideNum;
+
+  const start = (currentSlide - 1) * perSlide;
+  const slideFilms = rows.slice(start, start + perSlide);
+
+  const filmsEl = document.getElementById('post-films');
+  if (slideFilms.length === 0) {
+    filmsEl.innerHTML = '<div class="empty">no hay funciones para este día</div>';
+  } else {
+    filmsEl.innerHTML = slideFilms.map(s => {
+      const horaClass = (s.hora === '??' || !s.hora) ? 'film-time unknown' : 'film-time';
+      const horaText = (s.hora === '??' || !s.hora) ? 'S/H' : s.hora;
+      const yearDur = [s.year, s.duration ? s.duration + ' min' : ''].filter(Boolean).join(' · ');
+      return `<div class="film">
+        <div class="${horaClass}">${horaText}</div>
+        <div class="film-body">
+          <span class="film-cine ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>
+          <div class="film-title">${escapeHtml(displayTitle(s))}</div>
+          ${s.director ? `<div class="film-director">${escapeHtml(s.director)}</div>` : ''}
+          ${yearDur ? `<div class="film-meta">${escapeHtml(yearDur)}</div>` : ''}
+          ${s.ciclo ? `<div class="film-ciclo">${escapeHtml(s.ciclo)}</div>` : ''}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  // Indicadores de slide
+  const slideText = totalSlides > 1 ? `${currentSlide} / ${totalSlides}` : '';
+  document.getElementById('slide-indicator').textContent = totalSlides > 1 ? `Slide ${currentSlide} / ${totalSlides}` : '1 / 1';
+  document.getElementById('post-slide-num').textContent = slideText;
+  document.getElementById('prev-slide').disabled = currentSlide <= 1;
+  document.getElementById('next-slide').disabled = currentSlide >= totalSlides;
+
+  scaleStage();
+}
+
+function render() {
+  // Cambio de filtros: volver al slide 1
+  renderSlide(1);
+}
+
+function scaleStage() {
+  const post = document.getElementById('post');
+  const stage = document.getElementById('stage');
+  const w = post.offsetWidth;
+  const h = post.offsetHeight;
+  const availW = window.innerWidth - 60;
+  const availH = window.innerHeight - 200;
+  const scale = Math.min(availW / w, availH / h, 1);
+  stage.style.transform = `scale(${scale})`;
+  stage.style.height = (h * scale) + 'px';
+}
+
+async function captureCurrentSlide() {
+  const stage = document.getElementById('stage');
+  const prevTransform = stage.style.transform;
+  stage.style.transform = 'scale(1)';
+  const post = document.getElementById('post');
+  // Esperar al render layout
+  await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+  const canvas = await html2canvas(post, {
+    backgroundColor: '#0a0a0a',
+    scale: 2,
+    useCORS: true,
+    logging: false,
+  });
+  stage.style.transform = prevTransform;
+  return canvas;
+}
+
+function canvasToBlobAsync(canvas) {
+  return new Promise(res => canvas.toBlob(res, 'image/png'));
+}
+
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 1000);
+}
+
+function buildFilename(slideIdx) {
+  const date = document.getElementById('date').value;
+  const cine = document.getElementById('cine').value;
+  const fmt = document.getElementById('format').value;
+  const slug = (cine === 'all' ? 'todos' : cine.toLowerCase().replace(/\s+/g, '-'));
+  const slidePart = totalSlides > 1 ? `-${slideIdx}-de-${totalSlides}` : '';
+  return `cartelera-${date}-${slug}-${fmt}${slidePart}.png`;
+}
+
+async function downloadCurrent() {
+  const btn = document.getElementById('download');
+  btn.disabled = true;
+  btn.textContent = '⏳ Generando...';
+  try {
+    const canvas = await captureCurrentSlide();
+    const blob = await canvasToBlobAsync(canvas);
+    downloadBlob(blob, buildFilename(currentSlide));
+  } catch (e) {
+    alert('Error: ' + e.message);
+  } finally {
+    btn.disabled = false;
+    btn.textContent = '⬇ Descargar slide actual';
+  }
+}
+
+async function downloadAll() {
+  const btn = document.getElementById('download-all');
+  btn.disabled = true;
+  const startSlide = currentSlide;
+  try {
+    for (let i = 1; i <= totalSlides; i++) {
+      btn.textContent = `⏳ Slide ${i}/${totalSlides}...`;
+      renderSlide(i);
+      await new Promise(r => setTimeout(r, 200));  // dejar renderizar
+      const canvas = await captureCurrentSlide();
+      const blob = await canvasToBlobAsync(canvas);
+      downloadBlob(blob, buildFilename(i));
+      await new Promise(r => setTimeout(r, 400));  // browser throttle multi-download
+    }
+  } catch (e) {
+    alert('Error: ' + e.message);
+  } finally {
+    renderSlide(startSlide);
+    btn.disabled = false;
+    btn.textContent = '⬇ Descargar todos';
+  }
+}
+
+document.getElementById('date').addEventListener('change', render);
+document.getElementById('cine').addEventListener('change', render);
+document.getElementById('format').addEventListener('change', render);
+document.getElementById('prev-slide').addEventListener('click', () => renderSlide(currentSlide - 1));
+document.getElementById('next-slide').addEventListener('click', () => renderSlide(currentSlide + 1));
+document.getElementById('download').addEventListener('click', downloadCurrent);
+document.getElementById('download-all').addEventListener('click', downloadAll);
+window.addEventListener('resize', scaleStage);
+
+loadData();
+</script>
+</body>
+</html>
