@@ -33,8 +33,10 @@ jobs:
         id: date
         run: echo "today=$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
-      - name: Generate Instagram posts
-        run: python3 scripts/generate_posts.py --date "${{ steps.date.outputs.today }}"
+      - name: Generate Instagram posts (feed portrait + story)
+        run: |
+          python3 scripts/generate_posts.py --date "${{ steps.date.outputs.today }}" --format portrait
+          python3 scripts/generate_posts.py --date "${{ steps.date.outputs.today }}" --format story
 
       - name: Commit cartelera + posts
         run: |
@@ -44,16 +46,17 @@ jobs:
           git diff --cached --quiet || git commit -m "data: refresh cartelera + posts $(date -u +%Y-%m-%d)"
           git push
 
-      - name: Post to Instagram
-        # Solo si los secrets están seteados (sino, lo saltea sin error)
-        if: ${{ secrets.IG_USER_ID != '' && secrets.IG_ACCESS_TOKEN != '' }}
+      - name: Post to Instagram (feed carousel + stories)
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          # Las PNGs deben ser accesibles públicamente. Usamos raw.githubusercontent
-          # porque está disponible inmediatamente después del push (sin esperar deploy)
+          # raw.githubusercontent sirve las PNGs apenas el commit anterior está pusheado
           PUBLIC_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
         run: |
+          if [ -z "$IG_USER_ID" ] || [ -z "$IG_ACCESS_TOKEN" ]; then
+            echo "⏭  IG secrets no seteados — salteando post"
+            exit 0
+          fi
           # Pequeña espera para que raw.githubusercontent indexe el commit nuevo
-          sleep 15
+          sleep 20
           python3 scripts/post_to_instagram.py --date "${{ steps.date.outputs.today }}"

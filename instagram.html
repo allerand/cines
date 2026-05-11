@@ -64,12 +64,13 @@
     margin-bottom: 24px;
   }
   .post-brand {
-    font-size: 64px; font-weight: 700; letter-spacing: -0.02em;
+    font-size: 56px; font-weight: 700; letter-spacing: -0.02em;
     color: var(--text); line-height: 1;
   }
   .post-date {
-    font-size: 26px; font-weight: 400; color: var(--muted);
-    letter-spacing: 0.02em;
+    font-size: 48px; font-weight: 600; color: var(--text);
+    letter-spacing: -0.01em; line-height: 1.05;
+    margin-top: 6px;
   }
   .post-cinefilter {
     font-size: 18px; color: var(--accent); margin-top: 4px;
@@ -282,7 +283,7 @@ window.cartelera = {
 function filmsPerSlide(format) {
   if (format === 'square') return 5;
   if (format === 'portrait') return 6;
-  if (format === 'story') return 10;
+  if (format === 'story') return 8;
   return 6;
 }
 

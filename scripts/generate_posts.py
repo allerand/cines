@@ -61,9 +61,10 @@ def static_server(root: Path, port: int):
 async def generate(date_str: str, cine: str = "all", fmt: str = "portrait") -> list[Path]:
     from playwright.async_api import async_playwright
 
-    out_dir = HERE / "posts" / date_str
+    # Cada formato vive en su propio subdirectorio para que coexistan
+    # las PNGs de feed (portrait) y story sin pisarse.
+    out_dir = HERE / "posts" / date_str / fmt
     out_dir.mkdir(parents=True, exist_ok=True)
-    # Limpiar PNGs previos para este día
     for old in out_dir.glob("*.png"):
         old.unlink()
 
@@ -123,7 +124,7 @@ def main():
 
     saved = asyncio.run(generate(args.date, args.cine, args.format))
     if saved:
-        print(f"\n✅ {len(saved)} slide(s) → posts/{args.date}/")
+        print(f"\n✅ {len(saved)} slide(s) → posts/{args.date}/{args.format}/")
     else:
         print(f"\n⚠️  no se generó ningún slide para {args.date}")
         sys.exit(1)
