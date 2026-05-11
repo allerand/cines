@@ -37,6 +37,7 @@ async def run_scraper(semanas: int = 2) -> None:
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
         scrape_lorca, scrape_lumiton_agenda, scrape_cosmos,
+        scrape_gaumont, scrape_cck,
     )
 
     print("🎬 Cargando Cine Lorca (manual)...", end=" ", flush=True)
@@ -65,6 +66,22 @@ async def run_scraper(semanas: int = 2) -> None:
     except Exception as e:
         cosmos_screenings = []
         print(f"error — {e}")
+
+    print("🎬 Scrapeando Cine Gaumont...", end=" ", flush=True)
+    try:
+        gaumont_screenings = scrape_gaumont(semanas)
+        print(f"{len(gaumont_screenings)} funciones")
+    except Exception as e:
+        gaumont_screenings = []
+        print(f"error — {e}")
+
+    print("🎬 Scrapeando CCK...", end=" ", flush=True)
+    try:
+        cck_screenings = scrape_cck(semanas)
+        print(f"{len(cck_screenings)} funciones")
+    except Exception as e:
+        cck_screenings = []
+        print(f"error — {e}")
     from letterboxd import LetterboxdCache, enrich_title
 
     cache = LetterboxdCache(CACHE_JSON)
@@ -87,6 +104,8 @@ async def run_scraper(semanas: int = 2) -> None:
         all_screenings.extend(lorca_screenings)
         all_screenings.extend(lumiton_screenings)
         all_screenings.extend(cosmos_screenings)
+        all_screenings.extend(gaumont_screenings)
+        all_screenings.extend(cck_screenings)
 
         for name, fn in [
             ("Sala Lugones", lambda p: scrape_lugones(p)),

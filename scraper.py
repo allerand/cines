@@ -736,6 +736,233 @@ def scrape_lorca() -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
+# Cine Gaumont  (cinegaumont.ar — pelis con API JSON pública /films/ID/tree)
+# ---------------------------------------------------------------------------
+
+def scrape_gaumont(semanas: int = 2) -> list[Screening]:
+    """
+    1. Lista filmids desde cinegaumont.ar/Default (links /pelicula.aspx?filmid=N)
+    2. Para cada filmid, parsea metadata de la página de detalle.
+    3. Llama a la API JSON oficial cinegaumont.com.ar/films/ID/tree para
+       obtener fechas y horarios.
+    """
+    BASE_WEB = "https://www.cinegaumont.ar"
+    BASE_API = "https://www.cinegaumont.com.ar"
+
+    try:
+        home = fetch_html(f"{BASE_WEB}/Default")
+    except Exception:
+        return []
+
+    filmids: list[str] = []
+    seen: set[str] = set()
+    for a in home.find_all("a", href=re.compile(r"pelicula\.aspx\?filmid=\d+")):
+        m = re.search(r"filmid=(\d+)", a["href"])
+        if m and m.group(1) not in seen:
+            seen.add(m.group(1))
+            filmids.append(m.group(1))
+
+    result: list[Screening] = []
+    today = date.today()
+    end = today + timedelta(weeks=semanas)
+
+    for fid in filmids:
+        # Metadata de la peli (título, director, país, duración)
+        meta: dict = {}
+        try:
+            soup = fetch_html(f"{BASE_WEB}/pelicula.aspx?filmid={fid}")
+            h1 = soup.find(["h1", "h2"])
+            title = h1.get_text(strip=True) if h1 else ""
+            text = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
+            m = re.search(r"Dirección\s*:\s*([^\n.]+?)(?:\s+Elenco|\s+Origen|\s+Género|\s*©|\s*$)", text)
+            director = m.group(1).strip() if m else ""
+            m = re.search(r"Orig?en\s*:\s*([^\n.]+?)\s+Género", text)
+            country = m.group(1).strip() if m else ""
+            m = re.search(r"(\d{2,3})\s+minutos?\b", text)
+            duration = int(m.group(1)) if m else None
+            meta = {"title": title, "director": director, "country": country, "duration": duration}
+        except Exception:
+            continue
+        if not meta.get("title"):
+            continue
+
+        # Horarios via API JSON
+        try:
+            req = urllib.request.Request(
+                f"{BASE_API}/films/{fid}/tree",
+                headers={"User-Agent": UA, "Accept": "application/json"},
+            )
+            import json as _json
+            data = _json.loads(urllib.request.urlopen(req, timeout=15).read())
+        except Exception:
+            continue
+
+        for fecha_str, venues in (data.get("days") or {}).items():
+            try:
+                d = date.fromisoformat(fecha_str)
+            except ValueError:
+                continue
+            if d < today or d > end:
+                continue
+            for venue in venues:
+                for fmt in venue.get("formats", []):
+                    for perf in fmt.get("performances", []):
+                        st = perf.get("showTime") or ""
+                        m = re.match(r"(\d{1,2}):(\d{2})", st)
+                        if not m:
+                            continue
+                        hora = f"{int(m.group(1)):02d}:{m.group(2)}"
+                        result.append(Screening(
+                            cine="Cine Gaumont",
+                            title=meta["title"],
+                            fecha=d.isoformat(),
+                            hora=hora,
+                            ticket_url=f"{BASE_WEB}/pelicula.aspx?filmid={fid}",
+                            director=meta.get("director", ""),
+                            country=meta.get("country", ""),
+                            duration=meta.get("duration"),
+                        ))
+    return result
+
+
+# ---------------------------------------------------------------------------
+# CCK  (palaciolibertad.gob.ar — events con JSON-LD que detalla la programación)
+# ---------------------------------------------------------------------------
+
+CCK_MONTHS = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
+    "noviembre": 11, "diciembre": 12,
+}
+
+
+def scrape_cck(semanas: int = 2) -> list[Screening]:
+    """
+    1. Lista events desde palaciolibertad.gob.ar/cine/
+    2. Cada event tiene JSON-LD con "description" en HTML que detalla
+       fecha + hora + título de cada función dentro del ciclo.
+    """
+    BASE = "https://palaciolibertad.gob.ar"
+    try:
+        soup = fetch_html(f"{BASE}/cine/")
+    except Exception:
+        return []
+
+    event_urls: list[str] = []
+    seen: set[str] = set()
+    for a in soup.find_all("a", href=re.compile(r"/events/")):
+        u = a["href"]
+        if not u.startswith("http"):
+            u = BASE + u
+        if u not in seen:
+            seen.add(u)
+            event_urls.append(u)
+
+    result: list[Screening] = []
+    today = date.today()
+    end = today + timedelta(weeks=semanas)
+
+    import json as _json
+    import html as _html
+
+    for event_url in event_urls:
+        try:
+            ev_soup = fetch_html(event_url)
+        except Exception:
+            continue
+        h1 = ev_soup.find("h1")
+        cycle_name = h1.get_text(strip=True) if h1 else ""
+
+        # JSON-LD trae startDate/endDate y description con HTML
+        description_html = ""
+        for sc in ev_soup.find_all("script", type="application/ld+json"):
+            try:
+                d = _json.loads(sc.string)
+            except Exception:
+                continue
+            if not isinstance(d, dict) or d.get("@type") != "Event":
+                continue
+            description_html = _html.unescape(d.get("description") or "")
+            break
+        if not description_html:
+            continue
+
+        desc_soup = BeautifulSoup(description_html, "html.parser")
+        # Parseamos párrafo por párrafo. Cada <p> tiene este formato típico:
+        #   "Sábado 2 de mayo  19 h: TITLE"
+        #   "Domingo 17 de mayo  15 h: TITLE_A  17:30 h: TITLE_B"   (multi-slot)
+        # Estrategia: extraer el header de fecha del párrafo, después listar
+        # todos los slots "HH(:MM)? h: TITLE" dentro del mismo párrafo.
+        date_re = re.compile(
+            r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)\s+"
+            r"(\d{1,2})\s+de\s+(\w+)(?:\s+(?:de\s+)?(\d{4}))?",
+            re.IGNORECASE,
+        )
+        slot_re = re.compile(
+            r"(\d{1,2})(?::(\d{2}))?\s*h(?:s|oras)?\s*[:.\-–]\s*"
+            r"(.+?)"
+            r"(?=\s+\d{1,2}(?::\d{2})?\s*h(?:s|oras)?\s*[:.\-–]|\Z)",
+            re.IGNORECASE,
+        )
+
+        paragraphs: list[str] = []
+        for p in desc_soup.find_all("p"):
+            paragraphs.append(re.sub(r"\s+", " ", p.get_text(" ", strip=True)))
+        if not paragraphs:
+            paragraphs = [re.sub(r"\s+", " ", desc_soup.get_text(" ", strip=True))]
+
+        for para in paragraphs:
+            dm = date_re.search(para)
+            if not dm:
+                continue
+            day_num = int(dm.group(1))
+            month_name = dm.group(2).lower()
+            year = int(dm.group(3)) if dm.group(3) else today.year
+            month = CCK_MONTHS.get(month_name)
+            if not month:
+                continue
+            try:
+                d = date(year, month, day_num)
+            except ValueError:
+                continue
+            if d < today - timedelta(days=1):
+                try:
+                    d = date(year + 1, month, day_num)
+                except ValueError:
+                    continue
+            if d < today or d > end:
+                continue
+
+            # Slots a partir del fin del header de fecha
+            rest = para[dm.end():]
+            for sm in slot_re.finditer(rest):
+                hour = int(sm.group(1))
+                minute = int(sm.group(2)) if sm.group(2) else 0
+                raw_title = sm.group(3).strip(" -–:.,;")
+                if not raw_title or len(raw_title) < 2:
+                    continue
+                hora = f"{hour:02d}:{minute:02d}"
+                result.append(Screening(
+                    cine="CCK",
+                    title=raw_title,
+                    fecha=d.isoformat(),
+                    hora=hora,
+                    ticket_url=event_url,
+                    ciclo=cycle_name,
+                ))
+
+    # Deduplicar (cycle pages a veces repiten fechas)
+    seen_keys: set[tuple] = set()
+    deduped: list[Screening] = []
+    for s in result:
+        key = (s.title.lower(), s.fecha, s.hora)
+        if key not in seen_keys:
+            seen_keys.add(key)
+            deduped.append(s)
+    return deduped
+
+
+# ---------------------------------------------------------------------------
 # Cine Cosmos UBA  (cinecosmos.uba.ar — sitio estático con detalle por peli)
 # ---------------------------------------------------------------------------
 

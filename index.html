@@ -231,6 +231,8 @@
     .cine-munro    { border-color: #1a3a3a; color: #66bbbb; }
     .cine-lumiton  { border-color: #3a1a1a; color: #cc6666; }
     .cine-cosmos   { border-color: #3a3a1a; color: #ccbb44; }
+    .cine-gaumont  { border-color: #3a2a3a; color: #cc66cc; }
+    .cine-cck      { border-color: #2a2a3a; color: #8888cc; }
 
     .film-title {
       font-weight: 500;
@@ -384,6 +386,8 @@
   <button class="filter-btn" data-cine="Centro Cultural Munro">Munro</button>
   <button class="filter-btn" data-cine="Lumiton">Lumiton</button>
   <button class="filter-btn" data-cine="Cine Cosmos">Cosmos</button>
+  <button class="filter-btn" data-cine="Cine Gaumont">Gaumont</button>
+  <button class="filter-btn" data-cine="CCK">CCK</button>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
 </div>
 
@@ -514,6 +518,8 @@ function cineCssClass(cine) {
   if (cine === 'Centro Cultural Munro') return 'cine-munro';
   if (cine === 'Lumiton') return 'cine-lumiton';
   if (cine === 'Cine Cosmos') return 'cine-cosmos';
+  if (cine === 'Cine Gaumont') return 'cine-gaumont';
+  if (cine === 'CCK') return 'cine-cck';
   return '';
 }
 
