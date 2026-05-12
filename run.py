@@ -37,7 +37,7 @@ async def run_scraper(semanas: int = 2) -> None:
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
         scrape_lorca, scrape_lumiton_agenda, scrape_cosmos,
-        scrape_gaumont, scrape_cck,
+        scrape_gaumont, scrape_cck, scrape_arthaus,
     )
 
     print("🎬 Cargando Cine Lorca (manual)...", end=" ", flush=True)
@@ -110,6 +110,8 @@ async def run_scraper(semanas: int = 2) -> None:
         for name, fn in [
             ("Sala Lugones", lambda p: scrape_lugones(p)),
             ("Cacodelphia",  lambda p: scrape_cacodelphia(p)),
+            ("Arthaus",      lambda p: scrape_arthaus(p, semanas)),
+
         ]:
             print(f"🎬 Scrapeando {name}...", end=" ", flush=True)
             try:
