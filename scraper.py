@@ -872,6 +872,10 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
     1. Lista events desde palaciolibertad.gob.ar/cine/
     2. Cada event tiene JSON-LD con "description" en HTML que detalla
        fecha + hora + título de cada función dentro del ciclo.
+    
+    Manejo especial para eventos con múltiples películas por horario:
+    Ejemplo: "19 h: El castillo  Nancy"
+    Se parsea como DOS películas separadas.
     """
     BASE = "https://palaciolibertad.gob.ar"
     try:
@@ -922,6 +926,7 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
         # Parseamos párrafo por párrafo. Cada <p> tiene este formato típico:
         #   "Sábado 2 de mayo  19 h: TITLE"
         #   "Domingo 17 de mayo  15 h: TITLE_A  17:30 h: TITLE_B"   (multi-slot)
+        #   "Sábado 16 de mayo  19 h: El castillo  Nancy"  ← múltiples películas por hora
         # Estrategia: extraer el header de fecha del párrafo, después listar
         # todos los slots "HH(:MM)? h: TITLE" dentro del mismo párrafo.
         date_re = re.compile(
@@ -929,11 +934,13 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
             r"(\d{1,2})\s+de\s+(\w+)(?:\s+(?:de\s+)?(\d{4}))?",
             re.IGNORECASE,
         )
+        # Mejorado: captura títulos separados por saltos de línea o espacios dobles
+        # Ahora es más permisivo con saltos de línea entre películas
         slot_re = re.compile(
             r"(\d{1,2})(?::(\d{2}))?\s*h(?:s|oras)?\s*[:.\-–]\s*"
             r"(.+?)"
             r"(?=\s+\d{1,2}(?::\d{2})?\s*h(?:s|oras)?\s*[:.\-–]|\Z)",
-            re.IGNORECASE,
+            re.IGNORECASE | re.DOTALL,  # DOTALL permite que . coincida con saltos de línea
         )
 
         paragraphs: list[str] = []
@@ -969,18 +976,26 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
             for sm in slot_re.finditer(rest):
                 hour = int(sm.group(1))
                 minute = int(sm.group(2)) if sm.group(2) else 0
-                raw_title = sm.group(3).strip(" -–:.,;")
-                if not raw_title or len(raw_title) < 2:
-                    continue
-                hora = f"{hour:02d}:{minute:02d}"
-                result.append(Screening(
-                    cine="CCK",
-                    title=raw_title,
-                    fecha=d.isoformat(),
-                    hora=hora,
-                    ticket_url=event_url,
-                    ciclo=cycle_name,
-                ))
+                raw_title_chunk = sm.group(3).strip(" -–:.,;\n")
+                
+                # Si hay múltiples títulos separados por salto de línea o dos espacios,
+                # procesamos cada uno por separado
+                # Split por saltos de línea o múltiples espacios
+                titles = re.split(r'\s{2,}|\n', raw_title_chunk)
+                
+                for raw_title in titles:
+                    raw_title = raw_title.strip(" -–:.,;")
+                    if not raw_title or len(raw_title) < 2:
+                        continue
+                    hora = f"{hour:02d}:{minute:02d}"
+                    result.append(Screening(
+                        cine="CCK",
+                        title=raw_title,
+                        fecha=d.isoformat(),
+                        hora=hora,
+                        ticket_url=event_url,
+                        ciclo=cycle_name,
+                    ))
 
     # Deduplicar (cycle pages a veces repiten fechas)
     seen_keys: set[tuple] = set()
