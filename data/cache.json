@@ -289,11 +289,12 @@
     "year": null
   },
   "almas desesperadas": {
-    "url": "",
-    "title_en": "Almas desesperadas",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/dont-bother-to-knock/",
+    "title_en": "Don't Bother to Knock",
+    "director": "Roy Ward Baker",
+    "country": "USA",
+    "year": 1952,
+    "duration": 76
   },
   "amantes en el cielo": {
     "url": "https://letterboxd.com/film/lovers-in-the-sky/",
@@ -537,11 +538,12 @@
     "year": null
   },
   "los caballeros las prefieren rubias": {
-    "url": "",
-    "title_en": "Los caballeros las prefieren rubias",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/gentlemen-prefer-blondes/",
+    "title_en": "Gentlemen Prefer Blondes",
+    "director": "Howard Hawks",
+    "country": "USA",
+    "year": 1953,
+    "duration": 91
   },
   "gioia mia: un verano en sicilia": {
     "url": "https://letterboxd.com/film/sweetheart-2025-3/",
@@ -910,5 +912,149 @@
     "country": "Paraguay",
     "year": 2026,
     "duration": 78
+  },
+  "lo noy": {
+    "url": "https://letterboxd.com/film/lo-noy/",
+    "title_en": "Lo Noy",
+    "director": "Mario Varela",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 72
+  },
+  "boda sangrienta 2": {
+    "url": "https://letterboxd.com/film/ready-or-not-2-here-i-come/",
+    "title_en": "Ready or Not 2: Here I Come",
+    "director": "Matt Bettinelli-Olpin, Tyler Gillett",
+    "country": "USA",
+    "year": 2026,
+    "duration": 108
+  },
+  "jasmín": {
+    "url": "",
+    "title_en": "Jasmín",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "una eva y dos adanes": {
+    "url": "https://letterboxd.com/film/some-like-it-hot/",
+    "title_en": "Some Like It Hot",
+    "director": "Billy Wilder",
+    "country": "USA",
+    "year": 1959,
+    "duration": 123
+  },
+  "la comezón del séptimo año": {
+    "url": "https://letterboxd.com/film/the-seven-year-itch/",
+    "title_en": "The Seven Year Itch",
+    "director": "Billy Wilder",
+    "country": "USA",
+    "year": 1955,
+    "duration": 105
+  },
+  "la malvada": {
+    "url": "https://letterboxd.com/film/all-about-eve/",
+    "title_en": "All About Eve",
+    "director": "Joseph L. Mankiewicz",
+    "country": "USA",
+    "year": 1950,
+    "duration": 139
+  },
+  "la adorable pecadora": {
+    "url": "https://letterboxd.com/film/lets-make-love/",
+    "title_en": "Let's Make Love",
+    "director": "George Cukor",
+    "country": "USA",
+    "year": 1960,
+    "duration": 119
+  },
+  "la estrella silenciosa": {
+    "url": "",
+    "title_en": "La estrella silenciosa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "señales - una aventura espacial": {
+    "url": "",
+    "title_en": "Señales - Una aventura espacial",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "eolomea": {
+    "url": "https://letterboxd.com/film/eolomea/",
+    "title_en": "Eolomea",
+    "director": "Herrmann Zschoche",
+    "country": "Bulgaria, East Germany",
+    "year": 1972,
+    "duration": 82
+  },
+  "colo": {
+    "url": "https://letterboxd.com/film/colo/",
+    "title_en": "Colo",
+    "director": "Teresa Villaverde",
+    "country": "France, Portugal",
+    "year": 2017,
+    "duration": 136
+  },
+  "tres hermanos": {
+    "url": "https://letterboxd.com/film/tres-hermanos/",
+    "title_en": "Tres hermanos",
+    "director": "José Benavides hijo",
+    "country": "Mexico",
+    "year": 1943,
+    "duration": 87
+  },
+  "el murciélago": {
+    "url": "https://letterboxd.com/film/the-bat/",
+    "title_en": "The Bat",
+    "director": "Roland West",
+    "country": "USA",
+    "year": 1926,
+    "duration": 86
+  },
+  "el boxeador": {
+    "url": "https://letterboxd.com/film/battling-butler/",
+    "title_en": "Battling Butler",
+    "director": "Buster Keaton",
+    "country": "USA",
+    "year": 1926,
+    "duration": 77
+  },
+  "la madre": {
+    "url": "https://letterboxd.com/film/la-madre/",
+    "title_en": "La madre",
+    "director": "Angelo Maresca",
+    "country": "",
+    "year": 2013,
+    "duration": 90
+  },
+  "fausto": {
+    "url": "https://letterboxd.com/film/fausto/",
+    "title_en": "Fausto",
+    "director": "",
+    "country": "Mexico",
+    "year": 2017,
+    "duration": 106
+  },
+  "gorriones": {
+    "url": "https://letterboxd.com/film/gorriones/",
+    "title_en": "Gorriones",
+    "director": "Ricardo Villarán",
+    "country": "Argentina",
+    "year": 1925,
+    "duration": null
+  },
+  "el payaso": {
+    "url": "https://letterboxd.com/film/el-payaso/",
+    "title_en": "El Payaso",
+    "director": "Alejandra Mateo",
+    "country": "",
+    "year": 2024,
+    "duration": 13
   }
 }

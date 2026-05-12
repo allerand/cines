@@ -522,6 +522,7 @@ async def scrape_lugones(page: Page) -> list[Screening]:
         # Fetch /ver/ page ONCE; try cycle-format parse, fallback to estreno parse
         program: dict[tuple[int, str], dict] = {}
         estreno_meta: dict = {}
+        ver_text: Optional[str] = None
         if ver_url:
             ver_text = await fetch_ctba_ver_page(page, ver_url)
             if ver_text:
@@ -529,6 +530,47 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                 # Si no hay programa multi-film, parsear como estreno (peli única)
                 if not program:
                     estreno_meta = parse_ctba_estreno_page(ver_text)
+
+        # Para ciclos (múltiples películas): construir fechas directamente desde el
+        # programa, sin depender del entradasba ticket URL (que sólo cubre 1 film).
+        if program and ver_text:
+            # Extraer mes del encabezado tipo "Del miércoles 6 al miércoles 27 de mayo"
+            month_match = re.search(
+                r"al\s+\w+\s+\d+\s+de\s+(\w+)(?:\s+de\s+(\d{4}))?",
+                ver_text, re.IGNORECASE,
+            )
+            cycle_month: Optional[int] = None
+            cycle_year: int = today.year
+            if month_match:
+                cycle_month = MESES_ES.get(month_match.group(1).lower())
+                if month_match.group(2):
+                    cycle_year = int(month_match.group(2))
+            # Fallback: buscar cualquier mención de mes
+            if not cycle_month:
+                for m_name, m_num in MESES_ES.items():
+                    if len(m_name) > 3 and m_name in ver_text.lower():
+                        cycle_month = m_num
+                        break
+
+            if cycle_month:
+                for (day_num, hora), entry in program.items():
+                    try:
+                        d = date(cycle_year, cycle_month, day_num)
+                        if d < today - timedelta(days=1) or d > cutoff:
+                            continue
+                        result.append(Screening(
+                            cine="Sala Lugones",
+                            title=entry["title"],
+                            fecha=d.isoformat(), hora=hora,
+                            ticket_url=ticket_url,
+                            ciclo=cycle_name,
+                            director=entry.get("director", ""),
+                            country=entry.get("country", ""),
+                            year=entry.get("year"),
+                        ))
+                    except ValueError:
+                        pass
+            continue  # siguiente evento — no ir a entradasba
 
         if not ticket_url or "entradasba" not in ticket_url:
             result.append(Screening(
@@ -567,23 +609,7 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                     if d > cutoff:
                         continue
 
-                    # Look up individual film entry using day + rounded hour
-                    entry = (
-                        program.get((day, hora))
-                        or program.get((day, hora[:2] + ":00"))
-                    )
-                    if entry:
-                        result.append(Screening(
-                            cine="Sala Lugones",
-                            title=entry["title"],
-                            fecha=d.isoformat(), hora=hora,
-                            ticket_url=ticket_url,
-                            ciclo=cycle_name,
-                            director=entry.get("director", ""),
-                            country=entry.get("country", ""),
-                            year=entry.get("year"),
-                        ))
-                    elif estreno_meta:
+                    if estreno_meta:
                         # Película individual (estreno) — toda la metadata viene
                         # del /ver/ y el ciclo es "Estreno"
                         result.append(Screening(
