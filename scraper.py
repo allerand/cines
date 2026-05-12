@@ -398,6 +398,14 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
     """
     Parsea texto plano normalizado de una página /ver/ de ciclo CTBA.
     Devuelve {(day_of_month, "HH:00"): {"title","original_title","country","year","director"}}
+    
+    Patrón mejorado que captura múltiples películas por día:
+      Miércoles 6
+      A las 15 y 21 horas
+      Juventud en peligro
+      (Dangerous Years; EE.UU; 1947)
+      Dirección: Arthur Pierson.
+      ...
     """
     mapping: dict[tuple[int, str], dict] = {}
 
@@ -412,30 +420,51 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
     for i in range(1, len(parts), 2):
         day_num = int(parts[i])
         chunk = parts[i + 1] if i + 1 < len(parts) else ""
-        # Capture: hour1, hour2?, title, paren content, optional Dirección
-        for m in re.finditer(
-            r"A las (\d{1,2})(?:\s+y\s+(\d{1,2}))?\s+horas\s+([^\n(]{2,60}?)\s*"
-            r"\(([^)]+)\)\s*(?:Dirección\s*:?\s*([^.\n]+?)\s*(?:\.|Con|$|A las))?",
+        
+        # Primero, extraer los horarios del día: "A las 15 y 21 horas" o "A las 15 horas"
+        hour_match = re.search(
+            r"A las (\d{1,2})(?:\s+y\s+(\d{1,2}))?\s+horas?",
             chunk,
-            re.IGNORECASE,
-        ):
-            hour1 = int(m.group(1))
-            hour2 = int(m.group(2)) if m.group(2) else None
-            film = m.group(3).strip()
-            paren = m.group(4)
-            director_raw = m.group(5)
-            entry: dict = {"title": film}
-            pm = re.match(r"\s*([^;]+?)\s*;\s*([^;]+?)\s*;\s*(\d{4})\s*$", paren)
+            re.IGNORECASE
+        )
+        if not hour_match:
+            continue
+        
+        hours = [int(hour_match.group(1))]
+        if hour_match.group(2):
+            hours.append(int(hour_match.group(2)))
+        
+        # Ahora extraer cada película del día. Patrón:
+        # TITULO
+        # (original; país; año)
+        # Dirección: director
+        film_re = re.compile(
+            r"^([A-ZÁÉÍÓÚÑ][^\n(]+?)\s*\n"  # título en su propia línea
+            r"\(([^)]+)\)\s*\n?"  # metadata entre paréntesis
+            r"(?:Dirección[:\s]+([^\n.]+?))?(?:\n|$)",
+            re.MULTILINE | re.IGNORECASE
+        )
+        
+        for fm in film_re.finditer(chunk):
+            title = fm.group(1).strip()
+            paren_meta = fm.group(2)
+            director_raw = fm.group(3)
+            
+            entry: dict = {"title": title}
+            
+            # Parse metadata entre paréntesis: "Dangerous Years; EE.UU; 1947"
+            pm = re.match(r"\s*([^;]+?)\s*;\s*([^;]+?)\s*;\s*(\d{4})\s*$", paren_meta)
             if pm:
                 entry["original_title"] = pm.group(1).strip()
                 entry["country"] = pm.group(2).strip()
                 entry["year"] = int(pm.group(3))
+            
             if director_raw:
                 entry["director"] = re.sub(r"\s+", " ", director_raw).strip().rstrip(".")
-            if film:
-                mapping[(day_num, f"{hour1:02d}:00")] = entry
-                if hour2:
-                    mapping[(day_num, f"{hour2:02d}:00")] = entry
+            
+            # Asignar la película a cada hora del día
+            for hour in hours:
+                mapping[(day_num, f"{hour:02d}:00")] = entry
 
     return mapping
 
@@ -445,6 +474,8 @@ async def scrape_lugones(page: Page) -> list[Screening]:
     1. Lista eventos cine en complejoteatral.gob.ar/sala-leopoldo-lugones
     2. Para cada evento, scrapea la página de entradasba para obtener
        fechas y horarios exactos.
+    3. Para eventos con ciclos (múltiples películas), parsea la página /ver/
+       para extraer información de cada película del ciclo.
     """
     await page.goto(
         "https://complejoteatral.gob.ar/sala-leopoldo-lugones",
