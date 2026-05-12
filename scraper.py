@@ -1229,6 +1229,74 @@ def fetch_lumiton_evento_meta(url: str) -> dict:
 
     return out
 
+async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
+    await page.goto("https://arthaus.ar/cine", wait_until="networkidle", timeout=30000)
+    await page.wait_for_timeout(2500)
+
+    text = await page.evaluate("document.body.innerText")
+    lines = [re.sub(r"\s+", " ", l).strip() for l in text.splitlines() if l.strip()]
+
+    result: list[Screening] = []
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+
+    try:
+        start = lines.index("ARTHAUS CINE") + 1
+    except ValueError:
+        return []
+
+    block = lines[start:]
+    title = ""
+    director = ""
+
+    for i, line in enumerate(block):
+        if line.lower().startswith("dir."):
+            title = block[i - 1].strip()
+            director = line.replace("dir.", "").strip()
+            break
+
+    if not title:
+        return []
+
+    month_names = "|".join(MESES_ES.keys())
+
+    for line in block:
+        low = line.lower()
+
+        if not any(dia in low for dia in DIAS_ES):
+            continue
+        if " de " not in low:
+            continue
+
+        mh = re.search(rf"de\s+({month_names})", low)
+        th = re.search(r",\s*(\d{1,2})(?::(\d{2}))?\s*h", low)
+        if not mh or not th:
+            continue
+
+        month = MESES_ES.get(mh.group(1))
+        hora = f"{int(th.group(1)):02d}:{th.group(2) or '00'}"
+
+        before_month = low[:mh.start()]
+        days = [int(x) for x in re.findall(r"\b(\d{1,2})\b", before_month)]
+
+        for day in days:
+            try:
+                d = date(today.year, month, day)
+                if d < today - timedelta(days=1):
+                    d = date(today.year + 1, month, day)
+                if today <= d <= cutoff:
+                    result.append(Screening(
+                        cine="Arthaus",
+                        title=title,
+                        fecha=d.isoformat(),
+                        hora=hora,
+                        ticket_url="https://arthaus.ar/cine",
+                        director=director,
+                    ))
+            except ValueError:
+                pass
+
+    return result
 
 def scrape_lumiton_agenda() -> list[Screening]:
     """
