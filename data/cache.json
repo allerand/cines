@@ -870,5 +870,37 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "la luna de coco": {
+    "url": "https://letterboxd.com/film/la-luna-de-coco/",
+    "title_en": "Coco's Moon",
+    "director": "Javier Lester",
+    "country": "",
+    "year": 2024,
+    "duration": 67
+  },
+  "nuestros días en mi memoria. una película sobre estelares.": {
+    "url": "https://letterboxd.com/film/our-days-in-my-memory-a-film-about-estelares/",
+    "title_en": "Our Days in My Memory. A Film About Estelares",
+    "director": "Gonza López",
+    "country": "Argentina",
+    "year": null,
+    "duration": 90
+  },
+  "eternamente marilyn": {
+    "url": "",
+    "title_en": "Eternamente Marilyn",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "taxi driver": {
+    "url": "https://letterboxd.com/film/taxi-driver/",
+    "title_en": "Taxi Driver",
+    "director": "Martin Scorsese",
+    "country": "USA",
+    "year": 1976,
+    "duration": 114
   }
 }
