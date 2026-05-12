@@ -60,7 +60,7 @@
 
   .post-header {
     display: flex; flex-direction: column; gap: 8px;
-    padding-bottom: 32px; border-bottom: 2px solid var(--border);
+    padding-bottom: 32px; border-bottom: 2px solid var(--accent);
     margin-bottom: 24px;
   }
   .post-brand {
@@ -69,7 +69,7 @@
     text-transform: uppercase;
   }
   .post-date {
-    font-size: 48px; font-weight: 600; color: var(--text);
+    font-size: 48px; font-weight: 700; color: var(--accent);
     letter-spacing: -0.01em; line-height: 1.05;
     margin-top: 6px;
     text-transform: uppercase;
@@ -283,11 +283,21 @@ window.cartelera = {
 // Heurística: cuántas pelis entran por slide según el formato.
 // Conservador para que entren limpias incluso con director + año + ciclo.
 function filmsPerSlide(format) {
-  if (format === 'square') return 5;
-  if (format === 'portrait') return 6;
-  if (format === 'story') return 8;
-  return 6;
+  if (format === 'square') return 4;
+  if (format === 'portrait') return 5;
+  if (format === 'story') return 9;
+  return 5;
 }
+
+const DAY_ACCENT = [
+  '#e8805a', // domingo
+  '#5a9ee8', // lunes
+  '#e8c05a', // martes
+  '#a87ae8', // miércoles
+  '#5ae8a0', // jueves
+  '#e87aa8', // viernes
+  '#5ae8d8', // sábado
+];
 
 function getFilteredRows() {
   const date = document.getElementById('date').value;
@@ -314,6 +324,7 @@ function renderSlide(slideNum) {
     const dayName = DAYS_ES[dt.getDay()];
     const monthName = MONTHS_ES[m - 1];
     document.getElementById('post-date').textContent = `${dayName} ${d} de ${monthName}`.toLowerCase();
+    document.documentElement.style.setProperty('--accent', DAY_ACCENT[dt.getDay()]);
   } else {
     document.getElementById('post-date').textContent = '—';
   }
