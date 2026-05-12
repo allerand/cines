@@ -80,41 +80,10 @@ def build_caption(date_str: str) -> str:
     day = DAYS_ES[dt.weekday()]
     month = MONTHS_ES[m - 1]
 
-    cartelera_path = HERE / "data" / "cartelera.json"
-    top_lines: list[str] = []
-    if cartelera_path.exists():
-        try:
-            data = json.loads(cartelera_path.read_text(encoding="utf-8"))
-            rows = [s for s in data.get("screenings", []) if s.get("fecha") == date_str]
-            rows.sort(key=lambda s: (s.get("hora") or "99"))
-            for s in rows[:6]:
-                title = (s.get("title_en") or s.get("title_es") or "").strip()
-                if title and title == title.upper() and len(title) > 3:
-                    title = title[0] + title[1:].lower()
-                top_lines.append(f"{s.get('hora','')} · {title.lower()}")
-        except Exception:
-            pass
-
-    lines = [
-        f"🎬 la cartelera de hoy — {day} {d} de {month}",
-        "",
-        "todos los horarios de las salas de cine de buenos aires",
-        "malba · lugones · cacodelphia · lorca · york · munro · lumiton · cosmos · gaumont · cck",
-    ]
-    if top_lines:
-        lines.append("")
-        lines.append("destacados:")
-        lines.extend(top_lines)
-    lines += [
-        "",
-        "👉 toda la cartelera de la semana en sitedigo.com",
-        "(link también en bio)",
-        "",
-        "#cine #cineindependiente #cinearg #buenosaires #cartelera "
-        "#malba #salalugones #cacodelphia #cinelorca #cineyork #lumiton "
-        "#cinecosmos #cinegaumont #cck",
-    ]
-    return "\n".join(lines)
+    return (
+        f"Cartelera de cine en la ciudad — {day} {d} de {month}. "
+        "Toda la programación en sitedigo.com"
+    )
 
 
 def collect_slides(date_str: str, fmt: str) -> list[Path]:
