@@ -417,54 +417,52 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
     parts = day_re.split(normalized)
     # parts = [preamble, "6", chunk, "7", chunk, ...]
 
+    hour_re = re.compile(
+        r"A las (\d{1,2})(?:\s+y\s+(\d{1,2}))?\s+horas?",
+        re.IGNORECASE,
+    )
+    film_re = re.compile(
+        r"^([A-ZÁÉÍÓÚÑ][^\n(]+?)\s*\n"
+        r"\(([^)]+)\)\s*\n?"
+        r"(?:Dirección[:\s]+([^\n.]+?))?(?:\n|$)",
+        re.MULTILINE | re.IGNORECASE,
+    )
+
     for i in range(1, len(parts), 2):
         day_num = int(parts[i])
         chunk = parts[i + 1] if i + 1 < len(parts) else ""
-        
-        # Primero, extraer los horarios del día: "A las 15 y 21 horas" o "A las 15 horas"
-        hour_match = re.search(
-            r"A las (\d{1,2})(?:\s+y\s+(\d{1,2}))?\s+horas?",
-            chunk,
-            re.IGNORECASE
-        )
-        if not hour_match:
+
+        # Un día puede tener múltiples bloques "A las X horas", cada uno con su(s)
+        # película(s). Dividir el chunk por cada bloque horario.
+        hour_matches = list(hour_re.finditer(chunk))
+        if not hour_matches:
             continue
-        
-        hours = [int(hour_match.group(1))]
-        if hour_match.group(2):
-            hours.append(int(hour_match.group(2)))
-        
-        # Ahora extraer cada película del día. Patrón:
-        # TITULO
-        # (original; país; año)
-        # Dirección: director
-        film_re = re.compile(
-            r"^([A-ZÁÉÍÓÚÑ][^\n(]+?)\s*\n"  # título en su propia línea
-            r"\(([^)]+)\)\s*\n?"  # metadata entre paréntesis
-            r"(?:Dirección[:\s]+([^\n.]+?))?(?:\n|$)",
-            re.MULTILINE | re.IGNORECASE
-        )
-        
-        for fm in film_re.finditer(chunk):
-            title = fm.group(1).strip()
-            paren_meta = fm.group(2)
-            director_raw = fm.group(3)
-            
-            entry: dict = {"title": title}
-            
-            # Parse metadata entre paréntesis: "Dangerous Years; EE.UU; 1947"
-            pm = re.match(r"\s*([^;]+?)\s*;\s*([^;]+?)\s*;\s*(\d{4})\s*$", paren_meta)
-            if pm:
-                entry["original_title"] = pm.group(1).strip()
-                entry["country"] = pm.group(2).strip()
-                entry["year"] = int(pm.group(3))
-            
-            if director_raw:
-                entry["director"] = re.sub(r"\s+", " ", director_raw).strip().rstrip(".")
-            
-            # Asignar la película a cada hora del día
-            for hour in hours:
-                mapping[(day_num, f"{hour:02d}:00")] = entry
+
+        for idx, hm in enumerate(hour_matches):
+            hours = [int(hm.group(1))]
+            if hm.group(2):
+                hours.append(int(hm.group(2)))
+
+            sub_start = hm.end()
+            sub_end = hour_matches[idx + 1].start() if idx + 1 < len(hour_matches) else len(chunk)
+            sub_chunk = chunk[sub_start:sub_end]
+
+            for fm in film_re.finditer(sub_chunk):
+                title = fm.group(1).strip()
+                paren_meta = fm.group(2)
+                director_raw = fm.group(3)
+
+                entry: dict = {"title": title}
+                pm = re.match(r"\s*([^;]+?)\s*;\s*([^;]+?)\s*;\s*(\d{4})\s*$", paren_meta)
+                if pm:
+                    entry["original_title"] = pm.group(1).strip()
+                    entry["country"] = pm.group(2).strip()
+                    entry["year"] = int(pm.group(3))
+                if director_raw:
+                    entry["director"] = re.sub(r"\s+", " ", director_raw).strip().rstrip(".")
+
+                for hour in hours:
+                    mapping[(day_num, f"{hour:02d}:00")] = entry
 
     return mapping
 

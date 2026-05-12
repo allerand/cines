@@ -531,11 +531,12 @@
     "duration": 126
   },
   "almas perdidas": {
-    "url": "",
-    "title_en": "Almas perdidas",
-    "director": "",
-    "country": "",
-    "year": null
+    "url": "https://letterboxd.com/film/river-of-no-return/",
+    "title_en": "River of No Return",
+    "director": "Otto Preminger",
+    "country": "USA",
+    "year": 1954,
+    "duration": 91
   },
   "los caballeros las prefieren rubias": {
     "url": "https://letterboxd.com/film/gentlemen-prefer-blondes/",
@@ -1056,5 +1057,21 @@
     "country": "",
     "year": 2024,
     "duration": 13
+  },
+  "torrente pasional": {
+    "url": "https://letterboxd.com/film/niagara/",
+    "title_en": "Niagara",
+    "director": "Henry Hathaway",
+    "country": "USA",
+    "year": 1953,
+    "duration": 92
+  },
+  "en el polvo de las estrellas": {
+    "url": "",
+    "title_en": "En el polvo de las estrellas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
