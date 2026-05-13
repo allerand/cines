@@ -1073,5 +1073,29 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "lo habrás imaginado": {
+    "url": "https://letterboxd.com/film/lo-habras-imaginado/",
+    "title_en": "It's All In Your Head",
+    "director": "Victoria Chaya Miranda",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 102
+  },
+  "exit 8": {
+    "url": "https://letterboxd.com/film/exit-8/",
+    "title_en": "Exit 8",
+    "director": "Genki Kawamura",
+    "country": "Japan",
+    "year": 2025,
+    "duration": 95
+  },
+  "jota urondo, un cocinero impertinente": {
+    "url": "https://letterboxd.com/film/jota-urondo-un-cocinero-impertinente/",
+    "title_en": "Jota Urondo, An Impertinent Chef",
+    "director": "Juan Villegas, Mariana Erijimovich",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 70
   }
 }
