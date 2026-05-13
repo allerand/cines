@@ -1,0 +1,84 @@
+name: Post to Instagram (manual)
+
+# Workflow separado para postear a IG sin volver a correr el scraper.
+# Usa las PNGs ya commiteadas en posts/YYYY-MM-DD/.
+
+on:
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Fecha YYYY-MM-DD (vacío = hoy Buenos Aires)'
+        required: false
+        default: ''
+      mode:
+        description: 'Qué postear'
+        type: choice
+        options:
+          - both
+          - feed-only
+          - stories-only
+        default: both
+      dry_run:
+        description: 'Dry run (no postea, solo loguea)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Resolve date
+        id: date
+        run: |
+          if [ -z "${{ inputs.date }}" ]; then
+            d="$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
+          else
+            d="${{ inputs.date }}"
+          fi
+          echo "value=$d" >> "$GITHUB_OUTPUT"
+          echo "📅 fecha: $d"
+
+      - name: Verify slides exist
+        run: |
+          d="${{ steps.date.outputs.value }}"
+          echo "📂 contenido de posts/$d/:"
+          ls -la "posts/$d/" || (echo "❌ No hay slides para $d"; exit 1)
+
+      - name: Build mode flags
+        id: flags
+        run: |
+          case "${{ inputs.mode }}" in
+            feed-only)    echo "flag=--feed-only"    >> "$GITHUB_OUTPUT" ;;
+            stories-only) echo "flag=--stories-only" >> "$GITHUB_OUTPUT" ;;
+            *)            echo "flag="               >> "$GITHUB_OUTPUT" ;;
+          esac
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "dry=--dry-run" >> "$GITHUB_OUTPUT"
+          else
+            echo "dry="          >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Post to Instagram
+        env:
+          IG_USER_ID:      ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          PUBLIC_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
+        run: |
+          if [ "${{ inputs.dry_run }}" != "true" ] && { [ -z "$IG_USER_ID" ] || [ -z "$IG_ACCESS_TOKEN" ]; }; then
+            echo "❌ Faltan secrets IG_USER_ID / IG_ACCESS_TOKEN"
+            exit 1
+          fi
+          python3 scripts/post_to_instagram.py \
+            --date "${{ steps.date.outputs.value }}" \
+            ${{ steps.flags.outputs.flag }} \
+            ${{ steps.flags.outputs.dry }}
