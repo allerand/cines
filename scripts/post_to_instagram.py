@@ -18,6 +18,7 @@ Uso:
 import argparse
 import json
 import os
+import socket
 import sys
 import time
 import urllib.error
@@ -25,9 +26,17 @@ import urllib.parse
 import urllib.request
 from datetime import date as date_cls
 from pathlib import Path
+from typing import Optional
 
 API_VERSION = "v21.0"
 API_BASE = f"https://graph.facebook.com/{API_VERSION}"
+
+# GH Actions runners a veces resuelven graph.facebook.com a IPv6 sin egress IPv6,
+# resultando en "Network is unreachable". Forzamos IPv4.
+_orig_getaddrinfo = socket.getaddrinfo
+def _ipv4_only_getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
+    return _orig_getaddrinfo(host, port, socket.AF_INET, type, proto, flags)
+socket.getaddrinfo = _ipv4_only_getaddrinfo
 
 HERE = Path(__file__).resolve().parent.parent
 
@@ -36,17 +45,26 @@ MONTHS_ES = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
              "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
 
 
-def _request(method: str, url: str, params: dict) -> dict:
+def _request(method: str, url: str, params: dict, retries: int = 4) -> dict:
     data = urllib.parse.urlencode(params).encode() if method == "POST" else None
     if method == "GET":
         url = f"{url}?{urllib.parse.urlencode(params)}"
-    req = urllib.request.Request(url, data=data, method=method)
-    try:
-        with urllib.request.urlopen(req, timeout=30) as r:
-            return json.loads(r.read())
-    except urllib.error.HTTPError as e:
-        err = e.read().decode("utf-8", "replace")
-        raise RuntimeError(f"{method} {url} → {e.code}: {err}")
+    last_err: Optional[Exception] = None
+    for attempt in range(retries):
+        req = urllib.request.Request(url, data=data, method=method)
+        try:
+            with urllib.request.urlopen(req, timeout=30) as r:
+                return json.loads(r.read())
+        except urllib.error.HTTPError as e:
+            err = e.read().decode("utf-8", "replace")
+            raise RuntimeError(f"{method} {url} → {e.code}: {err}")
+        except (urllib.error.URLError, OSError) as e:
+            # Network is unreachable / DNS / timeout → backoff y reintento
+            last_err = e
+            wait = 2 ** attempt
+            print(f"  ⚠ network error ({e}); retry {attempt+1}/{retries} in {wait}s", file=sys.stderr)
+            time.sleep(wait)
+    raise RuntimeError(f"{method} {url} → falló tras {retries} reintentos: {last_err}")
 
 
 def api_post(endpoint: str, params: dict) -> dict:
