@@ -1,6 +1,34 @@
 {
-  "updated": "2026-05-13T14:08:29",
+  "updated": "2026-05-13T12:03:56",
   "screenings": [
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-12",
+      "hora": "15:00",
+      "title_es": "Mientras la ciudad duerme",
+      "title_en": "The Asphalt Jungle",
+      "director": "John Huston",
+      "country": "EE.UU",
+      "year": 1950,
+      "duration": 113,
+      "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-12",
+      "hora": "18:00",
+      "title_es": "Tempestad de pasiones",
+      "title_en": "Clash by Night",
+      "director": "Fritz Lang",
+      "country": "EE.UU",
+      "year": 1952,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/clash-by-night/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
     {
       "cine": "Cine Lorca",
       "fecha": "2026-05-13",
@@ -89,15 +117,15 @@
       "cine": "Sala Lugones",
       "fecha": "2026-05-13",
       "hora": "15:00",
-      "title_es": "Eternamente Marilyn",
-      "title_en": "Eternamente Marilyn",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "letterboxd": "",
+      "title_es": "Los inadaptados",
+      "title_en": "The Misfits",
+      "director": "John Huston",
+      "country": "EE.UU",
+      "year": 1961,
+      "duration": 124,
+      "letterboxd": "https://letterboxd.com/film/the-misfits/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
-      "ciclo": "Estreno"
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cine Cosmos",
@@ -240,6 +268,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-13",
+      "hora": "17:45",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-13",
       "hora": "18:00",
@@ -266,20 +308,6 @@
       "letterboxd": "https://letterboxd.com/film/76-89-23/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=468",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-13",
-      "hora": "18:00",
-      "title_es": "Ojos extraños",
-      "title_en": "Stranger Eyes",
-      "director": "Yeo Siew Hua",
-      "country": "France, Singapore",
-      "year": 2024,
-      "duration": 126,
-      "letterboxd": "https://letterboxd.com/film/stranger-eyes/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/64e67bf9-287c-4e2a-96f8-7bc6ce0e1ce9",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Cine Lorca",
@@ -439,15 +467,15 @@
       "cine": "Sala Lugones",
       "fecha": "2026-05-13",
       "hora": "21:00",
-      "title_es": "Eternamente Marilyn",
-      "title_en": "Eternamente Marilyn",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "letterboxd": "",
+      "title_es": "Tempestad de pasiones",
+      "title_en": "Clash by Night",
+      "director": "Fritz Lang",
+      "country": "EE.UU",
+      "year": 1952,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/clash-by-night/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
-      "ciclo": "Estreno"
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cacodelphia",
@@ -607,15 +635,15 @@
       "cine": "Sala Lugones",
       "fecha": "2026-05-14",
       "hora": "15:00",
-      "title_es": "Eternamente Marilyn",
-      "title_en": "Eternamente Marilyn",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "letterboxd": "",
+      "title_es": "La adorable pecadora",
+      "title_en": "Let's Make Love",
+      "director": "George Cukor",
+      "country": "EE.UU",
+      "year": 1960,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/lets-make-love/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
-      "ciclo": "Estreno"
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cine Cosmos",
@@ -702,6 +730,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-14",
+      "hora": "17:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-05-14",
       "hora": "18:00",
@@ -714,20 +756,6 @@
       "letterboxd": "https://letterboxd.com/film/reconquista-el-diario-de-scalabrini-ortiz/",
       "ticket_url": "https://lumiton.ar/evento/reconquista-el-diario-de-scalabrini-ortiz/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-14",
-      "hora": "18:00",
-      "title_es": "Ojos extraños",
-      "title_en": "Stranger Eyes",
-      "director": "Yeo Siew Hua",
-      "country": "France, Singapore",
-      "year": 2024,
-      "duration": 126,
-      "letterboxd": "https://letterboxd.com/film/stranger-eyes/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/64e67bf9-287c-4e2a-96f8-7bc6ce0e1ce9",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -915,15 +943,15 @@
       "cine": "Sala Lugones",
       "fecha": "2026-05-14",
       "hora": "21:00",
-      "title_es": "Eternamente Marilyn",
-      "title_en": "Eternamente Marilyn",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "letterboxd": "",
+      "title_es": "Almas desesperadas",
+      "title_en": "Don't Bother to Knock",
+      "director": "Roy Ward Baker",
+      "country": "EE.UU",
+      "year": 1952,
+      "duration": 76,
+      "letterboxd": "https://letterboxd.com/film/dont-bother-to-knock/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
-      "ciclo": "Estreno"
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cacodelphia",
@@ -1066,6 +1094,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-15",
+      "hora": "15:00",
+      "title_es": "Almas perdidas",
+      "title_en": "River of No Return",
+      "director": "Otto Preminger",
+      "country": "EE.UU",
+      "year": 1954,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/river-of-no-return/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-15",
       "hora": "15:05",
@@ -1178,6 +1220,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-15",
+      "hora": "17:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-05-15",
       "hora": "18:00",
@@ -1190,6 +1246,20 @@
       "letterboxd": "https://letterboxd.com/film/un-futuro-brillante/",
       "ticket_url": "https://lumiton.ar/evento/un-futuro-brillante/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-15",
+      "hora": "18:00",
+      "title_es": "Una Eva y dos Adanes",
+      "title_en": "Some Like It Hot",
+      "director": "Billy Wilder",
+      "country": "EE.UU",
+      "year": 1959,
+      "duration": 123,
+      "letterboxd": "https://letterboxd.com/film/some-like-it-hot/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cine Gaumont",
@@ -1358,6 +1428,20 @@
       "letterboxd": "https://letterboxd.com/film/exit-8/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-15",
+      "hora": "21:00",
+      "title_es": "Almas perdidas",
+      "title_en": "River of No Return",
+      "director": "Otto Preminger",
+      "country": "EE.UU",
+      "year": 1954,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/river-of-no-return/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cacodelphia",
@@ -1626,6 +1710,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-16",
+      "hora": "17:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": ""
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-05-16",
       "hora": "18:00",
@@ -1848,6 +1946,20 @@
       "letterboxd": "https://letterboxd.com/film/exit-8/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-16",
+      "hora": "21:00",
+      "title_es": "Los caballeros las prefieren rubias",
+      "title_en": "Gentlemen Prefer Blondes",
+      "director": "Howard Hawks",
+      "country": "EE.UU",
+      "year": 1953,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/gentlemen-prefer-blondes/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cacodelphia",
@@ -2144,6 +2256,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-17",
+      "hora": "17:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": ""
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-05-17",
       "hora": "17:30",
@@ -2184,6 +2310,20 @@
       "letterboxd": "https://letterboxd.com/film/the-headless-woman/",
       "ticket_url": "https://lumiton.ar/evento/la-mujer-sin-cabeza-2/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-17",
+      "hora": "18:00",
+      "title_es": "Una Eva y dos Adanes",
+      "title_en": "Some Like It Hot",
+      "director": "Billy Wilder",
+      "country": "EE.UU",
+      "year": 1959,
+      "duration": 123,
+      "letterboxd": "https://letterboxd.com/film/some-like-it-hot/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -2366,6 +2506,20 @@
       "letterboxd": "https://letterboxd.com/film/exit-8/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-17",
+      "hora": "21:00",
+      "title_es": "La comezón del séptimo año",
+      "title_en": "The Seven Year Itch",
+      "director": "Billy Wilder",
+      "country": "EE.UU",
+      "year": 1955,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/the-seven-year-itch/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cacodelphia",
@@ -2561,6 +2715,20 @@
       "duration": 115,
       "letterboxd": "https://letterboxd.com/film/case-137-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=357",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-18",
+      "hora": "17:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
       "ciclo": ""
     },
     {
@@ -2746,6 +2914,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-19",
+      "hora": "15:00",
+      "title_es": "Torrente pasional",
+      "title_en": "Niagara",
+      "director": "Henry Hathaway",
+      "country": "EE.UU",
+      "year": 1953,
+      "duration": 92,
+      "letterboxd": "https://letterboxd.com/film/niagara/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-19",
       "hora": "15:05",
@@ -2856,6 +3038,20 @@
       "letterboxd": "https://letterboxd.com/film/sweetheart-2025-3/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-19",
+      "hora": "18:00",
+      "title_es": "Los inadaptados",
+      "title_en": "The Misfits",
+      "director": "John Huston",
+      "country": "EE.UU",
+      "year": 1961,
+      "duration": 124,
+      "letterboxd": "https://letterboxd.com/film/the-misfits/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cine Gaumont",
@@ -2984,6 +3180,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-19",
+      "hora": "21:00",
+      "title_es": "Torrente pasional",
+      "title_en": "Niagara",
+      "director": "Henry Hathaway",
+      "country": "EE.UU",
+      "year": 1953,
+      "duration": 92,
+      "letterboxd": "https://letterboxd.com/film/niagara/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-19",
       "hora": "21:00",
@@ -3110,6 +3320,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-20",
+      "hora": "15:00",
+      "title_es": "La comezón del séptimo año",
+      "title_en": "The Seven Year Itch",
+      "director": "Billy Wilder",
+      "country": "EE.UU",
+      "year": 1955,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/the-seven-year-itch/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-20",
       "hora": "15:05",
@@ -3220,6 +3444,34 @@
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-20",
+      "hora": "17:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-20",
+      "hora": "18:00",
+      "title_es": "La malvada",
+      "title_en": "All About Eve",
+      "director": "Joseph L. Mankiewicz",
+      "country": "EE.UU",
+      "year": 1950,
+      "duration": 139,
+      "letterboxd": "https://letterboxd.com/film/all-about-eve/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cine Gaumont",
@@ -3432,6 +3684,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-21",
+      "hora": "15:00",
+      "title_es": "Eolomea",
+      "title_en": "Eolomea",
+      "director": "Herrmann Zschoche",
+      "country": "Bulgaria, East Germany",
+      "year": 1972,
+      "duration": 82,
+      "letterboxd": "https://letterboxd.com/film/eolomea/",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-21",
       "hora": "15:05",
@@ -3502,6 +3768,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-21",
+      "hora": "18:00",
+      "title_es": "La comezón del séptimo año",
+      "title_en": "The Seven Year Itch",
+      "director": "Billy Wilder",
+      "country": "EE.UU",
+      "year": 1955,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/the-seven-year-itch/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-05-21",
       "hora": "18:30",
@@ -3544,6 +3824,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-21",
+      "hora": "21:00",
+      "title_es": "La estrella silenciosa",
+      "title_en": "La estrella silenciosa",
+      "director": "",
+      "country": "República Democrática Alemana/República Popular de Polonia",
+      "year": 1960,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-21",
       "hora": "21:15",
@@ -3570,6 +3864,20 @@
       "letterboxd": "https://letterboxd.com/film/breathless/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=353",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-22",
+      "hora": "15:00",
+      "title_es": "En el polvo de las estrellas",
+      "title_en": "En el polvo de las estrellas",
+      "director": "",
+      "country": "República Democrática Alemana/Rumania",
+      "year": 1976,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
       "cine": "Cine Cosmos",
@@ -3626,6 +3934,20 @@
       "letterboxd": "https://letterboxd.com/film/ven-a-mi-casa-esta-navidad-2023/",
       "ticket_url": "https://lumiton.ar/evento/ven-a-mi-casa-esta-navidad-5/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-22",
+      "hora": "18:00",
+      "title_es": "La estrella silenciosa",
+      "title_en": "La estrella silenciosa",
+      "director": "",
+      "country": "República Democrática Alemana/República\n\nPopular de Polonia",
+      "year": 1960,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
       "cine": "MALBA",
@@ -3698,6 +4020,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-22",
+      "hora": "21:00",
+      "title_es": "En el polvo de las estrellas",
+      "title_en": "En el polvo de las estrellas",
+      "director": "",
+      "country": "República Democrática Alemana/Rumania",
+      "year": 1976,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-22",
       "hora": "21:15",
@@ -3752,6 +4088,20 @@
       "letterboxd": "https://letterboxd.com/film/breathless/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=353",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-23",
+      "hora": "15:00",
+      "title_es": "Señales - Una aventura espacial",
+      "title_en": "Señales - Una aventura espacial",
+      "director": "",
+      "country": "República Democrática Alemana/República Popular de Polonia",
+      "year": 1970,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
       "cine": "Cine Cosmos",
@@ -3824,6 +4174,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-23",
+      "hora": "18:00",
+      "title_es": "Una Eva y dos Adanes",
+      "title_en": "Some Like It Hot",
+      "director": "Billy Wilder",
+      "country": "EE.UU",
+      "year": 1959,
+      "duration": 123,
+      "letterboxd": "https://letterboxd.com/film/some-like-it-hot/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-23",
       "hora": "18:55",
@@ -3880,6 +4244,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-23",
+      "hora": "21:00",
+      "title_es": "Señales - Una aventura espacial",
+      "title_en": "Señales - Una aventura espacial",
+      "director": "",
+      "country": "República Democrática Alemana/República Popular de Polonia",
+      "year": 1970,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-23",
       "hora": "21:15",
@@ -3934,6 +4312,20 @@
       "letterboxd": "https://letterboxd.com/film/breathless/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=353",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-24",
+      "hora": "15:00",
+      "title_es": "Señales - Una aventura espacial",
+      "title_en": "Señales - Una aventura espacial",
+      "director": "",
+      "country": "República Democrática Alemana/República Popular de Polonia",
+      "year": 1970,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
       "cine": "Cine Cosmos",
@@ -4020,6 +4412,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-24",
+      "hora": "18:00",
+      "title_es": "La adorable pecadora",
+      "title_en": "Let's Make Love",
+      "director": "George Cukor",
+      "country": "EE.UU",
+      "year": 1960,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/lets-make-love/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-05-24",
       "hora": "18:30",
@@ -4076,6 +4482,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-24",
+      "hora": "21:00",
+      "title_es": "Eolomea",
+      "title_en": "Eolomea",
+      "director": "Herrmann Zschoche",
+      "country": "Bulgaria, East Germany",
+      "year": 1972,
+      "duration": 82,
+      "letterboxd": "https://letterboxd.com/film/eolomea/",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-24",
       "hora": "21:15",
@@ -4188,6 +4608,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-26",
+      "hora": "15:00",
+      "title_es": "En el polvo de las estrellas",
+      "title_en": "En el polvo de las estrellas",
+      "director": "",
+      "country": "República Democrática Alemana/Rumania",
+      "year": 1976,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-26",
       "hora": "15:05",
@@ -4230,6 +4664,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-26",
+      "hora": "18:00",
+      "title_es": "Eolomea",
+      "title_en": "Eolomea",
+      "director": "Herrmann Zschoche",
+      "country": "Bulgaria, East Germany",
+      "year": 1972,
+      "duration": 82,
+      "letterboxd": "https://letterboxd.com/film/eolomea/",
+      "ticket_url": "",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-26",
       "hora": "18:55",
@@ -4242,6 +4690,20 @@
       "letterboxd": "https://letterboxd.com/film/sentimental-value-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=358",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-26",
+      "hora": "21:00",
+      "title_es": "Los inadaptados",
+      "title_en": "The Misfits",
+      "director": "John Huston",
+      "country": "EE.UU",
+      "year": 1961,
+      "duration": 124,
+      "letterboxd": "https://letterboxd.com/film/the-misfits/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cine Cosmos",
@@ -4272,6 +4734,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-27",
+      "hora": "15:00",
+      "title_es": "Los caballeros las prefieren rubias",
+      "title_en": "Gentlemen Prefer Blondes",
+      "director": "Howard Hawks",
+      "country": "EE.UU",
+      "year": 1953,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/gentlemen-prefer-blondes/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-27",
       "hora": "15:05",
@@ -4314,6 +4790,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-27",
+      "hora": "18:00",
+      "title_es": "La comezón del séptimo año",
+      "title_en": "The Seven Year Itch",
+      "director": "Billy Wilder",
+      "country": "EE.UU",
+      "year": 1955,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/the-seven-year-itch/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-27",
       "hora": "18:55",
@@ -4326,6 +4816,20 @@
       "letterboxd": "https://letterboxd.com/film/sentimental-value-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=358",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-27",
+      "hora": "21:00",
+      "title_es": "Una Eva y dos Adanes",
+      "title_en": "Some Like It Hot",
+      "director": "Billy Wilder",
+      "country": "EE.UU",
+      "year": 1959,
+      "duration": 123,
+      "letterboxd": "https://letterboxd.com/film/some-like-it-hot/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cine Cosmos",
@@ -4398,6 +4902,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-29",
+      "hora": "15:00",
+      "title_es": "Tres hermanos",
+      "title_en": "Tres hermanos",
+      "director": "José Benavides hijo",
+      "country": "Mexico",
+      "year": 1943,
+      "duration": 87,
+      "letterboxd": "https://letterboxd.com/film/tres-hermanos/",
+      "ticket_url": "",
+      "ciclo": "Encuentro con Teresa Villaverde"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-05-29",
       "hora": "18:00",
@@ -4412,6 +4930,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-29",
+      "hora": "18:00",
+      "title_es": "Colo",
+      "title_en": "Colo",
+      "director": "Teresa Villaverde",
+      "country": "France, Portugal",
+      "year": 2017,
+      "duration": 136,
+      "letterboxd": "https://letterboxd.com/film/colo/",
+      "ticket_url": "",
+      "ciclo": "Encuentro con Teresa Villaverde"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-05-29",
       "hora": "20:30",
@@ -4424,6 +4956,20 @@
       "letterboxd": "https://letterboxd.com/film/jogo-de-cena/",
       "ticket_url": "https://lumiton.ar/evento/jogo-de-cena/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-30",
+      "hora": "15:00",
+      "title_es": "Colo",
+      "title_en": "Colo",
+      "director": "Teresa Villaverde",
+      "country": "France, Portugal",
+      "year": 2017,
+      "duration": 136,
+      "letterboxd": "https://letterboxd.com/film/colo/",
+      "ticket_url": "",
+      "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
       "cine": "Cine York",
@@ -4452,6 +4998,34 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/erase-una-vez-con-sebastian-de-caro-un-disparo-en-la-sombra/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-30",
+      "hora": "21:00",
+      "title_es": "Tres hermanos",
+      "title_en": "Tres hermanos",
+      "director": "José Benavides hijo",
+      "country": "Mexico",
+      "year": 1943,
+      "duration": 87,
+      "letterboxd": "https://letterboxd.com/film/tres-hermanos/",
+      "ticket_url": "",
+      "ciclo": "Encuentro con Teresa Villaverde"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-31",
+      "hora": "15:00",
+      "title_es": "Colo",
+      "title_en": "Colo",
+      "director": "Teresa Villaverde",
+      "country": "France, Portugal",
+      "year": 2017,
+      "duration": 136,
+      "letterboxd": "https://letterboxd.com/film/colo/",
+      "ticket_url": "",
+      "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -4511,31 +5085,283 @@
     },
     {
       "cine": "Sala Lugones",
-      "fecha": "Sin fecha",
-      "hora": "??",
-      "title_es": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia",
-      "title_en": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia",
-      "director": "",
-      "country": "",
-      "year": null,
+      "fecha": "2026-06-02",
+      "hora": "15:00",
+      "title_es": "Gorriones",
+      "title_en": "Gorriones",
+      "director": "Ricardo Villarán",
+      "country": "EE:UU",
+      "year": 1926,
       "duration": null,
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/gorriones/",
       "ticket_url": "",
-      "ciclo": ""
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
       "cine": "Sala Lugones",
-      "fecha": "Sin fecha",
-      "hora": "??",
-      "title_es": "Claude Chabrol bis",
-      "title_en": "Claude Chabrol bis",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "letterboxd": "",
+      "fecha": "2026-06-02",
+      "hora": "18:00",
+      "title_es": "El murciélago",
+      "title_en": "The Bat",
+      "director": "Roland West",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": 86,
+      "letterboxd": "https://letterboxd.com/film/the-bat/",
       "ticket_url": "",
-      "ciclo": ""
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-03",
+      "hora": "15:00",
+      "title_es": "La madre",
+      "title_en": "La madre",
+      "director": "Angelo Maresca",
+      "country": "",
+      "year": 2013,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/la-madre/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-03",
+      "hora": "18:00",
+      "title_es": "El boxeador",
+      "title_en": "Battling Butler",
+      "director": "Buster Keaton",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": 77,
+      "letterboxd": "https://letterboxd.com/film/battling-butler/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-04",
+      "hora": "15:00",
+      "title_es": "El boxeador",
+      "title_en": "Battling Butler",
+      "director": "Buster Keaton",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": 77,
+      "letterboxd": "https://letterboxd.com/film/battling-butler/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-05",
+      "hora": "15:00",
+      "title_es": "El murciélago",
+      "title_en": "The Bat",
+      "director": "Roland West",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": 86,
+      "letterboxd": "https://letterboxd.com/film/the-bat/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-05",
+      "hora": "18:00",
+      "title_es": "La madre",
+      "title_en": "La madre",
+      "director": "Angelo Maresca",
+      "country": "",
+      "year": 2013,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/la-madre/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-06",
+      "hora": "15:00",
+      "title_es": "El boxeador",
+      "title_en": "Battling Butler",
+      "director": "Buster Keaton",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": 77,
+      "letterboxd": "https://letterboxd.com/film/battling-butler/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-06",
+      "hora": "18:00",
+      "title_es": "Fausto",
+      "title_en": "Fausto",
+      "director": "",
+      "country": "Mexico",
+      "year": 2017,
+      "duration": 106,
+      "letterboxd": "https://letterboxd.com/film/fausto/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-07",
+      "hora": "15:00",
+      "title_es": "Gorriones",
+      "title_en": "Gorriones",
+      "director": "Ricardo Villarán",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": null,
+      "letterboxd": "https://letterboxd.com/film/gorriones/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-09",
+      "hora": "15:00",
+      "title_es": "El payaso",
+      "title_en": "El Payaso",
+      "director": "Alejandra Mateo",
+      "country": "",
+      "year": 2024,
+      "duration": 13,
+      "letterboxd": "https://letterboxd.com/film/el-payaso/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-09",
+      "hora": "18:00",
+      "title_es": "El boxeador",
+      "title_en": "Battling Butler",
+      "director": "Buster Keaton",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": 77,
+      "letterboxd": "https://letterboxd.com/film/battling-butler/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-10",
+      "hora": "15:00",
+      "title_es": "Fausto",
+      "title_en": "Fausto",
+      "director": "",
+      "country": "Mexico",
+      "year": 2017,
+      "duration": 106,
+      "letterboxd": "https://letterboxd.com/film/fausto/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-10",
+      "hora": "21:00",
+      "title_es": "La madre",
+      "title_en": "La madre",
+      "director": "Angelo Maresca",
+      "country": "",
+      "year": 2013,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/la-madre/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-11",
+      "hora": "21:00",
+      "title_es": "Fausto",
+      "title_en": "Fausto",
+      "director": "",
+      "country": "Mexico",
+      "year": 2017,
+      "duration": 106,
+      "letterboxd": "https://letterboxd.com/film/fausto/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-12",
+      "hora": "15:00",
+      "title_es": "El payaso",
+      "title_en": "El Payaso",
+      "director": "Alejandra Mateo",
+      "country": "",
+      "year": 2024,
+      "duration": 13,
+      "letterboxd": "https://letterboxd.com/film/el-payaso/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-12",
+      "hora": "18:00",
+      "title_es": "Gorriones",
+      "title_en": "Gorriones",
+      "director": "Ricardo Villarán",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": null,
+      "letterboxd": "https://letterboxd.com/film/gorriones/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-14",
+      "hora": "15:00",
+      "title_es": "El murciélago",
+      "title_en": "The Bat",
+      "director": "Roland West",
+      "country": "EE:UU",
+      "year": 1926,
+      "duration": 86,
+      "letterboxd": "https://letterboxd.com/film/the-bat/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-16",
+      "hora": "15:00",
+      "title_es": "La madre",
+      "title_en": "La madre",
+      "director": "Angelo Maresca",
+      "country": "",
+      "year": 2013,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/la-madre/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-17",
+      "hora": "18:00",
+      "title_es": "El payaso",
+      "title_en": "El Payaso",
+      "director": "Alejandra Mateo",
+      "country": "",
+      "year": 2024,
+      "duration": 13,
+      "letterboxd": "https://letterboxd.com/film/el-payaso/",
+      "ticket_url": "",
+      "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
       "cine": "Sala Lugones",
@@ -4548,34 +5374,6 @@
       "year": 2025,
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/justa/",
-      "ticket_url": "",
-      "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "Sin fecha",
-      "hora": "??",
-      "title_es": "Encuentro con Teresa Villaverde",
-      "title_en": "Encuentro con Teresa Villaverde",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "letterboxd": "",
-      "ticket_url": "",
-      "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "Sin fecha",
-      "hora": "??",
-      "title_es": "Cien años atrás: expresionismo, comedia, fantasía y drama",
-      "title_en": "Cien años atrás: expresionismo, comedia, fantasía y drama",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "letterboxd": "",
       "ticket_url": "",
       "ciclo": ""
     },
