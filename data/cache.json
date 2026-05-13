@@ -1097,5 +1097,45 @@
     "country": "Argentina",
     "year": 2025,
     "duration": 70
+  },
+  "blue heron": {
+    "url": "https://letterboxd.com/film/blue-heron/",
+    "title_en": "Blue Heron",
+    "director": "Sophy Romvari",
+    "country": "Canada, Hungary",
+    "year": 2025,
+    "duration": 91
+  },
+  "lo que trajo la tormenta": {
+    "url": "https://letterboxd.com/film/lo-que-trajo-la-tormenta/",
+    "title_en": "Brought with the Storm",
+    "director": "Miguel de Zuviría",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 119
+  },
+  "olivia": {
+    "url": "https://letterboxd.com/film/olivia-2025/",
+    "title_en": "Olivia",
+    "director": "Sofía Petersen",
+    "country": "Argentina, UK",
+    "year": 2025,
+    "duration": 127
+  },
+  "hombre de la atlántida": {
+    "url": "",
+    "title_en": "HOMBRE DE LA ATLÁNTIDA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "las poetas visitan a juana bignozzi": {
+    "url": "https://letterboxd.com/film/las-poetas-visitan-a-juana-bignozzi/",
+    "title_en": "The Poets Visit Juana Bignozzi",
+    "director": "Mercedes Halfon, Laura Citarella",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 90
   }
 }

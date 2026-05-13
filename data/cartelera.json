@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-13T12:21:10",
+  "updated": "2026-05-13T12:37:33",
   "screenings": [
     {
       "cine": "Cine Lorca",
@@ -842,6 +842,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-05-14",
+      "hora": "20:00",
+      "title_es": "Lo que trajo la tormenta",
+      "title_en": "Brought with the Storm",
+      "director": "Miguel de Zuviría",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/lo-que-trajo-la-tormenta/",
+      "ticket_url": "https://arthaus.ar/cine",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-14",
       "hora": "20:15",
@@ -1357,6 +1371,20 @@
       "duration": 113,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": ""
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-05-15",
+      "hora": "20:00",
+      "title_es": "OLIVIA",
+      "title_en": "Olivia",
+      "director": "Sofía Petersen",
+      "country": "Argentina, UK",
+      "year": 2025,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/olivia-2025/",
+      "ticket_url": "https://arthaus.ar/cine",
       "ciclo": ""
     },
     {
@@ -2421,6 +2449,20 @@
       "duration": 113,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": ""
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-05-17",
+      "hora": "20:00",
+      "title_es": "HOMBRE DE LA ATLÁNTIDA",
+      "title_en": "HOMBRE DE LA ATLÁNTIDA",
+      "director": "Simón Zorraquin",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "https://arthaus.ar/cine",
       "ciclo": ""
     },
     {
@@ -3782,6 +3824,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-05-21",
+      "hora": "20:00",
+      "title_es": "Blue Heron",
+      "title_en": "Blue Heron",
+      "director": "Sophy Romvari",
+      "country": "Canada, Hungary",
+      "year": 2025,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/blue-heron/",
+      "ticket_url": "https://arthaus.ar/cine",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-05-21",
       "hora": "20:30",
@@ -4202,6 +4258,20 @@
       "ciclo": "Revista Caligari"
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-05-23",
+      "hora": "20:00",
+      "title_es": "Las poetas visitan a Juana Bignozzi",
+      "title_en": "The Poets Visit Juana Bignozzi",
+      "director": "Laura Citarella & Mercedes Halfon",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/las-poetas-visitan-a-juana-bignozzi/",
+      "ticket_url": "https://arthaus.ar/cine",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-05-23",
       "hora": "20:30",
@@ -4437,6 +4507,20 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
       "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-05-24",
+      "hora": "20:00",
+      "title_es": "HIJO MAYOR",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 118,
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://arthaus.ar/cine",
       "ciclo": ""
     },
     {

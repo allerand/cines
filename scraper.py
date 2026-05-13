@@ -1232,6 +1232,9 @@ def fetch_lumiton_evento_meta(url: str) -> dict:
 async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
     await page.goto("https://arthaus.ar/cine", wait_until="networkidle", timeout=30000)
     await page.wait_for_timeout(2500)
+    for _ in range(8):
+    	await page.mouse.wheel(0, 1200)
+    	await page.wait_for_timeout(700)
 
     text = await page.evaluate("document.body.innerText")
     lines = [re.sub(r"\s+", " ", l).strip() for l in text.splitlines() if l.strip()]
@@ -1245,56 +1248,66 @@ async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
     except ValueError:
         return []
 
-    block = lines[start:]
-    title = ""
-    director = ""
-
+    block = lines[start:] 
     for i, line in enumerate(block):
-        if line.lower().startswith("dir."):
-            title = block[i - 1].strip()
-            director = line.replace("dir.", "").strip()
-            break
-
-    if not title:
-        return []
+        print(i, repr(line))
 
     month_names = "|".join(MESES_ES.keys())
+    date_re = re.compile(
+        rf"(?:(lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo|sábados|sabados|domingos)\s+)?"
+        rf"((?:\d{{1,2}}(?:\s*y\s*\d{{1,2}})*))\s+de\s+({month_names}),?\s+"
+        rf"(\d{{1,2}})(?::(\d{{2}}))?\s*(?:h|hs|horas?)",
+        re.IGNORECASE,
+    )
 
-    for line in block:
+    current_title = ""
+    current_director = ""
+
+    for i, line in enumerate(block):
         low = line.lower()
 
-        if not any(dia in low for dia in DIAS_ES):
-            continue
-        if " de " not in low:
+        if low in {"en cartelera", "programación anterior", "entradas", "reservá tu lugar"}:
             continue
 
-        mh = re.search(rf"de\s+({month_names})", low)
-        th = re.search(r",\s*(\d{1,2})(?::(\d{2}))?\s*h", low)
-        if not mh or not th:
+        if low.startswith("dir."):
+            current_director = re.sub(r"^dir\.\s*(por\s*)?", "", line, flags=re.IGNORECASE).strip()
+            if i > 0:
+                current_title = block[i - 1].strip()
             continue
 
-        month = MESES_ES.get(mh.group(1))
-        hora = f"{int(th.group(1)):02d}:{th.group(2) or '00'}"
+        if not current_title:
+            continue
 
-        before_month = low[:mh.start()]
-        days = [int(x) for x in re.findall(r"\b(\d{1,2})\b", before_month)]
+        for m in date_re.finditer(low):
+            days_raw = m.group(2)
+            month = MESES_ES.get(m.group(3).lower())
+            hour = int(m.group(4))
+            minute = int(m.group(5)) if m.group(5) else 0
 
-        for day in days:
-            try:
-                d = date(today.year, month, day)
-                if d < today - timedelta(days=1):
-                    d = date(today.year + 1, month, day)
-                if today <= d <= cutoff:
+            if not month:
+                continue
+
+            days = [int(x) for x in re.findall(r"\d{1,2}", days_raw)]
+            hora = f"{hour:02d}:{minute:02d}"
+
+            for day in days:
+                try:
+                    d = date(today.year, month, day)
+                    if d < today:
+                        continue
+                    if d > cutoff:
+                        continue
+
                     result.append(Screening(
                         cine="Arthaus",
-                        title=title,
+                        title=current_title,
                         fecha=d.isoformat(),
                         hora=hora,
                         ticket_url="https://arthaus.ar/cine",
-                        director=director,
+                        director=current_director,
                     ))
-            except ValueError:
-                pass
+                except ValueError:
+                    pass
 
     return result
 
