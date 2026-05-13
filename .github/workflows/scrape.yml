@@ -15,12 +15,14 @@ jobs:
     timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
-
+    
+      - name: Sync with main
+        run: git pull --ff-only origin main
+    
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
           cache: 'pip'
-
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
@@ -42,7 +44,6 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add data/cartelera.json data/cache.json posts/
 
           if git diff --cached --quiet; then
@@ -51,10 +52,8 @@ jobs:
           fi
 
           git commit -m "data: refresh cartelera + posts $(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
-
-          git pull --rebase origin main
           git push origin main
-
+          
       - name: Post to Instagram (feed carousel + stories)
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
