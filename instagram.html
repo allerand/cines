@@ -124,11 +124,11 @@
 
   /* Lowercase para el contenido (no para badges/labels uppercase) */
   .film-title {
-    font-size: 32px; font-weight: 500; line-height: 1.15;
+    font-size: 32px; font-weight: 700; line-height: 1.05;
     color: var(--text); text-transform: lowercase;
     display: block;
   }
-  .film-director { font-size: 22px; font-weight: 500; color: var(--text); line-height: 1.3; text-transform: lowercase; }
+  .film-director { font-size: 22px; font-weight: 700; color: var(--text); line-height: 1.3; text-transform: lowercase; }
   .film-meta { font-size: 16px; color: var(--muted); line-height: 1.4; }
   .film-ciclo { font-size: 14px; color: var(--muted); font-style: italic; margin-top: 2px; text-transform: lowercase; }
 
@@ -284,7 +284,7 @@ window.cartelera = {
 function filmsPerSlide(format) {
   if (format === 'square') return 4;
   if (format === 'portrait') return 5;
-  if (format === 'story') return 9;
+  if (format === 'story') return 7;
   return 5;
 }
 
