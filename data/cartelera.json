@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-13T18:47:11",
+  "updated": "2026-05-13T19:45:50",
   "screenings": [
     {
       "cine": "Cine Lorca",
@@ -86,20 +86,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-13",
-      "hora": "16:00",
-      "title_es": "Plata o Mierda",
-      "title_en": "Do or Die",
-      "director": "Marcos Joubert y Toia Bonino",
-      "country": "Argentina, Colombia",
-      "year": 2025,
-      "duration": 88,
-      "letterboxd": "https://letterboxd.com/film/plata-o-mierda/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=755",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-13",
       "hora": "16:15",
@@ -111,20 +97,6 @@
       "duration": 90,
       "letterboxd": "https://letterboxd.com/film/sweetheart-2025-3/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-13",
-      "hora": "16:30",
-      "title_es": "Nuestra Tierra",
-      "title_en": "Our Land",
-      "director": "Lucrecia Martel",
-      "country": "Argentina, Denmark",
-      "year": 2025,
-      "duration": 124,
-      "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
       "ciclo": ""
     },
     {
