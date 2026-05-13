@@ -82,7 +82,11 @@ def build_caption(date_str: str) -> str:
 
     return (
         f"Cartelera de cine en la ciudad — {day} {d} de {month}. "
-        "Toda la programación en sitedigo.com"
+        "Toda la programación en sitedigo.com "
+        "\n\n"
+        "#cine #cineindependiente #cinearg #buenosaires #cartelera "
+        "#malba #salalugones #cacodelphia #cinelorca #cineyork "
+        "#lumiton #cinecosmos #cinegaumont #cck"
     )
 
 
