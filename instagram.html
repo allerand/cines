@@ -76,7 +76,8 @@
   }
   
   .post.story .film {
-    padding: 18px 0;
+    position: relative;
+    padding: 26px 0 22px;
     grid-template-columns: 165px 1fr;
     gap: 34px;
     align-items: start;
@@ -84,13 +85,18 @@
   
   .post.story .film-time {
     font-size: 50px;
-    padding-top: 18px;
+    padding-top: 0;
     line-height: 1;
   }
-  .post.story .film-title {
-    font-size: 34px;
-    line-height: 1.05;
+
+   .post.story .film-body {
+    position: relative;
+    padding-top: 0;
   }
+   .post.story .film-title {
+     font-size: 34px;
+     line-height: 1.05;
+   }
   
   .post.story .film-director {
     font-size: 24px;
@@ -101,6 +107,9 @@
   }
   
   .post.story .film-cine {
+    position: absolute;
+    top: -22px;
+    left: 0;
     font-size: 14px;
     padding: 4px 8px;
   }
