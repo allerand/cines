@@ -233,6 +233,7 @@
     .cine-cosmos   { border-color: #3a3a1a; color: #ccbb44; }
     .cine-gaumont  { border-color: #3a2a3a; color: #cc66cc; }
     .cine-cck      { border-color: #2a2a3a; color: #8888cc; }
+    .cine-arthaus  { border-color: #1f3a2f; color: #66cc99; }
 
     .film-title {
       font-weight: 500;
@@ -388,6 +389,7 @@
   <button class="filter-btn" data-cine="Cine Cosmos">Cosmos</button>
   <button class="filter-btn" data-cine="Cine Gaumont">Gaumont</button>
   <button class="filter-btn" data-cine="CCK">CCK</button>
+  <button class="filter-btn" data-cine="Arthaus">Arthaus</button>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
 </div>
 
@@ -520,6 +522,7 @@ function cineCssClass(cine) {
   if (cine === 'Cine Cosmos') return 'cine-cosmos';
   if (cine === 'Cine Gaumont') return 'cine-gaumont';
   if (cine === 'CCK') return 'cine-cck';
+  if (cine === 'Arthaus') return 'cine-arthaus';
   return '';
 }
 
