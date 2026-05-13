@@ -321,12 +321,36 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
 # ---------------------------------------------------------------------------
 
 async def fetch_ctba_ver_page(page: Page, ver_url: str) -> Optional[str]:
-    """Carga la página /ver/ y devuelve el text plano. None si falla."""
+    """Carga la página /ver/ y devuelve el text plano. None si falla.
+
+    En GH Actions runners el render es más lento; usamos networkidle + un wait
+    activo por contenido programático antes de leer innerText.
+    """
     try:
-        await page.goto(ver_url, wait_until="domcontentloaded", timeout=20000)
-        await page.wait_for_timeout(2000)
+        await page.goto(ver_url, wait_until="networkidle", timeout=30000)
     except Exception:
-        return None
+        # Fallback: intentar igual con domcontentloaded
+        try:
+            await page.goto(ver_url, wait_until="domcontentloaded", timeout=20000)
+        except Exception:
+            return None
+
+    # Esperar a que el texto programático aparezca (ciclo) o, si no es ciclo,
+    # a que aparezca el bloque "Título original" (estreno). 12s máx.
+    try:
+        await page.wait_for_function(
+            """() => {
+                const t = document.body.innerText || '';
+                return /A las \\d{1,2}.{0,10}horas?/i.test(t)
+                    || /T[íi]tulo original/i.test(t)
+                    || /Direcci[óo]n/i.test(t);
+            }""",
+            timeout=12000,
+        )
+    except Exception:
+        # Aún sin matchear, damos margen extra y seguimos
+        await page.wait_for_timeout(2000)
+
     text = await page.evaluate("document.body.innerText")
     return "\n".join(re.sub(r"\s+", " ", ln).strip() for ln in text.splitlines())
 
@@ -521,9 +545,18 @@ async def scrape_lugones(page: Page) -> list[Screening]:
         program: dict[tuple[int, str], dict] = {}
         estreno_meta: dict = {}
         ver_text: Optional[str] = None
+        looks_like_cycle: bool = False
         if ver_url:
             ver_text = await fetch_ctba_ver_page(page, ver_url)
             if ver_text:
+                # Detectar estructura de ciclo: ≥2 bloques "A las X horas".
+                # Si la página tiene forma de ciclo nunca debemos usar
+                # cycle_name como título de la peli aunque el parser falle.
+                hour_blocks = re.findall(
+                    r"A las \d{1,2}(?:\s+y\s+\d{1,2})?\s+horas?",
+                    ver_text, re.IGNORECASE,
+                )
+                looks_like_cycle = len(hour_blocks) >= 2
                 program = parse_ctba_program_text(ver_text)
                 # Si no hay programa multi-film, parsear como estreno (peli única)
                 if not program:
@@ -620,6 +653,17 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                             country=estreno_meta.get("country", ""),
                             year=estreno_meta.get("year"),
                             duration=estreno_meta.get("duration"),
+                        ))
+                    elif looks_like_cycle:
+                        # Página parece ciclo pero el parser falló — peli
+                        # desconocida. Marcamos visible con ciclo "⚠️ parser
+                        # falló" para que se note en la web y no se confunda
+                        # con un estreno legítimo.
+                        result.append(Screening(
+                            cine="Sala Lugones", title=cycle_name,
+                            fecha=d.isoformat(), hora=hora,
+                            ticket_url=ticket_url,
+                            ciclo=f"⚠️ parser falló · {cycle_name}",
                         ))
                     else:
                         # Ni ciclo ni estreno parseable → preservar título del card

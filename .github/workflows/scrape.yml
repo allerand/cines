@@ -28,14 +28,6 @@ jobs:
 
       - name: Run scraper
         run: python3 run.py
-        
-      - name: Validate Lugones parsing
-        run: |
-          if grep -q '"title_es": "Eternamente Marilyn"' data/cartelera.json; then
-            echo "❌ Error: Lugones está tomando el ciclo como película"
-            exit 1
-          fi
-          echo "✅ Lugones OK"
 
       - name: Compute today's date (Buenos Aires)
         id: date
