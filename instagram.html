@@ -59,64 +59,69 @@
   .post.story {
     width: 1080px;
     height: 1920px;
-    padding: 170px 70px 70px;
+    padding: 130px 90px 100px;
   }
   
   .post.story .post-header {
-    padding-bottom: 32px;
-    margin-bottom: 24px;
+    padding-bottom: 36px;
+    margin-bottom: 34px;
   }
-  
+
   .post.story .post-brand {
-    font-size: 62px;
+    font-size: 58px;
   }
-  
+
   .post.story .post-date {
-    font-size: 54px;
+    font-size: 50px;
   }
-  
+
   .post.story .film {
-    position: relative;
-    padding: 26px 0 22px;
-    grid-template-columns: 165px 1fr;
-    gap: 34px;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 28px;
+    padding: 26px 0;
     align-items: start;
   }
-  
+
   .post.story .film-time {
-    font-size: 50px;
-    padding-top: 0;
+    font-size: 44px;
+    padding-top: 28px;
     line-height: 1;
   }
 
-   .post.story .film-body {
-    position: relative;
+  .post.story .film-body {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
     padding-top: 0;
   }
-   .post.story .film-title {
-     font-size: 34px;
-     line-height: 1.05;
-   }
-  
-  .post.story .film-director {
-    font-size: 24px;
+
+  .post.story .film-cine {
+    position: static;
+    font-size: 14px;
+    padding: 3px 9px;
   }
-  
+
+  .post.story .film-title {
+    font-size: 32px;
+    line-height: 1.05;
+  }
+
+  .post.story .film-director {
+    font-size: 22px;
+  }
+
   .post.story .film-meta {
     font-size: 16px;
   }
-  
-  .post.story .film-cine {
-    position: absolute;
-    top: -16px;
-    left: 0;
+
+  .post.story .film-ciclo {
     font-size: 14px;
-    padding: 4px 8px;
   }
-  
+
   .post.story .post-footer {
-    padding-top: 18px;
-    margin-top: 16px;
+    padding-top: 22px;
+    margin-top: 22px;
     font-size: 16px;
   }
   .post-header {
