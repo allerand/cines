@@ -1,34 +1,6 @@
 {
-  "updated": "2026-05-13T12:03:56",
+  "updated": "2026-05-13T12:21:10",
   "screenings": [
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-12",
-      "hora": "15:00",
-      "title_es": "Mientras la ciudad duerme",
-      "title_en": "The Asphalt Jungle",
-      "director": "John Huston",
-      "country": "EE.UU",
-      "year": 1950,
-      "duration": 113,
-      "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
-      "ciclo": "Eternamente Marilyn"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-12",
-      "hora": "18:00",
-      "title_es": "Tempestad de pasiones",
-      "title_en": "Clash by Night",
-      "director": "Fritz Lang",
-      "country": "EE.UU",
-      "year": 1952,
-      "duration": 105,
-      "letterboxd": "https://letterboxd.com/film/clash-by-night/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
-      "ciclo": "Eternamente Marilyn"
-    },
     {
       "cine": "Cine Lorca",
       "fecha": "2026-05-13",
