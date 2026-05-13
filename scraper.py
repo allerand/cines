@@ -546,9 +546,12 @@ async def scrape_lugones(page: Page) -> list[Screening]:
         estreno_meta: dict = {}
         ver_text: Optional[str] = None
         looks_like_cycle: bool = False
+        ver_text_len = 0
+        n_hour_blocks = 0
         if ver_url:
             ver_text = await fetch_ctba_ver_page(page, ver_url)
             if ver_text:
+                ver_text_len = len(ver_text)
                 # Detectar estructura de ciclo: ≥2 bloques "A las X horas".
                 # Si la página tiene forma de ciclo nunca debemos usar
                 # cycle_name como título de la peli aunque el parser falle.
@@ -556,11 +559,23 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                     r"A las \d{1,2}(?:\s+y\s+\d{1,2})?\s+horas?",
                     ver_text, re.IGNORECASE,
                 )
-                looks_like_cycle = len(hour_blocks) >= 2
+                n_hour_blocks = len(hour_blocks)
+                looks_like_cycle = n_hour_blocks >= 2
                 program = parse_ctba_program_text(ver_text)
                 # Si no hay programa multi-film, parsear como estreno (peli única)
                 if not program:
                     estreno_meta = parse_ctba_estreno_page(ver_text)
+
+        # Diagnóstico — muy útil para debuggear en runners
+        print(
+            f"  · {cycle_name[:50]:<50}  "
+            f"ver_text={ver_text_len:>5}B  "
+            f"hour_blocks={n_hour_blocks:>2}  "
+            f"program={len(program):>2}  "
+            f"estreno={'sí' if estreno_meta else 'no'}  "
+            f"ciclo_visible={looks_like_cycle}",
+            flush=True,
+        )
 
         # Para ciclos (múltiples películas): construir fechas directamente desde el
         # programa, sin depender del entradasba ticket URL (que sólo cubre 1 film).
