@@ -554,7 +554,7 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                 for (day_num, hora), entry in program.items():
                     try:
                         d = date(cycle_year, cycle_month, day_num)
-                        if d < today - timedelta(days=1) or d > cutoff:
+                        if d < today or d > cutoff:
                             continue
                         result.append(Screening(
                             cine="Sala Lugones",
