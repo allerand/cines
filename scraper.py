@@ -346,7 +346,8 @@ def fetch_ctba_ver_page_sync(ver_url: str) -> Optional[str]:
     # que parse_ctba_program_text espera.
     raw = soup.get_text("\n")
     return "\n".join(re.sub(r"\s+", " ", ln).strip() for ln in raw.splitlines() if ln.strip())
-
+def is_ctba_estreno_page(text: str) -> bool:
+    return bool(re.search(r"\bEstreno\s+exclusivo\b", text, re.IGNORECASE))
 
 def parse_ctba_estreno_page(text: str) -> dict:
     """
@@ -554,10 +555,13 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                 )
                 n_hour_blocks = len(hour_blocks)
                 looks_like_cycle = n_hour_blocks >= 2
-                program = parse_ctba_program_text(ver_text)
-                # Si no hay programa multi-film, parsear como estreno (peli única)
-                if not program:
+                is_estreno = is_ctba_estreno_page(ver_text)
+
+                if is_estreno:
+                    program = {}
                     estreno_meta = parse_ctba_estreno_page(ver_text)
+                else:
+                    program = parse_ctba_program_text(ver_text)
 
         # Diagnóstico — muy útil para debuggear en runners
         print(
@@ -572,8 +576,7 @@ async def scrape_lugones(page: Page) -> list[Screening]:
 
         # Para ciclos (múltiples películas): construir fechas directamente desde el
         # programa, sin depender del entradasba ticket URL (que sólo cubre 1 film).
-        if program and ver_text:
-            # Extraer mes del encabezado tipo "Del miércoles 6 al miércoles 27 de mayo"
+        if program and ver_text and not is_estreno:            # Extraer mes del encabezado tipo "Del miércoles 6 al miércoles 27 de mayo"
             month_match = re.search(
                 r"al\s+\w+\s+\d+\s+de\s+(\w+)(?:\s+de\s+(\d{4}))?",
                 ver_text, re.IGNORECASE,
@@ -648,7 +651,7 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                     if d > cutoff:
                         continue
 
-                    if estreno_meta:
+                    if is_estreno:
                         # Película individual (estreno) — toda la metadata viene
                         # del /ver/ y el ciclo es "Estreno"
                         result.append(Screening(

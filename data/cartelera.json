@@ -1,34 +1,6 @@
 {
-  "updated": "2026-05-14T11:19:26",
+  "updated": "2026-05-14T15:56:53",
   "screenings": [
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-14",
-      "hora": "14:30",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-14",
-      "hora": "14:45",
-      "title_es": "La Luna de Coco",
-      "title_en": "Coco's Moon",
-      "director": "Javier Lester Abálsamo",
-      "country": "",
-      "year": 2024,
-      "duration": 65,
-      "letterboxd": "https://letterboxd.com/film/la-luna-de-coco/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=778",
-      "ciclo": ""
-    },
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-14",
@@ -41,20 +13,6 @@
       "duration": 85,
       "letterboxd": "https://letterboxd.com/film/soy-tu-mensaje/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=360",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-14",
-      "hora": "15:00",
-      "title_es": "Nuestra Tierra",
-      "title_en": "Our Land",
-      "director": "Lucrecia Martel",
-      "country": "Argentina, Denmark",
-      "year": 2025,
-      "duration": 124,
-      "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
       "ciclo": ""
     },
     {
@@ -181,6 +139,34 @@
       "duration": 70,
       "letterboxd": "https://letterboxd.com/film/reconquista-el-diario-de-scalabrini-ortiz/",
       "ticket_url": "https://lumiton.ar/evento/reconquista-el-diario-de-scalabrini-ortiz/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-14",
+      "hora": "18:00",
+      "title_es": "Ojos extraños",
+      "title_en": "Stranger Eyes",
+      "director": "Yeo Siew Hua",
+      "country": "Singapur, Taiwán, Francia, Estados Unidos",
+      "year": 2024,
+      "duration": 126,
+      "letterboxd": "https://letterboxd.com/film/stranger-eyes/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/64e67bf9-287c-4e2a-96f8-7bc6ce0e1ce9",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-14",
+      "hora": "18:15",
+      "title_es": "El Renacer Albirrojo",
+      "title_en": "El Renacer Albirrojo",
+      "director": "Armando Aquino, Alfredo Galeano",
+      "country": "Paraguay",
+      "year": 2026,
+      "duration": 79,
+      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
       "ciclo": ""
     },
     {
@@ -718,6 +704,20 @@
     {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-15",
+      "hora": "18:15",
+      "title_es": "El Renacer Albirrojo",
+      "title_en": "El Renacer Albirrojo",
+      "director": "Armando Aquino, Alfredo Galeano",
+      "country": "Paraguay",
+      "year": 2026,
+      "duration": 79,
+      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-15",
       "hora": "18:30",
       "title_es": "El último viaje a China",
       "title_en": "El Último Viaje a China",
@@ -1231,6 +1231,20 @@
       "duration": 74,
       "letterboxd": "https://letterboxd.com/film/la-vida-a-oscuras/",
       "ticket_url": "https://lumiton.ar/evento/la-vida-a-oscuras/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-16",
+      "hora": "18:15",
+      "title_es": "El Renacer Albirrojo",
+      "title_en": "El Renacer Albirrojo",
+      "director": "Armando Aquino, Alfredo Galeano",
+      "country": "Paraguay",
+      "year": 2026,
+      "duration": 79,
+      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
       "ciclo": ""
     },
     {
@@ -1822,6 +1836,20 @@
       "ciclo": "Eternamente Marilyn"
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-17",
+      "hora": "18:15",
+      "title_es": "El Renacer Albirrojo",
+      "title_en": "El Renacer Albirrojo",
+      "director": "Armando Aquino, Alfredo Galeano",
+      "country": "Paraguay",
+      "year": 2026,
+      "duration": 79,
+      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-05-17",
       "hora": "18:30",
@@ -2258,6 +2286,20 @@
     {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-18",
+      "hora": "18:15",
+      "title_es": "El Renacer Albirrojo",
+      "title_en": "El Renacer Albirrojo",
+      "director": "Armando Aquino, Alfredo Galeano",
+      "country": "Paraguay",
+      "year": 2026,
+      "duration": 79,
+      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-18",
       "hora": "18:30",
       "title_es": "El último viaje a China",
       "title_en": "El Último Viaje a China",
@@ -2590,6 +2632,20 @@
       "letterboxd": "https://letterboxd.com/film/the-misfits/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
       "ciclo": "Eternamente Marilyn"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-19",
+      "hora": "18:15",
+      "title_es": "El Renacer Albirrojo",
+      "title_en": "El Renacer Albirrojo",
+      "director": "Armando Aquino, Alfredo Galeano",
+      "country": "Paraguay",
+      "year": 2026,
+      "duration": 79,
+      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
+      "ciclo": ""
     },
     {
       "cine": "Cine Gaumont",
@@ -3028,6 +3084,20 @@
     {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-20",
+      "hora": "18:15",
+      "title_es": "El Renacer Albirrojo",
+      "title_en": "El Renacer Albirrojo",
+      "director": "Armando Aquino, Alfredo Galeano",
+      "country": "Paraguay",
+      "year": 2026,
+      "duration": 79,
+      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-20",
       "hora": "18:30",
       "title_es": "El último viaje a China",
       "title_en": "El Último Viaje a China",
@@ -3260,7 +3330,7 @@
       "year": 1972,
       "duration": 82,
       "letterboxd": "https://letterboxd.com/film/eolomea/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -3428,7 +3498,7 @@
       "year": 1960,
       "duration": null,
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -3470,7 +3540,7 @@
       "year": 1976,
       "duration": null,
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -3540,7 +3610,7 @@
       "year": 1960,
       "duration": null,
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -3638,7 +3708,7 @@
       "year": 1976,
       "duration": null,
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -3708,7 +3778,7 @@
       "year": 1970,
       "duration": null,
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -3890,7 +3960,7 @@
       "year": 1970,
       "duration": null,
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -3960,7 +4030,7 @@
       "year": 1970,
       "duration": null,
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -4156,7 +4226,7 @@
       "year": 1972,
       "duration": 82,
       "letterboxd": "https://letterboxd.com/film/eolomea/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -4296,7 +4366,7 @@
       "year": 1976,
       "duration": null,
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -4352,7 +4422,7 @@
       "year": 1972,
       "duration": 82,
       "letterboxd": "https://letterboxd.com/film/eolomea/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
@@ -4748,20 +4818,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-29",
-      "hora": "15:00",
-      "title_es": "Tres hermanos",
-      "title_en": "Tres hermanos",
-      "director": "José Benavides hijo",
-      "country": "Mexico",
-      "year": 1943,
-      "duration": 87,
-      "letterboxd": "https://letterboxd.com/film/tres-hermanos/",
-      "ticket_url": "",
-      "ciclo": "Encuentro con Teresa Villaverde"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-05-29",
       "hora": "18:00",
@@ -4776,20 +4832,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-29",
-      "hora": "18:00",
-      "title_es": "Colo",
-      "title_en": "Colo",
-      "director": "Teresa Villaverde",
-      "country": "France, Portugal",
-      "year": 2017,
-      "duration": 136,
-      "letterboxd": "https://letterboxd.com/film/colo/",
-      "ticket_url": "",
-      "ciclo": "Encuentro con Teresa Villaverde"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-05-29",
       "hora": "20:30",
@@ -4802,20 +4844,6 @@
       "letterboxd": "https://letterboxd.com/film/jogo-de-cena/",
       "ticket_url": "https://lumiton.ar/evento/jogo-de-cena/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-30",
-      "hora": "15:00",
-      "title_es": "Colo",
-      "title_en": "Colo",
-      "director": "Teresa Villaverde",
-      "country": "France, Portugal",
-      "year": 2017,
-      "duration": 136,
-      "letterboxd": "https://letterboxd.com/film/colo/",
-      "ticket_url": "",
-      "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
       "cine": "Cine York",
@@ -4844,34 +4872,6 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/erase-una-vez-con-sebastian-de-caro-un-disparo-en-la-sombra/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-30",
-      "hora": "21:00",
-      "title_es": "Tres hermanos",
-      "title_en": "Tres hermanos",
-      "director": "José Benavides hijo",
-      "country": "Mexico",
-      "year": 1943,
-      "duration": 87,
-      "letterboxd": "https://letterboxd.com/film/tres-hermanos/",
-      "ticket_url": "",
-      "ciclo": "Encuentro con Teresa Villaverde"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-05-31",
-      "hora": "15:00",
-      "title_es": "Colo",
-      "title_en": "Colo",
-      "director": "Teresa Villaverde",
-      "country": "France, Portugal",
-      "year": 2017,
-      "duration": 136,
-      "letterboxd": "https://letterboxd.com/film/colo/",
-      "ticket_url": "",
-      "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -5220,6 +5220,20 @@
       "year": 2025,
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/justa/",
+      "ticket_url": "",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "Sin fecha",
+      "hora": "??",
+      "title_es": "Encuentro con Teresa Villaverde",
+      "title_en": "Encuentro con Teresa Villaverde",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "letterboxd": "",
       "ticket_url": "",
       "ciclo": ""
     },
