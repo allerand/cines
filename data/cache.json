@@ -1137,5 +1137,37 @@
     "country": "Argentina",
     "year": 2019,
     "duration": 90
+  },
+  "dar la cara": {
+    "url": "https://letterboxd.com/film/dar-la-cara/",
+    "title_en": "Dar la cara",
+    "director": "José A. Martínez Suárez",
+    "country": "Argentina",
+    "year": 1962,
+    "duration": 108
+  },
+  "la única opción": {
+    "url": "https://letterboxd.com/film/no-other-choice-2025/",
+    "title_en": "No Other Choice",
+    "director": "Park Chan-wook",
+    "country": "South Korea, France",
+    "year": 2025,
+    "duration": 140
+  },
+  "los lobos": {
+    "url": "",
+    "title_en": "Los lobos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "soy tu mensaje": {
+    "url": "https://letterboxd.com/film/soy-tu-mensaje/",
+    "title_en": "I Am Your Message",
+    "director": "Ricardo M. Jacobo",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 78
   }
 }
