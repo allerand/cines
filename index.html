@@ -40,10 +40,33 @@
     /* ── Header ── */
     header {
       border-bottom: 1px solid var(--border);
-      padding: 1.4rem 2rem;
+      padding: 0.35rem 2rem;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    
+    .header-text {
       display: flex;
       align-items: baseline;
-      gap: 1.2rem;
+      gap: 0.8rem;
+    }
+    
+    .logo-img {
+      height: 90px;
+      width: auto;
+      display: block;
+      opacity: 0.95;
+
+      margin-top: -10px;
+      margin-bottom: -10px;
     }
     header h1 {
       font-size: 1.1rem;
@@ -348,6 +371,15 @@
 
     /* ── Responsive ── */
     @media (max-width: 768px) {
+            .logo-img {
+        height: 28px;
+      }
+      
+      .header-text {
+        flex-direction: column;
+        gap: 0.1rem;
+        align-items: flex-start;
+      }
       header { padding: 1rem 1rem; }
       main { padding: 1rem; }
       .filters { padding: 0.6rem 1rem; }
@@ -376,8 +408,15 @@
 </div>
 
 <header>
-  <h1>Cartelera</h1>
-  <span class="subtitle">Cines · Buenos Aires</span>
+  <div class="header-left">
+    <img src="logo.png" alt="Logo" class="logo-img">
+
+    <div class="header-text">
+      <h1>Cartelera</h1>
+      <span class="subtitle">Cines · Buenos Aires</span>
+    </div>
+  </div>
+
   <span class="updated-badge" id="updated-badge"></span>
 </header>
 
@@ -424,7 +463,11 @@ async function loadData() {
 
     const updated = data.updated
       ? new Date(data.updated).toLocaleString('es-AR', {
-          day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit'
+          timeZone: 'America/Argentina/Buenos_Aires',
+          day: '2-digit',
+          month: 'short',
+          hour: '2-digit',
+          minute: '2-digit'
         })
       : '';
     document.getElementById('updated-badge').textContent =
