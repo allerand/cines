@@ -145,12 +145,16 @@
       .updated-badge {
           font-size: 0.65rem;
         }
-      }    
+         
 
-    /* ── Day tabs ── */
+/* ── Day tabs ── */
     .day-tabs-wrap {
       border-bottom: 1px solid var(--border);
-      overflow-x: auto;
+      overflow-x: auto;      /* Permite el scroll horizontal */
+      overflow-y: hidden;    /* Bloquea cualquier movimiento vertical raro */
+      width: 100%;           /* No deja que el contenedor sea más ancho que la pantalla */
+      display: block;
+      -webkit-overflow-scrolling: touch; /* Scroll suave en iOS */
       scrollbar-width: none;
     }
     .day-tabs-wrap::-webkit-scrollbar { display: none; }
@@ -159,10 +163,11 @@
       display: flex;
       padding: 0 1.5rem;
       gap: 0;
-      width: max-content;
+      width: max-content;    /* El contenido interior sí puede ser ancho */
     }
 
     .day-tab {
+      flex-shrink: 0;        /* IMPORTANTE: Evita que los días se achiquen */
       padding: 0.85rem 1.2rem;
       cursor: pointer;
       font-size: 0.82rem;
@@ -175,6 +180,7 @@
       flex-direction: column;
       align-items: center;
       gap: 0.15rem;
+      min-width: 80px;
     }
     .day-tab .day-name {
       font-weight: 600;
