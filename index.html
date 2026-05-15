@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G1XHLBZZY6"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-G1XHLBZZY6');
 </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartelera — Cines · Buenos Aires</title>
+  
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -41,48 +40,112 @@
     header {
       border-bottom: 1px solid var(--border);
       padding: 0.35rem 2rem;
+    }
 
+    .header-main-content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      /* Centrado vertical absoluto para que ambos lados coincidan en el eje medio */
+      align-items: center; 
+      width: 100%;
     }
-    
+
     .header-left {
       display: flex;
-      align-items: center;
-      gap: 0.9rem;
+      align-items: center; 
+      gap: 0; /* Controlamos el espacio vía margin-left en .header-text */
     }
-    
+    /* Bloque contenedor de las 3 líneas */
     .header-text {
       display: flex;
-      align-items: baseline;
-      gap: 0.8rem;
+      flex-direction: column;
+      justify-content: center; /* Centrado vertical respecto al logo */
+      gap: 3px;               /* Distancia uniforme entre líneas */
+      margin-left: 10px;      /* Pegado al logo como pediste */
     }
+    .insta-link-mobile { display: none; }
+    .insta-link-desktop { display: flex; align-items: center; color: var(--muted); transition: color 0.2s; }
+    .insta-link-desktop:hover, .insta-link-mobile:hover { color: var(--accent); }
     
+    /* Ajuste del logo para que el bloque de texto quede centrado a su altura */
     .logo-img {
-      height: 90px;
+      height: 85px;
       width: auto;
       display: block;
-      opacity: 0.95;
-
-      margin-top: -10px;
-      margin-bottom: -10px;
+      margin: 0;
     }
+
     header h1 {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      line-height: 1;         /* Reset de altura de línea para simetría */
+      margin: 0;
+      letter-spacing: 0.02em;
       color: var(--text);
     }
+
     header .subtitle {
-      font-size: 0.8rem;
+      font-size: 0.85rem;
+      line-height: 1;         /* Reset de altura de línea para simetría */
+      margin: 0;
       color: var(--muted);
+      white-space: nowrap;
     }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
     .updated-badge {
-      margin-left: auto;
       font-size: 0.72rem;
       color: var(--muted);
+      white-space: nowrap;
+      margin: 0;
+      /* Esto asegura que el texto se sienta centrado respecto a su propia altura */
+      line-height: 1; 
+      display: flex;
+      align-items: center;
     }
+    /* ── Responsive Header ── */
+      @media (max-width: 768px) {
+        .header-main-content {
+          /* En mobile mantenemos el centrado horizontal para que no "baile" arriba o abajo */
+          align-items: center;
+          flex-direction: row; 
+        }
+      }
+
+      .header-text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px; /* Este gap controla la separación igualitaria de las 3 líneas */
+        margin-left: 8px;
+      }
+
+      .insta-link-desktop { display: none; }
+      .insta-link-mobile {
+        display: flex; 
+        align-items: center; 
+        gap: 0.4rem; 
+        font-size: 0.85rem;
+        line-height: 1;         /* Reset de altura de línea para simetría */
+        margin: 0;
+        color: var(--accent);
+        text-decoration: none;
+      }
+      .header-right {
+        width: 100%;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+      }
+
+      .updated-badge {
+          font-size: 0.65rem;
+        }
+      }    
 
     /* ── Day tabs ── */
     .day-tabs-wrap {
@@ -119,13 +182,8 @@
       text-transform: uppercase;
       letter-spacing: 0.06em;
     }
-    .day-tab .day-date {
-      font-size: 0.75rem;
-    }
-    .day-tab .day-count {
-      font-size: 0.68rem;
-      color: var(--muted);
-    }
+    .day-tab .day-date { font-size: 0.75rem; }
+    .day-tab .day-count { font-size: 0.68rem; color: var(--muted); }
     .day-tab:hover { color: var(--text); }
     .day-tab.active {
       color: var(--accent);
@@ -183,27 +241,12 @@
       width: 14rem;
       transition: border-color 0.12s;
     }
-    .search-input:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
+    .search-input:focus { outline: none; border-color: var(--accent); }
     .search-input::placeholder { color: var(--muted); }
 
     /* ── Main content ── */
     main { padding: 1.5rem 2rem; }
 
-    .day-section { display: none; }
-    .day-section.visible { display: block; }
-
-    .section-header {
-      font-size: 0.75rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      margin-bottom: 1rem;
-    }
-
-    /* ── Table ── */
     .screening-table {
       width: 100%;
       border-collapse: collapse;
@@ -267,15 +310,8 @@
     .cine-cck      { border-color: #2a2a3a; color: #8888cc; }
     .cine-arthaus  { border-color: #1f3a2f; color: #66cc99; }
 
-    .film-title {
-      font-weight: 500;
-      color: var(--text);
-    }
-    .film-meta-row {
-      margin-top: 0.25rem;
-    }
-    /* Meta inline (director · año · duración · ciclo) — solo visible en mobile
-       cuando las columnas correspondientes están ocultas */
+    .film-title { font-weight: 500; color: var(--text); }
+    .film-meta-row { margin-top: 0.25rem; }
     .film-meta-inline {
       display: none;
       font-size: 0.72rem;
@@ -291,12 +327,7 @@
       letter-spacing: 0.02em;
     }
     .ticket-link:hover { text-decoration: underline; }
-    .ciclo-tag {
-      display: inline-block;
-      font-size: 0.7rem;
-      color: var(--muted);
-      font-style: italic;
-    }
+    .ciclo-tag { display: inline-block; font-size: 0.7rem; color: var(--muted); font-style: italic; }
 
     .lb-link {
       display: inline-flex;
@@ -314,40 +345,17 @@
       transition: all 0.12s;
       white-space: nowrap;
     }
-    .lb-link:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #000;
-    }
+    .lb-link:hover { background: var(--accent); border-color: var(--accent); color: #000; }
     .lb-link:hover .lb-dots span { opacity: 1; }
-    .lb-link.no-link {
-      opacity: 0.18;
-      pointer-events: none;
-    }
-    .lb-dots {
-      display: inline-flex;
-      gap: 2px;
-      align-items: center;
-    }
-    .lb-dots span {
-      display: block;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-    }
+    .lb-link.no-link { opacity: 0.18; pointer-events: none; }
+    .lb-dots { display: inline-flex; gap: 2px; align-items: center; }
+    .lb-dots span { display: block; width: 6px; height: 6px; border-radius: 50%; }
     .lb-dots span:nth-child(1) { background: #ef8232; }
     .lb-dots span:nth-child(2) { background: #00d060; }
     .lb-dots span:nth-child(3) { background: #40bcf4; }
 
-    /* ── Empty state ── */
-    .empty {
-      padding: 3rem 0;
-      text-align: center;
-      color: var(--muted);
-      font-size: 0.85rem;
-    }
+    .empty { padding: 3rem 0; text-align: center; color: var(--muted); font-size: 0.85rem; }
 
-    /* ── Loading ── */
     #loading {
       position: fixed; inset: 0;
       background: var(--bg);
@@ -369,63 +377,21 @@
     @keyframes spin { to { transform: rotate(360deg); } }
     #loading p { color: var(--muted); font-size: 0.8rem; }
 
-    /* ── Responsive ── */
     @media (max-width: 768px) {
-
-      .header-text {
-        flex-direction: column;
-        gap: 0.1rem;
-        align-items: flex-start;
-      }
-
       header { padding: 0.6rem 1rem; }
       main { padding: 1rem; }
       .filters { padding: 0.6rem 1rem; }
       .day-tabs { padding: 0 0.5rem; }
-
-      .col-ciclo,
-      .col-dir,
-      .col-pais,
-      .col-anio,
-      .col-dur {
-        display: none;
-      }
-
+      .col-ciclo, .col-dir, .col-pais, .col-anio, .col-dur { display: none; }
       .col-cine { width: 5rem; }
       .col-hora { width: 4rem; }
       .col-lb   { width: 3rem; }
-
-      .screening-table th,
-      .screening-table td {
-        padding: 0.45rem 0.4rem;
-      }
-
-      .film-meta-inline {
-        display: block;
-      }
-
-      .cine-tag {
-        font-size: 0.62rem;
-        padding: 0.12rem 0.35rem;
-      }
-
-      .lb-link {
-        padding: 0.2rem 0.35rem;
-      }
-
-      .lb-link .lb-dots span {
-        width: 5px;
-        height: 5px;
-      }
-
-      /* Ocultar dots del header y dejar solo "Letterboxd" */
-      th.col-lb .lb-dots {
-        display: none;
-      }
-
-      .lb-text {
-        display: inline;
-      }
+      .screening-table th, .screening-table td { padding: 0.45rem 0.4rem; }
+      .film-meta-inline { display: block; }
+      .cine-tag { font-size: 0.62rem; padding: 0.12rem 0.35rem; }
+      .lb-link { padding: 0.2rem 0.35rem; }
+      .lb-link .lb-dots span { width: 5px; height: 5px; }
+      th.col-lb .lb-dots { display: none; }
     }
   </style>
 </head>
@@ -437,17 +403,25 @@
 </div>
 
 <header>
-  <div class="header-left">
-    <img src="logo.png" alt="Logo" class="logo-img">
+  <div class="header-main-content">
+    <div class="header-left">
+      <img src="logo.png" alt="Logo" class="logo-img">
+      <div class="header-text">
+        <h1>Cartelera</h1>
+        <span class="subtitle">Cines · Buenos Aires</span>
+        <a href="https://www.instagram.com/sitedigocine/" target="_blank" rel="noopener" class="insta-link-mobile">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          <span>@sitedigocine</span>
+        </a>
+      </div>
+    </div>
 
-    <div class="header-text">
-      <h1>Cartelera</h1>
-      <span class="subtitle">Cines · Buenos Aires</span>
+    <div class="header-right">
+      <span class="updated-badge" id="updated-badge"></span>
     </div>
   </div>
-
-  <span class="updated-badge" id="updated-badge"></span>
 </header>
+
 
 <div class="day-tabs-wrap">
   <div class="day-tabs" id="day-tabs"></div>
@@ -474,15 +448,12 @@
 
 <script>
 const DAYS_ES = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
-const MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun',
-                   'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 
 let allScreenings = [];
 let activeDay = null;
 let activeCine = 'all';
 let searchQuery = '';
-
-// ── Carga de datos ──────────────────────────────────────────────
 
 async function loadData() {
   try {
@@ -490,45 +461,34 @@ async function loadData() {
     const data = await res.json();
     allScreenings = data.screenings || [];
 
-    const updated = data.updated
-      ? new Date(data.updated).toLocaleString('es-AR', {
-          timeZone: 'America/Argentina/Buenos_Aires',
+    if (data.updated) {
+      const dateObj = new Date(data.updated);
+      // Ajuste de 3 horas si el JSON viene en UTC pero necesitas hora local de Argentina
+      dateObj.setHours(dateObj.getHours() - 3); 
+      
+      const updated = dateObj.toLocaleString('es-AR', {
           day: '2-digit',
           month: 'short',
           hour: '2-digit',
-          minute: '2-digit'
-        })
-      : '';
-    document.getElementById('updated-badge').textContent =
-      updated ? 'Actualizado ' + updated : '';
+          minute: '2-digit',
+          hour12: false
+        });
+      document.getElementById('updated-badge').textContent = 'Actualizado ' + updated;
+    }
 
     buildDayTabs();
     document.getElementById('loading').classList.add('hidden');
   } catch (e) {
-    document.getElementById('loading').innerHTML =
-      '<p style="color:#c44">Error al cargar cartelera.json.<br>Ejecutá <code>python run.py</code> primero.</p>';
+    document.getElementById('loading').innerHTML = '<p style="color:#c44">Error al cargar datos.</p>';
   }
 }
 
-// ── Días ──────────────────────────────────────────────────────
-
 function buildDayTabs() {
-  const dates = [...new Set(
-    allScreenings
-      .map(s => s.fecha)
-      .filter(f => /^\d{4}-\d{2}-\d{2}$/.test(f))
-  )].sort();
-
+  const dates = [...new Set(allScreenings.map(s => s.fecha).filter(f => /^\d{4}-\d{2}-\d{2}$/.test(f)))].sort();
   const container = document.getElementById('day-tabs');
   container.innerHTML = '';
 
-  // Tab "Sin fecha" si hay funciones sin fecha
-  const withoutDate = allScreenings.filter(s => s.fecha === 'Sin fecha');
-
-  const todayStr = (() => {
-    const t = new Date();
-    return `${t.getFullYear()}-${String(t.getMonth()+1).padStart(2,'0')}-${String(t.getDate()).padStart(2,'0')}`;
-  })();
+  const todayStr = new Date().toISOString().split('T')[0];
 
   dates.forEach((fecha, i) => {
     const [y, m, d] = fecha.split('-').map(Number);
@@ -540,48 +500,24 @@ function buildDayTabs() {
     const tab = document.createElement('div');
     tab.className = 'day-tab' + (fecha === todayStr ? ' today' : '');
     tab.dataset.fecha = fecha;
-    tab.innerHTML = `
-      <span class="day-name">${dayName}</span>
-      <span class="day-date">${d} ${monthName}</span>
-      <span class="day-count">${count} func.</span>
-    `;
+    tab.innerHTML = `<span class="day-name">${dayName}</span><span class="day-date">${d} ${monthName}</span><span class="day-count">${count} func.</span>`;
     tab.addEventListener('click', () => selectDay(fecha));
     container.appendChild(tab);
-
     if (i === 0) selectDay(fecha);
   });
-
-  if (withoutDate.length > 0) {
-    const tab = document.createElement('div');
-    tab.className = 'day-tab';
-    tab.dataset.fecha = 'Sin fecha';
-    tab.innerHTML = `
-      <span class="day-name">—</span>
-      <span class="day-date">Sin fecha</span>
-      <span class="day-count">${withoutDate.length} func.</span>
-    `;
-    tab.addEventListener('click', () => selectDay('Sin fecha'));
-    container.appendChild(tab);
-  }
 }
 
 function selectDay(fecha) {
   activeDay = fecha;
-  document.querySelectorAll('.day-tab').forEach(t => {
-    t.classList.toggle('active', t.dataset.fecha === fecha);
-  });
+  document.querySelectorAll('.day-tab').forEach(t => t.classList.toggle('active', t.dataset.fecha === fecha));
   renderTable();
 }
-
-// ── Filtro por cine ──────────────────────────────────────────
 
 document.getElementById('filters').addEventListener('click', e => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
   activeCine = btn.dataset.cine;
-  document.querySelectorAll('.filter-btn').forEach(b =>
-    b.classList.toggle('active', b.dataset.cine === activeCine)
-  );
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
   renderTable();
 });
 
@@ -590,145 +526,51 @@ document.getElementById('search-input').addEventListener('input', e => {
   renderTable();
 });
 
-// ── Render ───────────────────────────────────────────────────
-
 function cineCssClass(cine) {
-  if (cine === 'MALBA') return 'cine-malba';
-  if (cine === 'Sala Lugones') return 'cine-lugones';
-  if (cine === 'Cacodelphia') return 'cine-cacode';
-  if (cine === 'Cine Lorca') return 'cine-lorca';
-  if (cine === 'Cine York') return 'cine-york';
-  if (cine === 'Centro Cultural Munro') return 'cine-munro';
-  if (cine === 'Lumiton') return 'cine-lumiton';
-  if (cine === 'Cine Cosmos') return 'cine-cosmos';
-  if (cine === 'Cine Gaumont') return 'cine-gaumont';
-  if (cine === 'CCK') return 'cine-cck';
-  if (cine === 'Arthaus') return 'cine-arthaus';
-  return '';
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus' };
+  return map[cine] || '';
 }
 
-function escapeHtml(s) {
-  return String(s)
-    .replace(/&/g, '&amp;')
-    .replace(/</g, '&lt;')
-    .replace(/>/g, '&gt;')
-    .replace(/"/g, '&quot;');
-}
-
-// Países donde el título original NO es inglés — respetamos el title_es local
-// (que ya es el título original o su traducción al castellano usada en BA)
-// en vez de la versión en inglés de Letterboxd
-const ORIGINAL_LANG_COUNTRIES = [
-  // Hispanohablantes
-  'argentina', 'españa', 'spain', 'méxico', 'mexico', 'chile', 'uruguay',
-  'colombia', 'perú', 'peru', 'venezuela', 'ecuador', 'bolivia', 'paraguay',
-  'cuba', 'guatemala', 'honduras', 'nicaragua', 'costa rica', 'panamá', 'panama',
-  'república dominicana', 'el salvador', 'puerto rico',
-  // Lusófonos (las salas suelen mostrar el título original en portugués)
-  'brasil', 'brazil', 'portugal',
-];
-
-function normalizeAllCaps(t) {
-  if (!t) return '';
-  if (t === t.toUpperCase() && t.length > 3) {
-    return t.charAt(0) + t.slice(1).toLowerCase();
-  }
-  return t;
-}
+function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 
 function displayTitle(s) {
-  const lb = s.title_en || '';
-  const local = s.title_es || '';
-  const country = (s.country || '').toLowerCase();
-  const keepLocal = ORIGINAL_LANG_COUNTRIES.some(c => country.includes(c));
-  // País no anglosajón: respetar el título local (suele ser el original)
-  if (keepLocal && local) return normalizeAllCaps(local);
-  // Sino, preferir la versión de Letterboxd (con casing correcto)
-  if (lb && s.letterboxd) return lb;
-  return normalizeAllCaps(local) || lb;
+  const lb = s.title_en || '', local = s.title_es || '', country = (s.country || '').toLowerCase();
+  const keepLocal = ['argentina', 'españa', 'spain', 'méxico', 'mexico', 'chile', 'uruguay', 'brasil', 'brazil', 'portugal'].some(c => country.includes(c));
+  if (keepLocal && local) return local;
+  return s.letterboxd && lb ? lb : (local || lb);
 }
 
 function renderTable() {
   const main = document.getElementById('main');
-
   let rows = allScreenings.filter(s => s.fecha === activeDay);
-  if (activeCine !== 'all') {
-    rows = rows.filter(s => s.cine === activeCine);
-  }
-  if (searchQuery) {
-    rows = rows.filter(s => {
-      const hay = [s.title_es, s.title_en, s.director, s.ciclo]
-        .filter(Boolean).join(' ').toLowerCase();
-      return hay.includes(searchQuery);
-    });
-  }
+  if (activeCine !== 'all') rows = rows.filter(s => s.cine === activeCine);
+  if (searchQuery) rows = rows.filter(s => [s.title_es, s.title_en, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
 
   if (rows.length === 0) {
-    main.innerHTML = '<div class="empty">No hay funciones para este día con los filtros seleccionados.</div>';
+    main.innerHTML = '<div class="empty">No hay funciones.</div>';
     return;
   }
 
   const tbody = rows.map(s => {
-    const horaClass = (s.hora === '??' || !s.hora) ? 'hora-tag unknown' : 'hora-tag';
     const horaText = (s.hora === '??' || !s.hora) ? 'S/H' : s.hora;
-    const cineClass = cineCssClass(s.cine);
-
-    let filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>`;
-    // Línea inline para mobile (cuando dir/pais/año/duración/ciclo están ocultos)
-    const inlineParts = [
-      s.director,
-      s.year,
-      s.duration ? s.duration + ' min' : '',
-      s.country,
-    ].filter(Boolean);
-    if (inlineParts.length) {
-      filmCell += `<div class="film-meta-inline">${escapeHtml(inlineParts.join(' · '))}${
-        s.ciclo ? ` <em>· ${escapeHtml(s.ciclo)}</em>` : ''
-      }</div>`;
-    } else if (s.ciclo) {
-      filmCell += `<div class="film-meta-inline"><em>${escapeHtml(s.ciclo)}</em></div>`;
-    }
-    if (s.ticket_url) {
-      filmCell += `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank" rel="noopener">Entradas →</a></div>`;
-    }
-
-    const lbHref = s.letterboxd || '';
-    const lbClass = lbHref ? 'lb-link' : 'lb-link no-link';
-    const lbAttr  = lbHref ? `href="${escapeHtml(lbHref)}" target="_blank" rel="noopener"` : '';
-
-    const ciclo = s.ciclo ? `<span class="ciclo-tag">${escapeHtml(s.ciclo)}</span>` : '';
+    const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>
+      <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
+      ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank">Entradas →</a></div>` : ''}`;
 
     return `<tr>
-      <td class="col-hora"><span class="${horaClass}">${horaText}</span></td>
-      <td class="col-cine"><span class="cine-tag ${cineClass}">${escapeHtml(s.cine)}</span></td>
+      <td class="col-hora"><span class="hora-tag">${horaText}</span></td>
+      <td class="col-cine"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span></td>
       <td class="col-film">${filmCell}</td>
-      <td class="col-ciclo">${ciclo}</td>
+      <td class="col-ciclo">${s.ciclo ? `<span class="ciclo-tag">${escapeHtml(s.ciclo)}</span>` : ''}</td>
       <td class="col-dir">${escapeHtml(s.director || '')}</td>
       <td class="col-pais">${escapeHtml(s.country || '')}</td>
       <td class="col-anio">${s.year || ''}</td>
       <td class="col-dur">${s.duration ? s.duration + ' min' : ''}</td>
-      <td class="col-lb"><a class="${lbClass}" ${lbAttr}><span class="lb-dots"><span></span><span></span><span></span></span></a></td>
+      <td class="col-lb"><a class="lb-link ${s.letterboxd ? '' : 'no-link'}" href="${s.letterboxd || '#'}" target="_blank"><span class="lb-dots"><span></span><span></span><span></span></span></a></td>
     </tr>`;
   }).join('');
 
-  main.innerHTML = `
-    <table class="screening-table">
-      <thead>
-        <tr>
-          <th class="col-hora">Hora</th>
-          <th class="col-cine">Cine</th>
-          <th class="col-film">Película</th>
-          <th class="col-ciclo">Ciclo</th>
-          <th class="col-dir">Director</th>
-          <th class="col-pais">País</th>
-          <th class="col-anio">Año</th>
-          <th class="col-dur">Duración</th>
-          <th class="col-lb"><span class="lb-text">Letterboxd</span></th>      
-          </tr>
-      </thead>
-      <tbody>${tbody}</tbody>
-    </table>
-  `;
+  main.innerHTML = `<table class="screening-table"><thead><tr><th class="col-hora">Hora</th><th class="col-cine">Cine</th><th class="col-film">Película</th><th class="col-ciclo">Ciclo</th><th class="col-dir">Director</th><th class="col-pais">País</th><th class="col-anio">Año</th><th class="col-dur">Duración</th><th class="col-lb">LB</th></tr></thead><tbody>${tbody}</tbody></table>`;
 }
 
 loadData();
