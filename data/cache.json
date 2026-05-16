@@ -1169,5 +1169,53 @@
     "country": "Argentina",
     "year": 2025,
     "duration": 78
+  },
+  "vampiros": {
+    "url": "https://letterboxd.com/film/vampires/",
+    "title_en": "Vampires",
+    "director": "John Carpenter",
+    "country": "USA",
+    "year": 1998,
+    "duration": 108
+  },
+  "piazzolla. los años del tiburón": {
+    "url": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
+    "title_en": "Piazzolla: The Years of the Shark",
+    "director": "Daniel Rosenfeld",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 90
+  },
+  "el hombre de al lado": {
+    "url": "https://letterboxd.com/film/el-hombre-de-al-lado/",
+    "title_en": "The Man Next Door",
+    "director": "Gastón Duprat, Mariano Cohn",
+    "country": "Argentina",
+    "year": 2009,
+    "duration": 103
+  },
+  "el último elvis": {
+    "url": "https://letterboxd.com/film/the-last-elvis/",
+    "title_en": "The Last Elvis",
+    "director": "Armando Bo",
+    "country": "Argentina",
+    "year": 2012,
+    "duration": 92
+  },
+  "cuatreros": {
+    "url": "https://letterboxd.com/film/rustlers-2016/",
+    "title_en": "Rustlers",
+    "director": "Albertina Carri",
+    "country": "Argentina",
+    "year": 2016,
+    "duration": 85
+  },
+  "historias mínimas": {
+    "url": "https://letterboxd.com/film/intimate-stories/",
+    "title_en": "Intimate Stories",
+    "director": "Carlos Sorin",
+    "country": "Argentina, Spain",
+    "year": 2002,
+    "duration": 92
   }
 }
