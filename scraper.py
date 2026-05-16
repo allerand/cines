@@ -414,48 +414,37 @@ def parse_ctba_estreno_page(text: str) -> dict:
 
 def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
     """
-    Parsea texto plano normalizado de una página /ver/ de ciclo CTBA.
-    Devuelve {(day_of_month, "HH:00"): {"title","original_title","country","year","director"}}
-    
-    Patrón mejorado que captura múltiples películas por día:
-      Miércoles 6
-      A las 15 y 21 horas
-      Juventud en peligro
-      (Dangerous Years; EE.UU; 1947)
-      Dirección: Arthur Pierson.
-      ...
+    Parsea texto plano de una página /ver/ de ciclo CTBA (Sala Lugones).
+    Captura Título, Director y Duración (ej: 93').
     """
     mapping: dict[tuple[int, str], dict] = {}
 
-    # Split text by day headers; capturing group gives the day-of-month number
     day_re = re.compile(
         r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[aá]bado|Domingo)\s+(\d{1,2})",
         re.IGNORECASE,
     )
-    parts = day_re.split(normalized)
-    # parts = [preamble, "6", chunk, "7", chunk, ...]
-
     hour_re = re.compile(
         r"A las (\d{1,2})(?:\s+y\s+(\d{1,2}))?\s+horas?",
         re.IGNORECASE,
     )
-    film_re = re.compile(
-        r"^([A-ZÁÉÍÓÚÑ][^\n(]+?)\s*\n"
-        r"\(([^)]+)\)\s*\n?"
-        r"(?:Dirección[:\s]+([^\n.]+?))?(?:\n|$)",
-        re.MULTILINE | re.IGNORECASE,
+    # Cabecera del bloque-peli: TITLE\n(Original; Country; Year)
+    film_head_re = re.compile(
+        r"^([A-ZÁÉÍÓÚÑ0-9][^\n(]+?)\s*\n+"
+        r"\(\s*([^;\n)]+?)\s*[;,]\s*([^;\n)]+?)\s*[;,]\s*(\d{4})\s*\)",
+        re.MULTILINE,
     )
+    # Director: captura hasta el fin de línea para no cortar en abreviaturas
+    # ("F. W. Murnau", "A. W. Sandberg", "Joseph L. Mankiewicz")
+    director_re = re.compile(r"Direcci[óo]n[:\s]+([^\n]+)", re.IGNORECASE)
+    # Duración: "(84'; DM)" — apóstrofes U+0027 / U+2019 / U+2032
+    duration_re = re.compile("\\((\\d{2,3})\\s*['’′]")
 
+    parts = day_re.split(normalized)
     for i in range(1, len(parts), 2):
         day_num = int(parts[i])
         chunk = parts[i + 1] if i + 1 < len(parts) else ""
 
-        # Un día puede tener múltiples bloques "A las X horas", cada uno con su(s)
-        # película(s). Dividir el chunk por cada bloque horario.
         hour_matches = list(hour_re.finditer(chunk))
-        if not hour_matches:
-            continue
-
         for idx, hm in enumerate(hour_matches):
             hours = [int(hm.group(1))]
             if hm.group(2):
@@ -463,27 +452,40 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
 
             sub_start = hm.end()
             sub_end = hour_matches[idx + 1].start() if idx + 1 < len(hour_matches) else len(chunk)
-            sub_chunk = chunk[sub_start:sub_end]
+            sub = chunk[sub_start:sub_end]
 
-            for fm in film_re.finditer(sub_chunk):
-                title = fm.group(1).strip()
-                paren_meta = fm.group(2)
-                director_raw = fm.group(3)
+            # Localizamos las cabeceras de peli; cada bloque horario suele
+            # tener UNA peli, pero soportamos múltiples por las dudas.
+            film_heads = list(film_head_re.finditer(sub))
+            if not film_heads:
+                continue
+            for fi, fm in enumerate(film_heads):
+                head_start = fm.start()
+                head_end = (
+                    film_heads[fi + 1].start() if fi + 1 < len(film_heads) else len(sub)
+                )
+                film_segment = sub[head_start:head_end]
 
-                entry: dict = {"title": title}
-                pm = re.match(r"\s*([^;]+?)\s*;\s*([^;]+?)\s*;\s*(\d{4})\s*$", paren_meta)
-                if pm:
-                    entry["original_title"] = pm.group(1).strip()
-                    entry["country"] = pm.group(2).strip()
-                    entry["year"] = int(pm.group(3))
-                if director_raw:
-                    entry["director"] = re.sub(r"\s+", " ", director_raw).strip().rstrip(".")
+                entry: dict = {
+                    "title": fm.group(1).strip(),
+                    "original_title": fm.group(2).strip(),
+                    "country": fm.group(3).strip(),
+                    "year": int(fm.group(4)),
+                }
+                dm = director_re.search(film_segment)
+                if dm:
+                    d = re.sub(r"\s+", " ", dm.group(1)).strip()
+                    # Quitar punto final y posibles "y guion: ..." final
+                    d = re.sub(r"\s+y\s+gui[óo]n:.*$", "", d, flags=re.IGNORECASE)
+                    entry["director"] = d.rstrip(".").strip()
+                dur = duration_re.search(film_segment)
+                if dur:
+                    entry["duration"] = int(dur.group(1))
 
                 for hour in hours:
                     mapping[(day_num, f"{hour:02d}:00")] = entry
 
     return mapping
-
 
 async def scrape_lugones(page: Page) -> list[Screening]:
     """
@@ -540,6 +542,7 @@ async def scrape_lugones(page: Page) -> list[Screening]:
         estreno_meta: dict = {}
         ver_text: Optional[str] = None
         looks_like_cycle: bool = False
+        is_estreno: bool = False
         ver_text_len = 0
         n_hour_blocks = 0
         if ver_url:
@@ -555,13 +558,16 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                 )
                 n_hour_blocks = len(hour_blocks)
                 looks_like_cycle = n_hour_blocks >= 2
-                is_estreno = is_ctba_estreno_page(ver_text)
-
-                if is_estreno:
-                    program = {}
-                    estreno_meta = parse_ctba_estreno_page(ver_text)
+                # "Estreno exclusivo" aparece tanto en estrenos genuinos como
+                # en ciclos que acompañan a un estreno (ej Teresa Villaverde →
+                # Justa). Heurística confiable: intentar parser de ciclo
+                # primero. Si extrae películas, es ciclo. Si no, es estreno.
+                program = parse_ctba_program_text(ver_text)
+                if program:
+                    is_estreno = False
                 else:
-                    program = parse_ctba_program_text(ver_text)
+                    is_estreno = True
+                    estreno_meta = parse_ctba_estreno_page(ver_text)
 
         # Diagnóstico — muy útil para debuggear en runners
         print(
@@ -576,7 +582,8 @@ async def scrape_lugones(page: Page) -> list[Screening]:
 
         # Para ciclos (múltiples películas): construir fechas directamente desde el
         # programa, sin depender del entradasba ticket URL (que sólo cubre 1 film).
-        if program and ver_text and not is_estreno:            # Extraer mes del encabezado tipo "Del miércoles 6 al miércoles 27 de mayo"
+        if program and ver_text and not is_estreno:
+            # Extraer mes del encabezado tipo "Del miércoles 6 al miércoles 27 de mayo"
             month_match = re.search(
                 r"al\s+\w+\s+\d+\s+de\s+(\w+)(?:\s+de\s+(\d{4}))?",
                 ver_text, re.IGNORECASE,
