@@ -1,0 +1,62 @@
+name: Test TMDb credential
+
+# Test rápido para verificar que TMDB_API_KEY está bien seteada y los
+# lookups funcionan. Tarda ~10 segundos.
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install beautifulsoup4
+
+      - name: Test TMDb
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+        run: |
+          python3 <<'PY'
+          import os, sys
+          # Mínimo necesario para usar letterboxd.tmdb_*
+          # (sólo importa funciones, no necesita playwright)
+          sys.path.insert(0, ".")
+          from letterboxd import _tmdb_credential, tmdb_search_movie, fetch_tmdb_movie_meta
+
+          kind, val = _tmdb_credential()
+          if not kind:
+              print("❌ TMDb credential NO seteada — chequear secret TMDB_API_KEY o TMDB_READ_ACCESS_TOKEN")
+              sys.exit(1)
+          print(f"✅ Credencial detectada: tipo {kind}, longitud {len(val)}")
+
+          # Test 1: peli vieja (La madre 1926 por Pudovkin)
+          print("\n— Test 1: 'Mat' 1926 (Pudovkin)")
+          results = tmdb_search_movie("Mat", year=1926)
+          if not results:
+              print("  ❌ Sin resultados")
+              sys.exit(1)
+          for r in results[:3]:
+              print(f"  • {r['title']} ({r['year']}) — orig={r['original_title']!r} id={r['id']}")
+          meta = fetch_tmdb_movie_meta(results[0]["id"])
+          print(f"  → director={meta.get('director')!r}  country={meta.get('country')!r}  duration={meta.get('duration')}min")
+
+          # Test 2: peli reciente (Los dias chinos, Santiago Loza)
+          print("\n— Test 2: 'Los dias chinos'")
+          results = tmdb_search_movie("Los dias chinos")
+          for r in results[:3]:
+              print(f"  • {r['title']} ({r['year']}) — orig={r['original_title']!r} id={r['id']}")
+          if results:
+              meta = fetch_tmdb_movie_meta(results[0]["id"])
+              print(f"  → director={meta.get('director')!r}  country={meta.get('country')!r}  duration={meta.get('duration')}min")
+
+          print("\n✅ TMDb funciona correctamente")
+          PY

@@ -48,6 +48,7 @@ class Screening:
     country: str = ""
     year: Optional[int] = None
     duration: Optional[int] = None  # minutos
+    original_title: str = ""        # útil como hint para IMDb/Letterboxd
 
 
 # ---------------------------------------------------------------------------
@@ -616,6 +617,8 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                             director=entry.get("director", ""),
                             country=entry.get("country", ""),
                             year=entry.get("year"),
+                            duration=entry.get("duration"),
+                            original_title=entry.get("original_title", ""),
                         ))
                     except ValueError:
                         pass

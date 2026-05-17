@@ -252,6 +252,152 @@ def imdb_suggest(query: str) -> list[dict]:
     return out
 
 
+# ---------------------------------------------------------------------------
+# TMDb fallback — acepta TMDB_API_KEY (key v3, ~32 chars hex) o
+# TMDB_READ_ACCESS_TOKEN (token v4, JWT con puntos). El código detecta el tipo:
+# - v3 → se manda como ?api_key=...
+# - v4 → se manda como Authorization: Bearer ...
+# Si ninguna env var está seteada, las funciones devuelven {} y no bloquean.
+# ---------------------------------------------------------------------------
+
+import os as _os
+
+
+def _tmdb_credential() -> tuple[str, str]:
+    """Devuelve (kind, value) donde kind ∈ {'v3','v4',''}."""
+    v4 = _os.environ.get("TMDB_READ_ACCESS_TOKEN", "").strip()
+    if v4:
+        return ("v4", v4)
+    v3 = _os.environ.get("TMDB_API_KEY", "").strip()
+    if v3:
+        # Heurística: tokens v4 son JWTs (contienen puntos). Si por error
+        # alguien pegó un v4 en TMDB_API_KEY, lo usamos como Bearer.
+        if v3.count(".") >= 2 and len(v3) > 100:
+            return ("v4", v3)
+        return ("v3", v3)
+    return ("", "")
+
+
+def _tmdb_request(path: str, params: dict) -> dict:
+    """Hace un GET a la API TMDb v3 manejando ambas credenciales."""
+    import urllib.parse
+    kind, cred = _tmdb_credential()
+    if not kind:
+        return {}
+    if kind == "v3":
+        params = {**params, "api_key": cred}
+    url = "https://api.themoviedb.org/3" + path
+    if params:
+        url += "?" + urllib.parse.urlencode(params)
+    headers = {"User-Agent": UA, "Accept": "application/json"}
+    if kind == "v4":
+        headers["Authorization"] = f"Bearer {cred}"
+    try:
+        req = urllib.request.Request(url, headers=headers)
+        return json.loads(urllib.request.urlopen(req, timeout=10).read())
+    except Exception:
+        return {}
+
+
+def tmdb_search_movie(title: str, year: Optional[int] = None) -> list[dict]:
+    """Busca en TMDb y devuelve hasta 5 candidatos: [{id, title, original_title, year}, ...]."""
+    params = {"query": title, "include_adult": "false"}
+    if year:
+        params["year"] = str(year)
+    data = _tmdb_request("/search/movie", params)
+    out: list[dict] = []
+    for r in data.get("results", [])[:5]:
+        out.append({
+            "id": r.get("id"),
+            "title": r.get("title") or "",
+            "original_title": r.get("original_title") or "",
+            "year": int(r["release_date"][:4]) if r.get("release_date") else None,
+        })
+    return out
+
+
+def fetch_tmdb_movie_meta(movie_id: int) -> dict:
+    """Trae detalles + credits de TMDb y devuelve {director, country, duration, year, title_en}."""
+    data = _tmdb_request(f"/movie/{movie_id}", {"append_to_response": "credits", "language": "en-US"})
+    if not data:
+        return {}
+    out: dict = {}
+    if data.get("title"):
+        out["title_en"] = data["title"]
+    if data.get("runtime"):
+        out["duration"] = int(data["runtime"])
+    if data.get("release_date"):
+        out["year"] = int(data["release_date"][:4])
+    # Country: array of {iso_3166_1, name}
+    countries = [c.get("name") for c in data.get("production_countries", []) if c.get("name")]
+    if countries:
+        out["country"] = ", ".join(countries[:2])
+    # Director: crew con job=="Director"
+    directors = [
+        c.get("name") for c in data.get("credits", {}).get("crew", [])
+        if c.get("job") == "Director" and c.get("name")
+    ]
+    if directors:
+        out["director"] = ", ".join(directors[:3])
+    return out
+
+
+def fill_meta_from_tmdb(
+    meta: dict,
+    title: str,
+    hint_year: Optional[int],
+    hint_original: str,
+    hint_director: str,
+) -> dict:
+    """
+    Si a `meta` le faltan duration/country/director, los completa via TMDb.
+    Requiere TMDB_API_KEY o TMDB_READ_ACCESS_TOKEN. Sin credencial, retorna meta sin tocar.
+    Valida match con hint_year (±2) y hint_director (overlap de palabras).
+    """
+    if meta.get("duration") and meta.get("country") and meta.get("director"):
+        return meta
+    if not _tmdb_credential()[0]:
+        return meta
+
+    queries: list[tuple[str, Optional[int]]] = []
+    if hint_original:
+        queries.append((hint_original, hint_year))
+    queries.append((title, hint_year))
+    if hint_year:
+        queries.append((title, None))
+
+    seen_ids: set[int] = set()
+    for q, y in queries:
+        for cand in tmdb_search_movie(q, y):
+            mid = cand.get("id")
+            if not mid or mid in seen_ids:
+                continue
+            seen_ids.add(mid)
+            cand_year = cand.get("year")
+            if hint_year and cand_year and abs(int(cand_year) - int(hint_year)) > 2:
+                continue
+            tmeta = fetch_tmdb_movie_meta(mid)
+            if not tmeta:
+                continue
+            if hint_year and tmeta.get("year"):
+                if abs(int(tmeta["year"]) - int(hint_year)) > 2:
+                    continue
+            if hint_director and tmeta.get("director"):
+                if not _name_overlap(hint_director, tmeta["director"]):
+                    continue
+            for f in ("director", "country", "year", "duration", "title_en"):
+                if not meta.get(f) and tmeta.get(f):
+                    meta[f] = tmeta[f]
+            if meta.get("duration") and meta.get("country") and meta.get("director"):
+                return meta
+    return meta
+    return meta
+
+
+# Alias para callers internos
+fill_meta_from_external = fill_meta_from_tmdb
+
+
 def letterboxd_url_from_imdb(tt: str) -> Optional[str]:
     """
     LB acepta /imdb/ttXXXXXX/ y redirige a la película. Devuelve la URL final
@@ -357,6 +503,12 @@ async def enrich_title(
         s = fetch_film_page(u)
         return parse_film_soup(s, u) if s else None
 
+    def _accept(m: dict) -> dict:
+        """Antes de aceptar un match: completar campos faltantes desde IMDb."""
+        m = fill_meta_from_external(m, title, hint_year, hint_original, hint_director)
+        cache.set(title, m)
+        return m
+
     # 1. slug del título original (si lo tenemos)
     if hint_original:
         candidates.append(f"https://letterboxd.com/film/{slugify(hint_original)}/")
@@ -376,8 +528,7 @@ async def enrich_title(
         if not m:
             continue
         if _validate_meta(m, hint_year, hint_director):
-            cache.set(title, m)
-            return m
+            return _accept(m)
         fallback_meta = fallback_meta or m
 
     # 4. Letterboxd internal search — devuelve TODOS los matches, validamos cada uno
@@ -406,8 +557,7 @@ async def enrich_title(
             if not m:
                 continue
             if _validate_meta(m, hint_year, hint_director):
-                cache.set(title, m)
-                return m
+                return _accept(m)
             fallback_meta = fallback_meta or m
     except Exception:
         pass
@@ -458,8 +608,7 @@ async def enrich_title(
             if not m:
                 continue
             if _validate_meta(m, hint_year, hint_director):
-                cache.set(title, m)
-                return m
+                return _accept(m)
             fallback_meta = fallback_meta or m
 
     # 6. DuckDuckGo fallback (con throttle, último recurso)
@@ -470,17 +619,22 @@ async def enrich_title(
             if not m:
                 continue
             if _validate_meta(m, hint_year, hint_director):
-                cache.set(title, m)
-                return m
+                return _accept(m)
             fallback_meta = fallback_meta or m
 
     # 6. Si no validamos nada pero teníamos algún match razonable y NO hay hints
     # estrictos, aceptarlo como mejor esfuerzo
     if fallback_meta and not (hint_year or hint_director):
+        # Si IMDb puede completar campos faltantes, lo intentamos
+        fallback_meta = fill_meta_from_external(
+            fallback_meta, title, hint_year, hint_original, hint_director,
+        )
         cache.set(title, fallback_meta)
         return fallback_meta
 
+    # 7. Último intento: rellenar empty meta directo desde IMDb (sin LB)
     empty = _empty_meta(title)
+    empty = fill_meta_from_external(empty, title, hint_year, hint_original, hint_director)
     cache.set(title, empty)
     return empty
 
