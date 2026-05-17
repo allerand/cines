@@ -283,6 +283,10 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
 
             if not title:
                 continue
+            # Skip ciclo cards (ej "Generación del 60") — sus pelis individuales
+            # aparecen por separado en otros cards
+            if title in MALBA_KNOWN_CICLOS:
+                continue
 
             key = (title, d.isoformat(), hora)
             if key not in seen:
