@@ -424,18 +424,26 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
     """
     mapping: dict[tuple[int, str], dict] = {}
 
+    # Header de día: debe estar en su propia línea. Esto descarta las
+    # menciones inline tipo "Del jueves 21 al martes 26 de mayo se proyecta..."
+    # que aparecen en sinopsis y rompían el chunking.
     day_re = re.compile(
-        r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[aá]bado|Domingo)\s+(\d{1,2})",
-        re.IGNORECASE,
+        r"\n(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[aá]bado|Domingo)\s+(\d{1,2})(?=\s*\n)",
     )
     hour_re = re.compile(
         r"A las (\d{1,2})(?:\s+y\s+(\d{1,2}))?\s+horas?",
         re.IGNORECASE,
     )
-    # Cabecera del bloque-peli: TITLE\n(Original; Country; Year)
+    # Cabecera del bloque-peli: TITLE\n(Original; Country; Year). El bloque
+    # entre paréntesis a veces es multilínea:
+    #   (
+    #   Der schweigende Stern
+    #   ; República Democrática Alemana/República
+    #   Popular de Polonia; 1960)
+    # Por eso permitimos newlines dentro del meta-paréntesis.
     film_head_re = re.compile(
         r"^([A-ZÁÉÍÓÚÑ0-9][^\n(]+?)\s*\n+"
-        r"\(\s*([^;\n)]+?)\s*[;,]\s*([^;\n)]+?)\s*[;,]\s*(\d{4})\s*\)",
+        r"\(\s*([^;)]+?)\s*[;,]\s*([^;)]+?)\s*[;,]\s*(\d{4})\s*\)",
         re.MULTILINE,
     )
     # Director: captura hasta el fin de línea para no cortar en abreviaturas
