@@ -139,6 +139,8 @@ async def run_scraper(semanas: int = 2) -> None:
                 h["year"] = s.year
             if not h.get("original") and getattr(s, "original_title", ""):
                 h["original"] = s.original_title
+            if not h.get("duration") and getattr(s, "duration", None):
+                h["duration"] = s.duration
 
         unique_titles = list(hints.keys())
         print(f"\n🔍 Enriqueciendo {len(unique_titles)} títulos con Letterboxd...")
@@ -153,6 +155,7 @@ async def run_scraper(semanas: int = 2) -> None:
                 hint_year=h.get("year"),
                 hint_director=h.get("director", ""),
                 hint_original=h.get("original", ""),
+                hint_duration=h.get("duration"),
             )
             title_meta[title] = meta
 

@@ -752,6 +752,11 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
         await page.goto(url, wait_until="networkidle")
         await page.wait_for_timeout(2000)
 
+        # Duración: la página muestra "NN MIN" justo debajo del título
+        full_text = await page.evaluate("document.body.innerText")
+        dur_match = re.search(r"\b(\d{1,3})\s*MIN\b", full_text)
+        film_duration: Optional[int] = int(dur_match.group(1)) if dur_match else None
+
         date_tabs = await page.query_selector_all("div.date")
         if not date_tabs:
             continue
@@ -789,6 +794,7 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
                         cine="Cacodelphia", title=title,
                         fecha=fecha, hora=hora,
                         ticket_url="https://cineartecacodelphia.com.ar/",
+                        duration=film_duration,
                     ))
 
     return result

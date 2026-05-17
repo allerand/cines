@@ -192,13 +192,19 @@ def _name_overlap(a: str, b: str) -> bool:
     return bool(words(a) & words(b))
 
 
-def _validate_meta(meta: dict, hint_year: Optional[int], hint_director: str) -> bool:
+def _validate_meta(
+    meta: dict,
+    hint_year: Optional[int],
+    hint_director: str,
+    hint_duration: Optional[int] = None,
+) -> bool:
     """
     Decide si el match de Letterboxd es coherente con la metadata del cine.
       - Si hint_year ±2 difiere del LB year → rechazar
       - Si hint_director y LB director no comparten ninguna palabra → rechazar
       - Si meta no trae director ni year, no podemos validar → rechazar también
         cuando hay hint_director (mejor empty que wrong)
+      - Si hint_duration ±5 difiere del LB duration → rechazar
     Sin hints, no se rechaza.
     """
     if hint_year and meta.get("year"):
@@ -209,6 +215,9 @@ def _validate_meta(meta: dict, hint_year: Optional[int], hint_director: str) -> 
         if not lb_director:
             return False  # sin LB director y con hint, no podemos confirmar → rechazar
         if not _name_overlap(hint_director, lb_director):
+            return False
+    if hint_duration and meta.get("duration"):
+        if abs(int(meta["duration"]) - int(hint_duration)) > 5:
             return False
     return True
 
@@ -472,6 +481,7 @@ async def enrich_title(
     hint_year: Optional[int] = None,
     hint_director: str = "",
     hint_original: str = "",
+    hint_duration: Optional[int] = None,
 ) -> dict:
     """
     Dado un título y, opcionalmente, hints (año, director, título original) que el
@@ -497,7 +507,7 @@ async def enrich_title(
         if not cached.get("url"):
             # Empty cached → re-intentar siempre por si la red estaba caída
             pass
-        elif _validate_meta(cached, hint_year, hint_director):
+        elif _validate_meta(cached, hint_year, hint_director, hint_duration):
             return cached
         # else: la entry cacheada NO matchea hints actuales → re-enrich
 
@@ -532,7 +542,7 @@ async def enrich_title(
         m = _try_url(u)
         if not m:
             continue
-        if _validate_meta(m, hint_year, hint_director):
+        if _validate_meta(m, hint_year, hint_director, hint_duration):
             return _accept(m)
         fallback_meta = fallback_meta or m
 
@@ -561,7 +571,7 @@ async def enrich_title(
             m = _try_url(u)
             if not m:
                 continue
-            if _validate_meta(m, hint_year, hint_director):
+            if _validate_meta(m, hint_year, hint_director, hint_duration):
                 return _accept(m)
             fallback_meta = fallback_meta or m
     except Exception:
@@ -612,7 +622,7 @@ async def enrich_title(
             m = _try_url(lb_url)
             if not m:
                 continue
-            if _validate_meta(m, hint_year, hint_director):
+            if _validate_meta(m, hint_year, hint_director, hint_duration):
                 return _accept(m)
             fallback_meta = fallback_meta or m
 
@@ -623,7 +633,7 @@ async def enrich_title(
             m = _try_url(u)
             if not m:
                 continue
-            if _validate_meta(m, hint_year, hint_director):
+            if _validate_meta(m, hint_year, hint_director, hint_duration):
                 return _accept(m)
             fallback_meta = fallback_meta or m
 
