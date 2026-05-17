@@ -18,6 +18,10 @@ on:
         description: 'Dry run (genera + loguea, no postea)'
         type: boolean
         default: false
+      skip_scrape:
+        description: 'Saltar scraper — usar la cartelera.json del repo'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -56,10 +60,15 @@ jobs:
           echo "📅 lunes objetivo: $d"
 
       - name: Run scraper (full)
+        if: ${{ inputs.skip_scrape != true }}
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
         run: python3 run.py
+
+      - name: Skip scrape notice
+        if: ${{ inputs.skip_scrape == true }}
+        run: echo "⏭  Saltando scraper — usando data/cartelera.json del repo"
 
       - name: Generate weekly portrait slides
         run: |
