@@ -1217,5 +1217,101 @@
     "country": "Argentina, Spain",
     "year": 2002,
     "duration": 92
+  },
+  "parque lezama": {
+    "url": "https://letterboxd.com/film/parque-lezama/",
+    "title_en": "Strangers in the Park",
+    "director": "Juan José Campanella",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 115
+  },
+  "esperando la carroza": {
+    "url": "https://letterboxd.com/film/esperando-la-carroza/",
+    "title_en": "Waiting for the Hearse",
+    "director": "Alejandro Doria",
+    "country": "Argentina",
+    "year": 1985,
+    "duration": 87
+  },
+  "darse cuenta": {
+    "url": "https://letterboxd.com/film/darse-cuenta/",
+    "title_en": "Darse cuenta",
+    "director": "Alejandro Doria",
+    "country": "Argentina",
+    "year": 1984,
+    "duration": 100
+  },
+  "la patagonia rebelde": {
+    "url": "https://letterboxd.com/film/la-patagonia-rebelde/",
+    "title_en": "Rebellion in Patagonia",
+    "director": "Héctor Olivera",
+    "country": "Argentina",
+    "year": 1974,
+    "duration": 103
+  },
+  "juan que reía": {
+    "url": "https://letterboxd.com/film/juan-que-reia/",
+    "title_en": "Juan que reía",
+    "director": "Carlos Galettini",
+    "country": "Argentina",
+    "year": 1976,
+    "duration": 97
+  },
+  "tute cabrero": {
+    "url": "https://letterboxd.com/film/tute-cabrero/",
+    "title_en": "Tute Cabrero",
+    "director": "Juan José Jusid",
+    "country": "Argentina",
+    "year": 1968,
+    "duration": 70
+  },
+  "la tregua": {
+    "url": "https://letterboxd.com/film/la-tregua/",
+    "title_en": "The Truce",
+    "director": "Alfonso Rosas Priego Jr.",
+    "country": "Mexico",
+    "year": 2003,
+    "duration": 101
+  },
+  "amores pendientes": {
+    "url": "https://letterboxd.com/film/amores-pendientes/",
+    "title_en": "Amores pendientes",
+    "director": "Oscar Estévez",
+    "country": "Uruguay",
+    "year": 2023,
+    "duration": 95
+  },
+  "7 cajas": {
+    "url": "",
+    "title_en": "7 cajas",
+    "director": "Tana Schémbori, Juan Carlos Maneglia",
+    "country": "Paraguay, Spain",
+    "year": 2012,
+    "duration": 106
+  },
+  "en la zona gris": {
+    "url": "https://letterboxd.com/film/in-the-grey-2026/",
+    "title_en": "In the Grey",
+    "director": "Guy Ritchie",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 98
+  },
+  "father mother sister brother": {
+    "url": "https://letterboxd.com/film/father-mother-sister-brother/",
+    "title_en": "Father Mother Sister Brother",
+    "director": "Jim Jarmusch",
+    "country": "USA, France",
+    "year": 2025,
+    "duration": 110
+  },
+  "dreams": {
+    "url": "https://letterboxd.com/film/dreams-2024-5/",
+    "title_en": "Dreams",
+    "director": "Dag Johan Haugerud",
+    "country": "Norway",
+    "year": 2024,
+    "duration": 111
   }
 }
