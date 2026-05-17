@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-17T22:28:27",
+  "updated": "2026-05-17T23:03:15",
   "screenings": [
     {
       "cine": "Cine Lorca",
@@ -324,20 +324,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-17",
-      "hora": "19:30",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
       "cine": "MALBA",
       "fecha": "2026-05-17",
       "hora": "20:00",
@@ -349,20 +335,6 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
       "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-17",
-      "hora": "20:00",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
       "ciclo": ""
     },
     {
@@ -391,20 +363,6 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-17",
-      "hora": "20:15",
-      "title_es": "Lo Noy",
-      "title_en": "Lo Noy",
-      "director": "Mario Varela",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 72,
-      "letterboxd": "https://letterboxd.com/film/lo-noy/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=789",
       "ciclo": ""
     },
     {
@@ -506,20 +464,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-17",
-      "hora": "21:30",
-      "title_es": "Caso 137",
-      "title_en": "Case 137",
-      "director": "Dominik Moll",
-      "country": "France",
-      "year": 2025,
-      "duration": 116,
-      "letterboxd": "https://letterboxd.com/film/case-137-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=791",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-17",
       "hora": "22:10",
@@ -531,34 +475,6 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/in-the-grey-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-17",
-      "hora": "22:15",
-      "title_es": "Lo habrás imaginado",
-      "title_en": "Lo habrás imaginado",
-      "director": "Victoria Chaya Miranda",
-      "country": "Argentina",
-      "year": 2019,
-      "duration": 85,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-17",
-      "hora": "22:30",
-      "title_es": "La frecuencia Kirlian",
-      "title_en": "The Kirlian Frequency",
-      "director": "Cristian Ponce",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 94,
-      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
       "ciclo": ""
     },
     {
@@ -604,34 +520,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "14:30",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "14:45",
-      "title_es": "La Luna de Coco",
-      "title_en": "Coco's Moon",
-      "director": "Javier Lester Abálsamo",
-      "country": "",
-      "year": 2024,
-      "duration": 65,
-      "letterboxd": "https://letterboxd.com/film/la-luna-de-coco/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=778",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-18",
       "hora": "15:00",
@@ -643,20 +531,6 @@
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=360",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "15:00",
-      "title_es": "Nuestra Tierra",
-      "title_en": "Our Land",
-      "director": "Lucrecia Martel",
-      "country": "Argentina, Denmark",
-      "year": 2025,
-      "duration": 124,
-      "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
       "ciclo": ""
     },
     {
@@ -702,34 +576,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "16:15",
-      "title_es": "Cuatro estrellas",
-      "title_en": "Four Stars",
-      "director": "Pablo Stigliani",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 91,
-      "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "16:30",
-      "title_es": "Lipán",
-      "title_en": "Lipán",
-      "director": "Gonzalo Calzada",
-      "country": "",
-      "year": null,
-      "duration": 101,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=766",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-18",
       "hora": "16:35",
@@ -758,20 +604,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "17:30",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Germany",
-      "year": 2024,
-      "duration": 96,
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-18",
       "hora": "18:10",
@@ -786,20 +618,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "18:15",
-      "title_es": "El Renacer Albirrojo",
-      "title_en": "El Renacer Albirrojo",
-      "director": "Armando Aquino, Alfredo Galeano",
-      "country": "Paraguay",
-      "year": 2026,
-      "duration": 79,
-      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-18",
       "hora": "18:15",
@@ -811,20 +629,6 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/in-the-grey-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "18:30",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
       "ciclo": ""
     },
     {
@@ -856,34 +660,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "19:30",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "20:00",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-18",
       "hora": "20:10",
@@ -895,20 +671,6 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "20:15",
-      "title_es": "Nuestros días en mi memoria. Una película sobre Estelares.",
-      "title_en": "Our Days in My Memory. A Film About Estelares",
-      "director": "Gonza López",
-      "country": "Argentina",
-      "year": null,
-      "duration": 90,
-      "letterboxd": "https://letterboxd.com/film/our-days-in-my-memory-a-film-about-estelares/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=783",
       "ciclo": ""
     },
     {
@@ -940,20 +702,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "21:30",
-      "title_es": "Caso 137",
-      "title_en": "Case 137",
-      "director": "Dominik Moll",
-      "country": "France",
-      "year": 2025,
-      "duration": 116,
-      "letterboxd": "https://letterboxd.com/film/case-137-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=791",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-18",
       "hora": "22:10",
@@ -965,34 +713,6 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/in-the-grey-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "22:15",
-      "title_es": "Lo habrás imaginado",
-      "title_en": "Lo habrás imaginado",
-      "director": "Victoria Chaya Miranda",
-      "country": "Argentina",
-      "year": 2019,
-      "duration": 85,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-18",
-      "hora": "22:30",
-      "title_es": "La frecuencia Kirlian",
-      "title_en": "The Kirlian Frequency",
-      "director": "Cristian Ponce",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 94,
-      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
       "ciclo": ""
     },
     {
@@ -1038,34 +758,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "14:30",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "14:45",
-      "title_es": "Hasta que la verdad los separe",
-      "title_en": "Hasta que la verdad los separe",
-      "director": "Samir Bitar",
-      "country": "",
-      "year": null,
-      "duration": 65,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=756",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-19",
       "hora": "15:00",
@@ -1077,20 +769,6 @@
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=360",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "15:00",
-      "title_es": "Nuestra Tierra",
-      "title_en": "Our Land",
-      "director": "Lucrecia Martel",
-      "country": "Argentina, Denmark",
-      "year": 2025,
-      "duration": 124,
-      "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
       "ciclo": ""
     },
     {
@@ -1147,34 +825,6 @@
       "duration": 105,
       "letterboxd": "https://letterboxd.com/film/the-drama/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "16:15",
-      "title_es": "Cuatro estrellas",
-      "title_en": "Four Stars",
-      "director": "Pablo Stigliani",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 91,
-      "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "16:30",
-      "title_es": "Lipán",
-      "title_en": "Lipán",
-      "director": "Gonzalo Calzada",
-      "country": "",
-      "year": null,
-      "duration": 101,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=766",
       "ciclo": ""
     },
     {
@@ -1276,20 +926,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "18:15",
-      "title_es": "El Renacer Albirrojo",
-      "title_en": "El Renacer Albirrojo",
-      "director": "Armando Aquino, Alfredo Galeano",
-      "country": "Paraguay",
-      "year": 2026,
-      "duration": 79,
-      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-19",
       "hora": "18:15",
@@ -1301,20 +937,6 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/in-the-grey-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "18:30",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
       "ciclo": ""
     },
     {
@@ -1388,20 +1010,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "20:00",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-19",
       "hora": "20:10",
@@ -1413,20 +1021,6 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "20:15",
-      "title_es": "Lo Noy",
-      "title_en": "Lo Noy",
-      "director": "Mario Varela",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 72,
-      "letterboxd": "https://letterboxd.com/film/lo-noy/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=789",
       "ciclo": ""
     },
     {
@@ -1514,20 +1108,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "22:00",
-      "title_es": "Boda Sangrienta 2",
-      "title_en": "Ready or Not 2: Here I Come",
-      "director": "Matt Bettinelli-Olpin y Tyler Gillett",
-      "country": "USA",
-      "year": 2026,
-      "duration": 108,
-      "letterboxd": "https://letterboxd.com/film/ready-or-not-2-here-i-come/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=785",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-19",
       "hora": "22:10",
@@ -1539,34 +1119,6 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/in-the-grey-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "22:15",
-      "title_es": "Lo habrás imaginado",
-      "title_en": "Lo habrás imaginado",
-      "director": "Victoria Chaya Miranda",
-      "country": "Argentina",
-      "year": 2019,
-      "duration": 85,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-19",
-      "hora": "22:30",
-      "title_es": "La frecuencia Kirlian",
-      "title_en": "The Kirlian Frequency",
-      "director": "Cristian Ponce",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 94,
-      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
       "ciclo": ""
     },
     {
@@ -1612,34 +1164,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "14:30",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "14:45",
-      "title_es": "La Luna de Coco",
-      "title_en": "Coco's Moon",
-      "director": "Javier Lester Abálsamo",
-      "country": "",
-      "year": 2024,
-      "duration": 65,
-      "letterboxd": "https://letterboxd.com/film/la-luna-de-coco/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=778",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-20",
       "hora": "15:00",
@@ -1651,20 +1175,6 @@
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=360",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "15:00",
-      "title_es": "Nuestra Tierra",
-      "title_en": "Our Land",
-      "director": "Lucrecia Martel",
-      "country": "Argentina, Denmark",
-      "year": 2025,
-      "duration": 124,
-      "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
       "ciclo": ""
     },
     {
@@ -1721,34 +1231,6 @@
       "duration": 105,
       "letterboxd": "https://letterboxd.com/film/the-drama/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "16:15",
-      "title_es": "Cuatro estrellas",
-      "title_en": "Four Stars",
-      "director": "Pablo Stigliani",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 91,
-      "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "16:30",
-      "title_es": "Lipán",
-      "title_en": "Lipán",
-      "director": "Gonzalo Calzada",
-      "country": "",
-      "year": null,
-      "duration": 101,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=766",
       "ciclo": ""
     },
     {
@@ -1822,20 +1304,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "17:30",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Germany",
-      "year": 2024,
-      "duration": 96,
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-05-20",
       "hora": "18:00",
@@ -1864,20 +1332,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "18:15",
-      "title_es": "El Renacer Albirrojo",
-      "title_en": "El Renacer Albirrojo",
-      "director": "Armando Aquino, Alfredo Galeano",
-      "country": "Paraguay",
-      "year": 2026,
-      "duration": 79,
-      "letterboxd": "https://letterboxd.com/film/el-renacer-albirrojo/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=779",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-20",
       "hora": "18:15",
@@ -1889,20 +1343,6 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/in-the-grey-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "18:30",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
       "ciclo": ""
     },
     {
@@ -1962,34 +1402,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "19:30",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "20:00",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-20",
       "hora": "20:10",
@@ -2001,20 +1413,6 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "20:15",
-      "title_es": "Jasmín",
-      "title_en": "Jasmín",
-      "director": "Gisela Gorbalán",
-      "country": "",
-      "year": 1980,
-      "duration": 75,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=615",
       "ciclo": ""
     },
     {
@@ -2102,20 +1500,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "21:30",
-      "title_es": "Caso 137",
-      "title_en": "Case 137",
-      "director": "Dominik Moll",
-      "country": "France",
-      "year": 2025,
-      "duration": 116,
-      "letterboxd": "https://letterboxd.com/film/case-137-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=791",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-20",
       "hora": "22:10",
@@ -2127,34 +1511,6 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/in-the-grey-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "22:15",
-      "title_es": "Lo habrás imaginado",
-      "title_en": "Lo habrás imaginado",
-      "director": "Victoria Chaya Miranda",
-      "country": "Argentina",
-      "year": 2019,
-      "duration": 85,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-20",
-      "hora": "22:30",
-      "title_es": "La frecuencia Kirlian",
-      "title_en": "The Kirlian Frequency",
-      "director": "Cristian Ponce",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 94,
-      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
       "ciclo": ""
     },
     {
@@ -2253,20 +1609,6 @@
       "duration": 114,
       "letterboxd": "https://letterboxd.com/film/juror-2/",
       "ticket_url": "https://lumiton.ar/evento/jurado-2/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-21",
-      "hora": "20:00",
-      "title_es": "Cuatreros",
-      "title_en": "Rustlers",
-      "director": "Albertina Carri",
-      "country": "Argentina",
-      "year": 2016,
-      "duration": 85,
-      "letterboxd": "https://letterboxd.com/film/rustlers-2016/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=800",
       "ciclo": ""
     },
     {
@@ -2422,20 +1764,6 @@
       "letterboxd": "https://letterboxd.com/film/the-romance-of-aniceto-and-francisca/",
       "ticket_url": "https://malba.org.ar/evento/este-es-el-romance-del-aniceto-y-la-francisca/",
       "ciclo": "Generación del 60"
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-22",
-      "hora": "20:00",
-      "title_es": "La Mujer sin cabeza",
-      "title_en": "The Headless Woman",
-      "director": "Lucrecia Martel",
-      "country": "Argentina, France",
-      "year": 2008,
-      "duration": 84,
-      "letterboxd": "https://letterboxd.com/film/the-headless-woman/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=801",
-      "ciclo": ""
     },
     {
       "cine": "Arthaus",
@@ -2604,20 +1932,6 @@
       "letterboxd": "https://letterboxd.com/film/strange-river/",
       "ticket_url": "https://malba.org.ar/evento/extrano-rio/",
       "ciclo": "Revista Caligari"
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-23",
-      "hora": "20:00",
-      "title_es": "Historias Mínimas",
-      "title_en": "Intimate Stories",
-      "director": "Carlos Sorín",
-      "country": "Argentina, Spain",
-      "year": 2002,
-      "duration": 90,
-      "letterboxd": "https://letterboxd.com/film/intimate-stories/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=802",
-      "ciclo": ""
     },
     {
       "cine": "Arthaus",
@@ -2858,20 +2172,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-24",
-      "hora": "20:00",
-      "title_es": "Piazzolla. Los años del tiburón",
-      "title_en": "Piazzolla: The Years of the Shark",
-      "director": "Daniel Rosenfeld",
-      "country": "Argentina",
-      "year": 2018,
-      "duration": 95,
-      "letterboxd": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=803",
-      "ciclo": ""
-    },
-    {
       "cine": "Arthaus",
       "fecha": "2026-05-24",
       "hora": "20:00",
@@ -2942,20 +2242,6 @@
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-26",
-      "hora": "20:00",
-      "title_es": "El hombre de al lado",
-      "title_en": "The Man Next Door",
-      "director": "Gastón Duprat y Mariano Cohn",
-      "country": "Argentina",
-      "year": 2009,
-      "duration": 101,
-      "letterboxd": "https://letterboxd.com/film/el-hombre-de-al-lado/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=804",
-      "ciclo": ""
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-05-26",
       "hora": "21:00",
@@ -2996,20 +2282,6 @@
       "letterboxd": "https://letterboxd.com/film/the-seven-year-itch/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
       "ciclo": "Eternamente Marilyn"
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-27",
-      "hora": "20:00",
-      "title_es": "El último Elvis",
-      "title_en": "The Last Elvis",
-      "director": "Armando Bó",
-      "country": "Argentina",
-      "year": 2012,
-      "duration": 91,
-      "letterboxd": "https://letterboxd.com/film/the-last-elvis/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=805",
-      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
