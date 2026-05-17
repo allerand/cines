@@ -28,6 +28,8 @@ jobs:
           playwright install --with-deps chromium
 
       - name: Run scraper
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
         run: python3 run.py
 
       - name: Compute today's date (Buenos Aires)
