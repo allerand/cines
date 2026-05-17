@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-17T17:08:16",
+  "updated": "2026-05-17T18:39:38",
   "screenings": [
     {
       "cine": "Cine Lorca",
@@ -30,32 +30,18 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
+      "cine": "Sala Lugones",
       "fecha": "2026-05-17",
       "hora": "14:30",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-17",
-      "hora": "14:45",
-      "title_es": "Hasta que la verdad los separe",
-      "title_en": "Hasta que la verdad los separe",
-      "director": "Samir Bitar",
-      "country": "",
-      "year": null,
-      "duration": 65,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=756",
-      "ciclo": ""
+      "title_es": "La malvada",
+      "title_en": "All About Eve",
+      "director": "Joseph L. Mankiewicz",
+      "country": "EE.UU",
+      "year": 1950,
+      "duration": 139,
+      "letterboxd": "https://letterboxd.com/film/all-about-eve/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
     },
     {
       "cine": "Cine Cosmos",
@@ -69,20 +55,6 @@
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=360",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-17",
-      "hora": "15:00",
-      "title_es": "Nuestra Tierra",
-      "title_en": "Our Land",
-      "director": "Lucrecia Martel",
-      "country": "Argentina, Denmark",
-      "year": 2025,
-      "duration": 124,
-      "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
       "ciclo": ""
     },
     {
@@ -318,7 +290,7 @@
       "director": "Billy Wilder",
       "country": "EE.UU",
       "year": 1959,
-      "duration": 120,
+      "duration": 123,
       "letterboxd": "https://letterboxd.com/film/some-like-it-hot/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
       "ciclo": "Eternamente Marilyn"
@@ -1979,13 +1951,13 @@
       "cine": "Sala Lugones",
       "fecha": "2026-05-20",
       "hora": "18:00",
-      "title_es": "La malvada",
-      "title_en": "All About Eve",
-      "director": "Joseph L. Mankiewicz",
+      "title_es": "Torrente pasional",
+      "title_en": "Niagara",
+      "director": "Henry Hathaway",
       "country": "EE.UU",
-      "year": 1950,
-      "duration": 138,
-      "letterboxd": "https://letterboxd.com/film/all-about-eve/",
+      "year": 1953,
+      "duration": 92,
+      "letterboxd": "https://letterboxd.com/film/niagara/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
       "ciclo": "Eternamente Marilyn"
     },
@@ -2172,6 +2144,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-20",
+      "hora": "20:30",
+      "title_es": "La malvada",
+      "title_en": "All About Eve",
+      "director": "Joseph L. Mankiewicz",
+      "country": "EE.UU",
+      "year": 1950,
+      "duration": 139,
+      "letterboxd": "https://letterboxd.com/film/all-about-eve/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
+      "ciclo": "Eternamente Marilyn"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-20",
       "hora": "20:40",
@@ -2312,6 +2298,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-21",
+      "hora": "15:00",
+      "title_es": "Eolomea",
+      "title_en": "Eolomea",
+      "director": "Herrmann Zschoche",
+      "country": "República Democrática Alemana/Unión Soviética/Bulgaria",
+      "year": 1972,
+      "duration": 82,
+      "letterboxd": "https://letterboxd.com/film/eolomea/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-21",
       "hora": "15:05",
@@ -2379,6 +2379,20 @@
       "duration": 68,
       "letterboxd": "https://letterboxd.com/film/spring-bride/",
       "ticket_url": "https://lumiton.ar/evento/la-novia-de-primavera/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-05-21",
+      "hora": "18:00",
+      "title_es": "La chica nueva",
+      "title_en": "The New Girl",
+      "director": "Micaela Gonzalo",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 78,
+      "letterboxd": "https://letterboxd.com/film/la-chica-nueva/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/la-chica-nueva",
       "ciclo": ""
     },
     {
@@ -2606,6 +2620,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-05-22",
+      "hora": "18:00",
+      "title_es": "El verdugo",
+      "title_en": "El verdugo",
+      "director": "Francisco Guerrero",
+      "country": "Mexico",
+      "year": 2003,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/el-verdugo/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/viernes-de-berlanga",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-22",
+      "hora": "18:00",
+      "title_es": "La estrella silenciosa",
+      "title_en": "The Silent Star",
+      "director": "Kurt Maetzig",
+      "country": "República Democrática Alemana/República Popular de Polonia",
+      "year": 1960,
+      "duration": 93,
+      "letterboxd": "https://letterboxd.com/film/the-silent-star/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-05-22",
       "hora": "18:40",
@@ -2796,7 +2838,7 @@
       "director": "Gottfried Kolditz",
       "country": "República Democrática Alemana/República Popular de Polonia",
       "year": 1970,
-      "duration": 90,
+      "duration": 91,
       "letterboxd": "https://letterboxd.com/film/signale-ein-weltraumabenteuer/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
@@ -2872,6 +2914,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-05-23",
+      "hora": "18:00",
+      "title_es": "Das Wunder von Taipeh",
+      "title_en": "We Wanted More: The Miracle of Taipei",
+      "director": "John David Seidler",
+      "country": "Germany",
+      "year": 2019,
+      "duration": 85,
+      "letterboxd": "https://letterboxd.com/film/das-wunder-von-taipeh/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/fiebre-de-futbol",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-05-23",
       "hora": "18:00",
@@ -2880,7 +2936,7 @@
       "director": "Billy Wilder",
       "country": "EE.UU",
       "year": 1959,
-      "duration": 120,
+      "duration": 123,
       "letterboxd": "https://letterboxd.com/film/some-like-it-hot/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
       "ciclo": "Eternamente Marilyn"
@@ -2992,7 +3048,7 @@
       "director": "Gottfried Kolditz",
       "country": "República Democrática Alemana/República Popular de Polonia",
       "year": 1970,
-      "duration": 90,
+      "duration": 91,
       "letterboxd": "https://letterboxd.com/film/signale-ein-weltraumabenteuer/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
@@ -3090,7 +3146,7 @@
       "director": "Gottfried Kolditz",
       "country": "República Democrática Alemana/República Popular de Polonia",
       "year": 1970,
-      "duration": 90,
+      "duration": 91,
       "letterboxd": "https://letterboxd.com/film/signale-ein-weltraumabenteuer/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
@@ -3230,7 +3286,7 @@
       "director": "George Cukor",
       "country": "EE.UU",
       "year": 1960,
-      "duration": 118,
+      "duration": 119,
       "letterboxd": "https://letterboxd.com/film/lets-make-love/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
       "ciclo": "Eternamente Marilyn"
@@ -3332,6 +3388,20 @@
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
       "ticket_url": "https://lumiton.ar/evento/nuestra-tierra-4/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-24",
+      "hora": "21:00",
+      "title_es": "Eolomea",
+      "title_en": "Eolomea",
+      "director": "Herrmann Zschoche",
+      "country": "República Democrática Alemana/Unión Soviética/Bulgaria",
+      "year": 1972,
+      "duration": 82,
+      "letterboxd": "https://letterboxd.com/film/eolomea/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
       "cine": "Cine Cosmos",
@@ -3468,7 +3538,7 @@
       "director": "Gottfried Kolditz",
       "country": "República Democrática Alemana/Rumania",
       "year": 1976,
-      "duration": 95,
+      "duration": 98,
       "letterboxd": "https://letterboxd.com/film/im-staub-der-sterne/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
       "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
@@ -3514,6 +3584,20 @@
       "letterboxd": "https://letterboxd.com/film/case-137-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=357",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-26",
+      "hora": "18:00",
+      "title_es": "Eolomea",
+      "title_en": "Eolomea",
+      "director": "Herrmann Zschoche",
+      "country": "República Democrática Alemana/Unión Soviética/Bulgaria",
+      "year": 1972,
+      "duration": 82,
+      "letterboxd": "https://letterboxd.com/film/eolomea/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/722a6714-4d22-495a-a61d-90c4a1445425",
+      "ciclo": "Cielos rojos: el cine de ciencia ficción de la República Democrática Alemana y la República Popular de Polonia"
     },
     {
       "cine": "Cine Cosmos",
@@ -3720,7 +3804,7 @@
       "director": "Billy Wilder",
       "country": "EE.UU",
       "year": 1959,
-      "duration": 120,
+      "duration": 123,
       "letterboxd": "https://letterboxd.com/film/some-like-it-hot/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8c75fef6-ceab-4d12-8846-ecab331b4b6b",
       "ciclo": "Eternamente Marilyn"
@@ -3807,6 +3891,20 @@
       "duration": 85,
       "letterboxd": "https://letterboxd.com/film/ultimas-conversas/",
       "ticket_url": "https://lumiton.ar/evento/ultimas-conversas/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-05-28",
+      "hora": "18:00",
+      "title_es": "La chica nueva",
+      "title_en": "The New Girl",
+      "director": "Micaela Gonzalo",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 78,
+      "letterboxd": "https://letterboxd.com/film/la-chica-nueva/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/la-chica-nueva",
       "ciclo": ""
     },
     {
@@ -4020,6 +4118,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-05-29",
+      "hora": "18:00",
+      "title_es": "Plácido",
+      "title_en": "Placido",
+      "director": "Luis García Berlanga",
+      "country": "Spain",
+      "year": 1961,
+      "duration": 84,
+      "letterboxd": "https://letterboxd.com/film/placido/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/viernes-de-berlanga",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-29",
+      "hora": "18:00",
+      "title_es": "Colo",
+      "title_en": "Colo",
+      "director": "Teresa Villaverde",
+      "country": "Portugal/Francia",
+      "year": 2017,
+      "duration": 135,
+      "letterboxd": "https://letterboxd.com/film/colo/",
+      "ticket_url": "",
+      "ciclo": "Encuentro con Teresa Villaverde"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-05-29",
       "hora": "18:40",
@@ -4118,6 +4244,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-30",
+      "hora": "15:00",
+      "title_es": "Colo",
+      "title_en": "Colo",
+      "director": "Teresa Villaverde",
+      "country": "Portugal/Francia",
+      "year": 2017,
+      "duration": 136,
+      "letterboxd": "https://letterboxd.com/film/colo/",
+      "ticket_url": "",
+      "ciclo": "Encuentro con Teresa Villaverde"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-30",
       "hora": "15:05",
@@ -4199,6 +4339,20 @@
       "duration": 87,
       "letterboxd": "https://letterboxd.com/film/claudia-2019/",
       "ticket_url": "https://lumiton.ar/evento/claudia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-05-30",
+      "hora": "18:00",
+      "title_es": "Sieger Sein",
+      "title_en": "Winners",
+      "director": "Soleen Yusef",
+      "country": "Germany",
+      "year": 2024,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/sieger-sein/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/fiebre-de-futbol",
       "ciclo": ""
     },
     {
@@ -4524,6 +4678,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-31",
+      "hora": "20:30",
+      "title_es": "Colo",
+      "title_en": "Colo",
+      "director": "Teresa Villaverde",
+      "country": "Portugal/Francia",
+      "year": 2017,
+      "duration": 136,
+      "letterboxd": "https://letterboxd.com/film/colo/",
+      "ticket_url": "",
+      "ciclo": "Encuentro con Teresa Villaverde"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-05-31",
       "hora": "21:20",
@@ -4654,12 +4822,12 @@
       "fecha": "2026-06-02",
       "hora": "15:00",
       "title_es": "Gorriones",
-      "title_en": "Gorriones",
+      "title_en": "Sparrows",
       "director": "William Beaudine",
       "country": "EE:UU",
       "year": 1926,
-      "duration": 84,
-      "letterboxd": "",
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/sparrows/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
@@ -4836,12 +5004,12 @@
       "fecha": "2026-06-03",
       "hora": "18:00",
       "title_es": "El boxeador",
-      "title_en": "El boxeador",
+      "title_en": "Battling Butler",
       "director": "Buster Keaton",
       "country": "EE:UU",
       "year": 1926,
-      "duration": 71,
-      "letterboxd": "",
+      "duration": 77,
+      "letterboxd": "https://letterboxd.com/film/battling-butler/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
@@ -4906,12 +5074,12 @@
       "fecha": "2026-06-04",
       "hora": "15:00",
       "title_es": "El boxeador",
-      "title_en": "El boxeador",
+      "title_en": "Battling Butler",
       "director": "Buster Keaton",
       "country": "EE:UU",
       "year": 1926,
-      "duration": 71,
-      "letterboxd": "",
+      "duration": 77,
+      "letterboxd": "https://letterboxd.com/film/battling-butler/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
@@ -4984,6 +5152,20 @@
       "letterboxd": "https://letterboxd.com/film/no-other-choice-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=362",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-04",
+      "hora": "20:30",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cine Cosmos",
@@ -5078,7 +5260,7 @@
       "director": "Vsevolov Pudovkin",
       "country": "Unión Soviética",
       "year": 1926,
-      "duration": 90,
+      "duration": 87,
       "letterboxd": "https://letterboxd.com/film/mother-1926/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
@@ -5110,6 +5292,20 @@
       "letterboxd": "https://letterboxd.com/film/no-other-choice-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=362",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-05",
+      "hora": "20:30",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cine Cosmos",
@@ -5144,12 +5340,12 @@
       "fecha": "2026-06-06",
       "hora": "15:00",
       "title_es": "El boxeador",
-      "title_en": "El boxeador",
+      "title_en": "Battling Butler",
       "director": "Buster Keaton",
       "country": "EE:UU",
       "year": 1926,
-      "duration": 71,
-      "letterboxd": "",
+      "duration": 77,
+      "letterboxd": "https://letterboxd.com/film/battling-butler/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
@@ -5238,6 +5434,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-06",
+      "hora": "20:30",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-06",
       "hora": "21:20",
@@ -5270,12 +5480,12 @@
       "fecha": "2026-06-07",
       "hora": "15:00",
       "title_es": "Gorriones",
-      "title_en": "Gorriones",
+      "title_en": "Sparrows",
       "director": "William Beaudine",
       "country": "EE:UU",
       "year": 1926,
-      "duration": 84,
-      "letterboxd": "",
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/sparrows/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
@@ -5322,6 +5532,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-07",
+      "hora": "18:00",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-07",
       "hora": "18:50",
@@ -5348,6 +5572,20 @@
       "letterboxd": "https://letterboxd.com/film/no-other-choice-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=362",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-07",
+      "hora": "21:00",
+      "title_es": "Taxi Driver",
+      "title_en": "Taxi Driver",
+      "director": "Martin Scorsese",
+      "country": "USA",
+      "year": 1976,
+      "duration": 114,
+      "letterboxd": "https://letterboxd.com/film/taxi-driver/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cine Cosmos",
@@ -5536,12 +5774,12 @@
       "fecha": "2026-06-09",
       "hora": "18:00",
       "title_es": "El boxeador",
-      "title_en": "El boxeador",
+      "title_en": "Battling Butler",
       "director": "Buster Keaton",
       "country": "EE:UU",
       "year": 1926,
-      "duration": 71,
-      "letterboxd": "",
+      "duration": 77,
+      "letterboxd": "https://letterboxd.com/film/battling-butler/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
@@ -5572,6 +5810,20 @@
       "letterboxd": "https://letterboxd.com/film/no-other-choice-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=362",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-09",
+      "hora": "21:00",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cine Cosmos",
@@ -5610,7 +5862,7 @@
       "director": "F. W. Murnau",
       "country": "Alemania",
       "year": 1926,
-      "duration": 107,
+      "duration": 116,
       "letterboxd": "",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
@@ -5658,6 +5910,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-10",
+      "hora": "18:00",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-10",
       "hora": "18:50",
@@ -5694,7 +5960,7 @@
       "director": "Vsevolov Pudovkin",
       "country": "Unión Soviética",
       "year": 1926,
-      "duration": 90,
+      "duration": 87,
       "letterboxd": "https://letterboxd.com/film/mother-1926/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
@@ -5770,6 +6036,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-11",
+      "hora": "18:00",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-11",
       "hora": "18:50",
@@ -5806,7 +6086,7 @@
       "director": "F. W. Murnau",
       "country": "Alemania",
       "year": 1926,
-      "duration": 107,
+      "duration": 116,
       "letterboxd": "",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
@@ -5848,7 +6128,7 @@
       "director": "A. W. Sandberg",
       "country": "Dinamarca",
       "year": 1926,
-      "duration": 139,
+      "duration": 137,
       "letterboxd": "https://letterboxd.com/film/the-golden-clown/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
@@ -5900,12 +6180,12 @@
       "fecha": "2026-06-12",
       "hora": "18:00",
       "title_es": "Gorriones",
-      "title_en": "Gorriones",
+      "title_en": "Sparrows",
       "director": "William Beaudine",
       "country": "EE:UU",
       "year": 1926,
-      "duration": 84,
-      "letterboxd": "",
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/sparrows/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
@@ -6034,6 +6314,20 @@
       "letterboxd": "https://letterboxd.com/film/no-other-choice-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=362",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-13",
+      "hora": "21:00",
+      "title_es": "Taxi Driver",
+      "title_en": "Taxi Driver",
+      "director": "Martin Scorsese",
+      "country": "USA",
+      "year": 1976,
+      "duration": 114,
+      "letterboxd": "https://letterboxd.com/film/taxi-driver/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cine Cosmos",
@@ -6118,6 +6412,20 @@
       "letterboxd": "https://letterboxd.com/film/case-137-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=357",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-14",
+      "hora": "17:00",
+      "title_es": "Taxi Driver",
+      "title_en": "Taxi Driver",
+      "director": "Martin Scorsese",
+      "country": "USA",
+      "year": 1976,
+      "duration": 114,
+      "letterboxd": "https://letterboxd.com/film/taxi-driver/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cine Cosmos",
@@ -6170,7 +6478,7 @@
       "director": "Vsevolov Pudovkin",
       "country": "Unión Soviética",
       "year": 1926,
-      "duration": 90,
+      "duration": 87,
       "letterboxd": "https://letterboxd.com/film/mother-1926/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
@@ -6184,10 +6492,24 @@
       "director": "A. W. Sandberg",
       "country": "Dinamarca",
       "year": 1926,
-      "duration": 139,
+      "duration": 137,
       "letterboxd": "https://letterboxd.com/film/the-golden-clown/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-19",
+      "hora": "21:00",
+      "title_es": "Taxi Driver",
+      "title_en": "Taxi Driver",
+      "director": "Martin Scorsese",
+      "country": "USA",
+      "year": 1976,
+      "duration": 114,
+      "letterboxd": "https://letterboxd.com/film/taxi-driver/",
+      "ticket_url": "",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Sala Lugones",
@@ -6200,34 +6522,6 @@
       "year": 2025,
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/justa/",
-      "ticket_url": "",
-      "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "Sin fecha",
-      "hora": "??",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "director": "Ramiro Sonzini, Ezequiel Salinas",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "",
-      "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "Sin fecha",
-      "hora": "??",
-      "title_es": "Taxi Driver",
-      "title_en": "Taxi Driver",
-      "director": "Martin Scorsese",
-      "country": "USA",
-      "year": 1976,
-      "duration": 114,
-      "letterboxd": "https://letterboxd.com/film/taxi-driver/",
       "ticket_url": "",
       "ciclo": ""
     }

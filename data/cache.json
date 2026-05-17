@@ -1019,10 +1019,10 @@
     "duration": 86
   },
   "el boxeador": {
-    "url": "",
-    "title_en": "El boxeador",
+    "url": "https://letterboxd.com/film/battling-butler/",
+    "title_en": "Battling Butler",
     "director": "Buster Keaton",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1926,
     "duration": 77
   },
@@ -1043,10 +1043,10 @@
     "duration": 116
   },
   "gorriones": {
-    "url": "",
-    "title_en": "Gorriones",
+    "url": "https://letterboxd.com/film/sparrows/",
+    "title_en": "Sparrows",
     "director": "William Beaudine",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1926,
     "duration": 94
   },
@@ -1313,5 +1313,45 @@
     "country": "Norway",
     "year": 2024,
     "duration": 111
+  },
+  "das wunder von taipeh": {
+    "url": "https://letterboxd.com/film/das-wunder-von-taipeh/",
+    "title_en": "We Wanted More: The Miracle of Taipei",
+    "director": "John David Seidler",
+    "country": "Germany",
+    "year": 2019,
+    "duration": 85
+  },
+  "sieger sein": {
+    "url": "https://letterboxd.com/film/sieger-sein/",
+    "title_en": "Winners",
+    "director": "Soleen Yusef",
+    "country": "Germany",
+    "year": 2024,
+    "duration": 119
+  },
+  "el verdugo": {
+    "url": "https://letterboxd.com/film/el-verdugo/",
+    "title_en": "El verdugo",
+    "director": "Francisco Guerrero",
+    "country": "Mexico",
+    "year": 2003,
+    "duration": 90
+  },
+  "plácido": {
+    "url": "https://letterboxd.com/film/placido/",
+    "title_en": "Placido",
+    "director": "Luis García Berlanga",
+    "country": "Spain",
+    "year": 1961,
+    "duration": 84
+  },
+  "la chica nueva": {
+    "url": "https://letterboxd.com/film/la-chica-nueva/",
+    "title_en": "The New Girl",
+    "director": "Micaela Gonzalo",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 78
   }
 }
