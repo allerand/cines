@@ -190,26 +190,51 @@ async def run_scraper(semanas: int = 2) -> None:
         print()
         await lb_browser.close()
 
+    # Stopwords del español (palabras que NO se capitalizan en sentence case)
+    SPANISH_STOPWORDS = {
+        "de", "del", "la", "el", "los", "las", "y", "a", "al", "en",
+        "un", "una", "unos", "unas", "por", "con", "para", "sin",
+        "lo", "se", "su", "sus", "es", "que", "o", "u", "ni", "mi",
+        "ante", "sobre", "tras", "entre", "hacia", "hasta", "desde",
+    }
+
+    def _title_case_es(s: str) -> str:
+        """'HOMBRE DE LA ATLÁNTIDA' → 'Hombre de la Atlántida'."""
+        if not s:
+            return s
+        out_words: list[str] = []
+        for i, w in enumerate(s.split()):
+            wl = w.lower()
+            if i == 0 or wl not in SPANISH_STOPWORDS:
+                # Capitalize preservando acentos (str.capitalize hace lower al resto)
+                out_words.append(wl[:1].upper() + wl[1:])
+            else:
+                out_words.append(wl)
+        return " ".join(out_words)
+
     # Construir JSON final
     screenings_out = []
     for s in all_screenings:
         meta = title_meta.get(s.title, {})
-        # Title display: preferimos el título oficial en español de TMDb
-        # (casing correcto, sin TODO EN MAYÚSCULAS de Cacodelphia/Arthaus).
-        # Si TMDb no tiene traducción al español usamos su título original.
-        # Como último fallback queda el título scrapeado del cine.
         scraped = s.title
-        # Si el cine devuelve TODO MAYÚSCULAS, prefiramos cualquier alternativa
+        # ¿Cine devolvió todo en MAYÚSCULAS? (Cacodelphia/Arthaus)
         scraped_is_caps = scraped.isupper() if len(scraped) > 3 else False
-        tmdb_es = meta.get("title_es") or ""
-        tmdb_orig = meta.get("original_title") or ""
-        tmdb_en = meta.get("title_en") or ""
-        if tmdb_es:
-            display_title = tmdb_es
-        elif scraped_is_caps and (tmdb_orig or tmdb_en):
-            display_title = tmdb_orig or tmdb_en
-        else:
+        tmdb_es = (meta.get("title_es") or "").strip()
+        tmdb_en = (meta.get("title_en") or "").strip()
+
+        if not scraped_is_caps:
+            # Cine ya nos dio el título con casing decente — respetamos.
+            # El cine local SIEMPRE conoce el título local mejor que TMDb.
             display_title = scraped
+        elif tmdb_es and tmdb_es.lower() != tmdb_en.lower():
+            # Cine en mayúsculas y TMDb tiene una traducción al español
+            # genuina (distinta del título en inglés) → usamos TMDb.
+            display_title = tmdb_es
+        else:
+            # Cine en mayúsculas y no hay traducción confiable al español →
+            # prettify el scraped a sentence-case en castellano (mantiene
+            # nombres propios y stopwords correctos).
+            display_title = _title_case_es(scraped)
 
         screenings_out.append({
             "cine":       s.cine,
