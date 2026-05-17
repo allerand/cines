@@ -430,20 +430,24 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
     day_re = re.compile(
         r"\n(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[aá]bado|Domingo)\s+(\d{1,2})(?=\s*\n)",
     )
+    # Bloques horarios. Soporta:
+    #   A las 15 horas
+    #   A las 15 y 21 horas
+    #   A las 20.30 horas
+    #   A las 15:30 horas
     hour_re = re.compile(
-        r"A las (\d{1,2})(?:\s+y\s+(\d{1,2}))?\s+horas?",
+        r"A las (\d{1,2})(?:[.:](\d{2}))?(?:\s+y\s+(\d{1,2})(?:[.:](\d{2}))?)?\s+horas?",
         re.IGNORECASE,
     )
-    # Cabecera del bloque-peli: TITLE\n(Original; Country; Year). El bloque
-    # entre paréntesis a veces es multilínea:
-    #   (
-    #   Der schweigende Stern
-    #   ; República Democrática Alemana/República
-    #   Popular de Polonia; 1960)
-    # Por eso permitimos newlines dentro del meta-paréntesis.
+    # Cabecera del bloque-peli: TITLE en su propia línea, luego (paren con meta).
+    # Soporta:
+    #   (Original; País; Año)                ← variante "3 segmentos"
+    #   (Original; País/Co-producción, Año)  ← idem, coma antes del año
+    #   (País; Año)                          ← variante "2 segmentos" (sin original)
+    #   (País/Co-producción, Año)            ← idem 2 seg, coma antes del año
+    # Y tolera saltos de línea dentro del paréntesis.
     film_head_re = re.compile(
-        r"^([A-ZÁÉÍÓÚÑ0-9][^\n(]+?)\s*\n+"
-        r"\(\s*([^;)]+?)\s*[;,]\s*([^;)]+?)\s*[;,]\s*(\d{4})\s*\)",
+        r"^([A-ZÁÉÍÓÚÑ0-9][^\n(]+?)\s*\n+\(([^)]+?)\)",
         re.MULTILINE,
     )
     # Director: captura hasta el fin de línea para no cortar en abreviaturas
@@ -452,6 +456,29 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
     # Duración: "(84'; DM)" — apóstrofes U+0027 / U+2019 / U+2032
     duration_re = re.compile("\\((\\d{2,3})\\s*['’′]")
 
+    def _parse_paren_meta(paren: str) -> Optional[dict]:
+        """De `(Sparrows; EE:UU; 1926)` o `(País; 1972)` extrae year/country/original.
+        Rechaza paréntesis que tienen SOLO año tipo `(1966)` — son menciones
+        espurias en sinopsis, no headers reales de película.
+        """
+        s = re.sub(r"\s+", " ", paren).strip()
+        ym = re.search(r"(?:^|[;,])\s*(\d{4})\s*$", s)
+        if not ym:
+            return None
+        year = int(ym.group(1))
+        pre = s[: ym.start()].strip().rstrip(",;").strip()
+        parts = [p.strip() for p in re.split(r"\s*;\s*", pre) if p.strip()]
+        if not parts:
+            return None  # `(1966)` suelto → mención en sinopsis, no header de peli
+        out: dict = {"year": year}
+        if len(parts) >= 2:
+            out["original_title"] = parts[0]
+            out["country"] = "; ".join(parts[1:])
+        else:
+            out["original_title"] = ""
+            out["country"] = parts[0]
+        return out
+
     parts = day_re.split(normalized)
     for i in range(1, len(parts), 2):
         day_num = int(parts[i])
@@ -459,9 +486,10 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
 
         hour_matches = list(hour_re.finditer(chunk))
         for idx, hm in enumerate(hour_matches):
-            hours = [int(hm.group(1))]
-            if hm.group(2):
-                hours.append(int(hm.group(2)))
+            # group(1)=hh1, group(2)=mm1, group(3)=hh2, group(4)=mm2
+            hh_mm: list[tuple[int, int]] = [(int(hm.group(1)), int(hm.group(2) or 0))]
+            if hm.group(3):
+                hh_mm.append((int(hm.group(3)), int(hm.group(4) or 0)))
 
             sub_start = hm.end()
             sub_end = hour_matches[idx + 1].start() if idx + 1 < len(hour_matches) else len(chunk)
@@ -479,11 +507,14 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
                 )
                 film_segment = sub[head_start:head_end]
 
+                meta = _parse_paren_meta(fm.group(2))
+                if not meta:
+                    continue
                 entry: dict = {
                     "title": fm.group(1).strip(),
-                    "original_title": fm.group(2).strip(),
-                    "country": fm.group(3).strip(),
-                    "year": int(fm.group(4)),
+                    "original_title": meta.get("original_title", ""),
+                    "country": meta.get("country", ""),
+                    "year": meta.get("year"),
                 }
                 dm = director_re.search(film_segment)
                 if dm:
@@ -495,8 +526,8 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
                 if dur:
                     entry["duration"] = int(dur.group(1))
 
-                for hour in hours:
-                    mapping[(day_num, f"{hour:02d}:00")] = entry
+                for hh, mm in hh_mm:
+                    mapping[(day_num, f"{hh:02d}:{mm:02d}")] = entry
 
     return mapping
 
