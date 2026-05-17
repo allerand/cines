@@ -1,0 +1,71 @@
+name: Scrape cartelera (sin postear a IG)
+
+# Workflow manual para correr SÓLO el scraper y commitear data/cartelera.json.
+# No genera ni postea piezas de Instagram. Útil para testear cambios al
+# scraping sin gastar API quota / sin publicar.
+
+on:
+  workflow_dispatch:
+    inputs:
+      semanas:
+        description: 'Semanas hacia adelante (default 2)'
+        required: false
+        default: '2'
+      regenerate_stories:
+        description: 'Regenerar PNG de stories de hoy (sin postear)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  scrape:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Run scraper
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+        run: python3 run.py --semanas "${{ inputs.semanas }}"
+
+      - name: Compute today's date (Buenos Aires)
+        if: ${{ inputs.regenerate_stories == 'true' }}
+        id: date
+        run: echo "today=$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
+
+      - name: Regenerate today's story PNGs (no posting)
+        if: ${{ inputs.regenerate_stories == 'true' }}
+        run: python3 scripts/generate_posts.py --date "${{ steps.date.outputs.today }}" --format story
+
+      - name: Commit cartelera (+ optional stories)
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/cartelera.json data/cache.json
+          if [ "${{ inputs.regenerate_stories }}" = "true" ]; then
+            git add posts/
+          fi
+
+          if git diff --cached --quiet; then
+            echo "No hay cambios para commitear"
+            exit 0
+          fi
+
+          git commit -m "data: scrape-only refresh $(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
+          git pull --rebase origin main
+          git push origin main
