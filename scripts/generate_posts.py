@@ -58,12 +58,19 @@ def static_server(root: Path, port: int):
             proc.kill()
 
 
-async def generate(date_str: str, cine: str = "all", fmt: str = "portrait") -> list[Path]:
+async def generate(
+    date_str: str,
+    cine: str = "all",
+    fmt: str = "portrait",
+    week_start: str = "",
+) -> list[Path]:
     from playwright.async_api import async_playwright
 
-    # Cada formato vive en su propio subdirectorio para que coexistan
-    # las PNGs de feed (portrait) y story sin pisarse.
-    out_dir = HERE / "posts" / date_str / fmt
+    # En modo semana el directorio de salida es "posts/YYYY-MM-DD_week/<fmt>/"
+    if week_start:
+        out_dir = HERE / "posts" / f"{week_start}_week" / fmt
+    else:
+        out_dir = HERE / "posts" / date_str / fmt
     out_dir.mkdir(parents=True, exist_ok=True)
     for old in out_dir.glob("*.png"):
         old.unlink()
@@ -78,10 +85,16 @@ async def generate(date_str: str, cine: str = "all", fmt: str = "portrait") -> l
                 device_scale_factor=2,
             )
             page = await ctx.new_page()
-            url = (
-                f"http://127.0.0.1:{port}/instagram.html"
-                f"?date={date_str}&cine={cine}&format={fmt}"
-            )
+            if week_start:
+                url = (
+                    f"http://127.0.0.1:{port}/instagram.html"
+                    f"?week={week_start}&cine={cine}&format={fmt}"
+                )
+            else:
+                url = (
+                    f"http://127.0.0.1:{port}/instagram.html"
+                    f"?date={date_str}&cine={cine}&format={fmt}"
+                )
             await page.goto(url, wait_until="networkidle", timeout=20000)
             # Esperar nuestro marker de render terminado
             await page.wait_for_function("document.body.dataset.ready === 'true'", timeout=10000)
@@ -115,6 +128,8 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", default=date_cls.today().isoformat(),
                         help="YYYY-MM-DD (default: hoy)")
+    parser.add_argument("--week-start", default="",
+                        help="YYYY-MM-DD (modo semana — 7 slides, 1 por día)")
     parser.add_argument("--cine", default="all",
                         help="'all' o nombre exacto del cine (default: all)")
     parser.add_argument("--format", default="portrait",
@@ -122,11 +137,15 @@ def main():
                         help="formato de slide (default: portrait)")
     args = parser.parse_args()
 
-    saved = asyncio.run(generate(args.date, args.cine, args.format))
+    saved = asyncio.run(generate(args.date, args.cine, args.format, args.week_start))
     if saved:
-        print(f"\n✅ {len(saved)} slide(s) → posts/{args.date}/{args.format}/")
+        out_subdir = (
+            f"{args.week_start}_week/{args.format}" if args.week_start
+            else f"{args.date}/{args.format}"
+        )
+        print(f"\n✅ {len(saved)} slide(s) → posts/{out_subdir}/")
     else:
-        print(f"\n⚠️  no se generó ningún slide para {args.date}")
+        print(f"\n⚠️  no se generó ningún slide")
         sys.exit(1)
 
 

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Preview semanal — diseño feed</title>
+<style>
+  :root { --bg: #181818; --panel: #1f1f1f; --text: #ddd; --muted: #888; --accent: #00d060; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; }
+  header { padding: 20px 28px; border-bottom: 1px solid #2a2a2a; }
+  header h1 { margin: 0 0 8px; font-size: 22px; }
+  header .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; font-size: 14px; }
+  header input, header select, header button {
+    background: #111; color: var(--text); border: 1px solid #2a2a2a; border-radius: 4px;
+    padding: 6px 10px; font: inherit;
+  }
+  header button {
+    background: var(--accent); color: #000; font-weight: 600; cursor: pointer;
+    border-color: var(--accent);
+  }
+  header .hint { color: var(--muted); font-size: 12px; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 16px;
+    padding: 16px;
+  }
+  .slide-card {
+    background: var(--panel); border-radius: 8px; overflow: hidden;
+    border: 1px solid #2a2a2a;
+  }
+  .slide-card .label {
+    padding: 8px 12px; font-size: 13px; color: var(--muted);
+    background: #161616; border-bottom: 1px solid #2a2a2a;
+    display: flex; justify-content: space-between;
+  }
+  .slide-card iframe {
+    display: block;
+    /* Cada iframe escala el contenido portrait (1080x1350) a la celda actual */
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    border: none;
+    background: #000;
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Preview semanal · diseño del feed</h1>
+  <div class="row">
+    <label>Inicio de semana <input type="date" id="weekStart"></label>
+    <label>Formato
+      <select id="format">
+        <option value="portrait">Portrait 1080×1350</option>
+        <option value="square">Square 1080×1080</option>
+        <option value="story">Story 1080×1920</option>
+      </select>
+    </label>
+    <button id="reload">Recargar</button>
+    <span class="hint">Refrescá tras editar <code>instagram.html</code></span>
+  </div>
+</header>
+<div class="grid" id="grid"></div>
+
+<script>
+  // Por default: lunes de la semana actual (Buenos Aires).
+  function thisMondayISO() {
+    const now = new Date();
+    const day = now.getDay(); // 0=dom..6=sab
+    const offsetToMon = (day === 0 ? -6 : 1 - day);
+    const mon = new Date(now);
+    mon.setDate(now.getDate() + offsetToMon);
+    return `${mon.getFullYear()}-${String(mon.getMonth()+1).padStart(2,'0')}-${String(mon.getDate()).padStart(2,'0')}`;
+  }
+
+  const grid = document.getElementById('grid');
+  const weekStartEl = document.getElementById('weekStart');
+  const formatEl = document.getElementById('format');
+  const reloadEl = document.getElementById('reload');
+
+  weekStartEl.value = thisMondayISO();
+
+  function render() {
+    const ws = weekStartEl.value;
+    const fmt = formatEl.value;
+    grid.innerHTML = '';
+    for (let i = 1; i <= 7; i++) {
+      const card = document.createElement('div');
+      card.className = 'slide-card';
+      card.innerHTML = `
+        <div class="label">
+          <span>Día ${i}/7</span>
+          <span class="hint">slide ${i}</span>
+        </div>
+        <iframe src="instagram.html?week=${ws}&format=${fmt}&slide=${i}&t=${Date.now()}"></iframe>
+      `;
+      grid.appendChild(card);
+    }
+  }
+
+  weekStartEl.addEventListener('change', render);
+  formatEl.addEventListener('change', render);
+  reloadEl.addEventListener('click', render);
+  render();
+</script>
+</body>
+</html>

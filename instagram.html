@@ -211,6 +211,49 @@
 
   .empty { padding: 60px 0; text-align: center; color: var(--muted); font-size: 24px; }
 
+  /* ── Modo "semana" ── 1 slide = 1 día completo. Layout compacto en 2 columnas. */
+  .post.week .post-films {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+    row-gap: 0;
+    overflow: hidden;
+  }
+  .post.week.single-col .post-films {
+    grid-template-columns: 1fr;
+  }
+  .post.week .film {
+    display: grid;
+    grid-template-columns: 70px 1fr;
+    gap: 10px;
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    align-items: baseline;
+    min-height: 0;
+  }
+  .post.week .film-time {
+    font-size: 20px; font-weight: 700; padding-top: 0;
+    line-height: 1.1;
+  }
+  .post.week .film-time.unknown {
+    font-size: 16px; padding-top: 2px;
+  }
+  .post.week .film-body {
+    gap: 1px;
+    min-width: 0;  /* permite ellipsis en grid child */
+  }
+  .post.week .film-title {
+    font-size: 17px; font-weight: 700; line-height: 1.15;
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .post.week .film-cine {
+    font-size: 10px; padding: 1px 6px; letter-spacing: 0.05em;
+  }
+  /* En week mode no mostramos director/year/duration/ciclo para ahorrar espacio */
+  .post.week .film-director,
+  .post.week .film-meta,
+  .post.week .film-ciclo { display: none; }
+
   .slides-controls { display: flex; align-items: center; gap: 8px; margin-left: auto; }
   .slides-controls button {
     padding: 6px 10px; font-size: 0.85rem;
@@ -319,6 +362,8 @@ function cineCssClass(cine) {
   return '';
 }
 
+let weekStart = null;  // YYYY-MM-DD si modo semanal, sino null
+
 async function loadData() {
   const res = await fetch('data/cartelera.json?t=' + Date.now());
   const data = await res.json();
@@ -326,7 +371,11 @@ async function loadData() {
 
   // URL params permiten control desde scripts (generate_posts.py):
   //   ?date=2026-05-10&cine=all&format=portrait&slide=2
+  //   ?week=2026-05-18&format=portrait      ← modo semanal (7 slides)
   const params = new URLSearchParams(location.search);
+  if (params.get('week')) {
+    weekStart = params.get('week');
+  }
   const dates = [...new Set(allScreenings.map(s => s.fecha).filter(f => /^\d{4}-\d{2}-\d{2}$/.test(f)))].sort();
   const today = new Date();
   const todayStr = `${today.getFullYear()}-${String(today.getMonth()+1).padStart(2,'0')}-${String(today.getDate()).padStart(2,'0')}`;
@@ -378,6 +427,12 @@ function getFilteredRows() {
 }
 
 function renderSlide(slideNum) {
+  // Modo semana: cada slide es un día (lun-dom). 7 slides total.
+  if (weekStart && /^\d{4}-\d{2}-\d{2}$/.test(weekStart)) {
+    renderWeekSlide(slideNum);
+    return;
+  }
+
   const date = document.getElementById('date').value;
   const cine = document.getElementById('cine').value;
   const format = document.getElementById('format').value;
@@ -438,6 +493,65 @@ function renderSlide(slideNum) {
   const slideText = totalSlides > 1 ? `${currentSlide} / ${totalSlides}` : '';
   document.getElementById('slide-indicator').textContent = totalSlides > 1 ? `Slide ${currentSlide} / ${totalSlides}` : '1 / 1';
   document.getElementById('post-slide-num').textContent = slideText;
+  document.getElementById('prev-slide').disabled = currentSlide <= 1;
+  document.getElementById('next-slide').disabled = currentSlide >= totalSlides;
+
+  scaleStage();
+}
+
+function renderWeekSlide(slideNum) {
+  // Modo semana: cada slide es un día (offset 0..6 desde weekStart). Total 7.
+  const format = document.getElementById('format').value;
+  const post = document.getElementById('post');
+  // Clase "week" añade layout compacto 2-columnas
+  post.className = 'post ' + format + ' week';
+
+  totalSlides = 7;
+  if (slideNum < 1) slideNum = 1;
+  if (slideNum > totalSlides) slideNum = totalSlides;
+  currentSlide = slideNum;
+
+  // Calcular fecha del día N de la semana
+  const [yS, mS, dS] = weekStart.split('-').map(Number);
+  const dt = new Date(yS, mS - 1, dS);
+  dt.setDate(dt.getDate() + (slideNum - 1));
+  const y = dt.getFullYear();
+  const m = dt.getMonth() + 1;
+  const d = dt.getDate();
+  const dayIso = `${y}-${String(m).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+  const dayName = DAYS_ES[dt.getDay()];
+  const monthName = MONTHS_ES[m - 1];
+  document.getElementById('post-date').textContent = `${dayName} ${d} de ${monthName}`.toLowerCase();
+  document.documentElement.style.setProperty('--accent', DAY_ACCENT[dt.getDay()]);
+  document.getElementById('post-cinefilter').hidden = true;
+
+  // Pelis de ese día
+  const rows = allScreenings
+    .filter(s => s.fecha === dayIso)
+    .sort((a, b) => (a.hora || '99').localeCompare(b.hora || '99'));
+
+  // 1 columna si pocas pelis, 2 columnas si muchas
+  if (rows.length <= 12) post.classList.add('single-col');
+
+  const filmsEl = document.getElementById('post-films');
+  if (rows.length === 0) {
+    filmsEl.innerHTML = '<div class="empty">no hay funciones</div>';
+  } else {
+    filmsEl.innerHTML = rows.map(s => {
+      const horaClass = (s.hora === '??' || !s.hora) ? 'film-time unknown' : 'film-time';
+      const horaText = (s.hora === '??' || !s.hora) ? 'S/H' : s.hora;
+      return `<div class="film">
+        <div class="${horaClass}">${horaText}</div>
+        <div class="film-body">
+          <span class="film-cine ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>
+          <div class="film-title">${escapeHtml(displayTitle(s))}</div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  document.getElementById('slide-indicator').textContent = `Día ${currentSlide} / 7`;
+  document.getElementById('post-slide-num').textContent = `${currentSlide} / 7`;
   document.getElementById('prev-slide').disabled = currentSlide <= 1;
   document.getElementById('next-slide').disabled = currentSlide >= totalSlides;
 
