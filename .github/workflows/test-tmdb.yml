@@ -26,37 +26,50 @@ jobs:
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
         run: |
           python3 <<'PY'
-          import os, sys
-          # Mínimo necesario para usar letterboxd.tmdb_*
-          # (sólo importa funciones, no necesita playwright)
-          sys.path.insert(0, ".")
-          from letterboxd import _tmdb_credential, tmdb_search_movie, fetch_tmdb_movie_meta
+          import os, sys, traceback
+          print("Python", sys.version.split()[0])
+          print("TMDB_API_KEY len:", len(os.environ.get("TMDB_API_KEY","")))
+          print("TMDB_READ_ACCESS_TOKEN len:", len(os.environ.get("TMDB_READ_ACCESS_TOKEN","")))
 
-          kind, val = _tmdb_credential()
-          if not kind:
-              print("❌ TMDb credential NO seteada — chequear secret TMDB_API_KEY o TMDB_READ_ACCESS_TOKEN")
+          try:
+              sys.path.insert(0, ".")
+              import letterboxd
+              print(f"letterboxd.py loaded: {letterboxd.__file__}")
+              from letterboxd import _tmdb_credential, tmdb_search_movie, fetch_tmdb_movie_meta
+          except Exception:
+              print("\n❌ Falló al importar letterboxd:")
+              traceback.print_exc()
               sys.exit(1)
-          print(f"✅ Credencial detectada: tipo {kind}, longitud {len(val)}")
 
-          # Test 1: peli vieja (La madre 1926 por Pudovkin)
-          print("\n— Test 1: 'Mat' 1926 (Pudovkin)")
-          results = tmdb_search_movie("Mat", year=1926)
-          if not results:
-              print("  ❌ Sin resultados")
-              sys.exit(1)
-          for r in results[:3]:
-              print(f"  • {r['title']} ({r['year']}) — orig={r['original_title']!r} id={r['id']}")
-          meta = fetch_tmdb_movie_meta(results[0]["id"])
-          print(f"  → director={meta.get('director')!r}  country={meta.get('country')!r}  duration={meta.get('duration')}min")
+          try:
+              kind, val = _tmdb_credential()
+              if not kind:
+                  print("\n❌ TMDb credential NO seteada — chequear secret TMDB_API_KEY o TMDB_READ_ACCESS_TOKEN")
+                  sys.exit(1)
+              print(f"\n✅ Credencial detectada: tipo {kind}, longitud {len(val)}")
 
-          # Test 2: peli reciente (Los dias chinos, Santiago Loza)
-          print("\n— Test 2: 'Los dias chinos'")
-          results = tmdb_search_movie("Los dias chinos")
-          for r in results[:3]:
-              print(f"  • {r['title']} ({r['year']}) — orig={r['original_title']!r} id={r['id']}")
-          if results:
+              print("\n— Test 1: 'Mat' 1926 (Pudovkin)")
+              results = tmdb_search_movie("Mat", year=1926)
+              print(f"  resultados: {len(results)}")
+              if not results:
+                  print("  ❌ Sin resultados — credencial probablemente inválida o rate-limit")
+                  sys.exit(1)
+              for r in results[:3]:
+                  print(f"  • {r['title']} ({r['year']}) — orig={r['original_title']!r} id={r['id']}")
               meta = fetch_tmdb_movie_meta(results[0]["id"])
               print(f"  → director={meta.get('director')!r}  country={meta.get('country')!r}  duration={meta.get('duration')}min")
 
-          print("\n✅ TMDb funciona correctamente")
+              print("\n— Test 2: 'Los dias chinos'")
+              results = tmdb_search_movie("Los dias chinos")
+              for r in results[:3]:
+                  print(f"  • {r['title']} ({r['year']}) — orig={r['original_title']!r} id={r['id']}")
+              if results:
+                  meta = fetch_tmdb_movie_meta(results[0]["id"])
+                  print(f"  → director={meta.get('director')!r}  country={meta.get('country')!r}  duration={meta.get('duration')}min")
+
+              print("\n✅ TMDb funciona correctamente")
+          except Exception:
+              print("\n❌ Excepción durante test:")
+              traceback.print_exc()
+              sys.exit(1)
           PY
