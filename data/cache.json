@@ -616,7 +616,9 @@
     "director": "Olivier Assayas",
     "country": "France, UK",
     "year": 2025,
-    "duration": 136
+    "duration": 136,
+    "title_es": "El mago del Kremlin",
+    "original_title": "Le mage du Kremlin"
   },
   "gioia mia - un verano en sicilia": {
     "url": "https://letterboxd.com/film/sweetheart-2025-3/",
@@ -936,7 +938,8 @@
     "director": "",
     "country": "",
     "year": 1980,
-    "duration": null
+    "duration": null,
+    "original_title": "茉莉花"
   },
   "una eva y dos adanes": {
     "url": "https://letterboxd.com/film/some-like-it-hot/",
@@ -1040,7 +1043,9 @@
     "director": "F. W. Murnau",
     "country": "Germany",
     "year": 1926,
-    "duration": 116
+    "duration": 116,
+    "title_es": "Fausto",
+    "original_title": "Faust - Eine deutsche Volkssage"
   },
   "gorriones": {
     "url": "https://letterboxd.com/film/sparrows/",
@@ -1080,7 +1085,8 @@
     "director": "Victoria Chaya Miranda",
     "country": "Argentina",
     "year": 2019,
-    "duration": 102
+    "duration": 102,
+    "original_title": "Lo habrás imaginado"
   },
   "exit 8": {
     "url": "https://letterboxd.com/film/exit-8/",
@@ -1168,7 +1174,8 @@
     "director": "Ricardo M. Jacobo",
     "country": "Argentina",
     "year": 2025,
-    "duration": 78
+    "duration": 78,
+    "original_title": "Soy tu mensaje"
   },
   "vampiros": {
     "url": "https://letterboxd.com/film/vampires/",
@@ -1285,10 +1292,12 @@
   "7 cajas": {
     "url": "",
     "title_en": "7 cajas",
-    "director": "Tana Schémbori, Juan Carlos Maneglia",
+    "director": "Juan Carlos Maneglia, Tana Schémbori",
     "country": "Paraguay, Spain",
     "year": 2012,
-    "duration": 106
+    "duration": 106,
+    "title_es": "7 Cajas",
+    "original_title": "7 cajas"
   },
   "en la zona gris": {
     "url": "https://letterboxd.com/film/in-the-grey-2026/",
