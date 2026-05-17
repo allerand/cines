@@ -19,10 +19,15 @@ import unicodedata
 import urllib.error
 import urllib.request
 from pathlib import Path
-from typing import Optional
+from typing import TYPE_CHECKING, Optional
 
 from bs4 import BeautifulSoup
-from playwright.async_api import Page
+
+# Playwright sólo se necesita para enrich_title (búsqueda en LB con headless
+# browser). Lo importamos perezosamente para que las funciones TMDb / utilities
+# puedan usarse sin tener playwright instalado.
+if TYPE_CHECKING:  # pragma: no cover
+    from playwright.async_api import Page
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -127,7 +132,7 @@ def parse_film_soup(soup: BeautifulSoup, url: str) -> Optional[dict]:
     }
 
 
-async def search_letterboxd(page: Page, query: str) -> Optional[str]:
+async def search_letterboxd(page: "Page", query: str) -> Optional[str]:
     """
     Busca en letterboxd.com/search/ con playwright y devuelve la URL de la primera película.
     (urllib devuelve 403 en el search endpoint de Letterboxd)
@@ -461,7 +466,7 @@ def search_ddg_letterboxd(query: str, min_delay: float = 4.0) -> list[str]:
 
 async def enrich_title(
     title: str,
-    page: Page,
+    page: "Page",
     cache: LetterboxdCache,
     delay: float = 1.0,
     hint_year: Optional[int] = None,
