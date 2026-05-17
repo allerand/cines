@@ -815,19 +815,135 @@ from pathlib import Path
 LORCA_MANUAL_PATH = Path(__file__).parent / "data" / "lorca_manual.json"
 
 
+LORCA_IMDB_BASE = (
+    "https://www.imdb.com/showtimes/cinema/AR/ci1036356/AR/C1134/"
+)
+
+
+def _parse_lorca_imdb_text(text: str) -> list[dict]:
+    """
+    Parsea el innerText de la página de showtimes IMDb para Cine Lorca.
+
+    Cada película aparece así (saltos de línea reales):
+
+        El diablo viste a la moda 2
+        20261h 59mPG-13
+        6.7
+         (42 k)
+        Calificar
+        Marcar como visto
+        Estándar:
+        4:00 PM
+        8:20 PM
+
+    Devuelve [{title, year, duration, times: ["HH:MM",...]}, ...].
+    """
+    lines = [ln.strip() for ln in text.splitlines()]
+    out: list[dict] = []
+    # Año + duración en una sola palabra: "20261h 59mPG-13" o "2026 1h 59m R"
+    meta_re = re.compile(r"^(\d{4})(\d+)h(\d+)m", re.IGNORECASE)
+    time_re = re.compile(r"^(\d{1,2}):(\d{2})\s+(AM|PM)$", re.IGNORECASE)
+
+    i = 0
+    while i < len(lines):
+        compact = lines[i].replace(" ", "") if lines[i] else ""
+        mm = meta_re.match(compact)
+        if not mm:
+            i += 1
+            continue
+        year = int(mm.group(1))
+        duration = int(mm.group(2)) * 60 + int(mm.group(3))
+        # La línea anterior no-vacía es el título
+        title = ""
+        k = i - 1
+        while k >= 0 and not lines[k]:
+            k -= 1
+        if k >= 0:
+            title = lines[k]
+        # Recolectar horarios hasta el próximo meta o fin
+        times: list[str] = []
+        j = i + 1
+        while j < len(lines):
+            ln = lines[j]
+            if not ln:
+                j += 1
+                continue
+            if ln.startswith("Datos de horarios") or ln.startswith("Más para explorar"):
+                break
+            if meta_re.match(ln.replace(" ", "")):
+                break
+            tm = time_re.match(ln)
+            if tm:
+                h = int(tm.group(1))
+                m = int(tm.group(2))
+                ampm = tm.group(3).upper()
+                if ampm == "PM" and h < 12:
+                    h += 12
+                elif ampm == "AM" and h == 12:
+                    h = 0
+                times.append(f"{h:02d}:{m:02d}")
+            j += 1
+        if title and times:
+            out.append({"title": title, "year": year, "duration": duration, "times": times})
+        i = j
+    return out
+
+
+async def scrape_lorca_imdb(page: "Page", semanas: int = 2) -> list[Screening]:
+    """
+    Cine Lorca no publica programación HTML — sólo una imagen estilizada de Wix.
+    Usamos IMDb showtimes (URL pública) que sí tiene los datos estructurados.
+    Iteramos por día de hoy → hoy+7*semanas.
+    """
+    today = date.today()
+    end = today + timedelta(days=7 * semanas)
+    result: list[Screening] = []
+    seen: set[tuple] = set()
+
+    d = today
+    while d <= end:
+        url = f"{LORCA_IMDB_BASE}{d.isoformat()}/"
+        text = ""
+        for attempt in range(2):
+            try:
+                await page.goto(url, wait_until="domcontentloaded", timeout=30000)
+                await page.wait_for_timeout(3500 if attempt == 0 else 6000)
+                text = await page.evaluate("document.body.innerText")
+            except Exception:
+                text = ""
+            if "Cine Lorca" in text:
+                break
+
+        # Detectar que llegamos a la página de Lorca (anti-redirect/bot-block)
+        if "Cine Lorca" not in text:
+            d += timedelta(days=1)
+            continue
+
+        for film in _parse_lorca_imdb_text(text):
+            for hora in film["times"]:
+                key = (film["title"], d.isoformat(), hora)
+                if key in seen:
+                    continue
+                seen.add(key)
+                result.append(Screening(
+                    cine="Cine Lorca",
+                    title=film["title"],
+                    fecha=d.isoformat(),
+                    hora=hora,
+                    ticket_url="https://cinelorca.wixsite.com/cine-lorca",
+                    year=film.get("year"),
+                    duration=film.get("duration"),
+                ))
+        d += timedelta(days=1)
+
+    return result
+
+
 def scrape_lorca() -> list[Screening]:
     """
-    Lorca publica su programación como imagen (Wix), así que se mantiene un JSON
-    manual con esta forma:
-      {
-        "period_start": "2026-05-07",   # YYYY-MM-DD
-        "period_end":   "2026-05-13",
-        "films": [
-          {"title": "El drama", "times": ["14:00", "22:10"]},
-          ...
-        ]
-      }
-    Genera una Screening por cada (film × hora × día del rango).
+    Fallback manual cuando IMDb falla. Lee data/lorca_manual.json con shape:
+      {"period_start": "...", "period_end": "...",
+       "films": [{"title": "...", "times": ["HH:MM", ...]}, ...]}
     """
     if not LORCA_MANUAL_PATH.exists():
         return []
@@ -1007,8 +1123,9 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
         h1 = ev_soup.find("h1")
         cycle_name = h1.get_text(strip=True) if h1 else ""
 
-        # JSON-LD trae startDate/endDate y description con HTML
+        # JSON-LD trae startDate/endDate y description con HTML.
         description_html = ""
+        start_iso = end_iso = ""
         for sc in ev_soup.find_all("script", type="application/ld+json"):
             try:
                 d = _json.loads(sc.string)
@@ -1017,71 +1134,94 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
             if not isinstance(d, dict) or d.get("@type") != "Event":
                 continue
             description_html = _html.unescape(d.get("description") or "")
+            start_iso = (d.get("startDate") or "")[:10]
+            end_iso = (d.get("endDate") or "")[:10]
             break
         if not description_html:
             continue
 
+        try:
+            ev_start = date.fromisoformat(start_iso) if start_iso else None
+            ev_end = date.fromisoformat(end_iso) if end_iso else ev_start
+        except ValueError:
+            ev_start = ev_end = None
+
+        # Si el evento entero queda fuera de la ventana, skip
+        if ev_end and ev_end < today:
+            continue
+        if ev_start and ev_start > end:
+            continue
+
+        # Mes/año por defecto para fechas que no los explicitan en el texto
+        default_month = ev_start.month if ev_start else today.month
+        default_year = ev_start.year if ev_start else today.year
+
         desc_soup = BeautifulSoup(description_html, "html.parser")
-        # Parseamos párrafo por párrafo. Cada <p> tiene este formato típico:
-        #   "Sábado 2 de mayo  19 h: TITLE"
-        #   "Domingo 17 de mayo  15 h: TITLE_A  17:30 h: TITLE_B"   (multi-slot)
-        #   "Sábado 16 de mayo  19 h: El castillo  Nancy"  ← múltiples películas por hora
-        # Estrategia: extraer el header de fecha del párrafo, después listar
-        # todos los slots "HH(:MM)? h: TITLE" dentro del mismo párrafo.
+        # Patrones soportados dentro de la descripción:
+        #   "Sábado 2 de mayo  19 h: TITLE"            (día + mes explícito)
+        #   "Viernes 22  17 h: TITLE  19:30 h: TITLE"  (día sin "de mes")
+        #   "15 h: TITLE"                              (solo hora — usa ev_start)
+        # date_re intenta capturar día con o sin "de mes"
         date_re = re.compile(
             r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)\s+"
-            r"(\d{1,2})\s+de\s+(\w+)(?:\s+(?:de\s+)?(\d{4}))?",
+            r"(\d{1,2})(?:\s+de\s+(\w+)(?:\s+(?:de\s+)?(\d{4}))?)?",
             re.IGNORECASE,
         )
-        # Mejorado: captura títulos separados por saltos de línea o espacios dobles
-        # Ahora es más permisivo con saltos de línea entre películas
         slot_re = re.compile(
             r"(\d{1,2})(?::(\d{2}))?\s*h(?:s|oras)?\s*[:.\-–]\s*"
             r"(.+?)"
             r"(?=\s+\d{1,2}(?::\d{2})?\s*h(?:s|oras)?\s*[:.\-–]|\Z)",
-            re.IGNORECASE | re.DOTALL,  # DOTALL permite que . coincida con saltos de línea
+            re.IGNORECASE | re.DOTALL,
         )
 
-        paragraphs: list[str] = []
-        for p in desc_soup.find_all("p"):
-            paragraphs.append(re.sub(r"\s+", " ", p.get_text(" ", strip=True)))
-        if not paragraphs:
-            paragraphs = [re.sub(r"\s+", " ", desc_soup.get_text(" ", strip=True))]
+        # Procesamos la descripción entera y agrupamos por header de fecha.
+        # Si nunca aparece un header de fecha, los slots se asignan a ev_start.
+        full_text = desc_soup.get_text(" ", strip=True)
+        full_text = re.sub(r"\s+", " ", full_text)
 
-        for para in paragraphs:
-            dm = date_re.search(para)
-            if not dm:
-                continue
+        # Encontrar headers de fecha + sus rangos en el texto
+        date_anchors: list[tuple[int, int, date]] = []  # (start, end, fecha resuelta)
+        for dm in date_re.finditer(full_text):
             day_num = int(dm.group(1))
-            month_name = dm.group(2).lower()
-            year = int(dm.group(3)) if dm.group(3) else today.year
-            month = CCK_MONTHS.get(month_name)
-            if not month:
-                continue
+            month_name = (dm.group(2) or "").lower()
+            year = int(dm.group(3)) if dm.group(3) else default_year
+            month = CCK_MONTHS.get(month_name, default_month)
             try:
-                d = date(year, month, day_num)
+                d_resolved = date(year, month, day_num)
             except ValueError:
                 continue
-            if d < today - timedelta(days=1):
+            # Si la fecha quedó en el pasado lejano y el evento es a futuro, +1 año
+            if d_resolved < today - timedelta(days=30) and not month_name:
                 try:
-                    d = date(year + 1, month, day_num)
+                    d_resolved = date(year + 1, month, day_num)
                 except ValueError:
                     continue
-            if d < today or d > end:
-                continue
+            date_anchors.append((dm.start(), dm.end(), d_resolved))
 
-            # Slots a partir del fin del header de fecha
-            rest = para[dm.end():]
-            for sm in slot_re.finditer(rest):
+        # Construir secciones (start_idx, end_idx, fecha). Sin anchors, una
+        # sola sección que cubre todo el texto y asocia a ev_start.
+        sections: list[tuple[int, int, date]] = []
+        if date_anchors:
+            for i, (a_start, a_end, a_date) in enumerate(date_anchors):
+                next_start = date_anchors[i + 1][0] if i + 1 < len(date_anchors) else len(full_text)
+                sections.append((a_end, next_start, a_date))
+        elif ev_start:
+            sections.append((0, len(full_text), ev_start))
+
+        for sec_start, sec_end, sec_date in sections:
+            if sec_date < today or sec_date > end:
+                continue
+            chunk = full_text[sec_start:sec_end]
+            for sm in slot_re.finditer(chunk):
                 hour = int(sm.group(1))
                 minute = int(sm.group(2)) if sm.group(2) else 0
                 raw_title_chunk = sm.group(3).strip(" -–:.,;\n")
-                
-                # Si hay múltiples títulos separados por salto de línea o dos espacios,
-                # procesamos cada uno por separado
-                # Split por saltos de línea o múltiples espacios
-                titles = re.split(r'\s{2,}|\n', raw_title_chunk)
-                
+                # Cortar en frases típicas de pie de página del CCK
+                raw_title_chunk = re.split(
+                    r"\s+(?:Las\s+proyecciones|Programaci[óo]n\b|Funciones\b)",
+                    raw_title_chunk, maxsplit=1, flags=re.IGNORECASE,
+                )[0]
+                titles = re.split(r"\s{2,}|\n", raw_title_chunk)
                 for raw_title in titles:
                     raw_title = raw_title.strip(" -–:.,;")
                     if not raw_title or len(raw_title) < 2:
@@ -1090,7 +1230,7 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
                     result.append(Screening(
                         cine="CCK",
                         title=raw_title,
-                        fecha=d.isoformat(),
+                        fecha=sec_date.isoformat(),
                         hora=hora,
                         ticket_url=event_url,
                         ciclo=cycle_name,

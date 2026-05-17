@@ -36,18 +36,11 @@ UA = (
 async def run_scraper(semanas: int = 2) -> None:
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
-        scrape_lorca, scrape_lumiton_agenda, scrape_cosmos,
+        scrape_lorca, scrape_lorca_imdb, scrape_lumiton_agenda, scrape_cosmos,
         scrape_gaumont, scrape_cck, scrape_arthaus,
     )
-
-    print("🎬 Cargando Cine Lorca (manual)...", end=" ", flush=True)
-    try:
-        r = scrape_lorca()
-        print(f"{len(r)} funciones")
-    except Exception as e:
-        r = []
-        print(f"error — {e}")
-    lorca_screenings = r
+    # Lorca: el scraping vía IMDb necesita playwright y se hace abajo.
+    lorca_screenings: list = []
 
     print("🎬 Scrapeando Lumiton (York / Munro / Lumiton)...", end=" ", flush=True)
     try:
@@ -101,11 +94,27 @@ async def run_scraper(semanas: int = 2) -> None:
         ctx = await browser.new_context(user_agent=UA, locale="es-AR")
         page = await ctx.new_page()
 
-        all_screenings.extend(lorca_screenings)
         all_screenings.extend(lumiton_screenings)
         all_screenings.extend(cosmos_screenings)
         all_screenings.extend(gaumont_screenings)
         all_screenings.extend(cck_screenings)
+
+        # Cine Lorca: scraping vía IMDb usa playwright en este contexto
+        print("🎬 Scrapeando Cine Lorca (IMDb)...", end=" ", flush=True)
+        try:
+            lorca_screenings = await scrape_lorca_imdb(page, semanas)
+            print(f"{len(lorca_screenings)} funciones")
+            if not lorca_screenings:
+                # Fallback al JSON manual si IMDb no devolvió nada
+                lorca_screenings = scrape_lorca()
+                if lorca_screenings:
+                    print(f"  ↳ fallback manual: {len(lorca_screenings)} funciones")
+            all_screenings.extend(lorca_screenings)
+        except Exception as e:
+            print(f"error — {e}")
+            lorca_screenings = scrape_lorca()
+            if lorca_screenings:
+                all_screenings.extend(lorca_screenings)
 
         for name, fn in [
             ("Sala Lugones", lambda p: scrape_lugones(p)),
