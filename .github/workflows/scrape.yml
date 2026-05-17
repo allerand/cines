@@ -51,6 +51,10 @@ jobs:
           fi
 
           git commit -m "data: refresh cartelera + posts $(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
+
+          # Rebase resolviendo conflictos a favor de NUESTRA generación fresca
+          # (-X theirs en rebase = mantener el commit que se está aplicando).
+          git pull --rebase -X theirs origin main
           git push origin main
           
       - name: Post stories to Instagram (daily)

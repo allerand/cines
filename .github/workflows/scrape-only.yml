@@ -67,5 +67,9 @@ jobs:
           fi
 
           git commit -m "data: scrape-only refresh $(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
-          git pull --rebase origin main
+
+          # Rebase resolviendo conflictos a favor de NUESTRA generación fresca
+          # de cartelera.json (-X theirs en rebase = mantener el commit que se
+          # está aplicando, que somos nosotros).
+          git pull --rebase -X theirs origin main
           git push origin main
