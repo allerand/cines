@@ -417,6 +417,87 @@ def parse_ctba_estreno_page(text: str) -> dict:
     return out
 
 
+def parse_ctba_grouped_dates_event(text: str) -> dict:
+    """
+    Maneja eventos del CTBA con formato:
+        TITULO
+        DIRECTOR(es)
+        Estreno
+        ...
+        TITULO (AÑO)
+        DíaSemana N[, día N]... [y día N,] HH(.MM|:MM)? horas
+        ...
+
+    Devuelve {director, year, country, dates: [(date, "HH:MM"), ...]} o {}.
+    Útil para estrenos como 'La noche está marchándose ya' que no usan el
+    bloque "Título original / Dirección" sino fechas agrupadas.
+    """
+    out: dict = {"dates": []}
+
+    # Año y título: línea final "TÍTULO (YYYY)" antes de la lista de fechas
+    ty = re.search(r"^([A-ZÁÉÍÓÚÑ][^\n(]+?)\s*\((\d{4})\)\s*$", text, re.MULTILINE)
+    if ty:
+        out["year"] = int(ty.group(2))
+
+    # Director: línea inmediata previa al marcador "Estreno" (encabezado típico)
+    dm = re.search(r"\n([A-ZÁÉÍÓÚÑ][^\n]+?)\s*\nEstreno(?:\s|\n)", text)
+    if dm:
+        out["director"] = re.sub(r"\s+", " ", dm.group(1)).strip()
+
+    # Mes contextual: buscar "de MES" cerca del primer "Del N al N de MES" o
+    # "a partir del DíaSemana N de MES".
+    month: Optional[int] = None
+    mm = re.search(
+        r"(?:Del\s+\d+\s+al\s+\d+|a\s+partir\s+del\s+\w+\s+\d+)\s+de\s+"
+        r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)",
+        text, re.IGNORECASE,
+    )
+    if mm:
+        month = MESES_ES.get(mm.group(1).lower())
+    if month is None:
+        # Fallback: primer "de MES" en todo el texto
+        m2 = re.search(
+            r"\bde\s+(enero|febrero|marzo|abril|mayo|junio|julio|agosto|septiembre|setiembre|octubre|noviembre|diciembre)\b",
+            text, re.IGNORECASE,
+        )
+        if m2:
+            month = MESES_ES.get(m2.group(1).lower())
+    if month is None:
+        return out
+
+    # Año contextual: si no salió del título-año, usar año actual y avanzar si el
+    # mes contextual ya pasó este año
+    year = out.get("year") or date.today().year
+    today = date.today()
+    if year < today.year:
+        # Película de archivo: la programación es para el año actual o siguiente
+        year = today.year
+    if year == today.year and month < today.month:
+        year += 1
+
+    # Líneas tipo "Jueves 4, viernes 5 y sábado 6, 20.30 horas"
+    date_line_re = re.compile(
+        r"((?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)\s+\d+"
+        r"(?:\s*[,y]+\s*(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)\s+\d+)*)"
+        r"\s*,?\s+(\d{1,2})(?:[.:](\d{2}))?\s+horas?",
+        re.IGNORECASE,
+    )
+    for m in date_line_re.finditer(text):
+        days_str = m.group(1)
+        hour = int(m.group(2))
+        minute = int(m.group(3) or 0)
+        # Extraer todos los números de día del segmento
+        day_nums = [int(d) for d in re.findall(r"\d+", days_str)]
+        for dn in day_nums:
+            try:
+                d = date(year, month, dn)
+                out["dates"].append((d, f"{hour:02d}:{minute:02d}"))
+            except ValueError:
+                pass
+
+    return out
+
+
 def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
     """
     Parsea texto plano de una página /ver/ de ciclo CTBA (Sala Lugones).
@@ -666,6 +747,29 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                     except ValueError:
                         pass
             continue  # siguiente evento — no ir a entradasba
+
+        # Antes del fallback "Sin fecha", probar parser de fechas-agrupadas
+        # (estrenos como "La noche está marchándose ya" que listan
+        # "Jueves 4, viernes 5 y sábado 6, 20.30 horas" en el /ver/ y todavía
+        # no tienen entradas en entradasba).
+        if ver_text and not program:
+            sp = parse_ctba_grouped_dates_event(ver_text)
+            sp_dates = sp.get("dates", [])
+            if sp_dates:
+                for d, hora in sp_dates:
+                    if d < today or d > cutoff:
+                        continue
+                    result.append(Screening(
+                        cine="Sala Lugones",
+                        title=cycle_name,
+                        fecha=d.isoformat(),
+                        hora=hora,
+                        ticket_url=ticket_url,
+                        ciclo="Estreno",
+                        director=sp.get("director", ""),
+                        year=sp.get("year"),
+                    ))
+                continue
 
         if not ticket_url or "entradasba" not in ticket_url:
             result.append(Screening(
