@@ -92,6 +92,13 @@ def wait_container_ready(container_id: str, token: str, timeout: int = 180) -> N
     raise TimeoutError(f"Container {container_id} no llegó a FINISHED en {timeout}s")
 
 
+HASHTAGS = (
+    "#cine #cineindependiente #cinearg #buenosaires #cartelera "
+    "#malba #salalugones #cacodelphia #cinelorca #cineyork "
+    "#lumiton #cinecosmos #cinegaumont #cck"
+)
+
+
 def build_caption(date_str: str) -> str:
     y, m, d = map(int, date_str.split("-"))
     dt = date_cls(y, m, d)
@@ -101,30 +108,53 @@ def build_caption(date_str: str) -> str:
     return (
         f"Cartelera de cine en la ciudad — {day} {d} de {month}. "
         "Toda la programación en sitedigo.com "
-        "\n\n"
-        "#cine #cineindependiente #cinearg #buenosaires #cartelera "
-        "#malba #salalugones #cacodelphia #cinelorca #cineyork "
-        "#lumiton #cinecosmos #cinegaumont #cck"
+        "\n\n" + HASHTAGS
     )
 
 
-def collect_slides(date_str: str, fmt: str) -> list[Path]:
-    """Encuentra slides para una fecha y formato. Compat con layout antiguo."""
-    fmt_dir = HERE / "posts" / date_str / fmt
+def build_weekly_caption(week_start_str: str) -> str:
+    y, m, d = map(int, week_start_str.split("-"))
+    start = date_cls(y, m, d)
+    end = start + __import__("datetime").timedelta(days=6)
+    month_s = MONTHS_ES[start.month - 1]
+    month_e = MONTHS_ES[end.month - 1]
+    if start.month == end.month:
+        when = f"del {start.day} al {end.day} de {month_s}"
+    else:
+        when = f"del {start.day} de {month_s} al {end.day} de {month_e}"
+
+    return (
+        f"Cartelera semanal de cine en la ciudad — semana {when}. "
+        "Toda la programación día por día en sitedigo.com "
+        "\n\n" + HASHTAGS
+    )
+
+
+def _slides_dir(date_str: str, fmt: str, weekly: bool = False) -> Path:
+    if weekly:
+        return HERE / "posts" / f"{date_str}_week" / fmt
+    return HERE / "posts" / date_str / fmt
+
+
+def collect_slides(date_str: str, fmt: str, weekly: bool = False) -> list[Path]:
+    """Encuentra slides para una fecha (o semana) y formato. Compat con layout antiguo."""
+    fmt_dir = _slides_dir(date_str, fmt, weekly)
     if fmt_dir.exists():
         return sorted(fmt_dir.glob("slide-*.png"))
     # Compat: PNGs viejos en posts/YYYY-MM-DD/slide-*.png
-    if fmt == "portrait":
+    if fmt == "portrait" and not weekly:
         legacy = HERE / "posts" / date_str
         if legacy.exists():
             return sorted(legacy.glob("slide-*.png"))
     return []
 
 
-def public_url(base: str, date_str: str, fmt: str, filename: str) -> str:
+def public_url(base: str, date_str: str, fmt: str, filename: str, weekly: bool = False) -> str:
     """URL pública de una slide. Detecta si existe la versión nueva con subdir."""
-    fmt_dir = HERE / "posts" / date_str / fmt
+    fmt_dir = _slides_dir(date_str, fmt, weekly)
     if fmt_dir.exists():
+        if weekly:
+            return f"{base}/posts/{date_str}_week/{fmt}/{filename}"
         return f"{base}/posts/{date_str}/{fmt}/{filename}"
     return f"{base}/posts/{date_str}/{filename}"
 
@@ -134,29 +164,31 @@ def public_url(base: str, date_str: str, fmt: str, filename: str) -> str:
 # ---------------------------------------------------------------------------
 
 def post_feed_carousel(date_str: str, user_id: str, token: str, base: str,
-                       dry_run: bool = False) -> None:
-    slides = collect_slides(date_str, "portrait")
+                       dry_run: bool = False, weekly: bool = False) -> None:
+    slides = collect_slides(date_str, "portrait", weekly=weekly)
     if not slides:
-        print(f"  ✗ feed: no hay slides portrait en posts/{date_str}/portrait/",
+        kind = "weekly feed" if weekly else "feed"
+        print(f"  ✗ {kind}: no hay slides portrait para {date_str}",
               file=sys.stderr)
         return
     if len(slides) > 10:
         print(f"  ! feed: IG carousel max 10 — truncando ({len(slides)} → 10)")
         slides = slides[:10]
 
-    caption = build_caption(date_str)
-    print(f"\n=== FEED CAROUSEL ({len(slides)} slides) ===")
+    caption = build_weekly_caption(date_str) if weekly else build_caption(date_str)
+    label = "WEEKLY FEED" if weekly else "FEED CAROUSEL"
+    print(f"\n=== {label} ({len(slides)} slides) ===")
     print(f"Caption:\n{caption}\n")
 
     if dry_run:
         for s in slides:
-            print(f"  - {public_url(base, date_str, 'portrait', s.name)}")
+            print(f"  - {public_url(base, date_str, 'portrait', s.name, weekly=weekly)}")
         return
 
     # 1) Container por slide
     children: list[str] = []
     for slide in slides:
-        url = public_url(base, date_str, "portrait", slide.name)
+        url = public_url(base, date_str, "portrait", slide.name, weekly=weekly)
         print(f"  → container {slide.name}")
         resp = api_post(f"/{user_id}/media", {
             "image_url": url,
@@ -233,6 +265,9 @@ def post_stories(date_str: str, user_id: str, token: str, base: str,
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--date", default=date_cls.today().isoformat())
+    parser.add_argument("--week-start", default="",
+                        help="YYYY-MM-DD — postea SOLO el feed semanal "
+                             "(carrusel de 7 slides desde posts/<fecha>_week/portrait/)")
     parser.add_argument("--feed-only", action="store_true")
     parser.add_argument("--stories-only", action="store_true")
     parser.add_argument("--dry-run", action="store_true",
@@ -252,6 +287,16 @@ def main():
         if missing:
             print(f"⚠️  faltan env vars: {', '.join(missing)}", file=sys.stderr)
             sys.exit(2)
+
+    # Modo semanal: posteo SOLO feed carousel desde posts/<fecha>_week/portrait/
+    if args.week_start:
+        try:
+            post_feed_carousel(args.week_start, user_id, token, base,
+                               dry_run=args.dry_run, weekly=True)
+            return
+        except Exception as e:
+            print(f"\n❌ error: {e}", file=sys.stderr)
+            sys.exit(1)
 
     do_feed = not args.stories_only
     do_stories = not args.feed_only

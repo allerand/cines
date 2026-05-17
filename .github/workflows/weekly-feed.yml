@@ -1,0 +1,101 @@
+name: Weekly feed (lunes)
+
+# Cada lunes a las 04:15 UTC (= 01:15 BA): scrape, generar las 7 slides
+# semanales (portrait) y postear el carrusel al feed de Instagram.
+# También se puede disparar manual con workflow_dispatch.
+
+on:
+  schedule:
+    # min hora dom-mes mes día-semana — '1' = lunes
+    - cron: '15 4 * * 1'
+  workflow_dispatch:
+    inputs:
+      monday:
+        description: 'Lunes de la semana (YYYY-MM-DD). Vacío = el próximo lunes desde hoy.'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Dry run (genera + loguea, no postea)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  weekly:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Compute Monday's date
+        id: monday
+        run: |
+          if [ -n "${{ inputs.monday }}" ]; then
+            d="${{ inputs.monday }}"
+          else
+            # weekday: Mon=1 (date +%u). Días a sumar para llegar al próximo lunes,
+            # o hoy si hoy es lunes.
+            today=$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)
+            dow=$(TZ='America/Argentina/Buenos_Aires' date -d "$today" +%u)
+            offset=$(( (8 - dow) % 7 ))
+            d=$(date -d "$today +$offset day" +%Y-%m-%d)
+          fi
+          echo "value=$d" >> "$GITHUB_OUTPUT"
+          echo "📅 lunes objetivo: $d"
+
+      - name: Run scraper (full)
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+        run: python3 run.py
+
+      - name: Generate weekly portrait slides
+        run: |
+          python3 scripts/generate_posts.py \
+            --week-start "${{ steps.monday.outputs.value }}" \
+            --format portrait
+
+      - name: Commit data + weekly slides
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/cartelera.json data/cache.json posts/
+
+          if git diff --cached --quiet; then
+            echo "No hay cambios para commitear"
+          else
+            git commit -m "data: weekly refresh + slides for ${{ steps.monday.outputs.value }}"
+            git pull --rebase -X theirs origin main
+            git push origin main
+          fi
+
+      - name: Post weekly feed to Instagram
+        env:
+          IG_USER_ID:      ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          PUBLIC_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
+        run: |
+          if [ "${{ inputs.dry_run }}" != "true" ] && { [ -z "$IG_USER_ID" ] || [ -z "$IG_ACCESS_TOKEN" ]; }; then
+            echo "❌ Faltan secrets IG_USER_ID / IG_ACCESS_TOKEN"
+            exit 1
+          fi
+          sleep 20
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python3 scripts/post_to_instagram.py \
+              --week-start "${{ steps.monday.outputs.value }}" --dry-run
+          else
+            python3 scripts/post_to_instagram.py \
+              --week-start "${{ steps.monday.outputs.value }}"
+          fi

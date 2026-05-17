@@ -1430,7 +1430,11 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
 
     result: list[Screening] = []
     today = date.today()
-    end = today + timedelta(weeks=semanas)
+    # La cartelera de Cosmos va Jueves → Miércoles y se actualiza cada Jueves.
+    # No tiene sentido expandir más allá del próximo Miércoles porque después
+    # el sitio publica una programación nueva. weekday(): Mon=0 ... Wed=2 ... Sun=6
+    days_to_wed = (2 - today.weekday()) % 7
+    end = today + timedelta(days=days_to_wed)
 
     for film_id in ids:
         try:
