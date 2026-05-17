@@ -1923,3 +1923,110 @@ def scrape_museo_cine(semanas: int = 4) -> list[Screening]:
                 original_title=ev.get("original_title", ""),
             ))
     return result
+
+
+# ---------------------------------------------------------------------------
+# Centro Cultural Recoleta (CCR) — categoria=9 = Cine
+#   Index → /agenda?categoria=9
+#   Cada link es un evento individual o un ciclo con "Actividades" hijas.
+#   Formato de fechas: "Sáb. 02.05 y Sáb. 30.05 | 18 h | Cine"
+# ---------------------------------------------------------------------------
+
+CCR_BASE = "http://centroculturalrecoleta.org"
+CCR_INDEX = CCR_BASE + "/agenda?categoria=9"
+
+
+def scrape_ccr() -> list[Screening]:
+    today = date.today()
+    cutoff = today + timedelta(days=90)
+    try:
+        idx_soup = fetch_html(CCR_INDEX)
+    except Exception:
+        return []
+
+    event_urls: list[str] = []
+    seen_urls: set[str] = set()
+    for a in idx_soup.find_all("a", href=re.compile(r"^/agenda/")):
+        h = a.get("href", "")
+        if not h or "categoria" in h:
+            continue
+        u = CCR_BASE + h if h.startswith("/") else h
+        if u not in seen_urls:
+            seen_urls.add(u)
+            event_urls.append(u)
+
+    # Línea de fechas: precedida por DíaAbbr y con DD.MM + HH
+    date_line_re = re.compile(
+        r"(?:Lun|Mar|Mi[ée]|Jue|Vie|S[áa]b|Dom)\.\s+\d{1,2}\.\d{1,2}",
+        re.IGNORECASE,
+    )
+    # Para extraer todos los DD.MM
+    ddmm_re = re.compile(r"\b(\d{1,2})\.(\d{1,2})\b")
+    hour_re = re.compile(r"(\d{1,2})(?:[.:](\d{2}))?\s*h\b", re.IGNORECASE)
+
+    result: list[Screening] = []
+    seen_keys: set[tuple] = set()
+
+    for url in event_urls:
+        try:
+            soup = fetch_html(url)
+        except Exception:
+            continue
+        text = soup.get_text("\n", strip=True)
+        lines = [ln.strip() for ln in text.splitlines()]
+
+        # Iterar líneas; cada línea que matchee date_line_re es una función,
+        # y el título es la línea no-vacía inmediata anterior.
+        for i, line in enumerate(lines):
+            if not date_line_re.search(line):
+                continue
+            # Skip the index-style "Sábados y domingos de mayo" header
+            if not ddmm_re.search(line):
+                continue
+
+            title = ""
+            j = i - 1
+            while j >= 0:
+                cand = lines[j].strip()
+                if cand and not date_line_re.search(cand):
+                    title = cand
+                    break
+                j -= 1
+            if not title or title.startswith("#") or len(title) < 2:
+                continue
+            # Filtrar headers genéricos
+            if title.lower() in {"actividades", "horarios", "cine"}:
+                continue
+
+            hm = hour_re.search(line)
+            if not hm:
+                continue
+            hour = int(hm.group(1))
+            minute = int(hm.group(2) or 0)
+            hora = f"{hour:02d}:{minute:02d}"
+
+            for dm in ddmm_re.finditer(line):
+                day = int(dm.group(1))
+                month = int(dm.group(2))
+                # Año: mes pasado → próximo año
+                year = today.year
+                if month < today.month:
+                    year += 1
+                try:
+                    d = date(year, month, day)
+                except ValueError:
+                    continue
+                if d < today or d > cutoff:
+                    continue
+                key = (title, d.isoformat(), hora)
+                if key in seen_keys:
+                    continue
+                seen_keys.add(key)
+                result.append(Screening(
+                    cine="Centro Cultural Recoleta",
+                    title=title,
+                    fecha=d.isoformat(),
+                    hora=hora,
+                    ticket_url=url,
+                ))
+    return result

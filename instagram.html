@@ -191,6 +191,7 @@
   .cine-cck      { border-color: #2a2a3a; color: #8888cc; }
   .cine-arthaus  { border-color: #1f3a2f; color: #66cc99; }
   .cine-museo    { border-color: #3a2a1f; color: #d9a066; }
+  .cine-ccr      { border-color: #2a1f2f; color: #b07acc; }
 
   /* Lowercase para el contenido (no para badges/labels uppercase) */
   .film-title {
@@ -281,6 +282,7 @@
       <option value="CCK">CCK</option>
       <option value="Arthaus">Arthaus</option>
       <option value="Museo del Cine">Museo del Cine</option>
+      <option value="Centro Cultural Recoleta">CCR</option>
     </select>
   </label>
   <label>Formato
@@ -362,6 +364,7 @@ function cineCssClass(cine) {
   if (cine === 'CCK') return 'cine-cck';
   if (cine === 'Arthaus') return 'cine-arthaus';
   if (cine === 'Museo del Cine') return 'cine-museo';
+  if (cine === 'Centro Cultural Recoleta') return 'cine-ccr';
   return '';
 }
 
