@@ -250,6 +250,56 @@
     .search-input:focus { outline: none; border-color: var(--accent); }
     .search-input::placeholder { color: var(--muted); }
 
+    /* ── Newsletter footer ── */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 1.5rem 2rem;
+      margin-top: 1rem;
+    }
+    .newsletter-form {
+      max-width: 28rem;
+      display: flex; flex-direction: column; gap: 0.4rem;
+    }
+    .newsletter-label {
+      font-size: 0.72rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .newsletter-input-wrap { display: flex; gap: 0.4rem; }
+    .newsletter-form input[type="email"] {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.4rem 0.7rem;
+      border-radius: 3px;
+      font-size: 0.8rem;
+      font-family: inherit;
+      transition: border-color 0.12s;
+    }
+    .newsletter-form input[type="email"]:focus {
+      outline: none;
+      border-color: var(--accent);
+    }
+    .newsletter-form input[type="email"]::placeholder { color: var(--muted); }
+    .newsletter-form button {
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.4rem 0.9rem;
+      border-radius: 3px;
+      font-size: 0.78rem;
+      cursor: pointer;
+      transition: all 0.12s;
+    }
+    .newsletter-form button:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
+      font-weight: 600;
+    }
+
     /* ── Main content ── */
     main { padding: 1.5rem 2rem; }
 
@@ -455,6 +505,31 @@
 </div>
 
 <main id="main"></main>
+
+<footer class="site-footer">
+  <form
+    class="newsletter-form"
+    action="https://buttondown.com/api/emails/embed-subscribe/sitedigocine"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/sitedigocine','popupwindow')"
+  >
+    <label for="newsletter-email" class="newsletter-label">
+      Recibí la cartelera semanal por mail
+    </label>
+    <div class="newsletter-input-wrap">
+      <input
+        id="newsletter-email"
+        type="email"
+        name="email"
+        placeholder="tu@email.com"
+        required
+        autocomplete="email"
+      />
+      <button type="submit">Suscribirme</button>
+    </div>
+  </form>
+</footer>
 
 <script>
 const DAYS_ES = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];

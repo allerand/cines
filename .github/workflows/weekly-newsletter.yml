@@ -1,0 +1,52 @@
+name: Weekly newsletter (jueves)
+
+# Cada jueves a las 12:00 UTC = 09:00 Buenos Aires:
+# - Usa data/cartelera.json del repo (no re-scrape)
+# - Arma el HTML día por día desde el próximo lunes
+# - Crea + envía el broadcast vía Buttondown
+# También se puede disparar manual con workflow_dispatch.
+
+on:
+  schedule:
+    - cron: '0 12 * * 4'   # jueves 12:00 UTC
+  workflow_dispatch:
+    inputs:
+      week:
+        description: 'Lunes de la semana (YYYY-MM-DD). Vacío = próximo lunes.'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Dry run (imprime HTML, no envía)'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+jobs:
+  send:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Send newsletter via Buttondown
+        env:
+          BUTTONDOWN_API_KEY: ${{ secrets.BUTTONDOWN_API_KEY }}
+        run: |
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            python3 scripts/send_newsletter.py \
+              ${{ inputs.week && format('--week {0}', inputs.week) || '' }} \
+              --dry-run
+          else
+            if [ -z "$BUTTONDOWN_API_KEY" ]; then
+              echo "❌ falta secret BUTTONDOWN_API_KEY"
+              exit 1
+            fi
+            python3 scripts/send_newsletter.py \
+              ${{ inputs.week && format('--week {0}', inputs.week) || '' }}
+          fi
