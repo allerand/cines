@@ -37,7 +37,7 @@ async def run_scraper(semanas: int = 2) -> None:
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
         scrape_lorca, scrape_lorca_imdb, scrape_lumiton_agenda, scrape_cosmos,
-        scrape_gaumont, scrape_cck, scrape_arthaus,
+        scrape_gaumont, scrape_cck, scrape_arthaus, scrape_museo_cine,
     )
     # Lorca: el scraping vía IMDb necesita playwright y se hace abajo.
     lorca_screenings: list = []
@@ -75,6 +75,14 @@ async def run_scraper(semanas: int = 2) -> None:
     except Exception as e:
         cck_screenings = []
         print(f"error — {e}")
+
+    print("🎬 Scrapeando Museo del Cine...", end=" ", flush=True)
+    try:
+        museo_screenings = scrape_museo_cine(semanas)
+        print(f"{len(museo_screenings)} funciones")
+    except Exception as e:
+        museo_screenings = []
+        print(f"error — {e}")
     from letterboxd import LetterboxdCache, enrich_title
 
     cache = LetterboxdCache(CACHE_JSON)
@@ -98,6 +106,7 @@ async def run_scraper(semanas: int = 2) -> None:
         all_screenings.extend(cosmos_screenings)
         all_screenings.extend(gaumont_screenings)
         all_screenings.extend(cck_screenings)
+        all_screenings.extend(museo_screenings)
 
         # Cine Lorca: scraping vía IMDb usa playwright en este contexto
         print("🎬 Scrapeando Cine Lorca (IMDb)...", end=" ", flush=True)

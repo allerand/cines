@@ -1644,3 +1644,178 @@ def scrape_lumiton_agenda() -> list[Screening]:
         s.duration = meta.get("duration")
 
     return result
+
+
+# ---------------------------------------------------------------------------
+# Museo del Cine Pablo Ducrós Hicken
+#   index → /gcaba_historico/cultura/museos/museodelcine
+#   por mes → /gcaba_historico/noticias/<MES>-en-el-museo-del-cine[-N]
+# Cada nota lista las funciones con este patrón:
+#   Sábado 2 a las 16 h | Cineclub Infantil
+#   El héroe del río de Buster Keaton y Charles Reisner (1928, Steamboat Bill, Jr.)
+# ---------------------------------------------------------------------------
+
+MUSEOCINE_BASE = "https://buenosaires.gob.ar"
+MUSEOCINE_INDEX = MUSEOCINE_BASE + "/gcaba_historico/cultura/museos/museodelcine"
+
+_MUSEOCINE_MONTHS = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
+    "noviembre": 11, "diciembre": 12,
+}
+
+
+def _museocine_month_pages() -> list[str]:
+    """Lista URLs absolutas de notas mensuales linkeadas desde la home."""
+    try:
+        soup = fetch_html(MUSEOCINE_INDEX)
+    except Exception:
+        return []
+    urls: list[str] = []
+    seen: set[str] = set()
+    for a in soup.find_all("a", href=re.compile(r"/noticias/[^/]*museo-del-cine")):
+        h = a.get("href", "")
+        if not h:
+            continue
+        if h.startswith("/"):
+            h = MUSEOCINE_BASE + h
+        if h not in seen:
+            seen.add(h)
+            urls.append(h)
+    return urls
+
+
+def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
+    """
+    Parsea texto plano de una nota mensual del Museo del Cine.
+    Devuelve [{fecha, hora, title, ciclo, director, year, original_title}, ...].
+    """
+    out: list[dict] = []
+
+    # Año: lo tomamos del header "Martes 05 de Mayo de 2026" o de "de 2026"
+    year = date.today().year
+    ym = re.search(r"\bde\s+(20\d{2})\b", text)
+    if ym:
+        year = int(ym.group(1))
+
+    # Mes: priorizar mes del slug; sino, detectar en el cuerpo
+    month = slug_month
+    if month is None:
+        for m_name, m_num in _MUSEOCINE_MONTHS.items():
+            if m_name in text.lower():
+                month = m_num
+                break
+    if month is None:
+        return []
+
+    header_re = re.compile(
+        r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)\s+"
+        r"(\d{1,2})\s+a\s+las\s+(\d{1,2})(?:[.:](\d{2}))?\s+h(?:s|oras)?"
+        r"(?:\s*\|\s*([^\n]+))?",
+        re.IGNORECASE,
+    )
+    # "Título de Director (AÑO[, Original])" — non-greedy en title, pero
+    # requiere que el director empiece con mayúscula para no cortar en
+    # preposiciones internas del título ("de las ostras", "de la calle").
+    film_line_re = re.compile(
+        r"^(.+?)\s+de\s+([A-ZÁÉÍÓÚÑ][^()]*?)\s+\((\d{4})(?:,\s*([^)]+))?\)\s*$",
+    )
+
+    # Iteramos por cada match de header y miramos las próximas 1-3 líneas no
+    # vacías hasta encontrar una que matchee film_line_re.
+    matches = list(header_re.finditer(text))
+    for idx, hm in enumerate(matches):
+        day_num = int(hm.group(1))
+        hour = int(hm.group(2))
+        minute = int(hm.group(3) or 0)
+        ciclo = (hm.group(4) or "").strip().rstrip(".,;")
+
+        # rango hasta el próximo header
+        seg_end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
+        segment = text[hm.end():seg_end]
+        # buscar primera línea no vacía con película
+        title = director = original = ""
+        film_year: Optional[int] = None
+        for line in segment.splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            fm = film_line_re.match(line)
+            if fm:
+                title = fm.group(1).strip()
+                director = re.sub(r"\s+", " ", fm.group(2)).strip()
+                film_year = int(fm.group(3))
+                original = (fm.group(4) or "").strip()
+                break
+            # Si la primera línea no-vacía NO matchea, salimos (es sinopsis)
+            break
+        if not title:
+            continue
+
+        try:
+            d = date(year, month, day_num)
+        except ValueError:
+            continue
+
+        out.append({
+            "fecha": d.isoformat(),
+            "hora": f"{hour:02d}:{minute:02d}",
+            "title": title,
+            "director": director,
+            "year": film_year,
+            "original_title": original,
+            "ciclo": ciclo,
+        })
+    return out
+
+
+def scrape_museo_cine(semanas: int = 4) -> list[Screening]:
+    """
+    Scrapea el index del Museo del Cine, descarga las notas mensuales
+    linkeadas y extrae las funciones dentro de la ventana (hoy → hoy+semanas).
+    """
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    page_urls = _museocine_month_pages()
+    result: list[Screening] = []
+    seen: set[tuple] = set()
+
+    for url in page_urls:
+        # Mes desde el slug (mayo|abril|...)
+        slug_month: Optional[int] = None
+        for m_name, m_num in _MUSEOCINE_MONTHS.items():
+            if f"/{m_name}-" in url or url.endswith(f"/{m_name}-en-el-museo-del-cine"):
+                slug_month = m_num
+                break
+
+        try:
+            soup = fetch_html(url)
+        except Exception:
+            continue
+        # Acotar al contenido principal — saca menú/footer
+        main = soup.find("article") or soup.find("main") or soup
+        text = main.get_text("\n", strip=True)
+
+        for ev in _parse_museocine_page(text, slug_month):
+            try:
+                d = date.fromisoformat(ev["fecha"])
+            except ValueError:
+                continue
+            if d < today or d > cutoff:
+                continue
+            key = (ev["title"], ev["fecha"], ev["hora"])
+            if key in seen:
+                continue
+            seen.add(key)
+            result.append(Screening(
+                cine="Museo del Cine",
+                title=ev["title"],
+                fecha=ev["fecha"],
+                hora=ev["hora"],
+                ticket_url=url,
+                ciclo=ev.get("ciclo", ""),
+                director=ev.get("director", ""),
+                year=ev.get("year"),
+                original_title=ev.get("original_title", ""),
+            ))
+    return result

@@ -315,6 +315,7 @@
     .cine-gaumont  { border-color: #3a2a3a; color: #cc66cc; }
     .cine-cck      { border-color: #2a2a3a; color: #8888cc; }
     .cine-arthaus  { border-color: #1f3a2f; color: #66cc99; }
+    .cine-museo    { border-color: #3a2a1f; color: #d9a066; }
 
     .film-title { font-weight: 500; color: var(--text); }
     .film-meta-row { margin-top: 0.25rem; }
@@ -447,6 +448,7 @@
   <button class="filter-btn" data-cine="Cine Gaumont">Gaumont</button>
   <button class="filter-btn" data-cine="CCK">CCK</button>
   <button class="filter-btn" data-cine="Arthaus">Arthaus</button>
+  <button class="filter-btn" data-cine="Museo del Cine">Museo</button>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
 </div>
 
@@ -533,7 +535,7 @@ document.getElementById('search-input').addEventListener('input', e => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo' };
   return map[cine] || '';
 }
 

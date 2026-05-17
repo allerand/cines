@@ -190,6 +190,7 @@
   .cine-gaumont  { border-color: #3a2a3a; color: #cc66cc; }
   .cine-cck      { border-color: #2a2a3a; color: #8888cc; }
   .cine-arthaus  { border-color: #1f3a2f; color: #66cc99; }
+  .cine-museo    { border-color: #3a2a1f; color: #d9a066; }
 
   /* Lowercase para el contenido (no para badges/labels uppercase) */
   .film-title {
@@ -279,6 +280,7 @@
       <option value="Cine Gaumont">Gaumont</option>
       <option value="CCK">CCK</option>
       <option value="Arthaus">Arthaus</option>
+      <option value="Museo del Cine">Museo del Cine</option>
     </select>
   </label>
   <label>Formato
@@ -359,6 +361,7 @@ function cineCssClass(cine) {
   if (cine === 'Cine Gaumont') return 'cine-gaumont';
   if (cine === 'CCK') return 'cine-cck';
   if (cine === 'Arthaus') return 'cine-arthaus';
+  if (cine === 'Museo del Cine') return 'cine-museo';
   return '';
 }
 
