@@ -400,12 +400,12 @@
     "year": 2025
   },
   "función especial: un buen día + después de un buen día": {
-    "url": "https://letterboxd.com/film/despues-de-un-buen-dia/",
-    "title_en": "Después de un buen día",
-    "director": "Néstor Frenkel",
-    "country": "Argentina",
-    "year": 2024,
-    "duration": 85
+    "url": "",
+    "title_en": "FUNCIÓN ESPECIAL: UN BUEN DÍA + DESPUÉS DE UN BUEN DÍA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "jfk": {
     "url": "https://letterboxd.com/film/jfk/",
@@ -415,8 +415,8 @@
     "year": 1991
   },
   "moon, mi amigo el panda": {
-    "url": "https://letterboxd.com/film/moon-the-panda/",
-    "title_en": "Moon the Panda",
+    "url": "",
+    "title_en": "MOON, MI AMIGO EL PANDA",
     "director": "Gilles de Maistre",
     "country": "France",
     "year": 2025,
@@ -614,7 +614,7 @@
     "url": "https://letterboxd.com/film/the-wizard-of-the-kremlin/",
     "title_en": "The Wizard of the Kremlin",
     "director": "Olivier Assayas",
-    "country": "France, USA",
+    "country": "France, UK",
     "year": 2025,
     "duration": 136
   },
@@ -723,12 +723,12 @@
     "duration": 104
   },
   "lipán": {
-    "url": "https://letterboxd.com/film/luciferina/",
-    "title_en": "Luciferina",
-    "director": "Gonzalo Calzada",
-    "country": "Argentina",
-    "year": 2018,
-    "duration": 115
+    "url": "",
+    "title_en": "Lipán",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "risa y la cabina del viento": {
     "url": "https://letterboxd.com/film/risa-and-the-wind-phone/",
@@ -935,7 +935,7 @@
     "title_en": "Jasmín",
     "director": "",
     "country": "",
-    "year": null,
+    "year": 1980,
     "duration": null
   },
   "una eva y dos adanes": {
@@ -971,20 +971,20 @@
     "duration": 119
   },
   "la estrella silenciosa": {
-    "url": "",
-    "title_en": "La estrella silenciosa",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-silent-star/",
+    "title_en": "The Silent Star",
+    "director": "Kurt Maetzig",
+    "country": "East Germany, Poland",
+    "year": 1960,
+    "duration": 93
   },
   "señales - una aventura espacial": {
-    "url": "",
-    "title_en": "Señales - Una aventura espacial",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/signale-ein-weltraumabenteuer/",
+    "title_en": "Signals: A Space Adventure",
+    "director": "Gottfried Kolditz",
+    "country": "Poland, East Germany",
+    "year": 1970,
+    "duration": 91
   },
   "eolomea": {
     "url": "https://letterboxd.com/film/eolomea/",
@@ -1003,12 +1003,12 @@
     "duration": 136
   },
   "tres hermanos": {
-    "url": "https://letterboxd.com/film/tres-hermanos/",
-    "title_en": "Tres hermanos",
-    "director": "José Benavides hijo",
-    "country": "Mexico",
-    "year": 1943,
-    "duration": 87
+    "url": "https://letterboxd.com/film/tres-irmaos/",
+    "title_en": "Two Brothers, My Sister",
+    "director": "Teresa Villaverde",
+    "country": "Portugal",
+    "year": 1994,
+    "duration": 108
   },
   "el murciélago": {
     "url": "https://letterboxd.com/film/the-bat/",
@@ -1019,44 +1019,44 @@
     "duration": 86
   },
   "el boxeador": {
-    "url": "https://letterboxd.com/film/battling-butler/",
-    "title_en": "Battling Butler",
+    "url": "",
+    "title_en": "El boxeador",
     "director": "Buster Keaton",
-    "country": "USA",
+    "country": "United States of America",
     "year": 1926,
     "duration": 77
   },
   "la madre": {
-    "url": "https://letterboxd.com/film/la-madre/",
-    "title_en": "La madre",
-    "director": "Angelo Maresca",
-    "country": "",
-    "year": 2013,
-    "duration": 90
+    "url": "https://letterboxd.com/film/mother-1926/",
+    "title_en": "Mother",
+    "director": "Vsevolod Pudovkin",
+    "country": "USSR",
+    "year": 1926,
+    "duration": 87
   },
   "fausto": {
-    "url": "https://letterboxd.com/film/fausto/",
+    "url": "",
     "title_en": "Fausto",
-    "director": "",
-    "country": "Mexico",
-    "year": 2017,
-    "duration": 106
+    "director": "F. W. Murnau",
+    "country": "Germany",
+    "year": 1926,
+    "duration": 116
   },
   "gorriones": {
-    "url": "https://letterboxd.com/film/gorriones/",
+    "url": "",
     "title_en": "Gorriones",
-    "director": "Ricardo Villarán",
-    "country": "Argentina",
-    "year": 1925,
-    "duration": null
+    "director": "William Beaudine",
+    "country": "United States of America",
+    "year": 1926,
+    "duration": 94
   },
   "el payaso": {
-    "url": "https://letterboxd.com/film/el-payaso/",
-    "title_en": "El Payaso",
-    "director": "Alejandra Mateo",
-    "country": "",
-    "year": 2024,
-    "duration": 13
+    "url": "https://letterboxd.com/film/the-golden-clown/",
+    "title_en": "The Golden Clown",
+    "director": "A.W. Sandberg",
+    "country": "Denmark",
+    "year": 1926,
+    "duration": 137
   },
   "torrente pasional": {
     "url": "https://letterboxd.com/film/niagara/",
@@ -1067,16 +1067,16 @@
     "duration": 92
   },
   "en el polvo de las estrellas": {
-    "url": "",
-    "title_en": "En el polvo de las estrellas",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/im-staub-der-sterne/",
+    "title_en": "In the Dust of the Stars",
+    "director": "Gottfried Kolditz",
+    "country": "East Germany, Romania",
+    "year": 1976,
+    "duration": 98
   },
   "lo habrás imaginado": {
-    "url": "https://letterboxd.com/film/lo-habras-imaginado/",
-    "title_en": "It's All In Your Head",
+    "url": "",
+    "title_en": "Lo habrás imaginado",
     "director": "Victoria Chaya Miranda",
     "country": "Argentina",
     "year": 2019,
@@ -1163,8 +1163,8 @@
     "duration": null
   },
   "soy tu mensaje": {
-    "url": "https://letterboxd.com/film/soy-tu-mensaje/",
-    "title_en": "I Am Your Message",
+    "url": "",
+    "title_en": "Soy tu mensaje",
     "director": "Ricardo M. Jacobo",
     "country": "Argentina",
     "year": 2025,
