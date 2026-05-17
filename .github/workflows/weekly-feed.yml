@@ -5,9 +5,7 @@ name: Weekly feed (lunes)
 # También se puede disparar manual con workflow_dispatch.
 
 on:
-  schedule:
-    # min hora dom-mes mes día-semana — '1' = lunes
-    - cron: '15 4 * * 1'
+  # Cron deshabilitado por ahora — sólo manual via Run workflow.
   workflow_dispatch:
     inputs:
       monday:

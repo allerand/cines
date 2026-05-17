@@ -331,28 +331,53 @@ def tmdb_search_movie(title: str, year: Optional[int] = None) -> list[dict]:
 
 
 def fetch_tmdb_movie_meta(movie_id: int) -> dict:
-    """Trae detalles + credits de TMDb y devuelve {director, country, duration, year, title_en}."""
-    data = _tmdb_request(f"/movie/{movie_id}", {"append_to_response": "credits", "language": "en-US"})
+    """Trae detalles + credits de TMDb. Devuelve {director, country, duration,
+    year, title_en, title_es, original_title}.
+
+    title_es: traducción oficial al español si existe (vía endpoint
+    /translations). Si TMDb no tiene una traducción al español, queda vacío
+    para que el caller use el título original.
+    """
+    data = _tmdb_request(f"/movie/{movie_id}", {"append_to_response": "credits,translations", "language": "en-US"})
     if not data:
         return {}
     out: dict = {}
     if data.get("title"):
         out["title_en"] = data["title"]
+    if data.get("original_title"):
+        out["original_title"] = data["original_title"]
     if data.get("runtime"):
         out["duration"] = int(data["runtime"])
     if data.get("release_date"):
         out["year"] = int(data["release_date"][:4])
-    # Country: array of {iso_3166_1, name}
     countries = [c.get("name") for c in data.get("production_countries", []) if c.get("name")]
     if countries:
         out["country"] = ", ".join(countries[:2])
-    # Director: crew con job=="Director"
     directors = [
         c.get("name") for c in data.get("credits", {}).get("crew", [])
         if c.get("job") == "Director" and c.get("name")
     ]
     if directors:
         out["director"] = ", ".join(directors[:3])
+
+    # Title en español oficial — preferimos es-AR > es-ES > es-MX > es genérico
+    title_es = ""
+    priority = ["AR", "ES", "MX", "CL", "UY"]
+    by_iso: dict[str, str] = {}
+    for tr in data.get("translations", {}).get("translations", []):
+        if tr.get("iso_639_1") != "es":
+            continue
+        title = (tr.get("data") or {}).get("title", "").strip()
+        if title:
+            by_iso[tr.get("iso_3166_1", "")] = title
+    for code in priority:
+        if code in by_iso:
+            title_es = by_iso[code]
+            break
+    if not title_es and by_iso:
+        title_es = next(iter(by_iso.values()))
+    if title_es:
+        out["title_es"] = title_es
     return out
 
 
@@ -368,7 +393,13 @@ def fill_meta_from_tmdb(
     Requiere TMDB_API_KEY o TMDB_READ_ACCESS_TOKEN. Sin credencial, retorna meta sin tocar.
     Valida match con hint_year (±2) y hint_director (overlap de palabras).
     """
-    if meta.get("duration") and meta.get("country") and meta.get("director"):
+    # Disparamos TMDb si falta algún campo crítico O si todavía no tenemos
+    # title_es (queremos siempre el título oficial en español si existe).
+    has_all = (
+        meta.get("duration") and meta.get("country") and meta.get("director")
+        and meta.get("title_es")
+    )
+    if has_all:
         return meta
     if not _tmdb_credential()[0]:
         return meta
@@ -399,12 +430,12 @@ def fill_meta_from_tmdb(
             if hint_director and tmeta.get("director"):
                 if not _name_overlap(hint_director, tmeta["director"]):
                     continue
-            for f in ("director", "country", "year", "duration", "title_en"):
+            for f in ("director", "country", "year", "duration", "title_en", "title_es", "original_title"):
                 if not meta.get(f) and tmeta.get(f):
                     meta[f] = tmeta[f]
-            if meta.get("duration") and meta.get("country") and meta.get("director"):
+            if (meta.get("duration") and meta.get("country") and meta.get("director")
+                    and meta.get("title_es")):
                 return meta
-    return meta
     return meta
 
 

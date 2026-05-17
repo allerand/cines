@@ -194,13 +194,29 @@ async def run_scraper(semanas: int = 2) -> None:
     screenings_out = []
     for s in all_screenings:
         meta = title_meta.get(s.title, {})
-        # Prefer the cinema's own scraped metadata over Letterboxd; fall back to LB.
+        # Title display: preferimos el título oficial en español de TMDb
+        # (casing correcto, sin TODO EN MAYÚSCULAS de Cacodelphia/Arthaus).
+        # Si TMDb no tiene traducción al español usamos su título original.
+        # Como último fallback queda el título scrapeado del cine.
+        scraped = s.title
+        # Si el cine devuelve TODO MAYÚSCULAS, prefiramos cualquier alternativa
+        scraped_is_caps = scraped.isupper() if len(scraped) > 3 else False
+        tmdb_es = meta.get("title_es") or ""
+        tmdb_orig = meta.get("original_title") or ""
+        tmdb_en = meta.get("title_en") or ""
+        if tmdb_es:
+            display_title = tmdb_es
+        elif scraped_is_caps and (tmdb_orig or tmdb_en):
+            display_title = tmdb_orig or tmdb_en
+        else:
+            display_title = scraped
+
         screenings_out.append({
             "cine":       s.cine,
             "fecha":      s.fecha,
             "hora":       s.hora,
-            "title_es":   s.title,
-            "title_en":   meta.get("title_en") or s.title,
+            "title_es":   display_title,
+            "title_en":   tmdb_en or display_title,
             "director":   getattr(s, "director", "") or meta.get("director") or "",
             "country":    getattr(s, "country", "") or meta.get("country") or "",
             "year":       getattr(s, "year", None) or meta.get("year"),
