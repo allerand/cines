@@ -176,60 +176,37 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
     byDay[k].sort((a, b) => (a.hora || "99").localeCompare(b.hora || "99"));
   }
 
-  // <style> compacto (Gmail lo respeta). Solo inline lo crítico para
-  // clientes que strip <style> (background, color, font del wrapper).
-  const STYLE = (
-    '<style>'
-    + '.b{background:' + T_BG + ';color:' + T_TEXT + ';font-family:' + T_FONT + ';line-height:1.45;}'
-    + '.w{max-width:760px;width:100%;margin:0 auto;}'
-    + '.hd{padding:0 0 22px;border-bottom:1px solid ' + T_BORDER + ';}'
-    + '.lg{display:block;width:48px;height:auto;border:0;}'
-    + '.br{font-size:18px;font-weight:700;letter-spacing:-0.01em;color:' + T_TEXT + ';}'
-    + '.sb{font-size:12px;color:' + T_MUTED + ';margin-top:2px;}'
-    + '.it{font-size:14px;color:' + T_TEXT + ';padding:18px 0 4px;}'
-    + '.dh{font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:' + T_ACCENT + ';padding-bottom:6px;}'
-    + '.dc{font-size:11px;color:' + T_MUTED + ';padding-bottom:6px;text-align:right;}'
-    + '.dt{margin:26px 0 10px;border-bottom:1px solid ' + T_BORDER + ';border-collapse:collapse;width:100%;}'
-    + '.nf{margin:6px 0 0;color:' + T_MUTED + ';font-size:13px;}'
-    + '.ft{width:100%;border-collapse:collapse;}'
-    + '.r td{padding:7px 0;border-bottom:1px solid ' + T_BORDER + ';font-size:13px;color:' + T_TEXT + ';vertical-align:top;}'
-    + '.h{padding-right:10px!important;width:48px;font-weight:700;color:' + T_TEXT + ';font-variant-numeric:tabular-nums;white-space:nowrap;}'
-    + '.c{display:inline-block;font-size:10px;color:' + T_MUTED + ';text-transform:uppercase;letter-spacing:.05em;border:1px solid ' + T_BORDER + ';padding:1px 6px;border-radius:3px;margin-right:6px;vertical-align:1px;}'
-    + '.t{font-weight:500;}'
-    + '.t a{color:' + T_TEXT + ';text-decoration:none;border-bottom:1px solid ' + T_BORDER + ';}'
-    + '.m{color:' + T_MUTED + ';font-size:11.5px;margin-top:2px;}'
-    + '.tc{border-collapse:collapse;width:100%;}'
-    + '.tl{padding-right:14px;vertical-align:top;width:50%;}'
-    + '.tr2{padding-left:14px;vertical-align:top;width:50%;}'
-    + '.fo{padding-top:16px;border-top:1px solid ' + T_BORDER + ';font-size:12px;color:' + T_MUTED + ';}'
-    + '.fo a{color:' + T_ACCENT + ';text-decoration:none;}'
-    + '</style>'
-  );
+  // Reusable style strings — armados una sola vez para mantener el output
+  // compacto sin sacrificar inline-styles (que es lo único que renderiza
+  // consistente en Gmail/Outlook/Apple Mail).
+  const SROW = 'border-bottom:1px solid ' + T_BORDER + ';font-size:13px;color:' + T_TEXT + ';vertical-align:top;';
 
   const parts = [
-    STYLE,
-    '<div class="b" style="background:' + T_BG + ';color:' + T_TEXT + ';font-family:' + T_FONT + ';line-height:1.45;">',
+    '<div style="background:' + T_BG + ';color:' + T_TEXT + ';font-family:' + T_FONT + ';line-height:1.45;">',
     '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="' + T_BG
-    + '" style="background:' + T_BG + ';border-collapse:collapse;"><tr><td align="center" style="padding:28px 12px;">',
-    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" class="w" width="760">',
+    + '" style="background:' + T_BG + ';border-collapse:collapse"><tr><td align="center" style="padding:28px 12px">',
+    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="760" '
+    + 'style="max-width:760px;width:100%;background:' + T_BG + ';color:' + T_TEXT + ';'
+    + 'font-family:' + T_FONT + ';line-height:1.45;text-align:left">',
 
-    // Header
-    '<tr><td class="hd">',
+    // Header — logo + brand
+    '<tr><td style="padding:0 0 22px;border-bottom:1px solid ' + T_BORDER + '">',
     '<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>',
-    '<td valign="middle" style="padding-right:12px;">',
-    '<img src="' + LOGO_URL + '" alt="Si te digo" width="48" height="48" class="lg">',
+    '<td valign="middle" style="padding-right:12px">',
+    '<img src="' + LOGO_URL + '" alt="Si te digo" width="48" height="48" '
+    + 'style="display:block;width:48px;height:auto;border:0">',
     '</td>',
     '<td valign="middle">',
-    '<div class="br">' + _escapeHtml(BRAND_NAME) + '</div>',
-    '<div class="sb">Cartelera semanal — cines · Buenos Aires</div>',
-    '</td>',
-    '</tr></table>',
-    '</td></tr>',
+    '<div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;color:' + T_TEXT + '">'
+    + _escapeHtml(BRAND_NAME) + '</div>',
+    '<div style="font-size:12px;color:' + T_MUTED + ';margin-top:2px">Cartelera semanal — cines · Buenos Aires</div>',
+    '</td></tr></table></td></tr>',
 
     // Intro
-    '<tr><td class="it">Programación de las salas de cine de la ciudad, semana ' + _escapeHtml(when) + '.</td></tr>',
+    '<tr><td style="padding:18px 0 4px;font-size:14px;color:' + T_TEXT + '">'
+    + 'Programación de las salas de cine de la ciudad, semana ' + _escapeHtml(when) + '.</td></tr>',
 
-    '<tr><td style="padding:0 0 24px;">',
+    '<tr><td style="padding:0 0 24px">',
   ];
 
   for (let i = 0; i < 7; i++) {
@@ -238,55 +215,57 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
     const films = byDay[iso] || [];
     const dayName = DAYS_ES[(d.getDay() + 6) % 7];
     parts.push(
-      '<table role="presentation" cellpadding="0" cellspacing="0" border="0" class="dt"><tr>'
-      + '<td class="dh">' + _escapeHtml(dayName + " " + d.getDate() + " de " + MONTHS_ES[d.getMonth()]) + '</td>'
-      + '<td class="dc">' + films.length + ' funciones</td>'
-      + '</tr></table>'
+      '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
+      + 'style="border-collapse:collapse;margin:26px 0 10px;border-bottom:1px solid ' + T_BORDER + '"><tr>'
+      + '<td style="font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:' + T_ACCENT + ';padding-bottom:6px">'
+      + _escapeHtml(dayName + " " + d.getDate() + " de " + MONTHS_ES[d.getMonth()]) + '</td>'
+      + '<td align="right" style="font-size:11px;color:' + T_MUTED + ';padding-bottom:6px">'
+      + films.length + ' funciones</td></tr></table>'
     );
     if (!films.length) {
-      parts.push('<div class="nf">— sin funciones —</div>');
+      parts.push('<div style="margin:6px 0 0;color:' + T_MUTED + ';font-size:13px">— sin funciones —</div>');
       continue;
     }
     if (films.length >= 6) {
       const half = Math.ceil(films.length / 2);
-      parts.push(_twoColumnFilms(films.slice(0, half), films.slice(half)));
+      parts.push(_twoColumnFilms(films.slice(0, half), films.slice(half), SROW));
     } else {
-      parts.push('<table role="presentation" cellpadding="0" cellspacing="0" border="0" class="ft">');
-      for (const s of films) parts.push(_renderFilmRow(s));
+      parts.push('<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse">');
+      for (const s of films) parts.push(_renderFilmRow(s, SROW));
       parts.push('</table>');
     }
   }
 
   parts.push(
     '</td></tr>',
-    '<tr><td class="fo">'
+    '<tr><td style="padding-top:16px;border-top:1px solid ' + T_BORDER + ';font-size:12px;color:' + T_MUTED + '">'
     + 'Todas las funciones también en '
-    + '<a href="' + SITE_URL + '">sitedigo.com</a> · '
-    + '<a href="https://instagram.com/sitedigocine">@sitedigocine</a> en Instagram.'
+    + '<a href="' + SITE_URL + '" style="color:' + T_ACCENT + ';text-decoration:none">sitedigo.com</a> · '
+    + '<a href="https://instagram.com/sitedigocine" style="color:' + T_ACCENT + ';text-decoration:none">@sitedigocine</a> en Instagram.'
     + '</td></tr>',
-    '</table>',
-    '</td></tr></table>',
-    '</div>'
+    '</table></td></tr></table></div>'
   );
   return parts.join("");
 }
 
 
-function _twoColumnFilms(left, right) {
+function _twoColumnFilms(left, right, sRow) {
   const renderCol = (arr) => {
-    return '<table role="presentation" cellpadding="0" cellspacing="0" border="0" class="ft">'
-      + arr.map(_renderFilmRow).join("") + '</table>';
+    return '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
+      + 'style="border-collapse:collapse">'
+      + arr.map(s => _renderFilmRow(s, sRow)).join("") + '</table>';
   };
   return (
-    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" class="tc"><tr>'
-    + '<td class="tl">' + renderCol(left) + '</td>'
-    + '<td class="tr2">' + renderCol(right) + '</td>'
+    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
+    + 'style="border-collapse:collapse"><tr>'
+    + '<td valign="top" width="50%" style="padding-right:14px">' + renderCol(left) + '</td>'
+    + '<td valign="top" width="50%" style="padding-left:14px">' + renderCol(right) + '</td>'
     + '</tr></table>'
   );
 }
 
 
-function _renderFilmRow(s) {
+function _renderFilmRow(s, sRow) {
   const title = s.title_es || s.title_en || "(sin título)";
   const meta = [];
   if (s.director) meta.push(s.director);
@@ -295,17 +274,19 @@ function _renderFilmRow(s) {
   const metaStr = meta.join(" · ");
   const lb = s.letterboxd || "";
   const titleHtml = lb
-    ? '<a href="' + _escapeHtml(lb) + '">' + _escapeHtml(title) + '</a>'
-    : _escapeHtml(title);
+    ? '<a href="' + _escapeHtml(lb) + '" style="color:' + T_TEXT + ';text-decoration:none;font-weight:500">' + _escapeHtml(title) + '</a>'
+    : '<span style="font-weight:500">' + _escapeHtml(title) + '</span>';
   return (
-    '<tr class="r">'
-    + '<td class="h">' + _escapeHtml(s.hora || "??") + '</td>'
-    + '<td>'
-    + '<span class="c">' + _escapeHtml(s.cine || "") + '</span>'
-    + '<span class="t">' + titleHtml + '</span>'
-    + (metaStr ? '<div class="m">' + _escapeHtml(metaStr) + '</div>' : '')
-    + '</td>'
-    + '</tr>'
+    '<tr>'
+    + '<td width="50" valign="top" style="padding:7px 10px 7px 0;' + sRow
+    + 'font-weight:700;white-space:nowrap">' + _escapeHtml(s.hora || "??") + '</td>'
+    + '<td valign="top" style="padding:7px 0;' + sRow + '">'
+    + '<span style="display:inline-block;font-size:10px;color:' + T_MUTED + ';text-transform:uppercase;'
+    + 'letter-spacing:.05em;border:1px solid ' + T_BORDER + ';padding:1px 6px;border-radius:3px;'
+    + 'margin-right:6px;vertical-align:1px">' + _escapeHtml(s.cine || "") + '</span>'
+    + titleHtml
+    + (metaStr ? '<div style="color:' + T_MUTED + ';font-size:11.5px;margin-top:2px">' + _escapeHtml(metaStr) + '</div>' : '')
+    + '</td></tr>'
   );
 }
 
