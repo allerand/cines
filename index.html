@@ -299,6 +299,20 @@
       color: #000;
       font-weight: 600;
     }
+    .newsletter-form button:disabled {
+      opacity: 0.6;
+      cursor: default;
+      background: var(--bg3);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .newsletter-msg {
+      font-size: 0.78rem;
+      margin: 0;
+      padding-top: 0.2rem;
+    }
+    .newsletter-msg.ok  { color: var(--accent); }
+    .newsletter-msg.err { color: #d97766; }
 
     /* ── Main content ── */
     main { padding: 1.5rem 2rem; }
@@ -507,13 +521,7 @@
 <main id="main"></main>
 
 <footer class="site-footer">
-  <form
-    class="newsletter-form"
-    action="https://buttondown.com/api/emails/embed-subscribe/sitedigo"
-    method="post"
-    target="popupwindow"
-    onsubmit="window.open('https://buttondown.com/sitedigo','popupwindow')"
-  >
+  <form id="newsletter-form" class="newsletter-form">
     <label for="newsletter-email" class="newsletter-label">
       Recibí la cartelera semanal por mail
     </label>
@@ -526,9 +534,56 @@
         required
         autocomplete="email"
       />
-      <button type="submit">Suscribirme</button>
+      <button type="submit" id="newsletter-submit">Suscribirme</button>
     </div>
+    <p id="newsletter-msg" class="newsletter-msg" hidden></p>
   </form>
+
+  <script>
+    (function() {
+      const HANDLE = 'sitedigo';
+      const form = document.getElementById('newsletter-form');
+      const input = document.getElementById('newsletter-email');
+      const btn = document.getElementById('newsletter-submit');
+      const msg = document.getElementById('newsletter-msg');
+
+      function showMsg(text, ok) {
+        msg.textContent = text;
+        msg.hidden = false;
+        msg.classList.remove('ok', 'err');
+        msg.classList.add(ok ? 'ok' : 'err');
+      }
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = (input.value || '').trim();
+        if (!email) return;
+        btn.disabled = true;
+        btn.textContent = 'Enviando…';
+        try {
+          await fetch(
+            'https://buttondown.com/api/emails/embed-subscribe/' + HANDLE,
+            {
+              method: 'POST',
+              mode: 'no-cors',
+              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+              body: 'email=' + encodeURIComponent(email),
+            }
+          );
+          // 'no-cors' siempre da respuesta opaque; asumimos OK. Si el mail
+          // ya existía o falló, Buttondown no manda nada y tampoco rompe la UX.
+          showMsg('✓ ¡Listo! Te suscribiste a la cartelera semanal.', true);
+          input.value = '';
+          btn.textContent = 'Suscripto';
+        } catch (err) {
+          console.warn('newsletter submit error', err);
+          showMsg('No pudimos suscribirte. Probá de nuevo en un rato.', false);
+          btn.disabled = false;
+          btn.textContent = 'Suscribirme';
+        }
+      });
+    })();
+  </script>
 </footer>
 
 <script>
