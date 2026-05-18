@@ -1032,20 +1032,28 @@ def _parse_lorca_imdb_text(text: str) -> list[dict]:
     return out
 
 
-async def scrape_lorca_imdb(page: "Page", semanas: int = 2) -> list[Screening]:
+async def _scrape_imdb_cinema(
+    page: "Page",
+    imdb_id: str,
+    cine_name: str,
+    ticket_url: str,
+    semanas: int = 2,
+    postal: str = "C1134",
+) -> list[Screening]:
     """
-    Cine Lorca no publica programación HTML — sólo una imagen estilizada de Wix.
-    Usamos IMDb showtimes (URL pública) que sí tiene los datos estructurados.
-    Iteramos por día de hoy → hoy+7*semanas.
+    Scrapea IMDb showtimes para un cine genérico. imdb_id es el ID 'ciNNNNNN'.
+    Cine_name se usa como discriminador para detectar el redirect/bot-block:
+    la página debe contener el nombre.
     """
     today = date.today()
     end = today + timedelta(days=7 * semanas)
     result: list[Screening] = []
     seen: set[tuple] = set()
 
+    base = f"https://www.imdb.com/showtimes/cinema/AR/{imdb_id}/AR/{postal}/"
     d = today
     while d <= end:
-        url = f"{LORCA_IMDB_BASE}{d.isoformat()}/"
+        url = f"{base}{d.isoformat()}/"
         text = ""
         for attempt in range(2):
             try:
@@ -1054,11 +1062,10 @@ async def scrape_lorca_imdb(page: "Page", semanas: int = 2) -> list[Screening]:
                 text = await page.evaluate("document.body.innerText")
             except Exception:
                 text = ""
-            if "Cine Lorca" in text:
+            if cine_name in text:
                 break
 
-        # Detectar que llegamos a la página de Lorca (anti-redirect/bot-block)
-        if "Cine Lorca" not in text:
+        if cine_name not in text:
             d += timedelta(days=1)
             continue
 
@@ -1069,17 +1076,66 @@ async def scrape_lorca_imdb(page: "Page", semanas: int = 2) -> list[Screening]:
                     continue
                 seen.add(key)
                 result.append(Screening(
-                    cine="Cine Lorca",
+                    cine=cine_name,
                     title=film["title"],
                     fecha=d.isoformat(),
                     hora=hora,
-                    ticket_url="https://cinelorca.wixsite.com/cine-lorca",
+                    ticket_url=ticket_url,
                     year=film.get("year"),
                     duration=film.get("duration"),
                 ))
         d += timedelta(days=1)
 
     return result
+
+
+async def scrape_lorca_imdb(page: "Page", semanas: int = 2) -> list[Screening]:
+    """
+    Cine Lorca no publica programación HTML — sólo una imagen estilizada de Wix.
+    Usamos IMDb showtimes (URL pública).
+    """
+    return await _scrape_imdb_cinema(
+        page,
+        imdb_id="ci1036356",
+        cine_name="Cine Lorca",
+        ticket_url="https://cinelorca.wixsite.com/cine-lorca",
+        semanas=semanas,
+    )
+
+
+# Cines comerciales con su ID de IMDb. IDs descubiertos browseando los
+# "cines cerca de" en showtimes/cinema/AR/.../. Agregá más sucursales acá
+# con el mismo formato — el scraper los toma todos automáticamente.
+COMMERCIAL_IMDB_CINEMAS = [
+    # (imdb_id, cine_name, ticket_url)
+    ("ci1036344", "Cinemark",  "https://www.cinemark.com.ar/"),       # Caballito
+    ("ci1036343", "Cinemark",  "https://www.cinemark.com.ar/"),       # Palermo
+    ("ci1036354", "Hoyts",     "https://www.hoyts.com.ar/"),          # Abasto
+    ("ci1033339", "Cinépolis", "https://www.cinepolis.com.ar/"),      # Houssay
+]
+
+
+async def scrape_commercial_imdb(page: "Page", semanas: int = 1) -> list[Screening]:
+    """Scrapea cada cine comercial vía IMDb y dedup por (title, fecha, hora, cine)."""
+    all_screenings: list[Screening] = []
+    seen: set[tuple] = set()
+    for imdb_id, cine_name, ticket_url in COMMERCIAL_IMDB_CINEMAS:
+        print(f"  · {cine_name} {imdb_id}...", end=" ", flush=True)
+        try:
+            ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, semanas)
+        except Exception as e:
+            print(f"error — {e}")
+            continue
+        added = 0
+        for s in ss:
+            k = (s.cine, s.title, s.fecha, s.hora)
+            if k in seen:
+                continue
+            seen.add(k)
+            all_screenings.append(s)
+            added += 1
+        print(f"{added} funciones")
+    return all_screenings
 
 
 def scrape_lorca() -> list[Screening]:

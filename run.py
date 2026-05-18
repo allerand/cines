@@ -38,7 +38,7 @@ async def run_scraper(semanas: int = 2) -> None:
         scrape_malba, scrape_lugones, scrape_cacodelphia,
         scrape_lorca, scrape_lorca_imdb, scrape_lumiton_agenda, scrape_cosmos,
         scrape_gaumont, scrape_cck, scrape_arthaus, scrape_museo_cine,
-        scrape_ccr,
+        scrape_ccr, scrape_commercial_imdb,
     )
     # Lorca: el scraping vía IMDb necesita playwright y se hace abajo.
     lorca_screenings: list = []
@@ -134,6 +134,17 @@ async def run_scraper(semanas: int = 2) -> None:
             lorca_screenings = scrape_lorca()
             if lorca_screenings:
                 all_screenings.extend(lorca_screenings)
+
+        # Cines comerciales (Cinemark, Hoyts, Cinépolis) — también vía IMDb.
+        # Limitamos a 1 semana porque los cines comerciales actualizan jueves
+        # y no publican mucho más adelante.
+        print("🎬 Scrapeando cines comerciales (IMDb)...")
+        try:
+            commercial_screenings = await scrape_commercial_imdb(page, semanas=1)
+            print(f"  Total comerciales: {len(commercial_screenings)} funciones")
+            all_screenings.extend(commercial_screenings)
+        except Exception as e:
+            print(f"  error — {e}")
 
         for name, fn in [
             ("Sala Lugones", lambda p: scrape_lugones(p)),
