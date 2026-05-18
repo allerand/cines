@@ -370,15 +370,26 @@ function cineCssClass(cine) {
 
 let weekStart = null;  // YYYY-MM-DD si modo semanal, sino null
 
+// Cines que NUNCA queremos en las piezas de IG (stories ni feed). Son los
+// comerciales — generan demasiadas funciones y saturan la pieza visualmente.
+// Si en el futuro hace falta incluirlos puntualmente, pasar ?include=commercial
+// como query param en la URL.
+const IG_EXCLUDE_CINES = new Set([
+  'Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'
+]);
+
 async function loadData() {
   const res = await fetch('data/cartelera.json?t=' + Date.now());
   const data = await res.json();
-  allScreenings = data.screenings || [];
+  const raw = data.screenings || [];
 
   // URL params permiten control desde scripts (generate_posts.py):
   //   ?date=2026-05-10&cine=all&format=portrait&slide=2
   //   ?week=2026-05-18&format=portrait      ← modo semanal (7 slides)
+  //   ?include=commercial                   ← override: incluir comerciales
   const params = new URLSearchParams(location.search);
+  const includeCommercial = (params.get('include') || '') === 'commercial';
+  allScreenings = includeCommercial ? raw : raw.filter(s => !IG_EXCLUDE_CINES.has(s.cine));
   if (params.get('week')) {
     weekStart = params.get('week');
   }
