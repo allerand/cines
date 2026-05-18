@@ -165,8 +165,8 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
 
   const parts = [
     '<div style="font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',system-ui,sans-serif;'
-    + ' max-width:640px;margin:0 auto;color:#1a1a1a;line-height:1.5;">',
-    '<h1 style="font-size:20px;font-weight:700;margin:0 0 6px;">Cartelera de cine</h1>',
+    + ' max-width:760px;margin:0 auto;padding:0 12px;color:#1a1a1a;line-height:1.45;">',
+    '<h1 style="font-size:22px;font-weight:700;margin:0 0 6px;letter-spacing:-0.01em;">Cartelera de cine</h1>',
     '<p style="margin:0 0 24px;color:#666;font-size:14px;">'
     + 'Programación de las salas de cine de la ciudad, semana ' + _escapeHtml(when) + '.</p>',
   ];
@@ -176,42 +176,32 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
     const iso = _isoDate(d);
     const films = byDay[iso] || [];
     const dayName = DAYS_ES[(d.getDay() + 6) % 7];
+    // Header del día — tabla para alinear título a la izq + contador a la der
     parts.push(
-      '<h2 style="font-size:14px;font-weight:700;letter-spacing:0.06em;'
-      + 'text-transform:uppercase;margin:24px 0 8px;color:#1a1a1a;'
-      + 'border-bottom:1px solid #e0e0e0;padding-bottom:4px;">'
+      '<table cellpadding="0" cellspacing="0" border="0" width="100%" '
+      + 'style="border-collapse:collapse;margin:28px 0 10px;border-bottom:1px solid #e0e0e0;">'
+      + '<tr>'
+      + '<td style="font-size:13px;font-weight:700;letter-spacing:0.08em;'
+      + 'text-transform:uppercase;color:#1a1a1a;padding-bottom:5px;">'
       + _escapeHtml(dayName + " " + d.getDate() + " de " + MONTHS_ES[d.getMonth()])
-      + '<span style="float:right;font-weight:400;color:#999;">' + films.length + ' func.</span>'
-      + '</h2>'
+      + '</td>'
+      + '<td align="right" style="font-size:11px;color:#999;padding-bottom:5px;">'
+      + films.length + ' funciones</td>'
+      + '</tr></table>'
     );
     if (!films.length) {
-      parts.push('<p style="margin:6px 0;color:#999;font-size:14px;">— sin funciones —</p>');
+      parts.push('<p style="margin:6px 0 0;color:#999;font-size:13px;">— sin funciones —</p>');
       continue;
     }
-    parts.push('<ul style="list-style:none;padding:0;margin:0;font-size:14px;">');
-    for (const s of films) {
-      const title = s.title_es || s.title_en || "(sin título)";
-      const metaExtras = [];
-      if (s.director) metaExtras.push(s.director);
-      if (s.year) metaExtras.push(s.year);
-      if (s.duration) metaExtras.push(s.duration + " min");
-      const metaStr = metaExtras.join(" · ");
-      const lb = s.letterboxd || "";
-      const titleHtml = lb
-        ? '<a href="' + _escapeHtml(lb) + '" style="color:#1a1a1a;text-decoration:none;border-bottom:1px solid #999;">' + _escapeHtml(title) + '</a>'
-        : _escapeHtml(title);
-      parts.push(
-        '<li style="padding:6px 0;border-bottom:1px solid #f0f0f0;">'
-        + '<strong style="display:inline-block;width:54px;color:#333;">' + _escapeHtml(s.hora || "??") + '</strong>'
-        + ' <span style="font-size:11px;color:#777;text-transform:uppercase;letter-spacing:0.04em;'
-        + 'border:1px solid #ddd;padding:1px 6px;border-radius:3px;margin-right:6px;">'
-        + _escapeHtml(s.cine || "") + '</span> '
-        + titleHtml
-        + (metaStr ? '<div style="margin-left:54px;color:#777;font-size:13px;">' + _escapeHtml(metaStr) + '</div>' : '')
-        + '</li>'
-      );
+    // 2 columnas si hay 6+ funciones (cae natural), 1 columna si menos
+    if (films.length >= 6) {
+      const half = Math.ceil(films.length / 2);
+      parts.push(_twoColumnFilms(films.slice(0, half), films.slice(half)));
+    } else {
+      parts.push('<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">');
+      for (const s of films) parts.push(_renderFilmRow(s));
+      parts.push('</table>');
     }
-    parts.push('</ul>');
   }
 
   parts.push(
@@ -223,6 +213,52 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
     + '</p></div>'
   );
   return parts.join("");
+}
+
+
+function _twoColumnFilms(left, right) {
+  const renderCol = (arr) => {
+    const rows = arr.map(_renderFilmRow).join("");
+    return '<table cellpadding="0" cellspacing="0" border="0" width="100%" '
+      + 'style="border-collapse:collapse;">' + rows + '</table>';
+  };
+  return (
+    '<table cellpadding="0" cellspacing="0" border="0" width="100%" '
+    + 'style="border-collapse:collapse;">'
+    + '<tr>'
+    + '<td valign="top" width="50%" style="padding-right:16px;">' + renderCol(left) + '</td>'
+    + '<td valign="top" width="50%" style="padding-left:16px;">' + renderCol(right) + '</td>'
+    + '</tr></table>'
+  );
+}
+
+
+function _renderFilmRow(s) {
+  const title = s.title_es || s.title_en || "(sin título)";
+  const meta = [];
+  if (s.director) meta.push(s.director);
+  if (s.year) meta.push(s.year);
+  if (s.duration) meta.push(s.duration + " min");
+  const metaStr = meta.join(" · ");
+  const lb = s.letterboxd || "";
+  const titleHtml = lb
+    ? '<a href="' + _escapeHtml(lb) + '" style="color:#1a1a1a;text-decoration:none;border-bottom:1px solid #bbb;">' + _escapeHtml(title) + '</a>'
+    : _escapeHtml(title);
+  return (
+    '<tr>'
+    + '<td valign="top" width="50" style="padding:7px 8px 7px 0;'
+    + 'border-bottom:1px solid #f0f0f0;font-size:13px;font-weight:700;'
+    + 'color:#333;font-variant-numeric:tabular-nums;white-space:nowrap;">'
+    + _escapeHtml(s.hora || "??") + '</td>'
+    + '<td valign="top" style="padding:7px 0;border-bottom:1px solid #f0f0f0;font-size:13px;">'
+    + '<span style="display:inline-block;font-size:10px;color:#777;text-transform:uppercase;'
+    + 'letter-spacing:0.05em;border:1px solid #ddd;padding:1px 5px;border-radius:3px;'
+    + 'margin-right:6px;vertical-align:1px;">' + _escapeHtml(s.cine || "") + '</span>'
+    + '<span style="font-weight:500;">' + titleHtml + '</span>'
+    + (metaStr ? '<div style="color:#888;font-size:11.5px;margin-top:2px;">' + _escapeHtml(metaStr) + '</div>' : '')
+    + '</td>'
+    + '</tr>'
+  );
 }
 
 
