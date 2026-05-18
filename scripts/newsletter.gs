@@ -204,7 +204,10 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
 
     // Intro
     '<tr><td style="padding:18px 0 4px;font-size:14px;color:' + T_TEXT + '">'
-    + 'Programación de las salas de cine de la ciudad, semana ' + _escapeHtml(when) + '.</td></tr>',
+    + 'Programación de las salas de cine de la ciudad, semana ' + _escapeHtml(when) + '. '
+    + '<span style="color:' + T_MUTED + ';font-size:13px">Tocá una película para ver director, año y duración en Letterboxd, o entrá a '
+    + '<a href="' + SITE_URL + '" style="color:' + T_ACCENT + ';text-decoration:none">sitedigo.com</a> para todos los detalles.</span>'
+    + '</td></tr>',
 
     '<tr><td style="padding:0 0 24px">',
   ];
@@ -266,26 +269,25 @@ function _twoColumnFilms(left, right, sRow) {
 
 
 function _renderFilmRow(s, sRow) {
+  // Versión compacta: 1 línea por peli (hora + cine + título). Si la peli
+  // tiene letterboxd, el título linkea ahí para que el lector vea director /
+  // año / duración / sinopsis sin tener que cargar todo eso en el mail
+  // (Gmail clipea a 102KB y los detalles completos no entran en una semana
+  // típica de 150+ funciones).
   const title = s.title_es || s.title_en || "(sin título)";
-  const meta = [];
-  if (s.director) meta.push(s.director);
-  if (s.year) meta.push(s.year);
-  if (s.duration) meta.push(s.duration + " min");
-  const metaStr = meta.join(" · ");
   const lb = s.letterboxd || "";
   const titleHtml = lb
     ? '<a href="' + _escapeHtml(lb) + '" style="color:' + T_TEXT + ';text-decoration:none;font-weight:500">' + _escapeHtml(title) + '</a>'
     : '<span style="font-weight:500">' + _escapeHtml(title) + '</span>';
   return (
     '<tr>'
-    + '<td width="50" valign="top" style="padding:7px 10px 7px 0;' + sRow
+    + '<td width="50" valign="top" style="padding:5px 10px 5px 0;' + sRow
     + 'font-weight:700;white-space:nowrap">' + _escapeHtml(s.hora || "??") + '</td>'
-    + '<td valign="top" style="padding:7px 0;' + sRow + '">'
+    + '<td valign="top" style="padding:5px 0;' + sRow + '">'
     + '<span style="display:inline-block;font-size:10px;color:' + T_MUTED + ';text-transform:uppercase;'
     + 'letter-spacing:.05em;border:1px solid ' + T_BORDER + ';padding:1px 6px;border-radius:3px;'
     + 'margin-right:6px;vertical-align:1px">' + _escapeHtml(s.cine || "") + '</span>'
     + titleHtml
-    + (metaStr ? '<div style="color:' + T_MUTED + ';font-size:11.5px;margin-top:2px">' + _escapeHtml(metaStr) + '</div>' : '')
     + '</td></tr>'
   );
 }
