@@ -370,13 +370,14 @@ function cineCssClass(cine) {
 
 let weekStart = null;  // YYYY-MM-DD si modo semanal, sino null
 
-// Cines que NUNCA queremos en las piezas de IG (stories ni feed). Son los
-// comerciales — generan demasiadas funciones y saturan la pieza visualmente.
-// Si en el futuro hace falta incluirlos puntualmente, pasar ?include=commercial
-// como query param en la URL.
-const IG_EXCLUDE_CINES = new Set([
-  'Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'
-]);
+// Cadenas comerciales que NUNCA queremos en las piezas de IG (stories ni
+// feed). Matcheamos por PREFIJO porque cada sucursal viene como
+// "Cinemark Caballito", "Hoyts Abasto", etc. — todas las del mismo grupo
+// se descartan. Override con ?include=commercial en la URL.
+const IG_EXCLUDE_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'];
+function isCommercial(cine) {
+  return IG_EXCLUDE_PREFIXES.some(p => cine && cine.startsWith(p));
+}
 
 async function loadData() {
   const res = await fetch('data/cartelera.json?t=' + Date.now());
@@ -389,7 +390,7 @@ async function loadData() {
   //   ?include=commercial                   ← override: incluir comerciales
   const params = new URLSearchParams(location.search);
   const includeCommercial = (params.get('include') || '') === 'commercial';
-  allScreenings = includeCommercial ? raw : raw.filter(s => !IG_EXCLUDE_CINES.has(s.cine));
+  allScreenings = includeCommercial ? raw : raw.filter(s => !isCommercial(s.cine));
   if (params.get('week')) {
     weekStart = params.get('week');
   }

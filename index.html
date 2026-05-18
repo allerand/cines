@@ -640,11 +640,13 @@
 const DAYS_ES = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 const MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 
-// Cines clasificados como "comerciales" — están ocultos por default y se
-// suman cuando el usuario toca el toggle "+ Comerciales".
-const COMMERCIAL_CINES = new Set([
-  'Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'
-]);
+// Cadenas comerciales. Cada peli viene como "Cinemark Caballito",
+// "Hoyts Abasto", etc. — matcheamos por PREFIJO así una sola entrada
+// cubre todas las sucursales de la cadena.
+const COMMERCIAL_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'];
+function isCommercial(cine) {
+  return COMMERCIAL_PREFIXES.some(p => cine && cine.startsWith(p));
+}
 
 let allScreenings = [];
 let activeDay = null;
@@ -661,7 +663,7 @@ function visibleScreenings() {
   // Aplica el filtro global del toggle comerciales. Usado por todo el
   // resto de la UI (tabs por día, conteos, render, etc.).
   if (showCommercial) return allScreenings;
-  return allScreenings.filter(s => !COMMERCIAL_CINES.has(s.cine));
+  return allScreenings.filter(s => !isCommercial(s.cine));
 }
 
 function applyCommercialToggle() {
@@ -675,7 +677,7 @@ function applyCommercialToggle() {
     tgl.textContent = showCommercial ? '− Comerciales' : '+ Comerciales';
   }
   // Si el cine activo era un comercial y se ocultaron, volvemos a "Todos"
-  if (!showCommercial && COMMERCIAL_CINES.has(activeCine)) {
+  if (!showCommercial && isCommercial(activeCine)) {
     activeCine = 'all';
     document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
   }
@@ -772,8 +774,14 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Cinemark':'cine-cinemark', 'Hoyts':'cine-hoyts', 'Cinépolis':'cine-cinepolis', 'Cinepolis':'cine-cinepolis', 'Showcase':'cine-showcase' };
-  return map[cine] || '';
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr' };
+  if (map[cine]) return map[cine];
+  // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
+  if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';
+  if (cine && cine.startsWith('Hoyts'))     return 'cine-hoyts';
+  if (cine && (cine.startsWith('Cinépolis') || cine.startsWith('Cinepolis'))) return 'cine-cinepolis';
+  if (cine && cine.startsWith('Showcase'))  return 'cine-showcase';
+  return '';
 }
 
 function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -788,7 +796,14 @@ function displayTitle(s) {
 function renderTable() {
   const main = document.getElementById('main');
   let rows = visibleScreenings().filter(s => s.fecha === activeDay);
-  if (activeCine !== 'all') rows = rows.filter(s => s.cine === activeCine);
+  if (activeCine !== 'all') {
+    // Chips comerciales (data-cine="Cinemark") matchean por PREFIJO así
+    // un solo chip cubre todas las sucursales de la cadena. Chips no
+    // comerciales matchean exacto.
+    rows = isCommercial(activeCine)
+      ? rows.filter(s => s.cine && s.cine.startsWith(activeCine))
+      : rows.filter(s => s.cine === activeCine);
+  }
   if (searchQuery) rows = rows.filter(s => [s.title_es, s.title_en, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
 
   if (rows.length === 0) {

@@ -1107,11 +1107,11 @@ async def scrape_lorca_imdb(page: "Page", semanas: int = 2) -> list[Screening]:
 # "cines cerca de" en showtimes/cinema/AR/.../. Agregá más sucursales acá
 # con el mismo formato — el scraper los toma todos automáticamente.
 COMMERCIAL_IMDB_CINEMAS = [
-    # (imdb_id, cine_name, ticket_url)
-    ("ci1036344", "Cinemark",  "https://www.cinemark.com.ar/"),       # Caballito
-    ("ci1036343", "Cinemark",  "https://www.cinemark.com.ar/"),       # Palermo
-    ("ci1036354", "Hoyts",     "https://www.hoyts.com.ar/"),          # Abasto
-    ("ci1033339", "Cinépolis", "https://www.cinepolis.com.ar/"),      # Houssay
+    # (imdb_id, cine_name, ticket_url) — cine_name incluye la sucursal
+    ("ci1036344", "Cinemark Caballito",  "https://www.cinemark.com.ar/"),
+    ("ci1036343", "Cinemark Palermo",    "https://www.cinemark.com.ar/"),
+    ("ci1036354", "Hoyts Abasto",        "https://www.hoyts.com.ar/"),
+    ("ci1033339", "Cinépolis Houssay",   "https://www.cinepolis.com.ar/"),
 ]
 
 
