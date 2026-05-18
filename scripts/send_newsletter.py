@@ -161,6 +161,10 @@ def buttondown_create_email(subject: str, body: str, api_key: str) -> dict:
         headers={
             "Authorization": f"Token {api_key}",
             "Content-Type": "application/json",
+            # Buttondown exige este header para confirmar que sabemos que
+            # 'about_to_send' dispara el envío real e inmediato a todos los
+            # suscriptores. Se pide una sola vez por API key.
+            "X-Buttondown-Live-Dangerously": "true",
         },
     )
     with urllib.request.urlopen(req, timeout=30) as r:
