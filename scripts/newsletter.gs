@@ -31,8 +31,21 @@
 
 // ⚙️ Config — cambiá esto antes de deployar
 const CARTELERA_URL = "https://raw.githubusercontent.com/allerand/cines/main/data/cartelera.json";
-const FROM_NAME = "Cartelera de cines"; // aparece como "Cartelera de cines <tu@gmail.com>"
+const LOGO_URL = "https://raw.githubusercontent.com/allerand/cines/main/logo.png";
+const SITE_URL = "https://sitedigo.com";
+const BRAND_NAME = "Si te digo producciones";
+const FROM_NAME = "Si te digo producciones";
 const SUBJECT_PREFIX = "Cartelera de cine — semana";
+
+// Paleta — igual a la web (index.html)
+const T_BG       = "#0a0a0a";
+const T_BG2      = "#111";
+const T_BG3      = "#1a1a1a";
+const T_BORDER   = "#2a2a2a";
+const T_TEXT     = "#e0e0e0";
+const T_MUTED    = "#666";
+const T_ACCENT   = "#00d060";
+const T_FONT     = "-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif";
 
 // Localización
 const DAYS_ES = ["lunes","martes","miércoles","jueves","viernes","sábado","domingo"];
@@ -164,11 +177,39 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
   }
 
   const parts = [
-    '<div style="font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',system-ui,sans-serif;'
-    + ' max-width:760px;margin:0 auto;padding:0 12px;color:#1a1a1a;line-height:1.45;">',
-    '<h1 style="font-size:22px;font-weight:700;margin:0 0 6px;letter-spacing:-0.01em;">Cartelera de cine</h1>',
-    '<p style="margin:0 0 24px;color:#666;font-size:14px;">'
-    + 'Programación de las salas de cine de la ciudad, semana ' + _escapeHtml(when) + '.</p>',
+    // Wrapper full-bleed dark background. Algunos clientes ignoran el body
+    // background, así que envolvemos en un <table> con bgcolor.
+    '<div style="background:' + T_BG + ';margin:0;padding:0;">',
+    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" '
+    + 'width="100%" bgcolor="' + T_BG + '" '
+    + 'style="background:' + T_BG + ';border-collapse:collapse;"><tr><td align="center" style="padding:32px 12px;">',
+    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="760" '
+    + 'style="max-width:760px;width:100%;background:' + T_BG + ';color:' + T_TEXT + ';'
+    + 'font-family:' + T_FONT + ';line-height:1.45;text-align:left;">',
+
+    // Header — logo + brand
+    '<tr><td style="padding:0 0 22px;border-bottom:1px solid ' + T_BORDER + ';">',
+    '<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>',
+    '<td valign="middle" style="padding-right:12px;">',
+    '<img src="' + LOGO_URL + '" alt="Si te digo" width="48" height="48" '
+    + 'style="display:block;width:48px;height:auto;border:0;outline:none;">',
+    '</td>',
+    '<td valign="middle">',
+    '<div style="font-size:18px;font-weight:700;letter-spacing:-0.01em;color:' + T_TEXT + ';">'
+    + _escapeHtml(BRAND_NAME) + '</div>',
+    '<div style="font-size:12px;color:' + T_MUTED + ';margin-top:2px;">Cartelera semanal — cines · Buenos Aires</div>',
+    '</td>',
+    '</tr></table>',
+    '</td></tr>',
+
+    // Intro
+    '<tr><td style="padding:18px 0 4px;">',
+    '<div style="font-size:14px;color:' + T_TEXT + ';">'
+    + 'Programación de las salas de cine de la ciudad, semana ' + _escapeHtml(when) + '.</div>',
+    '</td></tr>',
+
+    // Body container
+    '<tr><td style="padding:0 0 24px;">',
   ];
 
   for (let i = 0; i < 7; i++) {
@@ -176,41 +217,48 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
     const iso = _isoDate(d);
     const films = byDay[iso] || [];
     const dayName = DAYS_ES[(d.getDay() + 6) % 7];
-    // Header del día — tabla para alinear título a la izq + contador a la der
+    // Header del día — tabla con título a la izq + contador a la der
     parts.push(
-      '<table cellpadding="0" cellspacing="0" border="0" width="100%" '
-      + 'style="border-collapse:collapse;margin:28px 0 10px;border-bottom:1px solid #e0e0e0;">'
+      '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
+      + 'style="border-collapse:collapse;margin:26px 0 10px;border-bottom:1px solid ' + T_BORDER + ';">'
       + '<tr>'
       + '<td style="font-size:13px;font-weight:700;letter-spacing:0.08em;'
-      + 'text-transform:uppercase;color:#1a1a1a;padding-bottom:5px;">'
+      + 'text-transform:uppercase;color:' + T_ACCENT + ';padding-bottom:6px;">'
       + _escapeHtml(dayName + " " + d.getDate() + " de " + MONTHS_ES[d.getMonth()])
       + '</td>'
-      + '<td align="right" style="font-size:11px;color:#999;padding-bottom:5px;">'
+      + '<td align="right" style="font-size:11px;color:' + T_MUTED + ';padding-bottom:6px;">'
       + films.length + ' funciones</td>'
       + '</tr></table>'
     );
     if (!films.length) {
-      parts.push('<p style="margin:6px 0 0;color:#999;font-size:13px;">— sin funciones —</p>');
+      parts.push('<p style="margin:6px 0 0;color:' + T_MUTED + ';font-size:13px;">— sin funciones —</p>');
       continue;
     }
-    // 2 columnas si hay 6+ funciones (cae natural), 1 columna si menos
     if (films.length >= 6) {
       const half = Math.ceil(films.length / 2);
       parts.push(_twoColumnFilms(films.slice(0, half), films.slice(half)));
     } else {
-      parts.push('<table cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">');
+      parts.push('<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse;">');
       for (const s of films) parts.push(_renderFilmRow(s));
       parts.push('</table>');
     }
   }
 
   parts.push(
-    '<hr style="border:none;border-top:1px solid #e0e0e0;margin:32px 0 12px;">'
-    + '<p style="margin:0;font-size:12px;color:#999;">'
+    '</td></tr>',
+
+    // Footer
+    '<tr><td style="padding-top:16px;border-top:1px solid ' + T_BORDER + ';">',
+    '<div style="font-size:12px;color:' + T_MUTED + ';">'
     + 'Todas las funciones también en '
-    + '<a href="https://sitedigo.com" style="color:#1a1a1a;">sitedigo.com</a> · '
-    + '<a href="https://instagram.com/sitedigocine" style="color:#1a1a1a;">@sitedigocine</a> en Instagram.'
-    + '</p></div>'
+    + '<a href="' + SITE_URL + '" style="color:' + T_ACCENT + ';text-decoration:none;">sitedigo.com</a> · '
+    + '<a href="https://instagram.com/sitedigocine" style="color:' + T_ACCENT + ';text-decoration:none;">@sitedigocine</a> en Instagram.'
+    + '</div>',
+    '</td></tr>',
+
+    '</table>',          // inner table
+    '</td></tr></table>', // outer table
+    '</div>',
   );
   return parts.join("");
 }
@@ -219,15 +267,15 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
 function _twoColumnFilms(left, right) {
   const renderCol = (arr) => {
     const rows = arr.map(_renderFilmRow).join("");
-    return '<table cellpadding="0" cellspacing="0" border="0" width="100%" '
+    return '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
       + 'style="border-collapse:collapse;">' + rows + '</table>';
   };
   return (
-    '<table cellpadding="0" cellspacing="0" border="0" width="100%" '
+    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
     + 'style="border-collapse:collapse;">'
     + '<tr>'
-    + '<td valign="top" width="50%" style="padding-right:16px;">' + renderCol(left) + '</td>'
-    + '<td valign="top" width="50%" style="padding-left:16px;">' + renderCol(right) + '</td>'
+    + '<td valign="top" width="50%" style="padding-right:14px;">' + renderCol(left) + '</td>'
+    + '<td valign="top" width="50%" style="padding-left:14px;">' + renderCol(right) + '</td>'
     + '</tr></table>'
   );
 }
@@ -242,20 +290,20 @@ function _renderFilmRow(s) {
   const metaStr = meta.join(" · ");
   const lb = s.letterboxd || "";
   const titleHtml = lb
-    ? '<a href="' + _escapeHtml(lb) + '" style="color:#1a1a1a;text-decoration:none;border-bottom:1px solid #bbb;">' + _escapeHtml(title) + '</a>'
+    ? '<a href="' + _escapeHtml(lb) + '" style="color:' + T_TEXT + ';text-decoration:none;border-bottom:1px solid ' + T_BORDER + ';">' + _escapeHtml(title) + '</a>'
     : _escapeHtml(title);
   return (
     '<tr>'
-    + '<td valign="top" width="50" style="padding:7px 8px 7px 0;'
-    + 'border-bottom:1px solid #f0f0f0;font-size:13px;font-weight:700;'
-    + 'color:#333;font-variant-numeric:tabular-nums;white-space:nowrap;">'
+    + '<td valign="top" width="50" style="padding:8px 10px 8px 0;'
+    + 'border-bottom:1px solid ' + T_BORDER + ';font-size:13px;font-weight:700;'
+    + 'color:' + T_TEXT + ';font-variant-numeric:tabular-nums;white-space:nowrap;">'
     + _escapeHtml(s.hora || "??") + '</td>'
-    + '<td valign="top" style="padding:7px 0;border-bottom:1px solid #f0f0f0;font-size:13px;">'
-    + '<span style="display:inline-block;font-size:10px;color:#777;text-transform:uppercase;'
-    + 'letter-spacing:0.05em;border:1px solid #ddd;padding:1px 5px;border-radius:3px;'
+    + '<td valign="top" style="padding:8px 0;border-bottom:1px solid ' + T_BORDER + ';font-size:13px;color:' + T_TEXT + ';">'
+    + '<span style="display:inline-block;font-size:10px;color:' + T_MUTED + ';text-transform:uppercase;'
+    + 'letter-spacing:0.05em;border:1px solid ' + T_BORDER + ';padding:1px 6px;border-radius:3px;'
     + 'margin-right:6px;vertical-align:1px;">' + _escapeHtml(s.cine || "") + '</span>'
     + '<span style="font-weight:500;">' + titleHtml + '</span>'
-    + (metaStr ? '<div style="color:#888;font-size:11.5px;margin-top:2px;">' + _escapeHtml(metaStr) + '</div>' : '')
+    + (metaStr ? '<div style="color:' + T_MUTED + ';font-size:11.5px;margin-top:2px;">' + _escapeHtml(metaStr) + '</div>' : '')
     + '</td>'
     + '</tr>'
   );
