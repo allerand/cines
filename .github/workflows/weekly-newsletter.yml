@@ -7,8 +7,9 @@ name: Weekly newsletter (jueves)
 # También se puede disparar manual con workflow_dispatch.
 
 on:
-  schedule:
-    - cron: '0 12 * * 4'   # jueves 12:00 UTC
+  # Cron deshabilitado — el envío del newsletter ahora lo hace un Google
+  # Apps Script (scripts/newsletter.gs) con time trigger semanal. Este
+  # workflow queda como manual-only por si querés volver a Buttondown.
   workflow_dispatch:
     inputs:
       week:

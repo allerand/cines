@@ -541,7 +541,10 @@
 
   <script>
     (function() {
-      const HANDLE = 'sitedigo';
+      // URL del Web App de Apps Script (la generás después de Deploy → Web app).
+      // Hasta que tenga valor real, el form solo muestra el éxito sin guardar.
+      const APPS_SCRIPT_URL = 'REEMPLAZAR_CON_TU_WEBAPP_URL';
+
       const form = document.getElementById('newsletter-form');
       const input = document.getElementById('newsletter-email');
       const btn = document.getElementById('newsletter-submit');
@@ -561,18 +564,17 @@
         btn.disabled = true;
         btn.textContent = 'Enviando…';
         try {
-          await fetch(
-            'https://buttondown.com/api/emails/embed-subscribe/' + HANDLE,
-            {
-              method: 'POST',
-              mode: 'no-cors',
-              headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-              body: 'email=' + encodeURIComponent(email),
-            }
-          );
-          // 'no-cors' siempre da respuesta opaque; asumimos OK. Si el mail
-          // ya existía o falló, Buttondown no manda nada y tampoco rompe la UX.
-          showMsg('✓ ¡Listo! Te suscribiste a la cartelera semanal.', true);
+          if (APPS_SCRIPT_URL.startsWith('REEMPLAZAR')) {
+            throw new Error('APPS_SCRIPT_URL no configurada');
+          }
+          await fetch(APPS_SCRIPT_URL, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'email=' + encodeURIComponent(email),
+          });
+          // mode:'no-cors' da respuesta opaque pero el doPost igual ejecuta.
+          showMsg('✓ ¡Ya estás suscripto! La próxima cartelera te llega el jueves.', true);
           input.value = '';
           btn.textContent = 'Suscripto';
         } catch (err) {
