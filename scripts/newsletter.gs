@@ -185,8 +185,8 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
     '<div style="background:' + T_BG + ';color:' + T_TEXT + ';font-family:' + T_FONT + ';line-height:1.45;">',
     '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" bgcolor="' + T_BG
     + '" style="background:' + T_BG + ';border-collapse:collapse"><tr><td align="center" style="padding:28px 12px">',
-    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="760" '
-    + 'style="max-width:760px;width:100%;background:' + T_BG + ';color:' + T_TEXT + ';'
+    '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="900" '
+    + 'style="max-width:900px;width:100%;background:' + T_BG + ';color:' + T_TEXT + ';'
     + 'font-family:' + T_FONT + ';line-height:1.45;text-align:left">',
 
     // Header — logo + brand
@@ -229,10 +229,14 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
       parts.push('<div style="margin:6px 0 0;color:' + T_MUTED + ';font-size:13px">— sin funciones —</div>');
       continue;
     }
-    if (films.length >= 6) {
-      const half = Math.ceil(films.length / 2);
-      parts.push(_twoColumnFilms(films.slice(0, half), films.slice(half), SROW));
+    if (films.length >= 8) {
+      // 4 columnas — días llenos (8+ funciones)
+      parts.push(_nColumnFilms(films, 4, SROW));
+    } else if (films.length >= 4) {
+      // 2 columnas — días intermedios
+      parts.push(_nColumnFilms(films, 2, SROW));
     } else {
+      // 1 columna — días con pocas funciones
       parts.push('<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-collapse:collapse">');
       for (const s of films) parts.push(_renderFilmRow(s, SROW));
       parts.push('</table>');
@@ -252,18 +256,30 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
 }
 
 
-function _twoColumnFilms(left, right, sRow) {
+function _nColumnFilms(films, n, sRow) {
+  // Distribuye las pelis equitativamente en N columnas, llenando primero
+  // la columna 1, después la 2, etc. (lectura natural top-to-bottom).
+  const perCol = Math.ceil(films.length / n);
+  const cols = [];
+  for (let i = 0; i < n; i++) {
+    cols.push(films.slice(i * perCol, (i + 1) * perCol));
+  }
+  const widthPct = Math.floor(100 / n);
   const renderCol = (arr) => {
     return '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
       + 'style="border-collapse:collapse">'
       + arr.map(s => _renderFilmRow(s, sRow)).join("") + '</table>';
   };
+  const cells = cols.map((arr, idx) => {
+    // Padding entre columnas: derecho excepto última, izquierdo excepto primera
+    const pl = idx === 0 ? 0 : 10;
+    const pr = idx === n - 1 ? 0 : 10;
+    return '<td valign="top" width="' + widthPct + '%" '
+      + 'style="padding:0 ' + pr + 'px 0 ' + pl + 'px">' + renderCol(arr) + '</td>';
+  }).join("");
   return (
     '<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" '
-    + 'style="border-collapse:collapse"><tr>'
-    + '<td valign="top" width="50%" style="padding-right:14px">' + renderCol(left) + '</td>'
-    + '<td valign="top" width="50%" style="padding-left:14px">' + renderCol(right) + '</td>'
-    + '</tr></table>'
+    + 'style="border-collapse:collapse"><tr>' + cells + '</tr></table>'
   );
 }
 
