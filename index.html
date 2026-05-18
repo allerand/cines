@@ -235,6 +235,42 @@
       color: #000;
       font-weight: 600;
     }
+    /* Toggle "+ Comerciales" — visualmente distinto a los filtros de cine */
+    .filter-toggle {
+      background: transparent;
+      border: 1px dashed var(--border);
+      color: var(--muted);
+      padding: 0.3rem 0.75rem;
+      border-radius: 3px;
+      font-size: 0.72rem;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-family: inherit;
+      transition: all 0.12s;
+      margin-left: 0.4rem;
+    }
+    .filter-toggle:hover {
+      color: var(--text);
+      border-color: var(--text);
+      border-style: solid;
+    }
+    .filter-toggle[aria-pressed="true"] {
+      background: var(--bg3);
+      color: var(--accent);
+      border-color: var(--accent);
+      border-style: solid;
+    }
+    /* Chips de cines comerciales — mismos estilos que .filter-btn pero
+       con borde punteado para que se vean visualmente "agregados" */
+    .filter-btn.commercial-chip {
+      border-style: dashed;
+      opacity: 0.85;
+    }
+    .filter-btn.commercial-chip.active {
+      border-style: solid;
+      opacity: 1;
+    }
     .search-input {
       background: var(--bg3);
       border: 1px solid var(--border);
@@ -381,6 +417,11 @@
     .cine-arthaus  { border-color: #1f3a2f; color: #66cc99; }
     .cine-museo    { border-color: #3a2a1f; color: #d9a066; }
     .cine-ccr      { border-color: #2a1f2f; color: #b07acc; }
+    /* Comerciales — paleta gris/azulada para diferenciarlos visualmente */
+    .cine-cinemark { border-color: #2a2a2a; color: #aaa; }
+    .cine-hoyts    { border-color: #2a2a2a; color: #aaa; }
+    .cine-cinepolis{ border-color: #2a2a2a; color: #aaa; }
+    .cine-showcase { border-color: #2a2a2a; color: #aaa; }
 
     .film-title { font-weight: 500; color: var(--text); }
     .film-meta-row { margin-top: 0.25rem; }
@@ -515,6 +556,13 @@
   <button class="filter-btn" data-cine="Arthaus">Arthaus</button>
   <button class="filter-btn" data-cine="Museo del Cine">Museo del Cine</button>
   <button class="filter-btn" data-cine="Centro Cultural Recoleta">El Recoleta</button>
+  <button class="filter-btn commercial-chip" data-cine="Cinemark" hidden>Cinemark</button>
+  <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
+  <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
+  <button class="filter-btn commercial-chip" data-cine="Showcase" hidden>Showcase</button>
+  <button id="toggle-commercial" class="filter-toggle" type="button" aria-pressed="false">
+    + Comerciales
+  </button>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
 </div>
 
@@ -592,10 +640,50 @@
 const DAYS_ES = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 const MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
 
+// Cines clasificados como "comerciales" — están ocultos por default y se
+// suman cuando el usuario toca el toggle "+ Comerciales".
+const COMMERCIAL_CINES = new Set([
+  'Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'
+]);
+
 let allScreenings = [];
 let activeDay = null;
 let activeCine = 'all';
 let searchQuery = '';
+// Estado del toggle — persiste en localStorage para que el usuario no
+// tenga que volver a tocarlo cada visita.
+let showCommercial = (() => {
+  try { return localStorage.getItem('sd:showCommercial') === '1'; }
+  catch (_) { return false; }
+})();
+
+function visibleScreenings() {
+  // Aplica el filtro global del toggle comerciales. Usado por todo el
+  // resto de la UI (tabs por día, conteos, render, etc.).
+  if (showCommercial) return allScreenings;
+  return allScreenings.filter(s => !COMMERCIAL_CINES.has(s.cine));
+}
+
+function applyCommercialToggle() {
+  // Mostrar/ocultar los chips de cines comerciales en la barra
+  document.querySelectorAll('.commercial-chip').forEach(el => {
+    el.hidden = !showCommercial;
+  });
+  const tgl = document.getElementById('toggle-commercial');
+  if (tgl) {
+    tgl.setAttribute('aria-pressed', showCommercial ? 'true' : 'false');
+    tgl.textContent = showCommercial ? '− Comerciales' : '+ Comerciales';
+  }
+  // Si el cine activo era un comercial y se ocultaron, volvemos a "Todos"
+  if (!showCommercial && COMMERCIAL_CINES.has(activeCine)) {
+    activeCine = 'all';
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
+  }
+  // Re-buildeamos los tabs (cambian los conteos por día) y re-renderizamos
+  if (allScreenings.length) {
+    buildDayTabs();
+  }
+}
 
 async function loadData() {
   try {
@@ -618,6 +706,7 @@ async function loadData() {
       document.getElementById('updated-badge').textContent = 'Actualizado ' + updated;
     }
 
+    applyCommercialToggle();          // sincroniza chips + label del toggle
     buildDayTabs();
     document.getElementById('loading').classList.add('hidden');
   } catch (e) {
@@ -626,18 +715,22 @@ async function loadData() {
 }
 
 function buildDayTabs() {
-  const dates = [...new Set(allScreenings.map(s => s.fecha).filter(f => /^\d{4}-\d{2}-\d{2}$/.test(f)))].sort();
+  const pool = visibleScreenings();
+  const dates = [...new Set(pool.map(s => s.fecha).filter(f => /^\d{4}-\d{2}-\d{2}$/.test(f)))].sort();
   const container = document.getElementById('day-tabs');
   container.innerHTML = '';
 
   const todayStr = new Date().toISOString().split('T')[0];
+
+  // Si el día activo ya no existe en el pool filtrado, reseteamos
+  if (activeDay && !dates.includes(activeDay)) activeDay = null;
 
   dates.forEach((fecha, i) => {
     const [y, m, d] = fecha.split('-').map(Number);
     const dateObj = new Date(y, m - 1, d);
     const dayName = DAYS_ES[dateObj.getDay()];
     const monthName = MONTHS_ES[m - 1];
-    const count = allScreenings.filter(s => s.fecha === fecha).length;
+    const count = pool.filter(s => s.fecha === fecha).length;
 
     const tab = document.createElement('div');
     tab.className = 'day-tab' + (fecha === todayStr ? ' today' : '');
@@ -645,7 +738,10 @@ function buildDayTabs() {
     tab.innerHTML = `<span class="day-name">${dayName}</span><span class="day-date">${d} ${monthName}</span><span class="day-count">${count} func.</span>`;
     tab.addEventListener('click', () => selectDay(fecha));
     container.appendChild(tab);
-    if (i === 0) selectDay(fecha);
+    // Si no había día seleccionado o el seleccionado ya no existe, tomamos
+    // el primero del pool (el más temprano disponible).
+    if (i === 0 && !activeDay) selectDay(fecha);
+    else if (fecha === activeDay) selectDay(fecha); // re-aplica .active
   });
 }
 
@@ -668,8 +764,15 @@ document.getElementById('search-input').addEventListener('input', e => {
   renderTable();
 });
 
+// Toggle "+ Comerciales" — alterna la inclusión de Cinemark/Hoyts/Cinépolis/etc.
+document.getElementById('toggle-commercial').addEventListener('click', () => {
+  showCommercial = !showCommercial;
+  try { localStorage.setItem('sd:showCommercial', showCommercial ? '1' : '0'); } catch (_) {}
+  applyCommercialToggle();
+});
+
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Cinemark':'cine-cinemark', 'Hoyts':'cine-hoyts', 'Cinépolis':'cine-cinepolis', 'Cinepolis':'cine-cinepolis', 'Showcase':'cine-showcase' };
   return map[cine] || '';
 }
 
@@ -684,7 +787,7 @@ function displayTitle(s) {
 
 function renderTable() {
   const main = document.getElementById('main');
-  let rows = allScreenings.filter(s => s.fecha === activeDay);
+  let rows = visibleScreenings().filter(s => s.fecha === activeDay);
   if (activeCine !== 'all') rows = rows.filter(s => s.cine === activeCine);
   if (searchQuery) rows = rows.filter(s => [s.title_es, s.title_en, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
 
