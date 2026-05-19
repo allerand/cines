@@ -70,61 +70,61 @@
   }
 
   .post.story .post-brand {
-    font-size: 58px;
+    font-size: 64px;
   }
 
   .post.story .post-date {
-    font-size: 50px;
+    font-size: 56px;
   }
 
   .post.story .film {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 28px;
-    padding: 26px 0;
+    grid-template-columns: 160px 1fr;
+    gap: 32px;
+    padding: 30px 0;
     align-items: start;
   }
 
   .post.story .film-time {
-    font-size: 44px;
-    padding-top: 28px;
+    font-size: 52px;
+    padding-top: 30px;
     line-height: 1;
   }
 
   .post.story .film-body {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
     padding-top: 0;
   }
 
   .post.story .film-cine {
     position: static;
-    font-size: 14px;
-    padding: 3px 9px;
+    font-size: 18px;
+    padding: 4px 11px;
   }
 
   .post.story .film-title {
-    font-size: 32px;
-    line-height: 1.05;
+    font-size: 40px;
+    line-height: 1.1;
   }
 
   .post.story .film-director {
-    font-size: 22px;
+    font-size: 28px;
   }
 
   .post.story .film-meta {
-    font-size: 16px;
+    font-size: 22px;
   }
 
   .post.story .film-ciclo {
-    font-size: 14px;
+    font-size: 18px;
   }
 
   .post.story .post-footer {
     padding-top: 22px;
     margin-top: 22px;
-    font-size: 16px;
+    font-size: 20px;
   }
   .post-header {
     display: flex; flex-direction: column; gap: 8px;
@@ -195,11 +195,12 @@
 
   /* Lowercase para el contenido (no para badges/labels uppercase) */
   .film-title {
-    font-size: 32px; font-weight: 700; line-height: 1.05;
+    font-size: 32px; font-weight: 500; line-height: 1.1;
     color: var(--text); text-transform: lowercase;
     display: block;
+    letter-spacing: -0.005em;
   }
-  .film-director { font-size: 22px; font-weight: 700; color: var(--text); line-height: 1.3; text-transform: lowercase; }
+  .film-director { font-size: 22px; font-weight: 400; color: var(--text); line-height: 1.3; text-transform: lowercase; opacity: 0.85; }
   .film-meta { font-size: 16px; color: var(--muted); line-height: 1.4; }
   .film-ciclo { font-size: 14px; color: var(--muted); font-style: italic; margin-top: 2px; text-transform: lowercase; }
 
@@ -422,7 +423,7 @@ window.cartelera = {
 function filmsPerSlide(format) {
   if (format === 'square') return 4;
   if (format === 'portrait') return 5;
-  if (format === 'story') return 7;
+  if (format === 'story') return 6;
   return 5;
 }
 
