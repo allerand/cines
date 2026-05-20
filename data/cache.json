@@ -937,9 +937,8 @@
     "title_en": "Jasmín",
     "director": "",
     "country": "",
-    "year": 1980,
-    "duration": null,
-    "original_title": "茉莉花"
+    "year": null,
+    "duration": null
   },
   "una eva y dos adanes": {
     "url": "https://letterboxd.com/film/some-like-it-hot/",
@@ -1040,12 +1039,10 @@
   "fausto": {
     "url": "",
     "title_en": "Fausto",
-    "director": "F. W. Murnau",
-    "country": "Germany",
-    "year": 1926,
-    "duration": 116,
-    "title_es": "Fausto",
-    "original_title": "Faust - Eine deutsche Volkssage"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "gorriones": {
     "url": "https://letterboxd.com/film/sparrows/",
@@ -1082,11 +1079,10 @@
   "lo habrás imaginado": {
     "url": "",
     "title_en": "Lo habrás imaginado",
-    "director": "Victoria Chaya Miranda",
-    "country": "Argentina",
-    "year": 2019,
-    "duration": 102,
-    "original_title": "Lo habrás imaginado"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "exit 8": {
     "url": "https://letterboxd.com/film/exit-8/",
@@ -1171,11 +1167,10 @@
   "soy tu mensaje": {
     "url": "",
     "title_en": "Soy tu mensaje",
-    "director": "Ricardo M. Jacobo",
-    "country": "Argentina",
-    "year": 2025,
-    "duration": 78,
-    "original_title": "Soy tu mensaje"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "vampiros": {
     "url": "https://letterboxd.com/film/vampires/",
@@ -1292,12 +1287,10 @@
   "7 cajas": {
     "url": "",
     "title_en": "7 cajas",
-    "director": "Tana Schémbori, Juan Carlos Maneglia",
-    "country": "Paraguay, Spain",
-    "year": 2012,
-    "duration": 106,
-    "title_es": "7 Cajas",
-    "original_title": "7 cajas"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "en la zona gris": {
     "url": "https://letterboxd.com/film/in-the-grey-2026/",
@@ -1566,12 +1559,10 @@
   "la reina margot": {
     "url": "",
     "title_en": "La reina Margot",
-    "director": "Patrice Chéreau",
-    "country": "France, Germany",
-    "year": 1994,
-    "duration": 138,
-    "title_es": "La reina Margot",
-    "original_title": "La Reine Margot"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "rocambole en el camino": {
     "url": "",
@@ -1580,5 +1571,29 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "me casé con un boludo": {
+    "url": "",
+    "title_en": "Me casé con un boludo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el partido": {
+    "url": "https://letterboxd.com/film/the-match-2026/",
+    "title_en": "The Match",
+    "director": "Juan Cabral, Santiago Franco",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 91
+  },
+  "la chica de colonia": {
+    "url": "https://letterboxd.com/film/koln-75/",
+    "title_en": "Köln 75",
+    "director": "Ido Fluk",
+    "country": "Belgium, Germany",
+    "year": 2025,
+    "duration": 116
   }
 }
