@@ -1223,6 +1223,30 @@ def scrape_gaumont(semanas: int = 2) -> list[Screening]:
             seen.add(m.group(1))
             filmids.append(m.group(1))
 
+    # Mapeo filmid → nombre del ciclo. Cada heading "Ciclo X" en la home es
+    # un <div class="col-12">; las pelis del ciclo son los siblings con
+    # class col-lg-3 hasta el próximo heading.
+    filmid_to_ciclo: dict[str, str] = {}
+    ciclo_re = re.compile(r"^Ciclo\s+(.+)$", re.IGNORECASE)
+    for div in home.find_all("div", class_="col-12"):
+        m = ciclo_re.match(div.get_text(strip=True))
+        if not m:
+            continue
+        ciclo_name = m.group(1).strip()
+        nxt = div
+        while True:
+            nxt = nxt.find_next_sibling()
+            if nxt is None:
+                break
+            if nxt.name == "div" and "col-12" in (nxt.get("class") or []):
+                if ciclo_re.match(nxt.get_text(strip=True)):
+                    break
+                continue
+            for a in nxt.find_all("a", href=re.compile(r"filmid=")) if hasattr(nxt, "find_all") else []:
+                mm = re.search(r"filmid=(\d+)", a["href"])
+                if mm and mm.group(1) not in filmid_to_ciclo:
+                    filmid_to_ciclo[mm.group(1)] = ciclo_name
+
     result: list[Screening] = []
     today = date.today()
     end = today + timedelta(weeks=semanas)
@@ -1279,6 +1303,7 @@ def scrape_gaumont(semanas: int = 2) -> list[Screening]:
                             fecha=d.isoformat(),
                             hora=hora,
                             ticket_url=f"{BASE_WEB}/pelicula.aspx?filmid={fid}",
+                            ciclo=filmid_to_ciclo.get(fid, ""),
                             director=meta.get("director", ""),
                             country=meta.get("country", ""),
                             duration=meta.get("duration"),
