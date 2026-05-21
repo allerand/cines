@@ -87,18 +87,19 @@ function _handleSubscribe(params, e) {
 }
 
 function _handleStar(params) {
-  // Loguea cada star/unstar a la hoja "stars". Cada fila = un evento, lo cual
-  // permite contar populairidad por (cine, title, fecha, hora) o agregar por
-  // título total. La hoja se autocrea con headers si no existe.
+  // Loguea cada star/unstar a la hoja "stars". Cada fila = un evento, con
+  // un uid (UUID del navegador) que permite contar PERSONAS únicas, no
+  // clicks. La hoja se autocrea con headers si no existe.
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   let sheet = ss.getSheetByName("stars");
   if (!sheet) {
     sheet = ss.insertSheet("stars");
-    sheet.appendRow(["timestamp", "on", "key", "cine", "title", "fecha", "hora"]);
+    sheet.appendRow(["timestamp", "on", "uid", "key", "cine", "title", "fecha", "hora"]);
   }
   sheet.appendRow([
     new Date(),
     String(params.on || "1") === "1" ? 1 : 0,
+    String(params.uid || "anon"),
     String(params.key || ""),
     String(params.cine || ""),
     String(params.title || ""),
@@ -118,20 +119,38 @@ function doGet(e) {
 }
 
 function _counts() {
-  // Devuelve { counts: { "<key>": N, ... } } sumando 1 por cada star (on=1)
-  // y restando 1 por cada unstar (on=0). Net positivo = popularidad actual.
+  // Devuelve { counts: { "<key>": N, ... } } donde N es PERSONAS únicas que
+  // tienen la peli starred actualmente. Cada persona = 1 voto, sin importar
+  // cuántas veces clickeó. Detectamos columnas por su header (compat con la
+  // versión anterior que no tenía uid).
   const ss = SpreadsheetApp.getActiveSpreadsheet();
   const sheet = ss.getSheetByName("stars");
   if (!sheet) return _json({ counts: {} });
   const data = sheet.getDataRange().getValues();
-  const counts = {};
+  if (data.length < 2) return _json({ counts: {} });
+
+  const header = data[0].map(h => String(h).trim().toLowerCase());
+  const idxOn  = header.indexOf("on");
+  const idxUid = header.indexOf("uid");
+  const idxKey = header.indexOf("key");
+
+  // key → { uid → estado más reciente (0|1) }
+  const latest = {};
   for (let i = 1; i < data.length; i++) {
     const row = data[i];
-    const on = row[1];
-    const key = String(row[2] || "");
+    const key = String(idxKey >= 0 ? row[idxKey] : "").trim();
     if (!key) continue;
-    const delta = (String(on) === "1" || on === 1) ? 1 : -1;
-    counts[key] = Math.max(0, (counts[key] || 0) + delta);
+    const uid = String(idxUid >= 0 ? row[idxUid] : "anon").trim() || "anon";
+    const on  = idxOn >= 0 ? row[idxOn] : 1;
+    const onBool = (String(on) === "1" || on === 1) ? 1 : 0;
+    if (!latest[key]) latest[key] = {};
+    latest[key][uid] = onBool;  // sobreescribe → queda el último estado
+  }
+  const counts = {};
+  for (const k in latest) {
+    let n = 0;
+    for (const uid in latest[k]) if (latest[k][uid] === 1) n++;
+    if (n > 0) counts[k] = n;
   }
   return _json({ counts });
 }

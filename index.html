@@ -762,12 +762,27 @@ function gcalUrl(s) {
   return `https://calendar.google.com/calendar/render?${params.toString()}`;
 }
 
+// UUID anónimo por dispositivo — para deduplicar votos en el backend.
+// Cada persona = +1, incluso si clickea muchas veces.
+function deviceId() {
+  try {
+    let id = localStorage.getItem('sd:uid');
+    if (!id) {
+      id = (crypto && crypto.randomUUID ? crypto.randomUUID()
+           : 'u-' + Math.random().toString(36).slice(2) + Date.now().toString(36));
+      localStorage.setItem('sd:uid', id);
+    }
+    return id;
+  } catch (_) { return 'anon'; }
+}
+
 function pingStar(s, on) {
   // Fire-and-forget — el contador de popularidad vive en Apps Script.
   try {
     const body = new URLSearchParams({
       action: 'star',
       on: on ? '1' : '0',
+      uid: deviceId(),
       key: filmKey(s),
       cine: s.cine || '',
       title: s.title_es || s.title_en || '',
