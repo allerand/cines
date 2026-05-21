@@ -399,30 +399,36 @@
     .col-anio   { width: 4rem; color: var(--muted); text-align: right; }
     .col-dur    { width: 4.5rem; color: var(--muted); text-align: right; }
     .col-lb     { width: 6rem; text-align: center; }
-    .col-star   { width: 3rem; text-align: center; }
 
-    /* Estrella "agendar en Google Calendar" */
+    /* Estrella inline + título — "agendar en Google Calendar" */
+    .film-line {
+      display: flex;
+      align-items: baseline;
+      gap: 0.45rem;
+    }
     .star-btn {
       background: transparent;
       border: none;
       color: var(--muted);
-      font-size: 1.1rem;
+      font-size: 1rem;
       cursor: pointer;
-      padding: 0.15rem 0.3rem;
+      padding: 0;
       line-height: 1;
       transition: color 0.15s, transform 0.15s;
-      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+      flex-shrink: 0;
     }
-    .star-btn:hover { color: var(--text); transform: scale(1.15); }
+    .star-btn:hover { color: var(--text); transform: scale(1.1); }
     .star-btn.starred { color: var(--accent); }
-    .star-btn .star-count {
-      position: absolute;
-      bottom: -0.4rem;
-      right: -0.2rem;
-      font-size: 0.55rem;
+    .star-count {
+      font-size: 0.65rem;
       color: var(--muted);
       font-weight: 600;
+      font-variant-numeric: tabular-nums;
     }
+    .star-btn.starred .star-count { color: var(--accent); }
 
     .hora-tag {
       font-variant-numeric: tabular-nums;
@@ -706,6 +712,18 @@ function starredSet() {
   catch (_) { return new Set(); }
 }
 
+// Contador global de stars por key — se hidrata desde Apps Script al cargar.
+let starCounts = {};
+
+async function fetchStarCounts() {
+  try {
+    const res = await fetch(STAR_ENDPOINT + '?action=counts', { cache: 'no-store' });
+    if (!res.ok) return;
+    const data = await res.json();
+    starCounts = data.counts || {};
+  } catch (_) {}
+}
+
 function setStarred(key, on) {
   const s = starredSet();
   if (on) s.add(key); else s.delete(key);
@@ -846,6 +864,8 @@ async function loadData() {
     applyCommercialToggle();          // sincroniza chips + label del toggle
     buildDayTabs();
     document.getElementById('loading').classList.add('hidden');
+    // Fetch counts en background — cuando llegue, re-renderizamos
+    fetchStarCounts().then(() => renderTable());
   } catch (e) {
     document.getElementById('loading').innerHTML = '<p style="color:#c44">Error al cargar datos.</p>';
   }
@@ -959,12 +979,15 @@ function renderTable() {
   const stars = starredSet();
   const tbody = rows.map((s, i) => {
     const horaText = (s.hora === '??' || !s.hora) ? 'S/H' : s.hora;
-    const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>
+    const k = filmKey(s);
+    const isStarred = stars.has(k);
+    const count = starCounts[k] || 0;
+    const countHtml = count > 0 ? `<span class="star-count">${count}</span>` : '';
+    const starBtn = `<button class="star-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar">${isStarred ? '★' : '☆'}${countHtml}</button>`;
+
+    const filmCell = `<div class="film-line">${starBtn}<span class="film-title">${escapeHtml(displayTitle(s))}</span></div>
       <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
       ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank">Entradas →</a></div>` : ''}`;
-
-    const isStarred = stars.has(filmKey(s));
-    const starCell = `<button class="star-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar">${isStarred ? '★' : '☆'}</button>`;
 
     return `<tr>
       <td class="col-hora"><span class="hora-tag">${horaText}</span></td>
@@ -976,7 +999,6 @@ function renderTable() {
       <td class="col-anio">${s.year || ''}</td>
       <td class="col-dur">${s.duration ? s.duration + ' min' : ''}</td>
       <td class="col-lb"><a class="lb-link ${s.letterboxd ? '' : 'no-link'}" href="${s.letterboxd || '#'}" target="_blank"><span class="lb-dots"><span></span><span></span><span></span></span></a></td>
-      <td class="col-star">${starCell}</td>
     </tr>`;
   }).join('');
 
@@ -995,7 +1017,7 @@ function renderTable() {
     const isActive = sortKey === key;
     const ind = isActive ? `<span class="sort-ind">${sortDir === 'asc' ? '▲' : '▼'}</span>` : '';
     return `<th class="${cls}${isActive ? ' sort-active' : ''}" data-sort="${key}">${label}${ind}</th>`;
-  }).join('') + '<th class="col-star" title="Agendar en Google Calendar">★</th>';
+  }).join('');
 
   main.innerHTML = `<table class="screening-table"><thead><tr>${thead}</tr></thead><tbody>${tbody}</tbody></table>`;
 
@@ -1026,8 +1048,12 @@ function renderTable() {
       const wasStarred = btn.classList.contains('starred');
       const nowStarred = !wasStarred;
       setStarred(k, nowStarred);
+      // Bump optimista del contador local — el server lo confirma al próximo load
+      starCounts[k] = Math.max(0, (starCounts[k] || 0) + (nowStarred ? 1 : -1));
       btn.classList.toggle('starred', nowStarred);
-      btn.textContent = nowStarred ? '★' : '☆';
+      const count = starCounts[k] || 0;
+      const countHtml = count > 0 ? `<span class="star-count">${count}</span>` : '';
+      btn.innerHTML = (nowStarred ? '★' : '☆') + countHtml;
       pingStar(s, nowStarred);
       if (nowStarred) {
         const url = gcalUrl(s);

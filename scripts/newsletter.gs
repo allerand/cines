@@ -108,6 +108,34 @@ function _handleStar(params) {
   return _json({ ok: true });
 }
 
+function doGet(e) {
+  const params = (e && e.parameter) || {};
+  const action = String(params.action || "").toLowerCase();
+  if (action === "counts") {
+    return _counts();
+  }
+  return _json({ ok: true });
+}
+
+function _counts() {
+  // Devuelve { counts: { "<key>": N, ... } } sumando 1 por cada star (on=1)
+  // y restando 1 por cada unstar (on=0). Net positivo = popularidad actual.
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const sheet = ss.getSheetByName("stars");
+  if (!sheet) return _json({ counts: {} });
+  const data = sheet.getDataRange().getValues();
+  const counts = {};
+  for (let i = 1; i < data.length; i++) {
+    const row = data[i];
+    const on = row[1];
+    const key = String(row[2] || "");
+    if (!key) continue;
+    const delta = (String(on) === "1" || on === 1) ? 1 : -1;
+    counts[key] = Math.max(0, (counts[key] || 0) + delta);
+  }
+  return _json({ counts });
+}
+
 function doOptions(e) {
   return ContentService.createTextOutput("");
 }
