@@ -399,36 +399,34 @@
     .col-anio   { width: 4rem; color: var(--muted); text-align: right; }
     .col-dur    { width: 4.5rem; color: var(--muted); text-align: right; }
     .col-lb     { width: 6rem; text-align: center; }
+    .col-add    { width: 4rem; text-align: center; }
 
-    /* Estrella inline + título — "agendar en Google Calendar" */
-    .film-line {
-      display: flex;
-      align-items: baseline;
-      gap: 0.45rem;
-    }
-    .star-btn {
+    /* Botón "Agendar en Google Calendar" — entre Cine y Película. NO desplaza
+       el título, vive en su propia columna estrecha. */
+    .add-btn {
       background: transparent;
-      border: none;
+      border: 1px solid var(--border);
       color: var(--muted);
-      font-size: 1rem;
+      font-size: 0.78rem;
       cursor: pointer;
-      padding: 0;
+      padding: 0.18rem 0.4rem;
       line-height: 1;
-      transition: color 0.15s, transform 0.15s;
+      border-radius: 3px;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
       display: inline-flex;
       align-items: center;
-      gap: 0.25rem;
-      flex-shrink: 0;
-    }
-    .star-btn:hover { color: var(--text); transform: scale(1.1); }
-    .star-btn.starred { color: var(--accent); }
-    .star-count {
-      font-size: 0.65rem;
-      color: var(--muted);
-      font-weight: 600;
+      gap: 0.3rem;
+      font-family: inherit;
       font-variant-numeric: tabular-nums;
     }
-    .star-btn.starred .star-count { color: var(--accent); }
+    .add-btn:hover { color: var(--text); border-color: var(--text); }
+    .add-btn.starred {
+      background: rgba(0, 208, 96, 0.08);
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+    .add-btn .add-icon { font-weight: 700; }
+    .add-btn .add-count { font-size: 0.7rem; opacity: 0.85; }
 
     .hora-tag {
       font-variant-numeric: tabular-nums;
@@ -997,16 +995,18 @@ function renderTable() {
     const k = filmKey(s);
     const isStarred = stars.has(k);
     const count = starCounts[k] || 0;
-    const countHtml = count > 0 ? `<span class="star-count">${count}</span>` : '';
-    const starBtn = `<button class="star-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar">${isStarred ? '★' : '☆'}${countHtml}</button>`;
+    const countHtml = count > 0 ? `<span class="add-count">${count}</span>` : '';
+    const icon = isStarred ? '✓' : '+';
+    const addBtn = `<button class="add-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar"><span class="add-icon">${icon}</span>${countHtml}</button>`;
 
-    const filmCell = `<div class="film-line">${starBtn}<span class="film-title">${escapeHtml(displayTitle(s))}</span></div>
+    const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>
       <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
       ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank">Entradas →</a></div>` : ''}`;
 
     return `<tr>
       <td class="col-hora"><span class="hora-tag">${horaText}</span></td>
       <td class="col-cine"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span></td>
+      <td class="col-add">${addBtn}</td>
       <td class="col-film">${filmCell}</td>
       <td class="col-ciclo">${s.ciclo ? `<span class="ciclo-tag">${escapeHtml(s.ciclo)}</span>` : ''}</td>
       <td class="col-dir">${escapeHtml(s.director || '')}</td>
@@ -1020,6 +1020,7 @@ function renderTable() {
   const headers = [
     ['hora',     'col-hora', 'Hora'],
     ['cine',     'col-cine', 'Cine'],
+    ['__add',    'col-add',  ''],          // botón "agendar" — no sorteable
     ['title',    'col-film', 'Película'],
     ['ciclo',    'col-ciclo','Ciclo'],
     ['director', 'col-dir',  'Director'],
@@ -1029,6 +1030,7 @@ function renderTable() {
     ['lb',       'col-lb',   'LB'],
   ];
   const thead = headers.map(([key, cls, label]) => {
+    if (key === '__add') return `<th class="${cls}" style="cursor:default">${label}</th>`;
     const isActive = sortKey === key;
     const ind = isActive ? `<span class="sort-ind">${sortDir === 'asc' ? '▲' : '▼'}</span>` : '';
     return `<th class="${cls}${isActive ? ' sort-active' : ''}" data-sort="${key}">${label}${ind}</th>`;
@@ -1051,9 +1053,9 @@ function renderTable() {
     });
   });
 
-  // Handler de la estrella: toggle local + abrir Google Calendar + ping al
-  // backend (Apps Script) para el contador de popularidad.
-  main.querySelectorAll('.star-btn').forEach(btn => {
+  // Handler del botón "Agendar": toggle local + abrir Google Calendar + ping
+  // al backend (Apps Script) para el contador de popularidad.
+  main.querySelectorAll('.add-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const i = parseInt(btn.dataset.row, 10);
@@ -1067,8 +1069,9 @@ function renderTable() {
       starCounts[k] = Math.max(0, (starCounts[k] || 0) + (nowStarred ? 1 : -1));
       btn.classList.toggle('starred', nowStarred);
       const count = starCounts[k] || 0;
-      const countHtml = count > 0 ? `<span class="star-count">${count}</span>` : '';
-      btn.innerHTML = (nowStarred ? '★' : '☆') + countHtml;
+      const countHtml = count > 0 ? `<span class="add-count">${count}</span>` : '';
+      const icon = nowStarred ? '✓' : '+';
+      btn.innerHTML = `<span class="add-icon">${icon}</span>${countHtml}`;
       pingStar(s, nowStarred);
       if (nowStarred) {
         const url = gcalUrl(s);
