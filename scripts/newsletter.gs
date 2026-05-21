@@ -56,26 +56,56 @@ const MONTHS_ES = ["enero","febrero","marzo","abril","mayo","junio",
 // ───── 1. Endpoint del form ────────────────────────────────────────────
 function doPost(e) {
   try {
-    let email = "";
-    if (e.parameter && e.parameter.email) {
-      email = e.parameter.email;
-    } else if (e.postData && e.postData.contents) {
-      try { email = JSON.parse(e.postData.contents).email || ""; } catch (_) {}
+    const params = (e && e.parameter) || {};
+    const action = String(params.action || "subscribe").toLowerCase();
+
+    if (action === "star") {
+      return _handleStar(params);
     }
-    email = String(email).trim().toLowerCase();
-    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      return _json({ ok: false, error: "invalid_email" });
-    }
-    const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
-    const data = sheet.getDataRange().getValues();
-    const emails = new Set(data.slice(1).map(r => String(r[0] || "").trim().toLowerCase()));
-    if (!emails.has(email)) {
-      sheet.appendRow([email, new Date()]);
-    }
-    return _json({ ok: true });
+    return _handleSubscribe(params, e);
   } catch (err) {
     return _json({ ok: false, error: String(err) });
   }
+}
+
+function _handleSubscribe(params, e) {
+  let email = String(params.email || "");
+  if (!email && e && e.postData && e.postData.contents) {
+    try { email = JSON.parse(e.postData.contents).email || ""; } catch (_) {}
+  }
+  email = email.trim().toLowerCase();
+  if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return _json({ ok: false, error: "invalid_email" });
+  }
+  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheets()[0];
+  const data = sheet.getDataRange().getValues();
+  const emails = new Set(data.slice(1).map(r => String(r[0] || "").trim().toLowerCase()));
+  if (!emails.has(email)) {
+    sheet.appendRow([email, new Date()]);
+  }
+  return _json({ ok: true });
+}
+
+function _handleStar(params) {
+  // Loguea cada star/unstar a la hoja "stars". Cada fila = un evento, lo cual
+  // permite contar populairidad por (cine, title, fecha, hora) o agregar por
+  // título total. La hoja se autocrea con headers si no existe.
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName("stars");
+  if (!sheet) {
+    sheet = ss.insertSheet("stars");
+    sheet.appendRow(["timestamp", "on", "key", "cine", "title", "fecha", "hora"]);
+  }
+  sheet.appendRow([
+    new Date(),
+    String(params.on || "1") === "1" ? 1 : 0,
+    String(params.key || ""),
+    String(params.cine || ""),
+    String(params.title || ""),
+    String(params.fecha || ""),
+    String(params.hora || ""),
+  ]);
+  return _json({ ok: true });
 }
 
 function doOptions(e) {

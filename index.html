@@ -399,6 +399,30 @@
     .col-anio   { width: 4rem; color: var(--muted); text-align: right; }
     .col-dur    { width: 4.5rem; color: var(--muted); text-align: right; }
     .col-lb     { width: 6rem; text-align: center; }
+    .col-star   { width: 3rem; text-align: center; }
+
+    /* Estrella "agendar en Google Calendar" */
+    .star-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 0.15rem 0.3rem;
+      line-height: 1;
+      transition: color 0.15s, transform 0.15s;
+      position: relative;
+    }
+    .star-btn:hover { color: var(--text); transform: scale(1.15); }
+    .star-btn.starred { color: var(--accent); }
+    .star-btn .star-count {
+      position: absolute;
+      bottom: -0.4rem;
+      right: -0.2rem;
+      font-size: 0.55rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
 
     .hora-tag {
       font-variant-numeric: tabular-nums;
@@ -669,6 +693,73 @@ let searchQuery = '';
 let sortKey = 'hora';
 let sortDir = 'asc';
 
+// ── Sistema de estrellas / "agendar en Google Calendar" ────────────────
+// Apps Script URL (mismo del newsletter); recibe POST con action=star.
+const STAR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwFSvoEUdjrljSnxSZ-N3a82EC_pwc_V0aY_3MA3Du9BHQfNPhuxXXrp_YNBgfUAZCE/exec';
+
+function filmKey(s) {
+  return `${s.cine}|${s.title_es || s.title_en}|${s.fecha}|${s.hora}`;
+}
+
+function starredSet() {
+  try { return new Set(JSON.parse(localStorage.getItem('sd:starred') || '[]')); }
+  catch (_) { return new Set(); }
+}
+
+function setStarred(key, on) {
+  const s = starredSet();
+  if (on) s.add(key); else s.delete(key);
+  try { localStorage.setItem('sd:starred', JSON.stringify([...s])); } catch (_) {}
+}
+
+function gcalUrl(s) {
+  // YYYY-MM-DD + HH:MM → start; end = start + duration (o 2h default)
+  const [y, m, d] = (s.fecha || '').split('-').map(Number);
+  const [hh, mm] = (s.hora || '00:00').split(':').map(Number);
+  if (!y || !m || !d || isNaN(hh)) return '';
+  const dur = (typeof s.duration === 'number' && s.duration > 0) ? s.duration : 120;
+  const start = new Date(y, m - 1, d, hh, mm);
+  const end = new Date(start.getTime() + dur * 60000);
+  const fmt = (dt) =>
+    `${dt.getFullYear()}${String(dt.getMonth()+1).padStart(2,'0')}${String(dt.getDate()).padStart(2,'0')}T` +
+    `${String(dt.getHours()).padStart(2,'0')}${String(dt.getMinutes()).padStart(2,'0')}00`;
+  const title = s.title_es || s.title_en || 'Función de cine';
+  const details = [
+    s.director ? `Dirección: ${s.director}` : '',
+    s.year ? `Año: ${s.year}` : '',
+    s.country ? `País: ${s.country}` : '',
+    s.ciclo ? `Ciclo: ${s.ciclo}` : '',
+    s.letterboxd ? `Letterboxd: ${s.letterboxd}` : '',
+    s.ticket_url ? `Entradas: ${s.ticket_url}` : '',
+    '',
+    'Agendado desde sitedigo.com',
+  ].filter(Boolean).join('\n');
+  const params = new URLSearchParams({
+    action: 'TEMPLATE',
+    text: `${title} — ${s.cine || ''}`,
+    dates: `${fmt(start)}/${fmt(end)}`,
+    details: details,
+    location: s.cine || '',
+  });
+  return `https://calendar.google.com/calendar/render?${params.toString()}`;
+}
+
+function pingStar(s, on) {
+  // Fire-and-forget — el contador de popularidad vive en Apps Script.
+  try {
+    const body = new URLSearchParams({
+      action: 'star',
+      on: on ? '1' : '0',
+      key: filmKey(s),
+      cine: s.cine || '',
+      title: s.title_es || s.title_en || '',
+      fecha: s.fecha || '',
+      hora: s.hora || '',
+    });
+    fetch(STAR_ENDPOINT, { method: 'POST', mode: 'no-cors', body });
+  } catch (_) {}
+}
+
 // Extractores por columna — devuelven un valor comparable (string o number).
 // Para columnas mixtas usamos un sentinela alto/bajo para los vacíos.
 const SORT_EXTRACTORS = {
@@ -865,11 +956,15 @@ function renderTable() {
     return;
   }
 
-  const tbody = rows.map(s => {
+  const stars = starredSet();
+  const tbody = rows.map((s, i) => {
     const horaText = (s.hora === '??' || !s.hora) ? 'S/H' : s.hora;
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>
       <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
       ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank">Entradas →</a></div>` : ''}`;
+
+    const isStarred = stars.has(filmKey(s));
+    const starCell = `<button class="star-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar">${isStarred ? '★' : '☆'}</button>`;
 
     return `<tr>
       <td class="col-hora"><span class="hora-tag">${horaText}</span></td>
@@ -881,6 +976,7 @@ function renderTable() {
       <td class="col-anio">${s.year || ''}</td>
       <td class="col-dur">${s.duration ? s.duration + ' min' : ''}</td>
       <td class="col-lb"><a class="lb-link ${s.letterboxd ? '' : 'no-link'}" href="${s.letterboxd || '#'}" target="_blank"><span class="lb-dots"><span></span><span></span><span></span></span></a></td>
+      <td class="col-star">${starCell}</td>
     </tr>`;
   }).join('');
 
@@ -899,7 +995,7 @@ function renderTable() {
     const isActive = sortKey === key;
     const ind = isActive ? `<span class="sort-ind">${sortDir === 'asc' ? '▲' : '▼'}</span>` : '';
     return `<th class="${cls}${isActive ? ' sort-active' : ''}" data-sort="${key}">${label}${ind}</th>`;
-  }).join('');
+  }).join('') + '<th class="col-star" title="Agendar en Google Calendar">★</th>';
 
   main.innerHTML = `<table class="screening-table"><thead><tr>${thead}</tr></thead><tbody>${tbody}</tbody></table>`;
 
@@ -915,6 +1011,28 @@ function renderTable() {
         sortDir = (k === 'year' || k === 'duration' || k === 'lb') ? 'desc' : 'asc';
       }
       renderTable();
+    });
+  });
+
+  // Handler de la estrella: toggle local + abrir Google Calendar + ping al
+  // backend (Apps Script) para el contador de popularidad.
+  main.querySelectorAll('.star-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const i = parseInt(btn.dataset.row, 10);
+      const s = rows[i];
+      if (!s) return;
+      const k = filmKey(s);
+      const wasStarred = btn.classList.contains('starred');
+      const nowStarred = !wasStarred;
+      setStarred(k, nowStarred);
+      btn.classList.toggle('starred', nowStarred);
+      btn.textContent = nowStarred ? '★' : '☆';
+      pingStar(s, nowStarred);
+      if (nowStarred) {
+        const url = gcalUrl(s);
+        if (url) window.open(url, '_blank', 'noopener');
+      }
     });
   });
 }

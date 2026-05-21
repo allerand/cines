@@ -937,8 +937,9 @@
     "title_en": "Jasmín",
     "director": "",
     "country": "",
-    "year": null,
-    "duration": null
+    "year": 1980,
+    "duration": null,
+    "original_title": "茉莉花"
   },
   "una eva y dos adanes": {
     "url": "https://letterboxd.com/film/some-like-it-hot/",
@@ -1039,12 +1040,10 @@
   "fausto": {
     "url": "",
     "title_en": "Fausto",
-    "director": "F. W. Murnau",
-    "country": "Germany",
-    "year": 1926,
-    "duration": 116,
-    "title_es": "Fausto",
-    "original_title": "Faust - Eine deutsche Volkssage"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "gorriones": {
     "url": "https://letterboxd.com/film/sparrows/",
@@ -1081,11 +1080,10 @@
   "lo habrás imaginado": {
     "url": "",
     "title_en": "Lo habrás imaginado",
-    "director": "Victoria Chaya Miranda",
-    "country": "Argentina",
-    "year": 2019,
-    "duration": 102,
-    "original_title": "Lo habrás imaginado"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "exit 8": {
     "url": "https://letterboxd.com/film/exit-8/",
@@ -1170,10 +1168,11 @@
   "soy tu mensaje": {
     "url": "",
     "title_en": "Soy tu mensaje",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Ricardo M. Jacobo",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 78,
+    "original_title": "Soy tu mensaje"
   },
   "vampiros": {
     "url": "https://letterboxd.com/film/vampires/",
@@ -1290,12 +1289,10 @@
   "7 cajas": {
     "url": "",
     "title_en": "7 cajas",
-    "director": "Tana Schémbori, Juan Carlos Maneglia",
-    "country": "Paraguay, Spain",
-    "year": 2012,
-    "duration": 106,
-    "title_es": "7 Cajas",
-    "original_title": "7 cajas"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "en la zona gris": {
     "url": "https://letterboxd.com/film/in-the-grey-2026/",
@@ -1564,12 +1561,10 @@
   "la reina margot": {
     "url": "",
     "title_en": "La reina Margot",
-    "director": "Patrice Chéreau",
-    "country": "France, Germany",
-    "year": 1994,
-    "duration": 138,
-    "title_es": "La reina Margot",
-    "original_title": "La Reine Margot"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "rocambole en el camino": {
     "url": "",
@@ -1579,14 +1574,189 @@
     "year": null,
     "duration": null
   },
+  "entrecampos + maria do mar + catavento": {
+    "url": "",
+    "title_en": "Entrecampos + Maria do Mar + Catavento",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "a vida luminosa": {
+    "url": "https://letterboxd.com/film/a-vida-luminosa/",
+    "title_en": "The Luminous Life",
+    "director": "João Rosas",
+    "country": "Portugal, France",
+    "year": 2025,
+    "duration": 106
+  },
+  "porque hoje é sábado + duas vezes joão liberada": {
+    "url": "https://letterboxd.com/film/two-times-joao-liberada/",
+    "title_en": "Two Times João Liberada",
+    "director": "Paula Tomás Marques",
+    "country": "Portugal, Spain",
+    "year": 2025,
+    "duration": 70
+  },
+  "bulakna": {
+    "url": "https://letterboxd.com/film/bulakna/",
+    "title_en": "Bulakna",
+    "director": "Leonor Noivo",
+    "country": "Portugal, France",
+    "year": 2025,
+    "duration": 90
+  },
+  "fuck the polis": {
+    "url": "https://letterboxd.com/film/fuck-the-polis/",
+    "title_en": "Fuck the Polis",
+    "director": "Rita Azevedo Gomes",
+    "country": "Portugal",
+    "year": 2025,
+    "duration": 74
+  },
+  "sesión peliculinhas": {
+    "url": "",
+    "title_en": "Sesión Peliculinhas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "entroncamento": {
+    "url": "https://letterboxd.com/film/entroncamento/",
+    "title_en": "Entroncamento",
+    "director": "Pedro Cabeleira",
+    "country": "Portugal, France",
+    "year": 2025,
+    "duration": 131
+  },
+  "o riso e a faca": {
+    "url": "https://letterboxd.com/film/i-only-rest-in-the-storm/",
+    "title_en": "I Only Rest in the Storm",
+    "director": "Pedro Pinho",
+    "country": "Portugal, Brazil",
+    "year": 2025,
+    "duration": 211
+  },
+  "sesión especial motelx": {
+    "url": "",
+    "title_en": "Sesión especial MOTELX",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el conformista": {
+    "url": "https://letterboxd.com/film/the-conformist/",
+    "title_en": "The Conformist",
+    "director": "Bernardo Bertolucci",
+    "country": "Germany, France",
+    "year": 1970,
+    "duration": 108
+  },
+  "el imperio de los sentidos": {
+    "url": "https://letterboxd.com/film/empire-of-passion/",
+    "title_en": "Empire of Passion",
+    "director": "Nagisa Ōshima",
+    "country": "Japan, France",
+    "year": 1978,
+    "duration": 105
+  },
+  "nico": {
+    "url": "https://letterboxd.com/film/nico-2025/",
+    "title_en": "Nico",
+    "director": "Salomón Reyes",
+    "country": "",
+    "year": 2025,
+    "duration": 70
+  },
+  "crónicas de un exilio": {
+    "url": "https://letterboxd.com/film/cronicas-de-un-exilio/",
+    "title_en": "Chronicles of an Exile",
+    "director": "Micaela Montes Rojas, Pablo Guallar",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 93
+  },
+  "streaming paranormal": {
+    "url": "https://letterboxd.com/film/true-fear/",
+    "title_en": "True Fear",
+    "director": "Daniel di Grado",
+    "country": "Sweden",
+    "year": 2024,
+    "duration": 92
+  },
+  "viejos malditos": {
+    "url": "https://letterboxd.com/film/viejos-malditos/",
+    "title_en": "Damned Old People",
+    "director": "Xavier Chávez C.",
+    "country": "Argentina, Ecuador",
+    "year": 2025,
+    "duration": 96
+  },
+  "el remanso": {
+    "url": "",
+    "title_en": "El Remanso",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
   "me casé con un boludo": {
     "url": "",
     "title_en": "Me casé con un boludo",
-    "director": "Juan Taratuto",
-    "country": "Argentina",
-    "year": 2016,
-    "duration": 110,
-    "original_title": "Me casé con un boludo"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el pasajero del diablo": {
+    "url": "https://letterboxd.com/film/passenger-2026/",
+    "title_en": "Passenger",
+    "director": "André Øvredal",
+    "country": "USA",
+    "year": 2026,
+    "duration": 94
+  },
+  "pequeños monstruos": {
+    "url": "https://letterboxd.com/film/finnick-2/",
+    "title_en": "Finnick 2",
+    "director": "Denis Chernov",
+    "country": "Russia",
+    "year": 2025,
+    "duration": 85
+  },
+  "el día que me quieras": {
+    "url": "https://letterboxd.com/film/el-dia-que-me-quieras/",
+    "title_en": "The Day You Love Me",
+    "director": "John Reinhardt",
+    "country": "USA",
+    "year": 1935,
+    "duration": 82
+  },
+  "tango bar": {
+    "url": "https://letterboxd.com/film/tango-bar/",
+    "title_en": "Tango Bar",
+    "director": "John Reinhardt",
+    "country": "USA, Argentina",
+    "year": 1935,
+    "duration": 62
+  },
+  "cuesta abajo": {
+    "url": "https://letterboxd.com/film/cuesta-abajo/",
+    "title_en": "Downhill",
+    "director": "Louis J. Gasnier",
+    "country": "USA",
+    "year": 1934,
+    "duration": 74
+  },
+  "vidas imaginarias": {
+    "url": "https://letterboxd.com/film/the-marvellous-spiral/",
+    "title_en": "The Marvellous Spiral",
+    "director": "Isabel Medarde",
+    "country": "Spain",
+    "year": 2022,
+    "duration": 87
   },
   "el partido": {
     "url": "https://letterboxd.com/film/the-match-2026/",
@@ -1603,174 +1773,5 @@
     "country": "Belgium, Germany",
     "year": 2025,
     "duration": 116
-  },
-  "entrecampos + maria do mar + catavento": {
-    "url": "",
-    "title_en": "Entrecampos + Maria do Mar + Catavento",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
-  },
-  "a vida luminosa": {
-    "url": "https://letterboxd.com/film/a-vida-luminosa/",
-    "title_en": "The Luminous Life",
-    "director": "João Rosas",
-    "country": "Portugal, France",
-    "year": 2025,
-    "duration": 106,
-    "original_title": "A Vida Luminosa"
-  },
-  "porque hoje é sábado + duas vezes joão liberada": {
-    "url": "https://letterboxd.com/film/two-times-joao-liberada/",
-    "title_en": "Two Times João Liberada",
-    "director": "Paula Tomás Marques",
-    "country": "Portugal, Spain",
-    "year": 2025,
-    "duration": 70
-  },
-  "bulakna": {
-    "url": "https://letterboxd.com/film/bulakna/",
-    "title_en": "Bulakna",
-    "director": "Leonor Noivo",
-    "country": "Portugal, France",
-    "year": 2025,
-    "duration": 90,
-    "original_title": "Bulakna"
-  },
-  "fuck the polis": {
-    "url": "https://letterboxd.com/film/fuck-the-polis/",
-    "title_en": "Fuck the Polis",
-    "director": "Rita Azevedo Gomes",
-    "country": "Portugal",
-    "year": 2025,
-    "duration": 74,
-    "original_title": "Fuck the Polis"
-  },
-  "sesión peliculinhas": {
-    "url": "",
-    "title_en": "Sesión Peliculinhas",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
-  },
-  "entroncamento": {
-    "url": "https://letterboxd.com/film/entroncamento/",
-    "title_en": "Entroncamento",
-    "director": "Pedro Cabeleira",
-    "country": "Portugal, France",
-    "year": 2025,
-    "duration": 131,
-    "original_title": "Entroncamento"
-  },
-  "o riso e a faca": {
-    "url": "https://letterboxd.com/film/i-only-rest-in-the-storm/",
-    "title_en": "I Only Rest in the Storm",
-    "director": "Pedro Pinho",
-    "country": "Portugal, Brazil",
-    "year": 2025,
-    "duration": 211,
-    "title_es": "La risa y la navaja",
-    "original_title": "O Riso e a Faca"
-  },
-  "sesión especial motelx": {
-    "url": "",
-    "title_en": "Sesión especial MOTELX",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
-  },
-  "el conformista": {
-    "url": "https://letterboxd.com/film/the-conformist/",
-    "title_en": "The Conformist",
-    "director": "Bernardo Bertolucci",
-    "country": "Germany, France",
-    "year": 1970,
-    "duration": 108,
-    "title_es": "El conformista",
-    "original_title": "Il conformista"
-  },
-  "el imperio de los sentidos": {
-    "url": "https://letterboxd.com/film/empire-of-passion/",
-    "title_en": "Empire of Passion",
-    "director": "Nagisa Ōshima",
-    "country": "Japan, France",
-    "year": 1978,
-    "duration": 105
-  },
-  "nico": {
-    "url": "https://letterboxd.com/film/nico-2025/",
-    "title_en": "Nico",
-    "director": "Salomón Reyes",
-    "country": "",
-    "year": 2025,
-    "duration": 70,
-    "original_title": "Nico"
-  },
-  "crónicas de un exilio": {
-    "url": "https://letterboxd.com/film/cronicas-de-un-exilio/",
-    "title_en": "Chronicles of an Exile",
-    "director": "Micaela Montes Rojas, Pablo Guallar",
-    "country": "Argentina",
-    "year": 2021,
-    "duration": 93,
-    "original_title": "Crónicas de un exilio"
-  },
-  "streaming paranormal": {
-    "url": "https://letterboxd.com/film/true-fear/",
-    "title_en": "True Fear",
-    "director": "Daniel di Grado",
-    "country": "Sweden",
-    "year": 2024,
-    "duration": 92,
-    "title_es": "True Fear",
-    "original_title": "Äkta skräck"
-  },
-  "viejos malditos": {
-    "url": "https://letterboxd.com/film/viejos-malditos/",
-    "title_en": "Damned Old People",
-    "director": "Xavier Chávez C.",
-    "country": "Argentina, Ecuador",
-    "year": 2025,
-    "duration": 96,
-    "original_title": "Viejos Malditos"
-  },
-  "el remanso": {
-    "url": "",
-    "title_en": "El Remanso",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
-  },
-  "el pasajero del diablo": {
-    "url": "https://letterboxd.com/film/passenger-2026/",
-    "title_en": "Passenger",
-    "director": "André Øvredal",
-    "country": "USA",
-    "year": 2026,
-    "duration": 94,
-    "title_es": "El pasajero nocturno",
-    "original_title": "Passenger"
-  },
-  "pequeños monstruos": {
-    "url": "https://letterboxd.com/film/finnick-2/",
-    "title_en": "Finnick 2",
-    "director": "Denis Chernov",
-    "country": "Russia",
-    "year": 2025,
-    "duration": 85,
-    "title_es": "Finnick 2",
-    "original_title": "Финник 2"
-  },
-  "vidas imaginarias": {
-    "url": "https://letterboxd.com/film/the-marvellous-spiral/",
-    "title_en": "The Marvellous Spiral",
-    "director": "Isabel Medarde",
-    "country": "Spain",
-    "year": 2022,
-    "duration": 87
   }
 }
