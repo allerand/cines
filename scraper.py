@@ -1223,23 +1223,41 @@ def scrape_gaumont(semanas: int = 2) -> list[Screening]:
             seen.add(m.group(1))
             filmids.append(m.group(1))
 
-    # Mapeo filmid → nombre del ciclo. Cada heading "Ciclo X" en la home es
-    # un <div class="col-12">; las pelis del ciclo son los siblings con
-    # class col-lg-3 hasta el próximo heading.
+    # Mapeo filmid → nombre del ciclo. La home tiene varios headings que
+    # agrupan films, todos como <div class="col-12">:
+    #   - "Ciclo X"            → ciclo = "X"           (ej. "Ciclo Funciones Unicas")
+    #   - "Estrenos"           → ciclo = "Estreno"
+    #   - "Películas en cartel"→ ciclo = "En cartel"
+    # Los films del grupo son los siblings hasta el próximo heading.
+    HEADING_TO_CICLO = {
+        "estrenos": "Estreno",
+        "películas en cartel": "En cartel",
+        "peliculas en cartel": "En cartel",
+    }
     filmid_to_ciclo: dict[str, str] = {}
     ciclo_re = re.compile(r"^Ciclo\s+(.+)$", re.IGNORECASE)
+
+    def _heading_to_ciclo(text: str) -> str:
+        text = text.strip()
+        m = ciclo_re.match(text)
+        if m:
+            return m.group(1).strip()
+        return HEADING_TO_CICLO.get(text.lower(), "")
+
+    def _is_heading(text: str) -> bool:
+        return bool(_heading_to_ciclo(text))
+
     for div in home.find_all("div", class_="col-12"):
-        m = ciclo_re.match(div.get_text(strip=True))
-        if not m:
+        ciclo_name = _heading_to_ciclo(div.get_text(strip=True))
+        if not ciclo_name:
             continue
-        ciclo_name = m.group(1).strip()
         nxt = div
         while True:
             nxt = nxt.find_next_sibling()
             if nxt is None:
                 break
             if nxt.name == "div" and "col-12" in (nxt.get("class") or []):
-                if ciclo_re.match(nxt.get_text(strip=True)):
+                if _is_heading(nxt.get_text(strip=True)):
                     break
                 continue
             for a in nxt.find_all("a", href=re.compile(r"filmid=")) if hasattr(nxt, "find_all") else []:
