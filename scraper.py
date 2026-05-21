@@ -154,19 +154,35 @@ def fetch_malba_evento_meta(url: str) -> dict:
     if md:
         out["director"] = md.group(1).strip().rstrip(",")
 
-    # Ciclo: el patrón es "...CICLO_NAME [De DIRECTOR | TITULO_PELICULA]..."
-    # Buscamos el ciclo conocido seguido (en algún punto cercano) del título de la
-    # página o de "De NAME"
+    # Ciclo: dinámico — el <p> inmediatamente previo al <h1> del título contiene
+    # el nombre del ciclo (ej. "Semana de cine portugués", "Cineclub Nocturna",
+    # "Revista Caligari"). Esto evita tener que hardcodear nombres nuevos.
     h1 = soup.find("h1")
     title_text = h1.get_text(strip=True) if h1 else ""
-    for ciclo in MALBA_KNOWN_CICLOS:
-        # CICLO_NAME (whitespace) FILM_TITLE — la combinación clave
-        if title_text and re.search(re.escape(ciclo) + r"\s+" + re.escape(title_text), text):
-            out["ciclo"] = ciclo
+    if h1:
+        prev = h1
+        for _ in range(12):
+            prev = prev.find_previous()
+            if prev is None:
+                break
+            if prev.name != "p":
+                continue
+            ct = prev.get_text(strip=True)
+            # Filtros: no vacío, distinto del título, longitud razonable
+            if not ct or ct == title_text or len(ct) > 80:
+                continue
+            out["ciclo"] = ct
             break
-        # Fallback: CICLO_NAME seguido en pocos chars de "De DIRECTOR"
-        if "director" in out:
-            if re.search(re.escape(ciclo) + r"[^.]{0,200}\bDe\s+" + re.escape(out["director"]), text):
+
+    # Fallback hardcoded (compat con flujo viejo, por si el HTML cambia)
+    if "ciclo" not in out:
+        for ciclo in MALBA_KNOWN_CICLOS:
+            if title_text and re.search(re.escape(ciclo) + r"\s+" + re.escape(title_text), text):
+                out["ciclo"] = ciclo
+                break
+            if "director" in out and re.search(
+                re.escape(ciclo) + r"[^.]{0,200}\bDe\s+" + re.escape(out["director"]), text
+            ):
                 out["ciclo"] = ciclo
                 break
 
