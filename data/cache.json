@@ -1040,10 +1040,12 @@
   "fausto": {
     "url": "",
     "title_en": "Fausto",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "F. W. Murnau",
+    "country": "Germany",
+    "year": 1926,
+    "duration": 116,
+    "title_es": "Fausto",
+    "original_title": "Faust - Eine deutsche Volkssage"
   },
   "gorriones": {
     "url": "https://letterboxd.com/film/sparrows/",
@@ -1080,10 +1082,11 @@
   "lo habrás imaginado": {
     "url": "",
     "title_en": "Lo habrás imaginado",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Victoria Chaya Miranda",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 102,
+    "original_title": "Lo habrás imaginado"
   },
   "exit 8": {
     "url": "https://letterboxd.com/film/exit-8/",
@@ -1289,10 +1292,12 @@
   "7 cajas": {
     "url": "",
     "title_en": "7 cajas",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Tana Schémbori, Juan Carlos Maneglia",
+    "country": "Paraguay, Spain",
+    "year": 2012,
+    "duration": 106,
+    "title_es": "7 Cajas",
+    "original_title": "7 cajas"
   },
   "en la zona gris": {
     "url": "https://letterboxd.com/film/in-the-grey-2026/",
@@ -1561,10 +1566,12 @@
   "la reina margot": {
     "url": "",
     "title_en": "La reina Margot",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Patrice Chéreau",
+    "country": "France, Germany",
+    "year": 1994,
+    "duration": 138,
+    "title_es": "La reina Margot",
+    "original_title": "La Reine Margot"
   },
   "rocambole en el camino": {
     "url": "",
@@ -1692,7 +1699,8 @@
     "director": "Xavier Chávez C.",
     "country": "Argentina, Ecuador",
     "year": 2025,
-    "duration": 96
+    "duration": 96,
+    "original_title": "Viejos Malditos"
   },
   "el remanso": {
     "url": "",
@@ -1705,10 +1713,11 @@
   "me casé con un boludo": {
     "url": "",
     "title_en": "Me casé con un boludo",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Juan Taratuto",
+    "country": "Argentina",
+    "year": 2016,
+    "duration": 110,
+    "original_title": "Me casé con un boludo"
   },
   "el pasajero del diablo": {
     "url": "https://letterboxd.com/film/passenger-2026/",
@@ -1773,5 +1782,83 @@
     "country": "Belgium, Germany",
     "year": 2025,
     "duration": 116
+  },
+  "la tiendita del horror": {
+    "url": "",
+    "title_en": "La tiendita del horror",
+    "director": "Roger Corman",
+    "country": "United States of America",
+    "year": 1960,
+    "duration": 73,
+    "title_es": "La pequeña tienda de los horrores",
+    "original_title": "The Little Shop of Horrors"
+  },
+  "the hitchhiker's guide to the galaxy": {
+    "url": "https://letterboxd.com/film/the-hitchhikers-guide-to-the-galaxy/",
+    "title_en": "The Hitchhiker's Guide to the Galaxy",
+    "director": "Alan J.W. Bell",
+    "country": "UK",
+    "year": 1981,
+    "duration": 198,
+    "title_es": "Guía del autoestopista galáctico",
+    "original_title": "The Hitchhiker's Guide to the Galaxy"
+  },
+  "galaxy quest": {
+    "url": "https://letterboxd.com/film/galaxy-quest/",
+    "title_en": "Galaxy Quest",
+    "director": "Dean Parisot",
+    "country": "USA",
+    "year": 1999,
+    "duration": 102,
+    "title_es": "Héroes fuera de órbita",
+    "original_title": "Galaxy Quest"
+  },
+  "las aventuras de buckaroo banzaï en la octava dimensión": {
+    "url": "",
+    "title_en": "Las aventuras de Buckaroo Banzaï en la Octava Dimensión",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "torrente, el brazo tonto de la ley": {
+    "url": "https://letterboxd.com/film/torrente-el-brazo-tonto-de-la-ley/",
+    "title_en": "Torrente: The Dumb Arm of the Law",
+    "director": "Santiago Segura",
+    "country": "Spain",
+    "year": 1998,
+    "duration": 97,
+    "title_es": "Torrente, el brazo tonto de la ley",
+    "original_title": "Torrente: El Brazo Tonto De La Ley"
+  },
+  "cléo de 5 a 7": {
+    "url": "https://letterboxd.com/film/cleo-from-5-to-7/",
+    "title_en": "Cléo from 5 to 7",
+    "director": "Agnès Varda",
+    "country": "France, Italy",
+    "year": 1962,
+    "duration": 90,
+    "title_es": "Cleo de 5 a 7",
+    "original_title": "Cléo de 5 à 7"
+  },
+  "una canta, la otra no": {
+    "url": "https://letterboxd.com/film/lune-chante-lautre-pas/",
+    "title_en": "One Sings, the Other Doesn't",
+    "director": "Agnès Varda",
+    "country": "Belgium, France",
+    "year": 1977,
+    "duration": 122,
+    "title_es": "Una canta, la otra no",
+    "original_title": "L'une chante, l'autre pas"
+  },
+  "las criaturas": {
+    "url": "https://letterboxd.com/film/the-creatures/",
+    "title_en": "The Creatures",
+    "director": "Agnès Varda",
+    "country": "France, Sweden",
+    "year": 1966,
+    "duration": 94,
+    "title_es": "Las criaturas",
+    "original_title": "Les Créatures"
   }
 }

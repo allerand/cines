@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-21T10:11:19",
+  "updated": "2026-05-21T19:19:28",
   "screenings": [
     {
       "cine": "Cinemark Palermo",
@@ -324,20 +324,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-21",
-      "hora": "14:00",
-      "title_es": "Lo habrás imaginado",
-      "title_en": "Lo habrás imaginado",
-      "director": "Victoria Chaya Miranda",
-      "country": "",
-      "year": null,
-      "duration": 85,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-21",
       "hora": "14:00",
@@ -380,20 +366,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-21",
-      "hora": "14:15",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-21",
       "hora": "14:15",
@@ -433,20 +405,6 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-21",
-      "hora": "14:30",
-      "title_es": "Nuestra Tierra",
-      "title_en": "Our Land",
-      "director": "Lucrecia Martel",
-      "country": "Argentina, Denmark",
-      "year": 2025,
-      "duration": 124,
-      "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
       "ciclo": ""
     },
     {
@@ -590,27 +548,13 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-21",
-      "hora": "15:50",
-      "title_es": "Cuatro estrellas",
-      "title_en": "Four Stars",
-      "director": "Pablo Stigliani",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 91,
-      "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-21",
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -637,8 +581,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -811,7 +755,7 @@
       "duration": 81,
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -951,7 +895,7 @@
       "duration": 113,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1035,7 +979,7 @@
       "duration": 96,
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -1189,7 +1133,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -1525,7 +1469,7 @@
       "duration": 93,
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -1567,7 +1511,7 @@
       "duration": 85,
       "letterboxd": "https://letterboxd.com/film/rustlers-2016/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=800",
-      "ciclo": ""
+      "ciclo": "Semana del Cine Nacional"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1693,7 +1637,7 @@
       "duration": 107,
       "letterboxd": "https://letterboxd.com/film/viejos-malditos/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=812",
-      "ciclo": ""
+      "ciclo": "Funciones Unicas"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -1729,8 +1673,8 @@
       "hora": "20:40",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -1743,8 +1687,8 @@
       "hora": "20:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -1875,7 +1819,7 @@
       "duration": 66,
       "letterboxd": "https://letterboxd.com/film/nico-2025/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1917,7 +1861,7 @@
       "duration": null,
       "letterboxd": "",
       "ticket_url": "https://malba.org.ar/evento/buenos-fucking-aires-los-locales-de-fernanda-laguna/",
-      "ciclo": ""
+      "ciclo": "Proyecciones"
     },
     {
       "cine": "Cine Gaumont",
@@ -1931,7 +1875,7 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=820",
-      "ciclo": ""
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -2057,7 +2001,7 @@
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -2584,12 +2528,12 @@
       "title_es": "Lo habrás imaginado",
       "title_en": "Lo habrás imaginado",
       "director": "Victoria Chaya Miranda",
-      "country": "",
-      "year": null,
+      "country": "Argentina",
+      "year": 2019,
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -2645,7 +2589,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -2701,7 +2645,7 @@
       "duration": 124,
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -2855,7 +2799,7 @@
       "duration": 91,
       "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -2863,8 +2807,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -2891,8 +2835,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -3065,7 +3009,7 @@
       "duration": 81,
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -3205,7 +3149,7 @@
       "duration": 113,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "CCK",
@@ -3303,7 +3247,7 @@
       "duration": 96,
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -3429,7 +3373,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -3499,7 +3443,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/los-dias-chinos/",
       "ticket_url": "https://malba.org.ar/evento/los-dias-chinos/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "Hoyts Abasto",
@@ -3793,7 +3737,7 @@
       "duration": 93,
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -3835,7 +3779,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/the-romance-of-aniceto-and-francisca/",
       "ticket_url": "https://malba.org.ar/evento/este-es-el-romance-del-aniceto-y-la-francisca/",
-      "ciclo": "Generación del 60"
+      "ciclo": "Ciclo Generación del 60"
     },
     {
       "cine": "Cine Gaumont",
@@ -3849,7 +3793,7 @@
       "duration": 84,
       "letterboxd": "https://letterboxd.com/film/the-headless-woman/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=801",
-      "ciclo": ""
+      "ciclo": "Semana del Cine Nacional"
     },
     {
       "cine": "Cinemark Caballito",
@@ -3975,7 +3919,7 @@
       "duration": 60,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=814",
-      "ciclo": ""
+      "ciclo": "Funciones Unicas"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -4025,8 +3969,8 @@
       "hora": "20:40",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -4053,8 +3997,8 @@
       "hora": "20:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -4185,7 +4129,7 @@
       "duration": 66,
       "letterboxd": "https://letterboxd.com/film/nico-2025/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -4227,7 +4171,7 @@
       "duration": 80,
       "letterboxd": "https://letterboxd.com/film/el-bruto/",
       "ticket_url": "https://malba.org.ar/evento/el-bruto/",
-      "ciclo": "Generación del 60"
+      "ciclo": "Ciclo Generación del 60"
     },
     {
       "cine": "Cine Gaumont",
@@ -4241,7 +4185,7 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=820",
-      "ciclo": ""
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -4367,7 +4311,7 @@
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -4577,7 +4521,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/the-players-vs-angeles-caidos/",
       "ticket_url": "https://malba.org.ar/evento/the-players-vs-angeles-caidos/",
-      "ciclo": "Generación del 60"
+      "ciclo": "Ciclo Generación del 60"
     },
     {
       "cine": "Cinemark Palermo",
@@ -4922,12 +4866,12 @@
       "title_es": "Lo habrás imaginado",
       "title_en": "Lo habrás imaginado",
       "director": "Victoria Chaya Miranda",
-      "country": "",
-      "year": null,
+      "country": "Argentina",
+      "year": 2019,
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -4983,7 +4927,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -5039,7 +4983,7 @@
       "duration": 124,
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -5193,7 +5137,7 @@
       "duration": 91,
       "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -5201,8 +5145,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -5229,8 +5173,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -5403,7 +5347,7 @@
       "duration": 81,
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -5543,7 +5487,7 @@
       "duration": 113,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -5627,7 +5571,7 @@
       "duration": 96,
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -5683,7 +5627,7 @@
       "duration": 118,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -5781,7 +5725,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -6117,7 +6061,7 @@
       "duration": 93,
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -6173,7 +6117,7 @@
       "duration": 90,
       "letterboxd": "https://letterboxd.com/film/intimate-stories/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=802",
-      "ciclo": ""
+      "ciclo": "Semana del Cine Nacional"
     },
     {
       "cine": "Cinemark Caballito",
@@ -6299,7 +6243,7 @@
       "duration": 107,
       "letterboxd": "https://letterboxd.com/film/viejos-malditos/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=812",
-      "ciclo": ""
+      "ciclo": "Funciones Unicas"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -6349,8 +6293,8 @@
       "hora": "20:40",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -6377,8 +6321,8 @@
       "hora": "20:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -6509,7 +6453,7 @@
       "duration": 66,
       "letterboxd": "https://letterboxd.com/film/nico-2025/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -6551,7 +6495,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/the-souffleur/",
       "ticket_url": "https://malba.org.ar/evento/the-souffleur/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine Gaumont",
@@ -6565,7 +6509,7 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=820",
-      "ciclo": ""
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -6691,7 +6635,7 @@
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -7302,12 +7246,12 @@
       "title_es": "Lo habrás imaginado",
       "title_en": "Lo habrás imaginado",
       "director": "Victoria Chaya Miranda",
-      "country": "",
-      "year": null,
+      "country": "Argentina",
+      "year": 2019,
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -7363,7 +7307,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -7419,7 +7363,7 @@
       "duration": 124,
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -7601,7 +7545,7 @@
       "duration": 91,
       "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -7609,8 +7553,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -7637,8 +7581,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -7825,7 +7769,7 @@
       "duration": 81,
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -7951,7 +7895,7 @@
       "duration": 113,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -8029,10 +7973,10 @@
       "hora": "17:30",
       "title_es": "7 cajas",
       "title_en": "7 cajas",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
+      "director": "Tana Schémbori, Juan Carlos Maneglia",
+      "country": "Paraguay, Spain",
+      "year": 2012,
+      "duration": 106,
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/red-de-casas-de-la-cultura-cine-extranjero/",
       "ciclo": "Red de Casas de la Cultura: cine extranjero"
@@ -8049,7 +7993,7 @@
       "duration": 96,
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -8105,7 +8049,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/ls83/",
       "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -8203,7 +8147,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -8511,7 +8455,7 @@
       "duration": 93,
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -8553,7 +8497,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
       "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine Gaumont",
@@ -8567,7 +8511,7 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=803",
-      "ciclo": ""
+      "ciclo": "Semana del Cine Nacional"
     },
     {
       "cine": "Cinemark Caballito",
@@ -8693,7 +8637,7 @@
       "duration": 60,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=814",
-      "ciclo": ""
+      "ciclo": "Funciones Unicas"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -8771,8 +8715,8 @@
       "hora": "20:40",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -8799,8 +8743,8 @@
       "hora": "20:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -8917,7 +8861,7 @@
       "duration": 66,
       "letterboxd": "https://letterboxd.com/film/nico-2025/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -8959,7 +8903,7 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=820",
-      "ciclo": ""
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -9085,7 +9029,7 @@
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -9822,12 +9766,12 @@
       "title_es": "Lo habrás imaginado",
       "title_en": "Lo habrás imaginado",
       "director": "Victoria Chaya Miranda",
-      "country": "",
-      "year": null,
+      "country": "Argentina",
+      "year": 2019,
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -9883,7 +9827,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -9939,7 +9883,7 @@
       "duration": 124,
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -10093,7 +10037,7 @@
       "duration": 91,
       "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -10101,8 +10045,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -10129,8 +10073,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -10303,7 +10247,7 @@
       "duration": 81,
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -10443,7 +10387,7 @@
       "duration": 113,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -10527,7 +10471,7 @@
       "duration": 96,
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -10611,7 +10555,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -10947,7 +10891,7 @@
       "duration": 93,
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -11087,7 +11031,7 @@
       "duration": 89,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=706",
-      "ciclo": ""
+      "ciclo": "Funciones Unicas"
     },
     {
       "cine": "Cacodelphia",
@@ -11109,8 +11053,8 @@
       "hora": "20:40",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -11137,8 +11081,8 @@
       "hora": "20:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -11255,7 +11199,7 @@
       "duration": 66,
       "letterboxd": "https://letterboxd.com/film/nico-2025/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -11297,7 +11241,7 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=820",
-      "ciclo": ""
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -11437,7 +11381,7 @@
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -12020,12 +11964,12 @@
       "title_es": "Lo habrás imaginado",
       "title_en": "Lo habrás imaginado",
       "director": "Victoria Chaya Miranda",
-      "country": "",
-      "year": null,
+      "country": "Argentina",
+      "year": 2019,
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -12081,7 +12025,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -12137,7 +12081,7 @@
       "duration": 124,
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -12291,7 +12235,7 @@
       "duration": 91,
       "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -12299,8 +12243,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -12327,8 +12271,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -12501,7 +12445,7 @@
       "duration": 81,
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -12711,7 +12655,7 @@
       "duration": 96,
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -12823,7 +12767,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -13145,7 +13089,7 @@
       "duration": 93,
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -13187,7 +13131,7 @@
       "duration": 101,
       "letterboxd": "https://letterboxd.com/film/el-hombre-de-al-lado/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=804",
-      "ciclo": ""
+      "ciclo": "Semana del Cine Nacional"
     },
     {
       "cine": "Cinemark Caballito",
@@ -13299,7 +13243,7 @@
       "duration": 107,
       "letterboxd": "https://letterboxd.com/film/viejos-malditos/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=812",
-      "ciclo": ""
+      "ciclo": "Funciones Unicas"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -13335,8 +13279,8 @@
       "hora": "20:40",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -13363,8 +13307,8 @@
       "hora": "20:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -13495,7 +13439,7 @@
       "duration": 66,
       "letterboxd": "https://letterboxd.com/film/nico-2025/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -13537,7 +13481,7 @@
       "duration": 92,
       "letterboxd": "https://letterboxd.com/film/true-fear/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=786",
-      "ciclo": ""
+      "ciclo": "KM 0"
     },
     {
       "cine": "Cinemark Caballito",
@@ -13663,7 +13607,7 @@
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -14176,12 +14120,12 @@
       "title_es": "Lo habrás imaginado",
       "title_en": "Lo habrás imaginado",
       "director": "Victoria Chaya Miranda",
-      "country": "",
-      "year": null,
+      "country": "Argentina",
+      "year": 2019,
       "duration": 85,
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -14251,7 +14195,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -14293,7 +14237,7 @@
       "duration": 124,
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=611",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -14413,8 +14357,8 @@
       "hora": "15:40",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -14447,7 +14391,7 @@
       "duration": 91,
       "letterboxd": "https://letterboxd.com/film/cuatro-estrellas/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=768",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -14469,8 +14413,8 @@
       "hora": "15:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -14643,7 +14587,7 @@
       "duration": 81,
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -14881,7 +14825,7 @@
       "duration": 96,
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -14979,7 +14923,7 @@
       "duration": 97,
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -15287,7 +15231,7 @@
       "duration": 93,
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -15315,7 +15259,7 @@
       "duration": 91,
       "letterboxd": "https://letterboxd.com/film/the-last-elvis/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=805",
-      "ciclo": ""
+      "ciclo": "Semana del Cine Nacional"
     },
     {
       "cine": "Cinemark Caballito",
@@ -15399,7 +15343,7 @@
       "duration": 90,
       "letterboxd": "https://letterboxd.com/film/our-days-in-my-memory-a-film-about-estelares/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=783",
-      "ciclo": ""
+      "ciclo": "Funciones Unicas"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -15435,8 +15379,8 @@
       "hora": "20:40",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -15463,8 +15407,8 @@
       "hora": "20:50",
       "title_es": "Me casé con un boludo",
       "title_en": "Me casé con un boludo",
-      "director": "",
-      "country": "",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
@@ -15581,7 +15525,7 @@
       "duration": 66,
       "letterboxd": "https://letterboxd.com/film/nico-2025/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": ""
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -15609,7 +15553,7 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=820",
-      "ciclo": ""
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -15749,7 +15693,7 @@
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
-      "ciclo": ""
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -16015,7 +15959,7 @@
       "duration": 108,
       "letterboxd": "https://letterboxd.com/film/dar-la-cara/",
       "ticket_url": "https://malba.org.ar/evento/dar-la-cara/",
-      "ciclo": "Generación del 60"
+      "ciclo": "Ciclo Generación del 60"
     },
     {
       "cine": "Cine York",
@@ -16032,6 +15976,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-28",
+      "hora": "21:00",
+      "title_es": "Justa",
+      "title_en": "Justa",
+      "director": "Teresa Villaverde",
+      "country": "France, Portugal",
+      "year": 2025,
+      "duration": null,
+      "letterboxd": "https://letterboxd.com/film/justa/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ee1457c4-1733-4df8-a2bf-2a0f2a12397b",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-05-28",
       "hora": "22:00",
@@ -16043,7 +16001,7 @@
       "duration": 89,
       "letterboxd": "https://letterboxd.com/film/ouro-e-cinza/",
       "ticket_url": "https://malba.org.ar/evento/ouro-e-cinza/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Sala Lugones",
@@ -16056,7 +16014,7 @@
       "year": 1994,
       "duration": 108,
       "letterboxd": "https://letterboxd.com/film/tres-irmaos/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f9cce531-6402-4776-abce-f0fc0405ecf7",
       "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
@@ -16085,7 +16043,7 @@
       "duration": 71,
       "letterboxd": "https://letterboxd.com/film/tiger-bay-2025/",
       "ticket_url": "https://malba.org.ar/evento/baia-dos-tigres/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Cine York",
@@ -16126,7 +16084,7 @@
       "year": 2017,
       "duration": 135,
       "letterboxd": "https://letterboxd.com/film/colo/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f9cce531-6402-4776-abce-f0fc0405ecf7",
       "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
@@ -16141,7 +16099,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/los-dias-chinos/",
       "ticket_url": "https://malba.org.ar/evento/los-dias-chinos/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cacodelphia",
@@ -16169,7 +16127,7 @@
       "duration": null,
       "letterboxd": "",
       "ticket_url": "https://malba.org.ar/evento/entrecampos-maria-do-mar-catavento/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "CCK",
@@ -16200,6 +16158,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-29",
+      "hora": "21:00",
+      "title_es": "Justa",
+      "title_en": "Justa",
+      "director": "Teresa Villaverde",
+      "country": "France, Portugal",
+      "year": 2025,
+      "duration": null,
+      "letterboxd": "https://letterboxd.com/film/justa/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ee1457c4-1733-4df8-a2bf-2a0f2a12397b",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-05-29",
       "hora": "21:30",
@@ -16211,7 +16183,7 @@
       "duration": 106,
       "letterboxd": "https://letterboxd.com/film/a-vida-luminosa/",
       "ticket_url": "https://malba.org.ar/evento/a-vida-luminosa/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "MALBA",
@@ -16225,7 +16197,7 @@
       "duration": 70,
       "letterboxd": "https://letterboxd.com/film/two-times-joao-liberada/",
       "ticket_url": "https://malba.org.ar/evento/porque-hoje-e-sabado-duas-vezes-joao-liberada/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Sala Lugones",
@@ -16238,7 +16210,7 @@
       "year": 2017,
       "duration": 136,
       "letterboxd": "https://letterboxd.com/film/colo/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f9cce531-6402-4776-abce-f0fc0405ecf7",
       "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
@@ -16253,7 +16225,7 @@
       "duration": 90,
       "letterboxd": "https://letterboxd.com/film/bulakna/",
       "ticket_url": "https://malba.org.ar/evento/bulakna/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "CCK",
@@ -16281,7 +16253,7 @@
       "duration": 118,
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -16310,6 +16282,20 @@
       "letterboxd": "https://letterboxd.com/film/sieger-sein/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/fiebre-de-futbol",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-30",
+      "hora": "18:00",
+      "title_es": "Justa",
+      "title_en": "Justa",
+      "director": "Teresa Villaverde",
+      "country": "France, Portugal",
+      "year": 2025,
+      "duration": null,
+      "letterboxd": "https://letterboxd.com/film/justa/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ee1457c4-1733-4df8-a2bf-2a0f2a12397b",
+      "ciclo": "Estreno"
     },
     {
       "cine": "CCK",
@@ -16378,7 +16364,7 @@
       "year": 1994,
       "duration": 108,
       "letterboxd": "https://letterboxd.com/film/tres-irmaos/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f9cce531-6402-4776-abce-f0fc0405ecf7",
       "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
@@ -16393,7 +16379,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/the-souffleur/",
       "ticket_url": "https://malba.org.ar/evento/the-souffleur/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "MALBA",
@@ -16407,7 +16393,7 @@
       "duration": 74,
       "letterboxd": "https://letterboxd.com/film/fuck-the-polis/",
       "ticket_url": "https://malba.org.ar/evento/fuck-the-polis/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "MALBA",
@@ -16434,7 +16420,7 @@
       "year": 1994,
       "duration": 108,
       "letterboxd": "https://letterboxd.com/film/tres-irmaos/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f9cce531-6402-4776-abce-f0fc0405ecf7",
       "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
@@ -16463,7 +16449,21 @@
       "duration": null,
       "letterboxd": "",
       "ticket_url": "https://malba.org.ar/evento/sesion-peliculinhas/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-05-31",
+      "hora": "17:30",
+      "title_es": "Justa",
+      "title_en": "Justa",
+      "director": "Teresa Villaverde",
+      "country": "France, Portugal",
+      "year": 2025,
+      "duration": null,
+      "letterboxd": "https://letterboxd.com/film/justa/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ee1457c4-1733-4df8-a2bf-2a0f2a12397b",
+      "ciclo": "Estreno"
     },
     {
       "cine": "MALBA",
@@ -16477,7 +16477,7 @@
       "duration": null,
       "letterboxd": "https://letterboxd.com/film/ls83/",
       "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": ""
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -16519,7 +16519,7 @@
       "duration": 106,
       "letterboxd": "https://letterboxd.com/film/a-vida-luminosa/",
       "ticket_url": "https://malba.org.ar/evento/a-vida-luminosa-2/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Arthaus",
@@ -16560,7 +16560,7 @@
       "year": 2017,
       "duration": 136,
       "letterboxd": "https://letterboxd.com/film/colo/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f9cce531-6402-4776-abce-f0fc0405ecf7",
       "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
@@ -16575,7 +16575,7 @@
       "duration": 131,
       "letterboxd": "https://letterboxd.com/film/entroncamento/",
       "ticket_url": "https://malba.org.ar/evento/entroncamento/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Sala Lugones",
@@ -16659,7 +16659,7 @@
       "duration": 211,
       "letterboxd": "https://letterboxd.com/film/i-only-rest-in-the-storm/",
       "ticket_url": "https://malba.org.ar/evento/o-riso-e-a-faca/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Sala Lugones",
@@ -16687,7 +16687,7 @@
       "duration": null,
       "letterboxd": "",
       "ticket_url": "https://malba.org.ar/evento/sesion-especial-motelx/",
-      "ciclo": ""
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Sala Lugones",
@@ -16702,6 +16702,20 @@
       "letterboxd": "https://letterboxd.com/film/the-bat/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-06-05",
+      "hora": "18:00",
+      "title_es": "Torrente, el brazo tonto de la ley",
+      "title_en": "Torrente: The Dumb Arm of the Law",
+      "director": "Santiago Segura",
+      "country": "Spain",
+      "year": 1998,
+      "duration": 97,
+      "letterboxd": "https://letterboxd.com/film/torrente-el-brazo-tonto-de-la-ley/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/viernes-de-comicos-en-espanol",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -16746,6 +16760,20 @@
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-06-06",
+      "hora": "18:00",
+      "title_es": "La tiendita del horror",
+      "title_en": "La tiendita del horror",
+      "director": "Roger Corman",
+      "country": "United States of America",
+      "year": 1960,
+      "duration": 73,
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-06",
       "hora": "18:00",
@@ -16786,6 +16814,20 @@
       "letterboxd": "https://letterboxd.com/film/sparrows/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-06-07",
+      "hora": "18:00",
+      "title_es": "The Hitchhiker's guide to the Galaxy",
+      "title_en": "The Hitchhiker's Guide to the Galaxy",
+      "director": "Alan J.W. Bell",
+      "country": "UK",
+      "year": 1981,
+      "duration": 198,
+      "letterboxd": "https://letterboxd.com/film/the-hitchhikers-guide-to-the-galaxy/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -16866,7 +16908,7 @@
       "director": "F. W. Murnau",
       "country": "Alemania",
       "year": 1926,
-      "duration": null,
+      "duration": 116,
       "letterboxd": "",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
@@ -16936,7 +16978,7 @@
       "director": "F. W. Murnau",
       "country": "Alemania",
       "year": 1926,
-      "duration": null,
+      "duration": 116,
       "letterboxd": "",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
@@ -17054,6 +17096,20 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-06-14",
+      "hora": "18:00",
+      "title_es": "Galaxy Quest",
+      "title_en": "Galaxy Quest",
+      "director": "Dean Parisot",
+      "country": "USA",
+      "year": 1999,
+      "duration": 102,
+      "letterboxd": "https://letterboxd.com/film/galaxy-quest/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-14",
       "hora": "20:00",
@@ -17062,7 +17118,7 @@
       "director": "Patrice Chéreau",
       "country": "Francia/Italia/Alemania",
       "year": 1994,
-      "duration": null,
+      "duration": 138,
       "letterboxd": "",
       "ticket_url": "",
       "ciclo": "Breve encuentro con Isabelle Adjani"
@@ -17140,6 +17196,20 @@
     {
       "cine": "Sala Lugones",
       "fecha": "2026-06-18",
+      "hora": "15:00",
+      "title_es": "Cléo de 5 a 7",
+      "title_en": "Cléo from 5 to 7",
+      "director": "Agnès Varda",
+      "country": "Francia/Italia",
+      "year": 1962,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/cleo-from-5-to-7/",
+      "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-18",
       "hora": "18:00",
       "title_es": "Tango Bar",
       "title_en": "Tango Bar",
@@ -17160,7 +17230,7 @@
       "director": "Patrice Chéreau",
       "country": "Francia/Italia/Alemania",
       "year": 1994,
-      "duration": null,
+      "duration": 138,
       "letterboxd": "",
       "ticket_url": "",
       "ciclo": "Breve encuentro con Isabelle Adjani"
@@ -17208,6 +17278,20 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-06-20",
+      "hora": "18:00",
+      "title_es": "Las aventuras de Buckaroo Banzaï en la Octava Dimensión",
+      "title_en": "Las aventuras de Buckaroo Banzaï en la Octava Dimensión",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-21",
       "hora": "15:00",
@@ -17220,6 +17304,62 @@
       "letterboxd": "https://letterboxd.com/film/ishtar/",
       "ticket_url": "",
       "ciclo": "Breve encuentro con Isabelle Adjani"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-06-21",
+      "hora": "18:00",
+      "title_es": "Película sorpresa",
+      "title_en": "Película sorpresa",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/pelicula-sorpresa",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-21",
+      "hora": "18:00",
+      "title_es": "Una canta, la otra no",
+      "title_en": "One Sings, the Other Doesn't",
+      "director": "Agnès Varda",
+      "country": "Francia/Bélgica/Unión Soviética/Venezuela",
+      "year": 1977,
+      "duration": 122,
+      "letterboxd": "https://letterboxd.com/film/lune-chante-lautre-pas/",
+      "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-21",
+      "hora": "21:00",
+      "title_es": "Las criaturas",
+      "title_en": "The Creatures",
+      "director": "Agnès Varda",
+      "country": "Francia/Suecia",
+      "year": 1966,
+      "duration": 92,
+      "letterboxd": "https://letterboxd.com/film/the-creatures/",
+      "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-23",
+      "hora": "15:00",
+      "title_es": "Las criaturas",
+      "title_en": "The Creatures",
+      "director": "Agnès Varda",
+      "country": "Francia/Suecia",
+      "year": 1966,
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/the-creatures/",
+      "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
     },
     {
       "cine": "Sala Lugones",
@@ -17237,6 +17377,20 @@
     },
     {
       "cine": "Sala Lugones",
+      "fecha": "2026-06-23",
+      "hora": "21:00",
+      "title_es": "Las criaturas",
+      "title_en": "The Creatures",
+      "director": "Agnès Varda",
+      "country": "Francia/Suecia",
+      "year": 1966,
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/the-creatures/",
+      "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Sala Lugones",
       "fecha": "2026-06-24",
       "hora": "15:00",
       "title_es": "Possession",
@@ -17251,16 +17405,86 @@
     },
     {
       "cine": "Sala Lugones",
-      "fecha": "Sin fecha",
-      "hora": "??",
-      "title_es": "Justa",
-      "title_en": "Justa",
-      "director": "Teresa Villaverde",
-      "country": "France, Portugal",
-      "year": 2025,
-      "duration": null,
-      "letterboxd": "https://letterboxd.com/film/justa/",
+      "fecha": "2026-06-24",
+      "hora": "18:00",
+      "title_es": "Una canta, la otra no",
+      "title_en": "One Sings, the Other Doesn't",
+      "director": "Agnès Varda",
+      "country": "Francia/Bélgica/Unión Soviética/Venezuela",
+      "year": 1977,
+      "duration": 122,
+      "letterboxd": "https://letterboxd.com/film/lune-chante-lautre-pas/",
       "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-24",
+      "hora": "21:00",
+      "title_es": "Cléo de 5 a 7",
+      "title_en": "Cléo from 5 to 7",
+      "director": "Agnès Varda",
+      "country": "Francia/Italia",
+      "year": 1962,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/cleo-from-5-to-7/",
+      "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-25",
+      "hora": "15:00",
+      "title_es": "Una canta, la otra no",
+      "title_en": "One Sings, the Other Doesn't",
+      "director": "Agnès Varda",
+      "country": "Francia/Bélgica/Unión Soviética/Venezuela",
+      "year": 1977,
+      "duration": 122,
+      "letterboxd": "https://letterboxd.com/film/lune-chante-lautre-pas/",
+      "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-25",
+      "hora": "18:00",
+      "title_es": "Cléo de 5 a 7",
+      "title_en": "Cléo from 5 to 7",
+      "director": "Agnès Varda",
+      "country": "Francia/Italia",
+      "year": 1962,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/cleo-from-5-to-7/",
+      "ticket_url": "",
+      "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-06-27",
+      "hora": "18:00",
+      "title_es": "Galaxy Quest",
+      "title_en": "Galaxy Quest",
+      "director": "Dean Parisot",
+      "country": "USA",
+      "year": 1999,
+      "duration": 102,
+      "letterboxd": "https://letterboxd.com/film/galaxy-quest/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-06-28",
+      "hora": "18:00",
+      "title_es": "The Hitchhiker's guide to the Galaxy",
+      "title_en": "The Hitchhiker's Guide to the Galaxy",
+      "director": "Alan J.W. Bell",
+      "country": "UK",
+      "year": 1981,
+      "duration": 198,
+      "letterboxd": "https://letterboxd.com/film/the-hitchhikers-guide-to-the-galaxy/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
       "ciclo": ""
     }
   ]
