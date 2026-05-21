@@ -791,8 +791,14 @@ function buildDayTabs() {
   });
 }
 
+function resetSort() {
+  sortKey = 'hora';
+  sortDir = 'asc';
+}
+
 function selectDay(fecha) {
   activeDay = fecha;
+  resetSort();
   document.querySelectorAll('.day-tab').forEach(t => t.classList.toggle('active', t.dataset.fecha === fecha));
   renderTable();
 }
@@ -801,6 +807,7 @@ document.getElementById('filters').addEventListener('click', e => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
   activeCine = btn.dataset.cine;
+  resetSort();
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
   renderTable();
 });
@@ -814,6 +821,7 @@ document.getElementById('search-input').addEventListener('input', e => {
 document.getElementById('toggle-commercial').addEventListener('click', () => {
   showCommercial = !showCommercial;
   try { localStorage.setItem('sd:showCommercial', showCommercial ? '1' : '0'); } catch (_) {}
+  resetSort();
   applyCommercialToggle();
 });
 
