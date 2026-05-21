@@ -370,6 +370,17 @@
       border-bottom: 1px solid var(--border);
       font-weight: 500;
       white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+      transition: color 0.12s;
+    }
+    .screening-table th:hover { color: var(--text); }
+    .screening-table th.sort-active { color: var(--accent); }
+    .screening-table th .sort-ind {
+      display: inline-block;
+      margin-left: 0.25rem;
+      color: var(--accent);
+      font-size: 0.7rem;
     }
     .screening-table td {
       padding: 0.65rem 0.8rem;
@@ -654,6 +665,37 @@ let allScreenings = [];
 let activeDay = null;
 let activeCine = 'all';
 let searchQuery = '';
+// Ordenamiento de la tabla. Default: por hora ascendente.
+let sortKey = 'hora';
+let sortDir = 'asc';
+
+// Extractores por columna — devuelven un valor comparable (string o number).
+// Para columnas mixtas usamos un sentinela alto/bajo para los vacíos.
+const SORT_EXTRACTORS = {
+  hora:     s => s.hora || '99:99',
+  cine:     s => (s.cine || '').toLowerCase(),
+  title:    s => (s.title_es || s.title_en || '').toLowerCase(),
+  ciclo:    s => (s.ciclo || '').toLowerCase(),
+  director: s => (s.director || '').toLowerCase(),
+  country:  s => (s.country || '').toLowerCase(),
+  year:     s => s.year || 0,
+  duration: s => s.duration || 0,
+  lb:       s => s.letterboxd ? 1 : 0,
+};
+
+function sortRows(rows) {
+  const extract = SORT_EXTRACTORS[sortKey];
+  if (!extract) return rows;
+  const mult = sortDir === 'desc' ? -1 : 1;
+  return [...rows].sort((a, b) => {
+    const va = extract(a), vb = extract(b);
+    if (va < vb) return -1 * mult;
+    if (va > vb) return  1 * mult;
+    // Empate → caer a hora ascendente como tie-breaker
+    const ta = a.hora || '99:99', tb = b.hora || '99:99';
+    return ta < tb ? -1 : ta > tb ? 1 : 0;
+  });
+}
 // Estado del toggle — persiste en localStorage para que el usuario no
 // tenga que volver a tocarlo cada visita.
 let showCommercial = (() => {
@@ -808,6 +850,8 @@ function renderTable() {
   }
   if (searchQuery) rows = rows.filter(s => [s.title_es, s.title_en, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
 
+  rows = sortRows(rows);
+
   if (rows.length === 0) {
     main.innerHTML = '<div class="empty">No hay funciones.</div>';
     return;
@@ -832,7 +876,39 @@ function renderTable() {
     </tr>`;
   }).join('');
 
-  main.innerHTML = `<table class="screening-table"><thead><tr><th class="col-hora">Hora</th><th class="col-cine">Cine</th><th class="col-film">Película</th><th class="col-ciclo">Ciclo</th><th class="col-dir">Director</th><th class="col-pais">País</th><th class="col-anio">Año</th><th class="col-dur">Duración</th><th class="col-lb">LB</th></tr></thead><tbody>${tbody}</tbody></table>`;
+  const headers = [
+    ['hora',     'col-hora', 'Hora'],
+    ['cine',     'col-cine', 'Cine'],
+    ['title',    'col-film', 'Película'],
+    ['ciclo',    'col-ciclo','Ciclo'],
+    ['director', 'col-dir',  'Director'],
+    ['country',  'col-pais', 'País'],
+    ['year',     'col-anio', 'Año'],
+    ['duration', 'col-dur',  'Duración'],
+    ['lb',       'col-lb',   'LB'],
+  ];
+  const thead = headers.map(([key, cls, label]) => {
+    const isActive = sortKey === key;
+    const ind = isActive ? `<span class="sort-ind">${sortDir === 'asc' ? '▲' : '▼'}</span>` : '';
+    return `<th class="${cls}${isActive ? ' sort-active' : ''}" data-sort="${key}">${label}${ind}</th>`;
+  }).join('');
+
+  main.innerHTML = `<table class="screening-table"><thead><tr>${thead}</tr></thead><tbody>${tbody}</tbody></table>`;
+
+  // Handler de sort por click en header
+  main.querySelectorAll('th[data-sort]').forEach(th => {
+    th.addEventListener('click', () => {
+      const k = th.dataset.sort;
+      if (sortKey === k) {
+        sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+      } else {
+        sortKey = k;
+        // Para columnas numéricas (year/duration) o LB, default a desc
+        sortDir = (k === 'year' || k === 'duration' || k === 'lb') ? 'desc' : 'asc';
+      }
+      renderTable();
+    });
+  });
 }
 
 loadData();
