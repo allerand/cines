@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-22T00:33:08",
+  "updated": "2026-05-22T07:08:13",
   "screenings": [
     {
       "cine": "Cinemark Palermo",
@@ -5775,7 +5775,7 @@
       "hora": "17:30",
       "title_es": "7 cajas",
       "title_en": "7 cajas",
-      "director": "Tana Schémbori, Juan Carlos Maneglia",
+      "director": "Juan Carlos Maneglia, Tana Schémbori",
       "country": "Paraguay, Spain",
       "year": 2012,
       "duration": 106,
@@ -14464,6 +14464,20 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-05-29",
+      "hora": "21:30",
+      "title_es": "A Vida Luminosa",
+      "title_en": "The Luminous Life",
+      "director": "João Rosas Con presentación y Q&A del director",
+      "country": "Portugal, France",
+      "year": 2025,
+      "duration": 106,
+      "letterboxd": "https://letterboxd.com/film/a-vida-luminosa/",
+      "ticket_url": "https://malba.org.ar/evento/a-vida-luminosa/",
+      "ciclo": "Semana de cine portugués"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-29",
       "hora": "22:30",
@@ -14506,6 +14520,20 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-05-29",
+      "hora": "23:50",
+      "title_es": "Porque Hoje É Sábado + Duas Vezes João Liberada",
+      "title_en": "Two Times João Liberada",
+      "director": "Alice Eça Guimarães y de Paula Tomás Marques",
+      "country": "Portugal, Spain",
+      "year": 2025,
+      "duration": 70,
+      "letterboxd": "https://letterboxd.com/film/two-times-joao-liberada/",
+      "ticket_url": "https://malba.org.ar/evento/porque-hoje-e-sabado-duas-vezes-joao-liberada/",
+      "ciclo": "Semana de cine portugués"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-05-30",
       "hora": "15:00",
@@ -14518,6 +14546,20 @@
       "letterboxd": "https://letterboxd.com/film/colo/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f9cce531-6402-4776-abce-f0fc0405ecf7",
       "ciclo": "Encuentro con Teresa Villaverde"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-05-30",
+      "hora": "16:00",
+      "title_es": "Bulakna",
+      "title_en": "Bulakna",
+      "director": "Leonor Noivo",
+      "country": "Portugal, France",
+      "year": 2025,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/bulakna/",
+      "ticket_url": "https://malba.org.ar/evento/bulakna/",
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "CCK",
@@ -14676,6 +14718,20 @@
     {
       "cine": "MALBA",
       "fecha": "2026-05-30",
+      "hora": "22:00",
+      "title_es": "Fuck The Polis",
+      "title_en": "Fuck the Polis",
+      "director": "Rita Azevedo Gomes",
+      "country": "Portugal",
+      "year": 2025,
+      "duration": 74,
+      "letterboxd": "https://letterboxd.com/film/fuck-the-polis/",
+      "ticket_url": "https://malba.org.ar/evento/fuck-the-polis/",
+      "ciclo": "Semana de cine portugués"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-05-30",
       "hora": "23:50",
       "title_es": "Vampiros",
       "title_en": "Vampires",
@@ -14714,6 +14770,20 @@
       "letterboxd": "https://letterboxd.com/film/ponyo/",
       "ticket_url": "https://lumiton.ar/evento/ponyo-y-el-secreto-de-la-sirenita/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-05-31",
+      "hora": "17:00",
+      "title_es": "Sesión Peliculinhas",
+      "title_en": "Sesión Peliculinhas",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/sesion-peliculinhas/",
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Sala Lugones",
@@ -14772,6 +14842,20 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-05-31",
+      "hora": "20:00",
+      "title_es": "A Vida Luminosa",
+      "title_en": "The Luminous Life",
+      "director": "João Rosas Con presentación del director",
+      "country": "Portugal, France",
+      "year": 2025,
+      "duration": 106,
+      "letterboxd": "https://letterboxd.com/film/a-vida-luminosa/",
+      "ticket_url": "https://malba.org.ar/evento/a-vida-luminosa-2/",
+      "ciclo": "Semana de cine portugués"
+    },
+    {
       "cine": "Arthaus",
       "fecha": "2026-05-31",
       "hora": "20:00",
@@ -14812,6 +14896,20 @@
       "letterboxd": "https://letterboxd.com/film/colo/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f9cce531-6402-4776-abce-f0fc0405ecf7",
       "ciclo": "Encuentro con Teresa Villaverde"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-05-31",
+      "hora": "22:00",
+      "title_es": "Entroncamento",
+      "title_en": "Entroncamento",
+      "director": "Pedro Cabeleira",
+      "country": "Portugal, France",
+      "year": 2025,
+      "duration": 131,
+      "letterboxd": "https://letterboxd.com/film/entroncamento/",
+      "ticket_url": "https://malba.org.ar/evento/entroncamento/",
+      "ciclo": "Semana de cine portugués"
     },
     {
       "cine": "Sala Lugones",
