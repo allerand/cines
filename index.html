@@ -855,6 +855,11 @@ function applyCommercialToggle() {
 
 async function loadData() {
   try {
+    // 1. Traer primero los contadores globales del backend de Google Sheets
+    // Usamos 'reload' para obligar al navegador a pedir datos frescos si estás en incógnito
+    await fetchStarCounts();
+
+    // 2. Traer la cartelera local
     const res = await fetch('data/cartelera.json?t=' + Date.now());
     const data = await res.json();
     allScreenings = data.screenings || [];
@@ -874,16 +879,20 @@ async function loadData() {
       document.getElementById('updated-badge').textContent = 'Actualizado ' + updated;
     }
 
-    applyCommercialToggle();          // sincroniza chips + label del toggle
-    buildDayTabs();
+    applyCommercialToggle();          // Sincroniza chips + label del toggle
+    buildDayTabs();                   // Arma las pestañas de los días
+    
+    // Ocultar el loader de la pantalla
     document.getElementById('loading').classList.add('hidden');
-    // Fetch counts en background — cuando llegue, re-renderizamos
-    fetchStarCounts().then(() => renderTable());
+    
+    // 3. Renderizar la tabla (ahora sí, con starCounts ya cargado en memoria)
+    renderTable();
   } catch (e) {
+    console.error(e);
     document.getElementById('loading').innerHTML = '<p style="color:#c44">Error al cargar datos.</p>';
   }
 }
-
+  
 function buildDayTabs() {
   const pool = visibleScreenings();
   const dates = [...new Set(pool.map(s => s.fecha).filter(f => /^\d{4}-\d{2}-\d{2}$/.test(f)))].sort();
