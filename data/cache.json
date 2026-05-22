@@ -1860,5 +1860,53 @@
     "duration": 94,
     "title_es": "Las criaturas",
     "original_title": "Les Créatures"
+  },
+  "el retrato de mi padre": {
+    "url": "https://letterboxd.com/film/el-retrato-de-mi-padre/",
+    "title_en": "Portrait of My Father",
+    "director": "Juan Ignacio Fernández Hoppe",
+    "country": "Uruguay",
+    "year": 2022,
+    "duration": 99,
+    "original_title": "El retrato de mi padre"
+  },
+  "airbag": {
+    "url": "https://letterboxd.com/film/airbag/",
+    "title_en": "Airbag",
+    "director": "Juanma Bajo Ulloa",
+    "country": "France, Germany",
+    "year": 1997,
+    "duration": 132,
+    "original_title": "Airbag"
+  },
+  "las minas del rey salomón": {
+    "url": "",
+    "title_en": "Las minas del Rey Salomón",
+    "director": "José Luis Merino",
+    "country": "Spain",
+    "year": 1973,
+    "duration": 80,
+    "title_es": "Tarzán en las minas del rey Salomón",
+    "original_title": "Tarzán en las minas del rey Salomón"
+  },
+  "backrooms": {
+    "url": "https://letterboxd.com/film/backrooms-2026/",
+    "title_en": "Backrooms",
+    "director": "Kane Parsons",
+    "country": "USA, Canada",
+    "year": 2026,
+    "duration": 110,
+    "title_es": "Backrooms: Sin Salida",
+    "original_title": "Backrooms"
+  },
+  "el increíble castillo vagabundo": {
+    "url": "https://letterboxd.com/film/howls-moving-castle/",
+    "title_en": "Howl's Moving Castle",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 2004,
+    "duration": 119,
+    "title_es": "El castillo ambulante",
+    "original_title": "ハウルの動く城"
   }
 }
