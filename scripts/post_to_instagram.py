@@ -223,6 +223,39 @@ def post_feed_carousel(date_str: str, user_id: str, token: str, base: str,
 # Stories: una imagen por story (formato 1080x1920)
 # ---------------------------------------------------------------------------
 
+# Tope de stories por corrida — más que esto IG empieza a detectar la
+# automatización (error 2207006). Si hay más slides generadas, las extra
+# se omiten silenciosamente.
+MAX_STORIES_PER_RUN = 8
+
+
+def _publish_story(user_id: str, token: str, image_url: str) -> str:
+    """Crea container STORIES + publica. Devuelve el id del media publicado.
+    Reintenta el publish 1 vez con backoff largo si IG devuelve 2207006."""
+    container = api_post(f"/{user_id}/media", {
+        "image_url": image_url,
+        "media_type": "STORIES",
+        "access_token": token,
+    })
+    wait_container_ready(container["id"], token)
+    for attempt in range(2):
+        try:
+            r = api_post(f"/{user_id}/media_publish", {
+                "creation_id": container["id"],
+                "access_token": token,
+            })
+            return r.get("id", "")
+        except RuntimeError as e:
+            # IG código 2207006 = "media not found" típicamente significa
+            # rate-limit / anti-spam. Esperar más y reintentar 1 vez.
+            if "2207006" in str(e) and attempt == 0:
+                print(f"    ⚠ IG dijo 2207006 — espero 90s y reintento", file=sys.stderr)
+                time.sleep(90)
+                continue
+            raise
+    return ""
+
+
 def post_stories(date_str: str, user_id: str, token: str, base: str,
                  dry_run: bool = False) -> None:
     slides = collect_slides(date_str, "story")
@@ -231,30 +264,34 @@ def post_stories(date_str: str, user_id: str, token: str, base: str,
               file=sys.stderr)
         return
 
+    if len(slides) > MAX_STORIES_PER_RUN:
+        print(f"  ! story: cap a {MAX_STORIES_PER_RUN} de {len(slides)} (IG anti-spam)")
+        slides = slides[:MAX_STORIES_PER_RUN]
+
     print(f"\n=== STORIES ({len(slides)} slides) ===")
     if dry_run:
         for s in slides:
             print(f"  - {public_url(base, date_str, 'story', s.name)}")
         return
 
-    for slide in slides:
+    import random
+    for i, slide in enumerate(slides):
         url = public_url(base, date_str, "story", slide.name)
         print(f"  → story {slide.name}")
-        # 1) Container tipo STORIES
-        container = api_post(f"/{user_id}/media", {
-            "image_url": url,
-            "media_type": "STORIES",
-            "access_token": token,
-        })
-        wait_container_ready(container["id"], token)
-        # 2) Publicar
-        publish = api_post(f"/{user_id}/media_publish", {
-            "creation_id": container["id"],
-            "access_token": token,
-        })
-        print(f"    ✓ id {publish.get('id')}")
-        # Esperar 4s entre stories para no chocar contra rate limits
-        time.sleep(4)
+        try:
+            pub_id = _publish_story(user_id, token, url)
+            print(f"    ✓ id {pub_id}")
+        except Exception as e:
+            print(f"    ✗ falló {slide.name}: {e}", file=sys.stderr)
+            # Si falla por anti-spam, no tiene sentido seguir martillando
+            if "2207006" in str(e):
+                print(f"    ⏹  cortando — IG sigue detectando bot")
+                break
+        # Delay largo con jitter entre stories para no parecer bot
+        if i < len(slides) - 1:
+            wait_s = random.randint(30, 55)
+            print(f"    ⏳ {wait_s}s hasta la próxima")
+            time.sleep(wait_s)
     print(f"  ✅ {len(slides)} stories posteadas")
 
 
