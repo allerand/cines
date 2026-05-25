@@ -36,12 +36,31 @@ UA = (
 async def run_scraper(semanas: int = 2) -> None:
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
-        scrape_lorca, scrape_lorca_imdb, scrape_lumiton_agenda, scrape_cosmos,
+        scrape_lorca, scrape_lorca_lanacion, scrape_lumiton_agenda, scrape_cosmos,
         scrape_gaumont, scrape_cck, scrape_arthaus, scrape_museo_cine,
-        scrape_ccr, scrape_commercial_imdb,
+        scrape_ccr, scrape_commercial_lanacion,
     )
-    # Lorca: el scraping vía IMDb necesita playwright y se hace abajo.
     lorca_screenings: list = []
+
+    print("🎬 Scrapeando Cine Lorca (lanacion)...", end=" ", flush=True)
+    try:
+        lorca_screenings = scrape_lorca_lanacion()
+        print(f"{len(lorca_screenings)} funciones")
+        if not lorca_screenings:
+            lorca_screenings = scrape_lorca()
+            if lorca_screenings:
+                print(f"  ↳ fallback manual: {len(lorca_screenings)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+        lorca_screenings = scrape_lorca()
+
+    print("🎬 Scrapeando cines comerciales (lanacion)...", end=" ", flush=True)
+    try:
+        commercial_screenings = scrape_commercial_lanacion()
+        print(f"{len(commercial_screenings)} funciones")
+    except Exception as e:
+        commercial_screenings = []
+        print(f"error — {e}")
 
     print("🎬 Scrapeando Lumiton (York / Munro / Lumiton)...", end=" ", flush=True)
     try:
@@ -117,34 +136,8 @@ async def run_scraper(semanas: int = 2) -> None:
         all_screenings.extend(cck_screenings)
         all_screenings.extend(museo_screenings)
         all_screenings.extend(ccr_screenings)
-
-        # Cine Lorca: scraping vía IMDb usa playwright en este contexto
-        print("🎬 Scrapeando Cine Lorca (IMDb)...", end=" ", flush=True)
-        try:
-            lorca_screenings = await scrape_lorca_imdb(page, semanas)
-            print(f"{len(lorca_screenings)} funciones")
-            if not lorca_screenings:
-                # Fallback al JSON manual si IMDb no devolvió nada
-                lorca_screenings = scrape_lorca()
-                if lorca_screenings:
-                    print(f"  ↳ fallback manual: {len(lorca_screenings)} funciones")
-            all_screenings.extend(lorca_screenings)
-        except Exception as e:
-            print(f"error — {e}")
-            lorca_screenings = scrape_lorca()
-            if lorca_screenings:
-                all_screenings.extend(lorca_screenings)
-
-        # Cines comerciales (Cinemark, Hoyts, Cinépolis) — también vía IMDb.
-        # Limitamos a 1 semana porque los cines comerciales actualizan jueves
-        # y no publican mucho más adelante.
-        print("🎬 Scrapeando cines comerciales (IMDb)...")
-        try:
-            commercial_screenings = await scrape_commercial_imdb(page, semanas=1)
-            print(f"  Total comerciales: {len(commercial_screenings)} funciones")
-            all_screenings.extend(commercial_screenings)
-        except Exception as e:
-            print(f"  error — {e}")
+        all_screenings.extend(lorca_screenings)
+        all_screenings.extend(commercial_screenings)
 
         for name, fn in [
             ("Sala Lugones", lambda p: scrape_lugones(p)),

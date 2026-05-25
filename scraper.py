@@ -1105,40 +1105,155 @@ async def _scrape_imdb_cinema(
     return result
 
 
-async def scrape_lorca_imdb(page: "Page", semanas: int = 2) -> list[Screening]:
+# ───── Lanación: cartelera por sala ────────────────────────────────────
+#
+# IMDb dejó de servir la programación de Lorca (y de varias salas más).
+# La Nación sí tiene una página por sala que lista las películas en cartel
+# y desde el detail de cada peli sacamos los horarios en ESA sala.
+# Solo trae el día actual — el cron diario lo va actualizando.
+
+LANACION_BASE = "https://www.lanacion.com.ar"
+
+def _parse_lanacion_film_funciones(text: str) -> dict[str, list[str]]:
     """
-    Cine Lorca no publica programación HTML — sólo una imagen estilizada de Wix.
-    Usamos IMDb showtimes (URL pública).
+    Parsea el bloque 'FUNCIONES DE ...' del detail de una peli en lanacion
+    y devuelve { sala_name: ["HH:MM", "HH:MM", ...], ... } juntando los
+    horarios de TODOS los formatos (subtitulada, castellano, 3D, etc.)
+    para esa sala.
+
+    Estructura del texto:
+        FUNCIONES DE
+        EL DRAMA
+        Lorca
+        COMPRAR ENTRADAS
+        subtitulada: 22:10
+        Showcase Cinemas Norcenter
+        COMPRAR ENTRADAS
+        subtitulada: 16:50, 19:25, 21:50
+        OTRAS PELÍCULAS
     """
-    return await _scrape_imdb_cinema(
-        page,
-        imdb_id="ci1036356",
+    out: dict[str, list[str]] = {}
+    start = text.find("FUNCIONES DE")
+    end = text.find("OTRAS PELÍCULAS")
+    if start < 0:
+        return out
+    block = text[start: end if end > start else len(text)]
+    lines = [ln.strip() for ln in block.split("\n")]
+
+    current_sala = ""
+    i = 0
+    while i < len(lines):
+        ln = lines[i]
+        if not ln:
+            i += 1
+            continue
+        # Una línea que precede a "COMPRAR ENTRADAS" es el nombre de la sala
+        nxt = lines[i + 1] if i + 1 < len(lines) else ""
+        if nxt == "COMPRAR ENTRADAS":
+            current_sala = ln
+            i += 2  # saltamos al primer formato/horario
+            continue
+        # Una línea con formato: HH:MM[, HH:MM...]
+        m = re.match(r"^[^:]+:\s*((?:\d{1,2}:\d{2})(?:\s*,\s*\d{1,2}:\d{2})*)\s*$", ln)
+        if m and current_sala:
+            for t in re.findall(r"\d{1,2}:\d{2}", m.group(1)):
+                hh, mm = t.split(":")
+                hora = f"{int(hh):02d}:{mm}"
+                out.setdefault(current_sala, []).append(hora)
+        i += 1
+    # Dedup + sort
+    for k in out:
+        out[k] = sorted(set(out[k]))
+    return out
+
+
+def _scrape_lanacion_sala(slug: str, lanacion_name: str, cine_name: str,
+                          ticket_url: str) -> list[Screening]:
+    """
+    Scrapea /cartelera-de-cine/sala/<slug> en lanacion.com.ar:
+    1) Obtiene la lista de pelis en esa sala.
+    2) Para cada peli, parsea su detail page y extrae los horarios de la
+       sala (matcheando por `lanacion_name`).
+    3) Devuelve Screenings con fecha=hoy (lanacion sólo muestra el día actual).
+    """
+    today = date.today().isoformat()
+    sala_url = f"{LANACION_BASE}/cartelera-de-cine/sala/{slug}"
+    try:
+        sala_soup = fetch_html(sala_url)
+    except Exception:
+        return []
+
+    film_paths: list[tuple[str, str]] = []  # (path, title-from-listing)
+    seen: set[str] = set()
+    for a in sala_soup.find_all("a", href=re.compile(r"^/cartelera-de-cine/pelicula/")):
+        href = a["href"]
+        if href in seen:
+            continue
+        seen.add(href)
+        title = a.get_text(strip=True)
+        if title and len(title) > 1:
+            film_paths.append((href, title))
+
+    result: list[Screening] = []
+    for path, list_title in film_paths:
+        try:
+            det = fetch_html(LANACION_BASE + path)
+        except Exception:
+            continue
+        text = det.get_text("\n", strip=True)
+        # Título prolijo desde el h1 (la listing puede tener case raro)
+        h1 = det.find("h1")
+        title = (h1.get_text(strip=True) if h1 else list_title).strip()
+        # Algunos h1 vienen en MAYÚSCULAS; preferimos sentence-case
+        if title and title.isupper():
+            title = title.capitalize()
+
+        funciones = _parse_lanacion_film_funciones(text)
+        horarios = funciones.get(lanacion_name, [])
+        if not horarios:
+            continue
+        for hora in horarios:
+            result.append(Screening(
+                cine=cine_name,
+                title=title,
+                fecha=today,
+                hora=hora,
+                ticket_url=ticket_url,
+            ))
+    return result
+
+
+def scrape_lorca_lanacion() -> list[Screening]:
+    """Cine Lorca via lanacion (IMDb ya no muestra Lorca)."""
+    return _scrape_lanacion_sala(
+        slug="lorca-sa110",
+        lanacion_name="Lorca",
         cine_name="Cine Lorca",
         ticket_url="https://cinelorca.wixsite.com/cine-lorca",
-        semanas=semanas,
     )
 
 
-# Cines comerciales con su ID de IMDb. IDs descubiertos browseando los
-# "cines cerca de" en showtimes/cinema/AR/.../. Agregá más sucursales acá
-# con el mismo formato — el scraper los toma todos automáticamente.
-COMMERCIAL_IMDB_CINEMAS = [
-    # (imdb_id, cine_name, ticket_url) — cine_name incluye la sucursal
-    ("ci1036344", "Cinemark Caballito",  "https://www.cinemark.com.ar/"),
-    ("ci1036343", "Cinemark Palermo",    "https://www.cinemark.com.ar/"),
-    ("ci1036354", "Hoyts Abasto",        "https://www.hoyts.com.ar/"),
-    ("ci1033339", "Cinépolis Houssay",   "https://www.cinepolis.com.ar/"),
+# Cines comerciales de CABA scrapeados desde lanacion. Cada entry:
+#   (sala_slug, lanacion_name, cine_display_name, ticket_url)
+# Agregá más sucursales acá con la misma forma — el scraper las toma todas.
+LANACION_COMMERCIAL_CINEMAS = [
+    ("cinemark-caballito-sa130",            "Cinemark Caballito",         "Cinemark Caballito",     "https://www.cinemark.com.ar/"),
+    ("cinemark-palermo-sa223",              "Cinemark Palermo",           "Cinemark Palermo",       "https://www.cinemark.com.ar/"),
+    ("cinemark-puerto-madero-sa102",        "Cinemark Puerto Madero",     "Cinemark Puerto Madero", "https://www.cinemark.com.ar/"),
+    ("hoyts-abasto-de-buenos-aires-sa95",   "Hoyts Abasto de Buenos Aires","Hoyts Abasto",          "https://www.hoyts.com.ar/"),
+    ("hoyts-dot-sa520",                     "Hoyts Dot",                  "Hoyts Dot",              "https://www.hoyts.com.ar/"),
+    ("cinepolis-plaza-houssay-sa1225",      "Cinépolis Plaza Houssay",    "Cinépolis Houssay",      "https://www.cinepolis.com.ar/"),
 ]
 
 
-async def scrape_commercial_imdb(page: "Page", semanas: int = 1) -> list[Screening]:
-    """Scrapea cada cine comercial vía IMDb y dedup por (title, fecha, hora, cine)."""
+def scrape_commercial_lanacion() -> list[Screening]:
+    """Itera la lista de salas comerciales en lanacion y dedup."""
     all_screenings: list[Screening] = []
     seen: set[tuple] = set()
-    for imdb_id, cine_name, ticket_url in COMMERCIAL_IMDB_CINEMAS:
-        print(f"  · {cine_name} {imdb_id}...", end=" ", flush=True)
+    for slug, lan_name, cine_name, ticket_url in LANACION_COMMERCIAL_CINEMAS:
+        print(f"  · {cine_name}...", end=" ", flush=True)
         try:
-            ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, semanas)
+            ss = _scrape_lanacion_sala(slug, lan_name, cine_name, ticket_url)
         except Exception as e:
             print(f"error — {e}")
             continue
