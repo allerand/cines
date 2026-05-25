@@ -1943,5 +1943,34 @@
     "country": "USA, UK",
     "year": 1999,
     "duration": 112
+  },
+  "nada entre los dos": {
+    "url": "https://letterboxd.com/film/nothing-between-us/",
+    "title_en": "Nothing Between Us",
+    "director": "Juan Taratuto",
+    "country": "Mexico, USA",
+    "year": 2026,
+    "duration": 90,
+    "original_title": "Nada entre los dos"
+  },
+  "umamusume: pretty derby": {
+    "url": "https://letterboxd.com/film/umamusume-pretty-derby-beginning-of-a-new/",
+    "title_en": "Umamusume: Pretty Derby - Beginning of a New Era",
+    "director": "Ken Yamamoto",
+    "country": "Japan",
+    "year": 2024,
+    "duration": 108,
+    "title_es": "Umamusume: Pretty Derby – Beginning of a New Era",
+    "original_title": "ウマ娘 プリティーダービー 新時代の扉"
+  },
+  "blue velvet": {
+    "url": "https://letterboxd.com/film/blue-velvet/",
+    "title_en": "Blue Velvet",
+    "director": "David Lynch",
+    "country": "USA",
+    "year": 1986,
+    "duration": 120,
+    "title_es": "Terciopelo azul",
+    "original_title": "Blue Velvet"
   }
 }
