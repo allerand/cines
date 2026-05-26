@@ -436,6 +436,12 @@
     }
     .hora-tag.unknown { color: var(--muted); font-weight: 400; font-size: 0.78rem; }
 
+    .cine-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3px;
+    }
     .cine-tag {
       display: inline-block;
       font-size: 0.7rem;
@@ -444,6 +450,14 @@
       border: 1px solid var(--border);
       color: var(--muted);
       white-space: nowrap;
+    }
+    .cine-addr {
+      font-size: 0.62rem;
+      color: var(--muted);
+      opacity: 0.7;
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+      padding-left: 1px;
     }
     .cine-malba    { border-color: #2a3a4a; color: #6aaecc; }
     .cine-lugones  { border-color: #3a2a1a; color: #cc8844; }
@@ -682,6 +696,35 @@
 <script>
 const DAYS_ES = ['Dom', 'Lun', 'Mar', 'Mié', 'Jue', 'Vie', 'Sáb'];
 const MONTHS_ES = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+
+// Direcciones físicas de cada sala — se renderiza chica debajo del badge del cine.
+// Para chains comerciales (Cinemark/Hoyts/etc.) el lookup matchea por nombre exacto
+// (ej. "Cinemark Caballito") porque cada sucursal tiene su propia dirección.
+const CINE_ADDRESSES = {
+  'MALBA':                    'Av. Figueroa Alcorta 3415',
+  'Sala Lugones':             'Av. Corrientes 1530',
+  'Cacodelphia':              'Av. Corrientes 1372',
+  'Cine Lorca':               'Av. Corrientes 1428',
+  'Cine York':                'Alberdi 895, Olivos',
+  'Centro Cultural Munro':    'Av. Mitre 1755, Munro',
+  'Lumiton':                  'Italia 65, Munro',
+  'Cine Cosmos':              'Av. Corrientes 2046',
+  'Cine Gaumont':             'Av. Rivadavia 1635',
+  'CCK':                      'Sarmiento 151',
+  'Arthaus':                  'Bartolomé Mitre 434',
+  'Museo del Cine':           'Agustín R. Caffarena 51',
+  'Centro Cultural Recoleta': 'Junín 1930',
+  'Amorina':                  'Gorriti 5745, Palermo',
+  // Comerciales — una entrada por sucursal
+  'Cinemark Caballito':       'Av. La Plata 96',
+  'Cinemark Palermo':         'Beruti 3399',
+  'Cinemark Puerto Madero':   'A. Moreau de Justo 1920',
+  'Hoyts Abasto':             'Av. Corrientes 3247',
+  'Hoyts Dot':                'Vedia 3626, Saavedra',
+  'Cinépolis Houssay':        'M. T. de Alvear 2261',
+  'Cinépolis Recoleta':       'Vicente López 2050',
+  'Showcase Belgrano':        'Av. Cabildo 1900',
+};
 
 // Cadenas comerciales. Cada peli viene como "Cinemark Caballito",
 // "Hoyts Abasto", etc. — matcheamos por PREFIJO así una sola entrada
@@ -1020,7 +1063,7 @@ function renderTable() {
 
     return `<tr>
       <td class="col-hora"><span class="hora-tag">${horaText}</span></td>
-      <td class="col-cine"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span></td>
+      <td class="col-cine"><div class="cine-cell"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>${CINE_ADDRESSES[s.cine] ? `<div class="cine-addr">${escapeHtml(CINE_ADDRESSES[s.cine])}</div>` : ''}</div></td>
       <td class="col-add">${addBtn}</td>
       <td class="col-film">${filmCell}</td>
       <td class="col-ciclo">${s.ciclo ? `<span class="ciclo-tag">${escapeHtml(s.ciclo)}</span>` : ''}</td>
