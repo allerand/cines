@@ -26,6 +26,7 @@ DATA_DIR.mkdir(exist_ok=True)
 
 CARTELERA_JSON = DATA_DIR / "cartelera.json"
 CACHE_JSON = DATA_DIR / "cache.json"
+LB_OVERRIDES_JSON = DATA_DIR / "letterboxd_overrides.json"
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -287,6 +288,28 @@ async def run_scraper(semanas: int = 2) -> None:
         return (d, h)
 
     screenings_out.sort(key=sort_key)
+
+    # Aplicar overrides manuales de Letterboxd (data/letterboxd_overrides.json)
+    # para títulos donde el enrichment automático no logra encontrar la URL.
+    if LB_OVERRIDES_JSON.exists():
+        try:
+            overrides_raw = json.loads(LB_OVERRIDES_JSON.read_text(encoding="utf-8"))
+            overrides = {k.lower().strip(): v for k, v in overrides_raw.items()
+                         if not k.startswith("_") and v}
+            applied = 0
+            for s in screenings_out:
+                if s.get("letterboxd"):
+                    continue
+                for cand in (s.get("title_es", ""), s.get("title_en", "")):
+                    norm = (cand or "").lower().strip()
+                    if norm in overrides:
+                        s["letterboxd"] = overrides[norm]
+                        applied += 1
+                        break
+            if applied:
+                print(f"  ↳ Letterboxd overrides aplicados a {applied} funciones")
+        except Exception as e:
+            print(f"  ↳ Overrides omitidos: {e}")
 
     # La Nación sólo expone el día actual para cines comerciales.
     # Mergeamos con el JSON anterior para preservar funciones futuras ya capturadas.
