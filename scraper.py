@@ -1060,7 +1060,12 @@ async def _scrape_imdb_cinema(
     Scrapea IMDb showtimes para un cine genérico. imdb_id es el ID 'ciNNNNNN'.
     Cine_name se usa como discriminador para detectar el redirect/bot-block:
     la página debe contener el nombre.
+
+    Si imdb_id está vacío, retorna inmediatamente lista vacía para que el
+    caller caiga al fallback de La Nación.
     """
+    if not imdb_id:
+        return []
     today = date.today()
     end = today + timedelta(days=7 * semanas)
     result: list[Screening] = []
@@ -1241,16 +1246,26 @@ def scrape_lorca_lanacion() -> list[Screening]:
 
 # Cine → (imdb_id, cine_display_name, ticket_url, lanacion_slug, lanacion_name)
 IMDB_CINEMAS = [
-    ("ci1036356", "Cine Lorca",         "https://cinelorca.wixsite.com/cine-lorca",
-     "lorca-sa110",                       "Lorca"),
-    ("ci1036344", "Cinemark Caballito", "https://www.cinemark.com.ar/",
-     "cinemark-caballito-sa130",          "Cinemark Caballito"),
-    ("ci1036343", "Cinemark Palermo",   "https://www.cinemark.com.ar/",
-     "cinemark-palermo-sa223",            "Cinemark Palermo"),
-    ("ci1036354", "Hoyts Abasto",       "https://www.hoyts.com.ar/",
-     "hoyts-abasto-de-buenos-aires-sa95", "Hoyts Abasto de Buenos Aires"),
-    ("ci1033339", "Cinépolis Houssay",  "https://www.cinepolis.com.ar/",
-     "cinepolis-plaza-houssay-sa1225",    "Cinépolis Plaza Houssay"),
+    ("ci1036356", "Cine Lorca",             "https://cinelorca.wixsite.com/cine-lorca",
+     "lorca-sa110",                           "Lorca"),
+    # Cinemark CABA (3 sucursales)
+    ("ci1036344", "Cinemark Caballito",     "https://www.cinemark.com.ar/",
+     "cinemark-caballito-sa130",              "Cinemark Caballito"),
+    ("ci1036343", "Cinemark Palermo",       "https://www.cinemark.com.ar/",
+     "cinemark-palermo-sa223",                "Cinemark Palermo"),
+    ("",          "Cinemark Puerto Madero", "https://www.cinemark.com.ar/",
+     "cinemark-puerto-madero-sa102",          "Cinemark Puerto Madero"),
+    # Hoyts CABA (2 sucursales)
+    ("ci1036354", "Hoyts Abasto",           "https://www.hoyts.com.ar/",
+     "hoyts-abasto-de-buenos-aires-sa95",     "Hoyts Abasto de Buenos Aires"),
+    ("",          "Hoyts Dot",              "https://www.hoyts.com.ar/",
+     "hoyts-dot-sa520",                       "Hoyts Dot"),
+    # Cinépolis CABA (1 sucursal — Plaza Houssay es la única en capital)
+    ("ci1033339", "Cinépolis Houssay",      "https://www.cinepolis.com.ar/",
+     "cinepolis-plaza-houssay-sa1225",        "Cinépolis Plaza Houssay"),
+    # Showcase CABA (1 sucursal — Belgrano)
+    ("",          "Showcase Belgrano",      "https://www.todoshowcase.com/",
+     "showcase-cinemas-belgrano-sa170",       "Showcase Cinemas Belgrano"),
 ]
 
 
@@ -1304,6 +1319,7 @@ LANACION_COMMERCIAL_CINEMAS = [
     ("hoyts-abasto-de-buenos-aires-sa95",   "Hoyts Abasto de Buenos Aires","Hoyts Abasto",          "https://www.hoyts.com.ar/"),
     ("hoyts-dot-sa520",                     "Hoyts Dot",                  "Hoyts Dot",              "https://www.hoyts.com.ar/"),
     ("cinepolis-plaza-houssay-sa1225",      "Cinépolis Plaza Houssay",    "Cinépolis Houssay",      "https://www.cinepolis.com.ar/"),
+    ("showcase-cinemas-belgrano-sa170",     "Showcase Cinemas Belgrano",  "Showcase Belgrano",      "https://www.todoshowcase.com/"),
 ]
 
 
