@@ -273,6 +273,36 @@ async def run_scraper(semanas: int = 2) -> None:
 
     screenings_out.sort(key=sort_key)
 
+    # La Nación sólo expone el día actual para cines comerciales.
+    # Mergeamos con el JSON anterior para preservar funciones futuras ya capturadas.
+    COMMERCIAL_PREFIXES = ('Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex')
+    if CARTELERA_JSON.exists():
+        try:
+            prev_data = json.loads(CARTELERA_JSON.read_text(encoding="utf-8"))
+            today_str = date.today().isoformat()
+            prev_future_commercial = [
+                s for s in prev_data.get("screenings", [])
+                if any(s.get("cine", "").startswith(p) for p in COMMERCIAL_PREFIXES)
+                and s.get("fecha", "") > today_str
+            ]
+            if prev_future_commercial:
+                existing_keys = {
+                    (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
+                    for s in screenings_out
+                }
+                added = 0
+                for s in prev_future_commercial:
+                    k = (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
+                    if k not in existing_keys:
+                        screenings_out.append(s)
+                        existing_keys.add(k)
+                        added += 1
+                if added:
+                    screenings_out.sort(key=sort_key)
+                    print(f"  ↳ Mergeo {added} funciones comerciales de días futuros")
+        except Exception as e:
+            print(f"  ↳ Merge omitido: {e}")
+
     output = {
         "updated": datetime.now().isoformat(timespec="seconds"),
         "screenings": screenings_out,
