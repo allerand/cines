@@ -710,18 +710,9 @@ function starredSet() {
   catch (_) { return new Set(); }
 }
 
-// Contador global de stars por key (cine|title|fecha|hora) — desde Apps Script.
+// Contador por función (cine|title|fecha|hora) — desde Apps Script.
+// Cada función tiene su propio contador independiente.
 let starCounts = {};
-// Agregado por título: suma de todos los starCounts de una misma película.
-let titleCounts = {};
-
-function computeTitleCounts() {
-  titleCounts = {};
-  for (const [key, cnt] of Object.entries(starCounts)) {
-    const title = (key.split('|')[1] || '').toLowerCase().trim();
-    if (title) titleCounts[title] = (titleCounts[title] || 0) + cnt;
-  }
-}
 
 async function fetchStarCounts() {
   try {
@@ -729,7 +720,6 @@ async function fetchStarCounts() {
     if (!res.ok) return;
     const data = await res.json();
     starCounts = data.counts || {};
-    computeTitleCounts();
   } catch (_) {}
 }
 
@@ -1016,9 +1006,8 @@ function renderTable() {
     const horaText = (s.hora === '??' || !s.hora) ? 'S/H' : s.hora;
     const k = filmKey(s);
     const isStarred = stars.has(k);
-    // Mostramos el total global de la película (suma de todas sus funciones)
-    const movieTitleKey = (s.title_es || s.title_en || '').toLowerCase().trim();
-    const count = titleCounts[movieTitleKey] || 0;
+    // Contador por función — cada (cine|título|fecha|hora) es independiente
+    const count = starCounts[k] || 0;
     const countHtml = count > 0 ? `<span class="add-count">${count}</span>` : '';
     const icon = isStarred ? '✓' : '+';
     const addBtn = `<button class="add-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar"><span class="add-icon">${icon}</span>${countHtml}</button>`;
@@ -1091,12 +1080,8 @@ function renderTable() {
       setStarred(k, nowStarred);
       // Bump optimista del contador local — el server lo confirma al próximo load
       starCounts[k] = Math.max(0, (starCounts[k] || 0) + (nowStarred ? 1 : -1));
-      const movieTitleKey = (s.title_es || s.title_en || '').toLowerCase().trim();
-      if (movieTitleKey) {
-        titleCounts[movieTitleKey] = Math.max(0, (titleCounts[movieTitleKey] || 0) + (nowStarred ? 1 : -1));
-      }
       btn.classList.toggle('starred', nowStarred);
-      const count = titleCounts[movieTitleKey] || 0;
+      const count = starCounts[k] || 0;
       const countHtml = count > 0 ? `<span class="add-count">${count}</span>` : '';
       const icon = nowStarred ? '✓' : '+';
       btn.innerHTML = `<span class="add-icon">${icon}</span>${countHtml}`;
