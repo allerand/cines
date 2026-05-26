@@ -1,76 +1,6 @@
 {
-  "updated": "2026-05-26T02:36:39",
+  "updated": "2026-05-26T13:59:02",
   "screenings": [
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-05-26",
-      "hora": "00:15",
-      "title_es": "Michael",
-      "title_en": "Michael",
-      "director": "Antoine Fuqua",
-      "country": "USA",
-      "year": 2026,
-      "duration": 127,
-      "letterboxd": "https://letterboxd.com/film/michael-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-05-26",
-      "hora": "00:40",
-      "title_es": "El diablo viste a la moda 2",
-      "title_en": "The Devil Wears Prada 2",
-      "director": "David Frankel",
-      "country": "USA",
-      "year": 2026,
-      "duration": 119,
-      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-05-26",
-      "hora": "00:45",
-      "title_es": "Star Wars: The Mandalorian and Grogu",
-      "title_en": "Star Wars: The Mandalorian and Grogu",
-      "director": "Jon Favreau",
-      "country": "USA",
-      "year": 2026,
-      "duration": 132,
-      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-05-26",
-      "hora": "00:55",
-      "title_es": "El Pasajero Del Diablo",
-      "title_en": "Passenger",
-      "director": "André Øvredal",
-      "country": "USA",
-      "year": 2026,
-      "duration": 94,
-      "letterboxd": "https://letterboxd.com/film/passenger-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-05-26",
-      "hora": "01:00",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "director": "Curry Barker",
-      "country": "USA, UK",
-      "year": 2025,
-      "duration": 108,
-      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
     {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-26",
@@ -4886,20 +4816,6 @@
       "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-05-28",
-      "hora": "19:00",
-      "title_es": "La mirada cinéfila, de Daniela Kozak",
-      "title_en": "La mirada cinéfila, de Daniela Kozak",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/la-mirada-cinefila-de-daniela-kozak/",
-      "ciclo": "Presentación de libro"
     },
     {
       "cine": "Lumiton",
