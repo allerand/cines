@@ -1245,27 +1245,30 @@ def scrape_lorca_lanacion() -> list[Screening]:
 # La Nación para no perder al menos el día de hoy.
 
 # Cine → (imdb_id, cine_display_name, ticket_url, lanacion_slug, lanacion_name)
+# (imdb_id, cine_display_name, ticket_url, lanacion_slug, lanacion_name, imdb_postal)
 IMDB_CINEMAS = [
     ("ci1036356", "Cine Lorca",             "https://cinelorca.wixsite.com/cine-lorca",
-     "lorca-sa110",                           "Lorca"),
+     "lorca-sa110",                           "Lorca",                       "C1134"),
     # Cinemark CABA (3 sucursales)
     ("ci1036344", "Cinemark Caballito",     "https://www.cinemark.com.ar/",
-     "cinemark-caballito-sa130",              "Cinemark Caballito"),
+     "cinemark-caballito-sa130",              "Cinemark Caballito",          "C1134"),
     ("ci1036343", "Cinemark Palermo",       "https://www.cinemark.com.ar/",
-     "cinemark-palermo-sa223",                "Cinemark Palermo"),
+     "cinemark-palermo-sa223",                "Cinemark Palermo",            "C1134"),
     ("",          "Cinemark Puerto Madero", "https://www.cinemark.com.ar/",
-     "cinemark-puerto-madero-sa102",          "Cinemark Puerto Madero"),
+     "cinemark-puerto-madero-sa102",          "Cinemark Puerto Madero",      "C1134"),
     # Hoyts CABA (2 sucursales)
     ("ci1036354", "Hoyts Abasto",           "https://www.hoyts.com.ar/",
-     "hoyts-abasto-de-buenos-aires-sa95",     "Hoyts Abasto de Buenos Aires"),
+     "hoyts-abasto-de-buenos-aires-sa95",     "Hoyts Abasto de Buenos Aires","C1134"),
     ("",          "Hoyts Dot",              "https://www.hoyts.com.ar/",
-     "hoyts-dot-sa520",                       "Hoyts Dot"),
-    # Cinépolis CABA (1 sucursal — Plaza Houssay es la única en capital)
+     "hoyts-dot-sa520",                       "Hoyts Dot",                   "C1134"),
+    # Cinépolis CABA (2 sucursales)
     ("ci1033339", "Cinépolis Houssay",      "https://www.cinepolis.com.ar/",
-     "cinepolis-plaza-houssay-sa1225",        "Cinépolis Plaza Houssay"),
+     "cinepolis-plaza-houssay-sa1225",        "Cinépolis Plaza Houssay",     "C1134"),
+    ("ci1036368", "Cinépolis Recoleta",     "https://www.cinepolis.com.ar/",
+     "",                                      "",                            "C1428"),
     # Showcase CABA (1 sucursal — Belgrano)
     ("",          "Showcase Belgrano",      "https://www.todoshowcase.com/",
-     "showcase-cinemas-belgrano-sa170",       "Showcase Cinemas Belgrano"),
+     "showcase-cinemas-belgrano-sa170",       "Showcase Cinemas Belgrano",   "C1134"),
 ]
 
 
@@ -1279,25 +1282,27 @@ async def scrape_imdb_then_lanacion(page: Page, semanas: int = 2) -> list[Screen
     all_screenings: list[Screening] = []
     seen: set[tuple] = set()
 
-    for imdb_id, cine_name, ticket_url, lan_slug, lan_name in IMDB_CINEMAS:
+    for imdb_id, cine_name, ticket_url, lan_slug, lan_name, postal in IMDB_CINEMAS:
         print(f"  · {cine_name}...", end=" ", flush=True)
         ss: list[Screening] = []
         # 1) IMDb
         try:
-            ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, semanas)
+            ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, semanas, postal=postal)
         except Exception as e:
             print(f"IMDb error — {e};", end=" ")
             ss = []
-        # 2) Fallback La Nación si IMDb no devolvió nada
-        if not ss:
+        # 2) Fallback La Nación si IMDb no devolvió nada (skipea si no hay slug)
+        if not ss and lan_slug:
             try:
                 ss = _scrape_lanacion_sala(lan_slug, lan_name, cine_name, ticket_url)
                 print(f"fallback lanacion: {len(ss)} func.")
             except Exception as e:
                 print(f"lanacion error — {e}")
                 continue
-        else:
+        elif ss:
             print(f"{len(ss)} funciones (IMDb)")
+        else:
+            print("0 funciones")
 
         for s in ss:
             k = (s.cine, s.title, s.fecha, s.hora)
@@ -2340,4 +2345,76 @@ def scrape_ccr() -> list[Screening]:
                     hora=hora,
                     ticket_url=url,
                 ))
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Amorina Cine Bar  (amorina.club — JSON API pública con schedule completo)
+# ---------------------------------------------------------------------------
+
+def scrape_amorina() -> list[Screening]:
+    """
+    Lee https://www.amorina.club/schedule.json — array con una entrada por
+    función. Cada item tiene title, showtime (ISO con TZ), director, year,
+    runtime_mins, nationality, imdbid, overview, poster, etc.
+    """
+    import json as _json
+    url = "https://www.amorina.club/schedule.json"
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=15) as r:
+            data = _json.loads(r.read().decode("utf-8", errors="replace"))
+    except Exception:
+        return []
+
+    if not isinstance(data, list):
+        return []
+
+    result: list[Screening] = []
+    today = date.today()
+    for item in data:
+        if not isinstance(item, dict):
+            continue
+        title = (item.get("title") or "").strip()
+        showtime = (item.get("showtime") or "").strip()
+        if not title or not showtime:
+            continue
+        # Parsear ISO: "2026-05-24T21:00:00-03:00"
+        try:
+            from datetime import datetime as _dt
+            dt = _dt.fromisoformat(showtime)
+        except Exception:
+            continue
+        # Filtrar pasado
+        if dt.date() < today:
+            continue
+        fecha = dt.date().isoformat()
+        hora = f"{dt.hour:02d}:{dt.minute:02d}"
+
+        director = (item.get("director") or "").strip()
+        nationality = (item.get("nationality") or "").strip()
+        year = item.get("year")
+        try:
+            year = int(year) if year else None
+        except (TypeError, ValueError):
+            year = None
+        duration = item.get("runtime_mins")
+        try:
+            duration = int(duration) if duration else None
+        except (TypeError, ValueError):
+            duration = None
+        ciclo = (item.get("genre") or "").strip()
+
+        result.append(Screening(
+            cine="Amorina",
+            title=title,
+            fecha=fecha,
+            hora=hora,
+            ticket_url="https://www.amorina.club/peliculas",
+            ciclo=ciclo if ciclo and ciclo.lower() != "amorina elige" else "",
+            director=director,
+            country=nationality,
+            year=year,
+            duration=duration,
+        ))
     return result

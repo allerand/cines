@@ -38,7 +38,7 @@ async def run_scraper(semanas: int = 2) -> None:
         scrape_malba, scrape_lugones, scrape_cacodelphia,
         scrape_lorca, scrape_lumiton_agenda, scrape_cosmos,
         scrape_gaumont, scrape_cck, scrape_arthaus, scrape_museo_cine,
-        scrape_ccr, scrape_imdb_then_lanacion,
+        scrape_ccr, scrape_imdb_then_lanacion, scrape_amorina,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
     # browser para IMDb). Inicializamos vacío y se llena más abajo.
@@ -112,6 +112,14 @@ async def run_scraper(semanas: int = 2) -> None:
     print("🎬 Scrapeando MALBA...", end=" ", flush=True)
     try:
         r = scrape_malba(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
+    print("🎬 Scrapeando Amorina...", end=" ", flush=True)
+    try:
+        r = scrape_amorina()
         all_screenings.extend(r)
         print(f"{len(r)} funciones")
     except Exception as e:
