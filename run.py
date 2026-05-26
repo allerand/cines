@@ -264,6 +264,7 @@ async def run_scraper(semanas: int = 2) -> None:
             "country":    getattr(s, "country", "") or meta.get("country") or "",
             "year":       getattr(s, "year", None) or meta.get("year"),
             "duration":   getattr(s, "duration", None) or meta.get("duration"),
+            "genre":      meta.get("genre") or "",
             "letterboxd": meta.get("url") or "",
             "ticket_url": getattr(s, "ticket_url", ""),
             "ciclo":      getattr(s, "ciclo", ""),

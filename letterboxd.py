@@ -360,6 +360,21 @@ def fetch_tmdb_movie_meta(movie_id: int) -> dict:
     if directors:
         out["director"] = ", ".join(directors[:3])
 
+    # Géneros desde TMDb (vienen en inglés con language=en-US). Traducimos
+    # los comunes al español y dejamos máximo 2 para no saturar la columna.
+    TMDB_GENRE_ES = {
+        "Action": "Acción", "Adventure": "Aventura", "Animation": "Animación",
+        "Comedy": "Comedia", "Crime": "Crimen", "Documentary": "Documental",
+        "Drama": "Drama", "Family": "Familiar", "Fantasy": "Fantasía",
+        "History": "Historia", "Horror": "Terror", "Music": "Música",
+        "Mystery": "Misterio", "Romance": "Romance",
+        "Science Fiction": "Ciencia ficción", "TV Movie": "TV",
+        "Thriller": "Thriller", "War": "Bélica", "Western": "Western",
+    }
+    genres = [g.get("name") for g in data.get("genres", []) if g.get("name")]
+    if genres:
+        out["genre"] = ", ".join(TMDB_GENRE_ES.get(g, g) for g in genres[:2])
+
     # Title en español oficial — preferimos es-AR > es-ES > es-MX > es genérico
     title_es = ""
     priority = ["AR", "ES", "MX", "CL", "UY"]
@@ -430,7 +445,7 @@ def fill_meta_from_tmdb(
             if hint_director and tmeta.get("director"):
                 if not _name_overlap(hint_director, tmeta["director"]):
                     continue
-            for f in ("director", "country", "year", "duration", "title_en", "title_es", "original_title"):
+            for f in ("director", "country", "year", "duration", "title_en", "title_es", "original_title", "genre"):
                 if not meta.get(f) and tmeta.get(f):
                     meta[f] = tmeta[f]
             if (meta.get("duration") and meta.get("country") and meta.get("director")

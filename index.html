@@ -395,6 +395,7 @@
     .col-film   { }
     .col-ciclo  { width: 10rem; color: var(--muted); }
     .col-dir    { width: 12rem; color: var(--muted); }
+    .col-genre  { width: 8rem; color: var(--muted); }
     .col-pais   { width: 7rem; color: var(--muted); }
     .col-anio   { width: 4rem; color: var(--muted); text-align: right; }
     .col-dur    { width: 4.5rem; color: var(--muted); text-align: right; }
@@ -552,7 +553,7 @@
       main { padding: 1rem; }
       .filters { padding: 0.6rem 1rem; }
       .day-tabs { padding: 0 0.5rem; }
-      .col-ciclo, .col-dir, .col-pais, .col-anio, .col-dur { display: none; }
+      .col-ciclo, .col-dir, .col-genre, .col-pais, .col-anio, .col-dur { display: none; }
       .col-cine { width: 5rem; }
       .col-hora { width: 4rem; }
       .col-lb   { width: 3rem; }
@@ -846,6 +847,7 @@ const SORT_EXTRACTORS = {
   title:    s => (s.title_es || s.title_en || '').toLowerCase(),
   ciclo:    s => (s.ciclo || '').toLowerCase(),
   director: s => (s.director || '').toLowerCase(),
+  genre:    s => (s.genre || '').toLowerCase(),
   country:  s => (s.country || '').toLowerCase(),
   year:     s => s.year || 0,
   duration: s => s.duration || 0,
@@ -1069,6 +1071,7 @@ function renderTable() {
       <td class="col-film">${filmCell}</td>
       <td class="col-ciclo">${s.ciclo ? `<span class="ciclo-tag">${escapeHtml(s.ciclo)}</span>` : ''}</td>
       <td class="col-dir">${escapeHtml(s.director || '')}</td>
+      <td class="col-genre">${escapeHtml(s.genre || '')}</td>
       <td class="col-pais">${escapeHtml(s.country || '')}</td>
       <td class="col-anio">${s.year || ''}</td>
       <td class="col-dur">${s.duration ? s.duration + ' min' : ''}</td>
@@ -1083,6 +1086,7 @@ function renderTable() {
     ['title',    'col-film', 'Película'],
     ['ciclo',    'col-ciclo','Ciclo'],
     ['director', 'col-dir',  'Director'],
+    ['genre',    'col-genre','Género'],
     ['country',  'col-pais', 'País'],
     ['year',     'col-anio', 'Año'],
     ['duration', 'col-dur',  'Duración'],
