@@ -122,6 +122,24 @@ def parse_film_soup(soup: BeautifulSoup, url: str) -> Optional[dict]:
         if dm:
             duration = int(dm.group(1))
 
+    # Géneros: links /films/genre/SLUG/. LB usa slugs en inglés, traducimos.
+    LB_GENRE_ES = {
+        "action": "Acción", "adventure": "Aventura", "animation": "Animación",
+        "comedy": "Comedia", "crime": "Crimen", "documentary": "Documental",
+        "drama": "Drama", "family": "Familiar", "fantasy": "Fantasía",
+        "history": "Historia", "horror": "Terror", "music": "Música",
+        "mystery": "Misterio", "romance": "Romance",
+        "science-fiction": "Ciencia ficción", "tv-movie": "TV",
+        "thriller": "Thriller", "war": "Bélica", "western": "Western",
+    }
+    genre_slugs: list[str] = []
+    for a in soup.find_all("a", href=re.compile(r"^/films/genre/[^/]+/?$")):
+        m = re.match(r"^/films/genre/([^/]+)/?$", a["href"])
+        if m and m.group(1) not in genre_slugs:
+            genre_slugs.append(m.group(1))
+    genres = [LB_GENRE_ES.get(s, s.replace("-", " ").capitalize()) for s in genre_slugs[:2]]
+    genre = ", ".join(genres)
+
     return {
         "url": url,
         "title_en": title_en,
@@ -129,6 +147,7 @@ def parse_film_soup(soup: BeautifulSoup, url: str) -> Optional[dict]:
         "country": country,
         "year": year,
         "duration": duration,
+        "genre": genre,
     }
 
 
