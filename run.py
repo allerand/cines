@@ -36,28 +36,21 @@ UA = (
 async def run_scraper(semanas: int = 2) -> None:
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
-        scrape_lorca, scrape_lorca_lanacion, scrape_lumiton_agenda, scrape_cosmos,
+        scrape_lorca, scrape_lumiton_agenda, scrape_cosmos,
         scrape_gaumont, scrape_cck, scrape_arthaus, scrape_museo_cine,
-        scrape_ccr, scrape_commercial_lanacion,
+        scrape_ccr, scrape_imdb_then_lanacion,
     )
+    # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
+    # browser para IMDb). Inicializamos vacío y se llena más abajo.
     lorca_screenings: list = []
+    commercial_screenings: list = []
 
-    print("🎬 Scrapeando Cine Lorca (lanacion)...", end=" ", flush=True)
+    print("🎬 Cine Lorca + Comerciales (IMDb primero, Lanación fallback)...")
     try:
-        lorca_screenings = scrape_lorca_lanacion()
-        print(f"{len(lorca_screenings)} funciones")
-        if not lorca_screenings:
-            lorca_screenings = scrape_lorca()
-            if lorca_screenings:
-                print(f"  ↳ fallback manual: {len(lorca_screenings)} funciones")
+        # placeholder — se ejecuta abajo dentro de async_playwright
+        pass
     except Exception as e:
         print(f"error — {e}")
-        lorca_screenings = scrape_lorca()
-
-    print("🎬 Scrapeando cines comerciales (lanacion)...", end=" ", flush=True)
-    try:
-        commercial_screenings = scrape_commercial_lanacion()
-        print(f"{len(commercial_screenings)} funciones")
     except Exception as e:
         commercial_screenings = []
         print(f"error — {e}")
@@ -136,8 +129,21 @@ async def run_scraper(semanas: int = 2) -> None:
         all_screenings.extend(cck_screenings)
         all_screenings.extend(museo_screenings)
         all_screenings.extend(ccr_screenings)
-        all_screenings.extend(lorca_screenings)
-        all_screenings.extend(commercial_screenings)
+
+        # Lorca + comerciales: IMDb primero (semana completa), Lanación fallback (solo hoy)
+        print("🎬 Scrapeando Lorca + Comerciales (IMDb → Lanación fallback)...")
+        try:
+            imdb_screenings = await scrape_imdb_then_lanacion(page, semanas)
+            all_screenings.extend(imdb_screenings)
+            print(f"  ↳ total: {len(imdb_screenings)} funciones")
+            # Si Lorca quedó sin nada, último fallback: lorca_manual.json
+            if not any(s.cine == "Cine Lorca" for s in imdb_screenings):
+                lorca_manual = scrape_lorca()
+                if lorca_manual:
+                    all_screenings.extend(lorca_manual)
+                    print(f"  ↳ fallback manual Lorca: {len(lorca_manual)} funciones")
+        except Exception as e:
+            print(f"error — {e}")
 
         for name, fn in [
             ("Sala Lugones", lambda p: scrape_lugones(p)),

@@ -1224,13 +1224,74 @@ def _scrape_lanacion_sala(slug: str, lanacion_name: str, cine_name: str,
 
 
 def scrape_lorca_lanacion() -> list[Screening]:
-    """Cine Lorca via lanacion (IMDb ya no muestra Lorca)."""
+    """Cine Lorca via lanacion (fallback cuando IMDb no responde)."""
     return _scrape_lanacion_sala(
         slug="lorca-sa110",
         lanacion_name="Lorca",
         cine_name="Cine Lorca",
         ticket_url="https://cinelorca.wixsite.com/cine-lorca",
     )
+
+
+# ───── IMDb + La Nación combinados ────────────────────────────────────
+#
+# IMDb sirve la semana completa (multi-día) y La Nación solo el día actual.
+# Estrategia: probar IMDb primero. Si devuelve 0 funciones, fallback a
+# La Nación para no perder al menos el día de hoy.
+
+# Cine → (imdb_id, cine_display_name, ticket_url, lanacion_slug, lanacion_name)
+IMDB_CINEMAS = [
+    ("ci1036356", "Cine Lorca",         "https://cinelorca.wixsite.com/cine-lorca",
+     "lorca-sa110",                       "Lorca"),
+    ("ci1036344", "Cinemark Caballito", "https://www.cinemark.com.ar/",
+     "cinemark-caballito-sa130",          "Cinemark Caballito"),
+    ("ci1036343", "Cinemark Palermo",   "https://www.cinemark.com.ar/",
+     "cinemark-palermo-sa223",            "Cinemark Palermo"),
+    ("ci1036354", "Hoyts Abasto",       "https://www.hoyts.com.ar/",
+     "hoyts-abasto-de-buenos-aires-sa95", "Hoyts Abasto de Buenos Aires"),
+    ("ci1033339", "Cinépolis Houssay",  "https://www.cinepolis.com.ar/",
+     "cinepolis-plaza-houssay-sa1225",    "Cinépolis Plaza Houssay"),
+]
+
+
+async def scrape_imdb_then_lanacion(page: Page, semanas: int = 2) -> list[Screening]:
+    """
+    Por cada cine en IMDB_CINEMAS:
+      1) Intenta IMDb (multi-día, hasta `semanas` semanas)
+      2) Si no devuelve nada, fallback a La Nación (solo hoy)
+    Devuelve la unión deduplicada.
+    """
+    all_screenings: list[Screening] = []
+    seen: set[tuple] = set()
+
+    for imdb_id, cine_name, ticket_url, lan_slug, lan_name in IMDB_CINEMAS:
+        print(f"  · {cine_name}...", end=" ", flush=True)
+        ss: list[Screening] = []
+        # 1) IMDb
+        try:
+            ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, semanas)
+        except Exception as e:
+            print(f"IMDb error — {e};", end=" ")
+            ss = []
+        # 2) Fallback La Nación si IMDb no devolvió nada
+        if not ss:
+            try:
+                ss = _scrape_lanacion_sala(lan_slug, lan_name, cine_name, ticket_url)
+                print(f"fallback lanacion: {len(ss)} func.")
+            except Exception as e:
+                print(f"lanacion error — {e}")
+                continue
+        else:
+            print(f"{len(ss)} funciones (IMDb)")
+
+        for s in ss:
+            k = (s.cine, s.title, s.fecha, s.hora)
+            if k in seen:
+                continue
+            seen.add(k)
+            all_screenings.append(s)
+
+    return all_screenings
 
 
 # Cines comerciales de CABA scrapeados desde lanacion. Cada entry:
