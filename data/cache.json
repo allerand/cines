@@ -1972,5 +1972,15 @@
     "duration": 120,
     "title_es": "Terciopelo azul",
     "original_title": "Blue Velvet"
+  },
+  "scary movie": {
+    "url": "https://letterboxd.com/film/scary-movie-2026/",
+    "title_en": "Scary Movie",
+    "director": "Michael Tiddes",
+    "country": "USA",
+    "year": 2026,
+    "duration": 95,
+    "title_es": "Scary Movie: Terroríficamente incorrecta",
+    "original_title": "Scary Movie"
   }
 }
