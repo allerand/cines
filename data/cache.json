@@ -1045,7 +1045,8 @@
     "year": 1926,
     "duration": 116,
     "title_es": "Fausto",
-    "original_title": "Faust - Eine deutsche Volkssage"
+    "original_title": "Faust - Eine deutsche Volkssage",
+    "genre": "Fantasía, Drama"
   },
   "gorriones": {
     "url": "https://letterboxd.com/film/sparrows/",
@@ -1086,7 +1087,8 @@
     "country": "Argentina",
     "year": 2019,
     "duration": 102,
-    "original_title": "Lo habrás imaginado"
+    "original_title": "Lo habrás imaginado",
+    "genre": "Thriller, Crimen"
   },
   "exit 8": {
     "url": "https://letterboxd.com/film/exit-8/",
@@ -1571,7 +1573,8 @@
     "year": 1994,
     "duration": 138,
     "title_es": "La reina Margot",
-    "original_title": "La Reine Margot"
+    "original_title": "La Reine Margot",
+    "genre": "Drama, Historia"
   },
   "rocambole en el camino": {
     "url": "",
@@ -1700,7 +1703,8 @@
     "country": "Argentina, Ecuador",
     "year": 2025,
     "duration": 96,
-    "original_title": "Viejos Malditos"
+    "original_title": "Viejos Malditos",
+    "genre": "Drama"
   },
   "el remanso": {
     "url": "",
@@ -1717,7 +1721,8 @@
     "country": "Argentina",
     "year": 2016,
     "duration": 110,
-    "original_title": "Me casé con un boludo"
+    "original_title": "Me casé con un boludo",
+    "genre": "Comedia, Romance"
   },
   "el pasajero del diablo": {
     "url": "https://letterboxd.com/film/passenger-2026/",
@@ -1791,7 +1796,8 @@
     "year": 1960,
     "duration": 73,
     "title_es": "La pequeña tienda de los horrores",
-    "original_title": "The Little Shop of Horrors"
+    "original_title": "The Little Shop of Horrors",
+    "genre": "Terror, Comedia"
   },
   "the hitchhiker's guide to the galaxy": {
     "url": "https://letterboxd.com/film/the-hitchhikers-guide-to-the-galaxy/",
@@ -1887,7 +1893,8 @@
     "year": 1973,
     "duration": 80,
     "title_es": "Tarzán en las minas del rey Salomón",
-    "original_title": "Tarzán en las minas del rey Salomón"
+    "original_title": "Tarzán en las minas del rey Salomón",
+    "genre": "Aventura"
   },
   "backrooms": {
     "url": "https://letterboxd.com/film/backrooms-2026/",
@@ -2000,7 +2007,8 @@
     "country": "Argentina",
     "year": 1978,
     "duration": 85,
-    "original_title": "La parte del león"
+    "original_title": "La parte del león",
+    "genre": "Crimen, Drama"
   },
   "mulholland drive": {
     "url": "https://letterboxd.com/film/mulholland-drive/",
@@ -2115,7 +2123,8 @@
     "year": 1980,
     "duration": 97,
     "title_es": "La Discoteca del Amor",
-    "original_title": "La discoteca del amor"
+    "original_title": "La discoteca del amor",
+    "genre": "Comedia, Thriller"
   },
   "under the silver lake": {
     "url": "https://letterboxd.com/film/under-the-silver-lake/",
@@ -2212,6 +2221,17 @@
     "year": 1998,
     "duration": 117,
     "title_es": "El gran Lebowski",
-    "original_title": "The Big Lebowski"
+    "original_title": "The Big Lebowski",
+    "genre": "Comedia, Crimen"
+  },
+  "los traidores": {
+    "url": "https://letterboxd.com/film/the-traitors/",
+    "title_en": "The Traitors",
+    "director": "Raymundo Gleyzer",
+    "country": "Argentina",
+    "year": 1973,
+    "duration": 113,
+    "original_title": "Los Traidores",
+    "genre": "Drama"
   }
 }
