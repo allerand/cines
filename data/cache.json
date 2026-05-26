@@ -1982,5 +1982,236 @@
     "duration": 95,
     "title_es": "Scary Movie: Terroríficamente incorrecta",
     "original_title": "Scary Movie"
+  },
+  "suspiria": {
+    "url": "https://letterboxd.com/film/suspiria/",
+    "title_en": "Suspiria",
+    "director": "Dario Argento",
+    "country": "Italy",
+    "year": 1977,
+    "duration": 99,
+    "title_es": "Suspiria: Alarido",
+    "original_title": "Suspiria"
+  },
+  "la parte del león": {
+    "url": "",
+    "title_en": "La parte del León",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina",
+    "year": 1978,
+    "duration": 85,
+    "original_title": "La parte del león"
+  },
+  "mulholland drive": {
+    "url": "https://letterboxd.com/film/mulholland-drive/",
+    "title_en": "Mulholland Drive",
+    "director": "David Lynch",
+    "country": "France, USA",
+    "year": 2001,
+    "duration": 147,
+    "title_es": "Mulholland Drive: Sueños, misterios y secretos",
+    "original_title": "Mulholland Drive"
+  },
+  "peeping tom": {
+    "url": "https://letterboxd.com/film/peeping-tom/",
+    "title_en": "Peeping Tom",
+    "director": "Michael Powell",
+    "country": "UK",
+    "year": 1960,
+    "duration": 101,
+    "title_es": "El fotógrafo del pánico",
+    "original_title": "Peeping Tom"
+  },
+  "the red shoes": {
+    "url": "https://letterboxd.com/film/the-red-shoes/",
+    "title_en": "The Red Shoes",
+    "director": "Michael Powell, Emeric Pressburger",
+    "country": "UK",
+    "year": 1948,
+    "duration": 133,
+    "title_es": "Las zapatillas rojas",
+    "original_title": "The Red Shoes"
+  },
+  "singin' in the rain": {
+    "url": "https://letterboxd.com/film/singin-in-the-rain/",
+    "title_en": "Singin' in the Rain",
+    "director": "Stanley Donen, Gene Kelly",
+    "country": "USA",
+    "year": 1952,
+    "duration": 103,
+    "title_es": "Cantando bajo la lluvia",
+    "original_title": "Singin' in the Rain"
+  },
+  "euphoria ep final": {
+    "url": "",
+    "title_en": "Euphoria EP Final",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "martín (hache)": {
+    "url": "https://letterboxd.com/film/martin-hache/",
+    "title_en": "Martin (Hache)",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina, Spain",
+    "year": 1997,
+    "duration": 134,
+    "original_title": "Martín (Hache)"
+  },
+  "duelo al sol": {
+    "url": "https://letterboxd.com/film/duel-in-the-sun/",
+    "title_en": "Duel in the Sun",
+    "director": "King Vidor",
+    "country": "USA",
+    "year": 1946,
+    "duration": 144,
+    "title_es": "Duelo al sol",
+    "original_title": "Duel in the Sun"
+  },
+  "la ley de la frontera": {
+    "url": "https://letterboxd.com/film/la-ley-de-la-frontera/",
+    "title_en": "The Frontier Law",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina, Spain",
+    "year": 1995,
+    "duration": 113,
+    "original_title": "La ley de la frontera"
+  },
+  "haute tension": {
+    "url": "https://letterboxd.com/film/high-tension/",
+    "title_en": "High Tension",
+    "director": "Alexandre Aja",
+    "country": "France, Romania",
+    "year": 2003,
+    "duration": 91,
+    "title_es": "Alta tensión",
+    "original_title": "Haute tension"
+  },
+  "all that heaven allows": {
+    "url": "https://letterboxd.com/film/all-that-heaven-allows/",
+    "title_en": "All That Heaven Allows",
+    "director": "Douglas Sirk",
+    "country": "USA",
+    "year": 1955,
+    "duration": 89,
+    "title_es": "Sólo el cielo lo sabe",
+    "original_title": "All That Heaven Allows"
+  },
+  "lola": {
+    "url": "https://letterboxd.com/film/lola-1981/",
+    "title_en": "Lola",
+    "director": "Rainer Werner Fassbinder",
+    "country": "Germany",
+    "year": 1981,
+    "duration": 113,
+    "original_title": "Lola"
+  },
+  "la discoteca del amor": {
+    "url": "",
+    "title_en": "La discoteca del amor",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina",
+    "year": 1980,
+    "duration": 97,
+    "title_es": "La Discoteca del Amor",
+    "original_title": "La discoteca del amor"
+  },
+  "under the silver lake": {
+    "url": "https://letterboxd.com/film/under-the-silver-lake/",
+    "title_en": "Under the Silver Lake",
+    "director": "David Robert Mitchell",
+    "country": "USA",
+    "year": 2018,
+    "duration": 139,
+    "title_es": "Lo que esconde Silver Lake",
+    "original_title": "Under the Silver Lake"
+  },
+  "roma": {
+    "url": "https://letterboxd.com/film/roma-2004/",
+    "title_en": "Roma",
+    "director": "Adolfo Aristarain",
+    "country": "Spain, Argentina",
+    "year": 2004,
+    "duration": 152,
+    "original_title": "Roma"
+  },
+  "fright night": {
+    "url": "https://letterboxd.com/film/fright-night/",
+    "title_en": "Fright Night",
+    "director": "Tom Holland",
+    "country": "USA",
+    "year": 1985,
+    "duration": 107,
+    "title_es": "Noche de miedo",
+    "original_title": "Fright Night"
+  },
+  "body double": {
+    "url": "https://letterboxd.com/film/body-double/",
+    "title_en": "Body Double",
+    "director": "Brian De Palma",
+    "country": "USA",
+    "year": 1984,
+    "duration": 114,
+    "title_es": "Doble cuerpo",
+    "original_title": "Body Double"
+  },
+  "un lugar en el mundo": {
+    "url": "https://letterboxd.com/film/un-lugar-en-el-mundo/",
+    "title_en": "A Place in the World",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina, Spain",
+    "year": 1992,
+    "duration": 121,
+    "original_title": "Un lugar en el mundo"
+  },
+  "últimos días de la víctima": {
+    "url": "https://letterboxd.com/film/ultimos-dias-de-la-victima/",
+    "title_en": "Last Days of the Victim",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina",
+    "year": 1982,
+    "duration": 92,
+    "original_title": "Últimos días de la víctima"
+  },
+  "inherent vice": {
+    "url": "https://letterboxd.com/film/inherent-vice/",
+    "title_en": "Inherent Vice",
+    "director": "Paul Thomas Anderson",
+    "country": "USA",
+    "year": 2014,
+    "duration": 149,
+    "title_es": "Puro vicio",
+    "original_title": "Inherent Vice"
+  },
+  "lugares comunes": {
+    "url": "https://letterboxd.com/film/lugares-comunes/",
+    "title_en": "Common Ground",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina, Spain",
+    "year": 2002,
+    "duration": 110,
+    "title_es": "Lugares comunes",
+    "original_title": "Lugares comunes"
+  },
+  "pulse": {
+    "url": "https://letterboxd.com/film/pulse-2001/",
+    "title_en": "Pulse",
+    "director": "Kiyoshi Kurosawa",
+    "country": "Japan",
+    "year": 2001,
+    "duration": 119,
+    "title_es": "Pulse (Kairo)",
+    "original_title": "回路"
+  },
+  "the big lebowski": {
+    "url": "",
+    "title_en": "The Big Lebowski",
+    "director": "Joel Coen, Ethan Coen",
+    "country": "United Kingdom, United States of America",
+    "year": 1998,
+    "duration": 117,
+    "title_es": "El gran Lebowski",
+    "original_title": "The Big Lebowski"
   }
 }

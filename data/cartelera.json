@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-26T13:59:02",
+  "updated": "2026-05-26T17:53:17",
   "screenings": [
     {
       "cine": "Cinemark Palermo",
@@ -16,6 +16,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "12:20",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-26",
       "hora": "12:30",
@@ -27,6 +41,34 @@
       "duration": 119,
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "12:50",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "12:50",
+      "title_es": "Pequeños monstruos",
+      "title_en": "Finnick 2",
+      "director": "Denis Chernov",
+      "country": "Russia",
+      "year": 2025,
+      "duration": 88,
+      "letterboxd": "https://letterboxd.com/film/finnick-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -72,6 +114,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "13:00",
+      "title_es": "Pequeños monstruos",
+      "title_en": "Finnick 2",
+      "director": "Denis Chernov",
+      "country": "Russia",
+      "year": 2025,
+      "duration": 85,
+      "letterboxd": "https://letterboxd.com/film/finnick-2/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-26",
       "hora": "13:00",
@@ -101,6 +157,20 @@
     },
     {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-26",
+      "hora": "13:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-26",
       "hora": "13:00",
       "title_es": "Star Wars: The Mandalorian and Grogu",
@@ -153,6 +223,20 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "13:10",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -222,6 +306,20 @@
       "year": 2026,
       "duration": 119,
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "13:20",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -254,6 +352,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "13:20",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-26",
       "hora": "13:30",
@@ -264,6 +376,20 @@
       "year": 2026,
       "duration": 127,
       "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "13:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -293,6 +419,48 @@
       "duration": 119,
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "13:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "13:30",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "13:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -324,20 +492,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-26",
-      "hora": "14:00",
-      "title_es": "Lo habrás imaginado",
-      "title_en": "Lo habrás imaginado",
-      "director": "Victoria Chaya Miranda",
-      "country": "Argentina",
-      "year": 2019,
-      "duration": 85,
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=794",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-26",
       "hora": "14:00",
@@ -377,6 +531,34 @@
       "duration": 119,
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "14:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "14:00",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -408,20 +590,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-26",
-      "hora": "14:15",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-26",
       "hora": "14:15",
@@ -464,6 +632,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "14:15",
+      "title_es": "El drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "14:20",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-26",
       "hora": "14:30",
@@ -478,6 +674,34 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "14:30",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "14:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-26",
       "hora": "14:40",
@@ -489,6 +713,34 @@
       "duration": 88,
       "letterboxd": "https://letterboxd.com/film/finnick-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "14:40",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "14:40",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -520,6 +772,48 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "15:00",
+      "title_es": "Pequeños monstruos",
+      "title_en": "Finnick 2",
+      "director": "Denis Chernov",
+      "country": "Russia",
+      "year": 2025,
+      "duration": 85,
+      "letterboxd": "https://letterboxd.com/film/finnick-2/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "15:00",
+      "title_es": "Pequeños monstruos",
+      "title_en": "Finnick 2",
+      "director": "Denis Chernov",
+      "country": "Russia",
+      "year": 2025,
+      "duration": 88,
+      "letterboxd": "https://letterboxd.com/film/finnick-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "15:00",
+      "title_es": "Las ovejas detectives",
+      "title_en": "The Sheep Detectives",
+      "director": "Kyle Balda",
+      "country": "USA, UK",
+      "year": 2026,
+      "duration": 109,
+      "letterboxd": "https://letterboxd.com/film/the-sheep-detectives/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-05-26",
       "hora": "15:00",
@@ -545,6 +839,20 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "15:10",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
     {
@@ -604,6 +912,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "15:30",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "15:30",
+      "title_es": "Pequeños monstruos",
+      "title_en": "Finnick 2",
+      "director": "Denis Chernov",
+      "country": "Russia",
+      "year": 2025,
+      "duration": 85,
+      "letterboxd": "https://letterboxd.com/film/finnick-2/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-26",
       "hora": "15:40",
@@ -642,6 +978,34 @@
       "year": 2016,
       "duration": 100,
       "letterboxd": "",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "15:50",
+      "title_es": "El pasajero del Diablo",
+      "title_en": "Passenger",
+      "director": "André Øvredal",
+      "country": "USA",
+      "year": 2026,
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/passenger-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "15:50",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -717,6 +1081,20 @@
     },
     {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-26",
+      "hora": "16:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-26",
       "hora": "16:00",
       "title_es": "Star Wars: The Mandalorian and Grogu",
@@ -786,6 +1164,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "16:10",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-26",
       "hora": "16:10",
@@ -797,6 +1189,34 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "16:15",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "16:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -884,6 +1304,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "16:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "16:30",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-26",
       "hora": "16:30",
@@ -937,6 +1385,20 @@
       "duration": 119,
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "16:40",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -996,6 +1458,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "16:55",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-26",
       "hora": "17:00",
@@ -1010,7 +1486,35 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "17:00",
+      "title_es": "Mortal Kombat II",
+      "title_en": "Mortal Kombat II",
+      "director": "Simon McQuoid",
+      "country": "USA",
+      "year": 2026,
+      "duration": 116,
+      "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-26",
+      "hora": "17:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-26",
       "hora": "17:00",
       "title_es": "Star Wars: The Mandalorian and Grogu",
@@ -1063,6 +1567,90 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "17:10",
+      "title_es": "Las ovejas detectives",
+      "title_en": "The Sheep Detectives",
+      "director": "Kyle Balda",
+      "country": "USA, UK",
+      "year": 2026,
+      "duration": 109,
+      "letterboxd": "https://letterboxd.com/film/the-sheep-detectives/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "17:10",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "17:15",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "17:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "17:30",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -1094,6 +1682,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "17:45",
+      "title_es": "Nada Entre Los Dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-26",
       "hora": "17:50",
@@ -1119,6 +1721,20 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "17:50",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -1178,6 +1794,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "18:10",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-26",
       "hora": "18:10",
@@ -1217,6 +1847,20 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-05-26",
+      "hora": "18:30",
+      "title_es": "Suspiria",
+      "title_en": "Suspiria",
+      "director": "Dario Argento",
+      "country": "Italia",
+      "year": 1977,
+      "duration": 99,
+      "letterboxd": "https://letterboxd.com/film/suspiria/",
+      "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
     {
@@ -1374,6 +2018,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "19:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "19:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-26",
       "hora": "19:00",
@@ -1458,6 +2130,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "19:10",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "19:15",
+      "title_es": "El drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-26",
       "hora": "19:20",
@@ -1514,6 +2214,62 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "19:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "19:40",
+      "title_es": "Mortal Kombat II",
+      "title_en": "Mortal Kombat II",
+      "director": "Simon McQuoid",
+      "country": "USA",
+      "year": 2026,
+      "duration": 116,
+      "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "19:40",
+      "title_es": "Colonia 75",
+      "title_en": "Köln 75",
+      "director": "Ido Fluk",
+      "country": "Belgium, Germany",
+      "year": 2025,
+      "duration": 112,
+      "letterboxd": "https://letterboxd.com/film/koln-75/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "19:40",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-26",
       "hora": "19:45",
@@ -1526,6 +2282,34 @@
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "19:45",
+      "title_es": "El desprecio",
+      "title_en": "Contempt",
+      "director": "Jean-Luc Godard",
+      "country": "France, Italy",
+      "year": 1963,
+      "duration": 103,
+      "letterboxd": "https://letterboxd.com/film/contempt/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "19:45",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Palermo",
@@ -1552,6 +2336,20 @@
       "year": 2026,
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "19:50",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -1609,6 +2407,62 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "20:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "20:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "20:00",
+      "title_es": "El Drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "20:00",
+      "title_es": "Mortal Kombat II",
+      "title_en": "Mortal Kombat II",
+      "director": "Simon McQuoid",
+      "country": "USA",
+      "year": 2026,
+      "duration": 116,
+      "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -1721,6 +2575,48 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "20:20",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "20:20",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "20:30",
+      "title_es": "Mortal Kombat II",
+      "title_en": "Mortal Kombat II",
+      "director": "Simon McQuoid",
+      "country": "USA",
+      "year": 2026,
+      "duration": 116,
+      "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
+      "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
     {
@@ -1906,6 +2802,20 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "21:45",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-26",
       "hora": "21:50",
@@ -1931,6 +2841,20 @@
       "duration": 119,
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "21:55",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -2032,6 +2956,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "22:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "22:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-26",
       "hora": "22:10",
@@ -2060,6 +3012,62 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "22:10",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "22:15",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "22:15",
+      "title_es": "Me casé con un boludo",
+      "title_en": "Me casé con un boludo",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
+      "year": 2016,
+      "duration": 100,
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "22:15",
+      "title_es": "El pasajero del Diablo",
+      "title_en": "Passenger",
+      "director": "André Øvredal",
+      "country": "USA",
+      "year": 2026,
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/passenger-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-26",
       "hora": "22:20",
@@ -2085,6 +3093,34 @@
       "duration": 108,
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "22:20",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "22:20",
+      "title_es": "Hokum: La maldición de la bruja",
+      "title_en": "Hokum",
+      "director": "Damian McCarthy",
+      "country": "USA, Ireland",
+      "year": 2026,
+      "duration": 107,
+      "letterboxd": "https://letterboxd.com/film/hokum/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -2144,6 +3180,48 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "22:30",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "22:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-26",
+      "hora": "22:30",
+      "title_es": "Nada Entre Los Dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-26",
       "hora": "22:40",
@@ -2155,6 +3233,34 @@
       "duration": 108,
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "22:40",
+      "title_es": "El pasajero del Diablo",
+      "title_en": "Passenger",
+      "director": "André Øvredal",
+      "country": "USA",
+      "year": 2026,
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/passenger-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-26",
+      "hora": "22:40",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
     {
@@ -2173,6 +3279,20 @@
     },
     {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-26",
+      "hora": "22:45",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-26",
       "hora": "22:45",
       "title_es": "El diablo viste a la moda 2",
@@ -2284,6 +3404,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-26",
+      "hora": "23:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-26",
       "hora": "23:00",
@@ -2322,6 +3456,48 @@
       "year": 2026,
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/passenger-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "23:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "23:00",
+      "title_es": "El Pasajero Del Diablo",
+      "title_en": "Passenger",
+      "director": "André Øvredal",
+      "country": "USA",
+      "year": 2026,
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/passenger-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-26",
+      "hora": "23:10",
+      "title_es": "Mortal Kombat II",
+      "title_en": "Mortal Kombat II",
+      "director": "Simon McQuoid",
+      "country": "USA",
+      "year": 2026,
+      "duration": 116,
+      "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -2354,6 +3530,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "12:50",
+      "title_es": "Pequeños monstruos",
+      "title_en": "Finnick 2",
+      "director": "Denis Chernov",
+      "country": "Russia",
+      "year": 2025,
+      "duration": 88,
+      "letterboxd": "https://letterboxd.com/film/finnick-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-27",
       "hora": "13:00",
@@ -2438,6 +3628,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "13:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-27",
       "hora": "13:10",
@@ -2449,6 +3653,20 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "13:10",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -2606,6 +3824,48 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "13:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "13:30",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "13:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-27",
       "hora": "13:40",
@@ -2718,6 +3978,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "14:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-27",
       "hora": "14:05",
@@ -2788,6 +4062,34 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "14:30",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "14:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-27",
       "hora": "14:40",
@@ -2827,6 +4129,20 @@
       "duration": 90,
       "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "15:00",
+      "title_es": "Pequeños monstruos",
+      "title_en": "Finnick 2",
+      "director": "Denis Chernov",
+      "country": "Russia",
+      "year": 2025,
+      "duration": 88,
+      "letterboxd": "https://letterboxd.com/film/finnick-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -2897,6 +4213,20 @@
       "duration": 98,
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "15:30",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3012,6 +4342,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "16:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-27",
       "hora": "16:05",
@@ -3079,6 +4423,20 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "16:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3191,6 +4549,34 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "16:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "16:30",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3348,6 +4734,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "17:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-27",
       "hora": "17:10",
@@ -3373,6 +4773,48 @@
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "17:10",
+      "title_es": "El Drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "17:15",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "17:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3446,6 +4888,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "17:50",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-27",
       "hora": "18:00",
@@ -3514,6 +4970,20 @@
       "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-05-27",
+      "hora": "18:30",
+      "title_es": "La parte del León",
+      "title_en": "La parte del León",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1978,
+      "duration": 100,
+      "letterboxd": "",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Palermo",
@@ -3652,6 +5122,34 @@
       "year": 2026,
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "19:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "19:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -3810,6 +5308,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "19:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "19:40",
+      "title_es": "Colonia 75",
+      "title_en": "Köln 75",
+      "director": "Ido Fluk",
+      "country": "Belgium, Germany",
+      "year": 2025,
+      "duration": 112,
+      "letterboxd": "https://letterboxd.com/film/koln-75/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-27",
       "hora": "19:45",
@@ -3822,6 +5348,20 @@
       "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "19:45",
+      "title_es": "El desprecio",
+      "title_en": "Contempt",
+      "director": "Jean-Luc Godard",
+      "country": "France, Italy",
+      "year": 1963,
+      "duration": 103,
+      "letterboxd": "https://letterboxd.com/film/contempt/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -3904,6 +5444,48 @@
       "year": 2026,
       "duration": 132,
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "20:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "20:00",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "20:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -4003,6 +5585,20 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "20:20",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -4174,6 +5770,20 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "21:45",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-27",
       "hora": "21:50",
@@ -4286,6 +5896,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "22:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-27",
       "hora": "22:10",
@@ -4311,6 +5935,34 @@
       "duration": 119,
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "22:15",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "22:15",
+      "title_es": "Me casé con un boludo",
+      "title_en": "Me casé con un boludo",
+      "director": "Juan Taratuto",
+      "country": "Argentina",
+      "year": 2016,
+      "duration": 100,
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -4426,6 +6078,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "22:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "22:30",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-27",
       "hora": "22:45",
@@ -4450,6 +6130,20 @@
       "year": 2026,
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "22:45",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -4604,6 +6298,48 @@
       "year": 2026,
       "duration": 94,
       "letterboxd": "https://letterboxd.com/film/passenger-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "23:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "23:00",
+      "title_es": "El Pasajero Del Diablo",
+      "title_en": "Passenger",
+      "director": "André Øvredal",
+      "country": "USA",
+      "year": 2026,
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/passenger-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-27",
+      "hora": "23:10",
+      "title_es": "Mortal Kombat II",
+      "title_en": "Mortal Kombat II",
+      "director": "Simon McQuoid",
+      "country": "USA",
+      "year": 2026,
+      "duration": 116,
+      "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -4790,6 +6526,34 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-05-28",
+      "hora": "18:00",
+      "title_es": "El increíble castillo vagabundo",
+      "title_en": "Howl's Moving Castle",
+      "director": "Hayao Miyazaki",
+      "country": "Japan",
+      "year": 2004,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/howls-moving-castle/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-05-28",
+      "hora": "18:30",
+      "title_es": "Mulholland Drive",
+      "title_en": "Mulholland Drive",
+      "director": "David Lynch",
+      "country": "Estados Unidos, Francia",
+      "year": 2001,
+      "duration": 147,
+      "letterboxd": "https://letterboxd.com/film/mulholland-drive/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-05-28",
       "hora": "18:30",
@@ -4818,6 +6582,20 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-05-28",
+      "hora": "19:00",
+      "title_es": "La mirada cinéfila, de Daniela Kozak",
+      "title_en": "La mirada cinéfila, de Daniela Kozak",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/la-mirada-cinefila-de-daniela-kozak/",
+      "ciclo": "Presentación de libro"
+    },
+    {
       "cine": "Lumiton",
       "fecha": "2026-05-28",
       "hora": "19:00",
@@ -4833,6 +6611,20 @@
     },
     {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "19:00",
+      "title_es": "Mulholland Drive. Sueños, misterios y secretos",
+      "title_en": "Mulholland Drive",
+      "director": "David Lynch",
+      "country": "France, USA",
+      "year": 2001,
+      "duration": 147,
+      "letterboxd": "https://letterboxd.com/film/mulholland-drive/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-28",
       "hora": "19:00",
       "title_es": "Mulholland Drive. Sueños, misterios y secretos",
@@ -5252,6 +7044,20 @@
       "ciclo": "Encuentro con Teresa Villaverde"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-05-29",
+      "hora": "18:30",
+      "title_es": "Peeping Tom",
+      "title_en": "Peeping Tom",
+      "director": "Michael Powell",
+      "country": "Reino Unido",
+      "year": 1960,
+      "duration": 101,
+      "letterboxd": "https://letterboxd.com/film/peeping-tom/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-29",
       "hora": "18:30",
@@ -5281,6 +7087,20 @@
     },
     {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "19:00",
+      "title_es": "Mulholland Drive. Sueños, misterios y secretos",
+      "title_en": "Mulholland Drive",
+      "director": "David Lynch",
+      "country": "France, USA",
+      "year": 2001,
+      "duration": 147,
+      "letterboxd": "https://letterboxd.com/film/mulholland-drive/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-29",
       "hora": "19:00",
       "title_es": "Mulholland Drive. Sueños, misterios y secretos",
@@ -6078,6 +7898,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-05-31",
+      "hora": "16:00",
+      "title_es": "The Red Shoes",
+      "title_en": "The Red Shoes",
+      "director": "Michael Powell, Emeric Pressburger",
+      "country": "Reino Unido",
+      "year": 1948,
+      "duration": 133,
+      "letterboxd": "https://letterboxd.com/film/the-red-shoes/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-05-31",
       "hora": "16:30",
@@ -6246,7 +8080,35 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-05-31",
+      "hora": "19:00",
+      "title_es": "Singin' in the Rain",
+      "title_en": "Singin' in the Rain",
+      "director": "Stanley Donen, Gene Kelly",
+      "country": "Estados Unidos",
+      "year": 1952,
+      "duration": 103,
+      "letterboxd": "https://letterboxd.com/film/singin-in-the-rain/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "19:00",
+      "title_es": "El hombre elefante",
+      "title_en": "The Elephant Man",
+      "director": "David Lynch",
+      "country": "USA",
+      "year": 1980,
+      "duration": 124,
+      "letterboxd": "https://letterboxd.com/film/the-elephant-man/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-31",
       "hora": "19:00",
       "title_es": "El hombre elefante",
@@ -6384,6 +8246,20 @@
       "letterboxd": "https://letterboxd.com/film/entroncamento/",
       "ticket_url": "https://malba.org.ar/evento/entroncamento/",
       "ciclo": "Semana de cine portugués"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-05-31",
+      "hora": "22:00",
+      "title_es": "Euphoria EP Final",
+      "title_en": "Euphoria EP Final",
+      "director": "Sam Levinson",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 93,
+      "letterboxd": "",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Caballito",
@@ -6583,6 +8459,20 @@
     },
     {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "19:00",
+      "title_es": "Una historia sencilla",
+      "title_en": "The Straight Story",
+      "director": "David Lynch",
+      "country": "USA, UK",
+      "year": 1999,
+      "duration": 112,
+      "letterboxd": "https://letterboxd.com/film/the-straight-story/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-01",
       "hora": "19:00",
       "title_es": "Una historia sencilla",
@@ -6848,6 +8738,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-02",
+      "hora": "18:00",
+      "title_es": "El increíble castillo vagabundo",
+      "title_en": "Howl's Moving Castle",
+      "director": "Hayao Miyazaki",
+      "country": "Japan",
+      "year": 2004,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/howls-moving-castle/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-02",
       "hora": "18:00",
@@ -6860,6 +8764,20 @@
       "letterboxd": "https://letterboxd.com/film/the-bat/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-02",
+      "hora": "18:30",
+      "title_es": "Martín (Hache)",
+      "title_en": "Martin (Hache)",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 1997,
+      "duration": 134,
+      "letterboxd": "https://letterboxd.com/film/martin-hache/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Cacodelphia",
@@ -6877,6 +8795,20 @@
     },
     {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "19:00",
+      "title_es": "El hombre elefante",
+      "title_en": "The Elephant Man",
+      "director": "David Lynch",
+      "country": "USA",
+      "year": 1980,
+      "duration": 124,
+      "letterboxd": "https://letterboxd.com/film/the-elephant-man/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-02",
       "hora": "19:00",
       "title_es": "El hombre elefante",
@@ -7156,6 +9088,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-03",
+      "hora": "18:00",
+      "title_es": "El increíble castillo vagabundo",
+      "title_en": "Howl's Moving Castle",
+      "director": "Hayao Miyazaki",
+      "country": "Japan",
+      "year": 2004,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/howls-moving-castle/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-03",
       "hora": "18:00",
@@ -7168,6 +9114,20 @@
       "letterboxd": "https://letterboxd.com/film/battling-butler/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-03",
+      "hora": "18:30",
+      "title_es": "Duelo al sol",
+      "title_en": "Duel in the Sun",
+      "director": "King Vidor",
+      "country": "Estados Unidos",
+      "year": 1946,
+      "duration": 144,
+      "letterboxd": "https://letterboxd.com/film/duel-in-the-sun/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Cacodelphia",
@@ -7194,6 +9154,34 @@
       "year": 2026,
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-03",
+      "hora": "19:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-03",
+      "hora": "19:00",
+      "title_es": "El increíble castillo vagabundo",
+      "title_en": "Howl's Moving Castle",
+      "director": "Hayao Miyazaki",
+      "country": "Japan",
+      "year": 2004,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/howls-moving-castle/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -7237,6 +9225,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-03",
+      "hora": "20:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7310,6 +9312,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-03",
+      "hora": "21:15",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-03",
       "hora": "22:30",
@@ -7366,6 +9382,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-03",
+      "hora": "22:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-03",
       "hora": "22:40",
@@ -7405,6 +9435,34 @@
       "duration": 110,
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-03",
+      "hora": "23:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-04",
+      "hora": "12:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7489,6 +9547,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-04",
+      "hora": "14:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7604,6 +9676,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-04",
+      "hora": "17:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-04",
       "hora": "17:30",
@@ -7674,6 +9760,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-04",
+      "hora": "18:30",
+      "title_es": "La ley de la frontera",
+      "title_en": "The Frontier Law",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 1995,
+      "duration": 109,
+      "letterboxd": "https://letterboxd.com/film/la-ley-de-la-frontera/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-06-04",
       "hora": "19:00",
@@ -7727,6 +9827,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-04",
+      "hora": "19:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7884,6 +9998,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-04",
+      "hora": "22:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-04",
       "hora": "22:30",
@@ -7940,6 +10068,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-04",
+      "hora": "22:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-04",
       "hora": "22:50",
@@ -7979,6 +10121,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-05",
+      "hora": "12:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8063,6 +10219,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-05",
+      "hora": "14:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8178,6 +10348,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-05",
+      "hora": "17:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-05",
       "hora": "17:30",
@@ -8262,6 +10446,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-05",
+      "hora": "18:30",
+      "title_es": "Haute Tension",
+      "title_en": "High Tension",
+      "director": "Alexandre Aja",
+      "country": "Francia",
+      "year": 2003,
+      "duration": 91,
+      "letterboxd": "https://letterboxd.com/film/high-tension/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-05",
       "hora": "19:30",
@@ -8301,6 +10499,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-05",
+      "hora": "19:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8458,6 +10670,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-05",
+      "hora": "22:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-05",
       "hora": "22:30",
@@ -8514,6 +10740,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-05",
+      "hora": "22:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-05",
       "hora": "22:50",
@@ -8539,6 +10779,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-06",
+      "hora": "12:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8626,6 +10880,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-06",
+      "hora": "14:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-06",
       "hora": "15:00",
@@ -8682,6 +10950,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-06",
+      "hora": "16:00",
+      "title_es": "The Red Shoes",
+      "title_en": "The Red Shoes",
+      "director": "Michael Powell, Emeric Pressburger",
+      "country": "Reino Unido",
+      "year": 1948,
+      "duration": 133,
+      "letterboxd": "https://letterboxd.com/film/the-red-shoes/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-06",
       "hora": "16:00",
@@ -8735,6 +11017,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-06",
+      "hora": "17:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8822,6 +11118,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-06",
+      "hora": "19:00",
+      "title_es": "Singin' in the Rain",
+      "title_en": "Singin' in the Rain",
+      "director": "Stanley Donen, Gene Kelly",
+      "country": "Estados Unidos",
+      "year": 1952,
+      "duration": 103,
+      "letterboxd": "https://letterboxd.com/film/singin-in-the-rain/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-06",
       "hora": "19:30",
@@ -8861,6 +11171,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-06",
+      "hora": "19:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -9018,6 +11342,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-06",
+      "hora": "22:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-06",
       "hora": "22:30",
@@ -9074,6 +11412,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-06",
+      "hora": "22:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-06",
       "hora": "22:50",
@@ -9099,6 +11451,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-07",
+      "hora": "12:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -9186,6 +11552,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-07",
+      "hora": "14:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-07",
       "hora": "15:00",
@@ -9242,6 +11622,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-07",
+      "hora": "16:00",
+      "title_es": "All That Heaven Allows",
+      "title_en": "All That Heaven Allows",
+      "director": "Douglas Sirk",
+      "country": "Estados Unidos",
+      "year": 1955,
+      "duration": 89,
+      "letterboxd": "https://letterboxd.com/film/all-that-heaven-allows/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-07",
       "hora": "16:00",
@@ -9295,6 +11689,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-07",
+      "hora": "17:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -9382,6 +11790,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-07",
+      "hora": "19:00",
+      "title_es": "Lola",
+      "title_en": "Lola",
+      "director": "Rainer Werner Fassbinder",
+      "country": "Alemania",
+      "year": 1981,
+      "duration": 115,
+      "letterboxd": "https://letterboxd.com/film/lola-1981/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-07",
       "hora": "19:30",
@@ -9421,6 +11843,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-07",
+      "hora": "19:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -9578,6 +12014,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-07",
+      "hora": "22:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-07",
       "hora": "22:30",
@@ -9634,6 +12084,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-07",
+      "hora": "22:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-07",
       "hora": "22:50",
@@ -9659,6 +12123,48 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-08",
+      "hora": "00:20",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-08",
+      "hora": "00:50",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-08",
+      "hora": "12:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -9743,6 +12249,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-08",
+      "hora": "14:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -9844,6 +12364,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-08",
+      "hora": "17:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-08",
       "hora": "17:30",
@@ -9939,6 +12473,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-08",
+      "hora": "19:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -10082,6 +12630,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-08",
+      "hora": "22:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-08",
       "hora": "22:30",
@@ -10138,6 +12700,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-08",
+      "hora": "22:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-08",
       "hora": "22:50",
@@ -10163,6 +12739,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-09",
+      "hora": "12:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -10247,6 +12837,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-09",
+      "hora": "14:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -10362,6 +12966,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-09",
+      "hora": "17:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-09",
       "hora": "17:30",
@@ -10432,6 +13050,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-09",
+      "hora": "18:30",
+      "title_es": "La discoteca del amor",
+      "title_en": "La discoteca del amor",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1980,
+      "duration": 90,
+      "letterboxd": "",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-09",
       "hora": "19:30",
@@ -10471,6 +13103,20 @@
       "duration": 95,
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-09",
+      "hora": "19:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -10628,6 +13274,20 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-09",
+      "hora": "22:00",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-09",
       "hora": "22:30",
@@ -10671,6 +13331,20 @@
     },
     {
       "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-09",
+      "hora": "22:30",
+      "title_es": "Scary Movie",
+      "title_en": "Scary Movie",
+      "director": "Michael Tiddes",
+      "country": "USA",
+      "year": 2026,
+      "duration": 95,
+      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-09",
       "hora": "22:30",
       "title_es": "Scary Movie",
@@ -10740,6 +13414,20 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-10",
+      "hora": "18:30",
+      "title_es": "Under the Silver Lake",
+      "title_en": "Under the Silver Lake",
+      "director": "David Robert Mitchell",
+      "country": "Estados Unidos",
+      "year": 2018,
+      "duration": 139,
+      "letterboxd": "https://letterboxd.com/film/under-the-silver-lake/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-10",
       "hora": "21:00",
@@ -10794,6 +13482,20 @@
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-11",
+      "hora": "18:30",
+      "title_es": "Roma",
+      "title_en": "Roma",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 2004,
+      "duration": 148,
+      "letterboxd": "https://letterboxd.com/film/roma-2004/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -10852,6 +13554,20 @@
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-12",
+      "hora": "18:30",
+      "title_es": "Fright Night",
+      "title_en": "Fright Night",
+      "director": "Tom Holland",
+      "country": "Estados Unidos",
+      "year": 1985,
+      "duration": 106,
+      "letterboxd": "https://letterboxd.com/film/fright-night/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-12",
       "hora": "20:30",
@@ -10880,6 +13596,20 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-13",
+      "hora": "16:00",
+      "title_es": "Body Double",
+      "title_en": "Body Double",
+      "director": "Brian De Palma",
+      "country": "Estados Unidos",
+      "year": 1984,
+      "duration": 114,
+      "letterboxd": "https://letterboxd.com/film/body-double/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-13",
       "hora": "17:30",
@@ -10905,6 +13635,20 @@
       "duration": 80,
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/sabados-de-superaccion",
+      "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-13",
+      "hora": "19:00",
+      "title_es": "Mulholland Drive",
+      "title_en": "Mulholland Drive",
+      "director": "David Lynch",
+      "country": "Estados Unidos, Francia",
+      "year": 2001,
+      "duration": 147,
+      "letterboxd": "https://letterboxd.com/film/mulholland-drive/",
+      "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
     {
@@ -10936,6 +13680,20 @@
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-14",
+      "hora": "16:00",
+      "title_es": "Un lugar en el mundo",
+      "title_en": "A Place in the World",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España, Uruguay",
+      "year": 1992,
+      "duration": 120,
+      "letterboxd": "https://letterboxd.com/film/un-lugar-en-el-mundo/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-14",
       "hora": "17:00",
@@ -10961,6 +13719,20 @@
       "duration": 102,
       "letterboxd": "https://letterboxd.com/film/galaxy-quest/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-14",
+      "hora": "19:00",
+      "title_es": "Martín (Hache)",
+      "title_en": "Martin (Hache)",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 1997,
+      "duration": 134,
+      "letterboxd": "https://letterboxd.com/film/martin-hache/",
+      "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
     {
@@ -11006,6 +13778,20 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-16",
+      "hora": "18:30",
+      "title_es": "Últimos días de la víctima",
+      "title_en": "Last Days of the Victim",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1982,
+      "duration": 94,
+      "letterboxd": "https://letterboxd.com/film/ultimos-dias-de-la-victima/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-17",
       "hora": "15:00",
@@ -11032,6 +13818,20 @@
       "letterboxd": "https://letterboxd.com/film/the-golden-clown/",
       "ticket_url": "",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-17",
+      "hora": "18:30",
+      "title_es": "Inherent Vice",
+      "title_en": "Inherent Vice",
+      "director": "Paul Thomas Anderson",
+      "country": "Estados Unidos",
+      "year": 2014,
+      "duration": 148,
+      "letterboxd": "https://letterboxd.com/film/inherent-vice/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -11090,6 +13890,20 @@
       "ciclo": "Tres tardes con Gardel"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-18",
+      "hora": "18:30",
+      "title_es": "Lugares comunes",
+      "title_en": "Common Ground",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 2002,
+      "duration": 108,
+      "letterboxd": "https://letterboxd.com/film/lugares-comunes/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-18",
       "hora": "20:00",
@@ -11132,6 +13946,20 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-19",
+      "hora": "18:30",
+      "title_es": "Pulse",
+      "title_en": "Pulse",
+      "director": "Kiyoshi Kurosawa",
+      "country": "Japón",
+      "year": 2001,
+      "duration": 119,
+      "letterboxd": "https://letterboxd.com/film/pulse-2001/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-19",
       "hora": "21:00",
@@ -11146,6 +13974,20 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Amorina",
+      "fecha": "2026-06-20",
+      "hora": "16:00",
+      "title_es": "The Big Lebowski",
+      "title_en": "The Big Lebowski",
+      "director": "Coen Brothers",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 1998,
+      "duration": 127,
+      "letterboxd": "",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-20",
       "hora": "18:00",
@@ -11157,6 +13999,20 @@
       "duration": null,
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-20",
+      "hora": "19:00",
+      "title_es": "Under the Silver Lake",
+      "title_en": "Under the Silver Lake",
+      "director": "David Robert Mitchell",
+      "country": "Estados Unidos",
+      "year": 2018,
+      "duration": 139,
+      "letterboxd": "https://letterboxd.com/film/under-the-silver-lake/",
+      "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
     {
