@@ -573,6 +573,15 @@ async def enrich_title(
             # Empty cached → re-intentar siempre por si la red estaba caída
             pass
         elif _validate_meta(cached, hint_year, hint_director, hint_duration):
+            # Auto-backfill de campos nuevos (ej. genre se agregó al parser
+            # después de muchas entries estar cacheadas). Si el cached tiene
+            # URL pero le falta genre, re-fetch sólo para completar el campo.
+            if not cached.get("genre"):
+                s = fetch_film_page(cached["url"])
+                fresh = parse_film_soup(s, cached["url"]) if s else None
+                if fresh and fresh.get("genre"):
+                    cached["genre"] = fresh["genre"]
+                    cache.set(title, cached)
             return cached
         # else: la entry cacheada NO matchea hints actuales → re-enrich
 
