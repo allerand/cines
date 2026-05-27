@@ -1770,7 +1770,8 @@
     "director": "Isabel Medarde",
     "country": "Spain",
     "year": 2022,
-    "duration": 87
+    "duration": 87,
+    "genre": "Historia, Documental"
   },
   "el partido": {
     "url": "https://letterboxd.com/film/the-match-2026/",
@@ -2001,7 +2002,7 @@
     "original_title": "Suspiria"
   },
   "la parte del león": {
-    "url": "https://letterboxd.com/film/the-lions-share/",
+    "url": "",
     "title_en": "La parte del León",
     "director": "Adolfo Aristarain",
     "country": "Argentina",
@@ -2233,5 +2234,60 @@
     "duration": 113,
     "original_title": "Los Traidores",
     "genre": "Drama"
+  },
+  "el día de la bestia": {
+    "url": "https://letterboxd.com/film/el-dia-de-la-bestia/",
+    "title_en": "The Day of the Beast",
+    "director": "Álex de la Iglesia",
+    "country": "Italy, Spain",
+    "year": 1995,
+    "duration": 104,
+    "genre": "Acción, Terror",
+    "title_es": "El día de la bestia",
+    "original_title": "El día de la bestia"
+  },
+  "el milagro de p. tinto": {
+    "url": "https://letterboxd.com/film/el-milagro-de-p-tinto/",
+    "title_en": "The Miracle of P. Tinto",
+    "director": "Javier Fesser",
+    "country": "Spain",
+    "year": 1998,
+    "duration": 102,
+    "genre": "Fantasía, Comedia",
+    "title_es": "El milagro de P. Tinto",
+    "original_title": "El milagro de P. Tinto"
+  },
+  "el gran arco": {
+    "url": "https://letterboxd.com/film/the-great-arch-2025/",
+    "title_en": "The Great Arch",
+    "director": "Stéphane Demoustier",
+    "country": "France, Denmark",
+    "year": 2025,
+    "duration": 104,
+    "genre": "Drama, Historia",
+    "title_es": "El arquitecto",
+    "original_title": "L'Inconnu de la Grande Arche"
+  },
+  "ella y su hijo": {
+    "url": "https://letterboxd.com/film/woman-and-child/",
+    "title_en": "Woman and Child",
+    "director": "Saeed Roustaee",
+    "country": "Iran, France",
+    "year": 2025,
+    "duration": 131,
+    "genre": "Drama",
+    "title_es": "Ella y su hijo",
+    "original_title": "زن و بچه"
+  },
+  "alpha": {
+    "url": "https://letterboxd.com/film/alpha-2025/",
+    "title_en": "Alpha",
+    "director": "Julia Ducournau",
+    "country": "France, Belgium",
+    "year": 2025,
+    "duration": 128,
+    "genre": "Terror, Ciencia ficción",
+    "original_title": "Alpha",
+    "title_es": "Alfa"
   }
 }
