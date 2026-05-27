@@ -1,10 +1,22 @@
 name: Scrape cartelera (sin postear a IG)
 
-# Workflow manual para correr SÓLO el scraper y commitear data/cartelera.json.
-# No genera ni postea piezas de Instagram. Útil para testear cambios al
-# scraping sin gastar API quota / sin publicar.
+# Workflow para correr SÓLO el scraper y commitear data/cartelera.json.
+# No genera ni postea piezas de Instagram. Sirve para:
+#   1) Trigger manual (testeo de cambios al scraping).
+#   2) Refrescos automáticos durante el día — CTBA y otros cines pueden
+#      agregar eventos después del cron principal de las 4:15 AM (que sí
+#      postea a IG). Los refreshes adicionales capturan esas adiciones
+#      tardías sin re-postear stories.
 
 on:
+  schedule:
+    # Refrescos extra durante el día — sin IG post.
+    # 13:00 UTC = 10:00 AR (mediodía-ish, captura updates de la mañana)
+    # 19:00 UTC = 16:00 AR (media tarde, captura updates del mediodía)
+    # 01:00 UTC = 22:00 AR previo (captura updates de la tarde/noche)
+    - cron: '0 13 * * *'
+    - cron: '0 19 * * *'
+    - cron: '0 1 * * *'
   workflow_dispatch:
     inputs:
       semanas:
@@ -40,7 +52,8 @@ jobs:
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
-        run: python3 run.py --semanas "${{ inputs.semanas }}"
+        # Cuando se dispara por schedule, inputs.semanas viene vacío → default 2
+        run: python3 run.py --semanas "${{ inputs.semanas || '2' }}"
 
       - name: Compute today's date (Buenos Aires)
         if: ${{ inputs.regenerate_stories == 'true' }}
