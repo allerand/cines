@@ -5,8 +5,9 @@
     "director": "Gwendoline Ancelin, DIONO Corbel, Nicolas Guazzagaloppa",
     "country": "France",
     "year": 2009,
+    "duration": 8,
     "genre": "Drama, Animación",
-    "duration": 8
+    "original_title": "EMI"
   },
   "san simón": {
     "url": "https://letterboxd.com/film/san-simon/",
@@ -2556,5 +2557,44 @@
     "genre": "Terror, Ciencia ficción",
     "original_title": "Alpha",
     "title_es": "Alfa"
+  },
+  "la espera": {
+    "url": "https://letterboxd.com/film/the-wait-2026/",
+    "title_en": "The Wait",
+    "director": "Darío Doria",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 79,
+    "genre": ""
+  },
+  "la pintura del futuro": {
+    "url": "https://letterboxd.com/film/la-pintura-del-futuro/",
+    "title_en": "The Painting of the Future",
+    "director": "Alejandro Maly",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 72,
+    "genre": "Documental",
+    "original_title": "La pintura del futuro"
+  },
+  "el atardecer de los grillos": {
+    "url": "https://letterboxd.com/film/el-atardecer-de-los-grillos/",
+    "title_en": "El atardecer de los grillos",
+    "director": "Gonzalo Almeida",
+    "country": "",
+    "year": 2025,
+    "duration": 79,
+    "genre": "Documental",
+    "original_title": "El atardecer de los grillos"
+  },
+  "la fuerza invisible": {
+    "url": "",
+    "title_en": "La fuerza invisible",
+    "director": "Taio Gardey, Pedro Fernández Quiroga",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": null,
+    "original_title": "La Fuerza Invisible: Sierra Leona",
+    "genre": "Documental"
   }
 }
