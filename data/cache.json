@@ -3049,5 +3049,58 @@
     "genre": "Drama",
     "title_es": "La Grazia: La belleza de la duda",
     "original_title": "La grazia"
+  },
+  "gatica \"el mono\"": {
+    "url": "https://letterboxd.com/film/gatica-el-mono/",
+    "title_en": "Gatica, the Monkey",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1993,
+    "duration": 136,
+    "genre": "Drama",
+    "original_title": "Gatica el Mono"
+  },
+  "algo viejo, algo nuevo, algo prestado": {
+    "url": "https://letterboxd.com/film/something-old-something-new-something-borrowed/",
+    "title_en": "Something Old, Something New, Something Borrowed",
+    "director": "Hernán Rosselli",
+    "country": "Argentina, Spain",
+    "year": 2024,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "Algo viejo, algo nuevo, algo prestado"
+  },
+  "la ciénaga": {
+    "url": "https://letterboxd.com/film/la-cienaga/",
+    "title_en": "La Ciénaga",
+    "director": "Lucrecia Martel",
+    "country": "Argentina, France",
+    "year": 2001,
+    "duration": 101,
+    "genre": "Drama",
+    "title_es": "La ciénaga",
+    "original_title": "La Ciénaga"
+  },
+  "the doors": {
+    "url": "https://letterboxd.com/film/the-doors/",
+    "title_en": "The Doors",
+    "director": "Oliver Stone",
+    "country": "USA",
+    "year": 1991,
+    "duration": 140,
+    "genre": "Drama, Música",
+    "title_es": "The Doors",
+    "original_title": "The Doors"
+  },
+  "proyecto fin del mundo": {
+    "url": "https://letterboxd.com/film/project-hail-mary/",
+    "title_en": "Project Hail Mary",
+    "director": "Phil Lord, Christopher Miller",
+    "country": "USA",
+    "year": 2026,
+    "duration": 156,
+    "genre": "Ciencia ficción, Aventura",
+    "title_es": "Proyecto Salvación",
+    "original_title": "Project Hail Mary"
   }
 }
