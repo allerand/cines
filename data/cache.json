@@ -1,13 +1,13 @@
 {
   "emi": {
-    "url": "https://letterboxd.com/film/emi/",
+    "url": "https://letterboxd.com/film/emi-2025-1/",
     "title_en": "Emi",
-    "director": "Gwendoline Ancelin, DIONO Corbel, Nicolas Guazzagaloppa",
-    "country": "France",
-    "year": 2009,
-    "duration": 8,
-    "genre": "Drama, Animación",
-    "original_title": "EMI"
+    "director": "Ezequiel Erriquez",
+    "country": "Argentina, Uruguay",
+    "year": 2025,
+    "duration": 93,
+    "genre": "",
+    "original_title": "Emi"
   },
   "san simón": {
     "url": "https://letterboxd.com/film/san-simon/",
@@ -1413,21 +1413,23 @@
     "genre": "Comedia, Drama"
   },
   "esperando la carroza": {
-    "url": "https://letterboxd.com/film/esperando-la-carroza/",
-    "title_en": "Waiting for the Hearse",
+    "url": "",
+    "title_en": "ESPERANDO LA CARROZA",
     "director": "Alejandro Doria",
     "country": "Argentina",
     "year": 1985,
     "duration": 87,
+    "original_title": "Esperando la carroza",
     "genre": "Comedia"
   },
   "darse cuenta": {
-    "url": "https://letterboxd.com/film/darse-cuenta/",
-    "title_en": "Darse cuenta",
+    "url": "",
+    "title_en": "DARSE CUENTA",
     "director": "Alejandro Doria",
     "country": "Argentina",
     "year": 1984,
     "duration": 100,
+    "original_title": "Darse cuenta",
     "genre": "Drama"
   },
   "la patagonia rebelde": {
@@ -2640,5 +2642,412 @@
     "genre": "Misterio, Ciencia ficción",
     "title_es": "Backrooms: Sin Salida",
     "original_title": "Backrooms"
+  },
+  "familia sumergida": {
+    "url": "https://letterboxd.com/film/familia-sumergida/",
+    "title_en": "A Family Submerged",
+    "director": "María Alché",
+    "country": "Argentina, Brazil",
+    "year": 2018,
+    "duration": 91,
+    "genre": "Drama",
+    "original_title": "Familia sumergida"
+  },
+  "plesiosaurios vivos": {
+    "url": "https://letterboxd.com/film/plesiosaurios-vivos/",
+    "title_en": "Plesiosaurios vivos",
+    "director": "Magrio González, Iris Serrano",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 95,
+    "genre": "Documental",
+    "original_title": "Plesiosaurios vivos"
+  },
+  "el profesor chiflado": {
+    "url": "https://letterboxd.com/film/the-nutty-professor/",
+    "title_en": "The Nutty Professor",
+    "director": "Jerry Lewis",
+    "country": "USA",
+    "year": 1963,
+    "duration": 107,
+    "genre": "Ciencia ficción, Comedia",
+    "title_es": "El profesor chiflado",
+    "original_title": "The Nutty Professor"
+  },
+  "así cantaba carlos gardel": {
+    "url": "https://letterboxd.com/film/asi-cantaba-carlos-gardel/",
+    "title_en": "Así cantaba Carlos Gardel",
+    "director": "Eduardo Morera",
+    "country": "Argentina",
+    "year": 1935,
+    "duration": 35,
+    "genre": "Música",
+    "original_title": "Así cantaba Carlos Gardel"
+  },
+  "catálogo para una familia": {
+    "url": "https://letterboxd.com/film/catalogo-para-una-familia/",
+    "title_en": "Family Catalogue",
+    "director": "Iair Michel Attías",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 84,
+    "genre": "Documental",
+    "original_title": "Catálogo para una familia"
+  },
+  "ánimu": {
+    "url": "https://letterboxd.com/film/animu/",
+    "title_en": "Ánimu",
+    "director": "Miguel Kohan",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 61,
+    "genre": "Documental",
+    "original_title": "Ánimu"
+  },
+  "una tarde en el museo | laboratorio de construcción de cámaras oscuras": {
+    "url": "",
+    "title_en": "UNA TARDE EN EL MUSEO | LABORATORIO DE CONSTRUCCIÓN DE CÁMARAS OSCURAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "divorcio en montevideo": {
+    "url": "",
+    "title_en": "DIVORCIO EN MONTEVIDEO",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1939,
+    "duration": 70,
+    "original_title": "Divorcio en Montevideo",
+    "genre": "Comedia, Romance"
+  },
+  "pecadora equivocada": {
+    "url": "https://letterboxd.com/film/the-philadelphia-story/",
+    "title_en": "The Philadelphia Story",
+    "director": "George Cukor",
+    "country": "USA",
+    "year": 1940,
+    "duration": 113,
+    "genre": "Romance, Comedia"
+  },
+  "los knacks: déjame en el pasado": {
+    "url": "https://letterboxd.com/film/los-knacks-dejame-en-el-pasado/",
+    "title_en": "The Knacks: Leave Me in the Past",
+    "director": "Gabriel Nesci, Mariano Nesci",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 107,
+    "genre": "Documental",
+    "original_title": "Los Knacks: Déjame en el pasado"
+  },
+  "dumbo": {
+    "url": "https://letterboxd.com/film/dumbo/",
+    "title_en": "Dumbo",
+    "director": "Ben Sharpsteen, Jack Kinney, Bill Roberts",
+    "country": "USA",
+    "year": 1941,
+    "duration": 64,
+    "genre": "Animación, Familiar",
+    "title_es": "Dumbo",
+    "original_title": "Dumbo"
+  },
+  "detrás de las noticias": {
+    "url": "https://letterboxd.com/film/broadcast-news/",
+    "title_en": "Broadcast News",
+    "director": "James L. Brooks",
+    "country": "USA",
+    "year": 1987,
+    "duration": 133,
+    "genre": "Comedia, Romance",
+    "title_es": "Al filo de la noticia",
+    "original_title": "Broadcast News"
+  },
+  "cien veces no debo": {
+    "url": "https://letterboxd.com/film/cien-veces-no-debo/",
+    "title_en": "Cien veces no debo",
+    "director": "Alejandro Doria",
+    "country": "Argentina",
+    "year": 1990,
+    "duration": 91,
+    "genre": "Comedia",
+    "original_title": "Cien veces no debo"
+  },
+  "hechizo del tiempo": {
+    "url": "https://letterboxd.com/film/groundhog-day/",
+    "title_en": "Groundhog Day",
+    "director": "Harold Ramis",
+    "country": "USA",
+    "year": 1993,
+    "duration": 101,
+    "genre": "Comedia, Fantasía"
+  },
+  "de golpe en golpe": {
+    "url": "https://letterboxd.com/film/the-errand-boy/",
+    "title_en": "The Errand Boy",
+    "director": "Jerry Lewis",
+    "country": "USA",
+    "year": 1961,
+    "duration": 92,
+    "genre": "Comedia"
+  },
+  "la historia oficial": {
+    "url": "https://letterboxd.com/film/la-historia-oficial/",
+    "title_en": "The Official Story",
+    "director": "Luis Puenzo",
+    "country": "Argentina",
+    "year": 1985,
+    "duration": 112,
+    "genre": "Historia, Drama",
+    "original_title": "La historia oficial"
+  },
+  "fuck you! el último show": {
+    "url": "https://letterboxd.com/film/fuck-you-el-ultimo-show/",
+    "title_en": "Fuck you! The Last Show",
+    "director": "José Luis García",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 83,
+    "genre": "Música, Documental",
+    "original_title": "Fuck you! El último show"
+  },
+  "gremlins": {
+    "url": "https://letterboxd.com/film/gremlins/",
+    "title_en": "Gremlins",
+    "director": "Joe Dante",
+    "country": "USA",
+    "year": 1984,
+    "duration": 106,
+    "genre": "Fantasía, Comedia",
+    "original_title": "Gremlins"
+  },
+  "gremlins 2: la nueva generación": {
+    "url": "https://letterboxd.com/film/gremlins-2-the-new-batch/",
+    "title_en": "Gremlins 2: The New Batch",
+    "director": "Joe Dante",
+    "country": "USA",
+    "year": 1990,
+    "duration": 106,
+    "genre": "Comedia, Fantasía",
+    "title_es": "Gremlins 2: La nueva generación",
+    "original_title": "Gremlins 2: The New Batch"
+  },
+  "alicia en el país de las maravillas": {
+    "url": "",
+    "title_en": "ALICIA EN EL PAÍS DE LAS MARAVILLAS",
+    "director": "Clyde Geronimi, Wilfred Jackson, Hamilton Luske",
+    "country": "United States of America",
+    "year": 1951,
+    "duration": 75,
+    "title_es": "Alicia en el país de las maravillas",
+    "original_title": "Alice in Wonderland",
+    "genre": "Animación, Familiar"
+  },
+  "mi obra maestra": {
+    "url": "https://letterboxd.com/film/mi-obra-maestra/",
+    "title_en": "My Masterpiece",
+    "director": "Gastón Duprat",
+    "country": "Argentina, Spain",
+    "year": 2018,
+    "duration": 100,
+    "genre": "Comedia",
+    "original_title": "Mi obra maestra"
+  },
+  "luna de miel en río": {
+    "url": "",
+    "title_en": "LUNA DE MIEL EN RÍO",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1940,
+    "duration": 73,
+    "original_title": "Luna de miel en Río",
+    "genre": "Comedia"
+  },
+  "el terror de las chicas": {
+    "url": "",
+    "title_en": "EL TERROR DE LAS CHICAS",
+    "director": "Jerry Lewis",
+    "country": "United States of America",
+    "year": 1961,
+    "duration": 95,
+    "title_es": "El terror de las chicas",
+    "original_title": "The Ladies Man",
+    "genre": "Comedia"
+  },
+  "tiempo de revancha": {
+    "url": "https://letterboxd.com/film/time-for-revenge/",
+    "title_en": "Time for Revenge",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina",
+    "year": 1981,
+    "duration": 112,
+    "genre": "Thriller, Drama",
+    "original_title": "Tiempo de revancha"
+  },
+  "la bella y la bestia": {
+    "url": "",
+    "title_en": "LA BELLA Y LA BESTIA",
+    "director": "Gary Trousdale, Kirk Wise",
+    "country": "United States of America",
+    "year": 1991,
+    "duration": 84,
+    "title_es": "La bella y la bestia",
+    "original_title": "Beauty and the Beast",
+    "genre": "Romance, Familiar"
+  },
+  "corazones jóvenes": {
+    "url": "https://letterboxd.com/film/young-hearts-2024/",
+    "title_en": "Young Hearts",
+    "director": "Anthony Schatteman",
+    "country": "Belgium, Netherlands",
+    "year": 2024,
+    "duration": 99,
+    "genre": "Romance, Drama",
+    "title_es": "Young hearts",
+    "original_title": "Young Hearts"
+  },
+  "la gran ambición": {
+    "url": "https://letterboxd.com/film/the-great-ambition/",
+    "title_en": "The Great Ambition",
+    "director": "Andrea Segre",
+    "country": "Italy, Belgium",
+    "year": 2024,
+    "duration": 122,
+    "genre": "Drama, Historia",
+    "title_es": "La gran ambición",
+    "original_title": "Berlinguer: La grande ambizione"
+  },
+  "rescate en el barrio chino": {
+    "url": "https://letterboxd.com/film/big-trouble-in-little-china/",
+    "title_en": "Big Trouble in Little China",
+    "director": "John Carpenter",
+    "country": "USA",
+    "year": 1986,
+    "duration": 100,
+    "genre": "Comedia, Aventura",
+    "title_es": "Golpe en la pequeña China",
+    "original_title": "Big Trouble in Little China"
+  },
+  "el ingenuo": {
+    "url": "https://letterboxd.com/film/the-patsy-1964/",
+    "title_en": "The Patsy",
+    "director": "Jerry Lewis",
+    "country": "USA",
+    "year": 1964,
+    "duration": 101,
+    "genre": "Comedia"
+  },
+  "conan, el bárbaro": {
+    "url": "https://letterboxd.com/film/conan-the-barbarian/",
+    "title_en": "Conan the Barbarian",
+    "director": "John Milius",
+    "country": "USA",
+    "year": 1982,
+    "duration": 130,
+    "genre": "Fantasía, Acción",
+    "title_es": "Conan, el bárbaro",
+    "original_title": "Conan the Barbarian"
+  },
+  "digan lo que quieran": {
+    "url": "https://letterboxd.com/film/say-anything/",
+    "title_en": "Say Anything...",
+    "director": "Cameron Crowe",
+    "country": "USA",
+    "year": 1989,
+    "duration": 100,
+    "genre": "Romance, Drama",
+    "title_es": "Un gran amor",
+    "original_title": "Say Anything..."
+  },
+  "duro de matar": {
+    "url": "https://letterboxd.com/film/die-hard/",
+    "title_en": "Die Hard",
+    "director": "John McTiernan",
+    "country": "USA",
+    "year": 1988,
+    "duration": 132,
+    "genre": "Thriller, Acción",
+    "title_es": "Jungla de cristal",
+    "original_title": "Die Hard"
+  },
+  "quisiera ser grande": {
+    "url": "https://letterboxd.com/film/big/",
+    "title_en": "Big",
+    "director": "Penny Marshall",
+    "country": "USA",
+    "year": 1988,
+    "duration": 104,
+    "genre": "Drama, Comedia",
+    "title_es": "Quisiera ser grande",
+    "original_title": "Big"
+  },
+  "frozen: una aventura congelada": {
+    "url": "https://letterboxd.com/film/frozen-2013/",
+    "title_en": "Frozen",
+    "director": "Chris Buck, Jennifer Lee",
+    "country": "USA",
+    "year": 2013,
+    "duration": 102,
+    "genre": "Fantasía, Animación",
+    "title_es": "Frozen: El reino del hielo",
+    "original_title": "Frozen"
+  },
+  "¡caigan las rosas blancas!": {
+    "url": "https://letterboxd.com/film/caigan-las-rosas-blancas/",
+    "title_en": "White Roses, Fall!",
+    "director": "Albertina Carri",
+    "country": "Argentina, Brazil",
+    "year": 2025,
+    "duration": 123,
+    "genre": "Comedia",
+    "original_title": "¡Caigan las rosas blancas!"
+  },
+  "romería": {
+    "url": "https://letterboxd.com/film/romeria/",
+    "title_en": "Romería",
+    "director": "Carla Simón",
+    "country": "Spain, Germany",
+    "year": 2025,
+    "duration": 112,
+    "genre": "Drama",
+    "original_title": "Romería"
+  },
+  "historias breves 24": {
+    "url": "",
+    "title_en": "Historias breves 24",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "matria": {
+    "url": "",
+    "title_en": "Matria",
+    "director": "Jimena Chavez",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 80,
+    "original_title": "Matria",
+    "genre": "Documental"
+  },
+  "gioia mía, un verano en sicilia": {
+    "url": "https://letterboxd.com/film/sweetheart-2025-3/",
+    "title_en": "Sweetheart",
+    "director": "Margherita Spampinato",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Drama"
+  },
+  "la grazia: la belleza de la duda": {
+    "url": "https://letterboxd.com/film/la-grazia/",
+    "title_en": "La Grazia",
+    "director": "Paolo Sorrentino",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 133,
+    "genre": "Drama",
+    "title_es": "La Grazia: La belleza de la duda",
+    "original_title": "La grazia"
   }
 }

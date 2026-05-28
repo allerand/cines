@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-28T11:17:23",
+  "updated": "2026-05-28T17:04:47",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -182,6 +182,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "13:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-28",
       "hora": "13:00",
@@ -283,6 +298,21 @@
       "duration": 127,
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "13:45",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -452,6 +482,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "14:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-28",
       "hora": "14:45",
@@ -524,6 +569,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "15:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -674,6 +734,36 @@
       "genre": "Comedia, Romance",
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-28",
+      "hora": "15:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "15:45",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -1067,6 +1157,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "17:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "17:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-28",
       "hora": "17:30",
@@ -1140,6 +1260,21 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-28",
+      "hora": "17:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1307,6 +1442,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "18:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-28",
       "hora": "18:30",
@@ -1380,6 +1530,21 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/el-lado-mutante-de-la-fuerza/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-28",
+      "hora": "19:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1577,6 +1742,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-28",
+      "hora": "19:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-28",
       "hora": "19:50",
@@ -1682,6 +1862,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "20:00",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-28",
       "hora": "20:00",
@@ -1723,6 +1918,21 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "20:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -1997,6 +2207,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "21:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-28",
+      "hora": "21:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-28",
       "hora": "21:50",
@@ -2042,6 +2282,21 @@
       "ciclo": "Semana de cine portugués"
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-28",
+      "hora": "22:00",
+      "title_es": "Gioia mía, un verano en Sicilia",
+      "title_en": "Sweetheart",
+      "director": "Margherita Spampinato",
+      "country": "Italy",
+      "year": 2025,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/sweetheart-2025-3/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=840",
+      "ciclo": "Horizontes Cinematográficos"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-28",
       "hora": "22:00",
@@ -2084,6 +2339,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "22:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -2267,6 +2537,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "22:45",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-28",
       "hora": "22:50",
@@ -2369,6 +2654,21 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/dolly-2025/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-28",
+      "hora": "23:00",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -2597,6 +2897,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "13:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-29",
       "hora": "13:00",
@@ -2698,6 +3013,21 @@
       "duration": 127,
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "13:45",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -2882,6 +3212,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "14:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-29",
       "hora": "14:45",
@@ -2954,6 +3299,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "15:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3104,6 +3464,36 @@
       "genre": "Comedia, Romance",
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-29",
+      "hora": "15:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "15:45",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3527,6 +3917,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "17:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "17:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-29",
       "hora": "17:30",
@@ -3600,6 +4020,21 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-29",
+      "hora": "17:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -3767,6 +4202,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "18:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-29",
       "hora": "18:30",
@@ -3825,6 +4275,21 @@
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-29",
+      "hora": "19:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -4052,6 +4517,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-29",
+      "hora": "19:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-29",
       "hora": "19:50",
@@ -4157,6 +4637,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "20:00",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-29",
       "hora": "20:00",
@@ -4198,6 +4693,21 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "20:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -4290,6 +4800,21 @@
       "letterboxd": "https://letterboxd.com/film/sentimental-value-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=358",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-29",
+      "hora": "20:30",
+      "title_es": "Matria",
+      "title_en": "Matria",
+      "director": "Jimena Chaves",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 63,
+      "genre": "Documental",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=827",
+      "ciclo": "Funciones Unicas"
     },
     {
       "cine": "Cinemark Palermo",
@@ -4442,6 +4967,36 @@
       "ciclo": "Semana de cine portugués"
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "21:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-29",
+      "hora": "21:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-29",
       "hora": "21:50",
@@ -4470,6 +5025,21 @@
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-29",
+      "hora": "22:00",
+      "title_es": "La Grazia: La belleza de la duda",
+      "title_en": "La Grazia",
+      "director": "Paolo Sorrentino",
+      "country": "Italy",
+      "year": 2025,
+      "duration": 133,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-grazia/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=841",
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -4514,6 +5084,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "22:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -4697,6 +5282,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "22:45",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-29",
       "hora": "22:50",
@@ -4799,6 +5399,21 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/dolly-2025/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-29",
+      "hora": "23:00",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -5042,6 +5657,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "13:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-30",
       "hora": "13:00",
@@ -5143,6 +5773,21 @@
       "duration": 127,
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "13:45",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -5327,6 +5972,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "14:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-30",
       "hora": "14:45",
@@ -5399,6 +6059,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "15:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -5564,6 +6239,36 @@
       "genre": "Comedia, Romance",
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-30",
+      "hora": "15:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "15:45",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -6002,6 +6707,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "17:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "17:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-30",
       "hora": "17:30",
@@ -6075,6 +6810,21 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-30",
+      "hora": "17:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -6227,6 +6977,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "18:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-30",
       "hora": "18:30",
@@ -6272,6 +7037,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-30",
+      "hora": "19:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-30",
       "hora": "19:00",
@@ -6314,6 +7094,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "19:00",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -6467,6 +7262,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-30",
+      "hora": "19:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-30",
       "hora": "19:50",
@@ -6587,6 +7397,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "20:00",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-30",
       "hora": "20:00",
@@ -6643,6 +7468,21 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "20:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -6862,12 +7702,12 @@
       "hora": "21:00",
       "title_es": "EMI",
       "title_en": "Emi",
-      "director": "Gwendoline Ancelin, DIONO Corbel, Nicolas Guazzagaloppa",
-      "country": "France",
-      "year": 2009,
+      "director": "Ezequiel Erriquez",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
       "duration": 93,
-      "genre": "Drama, Animación",
-      "letterboxd": "https://letterboxd.com/film/emi/",
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
@@ -6885,6 +7725,36 @@
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "21:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-30",
+      "hora": "21:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -6945,6 +7815,21 @@
       "letterboxd": "https://letterboxd.com/film/fuck-the-polis/",
       "ticket_url": "https://malba.org.ar/evento/fuck-the-polis/",
       "ciclo": "Semana de cine portugués"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-30",
+      "hora": "22:00",
+      "title_es": "Gioia mía, un verano en Sicilia",
+      "title_en": "Sweetheart",
+      "director": "Margherita Spampinato",
+      "country": "Italy",
+      "year": 2025,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/sweetheart-2025-3/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=840",
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -7127,6 +8012,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "22:30",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-30",
       "hora": "22:30",
@@ -7168,6 +8068,21 @@
       "duration": 110,
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "22:45",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -7274,6 +8189,21 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/dolly-2025/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-30",
+      "hora": "23:00",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7517,6 +8447,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "13:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-31",
       "hora": "13:00",
@@ -7618,6 +8563,21 @@
       "duration": 127,
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "13:45",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -7802,6 +8762,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "14:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-31",
       "hora": "14:45",
@@ -7874,6 +8849,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "15:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8039,6 +9029,36 @@
       "genre": "Comedia, Romance",
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-31",
+      "hora": "15:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "15:45",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8492,6 +9512,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "17:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "17:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-31",
       "hora": "17:30",
@@ -8580,6 +9630,21 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-31",
+      "hora": "17:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -8717,6 +9782,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "18:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-05-31",
       "hora": "18:30",
@@ -8775,6 +9855,21 @@
       "letterboxd": "https://letterboxd.com/film/singin-in-the-rain/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-31",
+      "hora": "19:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -8972,6 +10067,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-31",
+      "hora": "19:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-31",
       "hora": "19:50",
@@ -9092,6 +10202,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "20:00",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-31",
       "hora": "20:00",
@@ -9148,6 +10273,21 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "20:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -9392,6 +10532,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "21:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-31",
+      "hora": "21:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-31",
       "hora": "21:50",
@@ -9452,6 +10622,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-05-31",
+      "hora": "22:00",
+      "title_es": "La Grazia: La belleza de la duda",
+      "title_en": "La Grazia",
+      "director": "Paolo Sorrentino",
+      "country": "Italy",
+      "year": 2025,
+      "duration": 133,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-grazia/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=841",
+      "ciclo": "Horizontes Cinematográficos"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-31",
       "hora": "22:00",
@@ -9494,6 +10679,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "22:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -9677,6 +10877,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "22:45",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-31",
       "hora": "22:50",
@@ -9779,6 +10994,21 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/dolly-2025/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-05-31",
+      "hora": "23:00",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -10247,6 +11477,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "13:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-01",
       "hora": "13:00",
@@ -10348,6 +11593,21 @@
       "duration": 127,
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "13:45",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -10532,6 +11792,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "14:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-01",
       "hora": "14:45",
@@ -10604,6 +11879,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "15:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -10739,6 +12029,36 @@
       "genre": "Comedia, Romance",
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-01",
+      "hora": "15:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "15:45",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -11102,6 +12422,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "17:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "17:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-01",
       "hora": "17:30",
@@ -11175,6 +12525,21 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-01",
+      "hora": "17:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -11252,6 +12617,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "18:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-01",
       "hora": "18:40",
@@ -11280,6 +12660,21 @@
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-01",
+      "hora": "19:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -11462,6 +12857,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-01",
+      "hora": "19:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-01",
       "hora": "19:50",
@@ -11567,6 +12977,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "20:00",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-01",
       "hora": "20:00",
@@ -11608,6 +13033,21 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "20:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -11777,6 +13217,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "21:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-01",
+      "hora": "21:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-01",
       "hora": "21:50",
@@ -11805,6 +13275,21 @@
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-01",
+      "hora": "22:00",
+      "title_es": "Gioia mía, un verano en Sicilia",
+      "title_en": "Sweetheart",
+      "director": "Margherita Spampinato",
+      "country": "Italy",
+      "year": 2025,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/sweetheart-2025-3/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=840",
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Caballito",
@@ -11849,6 +13334,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "22:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -12032,6 +13532,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "22:45",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-01",
       "hora": "22:50",
@@ -12134,6 +13649,21 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/dolly-2025/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-01",
+      "hora": "23:00",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -12377,6 +13907,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "13:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-02",
       "hora": "13:00",
@@ -12478,6 +14023,21 @@
       "duration": 127,
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "13:45",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -12647,6 +14207,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "14:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-02",
       "hora": "14:45",
@@ -12722,6 +14297,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "15:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-02",
       "hora": "15:00",
@@ -12778,7 +14368,7 @@
       "duration": 94,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sparrows/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -12884,6 +14474,36 @@
       "genre": "Comedia, Romance",
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-02",
+      "hora": "15:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "15:45",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -13262,6 +14882,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "17:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "17:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-02",
       "hora": "17:30",
@@ -13335,6 +14985,21 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-02",
+      "hora": "17:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -13423,7 +15088,7 @@
       "duration": 86,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-bat/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -13454,6 +15119,21 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/martin-hache/",
       "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "18:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -13500,6 +15180,21 @@
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-02",
+      "hora": "19:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -13697,6 +15392,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-02",
+      "hora": "19:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-02",
       "hora": "19:50",
@@ -13802,6 +15512,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "20:00",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-02",
       "hora": "20:00",
@@ -13828,6 +15553,21 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "20:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -14057,6 +15797,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "21:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-02",
+      "hora": "21:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-02",
       "hora": "21:50",
@@ -14129,6 +15899,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "22:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -14312,6 +16097,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "22:45",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-02",
       "hora": "22:50",
@@ -14414,6 +16214,21 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/dolly-2025/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-02",
+      "hora": "23:00",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -14848,7 +16663,7 @@
       "duration": 90,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/mother-1926/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -14940,6 +16755,21 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-03",
+      "hora": "15:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -15272,6 +17102,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-03",
+      "hora": "17:30",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-03",
+      "hora": "17:30",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-03",
+      "hora": "17:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-03",
       "hora": "17:30",
@@ -15345,6 +17220,21 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-03",
+      "hora": "17:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cine Gaumont",
@@ -15433,7 +17323,7 @@
       "duration": 77,
       "genre": "Romance, Comedia",
       "letterboxd": "https://letterboxd.com/film/battling-butler/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -15449,21 +17339,6 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Amorina",
-      "fecha": "2026-06-03",
-      "hora": "18:30",
-      "title_es": "Duelo al sol",
-      "title_en": "Duel in the Sun",
-      "director": "King Vidor",
-      "country": "Estados Unidos",
-      "year": 1946,
-      "duration": 144,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/duel-in-the-sun/",
-      "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
     {
@@ -15512,6 +17387,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-03",
+      "hora": "19:00",
+      "title_es": "Familia Sumergida",
+      "title_en": "A Family Submerged",
+      "director": "María Alché",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 91,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/familia-sumergida/",
+      "ticket_url": "https://lumiton.ar/evento/familia-sumergida-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-03",
+      "hora": "19:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-03",
       "hora": "19:00",
@@ -15530,14 +17435,14 @@
       "cine": "Cinépolis Houssay",
       "fecha": "2026-06-03",
       "hora": "19:00",
-      "title_es": "Scary Movie",
-      "title_en": "Scary Movie",
-      "director": "Michael Tiddes",
-      "country": "USA",
-      "year": 2026,
-      "duration": 95,
-      "genre": "Comedia, Terror",
-      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -15647,6 +17552,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-03",
+      "hora": "19:45",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-03",
       "hora": "19:50",
@@ -15752,6 +17672,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-03",
+      "hora": "20:00",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-03",
       "hora": "20:00",
@@ -15808,6 +17743,21 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-03",
+      "hora": "20:15",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -16052,6 +18002,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-03",
+      "hora": "21:45",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-03",
       "hora": "21:50",
@@ -16065,6 +18030,21 @@
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-03",
+      "hora": "22:00",
+      "title_es": "La Grazia: La belleza de la duda",
+      "title_en": "La Grazia",
+      "director": "Paolo Sorrentino",
+      "country": "Italy",
+      "year": 2025,
+      "duration": 133,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-grazia/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=841",
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Hoyts Abasto",
@@ -16232,6 +18212,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-03",
+      "hora": "22:30",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-03",
       "hora": "22:30",
@@ -16288,6 +18283,21 @@
       "duration": 110,
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-03",
+      "hora": "22:45",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -16364,6 +18374,21 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/dolly-2025/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-06-03",
+      "hora": "23:00",
+      "title_es": "Backrooms: sin salida",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -16588,7 +18613,7 @@
       "duration": 77,
       "genre": "Romance, Comedia",
       "letterboxd": "https://letterboxd.com/film/battling-butler/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -16727,6 +18752,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-04",
+      "hora": "18:00",
+      "title_es": "Plesiosaurios Vivos",
+      "title_en": "Plesiosaurios vivos",
+      "director": "Iris Serrano y Magrio González",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 95,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/plesiosaurios-vivos/",
+      "ticket_url": "https://lumiton.ar/evento/plesiosaurios-vivos/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-04",
       "hora": "18:00",
@@ -16784,6 +18824,21 @@
       "genre": "Aventura",
       "letterboxd": "https://letterboxd.com/film/la-ley-de-la-frontera/",
       "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-04",
+      "hora": "18:30",
+      "title_es": "El profesor chiflado",
+      "title_en": "The Nutty Professor",
+      "director": "Jerry Lewis",
+      "country": "EE.UU",
+      "year": 1963,
+      "duration": 107,
+      "genre": "Ciencia ficción, Comedia",
+      "letterboxd": "https://letterboxd.com/film/the-nutty-professor/",
+      "ticket_url": "https://lumiton.ar/evento/el-profesor-chiflado/",
       "ciclo": ""
     },
     {
@@ -16937,6 +18992,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-04",
+      "hora": "20:30",
+      "title_es": "Así Cantaba Carlos Gardel",
+      "title_en": "Así cantaba Carlos Gardel",
+      "director": "Eduardo Morera",
+      "country": "Argentina",
+      "year": 1935,
+      "duration": 35,
+      "genre": "Música",
+      "letterboxd": "https://letterboxd.com/film/asi-cantaba-carlos-gardel/",
+      "ticket_url": "https://lumiton.ar/evento/asi-cantaba-carlos-gardel-4/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-04",
+      "hora": "20:30",
+      "title_es": "Tango Bar",
+      "title_en": "Tango Bar",
+      "director": "John Reinhardt",
+      "country": "EE.UU",
+      "year": 1935,
+      "duration": 62,
+      "genre": "Drama, Música",
+      "letterboxd": "https://letterboxd.com/film/tango-bar/",
+      "ticket_url": "https://lumiton.ar/evento/tango-bar-4/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-04",
       "hora": "20:30",
@@ -16963,7 +19048,7 @@
       "duration": 104,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
     },
     {
@@ -17308,7 +19393,7 @@
       "duration": 86,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-bat/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -17447,6 +19532,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-05",
+      "hora": "18:00",
+      "title_es": "Catálogo para una Familia",
+      "title_en": "Family Catalogue",
+      "director": "Iair Michel Attías",
+      "country": "Argentina",
+      "year": 2023,
+      "duration": 84,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/catalogo-para-una-familia/",
+      "ticket_url": "https://lumiton.ar/evento/catalogo-para-una-familia/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-05",
       "hora": "18:00",
@@ -17473,7 +19573,7 @@
       "duration": 87,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/mother-1926/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -17657,6 +19757,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-05",
+      "hora": "20:30",
+      "title_es": "Ánimu",
+      "title_en": "Ánimu",
+      "director": "Miguel Kohan",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 61,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/animu/",
+      "ticket_url": "https://lumiton.ar/evento/animu/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-05",
       "hora": "20:30",
@@ -17683,7 +19798,7 @@
       "duration": 104,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
     },
     {
@@ -18013,8 +20128,23 @@
       "duration": 77,
       "genre": "Romance, Comedia",
       "letterboxd": "https://letterboxd.com/film/battling-butler/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Lumiton",
+      "fecha": "2026-06-06",
+      "hora": "15:30",
+      "title_es": "Una Tarde en el Museo | Laboratorio de Construcción de Cámaras Oscuras",
+      "title_en": "UNA TARDE EN EL MUSEO | LABORATORIO DE CONSTRUCCIÓN DE CÁMARAS OSCURAS",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/una-tarde-en-el-museo-laboratorio-de-construccion-de-camaras-oscuras/",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Caballito",
@@ -18167,6 +20297,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Lumiton",
+      "fecha": "2026-06-06",
+      "hora": "18:00",
+      "title_es": "Divorcio en Montevideo",
+      "title_en": "DIVORCIO EN MONTEVIDEO",
+      "director": "Manuel Romero",
+      "country": "Argentina",
+      "year": 1939,
+      "duration": 83,
+      "genre": "Comedia, Romance",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/divorcio-en-montevideo-4/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-06",
+      "hora": "18:00",
+      "title_es": "Pecadora Equivocada",
+      "title_en": "The Philadelphia Story",
+      "director": "George Cukor",
+      "country": "EE.UU",
+      "year": 1940,
+      "duration": 112,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/the-philadelphia-story/",
+      "ticket_url": "https://lumiton.ar/evento/pecadora-equivocada/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-06",
       "hora": "18:00",
@@ -18193,7 +20353,7 @@
       "duration": 107,
       "genre": "Fantasía, Drama",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -18377,6 +20537,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-06",
+      "hora": "20:30",
+      "title_es": "Los Knacks: Déjame en el Pasado",
+      "title_en": "The Knacks: Leave Me in the Past",
+      "director": "Mariano Nesci y Gabriel Nesci",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 105,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/los-knacks-dejame-en-el-pasado/",
+      "ticket_url": "https://lumiton.ar/evento/los-knacks-dejame-en-el-pasado/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-06",
       "hora": "20:30",
@@ -18403,7 +20578,7 @@
       "duration": 104,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
     },
     {
@@ -18733,7 +20908,7 @@
       "duration": 94,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sparrows/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -18794,6 +20969,21 @@
       "genre": "Comedia, Terror",
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-07",
+      "hora": "16:30",
+      "title_es": "Dumbo",
+      "title_en": "Dumbo",
+      "director": "Ben Sharpsteen",
+      "country": "EE.UU",
+      "year": 1941,
+      "duration": 64,
+      "genre": "Animación, Familiar",
+      "letterboxd": "https://letterboxd.com/film/dumbo/",
+      "ticket_url": "https://lumiton.ar/evento/dumbo/",
       "ciclo": ""
     },
     {
@@ -18887,6 +21077,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-07",
+      "hora": "18:00",
+      "title_es": "Al filo de la noticia",
+      "title_en": "Broadcast News",
+      "director": "James L. Brooks",
+      "country": "EE.UU",
+      "year": 1987,
+      "duration": 133,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/broadcast-news/",
+      "ticket_url": "https://lumiton.ar/evento/detras-de-las-noticias/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-07",
       "hora": "18:00",
@@ -18913,7 +21118,7 @@
       "duration": 104,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
     },
     {
@@ -18944,6 +21149,21 @@
       "genre": "Comedia, Terror",
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-07",
+      "hora": "18:30",
+      "title_es": "Cien Veces No Debo",
+      "title_en": "Cien veces no debo",
+      "director": "Alejandro Doria",
+      "country": "Argentina",
+      "year": 1990,
+      "duration": 91,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/cien-veces-no-debo/",
+      "ticket_url": "https://lumiton.ar/evento/cien-veces-no-debo-2/",
       "ciclo": ""
     },
     {
@@ -19097,6 +21317,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-07",
+      "hora": "20:30",
+      "title_es": "Hechizo del Tiempo",
+      "title_en": "Groundhog Day",
+      "director": "Harold Ramis",
+      "country": "EE.UU",
+      "year": 1993,
+      "duration": 100,
+      "genre": "Comedia, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/groundhog-day/",
+      "ticket_url": "https://lumiton.ar/evento/hechizo-del-tiempo/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-07",
       "hora": "20:30",
@@ -19138,7 +21373,7 @@
       "duration": 114,
       "genre": "Crimen, Drama",
       "letterboxd": "https://letterboxd.com/film/taxi-driver/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c2a26015-16df-4404-af20-2975405bb777",
       "ciclo": "Estreno"
     },
     {
@@ -20113,7 +22348,7 @@
       "duration": 139,
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/the-golden-clown/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -20263,7 +22498,7 @@
       "duration": 77,
       "genre": "Romance, Comedia",
       "letterboxd": "https://letterboxd.com/film/battling-butler/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -20488,7 +22723,7 @@
       "duration": 104,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
     },
     {
@@ -20803,7 +23038,7 @@
       "duration": 116,
       "genre": "Fantasía, Drama",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -20953,7 +23188,7 @@
       "duration": 104,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
     },
     {
@@ -21178,7 +23413,7 @@
       "duration": 87,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/mother-1926/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -21362,6 +23597,21 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-11",
+      "hora": "18:00",
+      "title_es": "EMI",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://lumiton.ar/evento/emi/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-11",
       "hora": "18:00",
@@ -21388,7 +23638,7 @@
       "duration": 104,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
     },
     {
@@ -21407,6 +23657,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-11",
+      "hora": "18:30",
+      "title_es": "De Golpe en Golpe",
+      "title_en": "The Errand Boy",
+      "director": "Jerry Lewis",
+      "country": "EE.UU",
+      "year": 1961,
+      "duration": 92,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/the-errand-boy/",
+      "ticket_url": "https://lumiton.ar/evento/de-golpe-en-golpe/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-11",
+      "hora": "20:30",
+      "title_es": "Jota Urondo, un Cocinero Impertinente",
+      "title_en": "Jota Urondo, An Impertinent Chef",
+      "director": "Mariana Erijmovich y Juan Villegas",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 70,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/jota-urondo-un-cocinero-impertinente/",
+      "ticket_url": "https://lumiton.ar/evento/jota-urondo-un-cocinero-impertinente/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-11",
       "hora": "21:00",
@@ -21418,7 +23698,7 @@
       "duration": 116,
       "genre": "Fantasía, Drama",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -21433,8 +23713,23 @@
       "duration": 137,
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/the-golden-clown/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-12",
+      "hora": "18:00",
+      "title_es": "La Historia Oficial",
+      "title_en": "The Official Story",
+      "director": "Luis Puenzo",
+      "country": "Argentina",
+      "year": 1985,
+      "duration": 112,
+      "genre": "Historia, Drama",
+      "letterboxd": "https://letterboxd.com/film/la-historia-oficial/",
+      "ticket_url": "https://lumiton.ar/evento/la-historia-oficial-4/",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -21463,7 +23758,7 @@
       "duration": 94,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sparrows/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -21479,6 +23774,21 @@
       "genre": "Comedia, Terror",
       "letterboxd": "https://letterboxd.com/film/fright-night/",
       "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-12",
+      "hora": "20:30",
+      "title_es": "Fuck You! el Último Show",
+      "title_en": "Fuck you! The Last Show",
+      "director": "José Luis García",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 81,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/fuck-you-el-ultimo-show/",
+      "ticket_url": "https://lumiton.ar/evento/fuck-you-el-ultimo-show-4/",
       "ciclo": ""
     },
     {
@@ -21542,6 +23852,21 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-13",
+      "hora": "18:00",
+      "title_es": "Gremlins",
+      "title_en": "Gremlins",
+      "director": "Joe Dante",
+      "country": "EE.UU",
+      "year": 1984,
+      "duration": 106,
+      "genre": "Fantasía, Comedia",
+      "letterboxd": "https://letterboxd.com/film/gremlins/",
+      "ticket_url": "https://lumiton.ar/evento/gremlins-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-13",
       "hora": "18:00",
@@ -21572,6 +23897,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-13",
+      "hora": "20:30",
+      "title_es": "Gremlins 2: La nueva generación",
+      "title_en": "Gremlins 2: The New Batch",
+      "director": "Joe Dante",
+      "country": "EE.UU",
+      "year": 1990,
+      "duration": 106,
+      "genre": "Comedia, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/gremlins-2-the-new-batch/",
+      "ticket_url": "https://lumiton.ar/evento/gremlins-2-la-nueva-generacion/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-13",
       "hora": "21:00",
@@ -21583,7 +23923,7 @@
       "duration": 114,
       "genre": "Crimen, Drama",
       "letterboxd": "https://letterboxd.com/film/taxi-driver/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c2a26015-16df-4404-af20-2975405bb777",
       "ciclo": "Estreno"
     },
     {
@@ -21598,7 +23938,7 @@
       "duration": 86,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-bat/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -21617,6 +23957,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-14",
+      "hora": "16:30",
+      "title_es": "Alicia en el País de las Maravillas",
+      "title_en": "ALICIA EN EL PAÍS DE LAS MARAVILLAS",
+      "director": "Clyde Geronimi, Hamilton Luske y Wilfred Jackson",
+      "country": "EE.UU",
+      "year": 1951,
+      "duration": 82,
+      "genre": "Animación, Familiar",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/alicia-en-el-pais-de-las-maravillas-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-14",
       "hora": "17:00",
@@ -21628,8 +23983,23 @@
       "duration": 114,
       "genre": "Crimen, Drama",
       "letterboxd": "https://letterboxd.com/film/taxi-driver/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c2a26015-16df-4404-af20-2975405bb777",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-14",
+      "hora": "18:00",
+      "title_es": "Mi Obra Maestra",
+      "title_en": "My Masterpiece",
+      "director": "Gastón Duprat",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 104,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/mi-obra-maestra/",
+      "ticket_url": "https://lumiton.ar/evento/mi-obra-maestra/",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -21644,6 +24014,21 @@
       "genre": "Comedia, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/galaxy-quest/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-14",
+      "hora": "18:30",
+      "title_es": "Esperando la Carroza",
+      "title_en": "ESPERANDO LA CARROZA",
+      "director": "Alejandro Doria",
+      "country": "Argentina",
+      "year": 1985,
+      "duration": 94,
+      "genre": "Comedia",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/esperando-la-carroza-11/",
       "ciclo": ""
     },
     {
@@ -21677,6 +24062,21 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-14",
+      "hora": "20:30",
+      "title_es": "El Agente Secreto",
+      "title_en": "The Secret Agent",
+      "director": "Kleber Mendonça Filho",
+      "country": "Francia, Brasil",
+      "year": 2025,
+      "duration": 161,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-secret-agent-2025/",
+      "ticket_url": "https://lumiton.ar/evento/el-agente-secreto/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-16",
       "hora": "15:00",
@@ -21688,7 +24088,7 @@
       "duration": 87,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/mother-1926/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -21748,7 +24148,7 @@
       "duration": 137,
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/the-golden-clown/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
@@ -21797,6 +24197,36 @@
       "ciclo": "Agnès Varda X 3"
     },
     {
+      "cine": "Lumiton",
+      "fecha": "2026-06-18",
+      "hora": "18:00",
+      "title_es": "Luna de Miel en Río",
+      "title_en": "LUNA DE MIEL EN RÍO",
+      "director": "Manuel Romero",
+      "country": "Argentina",
+      "year": 1940,
+      "duration": 86,
+      "genre": "Comedia",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/luna-de-miel-en-rio-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-18",
+      "hora": "18:00",
+      "title_es": "Últimos Días de la Víctima",
+      "title_en": "Last Days of the Victim",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1982,
+      "duration": 90,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/ultimos-dias-de-la-victima/",
+      "ticket_url": "https://lumiton.ar/evento/ultimos-dias-de-la-victima-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-18",
       "hora": "18:00",
@@ -21842,6 +24272,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-18",
+      "hora": "18:30",
+      "title_es": "El Terror de las Chicas",
+      "title_en": "EL TERROR DE LAS CHICAS",
+      "director": "Jerry Lewis",
+      "country": "EE.UU",
+      "year": 1961,
+      "duration": 106,
+      "genre": "Comedia",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/el-terror-de-las-chicas/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-18",
       "hora": "20:00",
@@ -21857,6 +24302,21 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-18",
+      "hora": "20:30",
+      "title_es": "Lugares comunes",
+      "title_en": "Common Ground",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 2002,
+      "duration": 112,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/lugares-comunes/",
+      "ticket_url": "https://lumiton.ar/evento/lugares-comunes-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-19",
       "hora": "15:00",
@@ -21870,6 +24330,21 @@
       "letterboxd": "https://letterboxd.com/film/cuesta-abajo/",
       "ticket_url": "",
       "ciclo": "Tres tardes con Gardel"
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-19",
+      "hora": "18:00",
+      "title_es": "Un Lugar en el Mundo",
+      "title_en": "A Place in the World",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España, Uruguay",
+      "year": 1992,
+      "duration": 120,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/un-lugar-en-el-mundo/",
+      "ticket_url": "https://lumiton.ar/evento/un-lugar-en-el-mundo-5/",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -21917,6 +24392,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-19",
+      "hora": "20:30",
+      "title_es": "Tiempo de Revancha",
+      "title_en": "Time for Revenge",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1981,
+      "duration": 112,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/time-for-revenge/",
+      "ticket_url": "https://lumiton.ar/evento/tiempo-de-revancha-3/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-19",
       "hora": "21:00",
@@ -21928,7 +24418,7 @@
       "duration": 114,
       "genre": "Crimen, Drama",
       "letterboxd": "https://letterboxd.com/film/taxi-driver/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c2a26015-16df-4404-af20-2975405bb777",
       "ciclo": "Estreno"
     },
     {
@@ -21992,6 +24482,36 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-21",
+      "hora": "16:30",
+      "title_es": "La Bella y la Bestia",
+      "title_en": "LA BELLA Y LA BESTIA",
+      "director": "Gary Trousdale y Kirk Wise",
+      "country": "EE.UU",
+      "year": 1991,
+      "duration": 93,
+      "genre": "Romance, Familiar",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/la-bella-y-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-21",
+      "hora": "18:00",
+      "title_es": "Corazones Jóvenes",
+      "title_en": "Young Hearts",
+      "director": "Anthony Schatteman",
+      "country": "Bélgica, Países Bajos",
+      "year": 2024,
+      "duration": 99,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/young-hearts-2024/",
+      "ticket_url": "https://lumiton.ar/evento/corazones-jovenes/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-21",
       "hora": "18:00",
@@ -22020,6 +24540,36 @@
       "letterboxd": "https://letterboxd.com/film/lune-chante-lautre-pas/",
       "ticket_url": "",
       "ciclo": "Agnès Varda X 3"
+    },
+    {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-21",
+      "hora": "18:30",
+      "title_es": "Darse Cuenta",
+      "title_en": "DARSE CUENTA",
+      "director": "Alejandro Doria",
+      "country": "Argentina",
+      "year": 1984,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/darse-cuenta-4/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-21",
+      "hora": "20:30",
+      "title_es": "La gran ambición",
+      "title_en": "The Great Ambition",
+      "director": "Andrea Segre",
+      "country": "Italia, Bélgica, Bulgaria",
+      "year": 2024,
+      "duration": 123,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/the-great-ambition/",
+      "ticket_url": "https://lumiton.ar/evento/la-gran-ambicion/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -22142,6 +24692,21 @@
       "ciclo": "Agnès Varda X 3"
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-25",
+      "hora": "18:00",
+      "title_es": "Golpe en la pequeña China",
+      "title_en": "Big Trouble in Little China",
+      "director": "John Carpenter",
+      "country": "EE.UU",
+      "year": 1986,
+      "duration": 99,
+      "genre": "Comedia, Aventura",
+      "letterboxd": "https://letterboxd.com/film/big-trouble-in-little-china/",
+      "ticket_url": "https://lumiton.ar/evento/rescate-en-el-barrio-chino/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-25",
       "hora": "18:00",
@@ -22172,6 +24737,51 @@
       "ciclo": "Agnès Varda X 3"
     },
     {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-25",
+      "hora": "18:30",
+      "title_es": "El Ingenuo",
+      "title_en": "The Patsy",
+      "director": "Jerry Lewis",
+      "country": "EE.UU",
+      "year": 1964,
+      "duration": 101,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/the-patsy-1964/",
+      "ticket_url": "https://lumiton.ar/evento/el-ingenuo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-25",
+      "hora": "20:30",
+      "title_es": "Conan, el bárbaro",
+      "title_en": "Conan the Barbarian",
+      "director": "John Milius",
+      "country": "EE.UU",
+      "year": 1982,
+      "duration": 129,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/conan-the-barbarian/",
+      "ticket_url": "https://lumiton.ar/evento/conan-el-barbaro/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-26",
+      "hora": "18:00",
+      "title_es": "Un gran amor",
+      "title_en": "Say Anything...",
+      "director": "Cameron Crowe",
+      "country": "EE.UU",
+      "year": 1989,
+      "duration": 100,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/say-anything/",
+      "ticket_url": "https://lumiton.ar/evento/digan-lo-que-quieran/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-26",
       "hora": "18:00",
@@ -22184,6 +24794,36 @@
       "genre": "Fantasía, Comedia",
       "letterboxd": "https://letterboxd.com/film/el-milagro-de-p-tinto/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/viernes-de-comicos-en-espanol",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-26",
+      "hora": "20:30",
+      "title_es": "Jungla de cristal",
+      "title_en": "Die Hard",
+      "director": "John McTiernan",
+      "country": "EE.UU",
+      "year": 1988,
+      "duration": 132,
+      "genre": "Thriller, Acción",
+      "letterboxd": "https://letterboxd.com/film/die-hard/",
+      "ticket_url": "https://lumiton.ar/evento/duro-de-matar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-27",
+      "hora": "18:00",
+      "title_es": "Quisiera ser grande",
+      "title_en": "Big",
+      "director": "Penny Marshall",
+      "country": "EE.UU",
+      "year": 1988,
+      "duration": 104,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/big/",
+      "ticket_url": "https://lumiton.ar/evento/quisiera-ser-grande/",
       "ciclo": ""
     },
     {
@@ -22202,6 +24842,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-28",
+      "hora": "16:30",
+      "title_es": "Frozen: El reino del hielo",
+      "title_en": "Frozen",
+      "director": "Chris Buck y Jennifer Lee",
+      "country": "EE.UU",
+      "year": 2013,
+      "duration": 103,
+      "genre": "Fantasía, Animación",
+      "letterboxd": "https://letterboxd.com/film/frozen-2013/",
+      "ticket_url": "https://lumiton.ar/evento/frozen-una-aventura-congelada/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-28",
+      "hora": "17:30",
+      "title_es": "¡caigan las Rosas Blancas!",
+      "title_en": "White Roses, Fall!",
+      "director": "Albertina Carri",
+      "country": "Argentina, España, Brasil",
+      "year": 2024,
+      "duration": 120,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/caigan-las-rosas-blancas/",
+      "ticket_url": "https://lumiton.ar/evento/caigan-las-rosas-blancas-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-28",
       "hora": "18:00",
@@ -22214,6 +24884,36 @@
       "genre": "Comedia",
       "letterboxd": "https://letterboxd.com/film/the-hitchhikers-guide-to-the-galaxy/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Munro",
+      "fecha": "2026-06-28",
+      "hora": "18:30",
+      "title_es": "Parque Lezama",
+      "title_en": "Strangers in the Park",
+      "director": "Juan José Campanella",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 115,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/parque-lezama/",
+      "ticket_url": "https://lumiton.ar/evento/parque-lezama/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-28",
+      "hora": "20:30",
+      "title_es": "Romería",
+      "title_en": "Romería",
+      "director": "Carla Simón",
+      "country": "España, Alemania",
+      "year": 2025,
+      "duration": 115,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/romeria/",
+      "ticket_url": "https://lumiton.ar/evento/romeria/",
       "ciclo": ""
     }
   ]
