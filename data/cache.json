@@ -2596,5 +2596,38 @@
     "duration": null,
     "original_title": "La Fuerza Invisible: Sierra Leona",
     "genre": "Documental"
+  },
+  "zona de riesgo": {
+    "url": "https://letterboxd.com/film/fuze/",
+    "title_en": "Fuze",
+    "director": "David Mackenzie",
+    "country": "UK",
+    "year": 2025,
+    "duration": 96,
+    "genre": "Drama, Acción",
+    "title_es": "Cuenta atrás",
+    "original_title": "Fuze"
+  },
+  "dolly": {
+    "url": "https://letterboxd.com/film/dolly-2025/",
+    "title_en": "Dolly",
+    "director": "Rod Blackhurst",
+    "country": "USA",
+    "year": 2025,
+    "duration": 83,
+    "genre": "Terror",
+    "title_es": "Dolly: Juega conmigo",
+    "original_title": "Dolly"
+  },
+  "l'inconnu de la grande arche": {
+    "url": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+    "title_en": "The Great Arch",
+    "director": "Stéphane Demoustier",
+    "country": "France, Denmark",
+    "year": 2025,
+    "duration": 104,
+    "genre": "Drama, Historia",
+    "title_es": "El arquitecto",
+    "original_title": "L'Inconnu de la Grande Arche"
   }
 }
