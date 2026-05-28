@@ -2418,3 +2418,120 @@ def scrape_amorina() -> list[Screening]:
             duration=duration,
         ))
     return result
+
+
+# ---------------------------------------------------------------------------
+# CEA — Centro de Experimentación Audiovisual (Avellaneda)
+# cea.mda.gob.ar — HTML estático (server-rendered), una card por función.
+# ---------------------------------------------------------------------------
+
+def scrape_cea() -> list[Screening]:
+    """
+    Scrapea cea.mda.gob.ar. La home tiene el bloque de programación renderizado
+    en HTML estático: cada función es un div.film-col con fecha (día + weekday),
+    título, director · año, badges (formato + ciclo) y link de reserva.
+
+    El año y horario salen del section-bar (ej. "Ciclo · Mayo 2026" + "19:00 hs").
+    """
+    try:
+        soup = fetch_html("https://cea.mda.gob.ar/")
+    except Exception:
+        return []
+
+    # Año del ciclo desde sb-tag ("Ciclo · Mayo 2026")
+    cycle_year = date.today().year
+    sb_tag = soup.select_one(".sb-tag")
+    if sb_tag:
+        ym = re.search(r"\b(20\d{2})\b", sb_tag.get_text(" ", strip=True))
+        if ym:
+            cycle_year = int(ym.group(1))
+
+    # Horario default desde sb-right ("... 19:00 hs · Colón 1133 · Avellaneda")
+    default_hora = "19:00"
+    sb_right = soup.select_one(".sb-right")
+    if sb_right:
+        hm = re.search(r"(\d{1,2}:\d{2})\s*hs", sb_right.get_text(" ", strip=True))
+        if hm:
+            default_hora = hm.group(1)
+
+    today = date.today()
+    cutoff = today + timedelta(days=60)
+    result: list[Screening] = []
+
+    for col in soup.select("div.film-col"):
+        badge = col.select_one(".fc-date-badge")
+        weekday = col.select_one(".fc-weekday")
+        title_el = col.select_one(".fc-title")
+        dir_el = col.select_one(".fc-dir")
+        badges = col.select(".fc-badge")
+        cta = col.select_one("a.fc-cta")
+
+        if not (badge and weekday and title_el):
+            continue
+
+        # Día numérico
+        try:
+            day_num = int(re.sub(r"\D", "", badge.get_text(strip=True)))
+        except ValueError:
+            continue
+
+        # Mes desde el weekday ("Jueves Mayo" → mayo)
+        wk_text = weekday.get_text(" ", strip=True).lower()
+        month = None
+        for m_name, m_num in MESES_ES.items():
+            if len(m_name) > 3 and m_name in wk_text:
+                month = m_num
+                break
+        if not month:
+            continue
+
+        # Año del screening: normalmente el del ciclo, salvo rollover dic→ene
+        screen_year = cycle_year
+        try:
+            d = date(screen_year, month, day_num)
+            if d < today - timedelta(days=1):
+                d = date(screen_year + 1, month, day_num)
+            if d > cutoff:
+                continue
+        except ValueError:
+            continue
+
+        # Título: el <br> separa líneas → unimos con espacio
+        title = title_el.get_text(" ", strip=True)
+        title = re.sub(r"\s+", " ", title).strip()
+        if not title:
+            continue
+
+        # Director · año de producción (ej. "Leonardo Favio · 1993")
+        director = ""
+        film_year: Optional[int] = None
+        if dir_el:
+            dir_text = dir_el.get_text(" ", strip=True)
+            parts = [p.strip() for p in dir_text.split("·")]
+            if parts:
+                director = parts[0]
+            for p in parts[1:]:
+                ym = re.search(r"\b(19\d{2}|20\d{2})\b", p)
+                if ym:
+                    film_year = int(ym.group(1))
+                    break
+
+        # Ciclo: el 2do badge (el 1ro es el formato Fílmico/Digital)
+        ciclo = ""
+        if len(badges) >= 2:
+            ciclo = badges[1].get_text(strip=True)
+
+        ticket_url = cta["href"] if cta and cta.get("href") else "https://cea.mda.gob.ar/#programacion"
+
+        result.append(Screening(
+            cine="CEA",
+            title=title,
+            fecha=d.isoformat(),
+            hora=default_hora,
+            ticket_url=ticket_url,
+            ciclo=ciclo,
+            director=director,
+            year=film_year,
+        ))
+
+    return result

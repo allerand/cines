@@ -475,6 +475,7 @@
     .cine-museo    { border-color: #3a2a1f; color: #d9a066; }
     .cine-ccr      { border-color: #2a1f2f; color: #b07acc; }
     .cine-amorina  { border-color: #3a1f2a; color: #cc6688; }
+    .cine-cea      { border-color: #1f3a3a; color: #5fd0c0; }
     /* Comerciales — paleta gris/azulada para diferenciarlos visualmente */
     .cine-cinemark { border-color: #2a2a2a; color: #aaa; }
     .cine-hoyts    { border-color: #2a2a2a; color: #aaa; }
@@ -615,6 +616,7 @@
   <button class="filter-btn" data-cine="Museo del Cine">Museo del Cine</button>
   <button class="filter-btn" data-cine="Centro Cultural Recoleta">El Recoleta</button>
   <button class="filter-btn" data-cine="Amorina">Amorina</button>
+  <button class="filter-btn" data-cine="CEA">CEA</button>
   <button class="filter-btn commercial-chip" data-cine="Cinemark" hidden>Cinemark</button>
   <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
@@ -717,6 +719,7 @@ const CINE_ADDRESSES = {
   'Museo del Cine':           'Agustín R. Caffarena 51',
   'Centro Cultural Recoleta': 'Junín 1930',
   'Amorina':                  'Gorriti 5745, Palermo',
+  'CEA':                       'Colón 1133, Avellaneda',
   // Comerciales — una entrada por sucursal
   'Cinemark Caballito':       'Av. La Plata 96',
   'Cinemark Palermo':         'Beruti 3399',
@@ -1010,7 +1013,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';
