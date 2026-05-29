@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T16:54:00",
+  "updated": "2026-05-29T21:21:47",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -437,21 +437,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-29",
-      "hora": "14:00",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "genre": "Fantasía, Drama",
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-29",
       "hora": "14:00",
@@ -587,21 +572,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-29",
-      "hora": "14:15",
-      "title_es": "Nico",
-      "title_en": "Nico",
-      "director": "Salomón Reyes",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 66,
-      "genre": "Terror, Drama",
-      "letterboxd": "https://letterboxd.com/film/nico-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-29",
       "hora": "14:20",
@@ -660,21 +630,6 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-29",
-      "hora": "14:45",
-      "title_es": "Crónicas de un exilio",
-      "title_en": "Chronicles of an Exile",
-      "director": "Micaela Montes Rojas, Pablo Guallar",
-      "country": "Argentina",
-      "year": 2021,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -977,21 +932,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-29",
-      "hora": "15:45",
-      "title_es": "Emi",
-      "title_en": "Emi",
-      "director": "Ezequiel Erriquez Mena",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 92,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-29",
       "hora": "15:45",
@@ -1020,21 +960,6 @@
       "letterboxd": "https://letterboxd.com/film/passenger-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-29",
-      "hora": "16:00",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Lorca",
@@ -1337,21 +1262,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-29",
-      "hora": "16:45",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-29",
       "hora": "16:50",
@@ -1637,21 +1547,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-29",
-      "hora": "17:45",
-      "title_es": "Nada entre los dos",
-      "title_en": "Nothing Between Us",
-      "director": "Juan Taratuto",
-      "country": "Mexico, USA",
-      "year": 2026,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-29",
       "hora": "17:50",
@@ -1680,21 +1575,6 @@
       "letterboxd": "https://letterboxd.com/film/tiger-bay-2025/",
       "ticket_url": "https://malba.org.ar/evento/baia-dos-tigres/",
       "ciclo": "Semana de cine portugués"
-    },
-    {
-      "cine": "Cine York",
-      "fecha": "2026-05-29",
-      "hora": "18:00",
-      "title_es": "Peões",
-      "title_en": "Metalworkers",
-      "director": "Eduardo Coutinho",
-      "country": "Brasil",
-      "year": 2004,
-      "duration": 85,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/peoes/",
-      "ticket_url": "https://lumiton.ar/evento/peoes/",
-      "ciclo": ""
     },
     {
       "cine": "Cine Gaumont",
@@ -25665,6 +25545,21 @@
       "letterboxd": "https://letterboxd.com/film/sparrows/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-06-12",
+      "hora": "18:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Amorina",
