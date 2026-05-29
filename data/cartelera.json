@@ -2,21 +2,6 @@
   "updated": "2026-05-29T11:10:31",
   "screenings": [
     {
-      "cine": "CEA",
-      "fecha": "2026-05-28",
-      "hora": "19:00",
-      "title_es": "Gatica \"El Mono\"",
-      "title_en": "Gatica, the Monkey",
-      "director": "Leonardo Favio",
-      "country": "Argentina",
-      "year": 1993,
-      "duration": 136,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/gatica-el-mono/",
-      "ticket_url": "https://forms.gle/yUPhTdqo9vjLTc3w9",
-      "ciclo": "88° Aniversario"
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-29",
       "hora": "12:00",

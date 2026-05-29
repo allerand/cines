@@ -2489,11 +2489,18 @@ def scrape_cea() -> list[Screening]:
         screen_year = cycle_year
         try:
             d = date(screen_year, month, day_num)
-            if d < today - timedelta(days=1):
-                d = date(screen_year + 1, month, day_num)
-            if d > cutoff:
-                continue
         except ValueError:
+            continue
+        # Rollover: si la fecha quedó muy en el pasado (ej. diciembre visto en
+        # enero), es del año siguiente.
+        if d < today - timedelta(days=180):
+            try:
+                d = date(screen_year + 1, month, day_num)
+            except ValueError:
+                continue
+        # Filtrar funciones pasadas (la página del CEA lista el ciclo completo,
+        # incluidos días ya transcurridos) y fuera de la ventana.
+        if d < today or d > cutoff:
             continue
 
         # Título: el <br> separa líneas → unimos con espacio
