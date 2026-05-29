@@ -3131,5 +3131,37 @@
     "duration": 84,
     "original_title": "Los cruces",
     "genre": "Documental"
+  },
+  "la quinta": {
+    "url": "https://letterboxd.com/film/la-quinta/",
+    "title_en": "La Quinta",
+    "director": "Adrián Alexander Eyzaguirre Sagastegui",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Terror, Thriller",
+    "original_title": "La quinta donna"
+  },
+  "el bello sergio": {
+    "url": "",
+    "title_en": "El bello Sergio",
+    "director": "Claude Chabrol",
+    "country": "France",
+    "year": 1959,
+    "duration": 98,
+    "title_es": "El bello Sergio",
+    "original_title": "Le Beau Serge",
+    "genre": "Drama"
+  },
+  "que la bestia muera": {
+    "url": "",
+    "title_en": "Que la bestia muera",
+    "director": "Claude Chabrol",
+    "country": "France, Italy",
+    "year": 1969,
+    "duration": 113,
+    "title_es": "Accidente sin huella",
+    "original_title": "Que la bête meure",
+    "genre": "Thriller, Drama"
   }
 }

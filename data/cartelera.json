@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-29T11:10:31",
+  "updated": "2026-05-29T16:54:00",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -452,6 +452,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "14:00",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-29",
       "hora": "14:00",
@@ -509,6 +524,21 @@
       "genre": "Misterio, Familiar",
       "letterboxd": "https://letterboxd.com/film/the-sheep-detectives/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "14:10",
+      "title_es": "El Drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -1007,6 +1037,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-29",
       "hora": "16:00",
@@ -1109,6 +1154,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "16:15",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -1667,6 +1727,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "18:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-29",
       "hora": "18:00",
@@ -1757,6 +1832,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "18:25",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-05-29",
       "hora": "18:30",
@@ -1815,21 +1905,6 @@
       "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-05-29",
-      "hora": "18:40",
-      "title_es": "Los dias chinos",
-      "title_en": "Chinese Days",
-      "director": "Santiago Loza",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 63,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/los-dias-chinos/",
-      "ticket_url": "https://malba.org.ar/evento/los-dias-chinos/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Hoyts Abasto",
@@ -2342,6 +2417,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-29",
       "hora": "20:10",
@@ -2459,6 +2549,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "20:25",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -2894,6 +2999,21 @@
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/fuze/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-29",
+      "hora": "22:10",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -3782,6 +3902,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "14:00",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-30",
       "hora": "14:00",
@@ -3839,6 +3974,21 @@
       "genre": "Misterio, Familiar",
       "letterboxd": "https://letterboxd.com/film/the-sheep-detectives/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "14:10",
+      "title_es": "El Drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -4367,6 +4517,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-30",
       "hora": "16:00",
@@ -4469,6 +4634,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "16:15",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -5027,6 +5207,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "18:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-30",
       "hora": "18:00",
@@ -5114,6 +5309,21 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "18:25",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -5687,6 +5897,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-30",
       "hora": "20:10",
@@ -5804,6 +6029,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "20:25",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -6239,6 +6479,21 @@
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/fuze/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-30",
+      "hora": "22:10",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -7202,6 +7457,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "14:00",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-31",
       "hora": "14:00",
@@ -7259,6 +7529,21 @@
       "genre": "Misterio, Familiar",
       "letterboxd": "https://letterboxd.com/film/the-sheep-detectives/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "14:10",
+      "title_es": "El Drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -7787,6 +8072,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-31",
       "hora": "16:00",
@@ -7904,6 +8204,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "16:15",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -8462,6 +8777,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "18:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-31",
       "hora": "18:00",
@@ -8534,6 +8864,21 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "18:25",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -9122,6 +9467,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-31",
       "hora": "20:10",
@@ -9239,6 +9599,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "20:25",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -9689,6 +10064,21 @@
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/fuze/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-05-31",
+      "hora": "22:10",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -10862,6 +11252,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "14:00",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-01",
       "hora": "14:00",
@@ -10919,6 +11324,21 @@
       "genre": "Misterio, Familiar",
       "letterboxd": "https://letterboxd.com/film/the-sheep-detectives/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "14:10",
+      "title_es": "El Drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -11402,6 +11822,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-01",
       "hora": "16:00",
@@ -11504,6 +11939,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "16:15",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -11957,6 +12407,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "18:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-01",
       "hora": "18:00",
@@ -12014,6 +12479,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "18:25",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -12482,6 +12962,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-01",
       "hora": "20:10",
@@ -12599,6 +13094,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "20:25",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -12944,6 +13454,21 @@
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/fuze/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-01",
+      "hora": "22:10",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -13832,6 +14357,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "14:00",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-02",
       "hora": "14:00",
@@ -13874,6 +14414,21 @@
       "genre": "Misterio, Familiar",
       "letterboxd": "https://letterboxd.com/film/the-sheep-detectives/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "14:10",
+      "title_es": "El Drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -14372,6 +14927,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-02",
       "hora": "16:00",
@@ -14489,6 +15059,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "16:15",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -14942,6 +15527,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "18:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-02",
       "hora": "18:00",
@@ -15044,6 +15644,21 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "18:25",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -15557,6 +16172,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-02",
       "hora": "20:10",
@@ -15674,6 +16304,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "20:25",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -16094,6 +16739,21 @@
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/fuze/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-02",
+      "hora": "22:10",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -16802,6 +17462,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "14:00",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-03",
       "hora": "14:00",
@@ -16844,6 +17519,21 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "14:10",
+      "title_es": "El Drama",
+      "title_en": "The Drama",
+      "director": "Kristoffer Borgli",
+      "country": "USA",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-drama/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -17312,6 +18002,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-03",
       "hora": "16:00",
@@ -17399,6 +18104,21 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "16:15",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -17912,6 +18632,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "18:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-03",
       "hora": "18:00",
@@ -18014,6 +18749,21 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/woman-and-child/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "18:25",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -18527,6 +19277,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-03",
       "hora": "20:10",
@@ -18644,6 +19409,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "20:25",
+      "title_es": "L'inconnu de la Grande Arche",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -18989,6 +19769,21 @@
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/fuze/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-03",
+      "hora": "22:10",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -21467,6 +22262,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-06",
+      "hora": "19:00",
+      "title_es": "La quinta",
+      "title_en": "La Quinta",
+      "director": "Adrián Alexander Eyzaguirre Sagastegui",
+      "country": "Italy",
+      "year": 2025,
+      "duration": 15,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/la-quinta/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-silvina-elena-schnicer-daniel-hendler/",
+      "ciclo": "Miradas contemporáneas:Silvina Elena Schnicer / Daniel Hendler"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-06",
       "hora": "19:30",
@@ -21947,6 +22757,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-07",
+      "hora": "15:00",
+      "title_es": "El bello Sergio",
+      "title_en": "El bello Sergio",
+      "director": "Claude Chabrol",
+      "country": "France",
+      "year": 1959,
+      "duration": 98,
+      "genre": "Drama",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-07",
       "hora": "15:00",
@@ -22110,6 +22935,21 @@
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-06-07",
+      "hora": "17:30",
+      "title_es": "Que la bestia muera",
+      "title_en": "Que la bestia muera",
+      "director": "Claude Chabrol",
+      "country": "France, Italy",
+      "year": 1969,
+      "duration": 113,
+      "genre": "Thriller, Drama",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
     },
     {
       "cine": "Hoyts Abasto",
