@@ -3102,5 +3102,34 @@
     "genre": "Ciencia ficción, Aventura",
     "title_es": "Proyecto Salvación",
     "original_title": "Project Hail Mary"
+  },
+  "encuentro coleman": {
+    "url": "",
+    "title_en": "ENCUENTRO COLEMAN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los bobos": {
+    "url": "https://letterboxd.com/film/los-bobos/",
+    "title_en": "Los Bobos",
+    "director": "Sofía Jallinsky, Juan Pablo Basovih Marinaro",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 95,
+    "genre": "Thriller, Terror",
+    "original_title": "Los Bobos",
+    "title_es": "La doctora de los marineros"
+  },
+  "los cruces": {
+    "url": "",
+    "title_en": "LOS CRUCES",
+    "director": "Julián Galay",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 84,
+    "original_title": "Los cruces",
+    "genre": "Documental"
   }
 }
