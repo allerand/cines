@@ -2590,14 +2590,14 @@
     "original_title": "El atardecer de los grillos"
   },
   "la fuerza invisible": {
-    "url": "",
-    "title_en": "La fuerza invisible",
+    "url": "https://letterboxd.com/film/la-fuerza-invisible-sierra-leona/",
+    "title_en": "La Fuerza Invisible: Sierra Leona",
     "director": "Taio Gardey, Pedro Fernández Quiroga",
     "country": "Argentina",
     "year": 2022,
-    "duration": null,
-    "original_title": "La Fuerza Invisible: Sierra Leona",
-    "genre": "Documental"
+    "duration": 81,
+    "genre": "Documental",
+    "original_title": "La Fuerza Invisible: Sierra Leona"
   },
   "zona de riesgo": {
     "url": "https://letterboxd.com/film/fuze/",
@@ -3204,5 +3204,27 @@
     "title_es": "He-Man y los masters del universo",
     "original_title": "Masters of the Universe",
     "genre": "Acción, Fantasía"
+  },
+  "dolly: juega conmigo": {
+    "url": "https://letterboxd.com/film/dolly-2025/",
+    "title_en": "Dolly",
+    "director": "Rod Blackhurst",
+    "country": "USA",
+    "year": 2025,
+    "duration": 83,
+    "genre": "Terror",
+    "title_es": "Dolly: Juega conmigo",
+    "original_title": "Dolly"
+  },
+  "el castillo ambulante": {
+    "url": "",
+    "title_en": "El castillo ambulante",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 2004,
+    "duration": 119,
+    "title_es": "El castillo ambulante",
+    "original_title": "ハウルの動く城",
+    "genre": "Fantasía, Animación"
   }
 }

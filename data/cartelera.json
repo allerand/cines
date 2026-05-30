@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30T05:06:12",
+  "updated": "2026-05-30T09:40:44",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -29,6 +29,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "12:20",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
     {
@@ -88,6 +103,36 @@
       "duration": 110,
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "12:30",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "12:30",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -242,6 +287,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "13:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "13:00",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Aventura, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-30",
       "hora": "13:00",
@@ -343,6 +418,21 @@
       "duration": 98,
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/fuze/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "13:20",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -482,6 +572,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "14:00",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-30",
       "hora": "14:00",
@@ -587,6 +692,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "14:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "14:10",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-30",
       "hora": "14:15",
@@ -617,6 +752,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "14:20",
+      "title_es": "Pequeños monstruos",
+      "title_en": "Finnick 2",
+      "director": "Denis Chernov",
+      "country": "Russia",
+      "year": 2025,
+      "duration": 85,
+      "genre": "Animación",
+      "letterboxd": "https://letterboxd.com/film/finnick-2/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-30",
       "hora": "14:25",
@@ -628,6 +778,21 @@
       "duration": 119,
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "14:30",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -647,6 +812,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "14:30",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-30",
       "hora": "14:30",
@@ -659,6 +839,36 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "14:30",
+      "title_es": "Las ovejas detectives",
+      "title_en": "The Sheep Detectives",
+      "director": "Kyle Balda",
+      "country": "USA, UK",
+      "year": 2026,
+      "duration": 109,
+      "genre": "Misterio, Familiar",
+      "letterboxd": "https://letterboxd.com/film/the-sheep-detectives/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "14:40",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Aventura, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -704,6 +914,51 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "14:45",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "14:50",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "14:50",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -797,6 +1052,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "15:00",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-05-30",
       "hora": "15:00",
@@ -854,6 +1124,36 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "15:10",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Aventura, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "15:10",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
     {
@@ -947,6 +1247,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "15:30",
+      "title_es": "Zona de riesgo",
+      "title_en": "Fuze",
+      "director": "David Mackenzie",
+      "country": "UK",
+      "year": 2025,
+      "duration": 96,
+      "genre": "Drama, Acción",
+      "letterboxd": "https://letterboxd.com/film/fuze/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "15:30",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-30",
       "hora": "15:30",
@@ -992,6 +1322,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "15:40",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Aventura, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-05-30",
       "hora": "15:45",
@@ -1033,6 +1378,21 @@
       "duration": 94,
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/passenger-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "15:50",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -1183,6 +1543,21 @@
       "duration": 116,
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "16:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -1397,6 +1772,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "16:50",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-30",
       "hora": "16:50",
@@ -1409,6 +1799,21 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "16:55",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -1442,6 +1847,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "17:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-30",
       "hora": "17:00",
@@ -1453,6 +1873,36 @@
       "duration": 132,
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "17:00",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "17:00",
+      "title_es": "Mortal Kombat II",
+      "title_en": "Mortal Kombat II",
+      "director": "Simon McQuoid",
+      "country": "USA",
+      "year": 2026,
+      "duration": 116,
+      "genre": "Aventura, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -1484,6 +1934,36 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "17:00",
+      "title_es": "El gran arco",
+      "title_en": "The Great Arch",
+      "director": "Stéphane Demoustier",
+      "country": "France, Denmark",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/the-great-arch-2025/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "17:05",
+      "title_es": "El castillo ambulante",
+      "title_en": "El castillo ambulante",
+      "director": "Hayao Miyazaki",
+      "country": "Japan",
+      "year": 2004,
+      "duration": 119,
+      "genre": "Fantasía, Animación",
+      "letterboxd": "",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -1532,6 +2012,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "17:10",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Aventura, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "17:20",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-30",
       "hora": "17:20",
@@ -1544,6 +2054,36 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-drama/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "17:20",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "17:25",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -1697,6 +2237,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "17:50",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Aventura, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "17:50",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-05-30",
       "hora": "18:00",
@@ -1802,6 +2372,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "18:00",
+      "title_es": "Dolly: Juega conmigo",
+      "title_en": "Dolly",
+      "director": "Rod Blackhurst",
+      "country": "USA",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/dolly-2025/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-30",
       "hora": "18:00",
@@ -1813,6 +2398,21 @@
       "duration": 119,
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/howls-moving-castle/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "18:00",
+      "title_es": "Super Mario Galaxy: La película",
+      "title_en": "The Super Mario Galaxy Movie",
+      "director": "Aaron Horvath, Michael Jelenic",
+      "country": "Japan, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Aventura, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -1892,6 +2492,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "18:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-30",
       "hora": "18:30",
@@ -1933,6 +2548,36 @@
       "duration": 119,
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "18:40",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "18:40",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -2132,6 +2777,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "19:25",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-05-30",
       "hora": "19:30",
@@ -2162,6 +2822,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "19:30",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-30",
       "hora": "19:30",
@@ -2174,6 +2849,21 @@
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/michael-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "19:30",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -2207,6 +2897,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "19:40",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-30",
       "hora": "19:40",
@@ -2218,6 +2923,21 @@
       "duration": 119,
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "19:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -2252,6 +2972,21 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "19:45",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-30",
       "hora": "19:50",
@@ -2297,6 +3032,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "19:50",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "19:50",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-30",
       "hora": "19:55",
@@ -2309,6 +3074,21 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "19:55",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -2387,6 +3167,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "20:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-30",
       "hora": "20:00",
@@ -2429,6 +3224,21 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "20:00",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -2567,6 +3377,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "20:20",
+      "title_es": "Zona de riesgo",
+      "title_en": "Fuze",
+      "director": "David Mackenzie",
+      "country": "UK",
+      "year": 2025,
+      "duration": 96,
+      "genre": "Drama, Acción",
+      "letterboxd": "https://letterboxd.com/film/fuze/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-05-30",
       "hora": "20:20",
@@ -2594,6 +3419,21 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "20:25",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
     {
@@ -2631,13 +3471,13 @@
       "fecha": "2026-05-30",
       "hora": "20:30",
       "title_es": "La fuerza invisible",
-      "title_en": "La fuerza invisible",
+      "title_en": "La Fuerza Invisible: Sierra Leona",
       "director": "Taio Gardey y Pedro Fernández Quiroga",
       "country": "Argentina",
       "year": 2022,
       "duration": 81,
       "genre": "Documental",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/la-fuerza-invisible-sierra-leona/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=829",
       "ciclo": "Funciones Unicas"
     },
@@ -2668,6 +3508,21 @@
       "duration": 98,
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/fuze/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "20:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -2807,6 +3662,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "21:30",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "21:30",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-30",
       "hora": "21:30",
@@ -2879,6 +3764,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/mortal-kombat-ii/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "21:55",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -3017,6 +3917,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "22:00",
+      "title_es": "Zona de riesgo",
+      "title_en": "Fuze",
+      "director": "David Mackenzie",
+      "country": "UK",
+      "year": 2025,
+      "duration": 96,
+      "genre": "Drama, Acción",
+      "letterboxd": "https://letterboxd.com/film/fuze/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "22:05",
+      "title_es": "Nada Entre Los Dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-30",
       "hora": "22:10",
@@ -3044,6 +3974,36 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "22:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "22:10",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
     {
@@ -3092,6 +4052,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "22:20",
+      "title_es": "El diablo viste a la moda 2",
+      "title_en": "The Devil Wears Prada 2",
+      "director": "David Frankel",
+      "country": "USA",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "22:20",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "22:25",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-30",
       "hora": "22:30",
@@ -3163,6 +4168,36 @@
       "duration": 111,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "22:30",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "22:30",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "director": "Curry Barker",
+      "country": "USA, UK",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -3197,6 +4232,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "22:35",
+      "title_es": "Michael",
+      "title_en": "Michael",
+      "director": "Antoine Fuqua",
+      "country": "USA",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-30",
       "hora": "22:40",
@@ -3227,6 +4277,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "22:40",
+      "title_es": "Star Wars: The Mandalorian and Grogu",
+      "title_en": "Star Wars: The Mandalorian and Grogu",
+      "director": "Jon Favreau",
+      "country": "USA",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-05-30",
       "hora": "22:40",
@@ -3239,6 +4304,36 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-05-30",
+      "hora": "22:40",
+      "title_es": "Hokum: La maldición de la bruja",
+      "title_en": "Hokum",
+      "director": "Damian McCarthy",
+      "country": "USA, Ireland",
+      "year": 2026,
+      "duration": 107,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/hokum/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "22:45",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
     {
@@ -3283,6 +4378,21 @@
       "duration": 132,
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-05-30",
+      "hora": "22:50",
+      "title_es": "Dolly: Juega conmigo",
+      "title_en": "Dolly",
+      "director": "Rod Blackhurst",
+      "country": "USA",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/dolly-2025/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -3373,6 +4483,21 @@
       "duration": 83,
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/dolly-2025/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-05-30",
+      "hora": "23:00",
+      "title_es": "Backrooms",
+      "title_en": "Backrooms",
+      "director": "Kane Parsons",
+      "country": "USA, Canada",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -18932,6 +20057,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-06-06",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Lumiton",
       "fecha": "2026-06-06",
       "hora": "18:00",
@@ -19862,6 +21002,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-06-07",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Germany",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-06-07",
       "hora": "18:00",
@@ -20070,6 +21225,21 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-06-07",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Caballito",
