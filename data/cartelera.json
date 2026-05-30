@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-30T14:40:02",
+  "updated": "2026-05-30T20:19:34",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -527,21 +527,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-30",
-      "hora": "14:00",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "genre": "Fantasía, Drama",
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-30",
       "hora": "14:00",
@@ -722,21 +707,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-30",
-      "hora": "14:15",
-      "title_es": "Nico",
-      "title_en": "Nico",
-      "director": "Salomón Reyes",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 66,
-      "genre": "Terror, Drama",
-      "letterboxd": "https://letterboxd.com/film/nico-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-30",
       "hora": "14:20",
@@ -870,21 +840,6 @@
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-30",
-      "hora": "14:45",
-      "title_es": "Crónicas de un exilio",
-      "title_en": "Chronicles of an Exile",
-      "director": "Micaela Montes Rojas, Pablo Guallar",
-      "country": "Argentina",
-      "year": 2021,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -1337,21 +1292,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-30",
-      "hora": "15:45",
-      "title_es": "Emi",
-      "title_en": "Emi",
-      "director": "Ezequiel Erriquez Mena",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 92,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-30",
       "hora": "15:45",
@@ -1410,21 +1350,6 @@
       "letterboxd": "https://letterboxd.com/film/bulakna/",
       "ticket_url": "https://malba.org.ar/evento/bulakna/",
       "ciclo": "Semana de cine portugués"
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-30",
-      "hora": "16:00",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Lorca",
@@ -1740,21 +1665,6 @@
       "letterboxd": "https://letterboxd.com/film/case-137-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=357",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-30",
-      "hora": "16:45",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -3780,21 +3690,6 @@
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-05-30",
-      "hora": "22:00",
-      "title_es": "The Souffleur",
-      "title_en": "The Souffleur",
-      "director": "Gastón Solnicki",
-      "country": "Argentina, Austria",
-      "year": 2025,
-      "duration": 78,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-souffleur/",
-      "ticket_url": "https://malba.org.ar/evento/the-souffleur/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "MALBA",
@@ -19382,6 +19277,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-06-05",
+      "hora": "18:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-06-05",
       "hora": "18:30",
@@ -20342,6 +20252,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-06-06",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Lumiton",
       "fecha": "2026-06-06",
       "hora": "18:00",
@@ -20655,6 +20580,21 @@
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-06-06",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -21392,6 +21332,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-06-07",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Germany",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-06-07",
       "hora": "18:00",
@@ -21630,6 +21585,21 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-06-07",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Caballito",
