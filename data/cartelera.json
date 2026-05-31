@@ -1,5 +1,5 @@
 {
-  "updated": "2026-05-31T14:40:53",
+  "updated": "2026-05-31T20:16:51",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -527,21 +527,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-31",
-      "hora": "14:00",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "genre": "Fantasía, Drama",
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-05-31",
       "hora": "14:00",
@@ -722,21 +707,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-31",
-      "hora": "14:15",
-      "title_es": "Nico",
-      "title_en": "Nico",
-      "director": "Salomón Reyes",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 66,
-      "genre": "Terror, Drama",
-      "letterboxd": "https://letterboxd.com/film/nico-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-05-31",
       "hora": "14:20",
@@ -870,21 +840,6 @@
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-31",
-      "hora": "14:45",
-      "title_es": "Crónicas de un exilio",
-      "title_en": "Chronicles of an Exile",
-      "director": "Micaela Montes Rojas, Pablo Guallar",
-      "country": "Argentina",
-      "year": 2021,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -1337,21 +1292,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-31",
-      "hora": "15:45",
-      "title_es": "Emi",
-      "title_en": "Emi",
-      "director": "Ezequiel Erriquez Mena",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 92,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-05-31",
       "hora": "15:45",
@@ -1410,21 +1350,6 @@
       "letterboxd": "https://letterboxd.com/film/the-red-shoes/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-31",
-      "hora": "16:00",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Lorca",
@@ -1592,21 +1517,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Munro",
-      "fecha": "2026-05-31",
-      "hora": "16:30",
-      "title_es": "Ponyo y el Secreto de la Sirenita",
-      "title_en": "Ponyo",
-      "director": "Hayao Miyazaki",
-      "country": "Japón",
-      "year": 2008,
-      "duration": 101,
-      "genre": "Animación, Familiar",
-      "letterboxd": "https://letterboxd.com/film/ponyo/",
-      "ticket_url": "https://lumiton.ar/evento/ponyo-y-el-secreto-de-la-sirenita/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-05-31",
       "hora": "16:30",
@@ -1755,21 +1665,6 @@
       "letterboxd": "https://letterboxd.com/film/case-137-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=357",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-05-31",
-      "hora": "16:45",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -2640,6 +2535,21 @@
       "letterboxd": "https://letterboxd.com/film/singin-in-the-rain/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
+    },
+    {
+      "cine": "CEA",
+      "fecha": "2026-05-31",
+      "hora": "19:00",
+      "title_es": "The Doors",
+      "title_en": "The Doors",
+      "director": "Oliver Stone",
+      "country": "USA",
+      "year": 1991,
+      "duration": 140,
+      "genre": "Drama, Música",
+      "letterboxd": "https://letterboxd.com/film/the-doors/",
+      "ticket_url": "https://forms.gle/PXGf7nmLUZoPAfZFA",
+      "ciclo": "Radar CEA"
     },
     {
       "cine": "Cine Gaumont",
