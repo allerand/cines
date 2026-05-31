@@ -3226,5 +3226,26 @@
     "title_es": "El castillo ambulante",
     "original_title": "ハウルの動く城",
     "genre": "Fantasía, Animación"
+  },
+  "la esposa infiel": {
+    "url": "",
+    "title_en": "La esposa infiel",
+    "director": "Eitan Tzur",
+    "country": "Israel, France",
+    "year": 2010,
+    "duration": 90,
+    "title_es": "La infiel",
+    "original_title": "התפרצות X",
+    "genre": "Drama"
+  },
+  "la ceremonia": {
+    "url": "https://letterboxd.com/film/la-ceremonia/",
+    "title_en": "La ceremonia",
+    "director": "Pedro Deré",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 63,
+    "genre": "Historia",
+    "original_title": "La ceremonia"
   }
 }
