@@ -136,16 +136,24 @@ def _slides_dir(date_str: str, fmt: str, weekly: bool = False) -> Path:
     return HERE / "posts" / date_str / fmt
 
 
+def _slide_num(p: Path) -> int:
+    """Extrae el número de slide-N.png para ordenar numéricamente
+    (sorted() lexicográfico pone slide-10 antes que slide-2)."""
+    import re as _re
+    m = _re.search(r"slide-(\d+)", p.stem)
+    return int(m.group(1)) if m else 0
+
+
 def collect_slides(date_str: str, fmt: str, weekly: bool = False) -> list[Path]:
     """Encuentra slides para una fecha (o semana) y formato. Compat con layout antiguo."""
     fmt_dir = _slides_dir(date_str, fmt, weekly)
     if fmt_dir.exists():
-        return sorted(fmt_dir.glob("slide-*.png"))
+        return sorted(fmt_dir.glob("slide-*.png"), key=_slide_num)
     # Compat: PNGs viejos en posts/YYYY-MM-DD/slide-*.png
     if fmt == "portrait" and not weekly:
         legacy = HERE / "posts" / date_str
         if legacy.exists():
-            return sorted(legacy.glob("slide-*.png"))
+            return sorted(legacy.glob("slide-*.png"), key=_slide_num)
     return []
 
 
