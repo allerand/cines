@@ -399,8 +399,12 @@
     .col-pais   { width: 7rem; color: var(--muted); }
     .col-anio   { width: 4rem; color: var(--muted); text-align: right; }
     .col-dur    { width: 4.5rem; color: var(--muted); text-align: right; }
-    .col-lb     { width: 6rem; text-align: center; }
+    .col-lb     { width: 7rem; text-align: center; }
     .col-add    { width: 4rem; text-align: center; }
+    th.col-add  { line-height: 0; }
+    .cal-icon   { vertical-align: middle; color: var(--muted); }
+    th.col-add:hover .cal-icon { color: var(--text); }
+    .lb-short   { display: none; }
 
     /* Botón "Agendar en Google Calendar" — entre Cine y Película. NO desplaza
        el título, vive en su propia columna estrecha. */
@@ -559,6 +563,8 @@
       .col-cine { width: 5rem; }
       .col-hora { width: 4rem; }
       .col-lb   { width: 3rem; }
+      .lb-full  { display: none; }
+      .lb-short { display: inline; }
       .screening-table th, .screening-table td { padding: 0.45rem 0.4rem; }
       .film-meta-inline { display: block; }
       .cine-tag { font-size: 0.62rem; padding: 0.12rem 0.35rem; }
@@ -1088,7 +1094,7 @@ function renderTable() {
   const headers = [
     ['hora',     'col-hora', 'Hora'],
     ['cine',     'col-cine', 'Cine'],
-    ['__add',    'col-add',  '📅'],          // botón "agendar" — no sorteable
+    ['__add',    'col-add',  '<svg class="cal-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>'],          // botón "agendar" — no sorteable
     ['title',    'col-film', 'Película'],
     ['ciclo',    'col-ciclo','Ciclo'],
     ['director', 'col-dir',  'Director'],
@@ -1096,7 +1102,7 @@ function renderTable() {
     ['country',  'col-pais', 'País'],
     ['year',     'col-anio', 'Año'],
     ['duration', 'col-dur',  'Duración'],
-    ['lb',       'col-lb',   'LB'],
+    ['lb',       'col-lb',   '<span class="lb-full">Letterboxd</span><span class="lb-short">LB</span>'],
   ];
   const thead = headers.map(([key, cls, label]) => {
     if (key === '__add') return `<th class="${cls}" style="cursor:default">${label}</th>`;
