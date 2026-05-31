@@ -2542,3 +2542,156 @@ def scrape_cea() -> list[Screening]:
         ))
 
     return result
+
+
+# ---------------------------------------------------------------------------
+# Filo Cine — Microcine de la Facultad de Filosofía y Letras (UBA)
+# filo.uba.ar/cines-en-filo — listado HTML estático (Drupal), detalle por film
+# con director, país, año y duración.
+# ---------------------------------------------------------------------------
+
+FILO_BASE = "https://www.filo.uba.ar"
+
+
+def _fetch_filo_film_meta(url: str) -> dict:
+    """
+    Extrae {director, country, year, duration, ciclo} desde la página de
+    detalle de una película de Filo Cine. La ficha técnica está renderizada
+    como un <p> por campo (ej. "Director: ...", "Duración : 56 min").
+    """
+    try:
+        soup = fetch_html(url)
+    except Exception:
+        return {}
+
+    out: dict = {}
+    for p in soup.find_all("p"):
+        txt = p.get_text(" ", strip=True)
+        if len(txt) > 300:
+            continue
+        m = re.match(r"^Director(?:a|es|as)?\s*:\s*(.+)$", txt, re.I)
+        if m and "director" not in out:
+            out["director"] = m.group(1).strip().rstrip(".")
+            continue
+        m = re.match(r"^Duración\s*:?\s*(\d{1,3})", txt, re.I)
+        if m:
+            out["duration"] = int(m.group(1))
+            continue
+        m = re.match(r"^País\s*(?:y\s+año)?\s*(?:de\s+producción)?\s*:?\s*(.+)$", txt, re.I)
+        if m:
+            rest = m.group(1)
+            ym = re.search(r"(19\d{2}|20\d{2})", rest)
+            if ym:
+                out["year"] = int(ym.group(1))
+            country = re.sub(r"[,\-–·•]?\s*(19\d{2}|20\d{2}).*$", "", rest).strip().rstrip(",").strip()
+            if country:
+                out["country"] = country
+            continue
+        m = re.match(r"^Año\s*(?:de\s+producción)?\s*:?\s*(\d{4})", txt, re.I)
+        if m and "year" not in out:
+            out["year"] = int(m.group(1))
+            continue
+        m = re.match(r"^Género\s*:?\s*(.+)$", txt, re.I)
+        if m:
+            out["ciclo"] = m.group(1).strip().rstrip(".")
+            continue
+
+    return out
+
+
+def scrape_filo() -> list[Screening]:
+    """
+    Scrapea filo.uba.ar/cines-en-filo. El listado tiene un .left-agenda-grid
+    por función con día, mes corto en español, título (link al detalle),
+    horario, sede ("Microcine") y categoría.
+
+    La página NO trae el año: lo inferimos asumiendo "más cercano en el futuro"
+    (si el día/mes ya pasó este año, es del siguiente).
+    """
+    try:
+        soup = fetch_html(f"{FILO_BASE}/cines-en-filo")
+    except Exception:
+        return []
+
+    today = date.today()
+    cutoff = today + timedelta(days=120)
+    result: list[Screening] = []
+    meta_cache: dict[str, dict] = {}
+
+    for row in soup.select(".left-agenda-grid.agenda-grid"):
+        day_el = row.select_one(".agenda-day")
+        month_el = row.select_one(".agenda-month")
+        title_link = row.select_one(".card-title a")
+        if not (day_el and month_el and title_link):
+            continue
+
+        try:
+            day_num = int(re.sub(r"\D", "", day_el.get_text(strip=True)))
+        except ValueError:
+            continue
+
+        month_text = month_el.get_text(strip=True).lower().rstrip(".")
+        month = MESES_ES.get(month_text)
+        if not month:
+            # Probar prefijos más largos / cortos
+            for k, v in MESES_ES.items():
+                if month_text.startswith(k) or k.startswith(month_text):
+                    month = v
+                    break
+        if not month:
+            continue
+
+        # Año: el más cercano que no sea pasado
+        year = today.year
+        try:
+            d = date(year, month, day_num)
+        except ValueError:
+            continue
+        if d < today:
+            try:
+                d = date(year + 1, month, day_num)
+            except ValueError:
+                continue
+        if d > cutoff:
+            continue
+
+        title = title_link.get_text(" ", strip=True)
+        href = title_link.get("href", "")
+        detail_url = href if href.startswith("http") else f"{FILO_BASE}{href}"
+
+        # Horario: primer .event-info con la imagen clock.png
+        hora = ""
+        for info in row.select(".event-info"):
+            img = info.find("img")
+            if img and "clock" in (img.get("src") or "").lower():
+                hm = re.search(r"(\d{1,2}):(\d{2})", info.get_text(" ", strip=True))
+                if hm:
+                    hora = f"{int(hm.group(1)):02d}:{hm.group(2)}"
+                break
+        if not hora:
+            continue
+
+        # Categoría (Ficción / Documental) — la usamos como ciclo si no hay
+        # género más específico en el detalle.
+        cat_el = row.select_one(".event-category")
+        categoria = cat_el.get_text(" ", strip=True) if cat_el else ""
+
+        # Enriquecer con metadata del detalle (director / país / año / duración)
+        if detail_url not in meta_cache:
+            meta_cache[detail_url] = _fetch_filo_film_meta(detail_url)
+        meta = meta_cache[detail_url]
+
+        result.append(Screening(
+            cine="Filo Cine",
+            title=title,
+            fecha=d.isoformat(),
+            hora=hora,
+            ticket_url=detail_url,
+            ciclo=meta.get("ciclo") or categoria,
+            director=meta.get("director", ""),
+            country=meta.get("country", ""),
+            year=meta.get("year"),
+            duration=meta.get("duration"),
+        ))
+
+    return result
