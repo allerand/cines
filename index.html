@@ -169,13 +169,14 @@
     }
 
     .day-tab {
+      position: relative;
       flex-shrink: 0;        /* IMPORTANTE: Evita que los días se achiquen */
       padding: 0.85rem 1.2rem;
       cursor: pointer;
       font-size: 0.82rem;
       color: var(--muted);
       border-bottom: 2px solid transparent;
-      transition: color 0.15s, border-color 0.15s;
+      transition: color 0.15s, border-color 0.15s, opacity 0.15s;
       white-space: nowrap;
       user-select: none;
       display: flex;
@@ -202,6 +203,23 @@
       content: "•";
       color: var(--accent);
       margin-right: 0.25rem;
+    }
+    /* Resaltado de días con funciones para la sala seleccionada.
+       Cuando hay un cine filtrado (#day-tabs.cine-filter), los días con
+       función para esa sala se marcan con un punto verde y quedan brillantes;
+       el resto se atenúa. */
+    .day-tabs.cine-filter .day-tab:not(.has-cine) { opacity: 0.32; }
+    .day-tabs.cine-filter .day-tab.has-cine { color: var(--text); }
+    .day-tab.has-cine::after {
+      content: "";
+      position: absolute;
+      bottom: 5px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
     }
 
     /* ── Filters bar ── */
@@ -999,6 +1017,29 @@ function buildDayTabs() {
     if (i === 0 && !activeDay) selectDay(fecha);
     else if (fecha === activeDay) selectDay(fecha); // re-aplica .active
   });
+
+  highlightCineDays();
+}
+
+// Marca en la grilla de días los que tienen funciones para la sala
+// seleccionada. Sin sala ("all") no resalta nada.
+function highlightCineDays() {
+  const container = document.getElementById('day-tabs');
+  const tabs = container.querySelectorAll('.day-tab');
+  if (activeCine === 'all') {
+    container.classList.remove('cine-filter');
+    tabs.forEach(t => t.classList.remove('has-cine'));
+    return;
+  }
+  container.classList.add('cine-filter');
+  const pool = visibleScreenings();
+  const matchesCine = s => isCommercial(activeCine)
+    ? (s.cine && s.cine.startsWith(activeCine))
+    : s.cine === activeCine;
+  tabs.forEach(t => {
+    const fecha = t.dataset.fecha;
+    t.classList.toggle('has-cine', pool.some(s => s.fecha === fecha && matchesCine(s)));
+  });
 }
 
 function resetSort() {
@@ -1019,6 +1060,17 @@ document.getElementById('filters').addEventListener('click', e => {
   activeCine = btn.dataset.cine;
   resetSort();
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
+  highlightCineDays();
+  // Si el día seleccionado no tiene funciones para esta sala, saltamos al
+  // primer día disponible para que no quede la tabla vacía.
+  if (activeCine !== 'all') {
+    const firstDay = document.querySelector('.day-tab.has-cine');
+    if (firstDay && firstDay.dataset.fecha !== activeDay) {
+      selectDay(firstDay.dataset.fecha);
+      firstDay.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+      return;
+    }
+  }
   renderTable();
 });
 
