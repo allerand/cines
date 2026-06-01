@@ -357,7 +357,11 @@
 
     .screening-table {
       width: 100%;
-      border-collapse: collapse;
+      /* separate (no collapse) para que los th sticky no tengan el bug de
+         doble-render/fantasma en Safari iOS. Las líneas entre filas se
+         mantienen vía border-bottom de cada celda. */
+      border-collapse: separate;
+      border-spacing: 0;
       font-size: 0.83rem;
     }
     .screening-table th {
