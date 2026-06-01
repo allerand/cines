@@ -3266,5 +3266,43 @@
     "duration": 80,
     "genre": "Documental",
     "original_title": "Cuidadoras"
+  },
+  "lai": {
+    "url": "https://letterboxd.com/film/lai/",
+    "title_en": "Lai",
+    "director": "Rusi Millán Pastori",
+    "country": "Argentina",
+    "year": 2017,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "Lai"
+  },
+  "annemarie": {
+    "url": "https://letterboxd.com/film/annemarie/",
+    "title_en": "Annemarie",
+    "director": "Mariana Sanguinetti",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 74,
+    "genre": "",
+    "original_title": "Annemarie"
+  },
+  "traslados": {
+    "url": "https://letterboxd.com/film/transfers/",
+    "title_en": "Transfers",
+    "director": "Nicolás Gil Lavedra",
+    "country": "Argentina, Uruguay",
+    "year": 2024,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "Traslados"
+  },
+  "la historia no oficial de los mundiales": {
+    "url": "",
+    "title_en": "LA HISTORIA NO OFICIAL DE LOS MUNDIALES",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }

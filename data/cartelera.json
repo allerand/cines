@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T13:38:33",
+  "updated": "2026-06-01T18:49:06",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -527,21 +527,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-01",
-      "hora": "14:00",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "genre": "Fantasía, Drama",
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-06-01",
       "hora": "14:00",
@@ -722,21 +707,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-01",
-      "hora": "14:15",
-      "title_es": "Nico",
-      "title_en": "Nico",
-      "director": "Salomón Reyes",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 66,
-      "genre": "Terror, Drama",
-      "letterboxd": "https://letterboxd.com/film/nico-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=819",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-01",
       "hora": "14:20",
@@ -870,21 +840,6 @@
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-01",
-      "hora": "14:45",
-      "title_es": "Crónicas de un exilio",
-      "title_en": "Chronicles of an Exile",
-      "director": "Micaela Montes Rojas, Pablo Guallar",
-      "country": "Argentina",
-      "year": 2021,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -9197,21 +9152,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine York",
-      "fecha": "2026-06-03",
-      "hora": "19:00",
-      "title_es": "Familia Sumergida",
-      "title_en": "A Family Submerged",
-      "director": "María Alché",
-      "country": "Argentina",
-      "year": 2018,
-      "duration": 91,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/familia-sumergida/",
-      "ticket_url": "https://lumiton.ar/evento/familia-sumergida-2/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-03",
       "hora": "19:00",
@@ -9509,6 +9449,21 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-06-03",
+      "hora": "20:00",
+      "title_es": "Familia Sumergida",
+      "title_en": "A Family Submerged",
+      "director": "María Alché",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 91,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/familia-sumergida/",
+      "ticket_url": "https://lumiton.ar/evento/familia-sumergida-2/",
       "ciclo": ""
     },
     {
@@ -17282,6 +17237,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-10",
+      "hora": "20:30",
+      "title_es": "Traslados",
+      "title_en": "Transfers",
+      "director": "Nicolás Gil Lavedra",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 92,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/transfers/",
+      "ticket_url": "https://lumiton.ar/evento/traslados/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-10",
       "hora": "20:30",
@@ -18347,6 +18317,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Biblioteca Nacional",
+      "fecha": "2026-06-16",
+      "hora": "18:30",
+      "title_es": "Annemarie",
+      "title_en": "Annemarie",
+      "director": "Mariana Sanguinetti",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 74,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/annemarie/",
+      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
+      "ciclo": "La Nave de los Sueños"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-17",
       "hora": "15:00",
@@ -18857,6 +18842,21 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Biblioteca Nacional",
+      "fecha": "2026-06-23",
+      "hora": "18:30",
+      "title_es": "El atardecer de los grillos",
+      "title_en": "El atardecer de los grillos",
+      "director": "Gonzalo Almeida",
+      "country": "",
+      "year": 2025,
+      "duration": 79,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-atardecer-de-los-grillos/",
+      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
+      "ciclo": "La Nave de los Sueños"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-23",
       "hora": "21:00",
@@ -18989,6 +18989,21 @@
       "genre": "Comedia",
       "letterboxd": "https://letterboxd.com/film/the-patsy-1964/",
       "ticket_url": "https://lumiton.ar/evento/el-ingenuo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Lumiton",
+      "fecha": "2026-06-25",
+      "hora": "19:00",
+      "title_es": "La Historia No Oficial de los Mundiales",
+      "title_en": "LA HISTORIA NO OFICIAL DE LOS MUNDIALES",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/la-historia-no-oficial-de-los-mundiales/",
       "ciclo": ""
     },
     {
@@ -19161,45 +19176,15 @@
       "fecha": "2026-06-29",
       "hora": "18:00",
       "title_es": "Lai",
-      "title_en": "",
+      "title_en": "Lai",
       "director": "Rusi Millán Pastori",
-      "country": "",
+      "country": "Argentina",
       "year": 2017,
-      "duration": "",
-      "genre": "",
-      "letterboxd": "",
+      "duration": 90,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/lai/",
       "ticket_url": "https://www.bn.gov.ar/agenda-cultural/el-monstruo-en-pantalla-grande",
       "ciclo": "El monstruo en pantalla grande"
-    },
-    {
-      "cine": "Biblioteca Nacional",
-      "fecha": "2026-06-16",
-      "hora": "18:30",
-      "title_es": "Annemarie",
-      "title_en": "",
-      "director": "Mariana Sanguinetti",
-      "country": "",
-      "year": null,
-      "duration": "",
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/annemarie/",
-      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
-      "ciclo": "La Nave de los Sueños"
-    },
-    {
-      "cine": "Biblioteca Nacional",
-      "fecha": "2026-06-23",
-      "hora": "18:30",
-      "title_es": "El atardecer de los grillos",
-      "title_en": "",
-      "director": "Gonzalo Almeida",
-      "country": "",
-      "year": null,
-      "duration": "",
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/el-atardecer-de-los-grillos/",
-      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
-      "ciclo": "La Nave de los Sueños"
     }
   ]
 }
