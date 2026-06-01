@@ -2695,3 +2695,78 @@ def scrape_filo() -> list[Screening]:
         ))
 
     return result
+
+
+# ---------------------------------------------------------------------------
+# Biblioteca Nacional — Auditorio Jorge Luis Borges
+# La agenda (bn.gov.ar/agenda-cultural?categoria=cine) publica la programación
+# en texto libre con marcado inconsistente (un título va en <i>, el siguiente
+# en texto plano), así que no se puede scrapear de forma confiable. Cada
+# función se carga a mano en data/bn_manual.json.
+# ---------------------------------------------------------------------------
+
+BN_MANUAL_PATH = Path(__file__).parent / "data" / "bn_manual.json"
+
+
+def scrape_bn() -> list[Screening]:
+    """
+    Lee data/bn_manual.json y devuelve las funciones futuras. Shape:
+      {"cine": "Biblioteca Nacional", "ticket_url": "...",
+       "functions": [{"title","director","country","year","ciclo",
+                      "fecha":"YYYY-MM-DD","hora":"HH:MM","ticket_url"}, ...]}
+    """
+    if not BN_MANUAL_PATH.exists():
+        return []
+    try:
+        data = json.loads(BN_MANUAL_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+
+    cine = (data.get("cine") or "Biblioteca Nacional").strip()
+    default_ticket = (data.get("ticket_url") or "").strip()
+    today = date.today()
+    result: list[Screening] = []
+
+    for f in data.get("functions", []):
+        title = (f.get("title") or "").strip()
+        fecha = (f.get("fecha") or "").strip()
+        hora = (f.get("hora") or "").strip()
+        if not title or not fecha or not hora:
+            continue
+        # Validar formato y descartar funciones pasadas.
+        try:
+            d = date.fromisoformat(fecha)
+        except ValueError:
+            continue
+        if d < today:
+            continue
+        m = re.match(r"^(\d{1,2}):(\d{2})$", hora)
+        if not m:
+            continue
+        hora = f"{int(m.group(1)):02d}:{m.group(2)}"
+
+        year = f.get("year")
+        try:
+            year = int(year) if year else None
+        except (TypeError, ValueError):
+            year = None
+        duration = f.get("duration")
+        try:
+            duration = int(duration) if duration else None
+        except (TypeError, ValueError):
+            duration = None
+
+        result.append(Screening(
+            cine=cine,
+            title=title,
+            fecha=d.isoformat(),
+            hora=hora,
+            ticket_url=(f.get("ticket_url") or default_ticket).strip(),
+            ciclo=(f.get("ciclo") or "").strip(),
+            director=(f.get("director") or "").strip(),
+            country=(f.get("country") or "").strip(),
+            year=year,
+            duration=duration,
+        ))
+
+    return result

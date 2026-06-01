@@ -1,10 +1,32 @@
 {
-  "_comment": "Overrides manuales para títulos que el enrichment no logra mapear automáticamente (Spanish title → Letterboxd canonical). Key = título normalizado (lowercase, trimmed). Se aplica después del enrichment en run.py. Agregá más overrides acá manualmente cuando detectes pelis sin link de LB en sitedigo.com.",
+  "_comment": "Overrides manuales para títulos que el enrichment no logra mapear automáticamente (Spanish title → Letterboxd canonical). Key = título normalizado (lowercase, trimmed). Se aplica después del enrichment en run.py. Agregá más overrides acá manualmente cuando detectes pelis sin link de LB en sitedigo.com. Todos los slugs se verifican contra letterboxd.com (status 200 + director/año correctos) antes de agregarlos.",
 
   "la parte del león":            "https://letterboxd.com/film/the-lions-share/",
   "la crónica francesa":          "https://letterboxd.com/film/the-french-dispatch-of-the-liberty-kansas/",
   "el gran hotel budapest":       "https://letterboxd.com/film/the-grand-budapest-hotel/",
   "los excéntricos tenenbaums":   "https://letterboxd.com/film/the-royal-tenenbaums/",
   "isla de perros":               "https://letterboxd.com/film/isle-of-dogs-2018/",
-  "las aventuras de buckaroo banzaï en la octava dimensión": "https://letterboxd.com/film/the-adventures-of-buckaroo-banzai-across-the-8th-dimension/"
+  "las aventuras de buckaroo banzaï en la octava dimensión": "https://letterboxd.com/film/the-adventures-of-buckaroo-banzai-across-the-8th-dimension/",
+
+  "el castillo ambulante":               "https://letterboxd.com/film/howls-moving-castle/",
+  "la tiendita del horror":              "https://letterboxd.com/film/the-little-shop-of-horrors/",
+  "fausto":                              "https://letterboxd.com/film/faust-1926/",
+  "el bello sergio":                     "https://letterboxd.com/film/le-beau-serge/",
+  "que la bestia muera":                 "https://letterboxd.com/film/this-man-must-die/",
+  "possession":                          "https://letterboxd.com/film/possession/",
+  "la reina margot":                     "https://letterboxd.com/film/queen-margot-1994/",
+  "the big lebowski":                    "https://letterboxd.com/film/the-big-lebowski/",
+  "alicia en el país de las maravillas": "https://letterboxd.com/film/alice-in-wonderland-1951/",
+  "la bella y la bestia":                "https://letterboxd.com/film/beauty-and-the-beast-1991/",
+  "el terror de las chicas":             "https://letterboxd.com/film/the-ladies-man-1961/",
+  "esperando la carroza":                "https://letterboxd.com/film/esperando-la-carroza/",
+  "darse cuenta":                        "https://letterboxd.com/film/darse-cuenta/",
+  "me casé con un boludo":               "https://letterboxd.com/film/me-case-con-un-boludo/",
+  "la discoteca del amor":               "https://letterboxd.com/film/la-discoteca-del-amor/",
+  "luna de miel en río":                 "https://letterboxd.com/film/luna-de-miel-en-rio/",
+  "historias breves 24":                 "https://letterboxd.com/film/historias-breves-24/",
+  "amos del universo":                   "https://letterboxd.com/film/masters-of-the-universe-2026/",
+
+  "annemarie":                           "https://letterboxd.com/film/annemarie/",
+  "el atardecer de los grillos":         "https://letterboxd.com/film/el-atardecer-de-los-grillos/"
 }

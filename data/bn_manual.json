@@ -1,0 +1,27 @@
+{
+  "_comment": "Programación de cine de la Biblioteca Nacional (Auditorio Jorge Luis Borges). La agenda de BN (bn.gov.ar/agenda-cultural?categoria=cine) usa texto libre inconsistente que no se puede scrapear de forma confiable, así que cada función se carga a mano acá. scrape_bn() en scraper.py lee este archivo y descarta funciones pasadas. Agregá/actualizá funciones cuando salga un ciclo nuevo.",
+  "cine": "Biblioteca Nacional",
+  "ticket_url": "https://www.bn.gov.ar/agenda-cultural?categoria=cine",
+  "functions": [
+    {
+      "title": "Annemarie",
+      "director": "Mariana Sanguinetti",
+      "country": "Argentina",
+      "year": 2026,
+      "ciclo": "La nave de los sueños",
+      "fecha": "2026-06-16",
+      "hora": "18:30",
+      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24"
+    },
+    {
+      "title": "El atardecer de los grillos",
+      "director": "Gonzalo Almeida",
+      "country": "Argentina",
+      "year": 2025,
+      "ciclo": "La nave de los sueños",
+      "fecha": "2026-06-23",
+      "hora": "18:30",
+      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24"
+    }
+  ]
+}
