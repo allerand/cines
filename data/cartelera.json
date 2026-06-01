@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T18:49:06",
+  "updated": "2026-06-01T22:11:48",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -1262,21 +1262,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-01",
-      "hora": "15:45",
-      "title_es": "Emi",
-      "title_en": "Emi",
-      "director": "Ezequiel Erriquez Mena",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 92,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-06-01",
       "hora": "15:45",
@@ -1320,21 +1305,6 @@
       "letterboxd": "https://letterboxd.com/film/the-devil-wears-prada-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-01",
-      "hora": "16:00",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Lorca",
@@ -1605,21 +1575,6 @@
       "letterboxd": "https://letterboxd.com/film/case-137-2025/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=357",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-01",
-      "hora": "16:45",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -2057,21 +2012,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-01",
-      "hora": "17:45",
-      "title_es": "Nada entre los dos",
-      "title_en": "Nothing Between Us",
-      "director": "Juan Taratuto",
-      "country": "Mexico, USA",
-      "year": 2026,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-01",
       "hora": "17:50",
@@ -2115,21 +2055,6 @@
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-01",
-      "hora": "18:00",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Germany",
-      "year": 2024,
-      "duration": 96,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Lorca",
@@ -10727,6 +10652,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "14:00",
+      "title_es": "Hijo Mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "14:15",
+      "title_es": "Crónicas de un exilio",
+      "title_en": "Chronicles of an Exile",
+      "director": "Micaela Montes Rojas, Pablo Guallar",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "14:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-04",
       "hora": "14:30",
@@ -10847,6 +10817,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "16:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-04",
       "hora": "16:00",
@@ -10890,6 +10875,36 @@
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "16:15",
+      "title_es": "El último viaje a China",
+      "title_en": "El Último Viaje a China",
+      "director": "Alejandro Maci",
+      "country": "",
+      "year": 2024,
+      "duration": 81,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "16:30",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -11072,6 +11087,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "18:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-04",
       "hora": "18:20",
@@ -11115,6 +11145,21 @@
       "letterboxd": "https://letterboxd.com/film/the-nutty-professor/",
       "ticket_url": "https://lumiton.ar/evento/el-profesor-chiflado/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "18:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "MALBA",
@@ -11492,6 +11537,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "22:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-04",
+      "hora": "22:30",
+      "title_es": "La frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "director": "Cristian Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-04",
       "hora": "22:30",
@@ -11762,6 +11837,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "14:00",
+      "title_es": "Hijo Mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "14:15",
+      "title_es": "Crónicas de un exilio",
+      "title_en": "Chronicles of an Exile",
+      "director": "Micaela Montes Rojas, Pablo Guallar",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "14:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-05",
       "hora": "14:30",
@@ -11882,6 +12002,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "16:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-05",
       "hora": "16:00",
@@ -11925,6 +12060,36 @@
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "16:15",
+      "title_es": "El último viaje a China",
+      "title_en": "El Último Viaje a China",
+      "director": "Alejandro Maci",
+      "country": "",
+      "year": 2024,
+      "duration": 81,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "16:30",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -12092,6 +12257,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "18:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-05",
       "hora": "18:20",
@@ -12135,6 +12315,21 @@
       "letterboxd": "https://letterboxd.com/film/high-tension/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "18:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -12527,6 +12722,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "22:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-05",
+      "hora": "22:30",
+      "title_es": "La frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "director": "Cristian Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-05",
       "hora": "22:30",
@@ -12782,6 +13007,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "14:00",
+      "title_es": "Hijo Mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "14:15",
+      "title_es": "Crónicas de un exilio",
+      "title_en": "Chronicles of an Exile",
+      "director": "Micaela Montes Rojas, Pablo Guallar",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "14:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-06",
       "hora": "14:30",
@@ -12932,6 +13202,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "16:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-06",
       "hora": "16:00",
@@ -12975,6 +13260,36 @@
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "16:15",
+      "title_es": "El último viaje a China",
+      "title_en": "El Último Viaje a China",
+      "director": "Alejandro Maci",
+      "country": "",
+      "year": 2024,
+      "duration": 81,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "16:30",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -13172,6 +13487,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "18:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-06",
       "hora": "18:20",
@@ -13185,6 +13515,21 @@
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "18:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Amorina",
@@ -13577,6 +13922,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "22:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-06",
+      "hora": "22:30",
+      "title_es": "La frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "director": "Cristian Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-06",
       "hora": "22:30",
@@ -13832,6 +14207,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "14:00",
+      "title_es": "Hijo Mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "14:15",
+      "title_es": "Crónicas de un exilio",
+      "title_en": "Chronicles of an Exile",
+      "director": "Micaela Montes Rojas, Pablo Guallar",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "14:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-07",
       "hora": "14:30",
@@ -13982,6 +14402,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "16:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-07",
       "hora": "16:00",
@@ -14027,6 +14462,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "16:15",
+      "title_es": "El último viaje a China",
+      "title_en": "El Último Viaje a China",
+      "director": "Alejandro Maci",
+      "country": "",
+      "year": 2024,
+      "duration": 81,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-06-07",
       "hora": "16:30",
@@ -14040,6 +14490,21 @@
       "letterboxd": "https://letterboxd.com/film/dumbo/",
       "ticket_url": "https://lumiton.ar/evento/dumbo/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "16:30",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -14237,6 +14702,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "18:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-07",
       "hora": "18:20",
@@ -14265,6 +14745,21 @@
       "letterboxd": "https://letterboxd.com/film/cien-veces-no-debo/",
       "ticket_url": "https://lumiton.ar/evento/cien-veces-no-debo-2/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "18:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Amorina",
@@ -14642,6 +15137,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "22:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "22:30",
+      "title_es": "La frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "director": "Cristian Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-07",
       "hora": "22:30",
@@ -14927,6 +15452,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "14:00",
+      "title_es": "Hijo Mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "14:15",
+      "title_es": "Crónicas de un exilio",
+      "title_en": "Chronicles of an Exile",
+      "director": "Micaela Montes Rojas, Pablo Guallar",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "14:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-08",
       "hora": "14:30",
@@ -15032,6 +15602,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "16:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-08",
       "hora": "16:00",
@@ -15075,6 +15660,36 @@
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "16:15",
+      "title_es": "El último viaje a China",
+      "title_en": "El Último Viaje a China",
+      "director": "Alejandro Maci",
+      "country": "",
+      "year": 2024,
+      "duration": 81,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "16:30",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -15197,6 +15812,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "18:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-08",
       "hora": "18:20",
@@ -15210,6 +15840,21 @@
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "18:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -15527,6 +16172,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "22:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "22:30",
+      "title_es": "La frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "director": "Cristian Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-08",
       "hora": "22:30",
@@ -15782,6 +16457,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "14:00",
+      "title_es": "Hijo Mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "14:15",
+      "title_es": "Crónicas de un exilio",
+      "title_en": "Chronicles of an Exile",
+      "director": "Micaela Montes Rojas, Pablo Guallar",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "14:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-09",
       "hora": "14:30",
@@ -15902,6 +16622,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "16:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-09",
       "hora": "16:00",
@@ -15945,6 +16680,36 @@
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "16:15",
+      "title_es": "El último viaje a China",
+      "title_en": "El Último Viaje a China",
+      "director": "Alejandro Maci",
+      "country": "",
+      "year": 2024,
+      "duration": 81,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "16:30",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -16082,6 +16847,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "18:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-09",
       "hora": "18:20",
@@ -16110,6 +16890,21 @@
       "letterboxd": "https://letterboxd.com/film/la-discoteca-del-amor/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "18:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -16442,6 +17237,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "22:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "22:30",
+      "title_es": "La frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "director": "Cristian Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-09",
       "hora": "22:30",
@@ -16697,6 +17522,51 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "14:00",
+      "title_es": "Hijo Mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "14:15",
+      "title_es": "Crónicas de un exilio",
+      "title_en": "Chronicles of an Exile",
+      "director": "Micaela Montes Rojas, Pablo Guallar",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "14:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-10",
       "hora": "14:30",
@@ -16817,6 +17687,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "16:00",
+      "title_es": "Historias breves 24",
+      "title_en": "Historias breves 24",
+      "director": "Varios",
+      "country": "",
+      "year": null,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-10",
       "hora": "16:00",
@@ -16860,6 +17745,36 @@
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "16:15",
+      "title_es": "El último viaje a China",
+      "title_en": "El Último Viaje a China",
+      "director": "Alejandro Maci",
+      "country": "",
+      "year": 2024,
+      "duration": 81,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "16:30",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -16997,6 +17912,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "18:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-10",
       "hora": "18:20",
@@ -17025,6 +17955,21 @@
       "letterboxd": "https://letterboxd.com/film/under-the-silver-lake/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "18:30",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -17370,6 +18315,36 @@
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "22:15",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "22:30",
+      "title_es": "La frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "director": "Cristian Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=769",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
