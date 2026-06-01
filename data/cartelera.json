@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-01T13:33:00",
+  "updated": "2026-06-01T13:38:33",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -18347,21 +18347,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Biblioteca Nacional",
-      "fecha": "2026-06-16",
-      "hora": "18:30",
-      "title_es": "Annemarie",
-      "title_en": "Annemarie",
-      "director": "Mariana Sanguinetti",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/annemarie/",
-      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
-      "ciclo": "La nave de los sueños"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-17",
       "hora": "15:00",
@@ -18872,21 +18857,6 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
-      "cine": "Biblioteca Nacional",
-      "fecha": "2026-06-23",
-      "hora": "18:30",
-      "title_es": "El atardecer de los grillos",
-      "title_en": "El atardecer de los grillos",
-      "director": "Gonzalo Almeida",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/el-atardecer-de-los-grillos/",
-      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
-      "ciclo": "La nave de los sueños"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-23",
       "hora": "21:00",
@@ -19185,6 +19155,51 @@
       "letterboxd": "https://letterboxd.com/film/romeria/",
       "ticket_url": "https://lumiton.ar/evento/romeria/",
       "ciclo": ""
+    },
+    {
+      "cine": "Biblioteca Nacional",
+      "fecha": "2026-06-29",
+      "hora": "18:00",
+      "title_es": "Lai",
+      "title_en": "",
+      "director": "Rusi Millán Pastori",
+      "country": "",
+      "year": 2017,
+      "duration": "",
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/el-monstruo-en-pantalla-grande",
+      "ciclo": "El monstruo en pantalla grande"
+    },
+    {
+      "cine": "Biblioteca Nacional",
+      "fecha": "2026-06-16",
+      "hora": "18:30",
+      "title_es": "Annemarie",
+      "title_en": "",
+      "director": "Mariana Sanguinetti",
+      "country": "",
+      "year": null,
+      "duration": "",
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/annemarie/",
+      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
+      "ciclo": "La Nave de los Sueños"
+    },
+    {
+      "cine": "Biblioteca Nacional",
+      "fecha": "2026-06-23",
+      "hora": "18:30",
+      "title_es": "El atardecer de los grillos",
+      "title_en": "",
+      "director": "Gonzalo Almeida",
+      "country": "",
+      "year": null,
+      "duration": "",
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/el-atardecer-de-los-grillos/",
+      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
+      "ciclo": "La Nave de los Sueños"
     }
   ]
 }

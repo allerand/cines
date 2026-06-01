@@ -2699,74 +2699,172 @@ def scrape_filo() -> list[Screening]:
 
 # ---------------------------------------------------------------------------
 # Biblioteca Nacional — Auditorio Jorge Luis Borges
-# La agenda (bn.gov.ar/agenda-cultural?categoria=cine) publica la programación
-# en texto libre con marcado inconsistente (un título va en <i>, el siguiente
-# en texto plano), así que no se puede scrapear de forma confiable. Cada
-# función se carga a mano en data/bn_manual.json.
+# bn.gov.ar/agenda-cultural?categoria=cine lista los ciclos de cine. Cada evento
+# tiene un bloque "Programación"/"Programa" con un patrón que se repite por
+# función:
+#     <p><b>{Día} {n} de {mes} | {hora} hs.</b></p>     ← fecha + horario
+#     <p>[prefijo de] <i>Título</i> de Director (Año)</p> ← película
+# El parser detecta cada línea de fecha y toma el <p> siguiente como película.
+# El título sale del <i>/<em> si existe; si no, del texto: se saca el prefijo
+# ("Preestreno de", "Función especial de"...) y se corta por el último " de "
+# (que separa título de director, incluso cuando el título lleva " de ").
 # ---------------------------------------------------------------------------
 
-BN_MANUAL_PATH = Path(__file__).parent / "data" / "bn_manual.json"
+BN_BASE = "https://www.bn.gov.ar"
+BN_INDEX = "https://www.bn.gov.ar/agenda-cultural?categoria=cine"
+
+_BN_MESES = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
+    "noviembre": 11, "diciembre": 12,
+}
+_BN_DATE_RE = re.compile(
+    r"(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[áa]bado|domingo)?\s*"
+    r"(\d{1,2})\s+de\s+(" + "|".join(_BN_MESES) + r")\s*\|\s*"
+    r"(\d{1,2})(?::(\d{2}))?\s*h", re.IGNORECASE)
+_BN_PREFIX_RE = re.compile(
+    r"^\s*(?:preestreno|funci[oó]n\s+especial|funci[oó]n|proyecci[oó]n|"
+    r"estreno|presentaci[oó]n|charla)\s+(?:de|del)\s+", re.IGNORECASE)
 
 
-def scrape_bn() -> list[Screening]:
-    """
-    Lee data/bn_manual.json y devuelve las funciones futuras. Shape:
-      {"cine": "Biblioteca Nacional", "ticket_url": "...",
-       "functions": [{"title","director","country","year","ciclo",
-                      "fecha":"YYYY-MM-DD","hora":"HH:MM","ticket_url"}, ...]}
-    """
-    if not BN_MANUAL_PATH.exists():
-        return []
-    try:
-        data = json.loads(BN_MANUAL_PATH.read_text(encoding="utf-8"))
-    except Exception:
-        return []
-
-    cine = (data.get("cine") or "Biblioteca Nacional").strip()
-    default_ticket = (data.get("ticket_url") or "").strip()
-    today = date.today()
-    result: list[Screening] = []
-
-    for f in data.get("functions", []):
-        title = (f.get("title") or "").strip()
-        fecha = (f.get("fecha") or "").strip()
-        hora = (f.get("hora") or "").strip()
-        if not title or not fecha or not hora:
-            continue
-        # Validar formato y descartar funciones pasadas.
+def _bn_event_range(soup) -> "Optional[tuple[date, date]]":
+    """Rango de fechas del evento (DD/MM/YY - DD/MM/YY) → para resolver el año."""
+    ds = re.findall(r"(\d{2})/(\d{2})/(\d{2})", soup.get_text(" ", strip=True))
+    dts = []
+    for dd, mm, yy in ds[:2]:
         try:
-            d = date.fromisoformat(fecha)
+            dts.append(date(2000 + int(yy), int(mm), int(dd)))
+        except ValueError:
+            pass
+    return (min(dts), max(dts)) if dts else None
+
+
+def _bn_resolve_year(day: int, month: int, rng) -> int:
+    if rng:
+        start, end = rng
+        for y in {start.year, end.year}:
+            try:
+                d = date(y, month, day)
+            except ValueError:
+                continue
+            if start <= d <= end:
+                return y
+    today = date.today()
+    return today.year + 1 if month < today.month else today.year
+
+
+def _bn_parse_film(text: str, italic: str) -> "tuple[str, str, Optional[int]]":
+    text = re.sub(r"\s+", " ", text).strip()
+    year = None
+    ym = re.search(r"\((\d{4})\)", text)
+    if ym:
+        year = int(ym.group(1))
+    director = ""
+    if italic and italic.strip(" .,"):
+        title = italic.strip(" .,")
+        after = text.split(title, 1)[-1] if title in text else text
+        dm = re.search(r"\bde\s+(.+)", after, re.IGNORECASE)
+        if dm:
+            director = re.sub(r"\(\d{4}\).*", "", dm.group(1)).strip(" .,")
+    else:
+        t = _BN_PREFIX_RE.sub("", text)
+        t = re.sub(r"\(\d{4}\).*", "", t).strip(" .,")
+        parts = re.split(r"\s+de\s+", t)
+        if len(parts) >= 2:
+            director = parts[-1].strip(" .,")
+            title = " de ".join(parts[:-1]).strip(" .,")
+        else:
+            title = t.strip(" .,")
+    return title, director, year
+
+
+def _bn_parse_event(soup, ciclo: str, ticket_url: str) -> list[Screening]:
+    rng = _bn_event_range(soup)
+    # Párrafos "hoja" (sin <p> anidado), en orden de aparición.
+    ps = [p for p in soup.find_all("p") if not p.find("p")]
+    today = date.today()
+    out: list[Screening] = []
+    seen: set[tuple] = set()
+
+    for i, p in enumerate(ps):
+        m = _BN_DATE_RE.search(p.get_text(" ", strip=True))
+        if not m:
+            continue
+        day, month = int(m.group(1)), _BN_MESES[m.group(2).lower()]
+        hora = f"{int(m.group(3)):02d}:{int(m.group(4) or 0):02d}"
+
+        # La película es el siguiente <p> no vacío que no sea otra fecha.
+        film_p = None
+        for q in ps[i + 1:]:
+            qt = q.get_text(" ", strip=True)
+            if not qt:
+                continue
+            if _BN_DATE_RE.search(qt):
+                break
+            film_p = q
+            break
+        if film_p is None:
+            continue
+
+        it = film_p.find(["i", "em"])
+        title, director, year = _bn_parse_film(
+            film_p.get_text(" ", strip=True),
+            it.get_text(" ", strip=True) if it else "")
+        if not title or len(title) < 2:
+            continue
+
+        try:
+            d = date(_bn_resolve_year(day, month, rng), month, day)
         except ValueError:
             continue
         if d < today:
             continue
-        m = re.match(r"^(\d{1,2}):(\d{2})$", hora)
-        if not m:
+
+        key = (title, d.isoformat(), hora)
+        if key in seen:
             continue
-        hora = f"{int(m.group(1)):02d}:{m.group(2)}"
-
-        year = f.get("year")
-        try:
-            year = int(year) if year else None
-        except (TypeError, ValueError):
-            year = None
-        duration = f.get("duration")
-        try:
-            duration = int(duration) if duration else None
-        except (TypeError, ValueError):
-            duration = None
-
-        result.append(Screening(
-            cine=cine,
+        seen.add(key)
+        out.append(Screening(
+            cine="Biblioteca Nacional",
             title=title,
             fecha=d.isoformat(),
             hora=hora,
-            ticket_url=(f.get("ticket_url") or default_ticket).strip(),
-            ciclo=(f.get("ciclo") or "").strip(),
-            director=(f.get("director") or "").strip(),
-            country=(f.get("country") or "").strip(),
+            ticket_url=ticket_url,
+            ciclo=ciclo,
+            director=director,
+            country="",
             year=year,
-            duration=duration,
         ))
+    return out
 
+
+def scrape_bn() -> list[Screening]:
+    """
+    Scrapea los ciclos de cine de la Biblioteca Nacional. Descubre los eventos
+    desde bn.gov.ar/agenda-cultural?categoria=cine y parsea el bloque de
+    programación de cada uno (ver patrón en el comentario de arriba).
+    """
+    try:
+        idx = fetch_html(BN_INDEX)
+    except Exception:
+        return []
+
+    event_urls: list[str] = []
+    seen: set[str] = set()
+    for a in idx.find_all("a", href=re.compile(r"/agenda-cultural/[^?#]")):
+        h = a["href"]
+        u = h if h.startswith("http") else BN_BASE + ("" if h.startswith("/") else "/") + h
+        if u not in seen:
+            seen.add(u)
+            event_urls.append(u)
+
+    result: list[Screening] = []
+    for url in event_urls:
+        try:
+            soup = fetch_html(url)
+        except Exception:
+            continue
+        og = soup.find("meta", property="og:title")
+        ciclo = (og["content"].strip() if og and og.get("content") else "")
+        result.extend(_bn_parse_event(soup, ciclo, url))
     return result

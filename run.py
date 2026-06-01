@@ -143,7 +143,7 @@ async def run_scraper(semanas: int = 2) -> None:
     except Exception as e:
         print(f"error — {e}")
 
-    print("🎬 Cargando Biblioteca Nacional (manual)...", end=" ", flush=True)
+    print("🎬 Scrapeando Biblioteca Nacional...", end=" ", flush=True)
     try:
         r = scrape_bn()
         all_screenings.extend(r)
