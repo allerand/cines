@@ -1026,19 +1026,29 @@ function buildDayTabs() {
 function highlightCineDays() {
   const container = document.getElementById('day-tabs');
   const tabs = container.querySelectorAll('.day-tab');
+  const pool = visibleScreenings();
   if (activeCine === 'all') {
     container.classList.remove('cine-filter');
-    tabs.forEach(t => t.classList.remove('has-cine'));
+    tabs.forEach(t => {
+      t.classList.remove('has-cine');
+      // Restaurar el contador total del día
+      const total = pool.filter(s => s.fecha === t.dataset.fecha).length;
+      const c = t.querySelector('.day-count');
+      if (c) c.textContent = `${total} func.`;
+    });
     return;
   }
   container.classList.add('cine-filter');
-  const pool = visibleScreenings();
   const matchesCine = s => isCommercial(activeCine)
     ? (s.cine && s.cine.startsWith(activeCine))
     : s.cine === activeCine;
   tabs.forEach(t => {
     const fecha = t.dataset.fecha;
-    t.classList.toggle('has-cine', pool.some(s => s.fecha === fecha && matchesCine(s)));
+    const n = pool.filter(s => s.fecha === fecha && matchesCine(s)).length;
+    t.classList.toggle('has-cine', n > 0);
+    // El contador muestra las funciones de la sala seleccionada
+    const c = t.querySelector('.day-count');
+    if (c) c.textContent = `${n} func.`;
   });
 }
 
