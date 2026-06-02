@@ -3304,5 +3304,38 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "300 cartas": {
+    "url": "https://letterboxd.com/film/300-cartas/",
+    "title_en": "#300Letters",
+    "director": "Lucas Santa Ana",
+    "country": "Argentina, UK",
+    "year": 2025,
+    "duration": 91,
+    "genre": "Romance, Comedia",
+    "title_es": "300 cartas",
+    "original_title": "#300cartas"
+  },
+  "perfect blue": {
+    "url": "https://letterboxd.com/film/perfect-blue/",
+    "title_en": "Perfect Blue",
+    "director": "Satoshi Kon",
+    "country": "Japan",
+    "year": 1997,
+    "duration": 82,
+    "genre": "Thriller, Animación",
+    "title_es": "Perfect Blue",
+    "original_title": "PERFECT BLUE"
+  },
+  "paprika, detective de los sueños": {
+    "url": "https://letterboxd.com/film/paprika-2006/",
+    "title_en": "Paprika",
+    "director": "Satoshi Kon",
+    "country": "Japan",
+    "year": 2006,
+    "duration": 90,
+    "genre": "Animación, Thriller",
+    "title_es": "Paprika, detective de los sueños",
+    "original_title": "パプリカ"
   }
 }
