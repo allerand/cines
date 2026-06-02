@@ -3337,5 +3337,59 @@
     "genre": "Animación, Thriller",
     "title_es": "Paprika, detective de los sueños",
     "original_title": "パプリカ"
+  },
+  "the big sleep": {
+    "url": "https://letterboxd.com/film/the-big-sleep/",
+    "title_en": "The Big Sleep",
+    "director": "Howard Hawks",
+    "country": "USA",
+    "year": 1946,
+    "duration": 114,
+    "genre": "Crimen, Thriller",
+    "title_es": "El sueño eterno",
+    "original_title": "The Big Sleep"
+  },
+  "palo y hueso": {
+    "url": "https://letterboxd.com/film/palo-y-hueso/",
+    "title_en": "Stick and Bone",
+    "director": "Nicolás Sarquís",
+    "country": "Argentina",
+    "year": 1968,
+    "duration": 70,
+    "genre": "Drama",
+    "original_title": "Palo y hueso"
+  },
+  "the turin horse": {
+    "url": "",
+    "title_en": "The Turin Horse",
+    "director": "Béla Tarr",
+    "country": "Hungary, Switzerland",
+    "year": 2011,
+    "duration": 155,
+    "title_es": "El caballo de Turín",
+    "original_title": "A torinói ló",
+    "genre": "Drama"
+  },
+  "eddington": {
+    "url": "https://letterboxd.com/film/eddington/",
+    "title_en": "Eddington",
+    "director": "Ari Aster",
+    "country": "USA, Finland",
+    "year": 2025,
+    "duration": 148,
+    "genre": "Comedia, Western",
+    "title_es": "Eddington: Regresamos a 2020",
+    "original_title": "Eddington"
+  },
+  "midsommar": {
+    "url": "https://letterboxd.com/film/midsommar/",
+    "title_en": "Midsommar",
+    "director": "Ari Aster",
+    "country": "Sweden, USA",
+    "year": 2019,
+    "duration": 147,
+    "genre": "Misterio, Drama",
+    "title_es": "Midsommar: el terror no espera la noche",
+    "original_title": "Midsommar"
   }
 }

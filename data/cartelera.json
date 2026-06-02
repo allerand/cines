@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-02T11:58:29",
+  "updated": "2026-06-02T17:28:57",
   "screenings": [
     {
       "cine": "Cinépolis Recoleta",
@@ -525,21 +525,6 @@
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-02",
-      "hora": "14:00",
-      "title_es": "Risa y la cabina del viento",
-      "title_en": "Risa and the Wind Phone",
-      "director": "Juan Cabral",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 97,
-      "genre": "Fantasía, Drama",
-      "letterboxd": "https://letterboxd.com/film/risa-and-the-wind-phone/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=765",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Lorca",
@@ -2342,21 +2327,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Amorina",
-      "fecha": "2026-06-02",
-      "hora": "18:30",
-      "title_es": "Martín (Hache)",
-      "title_en": "Martin (Hache)",
-      "director": "Adolfo Aristarain",
-      "country": "Argentina, España",
-      "year": 1997,
-      "duration": 134,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/martin-hache/",
-      "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-02",
       "hora": "18:30",
@@ -2474,6 +2444,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-02",
+      "hora": "19:00",
+      "title_es": "Martín (Hache)",
+      "title_en": "Martin (Hache)",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 1997,
+      "duration": 134,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/martin-hache/",
+      "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
     {
@@ -8057,21 +8042,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Amorina",
-      "fecha": "2026-06-04",
-      "hora": "18:30",
-      "title_es": "La ley de la frontera",
-      "title_en": "The Frontier Law",
-      "director": "Adolfo Aristarain",
-      "country": "Argentina, España",
-      "year": 1995,
-      "duration": 109,
-      "genre": "Aventura",
-      "letterboxd": "https://letterboxd.com/film/la-ley-de-la-frontera/",
-      "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-06-04",
       "hora": "18:30",
@@ -8115,6 +8085,21 @@
       "letterboxd": "https://letterboxd.com/film/i-only-rest-in-the-storm/",
       "ticket_url": "https://malba.org.ar/evento/o-riso-e-a-faca/",
       "ciclo": "Semana de cine portugués"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-04",
+      "hora": "19:00",
+      "title_es": "La ley de la frontera",
+      "title_en": "The Frontier Law",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 1995,
+      "duration": 109,
+      "genre": "Aventura",
+      "letterboxd": "https://letterboxd.com/film/la-ley-de-la-frontera/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -9242,21 +9227,6 @@
       "ciclo": "Estreno"
     },
     {
-      "cine": "Amorina",
-      "fecha": "2026-06-05",
-      "hora": "18:30",
-      "title_es": "Haute Tension",
-      "title_en": "High Tension",
-      "director": "Alexandre Aja",
-      "country": "Francia",
-      "year": 2003,
-      "duration": 91,
-      "genre": "Misterio, Terror",
-      "letterboxd": "https://letterboxd.com/film/high-tension/",
-      "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-05",
       "hora": "18:30",
@@ -9270,6 +9240,21 @@
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-05",
+      "hora": "19:00",
+      "title_es": "Haute Tension",
+      "title_en": "High Tension",
+      "director": "Alexandre Aja",
+      "country": "Francia",
+      "year": 2003,
+      "duration": 91,
+      "genre": "Misterio, Terror",
+      "letterboxd": "https://letterboxd.com/film/high-tension/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -10145,14 +10130,14 @@
       "cine": "Amorina",
       "fecha": "2026-06-06",
       "hora": "16:00",
-      "title_es": "The Red Shoes",
-      "title_en": "The Red Shoes",
-      "director": "Michael Powell, Emeric Pressburger",
-      "country": "Reino Unido",
-      "year": 1948,
-      "duration": 133,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-red-shoes/",
+      "title_es": "The Big Sleep",
+      "title_en": "The Big Sleep",
+      "director": "Howard Hawks",
+      "country": "Estados Unidos",
+      "year": 1946,
+      "duration": 114,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-big-sleep/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
@@ -10490,14 +10475,14 @@
       "cine": "Amorina",
       "fecha": "2026-06-06",
       "hora": "19:00",
-      "title_es": "Singin' in the Rain",
-      "title_en": "Singin' in the Rain",
-      "director": "Stanley Donen, Gene Kelly",
-      "country": "Estados Unidos",
-      "year": 1952,
-      "duration": 103,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/singin-in-the-rain/",
+      "title_es": "The Big Lebowski",
+      "title_en": "The Big Lebowski",
+      "director": "Coen Brothers",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 1998,
+      "duration": 127,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/the-big-lebowski/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
@@ -11912,6 +11897,21 @@
       "ciclo": "Continúa"
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-07",
+      "hora": "20:00",
+      "title_es": "Palo y Hueso",
+      "title_en": "Stick and Bone",
+      "director": "Nicolás Sarquís",
+      "country": "Argentina",
+      "year": 1968,
+      "duration": 70,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/palo-y-hueso/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=849",
+      "ciclo": "Bleak Week"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-07",
       "hora": "20:00",
@@ -12992,6 +12992,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-08",
+      "hora": "20:00",
+      "title_es": "The Turin Horse",
+      "title_en": "The Turin Horse",
+      "director": "Bela Tarr y Ágnes Hranitzky",
+      "country": "Hungary, Switzerland",
+      "year": 2011,
+      "duration": 146,
+      "genre": "Drama",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=850",
+      "ciclo": "Bleak Week"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-08",
       "hora": "20:00",
@@ -13892,21 +13907,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Amorina",
-      "fecha": "2026-06-09",
-      "hora": "18:30",
-      "title_es": "La discoteca del amor",
-      "title_en": "La discoteca del amor",
-      "director": "Adolfo Aristarain",
-      "country": "Argentina",
-      "year": 1980,
-      "duration": 90,
-      "genre": "Comedia, Thriller",
-      "letterboxd": "https://letterboxd.com/film/la-discoteca-del-amor/",
-      "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-09",
       "hora": "18:30",
@@ -13920,6 +13920,21 @@
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-09",
+      "hora": "19:00",
+      "title_es": "La discoteca del amor",
+      "title_en": "La discoteca del amor",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1980,
+      "duration": 90,
+      "genre": "Comedia, Thriller",
+      "letterboxd": "https://letterboxd.com/film/la-discoteca-del-amor/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -14055,6 +14070,21 @@
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-09",
+      "hora": "20:00",
+      "title_es": "Eddington",
+      "title_en": "Eddington",
+      "director": "Ari Aster",
+      "country": "USA, Finland",
+      "year": 2025,
+      "duration": 145,
+      "genre": "Comedia, Western",
+      "letterboxd": "https://letterboxd.com/film/eddington/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=851",
+      "ciclo": "Bleak Week"
     },
     {
       "cine": "Cinemark Caballito",
@@ -14897,6 +14927,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine York",
+      "fecha": "2026-06-10",
+      "hora": "18:00",
+      "title_es": "Ojos Extraños",
+      "title_en": "Stranger Eyes",
+      "director": "Yeo Siew Hua",
+      "country": "Singapur, Taiwán, Francia, Estados Unidos",
+      "year": 2024,
+      "duration": 126,
+      "genre": "Drama, Crimen",
+      "letterboxd": "https://letterboxd.com/film/stranger-eyes/",
+      "ticket_url": "https://lumiton.ar/evento/ojos-extranos/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-10",
       "hora": "18:00",
@@ -14957,21 +15002,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Amorina",
-      "fecha": "2026-06-10",
-      "hora": "18:30",
-      "title_es": "Under the Silver Lake",
-      "title_en": "Under the Silver Lake",
-      "director": "David Robert Mitchell",
-      "country": "Estados Unidos",
-      "year": 2018,
-      "duration": 139,
-      "genre": "Misterio, Crimen",
-      "letterboxd": "https://letterboxd.com/film/under-the-silver-lake/",
-      "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-10",
       "hora": "18:30",
@@ -14985,6 +15015,21 @@
       "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-10",
+      "hora": "19:00",
+      "title_es": "Under the Silver Lake",
+      "title_en": "Under the Silver Lake",
+      "director": "David Robert Mitchell",
+      "country": "Estados Unidos",
+      "year": 2018,
+      "duration": 139,
+      "genre": "Misterio, Crimen",
+      "letterboxd": "https://letterboxd.com/film/under-the-silver-lake/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -15120,6 +15165,21 @@
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-10",
+      "hora": "20:00",
+      "title_es": "Midsommar",
+      "title_en": "Midsommar",
+      "director": "Ari Aster",
+      "country": "Sweden, USA",
+      "year": 2019,
+      "duration": 145,
+      "genre": "Misterio, Drama",
+      "letterboxd": "https://letterboxd.com/film/midsommar/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=852",
+      "ciclo": "Bleak Week"
     },
     {
       "cine": "Cinemark Caballito",
@@ -15587,21 +15647,6 @@
       "ciclo": "Estreno"
     },
     {
-      "cine": "Amorina",
-      "fecha": "2026-06-11",
-      "hora": "18:30",
-      "title_es": "Roma",
-      "title_en": "Roma",
-      "director": "Adolfo Aristarain",
-      "country": "Argentina, España",
-      "year": 2004,
-      "duration": 148,
-      "genre": "Misterio, Historia",
-      "letterboxd": "https://letterboxd.com/film/roma-2004/",
-      "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-06-11",
       "hora": "18:30",
@@ -15614,6 +15659,21 @@
       "genre": "Comedia",
       "letterboxd": "https://letterboxd.com/film/the-errand-boy/",
       "ticket_url": "https://lumiton.ar/evento/de-golpe-en-golpe/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-11",
+      "hora": "19:00",
+      "title_es": "Roma",
+      "title_en": "Roma",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 2004,
+      "duration": 148,
+      "genre": "Misterio, Historia",
+      "letterboxd": "https://letterboxd.com/film/roma-2004/",
+      "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
     {
@@ -15724,7 +15784,7 @@
     {
       "cine": "Amorina",
       "fecha": "2026-06-12",
-      "hora": "18:30",
+      "hora": "19:00",
       "title_es": "Fright Night",
       "title_en": "Fright Night",
       "director": "Tom Holland",
@@ -16307,21 +16367,6 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
-      "cine": "Amorina",
-      "fecha": "2026-06-16",
-      "hora": "18:30",
-      "title_es": "Últimos días de la víctima",
-      "title_en": "Last Days of the Victim",
-      "director": "Adolfo Aristarain",
-      "country": "Argentina",
-      "year": 1982,
-      "duration": 94,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/ultimos-dias-de-la-victima/",
-      "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
       "cine": "Biblioteca Nacional",
       "fecha": "2026-06-16",
       "hora": "18:30",
@@ -16335,6 +16380,21 @@
       "letterboxd": "https://letterboxd.com/film/annemarie/",
       "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-24",
       "ciclo": "La Nave de los Sueños"
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-16",
+      "hora": "19:00",
+      "title_es": "Últimos días de la víctima",
+      "title_en": "Last Days of the Victim",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1982,
+      "duration": 94,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/ultimos-dias-de-la-victima/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -16384,7 +16444,7 @@
     {
       "cine": "Amorina",
       "fecha": "2026-06-17",
-      "hora": "18:30",
+      "hora": "19:00",
       "title_es": "Inherent Vice",
       "title_en": "Inherent Vice",
       "director": "Paul Thomas Anderson",
@@ -16487,21 +16547,6 @@
       "ciclo": "Tres tardes con Gardel"
     },
     {
-      "cine": "Amorina",
-      "fecha": "2026-06-18",
-      "hora": "18:30",
-      "title_es": "Lugares comunes",
-      "title_en": "Common Ground",
-      "director": "Adolfo Aristarain",
-      "country": "Argentina, España",
-      "year": 2002,
-      "duration": 108,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/lugares-comunes/",
-      "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-06-18",
       "hora": "18:30",
@@ -16514,6 +16559,21 @@
       "genre": "Comedia",
       "letterboxd": "https://letterboxd.com/film/the-ladies-man-1961/",
       "ticket_url": "https://lumiton.ar/evento/el-terror-de-las-chicas/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-06-18",
+      "hora": "19:00",
+      "title_es": "Lugares comunes",
+      "title_en": "Common Ground",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina, España",
+      "year": 2002,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/lugares-comunes/",
+      "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
     },
     {
@@ -16609,7 +16669,7 @@
     {
       "cine": "Amorina",
       "fecha": "2026-06-19",
-      "hora": "18:30",
+      "hora": "19:00",
       "title_es": "Pulse",
       "title_en": "Pulse",
       "director": "Kiyoshi Kurosawa",
