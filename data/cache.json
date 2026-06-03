@@ -725,14 +725,14 @@
     "genre": "Drama, Comedia"
   },
   "el mago del kremlin": {
-    "url": "https://letterboxd.com/film/the-wizard-of-the-kremlin/",
-    "title_en": "The Wizard of the Kremlin",
+    "url": "",
+    "title_en": "El mago del Kremlin",
     "director": "Olivier Assayas",
-    "country": "France, UK",
-    "year": 2025,
+    "country": "France, United Kingdom",
+    "year": 2026,
     "duration": 136,
     "title_es": "El mago del Kremlin",
-    "original_title": "Le mage du Kremlin",
+    "original_title": "Le Mage du Kremlin",
     "genre": "Drama"
   },
   "gioia mia - un verano en sicilia": {
@@ -1299,11 +1299,11 @@
   "hombre de la atlántida": {
     "url": "",
     "title_en": "HOMBRE DE LA ATLÁNTIDA",
-    "director": "",
+    "director": "Simon Zorraquin",
     "country": "",
     "year": null,
-    "duration": null,
-    "original_title": "A Man from Atlantis"
+    "duration": 69,
+    "original_title": "Hombre de la Atlántida"
   },
   "las poetas visitan a juana bignozzi": {
     "url": "https://letterboxd.com/film/las-poetas-visitan-a-juana-bignozzi/",
@@ -3196,15 +3196,15 @@
     "original_title": "BTS World Tour ‘Arirang’ in Busan: Live Viewing"
   },
   "amos del universo": {
-    "url": "",
-    "title_en": "Amos del universo",
+    "url": "https://letterboxd.com/film/masters-of-the-universe-2026/",
+    "title_en": "Masters of the Universe",
     "director": "Travis Knight",
-    "country": "United States of America",
+    "country": "USA",
     "year": 2026,
     "duration": 141,
+    "genre": "Ciencia ficción, Acción",
     "title_es": "He-Man y los masters del universo",
-    "original_title": "Masters of the Universe",
-    "genre": "Acción, Fantasía"
+    "original_title": "Masters of the Universe"
   },
   "dolly: juega conmigo": {
     "url": "https://letterboxd.com/film/dolly-2025/",
@@ -3391,5 +3391,282 @@
     "genre": "Misterio, Drama",
     "title_es": "Midsommar: el terror no espera la noche",
     "original_title": "Midsommar"
+  },
+  "más allá de la tumba": {
+    "url": "",
+    "title_en": "Más allá de la tumba",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el hombre más solitario de la ciudad": {
+    "url": "https://letterboxd.com/film/the-loneliest-man-in-town-2026/",
+    "title_en": "The Loneliest Man in Town",
+    "director": "Tizza Covi, Rainer Frimmel",
+    "country": "Austria",
+    "year": 2026,
+    "duration": 86,
+    "genre": "Música, Drama"
+  },
+  "la marca del vampiro": {
+    "url": "https://letterboxd.com/film/mark-of-the-vampire/",
+    "title_en": "Mark of the Vampire",
+    "director": "Tod Browning",
+    "country": "USA",
+    "year": 1935,
+    "duration": 60,
+    "genre": "Terror, Misterio",
+    "title_es": "La marca del vampiro",
+    "original_title": "Mark of the Vampire"
+  },
+  "las manos de orlac": {
+    "url": "",
+    "title_en": "Las manos de Orlac",
+    "director": "Karl Freund",
+    "country": "United States of America",
+    "year": 1935,
+    "duration": 68,
+    "title_es": "Las manos de Orlac",
+    "original_title": "Mad Love",
+    "genre": "Terror, Romance"
+  },
+  "el veredicto": {
+    "url": "https://letterboxd.com/film/the-verdict/",
+    "title_en": "The Verdict",
+    "director": "Don Siegel",
+    "country": "USA",
+    "year": 1946,
+    "duration": 86,
+    "genre": "Crimen, Misterio",
+    "title_es": "El veredicto",
+    "original_title": "The Verdict"
+  },
+  "el misterio del tercer piso": {
+    "url": "",
+    "title_en": "El misterio del tercer piso",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "glen or glenda": {
+    "url": "https://letterboxd.com/film/glen-or-glenda/",
+    "title_en": "Glen or Glenda",
+    "director": "Edward D. Wood Jr.",
+    "country": "USA",
+    "year": 1953,
+    "duration": 71,
+    "genre": "Drama, Comedia",
+    "title_es": "Glen o Glenda",
+    "original_title": "Glen or Glenda"
+  },
+  "juan moreira (1973)": {
+    "url": "https://letterboxd.com/film/juan-moreira/",
+    "title_en": "Juan Moreira",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1973,
+    "duration": 99,
+    "genre": "Western, Drama"
+  },
+  "el romance del aniceto y la francisca (1966)": {
+    "url": "",
+    "title_en": "El romance del Aniceto y la Francisca (1966)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "crónica de un niño solo (1965)": {
+    "url": "https://letterboxd.com/film/chronicle-of-a-boy-alone/",
+    "title_en": "Chronicle of a Boy Alone",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1965,
+    "duration": 79,
+    "genre": "Drama"
+  },
+  "nazareno cruz y el lobo (1974)": {
+    "url": "",
+    "title_en": "Nazareno Cruz y el lobo (1974)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "soñar, soñar (1976)": {
+    "url": "https://letterboxd.com/film/sonar-sonar/",
+    "title_en": "Soñar, soñar",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1976,
+    "duration": 85,
+    "genre": "Drama, Comedia"
+  },
+  "gatica, el mono (1993)": {
+    "url": "https://letterboxd.com/film/gatica-the-monkey/",
+    "title_en": "Gatica, the Monkey",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1993,
+    "duration": 136,
+    "genre": "Drama"
+  },
+  "el dependiente (1969)": {
+    "url": "https://letterboxd.com/film/the-dependent/",
+    "title_en": "The Dependent",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1969,
+    "duration": 87,
+    "genre": "Drama"
+  },
+  "aniceto (2008)": {
+    "url": "https://letterboxd.com/film/aniceto/",
+    "title_en": "Aniceto",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 2008,
+    "duration": 82,
+    "genre": "Drama, Música"
+  },
+  "había una vez un mago (2025)": {
+    "url": "",
+    "title_en": "Había una vez un mago (2025)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "las mantis": {
+    "url": "",
+    "title_en": "Las Mantis",
+    "director": "Dídac Gimeno",
+    "country": "Spain",
+    "year": null,
+    "duration": null,
+    "original_title": "Las Mantises"
+  },
+  "hereditary": {
+    "url": "https://letterboxd.com/film/hereditary/",
+    "title_en": "Hereditary",
+    "director": "Ari Aster",
+    "country": "USA, UK",
+    "year": 2018,
+    "duration": 128,
+    "genre": "Thriller, Terror",
+    "title_es": "El legado del diablo",
+    "original_title": "Hereditary"
+  },
+  "persona": {
+    "url": "https://letterboxd.com/film/persona/",
+    "title_en": "Persona",
+    "director": "Ingmar Bergman",
+    "country": "Sweden",
+    "year": 1966,
+    "duration": 84,
+    "genre": "Drama",
+    "original_title": "Persona"
+  },
+  "chinatown": {
+    "url": "https://letterboxd.com/film/chinatown/",
+    "title_en": "Chinatown",
+    "director": "Roman Polanski",
+    "country": "USA",
+    "year": 1974,
+    "duration": 130,
+    "genre": "Thriller, Misterio",
+    "title_es": "Chinatown",
+    "original_title": "Chinatown"
+  },
+  "burning": {
+    "url": "",
+    "title_en": "Burning",
+    "director": "Lee Chang-dong",
+    "country": "South Korea, Japan",
+    "year": 2018,
+    "duration": 148,
+    "title_es": "Burning",
+    "original_title": "버닝",
+    "genre": "Misterio, Drama"
+  },
+  "millennium actress": {
+    "url": "https://letterboxd.com/film/millennium-actress/",
+    "title_en": "Millennium Actress",
+    "director": "Satoshi Kon",
+    "country": "Japan",
+    "year": 2001,
+    "duration": 87,
+    "genre": "Drama, Romance",
+    "title_es": "Millennium Actress",
+    "original_title": "千年女優"
+  },
+  "toy story 5": {
+    "url": "https://letterboxd.com/film/toy-story-5/",
+    "title_en": "Toy Story 5",
+    "director": "Andrew Stanton",
+    "country": "USA",
+    "year": 2026,
+    "duration": null,
+    "genre": "Comedia, Familiar",
+    "original_title": "Toy Story 5"
+  },
+  "scary movie (2026)": {
+    "url": "https://letterboxd.com/film/scary-movie-2026/",
+    "title_en": "Scary Movie",
+    "director": "Michael Tiddes",
+    "country": "USA",
+    "year": 2026,
+    "duration": 96,
+    "genre": "Comedia, Terror"
+  },
+  "el pequeño ninja": {
+    "url": "https://letterboxd.com/film/checkered-ninja/",
+    "title_en": "Checkered Ninja",
+    "director": "Anders Matthesen, Thorbjørn Christoffersen",
+    "country": "Denmark",
+    "year": 2018,
+    "duration": 83,
+    "genre": "Comedia, Animación"
+  },
+  "el día de la revelación": {
+    "url": "https://letterboxd.com/film/disclosure-day/",
+    "title_en": "Disclosure Day",
+    "director": "Steven Spielberg",
+    "country": "USA",
+    "year": 2026,
+    "duration": 145,
+    "genre": "Thriller, Misterio",
+    "title_es": "El día de la revelación",
+    "original_title": "Disclosure Day"
+  },
+  "recién nacidas": {
+    "url": "https://letterboxd.com/film/young-mothers/",
+    "title_en": "Young Mothers",
+    "director": "Luc Dardenne, Jean-Pierre Dardenne",
+    "country": "Belgium, France",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Drama",
+    "title_es": "Recién nacidas",
+    "original_title": "Jeunes mères"
+  },
+  "madres jóvenes": {
+    "url": "https://letterboxd.com/film/young-mothers/",
+    "title_en": "Young Mothers",
+    "director": "Luc Dardenne, Jean-Pierre Dardenne",
+    "country": "Belgium, France",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Drama"
+  },
+  "hijo mayor de cecilia kang": {
+    "url": "",
+    "title_en": "HIJO MAYOR de Cecilia Kang",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
