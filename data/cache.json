@@ -3668,5 +3668,65 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "el silencio es un cuerpo que cae": {
+    "url": "https://letterboxd.com/film/el-silencio-es-un-cuerpo-que-cae/",
+    "title_en": "Silence Is a Falling Body",
+    "director": "Agustina Comedi",
+    "country": "Argentina",
+    "year": 2017,
+    "duration": 72,
+    "genre": "Documental",
+    "original_title": "El silencio es un cuerpo que cae"
+  },
+  "un oso rojo": {
+    "url": "https://letterboxd.com/film/a-red-bear/",
+    "title_en": "A Red Bear",
+    "director": "Adrián Caetano",
+    "country": "Argentina, Spain",
+    "year": 2002,
+    "duration": 95,
+    "genre": "Drama, Acción",
+    "title_es": "Un oso rojo",
+    "original_title": "Un oso rojo"
+  },
+  "essential killing": {
+    "url": "https://letterboxd.com/film/essential-killing/",
+    "title_en": "Essential Killing",
+    "director": "Jerzy Skolimowski",
+    "country": "Poland, Norway",
+    "year": 2010,
+    "duration": 84,
+    "genre": "Bélica, Thriller",
+    "title_es": "Essential Killing",
+    "original_title": "Essential Killing"
+  },
+  "yo soy mika de frankfurt!": {
+    "url": "https://letterboxd.com/film/yo-soy-mika-de-frankfurt/",
+    "title_en": "Yo soy Mika de Frankfurt",
+    "director": "Leandro Tolchinsky",
+    "country": "",
+    "year": 2026,
+    "duration": 78,
+    "genre": "",
+    "original_title": "Yo soy Mika de Frankfurt"
+  },
+  "somos y seremos mar": {
+    "url": "",
+    "title_en": "Somos y seremos Mar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "luciano": {
+    "url": "https://letterboxd.com/film/luciano-2024/",
+    "title_en": "Luciano",
+    "director": "Manuel Besedovsky",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 95,
+    "genre": "Documental",
+    "original_title": "Luciano"
   }
 }
