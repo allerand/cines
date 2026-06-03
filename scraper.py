@@ -1903,85 +1903,192 @@ def fetch_lumiton_evento_meta(url: str) -> dict:
 
     return out
 
+ARTHAUS_AGENDA_URL = "https://arthaus.ar/agenda/"
+
+# Día de semana opcional + día(s) + "de" mes + hora. Sirve para las líneas de
+# función que aparecen en el cuerpo de cada detalle, p.ej:
+#   "jueves 18 de junio, 20 H"   /   "jueves 25 de junio 20 H"
+_ARTHAUS_MONTHS = "|".join(MESES_ES.keys())
+_ARTHAUS_DATE_RE = re.compile(
+    rf"(?:(?:lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo|sábados|sabados|domingos)\s+)?"
+    rf"((?:\d{{1,2}}(?:\s*y\s*\d{{1,2}})*))\s+de\s+({_ARTHAUS_MONTHS}),?\s+"
+    rf"(\d{{1,2}})(?::(\d{{2}}))?\s*(?:h|hs|horas?)\b",
+    re.IGNORECASE,
+)
+
+
+def _arthaus_clean_title(raw: str) -> str:
+    """Quita el prefijo "CINE ARTHAUS." que llevan los títulos de cine."""
+    t = re.sub(r"^\s*cine\s+arthaus\s*[\.\:\-–—]*\s*", "", raw or "", flags=re.IGNORECASE).strip()
+    return t or (raw or "").strip()
+
+
+def _parse_arthaus_detail(title_raw: str, body: str, url: str,
+                          today: date, cutoff: date) -> list[Screening]:
+    """Parsea el texto plano de una página de detalle de arthaus.ar.
+
+    Sólo devuelve funciones si la CATEGORÍA del evento incluye "cine".
+    Extrae director y año desde la descripción ("... Dir. NOMBRE, AÑO ...") y
+    las fechas de función desde las líneas del cuerpo; si no hay, cae al bloque
+    estructurado FECHA / HORA del sidebar.
+    """
+    flat = re.sub(r"[ \t]+", " ", body or "")
+    low = flat.lower()
+
+    # 1) Filtro por categoría: el sidebar lista "CATEGORÍA  Cine  cine-actual".
+    mcat = re.search(r"categor[ií]a\s*(.{0,80})", low, re.DOTALL)
+    cat_blob = mcat.group(1) if mcat else ""
+    is_cine = ("cine" in cat_blob) or bool(re.search(r"\bcine[\s-]?actual\b", low))
+    if not is_cine:
+        return []
+
+    title = _arthaus_clean_title(title_raw)
+    if not title:
+        return []
+
+    # 2) Director + año desde la descripción: "Dir. Manuel Besedovsky, 2024".
+    director = ""
+    year: Optional[int] = None
+    md = re.search(r"dir\.\s*(?:por\s+)?([^,\n.]+?)\s*,?\s*\b((?:19|20)\d{2})\b", flat, re.IGNORECASE)
+    if md:
+        director = md.group(1).strip()
+        year = int(md.group(2))
+    else:
+        md = re.search(r"dir\.\s*(?:por\s+)?([^,\n.]+)", flat, re.IGNORECASE)
+        if md:
+            director = md.group(1).strip()
+        my = re.search(r"\b((?:19|20)\d{2})\b", flat)
+        if my:
+            year = int(my.group(1))
+
+    # 3) Fechas de función. Primero las líneas explícitas del cuerpo.
+    funcs: set[tuple[str, str]] = set()  # (YYYY-MM-DD, HH:MM)
+    for m in _ARTHAUS_DATE_RE.finditer(low):
+        month = MESES_ES.get(m.group(2).lower())
+        if not month:
+            continue
+        hour = int(m.group(3))
+        minute = int(m.group(4)) if m.group(4) else 0
+        hora = f"{hour:02d}:{minute:02d}"
+        for day in (int(x) for x in re.findall(r"\d{1,2}", m.group(1))):
+            for y in (today.year, today.year + 1):
+                try:
+                    d = date(y, month, day)
+                except ValueError:
+                    continue
+                if today <= d <= cutoff:
+                    funcs.add((d.isoformat(), hora))
+                    break
+
+    # 4) Fallback: bloque estructurado del sidebar — "FECHA 18 - 25 06 26" y
+    #    "HORA 20:00 - 20:00". Los números antes de MM YY son los días de función.
+    if not funcs:
+        mh = re.search(r"hora\s*(\d{1,2}:\d{2})", low)
+        mf = re.search(r"fecha\s*([\d\s\-–—]+)", low)
+        if mh and mf:
+            hora = mh.group(1)
+            if len(hora) == 4:
+                hora = "0" + hora
+            nums = [int(x) for x in re.findall(r"\d{1,2}", mf.group(1))]
+            if len(nums) >= 3:
+                month = nums[-2]
+                yy = nums[-1]
+                yr = yy + 2000 if yy < 100 else yy
+                for day in nums[:-2]:
+                    try:
+                        d = date(yr, month, day)
+                    except ValueError:
+                        continue
+                    if today <= d <= cutoff:
+                        funcs.add((d.isoformat(), hora))
+
+    return [
+        Screening(
+            cine="Arthaus",
+            title=title,
+            fecha=f,
+            hora=h,
+            ticket_url=url or ARTHAUS_AGENDA_URL,
+            director=director,
+            year=year,
+        )
+        for (f, h) in sorted(funcs)
+    ]
+
+
 async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
-    await page.goto("https://arthaus.ar/cine", wait_until="networkidle", timeout=30000)
-    await page.wait_for_timeout(2500)
-    for _ in range(8):
-    	await page.mouse.wheel(0, 1200)
-    	await page.wait_for_timeout(700)
+    """Scrapea la agenda de arthaus.ar.
 
-    text = await page.evaluate("document.body.innerText")
-    lines = [re.sub(r"\s+", " ", l).strip() for l in text.splitlines() if l.strip()]
-
-    result: list[Screening] = []
+    La web pasó a una agenda única (/agenda/) que mezcla todos los tipos de
+    evento (cine, música, etc.). Cada evento es una tarjeta con un botón
+    "VER DETALLE". Tomamos las tarjetas de cine y entramos a la página de cada
+    película para sacarle la data (fechas, hora, director, año).
+    """
     today = date.today()
     cutoff = today + timedelta(weeks=semanas)
 
-    try:
-        start = lines.index("ARTHAUS CINE") + 1
-    except ValueError:
-        return []
+    await page.goto(ARTHAUS_AGENDA_URL, wait_until="networkidle", timeout=30000)
+    await page.wait_for_timeout(2500)
+    for _ in range(10):
+        await page.mouse.wheel(0, 1600)
+        await page.wait_for_timeout(600)
 
-    block = lines[start:] 
-    for i, line in enumerate(block):
-        print(i, repr(line))
-
-    month_names = "|".join(MESES_ES.keys())
-    date_re = re.compile(
-        rf"(?:(lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo|sábados|sabados|domingos)\s+)?"
-        rf"((?:\d{{1,2}}(?:\s*y\s*\d{{1,2}})*))\s+de\s+({month_names}),?\s+"
-        rf"(\d{{1,2}})(?::(\d{{2}}))?\s*(?:h|hs|horas?)",
-        re.IGNORECASE,
+    # Juntamos, por tarjeta, el link "VER DETALLE" y el texto de la tarjeta
+    # (para descartar lo que no sea cine sin tener que abrir cada detalle).
+    cards = await page.evaluate(
+        """() => {
+            const out = [];
+            const seen = new Set();
+            for (const a of Array.from(document.querySelectorAll('a[href]'))) {
+                const label = (a.textContent || '').trim().toLowerCase().replace(/\\s+/g, ' ');
+                const isDetalle = label === 'ver detalle';
+                const href = a.href;
+                if (!href || seen.has(href)) continue;
+                // Link de detalle directo, o (fallback) link a un permalink de agenda.
+                const looksLikeEvent = /\\/agenda\\/[^/]+\\/?$/.test(new URL(href).pathname);
+                if (!isDetalle && !looksLikeEvent) continue;
+                let card = a;
+                for (let k = 0; k < 6 && card.parentElement; k++) {
+                    card = card.parentElement;
+                    if ((card.textContent || '').length > 140) break;
+                }
+                seen.add(href);
+                out.push({ href, text: (card.textContent || '').replace(/\\s+/g, ' ').trim() });
+            }
+            return out;
+        }"""
     )
 
-    current_title = ""
-    current_director = ""
+    # Pre-filtro por "cine" en el texto de la tarjeta (la categoría/el prefijo
+    # "CINE ARTHAUS." aparecen ahí). La categoría se re-verifica en el detalle.
+    detail_urls: list[str] = []
+    for c in cards:
+        if "cine" in (c.get("text", "")).lower():
+            detail_urls.append(c["href"])
+    # Salvaguarda: si el pre-filtro no encontró nada (p.ej. el texto visible de
+    # la tarjeta no incluía "cine"), visitamos todas — el parser de detalle
+    # descarta lo que no sea cine vía la CATEGORÍA.
+    if not detail_urls:
+        detail_urls = [c["href"] for c in cards]
+    # Dedup preservando orden.
+    seen_urls: set[str] = set()
+    detail_urls = [u for u in detail_urls if not (u in seen_urls or seen_urls.add(u))]
 
-    for i, line in enumerate(block):
-        low = line.lower()
+    print(f"  Arthaus: {len(cards)} tarjetas, {len(detail_urls)} candidatas de cine")
 
-        if low in {"en cartelera", "programación anterior", "entradas", "reservá tu lugar"}:
+    result: list[Screening] = []
+    for url in detail_urls:
+        try:
+            await page.goto(url, wait_until="networkidle", timeout=30000)
+            await page.wait_for_timeout(1200)
+            title_raw = await page.evaluate(
+                "() => { const h = document.querySelector('h1'); return h ? h.innerText : document.title; }"
+            )
+            body = await page.evaluate("document.body.innerText")
+        except Exception as e:
+            print(f"  Arthaus: error en {url}: {e}")
             continue
-
-        if low.startswith("dir."):
-            current_director = re.sub(r"^dir\.\s*(por\s*)?", "", line, flags=re.IGNORECASE).strip()
-            if i > 0:
-                current_title = block[i - 1].strip()
-            continue
-
-        if not current_title:
-            continue
-
-        for m in date_re.finditer(low):
-            days_raw = m.group(2)
-            month = MESES_ES.get(m.group(3).lower())
-            hour = int(m.group(4))
-            minute = int(m.group(5)) if m.group(5) else 0
-
-            if not month:
-                continue
-
-            days = [int(x) for x in re.findall(r"\d{1,2}", days_raw)]
-            hora = f"{hour:02d}:{minute:02d}"
-
-            for day in days:
-                try:
-                    d = date(today.year, month, day)
-                    if d < today:
-                        continue
-                    if d > cutoff:
-                        continue
-
-                    result.append(Screening(
-                        cine="Arthaus",
-                        title=current_title,
-                        fecha=d.isoformat(),
-                        hora=hora,
-                        ticket_url="https://arthaus.ar/cine",
-                        director=current_director,
-                    ))
-                except ValueError:
-                    pass
+        result.extend(_parse_arthaus_detail(title_raw, body, url, today, cutoff))
 
     return result
 
