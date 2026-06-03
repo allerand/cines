@@ -34,7 +34,7 @@ permissions:
 jobs:
   scrape:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
 
@@ -52,8 +52,8 @@ jobs:
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
-        # Cuando se dispara por schedule, inputs.semanas viene vacío → default 2
-        run: python3 run.py --semanas "${{ inputs.semanas || '2' }}"
+        # Cuando se dispara por schedule, inputs.semanas viene vacío → default 9 (≈ 2 meses)
+        run: python3 run.py --semanas "${{ inputs.semanas || '9' }}"
 
       - name: Compute today's date (Buenos Aires)
         if: ${{ inputs.regenerate_stories == 'true' }}

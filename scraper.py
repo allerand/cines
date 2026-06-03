@@ -2030,11 +2030,14 @@ async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
     # se perdían las segundas fechas, así que la ampliamos para esta sala.
     cutoff = today + timedelta(weeks=max(semanas, 5))
 
-    await page.goto(ARTHAUS_AGENDA_URL, wait_until="networkidle", timeout=30000)
-    await page.wait_for_timeout(2500)
+    # Usamos domcontentloaded (no networkidle): la agenda tiene analytics/widgets
+    # que mantienen conexiones abiertas y hacen que networkidle se cuelgue hasta
+    # el timeout. Compensamos con una espera fija + scroll para el lazy-load.
+    await page.goto(ARTHAUS_AGENDA_URL, wait_until="domcontentloaded", timeout=30000)
+    await page.wait_for_timeout(3000)
     for _ in range(10):
         await page.mouse.wheel(0, 1600)
-        await page.wait_for_timeout(600)
+        await page.wait_for_timeout(500)
 
     # Juntamos, por tarjeta, el link "VER DETALLE" y el texto de la tarjeta
     # (para descartar lo que no sea cine sin tener que abrir cada detalle).
@@ -2073,17 +2076,20 @@ async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
     # descarta lo que no sea cine vía la CATEGORÍA.
     if not detail_urls:
         detail_urls = [c["href"] for c in cards]
-    # Dedup preservando orden.
+    # Dedup preservando orden y tope defensivo para acotar la duración total.
     seen_urls: set[str] = set()
     detail_urls = [u for u in detail_urls if not (u in seen_urls or seen_urls.add(u))]
+    detail_urls = detail_urls[:80]
 
     print(f"  Arthaus: {len(cards)} tarjetas, {len(detail_urls)} candidatas de cine")
 
     result: list[Screening] = []
     for url in detail_urls:
         try:
-            await page.goto(url, wait_until="networkidle", timeout=30000)
-            await page.wait_for_timeout(1200)
+            # domcontentloaded + espera corta: las páginas de detalle son WP
+            # renderizadas en servidor, no necesitan esperar a networkidle.
+            await page.goto(url, wait_until="domcontentloaded", timeout=20000)
+            await page.wait_for_timeout(500)
             title_raw = await page.evaluate(
                 "() => { const h = document.querySelector('h1'); return h ? h.innerText : document.title; }"
             )
