@@ -34,7 +34,7 @@ UA = (
 )
 
 
-async def run_scraper(semanas: int = 2) -> None:
+async def run_scraper(semanas: int = 9) -> None:
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
         scrape_lorca, scrape_lumiton_agenda, scrape_cosmos,
@@ -399,7 +399,7 @@ def start_server(port: int = 8080) -> None:
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Scraper de cines de arte — Buenos Aires")
     parser.add_argument("--serve", action="store_true", help="Levantar servidor web después de scrapear")
-    parser.add_argument("--semanas", type=int, default=2, help="Semanas de anticipación (default: 2)")
+    parser.add_argument("--semanas", type=int, default=9, help="Semanas de anticipación (default: 9 ≈ 2 meses)")
     parser.add_argument("--only-serve", action="store_true", help="Solo servidor, sin scrapear")
     args = parser.parse_args()
 
