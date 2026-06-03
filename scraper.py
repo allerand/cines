@@ -2025,7 +2025,10 @@ async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
     película para sacarle la data (fechas, hora, director, año).
     """
     today = date.today()
-    cutoff = today + timedelta(weeks=semanas)
+    # Arthaus programa cada película en ~2 funciones repartidas en 2-3 semanas
+    # (p.ej. Olivia: vie 12 y dom 21). Con la ventana global corta (2 semanas)
+    # se perdían las segundas fechas, así que la ampliamos para esta sala.
+    cutoff = today + timedelta(weeks=max(semanas, 5))
 
     await page.goto(ARTHAUS_AGENDA_URL, wait_until="networkidle", timeout=30000)
     await page.wait_for_timeout(2500)
