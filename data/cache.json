@@ -3794,12 +3794,13 @@
     "original_title": "El gato negro"
   },
   "la momia": {
-    "url": "",
-    "title_en": "La momia",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-mummy/",
+    "title_en": "The Mummy",
+    "director": "Karl Freund",
+    "country": "USA",
+    "year": 1932,
+    "duration": 73,
+    "genre": "Terror, Fantasía"
   },
   "el extraviado": {
     "url": "",
@@ -3810,15 +3811,15 @@
     "duration": null
   },
   "el profanador de tumbas": {
-    "url": "",
-    "title_en": "El profanador de tumbas",
+    "url": "https://letterboxd.com/film/the-body-snatcher/",
+    "title_en": "The Body Snatcher",
     "director": "Robert Wise",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1945,
     "duration": 78,
+    "genre": "Terror, Thriller",
     "title_es": "El ladrón de cadáveres",
-    "original_title": "The Body Snatcher",
-    "genre": "Terror, Thriller"
+    "original_title": "The Body Snatcher"
   },
   "el ruiseñor y el cuervo": {
     "url": "",

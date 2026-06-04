@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-04T16:56:23",
+  "updated": "2026-06-04T21:35:08",
   "screenings": [
     {
       "cine": "Cinemark Palermo",
@@ -422,21 +422,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-04",
-      "hora": "14:00",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-04",
       "hora": "14:00",
@@ -497,21 +482,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-04",
-      "hora": "14:15",
-      "title_es": "Crónicas de un exilio",
-      "title_en": "Chronicles of an Exile",
-      "director": "Micaela Montes Rojas, Pablo Guallar",
-      "country": "Argentina",
-      "year": 2021,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-04",
       "hora": "14:20",
@@ -555,21 +525,6 @@
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-04",
-      "hora": "14:30",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Germany",
-      "year": 2024,
-      "duration": 96,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -719,6 +674,21 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-04",
+      "hora": "14:55",
+      "title_es": "Los años más bellos de una vida",
+      "title_en": "The Best Years of a Life",
+      "director": "Claude Lelouch",
+      "country": "Francia",
+      "year": 2019,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
       "ciclo": ""
     },
     {
@@ -947,36 +917,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-06-04",
-      "hora": "15:55",
-      "title_es": "Los años más bellos de una vida",
-      "title_en": "The Best Years of a Life",
-      "director": "Claude Lelouch",
-      "country": "Francia",
-      "year": 2019,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
-      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-04",
-      "hora": "16:00",
-      "title_es": "Historias breves 24",
-      "title_en": "Historias breves 24",
-      "director": "Varios",
-      "country": "",
-      "year": null,
-      "duration": 65,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-04",
       "hora": "16:00",
@@ -1037,21 +977,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-04",
-      "hora": "16:15",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-04",
       "hora": "16:20",
@@ -1065,21 +990,6 @@
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-04",
-      "hora": "16:30",
-      "title_es": "Emi",
-      "title_en": "Emi",
-      "director": "Ezequiel Erriquez Mena",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 92,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1412,21 +1322,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-04",
-      "hora": "17:15",
-      "title_es": "El mago del Kremlin",
-      "title_en": "El mago del Kremlin",
-      "director": "Olivier Assayas",
-      "country": "France, United Kingdom",
-      "year": 2026,
-      "duration": 152,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=868",
-      "ciclo": "Horizontes Cinematográficos"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-04",
       "hora": "17:20",
@@ -1650,21 +1545,6 @@
       "letterboxd": "",
       "ticket_url": "https://www.filo.uba.ar/caravanas-en-los-andes-una-mirada-etnoarqueol%C3%B3gica",
       "ciclo": "Documental"
-    },
-    {
-      "cine": "Cine York",
-      "fecha": "2026-06-04",
-      "hora": "18:00",
-      "title_es": "Plesiosaurios Vivos",
-      "title_en": "Plesiosaurios vivos",
-      "director": "Iris Serrano y Magrio González",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 95,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/plesiosaurios-vivos/",
-      "ticket_url": "https://lumiton.ar/evento/plesiosaurios-vivos/",
-      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -4024,6 +3904,21 @@
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-05",
+      "hora": "14:55",
+      "title_es": "Los años más bellos de una vida",
+      "title_en": "The Best Years of a Life",
+      "director": "Claude Lelouch",
+      "country": "Francia",
+      "year": 2019,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-05",
       "hora": "15:00",
       "title_es": "Gioia Mía, un verano en Sicilia",
       "title_en": "Sweetheart",
@@ -4244,21 +4139,6 @@
       "genre": "Comedia, Terror",
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-06-05",
-      "hora": "15:55",
-      "title_es": "Los años más bellos de una vida",
-      "title_en": "The Best Years of a Life",
-      "director": "Claude Lelouch",
-      "country": "Francia",
-      "year": 2019,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
-      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
       "ciclo": ""
     },
     {
@@ -7414,6 +7294,21 @@
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-06",
+      "hora": "14:55",
+      "title_es": "Los años más bellos de una vida",
+      "title_en": "The Best Years of a Life",
+      "director": "Claude Lelouch",
+      "country": "Francia",
+      "year": 2019,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-06",
       "hora": "15:00",
       "title_es": "Gioia Mía, un verano en Sicilia",
       "title_en": "Sweetheart",
@@ -7649,21 +7544,6 @@
       "genre": "Comedia, Terror",
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-06-06",
-      "hora": "15:55",
-      "title_es": "Los años más bellos de una vida",
-      "title_en": "The Best Years of a Life",
-      "director": "Claude Lelouch",
-      "country": "Francia",
-      "year": 2019,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
-      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
       "ciclo": ""
     },
     {
@@ -8625,21 +8505,6 @@
       "letterboxd": "https://letterboxd.com/film/a-red-bear/",
       "ticket_url": "https://forms.gle/VTSjGFMgr6p3CXVU6",
       "ciclo": "Zona CEA"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-06-06",
-      "hora": "19:00",
-      "title_es": "La quinta",
-      "title_en": "La Quinta",
-      "director": "Adrián Alexander Eyzaguirre Sagastegui",
-      "country": "Italy",
-      "year": 2025,
-      "duration": 15,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/la-quinta/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-silvina-elena-schnicer-daniel-hendler/",
-      "ciclo": "Miradas contemporáneas:Silvina Elena Schnicer / Daniel Hendler"
     },
     {
       "cine": "Cinemark Caballito",
@@ -10894,6 +10759,21 @@
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-07",
+      "hora": "14:55",
+      "title_es": "Los años más bellos de una vida",
+      "title_en": "The Best Years of a Life",
+      "director": "Claude Lelouch",
+      "country": "Francia",
+      "year": 2019,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-07",
       "hora": "15:00",
       "title_es": "Gioia Mía, un verano en Sicilia",
       "title_en": "Sweetheart",
@@ -10905,21 +10785,6 @@
       "letterboxd": "https://letterboxd.com/film/sweetheart-2025-3/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=366",
       "ciclo": ""
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-06-07",
-      "hora": "15:00",
-      "title_es": "El bello Sergio",
-      "title_en": "El bello Sergio",
-      "director": "Claude Chabrol",
-      "country": "France",
-      "year": 1959,
-      "duration": 98,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/le-beau-serge/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
-      "ciclo": "Cine francés: Claude Chabrol"
     },
     {
       "cine": "Cinemark Palermo",
@@ -11129,21 +10994,6 @@
       "genre": "Comedia, Terror",
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-06-07",
-      "hora": "15:55",
-      "title_es": "Los años más bellos de una vida",
-      "title_en": "The Best Years of a Life",
-      "director": "Claude Lelouch",
-      "country": "Francia",
-      "year": 2019,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
-      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
       "ciclo": ""
     },
     {
@@ -11715,21 +11565,6 @@
       "letterboxd": "https://letterboxd.com/film/fuze/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-06-07",
-      "hora": "17:30",
-      "title_es": "Que la bestia muera",
-      "title_en": "Que la bestia muera",
-      "director": "Claude Chabrol",
-      "country": "France, Italy",
-      "year": 1969,
-      "duration": 113,
-      "genre": "Thriller, Drama",
-      "letterboxd": "https://letterboxd.com/film/this-man-must-die/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
-      "ciclo": "Cine francés: Claude Chabrol"
     },
     {
       "cine": "Cinemark Palermo",
@@ -14599,6 +14434,21 @@
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-08",
+      "hora": "14:55",
+      "title_es": "Los años más bellos de una vida",
+      "title_en": "The Best Years of a Life",
+      "director": "Claude Lelouch",
+      "country": "Francia",
+      "year": 2019,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-08",
       "hora": "15:00",
       "title_es": "Gioia Mía, un verano en Sicilia",
       "title_en": "Sweetheart",
@@ -14804,21 +14654,6 @@
       "genre": "Comedia, Terror",
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-06-08",
-      "hora": "15:55",
-      "title_es": "Los años más bellos de una vida",
-      "title_en": "The Best Years of a Life",
-      "director": "Claude Lelouch",
-      "country": "Francia",
-      "year": 2019,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
-      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
       "ciclo": ""
     },
     {
@@ -15493,7 +15328,7 @@
       "duration": 102,
       "genre": "Western, Drama",
       "letterboxd": "https://letterboxd.com/film/juan-moreira/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/juan-moreira-1973",
+      "ticket_url": "https://www.filo.uba.ar/juan-moreira-1973",
       "ciclo": "Ficción"
     },
     {
@@ -17674,6 +17509,21 @@
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-09",
+      "hora": "14:55",
+      "title_es": "Los años más bellos de una vida",
+      "title_en": "The Best Years of a Life",
+      "director": "Claude Lelouch",
+      "country": "Francia",
+      "year": 2019,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-09",
       "hora": "15:00",
       "title_es": "Gioia Mía, un verano en Sicilia",
       "title_en": "Sweetheart",
@@ -17897,21 +17747,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-06-09",
-      "hora": "15:55",
-      "title_es": "Los años más bellos de una vida",
-      "title_en": "The Best Years of a Life",
-      "director": "Claude Lelouch",
-      "country": "Francia",
-      "year": 2019,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
-      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
-      "ciclo": ""
-    },
-    {
       "cine": "Filo Cine",
       "fecha": "2026-06-09",
       "hora": "16:00",
@@ -17923,7 +17758,7 @@
       "duration": 75,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://www.filo.uba.ar/index.php/el-romance-del-aniceto-y-la-francisca-1966",
+      "ticket_url": "https://www.filo.uba.ar/el-romance-del-aniceto-y-la-francisca-1966",
       "ciclo": "Ficción"
     },
     {
@@ -18628,7 +18463,7 @@
       "duration": 75,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/chronicle-of-a-boy-alone/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/cr%C3%B3nica-de-un-ni%C3%B1o-solo-1965",
+      "ticket_url": "https://www.filo.uba.ar/cr%C3%B3nica-de-un-ni%C3%B1o-solo-1965",
       "ciclo": "Ficción"
     },
     {
@@ -20914,6 +20749,21 @@
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-06-10",
+      "hora": "14:55",
+      "title_es": "Los años más bellos de una vida",
+      "title_en": "The Best Years of a Life",
+      "director": "Claude Lelouch",
+      "country": "Francia",
+      "year": 2019,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-10",
       "hora": "15:00",
       "title_es": "Gioia Mía, un verano en Sicilia",
       "title_en": "Sweetheart",
@@ -21137,21 +20987,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-06-10",
-      "hora": "15:55",
-      "title_es": "Los años más bellos de una vida",
-      "title_en": "The Best Years of a Life",
-      "director": "Claude Lelouch",
-      "country": "Francia",
-      "year": 2019,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-best-years-of-a-life/",
-      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=359",
-      "ciclo": ""
-    },
-    {
       "cine": "Filo Cine",
       "fecha": "2026-06-10",
       "hora": "16:00",
@@ -21163,7 +20998,7 @@
       "duration": 92,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://www.filo.uba.ar/index.php/nazareno-cruz-y-el-lobo-1974",
+      "ticket_url": "https://www.filo.uba.ar/nazareno-cruz-y-el-lobo-1974",
       "ciclo": "Ficción"
     },
     {
@@ -21883,7 +21718,7 @@
       "duration": 85,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/sonar-sonar/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/so%C3%B1ar-so%C3%B1ar-1976",
+      "ticket_url": "https://www.filo.uba.ar/so%C3%B1ar-so%C3%B1ar-1976",
       "ciclo": "Ficción"
     },
     {
@@ -23473,7 +23308,7 @@
       "duration": 136,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/gatica-the-monkey/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/gatica-el-mono-1993",
+      "ticket_url": "https://www.filo.uba.ar/gatica-el-mono-1993",
       "ciclo": "Ficción"
     },
     {
@@ -23548,7 +23383,7 @@
       "duration": 87,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-dependent/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/el-dependiente-1969",
+      "ticket_url": "https://www.filo.uba.ar/el-dependiente-1969",
       "ciclo": "Ficción"
     },
     {
@@ -23638,7 +23473,7 @@
       "duration": 82,
       "genre": "Drama, Música",
       "letterboxd": "https://letterboxd.com/film/aniceto/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/aniceto-2008",
+      "ticket_url": "https://www.filo.uba.ar/aniceto-2008",
       "ciclo": "Ficción"
     },
     {
@@ -23668,7 +23503,7 @@
       "duration": 102,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://www.filo.uba.ar/index.php/hab%C3%ADa-una-vez-un-mago-2025",
+      "ticket_url": "https://www.filo.uba.ar/hab%C3%ADa-una-vez-un-mago-2025",
       "ciclo": "Documental"
     },
     {
@@ -23942,21 +23777,6 @@
       "ciclo": ""
     },
     {
-      "cine": "CCK",
-      "fecha": "2026-06-13",
-      "hora": "17:00",
-      "title_es": "La quinta",
-      "title_en": "La Quinta",
-      "director": "Adrián Alexander Eyzaguirre Sagastegui",
-      "country": "Italy",
-      "year": 2025,
-      "duration": 15,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/la-quinta/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-silvina-elena-schnicer-daniel-hendler/",
-      "ciclo": "Miradas contemporáneas:Silvina Elena Schnicer / Daniel Hendler"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-13",
       "hora": "17:30",
@@ -24030,21 +23850,6 @@
       "letterboxd": "https://letterboxd.com/film/mulholland-drive/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-06-13",
-      "hora": "19:00",
-      "title_es": "Un cabo suelto",
-      "title_en": "A Loose End",
-      "director": "Daniel Hendler",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 95,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/un-cabo-suelto/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-silvina-elena-schnicer-daniel-hendler/",
-      "ciclo": "Miradas contemporáneas:Silvina Elena Schnicer / Daniel Hendler"
     },
     {
       "cine": "Cinemark Caballito",
@@ -24197,21 +24002,6 @@
       "ciclo": "Cineclub Nocturna"
     },
     {
-      "cine": "CCK",
-      "fecha": "2026-06-14",
-      "hora": "15:00",
-      "title_es": "La esposa infiel",
-      "title_en": "La esposa infiel",
-      "director": "Eitan Tzur",
-      "country": "Israel, France",
-      "year": 2010,
-      "duration": 90,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
-      "ciclo": "Cine francés: Claude Chabrol"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-14",
       "hora": "15:00",
@@ -24270,21 +24060,6 @@
       "letterboxd": "https://letterboxd.com/film/taxi-driver/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c2a26015-16df-4404-af20-2975405bb777",
       "ciclo": "Estreno"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-06-14",
-      "hora": "17:30",
-      "title_es": "La ceremonia",
-      "title_en": "La ceremonia",
-      "director": "Pedro Deré",
-      "country": "Argentina",
-      "year": 2024,
-      "duration": 63,
-      "genre": "Historia",
-      "letterboxd": "https://letterboxd.com/film/la-ceremonia/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
-      "ciclo": "Cine francés: Claude Chabrol"
     },
     {
       "cine": "MALBA",
@@ -29357,21 +29132,6 @@
       "ciclo": ""
     },
     {
-      "cine": "CCK",
-      "fecha": "2026-06-20",
-      "hora": "19:00",
-      "title_es": "Un cabo suelto",
-      "title_en": "A Loose End",
-      "director": "Daniel Hendler",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 95,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/un-cabo-suelto/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-silvina-elena-schnicer-daniel-hendler/",
-      "ciclo": "Miradas contemporáneas:Silvina Elena Schnicer / Daniel Hendler"
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-20",
       "hora": "19:00",
@@ -30347,21 +30107,6 @@
       "ciclo": ""
     },
     {
-      "cine": "CCK",
-      "fecha": "2026-06-21",
-      "hora": "15:00",
-      "title_es": "Que la bestia muera",
-      "title_en": "Que la bestia muera",
-      "director": "Claude Chabrol",
-      "country": "France, Italy",
-      "year": 1969,
-      "duration": 113,
-      "genre": "Thriller, Drama",
-      "letterboxd": "https://letterboxd.com/film/this-man-must-die/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
-      "ciclo": "Cine francés: Claude Chabrol"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-21",
       "hora": "15:00",
@@ -30645,21 +30390,6 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-06-21",
-      "hora": "17:30",
-      "title_es": "El bello Sergio",
-      "title_en": "El bello Sergio",
-      "director": "Claude Chabrol",
-      "country": "France",
-      "year": 1959,
-      "duration": 98,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/le-beau-serge/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
-      "ciclo": "Cine francés: Claude Chabrol"
     },
     {
       "cine": "Cinemark Caballito",
@@ -35376,13 +35106,13 @@
       "fecha": "2026-06-25",
       "hora": "19:15",
       "title_es": "La momia",
-      "title_en": "La momia",
+      "title_en": "The Mummy",
       "director": "Karl Freund",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
+      "country": "USA",
+      "year": 1932,
+      "duration": 73,
+      "genre": "Terror, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/the-mummy/",
       "ticket_url": "https://malba.org.ar/evento/la-momia/",
       "ciclo": "Ciclo Triángulo macabro"
     },
@@ -35436,13 +35166,13 @@
       "fecha": "2026-06-25",
       "hora": "22:30",
       "title_es": "El profanador de tumbas",
-      "title_en": "El profanador de tumbas",
+      "title_en": "The Body Snatcher",
       "director": "Robert Wise",
-      "country": "United States of America",
+      "country": "USA",
       "year": 1945,
       "duration": 78,
       "genre": "Terror, Thriller",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/the-body-snatcher/",
       "ticket_url": "https://malba.org.ar/evento/el-profanador-de-tumbas/",
       "ciclo": "Ciclo Triángulo macabro"
     },
@@ -35657,21 +35387,6 @@
       "ciclo": "Cineclub Nocturna"
     },
     {
-      "cine": "CCK",
-      "fecha": "2026-06-28",
-      "hora": "15:00",
-      "title_es": "La ceremonia",
-      "title_en": "La ceremonia",
-      "director": "Pedro Deré",
-      "country": "Argentina",
-      "year": 2024,
-      "duration": 63,
-      "genre": "Historia",
-      "letterboxd": "https://letterboxd.com/film/la-ceremonia/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
-      "ciclo": "Cine francés: Claude Chabrol"
-    },
-    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-06-28",
       "hora": "16:30",
@@ -35700,21 +35415,6 @@
       "letterboxd": "https://letterboxd.com/film/caigan-las-rosas-blancas/",
       "ticket_url": "https://lumiton.ar/evento/caigan-las-rosas-blancas-2/",
       "ciclo": ""
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-06-28",
-      "hora": "17:30",
-      "title_es": "La esposa infiel",
-      "title_en": "La esposa infiel",
-      "director": "Eitan Tzur",
-      "country": "Israel, France",
-      "year": 2010,
-      "duration": 90,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
-      "ciclo": "Cine francés: Claude Chabrol"
     },
     {
       "cine": "MALBA",
