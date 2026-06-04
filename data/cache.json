@@ -3421,15 +3421,15 @@
     "original_title": "Mark of the Vampire"
   },
   "las manos de orlac": {
-    "url": "",
-    "title_en": "Las manos de Orlac",
+    "url": "https://letterboxd.com/film/mad-love/",
+    "title_en": "Mad Love",
     "director": "Karl Freund",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1935,
     "duration": 68,
+    "genre": "Romance, Terror",
     "title_es": "Las manos de Orlac",
-    "original_title": "Mad Love",
-    "genre": "Terror, Romance"
+    "original_title": "Mad Love"
   },
   "el veredicto": {
     "url": "https://letterboxd.com/film/the-verdict/",
@@ -3443,12 +3443,13 @@
     "original_title": "The Verdict"
   },
   "el misterio del tercer piso": {
-    "url": "",
-    "title_en": "El misterio del tercer piso",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/stranger-on-the-third-floor/",
+    "title_en": "Stranger on the Third Floor",
+    "director": "Boris Ingster",
+    "country": "USA",
+    "year": 1940,
+    "duration": 64,
+    "genre": "Thriller, Misterio"
   },
   "glen or glenda": {
     "url": "https://letterboxd.com/film/glen-or-glenda/",
@@ -3728,5 +3729,131 @@
     "duration": 95,
     "genre": "Documental",
     "original_title": "Luciano"
+  },
+  "el rey del pánico": {
+    "url": "",
+    "title_en": "El rey del pánico",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "anoche conquisté tebas": {
+    "url": "https://letterboxd.com/film/last-night-i-conquered-the-city-of-thebes/",
+    "title_en": "Last Night I Conquered the City of Thebes",
+    "director": "Gabriel Azorín",
+    "country": "Spain, Portugal",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Drama",
+    "title_es": "Anoche conquisté Tebas",
+    "original_title": "Anoche conquisté Tebas"
+  },
+  "el hijo de frankenstein": {
+    "url": "https://letterboxd.com/film/frankenstein-2025/",
+    "title_en": "Frankenstein",
+    "director": "Guillermo del Toro",
+    "country": "USA, Canada",
+    "year": 2025,
+    "duration": 150,
+    "genre": "Fantasía, Drama",
+    "original_title": "La Sangre de Frankenstein",
+    "title_es": "Yo fui un Frankenstein adolescente"
+  },
+  "scarface": {
+    "url": "https://letterboxd.com/film/scarface/",
+    "title_en": "Scarface",
+    "director": "Howard Hawks",
+    "country": "USA",
+    "year": 1932,
+    "duration": 93,
+    "genre": "Crimen, Acción",
+    "title_es": "Scarface, el terror del Hampa",
+    "original_title": "Scarface"
+  },
+  "los ojos del gato": {
+    "url": "https://letterboxd.com/film/cats-eye/",
+    "title_en": "Cat's Eye",
+    "director": "Lewis Teague",
+    "country": "Netherlands, USA",
+    "year": 1985,
+    "duration": 94,
+    "genre": "Thriller, Terror",
+    "title_es": "Los ojos del gato",
+    "original_title": "Cat's Eye"
+  },
+  "el gato negro": {
+    "url": "https://letterboxd.com/film/the-black-cat/",
+    "title_en": "The Black Cat",
+    "director": "Edgar G. Ulmer",
+    "country": "USA",
+    "year": 1934,
+    "duration": 65,
+    "genre": "Terror, Thriller",
+    "original_title": "El gato negro"
+  },
+  "la momia": {
+    "url": "",
+    "title_en": "La momia",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el extraviado": {
+    "url": "",
+    "title_en": "El extraviado",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el profanador de tumbas": {
+    "url": "",
+    "title_en": "El profanador de tumbas",
+    "director": "Robert Wise",
+    "country": "United States of America",
+    "year": 1945,
+    "duration": 78,
+    "title_es": "El ladrón de cadáveres",
+    "original_title": "The Body Snatcher",
+    "genre": "Terror, Thriller"
+  },
+  "el ruiseñor y el cuervo": {
+    "url": "",
+    "title_en": "El ruiseñor y el cuervo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "white zombie": {
+    "url": "https://letterboxd.com/film/white-zombie/",
+    "title_en": "White Zombie",
+    "director": "Victor Halperin",
+    "country": "USA",
+    "year": 1932,
+    "duration": 67,
+    "genre": "Terror",
+    "title_es": "La legión de los hombres sin alma",
+    "original_title": "White Zombie"
+  },
+  "crimen y castigo": {
+    "url": "",
+    "title_en": "Crimen y castigo",
+    "director": "",
+    "country": "Mexico, United States of America",
+    "year": 2003,
+    "duration": null,
+    "original_title": "Secuestro crimen y castigo",
+    "genre": "Crimen"
+  },
+  "asalto al precinto 13": {
+    "url": "",
+    "title_en": "Asalto al precinto 13",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
