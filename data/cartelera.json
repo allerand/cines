@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-05T16:29:10",
+  "updated": "2026-06-05T21:24:50",
   "screenings": [
     {
       "cine": "Cinemark Palermo",
@@ -422,21 +422,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-05",
-      "hora": "14:00",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-06-05",
       "hora": "14:00",
@@ -445,7 +430,7 @@
       "director": "Pedro Almodóvar",
       "country": "Spain",
       "year": 2026,
-      "duration": 112,
+      "duration": 111,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
@@ -485,7 +470,7 @@
       "cine": "Cine Lorca",
       "fecha": "2026-06-05",
       "hora": "14:10",
-      "title_es": "Padre Madre Hermana Hermano",
+      "title_es": "Father Mother Sister Brother",
       "title_en": "Father Mother Sister Brother",
       "director": "Jim Jarmusch",
       "country": "USA, France",
@@ -525,21 +510,6 @@
       "letterboxd": "https://letterboxd.com/film/the-match-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-05",
-      "hora": "14:15",
-      "title_es": "Crónicas de un exilio",
-      "title_en": "Chronicles of an Exile",
-      "director": "Micaela Montes Rojas, Pablo Guallar",
-      "country": "Argentina",
-      "year": 2021,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/cronicas-de-un-exilio/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=818",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -585,21 +555,6 @@
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-05",
-      "hora": "14:30",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Germany",
-      "year": 2024,
-      "duration": 96,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -992,21 +947,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-05",
-      "hora": "16:00",
-      "title_es": "Historias breves 24",
-      "title_en": "Historias breves 24",
-      "director": "Varios",
-      "country": "",
-      "year": null,
-      "duration": 65,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/historias-breves-24/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=839",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-06-05",
       "hora": "16:00",
@@ -1015,7 +955,7 @@
       "director": "Pedro Almodóvar",
       "country": "Spain",
       "year": 2026,
-      "duration": 112,
+      "duration": 111,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
@@ -1070,12 +1010,12 @@
       "cine": "Cine Lorca",
       "fecha": "2026-06-05",
       "hora": "16:10",
-      "title_es": "Madres jóvenes",
+      "title_es": "Recién nacidas",
       "title_en": "Young Mothers",
       "director": "Luc Dardenne, Jean-Pierre Dardenne",
       "country": "Belgium, France",
       "year": 2025,
-      "duration": 106,
+      "duration": 105,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/young-mothers/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
@@ -1097,21 +1037,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-05",
-      "hora": "16:15",
-      "title_es": "El último viaje a China",
-      "title_en": "El Último Viaje a China",
-      "director": "Alejandro Maci",
-      "country": "",
-      "year": 2024,
-      "duration": 81,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=792",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-05",
       "hora": "16:20",
@@ -1125,21 +1050,6 @@
       "letterboxd": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-05",
-      "hora": "16:30",
-      "title_es": "Emi",
-      "title_en": "Emi",
-      "director": "Ezequiel Erriquez Mena",
-      "country": "Argentina, Uruguay",
-      "year": 2025,
-      "duration": 92,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/emi-2025-1/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=837",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1502,21 +1412,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-05",
-      "hora": "17:15",
-      "title_es": "El mago del Kremlin",
-      "title_en": "El mago del Kremlin",
-      "director": "Olivier Assayas",
-      "country": "France, United Kingdom",
-      "year": 2026,
-      "duration": 152,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=868",
-      "ciclo": "Horizontes Cinematográficos"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-05",
       "hora": "17:20",
@@ -1742,21 +1637,6 @@
       "ciclo": "Ciclo Triángulo macabro"
     },
     {
-      "cine": "Cine York",
-      "fecha": "2026-06-05",
-      "hora": "18:00",
-      "title_es": "Catálogo para una Familia",
-      "title_en": "Family Catalogue",
-      "director": "Iair Michel Attías",
-      "country": "Argentina",
-      "year": 2023,
-      "duration": 84,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/catalogo-para-una-familia/",
-      "ticket_url": "https://lumiton.ar/evento/catalogo-para-una-familia/",
-      "ciclo": ""
-    },
-    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-06-05",
       "hora": "18:00",
@@ -1835,7 +1715,7 @@
       "cine": "Cine Lorca",
       "fecha": "2026-06-05",
       "hora": "18:10",
-      "title_es": "El Partido",
+      "title_es": "El partido",
       "title_en": "The Match",
       "director": "Juan Cabral, Santiago Franco",
       "country": "Argentina",
@@ -2360,12 +2240,12 @@
       "cine": "Cine Lorca",
       "fecha": "2026-06-05",
       "hora": "20:00",
-      "title_es": "Madres jóvenes",
+      "title_es": "Recién nacidas",
       "title_en": "Young Mothers",
       "director": "Luc Dardenne, Jean-Pierre Dardenne",
       "country": "Belgium, France",
       "year": 2025,
-      "duration": 106,
+      "duration": 105,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/young-mothers/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
@@ -2440,7 +2320,7 @@
       "director": "Pedro Almodóvar",
       "country": "Spain",
       "year": 2026,
-      "duration": 112,
+      "duration": 111,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
@@ -2885,7 +2765,7 @@
       "cine": "Cine Lorca",
       "fecha": "2026-06-05",
       "hora": "22:00",
-      "title_es": "Padre Madre Hermana Hermano",
+      "title_es": "Father Mother Sister Brother",
       "title_en": "Father Mother Sister Brother",
       "director": "Jim Jarmusch",
       "country": "USA, France",
@@ -3050,7 +2930,7 @@
       "cine": "Cine Lorca",
       "fecha": "2026-06-05",
       "hora": "22:15",
-      "title_es": "El Partido",
+      "title_es": "El partido",
       "title_en": "The Match",
       "director": "Juan Cabral, Santiago Franco",
       "country": "Argentina",
@@ -3977,6 +3857,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "14:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-06",
       "hora": "14:00",
@@ -4004,6 +3899,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "14:10",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -4547,6 +4457,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-06",
       "hora": "16:00",
@@ -4589,6 +4514,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "16:10",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -5297,6 +5237,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "18:00",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-06",
       "hora": "18:00",
@@ -5340,6 +5295,21 @@
       "letterboxd": "https://letterboxd.com/film/faust-1926/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "18:10",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -5852,6 +5822,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "20:00",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-06",
       "hora": "20:00",
@@ -5894,6 +5879,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -6332,6 +6332,21 @@
       "ciclo": "Especial Satoshi Kon"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "22:00",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-06",
       "hora": "22:00",
@@ -6480,6 +6495,21 @@
       "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-06",
+      "hora": "22:15",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -7457,6 +7487,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "14:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-07",
       "hora": "14:00",
@@ -7484,6 +7529,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "14:10",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -7772,6 +7832,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-07",
+      "hora": "15:00",
+      "title_es": "El bello Sergio",
+      "title_en": "El bello Sergio",
+      "director": "Claude Chabrol",
+      "country": "France",
+      "year": 1959,
+      "duration": 98,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/le-beau-serge/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-07",
       "hora": "15:00",
@@ -8012,6 +8087,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-07",
       "hora": "16:00",
@@ -8054,6 +8144,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "16:10",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -8552,6 +8657,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-07",
+      "hora": "17:30",
+      "title_es": "Que la bestia muera",
+      "title_en": "Que la bestia muera",
+      "director": "Claude Chabrol",
+      "country": "France, Italy",
+      "year": 1969,
+      "duration": 113,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/this-man-must-die/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-07",
       "hora": "17:30",
@@ -8762,6 +8882,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "18:00",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-07",
       "hora": "18:00",
@@ -8805,6 +8940,21 @@
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "18:10",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -9347,6 +9497,21 @@
       "ciclo": "Bleak Week"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "20:00",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-07",
       "hora": "20:00",
@@ -9389,6 +9554,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -9797,6 +9977,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "22:00",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-07",
       "hora": "22:00",
@@ -9945,6 +10140,21 @@
       "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-07",
+      "hora": "22:15",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -11132,6 +11342,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "14:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-08",
       "hora": "14:00",
@@ -11159,6 +11384,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "14:10",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -11657,6 +11897,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-08",
       "hora": "16:00",
@@ -11699,6 +11954,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "16:10",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -12317,6 +12587,21 @@
       "ciclo": "Ficción"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "18:00",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-08",
       "hora": "18:00",
@@ -12344,6 +12629,21 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "18:10",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -12782,6 +13082,21 @@
       "ciclo": "Bleak Week"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "20:00",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-08",
       "hora": "20:00",
@@ -12824,6 +13139,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -13157,6 +13487,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "22:00",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-08",
       "hora": "22:00",
@@ -13305,6 +13650,21 @@
       "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-08",
+      "hora": "22:15",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -14207,6 +14567,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "14:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-09",
       "hora": "14:00",
@@ -14249,6 +14624,21 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-match-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "14:10",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -14762,6 +15152,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-09",
       "hora": "16:00",
@@ -14789,6 +15194,21 @@
       "genre": "Comedia, Terror",
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "16:10",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -15452,6 +15872,21 @@
       "ciclo": "Ficción"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "18:00",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-09",
       "hora": "18:00",
@@ -15495,6 +15930,21 @@
       "letterboxd": "https://letterboxd.com/film/battling-butler/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ffe22035-34cf-435e-84fd-133adc776dcd",
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "18:10",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -15962,6 +16412,21 @@
       "ciclo": "Bleak Week"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "20:00",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-09",
       "hora": "20:00",
@@ -16004,6 +16469,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -16397,6 +16877,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "22:00",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-09",
       "hora": "22:00",
@@ -16545,6 +17040,21 @@
       "letterboxd": "https://letterboxd.com/film/hokum/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=865",
       "ciclo": "KM 0"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-09",
+      "hora": "22:15",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -17447,6 +17957,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "14:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-10",
       "hora": "14:00",
@@ -17474,6 +17999,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "14:10",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -18002,6 +18542,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "16:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-10",
       "hora": "16:00",
@@ -18044,6 +18599,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "16:10",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -18722,6 +19292,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "18:00",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Morocco, France",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-10",
       "hora": "18:00",
@@ -18765,6 +19350,21 @@
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/8f0fbe90-802f-4c06-a802-ded5adc59cef",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "18:10",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -19247,6 +19847,21 @@
       "ciclo": "Bleak Week"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "20:00",
+      "title_es": "Recién nacidas",
+      "title_en": "Young Mothers",
+      "director": "Luc Dardenne, Jean-Pierre Dardenne",
+      "country": "Belgium, France",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/young-mothers/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-10",
       "hora": "20:00",
@@ -19289,6 +19904,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "20:10",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -19697,6 +20327,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "22:00",
+      "title_es": "Father Mother Sister Brother",
+      "title_en": "Father Mother Sister Brother",
+      "director": "Jim Jarmusch",
+      "country": "USA, France",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-10",
       "hora": "22:00",
@@ -19860,6 +20505,21 @@
       "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-06-10",
+      "hora": "22:15",
+      "title_es": "El partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral, Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -20522,6 +21182,21 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-11",
+      "hora": "18:00",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-06-11",
       "hora": "18:30",
@@ -20579,6 +21254,21 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-11",
+      "hora": "18:50",
+      "title_es": "Letras robadas",
+      "title_en": "Power Ballad",
+      "director": "John Carney",
+      "country": "Ireland, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Música, Comedia",
+      "letterboxd": "https://letterboxd.com/film/power-ballad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -20669,6 +21359,21 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/jota-urondo-un-cocinero-impertinente/",
       "ticket_url": "https://lumiton.ar/evento/jota-urondo-un-cocinero-impertinente/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-11",
+      "hora": "20:40",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -21017,6 +21722,21 @@
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-12",
+      "hora": "18:00",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-06-12",
       "hora": "18:30",
@@ -21059,6 +21779,21 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-12",
+      "hora": "18:50",
+      "title_es": "Letras robadas",
+      "title_en": "Power Ballad",
+      "director": "John Carney",
+      "country": "Ireland, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Música, Comedia",
+      "letterboxd": "https://letterboxd.com/film/power-ballad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -21195,6 +21930,21 @@
       "letterboxd": "https://letterboxd.com/film/possession/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/9634c684-d610-4eb0-b28a-91f18403beee",
       "ciclo": "Breve encuentro con Isabelle Adjani"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-12",
+      "hora": "20:40",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Cacodelphia",
@@ -21617,6 +22367,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-13",
+      "hora": "18:00",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-13",
       "hora": "18:45",
@@ -21629,6 +22394,21 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-13",
+      "hora": "18:50",
+      "title_es": "Letras robadas",
+      "title_en": "Power Ballad",
+      "director": "John Carney",
+      "country": "Ireland, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Música, Comedia",
+      "letterboxd": "https://letterboxd.com/film/power-ballad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -21827,6 +22607,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-13",
+      "hora": "20:40",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-13",
       "hora": "21:00",
@@ -22022,6 +22817,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-14",
+      "hora": "15:00",
+      "title_es": "La esposa infiel",
+      "title_en": "La esposa infiel",
+      "director": "Eitan Tzur",
+      "country": "Israel, France",
+      "year": 2010,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-14",
       "hora": "15:00",
@@ -22157,6 +22967,21 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-14",
+      "hora": "17:30",
+      "title_es": "La ceremonia",
+      "title_en": "La ceremonia",
+      "director": "Pedro Deré",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 63,
+      "genre": "Historia",
+      "letterboxd": "https://letterboxd.com/film/la-ceremonia/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-06-14",
       "hora": "18:00",
@@ -22202,6 +23027,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-14",
+      "hora": "18:00",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-06-14",
       "hora": "18:30",
@@ -22232,6 +23072,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-14",
+      "hora": "18:50",
+      "title_es": "Letras robadas",
+      "title_en": "Power Ballad",
+      "director": "John Carney",
+      "country": "Ireland, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Música, Comedia",
+      "letterboxd": "https://letterboxd.com/film/power-ballad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-06-14",
       "hora": "19:00",
@@ -22244,6 +23099,21 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/martin-hache/",
       "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-14",
+      "hora": "19:00",
+      "title_es": "Vidas Imaginarias",
+      "title_en": "The Marvellous Spiral",
+      "director": "Isabel Medarde",
+      "country": "Spain",
+      "year": 2022,
+      "duration": 80,
+      "genre": "Historia, Documental",
+      "letterboxd": "https://letterboxd.com/film/the-marvellous-spiral/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -22379,6 +23249,21 @@
       "genre": "Crimen, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-secret-agent-2025/",
       "ticket_url": "https://lumiton.ar/evento/el-agente-secreto/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-14",
+      "hora": "20:40",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -22607,6 +23492,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-15",
+      "hora": "18:00",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-15",
       "hora": "18:45",
@@ -22619,6 +23519,21 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-15",
+      "hora": "18:50",
+      "title_es": "Letras robadas",
+      "title_en": "Power Ballad",
+      "director": "John Carney",
+      "country": "Ireland, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Música, Comedia",
+      "letterboxd": "https://letterboxd.com/film/power-ballad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -22679,6 +23594,21 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-15",
+      "hora": "20:40",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -22937,6 +23867,21 @@
       "ciclo": "Breve encuentro con Isabelle Adjani"
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-16",
+      "hora": "18:00",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-06-16",
       "hora": "18:30",
@@ -22979,6 +23924,21 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-16",
+      "hora": "18:50",
+      "title_es": "Letras robadas",
+      "title_en": "Power Ballad",
+      "director": "John Carney",
+      "country": "Ireland, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Música, Comedia",
+      "letterboxd": "https://letterboxd.com/film/power-ballad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -23039,6 +23999,21 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-16",
+      "hora": "20:40",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -23807,6 +24782,21 @@
       "ciclo": "Cien años atrás: expresionismo, comedia, fantasía y drama"
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-17",
+      "hora": "18:00",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-17",
       "hora": "18:05",
@@ -23894,6 +24884,21 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-17",
+      "hora": "18:50",
+      "title_es": "Letras robadas",
+      "title_en": "Power Ballad",
+      "director": "John Carney",
+      "country": "Ireland, USA",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Música, Comedia",
+      "letterboxd": "https://letterboxd.com/film/power-ballad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -24149,6 +25154,21 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-17",
+      "hora": "20:40",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "USA",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -29072,6 +30092,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-21",
+      "hora": "15:00",
+      "title_es": "Que la bestia muera",
+      "title_en": "Que la bestia muera",
+      "director": "Claude Chabrol",
+      "country": "France, Italy",
+      "year": 1969,
+      "duration": 113,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/this-man-must-die/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-21",
       "hora": "15:00",
@@ -29355,6 +30390,21 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-06-21",
+      "hora": "17:30",
+      "title_es": "El bello Sergio",
+      "title_en": "El bello Sergio",
+      "director": "Claude Chabrol",
+      "country": "France",
+      "year": 1959,
+      "duration": 98,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/le-beau-serge/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
     },
     {
       "cine": "Cinemark Caballito",
@@ -34232,6 +35282,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-26",
+      "hora": "21:00",
+      "title_es": "Playback. Ensayo de una despedida",
+      "title_en": "Playback",
+      "director": "Agustina Comedi",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 14,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/playback-ensayo-de-una-despedida/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-06-26",
       "hora": "22:00",
@@ -34260,6 +35325,21 @@
       "letterboxd": "https://letterboxd.com/film/white-zombie/",
       "ticket_url": "https://malba.org.ar/evento/white-zombie/",
       "ciclo": "Ciclo Triángulo macabro"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-27",
+      "hora": "15:30",
+      "title_es": "Better Not Kill the Groove",
+      "title_en": "Better Not Kill the Groove",
+      "director": "Jonathan Leggett",
+      "country": "Suiza",
+      "year": 2024,
+      "duration": 7,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/better-not-kill-the-groove/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
     },
     {
       "cine": "MALBA",
@@ -34307,6 +35387,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-27",
+      "hora": "18:00",
+      "title_es": "Immaculata",
+      "title_en": "Immaculata",
+      "director": "Kim Lêa Sakkal",
+      "country": "Alemania/Francia",
+      "year": 2024,
+      "duration": 22,
+      "genre": "Thriller, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/immaculata/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-06-27",
       "hora": "20:15",
@@ -34320,6 +35415,21 @@
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-27",
+      "hora": "21:00",
+      "title_es": "A River Stifled",
+      "title_en": "A River Stifled",
+      "director": "Jingwei Bu",
+      "country": "China",
+      "year": 2024,
+      "duration": 16,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/a-river-stifled/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
     },
     {
       "cine": "MALBA",
@@ -34352,6 +35462,36 @@
       "ciclo": "Cineclub Nocturna"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-28",
+      "hora": "15:00",
+      "title_es": "La ceremonia",
+      "title_en": "La ceremonia",
+      "director": "Pedro Deré",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 63,
+      "genre": "Historia",
+      "letterboxd": "https://letterboxd.com/film/la-ceremonia/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-28",
+      "hora": "15:30",
+      "title_es": "The Thief",
+      "title_en": "The Thief",
+      "director": "Christoffer Rizvanovic Stenbakken",
+      "country": "Groenlandia/Dinamarca",
+      "year": 2025,
+      "duration": 20,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-06-28",
       "hora": "16:30",
@@ -34382,6 +35522,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-06-28",
+      "hora": "17:30",
+      "title_es": "La esposa infiel",
+      "title_en": "La esposa infiel",
+      "director": "Eitan Tzur",
+      "country": "Israel, France",
+      "year": 2010,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-claude-chabrol/",
+      "ciclo": "Cine francés: Claude Chabrol"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-06-28",
       "hora": "18:00",
@@ -34410,6 +35565,21 @@
       "letterboxd": "https://letterboxd.com/film/the-hitchhikers-guide-to-the-galaxy/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/el-otro-lado-de-la-ciencia-ficcion",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-28",
+      "hora": "18:00",
+      "title_es": "En el río manso",
+      "title_en": "en el río manso",
+      "director": "Marco Rossi",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 10,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/en-el-rio-manso/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -34472,6 +35642,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-28",
+      "hora": "21:00",
+      "title_es": "Como un estallido",
+      "title_en": "Como un estallido",
+      "director": "Sebastián Schjaer",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 11,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/como-un-estallido/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-29",
+      "hora": "15:30",
+      "title_es": "Nuestra sombra",
+      "title_en": "Our Own Shadow",
+      "director": "Agustina Sánchez Gavier",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 19,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/nuestra-sombra/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
+    },
+    {
       "cine": "Biblioteca Nacional",
       "fecha": "2026-06-29",
       "hora": "18:00",
@@ -34485,6 +35685,36 @@
       "letterboxd": "https://letterboxd.com/film/lai/",
       "ticket_url": "https://www.bn.gov.ar/agenda-cultural/el-monstruo-en-pantalla-grande",
       "ciclo": "El monstruo en pantalla grande"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-29",
+      "hora": "18:00",
+      "title_es": "Quisiera no sentir todo ese ruido",
+      "title_en": "Quisiera no sentir todo este ruido",
+      "director": "Lucila Mariani",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 15,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/quisiera-no-sentir-todo-este-ruido/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-06-29",
+      "hora": "21:00",
+      "title_es": "Los conjurados",
+      "title_en": "Los conjurados",
+      "director": "Humberto González Bustillo",
+      "country": "Venezuela/Argentina",
+      "year": 2025,
+      "duration": 9,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/los-conjurados/",
+      "ticket_url": "",
+      "ciclo": "Syncro Film Fest"
     }
   ]
 }
