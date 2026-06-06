@@ -2208,14 +2208,20 @@ _MUSEOCINE_MONTHS = {
 
 
 def _museocine_month_pages() -> list[str]:
-    """Lista URLs absolutas de notas mensuales linkeadas desde la home."""
+    """Lista URLs absolutas de notas mensuales linkeadas desde la home.
+
+    El museo cambia el slug de la nota mensual: antes era
+    `/noticias/<mes>-en-el-museo-del-cine`, ahora `/noticias/<mes>-en-nuestro-auditorio`.
+    Matcheamos ambos patrones (museo-del-cine | auditorio) para no depender del
+    nombre exacto cada mes.
+    """
     try:
         soup = fetch_html(MUSEOCINE_INDEX)
     except Exception:
         return []
     urls: list[str] = []
     seen: set[str] = set()
-    for a in soup.find_all("a", href=re.compile(r"/noticias/[^/]*museo-del-cine")):
+    for a in soup.find_all("a", href=re.compile(r"/noticias/[^/]*(?:museo-del-cine|auditorio)")):
         h = a.get("href", "")
         if not h:
             continue
