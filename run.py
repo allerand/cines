@@ -27,6 +27,7 @@ DATA_DIR.mkdir(exist_ok=True)
 CARTELERA_JSON = DATA_DIR / "cartelera.json"
 CACHE_JSON = DATA_DIR / "cache.json"
 LB_OVERRIDES_JSON = DATA_DIR / "letterboxd_overrides.json"
+METADATA_OVERRIDES_JSON = DATA_DIR / "metadata_overrides.json"
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -335,6 +336,38 @@ async def run_scraper(semanas: int = 9) -> None:
                 print(f"  ↳ Letterboxd overrides aplicados a {applied} funciones")
         except Exception as e:
             print(f"  ↳ Overrides omitidos: {e}")
+
+    # Overrides de metadata (data/metadata_overrides.json): corrigen campos que
+    # el enrichment matchea mal (p.ej. dos películas con el mismo título).
+    # Cada entry matchea por 'title' (case-insensitive) y opcionalmente 'cine',
+    # y pisa los campos que estén presentes (director, year, country, genre,
+    # duration, letterboxd, title_en, original_title).
+    if METADATA_OVERRIDES_JSON.exists():
+        _OVERRIDABLE = ("director", "year", "country", "genre", "duration",
+                        "letterboxd", "title_en", "original_title")
+        try:
+            raw = json.loads(METADATA_OVERRIDES_JSON.read_text(encoding="utf-8"))
+            entries = raw.get("overrides", []) if isinstance(raw, dict) else raw
+            applied = 0
+            for s in screenings_out:
+                s_title = (s.get("title_es", "") or "").lower().strip()
+                for ov in entries:
+                    if (ov.get("title", "") or "").lower().strip() != s_title:
+                        continue
+                    if ov.get("cine") and ov["cine"] != s.get("cine"):
+                        continue
+                    changed = False
+                    for f in _OVERRIDABLE:
+                        if f in ov:
+                            s[f] = ov[f]
+                            changed = True
+                    if changed:
+                        applied += 1
+                    break
+            if applied:
+                print(f"  ↳ Metadata overrides aplicados a {applied} funciones")
+        except Exception as e:
+            print(f"  ↳ Metadata overrides omitidos: {e}")
 
     # La Nación sólo expone el día actual para cines comerciales.
     # Mergeamos con el JSON anterior para preservar funciones futuras ya capturadas.
