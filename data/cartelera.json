@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T15:09:04",
+  "updated": "2026-06-06T16:50:05",
   "screenings": [
     {
       "cine": "Hoyts Dot",
@@ -1352,6 +1352,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-06-06",
+      "hora": "16:00",
+      "title_es": "El andariego",
+      "title_en": "El andariego",
+      "director": "Laura Piastrellini, Eduardo Fisicaro y Silvia Majul",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 64,
+      "genre": "Documental",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/junio-en-nuestro-auditorio-0",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-06-06",
       "hora": "16:00",
@@ -2325,6 +2340,21 @@
       "letterboxd": "https://letterboxd.com/film/the-philadelphia-story/",
       "ticket_url": "https://lumiton.ar/evento/pecadora-equivocada/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-06-06",
+      "hora": "18:00",
+      "title_es": "La hija del ministro",
+      "title_en": "La hija del ministro",
+      "director": "Francisco Mugica",
+      "country": "Argentina",
+      "year": 1943,
+      "duration": 72,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/la-hija-del-ministro-1943/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/junio-en-nuestro-auditorio-0",
+      "ciclo": "Cine argentino en 16mm"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -33096,13 +33126,13 @@
       "fecha": "2026-06-26",
       "hora": "18:00",
       "title_es": "El ruiseñor y el cuervo",
-      "title_en": "El ruiseñor y el cuervo",
+      "title_en": "The Wolf Man",
       "director": "George Waggner",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
+      "country": "USA",
+      "year": 1941,
+      "duration": 70,
+      "genre": "Terror, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-wolf-man-1941/",
       "ticket_url": "https://malba.org.ar/evento/el-ruisenor-y-el-cuervo/",
       "ciclo": "Ciclo Triángulo macabro"
     },
@@ -33600,66 +33630,6 @@
       "letterboxd": "https://letterboxd.com/film/lai/",
       "ticket_url": "https://www.bn.gov.ar/agenda-cultural/el-monstruo-en-pantalla-grande",
       "ciclo": "El monstruo en pantalla grande"
-    },
-    {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-06-29",
-      "hora": "22:00",
-      "title_es": "Barrio triste",
-      "title_en": "Barrio Triste",
-      "director": "STILLZ",
-      "country": "USA",
-      "year": 2025,
-      "duration": 84,
-      "genre": "Crimen, Drama",
-      "letterboxd": "https://letterboxd.com/film/barrio-triste-2025/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-06-29",
-      "hora": "22:00",
-      "title_es": "Barrio triste",
-      "title_en": "Barrio Triste",
-      "director": "STILLZ",
-      "country": "USA",
-      "year": 2025,
-      "duration": 84,
-      "genre": "Crimen, Drama",
-      "letterboxd": "https://letterboxd.com/film/barrio-triste-2025/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-06-30",
-      "hora": "22:00",
-      "title_es": "Barrio triste",
-      "title_en": "Barrio Triste",
-      "director": "STILLZ",
-      "country": "USA",
-      "year": 2025,
-      "duration": 84,
-      "genre": "Crimen, Drama",
-      "letterboxd": "https://letterboxd.com/film/barrio-triste-2025/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-06-30",
-      "hora": "22:00",
-      "title_es": "Barrio triste",
-      "title_en": "Barrio Triste",
-      "director": "STILLZ",
-      "country": "USA",
-      "year": 2025,
-      "duration": 84,
-      "genre": "Crimen, Drama",
-      "letterboxd": "https://letterboxd.com/film/barrio-triste-2025/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
     }
   ]
 }

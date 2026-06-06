@@ -3822,12 +3822,13 @@
     "original_title": "The Body Snatcher"
   },
   "el ruiseñor y el cuervo": {
-    "url": "",
-    "title_en": "El ruiseñor y el cuervo",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-wolf-man-1941/",
+    "title_en": "The Wolf Man",
+    "director": "George Waggner",
+    "country": "USA",
+    "year": 1941,
+    "duration": 70,
+    "genre": "Terror, Drama"
   },
   "white zombie": {
     "url": "https://letterboxd.com/film/white-zombie/",
@@ -4105,5 +4106,25 @@
     "year": 2026,
     "duration": null,
     "original_title": "La búsqueda de la inmortalidad"
+  },
+  "el andariego": {
+    "url": "",
+    "title_en": "El andariego",
+    "director": "María Laura Piastrellini, Eduardo Fisicaro, Silvia Majul",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 64,
+    "original_title": "El Andariego, historia de un grupo vocal",
+    "genre": "Documental"
+  },
+  "la hija del ministro": {
+    "url": "https://letterboxd.com/film/la-hija-del-ministro-1943/",
+    "title_en": "La hija del ministro",
+    "director": "Francisco Múgica",
+    "country": "Argentina",
+    "year": 1943,
+    "duration": 72,
+    "genre": "Comedia, Drama",
+    "original_title": "La hija del ministro"
   }
 }
