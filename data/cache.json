@@ -3842,14 +3842,14 @@
     "original_title": "White Zombie"
   },
   "crimen y castigo": {
-    "url": "",
-    "title_en": "Crimen y castigo",
-    "director": "",
-    "country": "Mexico, United States of America",
-    "year": 2003,
-    "duration": null,
-    "original_title": "Secuestro crimen y castigo",
-    "genre": "Crimen"
+    "url": "https://letterboxd.com/film/crime-and-punishment/",
+    "title_en": "Crime and Punishment",
+    "director": "Josef von Sternberg",
+    "country": "USA",
+    "year": 1935,
+    "duration": 88,
+    "genre": "Drama, Crimen",
+    "original_title": "Secuestro crimen y castigo"
   },
   "asalto al precinto 13": {
     "url": "",
@@ -4126,5 +4126,44 @@
     "duration": 72,
     "genre": "Comedia, Drama",
     "original_title": "La hija del ministro"
+  },
+  "se guapa y cállate": {
+    "url": "",
+    "title_en": "Se guapa y cállate",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la chismosa": {
+    "url": "https://letterboxd.com/film/la-chismosa/",
+    "title_en": "La chismosa",
+    "director": "Enrique Susini",
+    "country": "Argentina",
+    "year": 1938,
+    "duration": 96,
+    "genre": "Comedia, Drama",
+    "title_es": "La chismosa",
+    "original_title": "La chismosa"
+  },
+  "invasión": {
+    "url": "https://letterboxd.com/film/invasion-1969/",
+    "title_en": "Invasion",
+    "director": "Hugo Santiago",
+    "country": "Argentina",
+    "year": 1969,
+    "duration": 123,
+    "genre": "Drama, Ciencia ficción",
+    "original_title": "Invasión"
+  },
+  "el vampiro negro": {
+    "url": "https://letterboxd.com/film/the-black-vampire/",
+    "title_en": "The Black Vampire",
+    "director": "Román Viñoly Barreto",
+    "country": "Argentina",
+    "year": 1953,
+    "duration": 90,
+    "genre": "Thriller, Drama",
+    "original_title": "El vampiro negro"
   }
 }

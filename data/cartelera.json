@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-06T16:50:05",
+  "updated": "2026-06-06T17:37:33",
   "screenings": [
     {
       "cine": "Hoyts Dot",
@@ -510,21 +510,6 @@
       "letterboxd": "https://letterboxd.com/film/linconnu-de-la-grande-arche/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-06",
-      "hora": "14:00",
-      "title_es": "Hijo Mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 113,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=793",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Lorca",
@@ -5612,6 +5597,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-06-07",
+      "hora": "16:00",
+      "title_es": "Se guapa y cállate",
+      "title_en": "Se guapa y cállate",
+      "director": "Delphine Seyrig",
+      "country": "",
+      "year": 1976,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/junio-en-nuestro-auditorio-0",
+      "ciclo": "Pioneras"
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-06-07",
       "hora": "16:00",
@@ -6390,6 +6390,21 @@
       "letterboxd": "https://letterboxd.com/film/broadcast-news/",
       "ticket_url": "https://lumiton.ar/evento/detras-de-las-noticias/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-06-07",
+      "hora": "18:00",
+      "title_es": "La chismosa",
+      "title_en": "La chismosa",
+      "director": "Luis Marquina y Enrique Telémaco Susini",
+      "country": "Argentina",
+      "year": 1938,
+      "duration": 96,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/la-chismosa/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/junio-en-nuestro-auditorio-0",
+      "ciclo": "Cine argentino en video"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -19862,6 +19877,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-06-13",
+      "hora": "16:00",
+      "title_es": "Invasión",
+      "title_en": "Invasion",
+      "director": "Hugo Santiago",
+      "country": "Argentina",
+      "year": 1969,
+      "duration": 123,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/invasion-1969/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/junio-en-nuestro-auditorio-0",
+      "ciclo": "La llamada fatal presenta"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-13",
       "hora": "16:00",
@@ -20760,6 +20790,21 @@
       "letterboxd": "https://letterboxd.com/film/mi-obra-maestra/",
       "ticket_url": "https://lumiton.ar/evento/mi-obra-maestra/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-06-14",
+      "hora": "18:00",
+      "title_es": "El vampiro negro",
+      "title_en": "The Black Vampire",
+      "director": "Román Viñoly Barreto",
+      "country": "Argentina",
+      "year": 1953,
+      "duration": 90,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-black-vampire/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/junio-en-nuestro-auditorio-0",
+      "ciclo": "Cine argentino en 16mm"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -33396,13 +33441,13 @@
       "fecha": "2026-06-27",
       "hora": "22:30",
       "title_es": "Crimen y castigo",
-      "title_en": "Crimen y castigo",
+      "title_en": "Crime and Punishment",
       "director": "Josef von Sternberg",
-      "country": "Mexico, United States of America",
-      "year": 2003,
-      "duration": null,
-      "genre": "Crimen",
-      "letterboxd": "",
+      "country": "USA",
+      "year": 1935,
+      "duration": 88,
+      "genre": "Drama, Crimen",
+      "letterboxd": "https://letterboxd.com/film/crime-and-punishment/",
       "ticket_url": "https://malba.org.ar/evento/crimen-y-castigo/",
       "ciclo": "Ciclo Triángulo macabro"
     },
