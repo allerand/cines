@@ -2267,18 +2267,21 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
     header_re = re.compile(
         r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)\s+"
         r"(\d{1,2})\s+a\s+las\s+(\d{1,2})(?:[.:](\d{2}))?\s+h(?:s|oras)?"
-        r"(?:\s*\|\s*([^\n]+))?",
+        # Separador de ciclo: el museo usa "|" o "I" (i mayúscula) indistintamente.
+        r"(?:\s+[|I¦]\s+([^\n]+))?",
         re.IGNORECASE,
     )
-    # "Título de Director (AÑO[, Original])" — non-greedy en title, pero
-    # requiere que el director empiece con mayúscula para no cortar en
-    # preposiciones internas del título ("de las ostras", "de la calle").
+    # "Título de Director (...)" — non-greedy en title, pero requiere que el
+    # director empiece con mayúscula para no cortar en preposiciones internas
+    # del título ("de las ostras", "de la calle"). El paréntesis se captura
+    # entero porque el museo escribe tanto "(AÑO)" / "(AÑO, Original)" como
+    # "(Original, AÑO)"; el año se extrae después, esté donde esté.
     film_line_re = re.compile(
-        r"^(.+?)\s+de\s+([A-ZÁÉÍÓÚÑ][^()]*?)\s+\((\d{4})(?:,\s*([^)]+))?\)\s*$",
+        r"^(.+?)\s+de\s+([A-ZÁÉÍÓÚÑ][^()]*?)\s+\(([^)]*)\)\s*$",
     )
 
-    # Iteramos por cada match de header y miramos las próximas 1-3 líneas no
-    # vacías hasta encontrar una que matchee film_line_re.
+    # Iteramos por cada match de header y escaneamos las líneas del segmento
+    # (hasta el próximo header) buscando la primera que sea una línea de película.
     matches = list(header_re.finditer(text))
     for idx, hm in enumerate(matches):
         day_num = int(hm.group(1))
@@ -2289,7 +2292,8 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
         # rango hasta el próximo header
         seg_end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
         segment = text[hm.end():seg_end]
-        # buscar primera línea no vacía con película
+        # buscar la primera línea con película (saltea ciclo suelto, títulos
+        # repetidos en minúscula y sinopsis, que no matchean film_line_re).
         title = director = original = ""
         film_year: Optional[int] = None
         for line in segment.splitlines():
@@ -2297,13 +2301,18 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
             if not line:
                 continue
             fm = film_line_re.match(line)
-            if fm:
-                title = fm.group(1).strip()
-                director = re.sub(r"\s+", " ", fm.group(2)).strip()
-                film_year = int(fm.group(3))
-                original = (fm.group(4) or "").strip()
-                break
-            # Si la primera línea no-vacía NO matchea, salimos (es sinopsis)
+            if not fm:
+                continue
+            paren = fm.group(3)
+            ym2 = re.search(r"\b((?:19|20)\d{2})\b", paren)
+            if not ym2:
+                # Paréntesis sin año → no es una línea de película válida.
+                continue
+            title = fm.group(1).strip()
+            director = re.sub(r"\s+", " ", fm.group(2)).strip()
+            film_year = int(ym2.group(1))
+            # Original = lo que queda en el paréntesis al sacar el año y comas.
+            original = re.sub(r"\b(?:19|20)\d{2}\b", "", paren).strip(" ,").strip()
             break
         if not title:
             continue
