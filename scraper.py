@@ -1282,12 +1282,18 @@ async def scrape_imdb_then_lanacion(page: Page, semanas: int = 2) -> list[Screen
     all_screenings: list[Screening] = []
     seen: set[tuple] = set()
 
+    # IMDb se scrapea día por día, así que el costo crece linealmente con la
+    # ventana. Lorca y los comerciales no publican funciones más allá de ~2-3
+    # semanas, así que acotamos acá para no disparar el runtime del job (la
+    # ventana larga de 2 meses solo tiene sentido para los cines de repertorio).
+    imdb_semanas = min(semanas, 3)
+
     for imdb_id, cine_name, ticket_url, lan_slug, lan_name, postal in IMDB_CINEMAS:
         print(f"  · {cine_name}...", end=" ", flush=True)
         ss: list[Screening] = []
         # 1) IMDb
         try:
-            ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, semanas, postal=postal)
+            ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, imdb_semanas, postal=postal)
         except Exception as e:
             print(f"IMDb error — {e};", end=" ")
             ss = []

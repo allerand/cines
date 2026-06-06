@@ -1,28 +1,17 @@
 name: Scrape cartelera (sin postear a IG)
 
 # Workflow para correr SÓLO el scraper y commitear data/cartelera.json.
-# No genera ni postea piezas de Instagram. Sirve para:
-#   1) Trigger manual (testeo de cambios al scraping).
-#   2) Refrescos automáticos durante el día — CTBA y otros cines pueden
-#      agregar eventos después del cron principal de las 4:15 AM (que sí
-#      postea a IG). Los refreshes adicionales capturan esas adiciones
-#      tardías sin re-postear stories.
+# No genera ni postea piezas de Instagram. SÓLO manual (workflow_dispatch):
+# sirve para testear cambios al scraping sin re-postear stories. El refresco
+# diario automático lo hace "Scrape cartelera" (scrape.yml), que ya postea.
 
 on:
-  schedule:
-    # Refrescos extra durante el día — sin IG post.
-    # 13:00 UTC = 10:00 AR (mediodía-ish, captura updates de la mañana)
-    # 19:00 UTC = 16:00 AR (media tarde, captura updates del mediodía)
-    # 01:00 UTC = 22:00 AR previo (captura updates de la tarde/noche)
-    - cron: '0 13 * * *'
-    - cron: '0 19 * * *'
-    - cron: '0 1 * * *'
   workflow_dispatch:
     inputs:
       semanas:
-        description: 'Semanas hacia adelante (default 2)'
+        description: 'Semanas hacia adelante (default 9 ≈ 2 meses)'
         required: false
-        default: '2'
+        default: '9'
       regenerate_stories:
         description: 'Regenerar PNG de stories de hoy (sin postear)'
         type: boolean
