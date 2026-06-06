@@ -3974,5 +3974,136 @@
     "genre": "Música, Comedia",
     "title_es": "Letras robadas",
     "original_title": "Power Ballad"
+  },
+  "el gato y el canario": {
+    "url": "https://letterboxd.com/film/the-cat-and-the-canary-1927/",
+    "title_en": "The Cat and the Canary",
+    "director": "Paul Leni",
+    "country": "USA",
+    "year": 1927,
+    "duration": 87,
+    "genre": "Comedia, Misterio"
+  },
+  "scary movie: terroríficamente incorrecta": {
+    "url": "https://letterboxd.com/film/scary-movie-2026/",
+    "title_en": "Scary Movie",
+    "director": "Michael Tiddes",
+    "country": "USA",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Comedia, Terror",
+    "title_es": "Scary Movie: Terroríficamente incorrecta",
+    "original_title": "Scary Movie"
+  },
+  "the amazing digital circus: el último acto": {
+    "url": "https://letterboxd.com/film/the-amazing-digital-circus-el-ultimo-acto/",
+    "title_en": "The Amazing Digital Circus: The Last Act",
+    "director": "Gooseworx",
+    "country": "Australia",
+    "year": 2026,
+    "duration": 93,
+    "genre": "Drama, Thriller",
+    "title_es": "The Amazing Digital Circus: El Último Acto",
+    "original_title": "The Amazing Digital Circus: The Last Act"
+  },
+  "barrio triste": {
+    "url": "https://letterboxd.com/film/barrio-triste-2025/",
+    "title_en": "Barrio Triste",
+    "director": "STILLZ",
+    "country": "USA",
+    "year": 2025,
+    "duration": 84,
+    "genre": "Crimen, Drama",
+    "original_title": "Barrio Triste"
+  },
+  "los mentirosos": {
+    "url": "",
+    "title_en": "Los mentirosos",
+    "director": "Eduardo Braun Costa",
+    "country": "Argentina, Brazil",
+    "year": 2026,
+    "duration": 19,
+    "original_title": "Los Mentirosos",
+    "genre": "Comedia, Drama"
+  },
+  "el origen del mundo": {
+    "url": "https://letterboxd.com/film/the-origin-of-the-world-2025/",
+    "title_en": "The origin of the world",
+    "director": "Jazmín López",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Documental",
+    "original_title": "El origen del mundo"
+  },
+  "el oído absoluto": {
+    "url": "",
+    "title_en": "El oído absoluto",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "marazul": {
+    "url": "",
+    "title_en": "Marazul",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "un departamento como el mío pero con otra gente": {
+    "url": "",
+    "title_en": "Un departamento como el mío pero con otra gente",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "lo que no se puede borrar": {
+    "url": "",
+    "title_en": "Lo que no se puede borrar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the longest night": {
+    "url": "https://letterboxd.com/film/the-longest-night-2026/",
+    "title_en": "The Longest Night",
+    "director": "Phuong Thao Nguyen",
+    "country": "France",
+    "year": 2026,
+    "duration": 7,
+    "genre": "Documental",
+    "original_title": "The Longest Night"
+  },
+  "abortion party": {
+    "url": "https://letterboxd.com/film/abortion-party/",
+    "title_en": "Abortion Party",
+    "director": "Julia Mellen",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 13,
+    "genre": "Documental, Animación",
+    "title_es": "Fiesta de aborto",
+    "original_title": "Abortion Party"
+  },
+  "sandei": {
+    "url": "",
+    "title_en": "Sandei",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la búsqueda de la inmortalidad": {
+    "url": "",
+    "title_en": "La búsqueda de la inmortalidad",
+    "director": "Nicolás Zukerfeld",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": null,
+    "original_title": "La búsqueda de la inmortalidad"
   }
 }
