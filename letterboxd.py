@@ -712,8 +712,14 @@ async def enrich_title(
             fallback_meta = fallback_meta or m
 
     # 6. Si no validamos nada pero teníamos algún match razonable y NO hay hints
-    # estrictos, aceptarlo como mejor esfuerzo
-    if fallback_meta and not (hint_year or hint_director):
+    # estrictos, aceptarlo como mejor esfuerzo — PERO sólo si la duración no lo
+    # contradice. Antes la duración se ignoraba acá, así que un match con
+    # duración incompatible (peli homónima distinta) se colaba igual.
+    fb_dur_ok = not (
+        hint_duration and fallback_meta and fallback_meta.get("duration")
+        and abs(int(fallback_meta["duration"]) - int(hint_duration)) > 5
+    )
+    if fallback_meta and not (hint_year or hint_director) and fb_dur_ok:
         # Si IMDb puede completar campos faltantes, lo intentamos
         fallback_meta = fill_meta_from_external(
             fallback_meta, title, hint_year, hint_original, hint_director,

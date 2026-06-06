@@ -4,7 +4,9 @@ Sala Lugones · Cacodelphia · Cine Lorca · Cine York · MALBA
 """
 
 import re
+import json
 import urllib.request
+import urllib.parse
 from dataclasses import dataclass, field
 from datetime import date, timedelta
 from typing import Optional
@@ -881,10 +883,78 @@ async def scrape_lugones(page: Page) -> list[Screening]:
 # Cacodelphia  (cineartecacodelphia.com.ar — Vue SPA)
 # ---------------------------------------------------------------------------
 
+_YT_ID_RE = re.compile(
+    r"(?:youtube(?:-nocookie)?\.com/(?:embed/|watch\?v=)|youtu\.be/)([A-Za-z0-9_-]{11})"
+)
+_TRAILER_NOISE = ("trailer", "tráiler", "teaser", "oficial", "official", "hd", "4k", "min", "subt")
+
+
+def _looks_like_person(s: str) -> bool:
+    """Heurística para descartar basura del título del trailer: 1-4 palabras,
+    alfabéticas, mayúscula inicial, sin términos de marketing."""
+    if not s or len(s) > 50:
+        return False
+    if any(w in s.lower() for w in _TRAILER_NOISE):
+        return False
+    words = s.split()
+    if not (1 <= len(words) <= 4):
+        return False
+    ok = sum(1 for w in words
+             if w[:1].isupper() and re.fullmatch(r"[A-Za-zÁÉÍÓÚÑáéíóúñ'.\-]+", w))
+    return ok >= max(1, len(words) - 1)
+
+
+def _cacodelphia_trailer_meta(html: str) -> dict:
+    """Extrae {director, year, country} del título del trailer de YouTube
+    embebido en la ficha de Cacodelphia, vía oEmbed.
+
+    La ficha NO expone director/año en texto, pero el trailer suele titularse
+    "Título (trailer) · Director · AÑO · País · NN min". Es best-effort: si el
+    formato no matchea (no hay separador "·" o no hay año plausible), devuelve
+    {} y no agrega hints — preferimos no inventar a meter un dato erróneo.
+    """
+    m = _YT_ID_RE.search(html or "")
+    if not m:
+        return {}
+    watch = f"https://www.youtube.com/watch?v={m.group(1)}"
+    oembed = "https://www.youtube.com/oembed?url=" + urllib.parse.quote(watch, safe="") + "&format=json"
+    try:
+        req = urllib.request.Request(oembed, headers={"User-Agent": UA})
+        with urllib.request.urlopen(req, timeout=10) as r:
+            data = json.loads(r.read().decode("utf-8", errors="replace"))
+    except Exception:
+        return {}
+    title_txt = data.get("title", "") or ""
+    if "·" not in title_txt:
+        return {}
+    parts = [p.strip() for p in title_txt.split("·") if p.strip()]
+    this_year = date.today().year
+    out: dict = {}
+    for i, p in enumerate(parts):
+        if not re.fullmatch(r"(?:19|20)\d{2}", p):
+            continue
+        yr = int(p)
+        if not (1920 <= yr <= this_year + 1):
+            continue
+        out["year"] = yr
+        # Director = campo inmediatamente anterior (no el título en índice 0).
+        if i >= 2 and _looks_like_person(parts[i - 1]):
+            out["director"] = parts[i - 1]
+        # País = campo siguiente, si parece un país (texto sin dígitos, corto).
+        if i + 1 < len(parts):
+            nxt = parts[i + 1]
+            if nxt and not re.search(r"\d", nxt) and "min" not in nxt.lower() and len(nxt) <= 40:
+                out["country"] = nxt
+        break
+    return out
+
+
 async def scrape_cacodelphia(page: Page) -> list[Screening]:
     """
     Página principal → links /pelicula/86/HASH → por cada película, click en
-    cada tab de fecha y extraer horarios.
+    cada tab de fecha y extraer horarios. La ficha no trae director/año en
+    texto, así que los inferimos del título del trailer de YouTube (oEmbed)
+    para que el enrichment valide bien y no matchee la película equivocada.
     """
     await page.goto("https://cineartecacodelphia.com.ar/", wait_until="networkidle")
     await page.wait_for_timeout(3000)
@@ -919,6 +989,13 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
         full_text = await page.evaluate("document.body.innerText")
         dur_match = re.search(r"\b(\d{1,3})\s*MIN\b", full_text)
         film_duration: Optional[int] = int(dur_match.group(1)) if dur_match else None
+
+        # Director/año/país desde el trailer (la ficha no los trae en texto).
+        detail_html = await page.content()
+        tmeta = _cacodelphia_trailer_meta(detail_html)
+        film_director = tmeta.get("director", "")
+        film_year = tmeta.get("year")
+        film_country = tmeta.get("country", "")
 
         date_tabs = await page.query_selector_all("div.date")
         if not date_tabs:
@@ -958,6 +1035,9 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
                         fecha=fecha, hora=hora,
                         ticket_url="https://cineartecacodelphia.com.ar/",
                         duration=film_duration,
+                        director=film_director,
+                        year=film_year,
+                        country=film_country,
                     ))
 
     return result
