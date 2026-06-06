@@ -2207,13 +2207,21 @@ _MUSEOCINE_MONTHS = {
 }
 
 
-def _museocine_month_pages() -> list[str]:
-    """Lista URLs absolutas de notas mensuales linkeadas desde la home.
+# La nota mensual es una noticia cuyo slug arranca con el nombre del mes
+# ("junio-en-nuestro-auditorio-0", "mayo-en-el-museo-del-cine", ...). El museo
+# va cambiando el sufijo (auditorio / museo-del-cine / etc.), así que NO nos
+# atamos a él: descubrimos por el prefijo de mes, que es la parte estable.
+_MUSEOCINE_NOTICIA_RE = re.compile(
+    r"/noticias/(?:" + "|".join(_MUSEOCINE_MONTHS) + r")-", re.IGNORECASE
+)
 
-    El museo cambia el slug de la nota mensual: antes era
-    `/noticias/<mes>-en-el-museo-del-cine`, ahora `/noticias/<mes>-en-nuestro-auditorio`.
-    Matcheamos ambos patrones (museo-del-cine | auditorio) para no depender del
-    nombre exacto cada mes.
+
+def _museocine_month_pages() -> list[str]:
+    """Lista URLs absolutas de las notas mensuales linkeadas desde el índice.
+
+    Detecta cualquier noticia cuyo slug empiece con un nombre de mes, sin
+    depender del sufijo (que el museo cambia). Las notas de meses pasados que se
+    cuelen las descarta después el filtro de ventana de fechas.
     """
     try:
         soup = fetch_html(MUSEOCINE_INDEX)
@@ -2221,7 +2229,7 @@ def _museocine_month_pages() -> list[str]:
         return []
     urls: list[str] = []
     seen: set[str] = set()
-    for a in soup.find_all("a", href=re.compile(r"/noticias/[^/]*(?:museo-del-cine|auditorio)")):
+    for a in soup.find_all("a", href=_MUSEOCINE_NOTICIA_RE):
         h = a.get("href", "")
         if not h:
             continue
