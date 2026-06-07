@@ -1195,15 +1195,15 @@
     "genre": "Drama"
   },
   "fausto": {
-    "url": "",
-    "title_en": "Fausto",
+    "url": "https://letterboxd.com/film/faust-1926/",
+    "title_en": "Faust",
     "director": "F. W. Murnau",
     "country": "Germany",
     "year": 1926,
     "duration": 116,
+    "genre": "Fantasía, Drama",
     "title_es": "Fausto",
-    "original_title": "Faust - Eine deutsche Volkssage",
-    "genre": "Fantasía, Drama"
+    "original_title": "Faust - Eine deutsche Volkssage"
   },
   "gorriones": {
     "url": "https://letterboxd.com/film/sparrows/",
@@ -1996,13 +1996,12 @@
     "genre": "Romance, Drama"
   },
   "vidas imaginarias": {
-    "url": "https://letterboxd.com/film/the-marvellous-spiral/",
-    "title_en": "The Marvellous Spiral",
-    "director": "Isabel Medarde",
-    "country": "Spain",
-    "year": 2022,
-    "duration": 87,
-    "genre": "Historia, Documental"
+    "url": "",
+    "title_en": "VIDAS IMAGINARIAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "el partido": {
     "url": "https://letterboxd.com/film/the-match-2026/",
@@ -3124,14 +3123,14 @@
     "title_es": "La doctora de los marineros"
   },
   "los cruces": {
-    "url": "https://letterboxd.com/film/cruces/",
-    "title_en": "Cruces",
-    "director": "Ernesto Aguilar",
+    "url": "",
+    "title_en": "LOS CRUCES",
+    "director": "Julián Galay",
     "country": "Argentina",
-    "year": 2022,
-    "duration": 76,
-    "genre": "Drama",
-    "original_title": "Los cruces"
+    "year": 2025,
+    "duration": 84,
+    "original_title": "Los cruces",
+    "genre": "Documental"
   },
   "la quinta": {
     "url": "https://letterboxd.com/film/la-quinta/",
@@ -3852,12 +3851,13 @@
     "original_title": "Secuestro crimen y castigo"
   },
   "asalto al precinto 13": {
-    "url": "",
-    "title_en": "Asalto al precinto 13",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/assault-on-precinct-13/",
+    "title_en": "Assault on Precinct 13",
+    "director": "John Carpenter",
+    "country": "USA",
+    "year": 1976,
+    "duration": 91,
+    "genre": "Crimen, Acción"
   },
   "la entrevista": {
     "url": "",
