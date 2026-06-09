@@ -2738,9 +2738,41 @@ def _parse_cea_text(text: str, today: date, cutoff: date) -> list[dict]:
     return out
 
 
+def _parse_cea_form_blob(blob: str) -> dict:
+    """Extrae {day, month, hora} del título/descr de un Google Form de reserva
+    del CEA (ej. 'Reserva — … · Viernes 12 Junio · 19:00hs')."""
+    out: dict = {}
+    tm = re.search(r"(\d{1,2}):(\d{2})\s*hs", blob)
+    if tm:
+        out["hora"] = f"{int(tm.group(1)):02d}:{tm.group(2)}"
+    dm = re.search(r"(\d{1,2})\s+(?:de\s+)?(" + "|".join(_CEA_MONTHS) + r")\b", blob, re.IGNORECASE)
+    if dm:
+        out["day"] = int(dm.group(1))
+        out["month"] = _CEA_MONTHS[dm.group(2).lower()]
+    return out
+
+
+def _cea_form_meta(url: str) -> dict:
+    """Lee el título/descr de un Google Form de reserva del CEA para sacar la
+    fecha y el horario exactos de la función. Best-effort (urllib)."""
+    try:
+        soup = fetch_html(url)
+    except Exception:
+        return {}
+    chunks: list[str] = []
+    if soup.title:
+        chunks.append(soup.title.get_text(" ", strip=True))
+    for prop in ("og:title", "og:description"):
+        m = soup.find("meta", attrs={"property": prop})
+        if m and m.get("content"):
+            chunks.append(m["content"])
+    return _parse_cea_form_blob(" · ".join(chunks))
+
+
 async def scrape_cea(page: Page) -> list[Screening]:
     """Scrapea cea.mda.gob.ar (rediseño scroll/SPA) vía playwright + parser de
-    texto. Devuelve las funciones del ciclo vigente dentro de la ventana."""
+    texto. El horario exacto de cada función se toma del Google Form de reserva
+    (la home lista los horarios del ciclo juntos, sin mapearlos por función)."""
     try:
         await page.goto("https://cea.mda.gob.ar/", wait_until="domcontentloaded", timeout=30000)
         await page.wait_for_timeout(2500)
@@ -2748,23 +2780,38 @@ async def scrape_cea(page: Page) -> list[Screening]:
             await page.mouse.wheel(0, 1400)
             await page.wait_for_timeout(400)
         text = await page.evaluate("document.body.innerText")
+        form_links = await page.eval_on_selector_all(
+            'a[href*="docs.google.com/forms"], a[href*="forms.gle"]',
+            "els => els.map(e => e.href)",
+        )
     except Exception:
         return []
 
     today = date.today()
     cutoff = today + timedelta(days=60)
-    return [
-        Screening(
+
+    # Horario exacto por función: leemos cada Google Form de reserva (dedup) y
+    # lo asociamos a la función por fecha (cada función es un día distinto).
+    form_by_date: dict[tuple[int, int], dict] = {}
+    for url in dict.fromkeys(form_links or []):
+        meta = _cea_form_meta(url)
+        if "day" in meta and "month" in meta:
+            form_by_date[(meta["month"], meta["day"])] = {"hora": meta.get("hora"), "url": url}
+
+    result: list[Screening] = []
+    for ev in _parse_cea_text(text, today, cutoff):
+        _, mo, d = (int(x) for x in ev["fecha"].split("-"))
+        form = form_by_date.get((mo, d), {})
+        result.append(Screening(
             cine="CEA",
             title=ev["title"],
             fecha=ev["fecha"],
-            hora=ev["hora"],
-            ticket_url="https://cea.mda.gob.ar/",
+            hora=form.get("hora") or ev["hora"],
+            ticket_url=form.get("url") or "https://cea.mda.gob.ar/",
             director=ev["director"],
             year=ev["year"],
-        )
-        for ev in _parse_cea_text(text, today, cutoff)
-    ]
+        ))
+    return result
 
 
 # ---------------------------------------------------------------------------
