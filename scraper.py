@@ -2647,126 +2647,124 @@ def scrape_amorina() -> list[Screening]:
 
 # ---------------------------------------------------------------------------
 # CEA — Centro de Experimentación Audiovisual (Avellaneda)
-# cea.mda.gob.ar — HTML estático (server-rendered), una card por función.
+# cea.mda.gob.ar — sitio rediseñado (scroll/SPA). Parseamos el texto renderizado
+# (vía playwright) en vez de clases CSS, que el sitio renombra seguido.
+# Cada función: día → "Weekday Mes" → título → "Director · Año".
 # ---------------------------------------------------------------------------
 
-def scrape_cea() -> list[Screening]:
-    """
-    Scrapea cea.mda.gob.ar. La home tiene el bloque de programación renderizado
-    en HTML estático: cada función es un div.film-col con fecha (día + weekday),
-    título, director · año, badges (formato + ciclo) y link de reserva.
+_CEA_MONTHS = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
+    "noviembre": 11, "diciembre": 12,
+}
+_CEA_WD_MONTH_RE = re.compile(
+    r"^[A-Za-zÁÉÍÓÚáéíóúñ.]+\s*·?\s+(" + "|".join(_CEA_MONTHS) + r")\s*$", re.IGNORECASE
+)
+_CEA_DIR_YEAR_RE = re.compile(r"^(.+?)\s+·\s+((?:19|20)\d{2})\b")
+_CEA_SKIP_LINES = {"reservar entrada", "reservá tu función", "reserva tu función", "→"}
 
-    El año y horario salen del section-bar (ej. "Ciclo · Mayo 2026" + "19:00 hs").
+
+def _parse_cea_text(text: str, today: date, cutoff: date) -> list[dict]:
+    """Parsea el texto renderizado de cea.mda.gob.ar.
+
+    Ancla en líneas que son sólo un número de día, seguidas de una línea
+    "Weekday Mes" (ej. "Jueves Junio" o "Jue · Junio"); junta las líneas hasta
+    una "Director · Año" como título. Deduplica los dos bloques que la página
+    repite (programación + reservas). Devuelve dicts {fecha,title,director,year,hora}.
     """
+    lines = [l.strip() for l in text.splitlines()]
+    n = len(lines)
+
+    cycle_year = today.year
+    ym = re.search(r"ciclo\s*·\s*\w+\s+(20\d{2})", text, re.IGNORECASE)
+    if ym:
+        cycle_year = int(ym.group(1))
+
+    # Horario por defecto: primer "HH:MM" antes de "hs" (la página muestra el
+    # ciclo completo, p.ej. "19:00 / 18:00 hs"; usamos el primero).
+    default_hora = "19:00"
+    hm = re.search(r"(\d{1,2}:\d{2})(?:\s*/\s*\d{1,2}:\d{2})*\s*hs", text)
+    if hm:
+        default_hora = hm.group(1)
+
+    out: list[dict] = []
+    seen: set[tuple] = set()
+    i = 0
+    while i < n:
+        if re.fullmatch(r"\d{1,2}", lines[i]):
+            day = int(lines[i])
+            j = i + 1
+            while j < n and not lines[j]:
+                j += 1
+            m = _CEA_WD_MONTH_RE.match(lines[j]) if j < n else None
+            if m:
+                month = _CEA_MONTHS[m.group(1).lower()]
+                parts: list[str] = []
+                director, film_year, k = "", None, j + 1
+                while k < n and k < j + 10:
+                    ln = lines[k]
+                    if not ln:
+                        k += 1
+                        continue
+                    dm = _CEA_DIR_YEAR_RE.match(ln)
+                    if dm:
+                        director, film_year = dm.group(1).strip(), int(dm.group(2))
+                        break
+                    if ln.lower() in _CEA_SKIP_LINES:
+                        k += 1
+                        continue
+                    if re.fullmatch(r"\d{1,2}", ln):
+                        break  # arranca otra card
+                    parts.append(ln)
+                    k += 1
+                title = re.sub(r"\s+", " ", " ".join(parts)).strip()
+                if title and director:
+                    try:
+                        d = date(cycle_year, month, day)
+                    except ValueError:
+                        d = None
+                    if d and today <= d <= cutoff:
+                        key = (d.isoformat(), re.sub(r"[^a-z0-9]", "", title.lower()))
+                        if key not in seen:
+                            seen.add(key)
+                            out.append({
+                                "fecha": d.isoformat(), "title": title,
+                                "director": director, "year": film_year,
+                                "hora": default_hora,
+                            })
+                i = k
+                continue
+        i += 1
+    return out
+
+
+async def scrape_cea(page: Page) -> list[Screening]:
+    """Scrapea cea.mda.gob.ar (rediseño scroll/SPA) vía playwright + parser de
+    texto. Devuelve las funciones del ciclo vigente dentro de la ventana."""
     try:
-        soup = fetch_html("https://cea.mda.gob.ar/")
+        await page.goto("https://cea.mda.gob.ar/", wait_until="domcontentloaded", timeout=30000)
+        await page.wait_for_timeout(2500)
+        for _ in range(6):
+            await page.mouse.wheel(0, 1400)
+            await page.wait_for_timeout(400)
+        text = await page.evaluate("document.body.innerText")
     except Exception:
         return []
 
-    # Año del ciclo desde sb-tag ("Ciclo · Mayo 2026")
-    cycle_year = date.today().year
-    sb_tag = soup.select_one(".sb-tag")
-    if sb_tag:
-        ym = re.search(r"\b(20\d{2})\b", sb_tag.get_text(" ", strip=True))
-        if ym:
-            cycle_year = int(ym.group(1))
-
-    # Horario default desde sb-right ("... 19:00 hs · Colón 1133 · Avellaneda")
-    default_hora = "19:00"
-    sb_right = soup.select_one(".sb-right")
-    if sb_right:
-        hm = re.search(r"(\d{1,2}:\d{2})\s*hs", sb_right.get_text(" ", strip=True))
-        if hm:
-            default_hora = hm.group(1)
-
     today = date.today()
     cutoff = today + timedelta(days=60)
-    result: list[Screening] = []
-
-    for col in soup.select("div.film-col"):
-        badge = col.select_one(".fc-date-badge")
-        weekday = col.select_one(".fc-weekday")
-        title_el = col.select_one(".fc-title")
-        dir_el = col.select_one(".fc-dir")
-        badges = col.select(".fc-badge")
-        cta = col.select_one("a.fc-cta")
-
-        if not (badge and weekday and title_el):
-            continue
-
-        # Día numérico
-        try:
-            day_num = int(re.sub(r"\D", "", badge.get_text(strip=True)))
-        except ValueError:
-            continue
-
-        # Mes desde el weekday ("Jueves Mayo" → mayo)
-        wk_text = weekday.get_text(" ", strip=True).lower()
-        month = None
-        for m_name, m_num in MESES_ES.items():
-            if len(m_name) > 3 and m_name in wk_text:
-                month = m_num
-                break
-        if not month:
-            continue
-
-        # Año del screening: normalmente el del ciclo, salvo rollover dic→ene
-        screen_year = cycle_year
-        try:
-            d = date(screen_year, month, day_num)
-        except ValueError:
-            continue
-        # Rollover: si la fecha quedó muy en el pasado (ej. diciembre visto en
-        # enero), es del año siguiente.
-        if d < today - timedelta(days=180):
-            try:
-                d = date(screen_year + 1, month, day_num)
-            except ValueError:
-                continue
-        # Filtrar funciones pasadas (la página del CEA lista el ciclo completo,
-        # incluidos días ya transcurridos) y fuera de la ventana.
-        if d < today or d > cutoff:
-            continue
-
-        # Título: el <br> separa líneas → unimos con espacio
-        title = title_el.get_text(" ", strip=True)
-        title = re.sub(r"\s+", " ", title).strip()
-        if not title:
-            continue
-
-        # Director · año de producción (ej. "Leonardo Favio · 1993")
-        director = ""
-        film_year: Optional[int] = None
-        if dir_el:
-            dir_text = dir_el.get_text(" ", strip=True)
-            parts = [p.strip() for p in dir_text.split("·")]
-            if parts:
-                director = parts[0]
-            for p in parts[1:]:
-                ym = re.search(r"\b(19\d{2}|20\d{2})\b", p)
-                if ym:
-                    film_year = int(ym.group(1))
-                    break
-
-        # Ciclo: el 2do badge (el 1ro es el formato Fílmico/Digital)
-        ciclo = ""
-        if len(badges) >= 2:
-            ciclo = badges[1].get_text(strip=True)
-
-        ticket_url = cta["href"] if cta and cta.get("href") else "https://cea.mda.gob.ar/#programacion"
-
-        result.append(Screening(
+    return [
+        Screening(
             cine="CEA",
-            title=title,
-            fecha=d.isoformat(),
-            hora=default_hora,
-            ticket_url=ticket_url,
-            ciclo=ciclo,
-            director=director,
-            year=film_year,
-        ))
-
-    return result
+            title=ev["title"],
+            fecha=ev["fecha"],
+            hora=ev["hora"],
+            ticket_url="https://cea.mda.gob.ar/",
+            director=ev["director"],
+            year=ev["year"],
+        )
+        for ev in _parse_cea_text(text, today, cutoff)
+    ]
 
 
 # ---------------------------------------------------------------------------
