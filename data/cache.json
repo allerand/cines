@@ -4174,5 +4174,114 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "pensamiento lateral": {
+    "url": "https://letterboxd.com/film/pensamiento-lateral/",
+    "title_en": "Lateral Thinking",
+    "director": "Mariano Hueter",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Thriller",
+    "original_title": "Pensamiento lateral"
+  },
+  "en el cine": {
+    "url": "",
+    "title_en": "En el Cine",
+    "director": "Matías Szulanski",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": null,
+    "original_title": "En el cine"
+  },
+  "extracto de adiós": {
+    "url": "https://letterboxd.com/film/extracto-de-adios/",
+    "title_en": "Extracto de adiós",
+    "director": "Emanuel Brunella",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 73,
+    "genre": "",
+    "original_title": "Extracto de adiós"
+  },
+  "viaje.inestimable.voyage": {
+    "url": "",
+    "title_en": "Viaje.Inestimable.Voyage",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "argentina sangra por las barrancas del río paraná": {
+    "url": "https://letterboxd.com/film/argentina-sangra-por-las-barrancas-del-rio/",
+    "title_en": "Argentina sangra. Por las barrancas del río Paraná",
+    "director": "Andrés Cedrón",
+    "country": "",
+    "year": null,
+    "duration": 88,
+    "genre": "Documental",
+    "original_title": "Argentina sangra. Por las barrancas del río Paraná"
+  },
+  "las 100 noches del deseo": {
+    "url": "https://letterboxd.com/film/100-nights-of-hero/",
+    "title_en": "100 Nights of Hero",
+    "director": "Julia Jackman",
+    "country": "UK, USA",
+    "year": 2025,
+    "duration": 91,
+    "genre": "Fantasía, Romance",
+    "title_es": "Las 100 noches del deseo",
+    "original_title": "100 Nights of Hero"
+  },
+  "familia": {
+    "url": "",
+    "title_en": "FAMILIA",
+    "director": "Álvaro Sáenz de Heredia",
+    "country": "Spain",
+    "year": 1992,
+    "duration": 81,
+    "original_title": "Chechu y familia",
+    "genre": "Comedia"
+  },
+  "el santo": {
+    "url": "https://letterboxd.com/film/the-saint-2023/",
+    "title_en": "The Saint",
+    "director": "Juan Agustín Carbonere",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 86,
+    "genre": "Drama",
+    "original_title": "El Santo"
+  },
+  "el viento que arrasa": {
+    "url": "https://letterboxd.com/film/el-viento-que-arrasa/",
+    "title_en": "A Ravaging Wind",
+    "director": "Paula Hernández",
+    "country": "Argentina, Uruguay",
+    "year": 2023,
+    "duration": 95,
+    "genre": "Drama",
+    "original_title": "El viento que arrasa"
+  },
+  "gilda no me arrepiento de este amor": {
+    "url": "https://letterboxd.com/film/gilda-no-me-arrepiento-de-este-amor/",
+    "title_en": "I'm Gilda",
+    "director": "Lorena Muñoz",
+    "country": "Uruguay, Argentina",
+    "year": 2016,
+    "duration": 118,
+    "genre": "Drama, Música",
+    "original_title": "Gilda: no me arrepiento de este amor"
+  },
+  "8 1/2": {
+    "url": "https://letterboxd.com/film/8-half/",
+    "title_en": "8½",
+    "director": "Federico Fellini",
+    "country": "Italy, France",
+    "year": 1963,
+    "duration": 139,
+    "genre": "Drama",
+    "title_es": "Fellini, ocho y medio",
+    "original_title": "8½"
   }
 }
