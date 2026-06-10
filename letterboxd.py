@@ -18,8 +18,15 @@ import re
 import unicodedata
 import urllib.error
 import urllib.request
+from datetime import date
 from pathlib import Path
 from typing import TYPE_CHECKING, Optional
+
+# Sin hints (año/director) para desambiguar, rechazamos películas más viejas que
+# este corte: casi siempre son homónimos equivocados en salas que programan
+# estrenos (Cacodelphia, Lorca). Ej.: "Familia" (Costabile, 2024) matcheaba con
+# una "Familia" de 1992.
+_NO_HINT_MIN_YEAR = date.today().year - 8
 
 from bs4 import BeautifulSoup
 
@@ -224,7 +231,8 @@ def _validate_meta(
       - Si meta no trae director ni year, no podemos validar → rechazar también
         cuando hay hint_director (mejor empty que wrong)
       - Si hint_duration ±5 difiere del LB duration → rechazar
-    Sin hints, no se rechaza.
+      - Sin NINGÚN hint, rechazar pelis más viejas que _NO_HINT_MIN_YEAR
+        (homónimos equivocados en salas de estrenos).
     """
     if hint_year and meta.get("year"):
         if abs(int(meta["year"]) - int(hint_year)) > 2:
@@ -237,6 +245,11 @@ def _validate_meta(
             return False
     if hint_duration and meta.get("duration"):
         if abs(int(meta["duration"]) - int(hint_duration)) > 5:
+            return False
+    # Sin ningún hint para desambiguar, una peli claramente vieja es casi siempre
+    # un homónimo equivocado (salas de estrenos). Mejor empty que wrong.
+    if not hint_year and not hint_director and meta.get("year"):
+        if int(meta["year"]) < _NO_HINT_MIN_YEAR:
             return False
     return True
 
@@ -719,7 +732,13 @@ async def enrich_title(
         hint_duration and fallback_meta and fallback_meta.get("duration")
         and abs(int(fallback_meta["duration"]) - int(hint_duration)) > 5
     )
-    if fallback_meta and not (hint_year or hint_director) and fb_dur_ok:
+    # Sin hints, no aceptamos como mejor esfuerzo una peli claramente vieja
+    # (homónimo equivocado en salas de estrenos).
+    fb_recent_ok = not (
+        not hint_year and not hint_director and fallback_meta and fallback_meta.get("year")
+        and int(fallback_meta["year"]) < _NO_HINT_MIN_YEAR
+    )
+    if fallback_meta and not (hint_year or hint_director) and fb_dur_ok and fb_recent_ok:
         # Si IMDb puede completar campos faltantes, lo intentamos
         fallback_meta = fill_meta_from_external(
             fallback_meta, title, hint_year, hint_original, hint_director,
