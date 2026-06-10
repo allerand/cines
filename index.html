@@ -535,6 +535,16 @@
     }
     .ticket-link:hover { text-decoration: underline; }
     .ciclo-tag { display: inline-block; font-size: 0.7rem; color: var(--muted); font-style: italic; }
+    /* Ciclo dentro de la celda de película — sólo visible en mobile (en desktop
+       está la columna Ciclo). */
+    .film-ciclo-inline {
+      display: none;
+      font-size: 0.72rem;
+      color: var(--muted);
+      font-style: italic;
+      margin-top: 0.18rem;
+      line-height: 1.35;
+    }
 
     .lb-link {
       display: inline-flex;
@@ -597,6 +607,7 @@
       .lb-short { display: inline; }
       .screening-table th, .screening-table td { padding: 0.45rem 0.4rem; }
       .film-meta-inline { display: block; }
+      .film-ciclo-inline { display: block; }
       .cine-tag { font-size: 0.62rem; padding: 0.12rem 0.35rem; }
       .lb-link { padding: 0.2rem 0.35rem; }
       .lb-link .lb-dots span { width: 5px; height: 5px; }
@@ -1149,6 +1160,7 @@ function renderTable() {
     const addBtn = `<button class="add-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar"><span class="add-icon">${icon}</span>${countHtml}</button>`;
 
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>
+      ${s.ciclo ? `<div class="film-ciclo-inline">${escapeHtml(s.ciclo)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
       ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank">Entradas →</a></div>` : ''}`;
 

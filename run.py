@@ -249,6 +249,11 @@ async def run_scraper(semanas: int = 9) -> None:
                 out_words.append(wl)
         return " ".join(out_words)
 
+    def _fix_caps(s: str) -> str:
+        """Normaliza nombres que vienen TODO EN MAYÚSCULAS (p.ej. directores de
+        CEA, donde el innerText hereda un text-transform: uppercase)."""
+        return _title_case_es(s) if s and s.isupper() else s
+
     # Construir JSON final
     screenings_out = []
     for s in all_screenings:
@@ -279,8 +284,8 @@ async def run_scraper(semanas: int = 9) -> None:
             "hora":       s.hora,
             "title_es":   display_title,
             "title_en":   tmdb_en or display_title,
-            "director":   getattr(s, "director", "") or meta.get("director") or "",
-            "country":    getattr(s, "country", "") or meta.get("country") or "",
+            "director":   _fix_caps(getattr(s, "director", "") or meta.get("director") or ""),
+            "country":    _fix_caps(getattr(s, "country", "") or meta.get("country") or ""),
             "year":       getattr(s, "year", None) or meta.get("year"),
             "duration":   getattr(s, "duration", None) or meta.get("duration"),
             "genre":      meta.get("genre") or "",

@@ -598,6 +598,21 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], list[dict]
             sub_end = hour_matches[idx + 1].start() if idx + 1 < len(hour_matches) else len(chunk)
             sub = chunk[sub_start:sub_end]
 
+            # Etiqueta del programa: la línea justo antes de "A las X horas"
+            # (p.ej. "Programa de apertura" en un festival de cortos). Sirve para
+            # distinguir a qué función pertenece cada corto.
+            region = chunk[(hour_matches[idx - 1].end() if idx > 0 else 0):hm.start()]
+            prog_label = ""
+            for ln in reversed(region.splitlines()):
+                ln = ln.strip()
+                if not ln:
+                    continue
+                # Saltear líneas que parezcan película (terminan en "(...año)") o
+                # sinopsis larga; quedarnos con una etiqueta corta tipo "Programa X".
+                if not re.search(r"\([^)]*\d{4}[^)]*\)", ln) and len(ln) <= 60:
+                    prog_label = ln
+                break
+
             # Localizamos las cabeceras de peli; cada bloque horario suele
             # tener UNA peli, pero soportamos múltiples por las dudas.
             film_heads = list(film_head_re.finditer(sub))
@@ -618,6 +633,7 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], list[dict]
                     "original_title": meta.get("original_title", ""),
                     "country": meta.get("country", ""),
                     "year": meta.get("year"),
+                    "program": prog_label,
                 }
                 dm = director_re.search(film_segment)
                 if dm:
@@ -759,12 +775,16 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                     # Una función puede tener varias películas (cortos del mismo
                     # programa): emitimos una fila por cada una, misma fecha/hora.
                     for entry in entries:
+                        # Ciclo + nombre del programa (ej. "Syncro Film Fest -
+                        # Programa de apertura") para distinguir cada función.
+                        prog = entry.get("program", "")
+                        ciclo_label = f"{cycle_name} - {prog}" if prog else cycle_name
                         result.append(Screening(
                             cine="Sala Lugones",
                             title=entry["title"],
                             fecha=d.isoformat(), hora=hora,
                             ticket_url=ticket_url,
-                            ciclo=cycle_name,
+                            ciclo=ciclo_label,
                             director=entry.get("director", ""),
                             country=entry.get("country", ""),
                             year=entry.get("year"),
@@ -2379,28 +2399,30 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
         # rango hasta el próximo header
         seg_end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
         segment = text[hm.end():seg_end]
-        # buscar la primera línea con película (saltea ciclo suelto, títulos
-        # repetidos en minúscula y sinopsis, que no matchean film_line_re).
+        # Buscar la línea de película. Según el HTML, el título y el "de Director
+        # (año)" a veces quedan en la MISMA línea y a veces partidos (un <strong>
+        # en el título hace que get_text los separe), así que probamos uniendo
+        # hasta 4 líneas consecutivas desde el inicio del segmento.
+        seg_lines = [ln.strip() for ln in segment.splitlines() if ln.strip()]
         title = director = original = ""
         film_year: Optional[int] = None
-        for line in segment.splitlines():
-            line = line.strip()
-            if not line:
-                continue
-            fm = film_line_re.match(line)
-            if not fm:
-                continue
-            paren = fm.group(3)
-            ym2 = re.search(r"\b((?:19|20)\d{2})\b", paren)
-            if not ym2:
-                # Paréntesis sin año → no es una línea de película válida.
-                continue
-            title = fm.group(1).strip()
-            director = re.sub(r"\s+", " ", fm.group(2)).strip()
-            film_year = int(ym2.group(1))
-            # Original = lo que queda en el paréntesis al sacar el año y comas.
-            original = re.sub(r"\b(?:19|20)\d{2}\b", "", paren).strip(" ,").strip()
-            break
+        for start in range(min(4, len(seg_lines))):
+            for span in range(1, 5):
+                cand = " ".join(seg_lines[start:start + span])
+                fm = film_line_re.match(cand)
+                if not fm:
+                    continue
+                paren = fm.group(3)
+                ym2 = re.search(r"\b((?:19|20)\d{2})\b", paren)
+                if not ym2:
+                    continue  # paréntesis sin año → no es línea de película
+                title = fm.group(1).strip()
+                director = re.sub(r"\s+", " ", fm.group(2)).strip()
+                film_year = int(ym2.group(1))
+                original = re.sub(r"\b(?:19|20)\d{2}\b", "", paren).strip(" ,").strip()
+                break
+            if title:
+                break
         if not title:
             continue
 
