@@ -2791,6 +2791,12 @@ async def scrape_cea(page: Page) -> list[Screening]:
             'a[href*="docs.google.com/forms"], a[href*="forms.gle"]',
             "els => els.map(e => e.href)",
         )
+        # Fallback: en el SPA los links a veces no son <a> simples (botones con
+        # JS). Buscamos las URLs de formularios en el HTML renderizado completo.
+        html = await page.content()
+        form_links = list(form_links or []) + re.findall(
+            r'https://(?:docs\.google\.com/forms/[^\s"\'<>\\]+|forms\.gle/[^\s"\'<>\\]+)', html
+        )
     except Exception:
         return []
 
