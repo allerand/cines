@@ -516,12 +516,16 @@ def parse_ctba_grouped_dates_event(text: str) -> dict:
     return out
 
 
-def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
+def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], list[dict]]:
     """
     Parsea texto plano de una página /ver/ de ciclo CTBA (Sala Lugones).
     Captura Título, Director y Duración (ej: 93').
+
+    Devuelve {(día, hora): [película, ...]}: una MISMA función puede tener varias
+    películas (p.ej. el Syncro Film Fest, donde cada programa son varios cortos),
+    así que acumulamos una lista por horario en vez de pisar.
     """
-    mapping: dict[tuple[int, str], dict] = {}
+    mapping: dict[tuple[int, str], list[dict]] = {}
 
     # Header de día: debe estar en su propia línea. Esto descarta las
     # menciones inline tipo "Del jueves 21 al martes 26 de mayo se proyecta..."
@@ -626,7 +630,7 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], dict]:
                     entry["duration"] = int(dur.group(1))
 
                 for hh, mm in hh_mm:
-                    mapping[(day_num, f"{hh:02d}:{mm:02d}")] = entry
+                    mapping.setdefault((day_num, f"{hh:02d}:{mm:02d}"), []).append(entry)
 
     return mapping
 
@@ -745,11 +749,16 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                         break
 
             if cycle_month:
-                for (day_num, hora), entry in program.items():
+                for (day_num, hora), entries in program.items():
                     try:
                         d = date(cycle_year, cycle_month, day_num)
-                        if d < today or d > cutoff:
-                            continue
+                    except ValueError:
+                        continue
+                    if d < today or d > cutoff:
+                        continue
+                    # Una función puede tener varias películas (cortos del mismo
+                    # programa): emitimos una fila por cada una, misma fecha/hora.
+                    for entry in entries:
                         result.append(Screening(
                             cine="Sala Lugones",
                             title=entry["title"],
@@ -762,8 +771,6 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                             duration=entry.get("duration"),
                             original_title=entry.get("original_title", ""),
                         ))
-                    except ValueError:
-                        pass
             continue  # siguiente evento — no ir a entradasba
 
         # Antes del fallback "Sin fecha", probar parser de fechas-agrupadas
