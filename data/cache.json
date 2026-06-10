@@ -2033,21 +2033,21 @@
     "genre": "Terror, Comedia"
   },
   "the hitchhiker's guide to the galaxy": {
-    "url": "https://letterboxd.com/film/the-hitchhikers-guide-to-the-galaxy/",
-    "title_en": "The Hitchhiker's Guide to the Galaxy",
-    "director": "Alan J.W. Bell",
-    "country": "UK",
-    "year": 1981,
-    "duration": 198,
+    "url": "",
+    "title_en": "The Hitchhiker's guide to the Galaxy",
+    "director": "Garth Jennings",
+    "country": "United Kingdom, United States of America",
+    "year": 2005,
+    "duration": 109,
     "title_es": "Guía del autoestopista galáctico",
     "original_title": "The Hitchhiker's Guide to the Galaxy",
-    "genre": "Comedia"
+    "genre": "Aventura, Comedia"
   },
   "galaxy quest": {
-    "url": "https://letterboxd.com/film/galaxy-quest/",
+    "url": "",
     "title_en": "Galaxy Quest",
     "director": "Dean Parisot",
-    "country": "USA",
+    "country": "United States of America",
     "year": 1999,
     "duration": 102,
     "title_es": "Héroes fuera de órbita",
@@ -2055,13 +2055,12 @@
     "genre": "Comedia, Ciencia ficción"
   },
   "las aventuras de buckaroo banzaï en la octava dimensión": {
-    "url": "https://letterboxd.com/film/the-adventures-of-buckaroo-banzai-across-the-8th-dimension/",
+    "url": "",
     "title_en": "Las aventuras de Buckaroo Banzaï en la Octava Dimensión",
-    "director": "W.D. Richter",
-    "country": "USA",
-    "year": 1984,
-    "duration": 103,
-    "genre": "Comedia, Ciencia ficción"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "torrente, el brazo tonto de la ley": {
     "url": "https://letterboxd.com/film/torrente-el-brazo-tonto-de-la-ley/",
@@ -2118,14 +2117,14 @@
     "genre": "Documental"
   },
   "airbag": {
-    "url": "https://letterboxd.com/film/airbag/",
-    "title_en": "Airbag",
-    "director": "Juanma Bajo Ulloa",
-    "country": "France, Germany",
-    "year": 1997,
-    "duration": 132,
-    "original_title": "Airbag",
-    "genre": "Comedia, Acción"
+    "url": "https://letterboxd.com/film/airbag-2024/",
+    "title_en": "AIRBAG",
+    "director": "Timothy Leong",
+    "country": "USA",
+    "year": 2024,
+    "duration": 11,
+    "genre": "Drama, Comedia",
+    "original_title": "Airbag"
   },
   "las minas del rey salomón": {
     "url": "",
@@ -2506,26 +2505,26 @@
     "genre": "Drama"
   },
   "el día de la bestia": {
-    "url": "https://letterboxd.com/film/el-dia-de-la-bestia/",
-    "title_en": "The Day of the Beast",
-    "director": "Álex de la Iglesia",
-    "country": "Italy, Spain",
-    "year": 1995,
-    "duration": 104,
-    "genre": "Acción, Terror",
+    "url": "https://letterboxd.com/film/beast-2026-1/",
+    "title_en": "Beast",
+    "director": "Tyler Atkins",
+    "country": "USA, Australia",
+    "year": 2026,
+    "duration": 115,
+    "genre": "Drama, Acción",
     "title_es": "El día de la bestia",
     "original_title": "El día de la bestia"
   },
   "el milagro de p. tinto": {
-    "url": "https://letterboxd.com/film/el-milagro-de-p-tinto/",
-    "title_en": "The Miracle of P. Tinto",
+    "url": "",
+    "title_en": "El milagro de P. Tinto",
     "director": "Javier Fesser",
     "country": "Spain",
     "year": 1998,
     "duration": 102,
-    "genre": "Fantasía, Comedia",
     "title_es": "El milagro de P. Tinto",
-    "original_title": "El milagro de P. Tinto"
+    "original_title": "El milagro de P. Tinto",
+    "genre": "Comedia, Fantasía"
   },
   "el gran arco": {
     "url": "https://letterboxd.com/film/the-great-arch-2025/",
@@ -4019,14 +4018,14 @@
     "original_title": "Barrio Triste"
   },
   "los mentirosos": {
-    "url": "",
-    "title_en": "Los mentirosos",
+    "url": "https://letterboxd.com/film/the-liars-2026/",
+    "title_en": "The Liars",
     "director": "Eduardo Braun Costa",
     "country": "Argentina, Brazil",
     "year": 2026,
     "duration": 19,
-    "original_title": "Los Mentirosos",
-    "genre": "Comedia, Drama"
+    "genre": "Comedia, Drama",
+    "original_title": "Los Mentirosos"
   },
   "el origen del mundo": {
     "url": "https://letterboxd.com/film/the-origin-of-the-world-2025/",
@@ -4236,12 +4235,12 @@
   "familia": {
     "url": "",
     "title_en": "FAMILIA",
-    "director": "Álvaro Sáenz de Heredia",
-    "country": "Spain",
-    "year": 1992,
-    "duration": 81,
-    "original_title": "Chechu y familia",
-    "genre": "Comedia"
+    "director": "Izuru Narushima",
+    "country": "Japan",
+    "year": 2023,
+    "duration": 121,
+    "original_title": "ファミリア",
+    "genre": "Drama"
   },
   "el santo": {
     "url": "https://letterboxd.com/film/the-saint-2023/",
@@ -4283,5 +4282,408 @@
     "genre": "Drama",
     "title_es": "Fellini, ocho y medio",
     "original_title": "8½"
+  },
+  "narrativas desde el cuerpo": {
+    "url": "",
+    "title_en": "Narrativas desde el cuerpo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "egresso": {
+    "url": "",
+    "title_en": "Egresso",
+    "director": "Lia Souza",
+    "country": "",
+    "year": 2024,
+    "duration": null,
+    "original_title": "Egresso",
+    "genre": "Drama"
+  },
+  "¡ve y atrápalo!": {
+    "url": "https://letterboxd.com/film/go-and-get-it/",
+    "title_en": "Go and Get It",
+    "director": "Marshall Neilan, Henry Roberts Symonds",
+    "country": "USA",
+    "year": 1920,
+    "duration": 70,
+    "genre": "Misterio, Terror",
+    "original_title": "Go and Get It"
+  },
+  "prelude op. 28 no. 2": {
+    "url": "https://letterboxd.com/film/prelude-op-28-no-2/",
+    "title_en": "Prelude Op. 28 No. 2",
+    "director": "Jenni Toikka",
+    "country": "",
+    "year": 2022,
+    "duration": 8,
+    "genre": "Documental",
+    "original_title": "Preludi Op. 28 No. 2"
+  },
+  "hymn of the plague": {
+    "url": "",
+    "title_en": "Hymn of the Plague",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sojourn to shangri-la": {
+    "url": "https://letterboxd.com/film/sojourn-to-shangri-la/",
+    "title_en": "Sojourn to Shangri-La",
+    "director": "Yihan Lin",
+    "country": "China",
+    "year": 2023,
+    "duration": 20,
+    "genre": "Drama",
+    "original_title": "是日访古"
+  },
+  "world of glory": {
+    "url": "https://letterboxd.com/film/world-of-glory/",
+    "title_en": "World of Glory",
+    "director": "Roy Andersson",
+    "country": "Sweden",
+    "year": 1991,
+    "duration": 17,
+    "genre": "Drama, Comedia",
+    "original_title": "Härlig är jorden"
+  },
+  "robert taschen": {
+    "url": "https://letterboxd.com/film/robert-taschen/",
+    "title_en": "Robert Taschen",
+    "director": "Léo Bizeul",
+    "country": "",
+    "year": 2025,
+    "duration": 9,
+    "genre": "Documental",
+    "original_title": "Robert Taschen"
+  },
+  "you do not exist": {
+    "url": "https://letterboxd.com/film/you-do-not-exist/",
+    "title_en": "You Do Not Exist",
+    "director": "Dwayne LeBlanc",
+    "country": "USA",
+    "year": 2026,
+    "duration": 8,
+    "genre": "",
+    "original_title": "You Do Not Exist"
+  },
+  "kontrewers": {
+    "url": "https://letterboxd.com/film/kontrewers/",
+    "title_en": "Kontrewers",
+    "director": "Zuza Banasinska",
+    "country": "Netherlands, France",
+    "year": 2026,
+    "duration": 21,
+    "genre": "Documental, Fantasía",
+    "original_title": "Kontrewers"
+  },
+  "érase una vez en quizca": {
+    "url": "https://letterboxd.com/film/once-upon-a-time-in-quizca/",
+    "title_en": "Once Upon a Time in Quizca",
+    "director": "Nicolás Torchinsky",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 12,
+    "genre": "Documental",
+    "original_title": "Érase una vez en Quizca"
+  },
+  "abduction": {
+    "url": "",
+    "title_en": "Abduction",
+    "director": "Yana Lineva",
+    "country": "Bulgaria, Netherlands",
+    "year": 2026,
+    "duration": 12,
+    "original_title": "Abduction",
+    "genre": "Documental"
+  },
+  "alișveriș": {
+    "url": "https://letterboxd.com/film/alisveris/",
+    "title_en": "Alișveriș",
+    "director": "Vasile Todinca",
+    "country": "Romania",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Drama",
+    "original_title": "Alișveriș"
+  },
+  "the body": {
+    "url": "",
+    "title_en": "The Body",
+    "director": "Louris van de Geer",
+    "country": "Australia",
+    "year": 2025,
+    "duration": 12,
+    "original_title": "The Body"
+  },
+  "inventory": {
+    "url": "https://letterboxd.com/film/inventory-2025/",
+    "title_en": "Inventory",
+    "director": "Ivan Marković",
+    "country": "Serbia",
+    "year": 2025,
+    "duration": 21,
+    "genre": "Documental",
+    "original_title": "Inventar"
+  },
+  "domestic demon": {
+    "url": "https://letterboxd.com/film/domestic-demon/",
+    "title_en": "Domestic Demon",
+    "director": "Anahid Yahjian",
+    "country": "USA, Portugal",
+    "year": 2026,
+    "duration": 7,
+    "genre": "Documental",
+    "original_title": "Ընտանեկան Հարաման"
+  },
+  "trace": {
+    "url": "https://letterboxd.com/film/trace-2026/",
+    "title_en": "TRACE",
+    "director": "Alexandra Pavlovskaya-Lokchine",
+    "country": "Russia",
+    "year": 2026,
+    "duration": 12,
+    "genre": "",
+    "original_title": "TRACE"
+  },
+  "bico": {
+    "url": "https://letterboxd.com/film/bico/",
+    "title_en": "Bico",
+    "director": "Aki Kaurismäki",
+    "country": "Finland",
+    "year": 2004,
+    "duration": 6,
+    "genre": "Documental",
+    "original_title": "Bico"
+  },
+  "black mornings": {
+    "url": "https://letterboxd.com/film/black-mornings/",
+    "title_en": "Black Mornings",
+    "director": "David Gonseth",
+    "country": "Switzerland",
+    "year": 2025,
+    "duration": 18,
+    "genre": "Drama",
+    "original_title": "Noirs matins"
+  },
+  "a small fiction of my mother in beijing": {
+    "url": "https://letterboxd.com/film/a-small-fiction-of-my-mother-in-beijing/",
+    "title_en": "A Small Fiction of My Mother in Beijing",
+    "director": "Dorothea Sing Zhang",
+    "country": "",
+    "year": 2025,
+    "duration": 13,
+    "genre": "Documental",
+    "original_title": "A Small Fiction of My Mother in Beijing"
+  },
+  "primera enseñanza": {
+    "url": "https://letterboxd.com/film/primera-ensenanza/",
+    "title_en": "Primary Education",
+    "director": "Aria Sánchez, Marina Meira",
+    "country": "Cuba, Spain",
+    "year": 2025,
+    "duration": 14,
+    "genre": "Drama",
+    "original_title": "Primera Enseñanza"
+  },
+  "las credenciales": {
+    "url": "https://letterboxd.com/film/las-credenciales/",
+    "title_en": "Las credenciales",
+    "director": "Manuel Ferrari",
+    "country": "",
+    "year": 2020,
+    "duration": null,
+    "genre": "",
+    "original_title": "Las credenciales"
+  },
+  "dammen": {
+    "url": "https://letterboxd.com/film/dammen/",
+    "title_en": "Dammen",
+    "director": "Grégoire Graesslin",
+    "country": "France",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Misterio",
+    "original_title": "Dammen"
+  },
+  "before the sea forgets": {
+    "url": "https://letterboxd.com/film/before-the-sea-forgets/",
+    "title_en": "Before the Sea Forgets",
+    "director": "Ngọc Duy Lê",
+    "country": "Singapore",
+    "year": 2025,
+    "duration": 17,
+    "genre": "Drama",
+    "original_title": "Before the Sea Forgets"
+  },
+  "last may in theaters": {
+    "url": "https://letterboxd.com/film/last-may-in-theaters/",
+    "title_en": "Last May in Theaters",
+    "director": "Arief Budiman",
+    "country": "South Korea, Indonesia",
+    "year": 2025,
+    "duration": 23,
+    "genre": "Documental",
+    "original_title": "시네마 속 5월"
+  },
+  "index": {
+    "url": "https://letterboxd.com/film/index-2025/",
+    "title_en": "Index",
+    "director": "Radu Muntean",
+    "country": "Romania",
+    "year": 2025,
+    "duration": 29,
+    "genre": "Drama",
+    "original_title": "Index"
+  },
+  "slet 1988": {
+    "url": "https://letterboxd.com/film/slet-1988/",
+    "title_en": "Slet 1988",
+    "director": "Marta Popivoda",
+    "country": "Serbia, France",
+    "year": 2025,
+    "duration": 22,
+    "genre": "Documental",
+    "original_title": "Slet 1988"
+  },
+  "evacuations": {
+    "url": "https://letterboxd.com/film/evacuations/",
+    "title_en": "Evacuations",
+    "director": "Lilli Carré",
+    "country": "USA",
+    "year": 2025,
+    "duration": 7,
+    "genre": "",
+    "original_title": "Evacuations"
+  },
+  "the weary hours of two labs assistants": {
+    "url": "https://letterboxd.com/film/the-weary-hours-of-two-lab-assistants/",
+    "title_en": "The Weary Hours of Two Lab Assistants",
+    "director": "Burak Çevik",
+    "country": "Turkey, Germany",
+    "year": 2026,
+    "duration": 22,
+    "genre": "Drama"
+  },
+  "prologue": {
+    "url": "https://letterboxd.com/film/prologue-2004/",
+    "title_en": "Prologue",
+    "director": "Béla Tarr",
+    "country": "Hungary",
+    "year": 2004,
+    "duration": 5,
+    "genre": "Drama",
+    "original_title": "Prologue"
+  },
+  "critical condition": {
+    "url": "https://letterboxd.com/film/critical-condition-2025/",
+    "title_en": "Critical Condition",
+    "director": "Mila Zhluktenko",
+    "country": "Germany",
+    "year": 2025,
+    "duration": 24,
+    "genre": "Drama",
+    "original_title": "Критичне становище"
+  },
+  "a very straight neck": {
+    "url": "https://letterboxd.com/film/a-very-straight-neck/",
+    "title_en": "A Very Straight Neck",
+    "director": "Neo Sora",
+    "country": "Japan, China",
+    "year": 2025,
+    "duration": 11,
+    "genre": "Drama",
+    "original_title": "まっすぐな首"
+  },
+  "dissonance": {
+    "url": "https://letterboxd.com/film/dissonance-2026/",
+    "title_en": "DISSONANCE",
+    "director": "Jordan Strafer",
+    "country": "Germany",
+    "year": 2026,
+    "duration": 12,
+    "genre": "",
+    "original_title": "DISSONANCE"
+  },
+  "fragments for venus": {
+    "url": "https://letterboxd.com/film/fragments-for-venus/",
+    "title_en": "Fragments for Venus",
+    "director": "Alice Diop",
+    "country": "France, Italy",
+    "year": 2025,
+    "duration": 21,
+    "genre": "Drama",
+    "original_title": "Fragments for Venus"
+  },
+  "yuragim": {
+    "url": "https://letterboxd.com/film/yuragim/",
+    "title_en": "Yuragim",
+    "director": "Varia Garib, Kirill Komar",
+    "country": "Austria, Uzbekistan",
+    "year": 2026,
+    "duration": 19,
+    "genre": "Drama",
+    "original_title": "Yuragim"
+  },
+  "una vez en un cuerpo": {
+    "url": "https://letterboxd.com/film/una-vez-en-un-cuerpo/",
+    "title_en": "Once in a Body",
+    "director": "María Cristina Pérez González",
+    "country": "Colombia, USA",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Animación",
+    "original_title": "Una vez en un cuerpo"
+  },
+  "the world should perish": {
+    "url": "",
+    "title_en": "The World Should Perish",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "shot reverse shot": {
+    "url": "https://letterboxd.com/film/shot-reverse-shot-2026/",
+    "title_en": "Shot Reverse Shot",
+    "director": "Radu Jude, Adrian Cioflâncă",
+    "country": "Romania",
+    "year": 2026,
+    "duration": 22,
+    "genre": "Documental",
+    "original_title": "Plan contraplan"
+  },
+  "one equal light": {
+    "url": "https://letterboxd.com/film/one-equal-light/",
+    "title_en": "One Equal Light",
+    "director": "Maïder Fortuné, Annie MacDonell",
+    "country": "Canada, France",
+    "year": 2026,
+    "duration": 14,
+    "genre": "Documental",
+    "original_title": "One Equal Light"
+  },
+  "la notebook ronroneando en mi regazo y yo sola como un gato": {
+    "url": "",
+    "title_en": "La notebook ronroneando en mi regazo y yo sola como un gato",
+    "director": "Ariela Bergman",
+    "country": "Netherlands, Argentina",
+    "year": 2026,
+    "duration": 3,
+    "original_title": "La notebook ronroneando en mi regazo y yo sola como un gato",
+    "genre": "Animación"
+  },
+  "common pear": {
+    "url": "https://letterboxd.com/film/common-pear/",
+    "title_en": "Common Pear",
+    "director": "Gregor Božič",
+    "country": "Slovenia, UK",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Documental, Ciencia ficción",
+    "title_es": "Common Pear",
+    "original_title": "Navadna hruška"
   }
 }
