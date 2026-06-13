@@ -4235,12 +4235,12 @@
   "familia": {
     "url": "",
     "title_en": "FAMILIA",
-    "director": "Álvaro Sáenz de Heredia",
-    "country": "Spain",
-    "year": 1992,
-    "duration": 81,
-    "original_title": "Chechu y familia",
-    "genre": "Comedia"
+    "director": "Izuru Narushima",
+    "country": "Japan",
+    "year": 2023,
+    "duration": 121,
+    "original_title": "ファミリア",
+    "genre": "Drama"
   },
   "el santo": {
     "url": "https://letterboxd.com/film/the-saint-2023/",
@@ -4693,7 +4693,7 @@
     "country": "Argentina, Uruguay",
     "year": 2026,
     "duration": 62,
-    "genre": "",
+    "genre": "Documental",
     "original_title": "Tristán y los días por venir"
   },
   "supergirl": {
@@ -4705,5 +4705,23 @@
     "duration": 108,
     "genre": "Acción, Ciencia ficción",
     "original_title": "Supergirl"
+  },
+  "una directora extraordinaria": {
+    "url": "https://letterboxd.com/film/una-directora-extraordinaria/",
+    "title_en": "Una directora Extraordinaria",
+    "director": "Fabiana Urricelqui",
+    "country": "",
+    "year": null,
+    "duration": 85,
+    "genre": "Comedia, Drama",
+    "original_title": "Una directora Extraordinaria"
+  },
+  "estas entradas se habilitan hasta agotar la capacidad de la sala. por consultas sobre entradas e ingresos, escribir a: atencionpublico.pl@cultura.gob.ar": {
+    "url": "",
+    "title_en": "Estas entradas se habilitan hasta agotar la capacidad de la sala. Por consultas sobre entradas e ingresos, escribir a: atencionpublico.pl@cultura.gob.ar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
