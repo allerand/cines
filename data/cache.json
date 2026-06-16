@@ -4410,12 +4410,13 @@
     "original_title": "Alișveriș"
   },
   "the body": {
-    "url": "",
+    "url": "https://letterboxd.com/film/the-body-2025-1/",
     "title_en": "The Body",
     "director": "Louris van de Geer",
     "country": "Australia",
     "year": 2025,
     "duration": 12,
+    "genre": "",
     "original_title": "The Body"
   },
   "inventory": {
@@ -4666,14 +4667,14 @@
     "original_title": "One Equal Light"
   },
   "la notebook ronroneando en mi regazo y yo sola como un gato": {
-    "url": "",
-    "title_en": "La notebook ronroneando en mi regazo y yo sola como un gato",
+    "url": "https://letterboxd.com/film/the-laptop-is-purring-on-my-lap-and-i-am/",
+    "title_en": "The Laptop Is Purring on My Lap and I Am Lonely Like a Cat",
     "director": "Ariela Bergman",
     "country": "Netherlands, Argentina",
     "year": 2026,
     "duration": 3,
-    "original_title": "La notebook ronroneando en mi regazo y yo sola como un gato",
-    "genre": "Animación"
+    "genre": "Animación",
+    "original_title": "La notebook ronroneando en mi regazo y yo sola como un gato"
   },
   "common pear": {
     "url": "https://letterboxd.com/film/common-pear/",
@@ -4885,5 +4886,27 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "alphaville": {
+    "url": "",
+    "title_en": "ALPHAVILLE",
+    "director": "Jean-Luc Godard",
+    "country": "France, Italy",
+    "year": 1965,
+    "duration": 99,
+    "title_es": "Alphaville (Lemmy contra Alphaville)",
+    "original_title": "Alphaville, une étrange aventure de Lemmy Caution",
+    "genre": "Drama, Ciencia ficción"
+  },
+  "lo que mata": {
+    "url": "https://letterboxd.com/film/the-things-you-kill/",
+    "title_en": "The Things You Kill",
+    "director": "Alireza Khatami",
+    "country": "Canada, France",
+    "year": 2025,
+    "duration": 115,
+    "genre": "Drama, Thriller",
+    "original_title": "Lo que no mata engorda",
+    "title_es": "20 asesinos en potencia"
   }
 }
