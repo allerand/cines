@@ -4908,5 +4908,24 @@
     "genre": "Drama, Thriller",
     "original_title": "Lo que no mata engorda",
     "title_es": "20 asesinos en potencia"
+  },
+  "la botera": {
+    "url": "https://letterboxd.com/film/la-botera/",
+    "title_en": "Boat Rower Girl",
+    "director": "Sabrina Blanco",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 75,
+    "genre": "Drama",
+    "original_title": "La botera"
+  },
+  "pizza, birra y faso": {
+    "url": "https://letterboxd.com/film/pizza-beer-and-cigarettes/",
+    "title_en": "Pizza, Beer, and Cigarettes",
+    "director": "Bruno Stagnaro, Adrián Caetano",
+    "country": "Argentina",
+    "year": 1997,
+    "duration": 92,
+    "genre": "Drama, Crimen"
   }
 }
