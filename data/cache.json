@@ -410,13 +410,15 @@
     "duration": 63
   },
   "el mago de oz": {
-    "url": "https://letterboxd.com/film/el-mago-de-oz/",
-    "title_en": "El Mago de Oz",
-    "director": "Angélica Ortiz, Ramón Téllez",
-    "country": "",
-    "year": 1985,
-    "genre": "Fantasía",
-    "duration": 70
+    "url": "https://letterboxd.com/film/the-wizard-of-oz/",
+    "title_en": "The Wizard of Oz",
+    "director": "Larry Semon",
+    "country": "USA",
+    "year": 1925,
+    "duration": 81,
+    "genre": "Fantasía, Comedia",
+    "title_es": "Tomasín en el reino de Oz",
+    "original_title": "The Wizard of Oz"
   },
   "tiro de gracia": {
     "url": "https://letterboxd.com/film/tiro-de-gracia/",
@@ -4639,12 +4641,13 @@
     "original_title": "Una vez en un cuerpo"
   },
   "the world should perish": {
-    "url": "",
-    "title_en": "The World Should Perish",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/vilagvege/",
+    "title_en": "Világvége",
+    "director": "Péter Hajmási",
+    "country": "Hungary",
+    "year": 2025,
+    "duration": 21,
+    "genre": ""
   },
   "shot reverse shot": {
     "url": "https://letterboxd.com/film/shot-reverse-shot-2026/",
@@ -4927,5 +4930,47 @@
     "year": 1997,
     "duration": 92,
     "genre": "Drama, Crimen"
+  },
+  "prisioneros de la tierra": {
+    "url": "https://letterboxd.com/film/prisioneros-de-la-tierra/",
+    "title_en": "Prisoners of the Land",
+    "director": "Mario Soffici",
+    "country": "Argentina",
+    "year": 1939,
+    "duration": 87,
+    "genre": "Drama",
+    "original_title": "Prisioneros de la tierra"
+  },
+  "el navegante": {
+    "url": "https://letterboxd.com/film/the-navigator/",
+    "title_en": "The Navigator",
+    "director": "Donald Crisp, Buster Keaton",
+    "country": "USA",
+    "year": 1924,
+    "duration": 65,
+    "genre": "Acción, Romance",
+    "title_es": "El Navegante",
+    "original_title": "The Navigator"
+  },
+  "veinte años y una noche": {
+    "url": "https://letterboxd.com/film/veinte-anos-y-una-noche/",
+    "title_en": "Veinte años y una noche",
+    "director": "Alberto de Zavalía",
+    "country": "Argentina",
+    "year": 1941,
+    "duration": 87,
+    "genre": "Drama",
+    "original_title": "Veinte años y una noche"
+  },
+  "al cruzar la calle": {
+    "url": "https://letterboxd.com/film/one-way-street/",
+    "title_en": "One Way Street",
+    "director": "Hugo Fregonese",
+    "country": "USA",
+    "year": 1950,
+    "duration": 79,
+    "genre": "Crimen, Drama",
+    "title_es": "Murallas de silencio",
+    "original_title": "One Way Street"
   }
 }
