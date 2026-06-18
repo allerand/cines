@@ -2348,6 +2348,43 @@ def _museocine_month_pages() -> list[str]:
     return urls
 
 
+_MUSEO_PAREN_RE = re.compile(r"^(.+?)\s+\(([^)]*)\)\s*$")
+
+
+def _museo_film_parts(cand: str):
+    """De "Título de Director (...año...)" devuelve (title, director, year, original).
+
+    El split título/director es ambiguo cuando hay varios " de " (títulos con
+    "de": El mago de Oz; o directores con "de": Alberto de Zavalía). Probamos
+    todos los " de " donde el director arranca en mayúscula y elegimos el que
+    deja un director con forma de nombre (2-3 palabras; desempate: más palabras).
+    Devuelve None si no parece una línea de película.
+    """
+    m = _MUSEO_PAREN_RE.match(cand)
+    if not m:
+        return None
+    prefix, paren = m.group(1), m.group(2)
+    ym = re.search(r"\b((?:19|20)\d{2})\b", paren)
+    if not ym:
+        return None
+    year = int(ym.group(1))
+    original = re.sub(r"\b(?:19|20)\d{2}\b", "", paren).strip(" ,").strip()
+
+    best = None  # (score, title, director)
+    for mde in re.finditer(r"\sde\s", prefix):
+        title = prefix[:mde.start()].strip()
+        director = prefix[mde.end():].strip()
+        if not title or not director or not director[:1].isupper():
+            continue
+        w = len(director.split())
+        score = (-abs(w - 2), w)  # preferir 2-3 palabras; desempate: más palabras
+        if best is None or score > best[0]:
+            best = (score, title, director)
+    if not best:
+        return None
+    return best[1], re.sub(r"\s+", " ", best[2]).strip(), year, original
+
+
 def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
     """
     Parsea texto plano de una nota mensual del Museo del Cine.
@@ -2371,11 +2408,22 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
     if month is None:
         return []
 
+    # Header de función. El museo MEZCLA formatos en la misma nota:
+    #   "Sábado 6 a las 16 h"                              (sin mes)
+    #   "Sábado 20 de junio a las 16 h | Comunidad ..."    (con "de mes")
+    #   "Domingo 21 de junio | a partir de las 16 h"       ("| a partir de las")
+    #   "Domingo 21 y domingo 28 de junio a las 18 h | ..."(rango de 2 días)
+    #   "Domingo 7 a las 18 h I Cine argentino en video"   (separador "I")
+    _wd = r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)"
+    _mon = "|".join(_MUSEOCINE_MONTHS)
     header_re = re.compile(
-        r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)\s+"
-        r"(\d{1,2})\s+a\s+las\s+(\d{1,2})(?:[.:](\d{2}))?\s+h(?:s|oras)?"
-        # Separador de ciclo: el museo usa "|" o "I" (i mayúscula) indistintamente.
-        r"(?:\s+[|I¦]\s+([^\n]+))?",
+        _wd + r"\s+(?P<d1>\d{1,2})"
+        r"(?:\s+y\s+(?:" + _wd + r"\s+)?(?P<d2>\d{1,2}))?"     # rango opcional "21 y (domingo) 28"
+        r"(?:\s+de\s+(?P<mon>" + _mon + r"))?"                 # "de junio" opcional
+        r"\s*\|?\s*"                                            # "|" opcional antes del horario
+        r"a\s+(?:las|partir\s+de\s+las)\s+"                     # "a las" / "a partir de las"
+        r"(?P<hh>\d{1,2})(?:[.:](?P<mm>\d{2}))?\s*h(?:s|oras)?"
+        r"(?:\s*[|I¦]\s*(?P<ciclo>[^\n]+))?",
         re.IGNORECASE,
     )
     # "Título de Director (...)" — non-greedy en title, pero requiere que el
@@ -2383,18 +2431,18 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
     # del título ("de las ostras", "de la calle"). El paréntesis se captura
     # entero porque el museo escribe tanto "(AÑO)" / "(AÑO, Original)" como
     # "(Original, AÑO)"; el año se extrae después, esté donde esté.
-    film_line_re = re.compile(
-        r"^(.+?)\s+de\s+([A-ZÁÉÍÓÚÑ][^()]*?)\s+\(([^)]*)\)\s*$",
-    )
-
     # Iteramos por cada match de header y escaneamos las líneas del segmento
     # (hasta el próximo header) buscando la primera que sea una línea de película.
     matches = list(header_re.finditer(text))
     for idx, hm in enumerate(matches):
-        day_num = int(hm.group(1))
-        hour = int(hm.group(2))
-        minute = int(hm.group(3) or 0)
-        ciclo = (hm.group(4) or "").strip().rstrip(".,;")
+        days = [int(hm.group("d1"))]
+        if hm.group("d2"):
+            days.append(int(hm.group("d2")))
+        hour = int(hm.group("hh"))
+        minute = int(hm.group("mm") or 0)
+        # Mes del propio header si lo trae ("de junio"); sino el del slug/cuerpo.
+        hmonth = _MUSEOCINE_MONTHS.get(hm.group("mon").lower()) if hm.group("mon") else month
+        ciclo = (hm.group("ciclo") or "").strip().rstrip(".,;")
 
         # rango hasta el próximo header
         seg_end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
@@ -2406,40 +2454,36 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
         seg_lines = [ln.strip() for ln in segment.splitlines() if ln.strip()]
         title = director = original = ""
         film_year: Optional[int] = None
-        for start in range(min(4, len(seg_lines))):
-            for span in range(1, 5):
+        # Probamos primero los matches más cortos (span chico) en todas las
+        # posiciones, para preferir la línea de película limpia antes que una
+        # unión larga que arrastre preámbulos (ej. "Programación especial...").
+        for span in range(1, 5):
+            for start in range(min(5, len(seg_lines))):
                 cand = " ".join(seg_lines[start:start + span])
-                fm = film_line_re.match(cand)
-                if not fm:
+                parts = _museo_film_parts(cand)
+                if not parts:
                     continue
-                paren = fm.group(3)
-                ym2 = re.search(r"\b((?:19|20)\d{2})\b", paren)
-                if not ym2:
-                    continue  # paréntesis sin año → no es línea de película
-                title = fm.group(1).strip()
-                director = re.sub(r"\s+", " ", fm.group(2)).strip()
-                film_year = int(ym2.group(1))
-                original = re.sub(r"\b(?:19|20)\d{2}\b", "", paren).strip(" ,").strip()
+                title, director, film_year, original = parts
                 break
             if title:
                 break
         if not title:
             continue
 
-        try:
-            d = date(year, month, day_num)
-        except ValueError:
-            continue
-
-        out.append({
-            "fecha": d.isoformat(),
-            "hora": f"{hour:02d}:{minute:02d}",
-            "title": title,
-            "director": director,
-            "year": film_year,
-            "original_title": original,
-            "ciclo": ciclo,
-        })
+        for day_num in days:
+            try:
+                d = date(year, hmonth, day_num)
+            except (ValueError, TypeError):
+                continue
+            out.append({
+                "fecha": d.isoformat(),
+                "hora": f"{hour:02d}:{minute:02d}",
+                "title": title,
+                "director": director,
+                "year": film_year,
+                "original_title": original,
+                "ciclo": ciclo,
+            })
     return out
 
 
