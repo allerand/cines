@@ -2467,6 +2467,13 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
                 break
             if title:
                 break
+        if not title and seg_lines:
+            # Programa/ciclo sin formato "Título de Director (año)" (ej. una
+            # función de cortos: "Futuras: Ciclo de cortos..."). Usamos la
+            # primera línea del segmento como título, sin director/año.
+            first = seg_lines[0]
+            if 3 <= len(first) <= 100 and (first[:1].isupper() or first[:1] in "¡¿"):
+                title = first
         if not title:
             continue
 
