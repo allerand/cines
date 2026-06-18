@@ -231,10 +231,11 @@ def post_feed_carousel(date_str: str, user_id: str, token: str, base: str,
 # Stories: una imagen por story (formato 1080x1920)
 # ---------------------------------------------------------------------------
 
-# Tope de stories por corrida — más que esto IG empieza a detectar la
-# automatización (error 2207006). Si hay más slides generadas, las extra
-# se omiten silenciosamente.
-MAX_STORIES_PER_RUN = 8
+# Tope de stories por corrida — sanity bound. IG puede frenar por anti-spam
+# (error 2207006) si se postea muy rápido; el delay largo entre stories (abajo)
+# baja esa chance, y si igual frena, el loop corta limpio (más abajo). Subido
+# de 8 a 20 porque truncaba días con más slides (a veces hay 11).
+MAX_STORIES_PER_RUN = 20
 
 
 def _publish_story(user_id: str, token: str, image_url: str) -> str:
@@ -295,9 +296,10 @@ def post_stories(date_str: str, user_id: str, token: str, base: str,
             if "2207006" in str(e):
                 print(f"    ⏹  cortando — IG sigue detectando bot")
                 break
-        # Delay largo con jitter entre stories para no parecer bot
+        # Delay largo con jitter entre stories para no parecer bot. Más alto
+        # que antes (era 30-55s) para poder postear más sin disparar 2207006.
         if i < len(slides) - 1:
-            wait_s = random.randint(30, 55)
+            wait_s = random.randint(45, 75)
             print(f"    ⏳ {wait_s}s hasta la próxima")
             time.sleep(wait_s)
     print(f"  ✅ {len(slides)} stories posteadas")
