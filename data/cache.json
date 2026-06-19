@@ -4972,5 +4972,87 @@
     "genre": "Crimen, Drama",
     "title_es": "Murallas de silencio",
     "original_title": "One Way Street"
+  },
+  "lumbre": {
+    "url": "",
+    "title_en": "Lumbre",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "hotline": {
+    "url": "",
+    "title_en": "Hotline",
+    "director": "Jerry Jameson",
+    "country": "United States of America",
+    "year": 1982,
+    "duration": 96,
+    "original_title": "Hotline",
+    "genre": "Crimen, Terror"
+  },
+  "la huida": {
+    "url": "",
+    "title_en": "La Huida",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "caranday": {
+    "url": "",
+    "title_en": "Caranday",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "algunas notas sobre m.m.m.": {
+    "url": "",
+    "title_en": "Algunas notas sobre M.M.M.",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los ojos de helen": {
+    "url": "https://letterboxd.com/film/los-ojos-de-helen/",
+    "title_en": "LOS OJOS DE HELEN",
+    "director": "Fer Casals, Valeria Massimino",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 67,
+    "genre": "Documental",
+    "original_title": "LOS OJOS DE HELEN"
+  },
+  "tardes de soledad": {
+    "url": "https://letterboxd.com/film/afternoons-of-solitude/",
+    "title_en": "Afternoons of Solitude",
+    "director": "Albert Serra",
+    "country": "Spain, Portugal",
+    "year": 2024,
+    "duration": 126,
+    "genre": "Documental",
+    "original_title": "Tardes de soledad"
+  },
+  "alphaville, una extraña aventura de lemmy caution": {
+    "url": "https://letterboxd.com/film/alphaville/",
+    "title_en": "Alphaville",
+    "director": "Jean-Luc Godard",
+    "country": "France, Italy",
+    "year": 1965,
+    "duration": 99,
+    "genre": "Ciencia ficción, Misterio"
+  },
+  "minions & monstruos": {
+    "url": "https://letterboxd.com/film/minions-monsters-2026/",
+    "title_en": "Minions & Monsters",
+    "director": "Pierre Coffin",
+    "country": "USA",
+    "year": 2026,
+    "duration": 90,
+    "genre": "Aventura, Fantasía",
+    "title_es": "Minions & Monstruos",
+    "original_title": "Minions & Monsters"
   }
 }
