@@ -5084,5 +5084,189 @@
     "year": 2026,
     "duration": 138,
     "genre": "Drama, Comedia"
+  },
+  "casino": {
+    "url": "https://letterboxd.com/film/casino/",
+    "title_en": "Casino",
+    "director": "Martin Scorsese",
+    "country": "France, USA",
+    "year": 1995,
+    "duration": 179,
+    "genre": "Crimen, Drama",
+    "original_title": "Casino"
+  },
+  "munich": {
+    "url": "https://letterboxd.com/film/munich/",
+    "title_en": "Munich",
+    "director": "Steven Spielberg",
+    "country": "USA, Canada",
+    "year": 2005,
+    "duration": 164,
+    "genre": "Thriller, Drama",
+    "title_es": "Munich",
+    "original_title": "Munich"
+  },
+  "crónica de una fuga": {
+    "url": "https://letterboxd.com/film/cronica-de-una-fuga/",
+    "title_en": "Chronicle of an Escape",
+    "director": "Adrián Caetano",
+    "country": "Argentina",
+    "year": 2006,
+    "duration": 103,
+    "genre": "Thriller",
+    "original_title": "Crónica de una fuga"
+  },
+  "cape fear": {
+    "url": "https://letterboxd.com/film/cape-fear-1991/",
+    "title_en": "Cape Fear",
+    "director": "Martin Scorsese",
+    "country": "USA",
+    "year": 1991,
+    "duration": 128,
+    "genre": "Drama, Thriller",
+    "title_es": "El cabo del miedo",
+    "original_title": "Cape Fear"
+  },
+  "mystic river": {
+    "url": "https://letterboxd.com/film/mystic-river/",
+    "title_en": "Mystic River",
+    "director": "Clint Eastwood",
+    "country": "USA",
+    "year": 2003,
+    "duration": 138,
+    "genre": "Misterio, Crimen",
+    "title_es": "Río Místico",
+    "original_title": "Mystic River"
+  },
+  "exotica": {
+    "url": "https://letterboxd.com/film/exotica/",
+    "title_en": "Exotica",
+    "director": "Atom Egoyan",
+    "country": "Canada",
+    "year": 1994,
+    "duration": 103,
+    "genre": "Drama",
+    "title_es": "Exótica",
+    "original_title": "Exotica"
+  },
+  "más allá del olvido": {
+    "url": "https://letterboxd.com/film/mas-alla-del-olvido/",
+    "title_en": "Beyond Oblivion",
+    "director": "Hugo del Carril",
+    "country": "Argentina",
+    "year": 1956,
+    "duration": 92,
+    "genre": "Thriller, Drama",
+    "original_title": "Más allá del olvido"
+  },
+  "anything else": {
+    "url": "https://letterboxd.com/film/anything-else/",
+    "title_en": "Anything Else",
+    "director": "Woody Allen",
+    "country": "USA",
+    "year": 2003,
+    "duration": 108,
+    "genre": "Romance, Comedia",
+    "title_es": "Todo lo demás",
+    "original_title": "Anything Else"
+  },
+  "pusher": {
+    "url": "https://letterboxd.com/film/pusher/",
+    "title_en": "Pusher",
+    "director": "Nicolas Winding Refn",
+    "country": "Denmark",
+    "year": 1996,
+    "duration": 110,
+    "genre": "Acción, Crimen",
+    "title_es": "Pusher, un paseo por el abismo",
+    "original_title": "Pusher"
+  },
+  "pusher ii": {
+    "url": "https://letterboxd.com/film/pusher-ii/",
+    "title_en": "Pusher II",
+    "director": "Nicolas Winding Refn",
+    "country": "Denmark, UK",
+    "year": 2004,
+    "duration": 100,
+    "genre": "Drama, Acción",
+    "title_es": "Con las manos ensangrentadas (Pusher II)",
+    "original_title": "Pusher II"
+  },
+  "good time": {
+    "url": "https://letterboxd.com/film/good-time/",
+    "title_en": "Good Time",
+    "director": "Benny Safdie, Josh Safdie",
+    "country": "USA, Luxembourg",
+    "year": 2017,
+    "duration": 102,
+    "genre": "Drama, Crimen",
+    "title_es": "Good Time: Viviendo al límite",
+    "original_title": "Good Time"
+  },
+  "uncut gems": {
+    "url": "https://letterboxd.com/film/uncut-gems/",
+    "title_en": "Uncut Gems",
+    "director": "Josh Safdie, Benny Safdie",
+    "country": "USA",
+    "year": 2019,
+    "duration": 136,
+    "genre": "Crimen, Thriller",
+    "title_es": "Diamantes en bruto",
+    "original_title": "Uncut Gems"
+  },
+  "following": {
+    "url": "https://letterboxd.com/film/following/",
+    "title_en": "Following",
+    "director": "Christopher Nolan",
+    "country": "UK, USA",
+    "year": 1998,
+    "duration": 69,
+    "genre": "Drama, Thriller",
+    "title_es": "El seguidor",
+    "original_title": "Following"
+  },
+  "memento": {
+    "url": "https://letterboxd.com/film/memento/",
+    "title_en": "Memento",
+    "director": "Christopher Nolan",
+    "country": "USA",
+    "year": 2000,
+    "duration": 113,
+    "genre": "Thriller, Misterio",
+    "title_es": "Amnesia",
+    "original_title": "Memento"
+  },
+  "heat": {
+    "url": "https://letterboxd.com/film/heat-1995/",
+    "title_en": "Heat",
+    "director": "Michael Mann",
+    "country": "USA",
+    "year": 1995,
+    "duration": 170,
+    "genre": "Crimen, Acción",
+    "title_es": "Fuego contra Fuego",
+    "original_title": "Heat"
+  },
+  "the dark knight": {
+    "url": "https://letterboxd.com/film/the-dark-knight-2008/",
+    "title_en": "The Dark Knight",
+    "director": "Christopher Nolan",
+    "country": "UK, USA",
+    "year": 2008,
+    "duration": 152,
+    "genre": "Thriller, Acción",
+    "title_es": "El caballero oscuro",
+    "original_title": "The Dark Knight"
+  },
+  "interstellar": {
+    "url": "https://letterboxd.com/film/interstellar-2014/",
+    "title_en": "Interstellar",
+    "director": "Christopher Nolan",
+    "country": "UK, USA",
+    "year": 2014,
+    "duration": 169,
+    "genre": "Ciencia ficción, Drama",
+    "title_es": "Interestelar",
+    "original_title": "Interstellar"
   }
 }
