@@ -5279,5 +5279,106 @@
     "genre": "Drama, Thriller",
     "title_es": "El silencio de un hombre",
     "original_title": "Le Samouraï"
+  },
+  "bárbara": {
+    "url": "",
+    "title_en": "Bárbara",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "atahualpa yupanqui. un trashumante": {
+    "url": "https://letterboxd.com/film/atahualpa-yupanqui-un-trashumante/",
+    "title_en": "Atahualpa Yupanqui, un trashumante",
+    "director": "Federico Randazzo Abad",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 92,
+    "genre": "Documental",
+    "original_title": "Atahualpa Yupanqui, un trashumante"
+  },
+  "jackass la última y nos vamos": {
+    "url": "https://letterboxd.com/film/jackass-best-and-last/",
+    "title_en": "Jackass: Best and Last",
+    "director": "Jeff Tremaine",
+    "country": "USA",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Acción, Documental",
+    "title_es": "Jackass: Lo mejor para el final",
+    "original_title": "Jackass: Best and Last"
+  },
+  "bleach: thousand-year blood war - the calamity": {
+    "url": "https://letterboxd.com/film/bleach-thousand-year-blood-war-the-calamity/",
+    "title_en": "Bleach: Thousand-Year Blood War - The Calamity",
+    "director": "",
+    "country": "Japan",
+    "year": 2026,
+    "duration": null,
+    "genre": "Ciencia ficción, Acción",
+    "original_title": "Bleach: Thousand-Year Blood War - The Calamity"
+  },
+  "la venue de l'avenir": {
+    "url": "https://letterboxd.com/film/la-venue-de-lavenir/",
+    "title_en": "Colours of Time",
+    "director": "Cédric Klapisch",
+    "country": "France, Belgium",
+    "year": 2025,
+    "duration": 126,
+    "genre": "Drama, Comedia",
+    "title_es": "Los colores del tiempo",
+    "original_title": "La Venue de l'avenir"
+  },
+  "los colores del tiempo": {
+    "url": "https://letterboxd.com/film/colours-of-time/",
+    "title_en": "Colours of Time",
+    "director": "Cédric Klapisch",
+    "country": "France, Belgium",
+    "year": 2025,
+    "duration": 126,
+    "genre": "Drama, Comedia",
+    "title_es": "Los colores del tiempo",
+    "original_title": "La Venue de l'avenir"
+  },
+  "repulsión": {
+    "url": "",
+    "title_en": "REPULSIÓN",
+    "director": "Roman Polanski",
+    "country": "United Kingdom",
+    "year": 1965,
+    "duration": 105,
+    "title_es": "Repulsión",
+    "original_title": "Repulsion",
+    "genre": "Drama, Thriller"
+  },
+  "belén": {
+    "url": "https://letterboxd.com/film/belen-2025/",
+    "title_en": "Belén",
+    "director": "Dolores Fonzi",
+    "country": "Argentina, USA",
+    "year": 2025,
+    "duration": 108,
+    "genre": "Drama",
+    "title_es": "Año cero",
+    "original_title": "Belén"
+  },
+  "la cena": {
+    "url": "https://letterboxd.com/film/the-dinner/",
+    "title_en": "The Dinner",
+    "director": "Ettore Scola",
+    "country": "France, Italy",
+    "year": 1998,
+    "duration": 126,
+    "genre": "Comedia, Drama",
+    "original_title": "La cena"
+  },
+  "héroes (mundial 86)": {
+    "url": "",
+    "title_en": "HÉROES (MUNDIAL 86)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
