@@ -2220,6 +2220,112 @@ async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
 
     return result
 
+
+# ---------------------------------------------------------------------------
+# Centro Cultural 25 de Mayo — cc25.org/cine (Cine Urquiza, Villa Urquiza)
+# WordPress: /cine/ lista cards con "Ver detalle" → /eventos/<slug>/ con
+# FECHA / HORA / CATEGORÍA (Cine) + director/año/duración. Igual que Arthaus.
+# ---------------------------------------------------------------------------
+
+CC25_CINE_URL = "https://cc25.org/cine/"
+_CC25_MONTHS = {
+    "ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6,
+    "jul": 7, "ago": 8, "sep": 9, "oct": 10, "nov": 11, "dic": 12,
+}
+
+
+def _parse_cc25_detail(h1: str, body: str, url: str,
+                       today: date, cutoff: date) -> list[Screening]:
+    """Parsea una página /eventos/ de cc25.org. Sólo si CATEGORÍA incluye 'cine'."""
+    flat = re.sub(r"[ \t]+", " ", body or "")
+    low = flat.lower()
+    mcat = re.search(r"categor[ií]a\s*(.{0,40})", low, re.DOTALL)
+    if not (mcat and "cine" in mcat.group(1)):
+        return []
+    mf = re.search(r"fecha\s+(\d{1,2})\s+([a-záéíóú]{3})[a-záéíóú.]*\s+(\d{4})", low)
+    if not mf:
+        return []
+    day, mon, yr = int(mf.group(1)), _CC25_MONTHS.get(mf.group(2)), int(mf.group(3))
+    if not mon:
+        return []
+    mh = re.search(r"hora\s+(\d{1,2}:\d{2})", low)
+    hora = mh.group(1) if mh else "20:00"
+
+    h1 = (h1 or "").strip()
+    # Director: CC25 lo pone en el H1 como "Título – de Director" (limpio);
+    # fallback al cuerpo "dirigido por ...".
+    director = ""
+    md2 = re.search(r"[–-]\s*de\s+([^\n]+?)\s*$", h1, re.IGNORECASE)
+    if md2:
+        director = md2.group(1).strip()
+    else:
+        md = re.search(r"dirigid[oa]\s+por\s+([^,\n.]+?)(?:\s+y\s+(?:protagoniz|producid)|\s*[,.]|$)",
+                       flat, re.IGNORECASE)
+        if md:
+            director = md.group(1).strip()
+    title = re.sub(r"\s*[–-]\s*de\s+.*$", "", h1, flags=re.IGNORECASE).strip()
+    if director:
+        title = re.sub(r"\s*[–-]?\s*de\s+" + re.escape(director) + r"\s*$", "", title,
+                       flags=re.IGNORECASE).strip()
+    if not title:
+        return []
+
+    film_year: Optional[int] = None
+    country = ""
+    my = re.search(r"\b([A-ZÁÉÍÓÚ][a-záéíóúñ]+(?:\s*/\s*[A-ZÁÉÍÓÚ][a-záéíóúñ]+)?)\s*,\s*((?:19|20)\d{2})\b", flat)
+    if my:
+        country, film_year = my.group(1).strip(), int(my.group(2))
+    else:
+        ym = re.search(r"\b((?:19|20)\d{2})\b", flat)
+        if ym:
+            film_year = int(ym.group(1))
+    mdur = re.search(r"duraci[óo]n:?\s*(\d{1,3})", low)
+    duration = int(mdur.group(1)) if mdur else None
+
+    try:
+        d = date(yr, mon, day)
+    except ValueError:
+        return []
+    if not (today <= d <= cutoff):
+        return []
+    return [Screening(
+        cine="Centro Cultural 25 de Mayo", title=title,
+        fecha=d.isoformat(), hora=hora, ticket_url=url,
+        director=director, country=country, year=film_year, duration=duration,
+    )]
+
+
+async def scrape_cc25(page: Page, semanas: int = 3) -> list[Screening]:
+    """Scrapea cc25.org/cine: junta los links 'Ver detalle' (/eventos/) y entra a
+    cada uno a sacar fecha/hora/título/director (filtrando CATEGORÍA = Cine)."""
+    today = date.today()
+    cutoff = today + timedelta(weeks=max(semanas, 6))
+    try:
+        await page.goto(CC25_CINE_URL, wait_until="domcontentloaded", timeout=30000)
+        await page.wait_for_timeout(2500)
+        for _ in range(8):
+            await page.mouse.wheel(0, 1500)
+            await page.wait_for_timeout(450)
+        links = await page.eval_on_selector_all(
+            'a[href*="/eventos/"]', "els => els.map(e => e.href)")
+    except Exception:
+        return []
+    links = [u for u in dict.fromkeys(links or []) if "/eventos/" in u][:40]
+
+    result: list[Screening] = []
+    for url in links:
+        try:
+            await page.goto(url, wait_until="domcontentloaded", timeout=20000)
+            await page.wait_for_timeout(600)
+            h1 = await page.evaluate(
+                "() => { const h = document.querySelector('h1'); return h ? h.innerText : ''; }")
+            body = await page.evaluate("document.body.innerText")
+        except Exception:
+            continue
+        result.extend(_parse_cc25_detail(h1, body, url, today, cutoff))
+    return result
+
+
 def scrape_lumiton_agenda() -> list[Screening]:
     """
     Scrapea https://lumiton.ar/agenda-presencial/ — un único endpoint estático
