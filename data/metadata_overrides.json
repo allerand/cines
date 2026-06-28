@@ -1,4 +1,6 @@
 {
   "_comment": "Escape de ÚLTIMO RECURSO para corregir metadata cuando el enrichment matchea la película equivocada y la automatización no alcanza. Normalmente NO debería hacer falta: el scraper infiere director/año de la fuente (p.ej. Cacodelphia los saca del título del trailer) y el enrichment valida contra esos hints. Si aun así una peli queda mal, agregá un entry acá. Matchea por 'title' (case-insensitive) + 'cine' opcional, y pisa los campos presentes: director, year, country, genre, duration, letterboxd, title_en, original_title. Poné \"\" para borrar un dato. Se aplica al final en run.py.",
-  "overrides": []
+  "overrides": [
+    { "title": "Hojas secas", "cine": "Sala Lugones", "director": "Alexandre Koberidze" }
+  ]
 }

@@ -457,10 +457,16 @@ def parse_ctba_grouped_dates_event(text: str) -> dict:
     if ty:
         out["year"] = int(ty.group(2))
 
-    # Director: línea inmediata previa al marcador "Estreno" (encabezado típico)
+    # Director: línea inmediata previa al marcador "Estreno" (encabezado típico).
+    # OJO: a veces esa línea es una nota del cupo ("Siete únicas funciones") y no
+    # el director — la descartamos para no ensuciar el campo (el enrichment /
+    # override lo completa bien).
     dm = re.search(r"\n([A-ZÁÉÍÓÚÑ][^\n]+?)\s*\nEstreno(?:\s|\n)", text)
     if dm:
-        out["director"] = re.sub(r"\s+", " ", dm.group(1)).strip()
+        cand = re.sub(r"\s+", " ", dm.group(1)).strip()
+        if not re.search(r"funci[óo]n|[úu]nicas?|estreno|presenta|exclusiv|anticipo|\bciclo\b",
+                         cand, re.IGNORECASE):
+            out["director"] = cand
 
     # Mes contextual: buscar "de MES" cerca del primer "Del N al N de MES" o
     # "a partir del DíaSemana N de MES".
