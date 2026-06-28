@@ -3336,3 +3336,176 @@ def scrape_bn() -> list[Screening]:
         ciclo = (og["content"].strip() if og and og.get("content") else "")
         result.extend(_bn_parse_event(soup, ciclo, url))
     return result
+
+
+# ---------------------------------------------------------------------------
+# Centro Cultural de la Cooperación  (centrocultural.coop — Drupal)
+# ---------------------------------------------------------------------------
+# La cartelera de cine vive en /cartelera-mes/1436/YYYY-MM (1436 = categoría
+# "Cine", estable entre meses). Cada evento trae una línea de fecha en
+# lenguaje natural; los formatos vistos:
+#   "Martes 2 y 9 de Junio 19:00"                  → días sueltos
+#   "Miércoles de Junio 20:00"                     → todos los miércoles del mes
+#   "Funciones: Miércoles de Marzo y Abril 20:30"  → recurrente en varios meses
+
+CCD_BASE = "https://www.centrocultural.coop"
+CCD_CINE_CAT = 1436
+
+_CCD_MESES = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
+    "noviembre": 11, "diciembre": 12,
+}
+_CCD_DIAS = {
+    "lunes": 0, "martes": 1, "miércoles": 2, "miercoles": 2, "jueves": 3,
+    "viernes": 4, "sábado": 5, "sabado": 5, "domingo": 6,
+}
+_CCD_MES_RE = re.compile(r"\b(" + "|".join(_CCD_MESES) + r")\b", re.IGNORECASE)
+_CCD_DIA_RE = re.compile(r"\b(" + "|".join(_CCD_DIAS) + r")s?\b", re.IGNORECASE)
+
+
+def _ccd_month_urls(meses: int) -> list[tuple[str, int]]:
+    """URLs de cartelera (mes actual + próximos) junto al año de referencia."""
+    today = date.today()
+    out: list[tuple[str, int]] = []
+    y, m = today.year, today.month
+    for _ in range(max(1, meses)):
+        out.append((f"{CCD_BASE}/cartelera-mes/{CCD_CINE_CAT}/{y:04d}-{m:02d}", y))
+        m += 1
+        if m > 12:
+            m, y = 1, y + 1
+    return out
+
+
+def _ccd_month_year(base_year: int, month: int, today: date) -> int:
+    """Resuelve el año real de un mes nombrado (cruce diciembre→enero)."""
+    if date(base_year, month, 28) < today - timedelta(days=40):
+        return base_year + 1
+    return base_year
+
+
+def _ccd_expand_fecha(fecha_text: str, base_year: int,
+                      today: date) -> list[tuple[str, str]]:
+    """Expande la línea de fecha en lenguaje natural a [(YYYY-MM-DD, HH:MM)]."""
+    tm = re.search(r"\b(\d{1,2})[:.](\d{2})\b", fecha_text)
+    if not tm:
+        return []
+    hora = f"{int(tm.group(1)):02d}:{tm.group(2)}"
+    # Quitamos la hora para no confundir sus dígitos con números de día.
+    body = fecha_text[:tm.start()] + fecha_text[tm.end():]
+
+    months = [_CCD_MESES[m.group(1).lower()] for m in _CCD_MES_RE.finditer(body)]
+    days = [int(n) for n in re.findall(r"\b(\d{1,2})\b", body) if 1 <= int(n) <= 31]
+    dm = _CCD_DIA_RE.search(body)
+    weekday = _CCD_DIAS[dm.group(1).lower()] if dm else None
+
+    out: list[tuple[str, str]] = []
+    if days:
+        # Días sueltos: "Martes 2 y 9 de Junio 19:00".
+        if not months:
+            return []
+        month = months[0]
+        yr = _ccd_month_year(base_year, month, today)
+        for day in days:
+            try:
+                d = date(yr, month, day)
+            except ValueError:
+                continue
+            out.append((d.isoformat(), hora))
+    elif weekday is not None and months:
+        # Recurrente: "Miércoles de Junio 20:00" → todos los miércoles del mes.
+        for month in months:
+            yr = _ccd_month_year(base_year, month, today)
+            d = date(yr, month, 1)
+            while d.month == month:
+                if d.weekday() == weekday:
+                    out.append((d.isoformat(), hora))
+                d += timedelta(days=1)
+    return out
+
+
+def _ccd_meta(desc: str) -> tuple[str, Optional[int]]:
+    """Extrae (director, duración_min) de la meta-descripción del evento."""
+    director = ""
+    m = re.search(r"(?:Gui[oó]n y direcci[oó]n|Direcci[oó]n|Dirige)\s*:?\s*"
+                  r"([^\n.]+)", desc, re.IGNORECASE)
+    if m:
+        director = re.split(
+            r"\b(?:Duraci|Elenco|G[eé]nero|Guion|Pa[ií]s|A[ñn]o|Productor|Reparto)",
+            m.group(1))[0].strip(" .,")
+    else:
+        m = re.match(r"\s*De\s+(.+?)\.", desc)
+        if m:
+            director = m.group(1).strip(" .,")
+    dm = re.search(r"(\d{1,3})\s*minutos", desc, re.IGNORECASE)
+    duration = int(dm.group(1)) if dm else None
+    return director, duration
+
+
+def scrape_ccd(meses: int = 3) -> list[Screening]:
+    """
+    Scrapea la cartelera de cine del Centro Cultural de la Cooperación.
+    Recorre el mes actual y los próximos (`meses`), expandiendo la línea de
+    fecha en lenguaje natural de cada evento a funciones concretas.
+    """
+    today = date.today()
+    result: list[Screening] = []
+    seen: set[tuple] = set()
+    meta_cache: dict[str, tuple[str, Optional[int]]] = {}
+
+    for url, year in _ccd_month_urls(meses):
+        try:
+            soup = fetch_html(url)
+        except Exception:
+            continue
+
+        for div in soup.find_all("div", class_="info-evento"):
+            a = div.find("a", href=re.compile(r"/eventos/"))
+            if not a:
+                continue
+            title = a.get_text(strip=True)
+            href = a.get("href", "")
+            ev_url = href if href.startswith("http") else CCD_BASE + href
+
+            # La línea de fecha es el nodo de texto suelto dentro de info-evento
+            # ("Martes 2 y 9 de Junio 19:00"). Fallback: el span dd/mm/aaaa.
+            fecha_text = " ".join(
+                t.strip() for t in div.find_all(string=True, recursive=False)
+                if t.strip())
+            if not fecha_text:
+                sp = div.find("span", class_="date-display-single")
+                fecha_text = sp.get_text(strip=True) if sp else ""
+
+            dates = _ccd_expand_fecha(fecha_text, year, today)
+            if not dates:
+                continue
+
+            if ev_url not in meta_cache:
+                director, duration = "", None
+                try:
+                    dsoup = fetch_html(ev_url)
+                    dm = dsoup.find("meta", attrs={"name": "description"})
+                    if dm and dm.get("content"):
+                        director, duration = _ccd_meta(dm["content"])
+                except Exception:
+                    pass
+                meta_cache[ev_url] = (director, duration)
+            director, duration = meta_cache[ev_url]
+
+            for fecha, hora in dates:
+                if fecha < today.isoformat():
+                    continue
+                key = (title, fecha, hora)
+                if key in seen:
+                    continue
+                seen.add(key)
+                result.append(Screening(
+                    cine="Centro Cultural de la Cooperación",
+                    title=title,
+                    fecha=fecha,
+                    hora=hora,
+                    ticket_url=ev_url,
+                    director=director,
+                    duration=duration,
+                ))
+    return result

@@ -147,7 +147,20 @@
       .updated-badge {
           font-size: 0.65rem;
         }
-         
+
+      /* En mobile el badge "Actualizado" baja a su propia línea (alineado a la
+         derecha) para no pisar el subtítulo del header. */
+      @media (max-width: 768px) {
+        .header-main-content { flex-wrap: wrap; }
+        .header-left { flex: 1 1 auto; min-width: 0; }
+        header .subtitle { white-space: normal; }
+        .header-right {
+          width: 100%;
+          flex-direction: row;
+          justify-content: flex-end;
+          margin-top: 4px;
+        }
+      }
 
 /* ── Day tabs ── */
     .day-tabs-wrap {
@@ -306,69 +319,23 @@
     .search-input:focus { outline: none; border-color: var(--accent); }
     .search-input::placeholder { color: var(--muted); }
 
-    /* ── Newsletter footer ── */
+    /* ── Footer de contacto ── */
     .site-footer {
       border-top: 1px solid var(--border);
       padding: 1.5rem 2rem;
       margin-top: 1rem;
     }
-    .newsletter-form {
-      max-width: 28rem;
-      display: flex; flex-direction: column; gap: 0.4rem;
-    }
-    .newsletter-label {
-      font-size: 0.72rem;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-    }
-    .newsletter-input-wrap { display: flex; gap: 0.4rem; }
-    .newsletter-form input[type="email"] {
-      flex: 1;
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 0.4rem 0.7rem;
-      border-radius: 3px;
+    .contact-line {
       font-size: 0.8rem;
-      font-family: inherit;
-      transition: border-color 0.12s;
-    }
-    .newsletter-form input[type="email"]:focus {
-      outline: none;
-      border-color: var(--accent);
-    }
-    .newsletter-form input[type="email"]::placeholder { color: var(--muted); }
-    .newsletter-form button {
-      background: var(--bg3);
-      border: 1px solid var(--border);
-      color: var(--text);
-      padding: 0.4rem 0.9rem;
-      border-radius: 3px;
-      font-size: 0.78rem;
-      cursor: pointer;
-      transition: all 0.12s;
-    }
-    .newsletter-form button:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #000;
-      font-weight: 600;
-    }
-    .newsletter-form button:disabled {
-      opacity: 0.6;
-      cursor: default;
-      background: var(--bg3);
-      color: var(--accent);
-      border-color: var(--accent);
-    }
-    .newsletter-msg {
-      font-size: 0.78rem;
+      color: var(--muted);
       margin: 0;
-      padding-top: 0.2rem;
     }
-    .newsletter-msg.ok  { color: var(--accent); }
-    .newsletter-msg.err { color: #d97766; }
+    .contact-line a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .contact-line a:hover { text-decoration: underline; }
 
     /* ── Main content ── */
     main { padding: 1.5rem 2rem; }
@@ -512,6 +479,7 @@
     .cine-filo     { border-color: #2f2a3a; color: #9988cc; }
     .cine-bn       { border-color: #30331f; color: #b3c46a; }
     .cine-cc25     { border-color: #2d2640; color: #a585e0; }
+    .cine-ccd      { border-color: #33231f; color: #d98a66; }
     /* Comerciales — paleta gris/azulada para diferenciarlos visualmente */
     .cine-cinemark { border-color: #2a2a2a; color: #aaa; }
     .cine-hoyts    { border-color: #2a2a2a; color: #aaa; }
@@ -669,6 +637,7 @@
   <button class="filter-btn" data-cine="Filo Cine">Filo Cine</button>
   <button class="filter-btn" data-cine="Biblioteca Nacional">Biblioteca Nacional</button>
   <button class="filter-btn" data-cine="Centro Cultural 25 de Mayo">CC 25 de Mayo</button>
+  <button class="filter-btn" data-cine="Centro Cultural de la Cooperación">La Cooperación</button>
   <button class="filter-btn commercial-chip" data-cine="Cinemark" hidden>Cinemark</button>
   <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
@@ -682,71 +651,10 @@
 <main id="main"></main>
 
 <footer class="site-footer">
-  <form id="newsletter-form" class="newsletter-form">
-    <label for="newsletter-email" class="newsletter-label">
-      Recibí la cartelera semanal por mail
-    </label>
-    <div class="newsletter-input-wrap">
-      <input
-        id="newsletter-email"
-        type="email"
-        name="email"
-        placeholder="tu@email.com"
-        required
-        autocomplete="email"
-      />
-      <button type="submit" id="newsletter-submit">Suscribirme</button>
-    </div>
-    <p id="newsletter-msg" class="newsletter-msg" hidden></p>
-  </form>
-
-  <script>
-    (function() {
-      // URL del Web App de Apps Script (la generás después de Deploy → Web app).
-      // Hasta que tenga valor real, el form solo muestra el éxito sin guardar.
-      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwFSvoEUdjrljSnxSZ-N3a82EC_pwc_V0aY_3MA3Du9BHQfNPhuxXXrp_YNBgfUAZCE/exec';
-
-      const form = document.getElementById('newsletter-form');
-      const input = document.getElementById('newsletter-email');
-      const btn = document.getElementById('newsletter-submit');
-      const msg = document.getElementById('newsletter-msg');
-
-      function showMsg(text, ok) {
-        msg.textContent = text;
-        msg.hidden = false;
-        msg.classList.remove('ok', 'err');
-        msg.classList.add(ok ? 'ok' : 'err');
-      }
-
-      form.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const email = (input.value || '').trim();
-        if (!email) return;
-        btn.disabled = true;
-        btn.textContent = 'Enviando…';
-        try {
-          if (APPS_SCRIPT_URL.startsWith('REEMPLAZAR')) {
-            throw new Error('APPS_SCRIPT_URL no configurada');
-          }
-          await fetch(APPS_SCRIPT_URL, {
-            method: 'POST',
-            mode: 'no-cors',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: 'email=' + encodeURIComponent(email),
-          });
-          // mode:'no-cors' da respuesta opaque pero el doPost igual ejecuta.
-          showMsg('✓ ¡Ya estás suscripto! La próxima cartelera te llega el jueves.', true);
-          input.value = '';
-          btn.textContent = 'Suscripto';
-        } catch (err) {
-          console.warn('newsletter submit error', err);
-          showMsg('No pudimos suscribirte. Probá de nuevo en un rato.', false);
-          btn.disabled = false;
-          btn.textContent = 'Suscribirme';
-        }
-      });
-    })();
-  </script>
+  <p class="contact-line">
+    ¿Tenés sugerencias o propuestas? Escribinos a
+    <a href="mailto:contacto@sitedigo.com">contacto@sitedigo.com</a>
+  </p>
 </footer>
 
 <script>
@@ -775,6 +683,7 @@ const CINE_ADDRESSES = {
   'Filo Cine':                'Puan 480 / Bonifacio 1349',
   'Biblioteca Nacional':      'Agüero 2502 · Auditorio J. L. Borges',
   'Centro Cultural 25 de Mayo': 'Av. Triunvirato 4444, Villa Urquiza',
+  'Centro Cultural de la Cooperación': 'Av. Corrientes 1543 · Sala Raúl González Tuñón',
   // Comerciales — una entrada por sucursal
   'Cinemark Caballito':       'Av. La Plata 96',
   'Cinemark Palermo':         'Beruti 3399',
@@ -803,7 +712,7 @@ let sortKey = 'hora';
 let sortDir = 'asc';
 
 // ── Sistema de estrellas / "agendar en Google Calendar" ────────────────
-// Apps Script URL (mismo del newsletter); recibe POST con action=star.
+// Apps Script URL; recibe POST con action=star.
 const STAR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwFSvoEUdjrljSnxSZ-N3a82EC_pwc_V0aY_3MA3Du9BHQfNPhuxXXrp_YNBgfUAZCE/exec';
 
 function filmKey(s) {
@@ -1112,7 +1021,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';
