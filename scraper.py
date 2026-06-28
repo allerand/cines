@@ -3509,3 +3509,217 @@ def scrape_ccd(meses: int = 3) -> list[Screening]:
                     duration=duration,
                 ))
     return result
+
+
+# ---------------------------------------------------------------------------
+# Casa Nacional del Bicentenario  (casadelbicentenario.cultura.gob.ar)
+# ---------------------------------------------------------------------------
+# Las actividades de cine están taggeadas con badge "Cine" en /actividades/.
+# Cada actividad es un ciclo cuyo cuerpo lista una función por fecha, p. ej.:
+#   "Domingo 7. 19HS Muña Muña (2025) Dur. 67 min. Guion y dirección: ..."
+#   "Domingo 5 de julio, 19HS Cinéfilos (2024) Dir. Arnaud Desplechin. 88 min"
+# El mes/año se toma del bloque "Cuándo" (rango de fechas) y la hora del
+# bloque "Horario" si la línea de función no la trae.
+
+CB_BASE = "https://casadelbicentenario.cultura.gob.ar"
+CB_LISTING = CB_BASE + "/actividades/"
+
+_CB_MESES = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
+    "noviembre": 11, "diciembre": 12,
+}
+_CB_DOW = r"lunes|martes|mi[eé]rcoles|jueves|viernes|s[áa]bado|domingo"
+_CB_FUNC_RE = re.compile(
+    r"^(?:" + _CB_DOW + r")\s+(\d{1,2})"
+    r"(?:\s+de\s+(" + "|".join(_CB_MESES) + r"))?"
+    r"[.,]?\s*(?:(\d{1,2})(?::(\d{2}))?\s*HS\b)?",
+    re.IGNORECASE)
+_CB_RANGE_RE = re.compile(
+    r"(\d{1,2})\s+(" + "|".join(_CB_MESES) + r")\s+(\d{4})", re.IGNORECASE)
+
+
+def _cb_section(soup, label: str) -> str:
+    """Texto de una sección del sidebar (Cuándo / Horario / Entrada)."""
+    for h in soup.find_all(["h4", "h3"]):
+        if h.get_text(strip=True).lower() == label:
+            parts = []
+            for sib in h.next_siblings:
+                if getattr(sib, "name", None) in ("h4", "h3"):
+                    break
+                t = sib.get_text(" ", strip=True) if hasattr(sib, "get_text") else ""
+                if t:
+                    parts.append(t)
+            return " ".join(parts)
+    return ""
+
+
+def _cb_cuando(soup) -> "tuple[Optional[date], Optional[date]]":
+    txt = _cb_section(soup, "cuándo")
+    ds = []
+    for d, m, y in _CB_RANGE_RE.findall(txt):
+        try:
+            ds.append(date(int(y), _CB_MESES[m.lower()], int(d)))
+        except ValueError:
+            pass
+    return (min(ds), max(ds)) if ds else (None, None)
+
+
+def _cb_horario(soup) -> str:
+    m = re.search(r"(\d{1,2}):(\d{2})", _cb_section(soup, "horario"))
+    return f"{int(m.group(1)):02d}:{m.group(2)}" if m else "19:00"
+
+
+def _cb_resolve_date(day: int, month: int, start: "Optional[date]",
+                     end: "Optional[date]") -> "Optional[date]":
+    years = {start.year, end.year} if start and end else (
+        {start.year} if start else {date.today().year})
+    for y in years:
+        try:
+            d = date(y, month, day)
+        except ValueError:
+            continue
+        if start and end and start - timedelta(days=3) <= d <= end + timedelta(days=3):
+            return d
+    try:
+        return date(min(years), month, day)
+    except ValueError:
+        return None
+
+
+def _cb_parse_film(rest: str) -> "tuple[str, Optional[int], str, Optional[int]]":
+    """De la cola de una línea de función saca (título, año, director, duración)."""
+    rest = re.sub(r"^(PRE\s*ESTRENO|ESTRENO|FUNCI[ÓO]N\s+ESPECIAL)[\s:.\-]*",
+                  "", rest, flags=re.IGNORECASE).strip()
+    ym = re.search(r"\((\d{4})\)", rest)
+    year = int(ym.group(1)) if ym else None
+    title = (rest[:ym.start()] if ym
+             else re.split(r"\bDir\b|Direcci|Guion|Dur\.", rest)[0]).strip(" .,–-")
+    director = ""
+    dm = re.search(r"(?:Guion y direcci[oó]n|Direcci[oó]n|Dir)\.?\s*:?\s*([^.\n]+)",
+                   rest, re.IGNORECASE)
+    if dm:
+        cand = re.split(r"\b\d+\s*min", dm.group(1))[0].strip(" .,")
+        # Sin delimitador claro la sinopsis se pega al nombre: si es largo, lo
+        # dejamos vacío y que Letterboxd complete el director.
+        if len(cand) <= 40 and len(cand.split()) <= 5:
+            director = cand
+    durm = re.search(r"(\d{1,3})\s*(?:min|minutos)\b", rest, re.IGNORECASE)
+    duration = int(durm.group(1)) if durm else None
+    return title, year, director, duration
+
+
+def _cb_parse_detail(soup, url: str) -> list[Screening]:
+    h1 = soup.find(["h1", "h2"])
+    title_full = h1.get_text(" ", strip=True) if h1 else ""
+    ciclo = title_full.split("|", 1)[1].strip() if "|" in title_full else title_full
+    start, end = _cb_cuando(soup)
+    hora_default = _cb_horario(soup)
+    art = soup.find("div", class_="article") or soup
+
+    out: list[Screening] = []
+    seen: set[tuple] = set()
+    for p in art.find_all(["p", "li"]):
+        t = re.sub(r"\s+", " ", p.get_text(" ", strip=True)).strip()
+        m = _CB_FUNC_RE.match(t)
+        if not m:
+            continue
+        day = int(m.group(1))
+        month = _CB_MESES[m.group(2).lower()] if m.group(2) else (
+            start.month if start else None)
+        if not month:
+            continue
+        hora = (f"{int(m.group(3)):02d}:{int(m.group(4) or 0):02d}"
+                if m.group(3) else hora_default)
+        title, year, director, duration = _cb_parse_film(t[m.end():].strip())
+        if not title or len(title) < 2:
+            continue
+        d = _cb_resolve_date(day, month, start, end)
+        if not d:
+            continue
+        key = (title, d.isoformat(), hora)
+        if key in seen:
+            continue
+        seen.add(key)
+        out.append(Screening(
+            cine="Casa del Bicentenario",
+            title=title,
+            fecha=d.isoformat(),
+            hora=hora,
+            ticket_url=url,
+            ciclo=ciclo,
+            director=director,
+            year=year,
+            duration=duration,
+        ))
+
+    # Fallback: actividad de cine sin líneas de función parseables → 1 función
+    # en la fecha de inicio, con el título del ciclo.
+    if not out and start:
+        out.append(Screening(
+            cine="Casa del Bicentenario",
+            title=ciclo,
+            fecha=start.isoformat(),
+            hora=hora_default,
+            ticket_url=url,
+            ciclo="",
+        ))
+    return out
+
+
+def _cb_cine_urls(max_pages: int = 3) -> list[str]:
+    """Descubre URLs de actividades con badge 'Cine' desde /actividades/."""
+    urls: list[str] = []
+    seen: set[str] = set()
+    for page in range(1, max_pages + 1):
+        u = CB_LISTING if page == 1 else f"{CB_LISTING}?page={page}"
+        try:
+            soup = fetch_html(u)
+        except Exception:
+            break
+        cards = soup.select("div.agenda div.card")
+        if not cards:
+            break
+        for card in cards:
+            badge = card.find("span", class_="badge")
+            if not badge or badge.get_text(strip=True).lower() != "cine":
+                continue
+            a = (card.select_one("h4.card-title a[href]")
+                 or card.find("a", href=re.compile(r"/actividad/")))
+            if not a:
+                continue
+            href = a["href"]
+            if href.startswith("//"):
+                href = "https:" + href
+            elif href.startswith("/"):
+                href = CB_BASE + href
+            href = href.split("?")[0]
+            if href not in seen:
+                seen.add(href)
+                urls.append(href)
+    return urls
+
+
+def scrape_cb(max_pages: int = 3) -> list[Screening]:
+    """
+    Scrapea la cartelera de cine de la Casa Nacional del Bicentenario.
+    Descubre las actividades de cine y parsea cada ciclo en funciones
+    individuales (una película por fecha).
+    """
+    today = date.today()
+    result: list[Screening] = []
+    seen: set[tuple] = set()
+    for url in _cb_cine_urls(max_pages):
+        try:
+            soup = fetch_html(url)
+        except Exception:
+            continue
+        for s in _cb_parse_detail(soup, url):
+            if s.fecha < today.isoformat():
+                continue
+            key = (s.title, s.fecha, s.hora)
+            if key in seen:
+                continue
+            seen.add(key)
+            result.append(s)
+    return result
