@@ -366,33 +366,40 @@ async def run_scraper(semanas: int = 9) -> None:
         except Exception as e:
             print(f"  ↳ Metadata overrides omitidos: {e}")
 
-    # La Nación sólo expone el día actual para cines comerciales.
-    # Mergeamos con el JSON anterior para preservar funciones futuras ya capturadas.
+    # Merge con la corrida anterior para no perder funciones que el scrape de hoy
+    # no capturó. Dos casos:
+    #   1) Comerciales: La Nación sólo expone HOY, así que preservamos sus
+    #      funciones FUTURAS ya capturadas en corridas previas.
+    #   2) Eventos del CTBA (Lugones, etc.) que en su ÚLTIMO día caen del listado
+    #      de "próximos" y dejan de scrapearse → preservamos las funciones de HOY
+    #      que estaban antes y ahora faltan (cualquier sala).
     COMMERCIAL_PREFIXES = ('Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex')
     if CARTELERA_JSON.exists():
         try:
             prev_data = json.loads(CARTELERA_JSON.read_text(encoding="utf-8"))
             today_str = date.today().isoformat()
-            prev_future_commercial = [
-                s for s in prev_data.get("screenings", [])
-                if any(s.get("cine", "").startswith(p) for p in COMMERCIAL_PREFIXES)
-                and s.get("fecha", "") > today_str
-            ]
-            if prev_future_commercial:
-                existing_keys = {
-                    (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
-                    for s in screenings_out
-                }
-                added = 0
-                for s in prev_future_commercial:
-                    k = (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
-                    if k not in existing_keys:
-                        screenings_out.append(s)
-                        existing_keys.add(k)
-                        added += 1
-                if added:
-                    screenings_out.sort(key=sort_key)
-                    print(f"  ↳ Mergeo {added} funciones comerciales de días futuros")
+
+            def _key(s):
+                return (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
+
+            existing_keys = {_key(s) for s in screenings_out}
+            restored_comm = restored_today = 0
+            for s in prev_data.get("screenings", []):
+                f = s.get("fecha", "")
+                is_comm = any(s.get("cine", "").startswith(p) for p in COMMERCIAL_PREFIXES)
+                keep = (is_comm and f > today_str) or (f == today_str)
+                if not keep or _key(s) in existing_keys:
+                    continue
+                screenings_out.append(s)
+                existing_keys.add(_key(s))
+                if f == today_str:
+                    restored_today += 1
+                else:
+                    restored_comm += 1
+            if restored_comm or restored_today:
+                screenings_out.sort(key=sort_key)
+                print(f"  ↳ Merge: +{restored_comm} comerciales futuras, "
+                      f"+{restored_today} funciones de hoy preservadas")
         except Exception as e:
             print(f"  ↳ Merge omitido: {e}")
 
