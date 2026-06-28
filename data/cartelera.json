@@ -1,201 +1,6 @@
 {
-  "updated": "2026-06-28T10:24:52",
+  "updated": "2026-06-28T22:51:23",
   "screenings": [
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-06-28",
-      "hora": "00:05",
-      "title_es": "El día de la revelación",
-      "title_en": "Disclosure Day",
-      "director": "Steven Spielberg",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 145,
-      "genre": "Thriller, Misterio",
-      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-06-28",
-      "hora": "00:15",
-      "title_es": "Toy Story 5",
-      "title_en": "Toy Story 5",
-      "director": "Andrew Stanton",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 102,
-      "genre": "Comedia, Familiar",
-      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-06-28",
-      "hora": "00:30",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "director": "Curry Barker",
-      "country": "Usa, Uk",
-      "year": 2025,
-      "duration": 108,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-06-28",
-      "hora": "00:30",
-      "title_es": "Scary Movie: Terroríficamente Incorrecta",
-      "title_en": "Scary Movie",
-      "director": "Michael Tiddes",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 96,
-      "genre": "Comedia, Terror",
-      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-06-28",
-      "hora": "00:35",
-      "title_es": "Supergirl",
-      "title_en": "Supergirl",
-      "director": "Craig Gillespie",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 107,
-      "genre": "Acción, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/supergirl-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-06-28",
-      "hora": "00:40",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "director": "Curry Barker",
-      "country": "Usa, Uk",
-      "year": 2025,
-      "duration": 108,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-06-28",
-      "hora": "00:40",
-      "title_es": "BLEACH: Thousand-Year Blood War - The Calamity",
-      "title_en": "Bleach: Thousand-Year Blood War - The Calamity",
-      "director": "",
-      "country": "Japan",
-      "year": 2026,
-      "duration": 80,
-      "genre": "Ciencia ficción, Acción",
-      "letterboxd": "https://letterboxd.com/film/bleach-thousand-year-blood-war-the-calamity/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-06-28",
-      "hora": "00:50",
-      "title_es": "Toy Story 5",
-      "title_en": "Toy Story 5",
-      "director": "Andrew Stanton",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 102,
-      "genre": "Comedia, Familiar",
-      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-06-28",
-      "hora": "00:55",
-      "title_es": "jackass la última y nos vamos",
-      "title_en": "Jackass: Best and Last",
-      "director": "Jeff Tremaine",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 92,
-      "genre": "Acción, Documental",
-      "letterboxd": "https://letterboxd.com/film/jackass-best-and-last/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-06-28",
-      "hora": "01:00",
-      "title_es": "Supergirl",
-      "title_en": "Supergirl",
-      "director": "Craig Gillespie",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 107,
-      "genre": "Acción, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/supergirl-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-06-28",
-      "hora": "01:10",
-      "title_es": "Scary Movie: Terroríficamente Incorrecta",
-      "title_en": "Scary Movie",
-      "director": "Michael Tiddes",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 96,
-      "genre": "Comedia, Terror",
-      "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-06-28",
-      "hora": "01:10",
-      "title_es": "Backrooms: sin salida",
-      "title_en": "Backrooms",
-      "director": "Kane Parsons",
-      "country": "USA, Canada",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Misterio, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-06-28",
-      "hora": "01:20",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "director": "Curry Barker",
-      "country": "Usa, Uk",
-      "year": 2025,
-      "duration": 108,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
     {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-28",
@@ -1037,21 +842,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-28",
-      "hora": "14:30",
-      "title_es": "Una directora extraordinaria",
-      "title_en": "Una directora Extraordinaria",
-      "director": "Fabiana Urricelqui",
-      "country": "",
-      "year": null,
-      "duration": 85,
-      "genre": "Comedia, Drama",
-      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-06-28",
       "hora": "14:30",
@@ -1262,21 +1052,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-28",
-      "hora": "15:00",
-      "title_es": "Nada entre los dos",
-      "title_en": "Nothing Between Us",
-      "director": "Juan Taratuto",
-      "country": "Mexico, USA",
-      "year": 2026,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-06-28",
       "hora": "15:00",
@@ -1455,21 +1230,6 @@
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-28",
-      "hora": "15:15",
-      "title_es": "Hotline",
-      "title_en": "Hotline",
-      "director": "Jerry Jameson",
-      "country": "United States of America",
-      "year": 1982,
-      "duration": 90,
-      "genre": "Crimen, Terror",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=918",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -1997,21 +1757,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Munro",
-      "fecha": "2026-06-28",
-      "hora": "16:30",
-      "title_es": "Frozen: El reino del hielo",
-      "title_en": "Frozen",
-      "director": "Chris Buck y Jennifer Lee",
-      "country": "Ee.uu",
-      "year": 2013,
-      "duration": 103,
-      "genre": "Fantasía, Animación",
-      "letterboxd": "https://letterboxd.com/film/frozen-2013/",
-      "ticket_url": "https://lumiton.ar/evento/frozen-una-aventura-congelada/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-06-28",
       "hora": "16:30",
@@ -2117,21 +1862,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-28",
-      "hora": "16:45",
-      "title_es": "Lumbre",
-      "title_en": "Lumbre",
-      "director": "Francisco Del Sel",
-      "country": "",
-      "year": null,
-      "duration": 73,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=917",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-06-28",
       "hora": "16:45",
@@ -2175,21 +1905,6 @@
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-28",
-      "hora": "17:00",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Germany",
-      "year": 2024,
-      "duration": 96,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -2280,21 +1995,6 @@
       "letterboxd": "https://letterboxd.com/film/supergirl-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-28",
-      "hora": "17:15",
-      "title_es": "El Partido",
-      "title_en": "The Match",
-      "director": "Juan Cabral y Santiago Franco",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -2414,21 +2114,6 @@
       "genre": "Misterio, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/backrooms-2026/",
       "ticket_url": "https://www.todoshowcase.com/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine York",
-      "fecha": "2026-06-28",
-      "hora": "17:30",
-      "title_es": "¡caigan las Rosas Blancas!",
-      "title_en": "White Roses, Fall!",
-      "director": "Albertina Carri",
-      "country": "Argentina, España, Brasil",
-      "year": 2024,
-      "duration": 120,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/caigan-las-rosas-blancas/",
-      "ticket_url": "https://lumiton.ar/evento/caigan-las-rosas-blancas-2/",
       "ciclo": ""
     },
     {
@@ -3017,36 +2702,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Munro",
-      "fecha": "2026-06-28",
-      "hora": "18:30",
-      "title_es": "Parque Lezama",
-      "title_en": "Strangers in the Park",
-      "director": "Juan José Campanella",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 115,
-      "genre": "Comedia, Drama",
-      "letterboxd": "https://letterboxd.com/film/parque-lezama/",
-      "ticket_url": "https://lumiton.ar/evento/parque-lezama/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-28",
-      "hora": "18:30",
-      "title_es": "Una directora extraordinaria",
-      "title_en": "Una directora Extraordinaria",
-      "director": "Fabiana Urricelqui",
-      "country": "",
-      "year": null,
-      "duration": 85,
-      "genre": "Comedia, Drama",
-      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-06-28",
       "hora": "18:30",
@@ -3285,21 +2940,6 @@
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-28",
-      "hora": "19:15",
-      "title_es": "Conociendo la raíz",
-      "title_en": "Conociendo la raíz",
-      "director": "Hugo Meyer, Micaela Viviani",
-      "country": "",
-      "year": null,
-      "duration": 128,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -4172,21 +3812,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cacodelphia",
-      "fecha": "2026-06-28",
-      "hora": "21:00",
-      "title_es": "Repulsión",
-      "title_en": "REPULSIÓN",
-      "director": "Roman Polanski",
-      "country": "United Kingdom",
-      "year": 1965,
-      "duration": 105,
-      "genre": "Drama, Thriller",
-      "letterboxd": "",
-      "ticket_url": "https://cineartecacodelphia.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-06-28",
       "hora": "21:00",
@@ -4260,6 +3885,21 @@
       "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/fcd99c59-3d78-4155-badb-bae92d953069",
       "ciclo": "Syncro Film Fest - Competencia Universos paralelos – Programa 3"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-06-28",
+      "hora": "21:00",
+      "title_es": "Repulsión",
+      "title_en": "REPULSIÓN",
+      "director": "Roman Polanski",
+      "country": "United Kingdom",
+      "year": 1965,
+      "duration": 105,
+      "genre": "Drama, Thriller",
+      "letterboxd": "",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Cine Gaumont",
@@ -16341,7 +15981,7 @@
       "fecha": "2026-07-02",
       "hora": "19:50",
       "title_es": "Hojas secas",
-      "title_en": "Dry Leaf",
+      "title_en": "Hojas secas",
       "director": "Alexandre Koberidze",
       "country": "",
       "year": 2025,
@@ -16349,7 +15989,8 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/dry-leaf/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
-      "ciclo": "Estreno"
+      "ciclo": "Estreno",
+      "original_title": "Dry Leaf"
     },
     {
       "cine": "Cinemark Palermo",
@@ -17871,7 +17512,7 @@
       "fecha": "2026-07-04",
       "hora": "19:50",
       "title_es": "Hojas secas",
-      "title_en": "Dry Leaf",
+      "title_en": "Hojas secas",
       "director": "Alexandre Koberidze",
       "country": "",
       "year": 2025,
@@ -17879,7 +17520,8 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/dry-leaf/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
-      "ciclo": "Estreno"
+      "ciclo": "Estreno",
+      "original_title": "Dry Leaf"
     },
     {
       "cine": "Cinemark Palermo",
@@ -18426,7 +18068,7 @@
       "fecha": "2026-07-05",
       "hora": "17:00",
       "title_es": "Hojas secas",
-      "title_en": "Dry Leaf",
+      "title_en": "Hojas secas",
       "director": "Alexandre Koberidze",
       "country": "",
       "year": 2025,
@@ -18434,7 +18076,8 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/dry-leaf/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
-      "ciclo": "Estreno"
+      "ciclo": "Estreno",
+      "original_title": "Dry Leaf"
     },
     {
       "cine": "Hoyts Abasto",
@@ -20106,7 +19749,7 @@
       "fecha": "2026-07-07",
       "hora": "19:50",
       "title_es": "Hojas secas",
-      "title_en": "Dry Leaf",
+      "title_en": "Hojas secas",
       "director": "Alexandre Koberidze",
       "country": "",
       "year": 2025,
@@ -20114,7 +19757,8 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/dry-leaf/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
-      "ciclo": "Estreno"
+      "ciclo": "Estreno",
+      "original_title": "Dry Leaf"
     },
     {
       "cine": "Cinemark Palermo",
@@ -20616,7 +20260,7 @@
       "fecha": "2026-07-08",
       "hora": "17:00",
       "title_es": "Hojas secas",
-      "title_en": "Dry Leaf",
+      "title_en": "Hojas secas",
       "director": "Alexandre Koberidze",
       "country": "",
       "year": 2025,
@@ -20624,7 +20268,8 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/dry-leaf/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
-      "ciclo": "Estreno"
+      "ciclo": "Estreno",
+      "original_title": "Dry Leaf"
     },
     {
       "cine": "Hoyts Abasto",
@@ -21186,7 +20831,7 @@
       "fecha": "2026-07-11",
       "hora": "17:00",
       "title_es": "Hojas secas",
-      "title_en": "Dry Leaf",
+      "title_en": "Hojas secas",
       "director": "Alexandre Koberidze",
       "country": "",
       "year": 2025,
@@ -21194,7 +20839,8 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/dry-leaf/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
-      "ciclo": "Estreno"
+      "ciclo": "Estreno",
+      "original_title": "Dry Leaf"
     },
     {
       "cine": "Cine York",
@@ -22956,7 +22602,7 @@
       "fecha": "2026-07-21",
       "hora": "19:50",
       "title_es": "Hojas secas",
-      "title_en": "Dry Leaf",
+      "title_en": "Hojas secas",
       "director": "Alexandre Koberidze",
       "country": "",
       "year": 2025,
@@ -22964,7 +22610,8 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/dry-leaf/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
-      "ciclo": "Estreno"
+      "ciclo": "Estreno",
+      "original_title": "Dry Leaf"
     },
     {
       "cine": "CCK",
