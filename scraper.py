@@ -2331,56 +2331,36 @@ async def scrape_cc25(page: Page, semanas: int = 3) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
-# Centro Cultural Borges — centroculturalborges.gob.ar/disciplinas?d=cine
-# El LISTADO da la fecha de cada función (card con encabezado "01 JUL 2026" o
-# rango "DE MIE A DOM") + título + director. El DETALLE (/evento/<id>) da los
-# horarios ("14:50, 16:20, 17:50 y 19:20"), director ("Dirección: X") y
-# duración. Combinamos: fecha(s) del listado × horario(s) del detalle,
-# emparejando listado↔detalle por título.
+# Centro Cultural Borges — centroculturalborges.gob.ar
+# Consume la API pública del sitio eliminando la necesidad de automatizar el
+# navegador. Combina los datos de la cartelera general con los detalles de
+# cada evento para estructurar películas, directores, fechas y horarios.
 # ---------------------------------------------------------------------------
 
-BORGES_CINE_URL = "https://centroculturalborges.gob.ar/disciplinas?d=cine"
-# Parches para que el navegador headful no se delate como automatización y pase
-# el challenge anti-bots del sitio.
-_BORGES_STEALTH = """
-Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
-Object.defineProperty(navigator, 'languages', {get: () => ['es-AR', 'es']});
-Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]});
-window.chrome = window.chrome || {runtime: {}};
-"""
+BORGES_API_LIST = "https://centroculturalborges.gob.ar/api/public/eventos-destacados?disciplina=cine"
+BORGES_API_DETAIL = "https://centroculturalborges.gob.ar/api/public/evento-detalle?id="
+
 _BORGES_MONTHS = {
     "ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6,
     "jul": 7, "ago": 8, "sep": 9, "oct": 10, "nov": 11, "dic": 12,
 }
 _BORGES_WD = {"lun": 0, "mar": 1, "mie": 2, "jue": 3, "vie": 4, "sab": 5, "dom": 6}
 _BORGES_ACCENTS = str.maketrans("áéíóúüñÁÉÍÓÚÜÑ", "aeiouunAEIOUUN")
-# Fecha puntual del listado: "01 JUL 2026"
+
 _BORGES_DATE_RE = re.compile(
     r"\b(\d{1,2})\s+(ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)[a-z]*\.?\s+(20\d{2})\b",
     re.IGNORECASE,
 )
-# Rango semanal del listado: "DE MIE A DOM" (requiere el prefijo "DE" para no
-# confundirlo con el horario del footer "Mie a dom – 14 a 21 h").
 _BORGES_RANGE_RE = re.compile(
     r"\bde\s+(lun|mar|mi[ée]|jue|vie|s[áa]b|dom)\w*\s+a\s+(lun|mar|mi[ée]|jue|vie|s[áa]b|dom)\w*",
     re.IGNORECASE,
 )
 
-
-def _borges_norm(s: str) -> str:
-    """Normaliza un título para emparejar listado↔detalle (sin acentos, sin
-    puntuación, minúsculas)."""
-    return re.sub(r"[^a-z0-9]+", " ", (s or "").translate(_BORGES_ACCENTS).lower()).strip()
-
-
 def _borges_wd(tok: str) -> Optional[int]:
     return _BORGES_WD.get(tok.translate(_BORGES_ACCENTS).lower()[:3])
 
-
 def _borges_dates_from_label(label: str, today: date, cutoff: date) -> list[date]:
-    """Convierte el encabezado de fecha de una card en fechas concretas.
-    Soporta 'DD MMM YYYY' (puntual) y 'DE <díasem> A <díasem>' (rango semanal,
-    sin fecha de fin → se expande conservadoramente ~1 semana)."""
+    """Convierte el encabezado de fecha de la API en fechas concretas."""
     out: list[date] = []
     m = _BORGES_DATE_RE.search(label)
     if m:
@@ -2412,269 +2392,121 @@ def _borges_dates_from_label(label: str, today: date, cutoff: date) -> list[date
             d += timedelta(days=1)
     return out
 
-
-def _parse_borges_listing(flat: str, today: date, cutoff: date) -> list[dict]:
-    """Segmenta el innerText del listado por encabezados de fecha. Cada card es
-    [fecha, título, (director), sinopsis…]."""
-    lines = [l.strip() for l in (flat or "").split("\n")]
-    idxs = [i for i, l in enumerate(lines)
-            if l and (_BORGES_DATE_RE.search(l) or _BORGES_RANGE_RE.search(l))]
-    cards: list[dict] = []
-    for k, i in enumerate(idxs):
-        j = idxs[k + 1] if k + 1 < len(idxs) else len(lines)
-        seg = [x for x in lines[i:j] if x]
-        if len(seg) < 2:
-            continue
-        label = seg[0]
-        title = re.sub(r'["“”]', "", seg[1]).strip()
-        director = ""
-        if len(seg) > 2:
-            cand = seg[2]
-            if (len(cand.split()) <= 4 and not cand.endswith(".")
-                    and len(cand) <= 45 and cand.lower() != title.lower()
-                    and not _BORGES_DATE_RE.search(cand)):
-                director = cand
-        dates = _borges_dates_from_label(label, today, cutoff)
-        if title and dates:
-            cards.append({"title": title, "director": director, "dates": dates})
-    return cards
-
-
-def _borges_detail_title(h1: str, flat: str) -> str:
-    """Título del evento desde el detalle: h1 si es válido; si no, la línea corta
-    más frecuente que no sea navegación (el título suele repetirse en el hero,
-    breadcrumb y antes de la sinopsis)."""
-    NAV = {
-        "artes visuales", "teatro", "danza/performance", "danza performance",
-        "musica", "cine", "laboratorio", "inicio", "agenda", "visitar",
-        "lo que paso", "ver mas", "newsletter", "centro cultural borges",
-        "es", "en", "es / en", "menu",
-    }
-    cand = re.sub(r'["“”]', "", (h1 or "")).strip()
-    if cand and _borges_norm(cand) and _borges_norm(cand) not in NAV:
-        return cand
-    from collections import Counter
-    c: Counter = Counter()
-    for ln in (flat or "").split("\n"):
-        s = ln.strip()
-        if not (2 <= len(s) <= 60) or s.startswith(("↑", "↓")):
-            continue
-        if ":" in s or s.endswith(".") or _borges_norm(s) in NAV:
-            continue
-        c[s] += 1
-    return c.most_common(1)[0][0] if c else cand
-
-
-def _borges_detail_meta(h1: str, body: str, url: str) -> dict:
-    """Extrae del detalle: horarios, director, duración y título (para emparejar)."""
-    flat = re.sub(r"[ \t]+", " ", body or "")
-    # Horarios: en la franja entre "ver más" (si está) y los créditos
-    # ("Dirección…"), para no agarrar el "14 a 21 h" del footer.
-    a = re.search(r"ver m[áa]s", flat, re.IGNORECASE)
-    start = a.end() if a else 0
-    bm = re.search(r"\bdirecci[óo]n\b", flat[start:], re.IGNORECASE)
-    sched = flat[start: start + bm.start()] if bm else flat[start:]
-    times: list[str] = []
-    for hh, mm in re.findall(r"\b(\d{1,2}):(\d{2})\b", sched):
-        if 0 <= int(hh) <= 23:
-            times.append(f"{int(hh):02d}:{mm}")
-    if not times:
-        for hh in re.findall(r"\b(\d{1,2})\s*h\b", sched):
-            if 0 <= int(hh) <= 23:
-                times.append(f"{int(hh):02d}:00")
-    times = list(dict.fromkeys(times))
-    # Director: la línea de créditos "Dirección: X" (no "Dirección de …" ni el
-    # "Dirección\nViamonte 525" del footer, que no llevan ":").
-    director = ""
-    md = re.search(r"\bdirecci[óo]n\s*:\s*([^\n]+)", flat, re.IGNORECASE)
-    if md:
-        director = re.split(r"\s{2,}|\bguion\b|\bgui[óo]n\b",
-                            md.group(1), flags=re.IGNORECASE)[0].strip(" .,;")
-    duration = None
-    mdur = re.search(r"duraci[óo]n\s*:?\s*(\d{1,3})", flat, re.IGNORECASE)
-    if mdur:
-        duration = int(mdur.group(1))
-    return {
-        "url": url, "title": _borges_detail_title(h1, flat),
-        "times": times, "director": director, "duration": duration,
-    }
-
-
-def _borges_match(title: str, by_title: dict) -> Optional[dict]:
-    """Empareja una card del listado con el detalle por título normalizado; si no
-    hay match exacto, usa solapamiento de tokens (≥0.6) para tolerar variantes
-    ('… (DOBLE FUNCIÓN)', etc.)."""
-    n = _borges_norm(title)
-    if n in by_title:
-        return by_title[n]
-    ct = set(n.split())
-    best, best_score = None, 0.0
-    for k, meta in by_title.items():
-        kt = set(k.split())
-        if not kt:
-            continue
-        score = len(ct & kt) / max(1, min(len(ct), len(kt)))
-        if score > best_score:
-            best, best_score = meta, score
-    return best if best_score >= 0.6 else None
-
-
-async def _borges_goto(page: Page, url: str, timeout: int = 30000) -> bool:
-    """goto con reintentos. La page se comparte entre scrapers; a veces una
-    navegación pendiente del scraper anterior (p.ej. CC25) interrumpe la
-    nuestra ("interrupted by another navigation"). Estabilizamos con about:blank
-    y reintentamos."""
-    for attempt in range(4):
-        try:
-            await page.goto(url, wait_until="domcontentloaded", timeout=timeout)
-            return True
-        except Exception as e:
-            if attempt == 3:
-                raise
-            # Cancelar cualquier navegación en vuelo y reintentar.
-            try:
-                await page.goto("about:blank", timeout=8000)
-            except Exception:
-                pass
-            await page.wait_for_timeout(1200)
-    return False
-
-
-async def _borges_frames_dump(page: Page) -> tuple[str, str]:
-    """Junta innerText + HTML de TODOS los frames (el contenido podría estar en
-    un iframe, que `page.content()` no captura)."""
-    text, html = "", ""
-    for fr in page.frames:
-        try:
-            text += "\n" + (await fr.evaluate(
-                "document.body ? document.body.innerText : ''") or "")
-        except Exception:
-            pass
-        try:
-            html += "\n" + (await fr.content() or "")
-        except Exception:
-            pass
-    return text, html
-
-
-async def _borges_listing_content(page: Page) -> tuple[str, str]:
-    """Devuelve (innerText, html) del listado. Fase 1: esperar QUIETO a que el
-    challenge anti-bots se resuelva solo (sin scrollear ni tocar nada, para no
-    interferir con la verificación). Fase 2: ya en la página real, scrollear para
-    forzar el lazy-load de las cards."""
-    text, html = "", ""
-    # Fase 1 — espera pasiva hasta que aparezca contenido real (encabezado de
-    # fecha o link /evento/). Mientras tanto NO interactuamos con la página.
-    for _ in range(40):  # hasta ~60s
-        text, html = await _borges_frames_dump(page)
-        if (_BORGES_DATE_RE.search(text) or _BORGES_RANGE_RE.search(text)
-                or "/evento/" in html):
-            break
-        await page.wait_for_timeout(1500)
-    # Fase 2 — scroll para traer las cards de más abajo (lazy-load).
-    for _ in range(10):
-        await page.mouse.wheel(0, 1800)
-        await page.wait_for_timeout(500)
-    return await _borges_frames_dump(page)
-
-
-async def _borges_collect(page: Page, semanas: int = 3) -> list[Screening]:
-    """Lógica de scraping de Borges sobre una page ya lista (headful + stealth)."""
-    today = date.today()
-    cutoff = today + timedelta(weeks=max(semanas, 6))
+def fetch_borges_json(url: str) -> Optional[dict | list]:
+    """Helper interno para resolver las peticiones JSON de la API del Borges."""
+    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
     try:
-        await _borges_goto(page, BORGES_CINE_URL, timeout=45000)
-        listing, html = await _borges_listing_content(page)
+        with urllib.request.urlopen(req, timeout=15) as r:
+            return json.loads(r.read().decode("utf-8", errors="replace"))
     except Exception as e:
-        print(f"[borges error listado: {e}]", end=" ")
-        return []
-    ids = list(dict.fromkeys(re.findall(r"/evento/(\d+)", html)))[:60]
-    cards = _parse_borges_listing(listing, today, cutoff)
-    print(f"[{len(cards)} cards/{len(ids)} ev]", end=" ")
-    if not cards and not ids:
-        # Diagnóstico: si el SPA no rindió, mostrar qué quedó en pantalla.
-        snippet = re.sub(r"\s+", " ", (listing or "")).strip()[:180]
-        print(f"[listado vacío; pantalla: {snippet!r}]", end=" ")
-        return []
-    if not cards:
-        return []
-
-    # Detalle por evento → horarios/director/duración, indexado por título.
-    by_title: dict = {}
-    for ev_id in ids:
-        url = f"https://centroculturalborges.gob.ar/evento/{ev_id}"
-        try:
-            await _borges_goto(page, url, timeout=25000)
-            # Esperar a que el SPA renderice la ficha (horario/duración/dirección).
-            body = ""
-            for _ in range(15):  # hasta ~15s
-                body = await page.evaluate("document.body.innerText") or ""
-                if re.search(r"\d{1,2}:\d{2}|duraci[óo]n|direcci[óo]n", body, re.IGNORECASE):
-                    break
-                await page.wait_for_timeout(1000)
-            h1 = await page.evaluate(
-                "() => { const h = document.querySelector('h1'); return h ? h.innerText : ''; }")
-        except Exception:
-            continue
-        meta = _borges_detail_meta(h1, body, url)
-        if meta["title"] and meta["times"]:
-            by_title[_borges_norm(meta["title"])] = meta
-
-    out: list[Screening] = []
-    seen: set = set()
-    for card in cards:
-        meta = _borges_match(card["title"], by_title)
-        times = (meta or {}).get("times") or []
-        if not times:
-            continue
-        director = card["director"] or (meta or {}).get("director", "")
-        for d in card["dates"]:
-            for t in times:
-                key = (card["title"], d.isoformat(), t)
-                if key in seen:
-                    continue
-                seen.add(key)
-                out.append(Screening(
-                    cine="Centro Cultural Borges", title=card["title"],
-                    fecha=d.isoformat(), hora=t,
-                    ticket_url=(meta or {}).get("url", BORGES_CINE_URL),
-                    director=director, duration=(meta or {}).get("duration"),
-                ))
-    return out
-
+        print(f"  · [Borges API Error] No se pudo conectar a {url}: {e}")
+        return None
 
 async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
-    """Scrapea centroculturalborges.gob.ar. El sitio usa protección anti-bots
-    (challenge tipo Cloudflare) que bloquea al Chrome headless del runner, así
-    que abrimos un navegador propio HEADFUL (necesita display; en CI se corre
-    bajo xvfb) con parches stealth para parecer un navegador real. El argumento
-    `page` (headless, compartido) se ignora a propósito."""
-    try:
-        from playwright.async_api import async_playwright
-    except Exception:
-        return []
-    try:
-        async with async_playwright() as pw:
-            browser = await pw.chromium.launch(headless=False, args=[
-                "--disable-blink-features=AutomationControlled",
-                "--no-sandbox", "--disable-dev-shm-usage",
-                "--disable-gpu", "--window-size=1366,900",
-            ])
-            ctx = await browser.new_context(
-                user_agent=UA, locale="es-AR",
-                timezone_id="America/Argentina/Buenos_Aires",
-                viewport={"width": 1366, "height": 900},
-            )
-            await ctx.add_init_script(_BORGES_STEALTH)
-            bpage = await ctx.new_page()
-            try:
-                return await _borges_collect(bpage, semanas)
-            finally:
-                await browser.close()
-    except Exception as e:
-        print(f"[borges headful no disponible: {e}]", end=" ")
+    """
+    Scrapea centroculturalborges.gob.ar consumiendo directamente sus endpoints JSON.
+    Conserva el parámetro `page` intacto para no romper el contrato de llamadas de run.py.
+    """
+    today = date.today()
+    cutoff = today + timedelta(weeks=max(semanas, 6))
+    result: list[Screening] = []
+    
+    print("  · Conectando a la API del Centro Cultural Borges...", flush=True)
+    events_list = fetch_borges_json(BORGES_API_LIST)
+    if not events_list or not isinstance(events_list, list):
+        print("  · [Borges API] Lista de eventos vacía o inaccesible.")
         return []
 
+    for ev in events_list:
+        ev_id = ev.get("id")
+        title = re.sub(r'["“”]', "", ev.get("titulo", "")).strip()
+        if not ev_id or not title:
+            continue
+
+        # 1) Obtener la metadata extendida desde el detalle del evento
+        detail = fetch_borges_json(f"{BORGES_API_DETAIL}{ev_id}") or {}
+        
+        # 2) Extraer horarios consolidados (Combina fallback directo + texto descriptivo)
+        times: list[str] = []
+        next_time = ev.get("horarioSiguienteRepeticion")
+        if next_time:
+            tm = re.match(r"(\d{1,2}):(\d{2})", next_time)
+            if tm:
+                times.append(f"{int(tm.group(1)):02d}:{tm.group(2)}")
+
+        desc_larga = detail.get("descripcionLarga", "") or ""
+        fechas_rep = detail.get("fechasRepeticiones", "") or ""
+        combined_text = f"{fechas_rep}\n{desc_larga}"
+
+        # Parsear cualquier otra hora explícita en el cuerpo (ej: bloques de festivales de animación)
+        for hh, mm in re.findall(r"\b(\d{1,2}):(\d{2})\b", combined_text):
+            t_str = f"{int(hh):02d}:{mm}"
+            if t_str not in times and 0 <= int(hh) <= 23:
+                times.append(t_str)
+        
+        for hh in re.findall(r"\b(\d{1,2})\s*h\b", combined_text.lower()):
+            t_str = f"{int(hh):02d}:00"
+            if t_str not in times and 0 <= int(hh) <= 23:
+                times.append(t_str)
+
+        if not times:
+            times = ["19:00"]  # Fallback reglamentario si no se define hora
+
+        # 3) Extraer Director y Duración
+        director = ev.get("artistaDestacado", "").strip()
+        if not director:
+            md = re.search(r"\bdirecci[óo]n\s*:\s*([^\n]+)", combined_text, re.IGNORECASE)
+            if md:
+                director = re.split(r"\s{2,}|\bguion\b|\bgui[óo]n\b", md.group(1), flags=re.IGNORECASE)[0].strip(" .,;")
+
+        duration = detail.get("duracion")
+        if not duration:
+            mdur = re.search(r"duraci[óo]n\s*:?\s*(\d{1,3})", combined_text, re.IGNORECASE)
+            if mdur:
+                duration = int(mdur.group(1))
+
+        # 4) Resolver e inflar el abanico de fechas válidas
+        fecha_display = ev.get("fechaDisplay", "")
+        dates = _borges_dates_from_label(fecha_display, today, cutoff)
+
+        # Forzar inclusión segura del campo de repetición inmediata provisto por el backend
+        next_date_str = ev.get("fechaSiguienteRepeticion")
+        if next_date_str:
+            try:
+                next_date = date.fromisoformat(next_date_str)
+                if today <= next_date <= cutoff and next_date not in dates:
+                    dates.append(next_date)
+            except ValueError:
+                pass
+
+        if not dates:
+            continue
+
+        # 5) Mapear y empaquetar Screenings para sitedigo.com
+        ticket_url = f"https://centroculturalborges.gob.ar/evento/{ev_id}"
+        for d in dates:
+            for t in times:
+                result.append(Screening(
+                    cine="Centro Cultural Borges",
+                    title=title,
+                    fecha=d.isoformat(),
+                    hora=t,
+                    ticket_url=ticket_url,
+                    director=director,
+                    duration=duration
+                ))
+
+    # Deduplicación final defensiva
+    seen = set()
+    deduped = []
+    for s in result:
+        key = (s.title, s.fecha, s.hora)
+        if key not in seen:
+            seen.add(key)
+            deduped.append(s)
+
+    print(f"  · [Borges API] Procesadas con éxito {len(deduped)} funciones.")
+    return deduped
 
 def scrape_lumiton_agenda() -> list[Screening]:
     """
