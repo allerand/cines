@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T14:26:27",
+  "updated": "2026-06-30T14:51:31",
   "screenings": [
     {
       "cine": "Hoyts Abasto",
@@ -6695,7 +6695,7 @@
       "cine": "Cacodelphia",
       "fecha": "2026-07-01",
       "hora": "19:00",
-      "title_es": "Alphaville (Lemmy contra Alphaville)",
+      "title_es": "Alphaville",
       "title_en": "ALPHAVILLE",
       "director": "Jean-Luc Godard",
       "country": "France, Italy",
@@ -9585,7 +9585,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
       "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -14509,7 +14509,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
       "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
+      "ciclo": ""
     },
     {
       "cine": "CCK",
@@ -14847,13 +14847,13 @@
       "fecha": "2026-07-12",
       "hora": "18:30",
       "title_es": "Atraco perfecto",
-      "title_en": "The Killing",
+      "title_en": "CASTA DE MALDITOS",
       "director": "Stanley Kubrick",
-      "country": "Ee.uu",
+      "country": "United States of America",
       "year": 1956,
-      "duration": 84,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-killing/",
+      "duration": 85,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/casta-de-malditos-2/",
       "ciclo": ""
     },
@@ -14991,21 +14991,6 @@
       "letterboxd": "https://letterboxd.com/film/bluebeards-eighth-wife/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
       "ciclo": "Ernst Lubitsch en América"
-    },
-    {
-      "cine": "Museo del Cine",
-      "fecha": "2026-07-15",
-      "hora": "14:00",
-      "title_es": "Fecha de publicación: 30/06/2026",
-      "title_en": "Fecha de publicación: 30/06/2026",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/mayo-en-el-museo-del-cine-0",
-      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -15530,7 +15515,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
       "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
+      "ciclo": ""
     },
     {
       "cine": "CCK",
@@ -16929,21 +16914,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-24",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-07-24",
       "hora": "19:30",
@@ -16974,21 +16944,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-25",
-      "hora": "18:00",
-      "title_es": "Hijo mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 118,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-25",
       "hora": "18:00",
@@ -17002,21 +16957,6 @@
       "letterboxd": "https://letterboxd.com/film/el-correcaminos/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/cartoon",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-25",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -17241,7 +17181,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
       "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
+      "ciclo": ""
     },
     {
       "cine": "CCK",
@@ -17289,21 +17229,6 @@
       "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-01",
-      "hora": "18:00",
-      "title_es": "Hijo mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 118,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-01",
       "hora": "18:00",
@@ -17332,21 +17257,6 @@
       "letterboxd": "https://letterboxd.com/film/the-unknown-from-outer-space/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
       "ciclo": "Terror adolescente: seis clásicos imperdibles"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-01",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "CCK",
