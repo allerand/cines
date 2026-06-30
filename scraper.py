@@ -2326,6 +2326,119 @@ async def scrape_cc25(page: Page, semanas: int = 3) -> list[Screening]:
     return result
 
 
+# ---------------------------------------------------------------------------
+# Centro Cultural Borges — centroculturalborges.gob.ar/disciplinas?d=cine
+# Lista de eventos /evento/<id> con una línea de fecha/hora ("Vie 3 jul - 16 h"
+# o "Mie 1 / 8 / 15 jul - 15, 17 y 19 h") + país/año, dirección y duración.
+# ---------------------------------------------------------------------------
+
+BORGES_CINE_URL = "https://centroculturalborges.gob.ar/disciplinas?d=cine"
+_BORGES_MONTHS = {
+    "ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6,
+    "jul": 7, "ago": 8, "sep": 9, "oct": 10, "nov": 11, "dic": 12,
+}
+_BORGES_DT_RE = re.compile(
+    r"(?:lun|mar|mi[ée]|jue|vie|s[áa]b|dom)[a-z]*\.?\s+([\d,yY/\s]+?)\s+"
+    r"(ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)[a-z]*\s*[-–—]\s*([\d,yY:\s]+?)\s*h\b",
+    re.IGNORECASE,
+)
+
+
+def _parse_borges_detail(h1: str, body: str, url: str,
+                         today: date, cutoff: date) -> list[Screening]:
+    """Parsea una página /evento/ de Borges. La línea de fecha admite varias
+    fechas y varios horarios (festivales): se genera una función por cada
+    combinación fecha × horario."""
+    flat = re.sub(r"[ \t]+", " ", body or "")
+    m = _BORGES_DT_RE.search(flat)
+    if not m:
+        return []
+    days = [int(x) for x in re.findall(r"\d+", m.group(1))]
+    mon = _BORGES_MONTHS.get(m.group(2).lower()[:3])
+    times = re.findall(r"\d{1,2}(?::\d{2})?", m.group(3))
+    if not (days and mon and times):
+        return []
+
+    # Título: en el hero está entre el label "Cine" y la línea de fecha. Lo
+    # tomamos de ahí (más confiable que el h1, que puede ser el logo/nav).
+    pre_lines = [l.strip() for l in flat[:m.start()].split("\n") if l.strip()]
+    title_lines: list[str] = []
+    for ln in reversed(pre_lines):
+        if ln.lower() == "cine":
+            break
+        title_lines.append(ln)
+        if len(title_lines) >= 3:
+            break
+    title = " ".join(reversed(title_lines)) or (h1 or "")
+    title = re.sub(r"\s+", " ", re.sub(r'["“”]', "", title)).strip()
+    if not title:
+        return []
+
+    director = ""
+    md = re.search(r"(?:guion y direcci[óo]n|direcci[óo]n)\s*:\s*([^\n]+)", flat, re.IGNORECASE)
+    if md:
+        director = re.split(r"\s{2,}|reparto|m[úu]sica|fotograf", md.group(1), flags=re.IGNORECASE)[0].strip()
+    film_year: Optional[int] = None
+    country = ""
+    my = re.search(r"\b([A-ZÁÉÍÓÚ][a-záéíóúñ]+(?:\s*[/-]\s*[A-ZÁÉÍÓÚ][a-záéíóúñ]+)*)\s*,\s*((?:19|20)\d{2})\b", flat)
+    if my:
+        country, film_year = my.group(1).strip(), int(my.group(2))
+    mdur = re.search(r"duraci[óo]n:?\s*(\d{1,3})", flat, re.IGNORECASE)
+    duration = int(mdur.group(1)) if mdur else None
+
+    year = today.year + (1 if mon < today.month else 0)
+    out: list[Screening] = []
+    seen: set = set()
+    for day in days:
+        for t in times:
+            hh = t.split(":")
+            hora = f"{int(hh[0]):02d}:{hh[1] if len(hh) > 1 else '00'}"
+            try:
+                d = date(year, mon, day)
+            except ValueError:
+                continue
+            if not (today <= d <= cutoff) or (d.isoformat(), hora) in seen:
+                continue
+            seen.add((d.isoformat(), hora))
+            out.append(Screening(
+                cine="Centro Cultural Borges", title=title,
+                fecha=d.isoformat(), hora=hora, ticket_url=url,
+                director=director, country=country, year=film_year, duration=duration,
+            ))
+    return out
+
+
+async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
+    """Scrapea centroculturalborges.gob.ar/disciplinas?d=cine: junta los links
+    a /evento/<id> y entra a cada uno a sacar fecha(s)/hora(s)/título/director."""
+    today = date.today()
+    cutoff = today + timedelta(weeks=max(semanas, 6))
+    try:
+        await page.goto(BORGES_CINE_URL, wait_until="domcontentloaded", timeout=30000)
+        await page.wait_for_timeout(2500)
+        for _ in range(8):
+            await page.mouse.wheel(0, 1500)
+            await page.wait_for_timeout(450)
+        links = await page.eval_on_selector_all(
+            'a[href*="/evento/"]', "els => els.map(e => e.href)")
+    except Exception:
+        return []
+    links = [u for u in dict.fromkeys(links or []) if "/evento/" in u][:50]
+
+    result: list[Screening] = []
+    for url in links:
+        try:
+            await page.goto(url, wait_until="domcontentloaded", timeout=20000)
+            await page.wait_for_timeout(600)
+            h1 = await page.evaluate(
+                "() => { const h = document.querySelector('h1'); return h ? h.innerText : ''; }")
+            body = await page.evaluate("document.body.innerText")
+        except Exception:
+            continue
+        result.extend(_parse_borges_detail(h1, body, url, today, cutoff))
+    return result
+
+
 def scrape_lumiton_agenda() -> list[Screening]:
     """
     Scrapea https://lumiton.ar/agenda-presencial/ — un único endpoint estático
