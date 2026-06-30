@@ -2507,13 +2507,34 @@ def _borges_match(title: str, by_title: dict) -> Optional[dict]:
     return best if best_score >= 0.6 else None
 
 
+async def _borges_goto(page: Page, url: str, timeout: int = 30000) -> bool:
+    """goto con reintentos. La page se comparte entre scrapers; a veces una
+    navegación pendiente del scraper anterior (p.ej. CC25) interrumpe la
+    nuestra ("interrupted by another navigation"). Estabilizamos con about:blank
+    y reintentamos."""
+    for attempt in range(4):
+        try:
+            await page.goto(url, wait_until="domcontentloaded", timeout=timeout)
+            return True
+        except Exception as e:
+            if attempt == 3:
+                raise
+            # Cancelar cualquier navegación en vuelo y reintentar.
+            try:
+                await page.goto("about:blank", timeout=8000)
+            except Exception:
+                pass
+            await page.wait_for_timeout(1200)
+    return False
+
+
 async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
     """Scrapea centroculturalborges.gob.ar/disciplinas?d=cine. Saca fechas del
     listado, horarios/director/duración de cada /evento/<id>, y combina."""
     today = date.today()
     cutoff = today + timedelta(weeks=max(semanas, 6))
     try:
-        await page.goto(BORGES_CINE_URL, wait_until="domcontentloaded", timeout=45000)
+        await _borges_goto(page, BORGES_CINE_URL, timeout=45000)
         await page.wait_for_timeout(3500)
         try:
             await page.wait_for_load_state("networkidle", timeout=15000)
@@ -2538,7 +2559,7 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
     for ev_id in ids:
         url = f"https://centroculturalborges.gob.ar/evento/{ev_id}"
         try:
-            await page.goto(url, wait_until="domcontentloaded", timeout=25000)
+            await _borges_goto(page, url, timeout=25000)
             await page.wait_for_timeout(1000)
             try:
                 await page.wait_for_load_state("networkidle", timeout=8000)
