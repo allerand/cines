@@ -1906,10 +1906,14 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
         if m:
             duration = int(m.group(1))
 
-        # Bloques de horario: "Día1 - Día2 - ... | HH:MM"
-        # Puede haber varios: "Ju - Vi | 19:00 Sá - Do | 16:30"
+        # Bloques de horario: "Día1 - Día2 - ... | HH:MM[ - HH:MM ...]"
+        # Cada bloque puede tener VARIOS horarios separados por " - "
+        # (p.ej. "Ju Vi Sá Do Lu Ma Mi | 18:40 - 21:00") y puede haber varios
+        # bloques ("Ju - Vi | 19:00 Sá - Do | 16:30"). El grupo de horarios
+        # captura sólo dígitos/":"/espacios/guiones, así que se corta solo al
+        # llegar al próximo bloque de días (letras).
         slot_re = re.compile(
-            r"((?:(?:Lu|Ma|Mi|Mié|Mier|Ju|Vi|S[áa]|Do)\b\s*-?\s*)+)\|\s*(\d{1,2}):(\d{2})",
+            r"((?:(?:Lu|Ma|Mi|Mié|Mier|Ju|Vi|S[áa]|Do)\b\s*-?\s*)+)\|\s*([\d:\s\-–—,]+)",
             re.IGNORECASE,
         )
         slots: list[tuple[set[int], str]] = []
@@ -1921,8 +1925,8 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
                     weekdays.add(COSMOS_DAY_ABBREV[tok])
             if not weekdays:
                 continue
-            hora = f"{int(m.group(2)):02d}:{m.group(3)}"
-            slots.append((weekdays, hora))
+            for hh, mm in re.findall(r"(\d{1,2}):(\d{2})", m.group(2)):
+                slots.append((weekdays, f"{int(hh):02d}:{mm}"))
 
         if not slots:
             continue
