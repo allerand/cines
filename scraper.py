@@ -2528,6 +2528,42 @@ async def _borges_goto(page: Page, url: str, timeout: int = 30000) -> bool:
     return False
 
 
+async def _borges_frames_dump(page: Page) -> tuple[str, str]:
+    """Junta innerText + HTML de TODOS los frames (el contenido podría estar en
+    un iframe, que `page.content()` no captura)."""
+    text, html = "", ""
+    for fr in page.frames:
+        try:
+            text += "\n" + (await fr.evaluate(
+                "document.body ? document.body.innerText : ''") or "")
+        except Exception:
+            pass
+        try:
+            html += "\n" + (await fr.content() or "")
+        except Exception:
+            pass
+    return text, html
+
+
+async def _borges_listing_content(page: Page) -> tuple[str, str]:
+    """Espera a que el SPA renderice las cards (hasta que aparezca un encabezado
+    de fecha o un link /evento/), haciendo scroll para forzar el lazy-load.
+    Devuelve (innerText, html) de todos los frames."""
+    text, html = "", ""
+    for i in range(30):  # hasta ~30s
+        text, html = await _borges_frames_dump(page)
+        if (_BORGES_DATE_RE.search(text) or _BORGES_RANGE_RE.search(text)
+                or "/evento/" in html):
+            break
+        await page.mouse.wheel(0, 1600)
+        await page.wait_for_timeout(1000)
+    # Un par de scrolls extra para traer las cards de más abajo.
+    for _ in range(8):
+        await page.mouse.wheel(0, 2000)
+        await page.wait_for_timeout(400)
+    return await _borges_frames_dump(page)
+
+
 async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
     """Scrapea centroculturalborges.gob.ar/disciplinas?d=cine. Saca fechas del
     listado, horarios/director/duración de cada /evento/<id>, y combina."""
@@ -2535,22 +2571,18 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
     cutoff = today + timedelta(weeks=max(semanas, 6))
     try:
         await _borges_goto(page, BORGES_CINE_URL, timeout=45000)
-        await page.wait_for_timeout(3500)
-        try:
-            await page.wait_for_load_state("networkidle", timeout=15000)
-        except Exception:
-            pass
-        for _ in range(10):
-            await page.mouse.wheel(0, 1800)
-            await page.wait_for_timeout(500)
-        listing = await page.evaluate("document.body.innerText")
-        html = await page.content()
+        listing, html = await _borges_listing_content(page)
     except Exception as e:
         print(f"[borges error listado: {e}]", end=" ")
         return []
     ids = list(dict.fromkeys(re.findall(r"/evento/(\d+)", html)))[:60]
     cards = _parse_borges_listing(listing, today, cutoff)
     print(f"[{len(cards)} cards/{len(ids)} ev]", end=" ")
+    if not cards and not ids:
+        # Diagnóstico: si el SPA no rindió, mostrar qué quedó en pantalla.
+        snippet = re.sub(r"\s+", " ", (listing or "")).strip()[:180]
+        print(f"[listado vacío; pantalla: {snippet!r}]", end=" ")
+        return []
     if not cards:
         return []
 
@@ -2560,14 +2592,15 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
         url = f"https://centroculturalborges.gob.ar/evento/{ev_id}"
         try:
             await _borges_goto(page, url, timeout=25000)
-            await page.wait_for_timeout(1000)
-            try:
-                await page.wait_for_load_state("networkidle", timeout=8000)
-            except Exception:
-                pass
+            # Esperar a que el SPA renderice la ficha (horario/duración/dirección).
+            body = ""
+            for _ in range(15):  # hasta ~15s
+                body = await page.evaluate("document.body.innerText") or ""
+                if re.search(r"\d{1,2}:\d{2}|duraci[óo]n|direcci[óo]n", body, re.IGNORECASE):
+                    break
+                await page.wait_for_timeout(1000)
             h1 = await page.evaluate(
                 "() => { const h = document.querySelector('h1'); return h ? h.innerText : ''; }")
-            body = await page.evaluate("document.body.innerText")
         except Exception:
             continue
         meta = _borges_detail_meta(h1, body, url)
