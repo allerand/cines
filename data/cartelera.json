@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T14:08:29",
+  "updated": "2026-06-30T14:26:27",
   "screenings": [
     {
       "cine": "Hoyts Abasto",
@@ -797,6 +797,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "14:30",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-06-30",
       "hora": "14:30",
@@ -840,21 +855,6 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "14:30",
-      "title_es": "Una directora extraordinaria",
-      "title_en": "Una directora Extraordinaria",
-      "director": "Fabiana Urricelqui",
-      "country": "",
-      "year": null,
-      "duration": 85,
-      "genre": "Comedia, Drama",
-      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1007,6 +1007,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "15:00",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-30",
       "hora": "15:00",
@@ -1080,21 +1095,6 @@
       "letterboxd": "https://letterboxd.com/film/jackass-best-and-last/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "15:00",
-      "title_es": "Nada entre los dos",
-      "title_en": "Nothing Between Us",
-      "director": "Juan Taratuto",
-      "country": "Mexico, USA",
-      "year": 2026,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1172,6 +1172,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "15:15",
+      "title_es": "Hotline",
+      "title_en": "Hotline",
+      "director": "Jerry Jameson",
+      "country": "United States of America",
+      "year": 1982,
+      "duration": 90,
+      "genre": "Crimen, Terror",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=918",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-30",
       "hora": "15:15",
@@ -1215,21 +1230,6 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "15:15",
-      "title_es": "Hotline",
-      "title_en": "Hotline",
-      "director": "Jerry Jameson",
-      "country": "United States of America",
-      "year": 1982,
-      "duration": 90,
-      "genre": "Crimen, Terror",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=918",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1772,6 +1772,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "17:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-06-30",
       "hora": "17:00",
@@ -1815,21 +1830,6 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "17:00",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Germany",
-      "year": 2024,
-      "duration": 96,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1892,6 +1892,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "17:15",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-30",
       "hora": "17:15",
@@ -1920,21 +1935,6 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "17:15",
-      "title_es": "El Partido",
-      "title_en": "The Match",
-      "director": "Juan Cabral y Santiago Franco",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -2657,6 +2657,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "19:15",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-30",
       "hora": "19:15",
@@ -2687,21 +2702,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "19:15",
-      "title_es": "Conociendo la raíz",
-      "title_en": "Conociendo la raíz",
-      "director": "Hugo Meyer, Micaela Viviani",
-      "country": "",
-      "year": null,
-      "duration": 128,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-06-30",
       "hora": "19:25",
@@ -2715,6 +2715,21 @@
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "19:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -2820,21 +2835,6 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "19:30",
-      "title_es": "Negro Che, Negro Usted. Quince años después",
-      "title_en": "Negro Che, Negro Usted. Quince años después",
-      "director": "Alberto Masliah",
-      "country": "",
-      "year": null,
-      "duration": 80,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -3287,6 +3287,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "20:30",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-30",
       "hora": "20:30",
@@ -3390,21 +3405,6 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "20:30",
-      "title_es": "Tristán y los días por venir",
-      "title_en": "Tristán y los días por venir",
-      "director": "Martina Matzkin, Gabriela Uassouf",
-      "country": "Argentina, Uruguay",
-      "year": 2026,
-      "duration": 65,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -3527,21 +3527,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-06-30",
-      "hora": "21:30",
-      "title_es": "Toy Story 5",
-      "title_en": "Toy Story 5",
-      "director": "Andrew Stanton",
-      "country": "Usa",
-      "year": 2026,
-      "duration": 102,
-      "genre": "Comedia, Familiar",
-      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-30",
       "hora": "21:30",
@@ -3555,6 +3540,21 @@
       "letterboxd": "https://letterboxd.com/film/the-match-2026/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-06-30",
+      "hora": "21:30",
+      "title_es": "Toy Story 5",
+      "title_en": "Toy Story 5",
+      "director": "Andrew Stanton",
+      "country": "Usa",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Comedia, Familiar",
+      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Palermo",
@@ -3587,6 +3587,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "21:45",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-06-30",
       "hora": "21:45",
@@ -3604,17 +3619,17 @@
     {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-30",
-      "hora": "21:45",
-      "title_es": "Una chica invisible",
-      "title_en": "Una chica invisible",
-      "director": "Francisco Bendomir",
-      "country": "Argentina",
-      "year": 2019,
-      "duration": 75,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
-      "ciclo": "Estreno"
+      "hora": "22:00",
+      "title_es": "Lo que mata",
+      "title_en": "The Things You Kill",
+      "director": "Alireza Khatami",
+      "country": "Canada, France",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-things-you-kill/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=925",
+      "ciclo": "KM 0"
     },
     {
       "cine": "Cinemark Caballito",
@@ -3735,21 +3750,6 @@
       "letterboxd": "https://letterboxd.com/film/barrio-triste-2025/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "22:00",
-      "title_es": "Lo que mata",
-      "title_en": "The Things You Kill",
-      "director": "Alireza Khatami",
-      "country": "Canada, France",
-      "year": 2025,
-      "duration": 114,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-things-you-kill/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=925",
-      "ciclo": "KM 0"
     },
     {
       "cine": "Cine Lorca",
@@ -5132,6 +5132,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "14:30",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-01",
       "hora": "14:30",
@@ -5282,6 +5297,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "15:00",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-01",
       "hora": "15:00",
@@ -5415,6 +5445,21 @@
       "letterboxd": "https://letterboxd.com/film/scary-movie-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "15:15",
+      "title_es": "Hotline",
+      "title_en": "Hotline",
+      "director": "Jerry Jameson",
+      "country": "United States of America",
+      "year": 1982,
+      "duration": 90,
+      "genre": "Crimen, Terror",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=918",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -5867,6 +5912,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "16:45",
+      "title_es": "Lumbre",
+      "title_en": "Lumbre",
+      "director": "Francisco Del Sel",
+      "country": "",
+      "year": null,
+      "duration": 73,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=917",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-01",
       "hora": "16:45",
@@ -5895,6 +5955,21 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "17:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Palermo",
@@ -5940,6 +6015,21 @@
       "letterboxd": "https://letterboxd.com/film/supergirl-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "17:15",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -6452,6 +6542,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "18:30",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-07-01",
       "hora": "18:30",
@@ -6602,6 +6707,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "19:15",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-01",
       "hora": "19:15",
@@ -6615,6 +6735,21 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "19:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Palermo",
@@ -7067,6 +7202,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "20:30",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-01",
       "hora": "20:30",
@@ -7247,6 +7397,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "21:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-01",
       "hora": "21:30",
@@ -7277,6 +7442,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "21:45",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-01",
       "hora": "21:45",
@@ -7320,6 +7500,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-01",
+      "hora": "22:00",
+      "title_es": "Alpha",
+      "title_en": "Alpha",
+      "director": "Julia Ducournau",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alpha-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=927",
+      "ciclo": "Horizontes Cinematográficos"
     },
     {
       "cine": "Cinemark Palermo",
@@ -8057,6 +8252,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "14:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "14:15",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-02",
       "hora": "14:15",
@@ -8132,6 +8357,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "15:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-02",
       "hora": "15:30",
@@ -8175,6 +8415,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "16:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -8250,6 +8505,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -8340,6 +8610,21 @@
       "letterboxd": "https://letterboxd.com/film/76-89-03/",
       "ticket_url": "https://lumiton.ar/evento/76-89-03/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "18:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -8598,6 +8883,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "21:30",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-02",
       "hora": "21:45",
@@ -8628,6 +8928,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "22:00",
+      "title_es": "Lumbre",
+      "title_en": "Lumbre",
+      "director": "Francisco Del Sel",
+      "country": "",
+      "year": null,
+      "duration": 73,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=917",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-02",
       "hora": "22:00",
@@ -8641,6 +8956,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-02",
+      "hora": "22:15",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -8853,6 +9183,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "14:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "14:15",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-03",
       "hora": "14:15",
@@ -8928,6 +9288,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "15:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-03",
       "hora": "15:30",
@@ -8971,6 +9346,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "16:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -9048,6 +9438,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-03",
       "hora": "17:30",
@@ -9106,6 +9511,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "18:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -9303,6 +9723,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "21:30",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-03",
       "hora": "21:45",
@@ -9346,6 +9781,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "22:15",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -9558,6 +10008,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "14:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "14:15",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-04",
       "hora": "14:15",
@@ -9633,6 +10113,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "15:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-04",
       "hora": "15:30",
@@ -9691,6 +10186,21 @@
       "letterboxd": "https://letterboxd.com/film/mystic-river/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "16:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -9781,6 +10291,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -9901,6 +10426,21 @@
       "letterboxd": "https://letterboxd.com/film/cartas-de-amor/",
       "ticket_url": "https://lumiton.ar/evento/cartas-de-amor/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "18:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -10189,6 +10729,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "21:30",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-04",
       "hora": "21:45",
@@ -10219,6 +10774,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "22:00",
+      "title_es": "Hotline",
+      "title_en": "Hotline",
+      "director": "Jerry Jameson",
+      "country": "United States of America",
+      "year": 1982,
+      "duration": 90,
+      "genre": "Crimen, Terror",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=918",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-04",
       "hora": "22:00",
@@ -10232,6 +10802,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-04",
+      "hora": "22:15",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -10444,6 +11029,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "14:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "14:15",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-05",
       "hora": "14:15",
@@ -10519,6 +11134,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "15:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-05",
       "hora": "15:30",
@@ -10562,6 +11192,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "16:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -10653,6 +11298,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -10758,6 +11418,21 @@
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://lumiton.ar/evento/el-ultimo-viaje-a-la-china/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "18:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -11015,6 +11690,21 @@
       "ciclo": "Ernst Lubitsch en América - (100'; DM)."
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "21:30",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-05",
       "hora": "21:45",
@@ -11045,6 +11735,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "22:00",
+      "title_es": "Lumbre",
+      "title_en": "Lumbre",
+      "director": "Francisco Del Sel",
+      "country": "",
+      "year": null,
+      "duration": 73,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=917",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-05",
       "hora": "22:00",
@@ -11058,6 +11763,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-05",
+      "hora": "22:15",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -11300,6 +12020,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "14:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "14:15",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-06",
       "hora": "14:15",
@@ -11360,6 +12110,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "15:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-06",
       "hora": "15:30",
@@ -11403,6 +12168,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "16:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -11480,6 +12260,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-06",
       "hora": "17:30",
@@ -11538,6 +12333,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "18:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -11630,6 +12440,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "20:00",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-06",
       "hora": "20:00",
@@ -11720,6 +12545,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "21:30",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-06",
       "hora": "21:45",
@@ -11750,6 +12590,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "22:00",
+      "title_es": "Hotline",
+      "title_en": "Hotline",
+      "director": "Jerry Jameson",
+      "country": "United States of America",
+      "year": 1982,
+      "duration": 90,
+      "genre": "Crimen, Terror",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=918",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-06",
       "hora": "22:00",
@@ -11763,6 +12618,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-06",
+      "hora": "22:15",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -11960,6 +12830,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "14:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "14:15",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-07",
       "hora": "14:15",
@@ -12035,6 +12935,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "15:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-07",
       "hora": "15:30",
@@ -12078,6 +12993,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "16:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -12155,6 +13085,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-07",
       "hora": "17:30",
@@ -12228,6 +13173,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "18:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -12426,6 +13386,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "21:30",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-07",
       "hora": "21:45",
@@ -12456,6 +13431,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "22:00",
+      "title_es": "Exit 8",
+      "title_en": "Exit 8",
+      "director": "Genki Kawamura",
+      "country": "Japan",
+      "year": 2025,
+      "duration": 95,
+      "genre": "Misterio, Terror",
+      "letterboxd": "https://letterboxd.com/film/exit-8/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=899",
+      "ciclo": "KM 0"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-07",
       "hora": "22:00",
@@ -12469,6 +13459,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-07",
+      "hora": "22:15",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -12666,6 +13671,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "14:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "14:15",
+      "title_es": "Tristán y los días por venir",
+      "title_en": "Tristán y los días por venir",
+      "director": "Martina Matzkin, Gabriela Uassouf",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 65,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tristan-y-los-dias-por-venir/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=897",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-08",
       "hora": "14:15",
@@ -12741,6 +13776,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "15:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-08",
       "hora": "15:30",
@@ -12784,6 +13834,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "16:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -12877,6 +13942,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-08",
       "hora": "17:30",
@@ -12950,6 +14030,21 @@
       "letterboxd": "https://letterboxd.com/film/safo-historia-de-una-pasion/",
       "ticket_url": "https://lumiton.ar/evento/safo-historia-de-una-pasion-4/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "18:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -13057,6 +14152,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "20:00",
+      "title_es": "Algunas notas sobre M.M.M.",
+      "title_en": "Algunas notas sobre M.M.M.",
+      "director": "Luciana Foglio y Luján Montes",
+      "country": "",
+      "year": null,
+      "duration": 64,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=904",
+      "ciclo": "Funciones Unicas"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-08",
       "hora": "20:00",
@@ -13162,6 +14272,21 @@
       "ciclo": "Ernst Lubitsch en América"
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "21:30",
+      "title_es": "Conociendo la raíz",
+      "title_en": "Conociendo la raíz",
+      "director": "Hugo Meyer, Micaela Viviani",
+      "country": "",
+      "year": null,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=928",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-08",
       "hora": "21:45",
@@ -13192,6 +14317,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "22:00",
+      "title_es": "Lumbre",
+      "title_en": "Lumbre",
+      "director": "Francisco Del Sel",
+      "country": "",
+      "year": null,
+      "duration": 73,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=917",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-08",
       "hora": "22:00",
@@ -13205,6 +14345,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-08",
+      "hora": "22:15",
+      "title_es": "Una chica invisible",
+      "title_en": "Una chica invisible",
+      "director": "Francisco Bendomir",
+      "country": "Argentina",
+      "year": 2019,
+      "duration": 75,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/una-chica-invisible/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=931",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -13849,7 +15004,7 @@
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/abril-en-el-museo-del-cine",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/mayo-en-el-museo-del-cine-0",
       "ciclo": ""
     },
     {
