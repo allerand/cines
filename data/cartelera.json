@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T14:51:31",
+  "updated": "2026-06-30T17:45:31",
   "screenings": [
     {
       "cine": "Hoyts Abasto",
@@ -1772,6 +1772,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-30",
+      "hora": "17:00",
+      "title_es": "Gioia Mía, un verano en Sicilia",
+      "title_en": "Sweetheart",
+      "director": "Margherita Spampinato",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 93,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/sweetheart-2025-3/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=366",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-06-30",
       "hora": "17:00",
@@ -3407,6 +3422,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-30",
+      "hora": "20:35",
+      "title_es": "Sueños de Oslo",
+      "title_en": "Dreams",
+      "director": "Dar Johan Haugerud",
+      "country": "Noruega",
+      "year": 2024,
+      "duration": 112,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/dreams-2024-5/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=369",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-30",
       "hora": "20:40",
@@ -3479,6 +3509,21 @@
       "genre": "Terror, Romance",
       "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-06-30",
+      "hora": "21:00",
+      "title_es": "La chica de Colonia",
+      "title_en": "Köln 75",
+      "director": "Ido Fluk",
+      "country": "Alemania",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama, Música",
+      "letterboxd": "https://letterboxd.com/film/koln-75/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=373",
       "ciclo": ""
     },
     {
@@ -5957,6 +6002,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-07-01",
+      "hora": "17:00",
+      "title_es": "Gioia Mía, un verano en Sicilia",
+      "title_en": "Sweetheart",
+      "director": "Margherita Spampinato",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 93,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/sweetheart-2025-3/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=366",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-07-01",
       "hora": "17:00",
@@ -7322,6 +7382,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-07-01",
+      "hora": "20:35",
+      "title_es": "Sueños de Oslo",
+      "title_en": "Dreams",
+      "director": "Dar Johan Haugerud",
+      "country": "Noruega",
+      "year": 2024,
+      "duration": 112,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/dreams-2024-5/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=369",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-01",
       "hora": "20:40",
@@ -7364,6 +7439,21 @@
       "genre": "Terror, Romance",
       "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-07-01",
+      "hora": "21:00",
+      "title_es": "La chica de Colonia",
+      "title_en": "Köln 75",
+      "director": "Ido Fluk",
+      "country": "Alemania",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama, Música",
+      "letterboxd": "https://letterboxd.com/film/koln-75/",
+      "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=373",
       "ciclo": ""
     },
     {
@@ -9573,21 +9663,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-03",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": ""
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-03",
       "hora": "19:30",
@@ -10383,21 +10458,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-04",
-      "hora": "18:00",
-      "title_es": "Hijo mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 118,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-07-04",
       "hora": "18:00",
@@ -10637,21 +10697,6 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-04",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -11375,21 +11420,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-05",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Germany",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Amorina",
       "fecha": "2026-07-05",
       "hora": "18:00",
@@ -11553,21 +11583,6 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-05",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
-      "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Palermo",
@@ -14497,21 +14512,6 @@
       "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-10",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-07-10",
       "hora": "19:30",
@@ -14586,21 +14586,6 @@
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
       "ciclo": "Estreno",
       "original_title": "Dry Leaf"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-11",
-      "hora": "18:00",
-      "title_es": "Hijo mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 118,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -14678,21 +14663,6 @@
       "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-11",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-07-11",
       "hora": "20:30",
@@ -14768,21 +14738,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-12",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Germany",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Amorina",
       "fecha": "2026-07-12",
       "hora": "18:00",
@@ -14847,13 +14802,13 @@
       "fecha": "2026-07-12",
       "hora": "18:30",
       "title_es": "Atraco perfecto",
-      "title_en": "CASTA DE MALDITOS",
+      "title_en": "The Killing",
       "director": "Stanley Kubrick",
-      "country": "United States of America",
+      "country": "Ee.uu",
       "year": 1956,
-      "duration": 85,
-      "genre": "Crimen, Thriller",
-      "letterboxd": "",
+      "duration": 84,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-killing/",
       "ticket_url": "https://lumiton.ar/evento/casta-de-malditos-2/",
       "ciclo": ""
     },
@@ -14886,21 +14841,6 @@
       "letterboxd": "https://letterboxd.com/film/street-wanderers/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-12",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
-      "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -14991,6 +14931,21 @@
       "letterboxd": "https://letterboxd.com/film/bluebeards-eighth-wife/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
       "ciclo": "Ernst Lubitsch en América"
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-07-15",
+      "hora": "14:00",
+      "title_es": "Fecha de publicación: 30/06/2026",
+      "title_en": "Fecha de publicación: 30/06/2026",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/abril-en-el-museo-del-cine",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -15503,21 +15458,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-17",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-07-17",
       "hora": "19:30",
@@ -15803,21 +15743,6 @@
       "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-18",
-      "hora": "18:00",
-      "title_es": "Hijo mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, South Korea",
-      "year": 2025,
-      "duration": 118,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-18",
       "hora": "18:00",
@@ -15936,21 +15861,6 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-18",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Caballito",
@@ -16178,21 +16088,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-19",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Germany",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-19",
       "hora": "18:00",
@@ -16251,21 +16146,6 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-19",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
-      "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Palermo",
@@ -16974,21 +16854,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-26",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Germany",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-26",
       "hora": "18:00",
@@ -17002,21 +16867,6 @@
       "letterboxd": "https://letterboxd.com/film/tom-and-jerry-forbidden-compass/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/cartoon",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-26",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
-      "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Sala Lugones",
@@ -17169,21 +17019,6 @@
       "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-31",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-07-31",
       "hora": "19:30",
@@ -17289,21 +17124,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-02",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Germany",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-02",
       "hora": "18:00",
@@ -17332,21 +17152,6 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
       "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-02",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
-      "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
     }
   ]
 }
