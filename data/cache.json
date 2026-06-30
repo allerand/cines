@@ -5901,5 +5901,34 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "recuperar un futuro": {
+    "url": "",
+    "title_en": "Recuperar un futuro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el afinador": {
+    "url": "https://letterboxd.com/film/tuner/",
+    "title_en": "Tuner",
+    "director": "Daniel Roher",
+    "country": "Canada, USA",
+    "year": 2025,
+    "duration": 108,
+    "genre": "Thriller, Drama",
+    "title_es": "Un talento único",
+    "original_title": "Tuner"
+  },
+  "moscas": {
+    "url": "https://letterboxd.com/film/flies-2026/",
+    "title_en": "Flies",
+    "director": "Fernando Eimbcke",
+    "country": "Mexico",
+    "year": 2026,
+    "duration": 99,
+    "genre": "Drama, Comedia",
+    "original_title": "Moscas"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-06-30T17:45:31",
+  "updated": "2026-06-30T20:43:11",
   "screenings": [
     {
       "cine": "Hoyts Abasto",
@@ -797,21 +797,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "14:30",
-      "title_es": "Una directora extraordinaria",
-      "title_en": "Una directora Extraordinaria",
-      "director": "Fabiana Urricelqui",
-      "country": "",
-      "year": null,
-      "duration": 85,
-      "genre": "Comedia, Drama",
-      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-06-30",
       "hora": "14:30",
@@ -855,6 +840,21 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "14:30",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1007,21 +1007,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "15:00",
-      "title_es": "Nada entre los dos",
-      "title_en": "Nothing Between Us",
-      "director": "Juan Taratuto",
-      "country": "Mexico, USA",
-      "year": 2026,
-      "duration": 90,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-30",
       "hora": "15:00",
@@ -1095,6 +1080,21 @@
       "letterboxd": "https://letterboxd.com/film/jackass-best-and-last/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "15:00",
+      "title_es": "Nada entre los dos",
+      "title_en": "Nothing Between Us",
+      "director": "Juan Taratuto",
+      "country": "Mexico, USA",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/nothing-between-us/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=838",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1172,21 +1172,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "15:15",
-      "title_es": "Hotline",
-      "title_en": "Hotline",
-      "director": "Jerry Jameson",
-      "country": "United States of America",
-      "year": 1982,
-      "duration": 90,
-      "genre": "Crimen, Terror",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=918",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-06-30",
       "hora": "15:15",
@@ -1230,6 +1215,21 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "15:15",
+      "title_es": "Hotline",
+      "title_en": "Hotline",
+      "director": "Jerry Jameson",
+      "country": "United States of America",
+      "year": 1982,
+      "duration": 90,
+      "genre": "Crimen, Terror",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=918",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1787,21 +1787,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "17:00",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Germany",
-      "year": 2024,
-      "duration": 96,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-06-30",
       "hora": "17:00",
@@ -1845,6 +1830,21 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "17:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Germany",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1907,21 +1907,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-06-30",
-      "hora": "17:15",
-      "title_es": "El Partido",
-      "title_en": "The Match",
-      "director": "Juan Cabral y Santiago Franco",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-06-30",
       "hora": "17:15",
@@ -1950,6 +1935,21 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-06-30",
+      "hora": "17:15",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -6992,6 +6992,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-01",
+      "hora": "20:00",
+      "title_es": "Recuperar un futuro",
+      "title_en": "Recuperar un futuro",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/recuperar-un-futuro",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-01",
       "hora": "20:00",
@@ -8552,6 +8567,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "16:10",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Usa",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-02",
       "hora": "16:30",
@@ -8564,6 +8594,36 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "16:40",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "16:50",
+      "title_es": "Un talento único",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canada, USA",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -8747,6 +8807,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "18:20",
+      "title_es": "Los colores del tiempo",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-07-02",
       "hora": "18:30",
@@ -8774,6 +8849,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "18:50",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "Mexico",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -8805,6 +8895,21 @@
       "letterboxd": "",
       "ticket_url": "https://www.filo.uba.ar/barbara-ensayo-f%C3%ADlmico-coreogr%C3%A1ficotr%C3%ADptico",
       "ciclo": "Experimental"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "19:00",
+      "title_es": "Un talento único",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canada, USA",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -8958,6 +9063,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "20:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "20:50",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-02",
       "hora": "21:00",
@@ -8970,6 +9105,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-02",
+      "hora": "21:00",
+      "title_es": "20 asesinos en potencia",
+      "title_en": "The Things You Kill",
+      "director": "Alireza Khatami",
+      "country": "Canada, France",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-things-you-kill/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -9663,6 +9813,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-03",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-03",
       "hora": "19:30",
@@ -10308,6 +10473,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-04",
+      "hora": "16:10",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Usa",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-04",
       "hora": "16:30",
@@ -10320,6 +10500,36 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-04",
+      "hora": "16:40",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-04",
+      "hora": "16:50",
+      "title_es": "Alphaville",
+      "title_en": "ALPHAVILLE",
+      "director": "Jean-Luc Godard",
+      "country": "France, Italy",
+      "year": 1965,
+      "duration": 95,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -10458,6 +10668,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-04",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-07-04",
       "hora": "18:00",
@@ -10548,6 +10773,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-04",
+      "hora": "18:20",
+      "title_es": "Los colores del tiempo",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-04",
       "hora": "18:45",
@@ -10560,6 +10800,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-04",
+      "hora": "18:50",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "Mexico",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -10591,6 +10846,21 @@
       "letterboxd": "https://letterboxd.com/film/los-dias-chinos/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-alejo-moguillansky-santiago-loza/",
       "ciclo": "Miradas contemporáneas:Alejo Moguillansky / Santiago Loza"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-04",
+      "hora": "19:00",
+      "title_es": "Un talento único",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canada, USA",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -10699,6 +10969,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-04",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-07-04",
       "hora": "20:30",
@@ -10741,6 +11026,36 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-04",
+      "hora": "20:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-04",
+      "hora": "20:50",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -11284,6 +11599,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "16:10",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Usa",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-05",
       "hora": "16:30",
@@ -11296,6 +11626,36 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "16:40",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "16:50",
+      "title_es": "Alphaville",
+      "title_en": "ALPHAVILLE",
+      "director": "Jean-Luc Godard",
+      "country": "France, Italy",
+      "year": 1965,
+      "duration": 95,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -11420,6 +11780,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-05",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Germany",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-07-05",
       "hora": "18:00",
@@ -11510,6 +11885,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "18:20",
+      "title_es": "Los colores del tiempo",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-07-05",
       "hora": "18:30",
@@ -11537,6 +11927,36 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "18:50",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "Mexico",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "19:00",
+      "title_es": "Un talento único",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canada, USA",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -11583,6 +12003,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-05",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Palermo",
@@ -11675,6 +12110,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "20:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "20:50",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-05",
       "hora": "21:00",
@@ -11703,6 +12168,21 @@
       "letterboxd": "https://letterboxd.com/film/the-smiling-lieutenant/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
       "ciclo": "Ernst Lubitsch en América - (100'; DM)."
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-05",
+      "hora": "21:00",
+      "title_es": "20 asesinos en potencia",
+      "title_en": "The Things You Kill",
+      "director": "Alireza Khatami",
+      "country": "Canada, France",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-things-you-kill/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Cine Gaumont",
@@ -13055,6 +13535,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "16:10",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Usa",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-07",
       "hora": "16:30",
@@ -13067,6 +13562,36 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "16:40",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "16:50",
+      "title_es": "Un talento único",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canada, USA",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -13235,6 +13760,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "18:20",
+      "title_es": "Los colores del tiempo",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-07",
       "hora": "18:45",
@@ -13247,6 +13787,36 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "18:50",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "Mexico",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "19:00",
+      "title_es": "Un talento único",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canada, USA",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -13386,6 +13956,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "20:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "20:50",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-07",
       "hora": "21:00",
@@ -13398,6 +13998,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-07",
+      "hora": "21:00",
+      "title_es": "20 asesinos en potencia",
+      "title_en": "The Things You Kill",
+      "director": "Alireza Khatami",
+      "country": "Canada, France",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-things-you-kill/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -13896,6 +14511,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "16:10",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Usa",
+      "year": 2026,
+      "duration": 146,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-08",
       "hora": "16:30",
@@ -13908,6 +14538,36 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "16:40",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "16:50",
+      "title_es": "Un talento único",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canada, USA",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -14092,6 +14752,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "18:20",
+      "title_es": "Los colores del tiempo",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "France, Belgium",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-08",
       "hora": "18:45",
@@ -14107,6 +14782,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "18:50",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "Mexico",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-07-08",
       "hora": "19:00",
@@ -14119,6 +14809,21 @@
       "genre": "Romance, Comedia",
       "letterboxd": "https://letterboxd.com/film/anything-else/",
       "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "19:00",
+      "title_es": "Un talento único",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canada, USA",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
     },
     {
@@ -14164,6 +14869,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-08",
+      "hora": "20:00",
+      "title_es": "Recuperar un futuro",
+      "title_en": "Recuperar un futuro",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/recuperar-un-futuro",
       "ciclo": ""
     },
     {
@@ -14257,6 +14977,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "20:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "Spain",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "20:50",
+      "title_es": "Leviticus: Ritual de sangre",
+      "title_en": "Leviticus",
+      "director": "Adrian Chiarella",
+      "country": "Australia, USA",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Terror, Romance",
+      "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-08",
       "hora": "21:00",
@@ -14285,6 +15035,21 @@
       "letterboxd": "https://letterboxd.com/film/ninotchka/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
       "ciclo": "Ernst Lubitsch en América"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-07-08",
+      "hora": "21:00",
+      "title_es": "20 asesinos en potencia",
+      "title_en": "The Things You Kill",
+      "director": "Alireza Khatami",
+      "country": "Canada, France",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-things-you-kill/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Cine Gaumont",
@@ -14512,6 +15277,21 @@
       "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-10",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-07-10",
       "hora": "19:30",
@@ -14586,6 +15366,21 @@
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
       "ciclo": "Estreno",
       "original_title": "Dry Leaf"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-11",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -14663,6 +15458,21 @@
       "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-11",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-07-11",
       "hora": "20:30",
@@ -14736,6 +15546,21 @@
       "letterboxd": "https://letterboxd.com/film/back-to-stay/",
       "ticket_url": "https://lumiton.ar/evento/abrir-puertas-y-ventanas/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-12",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Germany",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Amorina",
@@ -14843,6 +15668,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-12",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-07-12",
       "hora": "20:30",
@@ -14933,21 +15773,6 @@
       "ciclo": "Ernst Lubitsch en América"
     },
     {
-      "cine": "Museo del Cine",
-      "fecha": "2026-07-15",
-      "hora": "14:00",
-      "title_es": "Fecha de publicación: 30/06/2026",
-      "title_en": "Fecha de publicación: 30/06/2026",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/abril-en-el-museo-del-cine",
-      "ciclo": ""
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-07-15",
       "hora": "15:00",
@@ -14990,6 +15815,21 @@
       "genre": "Drama, Thriller",
       "letterboxd": "https://letterboxd.com/film/following/",
       "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-15",
+      "hora": "20:00",
+      "title_es": "Recuperar un futuro",
+      "title_en": "Recuperar un futuro",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/recuperar-un-futuro",
       "ciclo": ""
     },
     {
@@ -15458,6 +16298,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-17",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-07-17",
       "hora": "19:30",
@@ -15743,6 +16598,21 @@
       "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-18",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-18",
       "hora": "18:00",
@@ -15861,6 +16731,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-18",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Caballito",
@@ -16088,6 +16973,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-19",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Germany",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-19",
       "hora": "18:00",
@@ -16146,6 +17046,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-19",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Palermo",
@@ -16764,6 +17679,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-22",
+      "hora": "20:00",
+      "title_es": "Recuperar un futuro",
+      "title_en": "Recuperar un futuro",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/recuperar-un-futuro",
+      "ciclo": ""
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-07-24",
       "hora": "17:00",
@@ -16792,6 +17722,21 @@
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/las-aventuras-de-joe-johnston",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-24",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "CCK",
@@ -16824,6 +17769,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-25",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-25",
       "hora": "18:00",
@@ -16837,6 +17797,21 @@
       "letterboxd": "https://letterboxd.com/film/el-correcaminos/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/cartoon",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-25",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -16854,6 +17829,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-26",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Germany",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-26",
       "hora": "18:00",
@@ -16866,6 +17856,36 @@
       "genre": "Familiar, Animación",
       "letterboxd": "https://letterboxd.com/film/tom-and-jerry-forbidden-compass/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/cartoon",
+      "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-26",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-29",
+      "hora": "20:00",
+      "title_es": "Recuperar un futuro",
+      "title_en": "Recuperar un futuro",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/recuperar-un-futuro",
       "ciclo": ""
     },
     {
@@ -17019,6 +18039,21 @@
       "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-31",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-07-31",
       "hora": "19:30",
@@ -17064,6 +18099,21 @@
       "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-01",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, South Korea",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-01",
       "hora": "18:00",
@@ -17092,6 +18142,21 @@
       "letterboxd": "https://letterboxd.com/film/the-unknown-from-outer-space/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
       "ciclo": "Terror adolescente: seis clásicos imperdibles"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-01",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "CCK",
@@ -17124,6 +18189,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-02",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Germany",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-02",
       "hora": "18:00",
@@ -17152,6 +18232,21 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
       "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-02",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     }
   ]
 }
