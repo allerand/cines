@@ -36,13 +36,17 @@ jobs:
         run: |
           pip install -r requirements.txt
           playwright install --with-deps chromium
+          sudo apt-get update && sudo apt-get install -y xvfb
 
       - name: Run scraper
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
-        # Cuando se dispara por schedule, inputs.semanas viene vacío → default 9 (≈ 2 meses)
-        run: python3 run.py --semanas "${{ inputs.semanas || '9' }}"
+        # xvfb-run da un display virtual para el navegador HEADFUL de Borges (su
+        # sitio bloquea headless con un challenge anti-bots). El resto de scrapers
+        # siguen headless. Cuando se dispara por schedule, inputs.semanas viene
+        # vacío → default 9 (≈ 2 meses).
+        run: xvfb-run -a python3 run.py --semanas "${{ inputs.semanas || '9' }}"
 
       - name: Compute today's date (Buenos Aires)
         if: ${{ inputs.regenerate_stories == 'true' }}

@@ -2336,6 +2336,14 @@ async def scrape_cc25(page: Page, semanas: int = 3) -> list[Screening]:
 # ---------------------------------------------------------------------------
 
 BORGES_CINE_URL = "https://centroculturalborges.gob.ar/disciplinas?d=cine"
+# Parches para que el navegador headful no se delate como automatización y pase
+# el challenge anti-bots del sitio.
+_BORGES_STEALTH = """
+Object.defineProperty(navigator, 'webdriver', {get: () => undefined});
+Object.defineProperty(navigator, 'languages', {get: () => ['es-AR', 'es']});
+Object.defineProperty(navigator, 'plugins', {get: () => [1, 2, 3, 4, 5]});
+window.chrome = window.chrome || {runtime: {}};
+"""
 _BORGES_MONTHS = {
     "ene": 1, "feb": 2, "mar": 3, "abr": 4, "may": 5, "jun": 6,
     "jul": 7, "ago": 8, "sep": 9, "oct": 10, "nov": 11, "dic": 12,
@@ -2550,8 +2558,8 @@ async def _borges_listing_content(page: Page) -> tuple[str, str]:
     de fecha o un link /evento/), haciendo scroll para forzar el lazy-load.
     Devuelve (innerText, html) de todos los frames."""
     text, html = "", ""
-    for i in range(30):  # hasta ~30s
-        text, html = await _borges_frames_dump(page)
+    for i in range(45):  # hasta ~45s (incluye el tiempo que tarda el challenge
+        text, html = await _borges_frames_dump(page)  # anti-bots en resolverse)
         if (_BORGES_DATE_RE.search(text) or _BORGES_RANGE_RE.search(text)
                 or "/evento/" in html):
             break
@@ -2564,9 +2572,8 @@ async def _borges_listing_content(page: Page) -> tuple[str, str]:
     return await _borges_frames_dump(page)
 
 
-async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
-    """Scrapea centroculturalborges.gob.ar/disciplinas?d=cine. Saca fechas del
-    listado, horarios/director/duración de cada /evento/<id>, y combina."""
+async def _borges_collect(page: Page, semanas: int = 3) -> list[Screening]:
+    """Lógica de scraping de Borges sobre una page ya lista (headful + stealth)."""
     today = date.today()
     cutoff = today + timedelta(weeks=max(semanas, 6))
     try:
@@ -2628,6 +2635,39 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
                     director=director, duration=(meta or {}).get("duration"),
                 ))
     return out
+
+
+async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
+    """Scrapea centroculturalborges.gob.ar. El sitio usa protección anti-bots
+    (challenge tipo Cloudflare) que bloquea al Chrome headless del runner, así
+    que abrimos un navegador propio HEADFUL (necesita display; en CI se corre
+    bajo xvfb) con parches stealth para parecer un navegador real. El argumento
+    `page` (headless, compartido) se ignora a propósito."""
+    try:
+        from playwright.async_api import async_playwright
+    except Exception:
+        return []
+    try:
+        async with async_playwright() as pw:
+            browser = await pw.chromium.launch(headless=False, args=[
+                "--disable-blink-features=AutomationControlled",
+                "--no-sandbox", "--disable-dev-shm-usage",
+                "--disable-gpu", "--window-size=1366,900",
+            ])
+            ctx = await browser.new_context(
+                user_agent=UA, locale="es-AR",
+                timezone_id="America/Argentina/Buenos_Aires",
+                viewport={"width": 1366, "height": 900},
+            )
+            await ctx.add_init_script(_BORGES_STEALTH)
+            bpage = await ctx.new_page()
+            try:
+                return await _borges_collect(bpage, semanas)
+            finally:
+                await browser.close()
+    except Exception as e:
+        print(f"[borges headful no disponible: {e}]", end=" ")
+        return []
 
 
 def scrape_lumiton_agenda() -> list[Screening]:
