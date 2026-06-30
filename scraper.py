@@ -2413,23 +2413,38 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
     a /evento/<id> y entra a cada uno a sacar fecha(s)/hora(s)/título/director."""
     today = date.today()
     cutoff = today + timedelta(weeks=max(semanas, 6))
+    ids: list[str] = []
     try:
-        await page.goto(BORGES_CINE_URL, wait_until="domcontentloaded", timeout=30000)
-        await page.wait_for_timeout(2500)
-        for _ in range(8):
-            await page.mouse.wheel(0, 1500)
-            await page.wait_for_timeout(450)
-        links = await page.eval_on_selector_all(
-            'a[href*="/evento/"]', "els => els.map(e => e.href)")
-    except Exception:
+        await page.goto(BORGES_CINE_URL, wait_until="domcontentloaded", timeout=45000)
+        await page.wait_for_timeout(3500)
+        try:
+            await page.wait_for_load_state("networkidle", timeout=15000)
+        except Exception:
+            pass
+        for _ in range(10):
+            await page.mouse.wheel(0, 1800)
+            await page.wait_for_timeout(500)
+        # El sitio es un SPA: los enlaces a /evento/<id> pueden no estar en
+        # <a href> (routerLink/onclick). Buscamos los ids en TODO el HTML
+        # renderizado, que es robusto a cómo esté cableada la navegación.
+        html = await page.content()
+        ids = re.findall(r"/evento/(\d+)", html)
+    except Exception as e:
+        print(f"[borges] error listado: {e}", end=" ")
         return []
-    links = [u for u in dict.fromkeys(links or []) if "/evento/" in u][:50]
+    ids = list(dict.fromkeys(ids))[:60]
+    print(f"[{len(ids)} eventos]", end=" ")
 
     result: list[Screening] = []
-    for url in links:
+    for ev_id in ids:
+        url = f"https://centroculturalborges.gob.ar/evento/{ev_id}"
         try:
-            await page.goto(url, wait_until="domcontentloaded", timeout=20000)
-            await page.wait_for_timeout(600)
+            await page.goto(url, wait_until="domcontentloaded", timeout=25000)
+            await page.wait_for_timeout(1200)
+            try:
+                await page.wait_for_load_state("networkidle", timeout=8000)
+            except Exception:
+                pass
             h1 = await page.evaluate(
                 "() => { const h = document.querySelector('h1'); return h ? h.innerText : ''; }")
             body = await page.evaluate("document.body.innerText")

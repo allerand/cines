@@ -395,6 +395,7 @@ async def run_scraper(semanas: int = 9) -> None:
     COMMERCIAL_PREFIXES = ('Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex')
     if CARTELERA_JSON.exists():
         try:
+            from datetime import date
             prev_data = json.loads(CARTELERA_JSON.read_text(encoding="utf-8"))
             today_str = date.today().isoformat()
 
