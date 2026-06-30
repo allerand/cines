@@ -2554,21 +2554,23 @@ async def _borges_frames_dump(page: Page) -> tuple[str, str]:
 
 
 async def _borges_listing_content(page: Page) -> tuple[str, str]:
-    """Espera a que el SPA renderice las cards (hasta que aparezca un encabezado
-    de fecha o un link /evento/), haciendo scroll para forzar el lazy-load.
-    Devuelve (innerText, html) de todos los frames."""
+    """Devuelve (innerText, html) del listado. Fase 1: esperar QUIETO a que el
+    challenge anti-bots se resuelva solo (sin scrollear ni tocar nada, para no
+    interferir con la verificación). Fase 2: ya en la página real, scrollear para
+    forzar el lazy-load de las cards."""
     text, html = "", ""
-    for i in range(45):  # hasta ~45s (incluye el tiempo que tarda el challenge
-        text, html = await _borges_frames_dump(page)  # anti-bots en resolverse)
+    # Fase 1 — espera pasiva hasta que aparezca contenido real (encabezado de
+    # fecha o link /evento/). Mientras tanto NO interactuamos con la página.
+    for _ in range(40):  # hasta ~60s
+        text, html = await _borges_frames_dump(page)
         if (_BORGES_DATE_RE.search(text) or _BORGES_RANGE_RE.search(text)
                 or "/evento/" in html):
             break
-        await page.mouse.wheel(0, 1600)
-        await page.wait_for_timeout(1000)
-    # Un par de scrolls extra para traer las cards de más abajo.
-    for _ in range(8):
-        await page.mouse.wheel(0, 2000)
-        await page.wait_for_timeout(400)
+        await page.wait_for_timeout(1500)
+    # Fase 2 — scroll para traer las cards de más abajo (lazy-load).
+    for _ in range(10):
+        await page.mouse.wheel(0, 1800)
+        await page.wait_for_timeout(500)
     return await _borges_frames_dump(page)
 
 
