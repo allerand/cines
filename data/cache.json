@@ -5988,5 +5988,35 @@
     "title_es": "No moriré sola",
     "original_title": "No moriré sola",
     "genre": "Terror, Thriller"
+  },
+  "yo, la peor de todas": {
+    "url": "https://letterboxd.com/film/i-the-worst-of-all/",
+    "title_en": "I, the Worst of All",
+    "director": "María Luisa Bemberg",
+    "country": "Argentina",
+    "year": 1990,
+    "duration": 105,
+    "genre": "Romance, Historia",
+    "original_title": "Yo, la peor de todas"
+  },
+  "un muro de silencio": {
+    "url": "https://letterboxd.com/film/a-wall-of-silence/",
+    "title_en": "A Wall of Silence",
+    "director": "Lita Stantic",
+    "country": "Argentina, Mexico",
+    "year": 1993,
+    "duration": 105,
+    "genre": "Drama",
+    "original_title": "Un muro de silencio"
+  },
+  "miss mary": {
+    "url": "https://letterboxd.com/film/miss-mary/",
+    "title_en": "Miss Mary",
+    "director": "María Luisa Bemberg",
+    "country": "Argentina, USA",
+    "year": 1986,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "Miss Mary"
   }
 }
