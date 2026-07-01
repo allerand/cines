@@ -26,14 +26,15 @@ jobs:
         run: |
           pip install -r requirements.txt
           playwright install --with-deps chromium
-          sudo apt-get update && sudo apt-get install -y xvfb
 
       - name: Run scraper
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-        # xvfb-run da display virtual para el navegador HEADFUL de Borges (su
-        # sitio bloquea headless con un challenge anti-bots).
-        run: xvfb-run -a python3 run.py
+          # Servicio de scraping (IPs residenciales) para saltear el bloqueo de
+          # Cloudflare a Borges desde el runner (opcional).
+          BORGES_SCRAPER_KEY: ${{ secrets.BORGES_SCRAPER_KEY }}
+          BORGES_SCRAPER_URL_TEMPLATE: ${{ secrets.BORGES_SCRAPER_URL_TEMPLATE }}
+        run: python3 run.py
 
       - name: Compute today's date (Buenos Aires)
         id: date

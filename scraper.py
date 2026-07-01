@@ -4,6 +4,7 @@ Sala Lugones · Cacodelphia · Cine Lorca · Cine York · MALBA
 """
 
 import re
+import os
 import json
 import urllib.request
 import urllib.parse
@@ -2392,33 +2393,65 @@ def _borges_dates_from_label(label: str, today: date, cutoff: date) -> list[date
             d += timedelta(days=1)
     return out
 
-def fetch_borges_json(url: str) -> Optional[dict | list]:
-    """Helper interno para resolver las peticiones JSON de la API del Borges.
+def _borges_http_json(url: str, browser_headers: bool = True):
+    """GET + parseo JSON. Con headers de navegador para el intento directo, o
+    mínimos cuando va por el servicio de scraping (que pone los suyos)."""
+    headers = {"Accept": "application/json, text/plain, */*"}
+    if browser_headers:
+        headers.update({
+            "User-Agent": ("Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) "
+                           "AppleWebKit/605.1.15 (KHTML, like Gecko) "
+                           "Version/18.5 Mobile/15E148 Safari/604.1"),
+            "Accept-Language": "es-AR,es;q=0.9,en;q=0.7",
+            "Referer": "https://centroculturalborges.gob.ar/disciplinas?d=cine",
+            "sec-ch-ua": '"Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"',
+            "sec-ch-ua-mobile": "?1",
+            "sec-ch-ua-platform": '"iOS"',
+            "Sec-Fetch-Dest": "empty",
+            "Sec-Fetch-Mode": "cors",
+            "Sec-Fetch-Site": "same-origin",
+        })
+    req = urllib.request.Request(url, headers=headers)
+    with urllib.request.urlopen(req, timeout=45) as r:
+        return json.loads(r.read().decode("utf-8", errors="replace"))
 
-    El sitio está detrás de Cloudflare, así que imitamos lo más posible a un
-    navegador real (UA móvil + client-hints + sec-fetch + referer). Esto pasa
-    si Cloudflare filtra por headers; si el bloqueo es por reputación de IP
-    (datacenter), devuelve 403 igual y hay que scrapear desde otra IP."""
-    req = urllib.request.Request(url, headers={
-        "User-Agent": ("Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) "
-                       "AppleWebKit/605.1.15 (KHTML, like Gecko) "
-                       "Version/18.5 Mobile/15E148 Safari/604.1"),
-        "Accept": "application/json, text/plain, */*",
-        "Accept-Language": "es-AR,es;q=0.9,en;q=0.7",
-        "Referer": "https://centroculturalborges.gob.ar/disciplinas?d=cine",
-        "sec-ch-ua": '"Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"',
-        "sec-ch-ua-mobile": "?1",
-        "sec-ch-ua-platform": '"iOS"',
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "same-origin",
-    })
-    try:
-        with urllib.request.urlopen(req, timeout=15) as r:
-            return json.loads(r.read().decode("utf-8", errors="replace"))
-    except Exception as e:
-        print(f"  · [Borges API Error] No se pudo conectar a {url}: {e}")
+
+def _borges_proxy_url(target: str) -> Optional[str]:
+    """Envuelve la URL objetivo en un servicio de scraping con IPs residenciales
+    para saltear el bloqueo de Cloudflare a la IP del runner. Requiere el secret
+    BORGES_SCRAPER_KEY. Por defecto usa el formato de ScraperAPI (ultra_premium =
+    residencial + anti-Cloudflare); se puede cambiar de proveedor con
+    BORGES_SCRAPER_URL_TEMPLATE, p.ej. scrape.do:
+        https://api.scrape.do/?token={key}&super=true&url={url}
+    """
+    key = os.environ.get("BORGES_SCRAPER_KEY")
+    if not key:
         return None
+    tmpl = (os.environ.get("BORGES_SCRAPER_URL_TEMPLATE")
+            or "https://api.scraperapi.com/?api_key={key}&ultra_premium=true&url={url}")
+    return tmpl.format(key=urllib.parse.quote(key, safe=""),
+                       url=urllib.parse.quote(target, safe=""))
+
+
+def fetch_borges_json(url: str) -> Optional[dict | list]:
+    """Trae un JSON de la API del Borges. Primero prueba directo (headers de
+    navegador). Si Cloudflare bloquea la IP del runner, reintenta a través de un
+    servicio de scraping con IPs residenciales — sólo si está configurado el
+    secret BORGES_SCRAPER_KEY. Si todo falla, devuelve None (Borges queda vacío
+    sin romper el resto del scrapeo)."""
+    try:
+        return _borges_http_json(url, browser_headers=True)
+    except Exception as direct_err:
+        proxy = _borges_proxy_url(url)
+        if not proxy:
+            print(f"  · [Borges API Error] {direct_err} "
+                  "(configurá BORGES_SCRAPER_KEY para usar un servicio de scraping)")
+            return None
+        try:
+            return _borges_http_json(proxy, browser_headers=False)
+        except Exception as proxy_err:
+            print(f"  · [Borges API Error] directo: {direct_err}; servicio: {proxy_err}")
+            return None
 
 def _borges_times_from_rep(rep: str, sig_hora: str) -> list[str]:
     """Horarios de un evento desde fechasRepeticiones — SÓLO la parte a la
@@ -2498,7 +2531,14 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
         if not ev_id or not title:
             continue
 
-        detail = fetch_borges_json(f"{BORGES_API_DETAIL}{ev_id}") or {}
+        # El detalle sólo aporta algo que el listado no tiene cuando el evento
+        # tiene rango de fechas ("DE MIE A DOM") o es un festival con varias
+        # fechas/horarios. Para las funciones de fecha única, el listado ya trae
+        # fecha + horario, así ahorramos llamadas al servicio de scraping.
+        display = ev.get("fechaDisplay", "") or ""
+        needs_detail = bool(_BORGES_RANGE_RE.search(display)
+                            or re.search(r"festival|ciclo", title, re.IGNORECASE))
+        detail = (fetch_borges_json(f"{BORGES_API_DETAIL}{ev_id}") or {}) if needs_detail else {}
         rep = detail.get("fechasRepeticiones", "") or ""
 
         director = (ev.get("artistaDestacado") or "").strip()

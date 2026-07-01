@@ -36,17 +36,18 @@ jobs:
         run: |
           pip install -r requirements.txt
           playwright install --with-deps chromium
-          sudo apt-get update && sudo apt-get install -y xvfb
 
       - name: Run scraper
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
-        # xvfb-run da un display virtual para el navegador HEADFUL de Borges (su
-        # sitio bloquea headless con un challenge anti-bots). El resto de scrapers
-        # siguen headless. Cuando se dispara por schedule, inputs.semanas viene
-        # vacío → default 9 (≈ 2 meses).
-        run: xvfb-run -a python3 run.py --semanas "${{ inputs.semanas || '9' }}"
+          # Servicio de scraping (IPs residenciales) para saltear el bloqueo de
+          # Cloudflare a Borges desde el runner. Opcional: si el secret no está,
+          # Borges intenta directo y, si falla, queda vacío sin romper nada.
+          BORGES_SCRAPER_KEY: ${{ secrets.BORGES_SCRAPER_KEY }}
+          BORGES_SCRAPER_URL_TEMPLATE: ${{ secrets.BORGES_SCRAPER_URL_TEMPLATE }}
+        # Cuando se dispara por schedule, inputs.semanas viene vacío → default 9 (≈ 2 meses)
+        run: python3 run.py --semanas "${{ inputs.semanas || '9' }}"
 
       - name: Compute today's date (Buenos Aires)
         if: ${{ inputs.regenerate_stories == 'true' }}
