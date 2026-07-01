@@ -3057,84 +3057,117 @@ _CEA_MONTHS = {
     "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
     "noviembre": 11, "diciembre": 12,
 }
-_CEA_WD_MONTH_RE = re.compile(
-    r"^[A-Za-zÁÉÍÓÚáéíóúñ.]+\s*·?\s+(" + "|".join(_CEA_MONTHS) + r")\s*$", re.IGNORECASE
-)
+_CEA_ACCENTS = str.maketrans("áéíóúü", "aeiouu")
+_CEA_DOW = {"lun": 0, "mar": 1, "mie": 2, "jue": 3, "vie": 4, "sab": 5, "dom": 6}
+_CEA_DOW_PAT = r"lun|mar|mi[ée]|jue|vie|s[áa]b|dom"
 _CEA_DIR_YEAR_RE = re.compile(r"^(.+?)\s+·\s+((?:19|20)\d{2})\b")
-_CEA_SKIP_LINES = {"reservar entrada", "reservá tu función", "reserva tu función", "→"}
+
+
+def _cea_norm(s: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (s or "").translate(_CEA_ACCENTS).lower()).strip()
+
+
+def _cea_resolve_date(dow_word: str, day: int, base_month: int, base_year: int,
+                      today: date, cutoff: date) -> Optional[date]:
+    """Resuelve (día-de-semana, número-de-día) a una fecha concreta, probando
+    meses alrededor del base y quedándose con el que hace que el weekday coincida
+    y caiga en la ventana. Así se desambigua el cruce de mes (p.ej. 'Dom 2' que
+    es domingo cae en agosto, no en julio)."""
+    wd = _CEA_DOW.get(dow_word.translate(_CEA_ACCENTS).lower()[:3])
+    cands: list[date] = []
+    for off in range(-1, 4):
+        m, y = base_month + off, base_year
+        while m > 12:
+            m -= 12
+            y += 1
+        while m < 1:
+            m += 12
+            y -= 1
+        try:
+            d = date(y, m, day)
+        except ValueError:
+            continue
+        if wd is not None and d.weekday() != wd:
+            continue
+        if today <= d <= cutoff:
+            cands.append(d)
+    return min(cands) if cands else None
 
 
 def _parse_cea_text(text: str, today: date, cutoff: date) -> list[dict]:
-    """Parsea el texto renderizado de cea.mda.gob.ar.
-
-    Ancla en líneas que son sólo un número de día, seguidas de una línea
-    "Weekday Mes" (ej. "Jueves Junio" o "Jue · Junio"); junta las líneas hasta
-    una "Director · Año" como título. Deduplica los dos bloques que la página
-    repite (programación + reservas). Devuelve dicts {fecha,title,director,year,hora}.
+    """Parsea el texto renderizado de cea.mda.gob.ar. El sitio publica el
+    cronograma del mes en dos formatos:
+      - "DOW día" (línea propia) + "Cine 19hs · Título"  (sección Próximamente)
+      - "Dow día · Título"  con horario default del ciclo (sección Vacaciones)
+    Se toma director/año del mapa "Título → Director · Año" que arman las cards
+    de arriba, cuando está disponible. Devuelve dicts {fecha,title,director,year,hora}.
     """
-    lines = [l.strip() for l in text.splitlines()]
-    n = len(lines)
+    my = re.search(r"\b(" + "|".join(_CEA_MONTHS) + r")\s+(20\d{2})", text, re.IGNORECASE)
+    base_month = _CEA_MONTHS[my.group(1).lower()] if my else today.month
+    base_year = int(my.group(2)) if my else today.year
 
-    cycle_year = today.year
-    ym = re.search(r"ciclo\s*·\s*\w+\s+(20\d{2})", text, re.IGNORECASE)
-    if ym:
-        cycle_year = int(ym.group(1))
+    lines = [re.sub(r"\s+", " ", l).strip() for l in text.splitlines()]
 
-    # Horario por defecto: primer "HH:MM" antes de "hs" (la página muestra el
-    # ciclo completo, p.ej. "19:00 / 18:00 hs"; usamos el primero).
-    default_hora = "19:00"
-    hm = re.search(r"(\d{1,2}:\d{2})(?:\s*/\s*\d{1,2}:\d{2})*\s*hs", text)
-    if hm:
-        default_hora = hm.group(1)
+    # Mapa título→(director,año) desde las cards "Título \n Director · Año".
+    dir_year: dict = {}
+    for idx, ln in enumerate(lines):
+        m = _CEA_DIR_YEAR_RE.match(ln)
+        if not m:
+            continue
+        p = idx - 1
+        while p >= 0 and not lines[p]:
+            p -= 1
+        if p >= 0:
+            dir_year.setdefault(_cea_norm(lines[p]), (m.group(1).strip(), int(m.group(2))))
+
+    fmt_a = re.compile(rf"^({_CEA_DOW_PAT})\s+(\d{{1,2}})\s*·\s*(.+)$", re.IGNORECASE)
+    dow_day = re.compile(rf"^({_CEA_DOW_PAT})\s+(\d{{1,2}})\s*$", re.IGNORECASE)
+    time_title = re.compile(r"^(?:cine\s+)?(\d{1,2})(?::(\d{2}))?\s*hs?\s*·\s*(.+)$", re.IGNORECASE)
+    cine_ctx = re.compile(r"\bcine\b[^\n]*?(\d{1,2})\s*hs\b", re.IGNORECASE)
 
     out: list[dict] = []
     seen: set[tuple] = set()
-    i = 0
-    while i < n:
-        if re.fullmatch(r"\d{1,2}", lines[i]):
-            day = int(lines[i])
-            j = i + 1
-            while j < n and not lines[j]:
-                j += 1
-            m = _CEA_WD_MONTH_RE.match(lines[j]) if j < n else None
-            if m:
-                month = _CEA_MONTHS[m.group(1).lower()]
-                parts: list[str] = []
-                director, film_year, k = "", None, j + 1
-                while k < n and k < j + 10:
-                    ln = lines[k]
-                    if not ln:
-                        k += 1
-                        continue
-                    dm = _CEA_DIR_YEAR_RE.match(ln)
-                    if dm:
-                        director, film_year = dm.group(1).strip(), int(dm.group(2))
-                        break
-                    if ln.lower() in _CEA_SKIP_LINES:
-                        k += 1
-                        continue
-                    if re.fullmatch(r"\d{1,2}", ln):
-                        break  # arranca otra card
-                    parts.append(ln)
-                    k += 1
-                title = re.sub(r"\s+", " ", " ".join(parts)).strip()
-                if title and director:
-                    try:
-                        d = date(cycle_year, month, day)
-                    except ValueError:
-                        d = None
-                    if d and today <= d <= cutoff:
-                        key = (d.isoformat(), re.sub(r"[^a-z0-9]", "", title.lower()))
-                        if key not in seen:
-                            seen.add(key)
-                            out.append({
-                                "fecha": d.isoformat(), "title": title,
-                                "director": director, "year": film_year,
-                                "hora": default_hora,
-                            })
-                i = k
-                continue
-        i += 1
+    default_time = "19:00"
+    pending: Optional[tuple] = None
+
+    def emit(d: Optional[date], title: str, hora: str) -> None:
+        if not d:
+            return
+        title = re.split(r"\s+·\s+", title.strip(" ·"))[0]
+        title = re.sub(r"\s+", " ", title).strip()
+        if len(title) < 2:
+            return
+        key = (d.isoformat(), _cea_norm(title))
+        if key in seen:
+            return
+        seen.add(key)
+        dy = dir_year.get(_cea_norm(title), ("", None))
+        out.append({"fecha": d.isoformat(), "title": title,
+                    "director": dy[0], "year": dy[1], "hora": hora})
+
+    for ln in lines:
+        if not ln:
+            continue
+        ma = fmt_a.match(ln)
+        if ma:
+            emit(_cea_resolve_date(ma.group(1), int(ma.group(2)), base_month, base_year, today, cutoff),
+                 ma.group(3), default_time)
+            continue
+        md = dow_day.match(ln)
+        if md:
+            pending = (md.group(1), int(md.group(2)))
+            continue
+        mt = time_title.match(ln)
+        if mt and pending:
+            hora = f"{int(mt.group(1)):02d}:{mt.group(2) or '00'}"
+            emit(_cea_resolve_date(pending[0], pending[1], base_month, base_year, today, cutoff),
+                 mt.group(3), hora)
+            continue
+        # Línea de contexto que fija el horario default del ciclo ("Cine · 18hs").
+        cm = cine_ctx.search(ln)
+        if cm:
+            default_time = f"{int(cm.group(1)):02d}:00"
+
     return out
 
 
@@ -3176,9 +3209,12 @@ async def scrape_cea(page: Page) -> list[Screening]:
     try:
         await page.goto("https://cea.mda.gob.ar/", wait_until="domcontentloaded", timeout=30000)
         await page.wait_for_timeout(2500)
-        for _ in range(6):
-            await page.mouse.wheel(0, 1400)
-            await page.wait_for_timeout(400)
+        # La programación completa del mes (secciones "Próximamente" y
+        # "Vacaciones de Invierno") está al fondo de la página → scrolleamos
+        # bastante para que el SPA renderice todo antes de leer el innerText.
+        for _ in range(16):
+            await page.mouse.wheel(0, 1600)
+            await page.wait_for_timeout(350)
         text = await page.evaluate("document.body.innerText")
         form_links = await page.eval_on_selector_all(
             'a[href*="docs.google.com/forms"], a[href*="forms.gle"]',
