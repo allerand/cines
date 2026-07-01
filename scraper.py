@@ -2402,90 +2402,106 @@ def fetch_borges_json(url: str) -> Optional[dict | list]:
         print(f"  · [Borges API Error] No se pudo conectar a {url}: {e}")
         return None
 
+def _borges_times_from_rep(rep: str, sig_hora: str) -> list[str]:
+    """Horarios de un evento desde fechasRepeticiones — SÓLO la parte a la
+    derecha del guión (p.ej. '15, 17 y 19 h' o '14:50, 16:20, 17:50, 19:20 h').
+    NO se parsea la descripción larga porque ahí las duraciones de los cortos
+    ('(00:08:00)') se colarían como horarios falsos. Fallback: horarioSiguiente."""
+    tail = re.split(r"\s*[-–—]\s*", rep or "", maxsplit=1)
+    tail = tail[1] if len(tail) > 1 else ""
+    times: list[str] = []
+    for hh, mm in re.findall(r"(\d{1,2})(?::(\d{2}))?", tail):
+        if 0 <= int(hh) <= 23:
+            times.append(f"{int(hh):02d}:{mm or '00'}")
+    if not times and sig_hora:
+        m = re.match(r"(\d{1,2}):(\d{2})", sig_hora)
+        if m:
+            times.append(f"{int(m.group(1)):02d}:{m.group(2)}")
+    return list(dict.fromkeys(times))
+
+
+def _borges_dates_from_rep(rep: str, display: str, sig_iso: str,
+                           today: date, cutoff: date) -> list[date]:
+    """Fechas de un evento, por prioridad:
+      1) día(s)+mes explícitos en fechasRepeticiones ('Mie 1 / 8 / 15 jul …') →
+         captura festivales con varias fechas.
+      2) fechaDisplay ('01 JUL 2026' puntual o 'DE MIE A DOM' rango semanal).
+      3) fechaSiguienteRepeticion (ISO)."""
+    left = re.split(r"\s*[-–—]\s*", rep or "", maxsplit=1)[0]
+    mm = re.search(r"(ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)", left, re.IGNORECASE)
+    days = [int(x) for x in re.findall(r"\b(\d{1,2})\b", left)]
+    if mm and days:
+        mon = _BORGES_MONTHS.get(mm.group(1).lower()[:3])
+        ym = re.search(r"(20\d{2})", display or "")
+        yr = int(ym.group(1)) if ym else today.year + (1 if mon and mon < today.month else 0)
+        out = []
+        for d in days:
+            try:
+                dt = date(yr, mon, d)
+            except (ValueError, TypeError):
+                continue
+            if today <= dt <= cutoff:
+                out.append(dt)
+        if out:
+            return out
+    lab = _borges_dates_from_label(display or "", today, cutoff)
+    if lab:
+        return lab
+    if sig_iso:
+        try:
+            d = date.fromisoformat(sig_iso[:10])
+            if today <= d <= cutoff:
+                return [d]
+        except ValueError:
+            pass
+    return []
+
+
 async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
-    """
-    Scrapea centroculturalborges.gob.ar consumiendo directamente sus endpoints JSON.
-    Conserva el parámetro `page` intacto para no romper el contrato de llamadas de run.py.
-    """
+    """Scrapea centroculturalborges.gob.ar consumiendo sus endpoints JSON
+    públicos (el HTML está detrás de un challenge anti-bots, pero la API no).
+    Conserva `page` intacto para no romper el contrato de run.py."""
     today = date.today()
     cutoff = today + timedelta(weeks=max(semanas, 6))
-    result: list[Screening] = []
-    
     print("  · Conectando a la API del Centro Cultural Borges...", flush=True)
     events_list = fetch_borges_json(BORGES_API_LIST)
     if not events_list or not isinstance(events_list, list):
         print("  · [Borges API] Lista de eventos vacía o inaccesible.")
         return []
 
+    result: list[Screening] = []
+    seen: set = set()
     for ev in events_list:
+        if not isinstance(ev, dict):
+            continue
         ev_id = ev.get("id")
-        title = re.sub(r'["“”]', "", ev.get("titulo", "")).strip()
+        title = re.sub(r'["“”]', "", ev.get("titulo", "") or "")
+        title = re.sub(r"\s+", " ", title).strip()
         if not ev_id or not title:
             continue
 
-        # 1) Obtener la metadata extendida desde el detalle del evento
         detail = fetch_borges_json(f"{BORGES_API_DETAIL}{ev_id}") or {}
-        
-        # 2) Extraer horarios consolidados (Combina fallback directo + texto descriptivo)
-        times: list[str] = []
-        next_time = ev.get("horarioSiguienteRepeticion")
-        if next_time:
-            tm = re.match(r"(\d{1,2}):(\d{2})", next_time)
-            if tm:
-                times.append(f"{int(tm.group(1)):02d}:{tm.group(2)}")
+        rep = detail.get("fechasRepeticiones", "") or ""
 
-        desc_larga = detail.get("descripcionLarga", "") or ""
-        fechas_rep = detail.get("fechasRepeticiones", "") or ""
-        combined_text = f"{fechas_rep}\n{desc_larga}"
-
-        # Parsear cualquier otra hora explícita en el cuerpo (ej: bloques de festivales de animación)
-        for hh, mm in re.findall(r"\b(\d{1,2}):(\d{2})\b", combined_text):
-            t_str = f"{int(hh):02d}:{mm}"
-            if t_str not in times and 0 <= int(hh) <= 23:
-                times.append(t_str)
-        
-        for hh in re.findall(r"\b(\d{1,2})\s*h\b", combined_text.lower()):
-            t_str = f"{int(hh):02d}:00"
-            if t_str not in times and 0 <= int(hh) <= 23:
-                times.append(t_str)
-
-        if not times:
-            times = ["19:00"]  # Fallback reglamentario si no se define hora
-
-        # 3) Extraer Director y Duración
-        director = ev.get("artistaDestacado", "").strip()
-        if not director:
-            md = re.search(r"\bdirecci[óo]n\s*:\s*([^\n]+)", combined_text, re.IGNORECASE)
-            if md:
-                director = re.split(r"\s{2,}|\bguion\b|\bgui[óo]n\b", md.group(1), flags=re.IGNORECASE)[0].strip(" .,;")
-
+        director = (ev.get("artistaDestacado") or "").strip()
         duration = detail.get("duracion")
-        if not duration:
-            mdur = re.search(r"duraci[óo]n\s*:?\s*(\d{1,3})", combined_text, re.IGNORECASE)
-            if mdur:
-                duration = int(mdur.group(1))
+        if not isinstance(duration, int) or duration <= 0:
+            duration = None
 
-        # 4) Resolver e inflar el abanico de fechas válidas
-        fecha_display = ev.get("fechaDisplay", "")
-        dates = _borges_dates_from_label(fecha_display, today, cutoff)
-
-        # Forzar inclusión segura del campo de repetición inmediata provisto por el backend
-        next_date_str = ev.get("fechaSiguienteRepeticion")
-        if next_date_str:
-            try:
-                next_date = date.fromisoformat(next_date_str)
-                if today <= next_date <= cutoff and next_date not in dates:
-                    dates.append(next_date)
-            except ValueError:
-                pass
-
+        times = _borges_times_from_rep(rep, ev.get("horarioSiguienteRepeticion") or "") or ["19:00"]
+        dates = _borges_dates_from_rep(
+            rep, ev.get("fechaDisplay", "") or "",
+            ev.get("fechaSiguienteRepeticion") or "", today, cutoff)
         if not dates:
             continue
 
-        # 5) Mapear y empaquetar Screenings para sitedigo.com
         ticket_url = f"https://centroculturalborges.gob.ar/evento/{ev_id}"
         for d in dates:
             for t in times:
+                key = (title, d.isoformat(), t)
+                if key in seen:
+                    continue
+                seen.add(key)
                 result.append(Screening(
                     cine="Centro Cultural Borges",
                     title=title,
@@ -2493,20 +2509,12 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
                     hora=t,
                     ticket_url=ticket_url,
                     director=director,
-                    duration=duration
+                    duration=duration,
                 ))
 
-    # Deduplicación final defensiva
-    seen = set()
-    deduped = []
-    for s in result:
-        key = (s.title, s.fecha, s.hora)
-        if key not in seen:
-            seen.add(key)
-            deduped.append(s)
+    print(f"  · [Borges API] Procesadas con éxito {len(result)} funciones.")
+    return result
 
-    print(f"  · [Borges API] Procesadas con éxito {len(deduped)} funciones.")
-    return deduped
 
 def scrape_lumiton_agenda() -> list[Screening]:
     """
