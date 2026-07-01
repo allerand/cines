@@ -2393,8 +2393,26 @@ def _borges_dates_from_label(label: str, today: date, cutoff: date) -> list[date
     return out
 
 def fetch_borges_json(url: str) -> Optional[dict | list]:
-    """Helper interno para resolver las peticiones JSON de la API del Borges."""
-    req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+    """Helper interno para resolver las peticiones JSON de la API del Borges.
+
+    El sitio está detrás de Cloudflare, así que imitamos lo más posible a un
+    navegador real (UA móvil + client-hints + sec-fetch + referer). Esto pasa
+    si Cloudflare filtra por headers; si el bloqueo es por reputación de IP
+    (datacenter), devuelve 403 igual y hay que scrapear desde otra IP."""
+    req = urllib.request.Request(url, headers={
+        "User-Agent": ("Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) "
+                       "AppleWebKit/605.1.15 (KHTML, like Gecko) "
+                       "Version/18.5 Mobile/15E148 Safari/604.1"),
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "es-AR,es;q=0.9,en;q=0.7",
+        "Referer": "https://centroculturalborges.gob.ar/disciplinas?d=cine",
+        "sec-ch-ua": '"Google Chrome";v="149", "Chromium";v="149", "Not)A;Brand";v="24"',
+        "sec-ch-ua-mobile": "?1",
+        "sec-ch-ua-platform": '"iOS"',
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
+    })
     try:
         with urllib.request.urlopen(req, timeout=15) as r:
             return json.loads(r.read().decode("utf-8", errors="replace"))
