@@ -6018,5 +6018,85 @@
     "duration": 100,
     "genre": "Drama",
     "original_title": "Miss Mary"
+  },
+  "la flor - parte i": {
+    "url": "https://letterboxd.com/film/la-flor-parte-i/",
+    "title_en": "La Flor",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 803,
+    "genre": "Thriller, Fantasía"
+  },
+  "la flor - parte ii": {
+    "url": "https://letterboxd.com/film/la-flor/",
+    "title_en": "La Flor",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 803,
+    "genre": "Thriller, Fantasía"
+  },
+  "la flor - parte iii": {
+    "url": "https://letterboxd.com/film/la-flor/",
+    "title_en": "La Flor",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 803,
+    "genre": "Thriller, Fantasía"
+  },
+  "scream 7": {
+    "url": "https://letterboxd.com/film/scream-7/",
+    "title_en": "Scream 7",
+    "director": "Kevin Williamson",
+    "country": "USA",
+    "year": 2026,
+    "duration": 114,
+    "genre": "Terror, Crimen",
+    "original_title": "Scream 7"
+  },
+  "forenses": {
+    "url": "https://letterboxd.com/film/forensics/",
+    "title_en": "Forensics",
+    "director": "Federico Atehortúa Arteaga",
+    "country": "Colombia",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "Forenses"
+  },
+  "ecos de xinjiang": {
+    "url": "https://letterboxd.com/film/ecos-de-xinjiang/",
+    "title_en": "Echoes from Xinjiang",
+    "director": "Pablo Martín Weber",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 70,
+    "genre": "Ciencia ficción",
+    "title_es": "Echoes from Xinjiang",
+    "original_title": "Ecos de Xinjiang"
+  },
+  "leyenda": {
+    "url": "https://letterboxd.com/film/legend/",
+    "title_en": "Legend",
+    "director": "Ridley Scott",
+    "country": "USA, UK",
+    "year": 1985,
+    "duration": 94,
+    "genre": "Aventura, Fantasía",
+    "title_es": "Leyenda",
+    "original_title": "Legend"
+  },
+  "laberinto": {
+    "url": "https://letterboxd.com/film/labyrinth/",
+    "title_en": "Labyrinth",
+    "director": "Jim Henson",
+    "country": "UK, USA",
+    "year": 1986,
+    "duration": 101,
+    "genre": "Aventura, Familiar",
+    "title_es": "Dentro del laberinto",
+    "original_title": "Labyrinth"
   }
 }
