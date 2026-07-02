@@ -2745,11 +2745,13 @@ def _museo_film_parts(cand: str):
     return best[1], re.sub(r"\s+", " ", best[2]).strip(), year, original
 
 
-def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
+def _parse_museocine_page(text: str, slug_month: Optional[int],
+                          today: Optional[date] = None) -> list[dict]:
     """
     Parsea texto plano de una nota mensual del Museo del Cine.
     Devuelve [{fecha, hora, title, ciclo, director, year, original_title}, ...].
     """
+    today = today or date.today()
     out: list[dict] = []
 
     # Año: lo tomamos del header "Martes 05 de Mayo de 2026" o de "de 2026"
@@ -2794,53 +2796,88 @@ def _parse_museocine_page(text: str, slug_month: Optional[int]) -> list[dict]:
     # Iteramos por cada match de header y escaneamos las líneas del segmento
     # (hasta el próximo header) buscando la primera que sea una línea de película.
     matches = list(header_re.finditer(text))
-    for idx, hm in enumerate(matches):
-        days = [int(hm.group("d1"))]
-        if hm.group("d2"):
-            days.append(int(hm.group("d2")))
-        hour = int(hm.group("hh"))
-        minute = int(hm.group("mm") or 0)
-        # Mes del propio header si lo trae ("de junio"); sino el del slug/cuerpo.
-        hmonth = _MUSEOCINE_MONTHS.get(hm.group("mon").lower()) if hm.group("mon") else month
-        ciclo = (hm.group("ciclo") or "").strip().rstrip(".,;")
+    # Agrupamos matches contiguos de la MISMA línea de fecha (separados sólo por
+    # " y [díasemana] "): comparten la película que viene después, y cada uno
+    # aporta su propio horario → soporta "día X a las Hh y día Y a las Kh".
+    groups: list[list] = []
+    for hm in matches:
+        if groups and re.fullmatch(rf"\s*y\s*(?:{_wd}\s*)?",
+                                   text[groups[-1][-1].end():hm.start()], re.IGNORECASE):
+            groups[-1].append(hm)
+        else:
+            groups.append([hm])
 
-        # rango hasta el próximo header
-        seg_end = matches[idx + 1].start() if idx + 1 < len(matches) else len(text)
-        segment = text[hm.end():seg_end]
-        # Buscar la línea de película. Según el HTML, el título y el "de Director
-        # (año)" a veces quedan en la MISMA línea y a veces partidos (un <strong>
-        # en el título hace que get_text los separe), así que probamos uniendo
-        # hasta 4 líneas consecutivas desde el inicio del segmento.
-        seg_lines = [ln.strip() for ln in segment.splitlines() if ln.strip()]
+    for gi, group in enumerate(groups):
+        # Slots (día, mes, hora, minuto) de todo el grupo + ciclo.
+        slots: list[tuple] = []
+        ciclo = ""
+        for hm in group:
+            hmonth = _MUSEOCINE_MONTHS.get(hm.group("mon").lower()) if hm.group("mon") else month
+            hour = int(hm.group("hh"))
+            minute = int(hm.group("mm") or 0)
+            days = [int(hm.group("d1"))]
+            if hm.group("d2"):
+                days.append(int(hm.group("d2")))
+            for dn in days:
+                slots.append((dn, hmonth, hour, minute))
+            if hm.group("ciclo"):
+                ciclo = hm.group("ciclo").strip().rstrip(".,;")
+
+        # Película: segmento desde el fin del grupo hasta el próximo grupo.
+        seg_start = group[-1].end()
+        seg_end = groups[gi + 1][0].start() if gi + 1 < len(groups) else len(text)
+        # El título y el "de Director (año)" a veces quedan en la MISMA línea y a
+        # veces partidos (un <strong> los separa en get_text), así que probamos
+        # uniendo hasta 4 líneas consecutivas desde el inicio del segmento.
+        seg_lines = [ln.strip() for ln in text[seg_start:seg_end].splitlines() if ln.strip()]
         title = director = original = ""
         film_year: Optional[int] = None
-        # Probamos primero los matches más cortos (span chico) en todas las
-        # posiciones, para preferir la línea de película limpia antes que una
-        # unión larga que arrastre preámbulos (ej. "Programación especial...").
         for span in range(1, 5):
             for start in range(min(5, len(seg_lines))):
-                cand = " ".join(seg_lines[start:start + span])
-                parts = _museo_film_parts(cand)
-                if not parts:
-                    continue
-                title, director, film_year, original = parts
-                break
+                parts = _museo_film_parts(" ".join(seg_lines[start:start + span]))
+                if parts:
+                    title, director, film_year, original = parts
+                    break
             if title:
                 break
         if not title and seg_lines:
-            # Programa/ciclo sin formato "Título de Director (año)" (ej. una
-            # función de cortos: "Futuras: Ciclo de cortos..."). Usamos la
-            # primera línea del segmento como título, sin director/año.
+            # Sin "Título de Director (año)": p.ej. un ciclo de cortos
+            # ("Futuras: …") o un film cuyo director no está en la línea
+            # ("Tambores apaches (Apache Drums, 1951, EE.UU.)"). Limpiamos el
+            # paréntesis final y sacamos año/título original si están.
             first = seg_lines[0]
+            pm = re.search(r"\(([^)]*)\)\s*$", first)
+            if pm:
+                py = re.search(r"\b((?:19|20)\d{2})\b", pm.group(1))
+                if py:
+                    film_year = int(py.group(1))
+                orig = re.sub(r"\b(?:19|20)\d{2}\b|EE\.?\s*UU\.?", " ", pm.group(1))
+                orig = re.sub(r"\s+", " ", orig).strip(" ,.")
+                if orig:
+                    original = orig
+                first = first[:pm.start()].strip()
             if 3 <= len(first) <= 100 and (first[:1].isupper() or first[:1] in "¡¿"):
                 title = first
         if not title:
             continue
 
-        for day_num in days:
+        for dn, hmonth, hour, minute in slots:
+            # Corrección de typo de mes: el museo a veces escribe "de junio" en
+            # la nota de julio. Si el mes explícito manda la fecha al pasado
+            # pero el mes del slug la deja a futuro, usamos el del slug.
+            d: Optional[date] = None
             try:
-                d = date(year, hmonth, day_num)
+                d = date(year, hmonth, dn)
             except (ValueError, TypeError):
+                pass
+            if slug_month and hmonth != slug_month and (d is None or d < today):
+                try:
+                    ds = date(year, slug_month, dn)
+                    if ds >= today:
+                        d = ds
+                except ValueError:
+                    pass
+            if d is None:
                 continue
             out.append({
                 "fecha": d.isoformat(),
@@ -2881,7 +2918,7 @@ def scrape_museo_cine(semanas: int = 4) -> list[Screening]:
         main = soup.find("article") or soup.find("main") or soup
         text = main.get_text("\n", strip=True)
 
-        for ev in _parse_museocine_page(text, slug_month):
+        for ev in _parse_museocine_page(text, slug_month, today):
             try:
                 d = date.fromisoformat(ev["fecha"])
             except ValueError:

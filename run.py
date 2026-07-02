@@ -273,6 +273,24 @@ async def run_scraper(semanas: int = 9) -> None:
         CEA, donde el innerText hereda un text-transform: uppercase)."""
         return _title_case_es(s) if s and s.isupper() else s
 
+    def _fix_country_caps(s: str) -> str:
+        """Como _fix_caps pero preserva las siglas de países (UK, USA, EEUU,
+        URSS): sólo title-casea los nombres largos en mayúsculas."""
+        if not s:
+            return s
+        out: list[str] = []
+        for part in s.split(","):
+            p = part.strip()
+            if not p:
+                continue
+            if p.isupper() and len(p.replace(" ", "")) <= 4:
+                out.append(p)            # sigla: se preserva en mayúsculas
+            elif p.isupper():
+                out.append(_title_case_es(p))
+            else:
+                out.append(p)
+        return ", ".join(out)
+
     # Construir JSON final
     screenings_out = []
     for s in all_screenings:
@@ -304,7 +322,7 @@ async def run_scraper(semanas: int = 9) -> None:
             "title_es":   display_title,
             "title_en":   tmdb_en or display_title,
             "director":   _fix_caps(getattr(s, "director", "") or meta.get("director") or ""),
-            "country":    _fix_caps(getattr(s, "country", "") or meta.get("country") or ""),
+            "country":    _fix_country_caps(getattr(s, "country", "") or meta.get("country") or ""),
             "year":       getattr(s, "year", None) or meta.get("year"),
             "duration":   getattr(s, "duration", None) or meta.get("duration"),
             "genre":      meta.get("genre") or "",
