@@ -4235,14 +4235,14 @@
     "original_title": "100 Nights of Hero"
   },
   "familia": {
-    "url": "",
-    "title_en": "FAMILIA",
-    "director": "Alfonso Pineda Ulloa",
-    "country": "Mexico, Argentina",
-    "year": 2026,
-    "duration": 98,
-    "original_title": "Familia a la deriva",
-    "genre": "Familiar, Comedia"
+    "url": "https://letterboxd.com/film/familia-2024-1/",
+    "title_en": "Familia",
+    "director": "Francesco Costabile",
+    "country": "Italy",
+    "year": 2024,
+    "duration": 120,
+    "genre": "Thriller, Drama",
+    "original_title": "Familia"
   },
   "el santo": {
     "url": "https://letterboxd.com/film/the-saint-2023/",
@@ -6244,5 +6244,37 @@
     "duration": 156,
     "genre": "Romance, Comedia",
     "original_title": "Fire Supply"
+  },
+  "tambores apaches": {
+    "url": "https://letterboxd.com/film/apache-drums/",
+    "title_en": "Apache Drums",
+    "director": "Hugo Fregonese",
+    "country": "USA",
+    "year": 1951,
+    "duration": 75,
+    "genre": "Western",
+    "title_es": "Tambores apaches",
+    "original_title": "Apache Drums"
+  },
+  "alma solitaria": {
+    "url": "https://letterboxd.com/film/saddle-tramp/",
+    "title_en": "Saddle Tramp",
+    "director": "Hugo Fregonese",
+    "country": "USA",
+    "year": 1950,
+    "duration": 76,
+    "genre": "Western",
+    "title_es": "Alma solitaria",
+    "original_title": "Saddle Tramp"
+  },
+  "mis seis presidiarios": {
+    "url": "https://letterboxd.com/film/my-six-convicts/",
+    "title_en": "My Six Convicts",
+    "director": "Hugo Fregonese",
+    "country": "USA",
+    "year": 1952,
+    "duration": 104,
+    "genre": "Drama",
+    "original_title": "My Six Convicts"
   }
 }
