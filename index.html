@@ -239,10 +239,20 @@
     .filters {
       padding: 0.8rem 2rem;
       display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      border-bottom: 1px solid var(--border);
+    }
+    /* Los chips de cine viven en su propio bloque flexible; así envuelven
+       prolijamente y el buscador queda fijo arriba a la derecha (sin dejar a
+       "Borges" / "+ Comerciales" colgados con un hueco enorme al lado). */
+    .filter-btns {
+      flex: 1 1 300px;
+      display: flex;
       gap: 0.6rem;
       align-items: center;
       flex-wrap: wrap;
-      border-bottom: 1px solid var(--border);
     }
     .filter-label {
       font-size: 0.72rem;
@@ -312,8 +322,9 @@
       border-radius: 3px;
       font-size: 0.78rem;
       font-family: inherit;
-      margin-left: auto;
-      width: 14rem;
+      flex: 0 0 auto;
+      align-self: flex-start;
+      width: 15rem;
       transition: border-color 0.12s;
     }
     .search-input:focus { outline: none; border-color: var(--accent); }
@@ -436,6 +447,15 @@
       color: var(--text);
     }
     .hora-tag.unknown { color: var(--muted); font-weight: 400; font-size: 0.78rem; }
+    /* Fecha por fila en modo búsqueda (resultados de varios días). */
+    .hora-date {
+      display: block;
+      font-size: 0.66rem;
+      color: var(--accent);
+      text-transform: capitalize;
+      margin-bottom: 0.1rem;
+      letter-spacing: 0.02em;
+    }
 
     .cine-cell {
       display: flex;
@@ -569,6 +589,7 @@
       header { padding: 0.6rem 1rem; }
       main { padding: 1rem; }
       .filters { padding: 0.6rem 1rem; }
+      .search-input { width: 100%; }
       .day-tabs { padding: 0 0.5rem; }
       .col-ciclo, .col-dir, .col-genre, .col-pais, .col-anio, .col-dur { display: none; }
       .col-cine { width: 5rem; }
@@ -619,6 +640,7 @@
 </div>
 
 <div class="filters" id="filters">
+  <div class="filter-btns">
   <span class="filter-label">Cine</span>
   <button class="filter-btn active" data-cine="all">Todos</button>
   <button class="filter-btn" data-cine="MALBA">MALBA</button>
@@ -649,6 +671,7 @@
   <button id="toggle-commercial" class="filter-toggle" type="button" aria-pressed="false">
     + Comerciales
   </button>
+  </div>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
 </div>
 
@@ -826,6 +849,23 @@ const SORT_EXTRACTORS = {
   duration: s => s.duration || 0,
   lb:       s => s.letterboxd ? 1 : 0,
 };
+
+// Orden cronológico (fecha, luego hora) — usado en modo búsqueda, que junta
+// funciones de varios días.
+function sortByDateTime(rows) {
+  return [...rows].sort((a, b) => {
+    if (a.fecha !== b.fecha) return a.fecha < b.fecha ? -1 : 1;
+    const ta = a.hora || '99:99', tb = b.hora || '99:99';
+    return ta < tb ? -1 : ta > tb ? 1 : 0;
+  });
+}
+
+// "2026-07-09" → "Mié 9 jul" (etiqueta corta para las filas en modo búsqueda).
+function fmtShortDate(fecha) {
+  const [y, m, d] = fecha.split('-').map(Number);
+  const dt = new Date(y, m - 1, d);
+  return `${DAYS_ES[dt.getDay()]} ${d} ${MONTHS_ES[m - 1]}`;
+}
 
 function sortRows(rows) {
   const extract = SORT_EXTRACTORS[sortKey];
@@ -1048,7 +1088,11 @@ function displayTitle(s) {
 
 function renderTable() {
   const main = document.getElementById('main');
-  let rows = visibleScreenings().filter(s => s.fecha === activeDay);
+  const searching = !!searchQuery;
+  // Con búsqueda activa mostramos funciones de TODOS los días (p.ej. todas las
+  // pelis de "lucrecia martel" en la ventana). Sin búsqueda: sólo el día activo.
+  let rows = visibleScreenings();
+  if (!searching) rows = rows.filter(s => s.fecha === activeDay);
   if (activeCine !== 'all') {
     // Chips comerciales (data-cine="Cinemark") matchean por PREFIJO así
     // un solo chip cubre todas las sucursales de la cadena. Chips no
@@ -1057,9 +1101,9 @@ function renderTable() {
       ? rows.filter(s => s.cine && s.cine.startsWith(activeCine))
       : rows.filter(s => s.cine === activeCine);
   }
-  if (searchQuery) rows = rows.filter(s => [s.title_es, s.title_en, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
+  if (searching) rows = rows.filter(s => [s.title_es, s.title_en, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
 
-  rows = sortRows(rows);
+  rows = searching ? sortByDateTime(rows) : sortRows(rows);
 
   if (rows.length === 0) {
     main.innerHTML = '<div class="empty">No hay funciones.</div>';
@@ -1083,7 +1127,7 @@ function renderTable() {
       ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank">Entradas →</a></div>` : ''}`;
 
     return `<tr>
-      <td class="col-hora"><span class="hora-tag">${horaText}</span></td>
+      <td class="col-hora">${searching ? `<span class="hora-date">${fmtShortDate(s.fecha)}</span>` : ''}<span class="hora-tag">${horaText}</span></td>
       <td class="col-cine"><div class="cine-cell"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>${CINE_ADDRESSES[s.cine] ? `<div class="cine-addr">${escapeHtml(CINE_ADDRESSES[s.cine])}</div>` : ''}</div></td>
       <td class="col-add">${addBtn}</td>
       <td class="col-film">${filmCell}</td>
