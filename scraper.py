@@ -796,10 +796,14 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], list[dict]
                 # Saltear líneas que parezcan película (terminan en "(...año)") o
                 # sinopsis larga; quedarnos con una etiqueta corta tipo "Programa X".
                 # También saltear notas de formato/duración sueltas tipo "(93';
-                # DM)." — no son un nombre de programa, sólo metadata residual.
+                # DM)." y encabezados de día ("Miércoles 1°", "Lunes 5") — no son
+                # un nombre de programa, sólo metadata/fechas residuales.
                 is_film_year = re.search(r"\([^)]*\d{4}[^)]*\)", ln)
                 is_format_note = ln.startswith("(") or re.search(r"\d{2,3}\s*['’′]", ln)
-                if not is_film_year and not is_format_note and len(ln) <= 60:
+                is_day_header = re.match(
+                    r"^(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bado|Domingo)\b",
+                    ln, re.IGNORECASE)
+                if not is_film_year and not is_format_note and not is_day_header and len(ln) <= 60:
                     prog_label = ln
                 break
 
