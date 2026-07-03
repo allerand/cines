@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T15:30:32",
+  "updated": "2026-07-03T21:45:30",
   "screenings": [
     {
       "cine": "Cinemark Palermo",
@@ -602,19 +602,19 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
+      "cine": "Cine Lorca",
       "fecha": "2026-07-03",
       "hora": "14:00",
-      "title_es": "Una directora extraordinaria",
-      "title_en": "Una directora Extraordinaria",
-      "director": "Fabiana Urricelqui",
-      "country": "",
-      "year": null,
-      "duration": 85,
-      "genre": "Comedia, Drama",
-      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
-      "ciclo": "En cartel"
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -647,6 +647,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "14:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-03",
       "hora": "14:00",
@@ -659,6 +674,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-03",
+      "hora": "14:05",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -872,21 +902,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-07-03",
-      "hora": "15:00",
-      "title_es": "Amarga Navidad",
-      "title_en": "Bitter Christmas",
-      "director": "Pedro Almodóvar",
-      "country": "España",
-      "year": 2026,
-      "duration": 111,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=947",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-03",
       "hora": "15:00",
@@ -945,6 +960,21 @@
       "letterboxd": "https://letterboxd.com/film/angel/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
       "ciclo": "Ernst Lubitsch en América"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "15:00",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=947",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -1067,21 +1097,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-07-03",
-      "hora": "15:30",
-      "title_es": "Negro Che, Negro Usted. Quince años después",
-      "title_en": "Negro Che, Negro Usted. Quince años después",
-      "director": "Alberto Masliah",
-      "country": "",
-      "year": null,
-      "duration": 80,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-03",
       "hora": "15:30",
@@ -1140,6 +1155,21 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "15:30",
+      "title_es": "Negro Che, Negro Usted. Quince años después",
+      "title_en": "Negro Che, Negro Usted. Quince años después",
+      "director": "Alberto Masliah",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=930",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -1262,6 +1292,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-03",
+      "hora": "15:50",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-03",
       "hora": "15:50",
@@ -1275,21 +1320,6 @@
       "letterboxd": "https://letterboxd.com/film/disclosure-day/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-07-03",
-      "hora": "16:00",
-      "title_es": "Una canción para mi tierra",
-      "title_en": "A Song for My Land",
-      "director": "Mauricio Albornoz Iniesta",
-      "country": "Argentina, Alemania",
-      "year": 2024,
-      "duration": 96,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1350,6 +1380,21 @@
       "letterboxd": "https://letterboxd.com/film/the-urgency-of-death/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/456",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "16:00",
+      "title_es": "Una canción para mi tierra",
+      "title_en": "A Song for My Land",
+      "director": "Mauricio Albornoz Iniesta",
+      "country": "Argentina, Alemania",
+      "year": 2024,
+      "duration": 96,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=754",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -1424,6 +1469,21 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-03",
+      "hora": "16:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -1562,21 +1622,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-07-03",
-      "hora": "17:15",
-      "title_es": "El Desprecio",
-      "title_en": "Contempt",
-      "director": "Jean-Luc Godard",
-      "country": "Francia, Italia",
-      "year": 1963,
-      "duration": 102,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/contempt/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=945",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-03",
       "hora": "17:15",
@@ -1620,6 +1665,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "17:15",
+      "title_es": "El Desprecio",
+      "title_en": "Contempt",
+      "director": "Jean-Luc Godard",
+      "country": "Francia, Italia",
+      "year": 1963,
+      "duration": 102,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/contempt/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=945",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Caballito",
@@ -1667,21 +1727,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-07-03",
-      "hora": "17:30",
-      "title_es": "El Partido",
-      "title_en": "The Match",
-      "director": "Juan Cabral y Santiago Franco",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-03",
       "hora": "17:30",
@@ -1695,6 +1740,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "17:30",
+      "title_es": "El Partido",
+      "title_en": "The Match",
+      "director": "Juan Cabral y Santiago Franco",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-match-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=929",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -1892,19 +1952,19 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
+      "cine": "MALBA",
       "fecha": "2026-07-03",
       "hora": "18:00",
-      "title_es": "Una directora extraordinaria",
-      "title_en": "Una directora Extraordinaria",
-      "director": "Fabiana Urricelqui",
-      "country": "",
-      "year": null,
+      "title_es": "La parte del león",
+      "title_en": "The Lion's Share",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1978,
       "duration": 85,
-      "genre": "Comedia, Drama",
-      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
-      "ciclo": "En cartel"
+      "genre": "Acción, Drama",
+      "letterboxd": "https://letterboxd.com/film/la-parte-del-leon/",
+      "ticket_url": "https://malba.org.ar/evento/la-parte-del-leon/",
+      "ciclo": "Ciclo Lita Stantic"
     },
     {
       "cine": "Hoyts Abasto",
@@ -1920,6 +1980,21 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-03",
+      "hora": "18:00",
+      "title_es": "Una directora extraordinaria",
+      "title_en": "Una directora Extraordinaria",
+      "director": "Fabiana Urricelqui",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -1952,19 +2027,19 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
+      "cine": "Cine Lorca",
       "fecha": "2026-07-03",
-      "hora": "18:00",
-      "title_es": "La parte del león",
-      "title_en": "The Lion's Share",
-      "director": "Adolfo Aristarain",
-      "country": "Argentina",
-      "year": 1978,
-      "duration": 85,
-      "genre": "Acción, Drama",
-      "letterboxd": "https://letterboxd.com/film/la-parte-del-leon/",
-      "ticket_url": "https://malba.org.ar/evento/la-parte-del-leon/",
-      "ciclo": "Ciclo Lita Stantic"
+      "hora": "18:05",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Marruecos, Francia",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Palermo",
@@ -2069,6 +2144,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-03",
+      "hora": "18:40",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -2192,6 +2282,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-03",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-07-03",
       "hora": "19:30",
@@ -2310,21 +2415,6 @@
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-03",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine Gaumont",
@@ -2567,6 +2657,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-03",
+      "hora": "20:10",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-03",
       "hora": "20:10",
@@ -2744,6 +2849,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-03",
+      "hora": "20:40",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -2942,6 +3062,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-03",
+      "hora": "22:00",
+      "title_es": "Family Portrait",
+      "title_en": "Family Portrait",
+      "director": "Lucy Kerr",
+      "country": "Estados Unidos",
+      "year": 2023,
+      "duration": 78,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/family-portrait-2023/",
+      "ticket_url": "https://malba.org.ar/evento/family-portrait/",
+      "ciclo": "Ciclo revista Caligari"
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-03",
       "hora": "22:00",
@@ -3030,21 +3165,6 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-03",
-      "hora": "22:00",
-      "title_es": "Family Portrait",
-      "title_en": "Family Portrait",
-      "director": "Lucy Kerr",
-      "country": "Estados Unidos",
-      "year": 2023,
-      "duration": 78,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/family-portrait-2023/",
-      "ticket_url": "https://malba.org.ar/evento/revista-caligari-2",
-      "ciclo": "Revista Caligari"
     },
     {
       "cine": "Cinemark Palermo",
@@ -3194,6 +3314,36 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-03",
+      "hora": "22:25",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-03",
+      "hora": "22:30",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -3561,13 +3711,13 @@
       "fecha": "2026-07-03",
       "hora": "24:00",
       "title_es": "El extraño",
-      "title_en": "El extraño",
+      "title_en": "The Stranger",
       "director": "Orson Welles",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
+      "country": "Estados Unidos",
+      "year": 1946,
+      "duration": 95,
+      "genre": "Thriller, Crimen",
+      "letterboxd": "https://letterboxd.com/film/the-stranger/",
       "ticket_url": "https://malba.org.ar/evento/orson-welles-x4",
       "ciclo": "Orson Welles x4"
     },
@@ -4217,6 +4367,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "14:00",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-04",
       "hora": "14:00",
@@ -4259,6 +4424,21 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/lopez/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/436",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "14:05",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -4862,6 +5042,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "15:50",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-07-04",
       "hora": "16:00",
@@ -5054,6 +5249,21 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "16:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -5582,6 +5792,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-04",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, Corea del Sur",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-07-04",
       "hora": "18:00",
@@ -5702,19 +5927,19 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
+      "cine": "Cine Lorca",
       "fecha": "2026-07-04",
-      "hora": "18:00",
-      "title_es": "Hijo mayor",
-      "title_en": "Elder Son",
-      "director": "Cecilia Kang",
-      "country": "Argentina, Corea del Sur",
+      "hora": "18:05",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Marruecos, Francia",
       "year": 2025,
-      "duration": 118,
+      "duration": 116,
       "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
-      "ciclo": "Continúa"
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Palermo",
@@ -5834,6 +6059,21 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "18:40",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -6438,6 +6678,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "20:10",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-04",
       "hora": "20:10",
@@ -6468,6 +6723,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-04",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-04",
       "hora": "20:15",
@@ -6496,21 +6766,6 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-04",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Caballito",
@@ -6645,6 +6900,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "20:40",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -6978,6 +7248,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-04",
+      "hora": "22:10",
+      "title_es": "Un muro de silencio",
+      "title_en": "A Wall of Silence",
+      "director": "Lita Stantic",
+      "country": "Argentina, México",
+      "year": 1993,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/a-wall-of-silence/",
+      "ticket_url": "https://malba.org.ar/evento/un-muro-de-silencio/",
+      "ciclo": "Ciclo Lita Stantic"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-04",
       "hora": "22:10",
@@ -7006,21 +7291,6 @@
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-04",
-      "hora": "22:10",
-      "title_es": "Un muro de silencio",
-      "title_en": "A Wall of Silence",
-      "director": "Lita Stantic",
-      "country": "Argentina, México",
-      "year": 1993,
-      "duration": 105,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/a-wall-of-silence/",
-      "ticket_url": "https://malba.org.ar/evento/un-muro-de-silencio/",
-      "ciclo": "Ciclo Lita Stantic"
     },
     {
       "cine": "Cine Gaumont",
@@ -7140,6 +7410,36 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "22:25",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-04",
+      "hora": "22:30",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -7514,7 +7814,7 @@
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
       "ciclo": "Cineclub Nocturna"
     },
     {
@@ -8163,6 +8463,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-05",
+      "hora": "14:00",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-05",
       "hora": "14:00",
@@ -8205,6 +8520,21 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/lopez/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/436",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-05",
+      "hora": "14:05",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -8823,6 +9153,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-05",
+      "hora": "15:50",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-05",
       "hora": "15:50",
@@ -9000,6 +9345,21 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-05",
+      "hora": "16:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -9544,6 +9904,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-05",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-07-05",
       "hora": "18:00",
@@ -9664,19 +10039,19 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
+      "cine": "Cine Lorca",
       "fecha": "2026-07-05",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Alemania",
+      "hora": "18:05",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Marruecos, Francia",
       "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Palermo",
@@ -9811,6 +10186,21 @@
       "genre": "Drama, Música",
       "letterboxd": "https://letterboxd.com/film/the-sound-of-music/",
       "ticket_url": "https://lumiton.ar/evento/la-novicia-rebelde-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-05",
+      "hora": "18:40",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -10234,6 +10624,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-05",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-07-05",
       "hora": "20:00",
@@ -10384,19 +10789,19 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
+      "cine": "Cine Lorca",
       "fecha": "2026-07-05",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
+      "hora": "20:10",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
       "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Caballito",
@@ -10591,6 +10996,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-05",
+      "hora": "20:40",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -11086,6 +11506,36 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-05",
+      "hora": "22:25",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-05",
+      "hora": "22:30",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -12394,6 +12844,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "14:00",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-06",
       "hora": "14:00",
@@ -12421,6 +12886,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "14:05",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -13009,6 +13489,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "15:50",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-06",
       "hora": "15:50",
@@ -13156,6 +13651,21 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "16:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -13684,6 +14194,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "18:05",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Marruecos, Francia",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-06",
       "hora": "18:05",
@@ -13789,6 +14314,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "18:40",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-06",
       "hora": "18:45",
@@ -13816,6 +14356,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-06",
+      "hora": "19:00",
+      "title_es": "Los sueños de Pepe - Movimiento 2052",
+      "title_en": "Pepe's Dreams - Movement 2052",
+      "director": "Pablo Trobo",
+      "country": "Uruguay",
+      "year": 2024,
+      "duration": 86,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/pepes-dreams-movement-2052/",
+      "ticket_url": "https://www.centrocultural.coop/eventos/los-suenos-de-pepe-movimiento-2052",
       "ciclo": ""
     },
     {
@@ -14284,6 +14839,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "20:10",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-06",
       "hora": "20:10",
@@ -14446,6 +15016,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "20:40",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -14911,6 +15496,36 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "22:25",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-06",
+      "hora": "22:30",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -15874,6 +16489,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "14:00",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-07",
       "hora": "14:00",
@@ -15901,6 +16531,21 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/masters-of-the-universe-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "14:05",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -16504,6 +17149,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "15:50",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-07",
       "hora": "15:50",
@@ -16666,6 +17326,21 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "16:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -17224,6 +17899,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "18:05",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Marruecos, Francia",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-07",
       "hora": "18:05",
@@ -17341,6 +18031,21 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "18:40",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -17870,6 +18575,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "20:10",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-07",
       "hora": "20:10",
@@ -18047,6 +18767,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "20:40",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -18557,6 +19292,36 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "22:25",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-07",
+      "hora": "22:30",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -19535,6 +20300,21 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "14:00",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-08",
       "hora": "14:00",
@@ -19607,6 +20387,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "14:05",
+      "title_es": "El día de la revelación",
+      "title_en": "Disclosure Day",
+      "director": "Steven Spielberg",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/disclosure-day/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -19877,21 +20672,6 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Centro Cultural Borges",
-      "fecha": "2026-07-08",
-      "hora": "15:00",
-      "title_es": "Cuadro a Cuadro, Festival Plum!",
-      "title_en": "CUADRO A CUADRO, FESTIVAL PLUM!",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/458",
       "ciclo": ""
     },
     {
@@ -20180,6 +20960,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "15:50",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-08",
       "hora": "15:50",
@@ -20360,6 +21155,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "16:40",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-08",
       "hora": "16:40",
@@ -20524,21 +21334,6 @@
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
       "ciclo": "Estreno",
       "original_title": "Dry Leaf"
-    },
-    {
-      "cine": "Centro Cultural Borges",
-      "fecha": "2026-07-08",
-      "hora": "17:00",
-      "title_es": "Cuadro a Cuadro, Festival Plum!",
-      "title_en": "CUADRO A CUADRO, FESTIVAL PLUM!",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/458",
-      "ciclo": ""
     },
     {
       "cine": "Cinemark Caballito",
@@ -20916,6 +21711,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "18:05",
+      "title_es": "Calle Málaga",
+      "title_en": "Calle Malaga",
+      "director": "Maryam Touzani",
+      "country": "Marruecos, Francia",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/calle-malaga/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-08",
       "hora": "18:05",
@@ -21048,6 +21858,21 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "18:40",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -21666,6 +22491,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "20:10",
+      "title_es": "La venue de l'avenir",
+      "title_en": "Colours of Time",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 124,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-venue-de-lavenir/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-08",
       "hora": "20:10",
@@ -21783,6 +22623,21 @@
       "genre": "Aventura, Fantasía",
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "20:40",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -22323,6 +23178,36 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025-2/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "22:25",
+      "title_es": "Amarga Navidad",
+      "title_en": "Bitter Christmas",
+      "director": "Pedro Almodóvar",
+      "country": "España",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/amarga-navidad/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-07-08",
+      "hora": "22:30",
+      "title_es": "El afinador",
+      "title_en": "Tuner",
+      "director": "Daniel Roher",
+      "country": "Canadá, Estados Unidos",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/tuner/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -23121,6 +24006,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-09",
+      "hora": "22:30",
+      "title_es": "Tan de repente",
+      "title_en": "Suddenly",
+      "director": "Diego Lerman",
+      "country": "Argentina, Países Bajos",
+      "year": 2002,
+      "duration": 90,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/suddenly-2002/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
+      "ciclo": "Lita Stantic: no habrá nadie igual"
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-09",
       "hora": "22:30",
@@ -23149,21 +24049,6 @@
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-09",
-      "hora": "22:30",
-      "title_es": "Tan de repente",
-      "title_en": "Tan de repente",
-      "director": "Diego Lerman",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
-      "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
       "cine": "Cinemark Caballito",
@@ -23616,6 +24501,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-10",
+      "hora": "18:00",
+      "title_es": "La guardería",
+      "title_en": "La guardería",
+      "director": "Virginia Croatto",
+      "country": "Argentina",
+      "year": 2015,
+      "duration": 71,
+      "genre": "Documental",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
+      "ciclo": "Lita Stantic: no habrá nadie igual"
+    },
+    {
       "cine": "Museo del Cine",
       "fecha": "2026-07-10",
       "hora": "18:00",
@@ -23659,21 +24559,6 @@
       "letterboxd": "https://letterboxd.com/film/the-bewilderment-of-chile/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/457",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-10",
-      "hora": "18:00",
-      "title_es": "La guardería",
-      "title_en": "La guardería",
-      "director": "Virginia Croatto",
-      "country": "Argentina",
-      "year": 2015,
-      "duration": 71,
-      "genre": "Documental",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
-      "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -23721,21 +24606,6 @@
       "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
     },
     {
-      "cine": "CCK",
-      "fecha": "2026-07-10",
-      "hora": "19:30",
-      "title_es": "El cerebro que no deseaba morir",
-      "title_en": "El cerebro que no deseaba morir",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
-      "ciclo": "Terror adolescente: seis clásicos imperdibles"
-    },
-    {
       "cine": "MALBA",
       "fecha": "2026-07-10",
       "hora": "19:30",
@@ -23749,6 +24619,21 @@
       "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
       "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
       "ciclo": "Continúa"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-10",
+      "hora": "19:30",
+      "title_es": "El cerebro que no deseaba morir",
+      "title_en": "El cerebro que no deseaba morir",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -23841,6 +24726,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-10",
+      "hora": "22:00",
+      "title_es": "Family Portrait",
+      "title_en": "Family Portrait",
+      "director": "Lucy Kerr",
+      "country": "Estados Unidos",
+      "year": 2023,
+      "duration": 78,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/family-portrait-2023/",
+      "ticket_url": "https://malba.org.ar/evento/family-portrait/",
+      "ciclo": "Ciclo revista Caligari"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-10",
       "hora": "22:00",
@@ -23854,21 +24754,6 @@
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-07-10",
-      "hora": "22:00",
-      "title_es": "Family portrait",
-      "title_en": "Family Portrait",
-      "director": "Lucy Kerr",
-      "country": "Estados Unidos",
-      "year": 2023,
-      "duration": 78,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/family-portrait-2023/",
-      "ticket_url": "https://malba.org.ar/evento/revista-caligari-2",
-      "ciclo": "Revista Caligari"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -24141,19 +25026,19 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Borges",
+      "cine": "Museo del Cine",
       "fecha": "2026-07-11",
       "hora": "16:00",
-      "title_es": "Gallega Invernal + Av Saenz 1073 (doble Función)",
-      "title_en": "GALLEGA INVERNAL + AV SAENZ 1073 (DOBLE FUNCIÓN)",
-      "director": "Lucía Seles",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/461",
-      "ciclo": ""
+      "title_es": "Monte criollo",
+      "title_en": "Monte Criollo",
+      "director": "Arturo S. Mom",
+      "country": "Argentina",
+      "year": 1935,
+      "duration": 65,
+      "genre": "Crimen",
+      "letterboxd": "https://letterboxd.com/film/monte-criollo/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/julio-en-el-auditorio",
+      "ciclo": "La llamada fatal"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -24168,6 +25053,21 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-07-11",
+      "hora": "16:00",
+      "title_es": "Gallega Invernal + Av Saenz 1073 (doble Función)",
+      "title_en": "GALLEGA INVERNAL + AV SAENZ 1073 (DOBLE FUNCIÓN)",
+      "director": "Lucía Seles",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/461",
       "ciclo": ""
     },
     {
@@ -24201,20 +25101,19 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
+      "cine": "CCK",
       "fecha": "2026-07-11",
       "hora": "17:00",
-      "title_es": "Hojas secas",
-      "title_en": "Hojas secas",
-      "director": "Alexandre Koberidze",
-      "country": "",
-      "year": 2025,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/dry-leaf/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
-      "ciclo": "Estreno",
-      "original_title": "Dry Leaf"
+      "title_es": "La casa en la colina embrujada",
+      "title_en": "La casa en la colina embrujada",
+      "director": "William Malone",
+      "country": "Estados Unidos",
+      "year": 1999,
+      "duration": 93,
+      "genre": "Terror",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -24245,6 +25144,22 @@
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-07-11",
+      "hora": "17:00",
+      "title_es": "Hojas secas",
+      "title_en": "Hojas secas",
+      "director": "Alexandre Koberidze",
+      "country": "",
+      "year": 2025,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/dry-leaf/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/82b83f87-cd74-4971-9d57-3ebaad4df175",
+      "ciclo": "Estreno",
+      "original_title": "Dry Leaf"
     },
     {
       "cine": "Cinemark Caballito",
@@ -24290,6 +25205,21 @@
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-11",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, Corea del Sur",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -24352,6 +25282,36 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-11",
+      "hora": "19:00",
+      "title_es": "Pin de fartie",
+      "title_en": "Pin de Fartie",
+      "director": "Alejo Moguillansky",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 106,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/pin-de-fartie/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-alejo-moguillansky-santiago-loza/",
+      "ciclo": "Miradas contemporáneas:Alejo Moguillansky / Santiago Loza"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-11",
+      "hora": "19:30",
+      "title_es": "El último hombre en la Tierra",
+      "title_en": "The Last Man on Earth",
+      "director": "Juan Camilo Pinzón",
+      "country": "Colombia",
+      "year": 2022,
+      "duration": 87,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/the-last-man-on-earth-2022/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-07-11",
       "hora": "19:45",
@@ -24425,6 +25385,21 @@
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-11",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -24491,14 +25466,14 @@
       "fecha": "2026-07-11",
       "hora": "22:10",
       "title_es": "Habi, la extranjera",
-      "title_en": "Habi, la extranjera",
+      "title_en": "Habi, The Foreigner",
       "director": "María Florencia Álvarez",
-      "country": "",
-      "year": null,
-      "duration": null,
+      "country": "Argentina, Brasil",
+      "year": 2013,
+      "duration": 92,
       "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
+      "letterboxd": "https://letterboxd.com/film/habi-the-foreigner/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
       "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
@@ -24588,7 +25563,7 @@
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
       "ciclo": "Cineclub Nocturna"
     },
     {
@@ -24742,6 +25717,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-12",
+      "hora": "15:00",
+      "title_es": "La tumba de las luciérnagas",
+      "title_en": "La tumba de las luciérnagas",
+      "director": "Taro Hyugaji",
+      "country": "Japón",
+      "year": 2008,
+      "duration": 100,
+      "genre": "Drama, Bélica",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-3/",
+      "ciclo": "Cine japonés en 16 mm"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-07-12",
       "hora": "15:00",
@@ -24757,6 +25747,21 @@
       "ciclo": "Ernst Lubitsch en América"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-12",
+      "hora": "15:30",
+      "title_es": "Teddy",
+      "title_en": "Teddy",
+      "director": "Andrea Eckerbom",
+      "country": "Noruega",
+      "year": 2022,
+      "duration": 76,
+      "genre": "Familiar, Aventura",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-07-12",
       "hora": "16:00",
@@ -24769,6 +25774,21 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/back-to-stay/",
       "ticket_url": "https://lumiton.ar/evento/abrir-puertas-y-ventanas/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-07-12",
+      "hora": "16:00",
+      "title_es": "La flor de la ribera",
+      "title_en": "La flor de la ribera",
+      "director": "Antonio Magnano",
+      "country": "Argentina",
+      "year": 1931,
+      "duration": 30,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-flor-de-la-ribera/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/julio-en-el-auditorio",
       "ciclo": ""
     },
     {
@@ -24877,6 +25897,36 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-12",
+      "hora": "17:30",
+      "title_es": "Blanca Nieve - La leyenda de la nieve",
+      "title_en": "The Death of Snow White",
+      "director": "Jason Brooks, Rana Khadim Official",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/the-death-of-snow-white/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-3/",
+      "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-12",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-07-12",
       "hora": "18:00",
@@ -24905,6 +25955,21 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/la-idea-de-un-lago/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-07-12",
+      "hora": "18:00",
+      "title_es": "Horas marcadas",
+      "title_en": "Horas marcadas",
+      "director": "Alberto Du Bois",
+      "country": "Argentina",
+      "year": 1954,
+      "duration": 88,
+      "genre": "Crimen, Drama",
+      "letterboxd": "https://letterboxd.com/film/horas-marcadas/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/julio-en-el-auditorio",
+      "ciclo": "Cine argentino en 16mm"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -24950,6 +26015,21 @@
       "letterboxd": "https://letterboxd.com/film/the-killing/",
       "ticket_url": "https://lumiton.ar/evento/casta-de-malditos-2/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-12",
+      "hora": "18:30",
+      "title_es": "Sus hijos después que ellos",
+      "title_en": "And Their Children After Them",
+      "director": "Ludovic Boukherma, Zoran Boukherma",
+      "country": "Francia",
+      "year": 2024,
+      "duration": 146,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/and-their-children-after-them/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -25025,6 +26105,21 @@
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-12",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Caballito",
@@ -25474,6 +26569,21 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-13",
+      "hora": "19:00",
+      "title_es": "Los sueños de Pepe - Movimiento 2052",
+      "title_en": "Pepe's Dreams - Movement 2052",
+      "director": "Pablo Trobo",
+      "country": "Uruguay",
+      "year": 2024,
+      "duration": 86,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/pepes-dreams-movement-2052/",
+      "ticket_url": "https://www.centrocultural.coop/eventos/los-suenos-de-pepe-movimiento-2052",
       "ciclo": ""
     },
     {
@@ -26332,21 +27442,6 @@
       "ciclo": "Ernst Lubitsch en América"
     },
     {
-      "cine": "Centro Cultural Borges",
-      "fecha": "2026-07-15",
-      "hora": "15:00",
-      "title_es": "Cuadro a Cuadro, Festival Plum!",
-      "title_en": "CUADRO A CUADRO, FESTIVAL PLUM!",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/458",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-15",
       "hora": "16:00",
@@ -26374,21 +27469,6 @@
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Centro Cultural Borges",
-      "fecha": "2026-07-15",
-      "hora": "17:00",
-      "title_es": "Cuadro a Cuadro, Festival Plum!",
-      "title_en": "CUADRO A CUADRO, FESTIVAL PLUM!",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/458",
       "ciclo": ""
     },
     {
@@ -26509,21 +27589,6 @@
       "genre": "Drama, Thriller",
       "letterboxd": "https://letterboxd.com/film/following/",
       "ticket_url": "https://www.amorina.club/peliculas",
-      "ciclo": ""
-    },
-    {
-      "cine": "Centro Cultural Borges",
-      "fecha": "2026-07-15",
-      "hora": "19:00",
-      "title_es": "Cuadro a Cuadro, Festival Plum!",
-      "title_en": "CUADRO A CUADRO, FESTIVAL PLUM!",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/458",
       "ciclo": ""
     },
     {
@@ -26857,21 +27922,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Arthaus",
-      "fecha": "2026-07-16",
-      "hora": "20:00",
-      "title_es": "Los bobos",
-      "title_en": "Los Bobos",
-      "director": "Juan Pablo Basovih Marinaro y Sofía Jallinsky",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 95,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/los-bobos/",
-      "ticket_url": "https://arthaus.ar/events/los-bobos/?occurrence=2026-07-16",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-07-16",
       "hora": "20:00",
@@ -26902,6 +27952,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-07-16",
+      "hora": "20:00",
+      "title_es": "Los bobos",
+      "title_en": "Los Bobos",
+      "director": "Juan Pablo Basovih Marinaro y Sofía Jallinsky",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 95,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/los-bobos/",
+      "ticket_url": "https://arthaus.ar/events/los-bobos/?occurrence=2026-07-16",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-07-16",
       "hora": "20:30",
@@ -26915,21 +27980,6 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-07-16",
-      "hora": "21:00",
-      "title_es": "El diablo dijo no",
-      "title_en": "Heaven Can Wait",
-      "director": "Ernst Lubitsch",
-      "country": "Estados Unidos",
-      "year": 1943,
-      "duration": 112,
-      "genre": "Comedia, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/heaven-can-wait/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
-      "ciclo": "Ernst Lubitsch en América"
     },
     {
       "cine": "Cinemark Caballito",
@@ -26975,6 +28025,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-07-16",
+      "hora": "21:00",
+      "title_es": "El diablo dijo no",
+      "title_en": "Heaven Can Wait",
+      "director": "Ernst Lubitsch",
+      "country": "Estados Unidos",
+      "year": 1943,
+      "duration": 112,
+      "genre": "Comedia, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/heaven-can-wait/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
+      "ciclo": "Ernst Lubitsch en América"
     },
     {
       "cine": "Cinemark Caballito",
@@ -27112,6 +28177,36 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-17",
+      "hora": "16:30",
+      "title_es": "Cortometrajes para todo público",
+      "title_en": "Cortometrajes para todo público",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-17",
+      "hora": "17:00",
+      "title_es": "Entierro a medianoche",
+      "title_en": "Entierro a medianoche",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-07-17",
       "hora": "17:20",
@@ -27125,6 +28220,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-17",
+      "hora": "18:00",
+      "title_es": "Hamaca paraguaya",
+      "title_en": "Paraguayan Hammock",
+      "director": "Paz Encina",
+      "country": "Argentina, Austria",
+      "year": 2006,
+      "duration": 78,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hamaca-paraguaya/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
+      "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
       "cine": "Cine York",
@@ -27187,21 +28297,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-17",
-      "hora": "18:00",
-      "title_es": "Hamaca paraguaya",
-      "title_en": "Hamaca paraguaya",
-      "director": "Paz Encina",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
-      "ciclo": "Lita Stantic: no habrá nadie igual"
-    },
-    {
       "cine": "Amorina",
       "fecha": "2026-07-17",
       "hora": "19:00",
@@ -27217,6 +28312,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-17",
+      "hora": "19:00",
+      "title_es": "Cortometrajes para mayores de 13 años",
+      "title_en": "Cortometrajes para mayores de 13 años",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-17",
       "hora": "19:00",
@@ -27230,6 +28340,36 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-17",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-17",
+      "hora": "19:30",
+      "title_es": "La novia del monstruo",
+      "title_en": "La novia del monstruo",
+      "director": "Edward D. Wood Jr.",
+      "country": "Estados Unidos",
+      "year": 1955,
+      "duration": 70,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
       "cine": "Cinemark Palermo",
@@ -27292,21 +28432,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-07-17",
-      "hora": "21:00",
-      "title_es": "Un ladrón en la alcoba",
-      "title_en": "Trouble in Paradise",
-      "director": "Ernst Lubitsch",
-      "country": "Estados Unidos",
-      "year": 1932,
-      "duration": 83,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/trouble-in-paradise/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
-      "ciclo": "Ernst Lubitsch en América"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-17",
       "hora": "21:00",
@@ -27350,6 +28475,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-07-17",
+      "hora": "21:00",
+      "title_es": "Un ladrón en la alcoba",
+      "title_en": "Trouble in Paradise",
+      "director": "Ernst Lubitsch",
+      "country": "Estados Unidos",
+      "year": 1932,
+      "duration": 83,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/trouble-in-paradise/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
+      "ciclo": "Ernst Lubitsch en América"
     },
     {
       "cine": "Cinemark Caballito",
@@ -27517,6 +28657,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-18",
+      "hora": "17:00",
+      "title_es": "El cerebro que no deseaba morir",
+      "title_en": "El cerebro que no deseaba morir",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
+    },
+    {
       "cine": "Centro Cultural Borges",
       "fecha": "2026-07-18",
       "hora": "17:00",
@@ -27545,6 +28700,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-18",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, Corea del Sur",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -27592,6 +28762,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-18",
+      "hora": "19:00",
+      "title_es": "Los días chinos",
+      "title_en": "Chinese Days",
+      "director": "Santiago Loza",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 63,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/los-dias-chinos/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-alejo-moguillansky-santiago-loza/",
+      "ciclo": "Miradas contemporáneas:Alejo Moguillansky / Santiago Loza"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-18",
       "hora": "19:00",
@@ -27607,19 +28792,19 @@
       "ciclo": ""
     },
     {
-      "cine": "Arthaus",
+      "cine": "CCK",
       "fecha": "2026-07-18",
-      "hora": "20:00",
-      "title_es": "Hombre de la Atlántida",
-      "title_en": "HOMBRE DE LA ATLÁNTIDA",
-      "director": "Simón Zorraquin",
-      "country": "",
-      "year": null,
-      "duration": 69,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://arthaus.ar/events/cine-arthaus-hombre-de-la-atlantida-2/?occurrence=2026-07-04",
-      "ciclo": ""
+      "hora": "19:30",
+      "title_es": "Plan 9 del espacio exterior",
+      "title_en": "The Unknown From Outer Space",
+      "director": "Juan Sainz de Rozas González",
+      "country": "España",
+      "year": 2025,
+      "duration": 11,
+      "genre": "Comedia, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-unknown-from-outer-space/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
       "cine": "Cinemark Palermo",
@@ -27652,6 +28837,36 @@
       "ciclo": ""
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-07-18",
+      "hora": "20:00",
+      "title_es": "Hombre de la Atlántida",
+      "title_en": "HOMBRE DE LA ATLÁNTIDA",
+      "director": "Simón Zorraquin",
+      "country": "",
+      "year": null,
+      "duration": 69,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://arthaus.ar/events/cine-arthaus-hombre-de-la-atlantida-2/?occurrence=2026-07-04",
+      "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-18",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-07-18",
       "hora": "20:30",
@@ -27665,21 +28880,6 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-07-18",
-      "hora": "21:00",
-      "title_es": "Rumbos de vida",
-      "title_en": "Design for Living",
-      "director": "Ernst Lubitsch",
-      "country": "Estados Unidos",
-      "year": 1933,
-      "duration": 91,
-      "genre": "Romance, Comedia",
-      "letterboxd": "https://letterboxd.com/film/design-for-living/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
-      "ciclo": "Ernst Lubitsch en América"
     },
     {
       "cine": "Cinemark Caballito",
@@ -27725,6 +28925,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-07-18",
+      "hora": "21:00",
+      "title_es": "Rumbos de vida",
+      "title_en": "Design for Living",
+      "director": "Ernst Lubitsch",
+      "country": "Estados Unidos",
+      "year": 1933,
+      "duration": 91,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/design-for-living/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
+      "ciclo": "Ernst Lubitsch en América"
     },
     {
       "cine": "Cinemark Caballito",
@@ -27776,14 +28991,14 @@
       "fecha": "2026-07-18",
       "hora": "22:10",
       "title_es": "Errante",
-      "title_en": "Errante",
+      "title_en": "Wanderer. The Conquest of Home",
       "director": "Adriana Lestido",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
+      "country": "Argentina",
+      "year": 2022,
+      "duration": 77,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/wanderer-the-conquest-of-home/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
       "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
@@ -27823,12 +29038,12 @@
       "title_es": "La plaga de los zombies",
       "title_en": "La plaga de los zombies",
       "director": "John Gilling",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
+      "country": "Reino Unido",
+      "year": 1966,
+      "duration": 91,
+      "genre": "Terror, Misterio",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
       "ciclo": "Cineclub Nocturna"
     },
     {
@@ -27877,6 +29092,21 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-19",
+      "hora": "15:30",
+      "title_es": "Sus hijos después que ellos",
+      "title_en": "And Their Children After Them",
+      "director": "Ludovic Boukherma, Zoran Boukherma",
+      "country": "Francia",
+      "year": 2024,
+      "duration": 146,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/and-their-children-after-them/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-19",
       "hora": "16:00",
@@ -27922,6 +29152,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-19",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-07-19",
       "hora": "18:00",
@@ -27952,6 +29197,21 @@
       "ciclo": "Ernst Lubitsch en América"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-19",
+      "hora": "18:30",
+      "title_es": "La receta perfecta",
+      "title_en": "Holy Cow",
+      "director": "Louise Courvoisier",
+      "country": "Francia",
+      "year": 2024,
+      "duration": 92,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/holy-cow-2024/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-19",
       "hora": "19:00",
@@ -27965,6 +29225,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-19",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Palermo",
@@ -28012,21 +29287,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-07-19",
-      "hora": "21:00",
-      "title_es": "Ser o no ser",
-      "title_en": "To Be or Not to Be",
-      "director": "Ernst Lubitsch",
-      "country": "Estados Unidos",
-      "year": 1942,
-      "duration": 99,
-      "genre": "Comedia, Bélica",
-      "letterboxd": "https://letterboxd.com/film/to-be-or-not-to-be/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
-      "ciclo": "Ernst Lubitsch en América"
-    },
-    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-19",
       "hora": "21:00",
@@ -28070,6 +29330,21 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-07-19",
+      "hora": "21:00",
+      "title_es": "Ser o no ser",
+      "title_en": "To Be or Not to Be",
+      "director": "Ernst Lubitsch",
+      "country": "Estados Unidos",
+      "year": 1942,
+      "duration": 99,
+      "genre": "Comedia, Bélica",
+      "letterboxd": "https://letterboxd.com/film/to-be-or-not-to-be/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e2401442-9258-40ab-ad62-eecd28dba524",
+      "ciclo": "Ernst Lubitsch en América"
     },
     {
       "cine": "Cinemark Caballito",
@@ -28174,6 +29449,21 @@
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-20",
+      "hora": "19:00",
+      "title_es": "Los sueños de Pepe - Movimiento 2052",
+      "title_en": "Pepe's Dreams - Movement 2052",
+      "director": "Pablo Trobo",
+      "country": "Uruguay",
+      "year": 2024,
+      "duration": 86,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/pepes-dreams-movement-2052/",
+      "ticket_url": "https://www.centrocultural.coop/eventos/los-suenos-de-pepe-movimiento-2052",
       "ciclo": ""
     },
     {
@@ -28874,12 +30164,42 @@
       "title_es": "Café de los maestros",
       "title_en": "Café de los maestros",
       "director": "Miguel Kohan",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
+      "country": "Argentina",
+      "year": 2008,
+      "duration": 90,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/cafe-de-los-maestros/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
+      "ciclo": "Lita Stantic: no habrá nadie igual"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-24",
+      "hora": "17:00",
+      "title_es": "El último hombre en la Tierra",
+      "title_en": "The Last Man on Earth",
+      "director": "Juan Camilo Pinzón",
+      "country": "Colombia",
+      "year": 2022,
+      "duration": 87,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/the-last-man-on-earth-2022/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-24",
+      "hora": "18:00",
+      "title_es": "Dársena Sur",
+      "title_en": "Dársena Sur",
+      "director": "Pablo Reyero",
+      "country": "Argentina",
+      "year": 1997,
+      "duration": 77,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/darsena-sur/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
       "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
@@ -28900,31 +30220,46 @@
     {
       "cine": "MALBA",
       "fecha": "2026-07-24",
-      "hora": "18:00",
-      "title_es": "Dársena Sur",
-      "title_en": "Dársena Sur",
-      "director": "Pablo Reyero",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-24",
+      "hora": "19:30",
+      "title_es": "La casa en la colina embrujada",
+      "title_en": "La casa en la colina embrujada",
+      "director": "William Malone",
+      "country": "Estados Unidos",
+      "year": 1999,
+      "duration": 93,
+      "genre": "Terror",
       "letterboxd": "",
-      "ticket_url": "",
-      "ciclo": "Lita Stantic: no habrá nadie igual"
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
       "cine": "MALBA",
       "fecha": "2026-07-24",
       "hora": "22:00",
       "title_es": "Diciembre",
-      "title_en": "Diciembre",
+      "title_en": "December",
       "director": "Lucas Gallo",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/december-2025-1/",
+      "ticket_url": "https://malba.org.ar/evento/revista-caligari-2",
       "ciclo": "Revista Caligari"
     },
     {
@@ -28934,12 +30269,12 @@
       "title_es": "La dama de Shanghai",
       "title_en": "La dama de Shanghai",
       "director": "Orson Welles",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
+      "country": "Estados Unidos",
+      "year": 1947,
+      "duration": 87,
+      "genre": "Misterio, Crimen",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://malba.org.ar/evento/orson-welles-x4",
       "ciclo": "Orson Welles x4"
     },
     {
@@ -28956,6 +30291,21 @@
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/cine-mexico-para-ninos",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-25",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, Corea del Sur",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -28975,16 +30325,31 @@
     {
       "cine": "MALBA",
       "fecha": "2026-07-25",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-25",
       "hora": "22:10",
       "title_es": "Camila",
       "title_en": "Camila",
       "director": "María Luisa Bemberg",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
+      "country": "Argentina, España",
+      "year": 1984,
+      "duration": 109,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/camila/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
       "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
@@ -28994,13 +30359,28 @@
       "title_es": "Un tiro en la noche",
       "title_en": "Un tiro en la noche",
       "director": "John Ford",
+      "country": "Estados Unidos",
+      "year": 1962,
+      "duration": 123,
+      "genre": "Western",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
+      "ciclo": "Cineclub Nocturna"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-26",
+      "hora": "15:00",
+      "title_es": "Escuela encantada 4",
+      "title_en": "Escuela encantada 4",
+      "director": "",
       "country": "",
       "year": null,
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "",
-      "ciclo": "Cineclub Nocturna"
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-3/",
+      "ciclo": "Cine japonés en 16 mm"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -29016,6 +30396,36 @@
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/cine-mexico-para-ninos",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-26",
+      "hora": "17:30",
+      "title_es": "La tumba de las luciérnagas",
+      "title_en": "La tumba de las luciérnagas",
+      "director": "Taro Hyugaji",
+      "country": "Japón",
+      "year": 2008,
+      "duration": 100,
+      "genre": "Drama, Bélica",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-3/",
+      "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-26",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -29045,6 +30455,36 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/forensics/",
       "ticket_url": "https://arthaus.ar/events/cine-arthaus-forenses/?occurrence=2026-07-05",
+      "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-26",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-07-27",
+      "hora": "19:00",
+      "title_es": "Los sueños de Pepe - Movimiento 2052",
+      "title_en": "Pepe's Dreams - Movement 2052",
+      "director": "Pablo Trobo",
+      "country": "Uruguay",
+      "year": 2024,
+      "duration": 86,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/pepes-dreams-movement-2052/",
+      "ticket_url": "https://www.centrocultural.coop/eventos/los-suenos-de-pepe-movimiento-2052",
       "ciclo": ""
     },
     {
@@ -29142,14 +30582,14 @@
       "fecha": "2026-07-30",
       "hora": "19:00",
       "title_es": "Cordero de Dios",
-      "title_en": "Cordero de Dios",
+      "title_en": "Lamb of God",
       "director": "Lucía Cedrón",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
+      "country": "Argentina",
+      "year": 2008,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/lamb-of-god/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
       "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
@@ -29198,6 +30638,51 @@
       "ciclo": "Ernst Lubitsch en América - Miércoles 1°"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-07-31",
+      "hora": "16:30",
+      "title_es": "Cortometrajes para todo público",
+      "title_en": "Cortometrajes para todo público",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-31",
+      "hora": "17:00",
+      "title_es": "La novia del monstruo",
+      "title_en": "La novia del monstruo",
+      "director": "Edward D. Wood Jr.",
+      "country": "Estados Unidos",
+      "year": 1955,
+      "duration": 70,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-31",
+      "hora": "18:00",
+      "title_es": "La deuda",
+      "title_en": "The Debt",
+      "director": "Gustavo Fontán",
+      "country": "Argentina, España",
+      "year": 2019,
+      "duration": 74,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-debt-2019/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
+      "ciclo": "Lita Stantic: no habrá nadie igual"
+    },
+    {
       "cine": "Centro Cultural Borges",
       "fecha": "2026-07-31",
       "hora": "18:00",
@@ -29213,33 +30698,78 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
+      "cine": "Filo Cine",
       "fecha": "2026-07-31",
-      "hora": "18:00",
-      "title_es": "La deuda",
-      "title_en": "La deuda",
-      "director": "Gustavo Fontán",
+      "hora": "19:00",
+      "title_es": "Atahualpa Yupanqui. Un trashumante",
+      "title_en": "Atahualpa Yupanqui, un trashumante",
+      "director": "Federico Randazzo Abad",
+      "country": "Argetina",
+      "year": 2024,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/atahualpa-yupanqui-un-trashumante/",
+      "ticket_url": "https://www.filo.uba.ar/index.php/atahualpa-yupanqui-un-trashumante",
+      "ciclo": "Documental"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-31",
+      "hora": "19:00",
+      "title_es": "Cortometrajes para mayores de 13 años",
+      "title_en": "Cortometrajes para mayores de 13 años",
+      "director": "",
       "country": "",
       "year": null,
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "",
-      "ciclo": "Lita Stantic: no habrá nadie igual"
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-31",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-07-31",
+      "hora": "19:30",
+      "title_es": "Entierro a medianoche",
+      "title_en": "Entierro a medianoche",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
     },
     {
       "cine": "MALBA",
       "fecha": "2026-07-31",
       "hora": "22:00",
       "title_es": "Diciembre",
-      "title_en": "Diciembre",
+      "title_en": "December",
       "director": "Lucas Gallo",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
+      "country": "Argentina, Uruguay",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/december-2025-1/",
+      "ticket_url": "https://malba.org.ar/evento/revista-caligari-2",
       "ciclo": "Revista Caligari"
     },
     {
@@ -29254,7 +30784,7 @@
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://malba.org.ar/evento/orson-welles-x4",
       "ciclo": "Orson Welles x4"
     },
     {
@@ -29273,6 +30803,36 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-08-01",
+      "hora": "17:00",
+      "title_es": "El cerebro que no deseaba morir",
+      "title_en": "El cerebro que no deseaba morir",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-01",
+      "hora": "18:00",
+      "title_es": "Hijo mayor",
+      "title_en": "Elder Son",
+      "director": "Cecilia Kang",
+      "country": "Argentina, Corea del Sur",
+      "year": 2025,
+      "duration": 118,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://malba.org.ar/evento/hijo-mayor/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-01",
       "hora": "18:00",
@@ -29288,18 +30848,48 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-08-01",
+      "hora": "19:30",
+      "title_es": "Plan 9 del espacio exterior",
+      "title_en": "The Unknown From Outer Space",
+      "director": "Juan Sainz de Rozas González",
+      "country": "España",
+      "year": 2025,
+      "duration": 11,
+      "genre": "Comedia, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-unknown-from-outer-space/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/terror-adolescente-seis-clasicos-imperdibles/",
+      "ciclo": "Terror adolescente: seis clásicos imperdibles"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-01",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-08-01",
       "hora": "22:10",
       "title_es": "Bolivia",
       "title_en": "Bolivia",
       "director": "Adrián Caetano",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "",
+      "country": "Argentina, Países Bajos",
+      "year": 2001,
+      "duration": 75,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/bolivia/",
+      "ticket_url": "https://malba.org.ar/evento/lita-stantic-no-habra-nadie-igual",
       "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
@@ -29314,8 +30904,23 @@
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
       "ciclo": "Cineclub Nocturna"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-08-02",
+      "hora": "15:30",
+      "title_es": "La receta perfecta",
+      "title_en": "Holy Cow",
+      "director": "Louise Courvoisier",
+      "country": "Francia",
+      "year": 2024,
+      "duration": 92,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/holy-cow-2024/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -29333,6 +30938,21 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-02",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-02",
       "hora": "18:00",
@@ -29346,6 +30966,36 @@
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/cartoon",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-08-02",
+      "hora": "18:30",
+      "title_es": "Teddy",
+      "title_en": "Teddy",
+      "director": "Andrea Eckerbom",
+      "country": "Noruega",
+      "year": 2022,
+      "duration": 76,
+      "genre": "Familiar, Aventura",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances-cortometrajes-y-largometrajes-contemporaneos/",
+      "ciclo": "Cine francés: cortometrajes y largometrajes contemporáneos"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-02",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Amorina",

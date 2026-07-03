@@ -6366,12 +6366,13 @@
     "original_title": "Diciembre"
   },
   "el extraño": {
-    "url": "",
-    "title_en": "El extraño",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-stranger/",
+    "title_en": "The Stranger",
+    "director": "Orson Welles",
+    "country": "USA",
+    "year": 1946,
+    "duration": 95,
+    "genre": "Thriller, Crimen"
   },
   "soberbia": {
     "url": "",
@@ -6384,13 +6385,13 @@
   "la dama de shanghai": {
     "url": "",
     "title_en": "La dama de Shanghai",
-    "director": "Huang Feng",
-    "country": "Hong Kong",
-    "year": 1972,
-    "duration": 89,
-    "original_title": "鐵掌旋風腿",
-    "genre": "Acción, Drama",
-    "title_es": "La dama de Shanghai"
+    "director": "Orson Welles",
+    "country": "United States of America",
+    "year": 1947,
+    "duration": 87,
+    "title_es": "La dama de Shanghai",
+    "original_title": "The Lady from Shanghai",
+    "genre": "Misterio, Crimen"
   },
   "el ciudadano comprar entradas actividades relacionadas": {
     "url": "",
@@ -6462,5 +6463,128 @@
     "genre": "Comedia, Familiar",
     "title_es": "Vaiana",
     "original_title": "Moana"
+  },
+  "tan de repente": {
+    "url": "https://letterboxd.com/film/suddenly-2002/",
+    "title_en": "Suddenly",
+    "director": "Diego Lerman",
+    "country": "Argentina, Netherlands",
+    "year": 2002,
+    "duration": 90,
+    "genre": "Comedia, Drama",
+    "original_title": "Tan de repente"
+  },
+  "habi, la extranjera": {
+    "url": "https://letterboxd.com/film/habi-the-foreigner/",
+    "title_en": "Habi, The Foreigner",
+    "director": "María Florencia Álvarez",
+    "country": "Argentina, Brazil",
+    "year": 2013,
+    "duration": 92,
+    "genre": "",
+    "original_title": "Habi, la extranjera"
+  },
+  "errante": {
+    "url": "https://letterboxd.com/film/wanderer-the-conquest-of-home/",
+    "title_en": "Wanderer. The Conquest of Home",
+    "director": "Adriana Lestido",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": 77,
+    "genre": "Documental"
+  },
+  "camila": {
+    "url": "https://letterboxd.com/film/camila/",
+    "title_en": "Camila",
+    "director": "María Luisa Bemberg",
+    "country": "Argentina, Spain",
+    "year": 1984,
+    "duration": 109,
+    "genre": "Romance, Drama",
+    "original_title": "Camila"
+  },
+  "la deuda": {
+    "url": "https://letterboxd.com/film/the-debt-2019/",
+    "title_en": "The Debt",
+    "director": "Gustavo Fontán",
+    "country": "Argentina, Spain",
+    "year": 2019,
+    "duration": 74,
+    "genre": "Drama",
+    "original_title": "La Deuda"
+  },
+  "bolivia": {
+    "url": "https://letterboxd.com/film/bolivia/",
+    "title_en": "Bolivia",
+    "director": "Adrián Caetano",
+    "country": "Argentina, Netherlands",
+    "year": 2001,
+    "duration": 75,
+    "genre": "Drama",
+    "original_title": "Bolivia"
+  },
+  "el ciudadano": {
+    "url": "",
+    "title_en": "El ciudadano",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el psicópata": {
+    "url": "",
+    "title_en": "El psicópata",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el mandato de otro mundo": {
+    "url": "",
+    "title_en": "El mandato de otro mundo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la plaga de los zombies": {
+    "url": "",
+    "title_en": "La plaga de los zombies",
+    "director": "John Gilling",
+    "country": "United Kingdom",
+    "year": 1966,
+    "duration": 91,
+    "title_es": "La maldición de los zombies",
+    "original_title": "The Plague of the Zombies",
+    "genre": "Terror, Misterio"
+  },
+  "un tiro en la noche": {
+    "url": "",
+    "title_en": "Un tiro en la noche",
+    "director": "John Ford",
+    "country": "United States of America",
+    "year": 1962,
+    "duration": 123,
+    "title_es": "El hombre que mató a Liberty Valance",
+    "original_title": "The Man Who Shot Liberty Valance",
+    "genre": "Western"
+  },
+  "pacto de amor": {
+    "url": "",
+    "title_en": "Pacto de amor",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los sueños de pepe - movimiento 2052": {
+    "url": "https://letterboxd.com/film/pepes-dreams-movement-2052/",
+    "title_en": "Pepe's Dreams - Movement 2052",
+    "director": "Pablo Trobo",
+    "country": "Uruguay",
+    "year": 2024,
+    "duration": 86,
+    "genre": "Documental",
+    "original_title": "Los Sueños de Pepe - Movimiento 2052"
   }
 }
