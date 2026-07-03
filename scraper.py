@@ -245,6 +245,103 @@ def scrape_malba_ciclos() -> list[dict]:
     return out
 
 
+# --- Ciclos de MALBA: páginas /evento/ con bloque "Programación" ------------
+# La agenda día-a-día se pierde funciones de ciclos (Revista Caligari, etc.).
+# Cada ciclo tiene una página /evento/ con un bloque "Programación" que lista
+# "VIERNES 3 / 22:00 Family portrait, de Lucy Kerr". Lo parseamos aparte.
+_MALBA_WD_RE = r"lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo"
+_MALBA_WD = {"lun": 0, "mar": 1, "mie": 2, "jue": 3, "vie": 4, "sab": 5, "dom": 6}
+_MALBA_ACCENTS = str.maketrans("áéíóú", "aeiou")
+_MALBA_EVT_RE = re.compile(
+    rf"({_MALBA_WD_RE})\s+(\d{{1,2}})\s+(\d{{1,2}}):(\d{{2}})\s+"
+    rf"(.+?)(?:,\s*de\s+([^,]+?))?"
+    rf"(?=\s+(?:{_MALBA_WD_RE})\s+\d{{1,2}}\s+\d{{1,2}}:\d{{2}}|$)",
+    re.IGNORECASE,
+)
+
+
+def _malba_wd(w: str) -> Optional[int]:
+    return _MALBA_WD.get(w.translate(_MALBA_ACCENTS).lower()[:3])
+
+
+def _malba_resolve_date(weekday: Optional[int], day: int,
+                        today: date, cutoff: date) -> Optional[date]:
+    """(díasemana, díadelmes) → fecha concreta: el mes cercano donde el weekday
+    coincide y cae en la ventana (desambigua el cruce de mes)."""
+    if weekday is None:
+        return None
+    y, m = today.year, today.month
+    for _ in range(5):
+        try:
+            cand = date(y, m, day)
+        except ValueError:
+            cand = None
+        if cand and cand.weekday() == weekday and today <= cand <= cutoff:
+            return cand
+        m += 1
+        if m > 12:
+            m, y = 1, y + 1
+    return None
+
+
+def _parse_malba_evento(text: str, url: str, today: date, cutoff: date) -> list[Screening]:
+    """Parsea una página /evento/ de MALBA: nombre del ciclo + bloque
+    'Programación' ("VIERNES 3 22:00 Family portrait, de Lucy Kerr")."""
+    ciclo = ""
+    mc = re.search(r"Ciclo\s+(.+?)\s+(?:" + _MALBA_WD_RE + r")\s+a\s+las",
+                   text, re.IGNORECASE)
+    if mc:
+        ciclo = mc.group(1).strip()
+    idx = text.rfind("Programación")
+    block = text[idx:] if idx >= 0 else text
+    block = re.split(r"\bHacete\b|\bAccede\b|\bSuscrib|\bMalba\b", block)[0]
+    out: list[Screening] = []
+    seen: set = set()
+    for m in _MALBA_EVT_RE.finditer(block):
+        d = _malba_resolve_date(_malba_wd(m.group(1)), int(m.group(2)), today, cutoff)
+        if not d:
+            continue
+        hora = f"{int(m.group(3)):02d}:{m.group(4)}"
+        title = m.group(5).strip().rstrip(",").strip()
+        director = (m.group(6) or "").strip().rstrip(".")
+        key = (title, d.isoformat(), hora)
+        if not title or key in seen:
+            continue
+        seen.add(key)
+        out.append(Screening(cine="MALBA", title=title, fecha=d.isoformat(),
+                             hora=hora, ticket_url=url, ciclo=ciclo, director=director))
+    return out
+
+
+def scrape_malba_eventos(today: date, cutoff: date) -> list[Screening]:
+    """Recorre los ciclos linkeados en malba.org.ar/cine/ y parsea el bloque
+    'Programación' de cada página /evento/."""
+    try:
+        soup = fetch_html("https://malba.org.ar/cine/")
+    except Exception:
+        return []
+    urls: list[str] = []
+    seen_u: set[str] = set()
+    for a in soup.find_all("a", href=re.compile(r"/evento/")):
+        u = a.get("href", "")
+        if not u:
+            continue
+        if not u.startswith("http"):
+            u = "https://malba.org.ar" + ("" if u.startswith("/") else "/") + u
+        u = u.split("?")[0].split("#")[0].rstrip("/")
+        if u not in seen_u:
+            seen_u.add(u)
+            urls.append(u)
+    out: list[Screening] = []
+    for u in urls[:40]:
+        try:
+            esoup = fetch_html(u)
+        except Exception:
+            continue
+        out.extend(_parse_malba_evento(esoup.get_text(" ", strip=True), u, today, cutoff))
+    return out
+
+
 def scrape_malba(semanas: int = 2) -> list[Screening]:
     today = date.today()
     end = today + timedelta(weeks=semanas)
@@ -336,6 +433,16 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
             s.director = meta["director"]
         if meta.get("ciclo") and not s.ciclo:
             s.ciclo = meta["ciclo"]
+
+    # Ciclos vía páginas /evento/ (la agenda día-a-día se los pierde).
+    try:
+        for s in scrape_malba_eventos(today, end):
+            key = (s.title, s.fecha, s.hora)
+            if key not in seen:
+                seen.add(key)
+                result.append(s)
+    except Exception:
+        pass
 
     return result
 
@@ -2666,6 +2773,35 @@ def scrape_lumiton_agenda() -> list[Screening]:
 
 MUSEOCINE_BASE = "https://buenosaires.gob.ar"
 MUSEOCINE_INDEX = MUSEOCINE_BASE + "/gcaba_historico/cultura/museos/museodelcine"
+MUSEO_MANUAL_PATH = Path(__file__).parent / "data" / "museo_manual.json"
+
+
+def _museo_manual(today: date, cutoff: date) -> list[Screening]:
+    """Override manual (data/museo_manual.json). Se mergea con el scrape y se
+    filtra a la ventana; las funciones de meses pasados se caen solas."""
+    if not MUSEO_MANUAL_PATH.exists():
+        return []
+    try:
+        data = json.loads(MUSEO_MANUAL_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return []
+    out: list[Screening] = []
+    for s in data.get("screenings", []):
+        title = (s.get("title") or "").strip()
+        try:
+            d = date.fromisoformat(s["fecha"])
+        except (KeyError, ValueError):
+            continue
+        if not title or not (today <= d <= cutoff):
+            continue
+        out.append(Screening(
+            cine="Museo del Cine", title=title,
+            fecha=s["fecha"], hora=s.get("hora", "??"),
+            ticket_url=MUSEOCINE_INDEX, ciclo=s.get("ciclo", ""),
+            director=s.get("director", ""), year=s.get("year"),
+            original_title=s.get("original_title", ""),
+        ))
+    return out
 
 _MUSEOCINE_MONTHS = {
     "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
@@ -2940,6 +3076,13 @@ def scrape_museo_cine(semanas: int = 4) -> list[Screening]:
                 year=ev.get("year"),
                 original_title=ev.get("original_title", ""),
             ))
+
+    # Override manual (stopgap) — dedup contra lo scrapeado.
+    for s in _museo_manual(today, cutoff):
+        key = (s.title, s.fecha, s.hora)
+        if key not in seen:
+            seen.add(key)
+            result.append(s)
     return result
 
 

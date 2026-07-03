@@ -1,0 +1,16 @@
+{
+  "_comment": "Override MANUAL del Museo del Cine. Se mergea con lo que trae scrape_museo_cine (dedup por título+fecha+hora) y se filtra a la ventana [hoy, hoy+semanas], así que las funciones de meses pasados se caen solas. Stopgap para cuando el sitio del museo rinde una estructura que el scraper no captura del todo. Actualizá/limpiá cuando cambie la programación del mes.",
+  "screenings": [
+    {"title": "Futuras: Ciclo de cortos hecho por mujeres y disidencias", "fecha": "2026-07-04", "hora": "16:00", "ciclo": "Comunidad Cinéfila presenta"},
+    {"title": "La sonriente Madame Beudet", "fecha": "2026-07-04", "hora": "18:00", "director": "Germaine Dulac", "year": 1923, "original_title": "La souriante Madame Beudet", "ciclo": "Pioneras"},
+    {"title": "Horas marcadas", "fecha": "2026-07-05", "hora": "16:00", "director": "Alberto Du Bois", "year": 1954, "ciclo": "Cine argentino en 16mm"},
+    {"title": "Horas marcadas", "fecha": "2026-07-12", "hora": "18:00", "director": "Alberto Du Bois", "year": 1954, "ciclo": "Cine argentino en 16mm"},
+    {"title": "Tambores apaches", "fecha": "2026-07-05", "hora": "18:00", "director": "Hugo Fregonese", "year": 1951, "original_title": "Apache Drums", "ciclo": "Hugo Fregonese en Hollywood"},
+    {"title": "Tambores apaches", "fecha": "2026-07-10", "hora": "16:00", "director": "Hugo Fregonese", "year": 1951, "original_title": "Apache Drums", "ciclo": "Hugo Fregonese en Hollywood"},
+    {"title": "Al cruzar la calle", "fecha": "2026-07-09", "hora": "16:00", "director": "Hugo Fregonese", "year": 1950, "original_title": "One Way Street", "ciclo": "Hugo Fregonese en Hollywood"},
+    {"title": "Alma solitaria", "fecha": "2026-07-09", "hora": "18:00", "director": "Hugo Fregonese", "year": 1950, "original_title": "Saddle Tramp", "ciclo": "Hugo Fregonese en Hollywood"},
+    {"title": "Mis seis presidiarios", "fecha": "2026-07-10", "hora": "18:00", "director": "Hugo Fregonese", "year": 1952, "original_title": "My Six Convicts", "ciclo": "Hugo Fregonese en Hollywood"},
+    {"title": "Monte criollo", "fecha": "2026-07-11", "hora": "16:00", "director": "Arturo S. Mom", "year": 1935, "ciclo": "La llamada fatal presenta"},
+    {"title": "La flor de la ribera", "fecha": "2026-07-12", "hora": "16:00", "director": "Antonio Magnano", "year": 1931}
+  ]
+}
