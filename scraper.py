@@ -267,7 +267,9 @@ _MALBA_EVT_RE = re.compile(
 
 
 def _malba_wd(w: str) -> Optional[int]:
-    return _MALBA_WD.get(w.translate(_MALBA_ACCENTS).lower()[:3])
+    # .lower() ANTES de translate: la tabla de acentos es sólo minúsculas, así
+    # que un "SÁBADO" en mayúsculas hay que bajarlo primero o la Á no se saca.
+    return _MALBA_WD.get(w.lower().translate(_MALBA_ACCENTS)[:3])
 
 
 def _malba_resolve_date(weekday: Optional[int], day: int,
@@ -290,14 +292,30 @@ def _malba_resolve_date(weekday: Optional[int], day: int,
     return None
 
 
-def _parse_malba_evento(text: str, url: str, today: date, cutoff: date) -> list[Screening]:
-    """Parsea una página /evento/ de MALBA: nombre del ciclo + bloque
-    'Programación' ("VIERNES 3 22:00 Family portrait, de Lucy Kerr")."""
-    ciclo = ""
+# Header de día dentro de la Programación: "JUEVES 9" / "SÁBADO 1 de agosto".
+_MALBA_DAY_HEAD_RE = re.compile(
+    r"^(" + _MALBA_WD_RE + r")\s+(\d{1,2})(?:\s+de\s+\w+)?$", re.IGNORECASE)
+# Línea de función: "18:30 Título, de Director" (director opcional).
+_MALBA_FILM_LINE_RE = re.compile(r"^(\d{1,2}):(\d{2})\s+(.+)$")
+
+
+def _parse_malba_evento(soup, url: str, today: date, cutoff: date) -> list[Screening]:
+    """Parsea la página /evento/ de un ciclo de MALBA: nombre del ciclo + bloque
+    'Programación'. La grilla lista por día una o VARIAS funciones; sólo la
+    primera de cada día trae el encabezado "JUEVES 9", las siguientes son sólo
+    "20:30 …", así que arrastramos el día actual entre líneas/párrafos.
+    """
+    text = soup.get_text(" ", strip=True)
     mc = re.search(r"Ciclo\s+(.+?)\s+(?:" + _MALBA_WD_RE + r")\s+a\s+las",
                    text, re.IGNORECASE)
     if mc:
         ciclo = mc.group(1).strip()
+    else:
+        # Sin "Ciclo X ... a las" (ej. "Trasnoches / Orson Welles x4"): usamos el
+        # título del evento como nombre del ciclo ("Orson Welles x4", "Cineclub
+        # Nocturna", "Lita Stantic: no habrá nadie igual").
+        h1 = soup.find("h1")
+        ciclo = h1.get_text(strip=True) if h1 else ""
     # Director del ciclo para retrospectivas de un solo autor (ej. "Orson Welles
     # x4"), donde la Programación lista la película SIN ", de Director". Se toma
     # del copete ("...la obra de NOMBRE...") o del título del ciclo ("NOMBRE xN").
@@ -313,24 +331,54 @@ def _parse_malba_evento(text: str, url: str, today: date, cutoff: date) -> list[
     )
     if _cd:
         cycle_director = _cd.group(1).strip().rstrip(".,")
-    idx = text.rfind("Programación")
-    block = text[idx:] if idx >= 0 else text
-    block = re.split(r"\bHacete\b|\bAccede\b|\bSuscrib|\bMalba\b", block)[0]
+
+    h3 = next((h for h in soup.find_all(["h3", "h2"])
+               if h.get_text(strip=True).lower().startswith("programaci")), None)
+    if h3 is None:
+        return []
+
     out: list[Screening] = []
     seen: set = set()
-    for m in _MALBA_EVT_RE.finditer(block):
-        d = _malba_resolve_date(_malba_wd(m.group(1)), int(m.group(2)), today, cutoff)
-        if not d:
+    cur: Optional[tuple[Optional[int], int]] = None  # (weekday, día del mes)
+    for p in h3.find_all_next("p"):
+        for br in p.find_all("br"):
+            br.replace_with("\n")
+        lines = [ln.strip() for ln in p.get_text().split("\n") if ln.strip()]
+        if not lines:
             continue
-        hora = f"{int(m.group(3)):02d}:{m.group(4)}"
-        title = m.group(5).strip().rstrip(",").strip()
-        director = (m.group(6) or "").strip().rstrip(".") or cycle_director
-        key = (title, d.isoformat(), hora)
-        if not title or key in seen:
+        # ¿Primera línea es encabezado de día? (setea el día actual)
+        dh = _MALBA_DAY_HEAD_RE.match(lines[0])
+        start = 0
+        if dh:
+            cur = (_malba_wd(dh.group(1)), int(dh.group(2)))
+            start = 1
+        elif not _MALBA_FILM_LINE_RE.match(lines[0]):
+            # <p> ajeno a la programación (botón "Comprar entradas" / pie):
+            # si ya juntamos funciones, es el fin de la sección.
+            if out or "Comprar entradas" in lines[0]:
+                break
             continue
-        seen.add(key)
-        out.append(Screening(cine="MALBA", title=title, fecha=d.isoformat(),
-                             hora=hora, ticket_url=url, ciclo=ciclo, director=director))
+        for ln in lines[start:]:
+            fm = _MALBA_FILM_LINE_RE.match(ln)
+            if not fm or cur is None:
+                continue
+            d = _malba_resolve_date(cur[0], cur[1], today, cutoff)
+            if not d:
+                continue
+            hora = f"{int(fm.group(1)):02d}:{fm.group(2)}"
+            rest = fm.group(3).strip()
+            if ", de " in rest:
+                title, director = rest.rsplit(", de ", 1)
+                title, director = title.strip().rstrip(","), director.strip().rstrip(".")
+            else:
+                title, director = rest.strip().rstrip(","), cycle_director
+            key = (title, d.isoformat(), hora)
+            if not title or key in seen:
+                continue
+            seen.add(key)
+            out.append(Screening(cine="MALBA", title=title, fecha=d.isoformat(),
+                                 hora=hora, ticket_url=url, ciclo=ciclo,
+                                 director=director))
     return out
 
 
@@ -359,7 +407,7 @@ def scrape_malba_eventos(today: date, cutoff: date) -> list[Screening]:
             esoup = fetch_html(u)
         except Exception:
             continue
-        out.extend(_parse_malba_evento(esoup.get_text(" ", strip=True), u, today, cutoff))
+        out.extend(_parse_malba_evento(esoup, u, today, cutoff))
     return out
 
 

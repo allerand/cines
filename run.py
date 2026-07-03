@@ -292,19 +292,75 @@ async def run_scraper(semanas: int = 9) -> None:
                 out.append(p)
         return ", ".join(out)
 
-    # Unificar países que las distintas fuentes escriben en inglés/español o con
-    # siglas → forma canónica en castellano (Estados Unidos, Reino Unido).
+    # Unificar países que las distintas fuentes escriben en inglés o español →
+    # forma canónica en castellano. La clave se normaliza sin acentos ni
+    # puntuación, así "Mexico"/"México"/"méxico" colapsan a una sola entrada.
     _COUNTRY_ALIASES = {
+        # Estados Unidos / Reino Unido (siglas y variantes)
         "usa": "Estados Unidos", "us": "Estados Unidos", "eeuu": "Estados Unidos",
         "euu": "Estados Unidos", "unitedstates": "Estados Unidos",
         "unitedstatesofamerica": "Estados Unidos", "estadosunidos": "Estados Unidos",
         "uk": "Reino Unido", "unitedkingdom": "Reino Unido",
         "reinounido": "Reino Unido", "greatbritain": "Reino Unido",
-        "granbretaña": "Reino Unido",
+        "granbretana": "Reino Unido", "england": "Reino Unido",
+        # Europa
+        "france": "Francia", "francia": "Francia",
+        "germany": "Alemania", "deutschland": "Alemania", "alemania": "Alemania",
+        "spain": "España", "espana": "España",
+        "italy": "Italia", "italia": "Italia",
+        "belgium": "Bélgica", "belgica": "Bélgica",
+        "netherlands": "Países Bajos", "holland": "Países Bajos",
+        "paisesbajos": "Países Bajos",
+        "portugal": "Portugal",
+        "switzerland": "Suiza", "suiza": "Suiza",
+        "sweden": "Suecia", "suecia": "Suecia",
+        "norway": "Noruega", "noruega": "Noruega",
+        "denmark": "Dinamarca", "dinamarca": "Dinamarca",
+        "finland": "Finlandia", "finlandia": "Finlandia",
+        "poland": "Polonia", "polonia": "Polonia",
+        "austria": "Austria",
+        "greece": "Grecia", "grecia": "Grecia",
+        "ireland": "Irlanda", "irlanda": "Irlanda",
+        "russia": "Rusia", "rusia": "Rusia", "ussr": "URSS", "urss": "URSS",
+        "hungary": "Hungría", "hungria": "Hungría",
+        "romania": "Rumania", "rumania": "Rumania",
+        "czechrepublic": "República Checa", "czechia": "República Checa",
+        "republicacheca": "República Checa",
+        "turkey": "Turquía", "turquia": "Turquía",
+        "iceland": "Islandia", "islandia": "Islandia",
+        # América
+        "canada": "Canadá",
+        "mexico": "México",
+        "brazil": "Brasil", "brasil": "Brasil",
+        "peru": "Perú",
+        "chile": "Chile", "argentina": "Argentina", "uruguay": "Uruguay",
+        "paraguay": "Paraguay", "bolivia": "Bolivia", "colombia": "Colombia",
+        "venezuela": "Venezuela", "ecuador": "Ecuador", "cuba": "Cuba",
+        # Asia / África / Oceanía
+        "japan": "Japón", "japon": "Japón",
+        "china": "China",
+        "southkorea": "Corea del Sur", "korea": "Corea del Sur",
+        "republicofkorea": "Corea del Sur", "coreadelsur": "Corea del Sur",
+        "northkorea": "Corea del Norte",
+        "india": "India",
+        "iran": "Irán",
+        "israel": "Israel",
+        "morocco": "Marruecos", "marruecos": "Marruecos",
+        "egypt": "Egipto", "egipto": "Egipto",
+        "australia": "Australia",
+        "newzealand": "Nueva Zelanda", "nuevazelanda": "Nueva Zelanda",
+        "taiwan": "Taiwán", "taiwán": "Taiwán",
+        "thailand": "Tailandia", "tailandia": "Tailandia",
+        "southafrica": "Sudáfrica", "sudafrica": "Sudáfrica",
     }
 
+    def _country_key(p: str) -> str:
+        """Clave de país sin acentos, minúsculas, sólo letras."""
+        p = p.lower().translate(str.maketrans("áéíóúü", "aeiouu"))
+        return re.sub(r"[^a-z]", "", p)
+
     def _normalize_country(s: str) -> str:
-        """'Usa, Uk' / 'United States of America' / 'Ee.uu.' → 'Estados Unidos'."""
+        """'Usa, Uk' → 'Estados Unidos'; 'France'/'Germany' → 'Francia'/'Alemania'."""
         if not s:
             return s
         seen: list[str] = []
@@ -312,8 +368,7 @@ async def run_scraper(semanas: int = 9) -> None:
             p = part.strip()
             if not p:
                 continue
-            key = re.sub(r"[^a-zñáéíóúü]", "", p.lower())
-            p = _COUNTRY_ALIASES.get(key, p)
+            p = _COUNTRY_ALIASES.get(_country_key(p), p)
             if p not in seen:
                 seen.append(p)
         return ", ".join(seen)
