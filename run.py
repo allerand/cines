@@ -13,6 +13,7 @@ import asyncio
 import http.server
 import json
 import os
+import re
 import sys
 import threading
 from datetime import datetime
@@ -291,6 +292,32 @@ async def run_scraper(semanas: int = 9) -> None:
                 out.append(p)
         return ", ".join(out)
 
+    # Unificar países que las distintas fuentes escriben en inglés/español o con
+    # siglas → forma canónica en castellano (Estados Unidos, Reino Unido).
+    _COUNTRY_ALIASES = {
+        "usa": "Estados Unidos", "us": "Estados Unidos", "eeuu": "Estados Unidos",
+        "euu": "Estados Unidos", "unitedstates": "Estados Unidos",
+        "unitedstatesofamerica": "Estados Unidos", "estadosunidos": "Estados Unidos",
+        "uk": "Reino Unido", "unitedkingdom": "Reino Unido",
+        "reinounido": "Reino Unido", "greatbritain": "Reino Unido",
+        "granbretaña": "Reino Unido",
+    }
+
+    def _normalize_country(s: str) -> str:
+        """'Usa, Uk' / 'United States of America' / 'Ee.uu.' → 'Estados Unidos'."""
+        if not s:
+            return s
+        seen: list[str] = []
+        for part in s.split(","):
+            p = part.strip()
+            if not p:
+                continue
+            key = re.sub(r"[^a-zñáéíóúü]", "", p.lower())
+            p = _COUNTRY_ALIASES.get(key, p)
+            if p not in seen:
+                seen.append(p)
+        return ", ".join(seen)
+
     # Construir JSON final
     screenings_out = []
     for s in all_screenings:
@@ -322,7 +349,7 @@ async def run_scraper(semanas: int = 9) -> None:
             "title_es":   display_title,
             "title_en":   tmdb_en or display_title,
             "director":   _fix_caps(getattr(s, "director", "") or meta.get("director") or ""),
-            "country":    _fix_country_caps(getattr(s, "country", "") or meta.get("country") or ""),
+            "country":    _normalize_country(_fix_country_caps(getattr(s, "country", "") or meta.get("country") or "")),
             "year":       getattr(s, "year", None) or meta.get("year"),
             "duration":   getattr(s, "duration", None) or meta.get("duration"),
             "genre":      meta.get("genre") or "",

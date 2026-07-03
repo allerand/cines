@@ -155,7 +155,13 @@ def fetch_malba_evento_meta(url: str) -> dict:
         text,
     )
     if md:
-        out["director"] = md.group(1).strip().rstrip(",")
+        director = md.group(1).strip().rstrip(",")
+        # A veces el texto repite el crédito ("De NOMBRE De NOMBRE") y el regex
+        # no-greedy captura ambas ocurrencias. Si es "X De X" dejamos un solo X.
+        dup = re.match(r"^(.+?)\s+De\s+\1$", director, re.IGNORECASE)
+        if dup:
+            director = dup.group(1).strip()
+        out["director"] = director
 
     # Ciclo: dinámico — el <p> inmediatamente previo al <h1> del título contiene
     # el nombre del ciclo (ej. "Semana de cine portugués", "Cineclub Nocturna",
@@ -292,6 +298,21 @@ def _parse_malba_evento(text: str, url: str, today: date, cutoff: date) -> list[
                    text, re.IGNORECASE)
     if mc:
         ciclo = mc.group(1).strip()
+    # Director del ciclo para retrospectivas de un solo autor (ej. "Orson Welles
+    # x4"), donde la Programación lista la película SIN ", de Director". Se toma
+    # del copete ("...la obra de NOMBRE...") o del título del ciclo ("NOMBRE xN").
+    cycle_director = ""
+    _cd = re.search(
+        r"(?:(?:la\s+)?obra\s+de|retrospectiva(?:\s+de|\s+dedicad[oa]\s+a)|"
+        r"homenaje\s+a|dedicad[oa]\s+a(?:\s+la\s+obra\s+de)?)\s+"
+        r"([A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ'’.\-]*(?:\s+[A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ'’.\-]*){0,3})",
+        text,
+    ) or re.search(
+        r"([A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ'’.\-]*(?:\s+[A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ'’.\-]*){0,3})\s+x\s*\d+\b",
+        text,
+    )
+    if _cd:
+        cycle_director = _cd.group(1).strip().rstrip(".,")
     idx = text.rfind("Programación")
     block = text[idx:] if idx >= 0 else text
     block = re.split(r"\bHacete\b|\bAccede\b|\bSuscrib|\bMalba\b", block)[0]
@@ -303,7 +324,7 @@ def _parse_malba_evento(text: str, url: str, today: date, cutoff: date) -> list[
             continue
         hora = f"{int(m.group(3)):02d}:{m.group(4)}"
         title = m.group(5).strip().rstrip(",").strip()
-        director = (m.group(6) or "").strip().rstrip(".")
+        director = (m.group(6) or "").strip().rstrip(".") or cycle_director
         key = (title, d.isoformat(), hora)
         if not title or key in seen:
             continue
@@ -404,7 +425,10 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
             if title in MALBA_KNOWN_CICLOS:
                 continue
 
-            key = (title, d.isoformat(), hora)
+            # Clave normalizada (case-insensitive) para que la misma función no
+            # se duplique cuando la agenda y la Programación del ciclo la
+            # escriben con distinto casing ("Family Portrait" vs "Family portrait").
+            key = (re.sub(r"\s+", " ", title).strip().lower(), d.isoformat(), hora)
             if key not in seen:
                 seen.add(key)
                 # Fallback ciclo desde matching weekday+hora (cobertura inicial)
@@ -437,7 +461,7 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
     # Ciclos vía páginas /evento/ (la agenda día-a-día se los pierde).
     try:
         for s in scrape_malba_eventos(today, end):
-            key = (s.title, s.fecha, s.hora)
+            key = (re.sub(r"\s+", " ", s.title).strip().lower(), s.fecha, s.hora)
             if key not in seen:
                 seen.add(key)
                 result.append(s)
@@ -723,7 +747,11 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], list[dict]
                     continue
                 # Saltear líneas que parezcan película (terminan en "(...año)") o
                 # sinopsis larga; quedarnos con una etiqueta corta tipo "Programa X".
-                if not re.search(r"\([^)]*\d{4}[^)]*\)", ln) and len(ln) <= 60:
+                # También saltear notas de formato/duración sueltas tipo "(93';
+                # DM)." — no son un nombre de programa, sólo metadata residual.
+                is_film_year = re.search(r"\([^)]*\d{4}[^)]*\)", ln)
+                is_format_note = ln.startswith("(") or re.search(r"\d{2,3}\s*['’′]", ln)
+                if not is_film_year and not is_format_note and len(ln) <= 60:
                     prog_label = ln
                 break
 
@@ -2958,6 +2986,9 @@ def _parse_museocine_page(text: str, slug_month: Optional[int],
                 slots.append((dn, hmonth, hour, minute))
             if hm.group("ciclo"):
                 ciclo = hm.group("ciclo").strip().rstrip(".,;")
+                # El museo redacta "NOMBRE DEL CICLO presenta" — nos quedamos
+                # sólo con el nombre del ciclo.
+                ciclo = re.sub(r"\s+presenta$", "", ciclo, flags=re.IGNORECASE).strip()
 
         # Película: segmento desde el fin del grupo hasta el próximo grupo.
         seg_start = group[-1].end()
