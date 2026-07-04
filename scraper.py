@@ -2580,7 +2580,7 @@ def _borges_dates_from_label(label: str, today: date, cutoff: date) -> list[date
             d += timedelta(days=1)
     return out
 
-def _borges_http_json(url: str, browser_headers: bool = True):
+def _borges_http_json(url: str, browser_headers: bool = True, timeout: int = 45):
     """GET + parseo JSON. Con headers de navegador para el intento directo, o
     mínimos cuando va por el servicio de scraping (que pone los suyos)."""
     headers = {"Accept": "application/json, text/plain, */*"}
@@ -2599,7 +2599,7 @@ def _borges_http_json(url: str, browser_headers: bool = True):
             "Sec-Fetch-Site": "same-origin",
         })
     req = urllib.request.Request(url, headers=headers)
-    with urllib.request.urlopen(req, timeout=45) as r:
+    with urllib.request.urlopen(req, timeout=timeout) as r:
         return json.loads(r.read().decode("utf-8", errors="replace"))
 
 
@@ -2634,11 +2634,17 @@ def fetch_borges_json(url: str) -> Optional[dict | list]:
             print(f"  · [Borges API Error] {direct_err} "
                   "(configurá BORGES_SCRAPER_KEY para usar un servicio de scraping)")
             return None
-        try:
-            return _borges_http_json(proxy, browser_headers=False)
-        except Exception as proxy_err:
-            print(f"  · [Borges API Error] directo: {direct_err}; servicio: {proxy_err}")
-            return None
+        # El servicio de scraping (residencial + anti-Cloudflare) suele tardar
+        # 60-90s en resolver el challenge de CF: timeout amplio + un reintento
+        # (a veces la 1ra pasada falla transitoriamente).
+        proxy_err: Optional[Exception] = None
+        for _ in range(2):
+            try:
+                return _borges_http_json(proxy, browser_headers=False, timeout=120)
+            except Exception as e:
+                proxy_err = e
+        print(f"  · [Borges API Error] directo: {direct_err}; servicio: {proxy_err}")
+        return None
 
 def _borges_times_from_rep(rep: str, sig_hora: str) -> list[str]:
     """Horarios de un evento desde fechasRepeticiones — SÓLO la parte a la
