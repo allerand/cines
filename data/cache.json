@@ -6295,15 +6295,15 @@
     "duration": null
   },
   "la guardería": {
-    "url": "",
-    "title_en": "La guardería",
+    "url": "https://letterboxd.com/film/our-house-in-cuba/",
+    "title_en": "Our House in Cuba",
     "director": "Virginia Croatto",
     "country": "Argentina",
     "year": 2015,
     "duration": 71,
+    "genre": "Documental",
     "title_es": "La Guardería",
-    "original_title": "La guardería",
-    "genre": "Documental"
+    "original_title": "La guardería"
   },
   "hamaca paraguaya": {
     "url": "https://letterboxd.com/film/hamaca-paraguaya/",
@@ -6383,15 +6383,15 @@
     "duration": null
   },
   "la dama de shanghai": {
-    "url": "",
-    "title_en": "La dama de Shanghai",
+    "url": "https://letterboxd.com/film/the-lady-from-shanghai/",
+    "title_en": "The Lady from Shanghai",
     "director": "Orson Welles",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1947,
     "duration": 87,
+    "genre": "Crimen, Drama",
     "title_es": "La dama de Shanghai",
-    "original_title": "The Lady from Shanghai",
-    "genre": "Misterio, Crimen"
+    "original_title": "The Lady from Shanghai"
   },
   "el ciudadano comprar entradas actividades relacionadas": {
     "url": "",
