@@ -486,13 +486,20 @@ async def run_scraper(semanas: int = 9) -> None:
             print(f"  ↳ Metadata overrides omitidos: {e}")
 
     # Merge con la corrida anterior para no perder funciones que el scrape de hoy
-    # no capturó. Dos casos:
+    # no capturó. Tres casos:
     #   1) Comerciales: La Nación sólo expone HOY, así que preservamos sus
     #      funciones FUTURAS ya capturadas en corridas previas.
     #   2) Eventos del CTBA (Lugones, etc.) que en su ÚLTIMO día caen del listado
     #      de "próximos" y dejan de scrapearse → preservamos las funciones de HOY
     #      que estaban antes y ahora faltan (cualquier sala).
+    #   3) Borges: publica ~1 mes de programación de una vez, pero su API cae
+    #      seguido (Cloudflare bloquea la IP del runner). Si esta corrida trajo
+    #      pocas/ninguna función de Borges (señal de scrape fallido), preservamos
+    #      sus funciones FUTURAS de la corrida anterior — con el scrape semanal
+    #      alcanza para no vaciar la grilla. Si el scrape anduvo, la data fresca
+    #      manda (no preservamos nada viejo).
     COMMERCIAL_PREFIXES = ('Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex')
+    BORGES_CINE = 'Centro Cultural Borges'
     if CARTELERA_JSON.exists():
         try:
             from datetime import date
@@ -502,23 +509,32 @@ async def run_scraper(semanas: int = 9) -> None:
             def _key(s):
                 return (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
 
+            borges_now = sum(1 for s in screenings_out if s.get("cine") == BORGES_CINE)
+            borges_failed = borges_now < 3  # sano trae ~15-20; 0-1 = falló
+
             existing_keys = {_key(s) for s in screenings_out}
-            restored_comm = restored_today = 0
+            restored_comm = restored_today = restored_borges = 0
             for s in prev_data.get("screenings", []):
                 f = s.get("fecha", "")
                 is_comm = any(s.get("cine", "").startswith(p) for p in COMMERCIAL_PREFIXES)
-                keep = (is_comm and f > today_str) or (f == today_str)
+                is_borges = s.get("cine") == BORGES_CINE
+                keep = ((is_comm and f > today_str)
+                        or (f == today_str)
+                        or (borges_failed and is_borges and f > today_str))
                 if not keep or _key(s) in existing_keys:
                     continue
                 screenings_out.append(s)
                 existing_keys.add(_key(s))
                 if f == today_str:
                     restored_today += 1
+                elif is_borges:
+                    restored_borges += 1
                 else:
                     restored_comm += 1
-            if restored_comm or restored_today:
+            if restored_comm or restored_today or restored_borges:
                 screenings_out.sort(key=sort_key)
                 print(f"  ↳ Merge: +{restored_comm} comerciales futuras, "
+                      f"+{restored_borges} Borges futuras, "
                       f"+{restored_today} funciones de hoy preservadas")
         except Exception as e:
             print(f"  ↳ Merge omitido: {e}")
