@@ -6548,26 +6548,26 @@
     "duration": null
   },
   "la plaga de los zombies": {
-    "url": "",
-    "title_en": "La plaga de los zombies",
+    "url": "https://letterboxd.com/film/the-plague-of-the-zombies/",
+    "title_en": "The Plague of the Zombies",
     "director": "John Gilling",
-    "country": "United Kingdom",
+    "country": "UK",
     "year": 1966,
     "duration": 91,
+    "genre": "Terror, Misterio",
     "title_es": "La maldición de los zombies",
-    "original_title": "The Plague of the Zombies",
-    "genre": "Terror, Misterio"
+    "original_title": "The Plague of the Zombies"
   },
   "un tiro en la noche": {
-    "url": "",
-    "title_en": "Un tiro en la noche",
+    "url": "https://letterboxd.com/film/the-man-who-shot-liberty-valance/",
+    "title_en": "The Man Who Shot Liberty Valance",
     "director": "John Ford",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1962,
     "duration": 123,
+    "genre": "Western",
     "title_es": "El hombre que mató a Liberty Valance",
-    "original_title": "The Man Who Shot Liberty Valance",
-    "genre": "Western"
+    "original_title": "The Man Who Shot Liberty Valance"
   },
   "pacto de amor": {
     "url": "",
@@ -6586,5 +6586,29 @@
     "duration": 86,
     "genre": "Documental",
     "original_title": "Los Sueños de Pepe - Movimiento 2052"
+  },
+  "taller | lo veo, ¡pero no lo creo!": {
+    "url": "",
+    "title_en": "Taller | Lo veo, ¡pero no lo creo!",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "música | conservatorios en concierto: primeros compases. plan niños y niñas del falla": {
+    "url": "",
+    "title_en": "Música | Conservatorios en concierto: primeros compases. Plan Niños y Niñas del Falla",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "música | conservatorios en concierto: primeros compases": {
+    "url": "",
+    "title_en": "Música | Conservatorios en concierto: primeros compases",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
