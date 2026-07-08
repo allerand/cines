@@ -1299,12 +1299,13 @@
     "genre": "Drama"
   },
   "hombre de la atlántida": {
-    "url": "",
-    "title_en": "HOMBRE DE LA ATLÁNTIDA",
+    "url": "https://letterboxd.com/film/a-man-from-atlantis/",
+    "title_en": "A Man from Atlantis",
     "director": "Simon Zorraquin",
     "country": "",
     "year": null,
     "duration": 69,
+    "genre": "",
     "original_title": "Hombre de la Atlántida"
   },
   "las poetas visitan a juana bignozzi": {
@@ -6339,13 +6340,13 @@
     "original_title": "Dársena Sur"
   },
   "cordero de dios": {
-    "url": "https://letterboxd.com/film/lamb-of-god-2020/",
+    "url": "https://letterboxd.com/film/lamb-of-god/",
     "title_en": "Lamb of God",
-    "director": "Iván Noel",
+    "director": "Lucía Cedrón",
     "country": "Argentina",
-    "year": 2020,
-    "duration": 115,
-    "genre": "Misterio, Drama",
+    "year": 2008,
+    "duration": 90,
+    "genre": "Drama",
     "original_title": "Cordero de Dios"
   },
   "la deuda, de gustavo fontán sábado 1 de agosto 22:10 bolivia": {
@@ -6898,5 +6899,66 @@
     "genre": "Drama, Ciencia ficción",
     "title_es": "Metrópolis",
     "original_title": "Metropolis"
+  },
+  "de ellas con nosotras": {
+    "url": "https://letterboxd.com/film/de-ellas-con-nosotras/",
+    "title_en": "De ellas con nosotras",
+    "director": "Aye Redigonda",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 67,
+    "genre": "Documental",
+    "original_title": "De ellas con nosotras"
+  },
+  "martín fierro, la película": {
+    "url": "https://letterboxd.com/film/martin-fierro-the-movie/",
+    "title_en": "Martin Fierro: The Movie",
+    "director": "Liliana Romero, Norman Ruíz",
+    "country": "Argentina",
+    "year": 2007,
+    "duration": 88,
+    "genre": "Animación, Acción",
+    "original_title": "Martín Fierro: la película"
+  },
+  "cuentos de la selva": {
+    "url": "https://letterboxd.com/film/cuentos-de-la-selva/",
+    "title_en": "Jungle Tales",
+    "director": "Norman Ruíz, Liliana Romero",
+    "country": "Argentina, Uruguay",
+    "year": 2010,
+    "duration": 77,
+    "genre": "Animación, Aventura",
+    "original_title": "Cuentos de la Selva"
+  },
+  "italpark": {
+    "url": "https://letterboxd.com/film/italpark/",
+    "title_en": "Italpark",
+    "director": "Juan Carlos Domínguez",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 82,
+    "genre": "Documental",
+    "original_title": "Italpark"
+  },
+  "el tiempo de la tierra": {
+    "url": "",
+    "title_en": "El tiempo de la tierra",
+    "director": "María Beatriz Ramírez Blankenhorst",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 11,
+    "title_es": "The Time of the Earth. Indigenous Stories",
+    "original_title": "El tiempo de la tierra, historias originarias"
+  },
+  "spider-man un nuevo día": {
+    "url": "https://letterboxd.com/film/spider-man-brand-new-day/",
+    "title_en": "Spider-Man: Brand New Day",
+    "director": "Destin Daniel Cretton",
+    "country": "USA",
+    "year": 2026,
+    "duration": 144,
+    "genre": "Ciencia ficción, Acción",
+    "title_es": "Spider-Man: Un nuevo día",
+    "original_title": "Spider-Man: Brand New Day"
   }
 }
