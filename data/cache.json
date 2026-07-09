@@ -718,13 +718,12 @@
     "genre": "Comedia, Drama"
   },
   "padre madre hermana hermano": {
-    "url": "https://letterboxd.com/film/father-mother-sister-brother/",
-    "title_en": "Father Mother Sister Brother",
-    "director": "Jim Jarmusch",
-    "country": "USA, France",
-    "year": 2025,
-    "duration": 110,
-    "genre": "Drama, Comedia"
+    "url": "",
+    "title_en": "Padre madre hermana hermano",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "el mago del kremlin": {
     "url": "",
@@ -3220,7 +3219,7 @@
   },
   "el castillo ambulante": {
     "url": "",
-    "title_en": "El castillo ambulante",
+    "title_en": "EL CASTILLO AMBULANTE",
     "director": "Hayao Miyazaki",
     "country": "Japan",
     "year": 2004,
@@ -6377,12 +6376,13 @@
     "genre": "Thriller, Crimen"
   },
   "soberbia": {
-    "url": "",
-    "title_en": "Soberbia",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/orson-welles-at-large-portrait-of-gina/",
+    "title_en": "Orson Welles at Large: Portrait of Gina",
+    "director": "Orson Welles",
+    "country": "USA",
+    "year": 1958,
+    "duration": 26,
+    "genre": "Documental"
   },
   "la dama de shanghai": {
     "url": "https://letterboxd.com/film/the-lady-from-shanghai/",
@@ -6960,5 +6960,121 @@
     "genre": "Ciencia ficción, Acción",
     "title_es": "Spider-Man: Un nuevo día",
     "original_title": "Spider-Man: Brand New Day"
+  },
+  "torneo de truco": {
+    "url": "",
+    "title_en": "Torneo de Truco",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sol alegría": {
+    "url": "https://letterboxd.com/film/sol-alegria/",
+    "title_en": "Sol Alegria",
+    "director": "Tavinho Teixeira, Mariah Teixeira",
+    "country": "Brazil",
+    "year": 2018,
+    "duration": 91,
+    "genre": "Comedia, Fantasía",
+    "original_title": "Sol Alegria"
+  },
+  "trial": {
+    "url": "",
+    "title_en": "Trial",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "no taxi do jack": {
+    "url": "https://letterboxd.com/film/jacks-ride/",
+    "title_en": "Jack’s Ride",
+    "director": "Susana Nobre",
+    "country": "Portugal",
+    "year": 2021,
+    "duration": 70,
+    "genre": "Drama",
+    "original_title": "No táxi do Jack"
+  },
+  "smof-stop motion our fest": {
+    "url": "",
+    "title_en": "SMOF-Stop Motion Our Fest",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "baño de sangre": {
+    "url": "",
+    "title_en": "Baño de Sangre",
+    "director": "Paula Pollacchi",
+    "country": "Argentina",
+    "year": 2003,
+    "duration": 97,
+    "original_title": "Baño de sangre",
+    "genre": "Terror"
+  },
+  "la estación del terror": {
+    "url": "https://letterboxd.com/film/ghost-train-2024/",
+    "title_en": "Ghost Train",
+    "director": "Tak Se-woong",
+    "country": "South Korea",
+    "year": 2024,
+    "duration": 95,
+    "genre": "Terror, Misterio",
+    "title_es": "Tren Fantasma",
+    "original_title": "괴기열차"
+  },
+  "trash": {
+    "url": "",
+    "title_en": "Trash",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "plaga zombie": {
+    "url": "https://letterboxd.com/film/plaga-zombie/",
+    "title_en": "Plaga zombie",
+    "director": "Pablo Parés, Hernán Sáez",
+    "country": "Argentina",
+    "year": 1997,
+    "duration": 70,
+    "genre": "Terror, Comedia",
+    "original_title": "Plaga zombie: zona mutante"
+  },
+  "evil dead en llamas": {
+    "url": "https://letterboxd.com/film/evil-dead-burn/",
+    "title_en": "Evil Dead Burn",
+    "director": "Sébastien Vaniček",
+    "country": "USA",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Thriller, Terror",
+    "title_es": "Posesión infernal: En llamas",
+    "original_title": "Evil Dead Burn"
+  },
+  "deux pianos": {
+    "url": "https://letterboxd.com/film/deux-pianos/",
+    "title_en": "Two Pianos",
+    "director": "Arnaud Desplechin",
+    "country": "France, Turkey",
+    "year": 2025,
+    "duration": 115,
+    "genre": "Drama, Música",
+    "title_es": "Dos pianos",
+    "original_title": "Deux Pianos"
+  },
+  "dos pianos": {
+    "url": "https://letterboxd.com/film/two-pianos/",
+    "title_en": "Two Pianos",
+    "director": "Arnaud Desplechin",
+    "country": "France, Turkey",
+    "year": 2025,
+    "duration": 115,
+    "genre": "Drama, Música",
+    "title_es": "Dos pianos",
+    "original_title": "Deux Pianos"
   }
 }
