@@ -7006,14 +7006,14 @@
     "duration": null
   },
   "baño de sangre": {
-    "url": "",
-    "title_en": "Baño de Sangre",
+    "url": "https://letterboxd.com/film/blood-bath-2003/",
+    "title_en": "Blood Bath",
     "director": "Paula Pollacchi",
     "country": "Argentina",
     "year": 2003,
     "duration": 97,
-    "original_title": "Baño de sangre",
-    "genre": "Terror"
+    "genre": "Terror",
+    "original_title": "Baño de sangre"
   },
   "la estación del terror": {
     "url": "https://letterboxd.com/film/ghost-train-2024/",
@@ -7076,5 +7076,261 @@
     "genre": "Drama, Música",
     "title_es": "Dos pianos",
     "original_title": "Deux Pianos"
+  },
+  "spider-man: un nuevo universo": {
+    "url": "https://letterboxd.com/film/spider-man-into-the-spider-verse/",
+    "title_en": "Spider-Man: Into the Spider-Verse",
+    "director": "Bob Persichetti, Peter Ramsey, Rodney Rothman",
+    "country": "USA",
+    "year": 2018,
+    "duration": 117,
+    "genre": "Aventura, Animación",
+    "title_es": "Spider-Man: un nuevo universo",
+    "original_title": "Spider-Man: Into the Spider-Verse"
+  },
+  "el cristal encantado": {
+    "url": "https://letterboxd.com/film/the-dark-crystal/",
+    "title_en": "The Dark Crystal",
+    "director": "Jim Henson, Frank Oz",
+    "country": "UK, USA",
+    "year": 1982,
+    "duration": 93,
+    "genre": "Fantasía, Aventura",
+    "title_es": "Cristal oscuro",
+    "original_title": "The Dark Crystal"
+  },
+  "los muppets conquistan manhattan": {
+    "url": "https://letterboxd.com/film/the-muppets-take-manhattan/",
+    "title_en": "The Muppets Take Manhattan",
+    "director": "Frank Oz",
+    "country": "USA",
+    "year": 1984,
+    "duration": 94,
+    "genre": "Familiar, Comedia",
+    "title_es": "Los Teleñecos conquistan Manhattan",
+    "original_title": "The Muppets Take Manhattan"
+  },
+  "mi pobre angelito": {
+    "url": "https://letterboxd.com/film/mi-pobre-angelito/",
+    "title_en": "Home Alone",
+    "director": "Chris Columbus",
+    "country": "USA",
+    "year": 1990,
+    "duration": 103,
+    "genre": "Familiar, Comedia",
+    "title_es": "Solo en casa",
+    "original_title": "Home Alone"
+  },
+  "llegan los muppets": {
+    "url": "https://letterboxd.com/film/the-muppet-movie/",
+    "title_en": "The Muppet Movie",
+    "director": "James Frawley",
+    "country": "UK, USA",
+    "year": 1979,
+    "duration": 95,
+    "genre": "Comedia, Familiar"
+  },
+  "mi pobre angelito 2: perdido en nueva york": {
+    "url": "https://letterboxd.com/film/home-alone-2-lost-in-new-york/",
+    "title_en": "Home Alone 2: Lost in New York",
+    "director": "Chris Columbus",
+    "country": "USA",
+    "year": 1992,
+    "duration": 120,
+    "genre": "Familiar, Comedia",
+    "title_es": "Solo en casa 2: Perdido en Nueva York",
+    "original_title": "Home Alone 2: Lost in New York"
+  },
+  "looney tunes": {
+    "url": "",
+    "title_en": "LOONEY TUNES",
+    "director": "Joe Dante",
+    "country": "United States of America, Germany",
+    "year": 2003,
+    "duration": 92,
+    "title_es": "Looney Tunes: De nuevo en acción",
+    "original_title": "Looney Tunes: Back in Action",
+    "genre": "Animación, Comedia"
+  },
+  "los increíbles": {
+    "url": "https://letterboxd.com/film/the-incredibles/",
+    "title_en": "The Incredibles",
+    "director": "Brad Bird",
+    "country": "USA",
+    "year": 2004,
+    "duration": 115,
+    "genre": "Animación, Familiar",
+    "title_es": "Los Increíbles",
+    "original_title": "The Incredibles"
+  },
+  "ernest and célestine: a journey in charabia": {
+    "url": "https://letterboxd.com/film/ernest-celestine-a-trip-to-gibberitia/",
+    "title_en": "Ernest & Celestine: A Trip to Gibberitia",
+    "director": "Julien Chheng, Jean-Christophe Roger",
+    "country": "France, Luxembourg",
+    "year": 2022,
+    "duration": 80,
+    "genre": "Familiar, Animación"
+  },
+  "azur & asmar": {
+    "url": "https://letterboxd.com/film/azur-asmar-the-princes-quest/",
+    "title_en": "Azur & Asmar: The Princes' Quest",
+    "director": "Michel Ocelot",
+    "country": "Belgium, France",
+    "year": 2006,
+    "duration": 99,
+    "genre": "Familiar, Animación",
+    "title_es": "Azur y Asmar",
+    "original_title": "Azur et Asmar"
+  },
+  "mary anning": {
+    "url": "https://letterboxd.com/film/mary-anning/",
+    "title_en": "Mary Anning",
+    "director": "Marcel Barelli",
+    "country": "Switzerland, Belgium",
+    "year": 2025,
+    "duration": 70,
+    "genre": "Aventura, Animación",
+    "title_es": "Mary Anning y la playa de los dinosaurios",
+    "original_title": "Mary Anning, chasseuse de fossiles"
+  },
+  "coco": {
+    "url": "https://letterboxd.com/film/coco-2017/",
+    "title_en": "Coco",
+    "director": "Lee Unkrich",
+    "country": "USA",
+    "year": 2017,
+    "duration": 105,
+    "genre": "Aventura, Animación",
+    "title_es": "Coco",
+    "original_title": "Coco"
+  },
+  "pequeños cuentos suizos": {
+    "url": "",
+    "title_en": "PEQUEÑOS CUENTOS SUIZOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ratatouille": {
+    "url": "https://letterboxd.com/film/ratatouille-2007/",
+    "title_en": "Ratatouille",
+    "director": "Brad Bird",
+    "country": "USA",
+    "year": 2007,
+    "duration": 111,
+    "genre": "Familiar, Fantasía",
+    "title_es": "Ratatouille",
+    "original_title": "Ratatouille"
+  },
+  "tom y jerry": {
+    "url": "https://letterboxd.com/film/tom-and-jerry-1/",
+    "title_en": "Tom and Jerry",
+    "director": "John Foster, Vernon Stallings",
+    "country": "USA",
+    "year": 2000,
+    "duration": 61,
+    "genre": "Animación, Comedia",
+    "original_title": "Tom y Jerry: Sus grandes aventuras",
+    "title_es": "Tom y Jerry: El Gran Musical"
+  },
+  "la quimera del oro con música en vivo": {
+    "url": "",
+    "title_en": "LA QUIMERA DEL ORO CON MÚSICA EN VIVO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cars: una aventura sobre ruedas": {
+    "url": "https://letterboxd.com/film/cars/",
+    "title_en": "Cars",
+    "director": "John Lasseter",
+    "country": "USA",
+    "year": 2006,
+    "duration": 117,
+    "genre": "Aventura, Comedia",
+    "original_title": "Cars"
+  },
+  "maya, gimme a title": {
+    "url": "https://letterboxd.com/film/maya-give-me-a-title/",
+    "title_en": "Maya, Give Me a Title",
+    "director": "Michel Gondry",
+    "country": "France",
+    "year": 2024,
+    "duration": 61,
+    "genre": "Animación, Fantasía"
+  },
+  "las trillizas de belleville": {
+    "url": "https://letterboxd.com/film/the-triplets-of-belleville/",
+    "title_en": "The Triplets of Belleville",
+    "director": "Sylvain Chomet",
+    "country": "France, Belgium",
+    "year": 2003,
+    "duration": 80,
+    "genre": "Animación, Comedia",
+    "title_es": "Bienvenidos a Belleville",
+    "original_title": "Les Triplettes de Belleville"
+  },
+  "up, una aventura de altura": {
+    "url": "https://letterboxd.com/film/up/",
+    "title_en": "Up",
+    "director": "Pete Docter",
+    "country": "USA",
+    "year": 2009,
+    "duration": 96,
+    "genre": "Aventura, Familiar",
+    "title_es": "Up: Una Aventura de Altura",
+    "original_title": "Up"
+  },
+  "los mumin: ¿quién animará a chico?": {
+    "url": "",
+    "title_en": "LOS MUMIN: ¿QUIÉN ANIMARÁ A CHICO?",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "chicken for linda!": {
+    "url": "https://letterboxd.com/film/chicken-for-linda/",
+    "title_en": "Chicken for Linda!",
+    "director": "Chiara Malta, Sébastien Laudenbach",
+    "country": "France, Italy",
+    "year": 2023,
+    "duration": 73,
+    "genre": "Familiar, Música",
+    "title_es": "Linda quiere pollo",
+    "original_title": "Linda veut du poulet !"
+  },
+  "buscando a dory": {
+    "url": "https://letterboxd.com/film/finding-dory/",
+    "title_en": "Finding Dory",
+    "director": "Andrew Stanton",
+    "country": "USA",
+    "year": 2016,
+    "duration": 97,
+    "genre": "Aventura, Animación",
+    "title_es": "Buscando a Dory",
+    "original_title": "Finding Dory"
+  },
+  "los mumin: el pequeño trol mumin, mymla y la pequeña my": {
+    "url": "",
+    "title_en": "LOS MUMIN: EL PEQUEÑO TROL MUMIN, MYMLA Y LA PEQUEÑA MY",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "evil dead: en llamas": {
+    "url": "https://letterboxd.com/film/evil-dead-burn/",
+    "title_en": "Evil Dead Burn",
+    "director": "Sébastien Vaniček",
+    "country": "USA",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Thriller, Terror",
+    "title_es": "Posesión infernal: En llamas",
+    "original_title": "Evil Dead Burn"
   }
 }
