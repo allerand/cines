@@ -40,8 +40,10 @@ jobs:
         id: date
         run: echo "today=$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
-      - name: Generate Instagram stories (daily)
-        run: python3 scripts/generate_posts.py --date "${{ steps.date.outputs.today }}" --format story
+      - name: Generate Instagram posts (feed + stories)
+        run: |
+          python3 scripts/generate_posts.py --date "${{ steps.date.outputs.today }}" --format portrait
+          python3 scripts/generate_posts.py --date "${{ steps.date.outputs.today }}" --format story
 
       - name: Commit cartelera + posts
         run: |
@@ -61,7 +63,7 @@ jobs:
           git pull --rebase -X theirs origin main
           git push origin main
           
-      - name: Post stories to Instagram (daily)
+      - name: Post to Instagram (feed + stories)
         env:
           IG_USER_ID: ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
@@ -74,4 +76,5 @@ jobs:
           fi
           # Pequeña espera para que raw.githubusercontent indexe el commit nuevo
           sleep 20
-          python3 scripts/post_to_instagram.py --date "${{ steps.date.outputs.today }}" --stories-only
+          # Sin flags = feed carousel + stories.
+          python3 scripts/post_to_instagram.py --date "${{ steps.date.outputs.today }}"

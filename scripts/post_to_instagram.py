@@ -348,13 +348,22 @@ def main():
     do_feed = not args.stories_only
     do_stories = not args.feed_only
 
-    try:
-        if do_feed:
+    # Feed y stories son independientes: si uno falla, igual intentamos el otro
+    # (así un hipo puntual del carousel no nos deja sin stories, y viceversa).
+    errors = []
+    if do_feed:
+        try:
             post_feed_carousel(args.date, user_id, token, base, dry_run=args.dry_run)
-        if do_stories:
+        except Exception as e:
+            print(f"\n❌ feed falló: {e}", file=sys.stderr)
+            errors.append(("feed", e))
+    if do_stories:
+        try:
             post_stories(args.date, user_id, token, base, dry_run=args.dry_run)
-    except Exception as e:
-        print(f"\n❌ error: {e}", file=sys.stderr)
+        except Exception as e:
+            print(f"\n❌ stories falló: {e}", file=sys.stderr)
+            errors.append(("stories", e))
+    if errors:
         sys.exit(1)
 
 
