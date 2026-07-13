@@ -7227,14 +7227,14 @@
     "original_title": "Ratatouille"
   },
   "tom y jerry": {
-    "url": "https://letterboxd.com/film/tom-and-jerry-1/",
-    "title_en": "Tom and Jerry",
+    "url": "",
+    "title_en": "TOM Y JERRY",
     "director": "John Foster, Vernon Stallings",
-    "country": "USA",
+    "country": "United States of America",
     "year": 2000,
     "duration": 61,
-    "genre": "Animación, Comedia",
     "original_title": "Tom y Jerry: Sus grandes aventuras",
+    "genre": "Animación",
     "title_es": "Tom y Jerry: El Gran Musical"
   },
   "la quimera del oro con música en vivo": {
@@ -7335,5 +7335,13 @@
     "genre": "Thriller, Terror",
     "title_es": "Posesión infernal: En llamas",
     "original_title": "Evil Dead Burn"
+  },
+  "invierno en el cc25 | linterna mágica – el pequeño nicolás": {
+    "url": "",
+    "title_en": "Invierno en el CC25 | LINTERNA MÁGICA – El Pequeño Nicolás",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
