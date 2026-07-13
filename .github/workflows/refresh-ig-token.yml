@@ -1,0 +1,51 @@
+name: Renovar token de Instagram
+
+# Refresca automáticamente el token long-lived de Instagram (IG_ACCESS_TOKEN)
+# antes de que venza (dura 60 días). Corre el 1 y el 15 de cada mes, así aunque
+# falle una corrida el token nunca llega a caducar.
+#
+# Secrets que necesita (además del ya existente IG_ACCESS_TOKEN):
+#   IG_APP_ID      - App ID de Facebook (ej. 1296791348564477)
+#   IG_APP_SECRET  - App Secret de Facebook (App settings → Basic)
+#   SECRETS_PAT    - Personal Access Token (fine-grained) con permiso
+#                    "Secrets: Read and write" sobre este repo, para poder
+#                    actualizar IG_ACCESS_TOKEN desde el workflow.
+
+on:
+  schedule:
+    - cron: '0 11 1,15 * *'   # 1 y 15 de cada mes, 08:00 BA (UTC-3)
+  workflow_dispatch:           # permite dispararlo a mano para probar
+
+permissions:
+  contents: read
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Refrescar token y actualizar el secret
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          IG_APP_ID: ${{ secrets.IG_APP_ID }}
+          IG_APP_SECRET: ${{ secrets.IG_APP_SECRET }}
+          GH_TOKEN: ${{ secrets.SECRETS_PAT }}
+        run: |
+          set -euo pipefail
+          # El script imprime SÓLO el token nuevo a stdout.
+          NEW_TOKEN="$(python3 scripts/refresh_ig_token_ci.py)"
+          # Enmascararlo YA para que no aparezca en ningún log posterior.
+          echo "::add-mask::$NEW_TOKEN"
+          if [ -z "$NEW_TOKEN" ]; then
+            echo "El token vino vacío — aborto sin tocar el secret."
+            exit 1
+          fi
+          gh secret set IG_ACCESS_TOKEN \
+            --repo "${{ github.repository }}" \
+            --body "$NEW_TOKEN"
+          echo "✅ IG_ACCESS_TOKEN renovado y guardado (otros ~60 días)."

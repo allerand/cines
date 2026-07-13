@@ -125,19 +125,39 @@ python3 scripts/post_to_instagram.py --date 2026-05-11 --dry-run
 python3 scripts/post_to_instagram.py --date 2026-05-11
 ```
 
-## Renovación del token (cada 60 días)
+## Renovación del token — AUTOMÁTICA (recomendado)
 
-Cuando se acerque el vencimiento, repetí el Paso 5 con el token actual:
+El workflow `.github/workflows/refresh-ig-token.yml` renueva el token solo el
+**1 y el 15 de cada mes**: intercambia el long-lived vigente por uno nuevo
+(otros ~60 días) y actualiza el secret `IG_ACCESS_TOKEN`. Como el token dura 60
+días y se refresca cada ~15, nunca llega a vencer.
+
+Para activarlo, cargá 3 secrets más (una sola vez):
+
+1. https://github.com/allerand/cines/settings/secrets/actions → **New repository secret**:
+   - `IG_APP_ID` → el App ID de Facebook (ej. `1296791348564477`)
+   - `IG_APP_SECRET` → el App Secret (Meta → App settings → Basic → Mostrar)
+2. Crear el **PAT** para que el workflow pueda escribir el secret:
+   - https://github.com/settings/personal-access-tokens/new (fine-grained)
+   - **Resource owner**: allerand · **Repository access**: sólo `allerand/cines`
+   - **Permissions → Repository → Secrets**: **Read and write**
+   - Generá el token y guardalo como secret `SECRETS_PAT` en el repo.
+3. Probalo a mano: Actions → **Renovar token de Instagram** → **Run workflow**.
+   Debería terminar con `✅ IG_ACCESS_TOKEN renovado y guardado`.
+
+> El token nuevo se enmascara (`::add-mask::`) antes de usarse, así que no
+> aparece en los logs. El PAT sólo puede tocar secrets de este repo.
+
+## Renovación del token — MANUAL (fallback)
+
+Si el auto-renovador falla o el token **ya venció** (hay que regenerarlo desde
+cero en Meta), usá el helper local con un token corto recién generado:
 
 ```bash
-curl -s "https://graph.facebook.com/v21.0/oauth/access_token?\
-grant_type=fb_exchange_token&\
-client_id=$APP_ID&\
-client_secret=$APP_SECRET&\
-fb_exchange_token=$CURRENT_LONG_LIVED_TOKEN"
+APP_ID=... APP_SECRET=... SHORT_TOKEN=EAA... bash scripts/refresh_ig_token.sh
 ```
 
-Actualizá el secret `IG_ACCESS_TOKEN` en GitHub con el nuevo valor.
+Copiá el token long-lived que imprime y pegalo en el secret `IG_ACCESS_TOKEN`.
 
 ## Troubleshooting
 
