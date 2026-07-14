@@ -1536,13 +1536,15 @@
     "genre": "Drama, Familiar"
   },
   "el verdugo": {
-    "url": "https://letterboxd.com/film/el-verdugo/",
-    "title_en": "El verdugo",
-    "director": "Francisco Guerrero",
-    "country": "Mexico",
-    "year": 2003,
-    "duration": 90,
-    "genre": "Crimen, Thriller"
+    "url": "https://letterboxd.com/film/dragonslayer/",
+    "title_en": "Dragonslayer",
+    "director": "Matthew Robbins",
+    "country": "USA",
+    "year": 1981,
+    "duration": 108,
+    "genre": "Fantasía, Aventura",
+    "title_es": "El dragón del lago de fuego",
+    "original_title": "Dragonslayer"
   },
   "plácido": {
     "url": "https://letterboxd.com/film/placido/",
@@ -5497,15 +5499,15 @@
     "duration": null
   },
   "teddy": {
-    "url": "",
+    "url": "https://letterboxd.com/film/teddy-2020-1/",
     "title_en": "Teddy",
-    "director": "Andrea Eckerbom",
-    "country": "Norway",
-    "year": 2022,
-    "duration": 76,
+    "director": "Zoran Boukherma, Ludovic Boukherma",
+    "country": "France",
+    "year": 2020,
+    "duration": 89,
+    "genre": "Comedia, Terror",
     "title_es": "Teddy, la magia de la Navidad",
-    "original_title": "Teddybjørnens Jul",
-    "genre": "Familiar, Aventura"
+    "original_title": "Teddybjørnens Jul"
   },
   "sus hijos después que ellos": {
     "url": "https://letterboxd.com/film/and-their-children-after-them/",
@@ -5861,12 +5863,13 @@
     "original_title": "Paths of Glory"
   },
   "animación de canadá": {
-    "url": "",
-    "title_en": "Animación de Canadá",
+    "url": "https://letterboxd.com/film/animation-night-in-canada-vol-1/",
+    "title_en": "Animation Night in Canada, Vol. 1",
     "director": "",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 137,
+    "genre": "Animación"
   },
   "méxico para niños": {
     "url": "",
@@ -6943,12 +6946,13 @@
     "original_title": "Italpark"
   },
   "el tiempo de la tierra": {
-    "url": "",
-    "title_en": "El tiempo de la tierra",
+    "url": "https://letterboxd.com/film/the-time-of-the-earth-indigenous-stories/",
+    "title_en": "The Time of the Earth. Indigenous Stories",
     "director": "María Beatriz Ramírez Blankenhorst",
     "country": "Argentina",
     "year": 2024,
     "duration": 11,
+    "genre": "",
     "title_es": "The Time of the Earth. Indigenous Stories",
     "original_title": "El tiempo de la tierra, historias originarias"
   },
@@ -7029,12 +7033,13 @@
     "original_title": "괴기열차"
   },
   "trash": {
-    "url": "",
+    "url": "https://letterboxd.com/film/trash-2010/",
     "title_en": "Trash",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Alejo Rébora",
+    "country": "Argentina",
+    "year": 2010,
+    "duration": 68,
+    "genre": "Acción"
   },
   "plaga zombie": {
     "url": "https://letterboxd.com/film/plaga-zombie/",
@@ -7343,5 +7348,117 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "arco": {
+    "url": "https://letterboxd.com/film/arco/",
+    "title_en": "Arco",
+    "director": "Ugo Bienvenu",
+    "country": "France, UK",
+    "year": 2025,
+    "duration": 89,
+    "genre": "Aventura, Animación",
+    "original_title": "Arco"
+  },
+  "la triste historia de los perros": {
+    "url": "https://letterboxd.com/film/a-dogs-life-2017/",
+    "title_en": "A Dog's Life",
+    "director": "Chang Yi",
+    "country": "Taiwan",
+    "year": 2017,
+    "duration": 80,
+    "genre": "Drama, Animación",
+    "original_title": "狗狗傷心誌"
+  },
+  "la odisea del chip": {
+    "url": "https://letterboxd.com/film/a-chip-odyssey/",
+    "title_en": "A Chip Odyssey",
+    "director": "Hsiao Chu-chen",
+    "country": "Taiwan",
+    "year": 2025,
+    "duration": null,
+    "genre": "Documental"
+  },
+  "la recepcionista": {
+    "url": "https://letterboxd.com/film/the-receptionist/",
+    "title_en": "The Receptionist",
+    "director": "Jenny Lu",
+    "country": "UK, Taiwan",
+    "year": 2016,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "接線員"
+  },
+  "a mi querida abuela": {
+    "url": "https://letterboxd.com/film/to-my-dear-granny/",
+    "title_en": "To My Dear Granny",
+    "director": "Qu You-ning",
+    "country": "Hong Kong, Taiwan",
+    "year": 2013,
+    "duration": 117,
+    "genre": "Drama, Familiar"
+  },
+  "el mundo al revés": {
+    "url": "https://letterboxd.com/film/the-world-upside-down-2025/",
+    "title_en": "The World Upside Down",
+    "director": "Agostina Di Luciano, Leon Schwitter",
+    "country": "Switzerland, Argentina",
+    "year": 2025,
+    "duration": 77,
+    "genre": "Documental",
+    "original_title": "El mundo al revés"
+  },
+  "vacaciones de invierno en arthaus": {
+    "url": "",
+    "title_en": "VACACIONES DE INVIERNO EN ARTHAUS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "monster": {
+    "url": "https://letterboxd.com/film/monster-hunter-2020/",
+    "title_en": "Monster Hunter",
+    "director": "Paul W. S. Anderson",
+    "country": "China, Germany",
+    "year": 2020,
+    "duration": 103,
+    "genre": "Aventura, Fantasía",
+    "title_es": "Monster Hunter",
+    "original_title": "Monster Hunter"
+  },
+  "mi amigo": {
+    "url": "https://letterboxd.com/film/petes-dragon-2016/",
+    "title_en": "Pete's Dragon",
+    "director": "David Lowery",
+    "country": "USA",
+    "year": 2016,
+    "duration": 103,
+    "genre": "Familiar, Fantasía"
+  },
+  "maría luisa bemberg: el eco de mi voz": {
+    "url": "",
+    "title_en": "María Luisa Bemberg: El eco de mi voz",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "linterna mágica – el pequeño nicolás | función distendida": {
+    "url": "",
+    "title_en": "LINTERNA MÁGICA – El Pequeño Nicolás | Función distendida",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el polvo": {
+    "url": "https://letterboxd.com/film/el-polvo/",
+    "title_en": "Dust",
+    "director": "Nicolás Torchinsky",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 73,
+    "genre": "Documental",
+    "original_title": "El polvo"
   }
 }
