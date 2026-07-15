@@ -1796,12 +1796,14 @@
     "original_title": "La Reine Margot"
   },
   "rocambole en el camino": {
-    "url": "",
-    "title_en": "Rocambole en el camino",
-    "director": "",
+    "url": "https://letterboxd.com/film/rocambole-en-el-camino/",
+    "title_en": "Rocambole en el Camino",
+    "director": "Marcia Paradiso, Matías Gonzalez",
     "country": "",
-    "year": null,
-    "duration": null
+    "year": 2026,
+    "duration": 89,
+    "genre": "Documental",
+    "original_title": "Rocambole en el Camino"
   },
   "entrecampos + maria do mar + catavento": {
     "url": "",
@@ -3221,7 +3223,7 @@
   },
   "el castillo ambulante": {
     "url": "",
-    "title_en": "EL CASTILLO AMBULANTE",
+    "title_en": "El Castillo Ambulante",
     "director": "Hayao Miyazaki",
     "country": "Japan",
     "year": 2004,
@@ -7460,5 +7462,59 @@
     "duration": 73,
     "genre": "Documental",
     "original_title": "El polvo"
+  },
+  "retazos de la memoria": {
+    "url": "",
+    "title_en": "Retazos de la Memoria",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "colores perdidos": {
+    "url": "",
+    "title_en": "Colores Perdidos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el club de pesca": {
+    "url": "https://letterboxd.com/film/el-club-de-pesca/",
+    "title_en": "El club de pesca",
+    "director": "Gastón Horacio Revol Molina",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 93,
+    "genre": "Crimen, Aventura",
+    "original_title": "El club de pesca"
+  },
+  "stud free pub": {
+    "url": "",
+    "title_en": "Stud Free Pub",
+    "director": "Ariel Raiman",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": null,
+    "original_title": "Stud Free Pub (Una buena historia)",
+    "genre": "Documental, Música"
+  },
+  "amor travesti": {
+    "url": "",
+    "title_en": "Amor Travesti",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "había una vez hace 40 años": {
+    "url": "https://letterboxd.com/film/habia-una-vez-hace-40-anos/",
+    "title_en": "Once upon a time, 40 Years ago",
+    "director": "Flavia Mertehikian",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 60,
+    "genre": "Documental",
+    "original_title": "Había una vez, hace 40 años..."
   }
 }
