@@ -3222,15 +3222,13 @@
     "original_title": "Dolly"
   },
   "el castillo ambulante": {
-    "url": "",
-    "title_en": "El Castillo Ambulante",
+    "url": "https://letterboxd.com/film/howls-moving-castle/",
+    "title_en": "Howl's Moving Castle",
     "director": "Hayao Miyazaki",
     "country": "Japan",
     "year": 2004,
     "duration": 119,
-    "title_es": "El castillo ambulante",
-    "original_title": "ハウルの動く城",
-    "genre": "Fantasía, Animación"
+    "genre": "Animación, Fantasía"
   },
   "la esposa infiel": {
     "url": "",
@@ -5582,13 +5580,10 @@
   "la novia del monstruo": {
     "url": "",
     "title_en": "La novia del monstruo",
-    "director": "Edward D. Wood Jr.",
-    "country": "United States of America",
-    "year": 1955,
-    "duration": 70,
-    "title_es": "La novia del monstruo",
-    "original_title": "Bride of the Monster",
-    "genre": "Terror, Ciencia ficción"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "the rocketeer": {
     "url": "https://letterboxd.com/film/the-return-of-the-rocketeer/",
@@ -5668,13 +5663,10 @@
   "chuck jones": {
     "url": "",
     "title_en": "Chuck Jones",
-    "director": "George Daugherty",
-    "country": "United States of America",
-    "year": 1992,
-    "duration": 93,
-    "original_title": "The Magical World of Chuck Jones",
-    "genre": "Documental",
-    "title_es": "Chuck Jones: A Life in Animation"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "furia de titanes": {
     "url": "",
@@ -5977,13 +5969,12 @@
     "original_title": "Cuerpos Sin Ley"
   },
   "cuarto oscuro": {
-    "url": "",
-    "title_en": "Cuarto Oscuro",
+    "url": "https://letterboxd.com/film/dark-room-2025/",
+    "title_en": "Dark Room",
     "director": "Rocke Oviedo",
     "country": "",
     "year": 2025,
     "duration": 61,
-    "original_title": "Cuarto oscuro",
     "genre": "Animación"
   },
   "no moriré sola": {
@@ -6429,13 +6420,10 @@
   "la tumba de las luciérnagas": {
     "url": "",
     "title_en": "La tumba de las luciérnagas",
-    "director": "Taro Hyugaji",
-    "country": "Japan",
-    "year": 2008,
-    "duration": 100,
-    "title_es": "La tumba de las luciérnagas",
-    "original_title": "火垂るの墓",
-    "genre": "Drama, Bélica"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "blanca nieve - la leyenda de la nieve": {
     "url": "https://letterboxd.com/film/the-death-of-snow-white/",
@@ -7153,13 +7141,10 @@
   "looney tunes": {
     "url": "",
     "title_en": "LOONEY TUNES",
-    "director": "Joe Dante",
-    "country": "United States of America, Germany",
-    "year": 2003,
-    "duration": 92,
-    "title_es": "Looney Tunes: De nuevo en acción",
-    "original_title": "Looney Tunes: Back in Action",
-    "genre": "Animación, Comedia"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "los increíbles": {
     "url": "https://letterboxd.com/film/the-incredibles/",
@@ -7236,13 +7221,10 @@
   "tom y jerry": {
     "url": "",
     "title_en": "TOM Y JERRY",
-    "director": "John Foster, Vernon Stallings",
-    "country": "United States of America",
-    "year": 2000,
-    "duration": 61,
-    "original_title": "Tom y Jerry: Sus grandes aventuras",
-    "genre": "Animación",
-    "title_es": "Tom y Jerry: El Gran Musical"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "la quimera del oro con música en vivo": {
     "url": "",
@@ -7500,12 +7482,13 @@
     "genre": "Documental, Música"
   },
   "amor travesti": {
-    "url": "",
-    "title_en": "Amor Travesti",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/amor-trava/",
+    "title_en": "Amor trava",
+    "director": "Lucrecia Mastrángelo",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 67,
+    "genre": ""
   },
   "había una vez hace 40 años": {
     "url": "https://letterboxd.com/film/habia-una-vez-hace-40-anos/",
@@ -7516,5 +7499,15 @@
     "duration": 60,
     "genre": "Documental",
     "original_title": "Había una vez, hace 40 años..."
+  },
+  "ateez: light the way in cinemas": {
+    "url": "https://letterboxd.com/film/ateez-light-the-way-in-cinemas/",
+    "title_en": "ATEEZ: LIGHT THE WAY IN CINEMAS",
+    "director": "Kim Ji-ae",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 65,
+    "genre": "Música",
+    "original_title": "ATEEZ: LIGHT THE WAY IN CINEMAS"
   }
 }
