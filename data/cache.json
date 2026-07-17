@@ -5580,10 +5580,13 @@
   "la novia del monstruo": {
     "url": "",
     "title_en": "La novia del monstruo",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Edward D. Wood Jr.",
+    "country": "United States of America",
+    "year": 1955,
+    "duration": 70,
+    "title_es": "La novia del monstruo",
+    "original_title": "Bride of the Monster",
+    "genre": "Terror, Ciencia ficción"
   },
   "the rocketeer": {
     "url": "https://letterboxd.com/film/the-return-of-the-rocketeer/",
@@ -5663,10 +5666,13 @@
   "chuck jones": {
     "url": "",
     "title_en": "Chuck Jones",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "George Daugherty",
+    "country": "United States of America",
+    "year": 1992,
+    "duration": 93,
+    "original_title": "The Magical World of Chuck Jones",
+    "genre": "Documental",
+    "title_es": "Chuck Jones: A Life in Animation"
   },
   "furia de titanes": {
     "url": "",
@@ -6420,10 +6426,13 @@
   "la tumba de las luciérnagas": {
     "url": "",
     "title_en": "La tumba de las luciérnagas",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Taro Hyugaji",
+    "country": "Japan",
+    "year": 2008,
+    "duration": 100,
+    "title_es": "La tumba de las luciérnagas",
+    "original_title": "火垂るの墓",
+    "genre": "Drama, Bélica"
   },
   "blanca nieve - la leyenda de la nieve": {
     "url": "https://letterboxd.com/film/the-death-of-snow-white/",
@@ -7141,10 +7150,13 @@
   "looney tunes": {
     "url": "",
     "title_en": "LOONEY TUNES",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Joe Dante",
+    "country": "United States of America, Germany",
+    "year": 2003,
+    "duration": 92,
+    "title_es": "Looney Tunes: De nuevo en acción",
+    "original_title": "Looney Tunes: Back in Action",
+    "genre": "Animación, Comedia"
   },
   "los increíbles": {
     "url": "https://letterboxd.com/film/the-incredibles/",
@@ -7221,10 +7233,13 @@
   "tom y jerry": {
     "url": "",
     "title_en": "TOM Y JERRY",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "John Foster, Vernon Stallings",
+    "country": "United States of America",
+    "year": 2000,
+    "duration": 61,
+    "original_title": "Tom y Jerry: Sus grandes aventuras",
+    "genre": "Animación",
+    "title_es": "Tom y Jerry: El Gran Musical"
   },
   "la quimera del oro con música en vivo": {
     "url": "",
@@ -7509,5 +7524,21 @@
     "duration": 65,
     "genre": "Música",
     "original_title": "ATEEZ: LIGHT THE WAY IN CINEMAS"
+  },
+  "smof, festival de cine de animación": {
+    "url": "",
+    "title_en": "SMOF, festival de cine de animación",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cuadro a cuadro. el paraíso": {
+    "url": "",
+    "title_en": "CUADRO A CUADRO. EL PARAÍSO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
