@@ -5080,13 +5080,12 @@
     "original_title": "Los caminantes de la calle"
   },
   ".": {
-    "url": "https://letterboxd.com/film/tn-2026/",
-    "title_en": "TN 2026",
-    "director": "Umapathy Ramaiah",
-    "country": "India",
-    "year": 2026,
-    "duration": 138,
-    "genre": "Drama, Comedia"
+    "url": "",
+    "title_en": ".",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "casino": {
     "url": "https://letterboxd.com/film/casino/",
@@ -7536,6 +7535,24 @@
   "cuadro a cuadro. el paraíso": {
     "url": "",
     "title_en": "CUADRO A CUADRO. EL PARAÍSO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "legerin. en busca de alina": {
+    "url": "https://letterboxd.com/film/legerin-en-busca-de-alina/",
+    "title_en": "Legerin, in Search of Alina",
+    "director": "María Laura Vásquez",
+    "country": "Argentina, Syria",
+    "year": 2024,
+    "duration": 82,
+    "genre": "Documental",
+    "original_title": "Legerin, en busca de Alina"
+  },
+  "la otra mejilla": {
+    "url": "",
+    "title_en": "LA OTRA MEJILLA",
     "director": "",
     "country": "",
     "year": null,
