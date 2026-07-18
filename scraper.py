@@ -417,6 +417,26 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
     result: list[Screening] = []
     seen: set[tuple] = set()
 
+    # Ciclos vía páginas /evento/ PRIMERO: traen título/director/ciclo limpios
+    # del bloque "Programación". Son la fuente autoritativa para esas películas,
+    # así que después la agenda día-a-día NO las vuelve a agregar (evita
+    # duplicados tipo "Family Portrait" y directores sucios).
+    covered_ciclo: set[tuple] = set()
+
+    def _mnorm(t: str) -> str:
+        return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
+
+    try:
+        for s in scrape_malba_eventos(today, end):
+            key = (s.title, s.fecha, s.hora)
+            if key in seen:
+                continue
+            seen.add(key)
+            covered_ciclo.add((_mnorm(s.title), s.fecha))
+            result.append(s)
+    except Exception:
+        pass
+
     # Build (weekday, hora) → ciclo_name map for cycles/series; standalone films
     # ("Continúa") populate it for completeness but we won't tag those as ciclo.
     ciclo_map: dict[tuple[int, str], str] = {}
@@ -472,6 +492,9 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
             # aparecen por separado en otros cards
             if title in MALBA_KNOWN_CICLOS:
                 continue
+            # Ya la trajo (más limpia) el scrape de ciclos /evento/ ese día.
+            if (_mnorm(title), d.isoformat()) in covered_ciclo:
+                continue
 
             # Clave normalizada (case-insensitive) para que la misma función no
             # se duplique cuando la agenda y la Programación del ciclo la
@@ -505,16 +528,6 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
             s.director = meta["director"]
         if meta.get("ciclo") and not s.ciclo:
             s.ciclo = meta["ciclo"]
-
-    # Ciclos vía páginas /evento/ (la agenda día-a-día se los pierde).
-    try:
-        for s in scrape_malba_eventos(today, end):
-            key = (re.sub(r"\s+", " ", s.title).strip().lower(), s.fecha, s.hora)
-            if key not in seen:
-                seen.add(key)
-                result.append(s)
-    except Exception:
-        pass
 
     return result
 
@@ -3246,6 +3259,20 @@ def scrape_ccr() -> list[Screening]:
                 continue
             # Filtrar headers genéricos
             if title.lower() in {"actividades", "horarios", "cine"}:
+                continue
+
+            # El título viene prefijado con la categoría ("Cine | …", "Taller |
+            # …", "Música | …"). Sólo cine; se saca el prefijo. Además, si la
+            # línea de fecha trae la categoría al final ("| 18 h | Taller"),
+            # descartamos lo que no sea cine.
+            pm = re.match(r"^([A-Za-zÁÉÍÓÚáéíóúñ]+)\s*\|\s*(.+)$", title)
+            if pm:
+                if pm.group(1).strip().lower() != "cine":
+                    continue
+                title = pm.group(2).strip()
+            segs = [s.strip() for s in line.split("|") if s.strip()]
+            if len(segs) >= 2 and re.fullmatch(r"[A-Za-zÁÉÍÓÚáéíóúñ ]{3,}", segs[-1]) \
+                    and "cine" not in segs[-1].lower():
                 continue
 
             hm = hour_re.search(line)
