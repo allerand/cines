@@ -7533,12 +7533,13 @@
     "duration": null
   },
   "cuadro a cuadro. el paraíso": {
-    "url": "",
-    "title_en": "CUADRO A CUADRO. EL PARAÍSO",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-paradise-2022/",
+    "title_en": "The Paradise",
+    "director": "Fernando Sirianni, Federico Breser",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": 104,
+    "genre": "Animación, Thriller"
   },
   "legerin. en busca de alina": {
     "url": "https://letterboxd.com/film/legerin-en-busca-de-alina/",
@@ -7557,5 +7558,45 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "caja negra": {
+    "url": "",
+    "title_en": "CAJA NEGRA",
+    "director": "Luis Ortega",
+    "country": "Argentina",
+    "year": 2002,
+    "duration": 81,
+    "original_title": "Caja negra",
+    "genre": "Drama"
+  },
+  "el ángel": {
+    "url": "",
+    "title_en": "EL ÁNGEL",
+    "director": "Luis Ortega",
+    "country": "Argentina, Spain",
+    "year": 2018,
+    "duration": 115,
+    "title_es": "El Ángel",
+    "original_title": "El Ángel",
+    "genre": "Drama, Crimen"
+  },
+  "lulú": {
+    "url": "",
+    "title_en": "LULÚ",
+    "director": "Bigas Luna",
+    "country": "Spain",
+    "year": 1990,
+    "duration": 95,
+    "original_title": "Las edades de Lulú",
+    "genre": "Drama"
+  },
+  "siempre es de noche": {
+    "url": "",
+    "title_en": "SIEMPRE ES DE NOCHE",
+    "director": "Luis Ortega",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 39,
+    "original_title": "Siempre es de noche"
   }
 }
