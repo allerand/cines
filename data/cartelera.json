@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T01:59:13",
+  "updated": "2026-07-19T09:41:07",
   "screenings": [
     {
       "cine": "Cinemark Caballito",
@@ -1292,6 +1292,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-07-19",
+      "hora": "17:00",
+      "title_es": "Medianeras",
+      "title_en": "Sidewalls",
+      "director": "Gustavo Taretto",
+      "country": "Argentina, Alemania",
+      "year": 2011,
+      "duration": 94,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/medianeras/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/465",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-19",
       "hora": "17:00",
@@ -1367,21 +1382,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-19",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Alemania",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "CEA",
       "fecha": "2026-07-19",
       "hora": "18:00",
@@ -1395,6 +1395,21 @@
       "letterboxd": "https://letterboxd.com/film/legend/",
       "ticket_url": "https://cea.mda.gob.ar/",
       "ciclo": "UNIVERSO CIRUELO"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-19",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -10217,6 +10232,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-07-22",
+      "hora": "14:00",
+      "title_es": "SMOF, festival de cine de animación",
+      "title_en": "SMOF, festival de cine de animación",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/477",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Lorca",
       "fecha": "2026-07-22",
       "hora": "14:05",
@@ -13082,6 +13112,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-07-22",
+      "hora": "23:00",
+      "title_es": "SMOF, festival de cine de animación",
+      "title_en": "SMOF, festival de cine de animación",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/477",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-07-22",
       "hora": "23:00",
@@ -14294,21 +14339,6 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Centro Cultural Borges",
-      "fecha": "2026-07-29",
-      "hora": "15:00",
-      "title_es": "Cuadro a Cuadro, Festival Plum!",
-      "title_en": "CUADRO A CUADRO, FESTIVAL PLUM!",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/458",
       "ciclo": ""
     },
     {
