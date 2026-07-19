@@ -1208,13 +1208,24 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
         p_el = a.find("p", class_=lambda c: c and "truncate" in c.split())
         title = p_el.get_text(strip=True) if p_el else ""
         title = re.sub(r"\s+", " ", title).strip()
+        # A veces el título trae el ciclo pegado ("El Jockey - Ciclo Luis
+        # Ortega"): lo separamos para no ensuciar el título.
+        ciclo = ""
+        mc = re.search(r"\s*[-–—|:]\s*Ciclo\s+(.+)$", title, re.IGNORECASE)
+        if mc:
+            ciclo = mc.group(1).strip()
+            title = title[:mc.start()].strip()
+        else:
+            mc = re.match(r"^Ciclo\s+(.+?)\s*[-–—|:]\s*(.+)$", title, re.IGNORECASE)
+            if mc:
+                ciclo, title = mc.group(1).strip(), mc.group(2).strip()
         if title and len(title) > 1 and title.lower() not in NON_TITLES:
-            movie_links.append((href, title))
+            movie_links.append((href, title, ciclo))
 
     result: list[Screening] = []
     seen_screenings: set[tuple] = set()
 
-    for href, title in movie_links:
+    for href, title, ciclo in movie_links:
         url = f"https://cineartecacodelphia.com.ar{href}"
         await page.goto(url, wait_until="networkidle")
         await page.wait_for_timeout(2000)
@@ -1268,6 +1279,7 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
                         cine="Cacodelphia", title=title,
                         fecha=fecha, hora=hora,
                         ticket_url="https://cineartecacodelphia.com.ar/",
+                        ciclo=ciclo,
                         duration=film_duration,
                         director=film_director,
                         year=film_year,
