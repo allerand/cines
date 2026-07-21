@@ -2689,19 +2689,29 @@ def _borges_proxy_url(target: str) -> Optional[str]:
                        url=urllib.parse.quote(target, safe=""))
 
 
-def fetch_borges_json(url: str) -> Optional[dict | list]:
+def fetch_borges_json(url: str, *, critical: bool = True,
+                      context: str = "") -> Optional[dict | list]:
     """Trae un JSON de la API del Borges. Primero prueba directo (headers de
     navegador). Si Cloudflare bloquea la IP del runner, reintenta a través de un
     servicio de scraping con IPs residenciales — sólo si está configurado el
     secret BORGES_SCRAPER_KEY. Si todo falla, devuelve None (Borges queda vacío
-    sin romper el resto del scrapeo)."""
+    sin romper el resto del scrapeo).
+
+    `critical` controla el logueo, no el comportamiento:
+      · listado  → crítico: si falla, Borges queda en 0 → se loguea como error.
+      · detalle  → NO crítico: la función igual se arma con los datos del
+                   listado, así que su fallo es silencioso (el llamador lo
+                   resume al final). Antes se imprimía un "[Borges API Error]"
+                   por cada detalle caído y hacía parecer roto un scrape sano.
+    `context` es la etiqueta legible del recurso ("el listado de cine")."""
     try:
         return _borges_http_json(url, browser_headers=True)
     except Exception as direct_err:
         proxy = _borges_proxy_url(url)
         if not proxy:
-            print(f"  · [Borges API Error] {direct_err} "
-                  "(configurá BORGES_SCRAPER_KEY para usar un servicio de scraping)")
+            if critical:
+                print(f"  · ❌ [Borges] No se pudo traer {context or 'el recurso'}: "
+                      f"{direct_err} (configurá BORGES_SCRAPER_KEY para un proxy residencial)")
             return None
         # El servicio de scraping (residencial + anti-Cloudflare) suele tardar
         # 60-90s en resolver el challenge de CF: timeout amplio + un reintento
@@ -2712,7 +2722,9 @@ def fetch_borges_json(url: str) -> Optional[dict | list]:
                 return _borges_http_json(proxy, browser_headers=False, timeout=120)
             except Exception as e:
                 proxy_err = e
-        print(f"  · [Borges API Error] directo: {direct_err}; servicio: {proxy_err}")
+        if critical:
+            print(f"  · ❌ [Borges] No se pudo traer {context or 'el recurso'} "
+                  f"(directo: {direct_err}; proxy: {proxy_err})")
         return None
 
 def _borges_times_from_rep(rep: str, sig_hora: str) -> list[str]:
@@ -2777,13 +2789,18 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
     today = date.today()
     cutoff = today + timedelta(weeks=max(semanas, 6))
     print("  · Conectando a la API del Centro Cultural Borges...", flush=True)
-    events_list = fetch_borges_json(BORGES_API_LIST)
+    events_list = fetch_borges_json(BORGES_API_LIST, critical=True,
+                                    context="el listado de cine")
     if not events_list or not isinstance(events_list, list):
-        print("  · [Borges API] Lista de eventos vacía o inaccesible.")
+        # Único fallo realmente fatal: sin listado no hay nada. run.py detecta
+        # que Borges vino con <3 funciones y restaura las futuras del caché.
+        print("  · [Borges] Listado inaccesible → se conserva la programación "
+              "de la corrida anterior (caché).")
         return []
 
     result: list[Screening] = []
     seen: set = set()
+    detail_missing = 0  # detalles caídos (no crítico) — se resumen al final
     for ev in events_list:
         if not isinstance(ev, dict):
             continue
@@ -2800,7 +2817,15 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
         display = ev.get("fechaDisplay", "") or ""
         needs_detail = bool(_BORGES_RANGE_RE.search(display)
                             or re.search(r"festival|ciclo", title, re.IGNORECASE))
-        detail = (fetch_borges_json(f"{BORGES_API_DETAIL}{ev_id}") or {}) if needs_detail else {}
+        detail: dict = {}
+        if needs_detail:
+            detail_json = fetch_borges_json(
+                f"{BORGES_API_DETAIL}{ev_id}", critical=False,
+                context=f"el detalle del evento {ev_id}")
+            if detail_json is None:
+                detail_missing += 1  # no crítico: seguimos con datos del listado
+            elif isinstance(detail_json, dict):
+                detail = detail_json
         rep = detail.get("fechasRepeticiones", "") or ""
 
         director = (ev.get("artistaDestacado") or "").strip()
@@ -2832,7 +2857,13 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
                     duration=duration,
                 ))
 
-    print(f"  · [Borges API] Procesadas con éxito {len(result)} funciones.")
+    if detail_missing:
+        # Aviso tranquilo, NO error: el detalle sólo aporta fechas extra a
+        # festivales/ciclos; sin él, cada función igual queda con la fecha/hora
+        # del listado.
+        print(f"  · ⚠️  [Borges] {detail_missing} evento(s) sin detalle "
+              "(no crítico: se usó la fecha/hora del listado).")
+    print(f"  · ✅ [Borges] {len(result)} funciones procesadas.")
     return result
 
 
