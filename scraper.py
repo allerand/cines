@@ -25,7 +25,7 @@ MESES_ES = {
     "mar": 3, "marzo": 3,   "abr": 4, "abril": 4,
     "may": 5, "mayo": 5,    "jun": 6, "junio": 6,
     "jul": 7, "julio": 7,   "ago": 8, "agosto": 8,
-    "sep": 9, "sept": 9, "septiembre": 9,
+    "sep": 9, "sept": 9, "septiembre": 9, "setiembre": 9,
     "oct": 10, "octubre": 10, "nov": 11, "noviembre": 11,
     "dic": 12, "diciembre": 12,
 }
@@ -953,17 +953,35 @@ async def scrape_lugones(page: Page) -> list[Screening]:
         # Para ciclos (múltiples películas): construir fechas directamente desde el
         # programa, sin depender del entradasba ticket URL (que sólo cubre 1 film).
         if program and ver_text and not is_estreno:
-            # Extraer mes del encabezado tipo "Del miércoles 6 al miércoles 27 de mayo"
-            month_match = re.search(
-                r"al\s+\w+\s+\d+\s+de\s+(\w+)(?:\s+de\s+(\d{4}))?",
+            # El encabezado del ciclo puede abarcar DOS meses, p.ej.
+            #   "Del jueves 23 de julio al domingo 2 de agosto".
+            # El código viejo tomaba SÓLO el mes final ("agosto") con el regex
+            # `al ... de (mes)` y lo aplicaba a TODOS los días → las funciones de
+            # julio (23-31) quedaban en agosto y desaparecían de la cartelera de
+            # la semana en curso ("falta todo el ciclo"). Ahora anclamos en el mes
+            # INICIAL y recorremos los encabezados de día en su orden cronológico,
+            # avanzando de mes cada vez que el número de día baja (rollover
+            # julio→agosto, o de fin de año diciembre→enero).
+            MONTH_RE = (
+                r"(enero|febrero|marzo|abril|mayo|junio|julio|agosto"
+                r"|septiembre|setiembre|octubre|noviembre|diciembre)"
+            )
+            # Preferimos el mes que sigue al día inicial ("Del <díaSem> 23 de
+            # julio ..."). Si el encabezado no lo nombra (formato de un solo mes,
+            # "Del miércoles 6 al 27 de mayo"), caemos al mes final.
+            anchor = re.search(
+                r"\b[Dd]el\s+\w+\s+\d{1,2}\s+de\s+" + MONTH_RE + r"(?:\s+de\s+(\d{4}))?",
+                ver_text, re.IGNORECASE,
+            ) or re.search(
+                r"\bal\s+\w+\s+\d{1,2}\s+de\s+" + MONTH_RE + r"(?:\s+de\s+(\d{4}))?",
                 ver_text, re.IGNORECASE,
             )
             cycle_month: Optional[int] = None
             cycle_year: int = today.year
-            if month_match:
-                cycle_month = MESES_ES.get(month_match.group(1).lower())
-                if month_match.group(2):
-                    cycle_year = int(month_match.group(2))
+            if anchor:
+                cycle_month = MESES_ES.get(anchor.group(1).lower())
+                if anchor.group(2):
+                    cycle_year = int(anchor.group(2))
             # Fallback: buscar cualquier mención de mes
             if not cycle_month:
                 for m_name, m_num in MESES_ES.items():
@@ -972,9 +990,35 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                         break
 
             if cycle_month:
+                # Si el mes inicial ya pasó este año, la programación es del que
+                # viene (archivo / programación adelantada).
+                if cycle_year == today.year and cycle_month < today.month:
+                    cycle_year += 1
+
+                # Encabezados de día en el orden en que aparecen (cronológico).
+                ordered_days = [
+                    int(m.group(1)) for m in re.finditer(
+                        r"\n(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[aá]bado|Domingo)"
+                        r"\s+(\d{1,2})(?=\s*\n)",
+                        ver_text,
+                    )
+                ]
+                # Mapear cada día → (mes, año), avanzando de mes en cada bajada.
+                day_to_ym: dict[int, tuple[int, int]] = {}
+                cur_month, cur_year = cycle_month, cycle_year
+                prev_day: Optional[int] = None
+                for dnum in ordered_days:
+                    if prev_day is not None and dnum < prev_day:
+                        cur_month += 1
+                        if cur_month > 12:
+                            cur_month, cur_year = 1, cur_year + 1
+                    day_to_ym.setdefault(dnum, (cur_month, cur_year))
+                    prev_day = dnum
+
                 for (day_num, hora), entries in program.items():
+                    ym = day_to_ym.get(day_num, (cycle_month, cycle_year))
                     try:
-                        d = date(cycle_year, cycle_month, day_num)
+                        d = date(ym[1], ym[0], day_num)
                     except ValueError:
                         continue
                     if d < today or d > cutoff:
