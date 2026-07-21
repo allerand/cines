@@ -1593,15 +1593,12 @@
     "genre": "Documental"
   },
   "obsesión": {
-    "url": "https://letterboxd.com/film/obsession-2025-2/",
-    "title_en": "Obsession",
-    "director": "Curry Barker",
-    "country": "USA, UK",
-    "year": 2025,
-    "duration": 108,
-    "original_title": "Nueva Obsesión",
-    "title_es": "Obsesión",
-    "genre": "Terror"
+    "url": "",
+    "title_en": "Obsesión",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "michael": {
     "url": "https://letterboxd.com/film/michael-2026/",
@@ -7598,5 +7595,137 @@
     "year": 2025,
     "duration": 39,
     "original_title": "Siempre es de noche"
+  },
+  "nimrods": {
+    "url": "",
+    "title_en": "Nimrods",
+    "director": "Lee Kirk",
+    "country": "United States of America",
+    "year": 2026,
+    "duration": 116,
+    "title_es": "Nimrods: A Green Day Comedy",
+    "original_title": "Nimrods",
+    "genre": "Comedia, Música"
+  },
+  "bellissima": {
+    "url": "",
+    "title_en": "Bellissima",
+    "director": "Luchino Visconti",
+    "country": "Italy",
+    "year": 1952,
+    "duration": 115,
+    "title_es": "Bellísima",
+    "original_title": "Bellissima",
+    "genre": "Drama"
+  },
+  "rocco y sus hermanos": {
+    "url": "https://letterboxd.com/film/rocco-and-his-brothers/",
+    "title_en": "Rocco and His Brothers",
+    "director": "Luchino Visconti",
+    "country": "Italy, France",
+    "year": 1960,
+    "duration": 178,
+    "genre": "Romance, Crimen",
+    "title_es": "Rocco y sus hermanos",
+    "original_title": "Rocco e i suoi fratelli"
+  },
+  "muerte en venecia": {
+    "url": "https://letterboxd.com/film/death-in-venice/",
+    "title_en": "Death in Venice",
+    "director": "Luchino Visconti",
+    "country": "France, Italy",
+    "year": 1971,
+    "duration": 131,
+    "genre": "Drama",
+    "title_es": "Muerte en Venecia",
+    "original_title": "Morte a Venezia"
+  },
+  "el gatopardo": {
+    "url": "https://letterboxd.com/film/the-leopard/",
+    "title_en": "The Leopard",
+    "director": "Luchino Visconti",
+    "country": "France, Italy",
+    "year": 1963,
+    "duration": 186,
+    "genre": "Drama",
+    "title_es": "El gatopardo",
+    "original_title": "Il gattopardo"
+  },
+  "la tierra tiembla": {
+    "url": "https://letterboxd.com/film/la-terra-trema/",
+    "title_en": "La Terra Trema",
+    "director": "Luchino Visconti",
+    "country": "Italy",
+    "year": 1948,
+    "duration": 160,
+    "genre": "Drama",
+    "title_es": "La tierra tiembla",
+    "original_title": "La terra trema"
+  },
+  "grupo de familia": {
+    "url": "https://letterboxd.com/film/conversation-piece/",
+    "title_en": "Conversation Piece",
+    "director": "Luchino Visconti",
+    "country": "France, Italy",
+    "year": 1974,
+    "duration": 121,
+    "genre": "Drama, Romance",
+    "title_es": "Confidencias",
+    "original_title": "Gruppo di Famiglia in un Interno"
+  },
+  "cómo entrenar": {
+    "url": "https://letterboxd.com/film/how-to-train-your-dragon-2025/",
+    "title_en": "How to Train Your Dragon",
+    "director": "Dean DeBlois",
+    "country": "USA",
+    "year": 2025,
+    "duration": 125,
+    "genre": "Fantasía, Familiar",
+    "title_es": "Cómo entrenar a tu dragón",
+    "original_title": "How to Train Your Dragon"
+  },
+  "la historia": {
+    "url": "https://letterboxd.com/film/the-neverending-story/",
+    "title_en": "The NeverEnding Story",
+    "director": "Wolfgang Petersen",
+    "country": "Germany",
+    "year": 1984,
+    "duration": 101,
+    "genre": "Fantasía, Familiar",
+    "title_es": "La historia interminable",
+    "original_title": "Die unendliche Geschichte"
+  },
+  "ponyo": {
+    "url": "https://letterboxd.com/film/ponyo/",
+    "title_en": "Ponyo",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 2008,
+    "duration": 100,
+    "genre": "Animación, Familiar",
+    "title_es": "Ponyo en el acantilado",
+    "original_title": "崖の上のポニョ"
+  },
+  "el mago": {
+    "url": "https://letterboxd.com/film/the-wizard-of-oz-1939/",
+    "title_en": "The Wizard of Oz",
+    "director": "Victor Fleming",
+    "country": "USA",
+    "year": 1939,
+    "duration": 102,
+    "genre": "Aventura, Fantasía",
+    "title_es": "El mago de Oz",
+    "original_title": "The Wizard of Oz"
+  },
+  "el viaje": {
+    "url": "https://letterboxd.com/film/spirited-away/",
+    "title_en": "Spirited Away",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 2001,
+    "duration": 125,
+    "genre": "Familiar, Fantasía",
+    "title_es": "El viaje de Chihiro",
+    "original_title": "千と千尋の神隠し"
   }
 }
