@@ -4377,3 +4377,222 @@ def scrape_cb(max_pages: int = 3) -> list[Screening]:
             seen.add(key)
             result.append(s)
     return result
+
+
+# ---------------------------------------------------------------------------
+# Biblioteca del Congreso — Auditorio Leonardo Favio  (bcn.gob.ar)
+# ---------------------------------------------------------------------------
+# bcn.gob.ar/agenda/cine lista una card por función (martes y jueves, 18:30).
+# Cada card trae:
+#     <h3 class="titulo_padre">Ciclo de cine: {ciclo}</h3>
+#     <h2 class="titulo_miniatura">{Título español} ({Título original})</h2>
+#     <div class="descripcion_corta">{Director}, {Año}, {Duración}’</div>
+#     ... "2 de julio" + "18:30 h"
+# La card no dice el año, así que abrimos la página de detalle, que trae la
+# fecha completa (DD/MM/YYYY), la ficha técnica y el link de reserva
+# (Eventbrite). Si el detalle falla, se cae a la card y se infiere el año.
+# ---------------------------------------------------------------------------
+
+BCN_BASE = "https://bcn.gob.ar"
+BCN_AGENDA = "https://bcn.gob.ar/agenda/cine"
+
+_BCN_CICLO_RE = re.compile(r"^\s*ciclo\s*(?:de\s*cine)?\s*:\s*", re.IGNORECASE)
+_BCN_FICHA_RE = {
+    "director": re.compile(r"Direcci[oó]n\s*:\s*([^\n]+)"),
+    "country": re.compile(r"Pa[ií]s(?:es)?\s*:\s*([^\n]+)"),
+    "year": re.compile(r"A[ñn]o\s*:\s*(\d{4})"),
+    "duration": re.compile(r"Duraci[oó]n\s*:\s*(\d{1,3})"),
+}
+
+
+def _bcn_split_title(raw: str) -> "tuple[str, str]":
+    """
+    "Perfectos desconocidos (Perfetti sconosciuti)" → título + título original.
+    Solo separa si el paréntesis final parece un título (no un año ni "1ª parte").
+    """
+    t = re.sub(r"\s+", " ", raw).strip()
+    m = re.search(r"^(.+?)\s*\(([^()]+)\)\s*$", t)
+    if not m:
+        return t, ""
+    title, paren = m.group(1).strip(" .,"), m.group(2).strip(" .,")
+    if not title or len(paren) < 2 or re.fullmatch(r"[\d\s\-–/]+", paren):
+        return t, ""
+    if re.search(r"\b(parte|temporada|episodio|versi[oó]n|copia|restaurad)", paren, re.IGNORECASE):
+        return t, ""
+    return title, paren
+
+
+def _bcn_parse_ficha(text: str) -> dict:
+    """Ficha técnica de la página de detalle: Dirección / Año / Duración / País."""
+    out: dict = {}
+    for key, rx in _BCN_FICHA_RE.items():
+        m = rx.search(text)
+        if not m:
+            continue
+        val = re.sub(r"\s+", " ", m.group(1)).strip(" .,;")
+        if not val:
+            continue
+        out[key] = int(val) if key in ("year", "duration") else val
+    return out
+
+
+def _bcn_parse_corta(text: str) -> dict:
+    """De "Steven Spielberg, 1987, 152’" saca director / año / duración."""
+    out: dict = {}
+    t = re.sub(r"\s+", " ", text).strip(" .,")
+    if not t:
+        return out
+    parts = [p.strip(" .,") for p in t.split(",")]
+    if parts and not re.fullmatch(r"[\d\s’'´`\-–]+", parts[0]):
+        out["director"] = parts[0]
+    ym = re.search(r"\b(19|20)\d{2}\b", t)
+    if ym:
+        out["year"] = int(ym.group(0))
+    dm = re.search(r"\b(\d{2,3})\s*[’'´`]", t)
+    if dm:
+        out["duration"] = int(dm.group(1))
+    return out
+
+
+def _bcn_detail_meta(url: str) -> dict:
+    """
+    Página de detalle de una película: fecha exacta (DD/MM/YYYY), horario,
+    link de reserva y ficha técnica.
+    """
+    out: dict = {}
+    try:
+        soup = fetch_html(url)
+    except Exception:
+        return out
+
+    body = soup.find("div", class_="row-same-height") or soup
+    text = body.get_text("\n", strip=True)
+
+    fechas: list[date] = []
+    for dd, mm, yy in re.findall(r"\b(\d{1,2})/(\d{1,2})/(\d{4})\b", text):
+        try:
+            fechas.append(date(int(yy), int(mm), int(dd)))
+        except ValueError:
+            pass
+    if fechas:
+        out["fechas"] = fechas
+
+    hora = parse_time_str(text)
+    if hora:
+        out["hora"] = hora
+
+    a = soup.find("a", string=re.compile(r"reserv", re.IGNORECASE))
+    if a and a.get("href", "").startswith("http"):
+        out["ticket_url"] = a["href"]
+
+    out.update(_bcn_parse_ficha(text))
+    return out
+
+
+def _bcn_card_date(card, day_hint: Optional[int]) -> "tuple[Optional[int], Optional[int]]":
+    """Día y mes de la card: del badge (02 / Jul) o del texto ("2 de julio")."""
+    badge = card.find("div", class_="agenda-fecha-nueva-content")
+    if badge:
+        num = badge.find("div", class_="numero")
+        mes = badge.find("div", class_="mes")
+        if num and mes:
+            try:
+                day = int(re.sub(r"\D", "", num.get_text(strip=True)))
+            except ValueError:
+                day = None
+            month = MESES_ES.get(mes.get_text(strip=True).strip(". ").lower())
+            if day and month:
+                return day, month
+    m = re.search(r"(\d{1,2})\s+de\s+([a-záéíóú]+)",
+                  card.get_text(" ", strip=True), re.IGNORECASE)
+    if m:
+        month = MESES_ES.get(m.group(2).lower())
+        if month:
+            return int(m.group(1)), month
+    return day_hint, None
+
+
+def _bcn_resolve_year(day: int, month: int, fechas: list) -> Optional[int]:
+    """Año de la función: el de la fecha del detalle que matchea día+mes."""
+    for d in fechas:
+        if d.day == day and d.month == month:
+            return d.year
+    today = date.today()
+    # Sin detalle: la agenda solo publica funciones futuras → si el mes ya pasó,
+    # es del año que viene.
+    return today.year + 1 if month < today.month else today.year
+
+
+def scrape_bcn() -> list[Screening]:
+    """
+    Scrapea la cartelera del Auditorio Leonardo Favio de la Biblioteca del
+    Congreso. Toma cada card de bcn.gob.ar/agenda/cine y la completa con la
+    página de detalle (fecha exacta, ficha técnica y link de reserva).
+    """
+    try:
+        soup = fetch_html(BCN_AGENDA)
+    except Exception:
+        return []
+
+    today = date.today()
+    result: list[Screening] = []
+    seen: set[tuple] = set()
+
+    for h3 in soup.find_all("h3", class_="titulo_padre"):
+        card = h3.find_parent("div", class_="same-height") or h3.find_parent("div")
+        if card is None:
+            continue
+
+        h2 = card.find("h2", class_="titulo_miniatura")
+        if not h2:
+            continue
+        title, original = _bcn_split_title(h2.get_text(" ", strip=True))
+        if not title:
+            continue
+
+        ciclo = _BCN_CICLO_RE.sub("", h3.get_text(" ", strip=True)).strip(" .,")
+
+        corta = card.find("div", class_="descripcion_corta")
+        meta = _bcn_parse_corta(corta.get_text(" ", strip=True)) if corta else {}
+
+        a = h2.find_parent("a") or card.find("a", href=re.compile(r"bcn\.gob\.ar/"))
+        detail_url = a["href"] if a and a.get("href") else BCN_AGENDA
+        if detail_url.startswith("/"):
+            detail_url = BCN_BASE + detail_url
+
+        detail = _bcn_detail_meta(detail_url) if detail_url != BCN_AGENDA else {}
+        for k in ("director", "country", "year", "duration"):
+            if detail.get(k):
+                meta[k] = detail[k]
+
+        day, month = _bcn_card_date(card, None)
+        if not day or not month:
+            continue
+        year = _bcn_resolve_year(day, month, detail.get("fechas", []))
+        try:
+            d = date(year, month, day)
+        except ValueError:
+            continue
+        if d < today:
+            continue
+
+        hora = detail.get("hora") or parse_time_str(card.get_text(" ", strip=True)) or "18:30"
+
+        key = (title, d.isoformat(), hora)
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(Screening(
+            cine="Biblioteca del Congreso",
+            title=title,
+            fecha=d.isoformat(),
+            hora=hora,
+            ticket_url=detail.get("ticket_url") or detail_url,
+            ciclo=ciclo,
+            director=meta.get("director", ""),
+            country=meta.get("country", ""),
+            year=meta.get("year"),
+            duration=meta.get("duration"),
+            original_title=original,
+        ))
+    return result
