@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-23T10:04:43",
+  "updated": "2026-07-23T16:33:31",
   "screenings": [
     {
       "cine": "Hoyts Abasto",
@@ -19588,7 +19588,7 @@
       "duration": 122,
       "genre": "Misterio, Crimen",
       "letterboxd": "https://letterboxd.com/film/the-testament-of-dr-mabuse/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -20612,21 +20612,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-07-28",
-      "hora": "18:30",
-      "title_es": "Perfectos desconocidos",
-      "title_en": "Perfect Strangers",
-      "director": "Paolo Genovese",
-      "country": "Italia",
-      "year": 2016,
-      "duration": 97,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/perfect-strangers-2016/",
-      "ticket_url": "https://www.eventbrite.com.ar/e/1992843500556?aff=oddtdtcreator",
-      "ciclo": "Cine italiano"
-    },
-    {
       "cine": "Cine Cosmos",
       "fecha": "2026-07-28",
       "hora": "18:40",
@@ -21358,7 +21343,7 @@
       "duration": 117,
       "genre": "Drama, Thriller",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -22217,6 +22202,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-07-29",
+      "hora": "11:30",
+      "title_es": "Toy Story 5",
+      "title_en": "Toy Story 5",
+      "director": "Andrew Stanton",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Comedia, Familiar",
+      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-29",
       "hora": "11:45",
@@ -22783,6 +22783,21 @@
       "duration": 115,
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/moana-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-07-29",
+      "hora": "14:00",
+      "title_es": "Toy Story 5",
+      "title_en": "Toy Story 5",
+      "director": "Andrew Stanton",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Comedia, Familiar",
+      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -23507,6 +23522,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-07-29",
+      "hora": "16:20",
+      "title_es": "Spider-Man Un Nuevo Día",
+      "title_en": "Spider-Man: Brand New Day",
+      "director": "Destin Daniel Cretton",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-07-29",
       "hora": "16:40",
@@ -23600,21 +23630,6 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-07-29",
       "hora": "16:50",
-      "title_es": "Toy Story 5",
-      "title_en": "Toy Story 5",
-      "director": "Andrew Stanton",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 102,
-      "genre": "Comedia, Familiar",
-      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-07-29",
-      "hora": "16:50",
       "title_es": "Deux pianos",
       "title_en": "Two Pianos",
       "director": "Arnaud Desplechin",
@@ -23623,6 +23638,21 @@
       "duration": 115,
       "genre": "Drama, Música",
       "letterboxd": "https://letterboxd.com/film/deux-pianos/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-07-29",
+      "hora": "16:50",
+      "title_es": "Toy Story 5",
+      "title_en": "Toy Story 5",
+      "director": "Andrew Stanton",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Comedia, Familiar",
+      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -23848,7 +23878,7 @@
       "duration": 122,
       "genre": "Misterio, Crimen",
       "letterboxd": "https://letterboxd.com/film/the-testament-of-dr-mabuse/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -24688,7 +24718,7 @@
       "duration": 148,
       "genre": "Drama, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/metropolis/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -25918,7 +25948,7 @@
       "duration": 110,
       "genre": "Drama, Thriller",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -26355,21 +26385,6 @@
       "letterboxd": "https://letterboxd.com/film/los-domingos/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-07-30",
-      "hora": "18:30",
-      "title_es": "La vida de Pi",
-      "title_en": "Life of Pi",
-      "director": "Ang Lee",
-      "country": "Estados Unidos",
-      "year": 2012,
-      "duration": 127,
-      "genre": "Drama, Aventura",
-      "letterboxd": "https://letterboxd.com/film/life-of-pi/",
-      "ticket_url": "https://www.eventbrite.com.ar/e/la-vida-de-pi-tickets-1992844434349?aff=odcleoeventsincollection",
-      "ciclo": "Aventuras extraordinarias"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -27733,7 +27748,7 @@
       "duration": 148,
       "genre": "Drama, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/metropolis/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -28183,7 +28198,7 @@
       "duration": 148,
       "genre": "Drama, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/metropolis/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -30373,7 +30388,7 @@
       "duration": 122,
       "genre": "Misterio, Crimen",
       "letterboxd": "https://letterboxd.com/film/the-testament-of-dr-mabuse/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -30838,7 +30853,7 @@
       "duration": 110,
       "genre": "Drama, Thriller",
       "letterboxd": "",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
     },
     {
@@ -35310,6 +35325,21 @@
       "letterboxd": "",
       "ticket_url": "",
       "ciclo": "Luchino Visconti: viajes en Italia"
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-08-06",
+      "hora": "18:00",
+      "title_es": "Kuitca / Masllorens",
+      "title_en": "KUITCA / MASLLORENS",
+      "director": "",
+      "country": "",
+      "year": 2000,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://arthaus.ar/events/kuitca-masllorens/?occurrence=2026-08-06",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Borges",
