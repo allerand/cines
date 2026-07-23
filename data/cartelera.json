@@ -2282,6 +2282,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-07-23",
+      "hora": "18:30",
+      "title_es": "The Fall. El sueño de Alexandria",
+      "title_en": "The Fall",
+      "director": "Tarsem Singh",
+      "country": "Estados Unidos",
+      "year": 2006,
+      "duration": 117,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-fall/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/the-fall-el-sueno-de-alexandria-tickets-1992844360127?aff=odcleoeventsincollection",
+      "ciclo": "Aventuras extraordinarias"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-07-23",
       "hora": "18:40",
@@ -20597,6 +20612,21 @@
       "ciclo": ""
     },
     {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-07-28",
+      "hora": "18:30",
+      "title_es": "Perfectos desconocidos",
+      "title_en": "Perfect Strangers",
+      "director": "Paolo Genovese",
+      "country": "Italia",
+      "year": 2016,
+      "duration": 97,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/perfect-strangers-2016/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/1992843500556?aff=oddtdtcreator",
+      "ciclo": "Cine italiano"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-07-28",
       "hora": "18:40",
@@ -26325,6 +26355,21 @@
       "letterboxd": "https://letterboxd.com/film/los-domingos/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-07-30",
+      "hora": "18:30",
+      "title_es": "La vida de Pi",
+      "title_en": "Life of Pi",
+      "director": "Ang Lee",
+      "country": "Estados Unidos",
+      "year": 2012,
+      "duration": 127,
+      "genre": "Drama, Aventura",
+      "letterboxd": "https://letterboxd.com/film/life-of-pi/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/la-vida-de-pi-tickets-1992844434349?aff=odcleoeventsincollection",
+      "ciclo": "Aventuras extraordinarias"
     },
     {
       "cine": "Cinépolis Recoleta",
