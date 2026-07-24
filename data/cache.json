@@ -1593,12 +1593,15 @@
     "genre": "Documental"
   },
   "obsesión": {
-    "url": "",
-    "title_en": "Obsesión",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/ossessione/",
+    "title_en": "Obsession",
+    "director": "Luchino Visconti, Luchino Visconti’s",
+    "country": "Italy",
+    "year": 1943,
+    "duration": 140,
+    "genre": "Drama, Crimen",
+    "title_es": "Obsesión",
+    "original_title": "Ossessione"
   },
   "michael": {
     "url": "https://letterboxd.com/film/michael-2026/",
@@ -8000,5 +8003,25 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "perfectos desconocidos": {
+    "url": "https://letterboxd.com/film/perfetti-sconosciuti/",
+    "title_en": "Perfect Strangers",
+    "director": "Paolo Genovese",
+    "country": "Italy",
+    "year": 2016,
+    "duration": 97,
+    "genre": "Drama",
+    "title_es": "Perfectos desconocidos",
+    "original_title": "Perfetti sconosciuti"
+  },
+  "la vida de pi": {
+    "url": "",
+    "title_en": "La vida de Pi",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "original_title": "La Vida Real de Daniel Pistola"
   }
 }
