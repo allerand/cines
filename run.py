@@ -411,6 +411,7 @@ async def run_scraper(semanas: int = 9) -> None:
             "hora":       s.hora,
             "title_es":   display_title,
             "title_en":   tmdb_en or display_title,
+            "original_title": (meta.get("original_title") or "").strip(),
             "director":   _fix_caps(getattr(s, "director", "") or meta.get("director") or ""),
             "country":    _normalize_country(_fix_country_caps(getattr(s, "country", "") or meta.get("country") or "")),
             "year":       getattr(s, "year", None) or meta.get("year"),

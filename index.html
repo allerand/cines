@@ -936,7 +936,7 @@ function pingStar(s, on) {
 const SORT_EXTRACTORS = {
   hora:     s => s.hora || '99:99',
   cine:     s => (s.cine || '').toLowerCase(),
-  title:    s => (s.title_es || s.title_en || '').toLowerCase(),
+  title:    s => (s.original_title || s.title_es || s.title_en || '').toLowerCase(),
   ciclo:    s => (s.ciclo || '').toLowerCase(),
   director: s => (s.director || '').toLowerCase(),
   genre:    s => (s.genre || '').toLowerCase(),
@@ -1186,21 +1186,20 @@ function cineCssClass(cine) {
 
 function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
 
+// Criterio Letterboxd unificado (invertido): título ORIGINAL como principal,
+// y el título en inglés en «guillemets». Si todavía no tenemos original_title
+// (títulos sin match en TMDb, funciones preservadas de corridas viejas),
+// caemos al título local del cine.
 function displayTitle(s) {
-  const lb = s.title_en || '', local = s.title_es || '', country = (s.country || '').toLowerCase();
-  const keepLocal = ['argentina', 'españa', 'spain', 'méxico', 'mexico', 'chile', 'uruguay', 'brasil', 'brazil', 'portugal'].some(c => country.includes(c));
-  if (keepLocal && local) return local;
-  return s.letterboxd && lb ? lb : (local || lb);
+  return s.original_title || s.title_es || s.title_en || '';
 }
 
-// Título en el otro idioma cuando difiere del principal (criterio Letterboxd:
-// se muestra en «guillemets» junto al título). Devuelve '' si son iguales.
 function altTitle(s) {
   const main = displayTitle(s);
-  const other = main === (s.title_es || '') ? (s.title_en || '') : (s.title_es || '');
+  const en = s.title_en || '';
   const norm = t => t.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
-  if (!other || norm(other) === norm(main)) return '';
-  return other;
+  if (!en || norm(en) === norm(main)) return '';
+  return en;
 }
 
 function renderTable() {
@@ -1218,7 +1217,7 @@ function renderTable() {
       ? rows.filter(s => s.cine && s.cine.startsWith(activeCine))
       : rows.filter(s => s.cine === activeCine);
   }
-  if (searching) rows = rows.filter(s => [s.title_es, s.title_en, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
+  if (searching) rows = rows.filter(s => [s.title_es, s.title_en, s.original_title, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
 
   rows = searching ? sortByDateTime(rows) : sortRows(rows);
 
