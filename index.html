@@ -1195,11 +1195,21 @@ document.getElementById('search-input').addEventListener('input', e => {
 // Compartir la vista actual: el hash ya lleva día/cine/búsqueda, así que la
 // URL tal cual es el deep link. Mobile → share sheet nativo; desktop → copiar
 // al portapapeles con feedback "Copiado ✓".
+// Texto humano de la vista actual — es lo que hace que el mensaje de
+// WhatsApp/Telegram salga legible en vez de una URL pelada.
+function shareText() {
+  const parts = ['Cartelera de cines BA'];
+  if (activeCine !== 'all') parts.push(activeCine);
+  if (searchQuery) parts.push(`"${searchQuery}"`);
+  else if (activeDay) parts.push(fmtShortDate(activeDay));
+  return parts.join(' · ');
+}
+
 document.getElementById('share-btn').addEventListener('click', async () => {
   const url = location.href;
   const btn = document.getElementById('share-btn');
   if (navigator.share) {
-    try { await navigator.share({ title: document.title, url }); return; }
+    try { await navigator.share({ title: 'Si te digo', text: shareText(), url }); return; }
     catch (e) { if (e && e.name === 'AbortError') return; /* sin share sheet → copiar */ }
   }
   try {
