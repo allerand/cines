@@ -7591,8 +7591,8 @@
     "genre": "Drama, Romance"
   },
   "siempre es de noche": {
-    "url": "https://letterboxd.com/film/always-night/",
-    "title_en": "Always Night",
+    "url": "",
+    "title_en": "SIEMPRE ES DE NOCHE",
     "director": "Luis Ortega",
     "country": "Argentina",
     "year": 2025,
@@ -8042,5 +8042,721 @@
     "year": 1965,
     "duration": 99,
     "genre": "Ciencia ficción, Misterio"
+  },
+  "martín fierro, la película|2007": {
+    "url": "https://letterboxd.com/film/martin-fierro-the-movie/",
+    "title_en": "Martin Fierro: The Movie",
+    "director": "Liliana Romero, Norman Ruíz",
+    "country": "Argentina",
+    "year": 2007,
+    "duration": 88,
+    "genre": "Animación, Acción",
+    "original_title": "Martín Fierro: la película"
+  },
+  "cuentos de la selva|2010": {
+    "url": "https://letterboxd.com/film/cuentos-de-la-selva/",
+    "title_en": "Jungle Tales",
+    "director": "Norman Ruíz, Liliana Romero",
+    "country": "Argentina, Uruguay",
+    "year": 2010,
+    "duration": 77,
+    "genre": "Animación, Aventura",
+    "original_title": "Cuentos de la Selva"
+  },
+  "el tiempo de la tierra|2023": {
+    "url": "https://letterboxd.com/film/the-time-of-the-earth-indigenous-stories/",
+    "title_en": "The Time of the Earth. Indigenous Stories",
+    "director": "María Beatriz Ramírez Blankenhorst",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 11,
+    "genre": "",
+    "title_es": "The Time of the Earth. Indigenous Stories",
+    "original_title": "El tiempo de la tierra, historias originarias"
+  },
+  "atahualpa yupanqui. un trashumante|2024": {
+    "url": "https://letterboxd.com/film/atahualpa-yupanqui-un-trashumante/",
+    "title_en": "Atahualpa Yupanqui, un trashumante",
+    "director": "Federico Randazzo Abad",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 92,
+    "genre": "Documental",
+    "original_title": "Atahualpa Yupanqui, un trashumante"
+  },
+  "perfectos desconocidos|2016": {
+    "url": "https://letterboxd.com/film/perfetti-sconosciuti/",
+    "title_en": "Perfect Strangers",
+    "director": "Paolo Genovese",
+    "country": "Italy",
+    "year": 2016,
+    "duration": 97,
+    "genre": "Drama",
+    "title_es": "Perfectos desconocidos",
+    "original_title": "Perfetti sconosciuti"
+  },
+  "la vida de pi|2012": {
+    "url": "",
+    "title_en": "La vida de Pi",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "original_title": "La Vida Real de Daniel Pistola"
+  },
+  "coco|2017": {
+    "url": "https://letterboxd.com/film/coco-2017/",
+    "title_en": "Coco",
+    "director": "Lee Unkrich",
+    "country": "USA",
+    "year": 2017,
+    "duration": 105,
+    "genre": "Aventura, Animación",
+    "title_es": "Coco",
+    "original_title": "Coco"
+  },
+  "pequeños cuentos suizos|2026": {
+    "url": "",
+    "title_en": "PEQUEÑOS CUENTOS SUIZOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ratatouille|2007": {
+    "url": "https://letterboxd.com/film/ratatouille-2007/",
+    "title_en": "Ratatouille",
+    "director": "Brad Bird",
+    "country": "USA",
+    "year": 2007,
+    "duration": 111,
+    "genre": "Familiar, Fantasía",
+    "title_es": "Ratatouille",
+    "original_title": "Ratatouille"
+  },
+  "la quimera del oro con música en vivo|1925": {
+    "url": "",
+    "title_en": "LA QUIMERA DEL ORO CON MÚSICA EN VIVO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cars: una aventura sobre ruedas|2006": {
+    "url": "https://letterboxd.com/film/cars/",
+    "title_en": "Cars",
+    "director": "John Lasseter",
+    "country": "USA",
+    "year": 2006,
+    "duration": 117,
+    "genre": "Aventura, Comedia",
+    "original_title": "Cars"
+  },
+  "la otra mejilla|2026": {
+    "url": "",
+    "title_en": "LA OTRA MEJILLA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "maya, gimme a title|2024": {
+    "url": "https://letterboxd.com/film/maya-give-me-a-title/",
+    "title_en": "Maya, Give Me a Title",
+    "director": "Michel Gondry",
+    "country": "France",
+    "year": 2024,
+    "duration": 61,
+    "genre": "Animación, Fantasía"
+  },
+  "las trillizas de belleville|2003": {
+    "url": "https://letterboxd.com/film/the-triplets-of-belleville/",
+    "title_en": "The Triplets of Belleville",
+    "director": "Sylvain Chomet",
+    "country": "France, Belgium",
+    "year": 2003,
+    "duration": 80,
+    "genre": "Animación, Comedia",
+    "title_es": "Bienvenidos a Belleville",
+    "original_title": "Les Triplettes de Belleville"
+  },
+  "llegan los muppets|1979": {
+    "url": "https://letterboxd.com/film/the-muppet-movie/",
+    "title_en": "The Muppet Movie",
+    "director": "James Frawley",
+    "country": "UK, USA",
+    "year": 1979,
+    "duration": 95,
+    "genre": "Comedia, Familiar"
+  },
+  "up, una aventura de altura|2009": {
+    "url": "https://letterboxd.com/film/up/",
+    "title_en": "Up",
+    "director": "Pete Docter",
+    "country": "USA",
+    "year": 2009,
+    "duration": 96,
+    "genre": "Aventura, Familiar",
+    "title_es": "Up: Una Aventura de Altura",
+    "original_title": "Up"
+  },
+  "los mumin: ¿quién animará a chico?|2023": {
+    "url": "https://letterboxd.com/film/the-book-about-moomin-mymble-and-little-my/",
+    "title_en": "The Book about Moomin, Mymble and Little My",
+    "director": "Veronica Lassenius",
+    "country": "Finland, Spain",
+    "year": 2023,
+    "duration": 12,
+    "genre": "Animación, Fantasía"
+  },
+  "chicken for linda!|2023": {
+    "url": "https://letterboxd.com/film/chicken-for-linda/",
+    "title_en": "Chicken for Linda!",
+    "director": "Chiara Malta, Sébastien Laudenbach",
+    "country": "France, Italy",
+    "year": 2023,
+    "duration": 73,
+    "genre": "Familiar, Música",
+    "title_es": "Linda quiere pollo",
+    "original_title": "Linda veut du poulet !"
+  },
+  "buscando a dory|2016": {
+    "url": "https://letterboxd.com/film/finding-dory/",
+    "title_en": "Finding Dory",
+    "director": "Andrew Stanton",
+    "country": "USA",
+    "year": 2016,
+    "duration": 97,
+    "genre": "Aventura, Animación",
+    "title_es": "Buscando a Dory",
+    "original_title": "Finding Dory"
+  },
+  "los mumin: el pequeño trol mumin, mymla y la pequeña my|1994": {
+    "url": "",
+    "title_en": "LOS MUMIN: EL PEQUEÑO TROL MUMIN, MYMLA Y LA PEQUEÑA MY",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "calle málaga|2025": {
+    "url": "https://letterboxd.com/film/calle-malaga/",
+    "title_en": "Calle Malaga",
+    "director": "Maryam Touzani",
+    "country": "Morocco, France",
+    "year": 2025,
+    "genre": "Drama",
+    "duration": 116
+  },
+  "letras robadas|2026": {
+    "url": "https://letterboxd.com/film/power-ballad/",
+    "title_en": "Power Ballad",
+    "director": "John Carney",
+    "country": "Ireland, USA",
+    "year": 2026,
+    "duration": 98,
+    "genre": "Música, Comedia",
+    "title_es": "Letras robadas",
+    "original_title": "Power Ballad"
+  },
+  "padre madre hermana hermano|2025": {
+    "url": "",
+    "title_en": "Padre madre hermana hermano",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el gran arco|2025": {
+    "url": "https://letterboxd.com/film/the-great-arch-2025/",
+    "title_en": "The Great Arch",
+    "director": "Stéphane Demoustier",
+    "country": "France, Denmark",
+    "year": 2025,
+    "duration": 104,
+    "genre": "Drama, Historia",
+    "title_es": "El arquitecto",
+    "original_title": "L'Inconnu de la Grande Arche"
+  },
+  "la grazia|2025": {
+    "url": "https://letterboxd.com/film/la-grazia/",
+    "title_en": "La Grazia",
+    "director": "Paolo Sorrentino",
+    "country": "Italy",
+    "year": 2025,
+    "genre": "Drama",
+    "duration": 133
+  },
+  "gioia mía, un verano en sicilia|2025": {
+    "url": "https://letterboxd.com/film/sweetheart-2025-3/",
+    "title_en": "Sweetheart",
+    "director": "Margherita Spampinato",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Drama"
+  },
+  "¡ve y atrápalo!|1920": {
+    "url": "https://letterboxd.com/film/go-and-get-it/",
+    "title_en": "Go and Get It",
+    "director": "Marshall Neilan, Henry Roberts Symonds",
+    "country": "USA",
+    "year": 1920,
+    "duration": 70,
+    "genre": "Misterio, Terror",
+    "original_title": "Go and Get It"
+  },
+  "el circo|1928": {
+    "url": "https://letterboxd.com/film/the-circus/",
+    "title_en": "The Circus",
+    "director": "Charlie Chaplin",
+    "country": "USA",
+    "year": 1928,
+    "duration": 72,
+    "genre": "Romance, Drama",
+    "title_es": "El circo",
+    "original_title": "The Circus"
+  },
+  "el cristal encantado jim henson y frank oz|1982": {
+    "url": "",
+    "title_en": "El cristal encantado Jim Henson y Frank Oz",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "memorias de un cazador de fama mundial|1987": {
+    "url": "",
+    "title_en": "Memorias de un cazador de fama mundial",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el colegial|1927": {
+    "url": "https://letterboxd.com/film/college/",
+    "title_en": "College",
+    "director": "James W. Horne",
+    "country": "USA",
+    "year": 1927,
+    "duration": 65,
+    "genre": "Drama, Romance",
+    "title_es": "El colegial",
+    "original_title": "College"
+  },
+  "las facultades|2019": {
+    "url": "https://letterboxd.com/film/las-facultades/",
+    "title_en": "The Faculties",
+    "director": "Eloísa Solaas",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 78,
+    "genre": "Documental",
+    "original_title": "Las facultades"
+  },
+  "breccia x 4|1988": {
+    "url": "",
+    "title_en": "Breccia X 4",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "héctor oesterheld comparte un choripán con sus verdugos|2016": {
+    "url": "https://letterboxd.com/film/hector-oesterheld-comparte-un-choripan-con-sus-verdugos/",
+    "title_en": "Héctor Oesterheld comparte un choripán con sus verdugos",
+    "director": "Marcelo Schapces",
+    "country": "Argentina",
+    "year": 2016,
+    "duration": 11,
+    "genre": "Drama",
+    "original_title": "Héctor Oesterheld comparte un choripán con sus verdugos"
+  },
+  "when we went mad|2025": {
+    "url": "https://letterboxd.com/film/when-we-went-mad/",
+    "title_en": "When We Went MAD!",
+    "director": "Alan Bernstein",
+    "country": "USA",
+    "year": 2025,
+    "duration": 107,
+    "genre": "Documental, Historia",
+    "original_title": "When We Went MAD!"
+  },
+  "el vengador tóxico|2025": {
+    "url": "https://letterboxd.com/film/the-toxic-avenger-unrated/",
+    "title_en": "The Toxic Avenger",
+    "director": "Macon Blair",
+    "country": "USA",
+    "year": 2023,
+    "duration": 102,
+    "genre": "Acción, Comedia",
+    "title_es": "El vengador tóxico",
+    "original_title": "The Toxic Avenger Unrated"
+  },
+  "gen el descalzo|1983": {
+    "url": "https://letterboxd.com/film/hadashi-no-gen/",
+    "title_en": "Barefoot Gen",
+    "director": "Mori Masaki",
+    "country": "Japan",
+    "year": 1983,
+    "duration": 83,
+    "genre": "Animación, Historia",
+    "title_es": "Hiroshima",
+    "original_title": "はだしのゲン"
+  },
+  "una habitación llena de polvo|2023": {
+    "url": "https://letterboxd.com/film/una-habitacion-llena-de-polvo/",
+    "title_en": "A Dust Filled Room",
+    "director": "Nicolás Zukerfeld",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 23,
+    "genre": "Drama",
+    "original_title": "Una habitación llena de polvo"
+  },
+  "algo fayó|2017": {
+    "url": "https://letterboxd.com/film/algo-fayo/",
+    "title_en": "Algo Fayó",
+    "director": "Santiago García Isler",
+    "country": "",
+    "year": 2017,
+    "duration": null,
+    "genre": "Documental",
+    "original_title": "Algo Fayó"
+  },
+  "molusco|2025": {
+    "url": "https://letterboxd.com/film/molusco/",
+    "title_en": "Mollusk",
+    "director": "Mauricio Bidault",
+    "country": "Mexico",
+    "year": 2025,
+    "duration": 116,
+    "genre": "Documental",
+    "original_title": "Molusco"
+  },
+  "soy tóxico|2019": {
+    "url": "https://letterboxd.com/film/i-am-toxic/",
+    "title_en": "I Am Toxic",
+    "director": "Pablo Parés",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 81,
+    "genre": "Ciencia ficción, Drama",
+    "original_title": "Soy tóxico"
+  },
+  "hiroshima mon amour|1959": {
+    "url": "https://letterboxd.com/film/hiroshima-mon-amour/",
+    "title_en": "Hiroshima Mon Amour",
+    "director": "Alain Resnais",
+    "country": "France, Japan",
+    "year": 1959,
+    "duration": 92,
+    "genre": "Drama, Romance",
+    "title_es": "Hiroshima, mon amour",
+    "original_title": "Hiroshima mon amour"
+  },
+  "tras los pasos de superpocho|2025": {
+    "url": "https://letterboxd.com/film/tras-los-pasos-de-superpocho/",
+    "title_en": "Tras los pasos de Superpocho",
+    "director": "Nacho Garassino",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 94,
+    "genre": "Documental",
+    "original_title": "Tras los pasos de Superpocho"
+  },
+  "pequeña flor|2022": {
+    "url": "https://letterboxd.com/film/15-ways-to-kill-your-neighbour/",
+    "title_en": "15 Ways to Kill Your Neighbour",
+    "director": "Santiago Mitre",
+    "country": "Argentina, Belgium",
+    "year": 2022,
+    "duration": 98,
+    "genre": "Comedia",
+    "title_es": "Pequeña flor",
+    "original_title": "Petite fleur"
+  },
+  "el hombre sin talento|1991": {
+    "url": "https://letterboxd.com/film/nowhere-man-1991/",
+    "title_en": "Nowhere Man",
+    "director": "Naoto Takenaka",
+    "country": "Japan",
+    "year": 1991,
+    "duration": 107,
+    "genre": "Drama",
+    "title_es": "Muno no hito",
+    "original_title": "無能の人"
+  },
+  "el testamento del dr. mabuse|1933": {
+    "url": "https://letterboxd.com/film/the-testament-of-dr-mabuse/",
+    "title_en": "The Testament of Dr. Mabuse",
+    "director": "Fritz Lang",
+    "country": "Germany, France",
+    "year": 1933,
+    "duration": 122,
+    "genre": "Misterio, Crimen",
+    "title_es": "El testamento del Dr. Mabuse",
+    "original_title": "Das Testament des Dr. Mabuse"
+  },
+  "m, el vampiro negro|1931": {
+    "url": "",
+    "title_en": "M, el vampiro negro",
+    "director": "Fritz Lang",
+    "country": "Germany",
+    "year": 1931,
+    "duration": 110,
+    "title_es": "M, el vampiro de Düsseldorf",
+    "original_title": "M - Eine Stadt sucht einen Mörder",
+    "genre": "Drama, Thriller"
+  },
+  "metrópolis|1927": {
+    "url": "https://letterboxd.com/film/metropolis/",
+    "title_en": "Metropolis",
+    "director": "Fritz Lang",
+    "country": "Germany",
+    "year": 1927,
+    "duration": 148,
+    "genre": "Drama, Ciencia ficción",
+    "title_es": "Metrópolis",
+    "original_title": "Metropolis"
+  },
+  "la triste historia de los perros|2017": {
+    "url": "https://letterboxd.com/film/a-dogs-life-2017/",
+    "title_en": "A Dog's Life",
+    "director": "Chang Yi",
+    "country": "Taiwan",
+    "year": 2017,
+    "duration": 80,
+    "genre": "Drama, Animación",
+    "original_title": "狗狗傷心誌"
+  },
+  "la odisea del chip|2025": {
+    "url": "https://letterboxd.com/film/a-chip-odyssey/",
+    "title_en": "A Chip Odyssey",
+    "director": "Hsiao Chu-chen",
+    "country": "Taiwan",
+    "year": 2025,
+    "duration": null,
+    "genre": "Documental"
+  },
+  "la recepcionista|2016": {
+    "url": "https://letterboxd.com/film/the-receptionist/",
+    "title_en": "The Receptionist",
+    "director": "Jenny Lu",
+    "country": "UK, Taiwan",
+    "year": 2016,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "接線員"
+  },
+  "a mi querida abuela|2012": {
+    "url": "https://letterboxd.com/film/to-my-dear-granny/",
+    "title_en": "To My Dear Granny",
+    "director": "Qu You-ning",
+    "country": "Hong Kong, Taiwan",
+    "year": 2013,
+    "duration": 117,
+    "genre": "Drama, Familiar"
+  },
+  "el mundo al revés|2025": {
+    "url": "https://letterboxd.com/film/the-world-upside-down-2025/",
+    "title_en": "The World Upside Down",
+    "director": "Agostina Di Luciano, Leon Schwitter",
+    "country": "Switzerland, Argentina",
+    "year": 2025,
+    "duration": 77,
+    "genre": "Documental",
+    "original_title": "El mundo al revés"
+  },
+  "bellissima|1951": {
+    "url": "",
+    "title_en": "Bellissima",
+    "director": "Luchino Visconti",
+    "country": "Italy",
+    "year": 1952,
+    "duration": 115,
+    "title_es": "Bellísima",
+    "original_title": "Bellissima",
+    "genre": "Drama"
+  },
+  "rocco y sus hermanos|1960": {
+    "url": "https://letterboxd.com/film/rocco-and-his-brothers/",
+    "title_en": "Rocco and His Brothers",
+    "director": "Luchino Visconti",
+    "country": "Italy, France",
+    "year": 1960,
+    "duration": 178,
+    "genre": "Romance, Crimen",
+    "title_es": "Rocco y sus hermanos",
+    "original_title": "Rocco e i suoi fratelli"
+  },
+  "muerte en venecia|1971": {
+    "url": "https://letterboxd.com/film/death-in-venice/",
+    "title_en": "Death in Venice",
+    "director": "Luchino Visconti",
+    "country": "France, Italy",
+    "year": 1971,
+    "duration": 131,
+    "genre": "Drama",
+    "title_es": "Muerte en Venecia",
+    "original_title": "Morte a Venezia"
+  },
+  "el gatopardo|1963": {
+    "url": "https://letterboxd.com/film/the-leopard/",
+    "title_en": "The Leopard",
+    "director": "Luchino Visconti",
+    "country": "France, Italy",
+    "year": 1963,
+    "duration": 186,
+    "genre": "Drama",
+    "title_es": "El gatopardo",
+    "original_title": "Il gattopardo"
+  },
+  "la tierra tiembla|1948": {
+    "url": "https://letterboxd.com/film/la-terra-trema/",
+    "title_en": "La Terra Trema",
+    "director": "Luchino Visconti",
+    "country": "Italy",
+    "year": 1948,
+    "duration": 160,
+    "genre": "Drama",
+    "title_es": "La tierra tiembla",
+    "original_title": "La terra trema"
+  },
+  "obsesión|1943": {
+    "url": "https://letterboxd.com/film/ossessione/",
+    "title_en": "Obsession",
+    "director": "Luchino Visconti, Luchino Visconti’s",
+    "country": "Italy",
+    "year": 1943,
+    "duration": 140,
+    "genre": "Drama, Crimen",
+    "title_es": "Obsesión",
+    "original_title": "Ossessione"
+  },
+  "grupo de familia|1974": {
+    "url": "https://letterboxd.com/film/conversation-piece/",
+    "title_en": "Conversation Piece",
+    "director": "Luchino Visconti",
+    "country": "France, Italy",
+    "year": 1974,
+    "duration": 121,
+    "genre": "Drama, Romance",
+    "title_es": "Confidencias",
+    "original_title": "Gruppo di Famiglia in un Interno"
+  },
+  "el conflicto de los marx|1930": {
+    "url": "https://letterboxd.com/film/animal-crackers/",
+    "title_en": "Animal Crackers",
+    "director": "Victor Heerman",
+    "country": "USA",
+    "year": 1930,
+    "duration": 98,
+    "genre": "Música, Comedia",
+    "title_es": "El conflicto de los Hermanos Marx",
+    "original_title": "Animal Crackers"
+  },
+  "polizones y polizontes|1931": {
+    "url": "https://letterboxd.com/film/monkey-business/",
+    "title_en": "Monkey Business",
+    "director": "Norman Z. McLeod",
+    "country": "USA",
+    "year": 1931,
+    "duration": 77,
+    "genre": "Comedia",
+    "title_es": "Pistoleros de agua dulce",
+    "original_title": "Monkey Business"
+  },
+  "plumas de caballo|1932": {
+    "url": "https://letterboxd.com/film/horse-feathers/",
+    "title_en": "Horse Feathers",
+    "director": "Norman Z. McLeod",
+    "country": "USA",
+    "year": 1932,
+    "duration": 68,
+    "genre": "Romance, Comedia",
+    "title_es": "Plumas de caballo",
+    "original_title": "Horse Feathers"
+  },
+  "sopa de ganso|1933": {
+    "url": "https://letterboxd.com/film/duck-soup-1933/",
+    "title_en": "Duck Soup",
+    "director": "Leo McCarey",
+    "country": "USA",
+    "year": 1933,
+    "duration": 68,
+    "genre": "Bélica, Comedia",
+    "title_es": "Sopa de ganso",
+    "original_title": "Duck Soup"
+  },
+  "una noche en la ópera|1935": {
+    "url": "https://letterboxd.com/film/a-night-at-the-opera/",
+    "title_en": "A Night at the Opera",
+    "director": "Sam Wood",
+    "country": "USA",
+    "year": 1935,
+    "duration": 91,
+    "genre": "Comedia, Música",
+    "title_es": "Una noche en la ópera",
+    "original_title": "A Night at the Opera"
+  },
+  "forenses|2025": {
+    "url": "https://letterboxd.com/film/forensics/",
+    "title_en": "Forensics",
+    "director": "Federico Atehortúa Arteaga",
+    "country": "Colombia",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "Forenses"
+  },
+  "los bobos|2025": {
+    "url": "https://letterboxd.com/film/los-bobos/",
+    "title_en": "Los Bobos",
+    "director": "Sofía Jallinsky, Juan Pablo Basovih Marinaro",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 95,
+    "genre": "Thriller, Terror",
+    "original_title": "Los Bobos",
+    "title_es": "La doctora de los marineros"
+  },
+  "vacaciones de invierno en arthaus|1930": {
+    "url": "",
+    "title_en": "VACACIONES DE INVIERNO EN ARTHAUS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "kuitca / masllorens|2000": {
+    "url": "",
+    "title_en": "KUITCA / MASLLORENS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el mago|1939": {
+    "url": "https://letterboxd.com/film/the-wizard-of-oz-1939/",
+    "title_en": "The Wizard of Oz",
+    "director": "Victor Fleming",
+    "country": "USA",
+    "year": 1939,
+    "duration": 102,
+    "genre": "Aventura, Fantasía",
+    "title_es": "El mago de Oz",
+    "original_title": "The Wizard of Oz"
+  },
+  "el viaje|2001": {
+    "url": "https://letterboxd.com/film/spirited-away/",
+    "title_en": "Spirited Away",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 2001,
+    "duration": 125,
+    "genre": "Familiar, Fantasía",
+    "title_es": "El viaje de Chihiro",
+    "original_title": "千と千尋の神隠し"
   }
 }
