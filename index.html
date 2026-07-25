@@ -986,7 +986,7 @@ function pingStar(s, on) {
 const SORT_EXTRACTORS = {
   hora:     s => s.hora || '99:99',
   cine:     s => (s.cine || '').toLowerCase(),
-  title:    s => (s.original_title || s.title_es || s.title_en || '').toLowerCase(),
+  title:    s => displayTitle(s).toLowerCase(),
   ciclo:    s => (s.ciclo || '').toLowerCase(),
   director: s => (s.director || '').toLowerCase(),
   genre:    s => (s.genre || '').toLowerCase(),
@@ -1276,8 +1276,17 @@ function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '
 // y el título en inglés en «guillemets». Si todavía no tenemos original_title
 // (títulos sin match en TMDb, funciones preservadas de corridas viejas),
 // caemos al título local del cine.
+// Excepción: originales en alfabetos no latinos (japonés, chino, coreano,
+// cirílico, árabe...) no le dicen nada al público local → mostramos el
+// título en español y el inglés queda en las «comillas».
+function isNonLatinTitle(t) {
+  return /[぀-ヿ㐀-䶿一-鿿豈-﫿가-힯ᄀ-ᇿЀ-ӿ֐-׿؀-ۿ฀-๿ऀ-ॿ]/.test(t);
+}
+
 function displayTitle(s) {
-  return s.original_title || s.title_es || s.title_en || '';
+  const orig = s.original_title || '';
+  if (orig && !isNonLatinTitle(orig)) return orig;
+  return s.title_es || s.title_en || orig;
 }
 
 function altTitle(s) {
