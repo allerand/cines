@@ -511,6 +511,15 @@
     .cine-showcase { border-color: #2a2a2a; color: #aaa; }
 
     .film-title { font-weight: 500; color: var(--text); }
+    /* Título alternativo (criterio Letterboxd): el otro idioma en «guillemets»,
+       inline junto al título principal — sin columna ni línea extra. */
+    .film-alt-title {
+      font-weight: 400;
+      font-style: italic;
+      font-size: 0.82em;
+      color: var(--muted);
+      margin-left: 0.3rem;
+    }
     .film-meta-row { margin-top: 0.25rem; }
     .film-meta-inline {
       display: none;
@@ -744,6 +753,89 @@ let searchQuery = '';
 let sortKey = 'hora';
 let sortDir = 'asc';
 
+// ── Deep links: el estado (día / cine / búsqueda) vive en el hash ──────
+// Formato: #sab-25-jul/gaumont/q=nolan — cada segmento es opcional y el
+// orden no importa. Los slugs de cine salen del label del chip ("Gaumont",
+// "El Recoleta") para que las URLs queden legibles y compartibles.
+function slugify(t) {
+  return String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+}
+
+function daySlug(fecha) {
+  const [y, m, d] = fecha.split('-').map(Number);
+  const dt = new Date(y, m - 1, d);
+  return `${slugify(DAYS_ES[dt.getDay()])}-${d}-${slugify(MONTHS_ES[m - 1])}`;
+}
+
+function cineSlug(cine) {
+  const btn = document.querySelector(`.filter-btn[data-cine="${CSS.escape(cine)}"]`);
+  return slugify(btn ? btn.textContent : cine);
+}
+
+function findCineBySlug(slug) {
+  for (const b of document.querySelectorAll('.filter-btn[data-cine]')) {
+    const c = b.dataset.cine;
+    if (!c || c === 'all') continue;
+    if (slugify(b.textContent) === slug || slugify(c) === slug) return c;
+  }
+  return null;
+}
+
+// Última URL que escribimos nosotros — para ignorar el hashchange propio.
+let lastHashWritten = null;
+
+function updateHash() {
+  const parts = [];
+  if (activeDay) parts.push(daySlug(activeDay));
+  if (activeCine !== 'all') parts.push(cineSlug(activeCine));
+  if (searchQuery) parts.push('q=' + encodeURIComponent(searchQuery));
+  const hash = parts.length ? '#' + parts.join('/') : '';
+  if (hash === location.hash) return;
+  lastHashWritten = hash;
+  // replaceState: no ensucia el historial con cada click de tab/chip
+  history.replaceState(null, '', hash || location.pathname + location.search);
+}
+
+// Lee el hash y lo vuelca al estado (sin renderizar — el caller decide).
+function applyHashState() {
+  const raw = location.hash.replace(/^#/, '');
+  if (!raw) return;
+  const dates = [...new Set(allScreenings.map(s => s.fecha))];
+  for (let seg of raw.split('/')) {
+    try { seg = decodeURIComponent(seg); } catch (_) {}
+    if (!seg) continue;
+    if (seg.startsWith('q=')) {
+      searchQuery = seg.slice(2).trim().toLowerCase();
+      const inp = document.getElementById('search-input');
+      if (inp) inp.value = searchQuery;
+      continue;
+    }
+    const slug = seg.toLowerCase();
+    const fecha = dates.find(f => daySlug(f) === slug);
+    if (fecha) { activeDay = fecha; continue; }
+    const cine = findCineBySlug(slug);
+    if (cine) {
+      activeCine = cine;
+      // Un link a un cine comercial tiene que mostrarlo aunque el toggle
+      // esté apagado en este dispositivo.
+      if (isCommercial(cine)) showCommercial = true;
+    }
+  }
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
+}
+
+// Soporta editar el hash a mano / navegar con back-forward entre hashes.
+window.addEventListener('hashchange', () => {
+  if (location.hash === lastHashWritten || !allScreenings.length) return;
+  activeDay = null; activeCine = 'all'; searchQuery = '';
+  const inp = document.getElementById('search-input');
+  if (inp) inp.value = '';
+  applyHashState();
+  applyCommercialToggle();
+  renderTable();
+});
+
 // ── Sistema de estrellas / "agendar en Google Calendar" ────────────────
 // Apps Script URL; recibe POST con action=star.
 const STAR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwFSvoEUdjrljSnxSZ-N3a82EC_pwc_V0aY_3MA3Du9BHQfNPhuxXXrp_YNBgfUAZCE/exec';
@@ -945,8 +1037,16 @@ async function loadData() {
       document.getElementById('updated-badge').textContent = 'Actualizado ' + updated;
     }
 
+    applyHashState();                 // Deep link: #dia/cine/q=... → estado inicial
     applyCommercialToggle();          // Sincroniza chips + label del toggle
     buildDayTabs();                   // Arma las pestañas de los días
+
+    // Deep link a una sala sin día explícito: si el día activo no tiene
+    // funciones de esa sala, saltamos al primero que sí (como el click en chip).
+    if (activeCine !== 'all' && !document.querySelector('.day-tab.active.has-cine')) {
+      const firstDay = document.querySelector('.day-tab.has-cine');
+      if (firstDay) selectDay(firstDay.dataset.fecha);
+    }
     
     // Ocultar el loader de la pantalla
     document.getElementById('loading').classList.add('hidden');
@@ -1035,6 +1135,7 @@ function selectDay(fecha) {
   resetSort();
   document.querySelectorAll('.day-tab').forEach(t => t.classList.toggle('active', t.dataset.fecha === fecha));
   renderTable();
+  updateHash();
 }
 
 document.getElementById('filters').addEventListener('click', e => {
@@ -1055,11 +1156,13 @@ document.getElementById('filters').addEventListener('click', e => {
     }
   }
   renderTable();
+  updateHash();
 });
 
 document.getElementById('search-input').addEventListener('input', e => {
   searchQuery = e.target.value.trim().toLowerCase();
   renderTable();
+  updateHash();
 });
 
 // Toggle "+ Comerciales" — alterna la inclusión de Cinemark/Hoyts/Cinépolis/etc.
@@ -1088,6 +1191,16 @@ function displayTitle(s) {
   const keepLocal = ['argentina', 'españa', 'spain', 'méxico', 'mexico', 'chile', 'uruguay', 'brasil', 'brazil', 'portugal'].some(c => country.includes(c));
   if (keepLocal && local) return local;
   return s.letterboxd && lb ? lb : (local || lb);
+}
+
+// Título en el otro idioma cuando difiere del principal (criterio Letterboxd:
+// se muestra en «guillemets» junto al título). Devuelve '' si son iguales.
+function altTitle(s) {
+  const main = displayTitle(s);
+  const other = main === (s.title_es || '') ? (s.title_en || '') : (s.title_es || '');
+  const norm = t => t.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  if (!other || norm(other) === norm(main)) return '';
+  return other;
 }
 
 function renderTable() {
@@ -1125,7 +1238,8 @@ function renderTable() {
     const icon = isStarred ? '✓' : '+';
     const addBtn = `<button class="add-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar"><span class="add-icon">${icon}</span>${countHtml}</button>`;
 
-    const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}</div>
+    const alt = altTitle(s);
+    const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}${alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : ''}</div>
       ${s.ciclo ? `<div class="film-ciclo-inline">${escapeHtml(s.ciclo)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
       ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank">Entradas →</a></div>` : ''}`;
