@@ -330,27 +330,29 @@
     .search-input:focus { outline: none; border-color: var(--accent); }
     .search-input::placeholder { color: var(--muted); }
 
-    /* Botón compartir — copia el deep link con el estado actual (día/cine/
-       búsqueda). En mobile usa el share sheet nativo. */
+    /* Botón compartir — sólo ícono, copia el deep link con el estado actual
+       (día/cine/búsqueda). En mobile usa el share sheet nativo. */
     .share-btn {
       display: inline-flex;
       align-items: center;
-      gap: 0.35rem;
+      justify-content: center;
       background: var(--bg3);
       border: 1px solid var(--border);
       color: var(--muted);
-      padding: 0.3rem 0.7rem;
+      width: 1.85rem;
+      height: 1.85rem;
+      padding: 0;
       border-radius: 3px;
-      font-size: 0.78rem;
-      font-family: inherit;
       cursor: pointer;
       flex: 0 0 auto;
       align-self: flex-start;
       transition: all 0.12s;
-      white-space: nowrap;
     }
     .share-btn:hover { color: var(--text); border-color: #444; }
     .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+    .share-btn .icon-check { display: none; }
+    .share-btn.copied .icon-link { display: none; }
+    .share-btn.copied .icon-check { display: block; }
 
     /* ── Footer de contacto ── */
     .site-footer {
@@ -707,7 +709,7 @@
   </button>
   </div>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
-  <button id="share-btn" class="share-btn" title="Copiar link a esta vista"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg><span id="share-label">Compartir</span></button>
+  <button id="share-btn" class="share-btn" title="Copiar link a esta vista" aria-label="Compartir esta vista"><svg class="icon-link" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg><svg class="icon-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></button>
 </div>
 
 <main id="main"></main>
@@ -1196,7 +1198,6 @@ document.getElementById('search-input').addEventListener('input', e => {
 document.getElementById('share-btn').addEventListener('click', async () => {
   const url = location.href;
   const btn = document.getElementById('share-btn');
-  const label = document.getElementById('share-label');
   if (navigator.share) {
     try { await navigator.share({ title: document.title, url }); return; }
     catch (e) { if (e && e.name === 'AbortError') return; /* sin share sheet → copiar */ }
@@ -1210,8 +1211,7 @@ document.getElementById('share-btn').addEventListener('click', async () => {
     ta.select(); document.execCommand('copy'); ta.remove();
   }
   btn.classList.add('copied');
-  label.textContent = 'Copiado ✓';
-  setTimeout(() => { btn.classList.remove('copied'); label.textContent = 'Compartir'; }, 1800);
+  setTimeout(() => btn.classList.remove('copied'), 1800);
 });
 
 // Toggle "+ Comerciales" — alterna la inclusión de Cinemark/Hoyts/Cinépolis/etc.
