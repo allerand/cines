@@ -419,7 +419,7 @@ async def run_scraper(semanas: int = 9) -> None:
             "genre":      meta.get("genre") or "",
             "letterboxd": meta.get("url") or "",
             "ticket_url": getattr(s, "ticket_url", ""),
-            "ciclo":      getattr(s, "ciclo", ""),
+            "ciclo":      _fix_caps(getattr(s, "ciclo", "")),
         })
 
     # Ordenar por fecha + hora
