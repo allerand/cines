@@ -331,28 +331,51 @@
     .search-input::placeholder { color: var(--muted); }
 
     /* Botón compartir — sólo ícono, copia el deep link con el estado actual
-       (día/cine/búsqueda). En mobile usa el share sheet nativo. */
+       (día/cine/búsqueda). Desktop: copia directo + globito "Link copiado".
+       Mobile (touch): share sheet nativo. */
     .share-btn {
+      position: relative;
       display: inline-flex;
       align-items: center;
-      justify-content: center;
+      gap: 0.4rem;
       background: var(--bg3);
       border: 1px solid var(--border);
       color: var(--muted);
-      width: 1.85rem;
       height: 1.85rem;
-      padding: 0;
+      padding: 0 0.6rem;
       border-radius: 3px;
+      font-size: 0.72rem;
+      font-family: inherit;
       cursor: pointer;
       flex: 0 0 auto;
       align-self: flex-start;
       transition: all 0.12s;
+      white-space: nowrap;
     }
     .share-btn:hover { color: var(--text); border-color: #444; }
     .share-btn.copied { color: var(--accent); border-color: var(--accent); }
     .share-btn .icon-check { display: none; }
-    .share-btn.copied .icon-link { display: none; }
+    .share-btn.copied .icon-share { display: none; }
     .share-btn.copied .icon-check { display: block; }
+    /* Globito de confirmación — aparece debajo del botón al copiar */
+    .share-toast {
+      position: absolute;
+      top: calc(100% + 0.4rem);
+      right: 0;
+      background: var(--bg3);
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 0.28rem 0.55rem;
+      border-radius: 3px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.15s;
+      z-index: 20;
+    }
+    .share-btn.copied .share-toast { opacity: 1; }
 
     /* ── Footer de contacto ── */
     .site-footer {
@@ -709,7 +732,7 @@
   </button>
   </div>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
-  <button id="share-btn" class="share-btn" title="Copiar link a esta vista" aria-label="Compartir esta vista"><svg class="icon-link" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg><svg class="icon-check" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></button>
+  <button id="share-btn" class="share-btn" title="Copiar link a esta vista"><svg class="icon-share" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg><svg class="icon-check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Compartir esta búsqueda</span><span class="share-toast">Link copiado ✓</span></button>
 </div>
 
 <main id="main"></main>
@@ -1208,7 +1231,11 @@ function shareText() {
 document.getElementById('share-btn').addEventListener('click', async () => {
   const url = location.href;
   const btn = document.getElementById('share-btn');
-  if (navigator.share) {
+  // Share sheet nativo SOLO en dispositivos touch (teléfono/tablet), donde es
+  // el flujo natural. En desktop el popover del sistema es incómodo: copiamos
+  // directo al portapapeles con confirmación visible.
+  const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+  if (isTouch && navigator.share) {
     try { await navigator.share({ title: 'Si te digo', text: shareText(), url }); return; }
     catch (e) { if (e && e.name === 'AbortError') return; /* sin share sheet → copiar */ }
   }
