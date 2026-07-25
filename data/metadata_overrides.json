@@ -1,6 +1,10 @@
 {
   "_comment": "Escape de ÚLTIMO RECURSO para corregir metadata cuando el enrichment matchea la película equivocada y la automatización no alcanza. Normalmente NO debería hacer falta: el scraper infiere director/año de la fuente (p.ej. Cacodelphia los saca del título del trailer) y el enrichment valida contra esos hints. Si aun así una peli queda mal, agregá un entry acá. Matchea por 'title' (case-insensitive) + 'cine' opcional, y pisa los campos presentes: director, year, country, genre, duration, letterboxd, title_en, original_title. Poné \"\" para borrar un dato. Se aplica al final en run.py.",
   "overrides": [
-    { "title": "Hojas secas", "cine": "Sala Lugones", "director": "Alexandre Koberidze", "original_title": "Dry Leaf", "letterboxd": "https://letterboxd.com/film/dry-leaf/" }
+    { "title": "Hojas secas", "cine": "Sala Lugones", "director": "Alexandre Koberidze", "original_title": "Dry Leaf", "letterboxd": "https://letterboxd.com/film/dry-leaf/" },
+
+    { "title": "El Ángel", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2018, "country": "Argentina", "genre": "Crimen, Drama", "duration": 115, "title_en": "El Angel", "original_title": "El Ángel", "letterboxd": "https://letterboxd.com/film/el-angel-2018/" },
+    { "title": "Lulú", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2014, "country": "Argentina", "genre": "Drama, Romance", "title_en": "Lulú", "original_title": "Lulú", "letterboxd": "https://letterboxd.com/film/lulu-2014/" },
+    { "title": "Siempre es de Noche", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2025, "country": "Argentina", "title_en": "Always Night", "original_title": "Siempre es de noche", "letterboxd": "https://letterboxd.com/film/always-night/" }
   ]
 }
