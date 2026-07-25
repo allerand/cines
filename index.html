@@ -787,7 +787,9 @@ let lastHashWritten = null;
 
 function updateHash() {
   const parts = [];
-  if (activeDay) parts.push(daySlug(activeDay));
+  // Con búsqueda activa la tabla junta funciones de TODOS los días, así que
+  // el día no aplica y no va en la URL (sería engañoso al compartirla).
+  if (activeDay && !searchQuery) parts.push(daySlug(activeDay));
   if (activeCine !== 'all') parts.push(cineSlug(activeCine));
   if (searchQuery) parts.push('q=' + encodeURIComponent(searchQuery));
   const hash = parts.length ? '#' + parts.join('/') : '';

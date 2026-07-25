@@ -362,6 +362,57 @@ def tmdb_search_movie(title: str, year: Optional[int] = None) -> list[dict]:
     return out
 
 
+def tmdb_imdb_id(movie_id: int) -> Optional[str]:
+    """IMDb id (ttXXXXXX) de una película de TMDb, o None."""
+    data = _tmdb_request(f"/movie/{movie_id}/external_ids", {})
+    tt = data.get("imdb_id") or ""
+    return tt if tt.startswith("tt") else None
+
+
+def tmdb_letterboxd_candidates(
+    title: str,
+    hint_original: str,
+    hint_year: Optional[int],
+    min_year_no_hint: Optional[int] = None,
+) -> list[str]:
+    """
+    Descubre URLs de Letterboxd vía TMDb search → IMDb id → /imdb/tt redirect.
+
+    TMDb matchea títulos traducidos y AKAs mucho mejor que el slug guessing
+    y que la suggestion API de IMDb (ej: "Obsesión" (2025) → Obsession de
+    Curry Barker, cuyo slug es inglés y "obsesion" no es prefijo de
+    "obsession"). Sin credencial de TMDb devuelve [].
+    """
+    if not _tmdb_credential()[0]:
+        return []
+    queries: list[tuple[str, Optional[int]]] = []
+    if hint_original:
+        queries.append((hint_original, hint_year))
+    queries.append((title, hint_year))
+    urls: list[str] = []
+    seen_ids: set[int] = set()
+    for q, y in queries:
+        for cand in tmdb_search_movie(q, y):
+            mid = cand.get("id")
+            if not mid or mid in seen_ids:
+                continue
+            seen_ids.add(mid)
+            cy = cand.get("year")
+            if hint_year and cy and abs(int(cy) - int(hint_year)) > 2:
+                continue
+            if not hint_year and cy and min_year_no_hint and int(cy) < min_year_no_hint:
+                continue
+            tt = tmdb_imdb_id(mid)
+            if not tt:
+                continue
+            lb_url = letterboxd_url_from_imdb(tt)
+            if lb_url and lb_url not in urls:
+                urls.append(lb_url)
+            if len(urls) >= 3:
+                return urls
+    return urls
+
+
 def fetch_tmdb_movie_meta(movie_id: int) -> dict:
     """Trae detalles + credits de TMDb. Devuelve {director, country, duration,
     year, title_en, title_es, original_title}.
@@ -578,14 +629,24 @@ async def enrich_title(
     if is_non_film(title):
         return _empty_meta(title)
 
-    # Cache hit: solo lo devolvemos si validá contra los hints actuales.
-    # Si los hints cambiaron (ej. ahora tenemos director del scraper), re-enrich.
-    if cache.has(title):
-        cached = cache.get(title)
+    # Key del cache scoped por año: dos películas homónimas en cartel al mismo
+    # tiempo (ej. "Obsesión" de Visconti en Lugones y la de Curry Barker en
+    # los comerciales) no deben pelear por el mismo slot — antes cada corrida
+    # las re-enriquecía y la última pisaba a la otra. Sin año, key plana
+    # (compatible con el cache legacy).
+    cache_key = f"{title}|{hint_year}" if hint_year else title
+
+    # Cache hit: solo lo devolvemos si valida contra los hints actuales.
+    # Probamos la key con año y la legacy (title solo) — si la legacy valida,
+    # la migramos a la key nueva. Si los hints cambiaron, re-enrich.
+    for k in ([cache_key, title] if cache_key != title else [title]):
+        if not cache.has(k):
+            continue
+        cached = cache.get(k)
         if not cached.get("url"):
             # Empty cached → re-intentar siempre por si la red estaba caída
-            pass
-        elif _validate_meta(cached, hint_year, hint_director, hint_duration):
+            continue
+        if _validate_meta(cached, hint_year, hint_director, hint_duration):
             # Auto-backfill de campos nuevos (ej. genre se agregó al parser
             # después de muchas entries estar cacheadas). Si el cached tiene
             # URL pero le falta genre, re-fetch sólo para completar el campo.
@@ -594,9 +655,10 @@ async def enrich_title(
                 fresh = parse_film_soup(s, cached["url"]) if s else None
                 if fresh and fresh.get("genre"):
                     cached["genre"] = fresh["genre"]
-                    cache.set(title, cached)
+            cache.set(cache_key, cached)
             return cached
-        # else: la entry cacheada NO matchea hints actuales → re-enrich
+        # else: la entry cacheada NO matchea hints actuales → probar la otra
+        # key o re-enrich
 
     search_title = title.title() if title == title.upper() else title
     candidates: list[str] = []
@@ -608,7 +670,7 @@ async def enrich_title(
     def _accept(m: dict) -> dict:
         """Antes de aceptar un match: completar campos faltantes desde IMDb."""
         m = fill_meta_from_external(m, title, hint_year, hint_original, hint_director)
-        cache.set(title, m)
+        cache.set(cache_key, m)
         return m
 
     # 1. slug del título original (si lo tenemos)
@@ -713,6 +775,19 @@ async def enrich_title(
                 return _accept(m)
             fallback_meta = fallback_meta or m
 
+    # 5bis. TMDb search → IMDb id → LB. Cubre títulos locales cuyo título
+    # canónico en LB está en otro idioma (slug inadivinable) y que la
+    # suggestion API de IMDb no matchea.
+    for lb_url in tmdb_letterboxd_candidates(
+        search_title, hint_original, hint_year, min_year_no_hint=_NO_HINT_MIN_YEAR,
+    ):
+        m = _try_url(lb_url)
+        if not m:
+            continue
+        if _validate_meta(m, hint_year, hint_director, hint_duration):
+            return _accept(m)
+        fallback_meta = fallback_meta or m
+
     # 6. DuckDuckGo fallback (con throttle, último recurso)
     if hint_director:
         q = f"letterboxd {search_title} {hint_director}"
@@ -743,13 +818,13 @@ async def enrich_title(
         fallback_meta = fill_meta_from_external(
             fallback_meta, title, hint_year, hint_original, hint_director,
         )
-        cache.set(title, fallback_meta)
+        cache.set(cache_key, fallback_meta)
         return fallback_meta
 
     # 7. Último intento: rellenar empty meta directo desde IMDb (sin LB)
     empty = _empty_meta(title)
     empty = fill_meta_from_external(empty, title, hint_year, hint_original, hint_director)
-    cache.set(title, empty)
+    cache.set(cache_key, empty)
     return empty
 
 
