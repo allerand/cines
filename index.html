@@ -330,6 +330,28 @@
     .search-input:focus { outline: none; border-color: var(--accent); }
     .search-input::placeholder { color: var(--muted); }
 
+    /* Botón compartir — copia el deep link con el estado actual (día/cine/
+       búsqueda). En mobile usa el share sheet nativo. */
+    .share-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+      font-size: 0.78rem;
+      font-family: inherit;
+      cursor: pointer;
+      flex: 0 0 auto;
+      align-self: flex-start;
+      transition: all 0.12s;
+      white-space: nowrap;
+    }
+    .share-btn:hover { color: var(--text); border-color: #444; }
+    .share-btn.copied { color: var(--accent); border-color: var(--accent); }
+
     /* ── Footer de contacto ── */
     .site-footer {
       border-top: 1px solid var(--border);
@@ -685,6 +707,7 @@
   </button>
   </div>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
+  <button id="share-btn" class="share-btn" title="Copiar link a esta vista"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg><span id="share-label">Compartir</span></button>
 </div>
 
 <main id="main"></main>
@@ -1165,6 +1188,30 @@ document.getElementById('search-input').addEventListener('input', e => {
   searchQuery = e.target.value.trim().toLowerCase();
   renderTable();
   updateHash();
+});
+
+// Compartir la vista actual: el hash ya lleva día/cine/búsqueda, así que la
+// URL tal cual es el deep link. Mobile → share sheet nativo; desktop → copiar
+// al portapapeles con feedback "Copiado ✓".
+document.getElementById('share-btn').addEventListener('click', async () => {
+  const url = location.href;
+  const btn = document.getElementById('share-btn');
+  const label = document.getElementById('share-label');
+  if (navigator.share) {
+    try { await navigator.share({ title: document.title, url }); return; }
+    catch (e) { if (e && e.name === 'AbortError') return; /* sin share sheet → copiar */ }
+  }
+  try {
+    await navigator.clipboard.writeText(url);
+  } catch (_) {
+    // Fallback para contextos sin clipboard API (http, permisos)
+    const ta = document.createElement('textarea');
+    ta.value = url; document.body.appendChild(ta);
+    ta.select(); document.execCommand('copy'); ta.remove();
+  }
+  btn.classList.add('copied');
+  label.textContent = 'Copiado ✓';
+  setTimeout(() => { btn.classList.remove('copied'); label.textContent = 'Compartir'; }, 1800);
 });
 
 // Toggle "+ Comerciales" — alterna la inclusión de Cinemark/Hoyts/Cinépolis/etc.
