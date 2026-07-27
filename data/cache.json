@@ -8758,5 +8758,71 @@
     "genre": "Familiar, Fantasía",
     "title_es": "El viaje de Chihiro",
     "original_title": "千と千尋の神隠し"
+  },
+  "laberinto|1986": {
+    "url": "https://letterboxd.com/film/labyrinth/",
+    "title_en": "Labyrinth",
+    "director": "Jim Henson",
+    "country": "UK, USA",
+    "year": 1986,
+    "duration": 101,
+    "genre": "Aventura, Familiar",
+    "title_es": "Dentro del laberinto",
+    "original_title": "Labyrinth"
+  },
+  "la historia sin fin|1984": {
+    "url": "https://letterboxd.com/film/the-neverending-story/",
+    "title_en": "The NeverEnding Story",
+    "director": "Wolfgang Petersen",
+    "country": "Germany",
+    "year": 1984,
+    "duration": 101,
+    "genre": "Fantasía, Familiar",
+    "title_es": "La historia interminable",
+    "original_title": "Die unendliche Geschichte"
+  },
+  "raya y el último dragón|2021": {
+    "url": "https://letterboxd.com/film/raya-and-the-last-dragon/",
+    "title_en": "Raya and the Last Dragon",
+    "director": "Don Hall, Carlos López Estrada",
+    "country": "USA",
+    "year": 2021,
+    "duration": 107,
+    "genre": "Animación, Aventura",
+    "title_es": "Raya y el último dragón",
+    "original_title": "Raya and the Last Dragon"
+  },
+  "cómo entrenar a tu dragón|2025": {
+    "url": "https://letterboxd.com/film/how-to-train-your-dragon-2025/",
+    "title_en": "How to Train Your Dragon",
+    "director": "Dean DeBlois",
+    "country": "USA",
+    "year": 2025,
+    "duration": 125,
+    "genre": "Fantasía, Familiar",
+    "title_es": "Cómo entrenar a tu dragón",
+    "original_title": "How to Train Your Dragon"
+  },
+  "la princesa mononoke|1997": {
+    "url": "https://letterboxd.com/film/princess-mononoke/",
+    "title_en": "Princess Mononoke",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 1997,
+    "duration": 134,
+    "genre": "Fantasía, Aventura",
+    "title_es": "La princesa Mononoke",
+    "original_title": "もののけ姫"
+  },
+  "leyenda|1985": {
+    "url": "https://letterboxd.com/film/legend/",
+    "title_en": "Legend",
+    "director": "Ridley Scott",
+    "country": "USA, UK",
+    "year": 1985,
+    "duration": 94,
+    "genre": "Aventura, Fantasía",
+    "title_es": "Leyenda",
+    "original_title": "Legend"
   }
 }
