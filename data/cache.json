@@ -8624,15 +8624,12 @@
     "original_title": "La terra trema"
   },
   "obsesión|1943": {
-    "url": "https://letterboxd.com/film/ossessione/",
-    "title_en": "Obsession",
-    "director": "Luchino Visconti, Luchino Visconti’s",
-    "country": "Italy",
-    "year": 1943,
-    "duration": 140,
-    "genre": "Drama, Crimen",
-    "title_es": "Obsesión",
-    "original_title": "Ossessione"
+    "url": "",
+    "title_en": "Obsesión",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "grupo de familia|1974": {
     "url": "https://letterboxd.com/film/conversation-piece/",
@@ -8824,5 +8821,15 @@
     "genre": "Aventura, Fantasía",
     "title_es": "Leyenda",
     "original_title": "Legend"
+  },
+  "weser": {
+    "url": "https://letterboxd.com/film/weser/",
+    "title_en": "Weser",
+    "director": "Fernando Spiner",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 85,
+    "genre": "Drama, Documental",
+    "original_title": "Weser"
   }
 }
