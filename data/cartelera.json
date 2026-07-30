@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T17:37:18",
+  "updated": "2026-07-30T23:40:13",
   "screenings": [
     {
       "cine": "Hoyts Abasto",
@@ -514,22 +514,6 @@
       "original_title": "Spider-Man: Brand New Day"
     },
     {
-      "cine": "Lumiton",
-      "fecha": "2026-07-30",
-      "hora": "15:00",
-      "title_es": "Tom y Jerry: El Gran Musical",
-      "title_en": "TOM Y JERRY",
-      "original_title": "Tom y Jerry: Sus grandes aventuras",
-      "director": "John Foster, Vernon Stallings",
-      "country": "Estados Unidos",
-      "year": 2000,
-      "duration": 45,
-      "genre": "Animación",
-      "letterboxd": "",
-      "ticket_url": "https://lumiton.ar/evento/tom-y-jerry/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Cosmos",
       "fecha": "2026-07-30",
       "hora": "15:00",
@@ -560,6 +544,22 @@
       "letterboxd": "https://letterboxd.com/film/m/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0fdc5540-c74b-4e7a-87df-f1a9ecfd1534",
       "ciclo": "Las tres M del Sr. Lang"
+    },
+    {
+      "cine": "Lumiton",
+      "fecha": "2026-07-30",
+      "hora": "15:00",
+      "title_es": "Tom y Jerry: El Gran Musical",
+      "title_en": "TOM Y JERRY",
+      "original_title": "Tom y Jerry: Sus grandes aventuras",
+      "director": "John Foster, Vernon Stallings",
+      "country": "Estados Unidos",
+      "year": 2000,
+      "duration": 45,
+      "genre": "Animación",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/tom-y-jerry/",
+      "ciclo": ""
     },
     {
       "cine": "Cine Cosmos",
@@ -706,22 +706,6 @@
       "original_title": "Spider-Man: Brand New Day"
     },
     {
-      "cine": "Cine York",
-      "fecha": "2026-07-30",
-      "hora": "16:00",
-      "title_es": "La Quimera del Oro con Música en Vivo",
-      "title_en": "LA QUIMERA DEL ORO CON MÚSICA EN VIVO",
-      "original_title": "",
-      "director": "Charles Chaplin",
-      "country": "Estados Unidos",
-      "year": 1925,
-      "duration": 95,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://lumiton.ar/evento/la-quimera-del-oro-con-musica-en-vivo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Museo del Cine",
       "fecha": "2026-07-30",
       "hora": "16:00",
@@ -736,6 +720,22 @@
       "letterboxd": "https://letterboxd.com/film/go-and-get-it/",
       "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/julio-en-el-auditorio",
       "ciclo": "Cineclub infantil"
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-07-30",
+      "hora": "16:00",
+      "title_es": "La Quimera del Oro con Música en Vivo",
+      "title_en": "LA QUIMERA DEL ORO CON MÚSICA EN VIVO",
+      "original_title": "",
+      "director": "Charles Chaplin",
+      "country": "Estados Unidos",
+      "year": 1925,
+      "duration": 95,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/la-quimera-del-oro-con-musica-en-vivo/",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -1202,22 +1202,6 @@
       "ciclo": "Aventuras extraordinarias"
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-07-30",
-      "hora": "18:30",
-      "title_es": "Weser",
-      "title_en": "Weser",
-      "original_title": "Weser",
-      "director": "Fernando Spiner",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 85,
-      "genre": "Drama, Documental",
-      "letterboxd": "https://letterboxd.com/film/weser/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=461",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cacodelphia",
       "fecha": "2026-07-30",
       "hora": "18:30",
@@ -1232,6 +1216,22 @@
       "letterboxd": "https://letterboxd.com/film/los-domingos/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-30",
+      "hora": "18:30",
+      "title_es": "Weser",
+      "title_en": "Weser",
+      "original_title": "Weser",
+      "director": "Fernando Spiner",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 85,
+      "genre": "Drama, Documental",
+      "letterboxd": "https://letterboxd.com/film/weser/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=461",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Cosmos",
@@ -1682,22 +1682,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-07-30",
-      "hora": "21:00",
-      "title_es": "La odisea",
-      "title_en": "The Odyssey",
-      "original_title": "The Odyssey",
-      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 172,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Cine Cosmos",
       "fecha": "2026-07-30",
       "hora": "21:00",
@@ -1744,6 +1728,22 @@
       "letterboxd": "https://letterboxd.com/film/leviticus-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-07-30",
+      "hora": "21:00",
+      "title_es": "La odisea",
+      "title_en": "The Odyssey",
+      "original_title": "The Odyssey",
+      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 172,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cinemark Caballito",
@@ -4834,6 +4834,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-01",
+      "hora": "16:00",
+      "title_es": "Los amos del tiempo",
+      "title_en": "Time Masters",
+      "original_title": "Les maîtres du temps",
+      "director": "René Laloux",
+      "country": "Francia, Alemania",
+      "year": 1982,
+      "duration": 80,
+      "genre": "Animación, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/time-masters/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Cineclub infantil"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-01",
       "hora": "16:00",
@@ -6132,7 +6148,7 @@
     {
       "cine": "MALBA",
       "fecha": "2026-08-01",
-      "hora": "24:00",
+      "hora": "23:50",
       "title_es": "Pacto de amor",
       "title_en": "Pacto de amor",
       "original_title": "",
@@ -6142,7 +6158,7 @@
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
+      "ticket_url": "https://malba.org.ar/evento/pacto-de-amor/",
       "ciclo": "Cineclub Nocturna"
     },
     {
@@ -6864,6 +6880,22 @@
       "letterboxd": "https://letterboxd.com/film/chicken-for-linda/",
       "ticket_url": "https://lumiton.ar/evento/chicken-for-linda/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-02",
+      "hora": "16:00",
+      "title_es": "El colegial",
+      "title_en": "College",
+      "original_title": "College",
+      "director": "James W. Horne y Buster Keaton",
+      "country": "Estados Unidos",
+      "year": 1927,
+      "duration": 65,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/college/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Cineclub infantil"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -13650,22 +13682,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-06",
-      "hora": "21:00",
-      "title_es": "La odisea",
-      "title_en": "The Odyssey",
-      "original_title": "The Odyssey",
-      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 172,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-06",
       "hora": "21:00",
@@ -13688,7 +13704,7 @@
       "title_es": "La Flor - Parte I",
       "title_en": "La Flor",
       "original_title": "",
-      "director": "Mariano Llinas",
+      "director": "Mariano Llinás",
       "country": "Argentina",
       "year": 2018,
       "duration": 803,
@@ -13842,22 +13858,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-07",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "original_title": "Para hacer una película solo hace falta un arma",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-08-07",
       "hora": "20:30",
@@ -13912,7 +13912,7 @@
       "title_es": "La Flor - Parte II",
       "title_en": "La Flor",
       "original_title": "",
-      "director": "Mariano Llinas",
+      "director": "Mariano Llinás",
       "country": "Argentina",
       "year": 2018,
       "duration": 803,
@@ -13970,6 +13970,22 @@
       "original_title": "ATEEZ: LIGHT THE WAY IN CINEMAS"
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-08",
+      "hora": "16:00",
+      "title_es": "Mouna o el sueño de un artista",
+      "title_en": "Mouna o el sueño de un artista",
+      "original_title": "",
+      "director": "Henri Duparc",
+      "country": "",
+      "year": 1969,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Cine africano"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-08",
       "hora": "17:00",
@@ -14002,6 +14018,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-08",
+      "hora": "18:00",
+      "title_es": "El sexto sentido",
+      "title_en": "El sexto sentido",
+      "original_title": "El sexto sentido",
+      "director": "Enrique Carreras",
+      "country": "Argentina, España",
+      "year": 1963,
+      "duration": 87,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/el-sexto-sentido/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Cine argentino en 16mm"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-08",
       "hora": "18:00",
@@ -14032,22 +14064,6 @@
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": "",
       "original_title": "ATEEZ: LIGHT THE WAY IN CINEMAS"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-08",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "original_title": "",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -14114,6 +14130,22 @@
       "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-08-08",
+      "hora": "23:15",
+      "title_es": "Totalmente Poseidos",
+      "title_en": "La Renga: Totalmente poseídos",
+      "original_title": "",
+      "director": "Gustavo Nápoli, Diego Stokelj",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 93,
+      "genre": "Documental, Música",
+      "letterboxd": "https://letterboxd.com/film/la-renga-totalmente-poseidos/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-09",
       "hora": "14:30",
@@ -14128,6 +14160,22 @@
       "letterboxd": "https://letterboxd.com/film/la-terra-trema/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-09",
+      "hora": "16:00",
+      "title_es": "La muerte en las calles",
+      "title_en": "La muerte en las calles",
+      "original_title": "La muerte en las calles",
+      "director": "Leo Fleider",
+      "country": "Argentina",
+      "year": 1952,
+      "duration": 83,
+      "genre": "Bélica, Drama",
+      "letterboxd": "https://letterboxd.com/film/la-muerte-en-las-calles/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "220º Aniversario de la Reconquista de Buenos Aires"
     },
     {
       "cine": "Centro Cultural Borges",
@@ -14162,22 +14210,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-09",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "original_title": "",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Alemania",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-08-09",
       "hora": "18:00",
@@ -14192,6 +14224,22 @@
       "letterboxd": "https://letterboxd.com/film/alphaville/",
       "ticket_url": "https://lumiton.ar/evento/alphaville/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-09",
+      "hora": "18:00",
+      "title_es": "Jack el destripador",
+      "title_en": "Man in the Attic",
+      "original_title": "",
+      "director": "Hugo Fregonese",
+      "country": "Estados Unidos",
+      "year": 1953,
+      "duration": 82,
+      "genre": "Thriller, Crimen",
+      "letterboxd": "https://letterboxd.com/film/man-in-the-attic/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Hugo Fregonese en Hollywood"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -14264,7 +14312,7 @@
       "title_es": "La Flor - Parte III",
       "title_en": "La Flor",
       "original_title": "",
-      "director": "Mariano Llinas",
+      "director": "Mariano Llinás",
       "country": "Argentina",
       "year": 2018,
       "duration": 803,
@@ -14272,22 +14320,6 @@
       "letterboxd": "https://letterboxd.com/film/la-flor/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-09",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "original_title": "",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
-      "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -14674,20 +14706,20 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
+      "cine": "Cacodelphia",
       "fecha": "2026-08-13",
       "hora": "21:00",
-      "title_es": "La odisea",
-      "title_en": "The Odyssey",
-      "original_title": "The Odyssey",
-      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 172,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
-      "ciclo": "Continúa"
+      "title_es": "A dos metros de ti",
+      "title_en": "A Few Feet Away",
+      "original_title": "A metros de distancia",
+      "director": "Tadeo Pestaña Caro",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 89,
+      "genre": "Comedia, Aventura",
+      "letterboxd": "https://letterboxd.com/film/a-few-feet-away/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -14786,22 +14818,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-14",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "original_title": "Para hacer una película solo hace falta un arma",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-14",
       "hora": "20:00",
@@ -14864,6 +14880,22 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/una-tarde-en-el-museo-taller-de-juguetes-opticos/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-15",
+      "hora": "16:00",
+      "title_es": "Recordá esto",
+      "title_en": "Recordá esto",
+      "original_title": "Recordá esto",
+      "director": "Matias Capelli",
+      "country": "",
+      "year": 2024,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Sala Lugones",
@@ -14930,6 +14962,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-15",
+      "hora": "18:00",
+      "title_es": "La barraca: Lorca por los caminos de España de Edgardo Cozarinsky (1995, Francia y España, 55 min.) y Lorca y el Río de la Plata",
+      "title_en": "La barraca: Lorca por los caminos de España de Edgardo Cozarinsky (1995, Francia y España, 55 min.) y Lorca y el Río de la Plata",
+      "original_title": "",
+      "director": "Eduardo Mignogna",
+      "country": "",
+      "year": 1998,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Lorca a 90 años de su muerte"
+    },
+    {
       "cine": "Centro Cultural Borges",
       "fecha": "2026-08-15",
       "hora": "19:00",
@@ -14944,22 +14992,6 @@
       "letterboxd": "https://letterboxd.com/film/the-world-upside-down-2025/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/483",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-15",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "original_title": "",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -15042,6 +15074,22 @@
       "ciclo": "Cinco tardes con los hermanos Marx"
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-16",
+      "hora": "16:00",
+      "title_es": "Futuras: Ciclo de cortos hecho por mujeres y disidencias",
+      "title_en": "Futuras: Ciclo de cortos hecho por mujeres y disidencias",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Comunidad Cinéfila"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-16",
       "hora": "17:00",
@@ -15072,22 +15120,6 @@
       "letterboxd": "https://letterboxd.com/film/conversation-piece/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-16",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "original_title": "",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Alemania",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -15122,6 +15154,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-08-16",
+      "hora": "18:00",
+      "title_es": "Mis seis presidiarios",
+      "title_en": "My Six Convicts",
+      "original_title": "My Six Convicts",
+      "director": "Hugo Fregonese",
+      "country": "Estados Unidos",
+      "year": 1952,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/my-six-convicts/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0",
+      "ciclo": "Hugo Fregonese en Hollywood"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-08-16",
       "hora": "18:00",
@@ -15152,22 +15200,6 @@
       "letterboxd": "https://letterboxd.com/film/31-minutos-la-pelicula/",
       "ticket_url": "https://lumiton.ar/evento/31-minutos-la-pelicula/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-16",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "original_title": "",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
-      "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Sala Lugones",
@@ -15346,20 +15378,20 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
+      "cine": "Cacodelphia",
       "fecha": "2026-08-20",
       "hora": "21:00",
-      "title_es": "La odisea",
-      "title_en": "The Odyssey",
-      "original_title": "The Odyssey",
-      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 172,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
-      "ciclo": "Continúa"
+      "title_es": "A dos metros de ti",
+      "title_en": "A Few Feet Away",
+      "original_title": "A metros de distancia",
+      "director": "Tadeo Pestaña Caro",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 89,
+      "genre": "Comedia, Aventura",
+      "letterboxd": "https://letterboxd.com/film/a-few-feet-away/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "MALBA",
@@ -15394,22 +15426,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-21",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "original_title": "Para hacer una película solo hace falta un arma",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-08-21",
       "hora": "20:30",
@@ -15440,22 +15456,6 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/mandabi/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-22",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "original_title": "",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -15522,22 +15522,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-23",
-      "hora": "18:00",
-      "title_es": "Ls83",
-      "title_en": "LS83",
-      "original_title": "",
-      "director": "Herman Szwarcbart",
-      "country": "Argentina, Alemania",
-      "year": 2025,
-      "duration": 83,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/ls83/",
-      "ticket_url": "https://malba.org.ar/evento/ls83/",
-      "ciclo": "Continúa"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-08-23",
       "hora": "18:00",
@@ -15568,22 +15552,6 @@
       "letterboxd": "https://letterboxd.com/film/paprika-2006/",
       "ticket_url": "https://lumiton.ar/evento/paprika/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-23",
-      "hora": "20:00",
-      "title_es": "El príncipe de Nanawa",
-      "title_en": "The Prince of Nanawa",
-      "original_title": "",
-      "director": "Clarisa Navas",
-      "country": "Argentina, Paraguay",
-      "year": 2025,
-      "duration": 212,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
-      "ticket_url": "https://malba.org.ar/evento/202508102000/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -15778,6 +15746,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cacodelphia",
+      "fecha": "2026-08-27",
+      "hora": "21:00",
+      "title_es": "A dos metros de ti",
+      "title_en": "A Few Feet Away",
+      "original_title": "A metros de distancia",
+      "director": "Tadeo Pestaña Caro",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 89,
+      "genre": "Comedia, Aventura",
+      "letterboxd": "https://letterboxd.com/film/a-few-feet-away/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-28",
       "hora": "18:00",
@@ -15792,22 +15776,6 @@
       "letterboxd": "https://letterboxd.com/film/m/",
       "ticket_url": "https://lumiton.ar/evento/m-el-vampiro-negro/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-28",
-      "hora": "19:30",
-      "title_es": "Para hacer una película sólo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "original_title": "Para hacer una película solo hace falta un arma",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 159,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -15888,22 +15856,6 @@
       "letterboxd": "https://letterboxd.com/film/the-leopard/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-29",
-      "hora": "20:15",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "original_title": "",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
-      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
