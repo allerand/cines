@@ -465,15 +465,17 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
             time_m = re.match(r"(\d{1,2}:\d{2})", text)
             hora = f"{int(time_m.group(1).split(':')[0]):02d}:{time_m.group(1).split(':')[1]}" if time_m else "??"
 
-            # Walk up to find a container with both an /evento/ link and a title element
+            # Card = el ancestro MÁS CERCANO que tiene un título. El link a
+            # /evento/ es opcional: MALBA no lo pone en todas las funciones
+            # (p.ej. "Cordero de Dios" no es clickeable) y antes ésas se
+            # perdían por exigir link+título. Tomar el ancestro más cercano
+            # evita agarrar un contenedor con varias cards (título equivocado).
             card = None
             node = span.parent
             for _ in range(15):
                 if node is None:
                     break
-                link = node.find("a", href=re.compile(r"/evento/"))
-                title_el = node.find(class_=re.compile(r"post-title|page-title|entry-title"))
-                if link and title_el:
+                if node.find(class_=re.compile(r"post-title|page-title|entry-title")):
                     card = node
                     break
                 node = node.parent
@@ -483,7 +485,7 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
 
             link = card.find("a", href=re.compile(r"/evento/"))
             title_el = card.find(class_=re.compile(r"post-title|page-title|entry-title"))
-            ticket_url = link["href"] if link else ""
+            ticket_url = link["href"] if link else "https://malba.org.ar/cine/"
             title = title_el.get_text(strip=True) if title_el else ""
 
             if not title:
@@ -1555,7 +1557,8 @@ def _scrape_lanacion_sala(slug: str, lanacion_name: str, cine_name: str,
     sala_url = f"{LANACION_BASE}/cartelera-de-cine/sala/{slug}"
     try:
         sala_soup = fetch_html(sala_url)
-    except Exception:
+    except Exception as e:
+        print(f"[lanacion {slug}: no carga — {e}]", end=" ")
         return []
 
     film_paths: list[tuple[str, str]] = []  # (path, title-from-listing)
@@ -1568,6 +1571,12 @@ def _scrape_lanacion_sala(slug: str, lanacion_name: str, cine_name: str,
         title = a.get_text(strip=True)
         if title and len(title) > 1:
             film_paths.append((href, title))
+
+    # Diagnóstico: si la listing no trae links de película, el sitio cambió de
+    # estructura (o pasó a render por JS) y hay que rehacer el parser. Sin esto
+    # el 0 es mudo y no se distingue de "hoy no hay funciones".
+    if not film_paths:
+        print(f"[lanacion {slug}: 0 links de película en la listing]", end=" ")
 
     result: list[Screening] = []
     for path, list_title in film_paths:
