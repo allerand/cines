@@ -3286,7 +3286,7 @@
     "country": "Argentina",
     "year": 2026,
     "duration": 74,
-    "genre": "",
+    "genre": "Documental",
     "original_title": "Annemarie"
   },
   "traslados": {
@@ -9577,5 +9577,15 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "annemarie|2026": {
+    "url": "https://letterboxd.com/film/annemarie/",
+    "title_en": "Annemarie",
+    "director": "Mariana Sanguinetti",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 74,
+    "genre": "Documental",
+    "original_title": "Annemarie"
   }
 }

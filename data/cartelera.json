@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-30T10:20:17",
+  "updated": "2026-07-30T17:37:18",
   "screenings": [
     {
       "cine": "Hoyts Abasto",
@@ -1682,6 +1682,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-07-30",
+      "hora": "21:00",
+      "title_es": "La odisea",
+      "title_en": "The Odyssey",
+      "original_title": "The Odyssey",
+      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 172,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-07-30",
       "hora": "21:00",
@@ -3151,6 +3167,22 @@
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/maya-give-me-a-title/",
       "ticket_url": "https://lumiton.ar/evento/maya-gimme-a-title/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-07-31",
+      "hora": "18:00",
+      "title_es": "Jumanji",
+      "title_en": "Jumanji: Open World",
+      "original_title": "Jumanji",
+      "director": "Jake Kasdan",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 104,
+      "genre": "Aventura, Comedia",
+      "letterboxd": "https://letterboxd.com/film/jumanji-open-world/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/las-aventuras-de-joe-johnston",
       "ciclo": ""
     },
     {
@@ -5182,7 +5214,7 @@
       "duration": 96,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://www.filo.uba.ar/index.php/perfume-una-pel%C3%ADcula-sobre-maria-gabriela-epumer",
+      "ticket_url": "https://www.filo.uba.ar/perfume-una-pel%C3%ADcula-sobre-maria-gabriela-epumer",
       "ciclo": "Documental"
     },
     {
@@ -6100,7 +6132,7 @@
     {
       "cine": "MALBA",
       "fecha": "2026-08-01",
-      "hora": "23:50",
+      "hora": "24:00",
       "title_es": "Pacto de amor",
       "title_en": "Pacto de amor",
       "original_title": "",
@@ -6110,7 +6142,7 @@
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/pacto-de-amor/",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
       "ciclo": "Cineclub Nocturna"
     },
     {
@@ -10574,7 +10606,7 @@
       "duration": 80,
       "genre": "Drama, Animación",
       "letterboxd": "https://letterboxd.com/film/a-dogs-life-2017/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/eda138e9-a9e6-466a-ae47-768ea613e4b4",
       "ciclo": "Encuentro con el cine de Taiwán"
     },
     {
@@ -11134,7 +11166,7 @@
       "duration": 106,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/a-chip-odyssey/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/eda138e9-a9e6-466a-ae47-768ea613e4b4",
       "ciclo": "Encuentro con el cine de Taiwán"
     },
     {
@@ -12046,7 +12078,7 @@
       "duration": 80,
       "genre": "Drama, Animación",
       "letterboxd": "https://letterboxd.com/film/a-dogs-life-2017/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/eda138e9-a9e6-466a-ae47-768ea613e4b4",
       "ciclo": "Encuentro con el cine de Taiwán"
     },
     {
@@ -12558,7 +12590,7 @@
       "duration": 100,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-receptionist/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/eda138e9-a9e6-466a-ae47-768ea613e4b4",
       "ciclo": "Encuentro con el cine de Taiwán"
     },
     {
@@ -13054,7 +13086,7 @@
       "duration": 117,
       "genre": "Drama, Familiar",
       "letterboxd": "https://letterboxd.com/film/to-my-dear-granny/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/eda138e9-a9e6-466a-ae47-768ea613e4b4",
       "ciclo": "Encuentro con el cine de Taiwán"
     },
     {
@@ -13422,7 +13454,7 @@
       "duration": 117,
       "genre": "Drama, Familiar",
       "letterboxd": "https://letterboxd.com/film/to-my-dear-granny/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/eda138e9-a9e6-466a-ae47-768ea613e4b4",
       "ciclo": "Encuentro con el cine de Taiwán"
     },
     {
@@ -13438,7 +13470,7 @@
       "duration": 122,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/node/970",
+      "ticket_url": "https://www.filo.uba.ar/node/970",
       "ciclo": "Documental"
     },
     {
@@ -13470,7 +13502,7 @@
       "duration": 108,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/bellissima/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -13618,6 +13650,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-06",
+      "hora": "21:00",
+      "title_es": "La odisea",
+      "title_en": "The Odyssey",
+      "original_title": "The Odyssey",
+      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 172,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-06",
       "hora": "21:00",
@@ -13630,7 +13678,7 @@
       "duration": 77,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-world-upside-down-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ca5a6a5a-9ad0-4f90-8bb5-563a2ea872ea",
       "ciclo": "Estreno"
     },
     {
@@ -13678,7 +13726,7 @@
       "duration": 100,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-receptionist/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/eda138e9-a9e6-466a-ae47-768ea613e4b4",
       "ciclo": "Encuentro con el cine de Taiwán"
     },
     {
@@ -13694,7 +13742,7 @@
       "duration": 177,
       "genre": "Romance, Crimen",
       "letterboxd": "https://letterboxd.com/film/rocco-and-his-brothers/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -13742,7 +13790,7 @@
       "duration": 15,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://www.filo.uba.ar/index.php/los-pinos-existe",
+      "ticket_url": "https://www.filo.uba.ar/los-pinos-existe",
       "ciclo": "Cortometraje Documental"
     },
     {
@@ -13774,7 +13822,7 @@
       "duration": 12,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://www.filo.uba.ar/index.php/mujeres-del-r%C3%ADo",
+      "ticket_url": "https://www.filo.uba.ar/mujeres-del-r%C3%ADo",
       "ciclo": "Documental"
     },
     {
@@ -13792,6 +13840,22 @@
       "letterboxd": "https://letterboxd.com/film/un-futuro-brillante/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/476",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-07",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "original_title": "Para hacer una película solo hace falta un arma",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -13822,7 +13886,7 @@
       "duration": 77,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-world-upside-down-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ca5a6a5a-9ad0-4f90-8bb5-563a2ea872ea",
       "ciclo": "Estreno"
     },
     {
@@ -13870,7 +13934,7 @@
       "duration": 130,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/death-in-venice/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -13918,7 +13982,7 @@
       "duration": 185,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-leopard/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -13970,6 +14034,22 @@
       "original_title": "ATEEZ: LIGHT THE WAY IN CINEMAS"
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-08",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "original_title": "",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-08",
       "hora": "20:30",
@@ -13998,7 +14078,7 @@
       "duration": 77,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-world-upside-down-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ca5a6a5a-9ad0-4f90-8bb5-563a2ea872ea",
       "ciclo": "Estreno"
     },
     {
@@ -14046,7 +14126,7 @@
       "duration": 160,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/la-terra-trema/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14080,6 +14160,22 @@
       "letterboxd": "https://letterboxd.com/film/who-framed-roger-rabbit/",
       "ticket_url": "https://lumiton.ar/evento/quien-engano-a-roger-rabbit/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-09",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "original_title": "",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -14126,7 +14222,7 @@
       "duration": 77,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-world-upside-down-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ca5a6a5a-9ad0-4f90-8bb5-563a2ea872ea",
       "ciclo": "Estreno"
     },
     {
@@ -14178,6 +14274,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-09",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "original_title": "",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-09",
       "hora": "20:30",
@@ -14206,7 +14318,7 @@
       "duration": 140,
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14238,7 +14350,7 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/death-in-venice/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14286,7 +14398,7 @@
       "duration": 77,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-world-upside-down-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ca5a6a5a-9ad0-4f90-8bb5-563a2ea872ea",
       "ciclo": "Estreno"
     },
     {
@@ -14334,7 +14446,7 @@
       "duration": 77,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-world-upside-down-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ca5a6a5a-9ad0-4f90-8bb5-563a2ea872ea",
       "ciclo": "Estreno"
     },
     {
@@ -14398,7 +14510,7 @@
       "duration": 121,
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/conversation-piece/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14430,7 +14542,7 @@
       "duration": 77,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-world-upside-down-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ca5a6a5a-9ad0-4f90-8bb5-563a2ea872ea",
       "ciclo": "Estreno"
     },
     {
@@ -14446,7 +14558,7 @@
       "duration": 122,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/nuestra-tierra",
+      "ticket_url": "https://www.filo.uba.ar/nuestra-tierra",
       "ciclo": "Documental"
     },
     {
@@ -14526,7 +14638,7 @@
       "duration": 160,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/la-terra-trema/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14562,6 +14674,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-13",
+      "hora": "21:00",
+      "title_es": "La odisea",
+      "title_en": "The Odyssey",
+      "original_title": "The Odyssey",
+      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 172,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-14",
       "hora": "14:30",
@@ -14590,7 +14718,7 @@
       "duration": null,
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14622,7 +14750,7 @@
       "duration": 81,
       "genre": "Terror, Drama",
       "letterboxd": "https://letterboxd.com/film/hiperrealidad/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/hiperrealidad",
+      "ticket_url": "https://www.filo.uba.ar/hiperrealidad",
       "ciclo": "Ficción"
     },
     {
@@ -14658,6 +14786,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-14",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "original_title": "Para hacer una película solo hace falta un arma",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-14",
       "hora": "20:00",
@@ -14670,7 +14814,7 @@
       "duration": 178,
       "genre": "Romance, Crimen",
       "letterboxd": "https://letterboxd.com/film/rocco-and-his-brothers/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14702,7 +14846,7 @@
       "duration": null,
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14734,7 +14878,7 @@
       "duration": 160,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/la-terra-trema/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14802,6 +14946,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-15",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "original_title": "",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-15",
       "hora": "20:30",
@@ -14846,7 +15006,7 @@
       "duration": 115,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/bellissima/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -14910,8 +15070,24 @@
       "duration": 121,
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/conversation-piece/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-16",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "original_title": "",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -14978,6 +15154,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-16",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "original_title": "",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-16",
       "hora": "20:30",
@@ -14990,7 +15182,7 @@
       "duration": 131,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/death-in-venice/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -15056,6 +15248,22 @@
       "letterboxd": "",
       "ticket_url": "https://bcn.gob.ar/festival-de-cine-africano-de-argentina/proyeccion-de-the-fortunate-y-this-is-jungo-life-1",
       "ciclo": "Festival de Cine Africano de Argentina"
+    },
+    {
+      "cine": "Filo Cine",
+      "fecha": "2026-08-19",
+      "hora": "18:00",
+      "title_es": "Annemarie",
+      "title_en": "Annemarie",
+      "original_title": "Annemarie",
+      "director": "Mariana Sanguinetti",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 74,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/annemarie/",
+      "ticket_url": "https://www.filo.uba.ar/annemarie",
+      "ciclo": "Ficción"
     },
     {
       "cine": "Cine York",
@@ -15139,6 +15347,22 @@
     },
     {
       "cine": "MALBA",
+      "fecha": "2026-08-20",
+      "hora": "21:00",
+      "title_es": "La odisea",
+      "title_en": "The Odyssey",
+      "original_title": "The Odyssey",
+      "director": "Christopher Nolan De Christopher Nolan De Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 172,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://malba.org.ar/evento/la-odisea/",
+      "ciclo": "Continúa"
+    },
+    {
+      "cine": "MALBA",
       "fecha": "2026-08-21",
       "hora": "18:00",
       "title_es": "Momentos",
@@ -15168,6 +15392,22 @@
       "letterboxd": "https://letterboxd.com/film/the-saint-2023/",
       "ticket_url": "https://lumiton.ar/evento/el-santo/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-21",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "original_title": "Para hacer una película solo hace falta un arma",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -15200,6 +15440,22 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/mandabi/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-22",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "original_title": "",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -15266,6 +15522,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-23",
+      "hora": "18:00",
+      "title_es": "Ls83",
+      "title_en": "LS83",
+      "original_title": "",
+      "director": "Herman Szwarcbart",
+      "country": "Argentina, Alemania",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ls83/",
+      "ticket_url": "https://malba.org.ar/evento/ls83/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-23",
       "hora": "18:00",
@@ -15296,6 +15568,22 @@
       "letterboxd": "https://letterboxd.com/film/paprika-2006/",
       "ticket_url": "https://lumiton.ar/evento/paprika/",
       "ciclo": ""
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-23",
+      "hora": "20:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "original_title": "",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://malba.org.ar/evento/202508102000/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
@@ -15470,7 +15758,7 @@
       "duration": 186,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-leopard/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -15506,6 +15794,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-08-28",
+      "hora": "19:30",
+      "title_es": "Para hacer una película sólo hace falta un arma",
+      "title_en": "All You Need to Make a Movie Is a Gun",
+      "original_title": "Para hacer una película solo hace falta un arma",
+      "director": "Santiago Sein",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+      "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
+      "ciclo": "Continúa"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-28",
       "hora": "20:30",
@@ -15534,7 +15838,7 @@
       "duration": 178,
       "genre": "Romance, Crimen",
       "letterboxd": "https://letterboxd.com/film/rocco-and-his-brothers/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
@@ -15582,8 +15886,24 @@
       "duration": 186,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-leopard/",
-      "ticket_url": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-08-29",
+      "hora": "20:15",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "original_title": "",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://malba.org.ar/evento/la-noche-esta-marchandose-ya/",
+      "ciclo": "Continúa"
     },
     {
       "cine": "Cine York",
