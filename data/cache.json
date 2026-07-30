@@ -8768,15 +8768,15 @@
     "original_title": "Labyrinth"
   },
   "la historia sin fin|1984": {
-    "url": "https://letterboxd.com/film/the-neverending-story/",
-    "title_en": "The NeverEnding Story",
+    "url": "",
+    "title_en": "LA HISTORIA SIN FIN",
     "director": "Wolfgang Petersen",
     "country": "Germany",
     "year": 1984,
     "duration": 101,
-    "genre": "Fantasía, Familiar",
     "title_es": "La historia interminable",
-    "original_title": "Die unendliche Geschichte"
+    "original_title": "Die unendliche Geschichte",
+    "genre": "Aventura, Fantasía"
   },
   "raya y el último dragón|2021": {
     "url": "https://letterboxd.com/film/raya-and-the-last-dragon/",
@@ -8930,6 +8930,649 @@
   "tangalanga contraataca en busca del ojete de crist": {
     "url": "",
     "title_en": "TANGALANGA CONTRAATACA EN BUSCA DEL OJETE DE CRIST",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "momentos": {
+    "url": "https://letterboxd.com/film/momentos/",
+    "title_en": "Momentos",
+    "director": "María Luisa Bemberg",
+    "country": "Argentina",
+    "year": 1981,
+    "duration": 90,
+    "genre": "Drama",
+    "original_title": "Momentos"
+  },
+  "el público|2020": {
+    "url": "https://letterboxd.com/film/el-publico/",
+    "title_en": "El público",
+    "director": "Mariano Pensotti",
+    "country": "Argentina",
+    "year": 2020,
+    "duration": null,
+    "genre": "Drama",
+    "original_title": "El público"
+  },
+  "festival de cine africano de argentina": {
+    "url": "",
+    "title_en": "Festival de Cine Africano de Argentina",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "proyección de \"the fortunate\" y \"this is jungo life\"": {
+    "url": "",
+    "title_en": "Proyección de \"The Fortunate\" y \"This is Jungo life\"",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "proyección de corto y largometraje en el marco del ficaa": {
+    "url": "",
+    "title_en": "Proyección de corto y largometraje en el marco del FICAA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "proyección de \"collateral\" y \"aqui nao entra luz\"": {
+    "url": "",
+    "title_en": "Proyección de \"Collateral\" y \"Aqui nao entra luz\"",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "proyección de \"guardian of the well bentley brown\" y \"katanga\"": {
+    "url": "",
+    "title_en": "Proyección de \"Guardian of the well Bentley Brown\" y \"KATANGA\"",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la muerte camina en la lluvia|1948": {
+    "url": "",
+    "title_en": "LA MUERTE CAMINA EN LA LLUVIA",
+    "director": "Carlos Hugo Christensen",
+    "country": "Argentina, Venezuela",
+    "year": 1948,
+    "duration": 73,
+    "original_title": "La muerte camina en la lluvia",
+    "genre": "Drama, Thriller"
+  },
+  "blade runner: the final cut|1982": {
+    "url": "https://letterboxd.com/film/blade-runner-the-final-cut/",
+    "title_en": "Blade Runner",
+    "director": "Ridley Scott",
+    "country": "USA, Hong Kong",
+    "year": 1982,
+    "duration": 118,
+    "genre": "Thriller, Drama",
+    "title_es": "Blade Runner",
+    "original_title": "Blade Runner"
+  },
+  "la dama duende|1945": {
+    "url": "https://letterboxd.com/film/la-dama-duende/",
+    "title_en": "La dama duende",
+    "director": "Luis Saslavsky",
+    "country": "Argentina",
+    "year": 1945,
+    "duration": 101,
+    "genre": "Comedia, Romance",
+    "title_es": "La dama duende",
+    "original_title": "La dama duende"
+  },
+  "presentación del libro “mis días con el cine” de rodolfo durán": {
+    "url": "",
+    "title_en": "PRESENTACIÓN DEL LIBRO “MIS DÍAS CON EL CINE” de RODOLFO DURÁN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cuento de verano|2025": {
+    "url": "https://letterboxd.com/film/a-summer-tale-2025/",
+    "title_en": "A Summer Tale",
+    "director": "Matías Szulanski",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 79,
+    "genre": "Comedia",
+    "original_title": "Cuento de verano"
+  },
+  "heavy metal|1981": {
+    "url": "https://letterboxd.com/film/heavy-metal/",
+    "title_en": "Heavy Metal",
+    "director": "Gerald Potterton, John Bruno, John Halas",
+    "country": "Canada, USA",
+    "year": 1981,
+    "duration": 90,
+    "genre": "Animación, Ciencia ficción",
+    "title_es": "Heavy Metal",
+    "original_title": "Heavy Metal"
+  },
+  "the bewilderment of chile|2025": {
+    "url": "https://letterboxd.com/film/the-bewilderment-of-chile/",
+    "title_en": "The Bewilderment of Chile",
+    "director": "Lucía Seles",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 121,
+    "genre": "Drama",
+    "original_title": "The Bewilderment of Chile"
+  },
+  "when we went mad!|2025": {
+    "url": "https://letterboxd.com/film/when-we-went-mad/",
+    "title_en": "When We Went MAD!",
+    "director": "Alan Bernstein",
+    "country": "USA",
+    "year": 2025,
+    "duration": 107,
+    "genre": "Documental, Historia",
+    "original_title": "When We Went MAD!"
+  },
+  "algo viejo, algo nuevo, algo prestado|2024": {
+    "url": "https://letterboxd.com/film/something-old-something-new-something-borrowed/",
+    "title_en": "Something Old, Something New, Something Borrowed",
+    "director": "Hernán Rosselli",
+    "country": "Argentina, Spain",
+    "year": 2024,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "Algo viejo, algo nuevo, algo prestado"
+  },
+  "¿quién engañó a roger rabbit?|1988": {
+    "url": "https://letterboxd.com/film/who-framed-roger-rabbit/",
+    "title_en": "Who Framed Roger Rabbit",
+    "director": "Robert Zemeckis",
+    "country": "USA",
+    "year": 1988,
+    "duration": 104,
+    "genre": "Fantasía, Animación",
+    "title_es": "¿Quién engañó a Roger Rabbit?",
+    "original_title": "Who Framed Roger Rabbit"
+  },
+  "alphaville|1965": {
+    "url": "https://letterboxd.com/film/alphaville/",
+    "title_en": "Alphaville",
+    "director": "Jean-Luc Godard",
+    "country": "France, Italy",
+    "year": 1965,
+    "duration": 99,
+    "genre": "Ciencia ficción, Misterio",
+    "title_es": "Alphaville",
+    "original_title": "Alphaville, une étrange aventure de Lemmy Caution"
+  },
+  "100 metros|2025": {
+    "url": "https://letterboxd.com/film/100-meters-2025/",
+    "title_en": "100 METERS",
+    "director": "Kenji Iwaisawa",
+    "country": "Japan, USA",
+    "year": 2025,
+    "duration": 107,
+    "genre": "Animación, Drama",
+    "title_es": "100 metros lisos",
+    "original_title": "ひゃくえむ。"
+  },
+  "el desprecio|1963": {
+    "url": "https://letterboxd.com/film/contempt/",
+    "title_en": "Contempt",
+    "director": "Jean-Luc Godard",
+    "country": "France, Italy",
+    "year": 1963,
+    "genre": "Drama, Romance",
+    "duration": 103
+  },
+  "después de hora|1985": {
+    "url": "https://letterboxd.com/film/after-hours/",
+    "title_en": "After Hours",
+    "director": "Martin Scorsese",
+    "country": "USA",
+    "year": 1985,
+    "duration": 97,
+    "genre": "Thriller, Comedia",
+    "title_es": "¡qué noche!",
+    "original_title": "After Hours"
+  },
+  "moulin rouge! amor en rojo|2001": {
+    "url": "https://letterboxd.com/film/moulin-rouge-2001/",
+    "title_en": "Moulin Rouge!",
+    "director": "Baz Luhrmann",
+    "country": "Australia, USA",
+    "year": 2001,
+    "duration": 128,
+    "genre": "Romance, Música",
+    "title_es": "Moulin Rouge",
+    "original_title": "Moulin Rouge!"
+  },
+  "propiedad privada prohibido pasar|2024": {
+    "url": "",
+    "title_en": "PROPIEDAD PRIVADA PROHIBIDO PASAR",
+    "director": "Wojciech Ganczarek",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "original_title": "Propiedad privada prohibido pasar",
+    "genre": "Documental"
+  },
+  "mi casa es su casa|2025": {
+    "url": "",
+    "title_en": "MI CASA ES SU CASA",
+    "director": "Joan Mayorga",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "original_title": "Mi casa es su casa",
+    "genre": "Animación"
+  },
+  "la casa de los millones|1942": {
+    "url": "",
+    "title_en": "LA CASA DE LOS MILLONES",
+    "director": "Luis Bayón Herrera",
+    "country": "Argentina",
+    "year": 1942,
+    "duration": 87,
+    "original_title": "La casa de los millones",
+    "genre": "Comedia"
+  },
+  "ziki|2025": {
+    "url": "https://letterboxd.com/film/ziki/",
+    "title_en": "Ziki",
+    "director": "Roberta Palmieri, Olga Sargenti",
+    "country": "Italy",
+    "year": 2024,
+    "duration": 13,
+    "genre": "Animación",
+    "original_title": "Ziki"
+  },
+  "yurlu|2025": {
+    "url": "https://letterboxd.com/film/yurlu-country/",
+    "title_en": "Yurlu | Country",
+    "director": "Yaara Bou Melhem",
+    "country": "Australia",
+    "year": 2025,
+    "duration": 79,
+    "genre": "Documental",
+    "original_title": "Yurlu | Country"
+  },
+  "tigre es yaguareté|2025": {
+    "url": "",
+    "title_en": "TIGRE ES YAGUARETÉ",
+    "director": "Left Hand Rotation",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "original_title": "Tigre es yaguareté",
+    "genre": "Documental"
+  },
+  "pau d'arco|2025": {
+    "url": "https://letterboxd.com/film/pau-darco/",
+    "title_en": "Paid in Blood",
+    "director": "Ana Aranha",
+    "country": "Brazil",
+    "year": 2025,
+    "duration": 89,
+    "genre": "Documental",
+    "original_title": "Pau D'Arco"
+  },
+  "el árbol de la autenticidad|2025": {
+    "url": "",
+    "title_en": "EL ÁRBOL DE LA AUTENTICIDAD",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fin de semana de las infancias | una tarde en el museo | taller de juguetes ópticos": {
+    "url": "",
+    "title_en": "FIN DE SEMANA DE LAS INFANCIAS | UNA TARDE EN EL MUSEO | TALLER DE JUGUETES ÓPTICOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "finquita: cine para infancias|2026": {
+    "url": "",
+    "title_en": "FINQUITA: CINE PARA INFANCIAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el ángel desnudo|1946": {
+    "url": "",
+    "title_en": "EL ÁNGEL DESNUDO",
+    "director": "Carlos Hugo Christensen",
+    "country": "Argentina, Venezuela",
+    "year": 1946,
+    "duration": 78,
+    "original_title": "El ángel desnudo",
+    "genre": "Drama"
+  },
+  "karuara, la gente del río|2024": {
+    "url": "https://letterboxd.com/film/karuara-people-of-the-river/",
+    "title_en": "Karuara, People of the River",
+    "director": "Stephanie Boyd, Miguel Araoz Cartagena",
+    "country": "Canada, Peru",
+    "year": 2024,
+    "duration": 77,
+    "genre": "Documental",
+    "original_title": "Karuara, la gente del río"
+  },
+  "colorado|2025": {
+    "url": "",
+    "title_en": "COLORADO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sesión peliculnhas|2024": {
+    "url": "",
+    "title_en": "SESIÓN PELICULNHAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pibit bang": {
+    "url": "",
+    "title_en": "PIBIT BANG",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "chao: la sirena|2025": {
+    "url": "https://letterboxd.com/film/chao-2025/",
+    "title_en": "ChaO",
+    "director": "Yasuhiro Aoki",
+    "country": "Japan",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Animación, Fantasía",
+    "title_es": "La sirena ChaO",
+    "original_title": "ChaO"
+  },
+  "31 minutos, la película|2008": {
+    "url": "https://letterboxd.com/film/31-minutos-la-pelicula/",
+    "title_en": "31 Minutes: The Movie",
+    "director": "Pedro Peirano, Álvaro Díaz González",
+    "country": "Brazil, Chile",
+    "year": 2008,
+    "duration": 84,
+    "genre": "Comedia, Aventura",
+    "original_title": "31 Minutos, la película"
+  },
+  "ben - hur|1959": {
+    "url": "https://letterboxd.com/film/ben-hur-1959/",
+    "title_en": "Ben-Hur",
+    "director": "William Wyler",
+    "country": "USA",
+    "year": 1959,
+    "duration": 212,
+    "genre": "Drama, Historia",
+    "title_es": "Ben-Hur",
+    "original_title": "Ben-Hur"
+  },
+  "demanda contra el olvido. poesía y aventura en raúl gonzález tuñón|2025": {
+    "url": "",
+    "title_en": "DEMANDA CONTRA EL OLVIDO. POESÍA Y AVENTURA EN RAÚL GONZÁLEZ TUÑÓN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "eclipse de sol|1943": {
+    "url": "https://letterboxd.com/film/eclipse-de-sol/",
+    "title_en": "Eclipse de sol",
+    "director": "Luis Saslavsky",
+    "country": "Argentina",
+    "year": 1943,
+    "duration": 83,
+    "genre": "Comedia",
+    "original_title": "Eclipse de sol"
+  },
+  "el método tangalanga|2022": {
+    "url": "https://letterboxd.com/film/el-metodo-tangalanga/",
+    "title_en": "The Tangalanga Method",
+    "director": "Mateo Bendesky",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": 98,
+    "genre": "Comedia",
+    "title_es": "El método Tangalanga",
+    "original_title": "El método Tangalanga"
+  },
+  "el santo|2023": {
+    "url": "https://letterboxd.com/film/the-saint-2023/",
+    "title_en": "The Saint",
+    "director": "Juan Agustín Carbonere",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 86,
+    "genre": "Drama",
+    "original_title": "El Santo"
+  },
+  "esto no es un golpe|2018": {
+    "url": "https://letterboxd.com/film/this-is-not-a-coup-2018/",
+    "title_en": "This Is Not a Coup",
+    "director": "Sergio Wolf",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 120,
+    "genre": "Documental",
+    "original_title": "Esto no es un golpe"
+  },
+  "mandabi|1968": {
+    "url": "",
+    "title_en": "MANDABI",
+    "director": "Ousmane Sembène",
+    "country": "Senegal, France",
+    "year": 1968,
+    "duration": 92,
+    "title_es": "El giro",
+    "original_title": "Mandabi",
+    "genre": "Comedia, Drama"
+  },
+  "luca|2007": {
+    "url": "https://letterboxd.com/film/luca/",
+    "title_en": "Luca",
+    "director": "Rodrigo Espina",
+    "country": "Argentina",
+    "year": 2008,
+    "duration": 90,
+    "genre": "Música, Documental",
+    "original_title": "Luca"
+  },
+  "la espera|2026": {
+    "url": "https://letterboxd.com/film/the-wait-2026/",
+    "title_en": "The Wait",
+    "director": "Darío Doria",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 79,
+    "genre": ""
+  },
+  "colores perdidos|2026": {
+    "url": "",
+    "title_en": "COLORES PERDIDOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "paprika|2006": {
+    "url": "https://letterboxd.com/film/paprika-2006/",
+    "title_en": "Paprika",
+    "director": "Satoshi Kon",
+    "country": "Japan",
+    "year": 2006,
+    "duration": 90,
+    "genre": "Animación, Thriller",
+    "title_es": "Paprika, detective de los sueños",
+    "original_title": "パプリカ"
+  },
+  "las angustias del dr. mel brooks|1977": {
+    "url": "https://letterboxd.com/film/high-anxiety/",
+    "title_en": "High Anxiety",
+    "director": "Mel Brooks",
+    "country": "USA",
+    "year": 1977,
+    "duration": 94,
+    "genre": "Thriller, Misterio",
+    "title_es": "Máxima ansiedad",
+    "original_title": "High Anxiety"
+  },
+  "la tv infantil de los 70 y 80: margarito y sus amigos": {
+    "url": "",
+    "title_en": "LA TV INFANTIL DE LOS 70 Y 80: MARGARITO Y SUS AMIGOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "locura en el oeste|1974": {
+    "url": "https://letterboxd.com/film/blazing-saddles/",
+    "title_en": "Blazing Saddles",
+    "director": "Mel Brooks",
+    "country": "USA",
+    "year": 1974,
+    "duration": 93,
+    "genre": "Western, Comedia",
+    "title_es": "Sillas de montar calientes",
+    "original_title": "Blazing Saddles"
+  },
+  "metropolis|1927": {
+    "url": "https://letterboxd.com/film/metropolis/",
+    "title_en": "Metropolis",
+    "director": "Fritz Lang",
+    "country": "Germany",
+    "year": 1927,
+    "duration": 148,
+    "genre": "Drama, Ciencia ficción",
+    "title_es": "Metrópolis",
+    "original_title": "Metropolis"
+  },
+  "el cura lorenzo|1954": {
+    "url": "https://letterboxd.com/film/el-cura-lorenzo/",
+    "title_en": "The Priest Lorenzo",
+    "director": "Augusto César Vatteone",
+    "country": "Argentina",
+    "year": 1954,
+    "duration": 89,
+    "genre": "Drama",
+    "original_title": "El cura Lorenzo"
+  },
+  "the last picture show|1971": {
+    "url": "https://letterboxd.com/film/the-last-picture-show/",
+    "title_en": "The Last Picture Show",
+    "director": "Peter Bogdanovich",
+    "country": "USA",
+    "year": 1971,
+    "duration": 119,
+    "genre": "Drama, Romance",
+    "title_es": "La última película",
+    "original_title": "The Last Picture Show"
+  },
+  "two people exchanging saliva|2024": {
+    "url": "https://letterboxd.com/film/two-people-exchanging-saliva/",
+    "title_en": "Two People Exchanging Saliva",
+    "director": "Alexandre Singh, Natalie Musteata",
+    "country": "France",
+    "year": 2024,
+    "duration": 36,
+    "genre": "Ciencia ficción, Fantasía",
+    "title_es": "Dos personas intercambiando saliva",
+    "original_title": "Deux personnes échangeant de la salive"
+  },
+  "visita guiada | ‘un recorrido por la historia de las mujeres en lumiton’": {
+    "url": "",
+    "title_en": "VISITA GUIADA | ‘Un recorrido por la historia de las mujeres en Lumiton’",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "velvet goldmine en 35 mm|1998": {
+    "url": "",
+    "title_en": "VELVET GOLDMINE EN 35 MM",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el pequeño ninja: el orígen|2018": {
+    "url": "",
+    "title_en": "EL PEQUEÑO NINJA: EL ORÍGEN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "perfect blue|1997": {
+    "url": "https://letterboxd.com/film/perfect-blue/",
+    "title_en": "Perfect Blue",
+    "director": "Satoshi Kon",
+    "country": "Japan",
+    "year": 1997,
+    "duration": 82,
+    "genre": "Thriller, Animación",
+    "title_es": "Perfect Blue",
+    "original_title": "PERFECT BLUE"
+  },
+  "marianela y el cadáver": {
+    "url": "",
+    "title_en": "Marianela y el Cadáver",
+    "director": "Julia Sofia Vega",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 78,
+    "original_title": "Marianela & el cadáver",
+    "genre": "Comedia, Fantasía"
+  },
+  "allá el viento": {
+    "url": "",
+    "title_en": "Allá el viento",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "dinamogramas, el arte de la memoria": {
+    "url": "",
+    "title_en": "Dinamogramas, el arte de la memoria",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la tierra explota, el tiempo se acaba": {
+    "url": "https://letterboxd.com/film/la-tierra-explota-el-tiempo-se-acaba/",
+    "title_en": "La Tierra Explota, el Tiempo se Acaba",
+    "director": "Juan Pablo Lepore",
+    "country": "",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Documental",
+    "original_title": "La Tierra Explota, el Tiempo se Acaba"
+  },
+  "bendita tú festival de cine": {
+    "url": "",
+    "title_en": "Bendita Tú Festival de Cine",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pantalla universidad": {
+    "url": "",
+    "title_en": "PANTALLA UNIVERSIDAD",
     "director": "",
     "country": "",
     "year": null,
