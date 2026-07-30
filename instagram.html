@@ -210,6 +210,19 @@
     display: block;
     letter-spacing: -0.005em;
   }
+  /* Título alternativo (el otro idioma) — mismo criterio que la web, pero acá
+     en su propia línea: con tipografía grande el inline envuelve y desalinea.
+     Bloque debajo del título, alineado a la izquierda con el resto. */
+  .film-alt-title {
+    display: block;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 0.62em;
+    color: var(--muted);
+    line-height: 1.25;
+    margin-top: 2px;
+    letter-spacing: 0;
+  }
   .film-director { font-size: 22px; font-weight: 400; color: var(--text); line-height: 1.3; text-transform: lowercase; opacity: 0.85; }
   .film-meta { font-size: 16px; color: var(--muted); line-height: 1.4; }
   .film-ciclo { font-size: 14px; color: var(--muted); font-style: italic; margin-top: 2px; text-transform: lowercase; }
@@ -262,10 +275,13 @@
   .post.week .film-cine {
     font-size: 10px; padding: 1px 6px; letter-spacing: 0.05em;
   }
-  /* En week mode no mostramos director/year/duration/ciclo para ahorrar espacio */
+  /* En week mode no mostramos director/year/duration/ciclo para ahorrar espacio.
+     El título alternativo tampoco entra: la fila es de una sola línea con
+     ellipsis. */
   .post.week .film-director,
   .post.week .film-meta,
-  .post.week .film-ciclo { display: none; }
+  .post.week .film-ciclo,
+  .post.week .film-alt-title { display: none; }
 
   .slides-controls { display: flex; align-items: center; gap: 8px; margin-left: auto; }
   .slides-controls button {
@@ -333,10 +349,6 @@ const DAYS_ES = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes'
 const MONTHS_ES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
                    'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
-const SPANISH_SPEAKING = ['argentina','españa','spain','méxico','mexico','chile','uruguay',
-  'colombia','perú','peru','venezuela','ecuador','bolivia','paraguay','cuba','guatemala',
-  'honduras','nicaragua','costa rica','panamá','panama','república dominicana',
-  'el salvador','puerto rico'];
 
 let allScreenings = [];
 let currentSlide = 1;
@@ -352,14 +364,31 @@ function normalizeAllCaps(t) {
   return t;
 }
 
+// Mismo criterio que la web (index.html): título ORIGINAL como principal y
+// el inglés en «guillemets». Si el original está en alfabeto no latino
+// (japonés, chino, coreano...), va el español primero.
+function isNonLatinTitle(t) {
+  return /[぀-ヿ㐀-䶿一-鿿豈-﫿가-힯ᄀ-ᇿЀ-ӿ֐-׿؀-ۿ฀-๿ऀ-ॿ]/.test(t);
+}
+
 function displayTitle(s) {
-  const lb = s.title_en || '';
-  const local = s.title_es || '';
-  const country = (s.country || '').toLowerCase();
-  const isSpanish = SPANISH_SPEAKING.some(c => country.includes(c));
-  if (isSpanish && local) return normalizeAllCaps(local);
-  if (lb && s.letterboxd) return lb;
-  return normalizeAllCaps(local) || lb;
+  const orig = s.original_title || '';
+  if (orig && !isNonLatinTitle(orig)) return orig;
+  return normalizeAllCaps(s.title_es || '') || s.title_en || orig;
+}
+
+function altTitle(s) {
+  const main = displayTitle(s);
+  const en = normalizeAllCaps(s.title_en || '');
+  const norm = t => t.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  if (!en || norm(en) === norm(main)) return '';
+  return en;
+}
+
+function titleHtml(s) {
+  const alt = altTitle(s);
+  return escapeHtml(displayTitle(s)) +
+    (alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : '');
 }
 
 function cineCssClass(cine) {
@@ -440,10 +469,12 @@ window.cartelera = {
 // Heurística: cuántas pelis entran por slide según el formato.
 // Conservador para que entren limpias incluso con director + año + ciclo.
 function filmsPerSlide(format) {
+  // portrait (1080×1350) es el más bajo de los tres: con el título alternativo
+  // en su propia línea, 5 fichas se desbordan. Story (1080×1920) tiene aire.
   if (format === 'square') return 4;
-  if (format === 'portrait') return 5;
+  if (format === 'portrait') return 4;
   if (format === 'story') return 5;
-  return 5;
+  return 4;
 }
 
 const DAY_ACCENT = [
@@ -518,7 +549,7 @@ function renderSlide(slideNum) {
         <div class="${horaClass}">${horaText}</div>
         <div class="film-body">
           <span class="film-cine ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>
-          <div class="film-title">${escapeHtml(displayTitle(s))}</div>
+          <div class="film-title">${titleHtml(s)}</div>
           ${s.director ? `<div class="film-director">${escapeHtml(s.director)}</div>` : ''}
           ${yearDur ? `<div class="film-meta">${escapeHtml(yearDur)}</div>` : ''}
           ${s.ciclo ? `<div class="film-ciclo">${escapeHtml(s.ciclo)}</div>` : ''}

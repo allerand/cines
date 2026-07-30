@@ -7,6 +7,8 @@
     { "title": "Lulú", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2014, "country": "Argentina", "genre": "Drama, Romance", "title_en": "Lulú", "original_title": "Lulú", "letterboxd": "https://letterboxd.com/film/lulu-2014/" },
     { "title": "Siempre es de Noche", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2025, "country": "Argentina", "title_en": "Always Night", "original_title": "Siempre es de noche", "letterboxd": "https://letterboxd.com/film/always-night/" },
 
+    { "title": "La vida de Pi", "director": "Ang Lee", "year": 2012, "title_en": "Life of Pi", "original_title": "Life of Pi", "letterboxd": "https://letterboxd.com/film/life-of-pi/" },
+
     { "title": "Obsesión", "director": "Curry Barker", "year": 2025, "country": "Estados Unidos", "genre": "Terror", "title_en": "Obsession", "original_title": "Obsession", "letterboxd": "https://letterboxd.com/film/obsession-2025/" }
   ]
 }

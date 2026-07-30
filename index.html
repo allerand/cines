@@ -1289,9 +1289,17 @@ function displayTitle(s) {
   return s.title_es || s.title_en || orig;
 }
 
+// "TOM Y JERRY" → "Tom y jerry". Algunos cines devuelven el título en
+// mayúsculas y se cuela en title_en.
+function normalizeAllCaps(t) {
+  if (!t) return '';
+  if (t === t.toUpperCase() && t.length > 3) return t.charAt(0) + t.slice(1).toLowerCase();
+  return t;
+}
+
 function altTitle(s) {
   const main = displayTitle(s);
-  const en = s.title_en || '';
+  const en = normalizeAllCaps(s.title_en || '');
   const norm = t => t.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
   if (!en || norm(en) === norm(main)) return '';
   return en;
