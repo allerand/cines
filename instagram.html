@@ -371,9 +371,27 @@ function isNonLatinTitle(t) {
   return /[぀-ヿ㐀-䶿一-鿿豈-﫿가-힯ᄀ-ᇿЀ-ӿ֐-׿؀-ۿ฀-๿ऀ-ॿ]/.test(t);
 }
 
+// Un original en letras latinas que viene de un país que no usa el alfabeto
+// latino es una transliteración ("Hotaru no Haka"): tampoco va de principal.
+const NON_LATIN_COUNTRIES = [
+  'japón', 'japon', 'japan', 'china', 'corea', 'korea', 'taiwán', 'taiwan',
+  'hong kong', 'tailandia', 'thailand', 'india', 'rusia', 'russia', 'ucrania',
+  'israel', 'irán', 'iran', 'grecia', 'greece', 'egipto', 'egypt', 'serbia',
+  'bulgaria', 'georgia', 'armenia', 'camboya', 'nepal', 'bangladesh',
+];
+
+function isTransliterated(s) {
+  const orig = s.original_title || '';
+  if (!orig || isNonLatinTitle(orig)) return false;
+  const country = (s.country || '').toLowerCase();
+  if (!NON_LATIN_COUNTRIES.some(c => country.includes(c))) return false;
+  const norm = t => t.trim().toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  return norm(orig) !== norm(s.title_en || '');
+}
+
 function displayTitle(s) {
   const orig = s.original_title || '';
-  if (orig && !isNonLatinTitle(orig)) return orig;
+  if (orig && !isNonLatinTitle(orig) && !isTransliterated(s)) return orig;
   return normalizeAllCaps(s.title_es || '') || s.title_en || orig;
 }
 
