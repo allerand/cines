@@ -4183,14 +4183,37 @@ _CB_MESES = {
     "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
     "noviembre": 11, "diciembre": 12,
 }
+# El sitio escribe los meses completos ("2 agosto 2026") o abreviados con
+# punto ("2 Ago. 2026"). Aceptamos ambos y resolvemos por prefijo.
+_CB_MES_RE = r"[a-záéíóúñ]{3,10}\.?"
+
+
+def _cb_mes_num(token: str) -> "Optional[int]":
+    t = token.strip().rstrip(".").lower()
+    for name, num in _CB_MESES.items():
+        if name.startswith(t) or t.startswith(name[:3]):
+            return num
+    return None
+
+
 _CB_DOW = r"lunes|martes|mi[eé]rcoles|jueves|viernes|s[áa]bado|domingo"
+# Formatos de fecha vistos en las fichas:
+#   "Domingo 7. 19HS"            → día suelto (el mes sale del rango "Cuándo")
+#   "Domingo 5 de julio, 19HS"   → día + mes en palabras
+#   "Domingo 2/8. 19HS"          → día/mes numérico
 _CB_FUNC_RE = re.compile(
-    r"^(?:" + _CB_DOW + r")\s+(\d{1,2})"
-    r"(?:\s+de\s+(" + "|".join(_CB_MESES) + r"))?"
-    r"[.,]?\s*(?:(\d{1,2})(?::(\d{2}))?\s*HS\b)?",
+    r"(?:^|\b)(?:" + _CB_DOW + r")\s+(\d{1,2})"
+    r"(?:\s*/\s*(\d{1,2})|\s+de\s+(" + _CB_MES_RE + r"))?"
+    r"[.,:]?\s*(?:(\d{1,2})(?::(\d{2}))?\s*HS\b)?",
     re.IGNORECASE)
 _CB_RANGE_RE = re.compile(
-    r"(\d{1,2})\s+(" + "|".join(_CB_MESES) + r")\s+(\d{4})", re.IGNORECASE)
+    r"(\d{1,2})\s+(" + _CB_MES_RE + r")\s+(\d{4})", re.IGNORECASE)
+# La primera función del ciclo suele venir precedida por el rótulo de la
+# sección, que rompe el ancla de inicio de línea.
+_CB_PREFIX_RE = re.compile(
+    r"^\s*(?:PROGRAMACI[ÓO]N|PROGRAMA|FUNCIONES)\s*[:.\-]?\s*", re.IGNORECASE)
+# Funciones dadas de baja — no las publicamos.
+_CB_CANCEL_RE = re.compile(r"\b(?:SUSPENDID|CANCELAD|REPROGRAMAD)", re.IGNORECASE)
 
 
 def _cb_section(soup, label: str) -> str:
@@ -4211,9 +4234,12 @@ def _cb_section(soup, label: str) -> str:
 def _cb_cuando(soup) -> "tuple[Optional[date], Optional[date]]":
     txt = _cb_section(soup, "cuándo")
     ds = []
-    for d, m, y in _CB_RANGE_RE.findall(txt):
+    for d, mes, y in _CB_RANGE_RE.findall(txt):
+        num = _cb_mes_num(mes)
+        if not num:
+            continue
         try:
-            ds.append(date(int(y), _CB_MESES[m.lower()], int(d)))
+            ds.append(date(int(y), num, int(d)))
         except ValueError:
             pass
     return (min(ds), max(ds)) if ds else (None, None)
@@ -4241,16 +4267,26 @@ def _cb_resolve_date(day: int, month: int, start: "Optional[date]",
         return None
 
 
-def _cb_parse_film(rest: str) -> "tuple[str, Optional[int], str, Optional[int]]":
-    """De la cola de una línea de función saca (título, año, director, duración)."""
+def _cb_parse_film(rest: str) -> "tuple[str, Optional[int], str, Optional[int], str]":
+    """De la cola de una función saca (título, año, director, duración, original).
+
+    Las fichas traen la metadata entre paréntesis después del título, en
+    variantes como:
+        "Escenas en el mar (1991, 101m. Dir. Takeshi Kitano) *(Ano Natsu…)"
+        "La tumba de las luciérnagas (animación, 1988, 88m. Dir. Isao Takahata)"
+        "Cinéfilos (2024) Dir. Arnaud Desplechin. 88 min"
+    """
     rest = re.sub(r"^(PRE\s*ESTRENO|ESTRENO|FUNCI[ÓO]N\s+ESPECIAL)[\s:.\-]*",
                   "", rest, flags=re.IGNORECASE).strip()
-    ym = re.search(r"\((\d{4})\)", rest)
-    year = int(ym.group(1)) if ym else None
-    title = (rest[:ym.start()] if ym
-             else re.split(r"\bDir\b|Direcci|Guion|Dur\.", rest)[0]).strip(" .,–-")
+    # El título es todo lo anterior al bloque de metadata (primer paréntesis
+    # o el primer marcador Dir./Dur.).
+    cut = re.search(r"\s*\(|\s+(?:Dir\b|Direcci|Guion|Dur\.)", rest, re.IGNORECASE)
+    title = (rest[:cut.start()] if cut else rest).strip(" .,:–-")
+    # El año puede no estar solo entre paréntesis: lo buscamos en la metadata.
+    ym = re.search(r"\b(?:19|20)\d{2}\b", rest[cut.start():] if cut else "")
+    year = int(ym.group(0)) if ym else None
     director = ""
-    dm = re.search(r"(?:Guion y direcci[oó]n|Direcci[oó]n|Dir)\.?\s*:?\s*([^.\n]+)",
+    dm = re.search(r"(?:Guion y direcci[oó]n|Direcci[oó]n|Dir)\.?\s*:?\s*([^.()\n]+)",
                    rest, re.IGNORECASE)
     if dm:
         cand = re.split(r"\b\d+\s*min", dm.group(1))[0].strip(" .,")
@@ -4258,9 +4294,14 @@ def _cb_parse_film(rest: str) -> "tuple[str, Optional[int], str, Optional[int]]"
         # dejamos vacío y que Letterboxd complete el director.
         if len(cand) <= 40 and len(cand.split()) <= 5:
             director = cand
-    durm = re.search(r"(\d{1,3})\s*(?:min|minutos)\b", rest, re.IGNORECASE)
+    # Duración: "88 min", "124min", "101m."
+    durm = re.search(r"(\d{1,3})\s*(?:m\b|min\b|minutos\b)", rest, re.IGNORECASE)
     duration = int(durm.group(1)) if durm else None
-    return title, year, director, duration
+    # Título original: el sitio lo marca con asterisco, "*(Hotaru no Haka)"
+    # o "(*Osaka Monogatari)". Sirve de hint para el match en Letterboxd.
+    om = re.search(r"\*\s*\(([^)]+)\)|\(\s*\*([^)]+)\)", rest)
+    original = (om.group(1) or om.group(2)).strip() if om else ""
+    return title, year, director, duration, original
 
 
 def _cb_parse_detail(soup, url: str) -> list[Screening]:
@@ -4271,22 +4312,53 @@ def _cb_parse_detail(soup, url: str) -> list[Screening]:
     hora_default = _cb_horario(soup)
     art = soup.find("div", class_="article") or soup
 
-    out: list[Screening] = []
-    seen: set[tuple] = set()
+    blocks: list[str] = []
     for p in art.find_all(["p", "li"]):
         t = re.sub(r"\s+", " ", p.get_text(" ", strip=True)).strip()
-        m = _CB_FUNC_RE.match(t)
-        if not m:
+        if t:
+            blocks.append(t)
+
+    out: list[Screening] = []
+    seen: set[tuple] = set()
+    for i, raw in enumerate(blocks):
+        t = _CB_PREFIX_RE.sub("", raw)
+        # La fecha puede no estar al principio del bloque (rótulos, negritas
+        # partidas); exigimos que aparezca cerca del inicio para no capturar
+        # fechas sueltas dentro de una sinopsis.
+        m = _CB_FUNC_RE.search(t)
+        if not m or m.start() > 40:
             continue
         day = int(m.group(1))
-        month = _CB_MESES[m.group(2).lower()] if m.group(2) else (
-            start.month if start else None)
-        if not month:
+        if m.group(2):                                    # "2/8"
+            month = int(m.group(2))
+        elif m.group(3):                                  # "2 de agosto"
+            month = _cb_mes_num(m.group(3))
+        else:                                             # sólo el día
+            month = start.month if start else None
+        if not month or not 1 <= month <= 12:
             continue
-        hora = (f"{int(m.group(3)):02d}:{int(m.group(4) or 0):02d}"
-                if m.group(3) else hora_default)
-        title, year, director, duration = _cb_parse_film(t[m.end():].strip())
+        hora = (f"{int(m.group(4)):02d}:{int(m.group(5) or 0):02d}"
+                if m.group(4) else hora_default)
+        rest = t[m.end():].strip()
+        # Cuando la fecha viene sola en su párrafo, la película está en el
+        # bloque siguiente.
+        if len(rest) < 3 and i + 1 < len(blocks):
+            rest = blocks[i + 1]
+        if _CB_CANCEL_RE.search(rest):
+            continue
+        title, year, director, duration, original = _cb_parse_film(rest)
         if not title or len(title) < 2:
+            continue
+        # Las fichas también traen fechas dentro del párrafo introductorio
+        # ("El sábado 8 de agosto a las 19, la Casa recibe al Festival…"), y
+        # de ahí salían títulos que en realidad son prosa. Una función real
+        # siempre declara al menos año, dirección o duración.
+        if not (year or director or duration):
+            continue
+        # Algunas fichas describen el programa en prosa bajo una fecha real
+        # ("Jueves 21 de mayo. 19HS Los filmes que componen este programa…").
+        # Ningún título de película llega a esa extensión.
+        if len(title) > 55:
             continue
         d = _cb_resolve_date(day, month, start, end)
         if not d:
@@ -4305,6 +4377,7 @@ def _cb_parse_detail(soup, url: str) -> list[Screening]:
             director=director,
             year=year,
             duration=duration,
+            original_title=original,
         ))
 
     # Fallback: actividad de cine sin líneas de función parseables → 1 función
