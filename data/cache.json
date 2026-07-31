@@ -6576,12 +6576,15 @@
     "original_title": "The Man Who Shot Liberty Valance"
   },
   "pacto de amor": {
-    "url": "",
-    "title_en": "Pacto de amor",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/bhagat-singh-ek-amar-gatha/",
+    "title_en": "Bhagat Singh Ek Amar Gatha",
+    "director": "Leonardo Bechini",
+    "country": "Cuba, Argentina",
+    "year": 2025,
+    "duration": 61,
+    "genre": "Documental, Acción",
+    "original_title": "Operación México, un pacto de amor",
+    "title_es": "El pacto de bodas"
   },
   "los sueños de pepe - movimiento 2052": {
     "url": "https://letterboxd.com/film/pepes-dreams-movement-2052/",
@@ -9161,14 +9164,14 @@
     "genre": "Documental"
   },
   "mi casa es su casa|2025": {
-    "url": "",
-    "title_en": "MI CASA ES SU CASA",
+    "url": "https://letterboxd.com/film/mi-casa-es-su-casa/",
+    "title_en": "Mi casa es su casa",
     "director": "Joan Mayorga",
     "country": "",
     "year": null,
-    "duration": null,
-    "original_title": "Mi casa es su casa",
-    "genre": "Animación"
+    "duration": 5,
+    "genre": "Animación",
+    "original_title": "Mi casa es su casa"
   },
   "la casa de los millones|1942": {
     "url": "",
@@ -9201,14 +9204,14 @@
     "original_title": "Yurlu | Country"
   },
   "tigre es yaguareté|2025": {
-    "url": "",
-    "title_en": "TIGRE ES YAGUARETÉ",
+    "url": "https://letterboxd.com/film/tigre-es-yaguarete/",
+    "title_en": "Tigre es yaguareté",
     "director": "Left Hand Rotation",
     "country": "",
     "year": null,
-    "duration": null,
-    "original_title": "Tigre es yaguareté",
-    "genre": "Documental"
+    "duration": 27,
+    "genre": "Documental",
+    "original_title": "Tigre es yaguareté"
   },
   "pau d'arco|2025": {
     "url": "https://letterboxd.com/film/pau-darco/",
@@ -9735,5 +9738,98 @@
     "year": 2018,
     "duration": 803,
     "genre": "Thriller, Fantasía"
+  },
+  "escenas en el mar|1991": {
+    "url": "https://letterboxd.com/film/a-scene-at-the-sea/",
+    "title_en": "A Scene at the Sea",
+    "director": "Takeshi Kitano",
+    "country": "Japan",
+    "year": 1991,
+    "duration": 101,
+    "genre": "Romance, Comedia",
+    "title_es": "Escenas en el mar",
+    "original_title": "あの夏、いちばん静かな海。"
+  },
+  "la tumba de las luciérnagas|1988": {
+    "url": "https://letterboxd.com/film/grave-of-the-fireflies/",
+    "title_en": "Grave of the Fireflies",
+    "director": "Isao Takahata",
+    "country": "Japan",
+    "year": 1988,
+    "duration": 89,
+    "genre": "Animación, Bélica",
+    "title_es": "La tumba de las luciérnagas",
+    "original_title": "火垂るの墓"
+  },
+  "una vez en osaka|1999": {
+    "url": "https://letterboxd.com/film/osaka-story/",
+    "title_en": "Osaka Story",
+    "director": "Jun Ichikawa",
+    "country": "Japan",
+    "year": 1999,
+    "duration": 119,
+    "genre": "",
+    "original_title": "大阪物語"
+  },
+  "ah, la primavera|1998": {
+    "url": "https://letterboxd.com/film/wait-and-see/",
+    "title_en": "Wait and See",
+    "director": "Shinji Sōmai",
+    "country": "Japan",
+    "year": 1998,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "あ、春"
+  },
+  "ataduras|1998": {
+    "url": "https://letterboxd.com/film/bonds/",
+    "title_en": "Bonds",
+    "director": "Kichitaro Negishi",
+    "country": "Japan",
+    "year": 1998,
+    "duration": 123,
+    "genre": "Crimen, Drama",
+    "original_title": "絆"
+  },
+  "propiedad privada prohibido pasar|2025": {
+    "url": "https://letterboxd.com/film/propiedad-privada-prohibido-pasar/",
+    "title_en": "Propiedad privada prohibido pasar",
+    "director": "Wojciech Ganczarek",
+    "country": "",
+    "year": null,
+    "duration": 106,
+    "genre": "Documental",
+    "original_title": "Propiedad privada prohibido pasar"
+  },
+  "carretera perdida": {
+    "url": "",
+    "title_en": "Carretera perdida",
+    "director": "David Lynch",
+    "country": "France, United States of America",
+    "year": 1997,
+    "duration": 134,
+    "title_es": "Carretera perdida",
+    "original_title": "Lost Highway",
+    "genre": "Drama, Thriller"
+  },
+  "trenque lauquen": {
+    "url": "https://letterboxd.com/film/trenque-lauquen/",
+    "title_en": "Trenque Lauquen",
+    "director": "Laura Citarella",
+    "country": "Argentina, Germany",
+    "year": 2022,
+    "duration": 260,
+    "genre": "Thriller, Misterio",
+    "original_title": "Trenque Lauquen"
+  },
+  "nunca asistas a este tipo de fiestas": {
+    "url": "https://letterboxd.com/film/nunca-asistas-a-este-tipo-de-fiestas/",
+    "title_en": "Nunca asistas a este tipo de fiestas",
+    "director": "Pablo Parés, Hernán Sáez, Paulo Soria",
+    "country": "Argentina",
+    "year": 2000,
+    "duration": 70,
+    "genre": "Comedia, Terror",
+    "original_title": "Nunca asistas a este tipo de fiestas"
   }
 }

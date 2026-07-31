@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-31T10:38:14",
+  "updated": "2026-07-31T19:52:11",
   "screenings": [
     {
       "cine": "Hoyts Abasto",
@@ -642,22 +642,6 @@
       "original_title": "Spider-Man: Brand New Day"
     },
     {
-      "cine": "Cine York",
-      "fecha": "2026-07-31",
-      "hora": "16:00",
-      "title_es": "Película Sorpresa en 35 Mm",
-      "title_en": "PELÍCULA SORPRESA EN 35 MM",
-      "original_title": "",
-      "director": "Stephen Chow",
-      "country": "Hong Kong",
-      "year": 2004,
-      "duration": 99,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://lumiton.ar/evento/pelicula-sorpresa-en-35-mm-5/",
-      "ciclo": ""
-    },
-    {
       "cine": "Museo del Cine",
       "fecha": "2026-07-31",
       "hora": "16:00",
@@ -672,6 +656,22 @@
       "letterboxd": "https://letterboxd.com/film/college/",
       "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/julio-en-el-auditorio",
       "ciclo": "Cineclub infantil"
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-07-31",
+      "hora": "16:00",
+      "title_es": "Película Sorpresa en 35 Mm",
+      "title_en": "PELÍCULA SORPRESA EN 35 MM",
+      "original_title": "",
+      "director": "Stephen Chow",
+      "country": "Hong Kong",
+      "year": 2004,
+      "duration": 99,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/pelicula-sorpresa-en-35-mm-5/",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -1808,6 +1808,22 @@
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": "",
       "original_title": "Spider-Man: Brand New Day"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-07-31",
+      "hora": "21:45",
+      "title_es": "Nunca asistas a este tipo de fiestas",
+      "title_en": "Nunca asistas a este tipo de fiestas",
+      "original_title": "Nunca asistas a este tipo de fiestas",
+      "director": "Paulo Soria, Hernán Sáez, Pablo Parés",
+      "country": "Argentina",
+      "year": 2000,
+      "duration": 70,
+      "genre": "Comedia, Terror",
+      "letterboxd": "https://letterboxd.com/film/nunca-asistas-a-este-tipo-de-fiestas/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1036",
+      "ciclo": "Noches de terror: Pesadillas Argentinas"
     },
     {
       "cine": "MALBA",
@@ -3362,6 +3378,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-08-01",
+      "hora": "19:00",
+      "title_es": "Trenque Lauquen",
+      "title_en": "Trenque Lauquen",
+      "original_title": "Trenque Lauquen",
+      "director": "Laura Citarella",
+      "country": "Argentina, Alemania",
+      "year": 2022,
+      "duration": 260,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/trenque-lauquen/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1032",
+      "ciclo": "Espíritu independiente"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-08-01",
       "hora": "19:00",
@@ -4070,16 +4102,16 @@
       "fecha": "2026-08-01",
       "hora": "23:50",
       "title_es": "Pacto de amor",
-      "title_en": "Pacto de amor",
-      "original_title": "",
-      "director": "David Cronenberg",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
+      "title_en": "Bhagat Singh Ek Amar Gatha",
+      "original_title": "Operación México, un pacto de amor",
+      "director": "Leonardo Bechini",
+      "country": "Cuba, Argentina",
+      "year": 2025,
+      "duration": 61,
+      "genre": "Documental, Acción",
+      "letterboxd": "https://letterboxd.com/film/bhagat-singh-ek-amar-gatha/",
       "ticket_url": "https://malba.org.ar/evento/pacto-de-amor/",
-      "ciclo": "Cineclub Nocturna"
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -5474,6 +5506,22 @@
       "original_title": "Spider-Man: Brand New Day"
     },
     {
+      "cine": "Casa del Bicentenario",
+      "fecha": "2026-08-02",
+      "hora": "19:00",
+      "title_es": "Escenas en el mar",
+      "title_en": "A Scene at the Sea",
+      "original_title": "あの夏、いちばん静かな海。",
+      "director": "Takeshi Kitano",
+      "country": "Japón",
+      "year": 1991,
+      "duration": 101,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-scene-at-the-sea/",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/",
+      "ciclo": "Miradas de Japón"
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-08-02",
       "hora": "19:00",
@@ -5488,6 +5536,22 @@
       "letterboxd": "https://letterboxd.com/film/father-mother-sister-brother/",
       "ticket_url": "https://www.cinecosmos.uba.ar/?c=main&a=Detalle&idPelicula=377",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-08-02",
+      "hora": "19:00",
+      "title_es": "Trenque Lauquen",
+      "title_en": "Trenque Lauquen",
+      "original_title": "Trenque Lauquen",
+      "director": "Laura Citarella",
+      "country": "Argentina, Alemania",
+      "year": 2022,
+      "duration": 260,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/trenque-lauquen/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1032",
+      "ciclo": "Espíritu independiente"
     },
     {
       "cine": "Cacodelphia",
@@ -5520,22 +5584,6 @@
       "letterboxd": "https://letterboxd.com/film/prisioneros-de-la-tierra/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/466",
       "ciclo": ""
-    },
-    {
-      "cine": "Casa del Bicentenario",
-      "fecha": "2026-08-02",
-      "hora": "19:00",
-      "title_es": "Escenas en el mar",
-      "title_en": "A Scene at the Sea",
-      "original_title": "あの夏、いちばん静かな海。",
-      "director": "Takeshi Kitano",
-      "country": "Japón",
-      "year": 1991,
-      "duration": 101,
-      "genre": "Romance, Comedia",
-      "letterboxd": "https://letterboxd.com/film/a-scene-at-the-sea/",
-      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/",
-      "ciclo": "Miradas de Japón"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -7218,6 +7266,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-08-03",
+      "hora": "19:00",
+      "title_es": "Trenque Lauquen",
+      "title_en": "Trenque Lauquen",
+      "original_title": "Trenque Lauquen",
+      "director": "Laura Citarella",
+      "country": "Argentina, Alemania",
+      "year": 2022,
+      "duration": 260,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/trenque-lauquen/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1032",
+      "ciclo": "Espíritu independiente"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-08-03",
       "hora": "19:10",
@@ -8880,6 +8944,22 @@
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": "",
       "original_title": "Spider-Man: Brand New Day"
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-08-04",
+      "hora": "19:00",
+      "title_es": "Legerin. En busca de Alina",
+      "title_en": "Legerin, in Search of Alina",
+      "original_title": "Legerin, en busca de Alina",
+      "director": "María Laura Vásquez",
+      "country": "Argentina, Syria",
+      "year": 2024,
+      "duration": 82,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/legerin-en-busca-de-alina/",
+      "ticket_url": "https://www.centrocultural.coop/eventos/legerin-en-busca-de-alina",
+      "ciclo": ""
     },
     {
       "cine": "Cine Cosmos",
@@ -10738,6 +10818,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-08-05",
+      "hora": "19:00",
+      "title_es": "Carretera perdida",
+      "title_en": "Carretera perdida",
+      "original_title": "Lost Highway",
+      "director": "David Lynch",
+      "country": "Francia, Estados Unidos",
+      "year": 1997,
+      "duration": 134,
+      "genre": "Drama, Thriller",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1033",
+      "ciclo": "American Cinematheque"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-08-05",
       "hora": "19:00",
@@ -11954,22 +12050,6 @@
       "ciclo": "Luchino Visconti: viajes en Italia"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-08",
-      "hora": "18:00",
-      "title_es": "Xul",
-      "title_en": "Xul",
-      "original_title": "Xul",
-      "director": "Cristián Costantini",
-      "country": "",
-      "year": 2026,
-      "duration": 103,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/xul/",
-      "ticket_url": "https://malba.org.ar/evento/xul/",
-      "ciclo": "Estreno"
-    },
-    {
       "cine": "Amorina",
       "fecha": "2026-08-08",
       "hora": "18:00",
@@ -12646,14 +12726,14 @@
       "fecha": "2026-08-13",
       "hora": "18:00",
       "title_es": "Propiedad Privada Prohibido Pasar",
-      "title_en": "PROPIEDAD PRIVADA PROHIBIDO PASAR",
+      "title_en": "Propiedad privada prohibido pasar",
       "original_title": "Propiedad privada prohibido pasar",
       "director": "Wojciech Ganczarek",
-      "country": "Argentina (Bolivia, Estados Unidos",
-      "year": 2024,
-      "duration": 12,
+      "country": "Polonia",
+      "year": 2025,
+      "duration": 106,
       "genre": "Documental",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/propiedad-privada-prohibido-pasar/",
       "ticket_url": "https://lumiton.ar/evento/propiedad-privada-prohibido-pasar/",
       "ciclo": ""
     },
@@ -12662,14 +12742,14 @@
       "fecha": "2026-08-13",
       "hora": "18:00",
       "title_es": "Mi Casa es su Casa",
-      "title_en": "MI CASA ES SU CASA",
+      "title_en": "Mi casa es su casa",
       "original_title": "Mi casa es su casa",
       "director": "Joan Mayorga",
       "country": "Colombia",
       "year": 2025,
       "duration": 5,
       "genre": "Animación",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/mi-casa-es-su-casa/",
       "ticket_url": "https://lumiton.ar/evento/mi-casa-es-su-casa/",
       "ciclo": ""
     },
@@ -12854,14 +12934,14 @@
       "fecha": "2026-08-14",
       "hora": "18:00",
       "title_es": "Tigre es Yaguareté",
-      "title_en": "TIGRE ES YAGUARETÉ",
+      "title_en": "Tigre es yaguareté",
       "original_title": "Tigre es yaguareté",
       "director": "Colectivo Left Hand Rotation",
       "country": "Argentina (España)",
       "year": 2025,
       "duration": 27,
       "genre": "Documental",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/tigre-es-yaguarete/",
       "ticket_url": "https://lumiton.ar/evento/tigre-es-yaguarete/",
       "ciclo": ""
     },
@@ -12992,22 +13072,6 @@
       "letterboxd": "https://letterboxd.com/film/la-terra-trema/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3a7fa770-7823-4018-b0d2-9ab7ad429c34",
       "ciclo": "Luchino Visconti: viajes en Italia"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-15",
-      "hora": "18:00",
-      "title_es": "Xul",
-      "title_en": "Xul",
-      "original_title": "Xul",
-      "director": "Cristián Costantini",
-      "country": "",
-      "year": 2026,
-      "duration": 103,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/xul/",
-      "ticket_url": "https://malba.org.ar/evento/xul/",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Cine York",
@@ -13314,6 +13378,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Casa del Bicentenario",
+      "fecha": "2026-08-16",
+      "hora": "19:00",
+      "title_es": "Una vez en Osaka",
+      "title_en": "Osaka Story",
+      "original_title": "大阪物語",
+      "director": "Jun Ichikawa",
+      "country": "Japón",
+      "year": 1999,
+      "duration": 119,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/osaka-story/",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/",
+      "ciclo": "Miradas de Japón"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-16",
       "hora": "19:00",
@@ -13328,22 +13408,6 @@
       "letterboxd": "https://letterboxd.com/film/31-minutos-la-pelicula/",
       "ticket_url": "https://lumiton.ar/evento/31-minutos-la-pelicula/",
       "ciclo": ""
-    },
-    {
-      "cine": "Casa del Bicentenario",
-      "fecha": "2026-08-16",
-      "hora": "19:00",
-      "title_es": "Una vez en Osaka",
-      "title_en": "Osaka Story",
-      "original_title": "大阪物語",
-      "director": "Jun Ichikawa",
-      "country": "Japón",
-      "year": 1999,
-      "duration": 119,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/osaka-monogatari/",
-      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/",
-      "ciclo": "Miradas de Japón"
     },
     {
       "cine": "MALBA",
@@ -13472,6 +13536,22 @@
       "letterboxd": "https://letterboxd.com/film/ben-hur-1959/",
       "ticket_url": "https://lumiton.ar/evento/ben-hur/",
       "ciclo": ""
+    },
+    {
+      "cine": "Filo Cine",
+      "fecha": "2026-08-20",
+      "hora": "18:00",
+      "title_es": "Nuestra Tierra",
+      "title_en": "Our Land",
+      "original_title": "",
+      "director": "Lucrecia Martel",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/our-land-2025-1/",
+      "ticket_url": "https://www.filo.uba.ar/node/969",
+      "ciclo": "Documental"
     },
     {
       "cine": "Cine York",
@@ -13632,38 +13712,6 @@
       "letterboxd": "https://letterboxd.com/film/this-is-not-a-coup-2018/",
       "ticket_url": "https://lumiton.ar/evento/esto-no-es-un-golpe-2/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-21",
-      "hora": "24:00",
-      "title_es": "Raptus",
-      "title_en": "Raptus",
-      "original_title": "",
-      "director": "Riccardo Freda",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/riccardo-freda-x-2",
-      "ciclo": "Riccardo Freda X 2"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-22",
-      "hora": "18:00",
-      "title_es": "Xul",
-      "title_en": "Xul",
-      "original_title": "Xul",
-      "director": "Cristián Costantini",
-      "country": "",
-      "year": 2026,
-      "duration": 103,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/xul/",
-      "ticket_url": "https://malba.org.ar/evento/xul/",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Cine York",
@@ -14098,22 +14146,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-08-28",
-      "hora": "24:00",
-      "title_es": "El espectro",
-      "title_en": "The Mysterious Rider",
-      "original_title": "",
-      "director": "Riccardo Freda",
-      "country": "Italia",
-      "year": 1948,
-      "duration": 90,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-mysterious-rider-1948/",
-      "ticket_url": "https://malba.org.ar/evento/riccardo-freda-x-2",
-      "ciclo": "Riccardo Freda X 2"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-29",
       "hora": "16:00",
@@ -14160,22 +14192,6 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/velvet-goldmine-en-35-mm/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-08-29",
-      "hora": "18:00",
-      "title_es": "Xul",
-      "title_en": "Xul",
-      "original_title": "Xul",
-      "director": "Cristián Costantini",
-      "country": "",
-      "year": 2026,
-      "duration": 103,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/xul/",
-      "ticket_url": "https://malba.org.ar/evento/xul/",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Sala Lugones",
