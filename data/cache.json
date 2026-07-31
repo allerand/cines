@@ -9673,5 +9673,67 @@
     "genre": "Comedia, Aventura",
     "original_title": "A metros de distancia",
     "title_es": "A dos metros de ti"
+  },
+  "raptus": {
+    "url": "",
+    "title_en": "Raptus",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el espectro": {
+    "url": "https://letterboxd.com/film/the-mysterious-rider-1948/",
+    "title_en": "The Mysterious Rider",
+    "director": "Riccardo Freda",
+    "country": "Italy",
+    "year": 1948,
+    "duration": 90,
+    "genre": "Aventura, Drama"
+  },
+  "xul": {
+    "url": "https://letterboxd.com/film/xul/",
+    "title_en": "Xul",
+    "director": "Cristián Costantini",
+    "country": "",
+    "year": 2026,
+    "duration": 103,
+    "genre": "",
+    "original_title": "Xul"
+  },
+  "paper moon + los tonos mayores": {
+    "url": "",
+    "title_en": "Paper Moon + Los tonos mayores",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la flor - parte i|2018": {
+    "url": "https://letterboxd.com/film/la-flor-parte-i/",
+    "title_en": "La Flor",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 803,
+    "genre": "Thriller, Fantasía"
+  },
+  "la flor - parte ii|2018": {
+    "url": "https://letterboxd.com/film/la-flor/",
+    "title_en": "La Flor",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 803,
+    "genre": "Thriller, Fantasía"
+  },
+  "la flor - parte iii|2018": {
+    "url": "https://letterboxd.com/film/la-flor/",
+    "title_en": "La Flor",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 803,
+    "genre": "Thriller, Fantasía"
   }
 }
