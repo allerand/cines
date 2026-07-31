@@ -4411,10 +4411,16 @@ def _cb_cine_urls(max_pages: int = 3) -> list[str]:
         u = CB_LISTING if page == 1 else f"{CB_LISTING}?page={page}"
         try:
             soup = fetch_html(u)
-        except Exception:
+        except Exception as e:
+            # Silenciar esto hacía que el runner reportara "0 funciones" sin
+            # causa, indistinguible de "no hay cine programado".
+            print(f"[CB] falló el listado {u}: {e}", flush=True)
             break
         cards = soup.select("div.agenda div.card")
         if not cards:
+            if page == 1:
+                print(f"[CB] el listado no devolvió tarjetas — ¿cambió el "
+                      f"markup o nos bloquearon? ({u})", flush=True)
             break
         for card in cards:
             badge = card.find("span", class_="badge")
@@ -4436,11 +4442,47 @@ def _cb_cine_urls(max_pages: int = 3) -> list[str]:
     return urls
 
 
+CB_MANUAL_PATH = Path(__file__).parent / "data" / "cb_manual.json"
+
+
+def _cb_manual(today: date) -> list[Screening]:
+    """Override manual (data/cb_manual.json). Se mergea con el scrape y se
+    filtra a partir de hoy, así que las funciones pasadas se caen solas."""
+    if not CB_MANUAL_PATH.exists():
+        return []
+    try:
+        data = json.loads(CB_MANUAL_PATH.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"[CB] override manual ilegible: {e}", flush=True)
+        return []
+    out: list[Screening] = []
+    for s in data.get("screenings", []):
+        title = (s.get("title") or "").strip()
+        try:
+            d = date.fromisoformat(s["fecha"])
+        except (KeyError, ValueError):
+            continue
+        if not title or d < today:
+            continue
+        out.append(Screening(
+            cine="Casa del Bicentenario", title=title,
+            fecha=s["fecha"], hora=s.get("hora", "19:00"),
+            ticket_url=s.get("ticket_url", CB_LISTING), ciclo=s.get("ciclo", ""),
+            director=s.get("director", ""), year=s.get("year"),
+            duration=s.get("duration"), original_title=s.get("original_title", ""),
+        ))
+    return out
+
+
 def scrape_cb(max_pages: int = 3) -> list[Screening]:
     """
     Scrapea la cartelera de cine de la Casa Nacional del Bicentenario.
     Descubre las actividades de cine y parsea cada ciclo en funciones
     individuales (una película por fecha).
+
+    Se mergea con data/cb_manual.json (dedup por título+fecha+hora): el sitio
+    responde distinto desde los runners de GitHub que desde una IP local, así
+    que el override es la red de contención cuando el listado viene vacío.
     """
     today = date.today()
     result: list[Screening] = []
@@ -4458,6 +4500,18 @@ def scrape_cb(max_pages: int = 3) -> list[Screening]:
                 continue
             seen.add(key)
             result.append(s)
+
+    manual = _cb_manual(today)
+    added = 0
+    for s in manual:
+        key = (s.title, s.fecha, s.hora)
+        if key in seen:
+            continue
+        seen.add(key)
+        result.append(s)
+        added += 1
+    if added:
+        print(f"[CB] +{added} función(es) desde el override manual", flush=True)
     return result
 
 

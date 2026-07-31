@@ -1,0 +1,10 @@
+{
+  "_comment": "Override MANUAL de la Casa Nacional del Bicentenario. Se mergea con lo que trae scrape_cb (dedup por título+fecha+hora) y se filtra desde hoy, así que las funciones pasadas se caen solas. Existe porque el sitio (casadelbicentenario.cultura.gob.ar) responde el listado vacío a los runners de GitHub Actions aunque desde una IP local devuelve las actividades: sin esto, el scrape publica 0 funciones sin error. Cuando el ciclo termine, vaciá 'screenings' o actualizá con la programación nueva.",
+  "screenings": [
+    {"title": "Escenas en el mar", "fecha": "2026-08-02", "hora": "19:00", "director": "Takeshi Kitano", "year": 1991, "duration": 101, "original_title": "あの夏、いちばん静かな海。", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"},
+    {"title": "La tumba de las luciérnagas", "fecha": "2026-08-09", "hora": "19:00", "director": "Isao Takahata", "year": 1988, "duration": 88, "original_title": "火垂るの墓", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"},
+    {"title": "Una vez en Osaka", "fecha": "2026-08-16", "hora": "19:00", "director": "Jun Ichikawa", "year": 1999, "duration": 119, "original_title": "大阪物語", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"},
+    {"title": "Ah, la primavera", "fecha": "2026-08-23", "hora": "19:00", "director": "Shinji Sōmai", "year": 1998, "duration": 100, "original_title": "あ、春", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"},
+    {"title": "Ataduras", "fecha": "2026-08-30", "hora": "19:00", "director": "Kichitaro Negishi", "year": 1998, "duration": 124, "original_title": "絆", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"}
+  ]
+}
