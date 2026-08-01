@@ -6576,15 +6576,12 @@
     "original_title": "The Man Who Shot Liberty Valance"
   },
   "pacto de amor": {
-    "url": "https://letterboxd.com/film/bhagat-singh-ek-amar-gatha/",
-    "title_en": "Bhagat Singh Ek Amar Gatha",
-    "director": "Leonardo Bechini",
-    "country": "Cuba, Argentina",
-    "year": 2025,
-    "duration": 61,
-    "genre": "Documental, Acción",
-    "original_title": "Operación México, un pacto de amor",
-    "title_es": "El pacto de bodas"
+    "url": "",
+    "title_en": "Pacto de amor",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "los sueños de pepe - movimiento 2052": {
     "url": "https://letterboxd.com/film/pepes-dreams-movement-2052/",
@@ -8502,15 +8499,12 @@
     "original_title": "Das Testament des Dr. Mabuse"
   },
   "m, el vampiro negro|1931": {
-    "url": "https://letterboxd.com/film/m/",
-    "title_en": "M",
-    "director": "Fritz Lang",
-    "country": "Germany",
-    "year": 1931,
-    "duration": 110,
-    "genre": "Thriller, Drama",
-    "title_es": "M, el vampiro de Düsseldorf",
-    "original_title": "M - Eine Stadt sucht einen Mörder"
+    "url": "",
+    "title_en": "M, EL VAMPIRO NEGRO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "metrópolis|1927": {
     "url": "https://letterboxd.com/film/metropolis/",
@@ -8627,12 +8621,15 @@
     "original_title": "La terra trema"
   },
   "obsesión|1943": {
-    "url": "",
-    "title_en": "Obsesión",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/ossessione/",
+    "title_en": "Obsession",
+    "director": "Luchino Visconti, Luchino Visconti’s",
+    "country": "Italy",
+    "year": 1943,
+    "duration": 140,
+    "genre": "Drama, Crimen",
+    "title_es": "Obsesión",
+    "original_title": "Ossessione"
   },
   "grupo de familia|1974": {
     "url": "https://letterboxd.com/film/conversation-piece/",
@@ -9831,5 +9828,21 @@
     "duration": 70,
     "genre": "Comedia, Terror",
     "original_title": "Nunca asistas a este tipo de fiestas"
+  },
+  "anima latina": {
+    "url": "",
+    "title_en": "ANIMA LATINA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pantalla universidad: unsam": {
+    "url": "",
+    "title_en": "PANTALLA UNIVERSIDAD: UNSAM",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
