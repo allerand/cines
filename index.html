@@ -1093,9 +1093,17 @@ async function loadData() {
 
     // Deep link a una sala sin día explícito: si el día activo no tiene
     // funciones de esa sala, saltamos al primero que sí (como el click en chip).
-    if (activeCine !== 'all' && !document.querySelector('.day-tab.active.has-cine')) {
-      const firstDay = document.querySelector('.day-tab.has-cine');
-      if (firstDay) selectDay(firstDay.dataset.fecha);
+    // Lo resolvemos sobre los datos y no sobre las clases .has-cine del DOM,
+    // que dependen del orden en que corren buildDayTabs/highlightCineDays.
+    if (activeCine !== 'all' && activeDay) {
+      const matches = s => isCommercial(activeCine)
+        ? (s.cine && s.cine.startsWith(activeCine))
+        : s.cine === activeCine;
+      const pool = visibleScreenings().filter(matches);
+      if (!pool.some(s => s.fecha === activeDay)) {
+        const firstDay = pool.map(s => s.fecha).sort()[0];
+        if (firstDay) selectDay(firstDay);
+      }
     }
     
     // Ocultar el loader de la pantalla

@@ -1743,19 +1743,29 @@ def scrape_lorca() -> list[Screening]:
        "films": [{"title": "...", "times": ["HH:MM", ...]}, ...]}
     """
     if not LORCA_MANUAL_PATH.exists():
+        print("[Lorca] no existe data/lorca_manual.json", flush=True)
         return []
     try:
         data = json.loads(LORCA_MANUAL_PATH.read_text(encoding="utf-8"))
-    except Exception:
+    except Exception as e:
+        print(f"[Lorca] lorca_manual.json ilegible: {e}", flush=True)
         return []
 
     try:
         start = date.fromisoformat(data["period_start"])
         end = date.fromisoformat(data["period_end"])
-    except (KeyError, ValueError):
+    except (KeyError, ValueError) as e:
+        print(f"[Lorca] período inválido en lorca_manual.json: {e}", flush=True)
         return []
 
     today = date.today()
+    # El rango se vence solo cuando cambia la programación semanal. Sin este
+    # aviso el scrape devolvía 0 funciones en silencio y la sala desaparecía
+    # de la web sin que nada lo señalara.
+    if end < today:
+        print(f"[Lorca] lorca_manual VENCIDO (period_end={end}, hoy={today}) — "
+              f"actualizá la programación de la semana", flush=True)
+        return []
     result: list[Screening] = []
     d = max(start, today)
     while d <= end:
