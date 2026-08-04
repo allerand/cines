@@ -2,7 +2,7 @@
 
 ## 🔴 Hay algo para mirar en Lumiton
 
-Datos de hace 1 h · 31 cines · 1041 funciones publicadas.
+Datos de hace 3 h · 31 cines · 1041 funciones publicadas.
 
 ## Para mirar esta semana
 

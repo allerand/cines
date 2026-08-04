@@ -3,34 +3,34 @@
 
   "screenings": [
     {
-      "_ciclo": "Bendita Tú — programa Luminancias, Centro Cultural Recoleta. Los seis cortos están sólo en el cuerpo del texto de centroculturalrecoleta.org/agenda/bendita-tu-festival-de-cine; el scraper ve una sola actividad.",
-      "cine": "Centro Cultural Recoleta", "title": "Daria's Night Flowers", "fecha": "2026-08-04", "hora": "18:00",
+      "_ciclo": "Bendita Tú — programa Luminancias, Centro Cultural Recoleta. OJO: el CCR publicó el día equivocado (martes 4); la función es el JUEVES 6, confirmado por el festival. Por eso las fechas de acá no coinciden con las de su web. Los seis cortos están sólo en el cuerpo del texto de centroculturalrecoleta.org/agenda/bendita-tu-festival-de-cine; el scraper ve una sola actividad.",
+      "cine": "Centro Cultural Recoleta", "title": "Daria's Night Flowers", "fecha": "2026-08-06", "hora": "18:00",
       "director": "Maryam Tafakory", "year": 2025, "country": "Irán, Reino Unido, Francia", "duration": 16,
       "ciclo": "Bendita Tú", "ticket_url": "http://centroculturalrecoleta.org/agenda/bendita-tu-festival-de-cine"
     },
     {
-      "cine": "Centro Cultural Recoleta", "title": "Four Percent", "fecha": "2026-08-04", "hora": "18:00",
+      "cine": "Centro Cultural Recoleta", "title": "Four Percent", "fecha": "2026-08-06", "hora": "18:00",
       "director": "Monika Masłoń", "year": 2025, "country": "Alemania, Polonia", "duration": 13,
       "ciclo": "Bendita Tú", "ticket_url": "http://centroculturalrecoleta.org/agenda/bendita-tu-festival-de-cine"
     },
     {
-      "cine": "Centro Cultural Recoleta", "title": "Utopías y otras especies", "fecha": "2026-08-04", "hora": "18:00",
+      "cine": "Centro Cultural Recoleta", "title": "Utopías y otras especies", "fecha": "2026-08-06", "hora": "18:00",
       "director": "Júlia Izaguirre", "year": 2025, "country": "España", "duration": 17,
       "ciclo": "Bendita Tú", "ticket_url": "http://centroculturalrecoleta.org/agenda/bendita-tu-festival-de-cine"
     },
     {
-      "cine": "Centro Cultural Recoleta", "title": "En otra Palestina", "fecha": "2026-08-04", "hora": "18:00",
+      "cine": "Centro Cultural Recoleta", "title": "En otra Palestina", "fecha": "2026-08-06", "hora": "18:00",
       "director": "Yaela Gottlieb", "year": 2025, "country": "Perú", "duration": 9,
       "ciclo": "Bendita Tú", "ticket_url": "http://centroculturalrecoleta.org/agenda/bendita-tu-festival-de-cine"
     },
     {
-      "cine": "Centro Cultural Recoleta", "title": "Beau temps, mauvais temps", "fecha": "2026-08-04", "hora": "18:00",
+      "cine": "Centro Cultural Recoleta", "title": "Beau temps, mauvais temps", "fecha": "2026-08-06", "hora": "18:00",
       "director": "Florence Lafond", "year": 2025, "country": "Canadá", "duration": 14,
       "original_title": "Beau temps, mauvais temps",
       "ciclo": "Bendita Tú", "ticket_url": "http://centroculturalrecoleta.org/agenda/bendita-tu-festival-de-cine"
     },
     {
-      "cine": "Centro Cultural Recoleta", "title": "El ensayo", "fecha": "2026-08-04", "hora": "18:00",
+      "cine": "Centro Cultural Recoleta", "title": "El ensayo", "fecha": "2026-08-06", "hora": "18:00",
       "director": "Carmen Ayala Marín, Alberto Martín Menacho", "year": 2025, "country": "España", "duration": 12,
       "original_title": "El ensayo",
       "ciclo": "Bendita Tú", "ticket_url": "http://centroculturalrecoleta.org/agenda/bendita-tu-festival-de-cine"
@@ -92,8 +92,8 @@
       "cine": "Museo del Cine", "fecha": "2026-08-15", "title_contiene": "La barraca: Lorca por los caminos de España de Edgardo Cozarinsky"
     },
     {
-      "_por_que": "El scraper del Recoleta ve el festival como UNA actividad. Los seis cortos van arriba como funciones propias, así que la entrada paraguas sobra y además no tiene Letterboxd posible.",
-      "cine": "Centro Cultural Recoleta", "fecha": "2026-08-04", "title_contiene": "Bendita Tú Festival de Cine"
+      "_por_que": "El scraper del Recoleta ve el festival como UNA actividad. Los seis cortos van arriba como funciones propias, así que la entrada paraguas sobra y además no tiene Letterboxd posible. Sin `fecha`: el CCR publicó mal el día y si lo corrigen, la paraguas hay que sacarla igual.",
+      "cine": "Centro Cultural Recoleta", "title_contiene": "Bendita Tú Festival de Cine"
     }
   ]
 }
