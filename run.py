@@ -43,7 +43,7 @@ async def run_scraper(semanas: int = 9) -> None:
         scrape_gaumont, scrape_cck, scrape_arthaus, scrape_museo_cine,
         scrape_ccr, scrape_imdb_then_lanacion, scrape_amorina, scrape_cea,
         scrape_filo, scrape_bn, scrape_cc25, scrape_ccd, scrape_cb,
-        scrape_borges, scrape_bcn,
+        scrape_borges, scrape_bcn, scrape_manual, descartar_manual,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
     # browser para IMDb). Inicializamos vacío y se llena más abajo.
@@ -170,6 +170,14 @@ async def run_scraper(semanas: int = 9) -> None:
     except Exception as e:
         print(f"error — {e}")
 
+    print("📝 Funciones manuales...", end=" ", flush=True)
+    try:
+        r = scrape_manual(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
     async with async_playwright() as pw:
         # Scraping phase — dedicated browser context
         browser = await pw.chromium.launch(headless=True)
@@ -220,6 +228,13 @@ async def run_scraper(semanas: int = 9) -> None:
         lb_browser = await pw.chromium.launch(headless=True)
         lb_ctx = await lb_browser.new_context(user_agent=UA)
         lb_page = await lb_ctx.new_page()
+
+        # Descartes manuales ANTES del enrichment: las funciones mal scrapeadas
+        # (p.ej. un programa doble en un solo título) no tienen match posible en
+        # Letterboxd, así que sacarlas acá también ahorra búsquedas inútiles.
+        all_screenings, n_desc = descartar_manual(all_screenings)
+        if n_desc:
+            print(f"  ↳ Descartadas {n_desc} funciones por manual_screenings.json")
 
         # Para cada título único, juntamos los mejores hints disponibles desde
         # cualquier screening que lo cite (director / año / título original)

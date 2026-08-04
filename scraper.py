@@ -148,20 +148,20 @@ def fetch_malba_evento_meta(url: str) -> dict:
 
     out: dict = {}
 
-    # Director: "De NAME" antes de un día de semana (formato MALBA estándar)
+    # Director: "De NAME" antes de un día de semana (formato MALBA estándar).
+    # MALBA repite el crédito N veces en algunas páginas ("De Christopher Nolan
+    # De Christopher Nolan De Christopher Nolan Jueves…" en /evento/la-odisea/),
+    # y el no-greedy se las tragaba todas. El (?:\s+De\s+\1)* consume esas
+    # repeticiones FUERA del grupo: sólo colapsa si el crédito es idéntico, así
+    # que un apellido con De propio ("Brian De Palma") sigue entero.
     md = re.search(
-        r"\bDe\s+([A-ZÁÉÍÓÚÑ][^.\n]{2,60}?)\s+(?:Lunes|Martes|Mi[ée]rcoles|Jueves|"
+        r"\bDe\s+([A-ZÁÉÍÓÚÑ][^.\n]{2,60}?)(?:\s+De\s+\1)*\s+"
+        r"(?:Lunes|Martes|Mi[ée]rcoles|Jueves|"
         r"Viernes|S[áa]bado|Domingo)",
         text,
     )
     if md:
-        director = md.group(1).strip().rstrip(",")
-        # A veces el texto repite el crédito ("De NOMBRE De NOMBRE") y el regex
-        # no-greedy captura ambas ocurrencias. Si es "X De X" dejamos un solo X.
-        dup = re.match(r"^(.+?)\s+De\s+\1$", director, re.IGNORECASE)
-        if dup:
-            director = dup.group(1).strip()
-        out["director"] = director
+        out["director"] = md.group(1).strip().rstrip(",")
 
     # Ciclo: dinámico — el <p> inmediatamente previo al <h1> del título contiene
     # el nombre del ciclo (ej. "Semana de cine portugués", "Cineclub Nocturna",
@@ -3551,19 +3551,22 @@ def _parse_cea_text(text: str, today: date, cutoff: date) -> list[dict]:
             continue
         month = _CEA_MONTHS[m.group(2).lower()]
 
-        # Título / director / año / ciclo dentro de la card (hasta el próximo
-        # "Director · Año", que cierra el bloque de metadata).
-        title = ciclo = director = ""
+        # Título / director / año / ciclo dentro de la card. El bloque va desde
+        # la línea del día hasta "Director · Año", que lo cierra.
+        #
+        # El TÍTULO es la ÚLTIMA línea antes de ese cierre; lo que viene antes
+        # es el copete del ciclo. Antes se asumía que el copete empezaba con
+        # "Ciclo · " y se tomaba la primera línea como título: cuando el CEA
+        # cambió el copete a "AVELLANEDA FILMA · Presencia de Diego Lerman"
+        # el copete pasó a publicarse COMO título. Tomarlo por posición y no
+        # por el prefijo aguanta el próximo rediseño.
+        director = ""
         film_year: Optional[int] = None
+        rows: list[str] = []
         k = j + 1
         while k < n and k < j + 10:
             row = lines[k]
             if not row:
-                k += 1
-                continue
-            cm = re.match(r"ciclo\s*·\s*(.+)$", row, re.IGNORECASE)
-            if cm:
-                ciclo = cm.group(1).strip()
                 k += 1
                 continue
             dm = _CEA_DIR_YEAR_RE.match(row)
@@ -3572,9 +3575,18 @@ def _parse_cea_text(text: str, today: date, cutoff: date) -> list[dict]:
                 break
             if re.fullmatch(r"\d{1,2}", row):
                 break
-            if not title:
-                title = row
+            rows.append(row)
             k += 1
+
+        title = rows[-1] if rows else ""
+        # Ciclo = primer segmento del copete, tanto en el formato viejo
+        # ("Ciclo · Radar CEA") como en el nuevo ("RADAR CEA · Clásico
+        # restaurado"). _fix_caps en run.py se encarga de las mayúsculas.
+        ciclo = ""
+        if len(rows) > 1:
+            eyebrow = rows[0]
+            cm = re.match(r"ciclo\s*·\s*(.+)$", eyebrow, re.IGNORECASE)
+            ciclo = (cm.group(1) if cm else eyebrow).split("·")[0].strip()
 
         # Requerimos "Director · Año": es lo que distingue una card real de
         # arriba de las listas de programación tentativa de más abajo.
@@ -4742,3 +4754,101 @@ def scrape_bcn() -> list[Screening]:
             original_title=original,
         ))
     return result
+
+
+# ---------------------------------------------------------------------------
+# Funciones manuales — data/manual_screenings.json
+# ---------------------------------------------------------------------------
+# Escape genérico para lo que ningún scraper puede sacar solo: festivales que
+# publican la grilla en prosa (los cortos de Bendita Tú viven dentro de un
+# párrafo, no en cards), programas dobles que el sitio escribe como un único
+# título, o un cine que rompió justo antes de una función importante.
+#
+# Ya existían overrides por cine (lorca_manual, museo_manual, cb_manual); éste
+# sirve para CUALQUIER sala y además puede DESCARTAR funciones mal scrapeadas,
+# que es lo que los otros no saben hacer.
+#
+# Shape:
+#   {"screenings": [ {cine, title, fecha, hora, ...campos de Screening} ],
+#    "descartar":  [ {cine, fecha, hora?, title_contiene} ]}
+#
+# El Letterboxd de estas funciones va en data/metadata_overrides.json, que es
+# donde vive ese dato para todo el resto de la cartelera.
+
+MANUAL_PATH = Path(__file__).parent / "data" / "manual_screenings.json"
+
+
+def _load_manual() -> dict:
+    if not MANUAL_PATH.exists():
+        return {}
+    try:
+        return json.loads(MANUAL_PATH.read_text(encoding="utf-8"))
+    except Exception as e:
+        print(f"[manual] manual_screenings.json ilegible: {e}", flush=True)
+        return {}
+
+
+def scrape_manual(semanas: int = 9) -> list[Screening]:
+    """Funciones cargadas a mano, filtradas a [hoy, hoy+semanas]. Las viejas se
+    caen solas: no hace falta limpiar el archivo cada mes."""
+    data = _load_manual()
+    today = date.today()
+    end = today + timedelta(weeks=semanas)
+
+    result: list[Screening] = []
+    for item in data.get("screenings", []):
+        try:
+            d = date.fromisoformat(item["fecha"])
+        except (KeyError, ValueError):
+            continue
+        if not (today <= d <= end):
+            continue
+        result.append(Screening(
+            cine=item.get("cine", ""),
+            title=item.get("title", ""),
+            fecha=item["fecha"],
+            hora=item.get("hora", "??"),
+            ticket_url=item.get("ticket_url", ""),
+            ciclo=item.get("ciclo", ""),
+            director=item.get("director", ""),
+            country=item.get("country", ""),
+            year=item.get("year"),
+            duration=item.get("duration"),
+            original_title=item.get("original_title", ""),
+        ))
+    return [s for s in result if s.cine and s.title]
+
+
+def descartar_manual(screenings: list) -> tuple[list, int]:
+    """Saca de la lista las funciones marcadas en `descartar`. Devuelve
+    (lista filtrada, cuántas se sacaron).
+
+    Matchea por cine + fecha + substring del título (case-insensitive), con
+    hora opcional. Es para funciones que el scraper trae MAL — p.ej. el Museo
+    del Cine mete un programa doble en un solo título — y que se reemplazan por
+    entradas correctas en `screenings`.
+    """
+    reglas = _load_manual().get("descartar", [])
+    if not reglas:
+        return screenings, 0
+
+    def descartada(s) -> bool:
+        cine = s.cine if hasattr(s, "cine") else s.get("cine", "")
+        fecha = s.fecha if hasattr(s, "fecha") else s.get("fecha", "")
+        hora = s.hora if hasattr(s, "hora") else s.get("hora", "")
+        title = s.title if hasattr(s, "title") else s.get("title_es", "")
+        for r in reglas:
+            if r.get("cine") and r["cine"] != cine:
+                continue
+            if r.get("fecha") and r["fecha"] != fecha:
+                continue
+            if r.get("hora") and r["hora"] != hora:
+                continue
+            frag = (r.get("title_contiene") or "").lower()
+            if frag and frag not in (title or "").lower():
+                continue
+            return True
+        return False
+
+    filtradas = [s for s in screenings if not descartada(s)]
+    return filtradas, len(screenings) - len(filtradas)

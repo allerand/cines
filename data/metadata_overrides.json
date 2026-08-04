@@ -9,6 +9,24 @@
 
     { "title": "La vida de Pi", "director": "Ang Lee", "year": 2012, "title_en": "Life of Pi", "original_title": "Life of Pi", "letterboxd": "https://letterboxd.com/film/life-of-pi/" },
 
-    { "title": "Obsesión", "director": "Curry Barker", "year": 2025, "country": "Estados Unidos", "genre": "Terror", "title_en": "Obsession", "original_title": "Obsession", "letterboxd": "https://letterboxd.com/film/obsession-2025/" }
+    { "title": "Obsesión", "director": "Curry Barker", "year": 2025, "country": "Estados Unidos", "genre": "Terror", "title_en": "Obsession", "original_title": "Obsession", "letterboxd": "https://letterboxd.com/film/obsession-2025/" },
+
+    { "_comment": "Cortos del festival Bendita Tú (Recoleta + Casa del Bicentenario). Cargados a mano en manual_screenings.json; el enrichment automático no los encuentra porque son estrenos 2025 de festival. Slugs verificados en letterboxd.com: coincide director en los 12." },
+    { "title": "Daria's Night Flowers", "director": "Maryam Tafakory", "year": 2025, "title_en": "Daria's Night Flowers", "letterboxd": "https://letterboxd.com/film/darias-night-flowers/" },
+    { "title": "Four Percent", "director": "Monika Masłoń", "year": 2025, "title_en": "Four Percent", "letterboxd": "https://letterboxd.com/film/four-percent/" },
+    { "title": "Utopías y otras especies", "director": "Júlia Izaguirre", "year": 2025, "original_title": "Utopies i altres espècies", "letterboxd": "https://letterboxd.com/film/utopias-y-otras-especies/" },
+    { "title": "En otra Palestina", "director": "Yaela Gottlieb", "year": 2025, "letterboxd": "https://letterboxd.com/film/en-otra-palestina/" },
+    { "title": "Beau temps, mauvais temps", "director": "Florence Lafond", "year": 2025, "title_en": "No Matter the Weather", "original_title": "Beau temps, mauvais temps", "letterboxd": "https://letterboxd.com/film/no-matter-the-weather/" },
+    { "title": "El ensayo", "cine": "Centro Cultural Recoleta", "director": "Carmen Ayala Marín, Alberto Martín Menacho", "year": 2025, "title_en": "The Essay", "original_title": "El ensayo", "letterboxd": "https://letterboxd.com/film/the-essay/" },
+    { "title": "Cuando ellas se fueron solo quedó un pequeño ruido en la montaña", "director": "Laura Dávila Argoty", "year": 2025, "title_en": "When They Left, All that Remained was a Small Noise in the Mountain", "letterboxd": "https://letterboxd.com/film/when-they-left-all-that-remained-was-a-small/" },
+    { "title": "Zamana", "cine": "Casa del Bicentenario", "director": "Marianela Siccardi", "year": 2025, "letterboxd": "https://letterboxd.com/film/zamana-2025/" },
+    { "title": "Can You Hear Me?", "cine": "Casa del Bicentenario", "director": "Anastazja Naumenko", "year": 2025, "letterboxd": "https://letterboxd.com/film/can-you-hear-me-2025/" },
+    { "title": "Vogliamo Una Vita Bella", "director": "Bianca Arnold", "year": 2025, "letterboxd": "https://letterboxd.com/film/vogliamo-una-vita-bella/" },
+    { "title": "How it begins", "director": "Chloé Wasp", "year": 2025, "letterboxd": "https://letterboxd.com/film/how-it-begins/" },
+    { "title": "Pude ver un fantasma desde mi ventana", "director": "Mayro Romero", "year": 2025, "title_en": "I Could See a Ghost from My Window", "letterboxd": "https://letterboxd.com/film/i-could-see-a-ghost-from-my-window/" },
+
+    { "_comment": "Programa doble del Museo del Cine por los 90 años de la muerte de Lorca — el sitio lo publica como un título único." },
+    { "title": "La barraca: Lorca por los caminos de España", "director": "Edgardo Cozarinsky", "year": 1995, "country": "Francia, España", "duration": 55 },
+    { "title": "Lorca y el Río de la Plata", "director": "Eduardo Mignogna", "year": 1998, "country": "Argentina", "duration": 50 }
   ]
 }
