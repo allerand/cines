@@ -1,0 +1,58 @@
+name: Auditoría semanal
+
+# Corre scripts/audit.py y abre un issue con el informe cuando encuentra algo
+# roto. Existe porque los scrapers fallan en silencio: cada uno atrapa su
+# excepción y devuelve [], así que un cine puede desaparecer de la web durante
+# semanas sin que nada avise. Esto convierte ese silencio en un issue.
+
+on:
+  schedule:
+    - cron: '30 12 * * 1'   # lunes 09:30 ART, después del scrape diario
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          # La auditoría compara cada cine contra su propio histórico, que sale
+          # de los commits de data/cartelera.json. Con el clone shallow por
+          # defecto no hay línea de base y se pierde la mitad del valor.
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Correr auditoría
+        id: audit
+        run: |
+          set +e
+          python3 scripts/audit.py --out audit.md
+          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: auditoria
+          path: audit.md
+
+      # Sólo se abre issue si hubo ERRORes (exit 1). Un informe limpio no
+      # necesita ruido: queda en el artifact del run.
+      - name: Abrir issue si hay hallazgos
+        if: steps.audit.outputs.exit_code == '1'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh issue create \
+            --title "Auditoría de cartelera — $(date -u +%Y-%m-%d)" \
+            --body-file audit.md \
+            --label auditoria || \
+          gh issue create \
+            --title "Auditoría de cartelera — $(date -u +%Y-%m-%d)" \
+            --body-file audit.md
