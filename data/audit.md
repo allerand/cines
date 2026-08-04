@@ -2,7 +2,7 @@
 
 ## 🔴 Hay algo para mirar en Lumiton
 
-Datos de hace 15 h · 30 cines · 798 funciones publicadas.
+Datos de hace 15 h · 31 cines · 804 funciones publicadas.
 
 ## Para mirar esta semana
 
@@ -18,7 +18,7 @@ Datos de hace 15 h · 30 cines · 798 funciones publicadas.
 - **Cine Gaumont** bajó bastante: 81 → 23 funciones.
 - **Hoyts Dot** volvió a la cartelera: 0 → 76 funciones.
 - **Cinemark Puerto Madero** volvió a la cartelera: 0 → 58 funciones.
-- …y 7 cines más con cambios de tamaño parecido (corré `python3 scripts/audit.py` para verlos).
+- …y 8 cines más con cambios de tamaño parecido (corré `python3 scripts/audit.py` para verlos).
 
 ## Cines por debajo de lo habitual
 
@@ -26,7 +26,7 @@ Datos de hace 15 h · 30 cines · 798 funciones publicadas.
 |---|---:|---:|---:|
 | Cine Gaumont | 23 | 13 | ~66 |
 
-Los otros 29 cines están en su rango normal.
+Los otros 30 cines están en su rango normal.
 
 ## Pendientes de siempre
 
@@ -35,7 +35,7 @@ Cosas que no rompen la web pero degradan la ficha. Están acá para que no se ol
 - **Sala Lugones**: ticket_url inválido ×39.
 - **Cine York**: dos títulos en el mismo horario ×4.
 - 18 funciones sin director: CCK (14/16), Lumiton (4/6).
-- 49 funciones sin link de Letterboxd: Amorina (3/3), Arthaus (13/14), Biblioteca Nacional (2/2), Biblioteca del Congreso (12/12), CCK (12/16), Centro Cultural 25 de Mayo (2/2), Lumiton (5/6).
+- 55 funciones sin link de Letterboxd: Amorina (3/3), Arthaus (13/14), Biblioteca Nacional (2/2), Biblioteca del Congreso (12/12), CCK (12/16), Centro Cultural 25 de Mayo (2/2), Hasta Trilce (6/6), Lumiton (5/6).
 
 ---
 

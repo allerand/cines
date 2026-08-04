@@ -5280,3 +5280,80 @@ def scrape_cinemark_hoyts(semanas: int = 2) -> list[Screening]:
                 duration=meta.get("duration"),
             ))
     return result
+
+
+# ---------------------------------------------------------------------------
+# Peña sin cadenas — Hasta Trilce (vía alternativateatral.com)
+# ---------------------------------------------------------------------------
+# Fernando Martín Peña proyecta en fílmico todos los martes en Hasta Trilce.
+# La gracia del ciclo es que NO se anuncia qué se da: son dos películas sorpresa
+# por noche. Por eso el título, el director y el año son fijos — no hay nada que
+# scrapear ahí, y ponerle un título real sería inventarlo.
+#
+# Las funciones salen del endpoint que usa el propio formulario de compra, que
+# devuelve JSON limpio con las que están A LA VENTA:
+#     {"funciones": [{"descripcion": "martes 04/08/2026 - 19:00 hs",
+#                     "fecha": "04/08/2026", "id": "130899"}, ...]}
+# La ficha del espectáculo también publica la grilla ("Martes - 19:00 hs y 21:00
+# hs - Del 04/08 al 22/12"), pero de ahí saldrían martes hasta diciembre que
+# todavía no existen. El endpoint dice lo que se puede comprar hoy.
+
+PENA_OBRA_ID = "75124"
+PENA_API = ("https://publico1.alternativateatral.com/api/formulario-localidades.asp"
+            f"?id={PENA_OBRA_ID}&o=14&m=&c=&_=1")
+PENA_ENTRADAS = (f"https://publico.alternativateatral.com/"
+                 f"entradas{PENA_OBRA_ID}-pena-sin-cadenas?o=14")
+PENA_CINE = "Hasta Trilce"
+PENA_CICLO = "Peña sin cadenas"
+PENA_TITULO = "Película sorpresa"
+
+
+def scrape_pena_sin_cadenas(semanas: int = 9) -> list[Screening]:
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    try:
+        crudo = fetch_bytes(PENA_API).decode("utf-8", errors="replace").strip()
+    except Exception as e:
+        print(f"[peña: no carga — {e}]", end=" ", flush=True)
+        return []
+
+    # La respuesta viene envuelta en paréntesis (es un JSONP sin nombre de
+    # callback), así que hay que pelarla antes de parsear.
+    if crudo.startswith("(") and crudo.endswith(")"):
+        crudo = crudo[1:-1]
+    try:
+        data = json.loads(crudo)
+    except Exception:
+        print("[peña: respuesta ilegible]", end=" ", flush=True)
+        return []
+
+    result: list[Screening] = []
+    seen: set = set()
+    for f in data.get("funciones") or []:
+        md = re.match(r"(\d{1,2})/(\d{1,2})/(\d{4})", (f.get("fecha") or "").strip())
+        mh = re.search(r"(\d{1,2}):(\d{2})", f.get("descripcion") or "")
+        if not (md and mh):
+            continue
+        try:
+            d = date(int(md.group(3)), int(md.group(2)), int(md.group(1)))
+        except ValueError:
+            continue
+        if not (today <= d <= cutoff):
+            continue
+        hora = f"{int(mh.group(1)):02d}:{mh.group(2)}"
+        if (d, hora) in seen:
+            continue
+        seen.add((d, hora))
+        result.append(Screening(
+            cine=PENA_CINE,
+            title=PENA_TITULO,
+            fecha=d.isoformat(),
+            hora=hora,
+            ticket_url=PENA_ENTRADAS,
+            ciclo=PENA_CICLO,
+            director="Desconocido",
+            duration=120,
+        ))
+    if not result:
+        print("[peña: 0 funciones a la venta]", end=" ", flush=True)
+    return result
