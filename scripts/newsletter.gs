@@ -236,6 +236,19 @@ function _escapeHtml(s) {
     .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 }
 
+// Link a la web con UTMs. Es lo que cierra el embudo: index.html lee utm_medium
+// y lo guarda como `canal`, así que un click a boletería hecho por alguien que
+// llegó desde el newsletter queda atribuido al newsletter y no a "directo".
+// Sin esto, el mail no se puede medir: GA4 ve las visitas como tráfico directo.
+function _siteUrl(weekStart, contenido) {
+  const camp = "semana-" + Utilities.formatDate(weekStart, "GMT-3", "yyyy-MM-dd");
+  return SITE_URL
+    + "?utm_source=newsletter&utm_medium=email"
+    + "&utm_campaign=" + encodeURIComponent(camp)
+    + "&utm_content=" + encodeURIComponent(contenido);
+}
+
+
 function _buildEmailHtml(weekStart, weekEnd, screenings) {
   const when = _captionDates(weekStart, weekEnd);
   const weekSet = new Set();
@@ -283,7 +296,7 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
     '<tr><td style="padding:18px 0 4px;font-size:14px;color:' + T_TEXT + '">'
     + 'Programación de las salas de cine de la ciudad, semana ' + _escapeHtml(when) + '. '
     + '<span style="color:' + T_MUTED + ';font-size:13px">Tocá una película para ver director, año y duración en Letterboxd, o entrá a '
-    + '<a href="' + SITE_URL + '" style="color:' + T_ACCENT + ';text-decoration:none">sitedigo.com</a> para todos los detalles.</span>'
+    + '<a href="' + _siteUrl(weekStart, 'intro') + '" style="color:' + T_ACCENT + ';text-decoration:none">sitedigo.com</a> para todos los detalles.</span>'
     + '</td></tr>',
 
     '<tr><td style="padding:0 0 24px">',
@@ -324,7 +337,7 @@ function _buildEmailHtml(weekStart, weekEnd, screenings) {
     '</td></tr>',
     '<tr><td style="padding-top:16px;border-top:1px solid ' + T_BORDER + ';font-size:12px;color:' + T_MUTED + '">'
     + 'Todas las funciones también en '
-    + '<a href="' + SITE_URL + '" style="color:' + T_ACCENT + ';text-decoration:none">sitedigo.com</a> · '
+    + '<a href="' + _siteUrl(weekStart, 'footer') + '" style="color:' + T_ACCENT + ';text-decoration:none">sitedigo.com</a> · '
     + '<a href="https://instagram.com/sitedigocine" style="color:' + T_ACCENT + ';text-decoration:none">@sitedigocine</a> en Instagram.'
     + '</td></tr>',
     '</table></td></tr></table></div>'

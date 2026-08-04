@@ -886,6 +886,82 @@ window.addEventListener('hashchange', () => {
   renderTable();
 });
 
+// ── Analítica ──────────────────────────────────────────────────────────
+// Lo que hay que poder demostrar no es tráfico: es cuánta gente sale de acá
+// hacia una boletería. Por eso TODOS los eventos de función llevan los mismos
+// parámetros — cine, película, ciclo, días de anticipación — y así cualquier
+// informe se corta por la dimensión que haga falta sin volver a tocar el
+// tracking.
+//
+// ⚠️ Los parámetros hay que darlos de alta UNA VEZ en GA4:
+//    Admin → Definiciones personalizadas → Crear dimensión personalizada,
+//    ámbito "Evento", con estos nombres de parámetro:
+//      cine · pelicula · ciclo · fecha_funcion · dias_anticipacion · canal ·
+//      vista · posicion
+//    Sin eso los eventos llegan igual pero los parámetros no se pueden ver en
+//    ningún informe, que es la forma más común de que un tracking no sirva.
+
+// De dónde llegó la visita. Se lee una sola vez: si después navega dentro del
+// sitio la URL cambia, pero el origen de la sesión sigue siendo el mismo.
+const CANAL_ORIGEN = (() => {
+  const p = new URLSearchParams(location.search);
+  const m = p.get('utm_medium') || p.get('utm_source');
+  if (m) return m.toLowerCase();
+  if (document.referrer && !document.referrer.includes(location.host)) {
+    try { return new URL(document.referrer).hostname.replace(/^www\./, ''); }
+    catch (_) { return 'referido'; }
+  }
+  return 'directo';
+})();
+
+function slugify(t) {
+  return (t || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '').slice(0, 60);
+}
+
+// Cuántos días falta para la función. Es el dato que dice si la gente reserva
+// con tiempo o decide el mismo día, y cambia por completo cuándo conviene
+// publicar.
+function diasHasta(fecha) {
+  try {
+    const hoy = new Date(); hoy.setHours(0, 0, 0, 0);
+    return Math.round((new Date(fecha + 'T00:00:00') - hoy) / 86400000);
+  } catch (_) { return -1; }
+}
+
+function paramsFuncion(s, extra) {
+  return Object.assign({
+    cine: s.cine || '',
+    pelicula: s.title_es || s.title_en || '',
+    ciclo: s.ciclo || '(sin ciclo)',
+    fecha_funcion: s.fecha || '',
+    dias_anticipacion: diasHasta(s.fecha),
+    canal: CANAL_ORIGEN,
+  }, extra || {});
+}
+
+function track(evento, params) {
+  try { if (window.gtag) gtag('event', evento, params || {}); } catch (_) {}
+}
+
+// Link a boletería con UTMs. Sirve para los dos lados: nosotros medimos el
+// click y el cine ve en SU propio analytics que la visita llegó desde acá —
+// que es la prueba concreta de que la cartelera le mueve gente a la sala.
+// Se preservan los parámetros que la URL ya tenga (varias boleterías los usan
+// para identificar la función).
+function ticketUrl(s) {
+  const raw = s.ticket_url || '';
+  if (!/^https?:/i.test(raw)) return raw;
+  try {
+    const u = new URL(raw);
+    u.searchParams.set('utm_source', 'sitedigo');
+    u.searchParams.set('utm_medium', 'cartelera');
+    u.searchParams.set('utm_campaign', s.ciclo ? slugify(s.ciclo) : 'cartelera-web');
+    u.searchParams.set('utm_content', slugify(s.title_es || s.title_en));
+    return u.toString();
+  } catch (_) { return raw; }
+}
+
 // ── Sistema de estrellas / "agendar en Google Calendar" ────────────────
 // Apps Script URL; recibe POST con action=star.
 const STAR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwFSvoEUdjrljSnxSZ-N3a82EC_pwc_V0aY_3MA3Du9BHQfNPhuxXXrp_YNBgfUAZCE/exec';
@@ -1200,6 +1276,9 @@ document.getElementById('filters').addEventListener('click', e => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
   activeCine = btn.dataset.cine;
+  // Va acá arriba y no al final: más abajo hay un return temprano cuando el
+  // día activo no tiene funciones de esa sala, y el filtro se aplicó igual.
+  track('filtrar_cine', { cine: activeCine, canal: CANAL_ORIGEN });
   resetSort();
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
   highlightCineDays();
@@ -1217,10 +1296,25 @@ document.getElementById('filters').addEventListener('click', e => {
   updateHash();
 });
 
+let searchTrackTimer = null;
 document.getElementById('search-input').addEventListener('input', e => {
   searchQuery = e.target.value.trim().toLowerCase();
   renderTable();
   updateHash();
+  // Con debounce y sólo si quedó algo escrito: si no, cada tecla sería un
+  // evento y la lista de búsquedas serían prefijos sin sentido.
+  clearTimeout(searchTrackTimer);
+  searchTrackTimer = setTimeout(() => {
+    if (searchQuery.length >= 3) {
+      track('buscar', {
+        termino: searchQuery,
+        resultados: visibleScreenings().filter(s =>
+          [s.title_es, s.title_en, s.original_title, s.director, s.ciclo]
+            .join(' ').toLowerCase().includes(searchQuery)).length,
+        canal: CANAL_ORIGEN,
+      });
+    }
+  }, 1200);
 });
 
 // Compartir la vista actual: el hash ya lleva día/cine/búsqueda, así que la
@@ -1239,6 +1333,10 @@ function shareText() {
 document.getElementById('share-btn').addEventListener('click', async () => {
   const url = location.href;
   const btn = document.getElementById('share-btn');
+  track('compartir_busqueda', {
+    cine: activeCine, fecha_funcion: activeDay,
+    termino: searchQuery || '(sin búsqueda)', canal: CANAL_ORIGEN,
+  });
   // Share sheet nativo SOLO en dispositivos touch (teléfono/tablet), donde es
   // el flujo natural. En desktop el popover del sistema es incómodo: copiamos
   // directo al portapapeles con confirmación visible.
@@ -1375,7 +1473,7 @@ function renderTable() {
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}${alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : ''}</div>
       ${s.ciclo ? `<div class="film-ciclo-inline">${escapeHtml(s.ciclo)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
-      ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" href="${escapeHtml(s.ticket_url)}" target="_blank">Entradas →</a></div>` : ''}`;
+      ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
 
     return `<tr>
       <td class="col-hora">${searching ? `<span class="hora-date">${fmtShortDate(s.fecha)}</span>` : ''}<span class="hora-tag">${horaText}</span></td>
@@ -1388,7 +1486,7 @@ function renderTable() {
       <td class="col-pais">${escapeHtml(s.country || '')}</td>
       <td class="col-anio">${s.year || ''}</td>
       <td class="col-dur">${s.duration ? s.duration + ' min' : ''}</td>
-      <td class="col-lb"><a class="lb-link ${s.letterboxd ? '' : 'no-link'}" href="${s.letterboxd || '#'}" target="_blank"><span class="lb-dots"><span></span><span></span><span></span></span></a></td>
+      <td class="col-lb"><a class="lb-link ${s.letterboxd ? '' : 'no-link'}" data-row="${i}" href="${s.letterboxd || '#'}" target="_blank" rel="noopener"><span class="lb-dots"><span></span><span></span><span></span></span></a></td>
     </tr>`;
   }).join('');
 
@@ -1429,6 +1527,25 @@ function renderTable() {
     });
   });
 
+  // Eventos de salida. `posicion` y `vista` van acá y no en paramsFuncion
+  // porque dependen de cómo estaba armada la lista en ese momento: sirven para
+  // saber si la gente clickea lo primero que ve o si baja a buscar.
+  const vista = searching ? 'busqueda' : 'dia';
+  main.querySelectorAll('.ticket-link').forEach(a => {
+    a.addEventListener('click', () => {
+      const s = rows[parseInt(a.dataset.row, 10)];
+      if (s) track('click_entradas', paramsFuncion(s, {
+        posicion: parseInt(a.dataset.row, 10) + 1, vista,
+      }));
+    });
+  });
+  main.querySelectorAll('.lb-link:not(.no-link)').forEach(a => {
+    a.addEventListener('click', () => {
+      const s = rows[parseInt(a.dataset.row, 10)];
+      if (s) track('click_letterboxd', paramsFuncion(s, { vista }));
+    });
+  });
+
   // Handler del botón "Agendar": toggle local + abrir Google Calendar + ping
   // al backend (Apps Script) para el contador de popularidad.
   main.querySelectorAll('.add-btn').forEach(btn => {
@@ -1449,6 +1566,8 @@ function renderTable() {
       const icon = nowStarred ? '✓' : '+';
       btn.innerHTML = `<span class="add-icon">${icon}</span>${countHtml}`;
       pingStar(s, nowStarred);
+      track(nowStarred ? 'agendar_funcion' : 'desagendar_funcion',
+            paramsFuncion(s, { vista }));
       if (nowStarred) {
         const url = gcalUrl(s);
         if (url) window.open(url, '_blank', 'noopener');
