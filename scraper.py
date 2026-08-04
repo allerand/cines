@@ -1539,27 +1539,27 @@ def _parse_lanacion_film_funciones(text: str) -> dict[str, list[str]]:
     block = text[start: end if end > start else len(text)]
     lines = [ln.strip() for ln in block.split("\n")]
 
+    # La sala se identifica por POSICIÓN: cualquier línea que no sea
+    # "Formato: HH:MM, HH:MM" abre una sala nueva y los horarios que siguen son
+    # suyos. Antes el ancla era la línea "COMPRAR ENTRADAS" que iba debajo de
+    # cada sala; La Nación la sacó (junto con "OTRAS PELÍCULAS") y sin ancla
+    # current_sala nunca se seteaba: los siete cines comerciales quedaban en
+    # cero. Sin ancla fija, un rediseño del botón ya no rompe el parseo.
+    formato_re = re.compile(
+        r"^[^:]{1,40}:\s*((?:\d{1,2}:\d{2})(?:\s*,\s*\d{1,2}:\d{2})*)\s*$")
     current_sala = ""
-    i = 0
-    while i < len(lines):
-        ln = lines[i]
-        if not ln:
-            i += 1
+    for ln in lines:
+        if not ln or ln == "COMPRAR ENTRADAS":
             continue
-        # Una línea que precede a "COMPRAR ENTRADAS" es el nombre de la sala
-        nxt = lines[i + 1] if i + 1 < len(lines) else ""
-        if nxt == "COMPRAR ENTRADAS":
+        m = formato_re.match(ln)
+        if not m:
             current_sala = ln
-            i += 2  # saltamos al primer formato/horario
             continue
-        # Una línea con formato: HH:MM[, HH:MM...]
-        m = re.match(r"^[^:]+:\s*((?:\d{1,2}:\d{2})(?:\s*,\s*\d{1,2}:\d{2})*)\s*$", ln)
-        if m and current_sala:
-            for t in re.findall(r"\d{1,2}:\d{2}", m.group(1)):
-                hh, mm = t.split(":")
-                hora = f"{int(hh):02d}:{mm}"
-                out.setdefault(current_sala, []).append(hora)
-        i += 1
+        if not current_sala:
+            continue
+        for t in re.findall(r"\d{1,2}:\d{2}", m.group(1)):
+            hh, mm = t.split(":")
+            out.setdefault(current_sala, []).append(f"{int(hh):02d}:{mm}")
     # Dedup + sort
     for k in out:
         out[k] = sorted(set(out[k]))
@@ -1590,9 +1590,16 @@ def _scrape_lanacion_sala(slug: str, lanacion_name: str, cine_name: str,
         if href in seen:
             continue
         seen.add(href)
+        # El título de la listing es sólo un fallback — el bueno sale del h1 del
+        # detalle. Desde ~julio de 2026 La Nación envuelve nada más que el
+        # poster en el <a>, así que get_text() viene vacío: exigirlo dejaba la
+        # listing en cero y con ella los siete cines comerciales.
         title = a.get_text(strip=True)
-        if title and len(title) > 1:
-            film_paths.append((href, title))
+        if not title:
+            img = a.find("img")
+            title = re.sub(r"^P[óo]ster de\s+", "",
+                           (img.get("alt") or "") if img else "").strip()
+        film_paths.append((href, title))
 
     # Diagnóstico: si la listing no trae links de película, el sitio cambió de
     # estructura (o pasó a render por JS) y hay que rehacer el parser. Sin esto
@@ -1641,9 +1648,20 @@ def scrape_lorca_lanacion() -> list[Screening]:
 
 # ───── IMDb + La Nación combinados ────────────────────────────────────
 #
-# IMDb sirve la semana completa (multi-día) y La Nación solo el día actual.
-# Estrategia: probar IMDb primero. Si devuelve 0 funciones, fallback a
-# La Nación para no perder al menos el día de hoy.
+# IMDb servía la semana completa y La Nación sólo el día actual, así que la
+# estrategia era IMDb primero con La Nación de fallback.
+#
+# Desde el 23/7/2026 IMDb dejó de servir showtimes: /showtimes/cinema/… devuelve
+# 202 con el body vacío para todos los cines. Como el fallback también estaba
+# roto, los siete comerciales pasaron diez días publicando la data preservada
+# de la corrida del 23 (Cinemark Caballito llegó a mostrar UN título).
+#
+# IMDB_HABILITADO apaga esa primera pasada: son hasta 21 días × 4 cines de
+# navegación con esperas de 3,5-6 s cada una — más de diez minutos de job para
+# recibir páginas vacías. La Nación queda como fuente única. Se pierde la
+# ventana a futuro (La Nación publica sólo hoy); si IMDb vuelve, alcanza con
+# poner esto en True.
+IMDB_HABILITADO = False
 
 # Cine → (imdb_id, cine_display_name, ticket_url, lanacion_slug, lanacion_name)
 # (imdb_id, cine_display_name, ticket_url, lanacion_slug, lanacion_name, imdb_postal)
@@ -1666,7 +1684,7 @@ IMDB_CINEMAS = [
     ("ci1033339", "Cinépolis Houssay",      "https://www.cinepolis.com.ar/",
      "cinepolis-plaza-houssay-sa1225",        "Cinépolis Plaza Houssay",     "C1134"),
     ("ci1036368", "Cinépolis Recoleta",     "https://www.cinepolis.com.ar/",
-     "",                                      "",                            "C1428"),
+     "cinepolis-recoleta-sa400",              "Cinépolis Recoleta",          "C1428"),
     # Showcase CABA (1 sucursal — Belgrano)
     ("",          "Showcase Belgrano",      "https://www.todoshowcase.com/",
      "showcase-cinemas-belgrano-sa170",       "Showcase Cinemas Belgrano",   "C1134"),
@@ -1692,12 +1710,13 @@ async def scrape_imdb_then_lanacion(page: Page, semanas: int = 2) -> list[Screen
     for imdb_id, cine_name, ticket_url, lan_slug, lan_name, postal in IMDB_CINEMAS:
         print(f"  · {cine_name}...", end=" ", flush=True)
         ss: list[Screening] = []
-        # 1) IMDb
-        try:
-            ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, imdb_semanas, postal=postal)
-        except Exception as e:
-            print(f"IMDb error — {e};", end=" ")
-            ss = []
+        # 1) IMDb (apagado: ver IMDB_HABILITADO)
+        if IMDB_HABILITADO:
+            try:
+                ss = await _scrape_imdb_cinema(page, imdb_id, cine_name, ticket_url, imdb_semanas, postal=postal)
+            except Exception as e:
+                print(f"IMDb error — {e};", end=" ")
+                ss = []
         # 2) Fallback La Nación si IMDb no devolvió nada (skipea si no hay slug)
         if not ss and lan_slug:
             try:

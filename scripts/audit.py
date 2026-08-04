@@ -52,8 +52,10 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 # cantidad de funciones.
 COMMERCIAL_PREFIXES = ("Cinemark", "Hoyts", "Cinépolis", "Cinepolis", "Showcase", "Multiplex")
 # Una sala de cadena en cartelera nunca tiene menos de esto. Con 1-2 títulos lo
-# que estamos publicando es el resto de un scrape viejo.
-COMMERCIAL_MIN_TITLES = 5
+# que estamos publicando es el resto de un scrape viejo. El umbral va bajo a
+# propósito: en una semana floja las cadenas comparten 5 estrenos y de nada
+# sirve una alarma que salta sola.
+COMMERCIAL_MIN_TITLES = 3
 
 # Sondas: página que lista la programación + patrón de los ítems. No parsean la
 # grilla (eso es trabajo del scraper), sólo responden "¿la fuente tiene algo
