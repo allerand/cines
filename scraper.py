@@ -6,6 +6,7 @@ Sala Lugones · Cacodelphia · Cine Lorca · Cine York · MALBA
 import re
 import os
 import json
+import time
 import urllib.request
 import urllib.parse
 from dataclasses import dataclass, field
@@ -58,10 +59,31 @@ class Screening:
 # Utilidades
 # ---------------------------------------------------------------------------
 
+def fetch_bytes(url: str, timeout: int = 20, intentos: int = 3) -> bytes:
+    """GET con reintentos. Un timeout suelto no puede costar un cine entero.
+
+    Los scrapers atrapan sus excepciones y devuelven [], y salvo comerciales y
+    Borges nada preserva las funciones de la corrida anterior: un fetch que
+    falla una vez borra la sala de la web hasta el día siguiente. Pasó con
+    Amorina el 3/8/2026 (schedule.json tenía las tres funciones de La Flor y la
+    web las perdió). Tres intentos con backoff cubren el hipo de red típico;
+    una fuente realmente caída sigue fallando y eso lo levanta la auditoría.
+    """
+    ultimo: Exception | None = None
+    for i in range(intentos):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            with urllib.request.urlopen(req, timeout=timeout) as r:
+                return r.read()
+        except Exception as e:
+            ultimo = e
+            if i < intentos - 1:
+                time.sleep(2 ** i)      # 1s, 2s
+    raise ultimo if ultimo else RuntimeError(f"fetch falló: {url}")
+
+
 def fetch_html(url: str) -> BeautifulSoup:
-    req = urllib.request.Request(url, headers={"User-Agent": UA})
-    with urllib.request.urlopen(req, timeout=20) as r:
-        return BeautifulSoup(r.read().decode("utf-8", errors="replace"), "html.parser")
+    return BeautifulSoup(fetch_bytes(url).decode("utf-8", errors="replace"), "html.parser")
 
 
 async def load_page(page: Page, url: str, wait_ms: int = 2500) -> BeautifulSoup:
@@ -1932,6 +1954,32 @@ CCK_MONTHS = {
 }
 
 
+_CCK_SALA_RE = re.compile(
+    r"^(?:Auditorio|Sala|Microcine|Cine)\s+[^:]{1,30}:\s*", re.IGNORECASE)
+
+
+def _json_ld_loads(raw: Optional[str]):
+    """json.loads tolerante para los bloques JSON-LD de los sitios.
+
+    El CCK escribe las duraciones como «118\\'» dentro de la description: `\\'`
+    es un escape válido en JavaScript pero NO en JSON, así que json.loads
+    explota y el evento entero se descartaba en silencio. Desde julio de 2026
+    los dos ciclos de palaciolibertad.gob.ar caían por esto y el cine quedaba
+    en cero. Reintentamos sacando ese escape (el lookbehind evita romper un
+    backslash escapado de verdad).
+    """
+    if not raw:
+        return None
+    try:
+        return json.loads(raw)
+    except Exception:
+        pass
+    try:
+        return json.loads(re.sub(r"(?<!\\)\\'", "'", raw))
+    except Exception:
+        return None
+
+
 def scrape_cck(semanas: int = 2) -> list[Screening]:
     """
     1. Lista events desde palaciolibertad.gob.ar/cine/
@@ -1977,10 +2025,7 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
         description_html = ""
         start_iso = end_iso = ""
         for sc in ev_soup.find_all("script", type="application/ld+json"):
-            try:
-                d = _json.loads(sc.string)
-            except Exception:
-                continue
+            d = _json_ld_loads(sc.string)
             if not isinstance(d, dict) or d.get("@type") != "Event":
                 continue
             description_html = _html.unescape(d.get("description") or "")
@@ -2017,10 +2062,13 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
             r"(\d{1,2})(?:\s+de\s+(\w+)(?:\s+(?:de\s+)?(\d{4}))?)?",
             re.IGNORECASE,
         )
+        # El \d* después de la "h" cubre los typos del CCK ("18:30 h1:" en la
+        # retrospectiva de Piñeiro). Sin eso el horario no se reconocía como
+        # slot nuevo y la película se pegaba al título de la función anterior.
         slot_re = re.compile(
-            r"(\d{1,2})(?::(\d{2}))?\s*h(?:s|oras)?\s*[:.\-–]\s*"
+            r"(\d{1,2})(?::(\d{2}))?\s*h(?:s|oras)?\d*\s*[:.\-–]\s*"
             r"(.+?)"
-            r"(?=\s+\d{1,2}(?::\d{2})?\s*h(?:s|oras)?\s*[:.\-–]|\Z)",
+            r"(?=\s+\d{1,2}(?::\d{2})?\s*h(?:s|oras)?\d*\s*[:.\-–]|\Z)",
             re.IGNORECASE | re.DOTALL,
         )
 
@@ -2071,6 +2119,10 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
                     r"\s+(?:Las\s+proyecciones|Programaci[óo]n\b|Funciones\b)",
                     raw_title_chunk, maxsplit=1, flags=re.IGNORECASE,
                 )[0]
+                # A veces el CCK repite la sala después de la hora ("16:30 h -
+                # Auditorio 511: La princesa de Francia"): el guion cuenta como
+                # separador de slot y la sala termina pegada al título.
+                raw_title_chunk = _CCK_SALA_RE.sub("", raw_title_chunk, count=1)
                 titles = re.split(r"\s{2,}|\n", raw_title_chunk)
                 for raw_title in titles:
                     raw_title = raw_title.strip(" -–:.,;")
@@ -2575,34 +2627,58 @@ def _parse_cc25_detail(h1: str, body: str, url: str,
     )]
 
 
-async def scrape_cc25(page: Page, semanas: int = 3) -> list[Screening]:
-    """Scrapea cc25.org/cine: junta los links 'Ver detalle' (/eventos/) y entra a
-    cada uno a sacar fecha/hora/título/director (filtrando CATEGORÍA = Cine)."""
+def _inner_text(soup) -> str:
+    """Equivalente a document.body.innerText sobre HTML servido: un salto de
+    línea por nodo y sin el contenido de script/style/noscript, que get_text()
+    incluiría y ensuciaría los regex de fecha/hora."""
+    for tag in soup(["script", "style", "noscript"]):
+        tag.decompose()
+    lines = (re.sub(r"[ \t]+", " ", l).strip() for l in soup.get_text("\n").splitlines())
+    return "\n".join(l for l in lines if l)
+
+
+def scrape_cc25(semanas: int = 3) -> list[Screening]:
+    """Scrapea cc25.org/cine: junta los links de eventos (/eventos/) y entra a
+    cada uno a sacar fecha/hora/título/director (filtrando CATEGORÍA = Cine).
+
+    Sin playwright: el HTML servido ya trae la listing completa y las fichas de
+    cada evento. Con browser el scrape venía devolviendo 0 desde mediados de
+    julio (el goto se colgaba en el runner sobre una página de ~460 KB), y
+    encima el parser andaba perfecto — se perdían las funciones por el
+    transporte, no por el parseo.
+
+    Ojo: /cine/ mezcla eventos vigentes con un archivo de funciones viejas
+    (marcadas "¡Caducado!"). El filtro por ventana de fechas ya las descarta.
+    """
     today = date.today()
     cutoff = today + timedelta(weeks=max(semanas, 6))
     try:
-        await page.goto(CC25_CINE_URL, wait_until="domcontentloaded", timeout=30000)
-        await page.wait_for_timeout(2500)
-        for _ in range(8):
-            await page.mouse.wheel(0, 1500)
-            await page.wait_for_timeout(450)
-        links = await page.eval_on_selector_all(
-            'a[href*="/eventos/"]', "els => els.map(e => e.href)")
-    except Exception:
+        listing = fetch_html(CC25_CINE_URL)
+    except Exception as e:
+        print(f"[cc25: listing no carga — {e}]", end=" ", flush=True)
         return []
-    links = [u for u in dict.fromkeys(links or []) if "/eventos/" in u][:40]
+
+    links: list[str] = []
+    for a in listing.find_all("a", href=re.compile(r"/eventos/")):
+        u = a["href"]
+        if not u.startswith("http"):
+            u = "https://cc25.org" + ("" if u.startswith("/") else "/") + u
+        u = u.split("?")[0].split("#")[0]
+        if u not in links:
+            links.append(u)
+    if not links:
+        print("[cc25: 0 links de evento en la listing]", end=" ", flush=True)
 
     result: list[Screening] = []
-    for url in links:
+    for url in links[:40]:
         try:
-            await page.goto(url, wait_until="domcontentloaded", timeout=20000)
-            await page.wait_for_timeout(600)
-            h1 = await page.evaluate(
-                "() => { const h = document.querySelector('h1'); return h ? h.innerText : ''; }")
-            body = await page.evaluate("document.body.innerText")
+            soup = fetch_html(url)
         except Exception:
             continue
-        result.extend(_parse_cc25_detail(h1, body, url, today, cutoff))
+        h1 = soup.find("h1")
+        result.extend(_parse_cc25_detail(
+            h1.get_text(" ", strip=True) if h1 else "",
+            _inner_text(soup), url, today, cutoff))
     return result
 
 
@@ -3428,10 +3504,9 @@ def scrape_amorina() -> list[Screening]:
     import json as _json
     url = "https://www.amorina.club/schedule.json"
     try:
-        req = urllib.request.Request(url, headers={"User-Agent": UA})
-        with urllib.request.urlopen(req, timeout=15) as r:
-            data = _json.loads(r.read().decode("utf-8", errors="replace"))
-    except Exception:
+        data = _json.loads(fetch_bytes(url).decode("utf-8", errors="replace"))
+    except Exception as e:
+        print(f"[amorina: {type(e).__name__} — {e}]", end=" ", flush=True)
         return []
 
     if not isinstance(data, list):
@@ -3906,6 +3981,11 @@ def _bn_resolve_year(day: int, month: int, rng) -> int:
     return today.year + 1 if month < today.month else today.year
 
 
+_BN_GENERICO_RE = re.compile(
+    r"^(?:proyecci[óo]n|funci[óo]n|presentaci[óo]n|charla|cine|estreno|encuentro)$",
+    re.IGNORECASE)
+
+
 def _bn_parse_film(text: str, italic: str) -> "tuple[str, str, Optional[int]]":
     text = re.sub(r"\s+", " ", text).strip()
     year = None
@@ -3928,6 +4008,21 @@ def _bn_parse_film(text: str, italic: str) -> "tuple[str, str, Optional[int]]":
             title = " de ".join(parts[:-1]).strip(" .,")
         else:
             title = t.strip(" .,")
+
+    # "Proyección de Invasión de Hugo Santiago. Charla con especialistas": la BN
+    # a veces pone una etiqueta genérica donde va el título y mete la película
+    # adentro del "de …". Sin esto la cartelera publica una función que se
+    # llama "Proyección" y un director que es media oración.
+    if title and _BN_GENERICO_RE.match(title.strip(" .,")) and director:
+        resto = re.split(r"[.;]", director, 1)[0].strip()
+        partes = re.split(r"\s+de\s+", resto)
+        if len(partes) >= 2:
+            # El último "de" separa director de título ("Invasión de los
+            # ultracuerpos de Philip Kaufman" → título / director).
+            title = " de ".join(partes[:-1]).strip(" .,")
+            director = partes[-1].strip(" .,")
+        elif resto:
+            title, director = resto, ""
     return title, director, year
 
 

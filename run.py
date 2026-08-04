@@ -170,6 +170,14 @@ async def run_scraper(semanas: int = 9) -> None:
     except Exception as e:
         print(f"error — {e}")
 
+    print("🎬 Scrapeando CC 25 de Mayo...", end=" ", flush=True)
+    try:
+        r = scrape_cc25(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
     print("📝 Funciones manuales...", end=" ", flush=True)
     try:
         r = scrape_manual(semanas)
@@ -211,7 +219,6 @@ async def run_scraper(semanas: int = 9) -> None:
             ("Cacodelphia",  lambda p: scrape_cacodelphia(p)),
             ("Arthaus",      lambda p: scrape_arthaus(p, semanas)),
             ("CEA",          lambda p: scrape_cea(p)),
-            ("CC 25 de Mayo", lambda p: scrape_cc25(p, semanas)),
             ("Centro Cultural Borges", lambda p: scrape_borges(p, semanas)),
         ]:
             print(f"🎬 Scrapeando {name}...", end=" ", flush=True)
