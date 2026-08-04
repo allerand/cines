@@ -405,3 +405,59 @@ function previewNewsletter() {
   });
   Logger.log("Preview enviado a " + Session.getActiveUser().getEmail());
 }
+
+
+// ───── 4. Auditoría semanal por mail ──────────────────────────────────
+//
+// El workflow .github/workflows/audit.yml corre los lunes, arma el informe y
+// commitea data/audit.html. Esta función lo lee de GitHub y te lo manda.
+//
+// Va por Apps Script y no por GitHub Actions a propósito: mandar mail desde el
+// runner pediría guardar una contraseña de aplicación como secret del repo.
+// Acá corre con tu cuenta de Google, que es la que ya manda el newsletter, y no
+// hay ninguna credencial dada de alta en ningún lado.
+//
+// SETUP (una vez):
+//   Triggers (el reloj a la izquierda) → Add trigger:
+//     - Function: sendAuditMail
+//     - Source: Time-driven → Week timer → Monday → 10 AM-11 AM
+//   (el workflow corre 09:30 ART, así que a las 10 el informe ya está)
+//
+// Para probarlo ahora mismo: corré sendAuditMail() a mano desde el editor.
+
+const AUDIT_URL = "https://raw.githubusercontent.com/allerand/cines/main/data/audit.html";
+// Vacío = tu propia casilla.
+const AUDIT_TO = "";
+
+function sendAuditMail() {
+  const res = UrlFetchApp.fetch(AUDIT_URL + "?t=" + Date.now(), { muteHttpExceptions: true });
+  if (res.getResponseCode() !== 200) {
+    Logger.log("No se pudo leer el informe: HTTP " + res.getResponseCode());
+    return;
+  }
+  const html = res.getContentText();
+
+  const mRes = html.match(/<!--\s*resumen:\s*(.*?)\s*-->/);
+  const resumen = mRes ? mRes[1] : "sin resumen";
+
+  // Quién audita al auditor: si el informe no es de esta semana, el workflow
+  // dejó de correr y sin este aviso te llegaría el mismo informe viejo para
+  // siempre, dando la falsa impresión de que todo está bien.
+  const mFecha = html.match(/Auditoría de cartelera\s*—\s*(\d{4}-\d{2}-\d{2})/);
+  let aviso = "";
+  if (mFecha) {
+    const dias = Math.floor((Date.now() - new Date(mFecha[1] + "T12:00:00Z")) / 86400000);
+    if (dias > 8) {
+      aviso = "[informe de hace " + dias + " días] ";
+      Logger.log("El informe tiene " + dias + " días: revisá el workflow audit.yml");
+    }
+  }
+
+  MailApp.sendEmail({
+    to: AUDIT_TO || Session.getActiveUser().getEmail(),
+    subject: aviso + "Auditoría de cartelera — " + resumen,
+    htmlBody: html,
+    name: FROM_NAME,
+  });
+  Logger.log("Auditoría enviada: " + resumen);
+}

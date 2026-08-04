@@ -114,6 +114,83 @@ class Report:
             out.append("\n✅ Sin hallazgos.")
         return "\n".join(out)
 
+    @property
+    def resumen(self) -> str:
+        """Una línea para el asunto del mail."""
+        n = Counter(s for s, _, _ in self.items)
+        if not n:
+            return "sin hallazgos"
+        partes = [f"{n[s]} {sing if n[s] == 1 else plur}"
+                  for s, sing, plur in ((SEV_ERROR, "error", "errores"),
+                                        (SEV_WARN, "aviso", "avisos"),
+                                        (SEV_INFO, "informativo", "informativos"))
+                  if n[s]]
+        return ", ".join(partes)
+
+
+# Conversor markdown → HTML para el subconjunto que usa el informe (títulos,
+# tabla, viñetas, negrita, code). Es para el mail: el cuerpo tiene que verse
+# bien en un cliente de correo, y no vale la pena meter una dependencia ni
+# reescribir el render entero — el markdown sigue siendo la fuente única.
+def md_a_html(md: str) -> str:
+    css = {
+        SEV_ERROR: "#d93025", SEV_WARN: "#b06000", SEV_INFO: "#1a73e8",
+    }
+    def inline(t: str) -> str:
+        t = (t.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
+        t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
+        return re.sub(r"`(.+?)`", r"<code>\1</code>", t)
+
+    out: list[str] = []
+    en_lista = en_tabla = False
+    color = "#1a1a1a"
+    for linea in md.splitlines():
+        l = linea.rstrip()
+        es_fila = l.startswith("|")
+        if en_lista and not l.startswith("- "):
+            out.append("</ul>"); en_lista = False
+        if en_tabla and not es_fila:
+            out.append("</table>"); en_tabla = False
+        if not l:
+            continue
+        if l.startswith("## "):
+            texto = l[3:]
+            color = next((c for s, c in css.items() if s in texto), "#1a1a1a")
+            out.append(f'<h3 style="color:{color};margin:22px 0 8px;font-size:16px">'
+                       f'{inline(texto)}</h3>')
+        elif l.startswith("# "):
+            out.append(f'<h2 style="margin:0 0 6px;font-size:20px">{inline(l[2:])}</h2>')
+        elif es_fila:
+            celdas = [c.strip() for c in l.strip("|").split("|")]
+            if all(re.fullmatch(r":?-{2,}:?", c) for c in celdas):
+                continue          # separador de encabezado
+            if not en_tabla:
+                out.append('<table style="border-collapse:collapse;font-size:13px;'
+                           'margin:8px 0">')
+                en_tabla = True
+                out.append("<tr>" + "".join(
+                    f'<th style="text-align:left;padding:3px 10px 3px 0;'
+                    f'border-bottom:1px solid #ddd">{inline(c)}</th>'
+                    for c in celdas) + "</tr>")
+                continue
+            out.append("<tr>" + "".join(
+                f'<td style="padding:2px 10px 2px 0;border-bottom:1px solid #f0f0f0">'
+                f'{inline(c)}</td>' for c in celdas) + "</tr>")
+        elif l.startswith("- "):
+            if not en_lista:
+                out.append('<ul style="margin:0 0 4px;padding-left:18px;font-size:14px">')
+                en_lista = True
+            out.append(f"<li style='margin-bottom:4px'>{inline(l[2:])}</li>")
+        else:
+            out.append(f'<p style="margin:0 0 10px;font-size:14px">{inline(l)}</p>')
+    if en_lista:
+        out.append("</ul>")
+    if en_tabla:
+        out.append("</table>")
+    return ('<div style="font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\','
+            "Helvetica,Arial,sans-serif;max-width:680px;color:#1a1a1a;"
+            'line-height:1.5">' + "\n".join(out) + "</div>")
+
 
 # --------------------------------------------------------------------------
 # Carga de datos
@@ -414,6 +491,8 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--offline", action="store_true", help="sin sondas HTTP")
     ap.add_argument("--out", type=Path, help="escribe el informe en un archivo")
+    ap.add_argument("--html", type=Path,
+                    help="además escribe el informe en HTML (para el mail semanal)")
     ap.add_argument("--dias-historico", type=int, default=14,
                     help="snapshots de git para la línea de base (default 14)")
     args = ap.parse_args()
@@ -444,6 +523,12 @@ def main() -> int:
     print(informe)
     if args.out:
         args.out.write_text(informe + "\n", encoding="utf-8")
+    if args.html:
+        # La primera línea es el resumen que el mail usa como asunto, sin tener
+        # que re-parsear el informe.
+        args.html.write_text(
+            f"<!-- resumen: {rep.resumen} -->\n" + md_a_html(informe) + "\n",
+            encoding="utf-8")
 
     return 1 if rep.n_errors else 0
 

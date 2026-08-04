@@ -1,9 +1,17 @@
 name: Auditoría semanal
 
-# Corre scripts/audit.py y abre un issue con el informe cuando encuentra algo
-# roto. Existe porque los scrapers fallan en silencio: cada uno atrapa su
-# excepción y devuelve [], así que un cine puede desaparecer de la web durante
-# semanas sin que nada avise. Esto convierte ese silencio en un issue.
+# Corre scripts/audit.py y deja el informe en data/audit.md + data/audit.html.
+# Existe porque los scrapers fallan en silencio: cada uno atrapa su excepción y
+# devuelve [], así que un cine puede desaparecer de la web durante semanas sin
+# que nada avise. Esto convierte ese silencio en un informe.
+#
+# Cómo llega el informe:
+#   · mail semanal — scripts/newsletter.gs (Apps Script) lee el data/audit.html
+#     commiteado acá y lo manda. Sin secrets: corre con la cuenta de Google del
+#     dueño, igual que el newsletter.
+#   · issue — sólo si hay ERRORes, para tener dónde seguir el arreglo.
+# Por eso el informe se commitea SIEMPRE, aunque salga limpio: el mail necesita
+# leer el de esta semana.
 
 on:
   schedule:
@@ -11,7 +19,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   issues: write
 
 jobs:
@@ -34,16 +42,19 @@ jobs:
         id: audit
         run: |
           set +e
-          python3 scripts/audit.py --out audit.md
+          python3 scripts/audit.py --out data/audit.md --html data/audit.html
           echo "exit_code=$?" >> "$GITHUB_OUTPUT"
 
-      - uses: actions/upload-artifact@v4
-        with:
-          name: auditoria
-          path: audit.md
+      - name: Commitear el informe
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/audit.md data/audit.html
+          git diff --staged --quiet || git commit -m "audit: informe $(date -u +%Y-%m-%d)"
+          git push
 
-      # Sólo se abre issue si hubo ERRORes (exit 1). Un informe limpio no
-      # necesita ruido: queda en el artifact del run.
+      # Sólo se abre issue si hubo ERRORes (exit 1). Un informe limpio ya viaja
+      # por mail y no necesita ruido extra.
       - name: Abrir issue si hay hallazgos
         if: steps.audit.outputs.exit_code == '1'
         env:
@@ -51,8 +62,8 @@ jobs:
         run: |
           gh issue create \
             --title "Auditoría de cartelera — $(date -u +%Y-%m-%d)" \
-            --body-file audit.md \
+            --body-file data/audit.md \
             --label auditoria || \
           gh issue create \
             --title "Auditoría de cartelera — $(date -u +%Y-%m-%d)" \
-            --body-file audit.md
+            --body-file data/audit.md
