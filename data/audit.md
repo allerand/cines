@@ -2,7 +2,7 @@
 
 ## 🔴 Hay algo para mirar en Lumiton
 
-Datos de hace 15 h · 30 cines · 787 funciones publicadas.
+Datos de hace 15 h · 30 cines · 798 funciones publicadas.
 
 ## Para mirar esta semana
 
@@ -35,7 +35,7 @@ Cosas que no rompen la web pero degradan la ficha. Están acá para que no se ol
 - **Sala Lugones**: ticket_url inválido ×39.
 - **Cine York**: dos títulos en el mismo horario ×4.
 - 18 funciones sin director: CCK (14/16), Lumiton (4/6).
-- 39 funciones sin link de Letterboxd: Amorina (3/3), Arthaus (3/3), Biblioteca Nacional (2/2), Biblioteca del Congreso (12/12), CCK (12/16), Centro Cultural 25 de Mayo (2/2), Lumiton (5/6).
+- 49 funciones sin link de Letterboxd: Amorina (3/3), Arthaus (13/14), Biblioteca Nacional (2/2), Biblioteca del Congreso (12/12), CCK (12/16), Centro Cultural 25 de Mayo (2/2), Lumiton (5/6).
 
 ---
 

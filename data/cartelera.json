@@ -8754,22 +8754,6 @@
       "ciclo": "Encuentro con el cine de Taiwán"
     },
     {
-      "cine": "Arthaus",
-      "fecha": "2026-08-06",
-      "hora": "18:00",
-      "title_es": "Kuitca / Masllorens",
-      "title_en": "KUITCA / MASLLORENS",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": 2000,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://arthaus.ar/events/kuitca-masllorens/?occurrence=2026-08-06",
-      "ciclo": ""
-    },
-    {
       "cine": "CEA",
       "fecha": "2026-08-06",
       "hora": "18:00",
@@ -9602,6 +9586,22 @@
       "ciclo": "Bendita Tú"
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-08-08",
+      "hora": "20:00",
+      "title_es": "Lo que Trajo la Tormenta",
+      "title_en": "Lo que Trajo la Tormenta",
+      "original_title": "",
+      "director": "Miguel de Zuviría",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra100416-lo-que-trajo-la-tormenta?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-08-08",
       "hora": "20:15",
@@ -9968,6 +9968,22 @@
       "letterboxd": "https://letterboxd.com/film/grave-of-the-fireflies/",
       "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/",
       "ciclo": "Miradas de Japón"
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-08-09",
+      "hora": "19:30",
+      "title_es": "Pin de Fartie",
+      "title_en": "Pin de Fartie",
+      "original_title": "",
+      "director": "Alejo Moguillansky",
+      "country": "",
+      "year": null,
+      "duration": 110,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra100416-lo-que-trajo-la-tormenta?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
     },
     {
       "cine": "MALBA",
@@ -10338,6 +10354,22 @@
       "ciclo": "Lita Stantic: no habrá nadie igual"
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-08-13",
+      "hora": "20:00",
+      "title_es": "En el Campo los Días Son Más Largos",
+      "title_en": "En el Campo los Días Son Más Largos",
+      "original_title": "",
+      "director": "Elina Firpo",
+      "country": "",
+      "year": null,
+      "duration": 73,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra102014-en-el-campo-los-dias-son-mas-largos?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-13",
       "hora": "20:00",
@@ -10533,16 +10565,16 @@
       "cine": "Arthaus",
       "fecha": "2026-08-14",
       "hora": "20:00",
-      "title_es": "Quizás, quizás, quizás",
-      "title_en": "Quizás, quizás, quizás",
-      "original_title": "Quizás",
-      "director": "Manuel Besedovsky",
-      "country": "España",
-      "year": 2016,
-      "duration": null,
-      "genre": "Drama",
+      "title_es": "El Placer es Mío",
+      "title_en": "El Placer es Mío",
+      "original_title": "",
+      "director": "Sacha Amaral",
+      "country": "",
+      "year": null,
+      "duration": 94,
+      "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://arthaus.ar/events/cine-arthaus-quizas-quizas-quizas/?occurrence=2026-08-14",
+      "ticket_url": "https://www.alternativateatral.com/obra102187-el-placer-es-mio?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
       "ciclo": ""
     },
     {
@@ -10869,16 +10901,16 @@
       "cine": "Arthaus",
       "fecha": "2026-08-15",
       "hora": "20:00",
-      "title_es": "Quizás, quizás, quizás",
-      "title_en": "Quizás, quizás, quizás",
-      "original_title": "Quizás",
+      "title_es": "Luciano",
+      "title_en": "Luciano",
+      "original_title": "",
       "director": "Manuel Besedovsky",
-      "country": "España",
-      "year": 2016,
-      "duration": null,
-      "genre": "Drama",
+      "country": "",
+      "year": null,
+      "duration": 94,
+      "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://arthaus.ar/events/cine-arthaus-quizas-quizas-quizas/?occurrence=2026-08-14",
+      "ticket_url": "https://www.alternativateatral.com/obra101207-luciano?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
       "ciclo": ""
     },
     {
@@ -11199,6 +11231,22 @@
       "genre": "Comedia, Aventura",
       "letterboxd": "https://letterboxd.com/film/31-minutos-la-pelicula/",
       "ticket_url": "https://lumiton.ar/evento/31-minutos-la-pelicula/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-08-16",
+      "hora": "19:30",
+      "title_es": "Emi",
+      "title_en": "Emi",
+      "original_title": "",
+      "director": "Ezequiel Erriquez Mena",
+      "country": "",
+      "year": null,
+      "duration": 93,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra102185-emi?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
       "ciclo": ""
     },
     {
@@ -11682,6 +11730,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-08-20",
+      "hora": "20:00",
+      "title_es": "Hijo Mayor",
+      "title_en": "Elder Son",
+      "original_title": "",
+      "director": "Cecilia Kang",
+      "country": "Argentina, Corea del Sur",
+      "year": 2025,
+      "duration": 120,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
+      "ticket_url": "https://www.alternativateatral.com/obra100130-hijo-mayor?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-08-20",
       "hora": "20:30",
@@ -11856,6 +11920,22 @@
       "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
       "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
       "ciclo": "Continúa"
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-08-21",
+      "hora": "20:00",
+      "title_es": "Diciembre",
+      "title_en": "Diciembre",
+      "original_title": "",
+      "director": "Lucas Gallo",
+      "country": "",
+      "year": null,
+      "duration": 105,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra101975-diciembre?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -12064,6 +12144,22 @@
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-cecilia-kang-hernan-rosselli/",
       "ciclo": "Miradas contemporáneas:Cecilia Kang / Hernán Rosselli"
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-08-22",
+      "hora": "20:00",
+      "title_es": "Forenses",
+      "title_en": "Forenses",
+      "original_title": "",
+      "director": "Federico Atehortúa",
+      "country": "",
+      "year": null,
+      "duration": 90,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra101672-forenses?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
     },
     {
       "cine": "MALBA",
@@ -12322,6 +12418,22 @@
       "ciclo": "Miradas de Japón"
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-08-23",
+      "hora": "19:30",
+      "title_es": "Pin de Fartie",
+      "title_en": "Pin de Fartie",
+      "original_title": "",
+      "director": "Alejo Moguillansky",
+      "country": "",
+      "year": null,
+      "duration": 110,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra100416-lo-que-trajo-la-tormenta?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-08-23",
       "hora": "20:00",
@@ -12562,6 +12674,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-08-27",
+      "hora": "20:00",
+      "title_es": "En el Campo los Días Son Más Largos",
+      "title_en": "En el Campo los Días Son Más Largos",
+      "original_title": "",
+      "director": "Elina Firpo",
+      "country": "",
+      "year": null,
+      "duration": 73,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra102014-en-el-campo-los-dias-son-mas-largos?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-27",
       "hora": "20:00",
@@ -12640,6 +12768,22 @@
       "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
       "ticket_url": "https://malba.org.ar/evento/para-hacer-una-pelicula-solo-hace-falta-un-arma/",
       "ciclo": "Continúa"
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-08-28",
+      "hora": "20:00",
+      "title_es": "Diciembre",
+      "title_en": "Diciembre",
+      "original_title": "",
+      "director": "Lucas Gallo",
+      "country": "",
+      "year": null,
+      "duration": 105,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra101975-diciembre?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
     },
     {
       "cine": "Cine York",
@@ -12786,6 +12930,22 @@
       "ciclo": "Miradas contemporáneas:Cecilia Kang / Hernán Rosselli"
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-08-29",
+      "hora": "20:00",
+      "title_es": "Lo que Trajo la Tormenta",
+      "title_en": "Lo que Trajo la Tormenta",
+      "original_title": "",
+      "director": "Miguel de Zuviría",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.alternativateatral.com/obra100416-lo-que-trajo-la-tormenta?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-08-29",
       "hora": "20:00",
@@ -12896,6 +13056,22 @@
       "letterboxd": "https://letterboxd.com/film/bonds/",
       "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/",
       "ciclo": "Miradas de Japón"
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-08-30",
+      "hora": "19:30",
+      "title_es": "1982",
+      "title_en": "1982",
+      "original_title": "",
+      "director": "Lucas Gallo",
+      "country": "",
+      "year": null,
+      "duration": 90,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://forms.gle/gPr19nTCMt5MvMR37?utm_source=email_marketing&utm_admin=163709&utm_medium=email&utm_campaign=Agenda_ArtHaus_agosto_septiembre",
+      "ciclo": ""
     },
     {
       "cine": "Cine York",

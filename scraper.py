@@ -2386,9 +2386,26 @@ _ARTHAUS_MONTHS = "|".join(MESES_ES.keys())
 _ARTHAUS_DATE_RE = re.compile(
     rf"(?:(?:lunes|martes|miércoles|miercoles|jueves|viernes|sábado|sabado|domingo|sábados|sabados|domingos)\s+)?"
     rf"((?:\d{{1,2}}(?:\s*y\s*\d{{1,2}})*))\s+de\s+({_ARTHAUS_MONTHS}),?\s+"
-    rf"(\d{{1,2}})(?::(\d{{2}}))?\s*(?:h|hs|horas?)\b",
+    # La hora va con dos puntos o con punto: la web escribe "19.30 H".
+    rf"(\d{{1,2}})(?:[.:](\d{{2}}))?\s*(?:h|hs|horas?)\b",
     re.IGNORECASE,
 )
+
+ARTHAUS_CINE_URL = "https://arthaus.ar/cine/"
+# Bloque de película en arthaus.ar/cine/. El ancla es la línea "Dir. NOMBRE":
+#
+#     LO QUE TRAJO LA TORMENTA          ← título (la línea anterior)
+#     Dir. Miguel de Zuviría
+#     Sábados 8 y 29 de agosto, 20 H    ← puede traer varias fechas
+#     + Q&A
+#     <sinopsis> (duración: 120’)
+#     entradas                          ← link a la boletería
+#
+_ARTHAUS_DIR_RE = re.compile(r"^dir\.\s*(.+)$", re.IGNORECASE)
+_ARTHAUS_DUR_RE = re.compile(r"duraci[óo]n\s*:\s*(\d{1,3})", re.IGNORECASE)
+_ARTHAUS_LINK_RE = re.compile(r"^(?:entradas|inscripci[óo]n\b.*)$", re.IGNORECASE)
+# "¡estreno!" viene como prefijo del título o en su propia línea.
+_ARTHAUS_ESTRENO_RE = re.compile(r"^\s*[¡!]*\s*estreno\s*!*\s*", re.IGNORECASE)
 
 
 def _arthaus_clean_title(raw: str) -> str:
@@ -2490,89 +2507,91 @@ def _parse_arthaus_detail(title_raw: str, body: str, url: str,
     ]
 
 
-async def scrape_arthaus(page: Page, semanas: int = 3) -> list[Screening]:
-    """Scrapea la agenda de arthaus.ar.
+def scrape_arthaus(semanas: int = 3) -> list[Screening]:
+    """Scrapea arthaus.ar/cine/ — la programación de cine del mes.
 
-    La web pasó a una agenda única (/agenda/) que mezcla todos los tipos de
-    evento (cine, música, etc.). Cada evento es una tarjeta con un botón
-    "VER DETALLE". Tomamos las tarjetas de cine y entramos a la página de cada
-    película para sacarle la data (fechas, hora, director, año).
+    Antes leía /agenda/ buscando tarjetas con "VER DETALLE". Esa agenda dejó de
+    listar cine (hoy no tiene ni un link /agenda/<slug>/), así que la sala venía
+    con 3 funciones sueltas mientras la web publicaba diez películas. /cine/ las
+    tiene todas, en HTML servido: sin playwright y sin abrir un detalle por
+    película.
+
+    El ciclo NO se asigna a propósito. Los títulos de ciclo ("Quizás, quizás,
+    quizás") y los de película son el mismo <h2> en la misma jerarquía, así que
+    no hay forma confiable de saber dónde termina el ciclo — antes eso hacía que
+    el nombre del ciclo se publicara COMO si fuera una película. Si hace falta,
+    va por metadata_overrides.json.
     """
     today = date.today()
-    # Arthaus programa cada película en ~2 funciones repartidas en 2-3 semanas
-    # (p.ej. Olivia: vie 12 y dom 21). Con la ventana global corta (2 semanas)
-    # se perdían las segundas fechas, así que la ampliamos para esta sala.
-    cutoff = today + timedelta(weeks=max(semanas, 5))
+    # Arthaus reparte cada película en 2 funciones separadas por semanas
+    # (p.ej. sábados 8 y 29), así que la ventana va más ancha que la global.
+    cutoff = today + timedelta(weeks=max(semanas, 6))
 
-    # Usamos domcontentloaded (no networkidle): la agenda tiene analytics/widgets
-    # que mantienen conexiones abiertas y hacen que networkidle se cuelgue hasta
-    # el timeout. Compensamos con una espera fija + scroll para el lazy-load.
-    await page.goto(ARTHAUS_AGENDA_URL, wait_until="domcontentloaded", timeout=30000)
-    await page.wait_for_timeout(3000)
-    for _ in range(10):
-        await page.mouse.wheel(0, 1600)
-        await page.wait_for_timeout(500)
+    try:
+        soup = fetch_html(ARTHAUS_CINE_URL)
+    except Exception as e:
+        print(f"[arthaus: no carga — {e}]", end=" ", flush=True)
+        return []
 
-    # Juntamos, por tarjeta, el link "VER DETALLE" y el texto de la tarjeta
-    # (para descartar lo que no sea cine sin tener que abrir cada detalle).
-    cards = await page.evaluate(
-        """() => {
-            const out = [];
-            const seen = new Set();
-            for (const a of Array.from(document.querySelectorAll('a[href]'))) {
-                const label = (a.textContent || '').trim().toLowerCase().replace(/\\s+/g, ' ');
-                const isDetalle = label === 'ver detalle';
-                const href = a.href;
-                if (!href || seen.has(href)) continue;
-                // Link de detalle directo, o (fallback) link a un permalink de agenda.
-                const looksLikeEvent = /\\/agenda\\/[^/]+\\/?$/.test(new URL(href).pathname);
-                if (!isDetalle && !looksLikeEvent) continue;
-                let card = a;
-                for (let k = 0; k < 6 && card.parentElement; k++) {
-                    card = card.parentElement;
-                    if ((card.textContent || '').length > 140) break;
-                }
-                seen.add(href);
-                out.push({ href, text: (card.textContent || '').replace(/\\s+/g, ' ').trim() });
-            }
-            return out;
-        }"""
-    )
+    # Los href de boletería, en orden de aparición, para poder emparejarlos con
+    # la línea "entradas" de cada bloque.
+    hrefs = [a["href"] for a in soup.find_all("a", href=True)
+             if _ARTHAUS_LINK_RE.match(a.get_text(" ", strip=True))]
 
-    # Pre-filtro por "cine" en el texto de la tarjeta (la categoría/el prefijo
-    # "CINE ARTHAUS." aparecen ahí). La categoría se re-verifica en el detalle.
-    detail_urls: list[str] = []
-    for c in cards:
-        if "cine" in (c.get("text", "")).lower():
-            detail_urls.append(c["href"])
-    # Salvaguarda: si el pre-filtro no encontró nada (p.ej. el texto visible de
-    # la tarjeta no incluía "cine"), visitamos todas — el parser de detalle
-    # descarta lo que no sea cine vía la CATEGORÍA.
-    if not detail_urls:
-        detail_urls = [c["href"] for c in cards]
-    # Dedup preservando orden y tope defensivo para acotar la duración total.
-    seen_urls: set[str] = set()
-    detail_urls = [u for u in detail_urls if not (u in seen_urls or seen_urls.add(u))]
-    detail_urls = detail_urls[:80]
-
-    print(f"  Arthaus: {len(cards)} tarjetas, {len(detail_urls)} candidatas de cine")
+    lineas = _inner_text(soup).split("\n")
+    # Índice de cada línea-link → su href, por posición.
+    link_de_linea: dict[int, str] = {}
+    k = 0
+    for i, l in enumerate(lineas):
+        if _ARTHAUS_LINK_RE.match(l):
+            if k < len(hrefs):
+                link_de_linea[i] = hrefs[k]
+            k += 1
 
     result: list[Screening] = []
-    for url in detail_urls:
-        try:
-            # domcontentloaded + espera corta: las páginas de detalle son WP
-            # renderizadas en servidor, no necesitan esperar a networkidle.
-            await page.goto(url, wait_until="domcontentloaded", timeout=20000)
-            await page.wait_for_timeout(500)
-            title_raw = await page.evaluate(
-                "() => { const h = document.querySelector('h1'); return h ? h.innerText : document.title; }"
-            )
-            body = await page.evaluate("document.body.innerText")
-        except Exception as e:
-            print(f"  Arthaus: error en {url}: {e}")
+    for i, linea in enumerate(lineas):
+        md = _ARTHAUS_DIR_RE.match(linea)
+        if not md or i == 0:
             continue
-        result.extend(_parse_arthaus_detail(title_raw, body, url, today, cutoff))
+        director = md.group(1).strip(" .,")
+        title = _ARTHAUS_ESTRENO_RE.sub("", lineas[i - 1]).strip()
+        if not title or _ARTHAUS_DIR_RE.match(title):
+            continue
 
+        # El bloque va hasta el próximo "Dir." (o 12 líneas, lo que venga antes).
+        fin = next((j for j in range(i + 1, min(i + 12, len(lineas)))
+                    if _ARTHAUS_DIR_RE.match(lineas[j])), min(i + 12, len(lineas)))
+        bloque = lineas[i + 1:fin]
+
+        duration: Optional[int] = None
+        ticket = ARTHAUS_CINE_URL
+        funcs: set = set()
+        for j, l in enumerate(bloque, start=i + 1):
+            if j in link_de_linea:
+                ticket = link_de_linea[j]
+            mdur = _ARTHAUS_DUR_RE.search(l)
+            if mdur:
+                duration = int(mdur.group(1))
+            for m in _ARTHAUS_DATE_RE.finditer(l):
+                month = MESES_ES.get(m.group(2).lower())
+                if not month:
+                    continue
+                hora = f"{int(m.group(3)):02d}:{m.group(4) or '00'}"
+                for day in (int(x) for x in re.findall(r"\d{1,2}", m.group(1))):
+                    for y in (today.year, today.year + 1):
+                        try:
+                            d = date(y, month, day)
+                        except ValueError:
+                            continue
+                        if today <= d <= cutoff:
+                            funcs.add((d.isoformat(), hora))
+                            break
+
+        for fecha, hora in sorted(funcs):
+            result.append(Screening(
+                cine="Arthaus", title=title, fecha=fecha, hora=hora,
+                ticket_url=ticket, director=director, duration=duration,
+            ))
     return result
 
 
