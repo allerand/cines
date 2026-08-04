@@ -3756,9 +3756,12 @@ def _parse_cea_text(text: str, today: date, cutoff: date) -> list[dict]:
     my = re.search(r"\b(" + "|".join(_CEA_MONTHS) + r")\s+(20\d{2})", text, re.IGNORECASE)
     base_year = int(my.group(2)) if my else today.year
 
-    # Horario del ciclo (arriba: "19:00 hs · Colón 1133 · Avellaneda").
+    # Horario del ciclo (arriba: "DESDE 18:00 HS · COLÓN 1133 · AVELLANEDA").
+    # El innerText llega en MAYÚSCULAS porque el sitio las aplica por CSS y
+    # innerText refleja lo renderizado: sin IGNORECASE el "HS" no matcheaba y
+    # todas las funciones salían con la hora por defecto en vez de la real.
     default_hora = "19:00"
-    hm = re.search(r"(\d{1,2}):(\d{2})\s*hs", text)
+    hm = re.search(r"(\d{1,2}):(\d{2})\s*hs", text, re.IGNORECASE)
     if hm:
         default_hora = f"{int(hm.group(1)):02d}:{hm.group(2)}"
 
@@ -3881,13 +3884,26 @@ async def scrape_cea(page: Page) -> list[Screening]:
     (la home lista los horarios del ciclo juntos, sin mapearlos por función)."""
     try:
         await page.goto("https://cea.mda.gob.ar/", wait_until="domcontentloaded", timeout=30000)
-        await page.wait_for_timeout(2500)
+        # El sitio es un SPA. Esperar un tiempo fijo alcanzaba en local pero no
+        # en el runner de GH Actions, donde la hidratación tarda más: el
+        # innerText volvía casi vacío, el parser no encontraba nada y el cine
+        # desaparecía de la web sin que fallara ninguna corrida. Esperamos a que
+        # aparezca una card de verdad en vez de contar segundos.
+        try:
+            await page.wait_for_function(
+                "() => /reservar\\s+entrada/i.test(document.body.innerText)",
+                timeout=25000)
+        except Exception:
+            pass
         # Sólo necesitamos las cards de arriba (las reservables) + los links a
         # los formularios de reserva; un scroll moderado alcanza.
         for _ in range(8):
             await page.mouse.wheel(0, 1500)
             await page.wait_for_timeout(400)
         text = await page.evaluate("document.body.innerText")
+        if len(text or "") < 400:
+            print(f"[cea: la página rindió {len(text or '')} caracteres — no hidrató]",
+                  end=" ", flush=True)
         form_links = await page.eval_on_selector_all(
             'a[href*="docs.google.com/forms"], a[href*="forms.gle"]',
             "els => els.map(e => e.href)",

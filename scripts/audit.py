@@ -80,6 +80,13 @@ PROBES = {
 # sonda que siempre devuelve 0 es peor que ninguna: dispara falsas alarmas.
 # Estos cines se controlan igual por su histórico de git.
 
+# Cines donde la sonda cuenta más ítems de los que hay programados, porque la
+# listing mezcla vigentes con un archivo de funciones viejas. Comparar contra
+# ese número dispara "puede faltar programación" todas las semanas, y una
+# alarma que siempre suena deja de leerse. El chequeo de cine caído (0
+# funciones) les sigue aplicando igual.
+SIN_REGLA_FALTANTES = {"Centro Cultural 25 de Mayo"}
+
 SEV_ERROR, SEV_WARN, SEV_INFO = "ERROR", "AVISO", "INFO"
 
 
@@ -412,7 +419,8 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
         if not rancio and not es_comercial and base and base >= 5 and n < base * 0.4:
             flojos.append((cine, n, titulos, f"~{base:.0f}"))
 
-        if probe_n and titulos and probe_n >= titulos * 3 and probe_n - titulos >= 4:
+        if (cine not in SIN_REGLA_FALTANTES and probe_n and titulos
+                and probe_n >= titulos * 3 and probe_n - titulos >= 4):
             rep.accionar(cine, f"la fuente publica {probe_n} {probe_detail} y "
                                f"nosotros tenemos {titulos} película(s). Puede "
                                f"estar faltando programación.")

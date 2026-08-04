@@ -25,6 +25,11 @@
     { "title": "How it begins", "director": "Chloé Wasp", "year": 2025, "letterboxd": "https://letterboxd.com/film/how-it-begins/" },
     { "title": "Pude ver un fantasma desde mi ventana", "director": "Mayro Romero", "year": 2025, "title_en": "I Could See a Ghost from My Window", "letterboxd": "https://letterboxd.com/film/i-could-see-a-ghost-from-my-window/" },
 
+    { "_comment": "La Flor se exhibe en partes y Amorina publica runtime 0, así que el enrichment le pone a CADA parte la duración de la obra completa (803 min). El link a la película entera está bien —es la misma— pero la duración no: se borra. Letterboxd tiene entradas por parte, pero en francés y con otra numeración que la de Amorina, así que mapearlas sería adivinar." },
+    { "title": "La Flor - Parte I", "cine": "Amorina", "duration": "" },
+    { "title": "La Flor - Parte II", "cine": "Amorina", "duration": "" },
+    { "title": "La Flor - Parte III", "cine": "Amorina", "duration": "" },
+
     { "_comment": "Títulos que el enrichment no puede matchear porque el cine invierte o traduce el original. Verificados en letterboxd.com." },
     { "title": "Algo nuevo, algo viejo, algo prestado", "director": "Hernán Rosselli", "year": 2024, "title_en": "Something Old, Something New, Something Borrowed", "original_title": "Algo viejo, algo nuevo, algo prestado", "letterboxd": "https://letterboxd.com/film/something-old-something-new-something-borrowed/" },
     { "title": "Marianela y el Cadáver", "year": 2024, "title_en": "Marianela & The Corpse", "original_title": "Marianela & el cadáver", "letterboxd": "https://letterboxd.com/film/marianela-the-corpse/" },
