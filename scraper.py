@@ -2511,16 +2511,24 @@ def scrape_arthaus(semanas: int = 3) -> list[Screening]:
     """Scrapea arthaus.ar/cine/ — la programación de cine del mes.
 
     Antes leía /agenda/ buscando tarjetas con "VER DETALLE". Esa agenda dejó de
-    listar cine (hoy no tiene ni un link /agenda/<slug>/), así que la sala venía
-    con 3 funciones sueltas mientras la web publicaba diez películas. /cine/ las
-    tiene todas, en HTML servido: sin playwright y sin abrir un detalle por
-    película.
+    listar cine (hoy no devuelve ni un link /agenda/<slug>/), así que la sala
+    venía con 3 funciones sueltas mientras la web publicaba diez películas.
+    /cine/ las tiene todas, en HTML servido: sin playwright y sin abrir un
+    detalle por película.
 
-    El ciclo NO se asigna a propósito. Los títulos de ciclo ("Quizás, quizás,
-    quizás") y los de película son el mismo <h2> en la misma jerarquía, así que
-    no hay forma confiable de saber dónde termina el ciclo — antes eso hacía que
-    el nombre del ciclo se publicara COMO si fuera una película. Si hace falta,
-    va por metadata_overrides.json.
+    Se recorre sección por sección (las de Elementor) porque ahí está la única
+    señal confiable de a qué ciclo pertenece cada película. Hay dos formas:
+
+      · Carátula de ciclo — una sección con el nombre del ciclo y la línea
+        "Ciclo de cine", sin ninguna ficha. El ciclo se aplica a la sección
+        SIGUIENTE, que es la que trae sus películas ("Quizás, quizás, quizás"
+        y sus tres films).
+      · Ciclo de una sola película — el nombre del ciclo y la película comparten
+        sección, y se reconocen porque quedan DOS encabezados antes del "Dir."
+        en vez de uno ("Cine Fri: la película gratuita del mes" → "1982").
+
+    Antes esto se resolvía por texto plano y el nombre del ciclo terminaba
+    publicado como si fuera una película.
     """
     today = date.today()
     # Arthaus reparte cada película en 2 funciones separadas por semanas
@@ -2533,65 +2541,78 @@ def scrape_arthaus(semanas: int = 3) -> list[Screening]:
         print(f"[arthaus: no carga — {e}]", end=" ", flush=True)
         return []
 
-    # Los href de boletería, en orden de aparición, para poder emparejarlos con
-    # la línea "entradas" de cada bloque.
-    hrefs = [a["href"] for a in soup.find_all("a", href=True)
-             if _ARTHAUS_LINK_RE.match(a.get_text(" ", strip=True))]
-
-    lineas = _inner_text(soup).split("\n")
-    # Índice de cada línea-link → su href, por posición.
-    link_de_linea: dict[int, str] = {}
-    k = 0
-    for i, l in enumerate(lineas):
-        if _ARTHAUS_LINK_RE.match(l):
-            if k < len(hrefs):
-                link_de_linea[i] = hrefs[k]
-            k += 1
-
     result: list[Screening] = []
-    for i, linea in enumerate(lineas):
-        md = _ARTHAUS_DIR_RE.match(linea)
-        if not md or i == 0:
+    ciclo_pendiente = ""
+
+    for sec in soup.find_all("section", class_="elementor-top-section"):
+        hrefs = [a["href"] for a in sec.find_all("a", href=True)
+                 if _ARTHAUS_LINK_RE.match(a.get_text(" ", strip=True))]
+        lineas = [l for l in _inner_text(sec).split("\n") if l]
+        if not lineas:
             continue
-        director = md.group(1).strip(" .,")
-        title = _ARTHAUS_ESTRENO_RE.sub("", lineas[i - 1]).strip()
-        if not title or _ARTHAUS_DIR_RE.match(title):
+
+        fichas = [i for i, l in enumerate(lineas) if _ARTHAUS_DIR_RE.match(l)]
+        if not fichas:
+            if any(l.lower() == "ciclo de cine" for l in lineas):
+                ciclo_pendiente = lineas[0].strip()
             continue
 
-        # El bloque va hasta el próximo "Dir." (o 12 líneas, lo que venga antes).
-        fin = next((j for j in range(i + 1, min(i + 12, len(lineas)))
-                    if _ARTHAUS_DIR_RE.match(lineas[j])), min(i + 12, len(lineas)))
-        bloque = lineas[i + 1:fin]
+        # El ciclo pendiente vale para esta sección y se consume acá.
+        ciclo_seccion, ciclo_pendiente = ciclo_pendiente, ""
 
-        duration: Optional[int] = None
-        ticket = ARTHAUS_CINE_URL
-        funcs: set = set()
-        for j, l in enumerate(bloque, start=i + 1):
-            if j in link_de_linea:
-                ticket = link_de_linea[j]
-            mdur = _ARTHAUS_DUR_RE.search(l)
-            if mdur:
-                duration = int(mdur.group(1))
-            for m in _ARTHAUS_DATE_RE.finditer(l):
-                month = MESES_ES.get(m.group(2).lower())
-                if not month:
-                    continue
-                hora = f"{int(m.group(3)):02d}:{m.group(4) or '00'}"
-                for day in (int(x) for x in re.findall(r"\d{1,2}", m.group(1))):
-                    for y in (today.year, today.year + 1):
-                        try:
-                            d = date(y, month, day)
-                        except ValueError:
-                            continue
-                        if today <= d <= cutoff:
-                            funcs.add((d.isoformat(), hora))
-                            break
+        link_k = 0
+        fin_anterior = -1
+        for n, i in enumerate(fichas):
+            director = _ARTHAUS_DIR_RE.match(lineas[i]).group(1).strip(" .,")
+            title = _ARTHAUS_ESTRENO_RE.sub("", lineas[i - 1]).strip() if i else ""
+            # Dos encabezados antes de la ficha → el primero es el ciclo. Se
+            # saltea el "¡estreno!", que también viene en su propia línea y si
+            # no se filtra termina publicado como si fuera el nombre del ciclo.
+            ciclo = ciclo_seccion
+            for j in range(fin_anterior + 1, i - 1):
+                cand = _ARTHAUS_ESTRENO_RE.sub("", lineas[j]).strip()
+                if cand:
+                    ciclo = cand
+                    break
+            if not title:
+                continue
 
-        for fecha, hora in sorted(funcs):
-            result.append(Screening(
-                cine="Arthaus", title=title, fecha=fecha, hora=hora,
-                ticket_url=ticket, director=director, duration=duration,
-            ))
+            fin_bloque = fichas[n + 1] - 1 if n + 1 < len(fichas) else len(lineas)
+            bloque = lineas[i + 1:fin_bloque]
+            fin_anterior = fin_bloque - 1
+
+            duration: Optional[int] = None
+            ticket = ARTHAUS_CINE_URL
+            funcs: set = set()
+            for l in bloque:
+                if _ARTHAUS_LINK_RE.match(l):
+                    if link_k < len(hrefs):
+                        ticket = hrefs[link_k]
+                    link_k += 1
+                mdur = _ARTHAUS_DUR_RE.search(l)
+                if mdur:
+                    duration = int(mdur.group(1))
+                for m in _ARTHAUS_DATE_RE.finditer(l):
+                    month = MESES_ES.get(m.group(2).lower())
+                    if not month:
+                        continue
+                    hora = f"{int(m.group(3)):02d}:{m.group(4) or '00'}"
+                    for day in (int(x) for x in re.findall(r"\d{1,2}", m.group(1))):
+                        for y in (today.year, today.year + 1):
+                            try:
+                                d = date(y, month, day)
+                            except ValueError:
+                                continue
+                            if today <= d <= cutoff:
+                                funcs.add((d.isoformat(), hora))
+                                break
+
+            for fecha, hora in sorted(funcs):
+                result.append(Screening(
+                    cine="Arthaus", title=title, fecha=fecha, hora=hora,
+                    ticket_url=ticket, director=director, duration=duration,
+                    ciclo=ciclo,
+                ))
     return result
 
 
