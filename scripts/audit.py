@@ -84,48 +84,88 @@ SEV_ERROR, SEV_WARN, SEV_INFO = "ERROR", "AVISO", "INFO"
 
 
 class Report:
-    """Junta hallazgos y los imprime agrupados por severidad."""
+    """Junta los hallazgos y arma un informe que se lee de arriba hacia abajo.
+
+    El orden importa más que la completitud: primero el veredicto, después lo
+    que hay que tocar esta semana, después lo que cambió, y recién al final lo
+    que viene arrastrándose hace rato. Un informe que empieza con una tabla de
+    treinta filas no se lee.
+    """
 
     def __init__(self) -> None:
-        self.items: list[tuple[str, str, str]] = []   # (severidad, cine, mensaje)
-        self.sections: list[str] = []                 # bloques de texto (tablas)
+        self.accion: list[tuple[str, str]] = []    # (cine, qué hacer) — ERRORes
+        self.cronico: list[str] = []               # frases ya resumidas
+        self.cambios: list[str] = []               # diff contra la semana pasada
+        self.contexto = ""                         # línea de estado
+        self.tabla: list[tuple] = []               # sólo cines con algo que mirar
+        self.sin_novedad = 0
 
-    def add(self, sev: str, cine: str, msg: str) -> None:
-        self.items.append((sev, cine, msg))
+    def accionar(self, cine: str, msg: str) -> None:
+        self.accion.append((cine, msg))
 
-    def section(self, text: str) -> None:
-        self.sections.append(text)
+    def cronicar(self, msg: str) -> None:
+        self.cronico.append(msg)
+
+    def cambiar(self, msg: str) -> None:
+        self.cambios.append(msg)
 
     @property
     def n_errors(self) -> int:
-        return sum(1 for s, _, _ in self.items if s == SEV_ERROR)
-
-    def render(self) -> str:
-        out: list[str] = []
-        out.extend(self.sections)
-        for sev, icon in ((SEV_ERROR, "🔴"), (SEV_WARN, "🟡"), (SEV_INFO, "🔵")):
-            group = [(c, m) for s, c, m in self.items if s == sev]
-            if not group:
-                continue
-            out.append(f"\n## {icon} {sev} ({len(group)})\n")
-            for cine, msg in group:
-                out.append(f"- **{cine}** — {msg}")
-        if not self.items:
-            out.append("\n✅ Sin hallazgos.")
-        return "\n".join(out)
+        return len(self.accion)
 
     @property
-    def resumen(self) -> str:
-        """Una línea para el asunto del mail."""
-        n = Counter(s for s, _, _ in self.items)
-        if not n:
-            return "sin hallazgos"
-        partes = [f"{n[s]} {sing if n[s] == 1 else plur}"
-                  for s, sing, plur in ((SEV_ERROR, "error", "errores"),
-                                        (SEV_WARN, "aviso", "avisos"),
-                                        (SEV_INFO, "informativo", "informativos"))
-                  if n[s]]
-        return ", ".join(partes)
+    def veredicto(self) -> str:
+        if not self.accion:
+            return "✅ Todo en orden"
+        cines = {c for c, _ in self.accion}
+        if len(cines) == 1:
+            return f"🔴 Hay algo para mirar en {next(iter(cines))}"
+        return f"🔴 Hay {len(self.accion)} cosas para mirar en {len(cines)} cines"
+
+    def render(self, hoy: date) -> str:
+        out = [f"# Auditoría de la cartelera — {_fecha_larga(hoy)}", "",
+               f"## {self.veredicto}", "", self.contexto, ""]
+
+        if self.accion:
+            out += ["## Para mirar esta semana", ""]
+            out += [f"- **{cine}** — {msg}" for cine, msg in self.accion]
+            out.append("")
+
+        out += ["## Qué cambió desde la semana pasada", ""]
+        out += [f"- {c}" for c in self.cambios] if self.cambios else \
+               ["Nada raro: ningún cine se cayó ni pegó un salto respecto de "
+                "la semana pasada."]
+        out.append("")
+
+        if self.tabla:
+            out += ["## Cines por debajo de lo habitual", "",
+                    "| Cine | Funciones | Títulos | Habitual |", "|---|---:|---:|---:|"]
+            out += [f"| {c} | {n} | {t} | {b} |" for c, n, t, b in self.tabla]
+            out += ["", f"Los otros {self.sin_novedad} cines están en su rango normal.", ""]
+
+        if self.cronico:
+            out += ["## Pendientes de siempre", "",
+                    "Cosas que no rompen la web pero degradan la ficha. "
+                    "Están acá para que no se olviden, no para arreglarlas hoy.", ""]
+            out += [f"- {c}" for c in self.cronico]
+            out.append("")
+
+        out += ["---", "",
+                "Generado por `scripts/audit.py`. Para correrlo a mano: "
+                "`cd ~/cines && python3 scripts/audit.py`"]
+        return "\n".join(out)
+
+    def asunto(self, hoy: date) -> str:
+        return f"{self.veredicto} — cartelera al {hoy:%d/%m}"
+
+
+_MESES_LARGO = ["enero", "febrero", "marzo", "abril", "mayo", "junio", "julio",
+                "agosto", "septiembre", "octubre", "noviembre", "diciembre"]
+_DIAS_LARGO = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
+
+
+def _fecha_larga(d: date) -> str:
+    return f"{_DIAS_LARGO[d.weekday()]} {d.day} de {_MESES_LARGO[d.month - 1]}"
 
 
 # Conversor markdown → HTML para el subconjunto que usa el informe (títulos,
@@ -294,22 +334,29 @@ def run_probes(cines: list[str]) -> dict[str, tuple[int | None, str]]:
 # Chequeos
 # --------------------------------------------------------------------------
 
-def check_frescura(rep: Report, meta: dict, today: date) -> None:
+def check_frescura(rep: Report, meta: dict, screenings: list[dict],
+                   today: date) -> None:
+    hoy = today.isoformat()
+    fut = [s for s in screenings if s.get("fecha", "") >= hoy]
+    cines = len({s["cine"] for s in fut})
+
     raw = meta.get("updated", "")
     try:
         updated = datetime.fromisoformat(raw)
     except ValueError:
-        rep.add(SEV_ERROR, "cartelera.json", f"campo `updated` ilegible: {raw!r}")
+        rep.accionar("cartelera.json", f"el campo `updated` quedó ilegible: {raw!r}")
+        rep.contexto = f"{cines} cines · {len(fut)} funciones publicadas."
         return
+
     horas = (datetime.now() - updated).total_seconds() / 3600
-    rep.section(f"**Última actualización:** {updated:%Y-%m-%d %H:%M} "
-                f"({horas:.0f} h atrás)\n")
+    rep.contexto = (f"Datos de hace {horas:.0f} h · {cines} cines · "
+                    f"{len(fut)} funciones publicadas.")
     # El scrape corre a diario: más de 36 h es una corrida perdida.
     if horas > 36:
-        rep.add(SEV_ERROR, "cartelera.json",
-                f"datos de hace {horas:.0f} h — el scrape diario no está commiteando")
-    elif horas > 26:
-        rep.add(SEV_WARN, "cartelera.json", f"datos de hace {horas:.0f} h")
+        rep.accionar("El scrape diario",
+                     f"los datos son de hace {horas:.0f} h — el workflow "
+                     f"`scrape.yml` no está commiteando. Mirá la última corrida "
+                     f"en Actions.")
 
 
 def check_cobertura(rep: Report, screenings: list[dict], today: date,
@@ -330,60 +377,92 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
         for c in universo
     } if snaps else {}
 
-    filas = []
+    flojos = []
     for cine in sorted(universo, key=lambda c: -len(fut.get(c, []))):
         ss = fut.get(cine, [])
         n, titulos = len(ss), len({s.get("title_es", "") for s in ss})
         base = baseline.get(cine)
         probe_n, probe_detail = probes.get(cine, (None, ""))
-        filas.append((cine, n, titulos, base, probe_n))
 
         es_comercial = cine.startswith(COMMERCIAL_PREFIXES)
         rancio = False
 
         if n == 0:
             if probe_n:
-                rep.add(SEV_ERROR, cine,
-                        f"0 funciones, pero la fuente publica {probe_n} {probe_detail} "
-                        f"→ el scraper se rompió")
+                rep.accionar(cine, f"no tiene ninguna función en la web, pero la "
+                                   f"fuente publica {probe_n} {probe_detail}. El "
+                                   f"scraper se rompió.")
             elif base:
-                rep.add(SEV_ERROR, cine,
-                        f"0 funciones (venía de ~{base:.0f}/día) → caído")
-            elif probe_n == 0:
-                rep.add(SEV_INFO, cine, "0 funciones y la fuente tampoco publica nada")
-            else:
-                rep.add(SEV_WARN, cine, "0 funciones y no se pudo sondear la fuente")
+                rep.accionar(cine, f"se quedó sin funciones (venía de unas "
+                                   f"{base:.0f} por día). Revisá su scraper.")
+            # Si la fuente tampoco publica nada, el cine simplemente no
+            # programó: no es un hallazgo, es la realidad.
             continue
 
         if es_comercial and titulos < COMMERCIAL_MIN_TITLES:
             rancio = True
-            rep.add(SEV_ERROR, cine,
-                    f"sólo {titulos} título(s) distinto(s) en {n} funciones — una sala "
-                    f"de cadena nunca tiene tan poco: se está publicando data vieja "
-                    f"preservada por la merge")
+            rep.accionar(cine, f"sólo {titulos} película(s) distinta(s) en {n} "
+                               f"funciones. Una sala de cadena nunca tiene tan "
+                               f"poco: se está publicando data vieja.")
 
         # Caída brusca contra su propio histórico. No aplica a las cadenas: La
-        # Nación publica sólo el día de hoy, así que desde que IMDb murió su
-        # número es estructuralmente más chico que el histórico y la alarma
-        # saltaría todas las semanas. A ellas las cubre la regla de títulos.
+        # Nación publica sólo el día de hoy para las que no son del grupo
+        # Cinemark Hoyts, así que su número es estructuralmente más chico que
+        # el histórico y la alarma saltaría todas las semanas.
         if not rancio and not es_comercial and base and base >= 5 and n < base * 0.4:
-            rep.add(SEV_WARN, cine,
-                    f"{n} funciones vs. ~{base:.0f} habituales (caída del "
-                    f"{100 - n / base * 100:.0f}%)")
+            flojos.append((cine, n, titulos, f"~{base:.0f}"))
 
         if probe_n and titulos and probe_n >= titulos * 3 and probe_n - titulos >= 4:
-            rep.add(SEV_WARN, cine,
-                    f"la fuente publica {probe_n} {probe_detail} y sólo tenemos "
-                    f"{titulos} título(s) — puede faltar programación")
+            rep.accionar(cine, f"la fuente publica {probe_n} {probe_detail} y "
+                               f"nosotros tenemos {titulos} película(s). Puede "
+                               f"estar faltando programación.")
 
-    # Tabla de cobertura
-    head = (f"\n| Cine | Funciones | Títulos | Histórico/día | Fuente |\n"
-            f"|---|---:|---:|---:|---:|")
-    body = "\n".join(
-        f"| {c} | {n} | {t} | {'—' if b is None else f'{b:.0f}'} | "
-        f"{'—' if p is None else p} |"
-        for c, n, t, b, p in filas)
-    rep.section(head + "\n" + body + "\n")
+    rep.tabla = flojos
+    rep.sin_novedad = len([c for c in universo if fut.get(c)]) - len(flojos)
+
+
+def check_cambios(rep: Report, screenings: list[dict], today: date,
+                  snaps: dict[str, Counter]) -> None:
+    """Diff contra el snapshot de hace una semana.
+
+    Es la sección que de verdad se lee: un informe semanal sirve por lo que
+    cambió, no por el estado absoluto. Un cine que viene con 3 funciones hace
+    meses no es noticia; uno que pasó de 20 a 0 la semana pasada, sí.
+    """
+    if not snaps:
+        return
+    hoy = today.isoformat()
+    objetivo = (today - timedelta(days=7)).isoformat()
+    # El snapshot más cercano a hace 7 días.
+    dia_ref = min(snaps, key=lambda d: abs((date.fromisoformat(d) - date.fromisoformat(objetivo)).days))
+    if abs((date.fromisoformat(dia_ref) - date.fromisoformat(objetivo)).days) > 3:
+        return          # sin histórico comparable, mejor no inventar un diff
+
+    antes = snaps[dia_ref]
+    ahora = Counter(s["cine"] for s in screenings if s.get("fecha", "") >= hoy)
+
+    # Prioridad por gravedad, no por tamaño: que un cine se caiga importa más
+    # que uno que duplicó funciones, aunque el salto sea más chico.
+    cambios: list[tuple[int, int, str]] = []
+    for cine in set(antes) | set(ahora):
+        a, b = antes.get(cine, 0), ahora.get(cine, 0)
+        delta = abs(b - a)
+        if b == 0 and a > 0:
+            cambios.append((0, delta, f"**{cine}** desapareció: {a} → 0 funciones."))
+        elif a >= 8 and b < a * 0.5:
+            cambios.append((1, delta, f"**{cine}** bajó bastante: {a} → {b} funciones."))
+        elif a == 0 and b > 0:
+            cambios.append((2, delta, f"**{cine}** volvió a la cartelera: 0 → {b} funciones."))
+        elif a >= 8 and b > a * 2:
+            cambios.append((3, delta, f"**{cine}** subió bastante: {a} → {b} funciones."))
+
+    cambios.sort(key=lambda c: (c[0], -c[1]))
+    TOPE = 8
+    for _, _, msg in cambios[:TOPE]:
+        rep.cambiar(msg)
+    if len(cambios) > TOPE:
+        rep.cambiar(f"…y {len(cambios) - TOPE} cines más con cambios de tamaño "
+                    f"parecido (corré `python3 scripts/audit.py` para verlos).")
 
 
 # Un director es un nombre, no una oración. Estas señales delatan que el parser
@@ -460,12 +539,22 @@ def check_calidad(rep: Report, screenings: list[dict], today: date) -> None:
                      f"{fecha} {hora}: {prev_titulo!r} vs {titulo!r}")
         vistos[key] = (titulo, ciclo)
 
+    # Reglas que rompen la ficha publicada → acción. El resto se resume abajo:
+    # son cosas que vienen arrastrándose y que ver una vez alcanza.
+    QUE_HACER = {
+        "título vacío": "hay funciones sin título",
+        "hora inválida": "hay horarios que no se pudieron parsear",
+        "director duplicado": "el crédito viene repetido desde la fuente",
+        "título con copete pegado": "el título en realidad es el copete del "
+                                    "ciclo o una actividad, no una película",
+    }
     for (regla, cine), n in sorted(problemas.items(), key=lambda kv: -kv[1]):
-        muestra = "; ".join(ejemplos[(regla, cine)])
-        sev = SEV_ERROR if regla in ("título vacío", "hora inválida",
-                                     "director duplicado",
-                                     "título con copete pegado") else SEV_WARN
-        rep.add(sev, cine, f"{regla} ×{n} — {muestra}")
+        muestra = ejemplos[(regla, cine)][0]
+        if regla in QUE_HACER:
+            veces = f" (×{n})" if n > 1 else ""
+            rep.accionar(cine, f"{QUE_HACER[regla]}{veces}. Ejemplo: {muestra}")
+        else:
+            rep.cronicar(f"**{cine}**: {regla} ×{n}.")
 
 
 def check_completitud(rep: Report, screenings: list[dict], today: date) -> None:
@@ -475,13 +564,19 @@ def check_completitud(rep: Report, screenings: list[dict], today: date) -> None:
     por_cine = defaultdict(list)
     for s in fut:
         por_cine[s["cine"]].append(s)
-    for cine, ss in sorted(por_cine.items()):
-        sin_dir = sum(1 for s in ss if not (s.get("director") or "").strip())
-        sin_lb = sum(1 for s in ss if not (s.get("letterboxd") or "").strip())
-        if sin_dir and sin_dir / len(ss) > 0.5:
-            rep.add(SEV_WARN, cine, f"{sin_dir}/{len(ss)} funciones sin director")
-        if sin_lb and sin_lb / len(ss) > 0.6:
-            rep.add(SEV_INFO, cine, f"{sin_lb}/{len(ss)} funciones sin link de Letterboxd")
+    # Se resume por campo y no por cine: siete líneas diciendo "sin Letterboxd"
+    # no dicen más que una que los liste.
+    for campo, etiqueta, umbral in (("director", "sin director", 0.5),
+                                    ("letterboxd", "sin link de Letterboxd", 0.6)):
+        afectados = []
+        total = 0
+        for cine, ss in sorted(por_cine.items()):
+            faltan = sum(1 for s in ss if not (s.get(campo) or "").strip())
+            if faltan and faltan / len(ss) > umbral:
+                afectados.append(f"{cine} ({faltan}/{len(ss)})")
+                total += faltan
+        if afectados:
+            rep.cronicar(f"{total} funciones {etiqueta}: {', '.join(afectados)}.")
 
 
 # --------------------------------------------------------------------------
@@ -501,33 +596,33 @@ def main() -> int:
     today = date.today()
     rep = Report()
 
-    rep.section(f"# Auditoría de cartelera — {today:%Y-%m-%d}\n")
-
-    check_frescura(rep, meta, today)
+    check_frescura(rep, meta, screenings, today)
 
     snaps = git_snapshots(args.dias_historico)
     if not snaps:
-        rep.add(SEV_INFO, "auditoría",
-                "sin línea de base histórica (clone shallow o repo sin historia): "
-                "usá actions/checkout con fetch-depth: 0")
+        rep.cronicar("Sin línea de base histórica: el repo está clonado shallow. "
+                     "En CI hace falta `actions/checkout` con `fetch-depth: 0`.")
 
     cines_hoy = {s["cine"] for s in screenings}
     a_sondear = sorted(set(PROBES) | cines_hoy & set(PROBES))
     probes = {} if args.offline else run_probes(a_sondear)
 
     check_cobertura(rep, screenings, today, snaps, probes)
+    check_cambios(rep, screenings, today, snaps)
     check_calidad(rep, screenings, today)
     check_completitud(rep, screenings, today)
 
-    informe = rep.render()
+    informe = rep.render(today)
     print(informe)
     if args.out:
         args.out.write_text(informe + "\n", encoding="utf-8")
     if args.html:
-        # La primera línea es el resumen que el mail usa como asunto, sin tener
-        # que re-parsear el informe.
+        # Asunto y fecha van en comentarios HTML para que el Apps Script que
+        # manda el mail no tenga que re-parsear el informe.
         args.html.write_text(
-            f"<!-- resumen: {rep.resumen} -->\n" + md_a_html(informe) + "\n",
+            f"<!-- asunto: {rep.asunto(today)} -->\n"
+            f"<!-- fecha: {today.isoformat()} -->\n"
+            + md_a_html(informe) + "\n",
             encoding="utf-8")
 
     return 1 if rep.n_errors else 0

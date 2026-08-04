@@ -6,9 +6,9 @@ name: Auditoría semanal
 # que nada avise. Esto convierte ese silencio en un informe.
 #
 # Cómo llega el informe:
-#   · mail semanal — scripts/newsletter.gs (Apps Script) lee el data/audit.html
-#     commiteado acá y lo manda. Sin secrets: corre con la cuenta de Google del
-#     dueño, igual que el newsletter.
+#   · mail semanal — scripts/audit_mail.gs (Apps Script, proyecto APARTE del
+#     newsletter) lee el data/audit.html commiteado acá y lo manda. Sin secrets:
+#     corre con la cuenta de Google del dueño y no le escribe a nadie más.
 #   · issue — sólo si hay ERRORes, para tener dónde seguir el arreglo.
 # Por eso el informe se commitea SIEMPRE, aunque salga limpio: el mail necesita
 # leer el de esta semana.

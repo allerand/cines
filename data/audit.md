@@ -1,60 +1,42 @@
-# Auditoría de cartelera — 2026-08-04
+# Auditoría de la cartelera — martes 4 de agosto
 
-**Última actualización:** 2026-08-03 11:28 (15 h atrás)
+## 🔴 Hay algo para mirar en Lumiton
 
+Datos de hace 15 h · 30 cines · 787 funciones publicadas.
 
-| Cine | Funciones | Títulos | Histórico/día | Fuente |
-|---|---:|---:|---:|---:|
-| Hoyts Abasto | 109 | 9 | 252 | — |
-| Cinemark Palermo | 84 | 7 | 206 | — |
-| Hoyts Dot | 76 | 6 | 0 | — |
-| Sala Lugones | 72 | 51 | 58 | — |
-| Cinemark Puerto Madero | 58 | 5 | 0 | — |
-| Cinemark Caballito | 52 | 5 | 117 | — |
-| Cine York | 43 | 39 | 19 | — |
-| Showcase Belgrano | 37 | 5 | 0 | — |
-| MALBA | 31 | 16 | 20 | — |
-| Cinépolis Recoleta | 28 | 9 | 171 | — |
-| Cine Gaumont | 23 | 13 | 66 | — |
-| Cacodelphia | 23 | 13 | 48 | — |
-| Cine Cosmos | 16 | 6 | 32 | — |
-| CCK | 16 | 10 | 8 | — |
-| Centro Cultural Borges | 15 | 11 | 17 | — |
-| Cinépolis Houssay | 13 | 5 | 80 | — |
-| Centro Cultural Munro | 12 | 12 | 6 | — |
-| Biblioteca del Congreso | 12 | 12 | 2 | — |
-| Casa del Bicentenario | 10 | 10 | 0 | — |
-| Filo Cine | 9 | 7 | 8 | — |
-| Museo del Cine | 9 | 9 | 9 | — |
-| Cine Lorca | 9 | 5 | 0 | — |
-| Centro Cultural Recoleta | 9 | 9 | 6 | — |
-| Lumiton | 6 | 6 | 2 | — |
-| CEA | 4 | 4 | 4 | — |
-| Arthaus | 3 | 2 | 5 | — |
-| Amorina | 3 | 3 | 3 | — |
-| Centro Cultural 25 de Mayo | 2 | 2 | 0 | — |
-| Biblioteca Nacional | 2 | 2 | 0 | — |
-| Centro Cultural de la Cooperación | 1 | 1 | 2 | — |
+## Para mirar esta semana
 
+- **Lumiton** — el título en realidad es el copete del ciclo o una actividad, no una película. Ejemplo: 'Fin de Semana de las Infancias | una Tarde en el Museo | Taller de Juguetes Ópticos'
 
-## 🔴 ERROR (1)
+## Qué cambió desde la semana pasada
 
-- **Lumiton** — título con copete pegado ×1 — 'Fin de Semana de las Infancias | una Tarde en el Museo | Taller de Juguetes Ópticos'
+- **Cinépolis Recoleta** bajó bastante: 219 → 28 funciones.
+- **Hoyts Abasto** bajó bastante: 292 → 109 funciones.
+- **Cinemark Palermo** bajó bastante: 228 → 84 funciones.
+- **Cinépolis Houssay** bajó bastante: 100 → 13 funciones.
+- **Cinemark Caballito** bajó bastante: 136 → 52 funciones.
+- **Cine Gaumont** bajó bastante: 81 → 23 funciones.
+- **Hoyts Dot** volvió a la cartelera: 0 → 76 funciones.
+- **Cinemark Puerto Madero** volvió a la cartelera: 0 → 58 funciones.
+- …y 7 cines más con cambios de tamaño parecido (corré `python3 scripts/audit.py` para verlos).
 
-## 🟡 AVISO (5)
+## Cines por debajo de lo habitual
 
-- **Cine Gaumont** — 23 funciones vs. ~66 habituales (caída del 65%)
-- **Sala Lugones** — ticket_url inválido ×39 — El conflicto de los Marx: ''; Polizones y polizontes: ''; Plumas de caballo: ''
-- **Cine York** — dos títulos en el mismo horario ×4 — 2026-08-13 18:00: 'Mi Casa es su Casa' vs 'Propiedad Privada Prohibido Pasar'; 2026-08-13 20:30: 'Yurlu' vs 'Ziki'; 2026-08-14 18:00: "Pau D'arco" vs 'Tigre es Yaguareté'
-- **CCK** — 14/16 funciones sin director
-- **Lumiton** — 4/6 funciones sin director
+| Cine | Funciones | Títulos | Habitual |
+|---|---:|---:|---:|
+| Cine Gaumont | 23 | 13 | ~66 |
 
-## 🔵 INFO (7)
+Los otros 29 cines están en su rango normal.
 
-- **Amorina** — 3/3 funciones sin link de Letterboxd
-- **Arthaus** — 3/3 funciones sin link de Letterboxd
-- **Biblioteca Nacional** — 2/2 funciones sin link de Letterboxd
-- **Biblioteca del Congreso** — 12/12 funciones sin link de Letterboxd
-- **CCK** — 12/16 funciones sin link de Letterboxd
-- **Centro Cultural 25 de Mayo** — 2/2 funciones sin link de Letterboxd
-- **Lumiton** — 5/6 funciones sin link de Letterboxd
+## Pendientes de siempre
+
+Cosas que no rompen la web pero degradan la ficha. Están acá para que no se olviden, no para arreglarlas hoy.
+
+- **Sala Lugones**: ticket_url inválido ×39.
+- **Cine York**: dos títulos en el mismo horario ×4.
+- 18 funciones sin director: CCK (14/16), Lumiton (4/6).
+- 39 funciones sin link de Letterboxd: Amorina (3/3), Arthaus (3/3), Biblioteca Nacional (2/2), Biblioteca del Congreso (12/12), CCK (12/16), Centro Cultural 25 de Mayo (2/2), Lumiton (5/6).
+
+---
+
+Generado por `scripts/audit.py`. Para correrlo a mano: `cd ~/cines && python3 scripts/audit.py`
