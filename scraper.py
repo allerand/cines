@@ -1708,6 +1708,10 @@ async def scrape_imdb_then_lanacion(page: Page, semanas: int = 2) -> list[Screen
     imdb_semanas = min(semanas, 3)
 
     for imdb_id, cine_name, ticket_url, lan_slug, lan_name, postal in IMDB_CINEMAS:
+        # Las salas del grupo Cinemark Hoyts van por su propia API, que trae
+        # varios días y ficha técnica. Acá quedan Lorca, Cinépolis y Showcase.
+        if cine_name in CINEMARKHOYTS_CINES:
+            continue
         print(f"  · {cine_name}...", end=" ", flush=True)
         ss: list[Screening] = []
         # 1) IMDb (apagado: ver IMDB_HABILITADO)
@@ -5124,3 +5128,115 @@ def descartar_manual(screenings: list) -> tuple[list, int]:
 
     filtradas = [s for s in screenings if not descartada(s)]
     return filtradas, len(screenings) - len(filtradas)
+
+
+# ---------------------------------------------------------------------------
+# Cinemark / Hoyts — API propia (bff.cinemark.com.ar)
+# ---------------------------------------------------------------------------
+# Cinemark y Hoyts son la misma empresa en Argentina (Cinemark Hoyts) y comparten
+# backend, así que una sola API cubre las cinco salas del grupo en CABA.
+#
+# Reemplaza a La Nación para esas salas: trae varios días en vez de sólo hoy,
+# más títulos (incluye el cine-evento: recitales, ATEEZ, Katy Perry) y ficha
+# propia con director, duración y género. Cinépolis, Showcase y el Lorca no son
+# del grupo y siguen por La Nación.
+#
+# El header `country: AR` es obligatorio — sin él la API responde 500
+# "Country undefined not implemented". Y va en MAYÚSCULAS: "ar" también falla.
+
+CINEMARKHOYTS_BFF = "https://bff.cinemark.com.ar/api"
+# (theaterId, nombre en la cartelera, ticket_url)
+CINEMARKHOYTS_SALAS = [
+    (103, "Hoyts Abasto",           "https://www.hoyts.com.ar/"),
+    (111, "Hoyts Dot",              "https://www.hoyts.com.ar/"),
+    (730, "Cinemark Puerto Madero", "https://www.cinemark.com.ar/"),
+    (733, "Cinemark Palermo",       "https://www.cinemark.com.ar/"),
+    (734, "Cinemark Caballito",     "https://www.cinemark.com.ar/"),
+]
+CINEMARKHOYTS_CINES = {nombre for _, nombre, _ in CINEMARKHOYTS_SALAS}
+
+
+def _cmh_get(path: str) -> Optional[dict]:
+    try:
+        req = urllib.request.Request(
+            f"{CINEMARKHOYTS_BFF}/{path}",
+            headers={"User-Agent": UA, "Accept": "application/json", "country": "AR"},
+        )
+        with urllib.request.urlopen(req, timeout=25) as r:
+            return json.loads(r.read().decode("utf-8", errors="replace"))
+    except Exception as e:
+        print(f"[cmh {path}: {type(e).__name__}]", end=" ", flush=True)
+        return None
+
+
+def _cmh_meta(slug: str, cache: dict) -> dict:
+    """Ficha de una película: director, duración, género. Cacheada por slug."""
+    if slug in cache:
+        return cache[slug]
+    out: dict = {}
+    d = _cmh_get(f"cinema/movies/slug/{urllib.parse.quote(slug)}")
+    m = (d or {}).get("data") or {}
+    if m:
+        for p in m.get("filmPersons") or []:
+            if (p.get("personType") or "").lower() == "director":
+                out["director"] = f"{p.get('firstName','')} {p.get('lastName','')}".strip()
+                break
+        if m.get("runTime"):
+            out["duration"] = int(m["runTime"])
+    cache[slug] = out
+    return out
+
+
+def scrape_cinemark_hoyts(semanas: int = 2) -> list[Screening]:
+    today = date.today()
+    end = today + timedelta(weeks=semanas)
+    meta_cache: dict = {}
+    result: list[Screening] = []
+
+    for theater_id, cine, ticket_url in CINEMARKHOYTS_SALAS:
+        sesiones = (_cmh_get(f"cinema/showtimes?theater={theater_id}") or {}).get("data") or []
+        if not sesiones:
+            print(f"[cmh {cine}: 0 funciones]", end=" ", flush=True)
+            continue
+
+        # corporateId → slug, para poder pedir la ficha de cada película.
+        slugs = {
+            str(m.get("corporateId")): m.get("slug", "")
+            for m in ((_cmh_get(f"cinema/movies?theater={theater_id}") or {}).get("data") or [])
+        }
+
+        seen: set[tuple] = set()
+        for s in sesiones:
+            fecha = s.get("sessionDisplayDate") or ""
+            # OJO: sessionDateTime termina en "Z" pero la hora ya viene en horario
+            # de Buenos Aires (verificado contra la cartelera publicada). Convertir
+            # desde UTC correría todas las funciones tres horas.
+            hora = (s.get("sessionDateTime") or "")[11:16]
+            title = (s.get("movieName") or "").strip()
+            if not (fecha and re.fullmatch(r"\d{2}:\d{2}", hora) and title):
+                continue
+            try:
+                d = date.fromisoformat(fecha)
+            except ValueError:
+                continue
+            if not (today <= d <= end):
+                continue
+            # La misma película a la misma hora en dos salas es una sola función
+            # para la cartelera.
+            key = (title, fecha, hora)
+            if key in seen:
+                continue
+            seen.add(key)
+
+            meta = _cmh_meta(slugs.get(str(s.get("corporateId")), ""), meta_cache) \
+                if slugs.get(str(s.get("corporateId"))) else {}
+            result.append(Screening(
+                cine=cine,
+                title=title,
+                fecha=fecha,
+                hora=hora,
+                ticket_url=ticket_url,
+                director=meta.get("director", ""),
+                duration=meta.get("duration"),
+            ))
+    return result
