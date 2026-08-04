@@ -25,6 +25,10 @@
     { "title": "How it begins", "director": "Chloé Wasp", "year": 2025, "letterboxd": "https://letterboxd.com/film/how-it-begins/" },
     { "title": "Pude ver un fantasma desde mi ventana", "director": "Mayro Romero", "year": 2025, "title_en": "I Could See a Ghost from My Window", "letterboxd": "https://letterboxd.com/film/i-could-see-a-ghost-from-my-window/" },
 
+    { "_comment": "Títulos que el enrichment no puede matchear porque el cine invierte o traduce el original. Verificados en letterboxd.com." },
+    { "title": "Algo nuevo, algo viejo, algo prestado", "director": "Hernán Rosselli", "year": 2024, "title_en": "Something Old, Something New, Something Borrowed", "original_title": "Algo viejo, algo nuevo, algo prestado", "letterboxd": "https://letterboxd.com/film/something-old-something-new-something-borrowed/" },
+    { "title": "Marianela y el Cadáver", "year": 2024, "title_en": "Marianela & The Corpse", "original_title": "Marianela & el cadáver", "letterboxd": "https://letterboxd.com/film/marianela-the-corpse/" },
+
     { "_comment": "Programa doble del Museo del Cine por los 90 años de la muerte de Lorca — el sitio lo publica como un título único." },
     { "title": "La barraca: Lorca por los caminos de España", "director": "Edgardo Cozarinsky", "year": 1995, "country": "Francia, España", "duration": 55 },
     { "title": "Lorca y el Río de la Plata", "director": "Eduardo Mignogna", "year": 1998, "country": "Argentina", "duration": 50 }

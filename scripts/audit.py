@@ -285,9 +285,11 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
                     f"de cadena nunca tiene tan poco: se está publicando data vieja "
                     f"preservada por la merge")
 
-        # Caída brusca contra su propio histórico. Si ya saltó la regla de
-        # títulos, la caída es el mismo problema contado dos veces.
-        if not rancio and base and base >= 5 and n < base * 0.4:
+        # Caída brusca contra su propio histórico. No aplica a las cadenas: La
+        # Nación publica sólo el día de hoy, así que desde que IMDb murió su
+        # número es estructuralmente más chico que el histórico y la alarma
+        # saltaría todas las semanas. A ellas las cubre la regla de títulos.
+        if not rancio and not es_comercial and base and base >= 5 and n < base * 0.4:
             rep.add(SEV_WARN, cine,
                     f"{n} funciones vs. ~{base:.0f} habituales (caída del "
                     f"{100 - n / base * 100:.0f}%)")
@@ -368,9 +370,12 @@ def check_calidad(rep: Report, screenings: list[dict], today: date) -> None:
 
         # Misma sala, misma fecha y hora, dos títulos distintos: síntoma de una
         # card mal delimitada. No aplica si comparten ciclo — un programa de
-        # cortos son varias películas en la misma función, a propósito.
+        # cortos son varias películas en la misma función, a propósito — ni en
+        # los multiplex, que tienen diez salas y estrenan todo a la misma hora.
         key = (cine, fecha, hora)
         ciclo = (s.get("ciclo") or "").strip()
+        if cine.startswith(COMMERCIAL_PREFIXES):
+            continue
         if key in vistos:
             prev_titulo, prev_ciclo = vistos[key]
             if prev_titulo != titulo and not (ciclo and ciclo == prev_ciclo):
