@@ -893,13 +893,11 @@ window.addEventListener('hashchange', () => {
 // informe se corta por la dimensión que haga falta sin volver a tocar el
 // tracking.
 //
-// ⚠️ Los parámetros hay que darlos de alta UNA VEZ en GA4:
-//    Admin → Definiciones personalizadas → Crear dimensión personalizada,
-//    ámbito "Evento", con estos nombres de parámetro:
-//      cine · pelicula · ciclo · fecha_funcion · dias_anticipacion · canal ·
-//      vista · posicion
-//    Sin eso los eventos llegan igual pero los parámetros no se pueden ver en
-//    ningún informe, que es la forma más común de que un tracking no sirva.
+// ⚠️ Los parámetros hay que darlos de alta como dimensiones personalizadas en
+//    GA4 o llegan igual pero no se pueden ver en ningún informe, que es la
+//    forma más común de que un tracking no sirva para nada. Eso lo hace
+//    scripts/ga4_setup.gs de una corrida (es idempotente). Si acá se agrega un
+//    parámetro nuevo, hay que agregarlo también a la lista de ese script.
 
 // De dónde llegó la visita. Se lee una sola vez: si después navega dentro del
 // sitio la URL cambia, pero el origen de la sesión sigue siendo el mismo.
