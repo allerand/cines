@@ -4702,6 +4702,11 @@ def _bcn_parse_ficha(text: str) -> dict:
         if not m:
             continue
         val = re.sub(r"\s+", " ", m.group(1)).strip(" .,;")
+        if key == "director":
+            # Algunas fichas van todas en un renglón ("Dirección: Hugo Santiago.
+            # 1969. 123´"): cortamos donde arranca el año/duración para no
+            # publicar un director con la ficha entera pegada.
+            val = re.split(r"[.,;]\s*(?=\d)", val)[0].strip(" .,;")
         if not val:
             continue
         out[key] = int(val) if key in ("year", "duration") else val
@@ -4714,9 +4719,12 @@ def _bcn_parse_corta(text: str) -> dict:
     t = re.sub(r"\s+", " ", text).strip(" .,")
     if not t:
         return out
-    parts = [p.strip(" .,") for p in t.split(",")]
-    if parts and not re.fullmatch(r"[\d\s’'´`\-–]+", parts[0]):
-        out["director"] = parts[0]
+    # El director es lo que va antes del año. El separador es coma
+    # ("Steven Spielberg, 1987, 152’") o punto ("Hugo Santiago. 1969. 123´"):
+    # cortar sólo por coma dejaba la ficha entera como nombre del director.
+    cabeza = re.split(r"[.,;]\s*(?=\d)", t)[0].strip(" .,")
+    if cabeza and not re.fullmatch(r"[\d\s’'´`\-–]+", cabeza):
+        out["director"] = cabeza
     ym = re.search(r"\b(19|20)\d{2}\b", t)
     if ym:
         out["year"] = int(ym.group(0))
@@ -4726,16 +4734,121 @@ def _bcn_parse_corta(text: str) -> dict:
     return out
 
 
-def _bcn_detail_meta(url: str) -> dict:
+# Cronograma de un ciclo/festival de la BCN. La agenda muestra una card por
+# FECHA con un título de relleno ("Proyección de 'Collateral' y 'Aqui nao entra
+# luz'") y la bajada institucional donde debería ir el director; las películas
+# de verdad, con ficha técnica, están en el bloque "Cronograma" de la página del
+# ciclo, con esta forma:
+#
+#     calendar_clock
+#     Martes 18 de agosto -
+#     18.30 h
+#     Cortometraje:
+#     The Fortunate
+#     Dirección: Habtamu Gebrehiwot,
+#     Año: 2026
+#     Duración: 15´
+#
+# Cuando la página tiene cronograma, cada película es una función propia y las
+# cards de la agenda se ignoran.
+_BCN_CRONO_DIA_RE = re.compile(
+    r"^(?:lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+"
+    r"(\d{1,2})\s+de\s+([a-záéíóúñ]+)", re.IGNORECASE)
+_BCN_CRONO_HORA_RE = re.compile(r"^(\d{1,2})[.:](\d{2})\s*h?\b")
+_BCN_CRONO_FILM_RE = re.compile(
+    r"^(?:corto|largo)metraje\s*:\s*(.*)$", re.IGNORECASE)
+
+
+def _bcn_cronograma(soup, ciclo: str, ticket_url: str,
+                    today: date) -> list[Screening]:
+    """Una Screening por película del bloque "Cronograma". [] si no hay."""
+    lines = [re.sub(r"[ \t]+", " ", l).strip()
+             for l in soup.get_text("\n").splitlines()]
+    lines = [l for l in lines if l]
+    try:
+        inicio = next(i for i, l in enumerate(lines) if l.lower() == "cronograma")
+    except StopIteration:
+        return []
+
+    out: list[Screening] = []
+    d: Optional[date] = None
+    hora = "18:30"
+    i = inicio + 1
+    while i < len(lines):
+        ln = lines[i]
+
+        md = _BCN_CRONO_DIA_RE.match(ln)
+        if md:
+            mes = MESES_ES.get(md.group(2).lower())
+            if mes:
+                dia = int(md.group(1))
+                # La agenda sólo publica funciones futuras: si el mes ya pasó,
+                # es del año que viene.
+                anio = today.year + 1 if mes < today.month else today.year
+                try:
+                    d = date(anio, mes, dia)
+                except ValueError:
+                    d = None
+            # La hora va en la línea siguiente ("18.30 h").
+            for j in range(i + 1, min(i + 3, len(lines))):
+                mh = _BCN_CRONO_HORA_RE.match(lines[j])
+                if mh:
+                    hora = f"{int(mh.group(1)):02d}:{mh.group(2)}"
+                    break
+            i += 1
+            continue
+
+        mf = _BCN_CRONO_FILM_RE.match(ln)
+        if not mf or d is None:
+            i += 1
+            continue
+
+        # El título va pegado a la etiqueta o en la línea siguiente.
+        titulo = mf.group(1).strip(" .,:")
+        j = i + 1
+        if not titulo and j < len(lines):
+            titulo = lines[j].strip(" .,:")
+            j += 1
+        # Ficha técnica: las líneas Dirección/Año/Duración que siguen, hasta la
+        # próxima película o el próximo día.
+        ficha: dict = {}
+        while j < len(lines) and j < i + 10:
+            if (_BCN_CRONO_FILM_RE.match(lines[j])
+                    or _BCN_CRONO_DIA_RE.match(lines[j])):
+                break
+            ficha.update(_bcn_parse_ficha(lines[j]))
+            j += 1
+
+        if titulo and today <= d:
+            titulo, original = _bcn_split_title(titulo)
+            out.append(Screening(
+                cine="Biblioteca del Congreso",
+                title=titulo,
+                fecha=d.isoformat(),
+                hora=hora,
+                ticket_url=ticket_url,
+                ciclo=ciclo,
+                director=ficha.get("director", ""),
+                country=ficha.get("country", ""),
+                year=ficha.get("year"),
+                duration=ficha.get("duration"),
+                original_title=original,
+            ))
+        i = j
+    return out
+
+
+def _bcn_detail_meta(url: str, soup=None) -> dict:
     """
     Página de detalle de una película: fecha exacta (DD/MM/YYYY), horario,
     link de reserva y ficha técnica.
     """
     out: dict = {}
-    try:
-        soup = fetch_html(url)
-    except Exception:
-        return out
+    if soup is None:
+        try:
+            soup = fetch_html(url)
+        except Exception:
+            return out
 
     body = soup.find("div", class_="row-same-height") or soup
     text = body.get_text("\n", strip=True)
@@ -4809,6 +4922,14 @@ def scrape_bcn() -> list[Screening]:
     today = date.today()
     result: list[Screening] = []
     seen: set[tuple] = set()
+    # Varias cards de la agenda apuntan a la misma página de ciclo: cacheamos
+    # el soup para no bajarla una vez por fecha.
+    detalles: dict[str, tuple] = {}
+    # Fecha+hora ya resueltas por un cronograma. Las cards de la agenda que
+    # caen ahí son las de relleno ("Proyección de X y Z") que el cronograma ya
+    # desglosó en películas: se descartan.
+    cubiertas: set[tuple] = set()
+    pendientes: list[tuple] = []
 
     for h3 in soup.find_all("h3", class_="titulo_padre"):
         card = h3.find_parent("div", class_="same-height") or h3.find_parent("div")
@@ -4832,7 +4953,38 @@ def scrape_bcn() -> list[Screening]:
         if detail_url.startswith("/"):
             detail_url = BCN_BASE + detail_url
 
-        detail = _bcn_detail_meta(detail_url) if detail_url != BCN_AGENDA else {}
+        if detail_url not in detalles:
+            dsoup = None
+            if detail_url != BCN_AGENDA:
+                try:
+                    dsoup = fetch_html(detail_url)
+                except Exception:
+                    dsoup = None
+            detalles[detail_url] = (
+                dsoup, _bcn_detail_meta(detail_url, dsoup) if dsoup is not None else {})
+        dsoup, detail = detalles[detail_url]
+
+        # Si la página del ciclo trae Cronograma, la card de la agenda no aporta
+        # nada: su título es de relleno y su bajada es institucional. Cada
+        # película del cronograma es una función propia.
+        if dsoup is not None:
+            h1 = dsoup.find("h1")
+            crono = _bcn_cronograma(
+                dsoup,
+                (h1.get_text(" ", strip=True) if h1 else "") or ciclo,
+                detail.get("ticket_url") or detail_url,
+                today,
+            )
+            if crono:
+                for s in crono:
+                    k = (s.title, s.fecha, s.hora)
+                    if k in seen:
+                        continue
+                    seen.add(k)
+                    result.append(s)
+                    cubiertas.add((s.fecha, s.hora))
+                continue
+
         for k in ("director", "country", "year", "duration"):
             if detail.get(k):
                 meta[k] = detail[k]
@@ -4854,7 +5006,7 @@ def scrape_bcn() -> list[Screening]:
         if key in seen:
             continue
         seen.add(key)
-        result.append(Screening(
+        pendientes.append((d.isoformat(), hora, Screening(
             cine="Biblioteca del Congreso",
             title=title,
             fecha=d.isoformat(),
@@ -4866,7 +5018,13 @@ def scrape_bcn() -> list[Screening]:
             year=meta.get("year"),
             duration=meta.get("duration"),
             original_title=original,
-        ))
+        )))
+
+    # Las cards se emiten al final: recién ahí sabemos qué fechas cubrió algún
+    # cronograma (el orden de la agenda no garantiza verlo primero).
+    for fecha, hora, s in pendientes:
+        if (fecha, hora) not in cubiertas:
+            result.append(s)
     return result
 
 
