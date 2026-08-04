@@ -439,7 +439,10 @@
     .screening-table td {
       padding: 0.65rem 0.8rem;
       border-bottom: 1px solid var(--border);
-      vertical-align: middle;
+      /* Alineación arriba: hora, badge del cine y título de la película arrancan
+         en la misma línea. Con vertical-align:middle la hora quedaba flotando en
+         el medio de una celda de cine más alta (badge + dirección + Entradas). */
+      vertical-align: top;
     }
     .screening-table tr:last-child td { border-bottom: none; }
     .screening-table tbody tr:hover td { background: var(--hover-row); }
@@ -558,7 +561,7 @@
     .cine-cinepolis{ border-color: #2a2a2a; color: #aaa; }
     .cine-showcase { border-color: #2a2a2a; color: #aaa; }
 
-    .film-title { font-weight: 500; color: var(--text); }
+    .film-title { font-weight: 500; color: var(--text); overflow-wrap: anywhere; }
     /* Título alternativo (criterio Letterboxd): el otro idioma en «guillemets»,
        inline junto al título principal — sin columna ni línea extra. */
     .film-alt-title {
@@ -584,6 +587,8 @@
       letter-spacing: 0.02em;
     }
     .ticket-link:hover { text-decoration: underline; }
+    /* "Entradas →" vive en la celda del Cine, debajo del badge y la dirección. */
+    .cine-cell .ticket-link { margin-top: 0.3rem; }
     .ciclo-tag { display: inline-block; font-size: 0.7rem; color: var(--muted); font-style: italic; }
     /* Ciclo dentro de la celda de película — sólo visible en mobile (en desktop
        está la columna Ciclo). */
@@ -651,15 +656,35 @@
       .search-input { width: 100%; }
       .day-tabs { padding: 0 0.5rem; }
       .col-ciclo, .col-dir, .col-genre, .col-pais, .col-anio, .col-dur { display: none; }
-      .col-cine { width: 5rem; }
+      /* table-layout:fixed hace que las columnas respeten su ancho en vez de
+         estirarse por contenido (ej. la dirección larga de la Biblioteca
+         Nacional). Sin esto la tabla se pasaba del viewport y la columna LB
+         quedaba fuera de pantalla (había que deslizar en horizontal). */
+      .screening-table { table-layout: fixed; }
+      /* Anchos pensados para que la ▲ de "Hora" no quede tapada, el botón "+"
+         (aun con contador "+ 1") entre sin pisar la película, y el badge del
+         cine entre en una línea. Lo que sobra va a Película, que puede crecer
+         hacia abajo. Mantenemos el tamaño de letra legible de siempre. */
       .col-hora { width: 4rem; }
-      .col-lb   { width: 3rem; }
+      .col-cine { width: 7rem; }
+      .col-add  { width: 3rem; }
+      .col-lb   { width: 2.4rem; }
       .lb-full  { display: none; }
       .lb-short { display: inline; }
-      .screening-table th, .screening-table td { padding: 0.45rem 0.4rem; }
+      .screening-table th, .screening-table td { padding: 0.6rem 0.35rem; }
       .film-meta-inline { display: block; }
       .film-ciclo-inline { display: block; }
-      .cine-tag { font-size: 0.62rem; padding: 0.12rem 0.35rem; }
+      /* El badge del cine SIEMPRE en una línea: si el nombre no entra se recorta
+         con "…" en vez de saltar de renglón y estirar la caja (queda feo). La
+         dirección sí puede cortar en dos líneas. */
+      .cine-tag {
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .cine-addr { white-space: normal; }
+      /* El "+" no debe desbordar su columna y pisar la película. */
+      .add-btn { padding: 0.16rem 0.3rem; }
       .lb-link { padding: 0.2rem 0.35rem; }
       .lb-link .lb-dots span { width: 5px; height: 5px; }
       th.col-lb .lb-dots { display: none; }
@@ -1473,12 +1498,18 @@ function renderTable() {
     const alt = altTitle(s);
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}${alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : ''}</div>
       ${s.ciclo ? `<div class="film-ciclo-inline">${escapeHtml(s.ciclo)}</div>` : ''}
-      <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
-      ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
+      <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>`;
+
+    // "Entradas →" vive en la celda del Cine (tiene más lugar libre que la de
+    // Película, que ya carga título + metadata). Conserva data-row/clase para
+    // que siga funcionando el handler de tracking.
+    const ticketLink = s.ticket_url
+      ? `<a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a>`
+      : '';
 
     return `<tr>
       <td class="col-hora">${searching ? `<span class="hora-date">${fmtShortDate(s.fecha)}</span>` : ''}<span class="hora-tag">${horaText}</span></td>
-      <td class="col-cine"><div class="cine-cell"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>${CINE_ADDRESSES[s.cine] ? `<div class="cine-addr">${escapeHtml(CINE_ADDRESSES[s.cine])}</div>` : ''}</div></td>
+      <td class="col-cine"><div class="cine-cell"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>${CINE_ADDRESSES[s.cine] ? `<div class="cine-addr">${escapeHtml(CINE_ADDRESSES[s.cine])}</div>` : ''}${ticketLink}</div></td>
       <td class="col-add">${addBtn}</td>
       <td class="col-film">${filmCell}</td>
       <td class="col-ciclo">${s.ciclo ? `<span class="ciclo-tag">${escapeHtml(s.ciclo)}</span>` : ''}</td>
