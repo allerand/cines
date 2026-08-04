@@ -1977,6 +1977,82 @@ CCK_MONTHS = {
 }
 
 
+# La descripción de cada ciclo del CCK trae la ficha de las películas, en dos
+# formatos distintos, y hasta ahora no se usaba ninguno: la cartelera publicaba
+# las funciones del CCK sin director.
+#
+#   1. Bloque "Programación", el más completo:
+#        Hijo mayor "Cecilia Kang. Argentina, Francia, 2025. 118'. Drama."
+#   2. Enumeración del ciclo, con el año y a veces la co-dirección:
+#        Se proyectan diez títulos: El hombre robado (2007), …,
+#        Sycorax (Matías Piñeiro y Lois Patiño, 2021), …
+#   3. Y para las retrospectivas de un solo autor, el copete lo nombra:
+#        "un recorrido por la obra de Matías Piñeiro"
+#      Eso cubre los programas dobles ("Rosalinda + Sycorax"), que no matchean
+#      contra ninguna de las dos listas.
+_CCK_NOMBRE = r"[A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ'’.\-]*(?:\s+[A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ'’.\-]*){0,3}"
+_CCK_AUTOR_RE = re.compile(
+    rf"(?:(?:la\s+)?obra\s+de|[Rr]etrospectiva\s+(?:de\s+)?|[Hh]omenaje\s+a)\s+({_CCK_NOMBRE})")
+# Va anclado al título y NO exige comillas: el sitio las escribe, pero se
+# pierden al desescapar el JSON-LD, así que el texto que ve el scraper es
+# «Hijo mayor Cecilia Kang. Argentina, Francia, 2025. 118'.» pelado.
+_CCK_FICHA_RE = re.compile(
+    r"\s*[\"“]?\s*([^\".]{3,60})\.\s*(?:([^\".]{0,70}?),\s*)?"
+    r"((?:19|20)\d{2})\.\s*(\d{2,3})\s*[’\'′]")
+_CCK_LISTA_RE = re.compile(r"[Ss]e\s+proyectan[^:]{0,40}:\s*(.+?)\.\s")
+
+
+def _cck_norm(t: str) -> str:
+    return re.sub(r"[^a-z0-9]+", " ", (t or "").lower().translate(_MALBA_ACCENTS)).strip()
+
+
+def _cck_fichas(texto: str) -> dict:
+    """{título normalizado: {director, country, year, duration}} desde el
+    bloque "Programación" y desde la enumeración del ciclo."""
+    out: dict = {}
+
+    ml = _CCK_LISTA_RE.search(texto)
+    if ml:
+        # Cortamos por comas que NO estén dentro de un paréntesis, para no
+        # partir "Sycorax (Matías Piñeiro y Lois Patiño, 2021)" al medio.
+        for item in re.split(r",\s*(?![^()]*\))", ml.group(1)):
+            mm = re.match(r"\s*(.+?)\s*\(([^)]*)\)\s*$", item)
+            if not mm:
+                continue
+            datos: dict = {}
+            my = re.search(r"(?:19|20)\d{2}", mm.group(2))
+            if my:
+                datos["year"] = int(my.group(0))
+            resto = re.sub(r",?\s*(?:19|20)\d{2}\s*$", "", mm.group(2)).strip()
+            if resto:
+                datos["director"] = resto
+            if datos:
+                out[_cck_norm(mm.group(1))] = datos
+    return out
+
+
+def _cck_ficha_programacion(texto: str, titulo: str) -> dict:
+    """Ficha del bloque "Programación" para un título puntual.
+
+    Se busca desde el marcador "Programación" en adelante porque el título
+    también aparece más arriba, en la agenda ("19 h: Hijo mayor"), donde no
+    tiene ficha detrás.
+    """
+    desde = texto.find("Programación")
+    i = texto.find(titulo, desde if desde >= 0 else 0)
+    while i >= 0:
+        m = _CCK_FICHA_RE.match(texto, i + len(titulo))
+        if m:
+            return {"director": m.group(1).strip(),
+                    # El país es opcional: unas fichas van "Director. País,
+                    # Año. NN'." y otras directo "Director. Año. NN'."
+                    "country": (m.group(2) or "").strip(),
+                    "year": int(m.group(3)),
+                    "duration": int(m.group(4))}
+        i = texto.find(titulo, i + 1)
+    return {}
+
+
 _CCK_SALA_RE = re.compile(
     r"^(?:Auditorio|Sala|Microcine|Cine)\s+[^:]{1,30}:\s*", re.IGNORECASE)
 
@@ -2100,6 +2176,12 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
         full_text = desc_soup.get_text(" ", strip=True)
         full_text = re.sub(r"\s+", " ", full_text)
 
+        # Fichas de este ciclo: la enumeración de títulos y, para las
+        # retrospectivas de un solo autor, el director del ciclo entero.
+        fichas_ciclo = _cck_fichas(full_text)
+        ma = _CCK_AUTOR_RE.search(full_text)
+        autor_ciclo = ma.group(1).strip() if ma else ""
+
         # Encontrar headers de fecha + sus rangos en el texto
         date_anchors: list[tuple[int, int, date]] = []  # (start, end, fecha resuelta)
         for dm in date_re.finditer(full_text):
@@ -2152,6 +2234,14 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
                     if not raw_title or len(raw_title) < 2:
                         continue
                     hora = f"{hour:02d}:{minute:02d}"
+                    # Ficha: primero la del bloque "Programación" (trae país y
+                    # duración), después la enumeración, y de última el autor
+                    # del ciclo — que es lo que cubre los programas dobles.
+                    ficha = _cck_ficha_programacion(full_text, raw_title)
+                    if not ficha:
+                        ficha = dict(fichas_ciclo.get(_cck_norm(raw_title), {}))
+                    if not ficha.get("director") and autor_ciclo:
+                        ficha["director"] = autor_ciclo
                     result.append(Screening(
                         cine="CCK",
                         title=raw_title,
@@ -2159,6 +2249,10 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
                         hora=hora,
                         ticket_url=event_url,
                         ciclo=cycle_name,
+                        director=ficha.get("director", ""),
+                        country=ficha.get("country", ""),
+                        year=ficha.get("year"),
+                        duration=ficha.get("duration"),
                     ))
 
     # Deduplicar (cycle pages a veces repiten fechas)
