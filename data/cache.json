@@ -8621,12 +8621,15 @@
     "original_title": "La terra trema"
   },
   "obsesión|1943": {
-    "url": "",
-    "title_en": "Obsesión",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/ossessione/",
+    "title_en": "Obsession",
+    "director": "Luchino Visconti, Luchino Visconti’s",
+    "country": "Italy",
+    "year": 1943,
+    "duration": 140,
+    "genre": "Drama, Crimen",
+    "title_es": "Obsesión",
+    "original_title": "Ossessione"
   },
   "grupo de familia|1974": {
     "url": "https://letterboxd.com/film/conversation-piece/",
@@ -9984,23 +9987,24 @@
     "genre": "Documental"
   },
   "el canto de los pájaros|2026": {
-    "url": "",
-    "title_en": "El canto de los pájaros",
+    "url": "https://letterboxd.com/film/el-canto-de-los-pajaros/",
+    "title_en": "El canto de los pajaros",
     "director": "Sebastián Zanzottera",
     "country": "",
     "year": 2026,
     "duration": 5,
+    "genre": "",
     "original_title": "El canto de los pajaros"
   },
   "introducción a la catástrofe|2026": {
-    "url": "",
+    "url": "https://letterboxd.com/film/introduccion-a-la-catastrofe/",
     "title_en": "Introducción a la catástrofe",
     "director": "Priya Govinda",
     "country": "",
     "year": 2026,
     "duration": 64,
-    "original_title": "Introducción a la catástrofe",
-    "genre": "Documental"
+    "genre": "Documental",
+    "original_title": "Introducción a la catástrofe"
   },
   "luz|2019": {
     "url": "https://letterboxd.com/film/light-2019/",
@@ -10051,12 +10055,13 @@
     "original_title": "En otra Palestina"
   },
   "vado in america|2026": {
-    "url": "",
+    "url": "https://letterboxd.com/film/vado-in-america/",
     "title_en": "Vado in America",
     "director": "Lucy Riera",
     "country": "Argentina, Switzerland",
     "year": 2026,
     "duration": 90,
+    "genre": "",
     "original_title": "Vado in America"
   },
   "todo parecía posible|2025": {
@@ -10090,14 +10095,14 @@
     "original_title": "Active Vocabulary"
   },
   "hablan las aves|2026": {
-    "url": "",
+    "url": "https://letterboxd.com/film/hablan-las-aves/",
     "title_en": "Hablan las aves",
     "director": "Rodrigo Montani",
     "country": "Argentina",
     "year": 2026,
     "duration": 11,
-    "original_title": "Hablan las aves",
-    "genre": "Documental"
+    "genre": "Documental",
+    "original_title": "Hablan las aves"
   },
   "bosque arriba en la montaña|2026": {
     "url": "https://letterboxd.com/film/forest-up-in-the-mountain/",
@@ -10160,14 +10165,14 @@
     "original_title": "Little Poems in Prose"
   },
   "los rusos|2026": {
-    "url": "",
+    "url": "https://letterboxd.com/film/los-rusos/",
     "title_en": "Los rusos",
     "director": "Mirko Stopar",
     "country": "",
     "year": 2026,
     "duration": 57,
-    "original_title": "Los rusos",
-    "genre": "Documental"
+    "genre": "Documental",
+    "original_title": "Los rusos"
   },
   "no arreglen ni limpien mi habitación, a mí me gusta como está|2026": {
     "url": "https://letterboxd.com/film/dont-tidy-or-clean-my-room-i-like-it-as-it/",
@@ -10701,5 +10706,209 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "la invitación": {
+    "url": "https://letterboxd.com/film/the-invite-2026/",
+    "title_en": "The Invite",
+    "director": "Olivia Wilde",
+    "country": "USA",
+    "year": 2026,
+    "duration": 107,
+    "genre": "Romance, Drama",
+    "original_title": "La invitación"
+  },
+  "el día d: bajo presión": {
+    "url": "https://letterboxd.com/film/pressure-2026/",
+    "title_en": "Pressure",
+    "director": "Anthony Maras",
+    "country": "UK, France",
+    "year": 2026,
+    "duration": 101,
+    "genre": "Historia, Bélica",
+    "title_es": "Tiempo de victoria",
+    "original_title": "Pressure"
+  },
+  "engendro": {
+    "url": "https://letterboxd.com/film/nightborn/",
+    "title_en": "Nightborn",
+    "director": "Hanna Bergholm",
+    "country": "Finland, Lithuania",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Terror",
+    "title_es": "Engendro",
+    "original_title": "Yön lapsi"
+  },
+  "spider-man: un nuevo d��a": {
+    "url": "https://letterboxd.com/film/spider-man-brand-new-day/",
+    "title_en": "Spider-Man: Brand New Day",
+    "director": "Destin Daniel Cretton",
+    "country": "USA",
+    "year": 2026,
+    "duration": 145,
+    "genre": "Ciencia ficción, Acción"
+  },
+  "franz": {
+    "url": "https://letterboxd.com/film/franz-2025/",
+    "title_en": "Franz",
+    "director": "Agnieszka Holland",
+    "country": "Czechia, Poland",
+    "year": 2025,
+    "duration": 127,
+    "genre": "Drama, Historia",
+    "title_es": "Franz Kafka",
+    "original_title": "Franz"
+  },
+  "fin de semana de la infancia | una tarde en el museo | la magia de la luz: taller de cianotipia": {
+    "url": "",
+    "title_en": "FIN DE SEMANA DE LA INFANCIA | UNA TARDE EN EL MUSEO | LA MAGIA DE LA LUZ: TALLER DE CIANOTIPIA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "no contéis con los dedos|1967": {
+    "url": "https://letterboxd.com/film/no-compteu-amb-els-dits/",
+    "title_en": "Don't Count On Your Fingers",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 1967,
+    "duration": 26,
+    "genre": "Drama",
+    "original_title": "No contéis con los dedos"
+  },
+  "nocturno 29|1968": {
+    "url": "",
+    "title_en": "Nocturno 29",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 1969,
+    "duration": 86,
+    "title_es": "Nocturno 29",
+    "original_title": "Nocturno 29",
+    "genre": "Drama, Terror"
+  },
+  "vampir-cuadecuc|1970": {
+    "url": "https://letterboxd.com/film/vampir-cuadecuc/",
+    "title_en": "Vampir Cuadecuc",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 1971,
+    "duration": 67,
+    "genre": "Documental",
+    "original_title": "Cuadecuc, vampir"
+  },
+  "poetas catalanes|1970": {
+    "url": "https://letterboxd.com/film/poetes-catalans/",
+    "title_en": "Catalan Poets",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 1970,
+    "duration": 30,
+    "genre": "Documental",
+    "original_title": "Poetes catalans"
+  },
+  "mudanza|2008": {
+    "url": "https://letterboxd.com/film/mudanza/",
+    "title_en": "Mudanza",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 2008,
+    "duration": 20,
+    "genre": "Documental",
+    "original_title": "Mudanza"
+  },
+  "umbracle|1972": {
+    "url": "https://letterboxd.com/film/umbracle/",
+    "title_en": "Umbracle",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 1972,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "Umbracle"
+  },
+  "informe general sobre algunas cuestiones de interés para una proyección pública|1976": {
+    "url": "",
+    "title_en": "Informe general sobre algunas cuestiones de interés para una proyección pública",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "puente de varsovia|1989": {
+    "url": "https://letterboxd.com/film/warsaw-bridge/",
+    "title_en": "Warsaw Bridge",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 1990,
+    "duration": 85,
+    "genre": "Drama",
+    "title_es": "Puente de Varsovia",
+    "original_title": "Pont de Varsòvia"
+  },
+  "los golfos|1959": {
+    "url": "https://letterboxd.com/film/los-golfos/",
+    "title_en": "The Delinquents",
+    "director": "Carlos Saura",
+    "country": "Spain",
+    "year": 1960,
+    "duration": 83,
+    "genre": "Drama",
+    "original_title": "Los golfos"
+  },
+  "informe general ii. el nuevo rapto de europa|2015": {
+    "url": "https://letterboxd.com/film/informe-general-ii-el-nuevo-rapto-de-europa/",
+    "title_en": "General Report II: The New Abduction of Europe",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 2015,
+    "duration": 126,
+    "genre": "Documental",
+    "title_es": "Informe General II: El nuevo rapto de Europa",
+    "original_title": "Informe general II. El nou rapte d’Europa"
+  },
+  "el silencio antes de bach|2007": {
+    "url": "https://letterboxd.com/film/the-silence-before-bach/",
+    "title_en": "The Silence Before Bach",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 2007,
+    "duration": 102,
+    "genre": "Música",
+    "title_es": "El silencio antes de Bach",
+    "original_title": "Die Stille vor Bach"
+  },
+  "tren de sombras|1997": {
+    "url": "https://letterboxd.com/film/tren-de-sombras/",
+    "title_en": "Train of Shadows",
+    "director": "José Luis Guerín",
+    "country": "Spain",
+    "year": 1997,
+    "duration": 88,
+    "genre": "Drama",
+    "original_title": "Tren de sombras"
+  },
+  "el día d bajo presión": {
+    "url": "https://letterboxd.com/film/pressure-2026/",
+    "title_en": "Pressure",
+    "director": "Anthony Maras",
+    "country": "UK, France",
+    "year": 2026,
+    "duration": 101,
+    "genre": "Historia, Bélica",
+    "title_es": "Tiempo de victoria",
+    "original_title": "Pressure"
+  },
+  "martin eden": {
+    "url": "https://letterboxd.com/film/martin-eden-2019/",
+    "title_en": "Martin Eden",
+    "director": "Pietro Marcello",
+    "country": "France, Germany",
+    "year": 2019,
+    "duration": 129,
+    "genre": "Drama, Romance",
+    "original_title": "Martin Eden",
+    "title_es": "El barco de la muerte"
   }
 }
