@@ -1216,6 +1216,12 @@ async def scrape_lugones(page: Page) -> list[Screening]:
 #     repiten la semana entera ya corregida; deduplicando sólo por (título,
 #     fecha, hora) sobrevivirían justamente las funciones que la corrección
 #     venía a sacar.
+#
+#   · Los rangos no incluyen los lunes. El cine abre de jueves a miércoles y
+#     cierra los lunes salvo feriado, así que un "Jue 6 a Mié 12" son seis días,
+#     no siete. Cuando sí abren un lunes feriado el mail lo nombra aparte
+#     ("Lunes 15, 15:10hs" el 15/6/2026, Güemes movido al lunes), y de ahí sale
+#     la regla: un lunes entra sólo si el mail lo nombra explícitamente.
 
 
 _CACO_MAIL_FROM = "cineartecacodelphia.com.ar"
@@ -1263,7 +1269,28 @@ def _caco_fecha(nombre: str, dia: int, enviado: date) -> Optional[date]:
     return cands[0]
 
 
-def _caco_funciones(linea: str, enviado: date) -> list[tuple[date, str]]:
+def _caco_dias_nombrados(lineas: list[str], enviado: date) -> set[date]:
+    """Fechas que el mail nombra explícitamente — día suelto o miembro de una
+    lista, y también los extremos de un rango — a diferencia de las que quedan
+    sólo implicadas por el interior de un rango.
+
+    Se usa para decidir si un lunes está abierto: ver la nota del encabezado.
+    """
+    nombradas: set[date] = set()
+    for linea in lineas:
+        marcas = list(_CACO_HORA_RE.finditer(linea))
+        if not marcas:
+            continue
+        for tramo in re.split(r"\s*-\s*", linea[:marcas[0].start()].rstrip(" ,")):
+            for n, d in _CACO_DIA_RE.findall(tramo)[:2]:
+                f = _caco_fecha(n, int(d), enviado)
+                if f:
+                    nombradas.add(f)
+    return nombradas
+
+
+def _caco_funciones(linea: str, enviado: date,
+                    nombradas: Optional[set] = None) -> list[tuple[date, str]]:
     """Expande una línea de horarios a pares (fecha, "HH:MM").
 
     Formatos vistos, que además se combinan entre sí:
@@ -1296,7 +1323,9 @@ def _caco_funciones(linea: str, enviado: date) -> list[tuple[date, str]]:
         # Un rango de más de dos semanas es basura del mail, no una temporada.
         d = ini
         while d <= fin and (d - ini).days <= 14:
-            fechas.append(d)
+            # Los lunes cierra, salvo feriado; y cuando abre, el mail lo nombra.
+            if d.weekday() != 0 or nombradas is None or d in nombradas:
+                fechas.append(d)
             d += timedelta(days=1)
 
     return [(f, h) for f in fechas for h in horas]
@@ -1351,7 +1380,7 @@ def _caco_parse_mail(html: str, enviado: date) -> list[Screening]:
     lo que hay entre "Horarios:" y "Sinopsis:".
     """
     soup = BeautifulSoup(html, "html.parser")
-    out: list[Screening] = []
+    bloques: list[tuple] = []
 
     for h3 in soup.find_all("h3"):
         celda = h3.parent
@@ -1371,11 +1400,18 @@ def _caco_parse_mail(html: str, enviado: date) -> list[Screening]:
         if i_hor is None:
             continue
 
-        ticket = _caco_ticket_url(celda.find("a"))
-        ciclo = _caco_ciclo(celda)
-        for p in ps[i_hor + 1: i_sin if i_sin is not None else len(ps)]:
-            linea = p.get_text(" ", strip=True).replace("\xa0", " ")
-            for fecha, hora in _caco_funciones(linea, enviado):
+        lineas = [p.get_text(" ", strip=True).replace("\xa0", " ")
+                  for p in ps[i_hor + 1: i_sin if i_sin is not None else len(ps)]]
+        bloques.append((title, _caco_ciclo(celda), _caco_ticket_url(celda.find("a")), lineas))
+
+    # Los lunes hay que resolverlos mirando el mail entero: el "Lunes 15" que
+    # avisa que ese feriado abren puede estar en la ficha de otra película.
+    nombradas = _caco_dias_nombrados([l for b in bloques for l in b[3]], enviado)
+
+    out: list[Screening] = []
+    for title, ciclo, ticket, lineas in bloques:
+        for linea in lineas:
+            for fecha, hora in _caco_funciones(linea, enviado, nombradas):
                 out.append(Screening(
                     cine="Cacodelphia", title=title,
                     fecha=fecha.isoformat(), hora=hora,
