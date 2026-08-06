@@ -1561,11 +1561,25 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
     # venta del cine, así que no vale la pena descartarla para blindarse contra
     # una función cancelada: perder una función es peor que mostrar una de más.
     vistas = {_caco_clave(s) for s in funciones}
+    # Índice por (fecha, hora) para el caso en que los títulos no coinciden
+    # exacto: el <h3> del mail viene truncado con puntos suspensivos
+    # ("TANGALANGA CONTRAATACA...") mientras la web trae el título entero.
+    por_horario: dict[tuple, list] = {}
+    for s in funciones:
+        por_horario.setdefault((s.fecha, s.hora), []).append(_caco_norm(s.title))
+
     for s in spa:
         key = _caco_clave(s)
         if key in vistas:
             continue
+        n = _caco_norm(s.title)
+        # Misma fecha y hora, y un título es prefijo del otro → es la misma
+        # función. Sin esto se duplica en el sitio.
+        if any(n.startswith(m) or m.startswith(n)
+               for m in por_horario.get((s.fecha, s.hora), [])):
+            continue
         vistas.add(key)
+        por_horario.setdefault((s.fecha, s.hora), []).append(n)
         funciones.append(s)
     return funciones
 
