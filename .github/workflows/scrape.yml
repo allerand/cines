@@ -34,6 +34,13 @@ jobs:
           # Cloudflare a Borges desde el runner (opcional).
           BORGES_SCRAPER_KEY: ${{ secrets.BORGES_SCRAPER_KEY }}
           BORGES_SCRAPER_URL_TEMPLATE: ${{ secrets.BORGES_SCRAPER_URL_TEMPLATE }}
+          # Cacodelphia sale del newsletter semanal que el cine manda por mail:
+          # la SPA es mucho más frágil y encima se saltea horarios. Sin esto el
+          # scraper cae solo a la SPA, así que no rompe nada, pero la cartelera
+          # del cine queda a medias. GMAIL_APP_PASSWORD es una contraseña de
+          # aplicación de Google (no la de la cuenta), con 2FA activado.
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         run: python3 run.py
 
       - name: Compute today's date (Buenos Aires)

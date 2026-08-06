@@ -7,10 +7,16 @@ import re
 import os
 import json
 import time
+import base64
+import imaplib
+import email
+import email.policy
+import email.utils
+import unicodedata
 import urllib.request
 import urllib.parse
 from dataclasses import dataclass, field
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from typing import Optional
 
 from bs4 import BeautifulSoup
@@ -1182,7 +1188,354 @@ async def scrape_lugones(page: Page) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
-# Cacodelphia  (cineartecacodelphia.com.ar — Vue SPA)
+# Cacodelphia  (newsletter semanal por mail; la SPA queda de fallback)
+# ---------------------------------------------------------------------------
+#
+# El cine manda cada miércoles/jueves un newsletter con la programación de la
+# semana, y ese mail es mejor fuente que la web: trae título, ciclo,
+# clasificación, horarios y el link exacto a la ficha, ya tabulado. La SPA en
+# cambio obliga a descubrir links, esperar a que hidrate Vue y clickear tab por
+# tab de fecha.
+#
+# Tres cosas que salieron de leer el histórico de la casilla, y que explican por
+# qué el parser hace lo que hace:
+#
+#   · Se parsea el HTML, NO el text/plain. Las dos partes del mail se generan
+#     por separado y divergen. El plano del 11/6/2026 se comió la función
+#     "Lunes 15, 15:10hs" de LETRAS ROBADAS, y en la fe de erratas del 6/8/2026
+#     corrigieron el HTML ("6 al 12 Agosto") dejando el plano con el mes viejo
+#     ("6 al 12 Julio"). El HTML es lo que ve el lector.
+#
+#   · Las fechas se anclan en el header Date: del mail, nunca en el texto. Ese
+#     mismo mail del 6/8 salió con asunto "30 de Julio al 5 de Agosto" y cuerpo
+#     "6 al 12 Julio": ni el asunto ni el encabezado sirven. Las líneas de
+#     horario traen sólo día de semana + número ("Jue 6"), y resolver ese número
+#     contra la fecha de envío alcanza para fijar mes y año.
+#
+#   · Un mail más nuevo pisa TODAS las fechas que menciona. Las fe de erratas
+#     repiten la semana entera ya corregida; deduplicando sólo por (título,
+#     fecha, hora) sobrevivirían justamente las funciones que la corrección
+#     venía a sacar.
+
+
+_CACO_MAIL_FROM = "cineartecacodelphia.com.ar"
+_CACO_HOME = "https://cineartecacodelphia.com.ar/"
+
+# Argentina no tiene DST desde 2009, así que un offset fijo nos ahorra depender
+# de que el runner tenga tzdata.
+_ART = timezone(timedelta(hours=-3))
+
+_CACO_DIAS_ABBR = {"lun": 0, "mar": 1, "mie": 2, "jue": 3,
+                   "vie": 4, "sab": 5, "dom": 6}
+
+# IMAP quiere "06-Aug-2026" y strftime("%b") depende del locale del runner.
+_MESES_IMAP = ("Jan", "Feb", "Mar", "Apr", "May", "Jun",
+               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+
+_CACO_HORA_RE = re.compile(r"\b(\d{1,2}):(\d{2})")
+_CACO_DIA_RE = re.compile(r"([A-Za-zÁÉÍÓÚÜáéíóúüñÑ]{3,10})\.?\s*(\d{1,2})\b")
+
+
+def _sin_acentos(s: str) -> str:
+    return "".join(c for c in unicodedata.normalize("NFD", s)
+                   if unicodedata.category(c) != "Mn")
+
+
+def _caco_fecha(nombre: str, dia: int, enviado: date) -> Optional[date]:
+    """Resuelve un "Jue 6" del mail a una fecha concreta.
+
+    La ventana de 25 días es corta a propósito: en menos de 28 días un número de
+    día aparece una sola vez, así que el número solo ya desambigua mes y año. El
+    día de la semana se usa para confirmar, pero cuando no cierra gana el número
+    — el cine se equivoca seguido con la abreviatura, y el número es lo que el
+    lector usa para ir al cine.
+    """
+    wd = _CACO_DIAS_ABBR.get(_sin_acentos(nombre)[:3].lower())
+    inicio = enviado - timedelta(days=2)
+    cands = [d for d in (inicio + timedelta(days=i) for i in range(25))
+             if d.day == dia]
+    if not cands:
+        return None
+    if wd is not None:
+        exactos = [d for d in cands if d.weekday() == wd]
+        if exactos:
+            return exactos[0]
+    return cands[0]
+
+
+def _caco_funciones(linea: str, enviado: date) -> list[tuple[date, str]]:
+    """Expande una línea de horarios a pares (fecha, "HH:MM").
+
+    Formatos vistos, que además se combinan entre sí:
+        Jue 6 a Mié 12, 18:00hs             rango
+        Vie 7 - Sáb 8 - Mar 11, 18:40hs     lista
+        Jue 2 - Sáb 4 a Mié 8, 19:00hs      lista con un rango adentro
+        Miércoles 12, 19:00hs               día suelto, nombre completo
+        Jue 6 a Mié 12, 16:20hs - 18:30hs   dos horarios para los mismos días
+
+    El guión es ambiguo (separa días antes del primer horario y horarios
+    después), así que cortamos en el primer horario en vez de partir por la
+    coma, que a veces falta o viene despegada: "Vie 17 - Mié 22 , 16:40hs".
+    """
+    marcas = list(_CACO_HORA_RE.finditer(linea))
+    if not marcas:
+        return []
+    horas = [f"{int(m.group(1)):02d}:{m.group(2)}"
+             for m in marcas if int(m.group(1)) <= 23]
+    if not horas:
+        return []
+
+    fechas: list[date] = []
+    for tramo in re.split(r"\s*-\s*", linea[:marcas[0].start()].rstrip(" ,")):
+        pares = _CACO_DIA_RE.findall(tramo)
+        extremos = [f for f in (_caco_fecha(n, int(d), enviado)
+                                for n, d in pares[:2]) if f]
+        if not extremos:
+            continue
+        ini, fin = extremos[0], max(extremos[0], extremos[-1])
+        # Un rango de más de dos semanas es basura del mail, no una temporada.
+        d = ini
+        while d <= fin and (d - ini).days <= 14:
+            fechas.append(d)
+            d += timedelta(days=1)
+
+    return [(f, h) for f in fechas for h in horas]
+
+
+def _caco_ticket_url(a) -> str:
+    """URL de la ficha desde el botón "Comprar Entradas".
+
+    Mailjet envuelve el link en uno de tracking cuyo último segmento es la URL
+    real en base64url. Si no desenvuelve a una URL del cine devolvemos el home,
+    que es lo que hacía el scraper de la SPA.
+    """
+    href = (a.get("href") or "").strip() if a else ""
+    if not href:
+        return _CACO_HOME
+    if _CACO_MAIL_FROM in href and "mjt.lu" not in href:
+        return href
+    seg = href.split("?")[0].rstrip("/").rsplit("/", 1)[-1]
+    try:
+        url = base64.urlsafe_b64decode(seg + "=" * (-len(seg) % 4)).decode("utf-8")
+    except Exception:
+        return _CACO_HOME
+    return url if url.startswith("http") and _CACO_MAIL_FROM in url else _CACO_HOME
+
+
+def _caco_ciclo(celda) -> str:
+    """Ciclo desde la banda roja que va arriba del poster ("CICLO LUIS ORTEGA").
+
+    Sólo levantamos los ciclos de verdad: ESTRENO / REESTRENO / EXCLUSIVA /
+    CLÁSICOS son etiquetas de marketing, no un programa, y ensuciarían el badge
+    del sitio. Devolvemos el texto tal cual viene (en mayúsculas); run.py ya lo
+    normaliza con _fix_caps.
+    """
+    bloque = celda.find_parent("table")
+    if bloque is None:
+        return ""
+    for td in bloque.find_all("td"):
+        if td.find("img"):
+            break       # llegamos al poster: la banda del ciclo va antes
+        txt = re.sub(r"\s+", " ", td.get_text(strip=True).replace("\xa0", " ")).strip()
+        m = re.match(r"ciclo\s+(.+)$", txt, re.IGNORECASE)
+        if m:
+            return m.group(1).strip()
+    return ""
+
+
+def _caco_parse_mail(html: str, enviado: date) -> list[Screening]:
+    """Saca las funciones de un newsletter. `enviado` es la fecha local del mail.
+
+    Cada película es un <h3> con el título, seguido de <p>s: la clasificación,
+    "Horarios:", una o más líneas de horarios, y "Sinopsis:". Nos quedamos con
+    lo que hay entre "Horarios:" y "Sinopsis:".
+    """
+    soup = BeautifulSoup(html, "html.parser")
+    out: list[Screening] = []
+
+    for h3 in soup.find_all("h3"):
+        celda = h3.parent
+        title = re.sub(r"\s+", " ", h3.get_text(strip=True))
+        if celda is None or not title:
+            continue
+
+        ps = celda.find_all("p", recursive=False)
+        i_hor = i_sin = None
+        for i, p in enumerate(ps):
+            txt = _sin_acentos(p.get_text(" ", strip=True)).lower()
+            if i_hor is None and txt.startswith("horarios"):
+                i_hor = i
+            elif i_hor is not None and txt.startswith("sinopsis"):
+                i_sin = i
+                break
+        if i_hor is None:
+            continue
+
+        ticket = _caco_ticket_url(celda.find("a"))
+        ciclo = _caco_ciclo(celda)
+        for p in ps[i_hor + 1: i_sin if i_sin is not None else len(ps)]:
+            linea = p.get_text(" ", strip=True).replace("\xa0", " ")
+            for fecha, hora in _caco_funciones(linea, enviado):
+                out.append(Screening(
+                    cine="Cacodelphia", title=title,
+                    fecha=fecha.isoformat(), hora=hora,
+                    ticket_url=ticket, ciclo=ciclo,
+                ))
+    return out
+
+
+def _caco_mails(dias: int = 30) -> list[tuple[datetime, str]]:
+    """Baja los newsletters de la casilla por IMAP, del más nuevo al más viejo.
+
+    Sin credenciales devuelve [] y el caller cae al scraping de la SPA, así que
+    el repo sigue andando para cualquiera que lo clone sin secrets.
+    """
+    user = os.environ.get("GMAIL_USER", "").strip()
+    # Google muestra la contraseña de aplicación en cuatro grupos de cuatro y
+    # es normal pegarla con los espacios; el servidor no los quiere.
+    pwd = re.sub(r"\s+", "", os.environ.get("GMAIL_APP_PASSWORD", ""))
+    if not (user and pwd):
+        return []
+
+    desde = date.today() - timedelta(days=dias)
+    since = f"{desde.day:02d}-{_MESES_IMAP[desde.month - 1]}-{desde.year}"
+
+    mails: list[tuple[datetime, str]] = []
+    M = imaplib.IMAP4_SSL(os.environ.get("GMAIL_IMAP_HOST", "imap.gmail.com"))
+    try:
+        M.login(user, pwd)
+        # readonly: es la casilla personal del dueño, no se la marcamos leída.
+        M.select("INBOX", readonly=True)
+        typ, data = M.search(None, "FROM", f'"{_CACO_MAIL_FROM}"', "SINCE", since)
+        if typ != "OK":
+            return []
+        for uid in (data[0] or b"").split():
+            typ, raw = M.fetch(uid, "(RFC822)")
+            if typ != "OK" or not raw or not isinstance(raw[0], tuple):
+                continue
+            msg = email.message_from_bytes(raw[0][1], policy=email.policy.default)
+            parte = msg.get_body(preferencelist=("html",))
+            if parte is None:
+                continue
+            try:
+                enviado = email.utils.parsedate_to_datetime(msg["Date"])
+            except Exception:
+                continue
+            if enviado.tzinfo is None:
+                enviado = enviado.replace(tzinfo=timezone.utc)
+            mails.append((enviado.astimezone(_ART), parte.get_content()))
+    finally:
+        try:
+            M.logout()
+        except Exception:
+            pass
+
+    # Por datetime, no por fecha: las fe de erratas salen el mismo día que el
+    # mail que corrigen (6/8/2026: 11:04 y 11:14) y tienen que quedar primero.
+    mails.sort(key=lambda t: t[0], reverse=True)
+    return mails
+
+
+def _caco_norm(title: str) -> str:
+    """Título normalizado para cruzar mail contra web.
+
+    Las dos fuentes escriben distinto la misma película ("LEVITICUS RITUAL DE
+    SANGRE" vs "Leviticus: Ritual de sangre"), así que comparar los títulos
+    crudos duplicaría en el sitio cada función que aparece en las dos.
+    """
+    return re.sub(r"[^a-z0-9]+", "", _sin_acentos(title).lower())
+
+
+def _caco_clave(s: Screening) -> tuple:
+    return (_caco_norm(s.title), s.fecha, s.hora)
+
+
+def scrape_cacodelphia_mail(dias: int = 30) -> list[Screening]:
+    """Funciones de los newsletters de los últimos `dias` días, sin la metadata
+    que sólo está en la ficha del sitio."""
+    hoy = date.today().isoformat()
+    resultado: list[Screening] = []
+    pisadas: set[str] = set()       # fechas ya cubiertas por un mail más nuevo
+    vistas: set[tuple] = set()
+
+    for enviado, html in _caco_mails(dias):
+        try:
+            funciones = _caco_parse_mail(html, enviado.date())
+        except Exception as e:
+            print(f"(mail del {enviado.date()} ilegible — {e})", end=" ", flush=True)
+            continue
+        for s in funciones:
+            key = _caco_clave(s)
+            if s.fecha in pisadas or s.fecha < hoy or key in vistas:
+                continue
+            vistas.add(key)
+            resultado.append(s)
+        pisadas |= {s.fecha for s in funciones}
+
+    return resultado
+
+
+async def scrape_cacodelphia(page: Page) -> list[Screening]:
+    """Cartelera de Cacodelphia: el newsletter manda sobre su semana, la SPA
+    aporta el resto.
+
+    El mail es la fuente confiable de la semana en curso (ver la nota del
+    encabezado), pero no es toda la cartelera: la web publica además funciones
+    sueltas más adelante — ciclos que se repiten, preestrenos — que el mail de
+    esta semana no menciona. Así que las dos fuentes se suman, con el mail
+    pisando su propia semana para que la SPA no reviva una función que una fe
+    de erratas sacó.
+
+    Si no hay credenciales IMAP o la casilla no tiene mails recientes, la SPA
+    queda de fuente única (que es como venía funcionando esto).
+    """
+    funciones = scrape_cacodelphia_mail()
+    if not funciones:
+        print("(sin mails; sólo SPA)", end=" ", flush=True)
+        return await scrape_cacodelphia_spa(page)
+
+    try:
+        spa = await scrape_cacodelphia_spa(page)
+    except Exception as e:
+        # La SPA es la parte frágil y ya no es crítica: perdemos las funciones
+        # de más adelante y los hints de metadata, pero la semana en curso sale
+        # entera igual.
+        print(f"(SPA falló, seguimos con el mail — {e})", end=" ", flush=True)
+        return funciones
+
+    # El mail no trae duración/director/año/país, pero la pasada por la SPA ya
+    # los sacó de cada ficha (y del trailer, vía oEmbed). Los copiamos por
+    # título en vez de volver a visitar las fichas: sirven de hint para que el
+    # enrichment de Letterboxd no matchee la película equivocada.
+    meta = {}
+    for s in spa:
+        k = _caco_norm(s.title)
+        if k not in meta and (s.duration or s.director or s.year):
+            meta[k] = s
+    for s in funciones:
+        m = meta.get(_caco_norm(s.title))
+        if m:
+            s.duration, s.director = m.duration, m.director
+            s.year, s.country = m.year, m.country
+
+    # Unión, sin dejar que el mail pise la semana entera: la web tiene
+    # trasnoches y funciones sueltas que el newsletter no publicita (p.ej.
+    # "Totalmente Poseidos", jue 6/8/2026 23:15). A diferencia de un mail viejo
+    # —que una fe de erratas deja obsoleto— la SPA es el propio sistema de
+    # venta del cine, así que no vale la pena descartarla para blindarse contra
+    # una función cancelada: perder una función es peor que mostrar una de más.
+    vistas = {_caco_clave(s) for s in funciones}
+    for s in spa:
+        key = _caco_clave(s)
+        if key in vistas:
+            continue
+        vistas.add(key)
+        funciones.append(s)
+    return funciones
+
+
+# ---------------------------------------------------------------------------
+# Cacodelphia — fallback: cineartecacodelphia.com.ar (Vue SPA)
 # ---------------------------------------------------------------------------
 
 _YT_ID_RE = re.compile(
@@ -1251,12 +1604,14 @@ def _cacodelphia_trailer_meta(html: str) -> dict:
     return out
 
 
-async def scrape_cacodelphia(page: Page) -> list[Screening]:
+async def scrape_cacodelphia_spa(page: Page) -> list[Screening]:
     """
     Página principal → links /pelicula/86/HASH → por cada película, click en
     cada tab de fecha y extraer horarios. La ficha no trae director/año en
     texto, así que los inferimos del título del trailer de YouTube (oEmbed)
     para que el enrichment valide bien y no matchee la película equivocada.
+
+    Quedó de fallback: sólo corre si no hay newsletters en la casilla.
     """
     await page.goto("https://cineartecacodelphia.com.ar/", wait_until="networkidle")
     await page.wait_for_timeout(3000)

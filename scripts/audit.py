@@ -75,8 +75,9 @@ PROBES = {
     "Amorina":                  ("https://www.amorina.club/schedule.json", "@amorina"),
 }
 # Sin sonda a propósito: Cosmos (no responde a un GET pelado), Filo y Arthaus
-# (listado renderizado por JS), Cacodelphia / Lugones / Borges / CEA (SPA o
-# Cloudflare) y los comerciales (IMDb + La Nación, sin listing estable). Una
+# (listado renderizado por JS), Lugones / Borges / CEA (SPA o Cloudflare),
+# Cacodelphia (su fuente es el newsletter que llega por mail, no una URL que se
+# pueda sondear) y los comerciales (IMDb + La Nación, sin listing estable). Una
 # sonda que siempre devuelve 0 es peor que ninguna: dispara falsas alarmas.
 # Estos cines se controlan igual por su histórico de git.
 
