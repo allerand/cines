@@ -1058,6 +1058,35 @@ function pingStar(s, on) {
   } catch (_) {}
 }
 
+// Cada búsqueda va también a la hoja de cálculo, además de GA4. No es
+// duplicado al pedo: GA4 sirve para tendencias, pero agrupa la cola larga en
+// "(other)", retiene 14 meses y no muestra nada anterior al alta de la
+// dimensión personalizada. La hoja es el registro crudo, completo y propio —
+// y es la que contesta la pregunta que importa: qué buscó la gente que la
+// cartelera no tenía.
+let ultimaBusquedaLogueada = '';
+
+function pingBusqueda(termino, resultados) {
+  try {
+    // Si esto es la continuación de lo que ya mandamos ("fra" → "franz"), el
+    // backend pisa esa fila en vez de guardar el prefijo suelto.
+    const continuacion = ultimaBusquedaLogueada &&
+      termino.startsWith(ultimaBusquedaLogueada) ? ultimaBusquedaLogueada : '';
+    const body = new URLSearchParams({
+      action: 'buscar',
+      termino: termino,
+      resultados: String(resultados),
+      cine: activeCine || '',
+      fecha: activeDay || '',
+      canal: CANAL_ORIGEN,
+      uid: deviceId(),
+      reemplaza: continuacion,
+    });
+    fetch(STAR_ENDPOINT, { method: 'POST', mode: 'no-cors', body });
+    ultimaBusquedaLogueada = termino;
+  } catch (_) {}
+}
+
 // Extractores por columna — devuelven un valor comparable (string o number).
 // Para columnas mixtas usamos un sentinela alto/bajo para los vacíos.
 const SORT_EXTRACTORS = {
@@ -1307,13 +1336,11 @@ document.getElementById('search-input').addEventListener('input', e => {
   clearTimeout(searchTrackTimer);
   searchTrackTimer = setTimeout(() => {
     if (searchQuery.length >= 3) {
-      track('buscar', {
-        termino: searchQuery,
-        resultados: visibleScreenings().filter(s =>
-          [s.title_es, s.title_en, s.original_title, s.director, s.ciclo]
-            .join(' ').toLowerCase().includes(searchQuery)).length,
-        canal: CANAL_ORIGEN,
-      });
+      const resultados = visibleScreenings().filter(s =>
+        [s.title_es, s.title_en, s.original_title, s.director, s.ciclo]
+          .join(' ').toLowerCase().includes(searchQuery)).length;
+      track('buscar', { termino: searchQuery, resultados, canal: CANAL_ORIGEN });
+      pingBusqueda(searchQuery, resultados);
     }
   }, 1200);
 });
