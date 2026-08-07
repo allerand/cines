@@ -1384,7 +1384,7 @@ def _caco_parse_mail(html: str, enviado: date) -> list[Screening]:
 
     for h3 in soup.find_all("h3"):
         celda = h3.parent
-        title = re.sub(r"\s+", " ", h3.get_text(strip=True))
+        title, ciclo_titulo = _caco_titulo_y_ciclo(h3.get_text(strip=True))
         if celda is None or not title:
             continue
 
@@ -1402,7 +1402,10 @@ def _caco_parse_mail(html: str, enviado: date) -> list[Screening]:
 
         lineas = [p.get_text(" ", strip=True).replace("\xa0", " ")
                   for p in ps[i_hor + 1: i_sin if i_sin is not None else len(ps)]]
-        bloques.append((title, _caco_ciclo(celda), _caco_ticket_url(celda.find("a")), lineas))
+        # La banda roja manda; el sufijo del título es el respaldo (los
+        # festivales no siempre traen banda propia).
+        bloques.append((title, _caco_ciclo(celda) or ciclo_titulo,
+                        _caco_ticket_url(celda.find("a")), lineas))
 
     # Los lunes hay que resolverlos mirando el mail entero: el "Lunes 15" que
     # avisa que ese feriado abren puede estar en la ficha de otra película.
@@ -1470,6 +1473,45 @@ def _caco_mails(dias: int = 30) -> list[tuple[datetime, str]]:
     # mail que corrigen (6/8/2026: 11:04 y 11:14) y tienen que quedar primero.
     mails.sort(key=lambda t: t[0], reverse=True)
     return mails
+
+
+# Festivales que el cine marca como sufijo del título ("Amora Mora - 8° FINCA").
+# La sigla no le dice nada a nadie en la columna de ciclo, así que la mapeamos
+# al nombre largo. Una sigla que no esté acá igual se separa del título.
+_CACO_FESTIVALES = {
+    "FINCA": "Festival Internacional de Cine Ambiental",
+}
+
+_CACO_FESTIVAL_RE = re.compile(r"\s*[-–—|:]\s*(\d{1,2})\s*[°º]\s*([^\-–—|:]{2,40})\s*$")
+
+
+def _caco_titulo_y_ciclo(title: str) -> tuple[str, str]:
+    """Separa del título el ciclo o festival que Cacodelphia le pega al final.
+
+        "EL ÁNGEL - CICLO LUIS ORTEGA"  → ("EL ÁNGEL", "Luis Ortega")
+        "Amora Mora - 8° FINCA"         → ("Amora Mora", "Festival Internacional…")
+
+    Dejar el sufijo adentro del título no sólo vacía la columna de ciclo:
+    además rompe el enrichment. De las ocho películas del 8° FINCA que entraron
+    el 7/8/2026 con el sufijo pegado, siete quedaron sin ficha de Letterboxd.
+    """
+    title = re.sub(r"\s+", " ", title).strip()
+
+    m = re.search(r"\s*[-–—|:]\s*Ciclo\s+(.+)$", title, re.IGNORECASE)
+    if m:
+        return title[:m.start()].strip(), m.group(1).strip()
+
+    m = re.match(r"^Ciclo\s+(.+?)\s*[-–—|:]\s*(.+)$", title, re.IGNORECASE)
+    if m:
+        return m.group(2).strip(), m.group(1).strip()
+
+    m = _CACO_FESTIVAL_RE.search(title)
+    if m:
+        sigla = m.group(2).strip()
+        return (title[:m.start()].strip(),
+                _CACO_FESTIVALES.get(sigla.upper(), f"{m.group(1)}° {sigla}"))
+
+    return title, ""
 
 
 def _caco_norm(title: str) -> str:
@@ -1679,19 +1721,9 @@ async def scrape_cacodelphia_spa(page: Page) -> list[Screening]:
             continue
         seen_hrefs.add(href)
         p_el = a.find("p", class_=lambda c: c and "truncate" in c.split())
-        title = p_el.get_text(strip=True) if p_el else ""
-        title = re.sub(r"\s+", " ", title).strip()
-        # A veces el título trae el ciclo pegado ("El Jockey - Ciclo Luis
-        # Ortega"): lo separamos para no ensuciar el título.
-        ciclo = ""
-        mc = re.search(r"\s*[-–—|:]\s*Ciclo\s+(.+)$", title, re.IGNORECASE)
-        if mc:
-            ciclo = mc.group(1).strip()
-            title = title[:mc.start()].strip()
-        else:
-            mc = re.match(r"^Ciclo\s+(.+?)\s*[-–—|:]\s*(.+)$", title, re.IGNORECASE)
-            if mc:
-                ciclo, title = mc.group(1).strip(), mc.group(2).strip()
+        # El título suele traer el ciclo o el festival pegado ("El Jockey -
+        # Ciclo Luis Ortega", "Amora Mora - 8° FINCA"): lo separamos.
+        title, ciclo = _caco_titulo_y_ciclo(p_el.get_text(strip=True) if p_el else "")
         if title and len(title) > 1 and title.lower() not in NON_TITLES:
             movie_links.append((href, title, ciclo))
 
@@ -1751,7 +1783,9 @@ async def scrape_cacodelphia_spa(page: Page) -> list[Screening]:
                     result.append(Screening(
                         cine="Cacodelphia", title=title,
                         fecha=fecha, hora=hora,
-                        ticket_url="https://cineartecacodelphia.com.ar/",
+                        # `url` es la ficha de esta película, que es donde se
+                        # compra; mandar al home obliga a buscarla de nuevo.
+                        ticket_url=url,
                         ciclo=ciclo,
                         duration=film_duration,
                         director=film_director,
