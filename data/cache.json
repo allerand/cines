@@ -8566,15 +8566,15 @@
     "original_title": "El mundo al revés"
   },
   "bellissima|1951": {
-    "url": "",
+    "url": "https://letterboxd.com/film/bellissima/",
     "title_en": "Bellissima",
     "director": "Luchino Visconti",
     "country": "Italy",
-    "year": 1952,
+    "year": 1951,
     "duration": 115,
+    "genre": "Drama",
     "title_es": "Bellísima",
-    "original_title": "Bellissima",
-    "genre": "Drama"
+    "original_title": "Bellissima"
   },
   "rocco y sus hermanos|1960": {
     "url": "https://letterboxd.com/film/rocco-and-his-brothers/",
@@ -11050,5 +11050,99 @@
     "duration": 76,
     "genre": "Fantasía, Drama",
     "original_title": "Los Nadadores"
+  },
+  "la ópera de tres centavos (die dreigroschenoper)|1931": {
+    "url": "",
+    "title_en": "La ópera de tres centavos (Die Dreigroschenoper)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "una canción para mi tierra|2025": {
+    "url": "https://letterboxd.com/film/una-cancion-para-mi-tierra/",
+    "title_en": "A Song for My Land",
+    "director": "Mauricio Albornoz Iniesta",
+    "country": "Argentina, Germany",
+    "year": 2024,
+    "duration": 93,
+    "genre": "Documental"
+  },
+  "tangalanga contraataca...": {
+    "url": "",
+    "title_en": "TANGALANGA CONTRAATACA...",
+    "director": "Diego Recalde",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "original_title": "Tangalanga contraataca en busca del OGT de cristal"
+  },
+  "amora mora - 8° finca": {
+    "url": "",
+    "title_en": "Amora Mora - 8° FINCA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cortometrajes en competencia - 8° finca": {
+    "url": "",
+    "title_en": "Cortometrajes en Competencia - 8° FINCA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "de la guerra fría a la guerra verde - 8° finca": {
+    "url": "https://letterboxd.com/film/green-is-the-new-red/",
+    "title_en": "Green Is the New Red",
+    "director": "Anna Recalde Miranda",
+    "country": "France, Italy",
+    "year": 2024,
+    "duration": 105,
+    "genre": "Documental"
+  },
+  "el costo del crecimiento - 8° finca": {
+    "url": "",
+    "title_en": "El costo del crecimiento - 8° FINCA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la granja de la libertad pailako - 8° finca": {
+    "url": "",
+    "title_en": "La granja de la libertad Pailako - 8° FINCA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la vida fracturada - 8° finca": {
+    "url": "",
+    "title_en": "La vida fracturada - 8° FINCA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tierra que habla - 8° finca": {
+    "url": "",
+    "title_en": "Tierra que habla - 8° FINCA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "amélie y los secretos": {
+    "url": "https://letterboxd.com/film/little-amelie-or-the-character-of-rain/",
+    "title_en": "Little Amélie or the Character of Rain",
+    "director": "Maïlys Vallade, Liane-cho Han",
+    "country": "France",
+    "year": 2025,
+    "duration": 77,
+    "genre": "Familiar, Animación",
+    "title_es": "Amélie y los secretos de la lluvia",
+    "original_title": "Amélie et la métaphysique des tubes"
   }
 }
