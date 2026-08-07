@@ -1,11 +1,19 @@
 name: Scrape cartelera (sin postear a IG)
 
 # Workflow para correr SÓLO el scraper y commitear data/cartelera.json.
-# No genera ni postea piezas de Instagram. SÓLO manual (workflow_dispatch):
-# sirve para testear cambios al scraping sin re-postear stories. El refresco
-# diario automático lo hace "Scrape cartelera" (scrape.yml), que ya postea.
+# No genera ni postea piezas de Instagram, así que sirve para dos cosas:
+#
+#   · manual (workflow_dispatch), para testear cambios al scraping sin
+#     re-postear stories;
+#   · el refresco de la tarde, porque el cine publica programación durante el
+#     día y scrape.yml corre a las 4:15 ART. El 6/8/2026 cargaron las 7
+#     películas del 8° FINCA y "Amélie y los secretos" después de esa corrida,
+#     y quedaron fuera de la web hasta el día siguiente. Este segundo pase las
+#     levanta el mismo día; postear queda para el de la mañana.
 
 on:
+  schedule:
+    - cron: '15 23 * * *'   # 20:15 ART
   workflow_dispatch:
     inputs:
       semanas:
@@ -46,6 +54,9 @@ jobs:
           # Borges intenta directo y, si falla, queda vacío sin romper nada.
           BORGES_SCRAPER_KEY: ${{ secrets.BORGES_SCRAPER_KEY }}
           BORGES_SCRAPER_URL_TEMPLATE: ${{ secrets.BORGES_SCRAPER_URL_TEMPLATE }}
+          # Sin esto Cacodelphia pierde el newsletter y queda sólo con la SPA.
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         # Cuando se dispara por schedule, inputs.semanas viene vacío → default 9 (≈ 2 meses)
         run: python3 run.py --semanas "${{ inputs.semanas || '9' }}"
 
