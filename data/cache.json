@@ -10953,15 +10953,15 @@
     "duration": null
   },
   "la ventana indiscreta": {
-    "url": "",
-    "title_en": "La ventana indiscreta",
+    "url": "https://letterboxd.com/film/rear-window/",
+    "title_en": "Rear Window",
     "director": "Alfred Hitchcock",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1954,
     "duration": 113,
+    "genre": "Thriller, Misterio",
     "title_es": "La ventana indiscreta",
-    "original_title": "Rear Window",
-    "genre": "Thriller, Misterio"
+    "original_title": "Rear Window"
   },
   "vento norte": {
     "url": "https://letterboxd.com/film/vento-norte/",
@@ -11006,14 +11006,14 @@
     "original_title": "Por el dinero"
   },
   "las escaleras de luli": {
-    "url": "",
-    "title_en": "Las escaleras de Luli",
+    "url": "https://letterboxd.com/film/lulis-stairs/",
+    "title_en": "Luli's Stairs",
     "director": "Cristian Salas",
     "country": "Argentina",
     "year": 2025,
     "duration": 109,
-    "original_title": "Las escaleras de Luli",
-    "genre": "Drama"
+    "genre": "Drama",
+    "original_title": "Las escaleras de Luli"
   },
   "algo ha cambiado: un viaje quijotesco al pappo's blues": {
     "url": "",
@@ -11026,12 +11026,13 @@
     "genre": "Documental"
   },
   "la mujer de fuego": {
-    "url": "",
-    "title_en": "La Mujer de fuego",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/woman-on-fire-2025/",
+    "title_en": "Woman on Fire",
+    "director": "Ignacio Ascúa",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 78,
+    "genre": ""
   },
   "el hombre largo / el onanista": {
     "url": "",
@@ -11144,5 +11145,91 @@
     "genre": "Familiar, Animación",
     "title_es": "Amélie y los secretos de la lluvia",
     "original_title": "Amélie et la métaphysique des tubes"
+  },
+  "amora mora": {
+    "url": "",
+    "title_en": "Amora Mora",
+    "director": "Ana Petta",
+    "country": "Brazil",
+    "year": 2025,
+    "duration": null,
+    "title_es": "Mora",
+    "original_title": "Amora",
+    "genre": "Documental"
+  },
+  "cortometrajes en competencia": {
+    "url": "",
+    "title_en": "Cortometrajes en Competencia",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "de la guerra fría a la guerra verde": {
+    "url": "https://letterboxd.com/film/green-is-the-new-red/",
+    "title_en": "Green Is the New Red",
+    "director": "Anna Recalde Miranda",
+    "country": "France, Italy",
+    "year": 2024,
+    "duration": 105,
+    "genre": "Documental",
+    "original_title": "De la guerre froide à la guerre verte"
+  },
+  "el costo del crecimiento": {
+    "url": "",
+    "title_en": "El costo del crecimiento",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la granja de la libertad pailako": {
+    "url": "",
+    "title_en": "La granja de la libertad Pailako",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la vida fracturada": {
+    "url": "https://letterboxd.com/film/la-vida-fracturada/",
+    "title_en": "La vida fracturada",
+    "director": "Tian Cartier, Martín Longo, Pablo E. Piovano",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "",
+    "original_title": "La vida fracturada"
+  },
+  "tierra que habla": {
+    "url": "https://letterboxd.com/film/tierra-que-habla/",
+    "title_en": "Tierra que habla",
+    "director": "Ana Fraile, Lucas Scavino",
+    "country": "",
+    "year": 2026,
+    "duration": 82,
+    "genre": "",
+    "original_title": "Tierra que habla"
+  },
+  "simón de la montaña|2024": {
+    "url": "https://letterboxd.com/film/simon-de-la-montana/",
+    "title_en": "Simon of the Mountain",
+    "director": "Federico Luis",
+    "country": "Argentina, Chile",
+    "year": 2024,
+    "duration": 96,
+    "genre": "Drama",
+    "original_title": "Simón de la montaña"
+  },
+  "vértigo|1958": {
+    "url": "https://letterboxd.com/film/vertigo/",
+    "title_en": "Vertigo",
+    "director": "Alfred Hitchcock",
+    "country": "USA",
+    "year": 1958,
+    "duration": 128,
+    "genre": "Thriller, Romance",
+    "title_es": "Vértigo",
+    "original_title": "Vertigo"
   }
 }
