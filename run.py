@@ -513,10 +513,13 @@ async def run_scraper(semanas: int = 9) -> None:
     # el enrichment matchea mal (p.ej. dos películas con el mismo título).
     # Cada entry matchea por 'title' (case-insensitive) y opcionalmente 'cine',
     # y pisa los campos que estén presentes (director, year, country, genre,
-    # duration, letterboxd, title_en, original_title).
+    # duration, letterboxd, title_en, original_title, title_es).
+    # 'title' matchea contra el title_es actual — o sea, contra el título MAL
+    # si lo que estás corrigiendo es justamente ese. Una vez corregido el
+    # entry deja de matchear, que es lo esperado.
     if METADATA_OVERRIDES_JSON.exists():
         _OVERRIDABLE = ("director", "year", "country", "genre", "duration",
-                        "letterboxd", "title_en", "original_title")
+                        "letterboxd", "title_en", "original_title", "title_es")
         try:
             raw = json.loads(METADATA_OVERRIDES_JSON.read_text(encoding="utf-8"))
             entries = raw.get("overrides", []) if isinstance(raw, dict) else raw

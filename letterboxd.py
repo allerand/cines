@@ -502,6 +502,14 @@ def fill_meta_from_tmdb(
     if not _tmdb_credential()[0]:
         return meta
 
+    # Validamos contra lo que YA sabemos de la película — normalmente porque lo
+    # trajo Letterboxd — y no sólo contra los hints de la fuente. Los hints
+    # vienen vacíos seguido (no todos los cines publican director o año), y sin
+    # ellos cualquier resultado de TMDb pasaba el filtro. Así es como el título
+    # en español de OTRA película termina siendo el título que se muestra.
+    check_year = hint_year or meta.get("year")
+    check_director = hint_director or meta.get("director")
+
     queries: list[tuple[str, Optional[int]]] = []
     if hint_original:
         queries.append((hint_original, hint_year))
@@ -517,18 +525,34 @@ def fill_meta_from_tmdb(
                 continue
             seen_ids.add(mid)
             cand_year = cand.get("year")
-            if hint_year and cand_year and abs(int(cand_year) - int(hint_year)) > 2:
+            if check_year and cand_year and abs(int(cand_year) - int(check_year)) > 2:
                 continue
             tmeta = fetch_tmdb_movie_meta(mid)
             if not tmeta:
                 continue
-            if hint_year and tmeta.get("year"):
-                if abs(int(tmeta["year"]) - int(hint_year)) > 2:
+            if check_year and tmeta.get("year"):
+                if abs(int(tmeta["year"]) - int(check_year)) > 2:
                     continue
-            if hint_director and tmeta.get("director"):
-                if not _name_overlap(hint_director, tmeta["director"]):
+            if check_director and tmeta.get("director"):
+                if not _name_overlap(check_director, tmeta["director"]):
                     continue
-            for f in ("director", "country", "year", "duration", "title_en", "title_es", "original_title", "genre"):
+
+            # Los títulos son la identidad de la película, así que los tomamos
+            # sólo de un candidato CONFIRMADO (el director coincide), nunca de
+            # uno que apenas no se contradice. Si ya sabemos de quién es la
+            # película y TMDb no dice director, el candidato no alcanza: una
+            # duración o un país de más pasan desapercibidos, un título de otra
+            # película es lo primero que ve la gente.
+            # Cuando no sabemos nada (sin match de Letterboxd), TMDb es la única
+            # fuente que hay y ahí sí aceptamos lo que traiga.
+            campos = ["director", "country", "year", "duration", "genre"]
+            confirmado = (not check_director) or bool(
+                tmeta.get("director") and _name_overlap(check_director, tmeta["director"])
+            )
+            if confirmado:
+                campos += ["title_en", "title_es", "original_title"]
+
+            for f in campos:
                 if not meta.get(f) and tmeta.get(f):
                     meta[f] = tmeta[f]
             if (meta.get("duration") and meta.get("country") and meta.get("director")
