@@ -964,8 +964,16 @@ function ticketUrl(s) {
 }
 
 // ── Sistema de estrellas / "agendar en Google Calendar" ────────────────
-// Apps Script URL; recibe POST con action=star.
-const STAR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwFSvoEUdjrljSnxSZ-N3a82EC_pwc_V0aY_3MA3Du9BHQfNPhuxXXrp_YNBgfUAZCE/exec';
+// URL del web app de Apps Script (scripts/newsletter.gs). Es una sola para
+// todo: action=star y action=buscar por POST, ?action=counts por GET.
+//
+// ⚠️ Cambia cada vez que se crea una implementación NUEVA en Apps Script (el
+//    ID va en la URL). Si un día los stars dejan de contarse o la hoja deja de
+//    recibir búsquedas, lo primero que hay que mirar es si esta URL sigue viva:
+//    un deployment archivado devuelve el 404 de Drive, y como todas las
+//    llamadas son fire-and-forget dentro de try/catch, la web no muestra nada
+//    roto — simplemente se pierde lo que se manda.
+const STAR_ENDPOINT = 'https://script.google.com/macros/s/AKfycbw3wbhTtknasBwkgky4ogkM6s3Gt1K1I7giZdyX5KhvMIKUIsATNQL8VT6pPLG9mjAs/exec';
 
 function filmKey(s) {
   return `${s.cine}|${s.title_es || s.title_en}|${s.fecha}|${s.hora}`;
