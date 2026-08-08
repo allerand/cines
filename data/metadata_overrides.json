@@ -36,6 +36,9 @@
 
     { "_comment": "Programa doble del Museo del Cine por los 90 años de la muerte de Lorca — el sitio lo publica como un título único." },
     { "title": "La barraca: Lorca por los caminos de España", "director": "Edgardo Cozarinsky", "year": 1995, "country": "Francia, España", "duration": 55 },
-    { "title": "Lorca y el Río de la Plata", "director": "Eduardo Mignogna", "year": 1998, "country": "Argentina", "duration": 50 }
+    { "title": "Lorca y el Río de la Plata", "director": "Eduardo Mignogna", "year": 1998, "country": "Argentina", "duration": 50 },
+
+    { "_comment": "Red de seguridad: TMDb devolvía el título en español de Five Feet Apart (2019) para esta película argentina. La validación de letterboxd.py ya no acepta títulos de un candidato sin confirmar, así que esto no debería volver a activarse — matchea sólo si el título equivocado reaparece." },
+    { "title": "A dos metros de ti", "cine": "Cacodelphia", "title_es": "A metros de distancia", "title_en": "A Few Feet Away", "original_title": "A metros de distancia", "director": "Tadeo Pestaña Caro", "year": 2025, "country": "Argentina", "duration": 89, "letterboxd": "https://letterboxd.com/film/a-few-feet-away/" }
   ]
 }
