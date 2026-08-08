@@ -3,10 +3,17 @@
  *
  * Hace dos cosas:
  *   1) Endpoint POST público (doPost) que recibe {email} del form de sitedigo
- *      y lo agrega a la primera hoja del Spreadsheet activo.
+ *      y lo agrega a la primera hoja del Spreadsheet activo. El mismo endpoint
+ *      recibe también los stars (hoja "stars") y las búsquedas que se tipean
+ *      en el buscador de la web (hoja "busquedas" — ver _handleBusqueda).
  *   2) Función sendNewsletter() que se dispara con un time-trigger todos los
  *      jueves a las 9 AM (configurás abajo). Lee la cartelera de GitHub,
  *      arma el HTML día por día y manda un mail a cada suscriptor.
+ *
+ * ⚠️ Si actualizás este archivo sobre un proyecto ya deployado, el endpoint
+ *    sigue sirviendo la versión vieja hasta que hagas Implementar → Administrar
+ *    implementaciones → ✏️ → Versión: Nueva → Implementar. Sin ese paso, las
+ *    búsquedas se mandan pero el script que las recibe no las conoce.
  *
  * ──────────────────────────────────────────────────────────────────────
  * SETUP (one-time):
@@ -62,6 +69,9 @@ function doPost(e) {
     if (action === "star") {
       return _handleStar(params);
     }
+    if (action === "buscar") {
+      return _handleBusqueda(params);
+    }
     return _handleSubscribe(params, e);
   } catch (err) {
     return _json({ ok: false, error: String(err) });
@@ -107,6 +117,103 @@ function _handleStar(params) {
     String(params.hora || ""),
   ]);
   return _json({ ok: true });
+}
+
+// ───── Búsquedas del buscador de la web ────────────────────────────────
+// Una fila por búsqueda. GA4 ya recibe el mismo evento, pero sirve para otra
+// cosa: muestra tendencias agregadas, agrupa la cola larga en "(other)",
+// retiene 14 meses y no deja ver NADA anterior al alta de la dimensión. Esta
+// hoja es el registro crudo, completo y propio.
+//
+// Lo valioso no son las búsquedas que encuentran algo: son las de
+// resultados = 0, que son la lista de lo que la gente vino a buscar y la
+// cartelera no tenía.
+const BUSQUEDAS_HEADERS =
+  ["timestamp", "termino", "resultados", "cine", "fecha_vista", "canal", "uid"];
+
+function _handleBusqueda(params) {
+  const termino = String(params.termino || "").trim().toLowerCase().slice(0, 120);
+  if (!termino) return _json({ ok: false, error: "sin_termino" });
+
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName("busquedas");
+  if (!sheet) {
+    sheet = ss.insertSheet("busquedas");
+    sheet.appendRow(BUSQUEDAS_HEADERS);
+    sheet.getRange(1, 1, 1, BUSQUEDAS_HEADERS.length).setFontWeight("bold");
+    sheet.setFrozenRows(1);
+  }
+
+  const uid = String(params.uid || "anon");
+  const fila = [
+    new Date(),
+    termino,
+    Number(params.resultados || 0),
+    String(params.cine || ""),
+    String(params.fecha || ""),
+    String(params.canal || ""),
+    uid,
+  ];
+
+  // Si esto es la continuación de lo que la misma persona ya mandó recién
+  // ("fra" → "franz"), pisamos esa fila en vez de sumar una nueva: en la hoja
+  // queda lo que terminó buscando, no cada prefijo intermedio del tipeo.
+  const previo = String(params.reemplaza || "").trim().toLowerCase();
+  const ultima = sheet.getLastRow();
+  if (previo && ultima > 1) {
+    const rango = sheet.getRange(ultima, 1, 1, BUSQUEDAS_HEADERS.length);
+    const anterior = rango.getValues()[0];
+    if (String(anterior[1]).trim().toLowerCase() === previo &&
+        String(anterior[6]) === uid) {
+      rango.setValues([fila]);
+      return _json({ ok: true, reemplazado: true });
+    }
+  }
+
+  sheet.appendRow(fila);
+  return _json({ ok: true });
+}
+
+/**
+ * Arma la hoja "busquedas · resumen": qué se busca, cuánta gente distinta lo
+ * buscó y cuántas de esas veces no encontró nada. Se corre a mano cuando
+ * querés mirar, o con un time-trigger semanal (Activadores → resumenBusquedas).
+ */
+function resumenBusquedas() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const log = ss.getSheetByName("busquedas");
+  if (!log || log.getLastRow() < 2) {
+    Logger.log("Todavía no hay búsquedas registradas.");
+    return;
+  }
+  const data = log.getRange(2, 1, log.getLastRow() - 1, BUSQUEDAS_HEADERS.length).getValues();
+
+  const acc = {};
+  data.forEach(function (r) {
+    const t = String(r[1] || "").trim();
+    if (!t) return;
+    if (!acc[t]) acc[t] = { veces: 0, personas: {}, vacias: 0, ultima: null };
+    const a = acc[t];
+    a.veces++;
+    a.personas[String(r[6] || "anon")] = 1;
+    if (Number(r[2] || 0) === 0) a.vacias++;
+    if (!a.ultima || r[0] > a.ultima) a.ultima = r[0];
+  });
+
+  const filas = Object.keys(acc).map(function (t) {
+    const a = acc[t];
+    return [t, a.veces, Object.keys(a.personas).length, a.vacias, a.ultima];
+  }).sort(function (x, y) { return y[1] - x[1] || y[2] - x[2]; });
+
+  const headers = ["termino", "veces", "personas", "veces sin resultados", "última vez"];
+  let out = ss.getSheetByName("busquedas · resumen");
+  if (!out) out = ss.insertSheet("busquedas · resumen");
+  out.clear();
+  out.appendRow(headers);
+  if (filas.length) out.getRange(2, 1, filas.length, headers.length).setValues(filas);
+  out.getRange(1, 1, 1, headers.length).setFontWeight("bold");
+  out.setFrozenRows(1);
+  Logger.log("Resumen actualizado: " + filas.length + " términos distintos.");
 }
 
 function doGet(e) {
