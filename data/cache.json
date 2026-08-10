@@ -10696,12 +10696,13 @@
     "original_title": "Algo viejo, algo nuevo, algo prestado"
   },
   "día del cine mexicano": {
-    "url": "",
-    "title_en": "Día del Cine mexicano",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/la-lucha-invade-el-cine-mexicano/",
+    "title_en": "La Lucha Invade el Cine Mexicano",
+    "director": "Jonathan Rodrigues",
+    "country": "Brazil",
+    "year": 2024,
+    "duration": 28,
+    "genre": "Documental"
   },
   "la invitación": {
     "url": "https://letterboxd.com/film/the-invite-2026/",
@@ -11235,5 +11236,79 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "yo narciso": {
+    "url": "https://letterboxd.com/film/yo-narciso/",
+    "title_en": "Yo, narciso",
+    "director": "Adrián Suar",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": null,
+    "genre": "Comedia, Romance",
+    "original_title": "Yo, narciso"
+  },
+  "paw patrol: la dino pelicula": {
+    "url": "https://letterboxd.com/film/paw-patrol-the-dino-movie/",
+    "title_en": "PAW Patrol: The Dino Movie",
+    "director": "Cal Brunker",
+    "country": "Canada, USA",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Comedia, Aventura",
+    "title_es": "La Patrulla Canina: La dino película",
+    "original_title": "PAW Patrol: The Dino Movie"
+  },
+  "el final de la calle oak": {
+    "url": "https://letterboxd.com/film/the-end-of-oak-street/",
+    "title_en": "The End of Oak Street",
+    "director": "David Robert Mitchell",
+    "country": "USA",
+    "year": 2026,
+    "duration": 100,
+    "genre": "Misterio, Thriller",
+    "title_es": "El final de Oak Street",
+    "original_title": "The End of Oak Street"
+  },
+  "insaciable": {
+    "url": "https://letterboxd.com/film/saccharine-2026/",
+    "title_en": "Saccharine",
+    "director": "Natalie Erika James",
+    "country": "Australia, Finland",
+    "year": 2026,
+    "duration": 113,
+    "genre": "Terror",
+    "title_es": "Insaciable",
+    "original_title": "Saccharine"
+  },
+  "la invitacion": {
+    "url": "https://letterboxd.com/film/the-invite-2026/",
+    "title_en": "The Invite",
+    "director": "Olivia Wilde",
+    "country": "USA",
+    "year": 2026,
+    "duration": 107,
+    "genre": "Romance, Drama"
+  },
+  "el dia d: bajo presion": {
+    "url": "https://letterboxd.com/film/pressure-2026/",
+    "title_en": "Pressure",
+    "director": "Anthony Maras",
+    "country": "UK, France",
+    "year": 2026,
+    "duration": 101,
+    "genre": "Historia, Bélica",
+    "title_es": "Tiempo de victoria",
+    "original_title": "Pressure"
+  },
+  "spider-man: un dia nuevo": {
+    "url": "https://letterboxd.com/film/spider-man-brand-new-day/",
+    "title_en": "Spider-Man: Brand New Day",
+    "director": "Destin Daniel Cretton",
+    "country": "USA",
+    "year": 2026,
+    "duration": 145,
+    "genre": "Ciencia ficción, Acción",
+    "title_es": "Spider-Man: Un nuevo día",
+    "original_title": "Spider-Man: Brand New Day"
   }
 }
