@@ -288,6 +288,21 @@ def check() -> None:
     Además vuelca una tarjeta cruda: si los títulos salen mal, la estructura
     para arreglar el selector ya está en la misma salida.
     """
+    # scraper.py usa `X | Y` en anotaciones evaluadas en runtime, así que no
+    # importa en 3.9. El CI corre 3.11; el python3 de las Command Line Tools de
+    # macOS suele ser viejo y el error que tira ("unsupported operand type(s)
+    # for |") no dice nada de versiones.
+    if sys.version_info < (3, 10):
+        v = ".".join(str(x) for x in sys.version_info[:3])
+        print(f"\n  ✗ scraper.py necesita Python 3.10+ y estás corriendo {v}\n"
+              f"    ({sys.executable})\n\n"
+              "    Probá con una versión más nueva:\n"
+              "        python3.12 scripts/probe_multiplex.py --check\n"
+              "    Para ver cuáles tenés:  ls /usr/local/bin/python3.* "
+              "/opt/homebrew/bin/python3.* 2>/dev/null\n"
+              "    Si no hay ninguna:      brew install python\n")
+        return
+
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
     import scraper
 
@@ -322,13 +337,15 @@ def check() -> None:
     print("\n  Primeras 10 funciones:")
     for s in ss[:10]:
         print(f"    {s.fecha} {s.hora}  {s.cine:<20} {s.title}")
-    direcciones()
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv[1:] if a != "--check"]
+    flags = {"--check", "--direcciones"}
+    args = [a for a in sys.argv[1:] if a not in flags]
     if "--check" in sys.argv:
         check()
+    elif "--direcciones" in sys.argv:
+        direcciones()
     else:
         for u in args or DEFAULT_URLS:
             probe(u)
