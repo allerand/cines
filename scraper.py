@@ -2220,6 +2220,156 @@ def scrape_commercial_lanacion() -> list[Screening]:
     return all_screenings
 
 
+# ───── Multiplex ──────────────────────────────────────────────────────
+#
+# La home sirve la grilla ENTERA en el HTML: ~1000 funciones (todas las salas ×
+# todos los días × todas las pelis) como <span class="horario-btn"> con la data
+# en atributos. El selector de fecha y el de complejo son filtros client-side
+# que sólo agregan/sacan la clase `visible` — por eso elegir una fecha no
+# dispara ningún request. Un solo GET trae toda la cartelera; no hace falta
+# browser ni pedir la ficha de cada película.
+#
+# Se parsean los atributos y no el texto visible: son ISO-ish, sin ambigüedad
+# de idioma, y sobreviven a cambios de CSS.
+MULTIPLEX_BASE = "https://multiplex.com.ar"
+
+# complejo_id → nombre de sala en sitedigo. Los IDs salen del <select id="complejo">
+# de cualquier ficha (/peliculas/<slug>/).
+#
+# Sólo CABA, igual criterio que LANACION_COMMERCIAL_CINEMAS: Canning (180) y
+# Pilar (187) son GBA y San Juan (190) es otra provincia. Para sumarlos alcanza
+# con descomentar — el resto del scraper los toma solo.
+MULTIPLEX_COMPLEJOS = {
+    "182": "Multiplex Belgrano",
+    "184": "Multiplex Lavalle",
+    # "180": "Multiplex Canning",     # Ezeiza (GBA)
+    # "187": "Multiplex Pilar",       # Pilar (GBA)
+    # "190": "Multiplex San Juan",    # provincia de San Juan
+}
+
+MULTIPLEX_TICKET_URL = f"{MULTIPLEX_BASE}/"
+
+
+def _multiplex_fecha(dia: str) -> Optional[str]:
+    """'08.13.2026' → '2026-08-13'.
+
+    OJO: el orden es MM.DD.YYYY (americano), no DD.MM. Verificado contra el
+    carrusel del sitio, que rotula ese mismo valor como "Jueves Ago 13".
+    """
+    m = re.fullmatch(r"\s*(\d{1,2})\.(\d{1,2})\.(\d{4})\s*", dia or "")
+    if not m:
+        return None
+    mes, day, anio = (int(x) for x in m.groups())
+    try:
+        return date(anio, mes, day).isoformat()
+    except ValueError:
+        return None
+
+
+def _multiplex_card_info(card) -> tuple[str, str]:
+    """(título, slug) de una tarjeta de película de la home.
+
+    Las tarjetas las genera un loop de Elementor, así que el markup del título
+    puede cambiar sin aviso: se prueban varias vías antes de rendirse.
+    """
+    slug = ""
+    a = card.find("a", href=re.compile(r"/peliculas/[^/]+/?"))
+    if a and a.get("href"):
+        m = re.search(r"/peliculas/([^/?#]+)", a["href"])
+        if m:
+            slug = m.group(1)
+
+    candidatos = []
+    if a:
+        candidatos.append(a.get_text(strip=True))
+    for h in card.find_all(["h1", "h2", "h3", "h4", "h5"], limit=3):
+        candidatos.append(h.get_text(strip=True))
+    for el in card.select('[class*="titulo"], [class*="title"]')[:3]:
+        candidatos.append(el.get_text(strip=True))
+    img = card.find("img")
+    if img:
+        candidatos.append(re.sub(r"^(P[óo]ster|Afiche)\s+de\s+", "",
+                                 img.get("alt") or "", flags=re.I).strip())
+
+    for c in candidatos:
+        # Descarta los CTA del propio botón ("Ver horarios", "Comprar entradas")
+        if c and len(c) > 1 and not re.match(r"^(ver|comprar|m[áa]s)\b", c, re.I):
+            return c.strip(), slug
+
+    # Último recurso: el slug, que al menos es identificable a ojo en la web.
+    return (slug.replace("-", " ").title() if slug else ""), slug
+
+
+def scrape_multiplex(semanas: int = 2) -> list[Screening]:
+    """Cartelera de Multiplex desde el HTML de la home (un solo GET)."""
+    hoy = date.today()
+    cutoff = (hoy + timedelta(weeks=semanas)).isoformat()
+    hoy_str = hoy.isoformat()
+
+    try:
+        soup = fetch_html(MULTIPLEX_BASE + "/")
+    except Exception as e:
+        print(f"[multiplex: no carga — {e}]", end=" ")
+        return []
+
+    cards = soup.select("div.funcion-item")
+    if not cards:
+        # Diagnóstico explícito: sin esto un rediseño del sitio devuelve 0 y se
+        # confunde con "hoy no hay funciones" (pasó con lanacion en julio).
+        print("[multiplex: 0 tarjetas .funcion-item — cambió el markup]", end=" ")
+        return []
+
+    result: list[Screening] = []
+    seen: set[tuple] = set()
+    sin_titulo = 0
+    desfasadas = 0
+
+    for card in cards:
+        titulo, slug = _multiplex_card_info(card)
+        if not titulo:
+            sin_titulo += 1
+            continue
+        ticket = f"{MULTIPLEX_BASE}/peliculas/{slug}/" if slug else MULTIPLEX_TICKET_URL
+
+        for span in card.select("[data-hora][data-complejo][data-dia]"):
+            cine = MULTIPLEX_COMPLEJOS.get(str(span.get("data-complejo", "")).strip())
+            if not cine:
+                continue                      # sucursal fuera de scope
+            fecha = _multiplex_fecha(span.get("data-dia", ""))
+            if not fecha or fecha < hoy_str or fecha > cutoff:
+                continue
+            hora = str(span.get("data-hora", "")).strip()
+            if not re.fullmatch(r"\d{1,2}:\d{2}", hora):
+                continue
+            hora = f"{int(hora.split(':')[0]):02d}:{hora.split(':')[1]}"
+
+            # data-dia-real existe por si una trasnoche se agrupa bajo el día
+            # anterior. Hoy coincide siempre con data-dia; si algún día deja de
+            # coincidir lo queremos saber antes de que la función aparezca en el
+            # día equivocado.
+            real = _multiplex_fecha(span.get("data-dia-real", "") or "")
+            if real and real != fecha:
+                desfasadas += 1
+
+            k = (cine, titulo, fecha, hora)
+            if k in seen:
+                continue                      # misma función en 2D y COMFORT PLUS
+            seen.add(k)
+            result.append(Screening(
+                cine=cine,
+                title=titulo,
+                fecha=fecha,
+                hora=hora,
+                ticket_url=ticket,
+            ))
+
+    if sin_titulo:
+        print(f"[multiplex: {sin_titulo} tarjetas sin título]", end=" ")
+    if desfasadas:
+        print(f"[multiplex: {desfasadas} con data-dia-real ≠ data-dia]", end=" ")
+    return result
+
+
 def scrape_lorca() -> list[Screening]:
     """
     Fallback manual cuando IMDb falla. Lee data/lorca_manual.json con shape:

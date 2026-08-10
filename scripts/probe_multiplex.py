@@ -232,10 +232,55 @@ def probe_lanacion() -> None:
             print(f"      {href}   {txt}")
 
 
+def check() -> None:
+    """Corre scrape_multiplex() de verdad y muestra qué sacó.
+
+    Además vuelca una tarjeta cruda: si los títulos salen mal, la estructura
+    para arreglar el selector ya está en la misma salida.
+    """
+    sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+    import scraper
+
+    seccion("Una tarjeta .funcion-item cruda (para ajustar el selector de título)")
+    try:
+        soup = BeautifulSoup(fetch(scraper.MULTIPLEX_BASE + "/"), "html.parser")
+        card = soup.select_one("div.funcion-item")
+        if card is None:
+            print("  ✗ no hay ningún div.funcion-item — cambió el markup")
+        else:
+            # Las horas son ~90% del HTML de la tarjeta y no aportan acá.
+            for h in card.select("div.bloque-formatos"):
+                h.decompose()
+            crudo = re.sub(r"\n\s*\n", "\n", card.prettify())
+            print(crudo[:2600] + ("\n  …(cortado)" if len(crudo) > 2600 else ""))
+    except Exception as e:
+        print(f"  ✗ {e}")
+
+    seccion("Resultado de scraper.scrape_multiplex()")
+    ss = scraper.scrape_multiplex()
+    print(f"\n  {len(ss)} funciones\n")
+    por_cine = Counter(s.cine for s in ss)
+    for cine, n in por_cine.most_common():
+        fechas = sorted({s.fecha for s in ss if s.cine == cine})
+        pelis = len({s.title for s in ss if s.cine == cine})
+        rango = f" ({fechas[0]} → {fechas[-1]})" if fechas else ""
+        print(f"  {cine:<22} {n:>4} funciones · {pelis} pelis · "
+              f"{len(fechas)} días{rango}")
+    print("\n  Títulos detectados:")
+    for t in sorted({s.title for s in ss}):
+        print(f"    · {t}")
+    print("\n  Primeras 10 funciones:")
+    for s in ss[:10]:
+        print(f"    {s.fecha} {s.hora}  {s.cine:<20} {s.title}")
+
+
 if __name__ == "__main__":
-    urls = sys.argv[1:] or DEFAULT_URLS
-    for u in urls:
-        probe(u)
-    if len(sys.argv) == 1:
-        probe_lanacion()
+    args = [a for a in sys.argv[1:] if a != "--check"]
+    if "--check" in sys.argv:
+        check()
+    else:
+        for u in args or DEFAULT_URLS:
+            probe(u)
+        if not args:
+            probe_lanacion()
     print("\n\nListo. Pegame la salida entera (o los HTML de /tmp/multiplex_probe/).")
