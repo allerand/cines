@@ -557,6 +557,7 @@
     .cine-hoyts    { border-color: #2a2a2a; color: #aaa; }
     .cine-cinepolis{ border-color: #2a2a2a; color: #aaa; }
     .cine-showcase { border-color: #2a2a2a; color: #aaa; }
+    .cine-multiplex{ border-color: #2a2a2a; color: #aaa; }
 
     .film-title { font-weight: 500; color: var(--text); }
     /* Título alternativo (criterio Letterboxd): el otro idioma en «guillemets»,
@@ -729,6 +730,7 @@
   <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
   <button class="filter-btn commercial-chip" data-cine="Showcase" hidden>Showcase</button>
+  <button class="filter-btn commercial-chip" data-cine="Multiplex" hidden>Multiplex</button>
   <button id="toggle-commercial" class="filter-toggle" type="button" aria-pressed="false">
     + Comerciales
   </button>
@@ -786,6 +788,10 @@ const CINE_ADDRESSES = {
   'Cinépolis Houssay':        'M. T. de Alvear 2261',
   'Cinépolis Recoleta':       'Vicente López 2050',
   'Showcase Belgrano':        'Av. Cabildo 1900',
+  'Multiplex Belgrano':       'Vuelta de Obligado 2199',
+  'Multiplex Lavalle':        'Lavalle 780',
+  'Multiplex Canning':        'Formosa 653, Ezeiza',
+  'Multiplex Pilar':          'Las Magnolias 754, Pilar',
 };
 
 // Cadenas comerciales. Cada peli viene como "Cinemark Caballito",
@@ -1443,6 +1449,7 @@ function cineCssClass(cine) {
   if (cine && cine.startsWith('Hoyts'))     return 'cine-hoyts';
   if (cine && (cine.startsWith('Cinépolis') || cine.startsWith('Cinepolis'))) return 'cine-cinepolis';
   if (cine && cine.startsWith('Showcase'))  return 'cine-showcase';
+  if (cine && cine.startsWith('Multiplex')) return 'cine-multiplex';
   return '';
 }
 
