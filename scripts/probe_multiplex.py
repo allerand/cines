@@ -232,6 +232,56 @@ def probe_lanacion() -> None:
             print(f"      {href}   {txt}")
 
 
+def direcciones() -> None:
+    """Busca la dirección de cada complejo para llenar CINE_ADDRESSES.
+
+    index.html renderiza la dirección debajo del badge del cine, y para las
+    cadenas la matchea por sucursal exacta ("Multiplex Belgrano"), así que hace
+    falta una por sala. No están en la API de WP (el post type `complejo` sólo
+    devuelve título e imagen), así que se leen de la página de cada complejo.
+    """
+    seccion("Direcciones de los complejos")
+    try:
+        raw = fetch("https://multiplex.com.ar/wp-json/wp/v2/complejo?per_page=20")
+        complejos = json.loads(raw)
+    except Exception as e:
+        print(f"  ✗ no se pudo listar complejos: {e}")
+        return
+
+    calle = re.compile(
+        r"((?:Av\.?|Avenida|Calle|Ruta|Colectora)?\s*[A-ZÁÉÍÓÚÑ][\w.'áéíóúñü]*"
+        r"(?:\s+[\w.'áéíóúñü]+){0,4}\s+\d{1,5}\b)")
+
+    for c in complejos:
+        nombre = (c.get("title") or {}).get("rendered", "?")
+        link = c.get("link", "")
+        print(f"\n  · {nombre}  →  {link}")
+        if not link:
+            continue
+        try:
+            soup = BeautifulSoup(fetch(link), "html.parser")
+        except Exception as e:
+            print(f"      ✗ {e}")
+            continue
+
+        # 1) Links a mapas: casi siempre llevan la dirección en la query
+        for a in soup.find_all("a", href=re.compile(r"maps\.|goo\.gl/maps|waze", re.I))[:3]:
+            print(f"      mapa: {corta(a['href'], 130)}")
+
+        # 2) Elementos rotulados como dirección
+        for el in soup.select('[class*="direccion"], [class*="address"], address')[:4]:
+            print(f"      {firma(el)} → {corta(el.get_text(' ', strip=True), 90)}")
+
+        # 3) Cualquier cosa con pinta de calle + altura
+        vistos = []
+        for m in calle.findall(soup.get_text(" ", strip=True)):
+            t = m.strip()
+            if 8 < len(t) < 60 and t not in vistos:
+                vistos.append(t)
+        if vistos:
+            print(f"      candidatos: {vistos[:6]}")
+
+
 def check() -> None:
     """Corre scrape_multiplex() de verdad y muestra qué sacó.
 
@@ -272,6 +322,7 @@ def check() -> None:
     print("\n  Primeras 10 funciones:")
     for s in ss[:10]:
         print(f"    {s.fecha} {s.hora}  {s.cine:<20} {s.title}")
+    direcciones()
 
 
 if __name__ == "__main__":

@@ -2236,14 +2236,17 @@ MULTIPLEX_BASE = "https://multiplex.com.ar"
 # complejo_id → nombre de sala en sitedigo. Los IDs salen del <select id="complejo">
 # de cualquier ficha (/peliculas/<slug>/).
 #
-# Sólo CABA, igual criterio que LANACION_COMMERCIAL_CINEMAS: Canning (180) y
-# Pilar (187) son GBA y San Juan (190) es otra provincia. Para sumarlos alcanza
-# con descomentar — el resto del scraper los toma solo.
+# Las cuatro de AMBA. San Juan (190) queda afuera: es otra provincia, a 1.100 km.
+# Para sumarla alcanza con descomentar — el resto del scraper la toma sola.
+#
+# El nombre de cada sala es el que usa la cadena, que es lo que la gente ve en
+# la marquesina y en la web de Multiplex. "Canning" es el barrio (partido de
+# Ezeiza); si algún día conviene, se cambia acá y sólo acá.
 MULTIPLEX_COMPLEJOS = {
-    "182": "Multiplex Belgrano",
-    "184": "Multiplex Lavalle",
-    # "180": "Multiplex Canning",     # Ezeiza (GBA)
-    # "187": "Multiplex Pilar",       # Pilar (GBA)
+    "182": "Multiplex Belgrano",      # CABA
+    "184": "Multiplex Lavalle",       # CABA
+    "180": "Multiplex Canning",       # Canning, Ezeiza (GBA)
+    "187": "Multiplex Pilar",         # Pilar (GBA)
     # "190": "Multiplex San Juan",    # provincia de San Juan
 }
 
