@@ -3,6 +3,13 @@ Scrapers de cartelera para cines de arte de Buenos Aires.
 Sala Lugones · Cacodelphia · Cine Lorca · Cine York · MALBA
 """
 
+# El módulo usa `X | Y` en anotaciones, que en 3.9 explota al importar con un
+# "unsupported operand type(s) for |" que no menciona versiones. Esto deja las
+# anotaciones sin evaluar (PEP 563) y hace que importe también en 3.9 — útil
+# porque el python3 que trae macOS de fábrica sigue siendo viejo. El CI corre
+# 3.11 y no cambia nada para él.
+from __future__ import annotations
+
 import re
 import os
 import json
