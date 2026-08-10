@@ -798,8 +798,34 @@ function isCommercial(cine) {
 
 let allScreenings = [];
 let activeDay = null;
-let activeCine = 'all';
+// Salas seleccionadas. Set vacío = "Todos": no guardamos 'all' adentro para no
+// tener dos formas de decir lo mismo. Clickear una sala ya elegida la saca.
+let activeCines = new Set();
 let searchQuery = '';
+
+// ¿Esta función entra en la selección actual? Sin selección entra todo.
+// Los chips comerciales (data-cine="Cinemark") matchean por PREFIJO, así un
+// solo chip cubre todas las sucursales de la cadena; el resto matchea exacto.
+function matchesCine(s) {
+  if (!activeCines.size) return true;
+  for (const c of activeCines) {
+    if (isCommercial(c) ? (s.cine && s.cine.startsWith(c)) : s.cine === c) return true;
+  }
+  return false;
+}
+
+// El chip "Todos" se prende solo cuando no hay ninguna sala elegida.
+function syncCineButtons() {
+  document.querySelectorAll('.filter-btn').forEach(b => {
+    const c = b.dataset.cine;
+    b.classList.toggle('active', c === 'all' ? !activeCines.size : activeCines.has(c));
+  });
+}
+
+// Para los eventos de analítica y para el texto de compartir.
+function cinesLabel(sep) {
+  return activeCines.size ? [...activeCines].join(sep || '|') : 'all';
+}
 // Ordenamiento de la tabla. Default: por hora ascendente.
 let sortKey = 'hora';
 let sortDir = 'asc';
@@ -808,6 +834,7 @@ let sortDir = 'asc';
 // Formato: #sab-25-jul/gaumont/q=nolan — cada segmento es opcional y el
 // orden no importa. Los slugs de cine salen del label del chip ("Gaumont",
 // "El Recoleta") para que las URLs queden legibles y compartibles.
+// Con varias salas elegidas va un segmento por sala: #sab-25-jul/lorca/cosmos.
 function slugify(t) {
   return String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -841,7 +868,8 @@ function updateHash() {
   // Con búsqueda activa la tabla junta funciones de TODOS los días, así que
   // el día no aplica y no va en la URL (sería engañoso al compartirla).
   if (activeDay && !searchQuery) parts.push(daySlug(activeDay));
-  if (activeCine !== 'all') parts.push(cineSlug(activeCine));
+  // Un segmento por sala, en el orden en que se fueron clickeando.
+  for (const c of activeCines) parts.push(cineSlug(c));
   if (searchQuery) parts.push('q=' + encodeURIComponent(searchQuery));
   const hash = parts.length ? '#' + parts.join('/') : '';
   if (hash === location.hash) return;
@@ -869,19 +897,19 @@ function applyHashState() {
     if (fecha) { activeDay = fecha; continue; }
     const cine = findCineBySlug(slug);
     if (cine) {
-      activeCine = cine;
+      activeCines.add(cine);
       // Un link a un cine comercial tiene que mostrarlo aunque el toggle
       // esté apagado en este dispositivo.
       if (isCommercial(cine)) showCommercial = true;
     }
   }
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
+  syncCineButtons();
 }
 
 // Soporta editar el hash a mano / navegar con back-forward entre hashes.
 window.addEventListener('hashchange', () => {
   if (location.hash === lastHashWritten || !allScreenings.length) return;
-  activeDay = null; activeCine = 'all'; searchQuery = '';
+  activeDay = null; activeCines.clear(); searchQuery = '';
   const inp = document.getElementById('search-input');
   if (inp) inp.value = '';
   applyHashState();
@@ -1084,7 +1112,7 @@ function pingBusqueda(termino, resultados) {
       action: 'buscar',
       termino: termino,
       resultados: String(resultados),
-      cine: activeCine || '',
+      cine: cinesLabel(),
       fecha: activeDay || '',
       canal: CANAL_ORIGEN,
       uid: deviceId(),
@@ -1164,10 +1192,14 @@ function applyCommercialToggle() {
     tgl.setAttribute('aria-pressed', showCommercial ? 'true' : 'false');
     tgl.textContent = showCommercial ? '− Comerciales' : '+ Comerciales';
   }
-  // Si el cine activo era un comercial y se ocultaron, volvemos a "Todos"
-  if (!showCommercial && isCommercial(activeCine)) {
-    activeCine = 'all';
-    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
+  // Si había comerciales elegidos y se ocultaron, los sacamos de la selección
+  // (las salas no comerciales que estuvieran elegidas se mantienen).
+  if (!showCommercial) {
+    let saco = false;
+    for (const c of [...activeCines]) {
+      if (isCommercial(c)) { activeCines.delete(c); saco = true; }
+    }
+    if (saco) syncCineButtons();
   }
   // Re-buildeamos los tabs (cambian los conteos por día) y re-renderizamos
   if (allScreenings.length) {
@@ -1209,11 +1241,8 @@ async function loadData() {
     // funciones de esa sala, saltamos al primero que sí (como el click en chip).
     // Lo resolvemos sobre los datos y no sobre las clases .has-cine del DOM,
     // que dependen del orden en que corren buildDayTabs/highlightCineDays.
-    if (activeCine !== 'all' && activeDay) {
-      const matches = s => isCommercial(activeCine)
-        ? (s.cine && s.cine.startsWith(activeCine))
-        : s.cine === activeCine;
-      const pool = visibleScreenings().filter(matches);
+    if (activeCines.size && activeDay) {
+      const pool = visibleScreenings().filter(matchesCine);
       if (!pool.some(s => s.fecha === activeDay)) {
         const firstDay = pool.map(s => s.fecha).sort()[0];
         if (firstDay) selectDay(firstDay);
@@ -1266,13 +1295,13 @@ function buildDayTabs() {
   highlightCineDays();
 }
 
-// Marca en la grilla de días los que tienen funciones para la sala
-// seleccionada. Sin sala ("all") no resalta nada.
+// Marca en la grilla de días los que tienen funciones para las salas
+// seleccionadas. Sin ninguna elegida no resalta nada.
 function highlightCineDays() {
   const container = document.getElementById('day-tabs');
   const tabs = container.querySelectorAll('.day-tab');
   const pool = visibleScreenings();
-  if (activeCine === 'all') {
+  if (!activeCines.size) {
     container.classList.remove('cine-filter');
     tabs.forEach(t => {
       t.classList.remove('has-cine');
@@ -1284,9 +1313,6 @@ function highlightCineDays() {
     return;
   }
   container.classList.add('cine-filter');
-  const matchesCine = s => isCommercial(activeCine)
-    ? (s.cine && s.cine.startsWith(activeCine))
-    : s.cine === activeCine;
   tabs.forEach(t => {
     const fecha = t.dataset.fecha;
     const n = pool.filter(s => s.fecha === fecha && matchesCine(s)).length;
@@ -1313,16 +1339,24 @@ function selectDay(fecha) {
 document.getElementById('filters').addEventListener('click', e => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
-  activeCine = btn.dataset.cine;
+  const cine = btn.dataset.cine;
+  // Toggle: si la sala ya estaba elegida la sacamos. "Todos" limpia todo.
+  if (cine === 'all') activeCines.clear();
+  else if (activeCines.has(cine)) activeCines.delete(cine);
+  else activeCines.add(cine);
   // Va acá arriba y no al final: más abajo hay un return temprano cuando el
-  // día activo no tiene funciones de esa sala, y el filtro se aplicó igual.
-  track('filtrar_cine', { cine: activeCine, canal: CANAL_ORIGEN });
+  // día activo no tiene funciones de esas salas, y el filtro se aplicó igual.
+  track('filtrar_cine', {
+    cine: cinesLabel(),
+    cines_elegidos: activeCines.size,
+    canal: CANAL_ORIGEN,
+  });
   resetSort();
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.cine === activeCine));
+  syncCineButtons();
   highlightCineDays();
-  // Si el día seleccionado no tiene funciones para esta sala, saltamos al
+  // Si el día seleccionado no tiene funciones para estas salas, saltamos al
   // primer día disponible para que no quede la tabla vacía.
-  if (activeCine !== 'all') {
+  if (activeCines.size) {
     const firstDay = document.querySelector('.day-tab.has-cine');
     if (firstDay && firstDay.dataset.fecha !== activeDay) {
       selectDay(firstDay.dataset.fecha);
@@ -1360,7 +1394,7 @@ document.getElementById('search-input').addEventListener('input', e => {
 // WhatsApp/Telegram salga legible en vez de una URL pelada.
 function shareText() {
   const parts = ['Cartelera de cines BA'];
-  if (activeCine !== 'all') parts.push(activeCine);
+  if (activeCines.size) parts.push([...activeCines].join(' + '));
   if (searchQuery) parts.push(`"${searchQuery}"`);
   else if (activeDay) parts.push(fmtShortDate(activeDay));
   return parts.join(' · ');
@@ -1370,7 +1404,7 @@ document.getElementById('share-btn').addEventListener('click', async () => {
   const url = location.href;
   const btn = document.getElementById('share-btn');
   track('compartir_busqueda', {
-    cine: activeCine, fecha_funcion: activeDay,
+    cine: cinesLabel(), fecha_funcion: activeDay,
     termino: searchQuery || '(sin búsqueda)', canal: CANAL_ORIGEN,
   });
   // Share sheet nativo SOLO en dispositivos touch (teléfono/tablet), donde es
@@ -1477,14 +1511,7 @@ function renderTable() {
   // pelis de "lucrecia martel" en la ventana). Sin búsqueda: sólo el día activo.
   let rows = visibleScreenings();
   if (!searching) rows = rows.filter(s => s.fecha === activeDay);
-  if (activeCine !== 'all') {
-    // Chips comerciales (data-cine="Cinemark") matchean por PREFIJO así
-    // un solo chip cubre todas las sucursales de la cadena. Chips no
-    // comerciales matchean exacto.
-    rows = isCommercial(activeCine)
-      ? rows.filter(s => s.cine && s.cine.startsWith(activeCine))
-      : rows.filter(s => s.cine === activeCine);
-  }
+  if (activeCines.size) rows = rows.filter(matchesCine);
   if (searching) rows = rows.filter(s => [s.title_es, s.title_en, s.original_title, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
 
   rows = searching ? sortByDateTime(rows) : sortRows(rows);
