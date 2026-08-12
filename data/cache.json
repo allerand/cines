@@ -7587,16 +7587,17 @@
     "country": "Spain",
     "year": 1990,
     "duration": 95,
-    "original_title": "Las edades de Lulú",
-    "genre": "Drama"
+    "genre": "Drama",
+    "original_title": "Las edades de Lulú"
   },
   "siempre es de noche": {
-    "url": "",
-    "title_en": "SIEMPRE ES DE NOCHE",
+    "url": "https://letterboxd.com/film/siempre-es-de-noche/",
+    "title_en": "Always Night",
     "director": "Luis Ortega",
     "country": "Argentina",
     "year": 2025,
     "duration": 39,
+    "genre": "",
     "original_title": "Siempre es de noche"
   },
   "nimrods": {
@@ -11507,5 +11508,83 @@
     "duration": 87,
     "genre": "Comedia",
     "original_title": "Esperando la carroza"
+  },
+  "adolescencia,sexo y muerte en campamento miasma": {
+    "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+    "title_en": "Teenage Sex and Death at Camp Miasma",
+    "director": "Jane Schoenbrun",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Terror, Comedia",
+    "title_es": "Adolescencia, sexo y muerte en campamento Miasma",
+    "original_title": "Teenage Sex and Death at Camp Miasma"
+  },
+  "8° festival internacional de cine ambiental [finca]|2025": {
+    "url": "",
+    "title_en": "8° Festival Internacional de Cine Ambiental [FINCA]",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sin ley": {
+    "url": "",
+    "title_en": "Sin Ley",
+    "director": "Carlos Lasso",
+    "country": "",
+    "year": 2025,
+    "duration": 66,
+    "original_title": "Sin ley"
+  },
+  "el punto": {
+    "url": "",
+    "title_en": "El Punto",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tierra citrus": {
+    "url": "https://letterboxd.com/film/tierra-citrus/",
+    "title_en": "Tierra Citrus",
+    "director": "Ayelén Agüero",
+    "country": "",
+    "year": 2025,
+    "duration": 65,
+    "genre": "",
+    "original_title": "Tierra Citrus"
+  },
+  "filmatron": {
+    "url": "https://letterboxd.com/film/filmatron/",
+    "title_en": "Filmatron",
+    "director": "Pablo Parés",
+    "country": "Argentina",
+    "year": 2007,
+    "duration": 92,
+    "genre": "Acción, Ciencia ficción",
+    "title_es": "Filmatron",
+    "original_title": "Filmatron"
+  },
+  "adolescencia sexo y muerte en campamento miasma": {
+    "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+    "title_en": "Teenage Sex and Death at Camp Miasma",
+    "director": "Jane Schoenbrun",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Terror, Comedia",
+    "title_es": "Adolescencia, sexo y muerte en campamento Miasma",
+    "original_title": "Teenage Sex and Death at Camp Miasma"
+  },
+  "qué será del verano": {
+    "url": "https://letterboxd.com/film/what-will-summer-bring/",
+    "title_en": "What Will Summer Bring",
+    "director": "Ignacio Ceroi",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "Qué será del verano"
   }
 }
