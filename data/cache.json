@@ -11537,12 +11537,13 @@
     "original_title": "Sin ley"
   },
   "el punto": {
-    "url": "",
-    "title_en": "El Punto",
-    "director": "",
+    "url": "https://letterboxd.com/film/punto-final/",
+    "title_en": "punto final",
+    "director": "Eva Martín",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": null,
+    "genre": "Romance, Drama"
   },
   "tierra citrus": {
     "url": "https://letterboxd.com/film/tierra-citrus/",
@@ -11756,5 +11757,53 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "mi vecino totoro (reestreno)": {
+    "url": "",
+    "title_en": "MI VECINO TOTORO (REESTRENO)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "harry potter 25° aniversario": {
+    "url": "",
+    "title_en": "HARRY POTTER 25° ANIVERSARIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "linkin park: unshatter": {
+    "url": "https://letterboxd.com/film/linkin-park-unshatter/",
+    "title_en": "LINKIN PARK: UNSHATTER",
+    "director": "Joe Hahn",
+    "country": "USA, South Korea",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Música, Documental",
+    "original_title": "LINKIN PARK: UNSHATTER"
+  },
+  "harry potter y la piedra filosofal": {
+    "url": "",
+    "title_en": "Harry Potter Y La Piedra Filosofal",
+    "director": "Chris Columbus",
+    "country": "United Kingdom, United States of America",
+    "year": 2001,
+    "duration": 152,
+    "genre": "Aventura, Fantasía",
+    "title_es": "Harry Potter y la piedra filosofal",
+    "original_title": "Harry Potter and the Philosopher's Stone"
+  },
+  "mi vecino totoro": {
+    "url": "",
+    "title_en": "Mi Vecino Totoro",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 1988,
+    "duration": 86,
+    "genre": "Fantasía, Animación",
+    "title_es": "Mi vecino Totoro",
+    "original_title": "となりのトトロ"
   }
 }
