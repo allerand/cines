@@ -7591,13 +7591,12 @@
     "original_title": "Las edades de Lulú"
   },
   "siempre es de noche": {
-    "url": "https://letterboxd.com/film/siempre-es-de-noche/",
-    "title_en": "Always Night",
+    "url": "",
+    "title_en": "SIEMPRE ES DE NOCHE",
     "director": "Luis Ortega",
     "country": "Argentina",
     "year": 2025,
     "duration": 39,
-    "genre": "",
     "original_title": "Siempre es de noche"
   },
   "nimrods": {
@@ -11146,7 +11145,7 @@
   },
   "amora mora": {
     "url": "",
-    "title_en": "Amora Mora",
+    "title_en": "AMORA MORA",
     "director": "Ana Petta",
     "country": "Brazil",
     "year": 2025,
@@ -11157,7 +11156,7 @@
   },
   "cortometrajes en competencia": {
     "url": "",
-    "title_en": "Cortometrajes en Competencia",
+    "title_en": "CORTOMETRAJES EN COMPETENCIA",
     "director": "",
     "country": "",
     "year": null,
@@ -11175,7 +11174,7 @@
   },
   "el costo del crecimiento": {
     "url": "",
-    "title_en": "El costo del crecimiento",
+    "title_en": "EL COSTO DEL CRECIMIENTO",
     "director": "",
     "country": "",
     "year": null,
@@ -11586,5 +11585,176 @@
     "duration": 85,
     "genre": "Documental",
     "original_title": "Qué será del verano"
+  },
+  "la pianista": {
+    "url": "",
+    "title_en": "La pianista",
+    "director": "Michael Haneke",
+    "country": "France, Austria",
+    "year": 2001,
+    "duration": 131,
+    "genre": "Drama, Romance",
+    "title_es": "La pianista",
+    "original_title": "La Pianiste"
+  },
+  "historias extraordinarias": {
+    "url": "",
+    "title_en": "Historias Extraordinarias",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2008,
+    "duration": 242,
+    "genre": "Drama",
+    "original_title": "Historias extraordinarias"
+  },
+  "el exilio de los músicos": {
+    "url": "https://letterboxd.com/film/el-exilio-de-los-musicos/",
+    "title_en": "El exilio de los músicos",
+    "director": "Iván Cherjovsky",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 69,
+    "genre": "Documental",
+    "original_title": "El exilio de los músicos"
+  },
+  "kanzo sensei – doctor akagi|1998": {
+    "url": "https://letterboxd.com/film/dr-akagi/",
+    "title_en": "Dr. Akagi",
+    "director": "Shōhei Imamura",
+    "country": "France, Japan",
+    "year": 1998,
+    "duration": 128,
+    "genre": "Comedia, Historia",
+    "title_es": "Doctor Akagi",
+    "original_title": "カンゾー先生"
+  },
+  "cerdos y acorazados|1961": {
+    "url": "https://letterboxd.com/film/pigs-and-battleships/",
+    "title_en": "Pigs and Battleships",
+    "director": "Shōhei Imamura, Shōhei Imamura.",
+    "country": "Japan",
+    "year": 1961,
+    "duration": 108,
+    "genre": "Crimen, Drama",
+    "title_es": "Cerdos y acorazados",
+    "original_title": "豚と軍艦"
+  },
+  "la mujer insecto|1963": {
+    "url": "https://letterboxd.com/film/the-insect-woman/",
+    "title_en": "The Insect Woman",
+    "director": "Shōhei Imamura",
+    "country": "Japan",
+    "year": 1963,
+    "duration": 123,
+    "genre": "Drama",
+    "title_es": "La mujer insecto",
+    "original_title": "にっぽん昆虫記"
+  },
+  "la balada de narayama|1983": {
+    "url": "https://letterboxd.com/film/the-ballad-of-narayama/",
+    "title_en": "The Ballad of Narayama",
+    "director": "Shōhei Imamura",
+    "country": "Japan",
+    "year": 1983,
+    "duration": 130,
+    "genre": "Drama",
+    "title_es": "La balada de Narayama",
+    "original_title": "楢山節考"
+  },
+  "madam onboro|1970": {
+    "url": "https://letterboxd.com/film/nippon-sengoshi-madamu-onboro-no-seikatsu/",
+    "title_en": "History of Postwar Japan as Told by a Bar Hostess",
+    "director": "Shōhei Imamura",
+    "country": "Japan",
+    "year": 1970,
+    "duration": 105,
+    "genre": "Documental, Historia",
+    "original_title": "にっぽん戦後史 マダムおんぼろの生活"
+  },
+  "intenciones de asesinato|1964": {
+    "url": "https://letterboxd.com/film/intentions-of-murder/",
+    "title_en": "Intentions of Murder",
+    "director": "Shōhei Imamura",
+    "country": "Japan",
+    "year": 1964,
+    "duration": 150,
+    "genre": "Drama",
+    "title_es": "Deseos impuros",
+    "original_title": "赤い殺意"
+  },
+  "el profundo deseo de los dioses|1968": {
+    "url": "https://letterboxd.com/film/profound-desires-of-the-gods/",
+    "title_en": "Profound Desires of the Gods",
+    "director": "Shōhei Imamura",
+    "country": "Japan",
+    "year": 1968,
+    "duration": 173,
+    "genre": "Drama",
+    "title_es": "El profundo deseo de los dioses",
+    "original_title": "神々の深き欲望"
+  },
+  "adolescencia, sexo y muerte en campamento miasma": {
+    "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+    "title_en": "Teenage Sex and Death at Camp Miasma",
+    "director": "Jane Schoenbrun",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Terror, Comedia",
+    "title_es": "Adolescencia, sexo y muerte en campamento Miasma",
+    "original_title": "Teenage Sex and Death at Camp Miasma"
+  },
+  "inscaciable (saccharine)": {
+    "url": "",
+    "title_en": "INSCACIABLE (SACCHARINE)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "amelie y los secretos de la lluvia": {
+    "url": "https://letterboxd.com/film/little-amelie-or-the-character-of-rain/",
+    "title_en": "Little Amélie or the Character of Rain",
+    "director": "Maïlys Vallade, Liane-cho Han",
+    "country": "France",
+    "year": 2025,
+    "duration": 77,
+    "genre": "Familiar, Animación",
+    "title_es": "Amélie y los secretos de la lluvia",
+    "original_title": "Amélie et la métaphysique des tubes"
+  },
+  "la granja de la libertad - pailako": {
+    "url": "",
+    "title_en": "LA GRANJA DE LA LIBERTAD - PAILAKO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "que será del verano": {
+    "url": "https://letterboxd.com/film/what-will-summer-bring/",
+    "title_en": "What Will Summer Bring",
+    "director": "Ignacio Ceroi",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "Qué será del verano"
+  },
+  "la contracción de la espera": {
+    "url": "",
+    "title_en": "LA CONTRACCIÓN DE LA ESPERA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "smof 2026": {
+    "url": "",
+    "title_en": "SMOF 2026",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
