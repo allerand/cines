@@ -2993,7 +2993,19 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
                     ))
             d += timedelta(days=1)
 
-    return result
+    # Dedup: el detalle de Cosmos a veces repite el bloque de horarios varias
+    # veces en la página (cambio de template del sitio), lo que generaba la
+    # misma función (título/fecha/hora) duplicada N veces en la grilla. Dos
+    # horarios distintos del mismo día se conservan; sólo se colapsa lo idéntico.
+    seen: set[tuple] = set()
+    deduped: list[Screening] = []
+    for s in result:
+        key = (s.title, s.fecha, s.hora)
+        if key in seen:
+            continue
+        seen.add(key)
+        deduped.append(s)
+    return deduped
 
 
 # ---------------------------------------------------------------------------
