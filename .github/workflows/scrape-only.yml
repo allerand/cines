@@ -60,13 +60,17 @@ jobs:
         # Cuando se dispara por schedule, inputs.semanas viene vacío → default 9 (≈ 2 meses)
         run: python3 run.py --semanas "${{ inputs.semanas || '9' }}"
 
+      # `regenerate_stories` es un input de tipo boolean, así que acá vale el
+      # booleano y no el string: con `== 'true'` la comparación daba false y
+      # estos dos pasos quedaban skipped, dejando los PNG de las stories con la
+      # cartelera vieja aunque el scrape hubiera arreglado los datos.
       - name: Compute today's date (Buenos Aires)
-        if: ${{ inputs.regenerate_stories == 'true' }}
+        if: ${{ inputs.regenerate_stories == true }}
         id: date
         run: echo "today=$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
       - name: Regenerate today's story PNGs (no posting)
-        if: ${{ inputs.regenerate_stories == 'true' }}
+        if: ${{ inputs.regenerate_stories == true }}
         run: python3 scripts/generate_posts.py --date "${{ steps.date.outputs.today }}" --format story
 
       - name: Commit cartelera (+ optional stories)

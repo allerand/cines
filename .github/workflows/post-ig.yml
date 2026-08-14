@@ -54,6 +54,18 @@ jobs:
           echo "📂 contenido de posts/$d/:"
           ls -la "posts/$d/" || (echo "❌ No hay slides para $d"; exit 1)
 
+          # Este workflow postea los PNG ya commiteados: no los regenera. Si son
+          # más viejos que la cartelera, se estaría posteando programación
+          # desactualizada (pasó el 14/8: se repostearon stories con funciones
+          # duplicadas de Cosmos aunque los datos ya estaban corregidos).
+          nuevo=$(git log -1 --format=%ct -- data/cartelera.json)
+          slides=$(git log -1 --format=%ct -- "posts/$d/")
+          if [ -n "$nuevo" ] && [ -n "$slides" ] && [ "$slides" -lt "$nuevo" ]; then
+            echo "::warning::Los slides de $d son más viejos que data/cartelera.json." \
+                 "Corré 'Scrape cartelera (sin postear a IG)' con regenerate_stories" \
+                 "antes de postear, o vas a subir la cartelera vieja."
+          fi
+
       - name: Build mode flags
         id: flags
         run: |
