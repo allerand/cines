@@ -2880,6 +2880,47 @@ COSMOS_DAY_ABBREV = {
 }
 
 
+def _cosmos_clean_title(text: str) -> str:
+    """Limpia el texto de un link de la home: le saca el badge de horarios
+    ("Ju Vi Sá Do Mi | 15:05 - 21:00"), el "Próximamente" y los CTA."""
+    if not text:
+        return ""
+    t = re.split(r"\|", text)[0]
+    t = re.sub(
+        r"\b(?:Lu|Ma|Mi|Mi[ée]|Mier|Ju|Vi|S[áa]|Do)\b[\s\-]*",
+        " ", t, flags=re.IGNORECASE,
+    )
+    t = re.sub(r"pr[óo]ximamente|ver\s+horarios|comprar\s+entradas|trailer",
+               " ", t, flags=re.IGNORECASE)
+    t = re.sub(r"[\d:]+", " ", t)
+    return re.sub(r"\s+", " ", t).strip(" -–—/")
+
+
+def _cosmos_norm(text: str) -> str:
+    """Normaliza para comparar títulos: sin acentos, minúsculas, sin puntuación."""
+    t = unicodedata.normalize("NFKD", text or "")
+    t = "".join(c for c in t if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
+
+
+def _cosmos_same_film(home_title: str, detail_title: str) -> bool:
+    """¿El detalle que bajamos es realmente el de esta película?
+
+    El rediseño de cinecosmos.uba.ar embebe el carrusel de la home dentro de
+    cada página de detalle, así que TODAS las pelis devolvían el título y los
+    horarios de la destacada (por eso la grilla mostraba "Calle Málaga" en
+    lugar de las 6 películas, multiplicada). Si el título del detalle no
+    coincide con el de la home, la página no trajo el contenido pedido y hay
+    que descartarla en vez de atribuirle horarios ajenos.
+    """
+    if not home_title or not detail_title:
+        return True  # sin referencia no bloqueamos: comportamiento anterior
+    a, b = _cosmos_norm(home_title), _cosmos_norm(detail_title)
+    if not a or not b:
+        return True
+    return a in b or b in a
+
+
 def scrape_cosmos(semanas: int = 2) -> list[Screening]:
     """
     Scrapea cinecosmos.uba.ar. La home lista las pelis con links
@@ -2894,14 +2935,25 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
     except Exception:
         return []
 
-    # IDs únicos de películas en la home
+    # IDs únicos de películas en la home + su título según la propia home.
+    # El título de la home es la referencia: el detalle del sitio nuevo embebe
+    # el carrusel de la portada, así que su primer <h1> puede ser el de la peli
+    # destacada y no el de la película pedida (ver _cosmos_same_film más abajo).
     ids: list[str] = []
     seen_ids: set[str] = set()
+    home_titles: dict[str, str] = {}
     for a in home.find_all("a", href=re.compile(r"idPelicula=\d+")):
         m = re.search(r"idPelicula=(\d+)", a["href"])
-        if m and m.group(1) not in seen_ids:
-            seen_ids.add(m.group(1))
-            ids.append(m.group(1))
+        if not m:
+            continue
+        fid = m.group(1)
+        if fid not in seen_ids:
+            seen_ids.add(fid)
+            ids.append(fid)
+        if not home_titles.get(fid):
+            t = _cosmos_clean_title(a.get_text(" ", strip=True))
+            if t:
+                home_titles[fid] = t
 
     result: list[Screening] = []
     today = date.today()
@@ -2911,6 +2963,7 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
     days_to_wed = (2 - today.weekday()) % 7
     end = today + timedelta(days=days_to_wed)
 
+    descartadas_por_carrusel = 0
     for film_id in ids:
         try:
             soup = fetch_html(f"{BASE}?c=main&a=Detalle&idPelicula={film_id}")
@@ -2930,25 +2983,66 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
         if not title:
             continue
 
-        director = ""
-        m = re.search(r"Direcci[óo]n\s*:\s*([^\n]+?)\s+A[ñn]o\s*:", text)
+        # Si el detalle no es el de esta película (carrusel de la home embebido)
+        # lo descartamos: sus horarios son de la peli destacada, no de ésta.
+        home_title = home_titles.get(film_id, "")
+        if not _cosmos_same_film(home_title, title):
+            descartadas_por_carrusel += 1
+            continue
+        # El título de la home manda: es el que corresponde a este id.
+        if home_title:
+            title = home_title
+
+        # Metadata. El template viejo rotulaba cada campo ("Dirección: X Año:
+        # YYYY País: P Duración: NNm"); el nuevo los muestra juntos en la ficha
+        # del carrusel, sin rótulos: "Marruecos / Dir: Maryam Touzani / 117m".
+        director = country = ""
+        duration: Optional[int] = None
+
+        # 1) Formato nuevo, todo junto: es el más confiable porque los "/"
+        #    delimitan sin ambigüedad dónde termina cada campo.
+        m = re.search(
+            r"([^/|\n]{2,40}?)\s*/\s*Dir\.?\s*:\s*([^/|\n]{2,60}?)\s*/\s*(\d{2,3})\s*m\b",
+            text,
+        )
         if m:
-            director = m.group(1).strip()
+            country = m.group(1).strip(" .,-")
+            director = m.group(2).strip(" .,-")
+            duration = int(m.group(3))
+
+        # 2) Formato viejo rotulado (y fallbacks sueltos por campo).
+        if not director:
+            m = (re.search(r"Direcci[óo]n\s*:\s*([^\n]+?)\s+A[ñn]o\s*:", text)
+                 or re.search(r"\bDir\.?\s*:\s*([^/|\n]{2,60}?)\s*(?:/|\||$)", text))
+            if m:
+                director = m.group(1).strip(" .,-")
+
+        if duration is None:
+            m = (re.search(r"Duraci[óo]n\s*:\s*(\d{1,3})\s*m\b", text)
+                 or re.search(r"/\s*(\d{2,3})\s*m\b", text))
+            if m:
+                duration = int(m.group(1))
+
+        if not country:
+            m = re.search(r"Pa[íi]s\s*:\s*([^\n]+?)\s+Duraci[óo]n\s*:", text)
+            if m:
+                country = m.group(1).strip(" .,-")
+
+        # Al aplanar el HTML el título queda pegado al país ("Calle Málaga
+        # Marruecos / 117m"); como lo conocemos, lo sacamos del país.
+        if country and title:
+            country = re.sub(re.escape(title), " ", country, flags=re.IGNORECASE)
+            country = re.sub(r"\s+", " ", country).strip(" .,-/")
+
+        # El país nunca lleva rótulo de dirección ni dígitos: si se coló algo
+        # así, preferimos vacío y que lo complete el enriquecimiento.
+        if re.search(r"\d|\bdir\b|direcci", country, re.IGNORECASE):
+            country = ""
 
         year: Optional[int] = None
         m = re.search(r"A[ñn]o\s*:\s*(\d{4})", text)
         if m:
             year = int(m.group(1))
-
-        country = ""
-        m = re.search(r"Pa[íi]s\s*:\s*([^\n]+?)\s+Duraci[óo]n\s*:", text)
-        if m:
-            country = m.group(1).strip()
-
-        duration: Optional[int] = None
-        m = re.search(r"Duraci[óo]n\s*:\s*(\d{1,3})\s*m\b", text)
-        if m:
-            duration = int(m.group(1))
 
         # Bloques de horario: "Día1 - Día2 - ... | HH:MM[ - HH:MM ...]"
         # Cada bloque puede tener VARIOS horarios separados por " - "
@@ -2993,10 +3087,10 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
                     ))
             d += timedelta(days=1)
 
-    # Dedup: el detalle de Cosmos a veces repite el bloque de horarios varias
-    # veces en la página (cambio de template del sitio), lo que generaba la
-    # misma función (título/fecha/hora) duplicada N veces en la grilla. Dos
-    # horarios distintos del mismo día se conservan; sólo se colapsa lo idéntico.
+    # Dedup: el detalle de Cosmos repite el bloque de horarios varias veces en
+    # la página (carrusel + ficha), lo que generaba la misma función
+    # (título/fecha/hora) duplicada N veces en la grilla. Dos horarios distintos
+    # del mismo día se conservan; sólo se colapsa lo idéntico.
     seen: set[tuple] = set()
     deduped: list[Screening] = []
     for s in result:
@@ -3005,6 +3099,15 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
             continue
         seen.add(key)
         deduped.append(s)
+
+    # Diagnóstico explícito: sin esto un rediseño del sitio devuelve datos
+    # raros (o 0) y se confunde con "esta semana no hay funciones".
+    if descartadas_por_carrusel:
+        print(f"[cosmos: {descartadas_por_carrusel}/{len(ids)} detalles traían "
+              f"la peli destacada en vez de la propia — descartados]", end=" ")
+    if ids and not deduped:
+        print(f"[cosmos: {len(ids)} pelis en la home pero 0 funciones — "
+              f"revisar el markup]", end=" ")
     return deduped
 
 
