@@ -559,13 +559,12 @@
     "genre": "Drama, Comedia"
   },
   "calle málaga": {
-    "url": "https://letterboxd.com/film/calle-malaga/",
-    "title_en": "Calle Malaga",
-    "director": "Maryam Touzani",
-    "country": "Morocco, France",
-    "year": 2025,
-    "genre": "Drama",
-    "duration": 116
+    "url": "",
+    "title_en": "Calle Málaga",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "los venerables todos": {
     "url": "https://letterboxd.com/film/los-venerables-todos/",
@@ -809,13 +808,12 @@
     "genre": "Música, Documental"
   },
   "sin aliento": {
-    "url": "https://letterboxd.com/film/breathless/",
-    "title_en": "Breathless",
-    "director": "Jean-Luc Godard",
-    "country": "France",
-    "year": 1960,
-    "duration": 90,
-    "genre": "Crimen, Drama"
+    "url": "",
+    "title_en": "Sin aliento",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "las catadoras del führer": {
     "url": "https://letterboxd.com/film/the-tasters/",
@@ -2533,15 +2531,12 @@
     "genre": "Comedia, Fantasía"
   },
   "el gran arco": {
-    "url": "https://letterboxd.com/film/the-great-arch-2025/",
-    "title_en": "The Great Arch",
-    "director": "Stéphane Demoustier",
-    "country": "France, Denmark",
-    "year": 2025,
-    "duration": 104,
-    "genre": "Drama, Historia",
-    "title_es": "El arquitecto",
-    "original_title": "L'Inconnu de la Grande Arche"
+    "url": "",
+    "title_en": "El gran arco",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "ella y su hijo": {
     "url": "https://letterboxd.com/film/woman-and-child/",
@@ -2555,15 +2550,12 @@
     "original_title": "زن و بچه"
   },
   "alpha": {
-    "url": "https://letterboxd.com/film/alpha-2025/",
+    "url": "",
     "title_en": "Alpha",
-    "director": "Julia Ducournau",
-    "country": "France, Belgium",
-    "year": 2025,
-    "duration": 128,
-    "genre": "Terror, Ciencia ficción",
-    "original_title": "Alpha",
-    "title_es": "Alfa"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "la espera": {
     "url": "https://letterboxd.com/film/the-wait-2026/",
@@ -3242,14 +3234,12 @@
     "genre": "Drama"
   },
   "la ceremonia": {
-    "url": "https://letterboxd.com/film/la-ceremonia/",
+    "url": "",
     "title_en": "La ceremonia",
-    "director": "Pedro Deré",
-    "country": "Argentina",
-    "year": 2024,
-    "duration": 63,
-    "genre": "Historia",
-    "original_title": "La ceremonia"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "caravanas en los andes: una mirada etnoarqueológica": {
     "url": "",
@@ -4895,14 +4885,12 @@
   },
   "alphaville": {
     "url": "",
-    "title_en": "ALPHAVILLE",
-    "director": "Jean-Luc Godard",
-    "country": "France, Italy",
-    "year": 1965,
-    "duration": 99,
-    "title_es": "Alphaville",
-    "original_title": "Alphaville, une étrange aventure de Lemmy Caution",
-    "genre": "Drama, Ciencia ficción"
+    "title_en": "Alphaville",
+    "director": "",
+    "country": "",
+    "year": 1999,
+    "duration": 101,
+    "genre": "Música"
   },
   "lo que mata": {
     "url": "https://letterboxd.com/film/the-things-you-kill/",
@@ -7268,15 +7256,12 @@
     "genre": "Animación, Fantasía"
   },
   "las trillizas de belleville": {
-    "url": "https://letterboxd.com/film/the-triplets-of-belleville/",
-    "title_en": "The Triplets of Belleville",
-    "director": "Sylvain Chomet",
-    "country": "France, Belgium",
-    "year": 2003,
-    "duration": 80,
-    "genre": "Animación, Comedia",
-    "title_es": "Bienvenidos a Belleville",
-    "original_title": "Les Triplettes de Belleville"
+    "url": "",
+    "title_en": "Las trillizas de Belleville",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "up, una aventura de altura": {
     "url": "https://letterboxd.com/film/up/",
@@ -8823,14 +8808,12 @@
     "original_title": "Legend"
   },
   "weser": {
-    "url": "https://letterboxd.com/film/weser/",
+    "url": "",
     "title_en": "Weser",
-    "director": "Fernando Spiner",
-    "country": "Argentina",
-    "year": 2025,
-    "duration": 85,
-    "genre": "Drama, Documental",
-    "original_title": "Weser"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "perfume | una película sobre maria gabriela epumer|2026": {
     "url": "",
@@ -11844,6 +11827,86 @@
   "tu rostro - doc bsas": {
     "url": "",
     "title_en": "TU ROSTRO - DOC BSAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "adiós a los niños": {
+    "url": "",
+    "title_en": "Adiós a los niños",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "azur y asmar": {
+    "url": "",
+    "title_en": "Azur y Asmar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "césar y rosalie": {
+    "url": "",
+    "title_en": "César y Rosalie",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el odio": {
+    "url": "",
+    "title_en": "El odio",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el planeta salvaje": {
+    "url": "",
+    "title_en": "El planeta salvaje",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la jetée": {
+    "url": "",
+    "title_en": "La Jetée",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sin sol": {
+    "url": "",
+    "title_en": "Sin sol",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los amos del tiempo": {
+    "url": "",
+    "title_en": "Los amos del tiempo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los coristas": {
+    "url": "",
+    "title_en": "Los coristas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tío de américa": {
+    "url": "",
+    "title_en": "tío de América",
     "director": "",
     "country": "",
     "year": null,
