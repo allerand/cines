@@ -2942,7 +2942,39 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
-# Cine Cosmos UBA  (cinecosmos.uba.ar — sitio estático con detalle por peli)
+# Cine Cosmos UBA  (cosmos.uba.ar — la home ya trae la cartelera completa)
+# ---------------------------------------------------------------------------
+# Cada película de la home es una card autocontenida, y ahí está todo:
+#
+#   <div class="card">
+#     <a href="/pelicula?idPelicula=408"><img alt="Letras robadas"></a>
+#     <div class="card-body">
+#       <h4 class="card-title">Letras robadas</h4>
+#       <p class="direccion">Dirección: John Carney</p>
+#       <p class="lightText">Irlanda / 98m</p>
+#     </div>
+#     <div class="card-footer"><p>Vi Sá Do Lu Ma Mi | 15:00</p></div>
+#   </div>
+#
+# El footer es el que manda: o trae los días con sus horarios, o dice
+# "Próximamente" — y ahí la película todavía NO tiene funciones, así que no va
+# a la cartelera. Ese es el caso de todo el ciclo de cine francés de agosto de
+# 2026, que se publicó con la ficha completa semanas antes de tener horarios.
+#
+# Antes esto salía de una página de detalle por película
+# (`/?c=main&a=Detalle&idPelicula=NNN`). Esa ruta ya no existe: el sitio
+# contesta la home entera para CUALQUIER id. Como el scraper aplanaba ese HTML
+# y buscaba bloques "días | horarios" en todo el texto, cada película se
+# quedaba con los horarios de todas — 843 funciones fantasma en la cartelera
+# del 15/8/2026, las "Próximamente" incluidas, con el país lleno de restos del
+# aplanado ("ximamente Trailer Letras robadas Irlanda") y el director de la
+# primera peli repetido en el resto. Leyendo la card no hace falta ninguna
+# heurística para saber de quién es cada horario: está en su propio nodo.
+#
+# Lo único que se pierde es el año (la ficha de la card no lo trae): lo
+# completa el enriquecimiento por Letterboxd/TMDB, que además lo traía bien
+# cuando el detalle lo daba mal. El detalle nuevo (/pelicula?idPelicula=NNN)
+# sólo se usa como ticket_url.
 # ---------------------------------------------------------------------------
 
 COSMOS_DAY_ABBREV = {
@@ -2955,83 +2987,43 @@ COSMOS_DAY_ABBREV = {
     "do": 6, "dom": 6,
 }
 
-
-def _cosmos_clean_title(text: str) -> str:
-    """Limpia el texto de un link de la home: le saca el badge de horarios
-    ("Ju Vi Sá Do Mi | 15:05 - 21:00"), el "Próximamente" y los CTA."""
-    if not text:
-        return ""
-    t = re.split(r"\|", text)[0]
-    t = re.sub(
-        r"\b(?:Lu|Ma|Mi|Mi[ée]|Mier|Ju|Vi|S[áa]|Do)\b[\s\-]*",
-        " ", t, flags=re.IGNORECASE,
-    )
-    t = re.sub(r"pr[óo]ximamente|ver\s+horarios|comprar\s+entradas|trailer",
-               " ", t, flags=re.IGNORECASE)
-    t = re.sub(r"[\d:]+", " ", t)
-    return re.sub(r"\s+", " ", t).strip(" -–—/")
+# "Vi Sá Do Lu Ma Mi | 15:00" y también "Sá Do Lu Ma Mi | 18:50 - 20:50": los
+# días valen para todos los horarios del bloque. El grupo de horarios captura
+# sólo dígitos/":"/separadores, así que corta solo si aparece otro bloque.
+_COSMOS_SLOT_RE = re.compile(
+    r"((?:(?:Lu|Ma|Mi|Mié|Mier|Ju|Vi|S[áa]|Do)\b\s*-?\s*)+)\|\s*([\d:\s\-–—,]+)",
+    re.IGNORECASE,
+)
 
 
-def _cosmos_norm(text: str) -> str:
-    """Normaliza para comparar títulos: sin acentos, minúsculas, sin puntuación."""
-    t = unicodedata.normalize("NFKD", text or "")
-    t = "".join(c for c in t if not unicodedata.combining(c))
-    return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
+def _cosmos_slots(footer_text: str) -> list[tuple[set[int], str]]:
+    """(días de la semana, hora) del footer de una card.
 
-
-def _cosmos_same_film(home_title: str, detail_title: str) -> bool:
-    """¿El detalle que bajamos es realmente el de esta película?
-
-    El rediseño de cinecosmos.uba.ar embebe el carrusel de la home dentro de
-    cada página de detalle, así que TODAS las pelis devolvían el título y los
-    horarios de la destacada (por eso la grilla mostraba "Calle Málaga" en
-    lugar de las 6 películas, multiplicada). Si el título del detalle no
-    coincide con el de la home, la página no trajo el contenido pedido y hay
-    que descartarla en vez de atribuirle horarios ajenos.
+    Devuelve [] cuando el footer dice "Próximamente" — que es justamente cómo
+    se distingue una película anunciada de una programada.
     """
-    if not home_title or not detail_title:
-        return True  # sin referencia no bloqueamos: comportamiento anterior
-    a, b = _cosmos_norm(home_title), _cosmos_norm(detail_title)
-    if not a or not b:
-        return True
-    return a in b or b in a
+    slots: list[tuple[set[int], str]] = []
+    for m in _COSMOS_SLOT_RE.finditer(footer_text or ""):
+        weekdays = {COSMOS_DAY_ABBREV[t]
+                    for t in re.findall(r"[a-záéí]+", m.group(1).lower())
+                    if t in COSMOS_DAY_ABBREV}
+        if not weekdays:
+            continue
+        for hh, mm in re.findall(r"(\d{1,2}):(\d{2})", m.group(2)):
+            slots.append((weekdays, f"{int(hh):02d}:{mm}"))
+    return slots
 
 
 def scrape_cosmos(semanas: int = 2) -> list[Screening]:
-    """
-    Scrapea cinecosmos.uba.ar. La home lista las pelis con links
-    `?c=main&a=Detalle&idPelicula=NNN`. Cada detalle tiene:
-        "Dirección: NAME  Año: YYYY  País: PAIS  Duración: NNm
-         Ju - Vi - Sá - Do - Lu - Ma - Mi | HH:MM"
-    Generamos una Screening por cada (día válido en el rango, hora).
-    """
-    BASE = "https://www.cinecosmos.uba.ar/"
+    """Scrapea la cartelera de cosmos.uba.ar desde las cards de la home."""
+    # El sitio se mudó: www.cinecosmos.uba.ar redirige 301 a cosmos.uba.ar.
+    # Se apunta al dominio nuevo para que los ticket_url no salgan redirigidos.
+    BASE = "https://cosmos.uba.ar"
     try:
-        home = fetch_html(BASE)
+        home = fetch_html(f"{BASE}/")
     except Exception:
         return []
 
-    # IDs únicos de películas en la home + su título según la propia home.
-    # El título de la home es la referencia: el detalle del sitio nuevo embebe
-    # el carrusel de la portada, así que su primer <h1> puede ser el de la peli
-    # destacada y no el de la película pedida (ver _cosmos_same_film más abajo).
-    ids: list[str] = []
-    seen_ids: set[str] = set()
-    home_titles: dict[str, str] = {}
-    for a in home.find_all("a", href=re.compile(r"idPelicula=\d+")):
-        m = re.search(r"idPelicula=(\d+)", a["href"])
-        if not m:
-            continue
-        fid = m.group(1)
-        if fid not in seen_ids:
-            seen_ids.add(fid)
-            ids.append(fid)
-        if not home_titles.get(fid):
-            t = _cosmos_clean_title(a.get_text(" ", strip=True))
-            if t:
-                home_titles[fid] = t
-
-    result: list[Screening] = []
     today = date.today()
     # La cartelera de Cosmos va Jueves → Miércoles y se actualiza cada Jueves.
     # No tiene sentido expandir más allá del próximo Miércoles porque después
@@ -3039,113 +3031,45 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
     days_to_wed = (2 - today.weekday()) % 7
     end = today + timedelta(days=days_to_wed)
 
-    descartadas_por_carrusel = 0
-    for film_id in ids:
-        try:
-            soup = fetch_html(f"{BASE}?c=main&a=Detalle&idPelicula={film_id}")
-        except Exception:
-            continue
-        text = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
+    cards = home.select("div.card")
+    result: list[Screening] = []
+    proximamente = 0
 
-        # Title — primer h1/h2 o link al detalle dentro de la propia página
-        title = ""
-        for tag in ("h1", "h2", "h3"):
-            el = soup.find(tag)
-            if el:
-                t = el.get_text(strip=True)
-                if t and t.lower() != "cine cosmos":
-                    title = t
-                    break
-        if not title:
+    for card in cards:
+        titulo_el = card.select_one(".card-title")
+        title = re.sub(r"\s+", " ", titulo_el.get_text(" ", strip=True)) if titulo_el else ""
+        # El afiche del ciclo también entra como card, con el título en "." y la
+        # ficha vacía. Sin dos letras seguidas no es un título de película.
+        if not re.search(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{2}", title):
             continue
 
-        # Si el detalle no es el de esta película (carrusel de la home embebido)
-        # lo descartamos: sus horarios son de la peli destacada, no de ésta.
-        home_title = home_titles.get(film_id, "")
-        if not _cosmos_same_film(home_title, title):
-            descartadas_por_carrusel += 1
-            continue
-        # El título de la home manda: es el que corresponde a este id.
-        if home_title:
-            title = home_title
-
-        # Metadata. El template viejo rotulaba cada campo ("Dirección: X Año:
-        # YYYY País: P Duración: NNm"); el nuevo los muestra juntos en la ficha
-        # del carrusel, sin rótulos: "Marruecos / Dir: Maryam Touzani / 117m".
-        director = country = ""
-        duration: Optional[int] = None
-
-        # 1) Formato nuevo, todo junto: es el más confiable porque los "/"
-        #    delimitan sin ambigüedad dónde termina cada campo.
-        m = re.search(
-            r"([^/|\n]{2,40}?)\s*/\s*Dir\.?\s*:\s*([^/|\n]{2,60}?)\s*/\s*(\d{2,3})\s*m\b",
-            text,
-        )
-        if m:
-            country = m.group(1).strip(" .,-")
-            director = m.group(2).strip(" .,-")
-            duration = int(m.group(3))
-
-        # 2) Formato viejo rotulado (y fallbacks sueltos por campo).
-        if not director:
-            m = (re.search(r"Direcci[óo]n\s*:\s*([^\n]+?)\s+A[ñn]o\s*:", text)
-                 or re.search(r"\bDir\.?\s*:\s*([^/|\n]{2,60}?)\s*(?:/|\||$)", text))
-            if m:
-                director = m.group(1).strip(" .,-")
-
-        if duration is None:
-            m = (re.search(r"Duraci[óo]n\s*:\s*(\d{1,3})\s*m\b", text)
-                 or re.search(r"/\s*(\d{2,3})\s*m\b", text))
-            if m:
-                duration = int(m.group(1))
-
-        if not country:
-            m = re.search(r"Pa[íi]s\s*:\s*([^\n]+?)\s+Duraci[óo]n\s*:", text)
-            if m:
-                country = m.group(1).strip(" .,-")
-
-        # Al aplanar el HTML el título queda pegado al país ("Calle Málaga
-        # Marruecos / 117m"); como lo conocemos, lo sacamos del país.
-        if country and title:
-            country = re.sub(re.escape(title), " ", country, flags=re.IGNORECASE)
-            country = re.sub(r"\s+", " ", country).strip(" .,-/")
-
-        # El país nunca lleva rótulo de dirección ni dígitos: si se coló algo
-        # así, preferimos vacío y que lo complete el enriquecimiento.
-        if re.search(r"\d|\bdir\b|direcci", country, re.IGNORECASE):
-            country = ""
-
-        year: Optional[int] = None
-        m = re.search(r"A[ñn]o\s*:\s*(\d{4})", text)
-        if m:
-            year = int(m.group(1))
-
-        # Bloques de horario: "Día1 - Día2 - ... | HH:MM[ - HH:MM ...]"
-        # Cada bloque puede tener VARIOS horarios separados por " - "
-        # (p.ej. "Ju Vi Sá Do Lu Ma Mi | 18:40 - 21:00") y puede haber varios
-        # bloques ("Ju - Vi | 19:00 Sá - Do | 16:30"). El grupo de horarios
-        # captura sólo dígitos/":"/espacios/guiones, así que se corta solo al
-        # llegar al próximo bloque de días (letras).
-        slot_re = re.compile(
-            r"((?:(?:Lu|Ma|Mi|Mié|Mier|Ju|Vi|S[áa]|Do)\b\s*-?\s*)+)\|\s*([\d:\s\-–—,]+)",
-            re.IGNORECASE,
-        )
-        slots: list[tuple[set[int], str]] = []
-        for m in slot_re.finditer(text):
-            days_chunk = m.group(1).lower()
-            weekdays: set[int] = set()
-            for tok in re.findall(r"[a-záéí]+", days_chunk):
-                if tok in COSMOS_DAY_ABBREV:
-                    weekdays.add(COSMOS_DAY_ABBREV[tok])
-            if not weekdays:
-                continue
-            for hh, mm in re.findall(r"(\d{1,2}):(\d{2})", m.group(2)):
-                slots.append((weekdays, f"{int(hh):02d}:{mm}"))
-
+        footer = card.select_one(".card-footer")
+        slots = _cosmos_slots(footer.get_text(" ", strip=True) if footer else "")
         if not slots:
+            proximamente += 1
             continue
 
-        # Expandir a fechas concretas
+        link = card.find("a", href=re.compile(r"idPelicula=\d+"))
+        m = re.search(r"idPelicula=(\d+)", link["href"]) if link else None
+        ticket_url = f"{BASE}/pelicula?idPelicula={m.group(1)}" if m else f"{BASE}/"
+
+        director = ""
+        dir_el = card.select_one("p.direccion")
+        if dir_el:
+            director = re.sub(r"^\s*Direcci[óo]n\s*:\s*", "",
+                              re.sub(r"\s+", " ", dir_el.get_text(" ", strip=True))).strip(" .,-")
+
+        # "Irlanda / 98m" — el país es lo que va antes de la duración.
+        country, duration = "", None
+        ficha_el = card.select_one("p.lightText")
+        if ficha_el:
+            ficha = re.sub(r"\s+", " ", ficha_el.get_text(" ", strip=True))
+            md = re.search(r"(\d{2,3})\s*m\b", ficha)
+            if md:
+                duration = int(md.group(1))
+            # El punto NO se saca: "EE.UU." lo lleva adentro y al final.
+            country = re.sub(r"\s*/?\s*\d{2,3}\s*m\b.*$", "", ficha).strip(" /,-")
+
         d = today
         while d <= end:
             for weekdays, hora in slots:
@@ -3155,18 +3079,15 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
                         title=title,
                         fecha=d.isoformat(),
                         hora=hora,
-                        ticket_url=f"{BASE}?c=main&a=Detalle&idPelicula={film_id}",
+                        ticket_url=ticket_url,
                         director=director,
                         country=country,
-                        year=year,
                         duration=duration,
                     ))
             d += timedelta(days=1)
 
-    # Dedup: el detalle de Cosmos repite el bloque de horarios varias veces en
-    # la página (carrusel + ficha), lo que generaba la misma función
-    # (título/fecha/hora) duplicada N veces en la grilla. Dos horarios distintos
-    # del mismo día se conservan; sólo se colapsa lo idéntico.
+    # Dedup por si el sitio vuelve a renderizar la misma card dos veces (el
+    # template anterior repetía el bloque de horarios y duplicaba funciones).
     seen: set[tuple] = set()
     deduped: list[Screening] = []
     for s in result:
@@ -3176,14 +3097,13 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
         seen.add(key)
         deduped.append(s)
 
-    # Diagnóstico explícito: sin esto un rediseño del sitio devuelve datos
-    # raros (o 0) y se confunde con "esta semana no hay funciones".
-    if descartadas_por_carrusel:
-        print(f"[cosmos: {descartadas_por_carrusel}/{len(ids)} detalles traían "
-              f"la peli destacada en vez de la propia — descartados]", end=" ")
-    if ids and not deduped:
-        print(f"[cosmos: {len(ids)} pelis en la home pero 0 funciones — "
+    # Diagnóstico explícito: sin esto un rediseño del sitio devuelve 0 (o datos
+    # raros) y se confunde con "esta semana no hay funciones".
+    if cards and not deduped:
+        print(f"[cosmos: {len(cards)} cards en la home pero 0 funciones — "
               f"revisar el markup]", end=" ")
+    elif proximamente:
+        print(f"[cosmos: {proximamente} anunciadas sin horario]", end=" ")
     return deduped
 
 
