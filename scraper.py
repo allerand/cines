@@ -108,7 +108,7 @@ _CF_CHALLENGE_RE = re.compile(
     re.IGNORECASE)
 
 
-def _scraper_proxy_url(target: str) -> Optional[str]:
+def _scraper_proxy_url(target: str, pais: str = "") -> Optional[str]:
     """Envuelve la URL objetivo en un servicio de scraping con IPs residenciales
     para saltear el bloqueo de Cloudflare a la IP del runner. Requiere el secret
     SCRAPER_KEY (o BORGES_SCRAPER_KEY, el nombre viejo: es el que está cargado en
@@ -116,6 +116,13 @@ def _scraper_proxy_url(target: str) -> Optional[str]:
     de ScraperAPI (ultra_premium = residencial + anti-Cloudflare); se puede
     cambiar de proveedor con SCRAPER_URL_TEMPLATE, p.ej. scrape.do:
         https://api.scrape.do/?token={key}&super=true&url={url}
+
+    `pais` pide que la IP sea de ese país (ISO-2). Los sitios del Estado suelen
+    bloquear por geografía además de por datacenter: palaciolibertad.gob.ar
+    contesta normal desde una conexión argentina y con 403 desde el runner, y el
+    proxy —que sale por EE.UU. por defecto— devolvía 502 al intentar bajarlo.
+    Cada proveedor lo pide con su propio parámetro; se agregan sólo si el
+    template no los trae ya, así un template propio sigue mandando.
     """
     key = os.environ.get("SCRAPER_KEY") or os.environ.get("BORGES_SCRAPER_KEY")
     if not key:
@@ -123,8 +130,16 @@ def _scraper_proxy_url(target: str) -> Optional[str]:
     tmpl = (os.environ.get("SCRAPER_URL_TEMPLATE")
             or os.environ.get("BORGES_SCRAPER_URL_TEMPLATE")
             or "https://api.scraperapi.com/?api_key={key}&ultra_premium=true&url={url}")
-    return tmpl.format(key=urllib.parse.quote(key, safe=""),
-                       url=urllib.parse.quote(target, safe=""))
+    proxy = tmpl.format(key=urllib.parse.quote(key, safe=""),
+                        url=urllib.parse.quote(target, safe=""))
+    if pais:
+        if "scraperapi" in proxy and "country_code=" not in proxy:
+            proxy += f"&country_code={pais}"
+        elif "scrape.do" in proxy and "geoCode=" not in proxy:
+            proxy += f"&geoCode={pais}"
+            if "super=" not in proxy:
+                proxy += "&super=true"   # scrape.do exige super para geo
+    return proxy
 
 
 def fetch_html_cf(url: str, contexto: str = "") -> Optional[BeautifulSoup]:
@@ -147,23 +162,27 @@ def fetch_html_cf(url: str, contexto: str = "") -> Optional[BeautifulSoup]:
 
     motivo = directo_err or "Cloudflare contestó el challenge («Just a moment…»)"
     etiqueta = contexto or url
-    proxy = _scraper_proxy_url(url)
-    if not proxy:
+    if not _scraper_proxy_url(url):
         print(f"  · ❌ [{etiqueta}] bloqueado: {motivo} "
               f"(configurá SCRAPER_KEY para un proxy residencial)")
         return None
-    # El servicio residencial suele tardar 60-90s en resolver el challenge:
-    # timeout amplio y un reintento (la 1ra pasada a veces falla sola).
+    # Dos pasadas por el proxy, no dos iguales: primero pidiendo IP argentina
+    # —el 502 del 16/8/2026 contra palaciolibertad.gob.ar salía de intentarlo
+    # desde EE.UU.— y después sin geo, que es lo que ya funcionaba para el
+    # Borges y lo único que anda si el plan del proveedor no incluye
+    # geotargeting a la Argentina. El servicio tarda 60-90s en resolver el
+    # challenge, así que el timeout va amplio.
     proxy_err: Optional[object] = None
-    for _ in range(2):
+    for pais in ("ar", ""):
+        proxy = _scraper_proxy_url(url, pais)
         try:
             txt = fetch_bytes(proxy, timeout=120, intentos=1).decode("utf-8", errors="replace")
         except Exception as e:
-            proxy_err = e
+            proxy_err = f"{e} (IP {pais or 'default'})"
             continue
         if not _CF_CHALLENGE_RE.search(txt[:4000]):
             return BeautifulSoup(txt, "html.parser")
-        proxy_err = "el proxy también recibió el challenge"
+        proxy_err = f"el proxy también recibió el challenge (IP {pais or 'default'})"
     print(f"  · ❌ [{etiqueta}] no se pudo traer "
           f"(directo: {motivo}; proxy: {proxy_err})")
     return None
