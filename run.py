@@ -18,6 +18,7 @@ import sys
 import threading
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 from playwright.async_api import async_playwright
 
@@ -580,8 +581,26 @@ async def run_scraper(semanas: int = 9) -> None:
             borges_now = sum(1 for s in screenings_out if s.get("cine") == BORGES_CINE)
             borges_failed = borges_now < 3  # sano trae ~15-20; 0-1 = falló
 
+            # De dónde saca los links CADA cine en la corrida de hoy. Sirve para
+            # no revivir funciones que dejó un scraper que ya no existe: cuando
+            # el sitio de un cine se muda (o cambia de ruta), sus funciones
+            # viejas apuntan a un host que el scraper de hoy ya no produce.
+            # Pasó con Cosmos: el sitio se mudó a cosmos.uba.ar y las 160
+            # funciones basura de la corrida anterior —una película con los
+            # horarios de todas las demás— volvían por acá, corrida tras
+            # corrida, encima de las 32 buenas. Sin este filtro, un día de data
+            # mala se vuelve inmortal hasta la medianoche: el scraper arreglado
+            # no alcanza para limpiarla.
+            def _host(s):
+                return urlparse(s.get("ticket_url") or "").netloc.lower()
+
+            hosts_hoy: dict = {}
+            for s in screenings_out:
+                hosts_hoy.setdefault(s.get("cine", ""), set()).add(_host(s))
+
             existing_keys = {_key(s) for s in screenings_out}
             restored_comm = restored_today = restored_borges = 0
+            descartadas_host = 0
             for s in prev_data.get("screenings", []):
                 f = s.get("fecha", "")
                 is_comm = any(s.get("cine", "").startswith(p) for p in COMMERCIAL_PREFIXES)
@@ -591,6 +610,12 @@ async def run_scraper(semanas: int = 9) -> None:
                         or (borges_failed and is_borges and f > today_str))
                 if not keep or _key(s) in existing_keys:
                     continue
+                # El cine trajo funciones hoy pero desde otro origen: la vieja
+                # es de un scraper anterior, no una que se cayó del listado.
+                hosts = hosts_hoy.get(s.get("cine", ""))
+                if hosts and _host(s) not in hosts:
+                    descartadas_host += 1
+                    continue
                 screenings_out.append(s)
                 existing_keys.add(_key(s))
                 if f == today_str:
@@ -599,6 +624,9 @@ async def run_scraper(semanas: int = 9) -> None:
                     restored_borges += 1
                 else:
                     restored_comm += 1
+            if descartadas_host:
+                print(f"  ↳ Merge: {descartadas_host} funciones viejas descartadas "
+                      f"(apuntaban a un sitio que su cine ya no usa)")
             if restored_comm or restored_today or restored_borges:
                 screenings_out.sort(key=sort_key)
                 print(f"  ↳ Merge: +{restored_comm} comerciales futuras, "
