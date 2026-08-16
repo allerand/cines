@@ -99,6 +99,76 @@ def fetch_html(url: str) -> BeautifulSoup:
     return BeautifulSoup(fetch_bytes(url).decode("utf-8", errors="replace"), "html.parser")
 
 
+# Cloudflare no siempre bloquea con un 403: el challenge ("Just a moment…")
+# viene con 200 y su propio HTML, así que un fetch "exitoso" puede no traer una
+# sola línea del sitio. Hay que mirar el cuerpo, no el status.
+_CF_CHALLENGE_RE = re.compile(
+    r"Just a moment|Performing security verification|challenge-platform|"
+    r"cf-browser-verification|__cf_chl|Enable JavaScript and cookies to continue",
+    re.IGNORECASE)
+
+
+def _scraper_proxy_url(target: str) -> Optional[str]:
+    """Envuelve la URL objetivo en un servicio de scraping con IPs residenciales
+    para saltear el bloqueo de Cloudflare a la IP del runner. Requiere el secret
+    SCRAPER_KEY (o BORGES_SCRAPER_KEY, el nombre viejo: es el que está cargado en
+    el repo, de cuando esto lo usaba sólo el Borges). Por defecto usa el formato
+    de ScraperAPI (ultra_premium = residencial + anti-Cloudflare); se puede
+    cambiar de proveedor con SCRAPER_URL_TEMPLATE, p.ej. scrape.do:
+        https://api.scrape.do/?token={key}&super=true&url={url}
+    """
+    key = os.environ.get("SCRAPER_KEY") or os.environ.get("BORGES_SCRAPER_KEY")
+    if not key:
+        return None
+    tmpl = (os.environ.get("SCRAPER_URL_TEMPLATE")
+            or os.environ.get("BORGES_SCRAPER_URL_TEMPLATE")
+            or "https://api.scraperapi.com/?api_key={key}&ultra_premium=true&url={url}")
+    return tmpl.format(key=urllib.parse.quote(key, safe=""),
+                       url=urllib.parse.quote(target, safe=""))
+
+
+def fetch_html_cf(url: str, contexto: str = "") -> Optional[BeautifulSoup]:
+    """fetch_html para los sitios que están detrás de Cloudflare.
+
+    Primero va directo (desde una IP argentina normal alcanza). Si el sitio
+    responde con error o con el challenge, reintenta por el servicio de scraping
+    residencial. Devuelve None cuando no hay forma: el scraper que llama corta y
+    el cine queda vacío, pero con un motivo impreso en el log en vez del cero
+    mudo que había antes.
+    """
+    html_txt = ""
+    directo_err: Optional[object] = None
+    try:
+        html_txt = fetch_bytes(url).decode("utf-8", errors="replace")
+    except Exception as e:
+        directo_err = e
+    if html_txt and not _CF_CHALLENGE_RE.search(html_txt[:4000]):
+        return BeautifulSoup(html_txt, "html.parser")
+
+    motivo = directo_err or "Cloudflare contestó el challenge («Just a moment…»)"
+    etiqueta = contexto or url
+    proxy = _scraper_proxy_url(url)
+    if not proxy:
+        print(f"  · ❌ [{etiqueta}] bloqueado: {motivo} "
+              f"(configurá SCRAPER_KEY para un proxy residencial)")
+        return None
+    # El servicio residencial suele tardar 60-90s en resolver el challenge:
+    # timeout amplio y un reintento (la 1ra pasada a veces falla sola).
+    proxy_err: Optional[object] = None
+    for _ in range(2):
+        try:
+            txt = fetch_bytes(proxy, timeout=120, intentos=1).decode("utf-8", errors="replace")
+        except Exception as e:
+            proxy_err = e
+            continue
+        if not _CF_CHALLENGE_RE.search(txt[:4000]):
+            return BeautifulSoup(txt, "html.parser")
+        proxy_err = "el proxy también recibió el challenge"
+    print(f"  · ❌ [{etiqueta}] no se pudo traer "
+          f"(directo: {motivo}; proxy: {proxy_err})")
+    return None
+
+
 async def load_page(page: Page, url: str, wait_ms: int = 2500) -> BeautifulSoup:
     await page.goto(url, wait_until="networkidle", timeout=30000)
     await page.wait_for_timeout(wait_ms)
@@ -2687,11 +2757,18 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
     Manejo especial para eventos con múltiples películas por horario:
     Ejemplo: "19 h: El castillo  Nancy"
     Se parsea como DOS películas separadas.
+
+    El 14/8/2026 palaciolibertad.gob.ar empezó a devolverle a la IP del runner
+    el challenge de Cloudflare (200 + "Just a moment…", el sitio entero: /cine/,
+    los events, el sitemap y el wp-json). Como el HTML del challenge no tiene
+    links /events/, el scraper no fallaba: devolvía [] y el cine desaparecía de
+    la cartelera sin un solo error en el log. Por eso ahora las dos bajadas van
+    por fetch_html_cf, que cae al proxy residencial —el mismo que ya usa el
+    Borges— cuando aparece el challenge.
     """
     BASE = "https://palaciolibertad.gob.ar"
-    try:
-        soup = fetch_html(f"{BASE}/cine/")
-    except Exception:
+    soup = fetch_html_cf(f"{BASE}/cine/", "CCK: la agenda de cine")
+    if soup is None:
         return []
 
     event_urls: list[str] = []
@@ -2712,9 +2789,8 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
     import html as _html
 
     for event_url in event_urls:
-        try:
-            ev_soup = fetch_html(event_url)
-        except Exception:
+        ev_soup = fetch_html_cf(event_url, f"CCK: {event_url}")
+        if ev_soup is None:
             continue
         h1 = ev_soup.find("h1")
         cycle_name = h1.get_text(strip=True) if h1 else ""
@@ -3638,29 +3714,12 @@ def _borges_http_json(url: str, browser_headers: bool = True, timeout: int = 45)
         return json.loads(r.read().decode("utf-8", errors="replace"))
 
 
-def _borges_proxy_url(target: str) -> Optional[str]:
-    """Envuelve la URL objetivo en un servicio de scraping con IPs residenciales
-    para saltear el bloqueo de Cloudflare a la IP del runner. Requiere el secret
-    BORGES_SCRAPER_KEY. Por defecto usa el formato de ScraperAPI (ultra_premium =
-    residencial + anti-Cloudflare); se puede cambiar de proveedor con
-    BORGES_SCRAPER_URL_TEMPLATE, p.ej. scrape.do:
-        https://api.scrape.do/?token={key}&super=true&url={url}
-    """
-    key = os.environ.get("BORGES_SCRAPER_KEY")
-    if not key:
-        return None
-    tmpl = (os.environ.get("BORGES_SCRAPER_URL_TEMPLATE")
-            or "https://api.scraperapi.com/?api_key={key}&ultra_premium=true&url={url}")
-    return tmpl.format(key=urllib.parse.quote(key, safe=""),
-                       url=urllib.parse.quote(target, safe=""))
-
-
 def fetch_borges_json(url: str, *, critical: bool = True,
                       context: str = "") -> Optional[dict | list]:
     """Trae un JSON de la API del Borges. Primero prueba directo (headers de
     navegador). Si Cloudflare bloquea la IP del runner, reintenta a través de un
     servicio de scraping con IPs residenciales — sólo si está configurado el
-    secret BORGES_SCRAPER_KEY. Si todo falla, devuelve None (Borges queda vacío
+    secret SCRAPER_KEY. Si todo falla, devuelve None (Borges queda vacío
     sin romper el resto del scrapeo).
 
     `critical` controla el logueo, no el comportamiento:
@@ -3673,11 +3732,11 @@ def fetch_borges_json(url: str, *, critical: bool = True,
     try:
         return _borges_http_json(url, browser_headers=True)
     except Exception as direct_err:
-        proxy = _borges_proxy_url(url)
+        proxy = _scraper_proxy_url(url)
         if not proxy:
             if critical:
                 print(f"  · ❌ [Borges] No se pudo traer {context or 'el recurso'}: "
-                      f"{direct_err} (configurá BORGES_SCRAPER_KEY para un proxy residencial)")
+                      f"{direct_err} (configurá SCRAPER_KEY para un proxy residencial)")
             return None
         # El servicio de scraping (residencial + anti-Cloudflare) suele tardar
         # 60-90s en resolver el challenge de CF: timeout amplio + un reintento
