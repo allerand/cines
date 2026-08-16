@@ -559,12 +559,14 @@
     "genre": "Drama, Comedia"
   },
   "calle málaga": {
-    "url": "",
-    "title_en": "Calle Málaga",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/calle-malaga/",
+    "title_en": "Calle Malaga",
+    "director": "Maryam Touzani",
+    "country": "Morocco, France",
+    "year": 2025,
+    "duration": 116,
+    "genre": "Drama",
+    "original_title": "Calle Málaga"
   },
   "los venerables todos": {
     "url": "https://letterboxd.com/film/los-venerables-todos/",
@@ -1591,15 +1593,13 @@
     "genre": "Documental"
   },
   "obsesión": {
-    "url": "https://letterboxd.com/film/ossessione/",
+    "url": "https://letterboxd.com/film/obsession-2025/",
     "title_en": "Obsession",
-    "director": "Luchino Visconti, Luchino Visconti’s",
-    "country": "Italy",
-    "year": 1943,
-    "duration": 140,
-    "genre": "Drama, Crimen",
-    "title_es": "Obsesión",
-    "original_title": "Ossessione"
+    "director": "Curry Barker",
+    "country": "USA, UK",
+    "year": 2025,
+    "duration": 109,
+    "genre": "Thriller, Terror"
   },
   "michael": {
     "url": "https://letterboxd.com/film/michael-2026/",
@@ -2531,12 +2531,15 @@
     "genre": "Comedia, Fantasía"
   },
   "el gran arco": {
-    "url": "",
-    "title_en": "El gran arco",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-great-arch-2025/",
+    "title_en": "The Great Arch",
+    "director": "Stéphane Demoustier",
+    "country": "France, Denmark",
+    "year": 2025,
+    "duration": 104,
+    "genre": "Drama, Historia",
+    "title_es": "El arquitecto",
+    "original_title": "L'Inconnu de la Grande Arche"
   },
   "ella y su hijo": {
     "url": "https://letterboxd.com/film/woman-and-child/",
@@ -2550,12 +2553,14 @@
     "original_title": "زن و بچه"
   },
   "alpha": {
-    "url": "",
+    "url": "https://letterboxd.com/film/alpha-2025/",
     "title_en": "Alpha",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Julia Ducournau",
+    "country": "France, Belgium",
+    "year": 2025,
+    "duration": 128,
+    "genre": "Terror, Ciencia ficción",
+    "original_title": "Alpha"
   },
   "la espera": {
     "url": "https://letterboxd.com/film/the-wait-2026/",
@@ -4884,13 +4889,15 @@
     "genre": "Fantasía, Drama"
   },
   "alphaville": {
-    "url": "",
+    "url": "https://letterboxd.com/film/alphaville/",
     "title_en": "Alphaville",
-    "director": "",
-    "country": "",
-    "year": 1999,
-    "duration": 101,
-    "genre": "Música"
+    "director": "Jean-Luc Godard",
+    "country": "France, Italy",
+    "year": 1965,
+    "duration": 99,
+    "genre": "Ciencia ficción, Misterio",
+    "title_es": "Alphaville",
+    "original_title": "Alphaville, une étrange aventure de Lemmy Caution"
   },
   "lo que mata": {
     "url": "https://letterboxd.com/film/the-things-you-kill/",
@@ -8808,12 +8815,14 @@
     "original_title": "Legend"
   },
   "weser": {
-    "url": "",
+    "url": "https://letterboxd.com/film/weser/",
     "title_en": "Weser",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Fernando Spiner",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 85,
+    "genre": "Drama, Documental",
+    "original_title": "Weser"
   },
   "perfume | una película sobre maria gabriela epumer|2026": {
     "url": "",
