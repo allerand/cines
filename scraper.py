@@ -1580,12 +1580,35 @@ _CACO_FESTIVALES = {
 
 _CACO_FESTIVAL_RE = re.compile(r"\s*[-–—|:]\s*(\d{1,2})\s*[°º]\s*([^\-–—|:]{2,40})\s*$")
 
+# Ciclos que el cine pega al final del título sin la palabra "Ciclo" y sin
+# ordinal, así que no los agarra ninguno de los patrones de arriba: las cuatro
+# funciones del DocBuenosAires entraron el 17/8/2026 como "Tu Rostro - Doc
+# Bsas" con la columna de ciclo vacía. La clave es el sufijo normalizado (sin
+# acentos ni espacios) porque el cine lo escribe distinto cada vez ("Doc Bsas",
+# "DOC BSAS"), y el valor es cómo tiene que salir en la web.
+#
+# El nombre canónico va escrito EXACTAMENTE igual que en Lugones, que programa
+# el mismo festival: si no coinciden carácter por carácter, la web los muestra
+# como dos ciclos distintos y las funciones quedan separadas.
+_CACO_CICLOS_PEGADOS = {
+    "docbsas": "DocBuenosAires",
+    "docbuenosaires": "DocBuenosAires",
+    "docba": "DocBuenosAires",
+}
+
+
+def _caco_sufijo_conocido(sufijo: str) -> str:
+    """Nombre canónico del ciclo si el sufijo es uno conocido, si no ''."""
+    clave = re.sub(r"[^a-z0-9]+", "", _sin_acentos(sufijo).lower())
+    return _CACO_CICLOS_PEGADOS.get(clave, "")
+
 
 def _caco_titulo_y_ciclo(title: str) -> tuple[str, str]:
     """Separa del título el ciclo o festival que Cacodelphia le pega al final.
 
         "EL ÁNGEL - CICLO LUIS ORTEGA"  → ("EL ÁNGEL", "Luis Ortega")
         "Amora Mora - 8° FINCA"         → ("Amora Mora", "Festival Internacional…")
+        "Tu Rostro - Doc Bsas"          → ("Tu Rostro", "DocBuenosAires")
 
     Dejar el sufijo adentro del título no sólo vacía la columna de ciclo:
     además rompe el enrichment. De las ocho películas del 8° FINCA que entraron
@@ -1604,8 +1627,20 @@ def _caco_titulo_y_ciclo(title: str) -> tuple[str, str]:
     m = _CACO_FESTIVAL_RE.search(title)
     if m:
         sigla = m.group(2).strip()
+        # Un festival conocido manda su nombre canónico aunque venga con
+        # ordinal ("40° DocBuenosAires"): así no se abre un ciclo nuevo por año.
         return (title[:m.start()].strip(),
-                _CACO_FESTIVALES.get(sigla.upper(), f"{m.group(1)}° {sigla}"))
+                _caco_sufijo_conocido(sigla)
+                or _CACO_FESTIVALES.get(sigla.upper(), f"{m.group(1)}° {sigla}"))
+
+    # Sufijo pelado, sin "Ciclo" ni ordinal. Sólo se corta si es un ciclo que
+    # conocemos: cortar cualquier cosa después de un guion se comería los
+    # subtítulos que son parte del nombre de la película.
+    m = re.search(r"\s*[-–—|:]\s*([^\-–—|:]{2,40})\s*$", title)
+    if m:
+        ciclo = _caco_sufijo_conocido(m.group(1))
+        if ciclo:
+            return title[:m.start()].strip(), ciclo
 
     return title, ""
 
