@@ -1,6 +1,18 @@
 {
   "_comment": "Escape de ÚLTIMO RECURSO para corregir metadata cuando el enrichment matchea la película equivocada y la automatización no alcanza. Normalmente NO debería hacer falta: el scraper infiere director/año de la fuente (p.ej. Cacodelphia los saca del título del trailer) y el enrichment valida contra esos hints. Si aun así una peli queda mal, agregá un entry acá. Matchea por 'title' (case-insensitive) + 'cine' opcional, y pisa los campos presentes: director, year, country, genre, duration, letterboxd, title_en, original_title. Poné \"\" para borrar un dato. Se aplica al final en run.py.",
   "overrides": [
+    { "_comment": "26° DocBuenosAires (18-23/8/2026). El Foco Tsai Ming-liang se reparte entre Lugones y Cacodelphia, y la ficha de Cacodelphia no publica director/país/año — sólo duración y sinopsis. Datos de la programación oficial (docbsas.com/2026/08/10/programacion-26-doc-buenosaires/); los slugs de Letterboxd verificados uno por uno." },
+    { "title": "Tu Rostro", "cine": "Cacodelphia", "director": "Tsai Ming-liang", "country": "Taiwán/Francia", "year": 2018, "genre": "Documental", "title_en": "Your Face", "letterboxd": "https://letterboxd.com/film/your-face-2018/" },
+    { "title": "Días", "cine": "Cacodelphia", "director": "Tsai Ming-liang", "country": "Taiwán/Francia", "year": 2020, "genre": "Documental", "title_en": "Days", "original_title": "日子", "letterboxd": "https://letterboxd.com/film/days-2020/" },
+    { "title": "La noche y los días de Miguel Burnier", "director": "João Dumans", "country": "Brasil", "year": 2026, "genre": "Documental", "title_en": "The Night and the Days of Miguel Burnier", "original_title": "A Noite e os Dias de Miguel Burnier", "letterboxd": "https://letterboxd.com/film/the-night-and-the-days-of-miguel-burnier/" },
+
+    { "_comment": "Todo parecía posible se da en las dos salas: sin 'cine' el entry las empareja a las dos. El país sale de la programación oficial (TMDb sólo listaba Puerto Rico)." },
+    { "title": "Todo parecía posible", "director": "Ramón Rivera Moret", "country": "Estados Unidos/Puerto Rico", "year": 2025, "genre": "Documental", "title_en": "Everything Seemed Possible", "original_title": "Todo parecía posible", "letterboxd": "https://letterboxd.com/film/todo-parecia-posible/" },
+
+    { "_comment": "Dos datos que el enrichment trajo mal y la programación oficial desmiente: el apellido de Mirian Martín y el guion del nombre de Tsai Ming-liang (las otras siete del foco lo tienen bien)." },
+    { "title": "Un río y una reina", "cine": "Sala Lugones", "director": "Mirian Martín", "title_en": "A River and a Queen", "original_title": "Un río y una reina", "letterboxd": "https://letterboxd.com/film/a-river-and-a-queen/" },
+    { "title": "Disciplina", "cine": "Sala Lugones", "letterboxd": "https://letterboxd.com/film/disciplina-1/" },
+    { "title": "El caminante", "cine": "Sala Lugones", "director": "Tsai Ming-liang" },
     { "title": "Hojas secas", "cine": "Sala Lugones", "director": "Alexandre Koberidze", "original_title": "Dry Leaf", "letterboxd": "https://letterboxd.com/film/dry-leaf/" },
 
     { "title": "El Ángel", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2018, "country": "Argentina", "genre": "Crimen, Drama", "duration": 115, "title_en": "El Angel", "original_title": "El Ángel", "letterboxd": "https://letterboxd.com/film/el-angel-2018/" },
