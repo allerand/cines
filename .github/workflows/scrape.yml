@@ -31,7 +31,12 @@ jobs:
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           # Servicio de scraping (IPs residenciales) para saltear el bloqueo de
-          # Cloudflare a Borges desde el runner (opcional).
+          # Cloudflare a la IP del runner (opcional). Lo usan Borges y, desde el
+          # 14/8/2026, también el CCK: palaciolibertad.gob.ar empezó a contestar
+          # el challenge de CF y el cine quedaba en 0 funciones.
+          # SCRAPER_KEY es el nombre nuevo; si no está, se usa BORGES_SCRAPER_KEY.
+          SCRAPER_KEY: ${{ secrets.SCRAPER_KEY }}
+          SCRAPER_URL_TEMPLATE: ${{ secrets.SCRAPER_URL_TEMPLATE }}
           BORGES_SCRAPER_KEY: ${{ secrets.BORGES_SCRAPER_KEY }}
           BORGES_SCRAPER_URL_TEMPLATE: ${{ secrets.BORGES_SCRAPER_URL_TEMPLATE }}
           # Cacodelphia sale del newsletter semanal que el cine manda por mail:

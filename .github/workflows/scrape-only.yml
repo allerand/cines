@@ -50,8 +50,12 @@ jobs:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
           # Servicio de scraping (IPs residenciales) para saltear el bloqueo de
-          # Cloudflare a Borges desde el runner. Opcional: si el secret no está,
-          # Borges intenta directo y, si falla, queda vacío sin romper nada.
+          # Cloudflare a la IP del runner. Lo usan Borges y, desde el 14/8/2026,
+          # el CCK. Opcional: si el secret no está, cada uno intenta directo y,
+          # si falla, queda vacío sin romper nada.
+          # SCRAPER_KEY es el nombre nuevo; si no está, se usa BORGES_SCRAPER_KEY.
+          SCRAPER_KEY: ${{ secrets.SCRAPER_KEY }}
+          SCRAPER_URL_TEMPLATE: ${{ secrets.SCRAPER_URL_TEMPLATE }}
           BORGES_SCRAPER_KEY: ${{ secrets.BORGES_SCRAPER_KEY }}
           BORGES_SCRAPER_URL_TEMPLATE: ${{ secrets.BORGES_SCRAPER_URL_TEMPLATE }}
           # Sin esto Cacodelphia pierde el newsletter y queda sólo con la SPA.
