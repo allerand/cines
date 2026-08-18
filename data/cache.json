@@ -5345,9 +5345,9 @@
     "country": "United Kingdom",
     "year": 1965,
     "duration": 105,
+    "genre": "Drama, Thriller",
     "title_es": "Repulsión",
-    "original_title": "Repulsion",
-    "genre": "Drama, Thriller"
+    "original_title": "Repulsion"
   },
   "belén": {
     "url": "https://letterboxd.com/film/belen-2025/",
@@ -12008,5 +12008,99 @@
     "genre": "Acción, Drama",
     "title_es": "La muerte de Robin Hood",
     "original_title": "The Death of Robin Hood"
+  },
+  "la noche del demonio 6": {
+    "url": "https://letterboxd.com/film/insidious-out-of-the-further/",
+    "title_en": "Insidious: Out of the Further",
+    "director": "Jacob Chase",
+    "country": "USA",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Terror, Thriller",
+    "title_es": "Insidious: Fuera del más allá",
+    "original_title": "Insidious: Out of the Further"
+  },
+  "tu corazón será destrozado": {
+    "url": "https://letterboxd.com/film/your-heart-will-be-broken/",
+    "title_en": "Your Heart Will Be Broken",
+    "director": "Mikhail Vaynberg",
+    "country": "Russia",
+    "year": 2026,
+    "duration": 134,
+    "genre": "Romance",
+    "title_es": "Tu corazón se romperá",
+    "original_title": "Твоё сердце будет разбито"
+  },
+  "kapanga: todoterreno": {
+    "url": "https://letterboxd.com/film/kapanga-todoterreno/",
+    "title_en": "Kapanga Todoterreno",
+    "director": "Pablo Parés, Paulo Soria, Hernán Sáez",
+    "country": "Argentina",
+    "year": 2009,
+    "duration": 75,
+    "genre": "Comedia, Música",
+    "original_title": "Kapanga Todoterreno"
+  },
+  "el amante": {
+    "url": "",
+    "title_en": "EL AMANTE",
+    "director": "Vicente Aranda",
+    "country": "Italy, Spain",
+    "year": 1993,
+    "duration": 105,
+    "genre": "Comedia, Drama",
+    "title_es": "El amante bilingüe",
+    "original_title": "El amante bilingüe"
+  },
+  "quiero llenarme de ti|1969": {
+    "url": "https://letterboxd.com/film/quiero-llenarme-de-ti/",
+    "title_en": "Quiero llenarme de ti",
+    "director": "Emilio Vieyra",
+    "country": "Argentina",
+    "year": 1969,
+    "duration": 92,
+    "genre": "Música, Romance",
+    "original_title": "Quiero llenarme de ti"
+  },
+  "la vida continúa|1969": {
+    "url": "https://letterboxd.com/film/la-vida-continua/",
+    "title_en": "La vida continúa",
+    "director": "Emilio Vieyra",
+    "country": "Argentina",
+    "year": 1969,
+    "duration": 94,
+    "genre": "Música",
+    "original_title": "La vida continúa"
+  },
+  "operación rosa rosa|1974": {
+    "url": "https://letterboxd.com/film/operacion-rosa-rosa/",
+    "title_en": "Operation Rosa Rosa",
+    "director": "Leo Fleider",
+    "country": "Argentina",
+    "year": 1974,
+    "duration": 105,
+    "genre": "Romance, Música",
+    "original_title": "Operación Rosa Rosa"
+  },
+  "gitano|1970": {
+    "url": "https://letterboxd.com/film/gitano/",
+    "title_en": "Gitano",
+    "director": "Emilio Vieyra",
+    "country": "Argentina",
+    "year": 1970,
+    "duration": 90,
+    "genre": "Drama",
+    "original_title": "Gitano"
+  },
+  "piazzolla, los años del tiburón": {
+    "url": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
+    "title_en": "Piazzolla: The Years of the Shark",
+    "director": "Daniel Rosenfeld",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 90,
+    "genre": "Documental",
+    "title_es": "Piazzolla, los años del tiburón",
+    "original_title": "Piazzolla: los años del tiburón"
   }
 }
