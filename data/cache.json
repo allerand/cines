@@ -11980,5 +11980,33 @@
     "genre": "Documental",
     "original_title": "Entre Luces Dibujo Tu Rostro",
     "title_es": "Tengo miedo de olvidar tu rostro"
+  },
+  "anderson matthew": {
+    "url": "",
+    "title_en": "Anderson Matthew",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el gran falsificador": {
+    "url": "https://letterboxd.com/film/the-money-maker-2025/",
+    "title_en": "The Money Maker",
+    "director": "Jean-Paul Salomé",
+    "country": "France, Belgium",
+    "year": 2025,
+    "duration": 128,
+    "genre": "Crimen, Historia"
+  },
+  "la muerte de robin hood": {
+    "url": "https://letterboxd.com/film/the-death-of-robin-hood/",
+    "title_en": "The Death of Robin Hood",
+    "director": "Michael Sarnoski",
+    "country": "USA",
+    "year": 2026,
+    "duration": 123,
+    "genre": "Acción, Drama",
+    "title_es": "La muerte de Robin Hood",
+    "original_title": "The Death of Robin Hood"
   }
 }
