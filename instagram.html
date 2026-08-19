@@ -182,6 +182,7 @@
   /* Colores de sala — espejo de index.html (la web es la fuente de verdad). */
   .cine-malba    { border-color: #2a3a4a; color: #6aaecc; }
   .cine-lugones  { border-color: #3a2a1a; color: #cc8844; }
+  .cine-soffici  { border-color: #1c2740; color: #5f8fe0; }
   .cine-cacode   { border-color: #1a2a1a; color: #66bb66; }
   .cine-lorca    { border-color: #1a1a30; color: #7a88cc; }
   .cine-york     { border-color: #2a2a1a; color: #bbbb44; }
@@ -299,6 +300,7 @@
       <option value="all">Todos</option>
       <option value="MALBA">MALBA</option>
       <option value="Sala Lugones">Lugones</option>
+      <option value="Sala Mario Soffici">Sala DAC</option>
       <option value="Cacodelphia">Cacodelphia</option>
       <option value="Cine Lorca">Lorca</option>
       <option value="Cine York">York</option>
@@ -412,6 +414,7 @@ function titleHtml(s) {
 function cineCssClass(cine) {
   if (cine === 'MALBA') return 'cine-malba';
   if (cine === 'Sala Lugones') return 'cine-lugones';
+  if (cine === 'Sala Mario Soffici') return 'cine-soffici';
   if (cine === 'Cacodelphia') return 'cine-cacode';
   if (cine === 'Cine Lorca') return 'cine-lorca';
   if (cine === 'Cine York') return 'cine-york';
