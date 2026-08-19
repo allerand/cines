@@ -531,6 +531,7 @@
     }
     .cine-malba    { border-color: #2a3a4a; color: #6aaecc; }
     .cine-lugones  { border-color: #3a2a1a; color: #cc8844; }
+    .cine-soffici  { border-color: #1c2740; color: #5f8fe0; }
     .cine-cacode   { border-color: #1a2a1a; color: #66bb66; }
     .cine-lorca    { border-color: #1a1a30; color: #7a88cc; }
     .cine-york     { border-color: #2a2a1a; color: #bbbb44; }
@@ -705,6 +706,7 @@
   <button class="filter-btn active" data-cine="all">Todos</button>
   <button class="filter-btn" data-cine="MALBA">MALBA</button>
   <button class="filter-btn" data-cine="Sala Lugones">Lugones</button>
+  <button class="filter-btn" data-cine="Sala Mario Soffici">Soffici (DAC)</button>
   <button class="filter-btn" data-cine="Cacodelphia">Cacodelphia</button>
   <button class="filter-btn" data-cine="Cine Lorca">Lorca</button>
   <button class="filter-btn" data-cine="Cine York">York</button>
@@ -759,6 +761,7 @@ const CINE_ADDRESSES = {
   'Hasta Trilce':             'Maza 177',
   'MALBA':                    'Av. Figueroa Alcorta 3415',
   'Sala Lugones':             'Av. Corrientes 1530',
+  'Sala Mario Soffici':       'Vera 559 (DAC)',
   'Cacodelphia':              'Av. Corrientes 1372',
   'Cine Lorca':               'Av. Corrientes 1428',
   'Cine York':                'Alberdi 895, Olivos',
@@ -1442,7 +1445,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';

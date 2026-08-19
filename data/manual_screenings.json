@@ -83,6 +83,26 @@
       "director": "Eduardo Mignogna", "year": 1998, "country": "Argentina", "duration": 50,
       "ciclo": "Lorca a 90 años de su muerte",
       "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/agosto-en-el-museo-del-cine-0"
+    },
+
+    {
+      "_ciclo": "26° DocBuenosAires — tercera sede: la Sala Mario Soffici de DAC (Vera 559). De las tres salas del festival, dos ya entran solas (Lugones vía el Complejo Teatral, Cacodelphia vía su propio sitio) y la de DAC no: DAC no publica cartelera propia y el scraper del festival no existe, así que sus funciones no aparecían en ningún lado. Acá va el programa de DIVEDCO del miércoles 19 (15.00hs), tal como lo publicó el festival. Si aparecen más funciones en Soffici, se agregan acá abajo con el mismo formato.",
+      "cine": "Sala Mario Soffici", "title": "El puente", "fecha": "2026-08-19", "hora": "15:00",
+      "director": "Amílcar Tirado", "year": 1951, "country": "Puerto Rico", "duration": 50,
+      "original_title": "El puente",
+      "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
+    },
+    {
+      "cine": "Sala Mario Soffici", "title": "Las manos del hombre", "fecha": "2026-08-19", "hora": "15:00",
+      "director": "Jack Delano", "year": 1952, "country": "Puerto Rico", "duration": 25,
+      "original_title": "Las manos del hombre",
+      "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
+    },
+    {
+      "cine": "Sala Mario Soffici", "title": "Ignacio", "fecha": "2026-08-19", "hora": "15:00",
+      "director": "Ángel F. Rivera", "year": 1956, "country": "Puerto Rico", "duration": 34,
+      "original_title": "Ignacio",
+      "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
     }
   ],
 
