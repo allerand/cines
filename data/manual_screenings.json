@@ -86,7 +86,7 @@
     },
 
     {
-      "_ciclo": "26° DocBuenosAires — tercera sede: la Sala Mario Soffici de DAC (Vera 559). De las tres salas del festival, dos ya entran solas (Lugones vía el Complejo Teatral, Cacodelphia vía su propio sitio) y la de DAC no: DAC no publica cartelera propia y el scraper del festival no existe, así que sus funciones no aparecían en ningún lado. Acá va el programa de DIVEDCO del miércoles 19 (15.00hs), tal como lo publicó el festival. Si aparecen más funciones en Soffici, se agregan acá abajo con el mismo formato.",
+      "_ciclo": "26° DocBuenosAires — tercera sede: la Sala Mario Soffici de DAC (Vera 559). De las tres salas del festival, dos ya entran solas (Lugones vía el Complejo Teatral, Cacodelphia vía su propio sitio) y la de DAC no: DAC no publica cartelera propia y el scraper del festival no existe, así que sus funciones no aparecían en ningún lado. Va la grilla COMPLETA de la sala, del programa de mano oficial (DBA_Programa.pdf): miércoles 19, jueves 20 y viernes 21, siempre a las 15.00hs. Sábado 22 y domingo 23 no hay funciones en Soffici. Quedan afuera los dos diálogos de las 10.30 (jueves y viernes) porque no son proyecciones.",
       "cine": "Sala Mario Soffici", "title": "El puente", "fecha": "2026-08-19", "hora": "15:00",
       "director": "Amílcar Tirado", "year": 1951, "country": "Puerto Rico", "duration": 50,
       "original_title": "El puente",
@@ -102,6 +102,32 @@
       "cine": "Sala Mario Soffici", "title": "Ignacio", "fecha": "2026-08-19", "hora": "15:00",
       "director": "Ángel F. Rivera", "year": 1956, "country": "Puerto Rico", "duration": 34,
       "original_title": "Ignacio",
+      "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
+    },
+    {
+      "_ciclo": "Jueves 20 — sigue el foco DIVEDCO. El programa escribe 'Benji Doniger'; acá va Benjamín Doniger, que es como figura en Letterboxd (y el hint de apellido matchea igual).",
+      "cine": "Sala Mario Soffici", "title": "Cuando los padres olvidan", "fecha": "2026-08-20", "hora": "15:00",
+      "director": "Amílcar Tirado", "year": 1957, "country": "Puerto Rico", "duration": 50,
+      "original_title": "Cuando los padres olvidan",
+      "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
+    },
+    {
+      "cine": "Sala Mario Soffici", "title": "Una voz en la montaña", "fecha": "2026-08-20", "hora": "15:00",
+      "director": "Amílcar Tirado", "year": 1952, "country": "Puerto Rico", "duration": 31,
+      "original_title": "Una voz en la montaña",
+      "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
+    },
+    {
+      "cine": "Sala Mario Soffici", "title": "Modesta", "fecha": "2026-08-20", "hora": "15:00",
+      "director": "Benjamín Doniger", "year": 1956, "country": "Puerto Rico", "duration": 37,
+      "original_title": "Modesta",
+      "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
+    },
+    {
+      "_ciclo": "Viernes 21 — única función de la sala que no es del foco DIVEDCO: es del Premio a la Trayectoria a Alejandro Fernández Mouján.",
+      "cine": "Sala Mario Soffici", "title": "Las Palmas, Chaco", "fecha": "2026-08-21", "hora": "15:00",
+      "director": "Alejandro Fernández Mouján", "year": 2002, "country": "Argentina", "duration": 105,
+      "original_title": "Las Palmas, Chaco",
       "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
     }
   ],
