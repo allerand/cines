@@ -10393,8 +10393,9 @@
     "title_en": "JUAN GABRIEL: MI PRIMER BELLAS ARTES",
     "director": "María José Cuevas, Benjamin H. Stavillo",
     "country": "",
-    "year": null,
+    "year": 2026,
     "duration": 102,
+    "genre": "Música",
     "original_title": "Juan Gabriel: Mi Primer Bellas Artes"
   },
   "m (2026) - función distendida": {
@@ -11954,7 +11955,7 @@
   },
   "la noche y los días de miguel burnier": {
     "url": "",
-    "title_en": "La noche y los días de Miguel Burnier",
+    "title_en": "LA NOCHE Y LOS DÍAS DE MIGUEL BURNIER",
     "director": "",
     "country": "",
     "year": null,
@@ -12102,5 +12103,167 @@
     "genre": "Documental",
     "title_es": "Piazzolla, los años del tiburón",
     "original_title": "Piazzolla: los años del tiburón"
+  },
+  "no matar|2026": {
+    "url": "https://letterboxd.com/film/no-matar/",
+    "title_en": "Not to Kill",
+    "director": "Juan Villegas",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 225,
+    "genre": "",
+    "original_title": "No matar"
+  },
+  "el puente|1951": {
+    "url": "https://letterboxd.com/film/el-puente-1951/",
+    "title_en": "El puente",
+    "director": "Amílcar Tirado",
+    "country": "Puerto Rico",
+    "year": 1951,
+    "duration": 51,
+    "genre": "Documental, Drama",
+    "original_title": "El puente"
+  },
+  "las manos del hombre|1952": {
+    "url": "https://letterboxd.com/film/las-manos-del-hombre/",
+    "title_en": "Las manos del hombre",
+    "director": "Jack Delano",
+    "country": "Puerto Rico",
+    "year": 1952,
+    "duration": 25,
+    "genre": "Documental",
+    "original_title": "Las manos del hombre"
+  },
+  "ignacio|1956": {
+    "url": "https://letterboxd.com/film/ignacio/",
+    "title_en": "Ignacio",
+    "director": "Ángel F. Rivera",
+    "country": "Puerto Rico",
+    "year": 1956,
+    "duration": 35,
+    "genre": "Drama",
+    "original_title": "Ignacio"
+  },
+  "cuando los padres olvidan|1957": {
+    "url": "",
+    "title_en": "Cuando los padres olvidan",
+    "director": "Amílcar Tirado",
+    "country": "Puerto Rico",
+    "year": 1957,
+    "duration": 49,
+    "genre": "Drama",
+    "original_title": "Cuando los padres olvidan"
+  },
+  "una voz en la montaña|1952": {
+    "url": "https://letterboxd.com/film/una-voz-en-la-montana/",
+    "title_en": "A Voice on the Mountain",
+    "director": "Amílcar Tirado",
+    "country": "Puerto Rico",
+    "year": 1952,
+    "duration": 31,
+    "genre": "Documental, Drama",
+    "original_title": "Una voz en la montaña"
+  },
+  "modesta|1956": {
+    "url": "https://letterboxd.com/film/modesta/",
+    "title_en": "Modesta",
+    "director": "Benjamín Doniger",
+    "country": "Puerto Rico",
+    "year": 1956,
+    "duration": 35,
+    "genre": "Drama",
+    "original_title": "Modesta"
+  },
+  "las palmas, chaco|2002": {
+    "url": "https://letterboxd.com/film/las-palmas-chaco/",
+    "title_en": "Las Palmas, Chaco",
+    "director": "Alejandro Fernández Mouján",
+    "country": "Argentina",
+    "year": 2002,
+    "duration": 105,
+    "genre": "Documental",
+    "original_title": "Las Palmas, Chaco"
+  },
+  "los rusos|2025": {
+    "url": "https://letterboxd.com/film/los-rusos/",
+    "title_en": "Los rusos",
+    "director": "Mirko Stopar",
+    "country": "",
+    "year": 2026,
+    "duration": 56,
+    "genre": "Documental",
+    "original_title": "Los rusos"
+  },
+  "ahí donde no estás": {
+    "url": "https://letterboxd.com/film/ahi-donde-no-estas/",
+    "title_en": "Ahí donde no estás",
+    "director": "Laura Chiabrando",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": null,
+    "genre": "Drama",
+    "original_title": "Ahí donde no estás"
+  },
+  "canelones": {
+    "url": "",
+    "title_en": "Canelones",
+    "director": "Christian Basilis, Ana Laura Gussoni",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 91,
+    "genre": "Comedia, Thriller",
+    "original_title": "Canelones"
+  },
+  "guerra de verano": {
+    "url": "",
+    "title_en": "Guerra de Verano",
+    "director": "Alicia Scherson",
+    "country": "Chile, Uruguay",
+    "year": 2026,
+    "duration": 104,
+    "genre": "Misterio, Drama",
+    "original_title": "Guerra de verano"
+  },
+  "p3nd3jo5": {
+    "url": "https://letterboxd.com/film/p3nd3jo5/",
+    "title_en": "P3nd3jo5",
+    "director": "Raúl Perrone",
+    "country": "Argentina",
+    "year": 2013,
+    "duration": 157,
+    "genre": "Thriller, Romance",
+    "original_title": "P3nd3jo5"
+  },
+  "un trago de infierno": {
+    "url": "https://letterboxd.com/film/un-trago-de-infierno/",
+    "title_en": "A Sip of Hell",
+    "director": "Pilar Boyle, Mariano Asseff",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 90,
+    "genre": "Terror, Fantasía",
+    "original_title": "Un Trago de Infierno"
+  },
+  "repulsion": {
+    "url": "",
+    "title_en": "REPULSION",
+    "director": "Roman Polanski",
+    "country": "United Kingdom",
+    "year": 1965,
+    "duration": 105,
+    "genre": "Drama, Thriller",
+    "title_es": "Repulsión",
+    "original_title": "Repulsion"
+  },
+  "destino de un capricho|1972": {
+    "url": "https://letterboxd.com/film/destino-de-un-capricho/",
+    "title_en": "Destino de un capricho",
+    "director": "Leo Fleider",
+    "country": "Argentina",
+    "year": 1972,
+    "duration": 94,
+    "genre": "Drama, Comedia",
+    "title_es": "Destino de un capricho",
+    "original_title": "Destino de un capricho"
   }
 }
