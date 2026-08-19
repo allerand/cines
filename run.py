@@ -635,6 +635,24 @@ async def run_scraper(semanas: int = 9) -> None:
         except Exception as e:
             print(f"  ↳ Merge omitido: {e}")
 
+    # Una misma película no se da dos veces en la misma sala a la misma hora: si
+    # aparece repetida es que dos fuentes trajeron la misma función. Pasa cuando
+    # una función manual reemplaza a una scrapeada (manual_screenings.json) y el
+    # cine después corrige su propio listado: la regla de `descartar` deja de
+    # matchear y quedan las dos. Nos quedamos con la primera, que es la manual —
+    # scrape_manual corre antes que todos los scrapers.
+    vistas: set[tuple] = set()
+    unicas = []
+    for s in screenings_out:
+        k = (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
+        if k in vistas:
+            continue
+        vistas.add(k)
+        unicas.append(s)
+    if len(unicas) != len(screenings_out):
+        print(f"  ↳ {len(screenings_out) - len(unicas)} funciones duplicadas descartadas")
+        screenings_out = unicas
+
     output = {
         "updated": datetime.now().isoformat(timespec="seconds"),
         "screenings": screenings_out,

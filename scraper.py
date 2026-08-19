@@ -863,8 +863,14 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], list[dict]
     #   A las 15 y 21 horas
     #   A las 20.30 horas
     #   A las 15:30 horas
+    #   A las 20.30 hs. / hs / h      ← la página los mezcla y antes no matcheaban
+    #
+    # Que una cabecera NO matchee no deja la función afuera: las películas que
+    # venían abajo se le suman al bloque horario ANTERIOR, o sea que aparecen en
+    # cartelera con el horario de otra función. Por eso conviene ser generoso acá.
     hour_re = re.compile(
-        r"A las (\d{1,2})(?:[.:](\d{2}))?(?:\s+y\s+(\d{1,2})(?:[.:](\d{2}))?)?\s+horas?",
+        r"A las (\d{1,2})(?:[.:](\d{2}))?(?:\s+y\s+(\d{1,2})(?:[.:](\d{2}))?)?"
+        r"\s*(?:horas?|hs\.?|h)\b",
         re.IGNORECASE,
     )
     # Cabecera del bloque-peli: TITLE en su propia línea, luego (paren con meta).
