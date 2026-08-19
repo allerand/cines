@@ -37,9 +37,18 @@ jobs:
           cache: 'pip'
 
       - name: Install dependencies
+        # Ver el comentario en scrape.yml: apt puede colgarse adentro de
+        # `playwright install --with-deps` y comerse el timeout del job.
+        timeout-minutes: 20
         run: |
           pip install -r requirements.txt
-          playwright install --with-deps chromium
+          ok=0
+          for i in 1 2 3; do
+            if timeout 300 playwright install --with-deps chromium; then ok=1; break; fi
+            echo "::warning::playwright install se colgó o falló (intento $i/3)"
+            sleep 15
+          done
+          [ "$ok" = 1 ] || { echo "::error::playwright install falló 3 veces"; exit 1; }
 
       - name: Compute Monday's date
         id: monday

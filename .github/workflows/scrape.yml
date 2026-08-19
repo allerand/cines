@@ -23,9 +23,22 @@ jobs:
           python-version: '3.11'
           cache: 'pip'
       - name: Install dependencies
+        # `playwright install --with-deps` corre apt-get adentro, y el 19/8/2026
+        # apt se colgó bajando los índices de Ubuntu: el paso quedó una hora
+        # sin imprimir nada hasta comerse el timeout del job entero. Resultado:
+        # ese día no hubo scrape, ni stories generadas, ni post en Instagram.
+        # Con timeout por intento + reintentos, un mirror colgado cuesta
+        # minutos y no el día.
+        timeout-minutes: 20
         run: |
           pip install -r requirements.txt
-          playwright install --with-deps chromium
+          ok=0
+          for i in 1 2 3; do
+            if timeout 300 playwright install --with-deps chromium; then ok=1; break; fi
+            echo "::warning::playwright install se colgó o falló (intento $i/3)"
+            sleep 15
+          done
+          [ "$ok" = 1 ] || { echo "::error::playwright install falló 3 veces"; exit 1; }
 
       - name: Run scraper
         env:
