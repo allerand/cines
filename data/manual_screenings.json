@@ -129,6 +129,28 @@
       "director": "Alejandro Fernández Mouján", "year": 2002, "country": "Argentina", "duration": 105,
       "original_title": "Las Palmas, Chaco",
       "ciclo": "DocBuenosAires", "ticket_url": "https://docbsas.com/2026/08/10/programacion-26-doc-buenosaires/"
+    },
+
+    {
+      "_ciclo": "Cierre del DocBuenosAires en el Lugones (domingo 23). El listado del CTBA junta las dos funciones de la tarde en un solo horario: dejaba las cuatro películas a las 15.00 y 17.30, con 193' de programa arrancando a las 17.30. El programa de mano las reparte en dos: 14.30 y 20.30. Manda el PDF, así que las cuatro se descartan del scrape (por cine + fecha + HORA vieja) y vuelven acá con el horario bueno.",
+      "cine": "Sala Lugones", "title": "Pequeños poemas en prosa", "fecha": "2026-08-23", "hora": "14:30",
+      "director": "Radu Jude, Andrei Rus", "year": 2025, "country": "Rumania", "duration": 35,
+      "ciclo": "DocBuenosAires", "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/7adc1ec9-75eb-4bf4-bc0c-2fa5508433a5"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Los rusos", "fecha": "2026-08-23", "hora": "14:30",
+      "director": "Mirko Stopar", "year": 2025, "country": "Noruega, Argentina", "duration": 57,
+      "ciclo": "DocBuenosAires", "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/7adc1ec9-75eb-4bf4-bc0c-2fa5508433a5"
+    },
+    {
+      "cine": "Sala Lugones", "title": "La felicidad", "fecha": "2026-08-23", "hora": "20:30",
+      "director": "Paz Encina", "year": 2025, "country": "Paraguay", "duration": 18,
+      "ciclo": "DocBuenosAires", "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/7adc1ec9-75eb-4bf4-bc0c-2fa5508433a5"
+    },
+    {
+      "cine": "Sala Lugones", "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar", "fecha": "2026-08-23", "hora": "20:30",
+      "director": "Deimer Quintero Vertel", "year": 2026, "country": "Colombia", "duration": 92,
+      "ciclo": "DocBuenosAires", "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/7adc1ec9-75eb-4bf4-bc0c-2fa5508433a5"
     }
   ],
 
@@ -136,6 +158,19 @@
     {
       "_por_que": "Programa doble metido en un solo título, con las fichas técnicas de las dos películas pegadas. Se reemplaza por las dos funciones de arriba.",
       "cine": "Museo del Cine", "fecha": "2026-08-15", "title_contiene": "La barraca: Lorca por los caminos de España de Edgardo Cozarinsky"
+    },
+    {
+      "_por_que": "Las cuatro del cierre del DocBuenosAires con el horario del CTBA, que junta las dos funciones de la tarde. Vuelven arriba a las 14.30 y 20.30, que es como las programa el festival. La `hora` acá NO es opcional: descartar_manual corre sobre todas las funciones, también las manuales, y estas tienen el mismo título — sin la hora vieja la regla se comería la buena y no quedaría ninguna.",
+      "cine": "Sala Lugones", "fecha": "2026-08-23", "hora": "15:00", "title_contiene": "Pequeños poemas en prosa"
+    },
+    {
+      "cine": "Sala Lugones", "fecha": "2026-08-23", "hora": "15:00", "title_contiene": "Los rusos"
+    },
+    {
+      "cine": "Sala Lugones", "fecha": "2026-08-23", "hora": "17:30", "title_contiene": "La felicidad"
+    },
+    {
+      "cine": "Sala Lugones", "fecha": "2026-08-23", "hora": "17:30", "title_contiene": "El hogar fue sepultado"
     },
     {
       "_por_que": "El scraper del Recoleta ve el festival como UNA actividad. Los seis cortos van arriba como funciones propias, así que la entrada paraguas sobra y además no tiene Letterboxd posible. Sin `fecha`: el CCR publicó mal el día y si lo corrigen, la paraguas hay que sacarla igual.",
