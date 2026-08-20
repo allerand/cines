@@ -11797,7 +11797,7 @@
   },
   "mi vecino totoro": {
     "url": "",
-    "title_en": "Mi Vecino Totoro",
+    "title_en": "Mi vecino Totoro",
     "director": "Hayao Miyazaki",
     "country": "Japan",
     "year": 1988,
@@ -12305,5 +12305,34 @@
     "genre": "Romance, Comedia",
     "title_es": "Mi tío de América",
     "original_title": "Mon oncle d'Amérique"
+  },
+  "pmmm la pelicula parte 1": {
+    "url": "",
+    "title_en": "PMMM LA PELICULA PARTE 1",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "terminator 2: el juicio final": {
+    "url": "",
+    "title_en": "TERMINATOR 2: EL JUICIO FINAL",
+    "director": "James Cameron",
+    "country": "France, United States of America",
+    "year": 1991,
+    "duration": 137,
+    "genre": "Acción, Thriller",
+    "title_es": "Terminator 2: El juicio final",
+    "original_title": "Terminator 2: Judgment Day"
+  },
+  "la noche sin mí": {
+    "url": "https://letterboxd.com/film/the-night-without-me/",
+    "title_en": "The Night Without Me",
+    "director": "María Laura Berch, Laura Chiabrando",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 68,
+    "genre": "Drama",
+    "original_title": "La noche sin mí"
   }
 }
