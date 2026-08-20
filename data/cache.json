@@ -810,12 +810,13 @@
     "genre": "Música, Documental"
   },
   "sin aliento": {
-    "url": "",
-    "title_en": "Sin aliento",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/breathless/",
+    "title_en": "Breathless",
+    "director": "Jean-Luc Godard",
+    "country": "France",
+    "year": 1960,
+    "duration": 90,
+    "genre": "Romance, Crimen"
   },
   "las catadoras del führer": {
     "url": "https://letterboxd.com/film/the-tasters/",
@@ -3239,12 +3240,13 @@
     "genre": "Drama"
   },
   "la ceremonia": {
-    "url": "",
-    "title_en": "La ceremonia",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/la-ceremonie/",
+    "title_en": "La Cérémonie",
+    "director": "Claude Chabrol",
+    "country": "France, Germany",
+    "year": 1995,
+    "duration": 112,
+    "genre": "Thriller, Drama"
   },
   "caravanas en los andes: una mirada etnoarqueológica": {
     "url": "",
@@ -7265,10 +7267,13 @@
   "las trillizas de belleville": {
     "url": "",
     "title_en": "Las trillizas de Belleville",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Sylvain Chomet",
+    "country": "France, Belgium",
+    "year": 2003,
+    "duration": 80,
+    "genre": "Animación, Comedia",
+    "title_es": "Bienvenidos a Belleville",
+    "original_title": "Les Triplettes de Belleville"
   },
   "up, una aventura de altura": {
     "url": "https://letterboxd.com/film/up/",
@@ -11737,12 +11742,13 @@
     "original_title": "Qué será del verano"
   },
   "la contracción de la espera": {
-    "url": "",
-    "title_en": "LA CONTRACCIÓN DE LA ESPERA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/fiora/",
+    "title_en": "Fiora",
+    "director": "Martina Juncadella, Martín Vilela",
+    "country": "Argentina",
+    "year": 2017,
+    "duration": 17,
+    "genre": ""
   },
   "smof 2026": {
     "url": "",
@@ -11843,76 +11849,99 @@
     "duration": null
   },
   "adiós a los niños": {
-    "url": "",
-    "title_en": "Adiós a los niños",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/au-revoir-les-enfants/",
+    "title_en": "Au Revoir les Enfants",
+    "director": "Louis Malle",
+    "country": "Germany, France",
+    "year": 1987,
+    "duration": 105,
+    "genre": "Drama, Bélica",
+    "title_es": "Adiós, muchachos",
+    "original_title": "Au revoir les enfants"
   },
   "azur y asmar": {
-    "url": "",
-    "title_en": "Azur y Asmar",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/azur-asmar-the-princes-quest/",
+    "title_en": "Azur & Asmar: The Princes' Quest",
+    "director": "Michel Ocelot",
+    "country": "Belgium, France",
+    "year": 2006,
+    "duration": 99,
+    "genre": "Familiar, Animación",
+    "title_es": "Azur y Asmar",
+    "original_title": "Azur et Asmar"
   },
   "césar y rosalie": {
-    "url": "",
-    "title_en": "César y Rosalie",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/cesar-and-rosalie/",
+    "title_en": "Cesar and Rosalie",
+    "director": "Claude Sautet",
+    "country": "France, Germany",
+    "year": 1972,
+    "duration": 110,
+    "genre": "Romance, Drama",
+    "title_es": "Ella, yo y el otro",
+    "original_title": "César et Rosalie"
   },
   "el odio": {
-    "url": "",
-    "title_en": "El odio",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/la-haine/",
+    "title_en": "La Haine",
+    "director": "Mathieu Kassovitz",
+    "country": "France",
+    "year": 1995,
+    "duration": 98,
+    "genre": "Drama"
   },
   "el planeta salvaje": {
-    "url": "",
-    "title_en": "El planeta salvaje",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/fantastic-planet/",
+    "title_en": "Fantastic Planet",
+    "director": "René Laloux",
+    "country": "Czechoslovakia, France",
+    "year": 1973,
+    "duration": 72,
+    "genre": "Animación, Ciencia ficción",
+    "title_es": "El planeta salvaje",
+    "original_title": "La Planète sauvage"
   },
   "la jetée": {
-    "url": "",
+    "url": "https://letterboxd.com/film/la-jetee/",
     "title_en": "La Jetée",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Chris Marker",
+    "country": "France",
+    "year": 1962,
+    "duration": 29,
+    "genre": "Romance, Ciencia ficción",
+    "title_es": "La jetée",
+    "original_title": "La Jetée"
   },
   "sin sol": {
-    "url": "",
-    "title_en": "Sin sol",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/sans-soleil/",
+    "title_en": "Sans Soleil",
+    "director": "Chris Marker",
+    "country": "France",
+    "year": 1983,
+    "duration": 100,
+    "genre": "Documental"
   },
   "los amos del tiempo": {
-    "url": "",
-    "title_en": "Los amos del tiempo",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/time-masters/",
+    "title_en": "Time Masters",
+    "director": "René Laloux",
+    "country": "France, Germany",
+    "year": 1982,
+    "duration": 80,
+    "genre": "Animación, Ciencia ficción",
+    "title_es": "Los amos del tiempo",
+    "original_title": "Les maîtres du temps"
   },
   "los coristas": {
-    "url": "",
-    "title_en": "Los coristas",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-chorus/",
+    "title_en": "The Chorus",
+    "director": "Christophe Barratier",
+    "country": "France, Switzerland",
+    "year": 2004,
+    "duration": 97,
+    "genre": "Drama, Música",
+    "title_es": "Los chicos del coro",
+    "original_title": "Les Choristes"
   },
   "tío de américa": {
     "url": "",
@@ -12145,8 +12174,8 @@
     "original_title": "Ignacio"
   },
   "cuando los padres olvidan|1957": {
-    "url": "",
-    "title_en": "Cuando los padres olvidan",
+    "url": "https://letterboxd.com/film/when-fathers-forget/",
+    "title_en": "When Fathers Forget",
     "director": "Amílcar Tirado",
     "country": "Puerto Rico",
     "year": 1957,
@@ -12265,5 +12294,16 @@
     "genre": "Drama, Comedia",
     "title_es": "Destino de un capricho",
     "original_title": "Destino de un capricho"
+  },
+  "mi tío de américa": {
+    "url": "https://letterboxd.com/film/my-american-uncle/",
+    "title_en": "My American Uncle",
+    "director": "Alain Resnais",
+    "country": "France",
+    "year": 1980,
+    "duration": 126,
+    "genre": "Romance, Comedia",
+    "title_es": "Mi tío de América",
+    "original_title": "Mon oncle d'Amérique"
   }
 }
