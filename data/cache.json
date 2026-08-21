@@ -9675,12 +9675,13 @@
     "original_title": "A metros de distancia"
   },
   "raptus": {
-    "url": "",
-    "title_en": "Raptus",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/double-cross-1951/",
+    "title_en": "Double Cross",
+    "director": "Riccardo Freda",
+    "country": "Italy",
+    "year": 1951,
+    "duration": 95,
+    "genre": "Drama"
   },
   "el espectro": {
     "url": "https://letterboxd.com/film/the-mysterious-rider-1948/",
@@ -12316,7 +12317,7 @@
   },
   "terminator 2: el juicio final": {
     "url": "",
-    "title_en": "TERMINATOR 2: EL JUICIO FINAL",
+    "title_en": "Terminator 2: El Juicio Final",
     "director": "James Cameron",
     "country": "France, United States of America",
     "year": 1991,
@@ -12334,5 +12335,16 @@
     "duration": 68,
     "genre": "Drama",
     "original_title": "La noche sin mí"
+  },
+  "la noche del demonio: están entre nosotros": {
+    "url": "https://letterboxd.com/film/insidious-out-of-the-further/",
+    "title_en": "Insidious: Out of the Further",
+    "director": "Jacob Chase",
+    "country": "USA",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Terror, Thriller",
+    "title_es": "Insidious: Fuera del más allá",
+    "original_title": "Insidious: Out of the Further"
   }
 }
