@@ -319,6 +319,14 @@ def git_snapshots(n_days: int = 14) -> dict[str, Counter]:
 # Sondas en vivo
 # --------------------------------------------------------------------------
 
+# Una sonda que no pudo medir no dice lo mismo según por qué falló, y la
+# diferencia decide a dónde mandar al que lee el informe: si la fuente nos
+# cerró la puerta (403 de Cloudflare, 401, 429) el scraper puede estar
+# perfecto y no hay parser que arreglar; si el que falló fuimos nosotros
+# (timeout, DNS) no se puede concluir nada. El prefijo marca cuál es cuál.
+_RECHAZO = "rechazo:"
+
+
 def probe(cine: str, url: str, pattern: str) -> tuple[str, int | None, str]:
     """(cine, cantidad de ítems publicados, detalle). None = no se pudo medir."""
     try:
@@ -326,7 +334,10 @@ def probe(cine: str, url: str, pattern: str) -> tuple[str, int | None, str]:
         with urllib.request.urlopen(req, timeout=30) as r:
             body = r.read().decode("utf-8", errors="replace")
     except urllib.error.HTTPError as e:
-        return cine, None, f"HTTP {e.code}"
+        # 401/403/429 son la fuente diciendo "vos no": el mismo bloqueo que se
+        # come el scraper. 5xx es la fuente caída, que tampoco es culpa nuestra.
+        marca = _RECHAZO if e.code in (401, 403, 405, 406, 429) or e.code >= 500 else ""
+        return cine, None, f"{marca}HTTP {e.code}"
     except Exception as e:
         return cine, None, f"{type(e).__name__}"
 
@@ -434,6 +445,46 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
         for c in universo
     } if snaps else {}
 
+    # La mediana contesta "cuánto trae habitualmente", que es lo que hay que
+    # decir en el mensaje, pero no sirve para decidir SI avisar: en cuanto un
+    # cine lleva más de media ventana caído, su propia mediana es 0 y el cine
+    # desaparece del informe. Es el peor modo de falla posible para esto —
+    # cuanto más tiempo lleva roto, más silencioso—, y ya pasó: el Museo del
+    # Cine llevaba ocho días en cero sin que ningún informe lo nombrara.
+    # Así que decidir si avisar y describir cuánto traía pasan a ser dos
+    # cuentas distintas, y ninguna de las dos puede salir de la mediana cruda.
+    #
+    # Cuánto traía: la mediana de los días en que trajo ALGO. El máximo sería
+    # lo obvio, pero un solo día de datos basura lo secuestra —Cosmos llegó a
+    # publicar 843 funciones el día que una película se llevaba los horarios de
+    # todas las demás— y un informe que dice "traía hasta 843 por día" no se
+    # cree. Salteando los ceros, la mediana describe el cine cuando anda.
+    #
+    # Cuándo avisar: lo que separa un cine roto de uno que no programó es el
+    # volumen que mueve cuando anda, no la forma del hueco. Una sala que trae
+    # quince funciones por día no se queda en cero porque sí; el CEA, que trae
+    # tres, entra y sale del cero todo el tiempo y avisar por cada hueco
+    # entrena a ignorar el informe.
+    #
+    # Se probó calibrar la racha contra la peor racha previa de ese mismo cine
+    # y sale mal justo en el caso que importa: un cine que se rompió, se
+    # arregló y se volvió a romper lleva su propia caída anterior en la
+    # ventana, así que "oscila" y el aviso se degrada. Le pasó al CCK.
+    ALTA_FRECUENCIA = 5      # funciones/día a partir de las cuales un cero es raro
+    RACHA_CHICA = 3          # días en cero que hacen mirar hasta a una sala chica
+    dias = sorted(snaps, reverse=True)
+    habitual, racha_cero = {}, {}
+    for c in universo:
+        vals = [snaps[d].get(c, 0) for d in dias]
+        con_funciones = [v for v in vals if v]
+        habitual[c] = median(con_funciones) if con_funciones else 0
+        n = 0
+        for v in vals:
+            if v:
+                break
+            n += 1
+        racha_cero[c] = n
+
     flojos = []
     for cine in sorted(universo, key=lambda c: -len(fut.get(c, []))):
         ss = fut.get(cine, [])
@@ -445,15 +496,37 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
         rancio = False
 
         if n == 0:
-            if probe_n:
-                rep.accionar(cine, f"no tiene ninguna función en la web, pero la "
-                                   f"fuente publica {probe_n} {probe_detail}. El "
-                                   f"scraper se rompió.")
-            elif base:
-                rep.accionar(cine, f"se quedó sin funciones (venía de unas "
-                                   f"{base:.0f} por día). Revisá su scraper.")
-            # Si la fuente tampoco publica nada, el cine simplemente no
-            # programó: no es un hallazgo, es la realidad.
+            racha, hab = racha_cero.get(cine, 0), habitual.get(cine, 0)
+            desde = (f"lleva {racha} día{'s' if racha != 1 else ''} sin ninguna "
+                     f"función" if racha else "no tiene ninguna función")
+            venia = f" (traía ~{hab:.0f} por día)" if hab else ""
+
+            if probe_detail.startswith(_RECHAZO):
+                # La fuente nos rechaza a nosotros igual que rechaza al
+                # scraper. Decir "revisá su scraper" acá manda a reescribir un
+                # parser que puede estar intacto: lo que falta es poder entrar
+                # (proxy residencial vivo, o una IP que el sitio acepte).
+                rep.accionar(cine, f"{desde}{venia}, y la fuente tampoco nos deja "
+                                   f"sondearla ({probe_detail[len(_RECHAZO):]}). "
+                                   f"No es el parser: es acceso al sitio — revisá "
+                                   f"que el proxy de scraping siga vivo.")
+            elif probe_n:
+                rep.accionar(cine, f"{desde}{venia}, pero la fuente publica "
+                                   f"{probe_n} {probe_detail}. El scraper se rompió.")
+            elif probe_n == 0:
+                # Medimos la fuente y no publica nada: el cine no programó. Es
+                # la realidad, no un hallazgo.
+                pass
+            elif not hab:
+                # Nunca trajo nada en la ventana: no hay con qué comparar.
+                pass
+            elif hab >= ALTA_FRECUENCIA or racha >= RACHA_CHICA:
+                rep.accionar(cine, f"{desde}{venia}. Revisá su scraper.")
+            else:
+                # Está en cero, pero dentro de lo que este cine hace normalmente.
+                # Va al informe igual —en cero está—, sin gritar.
+                rep.cronicar(f"**{cine}** {desde}{venia}; entra y sale del cero "
+                             f"seguido, puede que no haya programado.")
             continue
 
         if es_comercial and titulos < COMMERCIAL_MIN_TITLES:
