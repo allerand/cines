@@ -12439,5 +12439,91 @@
     "duration": 64,
     "genre": "Documental",
     "original_title": "Introducción a la catástrofe"
+  },
+  "queen: live in budapest": {
+    "url": "",
+    "title_en": "QUEEN: LIVE IN BUDAPEST",
+    "director": "János Zsombolyai",
+    "country": "Hungary, United Kingdom",
+    "year": 2012,
+    "duration": 91,
+    "genre": "Música",
+    "title_es": "Queen: El concierto de Budapest",
+    "original_title": "Varázslat - A Queen Budapesten"
+  },
+  "coyote vs acme": {
+    "url": "https://letterboxd.com/film/coyote-vs-acme/",
+    "title_en": "Coyote vs. Acme",
+    "director": "Dave Green",
+    "country": "USA",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Aventura, Familiar",
+    "title_es": "Coyote vs. Acme",
+    "original_title": "Coyote vs. Acme"
+  },
+  "la guerra de los últimos": {
+    "url": "https://letterboxd.com/film/the-dog-stars/",
+    "title_en": "The Dog Stars",
+    "director": "Ridley Scott",
+    "country": "USA",
+    "year": 2026,
+    "duration": 119,
+    "genre": "Ciencia ficción, Thriller",
+    "title_es": "La constelación del perro",
+    "original_title": "The Dog Stars"
+  },
+  "sólo por una noche": {
+    "url": "https://letterboxd.com/film/one-night-only-2026/",
+    "title_en": "One Night Only",
+    "director": "Will Gluck",
+    "country": "USA",
+    "year": 2026,
+    "duration": 102,
+    "genre": "Comedia, Romance",
+    "title_es": "Una noche al año",
+    "original_title": "One Night Only"
+  },
+  "impacto mortal": {
+    "url": "https://letterboxd.com/film/deep-water-2026/",
+    "title_en": "Deep Water",
+    "director": "Renny Harlin",
+    "country": "USA, Spain",
+    "year": 2026,
+    "duration": 107,
+    "genre": "Thriller, Terror",
+    "title_es": "En mar abierto",
+    "original_title": "Deep Water"
+  },
+  "la guerra de los ultimos": {
+    "url": "https://letterboxd.com/film/the-dog-stars/",
+    "title_en": "The Dog Stars",
+    "director": "Ridley Scott",
+    "country": "USA",
+    "year": 2026,
+    "duration": 119,
+    "genre": "Ciencia ficción, Thriller",
+    "title_es": "La constelación del perro",
+    "original_title": "The Dog Stars"
+  },
+  "solo por una noche": {
+    "url": "https://letterboxd.com/film/one-night-only-2026/",
+    "title_en": "One Night Only",
+    "director": "Will Gluck",
+    "country": "USA",
+    "year": 2026,
+    "duration": 102,
+    "genre": "Comedia, Romance",
+    "title_es": "Una noche al año",
+    "original_title": "One Night Only"
+  },
+  "tierra de crimen": {
+    "url": "https://letterboxd.com/film/reedland/",
+    "title_en": "Reedland",
+    "director": "Sven Bresser",
+    "country": "Netherlands, Belgium",
+    "year": 2025,
+    "duration": 105,
+    "genre": "Drama"
   }
 }
