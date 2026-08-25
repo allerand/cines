@@ -182,6 +182,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     except Exception as e:
         print(f"error — {e}")
 
+    print("🎬 Scrapeando CEA...", end=" ", flush=True)
+    try:
+        r = scrape_cea(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
     print("🎬 Scrapeando Archivo General de la Nación...", end=" ", flush=True)
     try:
         r = scrape_agn(semanas)
@@ -271,7 +279,6 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         salas_playwright = [
             ("Sala Lugones", lambda p: scrape_lugones(p)),
             ("Cacodelphia",  lambda p: scrape_cacodelphia(p)),
-            ("CEA",          lambda p: scrape_cea(p)),
         ]
         if sin_proxy:
             print("🎬 Scrapeando Centro Cultural Borges... salteado (--sin-proxy)")

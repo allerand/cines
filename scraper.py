@@ -4659,9 +4659,32 @@ def scrape_amorina() -> list[Screening]:
 
 # ---------------------------------------------------------------------------
 # CEA — Centro de Experimentación Audiovisual (Avellaneda)
-# cea.mda.gob.ar — sitio rediseñado (scroll/SPA). Parseamos el texto renderizado
-# (vía playwright) en vez de clases CSS, que el sitio renombra seguido.
-# Cada función: día → "Weekday Mes" → título → "Director · Año".
+# ---------------------------------------------------------------------------
+# cea.mda.gob.ar sirve la programación en el HTML, sin JS: cada función es una
+# card con TODO adentro —día, mes, hora, ciclo, título, director, año y el link
+# al formulario de reserva— y los campos vienen marcados con `data-field`:
+#
+#   <div class="film-col">
+#     <div class="fc-date-badge">27</div>
+#     <div class="fc-weekday">Jueves Agosto · 19hs</div>
+#     <div class="fc-cycle">CICLO SANDRO · Ídolo popular argentino</div>
+#     <div class="fc-title" data-field="titulo">Tú me<br>enloqueces</div>
+#     <div class="fc-dir"   data-field="dirAnio">Sandro · 1976 · Español</div>
+#     <a class="fc-cta"     data-field="formUrl" href="https://forms.gle/…">
+#
+# Hasta agosto de 2026 esto se bajaba con playwright, esperando a que
+# "hidratara" el SPA, scrolleando ocho veces y parseando el innerText a fuerza
+# de regex. De ahí salieron ocho arreglos en tres meses: en el runner la
+# hidratación tarda más que en casa, el innerText volvía vacío, el parser no
+# encontraba nada y el cine desaparecía de la cartelera sin que fallara ninguna
+# corrida. Nada de eso hacía falta: la página nunca necesitó un navegador.
+#
+# Se lee por `data-field` antes que por clase, que es lo que el sitio renombra
+# cuando lo rediseñan (van dos veces desde mayo). Y se ignora todo lo que
+# cuelgue de un bloque oculto: la home arrastra ocho `.hidden-temp` con
+# `display:none`, uno de ellos el cronograma de julio entero. Un parser que
+# mire el HTML sin filtrar eso publica la programación del mes pasado —el
+# innerText no lo veía, y por eso el bug nunca apareció antes.
 # ---------------------------------------------------------------------------
 
 _CEA_MONTHS = {
@@ -4676,113 +4699,6 @@ _CEA_DIR_YEAR_RE = re.compile(r"^(.+?)\s+·\s+((?:19|20)\d{2})\b")
 
 def _cea_norm(s: str) -> str:
     return re.sub(r"[^a-z0-9]+", " ", (s or "").translate(_CEA_ACCENTS).lower()).strip()
-
-
-def _parse_cea_text(text: str, today: date, cutoff: date) -> list[dict]:
-    """Parsea SÓLO las cards de la sección "Programación" de cea.mda.gob.ar —
-    las funciones con entrada reservable. Cada card tiene la forma:
-        <día>            (número solo)
-        <Día> <Mes>      (día de semana completo + mes, ej. "Sábado Julio")
-        Ciclo · <ciclo>
-        <título>
-        <Director> · <Año>
-        …  Reservar entrada
-    La programación tentativa de más abajo ("Próximamente" / "Vacaciones") NO
-    se toma porque todavía no tiene entradas. Devuelve dicts
-    {fecha, title, director, year, hora, ciclo}.
-    """
-    my = re.search(r"\b(" + "|".join(_CEA_MONTHS) + r")\s+(20\d{2})", text, re.IGNORECASE)
-    base_year = int(my.group(2)) if my else today.year
-
-    # Horario del ciclo (arriba: "DESDE 18:00 HS · COLÓN 1133 · AVELLANEDA").
-    # El innerText llega en MAYÚSCULAS porque el sitio las aplica por CSS y
-    # innerText refleja lo renderizado: sin IGNORECASE el "HS" no matcheaba y
-    # todas las funciones salían con la hora por defecto en vez de la real.
-    default_hora = "19:00"
-    hm = re.search(r"(\d{1,2}):(\d{2})\s*hs", text, re.IGNORECASE)
-    if hm:
-        default_hora = f"{int(hm.group(1)):02d}:{hm.group(2)}"
-
-    wd_month = re.compile(rf"^({_CEA_WD_FULL})\s+(" + "|".join(_CEA_MONTHS) + r")$", re.IGNORECASE)
-    lines = [re.sub(r"\s+", " ", l).strip() for l in text.splitlines()]
-    n = len(lines)
-
-    out: list[dict] = []
-    seen: set[tuple] = set()
-    for i, ln in enumerate(lines):
-        if not re.fullmatch(r"\d{1,2}", ln):
-            continue
-        day = int(ln)
-        # La línea siguiente no vacía debe ser "DíaSemana Mes" (card de arriba).
-        j = i + 1
-        while j < n and not lines[j]:
-            j += 1
-        if j >= n:
-            continue
-        m = wd_month.match(lines[j])
-        if not m:
-            continue
-        month = _CEA_MONTHS[m.group(2).lower()]
-
-        # Título / director / año / ciclo dentro de la card. El bloque va desde
-        # la línea del día hasta "Director · Año", que lo cierra.
-        #
-        # El TÍTULO es la ÚLTIMA línea antes de ese cierre; lo que viene antes
-        # es el copete del ciclo. Antes se asumía que el copete empezaba con
-        # "Ciclo · " y se tomaba la primera línea como título: cuando el CEA
-        # cambió el copete a "AVELLANEDA FILMA · Presencia de Diego Lerman"
-        # el copete pasó a publicarse COMO título. Tomarlo por posición y no
-        # por el prefijo aguanta el próximo rediseño.
-        director = ""
-        film_year: Optional[int] = None
-        rows: list[str] = []
-        k = j + 1
-        while k < n and k < j + 10:
-            row = lines[k]
-            if not row:
-                k += 1
-                continue
-            dm = _CEA_DIR_YEAR_RE.match(row)
-            if dm:
-                director, film_year = dm.group(1).strip(), int(dm.group(2))
-                break
-            if re.fullmatch(r"\d{1,2}", row):
-                break
-            rows.append(row)
-            k += 1
-
-        title = rows[-1] if rows else ""
-        # Ciclo = primer segmento del copete, tanto en el formato viejo
-        # ("Ciclo · Radar CEA") como en el nuevo ("RADAR CEA · Clásico
-        # restaurado"). _fix_caps en run.py se encarga de las mayúsculas.
-        ciclo = ""
-        if len(rows) > 1:
-            eyebrow = rows[0]
-            cm = re.match(r"ciclo\s*·\s*(.+)$", eyebrow, re.IGNORECASE)
-            ciclo = (cm.group(1) if cm else eyebrow).split("·")[0].strip()
-
-        # Requerimos "Director · Año": es lo que distingue una card real de
-        # arriba de las listas de programación tentativa de más abajo.
-        if not (title and director):
-            continue
-        try:
-            d = date(base_year, month, day)
-        except ValueError:
-            continue
-        if d < today - timedelta(days=30):
-            try:
-                d = date(base_year + 1, month, day)
-            except ValueError:
-                continue
-        if not (today <= d <= cutoff):
-            continue
-        key = (d.isoformat(), _cea_norm(title))
-        if key in seen:
-            continue
-        seen.add(key)
-        out.append({"fecha": d.isoformat(), "title": title, "director": director,
-                    "year": film_year, "hora": default_hora, "ciclo": ciclo})
-    return out
 
 
 def _parse_cea_form_blob(blob: str) -> dict:
@@ -4816,70 +4732,145 @@ def _cea_form_meta(url: str) -> dict:
     return _parse_cea_form_blob(" · ".join(chunks))
 
 
-async def scrape_cea(page: Page) -> list[Screening]:
-    """Scrapea cea.mda.gob.ar (rediseño scroll/SPA) vía playwright + parser de
-    texto. El horario exacto de cada función se toma del Google Form de reserva
-    (la home lista los horarios del ciclo juntos, sin mapearlos por función)."""
+CEA_URL = "https://cea.mda.gob.ar/"
+
+# La fecha no tiene `data-field`: se arma con el número grande de la card y el
+# renglón de abajo ("Jueves Agosto · 19hs"), que trae mes y hora.
+_CEA_CUANDO_RE = re.compile(
+    rf"({_CEA_WD_FULL})\s+(" + "|".join(_CEA_MONTHS) + r")"
+    r"(?:\s*·\s*(\d{1,2})(?::(\d{2}))?\s*h)?",
+    re.IGNORECASE)
+
+
+def _cea_oculto(nodo) -> bool:
+    """True si el nodo cuelga de un bloque que la página no muestra.
+
+    La home arrastra secciones viejas con `.hidden-temp`
+    (`display:none !important`), entre ellas el cronograma de julio completo.
+    """
+    for n in [nodo, *nodo.parents]:
+        clases = n.get("class") or [] if hasattr(n, "get") else []
+        if "hidden-temp" in clases:
+            return True
+        if hasattr(n, "has_attr") and n.has_attr("hidden"):
+            return True
+        estilo = (n.get("style") or "").replace(" ", "").lower() if hasattr(n, "get") else ""
+        if "display:none" in estilo or "visibility:hidden" in estilo:
+            return True
+    return False
+
+
+def _cea_campo(card, campo: str, clase: str) -> str:
+    """Texto de un campo de la card: primero por `data-field`, que es lo que
+    sobrevive a los rediseños, y si no está, por la clase."""
+    el = card.select_one(f'[data-field="{campo}"]') or card.select_one(clase)
+    return re.sub(r"\s+", " ", el.get_text(" ", strip=True)) if el else ""
+
+
+def scrape_cea(semanas: int = 9) -> list[Screening]:
+    """Scrapea las funciones del CEA desde el HTML de la home (sin navegador)."""
     try:
-        await page.goto("https://cea.mda.gob.ar/", wait_until="domcontentloaded", timeout=30000)
-        # El sitio es un SPA. Esperar un tiempo fijo alcanzaba en local pero no
-        # en el runner de GH Actions, donde la hidratación tarda más: el
-        # innerText volvía casi vacío, el parser no encontraba nada y el cine
-        # desaparecía de la web sin que fallara ninguna corrida. Esperamos a que
-        # aparezca una card de verdad en vez de contar segundos.
-        try:
-            await page.wait_for_function(
-                "() => /reservar\\s+entrada/i.test(document.body.innerText)",
-                timeout=25000)
-        except Exception:
-            pass
-        # Sólo necesitamos las cards de arriba (las reservables) + los links a
-        # los formularios de reserva; un scroll moderado alcanza.
-        for _ in range(8):
-            await page.mouse.wheel(0, 1500)
-            await page.wait_for_timeout(400)
-        text = await page.evaluate("document.body.innerText")
-        if len(text or "") < 400:
-            print(f"[cea: la página rindió {len(text or '')} caracteres — no hidrató]",
-                  end=" ", flush=True)
-        form_links = await page.eval_on_selector_all(
-            'a[href*="docs.google.com/forms"], a[href*="forms.gle"]',
-            "els => els.map(e => e.href)",
-        )
-        # Fallback: en el SPA los links a veces no son <a> simples (botones con
-        # JS). Buscamos las URLs de formularios en el HTML renderizado completo.
-        html = await page.content()
-        form_links = list(form_links or []) + re.findall(
-            r'https://(?:docs\.google\.com/forms/[^\s"\'<>\\]+|forms\.gle/[^\s"\'<>\\]+)', html
-        )
-    except Exception:
+        soup = fetch_html(CEA_URL)
+    except Exception as e:
+        print(f"[cea: no se pudo bajar la home — {e}]", end=" ", flush=True)
         return []
 
+    # El ancla es el campo del título, no la clase del contenedor: si mañana
+    # `.film-col` pasa a llamarse otra cosa, esto sigue encontrando las cards.
+    cards = []
+    for t in soup.select('[data-field="titulo"]'):
+        card = t.find_parent(class_="film-col") or t.parent.parent
+        if card is not None and card not in cards:
+            cards.append(card)
+    if not cards:
+        cards = soup.select(".film-col")
+    visibles = [c for c in cards if not _cea_oculto(c)]
+
     today = date.today()
-    cutoff = today + timedelta(days=60)
-
-    # Horario exacto por función: leemos cada Google Form de reserva (dedup) y
-    # lo asociamos a la función por fecha (cada función es un día distinto).
-    form_by_date: dict[tuple[int, int], dict] = {}
-    for url in dict.fromkeys(form_links or []):
-        meta = _cea_form_meta(url)
-        if "day" in meta and "month" in meta:
-            form_by_date[(meta["month"], meta["day"])] = {"hora": meta.get("hora"), "url": url}
-
+    cutoff = today + timedelta(weeks=semanas)
     result: list[Screening] = []
-    for ev in _parse_cea_text(text, today, cutoff):
-        _, mo, d = (int(x) for x in ev["fecha"].split("-"))
-        form = form_by_date.get((mo, d), {})
+    vistas: set[tuple] = set()
+
+    for card in visibles:
+        texto = re.sub(r"\s+", " ", card.get_text(" ", strip=True))
+        m = _CEA_CUANDO_RE.search(texto)
+        if not m:
+            continue
+        month = _CEA_MONTHS[m.group(2).lower()]
+
+        badge = card.select_one(".fc-date-badge")
+        dia = badge.get_text(strip=True) if badge else ""
+        if not dia.isdigit():
+            # Sin el número grande: el primer 1-2 dígitos suelto de la card,
+            # que es el mismo que muestra el badge.
+            dm = re.search(r"\b(\d{1,2})\b", texto)
+            if not dm:
+                continue
+            dia = dm.group(1)
+
+        # El año no está en ningún lado: es el que deja la fecha cerca de hoy
+        # (en diciembre, "enero" es del año que viene).
+        try:
+            d = date(today.year, month, int(dia))
+        except ValueError:
+            continue
+        if d < today - timedelta(days=45):
+            try:
+                d = date(today.year + 1, month, int(dia))
+            except ValueError:
+                continue
+        if not (today <= d <= cutoff):
+            continue
+
+        titulo = _cea_campo(card, "titulo", ".fc-title")
+        if not titulo:
+            continue
+
+        hora = f"{int(m.group(3)):02d}:{int(m.group(4) or 0):02d}" if m.group(3) else ""
+
+        a = card.select_one('a[data-field="formUrl"][href]') or card.select_one("a.fc-cta[href]")
+        form_url = a["href"] if a else ""
+
+        if not hora and form_url:
+            # Sin hora en la card, la busca el formulario de reserva, que la
+            # tiene en el título ("… jueves 27/8 19hs").
+            hora = (_cea_form_meta(form_url) or {}).get("hora") or ""
+        if not hora:
+            # Publicar una función sin horario es peor que no publicarla: se
+            # ordena mal en la grilla y manda a la gente a una hora inventada.
+            print(f"[cea: '{titulo[:30]}' sin horario — salteada]", end=" ", flush=True)
+            continue
+
+        director = year = ""
+        dm = _CEA_DIR_YEAR_RE.match(_cea_campo(card, "dirAnio", ".fc-dir"))
+        if dm:
+            director, year = dm.group(1).strip(), int(dm.group(2))
+
+        ciclo = _cea_campo(card, "ciclo", ".fc-cycle").split("·")[0].strip()
+        if ciclo.isupper():
+            ciclo = ciclo.title()      # "CICLO SANDRO" → "Ciclo Sandro"
+
+        clave = (d.isoformat(), _cea_norm(titulo))
+        if clave in vistas:
+            continue
+        vistas.add(clave)
         result.append(Screening(
             cine="CEA",
-            title=ev["title"],
-            fecha=ev["fecha"],
-            hora=form.get("hora") or ev["hora"],
-            ticket_url=form.get("url") or "https://cea.mda.gob.ar/",
-            director=ev["director"],
-            year=ev["year"],
-            ciclo=ev.get("ciclo", ""),
+            title=titulo,
+            fecha=d.isoformat(),
+            hora=hora,
+            ticket_url=form_url or CEA_URL,
+            director=director,
+            year=year or None,
+            ciclo=ciclo,
         ))
+
+    if visibles and not result:
+        # El caso que hacía desaparecer al cine sin ruido: la página carga pero
+        # el markup cambió. Que quede en el log del scrape, no sólo en la
+        # auditoría del día siguiente.
+        print(f"[cea: {len(visibles)} cards en la home pero 0 funciones — revisar el markup]",
+              end=" ", flush=True)
     return result
 
 

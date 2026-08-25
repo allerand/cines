@@ -73,13 +73,14 @@ PROBES = {
     "Casa del Bicentenario":    ("https://casadelbicentenario.cultura.gob.ar/actividades/",
                                  r"/actividad/[a-z0-9\-]+"),
     "Amorina":                  ("https://www.amorina.club/schedule.json", "@amorina"),
+    "CEA":                      ("https://cea.mda.gob.ar/", "@cea"),
     "Archivo General de la Nación": ("https://www.argentina.gob.ar/interior/"
                                      "archivo-general-de-la-nacion/"
                                      "cine-en-el-archivo-general-de-la-nacion",
                                      "@agn"),
 }
 # Sin sonda a propósito: Cosmos (no responde a un GET pelado), Filo y Arthaus
-# (listado renderizado por JS), Lugones / Borges / CEA (SPA o Cloudflare),
+# (listado renderizado por JS), Lugones / Borges (SPA o Cloudflare),
 # Cacodelphia (su fuente es el newsletter que llega por mail, no una URL que se
 # pueda sondear) y los comerciales (IMDb + La Nación, sin listing estable). Una
 # sonda que siempre devuelve 0 es peor que ninguna: dispara falsas alarmas.
@@ -362,6 +363,17 @@ def probe(cine: str, url: str, pattern: str) -> tuple[str, int | None, str]:
             if d >= date.today():
                 n += 1
         return cine, n, "funciones futuras en la landing"
+
+    if pattern == "@cea":
+        # Cada función del CEA es una card con data-field="titulo". Se
+        # descuentan las que cuelgan de un bloque .hidden-temp: la home
+        # arrastra secciones viejas con display:none —el cronograma de julio,
+        # sin ir más lejos— y contarlas daría funciones que la página no
+        # muestra. Es la misma regla que aplica el scraper.
+        limpio = re.sub(r'<[^>]*class="[^"]*hidden-temp[^"]*"[^>]*>.*?</div>', " ",
+                        body, flags=re.DOTALL | re.IGNORECASE)
+        n = len(re.findall(r'data-field="titulo"', limpio)) or len(re.findall(r'class="[^"]*film-col', limpio))
+        return cine, n, "funciones anunciadas en la home"
 
     return cine, len(set(re.findall(pattern, body))), "ítems en la listing"
 
