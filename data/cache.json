@@ -12525,5 +12525,24 @@
     "year": 2025,
     "duration": 105,
     "genre": "Drama"
+  },
+  "avengers: endgame (re estreno)": {
+    "url": "",
+    "title_en": "Avengers: Endgame (re Estreno)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "michael: la historia de michael jackson": {
+    "url": "",
+    "title_en": "Michael: La Historia De Michael Jackson",
+    "director": "Sonia Anderson",
+    "country": "Canada, United States of America",
+    "year": 2009,
+    "duration": 50,
+    "genre": "Documental",
+    "title_es": "La historia de Michael Jackson",
+    "original_title": "The Michael Jackson Story"
   }
 }
