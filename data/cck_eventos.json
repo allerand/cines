@@ -1,0 +1,116 @@
+{
+  "https://palaciolibertad.gob.ar/events/retrospectiva-matias-pineiro/": {
+    "ts": "2026-08-25T09:54:35",
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "Isabella",
+        "fecha": "2026-08-29",
+        "hora": "16:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectiva-matias-pineiro/",
+        "ciclo": "Retrospectiva: Matías Piñeiro",
+        "director": "Matías Piñeiro",
+        "country": "",
+        "year": 2020,
+        "duration": 80,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Prefacio + Tú me abrasas",
+        "fecha": "2026-08-29",
+        "hora": "18:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectiva-matias-pineiro/",
+        "ciclo": "Retrospectiva: Matías Piñeiro",
+        "director": "Matías Piñeiro",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-cecilia-kang-hernan-rosselli/": {
+    "ts": "2026-08-25T09:54:37",
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "Algo nuevo, algo viejo, algo prestado",
+        "fecha": "2026-08-29",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-cecilia-kang-hernan-rosselli/",
+        "ciclo": "Miradas contemporáneas:Cecilia Kang / Hernán Rosselli",
+        "director": "Hernán Rosselli",
+        "country": "",
+        "year": 2024,
+        "duration": 103,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/": {
+    "ts": "2026-08-25T09:54:37",
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "Borges/Santiago: Variaciones sobre un guion",
+        "fecha": "2026-08-28",
+        "hora": "16:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/",
+        "ciclo": "Borges y el cine",
+        "director": "Alejo Moguillansky",
+        "country": "",
+        "year": 2008,
+        "duration": 76,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Los otros",
+        "fecha": "2026-08-28",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/",
+        "ciclo": "Borges y el cine",
+        "director": "Hugo Santiago",
+        "country": "",
+        "year": 1974,
+        "duration": 127,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Los otros",
+        "fecha": "2026-08-30",
+        "hora": "15:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/",
+        "ciclo": "Borges y el cine",
+        "director": "Hugo Santiago",
+        "country": "",
+        "year": 1974,
+        "duration": 127,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Invasión",
+        "fecha": "2026-08-30",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/",
+        "ciclo": "Borges y el cine",
+        "director": "Hugo Santiago",
+        "country": "",
+        "year": 1969,
+        "duration": 123,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/anima-latina-9-o-festival-de-cine-de-animacion-latinoamericano-competencia-de-cortometrajes-argentinos/": {
+    "ts": "2026-08-25T09:54:38",
+    "semanas": 9,
+    "funciones": []
+  }
+}

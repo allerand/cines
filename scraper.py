@@ -22,7 +22,7 @@ import email.utils
 import unicodedata
 import urllib.request
 import urllib.parse
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, asdict
 from datetime import date, datetime, timedelta, timezone
 from typing import Optional
 
@@ -109,13 +109,53 @@ _CF_CHALLENGE_RE = re.compile(
 
 
 # El proxy contesta con SU propio status cuando el problema es la cuenta y no el
-# sitio: 401 = key inválida o revocada, 402/403 = sin créditos o el plan no
-# cubre lo que se pidió (ultra_premium, geotargeting). Reintentar no sirve —ni
-# pedir otra geo—: hasta que no se renueve la key todas las bajadas por proxy
-# van a fallar igual. Y el log tiene que decirlo, porque "no se pudo traer" a
-# secas hace pensar que el que se puso duro es el cine.
+# sitio: 401 = token inválido o revocado, 402 = sin créditos. Reintentar no
+# sirve —ni pedir otra geo—: hasta que no se renueve la key todas las bajadas
+# por proxy van a fallar igual. Y el log tiene que decirlo, porque "no se pudo
+# traer" a secas hace pensar que el que se puso duro es el cine.
+#
+# El 403 quedó AFUERA a propósito: desde que se prueba primero por IP de
+# datacenter, un 403 es casi siempre el sitio rechazando esa IP —el proxy pasa
+# el status del origen tal cual— y lo que corresponde ahí es escalar a
+# residencial, no cortar.
 def _credencial_del_proxy_caida(e: object) -> bool:
-    return getattr(e, "code", None) in (401, 402, 403)
+    return getattr(e, "code", None) in (401, 402)
+
+
+# Cuánto se gastó en el proxy durante esta corrida. scrape.do devuelve el costo
+# real de cada request en un header, así que no hay que estimarlo: el resumen
+# sale impreso al final del scrape y se ve en el log de Actions.
+PROXY_USO = {"requests": 0, "creditos": 0}
+
+
+def _anotar_costo_proxy(resp) -> None:
+    """Suma lo que cobró el proxy por esta respuesta (si lo informa)."""
+    costo = (resp.headers.get("Scrape.do-Request-Cost")
+             or resp.headers.get("scrape.do-request-cost"))
+    if costo is None:
+        return
+    PROXY_USO["requests"] += 1
+    try:
+        PROXY_USO["creditos"] += int(costo)
+    except (TypeError, ValueError):
+        pass
+
+
+def resumen_proxy() -> str:
+    """Una línea para el final del scrape. Vacío si no se usó el proxy."""
+    if not PROXY_USO["requests"]:
+        return ""
+    return (f"proxy: {PROXY_USO['requests']} requests cobrados, "
+            f"{PROXY_USO['creditos']} créditos")
+
+
+def _fetch_por_proxy(url: str, timeout: int = 120) -> str:
+    """GET por el servicio de scraping, anotando lo que costó."""
+    req = urllib.request.Request(url, headers={"User-Agent": UA})
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        data = r.read()
+        _anotar_costo_proxy(r)
+    return data.decode("utf-8", errors="replace")
 
 
 def _pista_credencial(e: object) -> str:
@@ -125,7 +165,7 @@ def _pista_credencial(e: object) -> str:
             "(o BORGES_SCRAPER_KEY) o fijate los créditos del plan")
 
 
-def _scraper_proxy_url(target: str, pais: str = "") -> Optional[str]:
+def _scraper_proxy_url(target: str, pais: str = "", barato: bool = False) -> Optional[str]:
     """Envuelve la URL objetivo en un servicio de scraping con IPs residenciales
     para saltear el bloqueo de Cloudflare a la IP del runner. Requiere el secret
     SCRAPER_KEY (o BORGES_SCRAPER_KEY, el nombre viejo: es el que está cargado en
@@ -156,6 +196,17 @@ def _scraper_proxy_url(target: str, pais: str = "") -> Optional[str]:
     tmpl = tmpl or "https://api.scraperapi.com/?api_key={key}&ultra_premium=true&url={url}"
     proxy = tmpl.format(key=urllib.parse.quote(key, safe=""),
                         url=urllib.parse.quote(target, safe=""))
+    if barato:
+        # Sin IPs residenciales. En scrape.do un request normal sale 1 crédito
+        # y uno `super` sale 10; en ScraperAPI la diferencia es la misma con
+        # ultra_premium. Y como el proveedor cobra SÓLO las respuestas
+        # exitosas, probar barato primero es gratis cuando no alcanza: el 403
+        # del sitio no se cobra y se escala a residencial.
+        # Tampoco se pide geo: scrape.do exige `super` para geotargetear, así
+        # que pedirla acá volvería a encarecer el request.
+        proxy = re.sub(r"([?&])(?:super|ultra_premium|premium|render)=(?:true|1)&?",
+                       r"\1", proxy)
+        return proxy.replace("?&", "?").rstrip("&?")
     if pais:
         if "scraperapi" in proxy and "country_code=" not in proxy:
             proxy += f"&country_code={pais}"
@@ -190,27 +241,35 @@ def fetch_html_cf(url: str, contexto: str = "") -> Optional[BeautifulSoup]:
         print(f"  · ❌ [{etiqueta}] bloqueado: {motivo} "
               f"(configurá SCRAPER_KEY para un proxy residencial)")
         return None
-    # Dos pasadas por el proxy, no dos iguales: primero pidiendo IP argentina
-    # —el 502 del 16/8/2026 contra palaciolibertad.gob.ar salía de intentarlo
-    # desde EE.UU.— y después sin geo, que es lo que ya funcionaba para el
-    # Borges y lo único que anda si el plan del proveedor no incluye
-    # geotargeting a la Argentina. El servicio tarda 60-90s en resolver el
+    # Escalera de más barato a más caro, porque el proxy cobra por modo y sólo
+    # cobra los éxitos:
+    #   1. datacenter          1 crédito   — alcanza cuando el bloqueo es a la
+    #                                        IP del runner y no un challenge
+    #   2. residencial + AR   10 créditos  — el 502 del 16/8/2026 contra
+    #                                        palaciolibertad salía de pedirlo
+    #                                        desde EE.UU.
+    #   3. residencial        10 créditos  — lo único que anda si el plan no
+    #                                        incluye geotargeting a la Argentina
+    # Un rechazo del sitio no se cobra, así que empezar por el escalón barato
+    # no cuesta nada cuando no alcanza. El servicio tarda 60-90s en resolver un
     # challenge, así que el timeout va amplio.
     proxy_err: Optional[object] = None
     pista = ""
-    for pais in ("ar", ""):
-        proxy = _scraper_proxy_url(url, pais)
+    for etapa, pais, barato in (("datacenter", "", True),
+                                ("residencial AR", "ar", False),
+                                ("residencial", "", False)):
+        proxy = _scraper_proxy_url(url, pais, barato)
         try:
-            txt = fetch_bytes(proxy, timeout=120, intentos=1).decode("utf-8", errors="replace")
+            txt = _fetch_por_proxy(proxy, timeout=120)
         except Exception as e:
-            proxy_err = f"{e} (IP {pais or 'default'})"
+            proxy_err = f"{e} ({etapa})"
             if _credencial_del_proxy_caida(e):
                 pista = _pista_credencial(e)
-                break          # la segunda pasada iba a dar exactamente lo mismo
+                break          # los escalones que siguen dan exactamente lo mismo
             continue
         if not _CF_CHALLENGE_RE.search(txt[:4000]):
             return BeautifulSoup(txt, "html.parser")
-        proxy_err = f"el proxy también recibió el challenge (IP {pais or 'default'})"
+        proxy_err = f"el proxy también recibió el challenge ({etapa})"
     print(f"  · ❌ [{etiqueta}] no se pudo traer "
           f"(directo: {motivo}; proxy: {proxy_err}){pista}")
     return None
@@ -2849,6 +2908,70 @@ def _json_ld_loads(raw: Optional[str]):
         return None
 
 
+# La agenda de cada ciclo del CCK se escribe una vez por mes y no se toca más,
+# pero cada corrida bajaba las cuatro fichas de nuevo: 5 requests por corrida
+# (el listado + un evento por ciclo), 10 por día, a 10 créditos cada uno. Eso
+# fue lo que fundió el plan del proxy el 21/8/2026.
+#
+# Con esta caché la corrida de la mañana refresca (TTL < 24 h) y todo lo que
+# venga después en el mismo día —el pase de la tarde, un dispatch a mano para
+# probar algo— sale gratis. El día que se debuggeó el fix del geo fueron seis
+# corridas: 210 créditos, el 21% del mes.
+#
+# Se guardan las funciones ya parseadas y no el HTML: son 200 bytes por función
+# contra 150 KB por página, y el archivo lo commitea el workflow en cada
+# corrida. El listado NUNCA se cachea: es el que dice qué ciclos hay, y es la
+# única forma de enterarse de uno nuevo.
+CCK_CACHE_PATH = Path(__file__).parent / "data" / "cck_eventos.json"
+CCK_CACHE_HORAS = 20
+
+
+def _cck_cache_load() -> dict:
+    try:
+        return json.loads(CCK_CACHE_PATH.read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+
+
+def _cck_cache_get(cache: dict, url: str, semanas: int,
+                   hoy: date, fin: date) -> Optional[list[Screening]]:
+    """Funciones cacheadas de este evento, o None si hay que bajarlo."""
+    e = cache.get(url)
+    if not isinstance(e, dict):
+        return None
+    try:
+        edad = datetime.now() - datetime.fromisoformat(e["ts"])
+    except Exception:
+        return None
+    if edad > timedelta(hours=CCK_CACHE_HORAS) or edad < timedelta(0):
+        return None
+    # La ventana se calculó con las `semanas` de aquella corrida: si ahora se
+    # pide más lejos, la caché se queda corta y no sirve.
+    if e.get("semanas", 0) < semanas:
+        return None
+    # Y se refiltra por fecha, porque la ventana se corrió desde entonces.
+    return [Screening(**f) for f in e.get("funciones", [])
+            if hoy.isoformat() <= f.get("fecha", "") <= fin.isoformat()]
+
+
+def _cck_cache_put(cache: dict, url: str, semanas: int,
+                   funciones: list[Screening]) -> None:
+    cache[url] = {"ts": datetime.now().isoformat(timespec="seconds"),
+                  "semanas": semanas,
+                  "funciones": [asdict(s) for s in funciones]}
+
+
+def _cck_cache_save(cache: dict, urls_vigentes: list[str]) -> None:
+    """Guarda, tirando los ciclos que ya no están en la agenda."""
+    vivos = {u: e for u, e in cache.items() if u in set(urls_vigentes)}
+    try:
+        CCK_CACHE_PATH.parent.mkdir(parents=True, exist_ok=True)
+        CCK_CACHE_PATH.write_text(json.dumps(vivos, ensure_ascii=False, indent=2),
+                                  encoding="utf-8")
+    except Exception as e:
+        print(f"  · [CCK] no se pudo guardar la caché de eventos: {e}")
+
+
 def scrape_cck(semanas: int = 2) -> list[Screening]:
     """
     1. Lista events desde palaciolibertad.gob.ar/cine/
@@ -2889,7 +3012,14 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
     import json as _json
     import html as _html
 
+    cache = _cck_cache_load()
+
     for event_url in event_urls:
+        cacheado = _cck_cache_get(cache, event_url, semanas, today, end)
+        if cacheado is not None:
+            result.extend(cacheado)
+            continue
+        desde = len(result)
         ev_soup = fetch_html_cf(event_url, f"CCK: {event_url}")
         if ev_soup is None:
             continue
@@ -3030,6 +3160,10 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
                         year=ficha.get("year"),
                         duration=ficha.get("duration"),
                     ))
+
+        _cck_cache_put(cache, event_url, semanas, result[desde:])
+
+    _cck_cache_save(cache, event_urls)
 
     # Deduplicar (cycle pages a veces repiten fechas)
     seen_keys: set[tuple] = set()
@@ -3732,7 +3866,9 @@ def _borges_http_json(url: str, browser_headers: bool = True, timeout: int = 45)
         })
     req = urllib.request.Request(url, headers=headers)
     with urllib.request.urlopen(req, timeout=timeout) as r:
-        return json.loads(r.read().decode("utf-8", errors="replace"))
+        crudo = r.read()
+        _anotar_costo_proxy(r)      # sólo las respuestas del proxy traen el header
+    return json.loads(crudo.decode("utf-8", errors="replace"))
 
 
 def fetch_borges_json(url: str, *, critical: bool = True,
@@ -3762,10 +3898,15 @@ def fetch_borges_json(url: str, *, critical: bool = True,
         # El servicio de scraping (residencial + anti-Cloudflare) suele tardar
         # 60-90s en resolver el challenge de CF: timeout amplio + un reintento
         # (a veces la 1ra pasada falla transitoriamente).
+        # Igual que fetch_html_cf: primero el escalón barato (datacenter, 1
+        # crédito) y recién si no alcanza el residencial (10), que es el que
+        # resuelve el challenge. El residencial va dos veces porque a veces la
+        # primera pasada falla sola.
         proxy_err: Optional[Exception] = None
-        for _ in range(2):
+        for barato in (True, False, False):
             try:
-                return _borges_http_json(proxy, browser_headers=False, timeout=120)
+                return _borges_http_json(_scraper_proxy_url(url, "", barato) or proxy,
+                                         browser_headers=False, timeout=120)
             except Exception as e:
                 proxy_err = e
                 if _credencial_del_proxy_caida(e):

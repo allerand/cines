@@ -37,7 +37,12 @@ UA = (
 )
 
 
-async def run_scraper(semanas: int = 9) -> None:
+async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
+    """`sin_proxy` saltea los cines que sólo se bajan por el proxy pago (CCK y
+    Borges). Lo usa el pase de la tarde: los dos publican con semanas de
+    anticipación, así que el de la madrugada alcanza, y cada corrida extra sale
+    ~9 requests del plan. El scrape de la mañana los trae igual, y el merge
+    conserva sus funciones futuras."""
     from scraper import (
         scrape_malba, scrape_lugones, scrape_cacodelphia,
         scrape_lorca, scrape_lumiton_agenda, scrape_cosmos,
@@ -46,6 +51,7 @@ async def run_scraper(semanas: int = 9) -> None:
         scrape_filo, scrape_bn, scrape_cc25, scrape_ccd, scrape_cb,
         scrape_borges, scrape_bcn, scrape_agn, scrape_manual, descartar_manual,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex,
+        resumen_proxy,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
     # browser para IMDb). Inicializamos vacío y se llena más abajo.
@@ -89,12 +95,16 @@ async def run_scraper(semanas: int = 9) -> None:
         print(f"error — {e}")
 
     print("🎬 Scrapeando CCK...", end=" ", flush=True)
-    try:
-        cck_screenings = scrape_cck(semanas)
-        print(f"{len(cck_screenings)} funciones")
-    except Exception as e:
+    if sin_proxy:
         cck_screenings = []
-        print(f"error — {e}")
+        print("salteado (--sin-proxy)")
+    else:
+        try:
+            cck_screenings = scrape_cck(semanas)
+            print(f"{len(cck_screenings)} funciones")
+        except Exception as e:
+            cck_screenings = []
+            print(f"error — {e}")
 
     print("🎬 Scrapeando Museo del Cine...", end=" ", flush=True)
     try:
@@ -258,12 +268,18 @@ async def run_scraper(semanas: int = 9) -> None:
         except Exception as e:
             print(f"error — {e}")
 
-        for name, fn in [
+        salas_playwright = [
             ("Sala Lugones", lambda p: scrape_lugones(p)),
             ("Cacodelphia",  lambda p: scrape_cacodelphia(p)),
             ("CEA",          lambda p: scrape_cea(p)),
-            ("Centro Cultural Borges", lambda p: scrape_borges(p, semanas)),
-        ]:
+        ]
+        if sin_proxy:
+            print("🎬 Scrapeando Centro Cultural Borges... salteado (--sin-proxy)")
+        else:
+            salas_playwright.append(
+                ("Centro Cultural Borges", lambda p: scrape_borges(p, semanas)))
+
+        for name, fn in salas_playwright:
             print(f"🎬 Scrapeando {name}...", end=" ", flush=True)
             try:
                 r = await fn(page)
@@ -690,6 +706,9 @@ async def run_scraper(semanas: int = 9) -> None:
         json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8"
     )
     print(f"\n✅ {len(screenings_out)} funciones guardadas en {CARTELERA_JSON}")
+    gasto = resumen_proxy()
+    if gasto:
+        print(f"💳 {gasto}")
 
 
 def start_server(port: int = 8080) -> None:
@@ -716,10 +735,12 @@ if __name__ == "__main__":
     parser.add_argument("--serve", action="store_true", help="Levantar servidor web después de scrapear")
     parser.add_argument("--semanas", type=int, default=9, help="Semanas de anticipación (default: 9 ≈ 2 meses)")
     parser.add_argument("--only-serve", action="store_true", help="Solo servidor, sin scrapear")
+    parser.add_argument("--sin-proxy", action="store_true",
+                        help="Saltear los cines que se bajan por el proxy pago (CCK, Borges)")
     args = parser.parse_args()
 
     if not args.only_serve:
-        asyncio.run(run_scraper(semanas=args.semanas))
+        asyncio.run(run_scraper(semanas=args.semanas, sin_proxy=args.sin_proxy))
 
     if args.serve or args.only_serve:
         start_server()

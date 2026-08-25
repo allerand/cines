@@ -71,7 +71,14 @@ jobs:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
         # Cuando se dispara por schedule, inputs.semanas viene vacío → default 9 (≈ 2 meses)
-        run: python3 run.py --semanas "${{ inputs.semanas || '9' }}"
+        #
+        # --sin-proxy sólo en el pase automático de la tarde: el CCK y el Borges
+        # publican con semanas de anticipación, así que con el scrape de la
+        # madrugada alcanza, y cada corrida extra son ~9 requests del plan del
+        # proxy a 10 créditos cada uno (eso fue lo que fundió la cuenta el
+        # 21/8/2026). Disparado a mano SÍ los scrapea, que es lo que se quiere
+        # cuando estás probando justamente eso.
+        run: python3 run.py --semanas "${{ inputs.semanas || '9' }}" ${{ github.event_name == 'schedule' && '--sin-proxy' || '' }}
 
       # `regenerate_stories` es un input de tipo boolean, así que acá vale el
       # booleano y no el string: con `== 'true'` la comparación daba false y
@@ -91,7 +98,7 @@ jobs:
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/cartelera.json data/cache.json
+          git add data/cartelera.json data/cache.json data/cck_eventos.json
           if [ "${{ inputs.regenerate_stories }}" = "true" ]; then
             git add posts/
           fi
