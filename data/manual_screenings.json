@@ -191,62 +191,6 @@
       "director": "Hugo Santiago", "year": 1969, "country": "Argentina", "duration": 123,
       "original_title": "Invasión",
       "ciclo": "Borges y el cine", "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/"
-    },
-    {
-      "_ciclo": "Cine Cosmos — Semana del Cine Francés (30 años del Centro Franco Argentino de la UBA), del 20 al 26 de agosto. La grilla vive en la página del ciclo (/pelicula?idPelicula=409) y no en las cards de la home, que es lo único que mira scrape_cosmos: por eso el cine venía en cero desde el 21/8 con el log avisando '1 cards en la home pero 0 funciones'. Van a mano las que faltan del ciclo; el scraper hay que arreglarlo aparte. Las entradas se compran en boletería el mismo día, desde las 14.30.",
-      "cine": "Cine Cosmos", "title": "Sin aliento", "fecha": "2026-08-25", "hora": "15:00",
-      "director": "Jean-Luc Godard", "year": 1960, "country": "Francia", "duration": 89,
-      "original_title": "À bout de souffle",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
-    },
-    {
-      "cine": "Cine Cosmos", "title": "Mi tío de América", "fecha": "2026-08-25", "hora": "16:45",
-      "director": "Alain Resnais", "year": 1980,
-      "original_title": "Mon oncle d'Amérique",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
-    },
-    {
-      "cine": "Cine Cosmos", "title": "El planeta salvaje", "fecha": "2026-08-25", "hora": "19:05",
-      "director": "René Laloux", "year": 1973,
-      "original_title": "La planète sauvage",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
-    },
-    {
-      "cine": "Cine Cosmos", "title": "La ceremonia", "fecha": "2026-08-25", "hora": "20:40",
-      "director": "Claude Chabrol", "year": 1995, "country": "Francia", "duration": 111,
-      "original_title": "La cérémonie",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
-    },
-    {
-      "cine": "Cine Cosmos", "title": "Los amos del tiempo", "fecha": "2026-08-26", "hora": "15:00",
-      "director": "René Laloux", "year": 1982,
-      "original_title": "Les maîtres du temps",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
-    },
-    {
-      "cine": "Cine Cosmos", "title": "Azur y Asmar", "fecha": "2026-08-26", "hora": "16:40",
-      "director": "Michel Ocelot", "year": 2006, "country": "Francia", "duration": 99,
-      "original_title": "Azur et Asmar",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
-    },
-    {
-      "_ciclo": "El 26 a las 18.40 va el programa doble de Chris Marker: la página lo escribe como un solo bloque ('La Jetée - Sin sol') y acá van las dos funciones, que es como las publica el resto de la cartelera.",
-      "cine": "Cine Cosmos", "title": "La Jetée", "fecha": "2026-08-26", "hora": "18:40",
-      "director": "Chris Marker", "year": 1962,
-      "original_title": "La jetée",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
-    },
-    {
-      "cine": "Cine Cosmos", "title": "Sin sol", "fecha": "2026-08-26", "hora": "18:40",
-      "director": "Chris Marker", "year": 1983,
-      "original_title": "Sans soleil",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
-    },
-    {
-      "cine": "Cine Cosmos", "title": "Los coristas", "fecha": "2026-08-26", "hora": "21:00",
-      "director": "Christophe Barratier", "year": 2004,
-      "original_title": "Les choristes",
-      "ciclo": "Semana del Cine Francés", "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409"
     }
   ],
 

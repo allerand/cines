@@ -3249,6 +3249,93 @@ def _cosmos_slots(footer_text: str) -> list[tuple[set[int], str]]:
     return slots
 
 
+# Cuando el Cosmos arma un ciclo, la card de la home queda ROTA: el CMS la
+# publica con el título en ".", la ficha vacía y el footer en "Ju Vi Sá Do Lu Ma
+# Mi | 00:00" — los siete días a las cero horas. No es una película: es el
+# afiche del ciclo, y la programación de verdad está en su página de detalle,
+# escrita en prosa adentro de la descripción:
+#
+#     PROGRAMACIÓN POR DÍA
+#     Jueves 20
+#     15:00
+#     Azur y Asmar
+#     16:55
+#     El odio
+#     …
+#
+# Descartar esa card —que es lo que se hacía— deja al cine en cero toda la
+# semana del ciclo, con el log avisando "1 cards en la home pero 0 funciones".
+# Pasó del 21 al 26 de agosto de 2026 con la Semana del Cine Francés. Ahora, si
+# una card no da funciones pero linkea a un detalle, se mira el detalle: si
+# tiene el bloque de programación, sale de ahí.
+_COSMOS_DIA_RE = re.compile(
+    r"^(?:lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})$",
+    re.IGNORECASE)
+_COSMOS_HORA_RE = re.compile(r"^(\d{1,2}):(\d{2})$")
+# "Llega la Semana del Cine Francés en el Cine Cosmos UBA" → "Semana del Cine
+# Francés". El nombre del ciclo no está en ningún título de la página (el CMS
+# los deja en "."), así que sale del copete.
+_COSMOS_CICLO_RE = re.compile(
+    r"\b((?:Semana|Ciclo|Festival|Muestra|Retrospectiva|Foco)\b[^.,;:]{0,50}?)"
+    r"(?=\s+en\s+(?:el|la|los|las)\b|[.,;:]|$)")
+
+
+def _cosmos_ciclo_nombre(texto: str) -> str:
+    m = _COSMOS_CICLO_RE.search(texto or "")
+    return re.sub(r"\s+", " ", m.group(1)).strip() if m else ""
+
+
+def _cosmos_programacion(det, today: date, end: date) -> list[tuple[date, str, str]]:
+    """(fecha, hora, título) del bloque "PROGRAMACIÓN POR DÍA" de un ciclo.
+
+    Devuelve [] si la página no es un ciclo — que es como se distingue del
+    detalle de una película común.
+    """
+    desc = det.select_one(".peliculaDescp") or det
+    texto = desc.get_text("\n")
+    lineas = [re.sub(r"\s+", " ", l).strip() for l in texto.split("\n")]
+
+    # El mes lo da el copete ("Del 20 al 26 de agosto"); los encabezados de día
+    # sólo traen el número.
+    mm = re.search(r"\bde\s+(" + "|".join(MESES_ES) + r")\b", texto, re.IGNORECASE)
+    mes = MESES_ES[mm.group(1).lower()] if mm else today.month
+
+    out: list[tuple[date, str, str]] = []
+    fecha = None
+    hora = ""
+    empezo = False
+    for linea in lineas:
+        if not linea:
+            continue
+        if not empezo:
+            empezo = bool(re.search(r"programaci[óo]n\s+por\s+d[íi]a", linea, re.IGNORECASE))
+            continue
+        md = _COSMOS_DIA_RE.match(linea)
+        if md:
+            fecha, hora = None, ""
+            for anio in (today.year, today.year + 1):
+                try:
+                    d = date(anio, mes, int(md.group(1)))
+                except ValueError:
+                    break
+                if d >= today - timedelta(days=45):
+                    fecha = d
+                    break
+            continue
+        mh = _COSMOS_HORA_RE.match(linea)
+        if mh:
+            hora = f"{int(mh.group(1)):02d}:{mh.group(2)}"
+            continue
+        # Cualquier otro renglón con letras es un título. Los programas dobles
+        # vienen como dos renglones bajo el mismo horario, a veces separados
+        # por un "-" suelto: van como dos funciones, que es como se publica el
+        # resto de la cartelera.
+        if fecha and hora and re.search(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{2}", linea):
+            if today <= fecha <= end:
+                out.append((fecha, hora, linea.strip(" -–·")))
+    return out
+
+
 def scrape_cosmos(semanas: int = 2) -> list[Screening]:
     """Scrapea la cartelera de cosmos.uba.ar desde las cards de la home."""
     # El sitio se mudó: www.cinecosmos.uba.ar redirige 301 a cosmos.uba.ar.
@@ -3269,24 +3356,35 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
     cards = home.select("div.card")
     result: list[Screening] = []
     proximamente = 0
+    a_revisar: list[str] = []      # cards sin funciones que linkean a un detalle
+
+    def _detalle(card) -> str:
+        link = card.find("a", href=re.compile(r"idPelicula=\d+"))
+        m = re.search(r"idPelicula=(\d+)", link["href"]) if link else None
+        return f"{BASE}/pelicula?idPelicula={m.group(1)}" if m else ""
 
     for card in cards:
         titulo_el = card.select_one(".card-title")
         title = re.sub(r"\s+", " ", titulo_el.get_text(" ", strip=True)) if titulo_el else ""
         # El afiche del ciclo también entra como card, con el título en "." y la
-        # ficha vacía. Sin dos letras seguidas no es un título de película.
+        # ficha vacía. Sin dos letras seguidas no es un título de película —
+        # pero puede ser un ciclo, así que su detalle se revisa después.
         if not re.search(r"[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]{2}", title):
+            u = _detalle(card)
+            if u:
+                a_revisar.append(u)
             continue
 
         footer = card.select_one(".card-footer")
         slots = _cosmos_slots(footer.get_text(" ", strip=True) if footer else "")
         if not slots:
             proximamente += 1
+            u = _detalle(card)
+            if u:
+                a_revisar.append(u)
             continue
 
-        link = card.find("a", href=re.compile(r"idPelicula=\d+"))
-        m = re.search(r"idPelicula=(\d+)", link["href"]) if link else None
-        ticket_url = f"{BASE}/pelicula?idPelicula={m.group(1)}" if m else f"{BASE}/"
+        ticket_url = _detalle(card) or f"{BASE}/"
 
         director = ""
         dir_el = card.select_one("p.direccion")
@@ -3321,6 +3419,31 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
                     ))
             d += timedelta(days=1)
 
+    # Las cards que no dieron ninguna función pueden ser el afiche de un ciclo:
+    # ahí la programación está en el detalle. Se miran pocas a propósito —una
+    # bajada por card— y sólo cuentan si traen el bloque de programación.
+    ciclos = 0
+    for url in list(dict.fromkeys(a_revisar))[:4]:
+        try:
+            det = fetch_html(url)
+        except Exception:
+            continue
+        funciones = _cosmos_programacion(det, today, end)
+        if not funciones:
+            continue
+        ciclos += 1
+        desc = det.select_one(".peliculaDescp")
+        nombre = _cosmos_ciclo_nombre(desc.get_text(" ", strip=True) if desc else "")
+        for f, hora, titulo in funciones:
+            result.append(Screening(
+                cine="Cine Cosmos",
+                title=titulo,
+                fecha=f.isoformat(),
+                hora=hora,
+                ticket_url=url,
+                ciclo=nombre,
+            ))
+
     # Dedup por si el sitio vuelve a renderizar la misma card dos veces (el
     # template anterior repetía el bloque de horarios y duplicaba funciones).
     seen: set[tuple] = set()
@@ -3337,6 +3460,8 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
     if cards and not deduped:
         print(f"[cosmos: {len(cards)} cards en la home pero 0 funciones — "
               f"revisar el markup]", end=" ")
+    elif ciclos:
+        print(f"[cosmos: {ciclos} ciclo(s) leídos del detalle]", end=" ")
     elif proximamente:
         print(f"[cosmos: {proximamente} anunciadas sin horario]", end=" ")
     return deduped

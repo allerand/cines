@@ -422,6 +422,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         "romania": "Rumania", "rumania": "Rumania",
         "czechrepublic": "República Checa", "czechia": "República Checa",
         "republicacheca": "República Checa",
+        "czechoslovakia": "Checoslovaquia", "checoslovaquia": "Checoslovaquia",
         "turkey": "Turquía", "turquia": "Turquía",
         "iceland": "Islandia", "islandia": "Islandia",
         # América

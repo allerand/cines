@@ -1778,6 +1778,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-25",
+      "hora": "15:00",
+      "title_es": "Sin aliento",
+      "title_en": "Breathless",
+      "original_title": "",
+      "director": "Jean-Luc Godard",
+      "country": "Francia",
+      "year": 1960,
+      "duration": 90,
+      "genre": "Romance, Crimen",
+      "letterboxd": "https://letterboxd.com/film/breathless/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-08-25",
       "hora": "15:10",
@@ -2912,6 +2928,22 @@
       "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-25",
+      "hora": "16:45",
+      "title_es": "Mi tío de América",
+      "title_en": "My American Uncle",
+      "original_title": "Mon oncle d'Amérique",
+      "director": "Alain Resnais",
+      "country": "Francia",
+      "year": 1980,
+      "duration": 126,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/my-american-uncle/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
     },
     {
       "cine": "Cinépolis Recoleta",
@@ -4242,6 +4274,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-25",
+      "hora": "19:05",
+      "title_es": "El planeta salvaje",
+      "title_en": "Fantastic Planet",
+      "original_title": "La Planète sauvage",
+      "director": "René Laloux",
+      "country": "Checoslovaquia, Francia",
+      "year": 1973,
+      "duration": 72,
+      "genre": "Animación, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/fantastic-planet/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-08-25",
       "hora": "19:10",
@@ -5152,6 +5200,22 @@
       "letterboxd": "https://letterboxd.com/film/the-end-of-oak-street/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-final-de-la-calle-oak/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-25",
+      "hora": "20:40",
+      "title_es": "La ceremonia",
+      "title_en": "La Cérémonie",
+      "original_title": "",
+      "director": "Claude Chabrol",
+      "country": "Francia, Alemania",
+      "year": 1995,
+      "duration": 112,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/la-ceremonie/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -8738,6 +8802,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-26",
+      "hora": "15:00",
+      "title_es": "Los amos del tiempo",
+      "title_en": "Time Masters",
+      "original_title": "Les maîtres du temps",
+      "director": "René Laloux",
+      "country": "Francia, Alemania",
+      "year": 1982,
+      "duration": 80,
+      "genre": "Animación, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/time-masters/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-08-26",
       "hora": "15:10",
@@ -9648,6 +9728,22 @@
       "letterboxd": "https://letterboxd.com/film/the-end-of-oak-street/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-final-de-la-calle-oak/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-26",
+      "hora": "16:40",
+      "title_es": "Azur y Asmar",
+      "title_en": "Azur & Asmar: The Princes' Quest",
+      "original_title": "Azur et Asmar",
+      "director": "Michel Ocelot",
+      "country": "Bélgica, Francia",
+      "year": 2006,
+      "duration": 99,
+      "genre": "Familiar, Animación",
+      "letterboxd": "https://letterboxd.com/film/azur-asmar-the-princes-quest/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -10656,6 +10752,38 @@
       "letterboxd": "https://letterboxd.com/film/minions-monsters-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/minions-monstruos/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-26",
+      "hora": "18:40",
+      "title_es": "La Jetée",
+      "title_en": "La Jetée",
+      "original_title": "La Jetée",
+      "director": "Chris Marker",
+      "country": "Francia",
+      "year": 1962,
+      "duration": 29,
+      "genre": "Romance, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-jetee/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-26",
+      "hora": "18:40",
+      "title_es": "Sin sol",
+      "title_en": "Sans Soleil",
+      "original_title": "",
+      "director": "Chris Marker",
+      "country": "Francia",
+      "year": 1983,
+      "duration": 100,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/sans-soleil/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
     },
     {
       "cine": "Hoyts Abasto",
@@ -11904,6 +12032,22 @@
       "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/9ee70625-4d4a-455b-8874-323c88d5b59b",
       "ciclo": "Integral Pere Portabella"
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-08-26",
+      "hora": "21:00",
+      "title_es": "Los coristas",
+      "title_en": "The Chorus",
+      "original_title": "Les Choristes",
+      "director": "Christophe Barratier",
+      "country": "Francia, Suiza",
+      "year": 2004,
+      "duration": 97,
+      "genre": "Drama, Música",
+      "letterboxd": "https://letterboxd.com/film/the-chorus/",
+      "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=409",
+      "ciclo": "Semana del Cine Francés"
     },
     {
       "cine": "Hoyts Abasto",
@@ -15520,6 +15664,22 @@
       "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-noche-del-demonio-estan-entre-nosotros/",
       "ciclo": ""
+    },
+    {
+      "cine": "CEA",
+      "fecha": "2026-08-27",
+      "hora": "19:00",
+      "title_es": "Tú me enloqueces",
+      "title_en": "Tú me enloqueces",
+      "original_title": "",
+      "director": "Sandro",
+      "country": "",
+      "year": 1976,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://forms.gle/yUPhTdqo9vjLTc3w9",
+      "ciclo": "Ciclo Sandro"
     },
     {
       "cine": "Multiplex Pilar",
@@ -19298,6 +19458,22 @@
       "ciclo": "Borges y el cine"
     },
     {
+      "cine": "CEA",
+      "fecha": "2026-08-28",
+      "hora": "19:00",
+      "title_es": "El deseo de vivir",
+      "title_en": "El deseo de vivir",
+      "original_title": "",
+      "director": "Julio Saraceni",
+      "country": "",
+      "year": 1973,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://forms.gle/sHPFtP59j4ttPKDx7",
+      "ciclo": "Ciclo Sandro"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-08-28",
       "hora": "19:10",
@@ -23056,6 +23232,22 @@
       "letterboxd": "https://letterboxd.com/film/something-old-something-new-something-borrowed/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-cecilia-kang-hernan-rosselli/",
       "ciclo": "Miradas contemporáneas:Cecilia Kang / Hernán Rosselli"
+    },
+    {
+      "cine": "CEA",
+      "fecha": "2026-08-29",
+      "hora": "19:00",
+      "title_es": "Muchacho",
+      "title_en": "Muchacho",
+      "original_title": "",
+      "director": "Leo Fleider",
+      "country": "",
+      "year": 1970,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://forms.gle/VTSjGFMgr6p3CXVU6",
+      "ciclo": "Ciclo Sandro"
     },
     {
       "cine": "Multiplex Pilar",
@@ -26832,6 +27024,22 @@
       "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-noche-del-demonio-estan-entre-nosotros/",
       "ciclo": ""
+    },
+    {
+      "cine": "CEA",
+      "fecha": "2026-08-30",
+      "hora": "19:00",
+      "title_es": "Subí que te llevo",
+      "title_en": "Subí que te llevo",
+      "original_title": "",
+      "director": "Rubén W. Cavallotti",
+      "country": "",
+      "year": 1980,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://forms.gle/PXGf7nmLUZoPAfZFA",
+      "ciclo": "Ciclo Sandro"
     },
     {
       "cine": "Multiplex Pilar",
