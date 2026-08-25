@@ -108,6 +108,23 @@ _CF_CHALLENGE_RE = re.compile(
     re.IGNORECASE)
 
 
+# El proxy contesta con SU propio status cuando el problema es la cuenta y no el
+# sitio: 401 = key inválida o revocada, 402/403 = sin créditos o el plan no
+# cubre lo que se pidió (ultra_premium, geotargeting). Reintentar no sirve —ni
+# pedir otra geo—: hasta que no se renueve la key todas las bajadas por proxy
+# van a fallar igual. Y el log tiene que decirlo, porque "no se pudo traer" a
+# secas hace pensar que el que se puso duro es el cine.
+def _credencial_del_proxy_caida(e: object) -> bool:
+    return getattr(e, "code", None) in (401, 402, 403)
+
+
+def _pista_credencial(e: object) -> str:
+    if not _credencial_del_proxy_caida(e):
+        return ""
+    return (" — el que rechaza es el PROXY, no el sitio: renová SCRAPER_KEY "
+            "(o BORGES_SCRAPER_KEY) o fijate los créditos del plan")
+
+
 def _scraper_proxy_url(target: str, pais: str = "") -> Optional[str]:
     """Envuelve la URL objetivo en un servicio de scraping con IPs residenciales
     para saltear el bloqueo de Cloudflare a la IP del runner. Requiere el secret
@@ -124,12 +141,19 @@ def _scraper_proxy_url(target: str, pais: str = "") -> Optional[str]:
     Cada proveedor lo pide con su propio parámetro; se agregan sólo si el
     template no los trae ya, así un template propio sigue mandando.
     """
-    key = os.environ.get("SCRAPER_KEY") or os.environ.get("BORGES_SCRAPER_KEY")
+    # La key y el template se toman EN PAR, nunca cruzados: son de un proveedor
+    # puntual. Una key nueva en SCRAPER_KEY combinada con el template viejo de
+    # BORGES_SCRAPER_URL_TEMPLATE (otro proveedor) da 401 Unauthorized, que se
+    # lee igual que una key vencida y manda a buscar el problema al lado
+    # equivocado.
+    key = os.environ.get("SCRAPER_KEY")
+    tmpl = os.environ.get("SCRAPER_URL_TEMPLATE")
+    if not key:
+        key = os.environ.get("BORGES_SCRAPER_KEY")
+        tmpl = os.environ.get("BORGES_SCRAPER_URL_TEMPLATE")
     if not key:
         return None
-    tmpl = (os.environ.get("SCRAPER_URL_TEMPLATE")
-            or os.environ.get("BORGES_SCRAPER_URL_TEMPLATE")
-            or "https://api.scraperapi.com/?api_key={key}&ultra_premium=true&url={url}")
+    tmpl = tmpl or "https://api.scraperapi.com/?api_key={key}&ultra_premium=true&url={url}"
     proxy = tmpl.format(key=urllib.parse.quote(key, safe=""),
                         url=urllib.parse.quote(target, safe=""))
     if pais:
@@ -173,18 +197,22 @@ def fetch_html_cf(url: str, contexto: str = "") -> Optional[BeautifulSoup]:
     # geotargeting a la Argentina. El servicio tarda 60-90s en resolver el
     # challenge, así que el timeout va amplio.
     proxy_err: Optional[object] = None
+    pista = ""
     for pais in ("ar", ""):
         proxy = _scraper_proxy_url(url, pais)
         try:
             txt = fetch_bytes(proxy, timeout=120, intentos=1).decode("utf-8", errors="replace")
         except Exception as e:
             proxy_err = f"{e} (IP {pais or 'default'})"
+            if _credencial_del_proxy_caida(e):
+                pista = _pista_credencial(e)
+                break          # la segunda pasada iba a dar exactamente lo mismo
             continue
         if not _CF_CHALLENGE_RE.search(txt[:4000]):
             return BeautifulSoup(txt, "html.parser")
         proxy_err = f"el proxy también recibió el challenge (IP {pais or 'default'})"
     print(f"  · ❌ [{etiqueta}] no se pudo traer "
-          f"(directo: {motivo}; proxy: {proxy_err})")
+          f"(directo: {motivo}; proxy: {proxy_err}){pista}")
     return None
 
 
@@ -2760,6 +2788,19 @@ def _cck_fichas(texto: str) -> dict:
     return out
 
 
+def _cck_titulo_re(titulo: str) -> "re.Pattern":
+    """El mismo título con los espacios sueltos.
+
+    La agenda y el bloque "Programación" no escriben igual el mismo título:
+    arriba «16:30 h: Borges/Santiago: Variaciones sobre un guion» y abajo
+    «Borges / Santiago: Variaciones sobre un guion Alejo Moguillansky. 2008.
+    76'.». Buscando el string literal no matcheaba ninguna de las dos y la
+    función salía a la cartelera sin director, sin año y sin duración.
+    """
+    tokens = re.findall(r"\w+|[^\w\s]", titulo)
+    return re.compile(r"\s*".join(re.escape(t) for t in tokens), re.IGNORECASE)
+
+
 def _cck_ficha_programacion(texto: str, titulo: str) -> dict:
     """Ficha del bloque "Programación" para un título puntual.
 
@@ -2767,10 +2808,11 @@ def _cck_ficha_programacion(texto: str, titulo: str) -> dict:
     también aparece más arriba, en la agenda ("19 h: Hijo mayor"), donde no
     tiene ficha detrás.
     """
+    if not re.search(r"\w", titulo):     # un título sin letras matchearía cualquier cosa
+        return {}
     desde = texto.find("Programación")
-    i = texto.find(titulo, desde if desde >= 0 else 0)
-    while i >= 0:
-        m = _CCK_FICHA_RE.match(texto, i + len(titulo))
+    for tm in _cck_titulo_re(titulo).finditer(texto, desde if desde >= 0 else 0):
+        m = _CCK_FICHA_RE.match(texto, tm.end())
         if m:
             return {"director": m.group(1).strip(),
                     # El país es opcional: unas fichas van "Director. País,
@@ -2778,7 +2820,6 @@ def _cck_ficha_programacion(texto: str, titulo: str) -> dict:
                     "country": (m.group(2) or "").strip(),
                     "year": int(m.group(3)),
                     "duration": int(m.group(4))}
-        i = texto.find(titulo, i + 1)
     return {}
 
 
@@ -3727,9 +3768,12 @@ def fetch_borges_json(url: str, *, critical: bool = True,
                 return _borges_http_json(proxy, browser_headers=False, timeout=120)
             except Exception as e:
                 proxy_err = e
+                if _credencial_del_proxy_caida(e):
+                    break      # no es transitorio: reintentar sólo quema tiempo
         if critical:
             print(f"  · ❌ [Borges] No se pudo traer {context or 'el recurso'} "
-                  f"(directo: {direct_err}; proxy: {proxy_err})")
+                  f"(directo: {direct_err}; proxy: {proxy_err})"
+                  f"{_pista_credencial(proxy_err)}")
         return None
 
 def _borges_times_from_rep(rep: str, sig_hora: str) -> list[str]:

@@ -567,14 +567,23 @@ async def run_scraper(semanas: int = 9) -> None:
     #   2) Eventos del CTBA (Lugones, etc.) que en su ÚLTIMO día caen del listado
     #      de "próximos" y dejan de scrapearse → preservamos las funciones de HOY
     #      que estaban antes y ahora faltan (cualquier sala).
-    #   3) Borges: publica ~1 mes de programación de una vez, pero su API cae
-    #      seguido (Cloudflare bloquea la IP del runner). Si esta corrida trajo
-    #      pocas/ninguna función de Borges (señal de scrape fallido), preservamos
-    #      sus funciones FUTURAS de la corrida anterior — con el scrape semanal
-    #      alcanza para no vaciar la grilla. Si el scrape anduvo, la data fresca
-    #      manda (no preservamos nada viejo).
+    #   3) Los cines que se bajan por el proxy residencial (Borges y CCK):
+    #      publican semanas de programación de una vez, pero Cloudflare bloquea
+    #      la IP del runner y el proxy se cae por su cuenta (key vencida, sin
+    #      créditos). Si la corrida trajo menos funciones que el umbral —señal
+    #      de scrape fallido, no de cartelera vacía— preservamos sus funciones
+    #      FUTURAS de la corrida anterior. Si el scrape anduvo, la data fresca
+    #      manda y no se preserva nada viejo.
+    #
+    #      El CCK estaba afuera de esta red y por eso desapareció de la web en
+    #      dos días: el 22/8/2026 el proxy empezó a contestar 401 y, sin cache,
+    #      cada corrida se llevaba puestas las funciones futuras; sólo sobrevivían
+    #      las de HOY (caso 2). El Borges, con la misma falla el mismo día, siguió
+    #      publicando. Umbral 1 —y no 3 como el Borges— porque el CCK sano puede
+    #      tener pocas funciones a la vista (proyecta viernes a domingo): sólo el
+    #      cero es inequívocamente una falla.
     COMMERCIAL_PREFIXES = ('Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex')
-    BORGES_CINE = 'Centro Cultural Borges'
+    CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1}   # cine → mínimo sano
     if CARTELERA_JSON.exists():
         try:
             from datetime import date
@@ -584,8 +593,12 @@ async def run_scraper(semanas: int = 9) -> None:
             def _key(s):
                 return (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
 
-            borges_now = sum(1 for s in screenings_out if s.get("cine") == BORGES_CINE)
-            borges_failed = borges_now < 3  # sano trae ~15-20; 0-1 = falló
+            # Cines detrás del proxy cuyo scrape se cayó hoy: los que trajeron
+            # menos funciones que su mínimo sano (el Borges sano trae 15-20).
+            cache_caidos = {
+                cine for cine, minimo in CINES_CON_CACHE.items()
+                if sum(1 for s in screenings_out if s.get("cine") == cine) < minimo
+            }
 
             # De dónde saca los links CADA cine en la corrida de hoy. Sirve para
             # no revivir funciones que dejó un scraper que ya no existe: cuando
@@ -605,15 +618,15 @@ async def run_scraper(semanas: int = 9) -> None:
                 hosts_hoy.setdefault(s.get("cine", ""), set()).add(_host(s))
 
             existing_keys = {_key(s) for s in screenings_out}
-            restored_comm = restored_today = restored_borges = 0
+            restored_comm = restored_today = restored_cache = 0
             descartadas_host = 0
             for s in prev_data.get("screenings", []):
                 f = s.get("fecha", "")
                 is_comm = any(s.get("cine", "").startswith(p) for p in COMMERCIAL_PREFIXES)
-                is_borges = s.get("cine") == BORGES_CINE
+                is_cache = s.get("cine") in cache_caidos
                 keep = ((is_comm and f > today_str)
                         or (f == today_str)
-                        or (borges_failed and is_borges and f > today_str))
+                        or (is_cache and f > today_str))
                 if not keep or _key(s) in existing_keys:
                     continue
                 # El cine trajo funciones hoy pero desde otro origen: la vieja
@@ -626,17 +639,18 @@ async def run_scraper(semanas: int = 9) -> None:
                 existing_keys.add(_key(s))
                 if f == today_str:
                     restored_today += 1
-                elif is_borges:
-                    restored_borges += 1
+                elif is_cache:
+                    restored_cache += 1
                 else:
                     restored_comm += 1
             if descartadas_host:
                 print(f"  ↳ Merge: {descartadas_host} funciones viejas descartadas "
                       f"(apuntaban a un sitio que su cine ya no usa)")
-            if restored_comm or restored_today or restored_borges:
+            if restored_comm or restored_today or restored_cache:
                 screenings_out.sort(key=sort_key)
+                caidos = ", ".join(sorted(cache_caidos)) or "—"
                 print(f"  ↳ Merge: +{restored_comm} comerciales futuras, "
-                      f"+{restored_borges} Borges futuras, "
+                      f"+{restored_cache} futuras de caché ({caidos}), "
                       f"+{restored_today} funciones de hoy preservadas")
         except Exception as e:
             print(f"  ↳ Merge omitido: {e}")
