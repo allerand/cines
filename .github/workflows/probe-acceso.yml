@@ -1,0 +1,56 @@
+name: Sondeo de acceso
+
+# Corre scripts/probe_acceso.py desde la red del runner y dice, por sitio, qué
+# cliente entra y cuál no: urllib pelado, urllib con headers de navegador, o
+# Chromium de verdad.
+#
+# Sirve para contestar la única pregunta que importa cuando un cine se cae con
+# 403: ¿nos bloquean por cómo pedimos, o por desde dónde pedimos? Si Chromium
+# entra, se arregla en código. Si Chromium también recibe 403, el bloqueo es a
+# la IP del runner y no hay código que lo salve — hace falta salir por otra red
+# (proxy residencial con IP argentina, o correr el scrape desde otro lado).
+#
+# Corrido el 25/8/2026 contra palaciolibertad.gob.ar, la API del Borges y
+# casadelbicentenario.cultura.gob.ar: los tres dieron 403 en las tres pruebas,
+# con el Gaumont de control entrando sin problema.
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL suelta a sondear (vacío = los sitios que suelen bloquear)'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  sondeo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        timeout-minutes: 10
+        # Mismo patrón que los workflows de scrape: apt se cuelga adentro de
+        # `playwright install --with-deps` y sin esto se come el job entero.
+        run: |
+          pip install -r requirements.txt
+          for i in 1 2 3; do
+            if timeout 300 playwright install --with-deps chromium; then break; fi
+            echo "::warning::playwright install falló (intento $i/3)"
+            sleep 15
+          done
+
+      - name: Sondeo
+        run: |
+          if [ -n "${{ inputs.url }}" ]; then
+            python3 scripts/probe_acceso.py --url "${{ inputs.url }}"
+          else
+            python3 scripts/probe_acceso.py
+          fi

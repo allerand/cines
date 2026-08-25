@@ -106,6 +106,19 @@ _AGN_FILM_RE = re.compile(
     r"(\d{1,2})\s+de\s+(" + "|".join(_AGN_MESES) + r")",
     re.IGNORECASE)
 
+# Salas cuya fuente publica SÓLO la grilla del día (La Nación e IMDb). En
+# cuanto la cartelera es de ayer —una corrida que cruza la medianoche
+# alcanza— quedan con cero funciones futuras sin que nada esté roto. Como son
+# las de más volumen, encabezaban el informe con una alarma falsa. Se les pide
+# dos snapshots en cero, que ya no se explican por el vuelco de día.
+#
+# No alcanza con mirar el prefijo de cadena: el Cine Lorca no es cadena y sale
+# de la misma fuente, y las salas de Cinemark/Hoyts sí publican con
+# anticipación por su propia API.
+FUENTE_SOLO_HOY = {
+    "Cine Lorca", "Cinépolis Houssay", "Cinépolis Recoleta", "Showcase Belgrano",
+}
+
 SEV_ERROR, SEV_WARN, SEV_INFO = "ERROR", "AVISO", "INFO"
 
 
@@ -428,7 +441,9 @@ def check_frescura(rep: Report, meta: dict, screenings: list[dict],
 
 
 def check_cobertura(rep: Report, screenings: list[dict], today: date,
-                    snaps: dict[str, Counter], probes: dict) -> None:
+                    snaps: dict[str, Counter], probes: dict,
+                    fuentes: dict | None = None) -> None:
+    fuentes = fuentes or {}
     hoy = today.isoformat()
     fut = defaultdict(list)
     for s in screenings:
@@ -495,6 +510,21 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
         es_comercial = cine.startswith(COMMERCIAL_PREFIXES)
         rancio = False
 
+        # Un cine puede publicar funciones y tener la fuente caída igual: el
+        # Borges vive del caché de la última corrida buena y la Casa del
+        # Bicentenario de data/cb_manual.json. La grilla se ve llena y el
+        # conteo no baja, así que ninguno de los chequeos de acá lo agarraba —
+        # el Borges estuvo cuatro días así sin figurar en ningún informe. Es
+        # peor que un cero: un cero se ve, esto no, y mientras tanto se publica
+        # programación que nadie confirmó.
+        proc = fuentes.get(cine) or {}
+        if n and proc.get("publicadas") and not proc.get("scrapeadas"):
+            motivo = proc.get("fuente_caida") or "la fuente no contestó"
+            rep.accionar(cine, f"publica {n} función(es) pero no scrapeó "
+                               f"ninguna en la última corrida: {motivo}. Lo que "
+                               f"se ve es lo último bueno, y se vacía solo a "
+                               f"medida que pasan las fechas.")
+
         if n == 0:
             racha, hab = racha_cero.get(cine, 0), habitual.get(cine, 0)
             desde = (f"lleva {racha} día{'s' if racha != 1 else ''} sin ninguna "
@@ -519,6 +549,10 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
                 pass
             elif not hab:
                 # Nunca trajo nada en la ventana: no hay con qué comparar.
+                pass
+            elif cine in FUENTE_SOLO_HOY and racha < 2:
+                # Ver FUENTE_SOLO_HOY: un cero de un día acá es el vuelco de
+                # fecha, no una caída.
                 pass
             elif hab >= ALTA_FRECUENCIA or racha >= RACHA_CHICA:
                 rep.accionar(cine, f"{desde}{venia}. Revisá su scraper.")
@@ -738,7 +772,7 @@ def main() -> int:
     a_sondear = sorted(set(PROBES) | cines_hoy & set(PROBES))
     probes = {} if args.offline else run_probes(a_sondear)
 
-    check_cobertura(rep, screenings, today, snaps, probes)
+    check_cobertura(rep, screenings, today, snaps, probes, meta.get("fuentes"))
     check_cambios(rep, screenings, today, snaps)
     check_calidad(rep, screenings, today)
     check_completitud(rep, screenings, today)

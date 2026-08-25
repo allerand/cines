@@ -133,6 +133,20 @@ def fetch_html(url: str) -> BeautifulSoup:
     return BeautifulSoup(fetch_bytes(url).decode("utf-8", errors="replace"), "html.parser")
 
 
+# Cines cuya fuente no se pudo leer en ESTA corrida, con el motivo. Existe
+# porque un cine con la fuente caída no siempre queda en cero: el Borges vive
+# del caché de la corrida anterior y la Casa del Bicentenario de un override
+# a mano, así que los dos siguen publicando funciones y desde afuera parecen
+# sanos. La cartelera no guardaba de dónde salía cada función, así que la
+# auditoría no tenía cómo distinguir "se scrapeó hoy" de "hace cuatro días que
+# no entra y está mostrando lo viejo". Se vuelca a data/cartelera.json.
+FUENTES_CAIDAS: dict[str, str] = {}
+
+
+def marcar_fuente_caida(cine: str, motivo: str) -> None:
+    FUENTES_CAIDAS[cine] = motivo
+
+
 # Cloudflare no siempre bloquea con un 403: el challenge ("Just a moment…")
 # viene con 200 y su propio HTML, así que un fetch "exitoso" puede no traer una
 # sola línea del sitio. Hay que mirar el cuerpo, no el status.
@@ -3027,6 +3041,7 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
     BASE = "https://palaciolibertad.gob.ar"
     soup = fetch_html_cf(f"{BASE}/cine/", "CCK: la agenda de cine")
     if soup is None:
+        marcar_fuente_caida("CCK", "no se pudo leer palaciolibertad.gob.ar/cine/")
         return []
 
     event_urls: list[str] = []
@@ -4152,6 +4167,9 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
         # que Borges vino con <3 funciones y restaura las futuras del caché.
         print("  · [Borges] Listado inaccesible → se conserva la programación "
               "de la corrida anterior (caché).")
+        marcar_fuente_caida("Centro Cultural Borges",
+                            "la API no contesta; se publica el caché de la "
+                            "última corrida buena")
         return []
 
     result: list[Screening] = []
@@ -5800,6 +5818,9 @@ def _cb_cine_urls(max_pages: int = 3) -> list[str]:
             # Silenciar esto hacía que el runner reportara "0 funciones" sin
             # causa, indistinguible de "no hay cine programado".
             print(f"[CB] falló el listado {u}: {e}", flush=True)
+            marcar_fuente_caida("Casa del Bicentenario",
+                                f"el listado no contesta ({e}); sólo queda lo "
+                                f"que haya en data/cb_manual.json")
             break
         cards = soup.select("div.agenda div.card")
         if not cards:

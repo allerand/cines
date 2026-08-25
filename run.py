@@ -629,6 +629,16 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     #      CERO funciones (desde casa, 11) — sólo sobrevivieron las de HOY por
     #      el caso 2, así que la sala perdió todo el ciclo de septiembre.
     CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1, 'Bellas Artes': 1}   # cine → mínimo sano
+
+    # Cuánto trajo cada cine ANTES del merge, o sea de la fuente, hoy. Después
+    # del merge no se puede distinguir: un cine que no se pudo scrapear y quedó
+    # publicando el caché de ayer se ve igual que uno que anduvo bien. Cuantos
+    # más cines entran a CINES_CON_CACHE, más gente hay en esa situación: el
+    # Borges estuvo cuatro días caído mostrando ~15 funciones sin que ninguna
+    # auditoría lo nombrara.
+    from collections import Counter as _Counter
+    scrapeadas_hoy = _Counter(s["cine"] for s in screenings_out)
+
     if CARTELERA_JSON.exists():
         try:
             from datetime import date
@@ -718,8 +728,29 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         print(f"  ↳ {len(screenings_out) - len(unicas)} funciones duplicadas descartadas")
         screenings_out = unicas
 
+    # Procedencia por cine: cuántas salieron de la fuente hoy contra cuántas se
+    # publican. Si un cine publica 15 y scrapeó 0, está viviendo del caché o de
+    # un override y su fuente está caída, aunque la grilla se vea llena.
+    # scraper.FUENTES_CAIDAS agrega el motivo cuando el scraper lo sabe.
+    from scraper import FUENTES_CAIDAS
+    publicadas = _Counter(s["cine"] for s in screenings_out)
+    fuentes = {}
+    for cine in sorted(set(publicadas) | set(scrapeadas_hoy) | set(FUENTES_CAIDAS)):
+        entrada = {"scrapeadas": scrapeadas_hoy.get(cine, 0),
+                   "publicadas": publicadas.get(cine, 0)}
+        if cine in FUENTES_CAIDAS:
+            entrada["fuente_caida"] = FUENTES_CAIDAS[cine]
+        fuentes[cine] = entrada
+
+    en_soporte = [c for c, f in fuentes.items()
+                  if f["publicadas"] and not f["scrapeadas"]]
+    if en_soporte:
+        print(f"  ↳ Publicando sin fuente viva: {', '.join(en_soporte)} "
+              f"(caché u override; la fuente no contestó hoy)")
+
     output = {
         "updated": datetime.now().isoformat(timespec="seconds"),
+        "fuentes": fuentes,
         "screenings": screenings_out,
     }
 

@@ -1,9 +1,7 @@
 name: Test TMDb credential
 
-# TEMPORAL — prestado para correr scripts/probe_acceso.py desde la red del
-# runner y averiguar si el 403 de palaciolibertad / Borges / Bicentenario se
-# saltea con Chromium. Se restaura al contenido original en el commit
-# siguiente.
+# Test rápido para verificar que TMDB_API_KEY está bien seteada y los
+# lookups funcionan. Tarda ~10 segundos.
 
 on:
   workflow_dispatch:
@@ -11,7 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 3
     steps:
       - uses: actions/checkout@v4
 
@@ -20,14 +18,58 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        timeout-minutes: 10
-        run: |
-          pip install -r requirements.txt
-          for i in 1 2 3; do
-            if timeout 300 playwright install --with-deps chromium; then break; fi
-            echo "::warning::playwright install falló (intento $i/3)"
-            sleep 15
-          done
+        run: pip install beautifulsoup4
 
-      - name: Sondeo de acceso
-        run: python3 scripts/probe_acceso.py
+      - name: Test TMDb
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+        run: |
+          python3 <<'PY'
+          import os, sys, traceback
+          print("Python", sys.version.split()[0])
+          print("TMDB_API_KEY len:", len(os.environ.get("TMDB_API_KEY","")))
+          print("TMDB_READ_ACCESS_TOKEN len:", len(os.environ.get("TMDB_READ_ACCESS_TOKEN","")))
+
+          try:
+              sys.path.insert(0, ".")
+              import letterboxd
+              print(f"letterboxd.py loaded: {letterboxd.__file__}")
+              from letterboxd import _tmdb_credential, tmdb_search_movie, fetch_tmdb_movie_meta
+          except Exception:
+              print("\n❌ Falló al importar letterboxd:")
+              traceback.print_exc()
+              sys.exit(1)
+
+          try:
+              kind, val = _tmdb_credential()
+              if not kind:
+                  print("\n❌ TMDb credential NO seteada — chequear secret TMDB_API_KEY o TMDB_READ_ACCESS_TOKEN")
+                  sys.exit(1)
+              print(f"\n✅ Credencial detectada: tipo {kind}, longitud {len(val)}")
+
+              print("\n— Test 1: 'Mat' 1926 (Pudovkin)")
+              results = tmdb_search_movie("Mat", year=1926)
+              print(f"  resultados: {len(results)}")
+              if not results:
+                  print("  ❌ Sin resultados — credencial probablemente inválida o rate-limit")
+                  sys.exit(1)
+              for r in results[:3]:
+                  print(f"  • {r['title']} ({r['year']}) — orig={r['original_title']!r} id={r['id']}")
+              meta = fetch_tmdb_movie_meta(results[0]["id"])
+              print(f"  → director={meta.get('director')!r}  country={meta.get('country')!r}  duration={meta.get('duration')}min")
+
+              print("\n— Test 2: 'Los dias chinos'")
+              results = tmdb_search_movie("Los dias chinos")
+              for r in results[:3]:
+                  print(f"  • {r['title']} ({r['year']}) — orig={r['original_title']!r} id={r['id']}")
+              if results:
+                  meta = fetch_tmdb_movie_meta(results[0]["id"])
+                  print(f"  → director={meta.get('director')!r}  country={meta.get('country')!r}  duration={meta.get('duration')}min")
+
+              print("\n✅ TMDb funciona correctamente")
+          except Exception:
+              print("\n❌ Excepción durante test:")
+              traceback.print_exc()
+              sys.exit(1)
+          PY
