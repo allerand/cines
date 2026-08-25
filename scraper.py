@@ -5980,6 +5980,157 @@ def scrape_bcn() -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
+# Archivo General de la Nación  (argentina.gob.ar — Drupal)
+# ---------------------------------------------------------------------------
+# El AGN no tiene agenda ni ficha por película: hay UNA sola landing que
+# reescriben cada mes con el ciclo vigente, y la grilla vive en prosa. Cada
+# función es un <p> con esta forma:
+#
+#     <p><strong>Los Corroboradores</strong><br>
+#        Jueves 6 de agosto | 70 min. | Ficción / Documental<br>
+#        Dirección: Luis Bernardez</p>
+#
+# Lo que ese párrafo NO dice —hora y año— está una sola vez al pie, en un
+# bloque "Información General" que vale para todo el ciclo. Sin hora no se
+# puede publicar una función, así que si ese bloque desaparece preferimos
+# devolver [] antes que inventar un horario: la auditoría lo levanta como cine
+# caído, que es exactamente lo que pasó.
+#
+# Ojo con dos cosas de la página:
+#   - el bloque de abajo se contradice con los párrafos ("Fecha: 8, 13 y 20 de
+#     agosto" cuando las funciones son jueves 6, 13 y 20). Mandan los párrafos:
+#     son por película, el otro es un resumen escrito a mano.
+#   - los botones "Reservá tu lugar" apuntan todos al MISMO formulario de
+#     Microsoft, sin distinguir función, y encima con el href roto
+#     ("blank:#https://…", un desliz del editor de Drupal). Como link de la
+#     cartelera mandamos la landing del AGN: es lo que le sirve a alguien que
+#     quiere ir (tiene ficha, sede y el formulario a un click), y no se pudre
+#     cuando el ciclo siguiente cambia de formulario.
+# ---------------------------------------------------------------------------
+
+AGN_URL = ("https://www.argentina.gob.ar/interior/archivo-general-de-la-nacion/"
+           "cine-en-el-archivo-general-de-la-nacion")
+
+_AGN_FECHA_RE = re.compile(
+    r"(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[áa]bados?|domingos?)?\s*"
+    r"(\d{1,2}(?:\s*(?:,|y)\s*\d{1,2})*)\s+de\s+(" + "|".join(MESES_ES) + r")\b",
+    re.IGNORECASE)
+_AGN_HORA_RE = re.compile(r"\b(\d{1,2})(?::(\d{2}))?\s*h(?:s|oras)?\b", re.IGNORECASE)
+_AGN_DUR_RE = re.compile(r"\b(\d{2,3})\s*min", re.IGNORECASE)
+_AGN_DIR_RE = re.compile(r"Direcci[oó]n\s*:\s*([^|]+)", re.IGNORECASE)
+
+
+def _agn_hora(body_text: str) -> Optional[str]:
+    """Horario del ciclo, desde "Horario: A las 18 h" (o "18:30 h")."""
+    m = re.search(r"Horario\s*:\s*(?:a\s+las\s+)?(\d{1,2})(?::(\d{2}))?\s*h",
+                  body_text, re.IGNORECASE)
+    if not m:
+        return None
+    return f"{int(m.group(1)):02d}:{int(m.group(2) or 0):02d}"
+
+
+def _agn_year(body_text: str, month: int) -> int:
+    """Año del ciclo. Sale de "Fecha: … de agosto de 2026"; si ese renglón no
+    está, se infiere: un mes que ya pasó hace rato es del año que viene (la
+    página se publica con un mes de anticipación, no con once de atraso)."""
+    m = re.search(r"Fecha\s*:[^\n]*?\bde\s+(20\d{2})", body_text, re.IGNORECASE)
+    if m:
+        return int(m.group(1))
+    today = date.today()
+    return today.year + 1 if month < today.month - 1 else today.year
+
+
+def scrape_agn(semanas: int = 9) -> list[Screening]:
+    """Scrapea el ciclo de cine del Archivo General de la Nación."""
+    try:
+        soup = fetch_html(AGN_URL)
+    except Exception:
+        return []
+
+    body = soup.find("div", class_="field-name-body") or soup
+    body_text = body.get_text("\n", strip=True)
+
+    hora = _agn_hora(body_text)
+    if not hora:
+        return []
+
+    # Ciclo: el primer <h4> del cuerpo es el nombre ("Arquitectura, archivos e
+    # historia"); los que siguen son separadores de sección ("Programación de
+    # agosto:", "Subte", "Colectivos").
+    ciclo = ""
+    for h in body.find_all(["h2", "h3", "h4"]):
+        t = re.sub(r"\s+", " ", h.get_text(" ", strip=True)).strip()
+        if t and not re.match(r"^(programaci[oó]n|informaci[oó]n|c[oó]mo llegar)",
+                              t, re.IGNORECASE):
+            ciclo = t
+            break
+
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    result: list[Screening] = []
+    seen: set[tuple] = set()
+
+    for p in body.find_all("p"):
+        strong = p.find("strong")
+        if not strong:
+            continue
+        crudo = re.sub(r"\s+", " ", strong.get_text(" ", strip=True)).strip()
+        # "Fecha: 8, 13 y 20 de agosto de 2026" — el resumen del pie también es
+        # negrita + fecha, y sin este corte entra a la cartelera como una
+        # película llamada "Fecha". La negrita terminada en ":" es una etiqueta,
+        # nunca un título.
+        if crudo.endswith(":") or p.find_parent("li"):
+            continue
+        title = crudo.strip(" .")
+        if len(title) < 2:
+            continue
+
+        # El resto del párrafo (sin el título) es la línea de datos. Sólo es una
+        # función si ahí hay una fecha; así se descartan los otros párrafos en
+        # negrita ("Entrada libre y gratuita…", la dirección de la sede).
+        resto = p.get_text(" ", strip=True)
+        resto = resto.replace(strong.get_text(" ", strip=True), " ", 1)
+        m = _AGN_FECHA_RE.search(resto)
+        if not m:
+            continue
+
+        month = MESES_ES[m.group(2).lower()]
+        year = _agn_year(body_text, month)
+        # La ficha puede traer su propio horario; si no, manda el del ciclo.
+        hm = _AGN_HORA_RE.search(_AGN_DUR_RE.sub(" ", resto))
+        hora_f = (f"{int(hm.group(1)):02d}:{int(hm.group(2) or 0):02d}"
+                  if hm else hora)
+
+        dm = _AGN_DUR_RE.search(resto)
+        duration = int(dm.group(1)) if dm else None
+        dirm = _AGN_DIR_RE.search(resto)
+        director = re.sub(r"\s+", " ", dirm.group(1)).strip(" .,") if dirm else ""
+
+        for dtxt in re.split(r"\s*(?:,|y)\s*", m.group(1)):
+            try:
+                d = date(year, month, int(dtxt))
+            except ValueError:
+                continue
+            if d < today or d > cutoff:
+                continue
+            key = (title, d.isoformat(), hora_f)
+            if key in seen:
+                continue
+            seen.add(key)
+            result.append(Screening(
+                cine="Archivo General de la Nación",
+                title=title,
+                fecha=d.isoformat(),
+                hora=hora_f,
+                ticket_url=AGN_URL,
+                ciclo=ciclo,
+                director=director,
+                duration=duration,
+            ))
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Funciones manuales — data/manual_screenings.json
 # ---------------------------------------------------------------------------
 # Escape genérico para lo que ningún scraper puede sacar solo: festivales que

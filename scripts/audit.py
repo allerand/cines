@@ -73,6 +73,10 @@ PROBES = {
     "Casa del Bicentenario":    ("https://casadelbicentenario.cultura.gob.ar/actividades/",
                                  r"/actividad/[a-z0-9\-]+"),
     "Amorina":                  ("https://www.amorina.club/schedule.json", "@amorina"),
+    "Archivo General de la Nación": ("https://www.argentina.gob.ar/interior/"
+                                     "archivo-general-de-la-nacion/"
+                                     "cine-en-el-archivo-general-de-la-nacion",
+                                     "@agn"),
 }
 # Sin sonda a propósito: Cosmos (no responde a un GET pelado), Filo y Arthaus
 # (listado renderizado por JS), Lugones / Borges / CEA (SPA o Cloudflare),
@@ -87,6 +91,19 @@ PROBES = {
 # alarma que siempre suena deja de leerse. El chequeo de cine caído (0
 # funciones) les sigue aplicando igual.
 SIN_REGLA_FALTANTES = {"Centro Cultural 25 de Mayo"}
+
+# Sonda del AGN (ver probe(): "@agn"). Cada función es un <strong>título</strong>
+# seguido de un <br> y la línea "Jueves 6 de agosto | 70 min. | …".
+_AGN_MESES = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
+    "noviembre": 11, "diciembre": 12,
+}
+_AGN_FILM_RE = re.compile(
+    r"<strong>([^<>]{3,80})</strong>\s*<br\s*/?>\s*"
+    r"(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[áa]bado|domingo)?\s*"
+    r"(\d{1,2})\s+de\s+(" + "|".join(_AGN_MESES) + r")",
+    re.IGNORECASE)
 
 SEV_ERROR, SEV_WARN, SEV_INFO = "ERROR", "AVISO", "INFO"
 
@@ -325,6 +342,26 @@ def probe(cine: str, url: str, pattern: str) -> tuple[str, int | None, str]:
             if st >= today:
                 n += 1
         return cine, n, "funciones futuras en schedule.json"
+
+    if pattern == "@agn":
+        # El AGN no tiene listing: es una landing que reescriben cada mes y que
+        # conserva las funciones ya pasadas hasta que sube el ciclo siguiente.
+        # Contar títulos a secas diría "la fuente publica 3" a fin de mes, con
+        # la cartelera legítimamente vacía, y el informe cerraría cada mes con
+        # un "el scraper se rompió" que no es cierto. Contamos sólo lo que
+        # todavía no pasó.
+        anio = re.search(r"Fecha\s*:.{0,80}?\bde\s+(20\d{2})",
+                         re.sub(r"<[^>]+>", " ", body), re.IGNORECASE)
+        anio = int(anio.group(1)) if anio else date.today().year
+        n = 0
+        for _, dia, mes in _AGN_FILM_RE.findall(body):
+            try:
+                d = date(anio, _AGN_MESES[mes.lower()], int(dia))
+            except ValueError:
+                continue
+            if d >= date.today():
+                n += 1
+        return cine, n, "funciones futuras en la landing"
 
     return cine, len(set(re.findall(pattern, body))), "ítems en la listing"
 
