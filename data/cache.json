@@ -810,13 +810,13 @@
     "genre": "Música, Documental"
   },
   "sin aliento": {
-    "url": "https://letterboxd.com/film/breathless/",
-    "title_en": "Breathless",
-    "director": "Jean-Luc Godard",
-    "country": "France",
-    "year": 1960,
-    "duration": 90,
-    "genre": "Romance, Crimen"
+    "url": "https://letterboxd.com/film/no-limit-2022/",
+    "title_en": "No Limit",
+    "director": "David M. Rosenthal",
+    "country": "Belgium, France",
+    "year": 2022,
+    "duration": 119,
+    "genre": "Drama, Romance"
   },
   "las catadoras del führer": {
     "url": "https://letterboxd.com/film/the-tasters/",
@@ -3240,13 +3240,14 @@
     "genre": "Drama"
   },
   "la ceremonia": {
-    "url": "https://letterboxd.com/film/la-ceremonie/",
-    "title_en": "La Cérémonie",
-    "director": "Claude Chabrol",
-    "country": "France, Germany",
-    "year": 1995,
-    "duration": 112,
-    "genre": "Thriller, Drama"
+    "url": "https://letterboxd.com/film/la-ceremonia/",
+    "title_en": "La ceremonia",
+    "director": "Pedro Deré",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 63,
+    "genre": "Historia",
+    "original_title": "La ceremonia"
   },
   "caravanas en los andes: una mirada etnoarqueológica": {
     "url": "",
@@ -11861,13 +11862,13 @@
     "original_title": "Au revoir les enfants"
   },
   "azur y asmar": {
-    "url": "https://letterboxd.com/film/azur-asmar-the-princes-quest/",
-    "title_en": "Azur & Asmar: The Princes' Quest",
+    "url": "",
+    "title_en": "Azur y Asmar",
     "director": "Michel Ocelot",
     "country": "Belgium, France",
     "year": 2006,
     "duration": 99,
-    "genre": "Familiar, Animación",
+    "genre": "Animación, Familiar",
     "title_es": "Azur y Asmar",
     "original_title": "Azur et Asmar"
   },
@@ -11892,8 +11893,8 @@
     "genre": "Drama"
   },
   "el planeta salvaje": {
-    "url": "https://letterboxd.com/film/fantastic-planet/",
-    "title_en": "Fantastic Planet",
+    "url": "",
+    "title_en": "El planeta salvaje",
     "director": "René Laloux",
     "country": "Czechoslovakia, France",
     "year": 1973,
@@ -11903,44 +11904,41 @@
     "original_title": "La Planète sauvage"
   },
   "la jetée": {
-    "url": "https://letterboxd.com/film/la-jetee/",
-    "title_en": "La Jetée",
-    "director": "Chris Marker",
-    "country": "France",
-    "year": 1962,
-    "duration": 29,
-    "genre": "Romance, Ciencia ficción",
-    "title_es": "La jetée",
-    "original_title": "La Jetée"
+    "url": "https://letterboxd.com/film/ai-jetee/",
+    "title_en": "AI Jetée",
+    "director": "Adrian Goycoolea",
+    "country": "",
+    "year": 2024,
+    "duration": 27,
+    "genre": "Ciencia ficción"
   },
   "sin sol": {
-    "url": "https://letterboxd.com/film/sans-soleil/",
-    "title_en": "Sans Soleil",
-    "director": "Chris Marker",
-    "country": "France",
-    "year": 1983,
-    "duration": 100,
-    "genre": "Documental"
+    "url": "https://letterboxd.com/film/no-hay-sabado-sin-sol/",
+    "title_en": "No hay sábado sin sol",
+    "director": "Manuel Herrera",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "",
+    "original_title": "No hay sábado sin sol"
   },
   "los amos del tiempo": {
-    "url": "https://letterboxd.com/film/time-masters/",
-    "title_en": "Time Masters",
-    "director": "René Laloux",
-    "country": "France, Germany",
-    "year": 1982,
-    "duration": 80,
-    "genre": "Animación, Ciencia ficción",
-    "title_es": "Los amos del tiempo",
-    "original_title": "Les maîtres du temps"
+    "url": "https://letterboxd.com/film/our-times-2025/",
+    "title_en": "Our Times",
+    "director": "Chava Cartas",
+    "country": "Mexico",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Ciencia ficción, Romance"
   },
   "los coristas": {
-    "url": "https://letterboxd.com/film/the-chorus/",
-    "title_en": "The Chorus",
+    "url": "",
+    "title_en": "Los coristas",
     "director": "Christophe Barratier",
     "country": "France, Switzerland",
     "year": 2004,
     "duration": 97,
-    "genre": "Drama, Música",
+    "genre": "Drama, Comedia",
     "title_es": "Los chicos del coro",
     "original_title": "Les Choristes"
   },
@@ -12297,15 +12295,13 @@
     "original_title": "Destino de un capricho"
   },
   "mi tío de américa": {
-    "url": "https://letterboxd.com/film/my-american-uncle/",
-    "title_en": "My American Uncle",
-    "director": "Alain Resnais",
-    "country": "France",
-    "year": 1980,
-    "duration": 126,
-    "genre": "Romance, Comedia",
-    "title_es": "Mi tío de América",
-    "original_title": "Mon oncle d'Amérique"
+    "url": "https://letterboxd.com/film/borat-subsequent-moviefilm-delivery-of-prodigious/",
+    "title_en": "Borat Subsequent Moviefilm: Delivery of Prodigious Bribe to American Regime for Make Benefit Once Glorious Nation of Kazakhstan",
+    "director": "Jason Woliner",
+    "country": "USA",
+    "year": 2020,
+    "duration": 96,
+    "genre": "Comedia"
   },
   "pmmm la pelicula parte 1": {
     "url": "",
@@ -12518,13 +12514,15 @@
     "original_title": "One Night Only"
   },
   "tierra de crimen": {
-    "url": "https://letterboxd.com/film/reedland/",
-    "title_en": "Reedland",
-    "director": "Sven Bresser",
-    "country": "Netherlands, Belgium",
-    "year": 2025,
-    "duration": 105,
-    "genre": "Drama"
+    "url": "",
+    "title_en": "TIERRA DE CRIMEN",
+    "director": "Chris Brinker",
+    "country": "United States of America",
+    "year": 2014,
+    "duration": 95,
+    "genre": "Drama, Acción",
+    "title_es": "Tierra del mal",
+    "original_title": "Bad Country"
   },
   "avengers: endgame (re estreno)": {
     "url": "",
@@ -12544,5 +12542,466 @@
     "genre": "Documental",
     "title_es": "La historia de Michael Jackson",
     "original_title": "The Michael Jackson Story"
+  },
+  "norma también|2025": {
+    "url": "https://letterboxd.com/film/norma-tambien/",
+    "title_en": "Norma también",
+    "director": "Natalia Vinelli, Alejandra Guzzo",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 74,
+    "genre": "Documental",
+    "original_title": "Norma también"
+  },
+  "nóstos: il ritorno|1989": {
+    "url": "https://letterboxd.com/film/nostos-il-ritorno/",
+    "title_en": "Nostos: The Return",
+    "director": "Franco Piavoli",
+    "country": "Italy",
+    "year": 1989,
+    "duration": 88,
+    "genre": "Drama, Aventura",
+    "original_title": "Nostos: il ritorno"
+  },
+  "todas las fuerzas|2025": {
+    "url": "https://letterboxd.com/film/todas-las-fuerzas/",
+    "title_en": "All the Strength",
+    "director": "Luciana Piantanida",
+    "country": "Argentina, Peru",
+    "year": 2025,
+    "duration": 70,
+    "genre": "Fantasía, Drama",
+    "original_title": "Todas las fuerzas"
+  },
+  "tos ferina|1986": {
+    "url": "https://letterboxd.com/film/whooping-cough/",
+    "title_en": "Whooping Cough",
+    "director": "Péter Gárdos",
+    "country": "Hungary",
+    "year": 1987,
+    "duration": 91,
+    "genre": "Comedia, Drama"
+  },
+  "la combattante|2022": {
+    "url": "https://letterboxd.com/film/la-combattante/",
+    "title_en": "La combattante",
+    "director": "Camille Ponsin",
+    "country": "Belgium, France",
+    "year": 2022,
+    "duration": 94,
+    "genre": "Documental",
+    "original_title": "La combattante"
+  },
+  "l´histoire de soulaymane|2024": {
+    "url": "https://letterboxd.com/film/souleymanes-story/",
+    "title_en": "Souleymane's Story",
+    "director": "Boris Lojkine",
+    "country": "France",
+    "year": 2024,
+    "duration": 94,
+    "genre": "Drama"
+  },
+  "kuhle wampe|1932": {
+    "url": "https://letterboxd.com/film/kuhle-wampe-or-who-owns-the-world/",
+    "title_en": "Kuhle Wampe or Who Owns the World?",
+    "director": "Slatan Dudow",
+    "country": "Germany",
+    "year": 1932,
+    "duration": 74,
+    "genre": "Drama",
+    "original_title": "Kuhle Wampe oder: Wem gehört die Welt?"
+  },
+  "programa de cortometrajes": {
+    "url": "",
+    "title_en": "Programa de cortometrajes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ernest cole, photographe|2024": {
+    "url": "https://letterboxd.com/film/ernest-cole-lost-and-found/",
+    "title_en": "Ernest Cole: Lost and Found",
+    "director": "Raoul Peck",
+    "country": "France, USA",
+    "year": 2024,
+    "duration": 105,
+    "genre": "Documental",
+    "original_title": "Ernest Cole, photographe"
+  },
+  "nct 127 5th tour neo city: seoul the redline": {
+    "url": "https://letterboxd.com/film/nct-127-5th-tour-neo-city-seoul-the-redline/",
+    "title_en": "NCT 127 5TH TOUR ‘NEO CITY  SEOUL - THE REDLINE’ in CINEMAS",
+    "director": "",
+    "country": "",
+    "year": 2026,
+    "duration": 255,
+    "genre": "Música",
+    "original_title": "NCT 127 5TH TOUR ‘NEO CITY  SEOUL - THE REDLINE’ in CINEMAS"
+  },
+  "lo que escribimos juntos|2025": {
+    "url": "https://letterboxd.com/film/lo-que-escribimos-juntos/",
+    "title_en": "What We Wrote Together",
+    "director": "Nicolás Teté",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 93,
+    "genre": "Romance, Drama",
+    "original_title": "Lo que escribimos juntos"
+  },
+  "borges/santiago: variaciones sobre un guion|2008": {
+    "url": "https://letterboxd.com/film/borges-santiago-variaciones-sobre-un-guion/",
+    "title_en": "Borges/Santiago: variaciones sobre un guion",
+    "director": "Alejo Moguillansky",
+    "country": "",
+    "year": 2008,
+    "duration": 76,
+    "genre": "Documental",
+    "original_title": "Borges/Santiago: variaciones sobre un guion"
+  },
+  "prefacio + tú me abrasas|2024": {
+    "url": "https://letterboxd.com/film/you-burn-me/",
+    "title_en": "You Burn Me",
+    "director": "Matías Piñeiro",
+    "country": "Argentina, Spain",
+    "year": 2024,
+    "duration": 64,
+    "genre": "Drama, Documental"
+  },
+  "el temblor": {
+    "url": "",
+    "title_en": "El Temblor",
+    "director": "Santiago Van Dam",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "El temblor"
+  },
+  "la niña del azúcar": {
+    "url": "",
+    "title_en": "La niña del azúcar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "lu & pau": {
+    "url": "https://letterboxd.com/film/lu-pau/",
+    "title_en": "Lu & Pau",
+    "director": "Nicanor Loreti",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 76,
+    "genre": "Thriller, Comedia",
+    "original_title": "Lu & Pau"
+  },
+  "cin3 fili4": {
+    "url": "https://letterboxd.com/film/cin3-fili4/",
+    "title_en": "CIN3 FILI4",
+    "director": "Raúl Perrone",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "",
+    "original_title": "CIN3 FILI4"
+  },
+  "el sabor de las cerezas": {
+    "url": "",
+    "title_en": "El sabor de las cerezas",
+    "director": "Abbas Kiarostami",
+    "country": "Iran, France",
+    "year": 1997,
+    "duration": 99,
+    "genre": "Drama",
+    "title_es": "El sabor de las cerezas",
+    "original_title": "طعم گيلاس"
+  },
+  "nunca más asistas a este tipo de fiestas": {
+    "url": "https://letterboxd.com/film/nunca-mas-asistas-a-este-tipo-de-fiestas/",
+    "title_en": "Nunca más asistas a este tipo de fiestas",
+    "director": "Pablo Parés, Paulo Soria, Hernán Sáez",
+    "country": "Argentina",
+    "year": 2010,
+    "duration": 70,
+    "genre": "Comedia, Terror",
+    "original_title": "Nunca más asistas a este tipo de fiestas"
+  },
+  "el cuerno de cabra": {
+    "url": "",
+    "title_en": "El cuerno de cabra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "locas margaritas": {
+    "url": "",
+    "title_en": "Locas margaritas",
+    "director": "Věra Chytilová",
+    "country": "Czechoslovakia",
+    "year": 1966,
+    "duration": 76,
+    "genre": "Comedia, Drama",
+    "title_es": "Las margaritas",
+    "original_title": "Sedmikrásky"
+  },
+  "el hijo de la yegua blanca": {
+    "url": "",
+    "title_en": "El hijo de la yegua blanca",
+    "director": "Marcell Jankovics",
+    "country": "Hungary",
+    "year": 1981,
+    "duration": 86,
+    "genre": "Aventura, Animación",
+    "title_es": "El hijo de la yegua blanca",
+    "original_title": "Fehérlófia"
+  },
+  "el color de la granada": {
+    "url": "",
+    "title_en": "El color de la granada",
+    "director": "Sergei Parajanov",
+    "country": "Soviet Union",
+    "year": 1969,
+    "duration": 80,
+    "genre": "Drama, Historia",
+    "title_es": "El color de la granada",
+    "original_title": "Նռան գույնը"
+  },
+  "viy, espíritu del mal": {
+    "url": "",
+    "title_en": "Viy, espíritu del mal",
+    "director": "Georgi Kropachyov, Konstantin Ershov",
+    "country": "Soviet Union",
+    "year": 1967,
+    "duration": 76,
+    "genre": "Drama, Fantasía",
+    "title_es": "El Viyi",
+    "original_title": "Вий"
+  },
+  "cuéntame tu vida": {
+    "url": "",
+    "title_en": "Cuéntame tu vida",
+    "director": "Alfred Hitchcock",
+    "country": "United States of America",
+    "year": 1945,
+    "duration": 111,
+    "genre": "Thriller, Misterio",
+    "title_es": "Recuerda",
+    "original_title": "Spellbound"
+  },
+  "vértigo": {
+    "url": "https://letterboxd.com/film/fall-2-deadpoint/",
+    "title_en": "Fall 2: Deadpoint",
+    "director": "Michael Spierig, Peter Spierig",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 98,
+    "genre": "Thriller"
+  },
+  "psicosis": {
+    "url": "https://letterboxd.com/film/delirium-2019-2/",
+    "title_en": "Delirium",
+    "director": "Till Endemann",
+    "country": "Germany, Austria",
+    "year": 2019,
+    "duration": 89,
+    "genre": "TV, Thriller",
+    "title_es": "Psicosis",
+    "original_title": "Im Schatten der Angst"
+  },
+  "frenesí": {
+    "url": "https://letterboxd.com/film/frenesi/",
+    "title_en": "frenesi.",
+    "director": "Wilson Neto",
+    "country": "Brazil",
+    "year": 2021,
+    "duration": 5,
+    "genre": "Música"
+  },
+  "casino royale": {
+    "url": "",
+    "title_en": "Casino Royale",
+    "director": "Martin Campbell",
+    "country": "United Kingdom, United States of America",
+    "year": 2006,
+    "duration": 144,
+    "genre": "Aventura, Acción",
+    "title_es": "Casino Royale",
+    "original_title": "Casino Royale"
+  },
+  "pago retroactivo|1922": {
+    "url": "https://letterboxd.com/film/back-pay-1922/",
+    "title_en": "Back Pay",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1922,
+    "duration": 90,
+    "genre": "Drama",
+    "original_title": "Back Pay"
+  },
+  "la historia se hace de noche|1937": {
+    "url": "https://letterboxd.com/film/history-is-made-at-night/",
+    "title_en": "History Is Made at Night",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1937,
+    "duration": 97,
+    "genre": "Romance, Drama",
+    "title_es": "Cena de medianoche",
+    "original_title": "History Is Made at Night"
+  },
+  "adiós a la armas|1932": {
+    "url": "https://letterboxd.com/film/a-farewell-to-arms/",
+    "title_en": "A Farewell to Arms",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1932,
+    "duration": 89,
+    "genre": "Drama, Romance",
+    "title_es": "Adiós a las armas",
+    "original_title": "A Farewell to Arms"
+  },
+  "extraño cargamento|1940": {
+    "url": "https://letterboxd.com/film/strange-cargo/",
+    "title_en": "Strange Cargo",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1940,
+    "duration": 113,
+    "genre": "Aventura, Romance",
+    "title_es": "Extraño cargamento",
+    "original_title": "Strange Cargo"
+  },
+  "tres camaradas|1938": {
+    "url": "https://letterboxd.com/film/three-comrades/",
+    "title_en": "Three Comrades",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1938,
+    "duration": 98,
+    "genre": "Drama, Romance",
+    "title_es": "Tres camaradas",
+    "original_title": "Three Comrades"
+  },
+  "dioses de barro|1939": {
+    "url": "https://letterboxd.com/film/disputed-passage/",
+    "title_en": "Disputed Passage",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1939,
+    "duration": 91,
+    "genre": "Drama, Bélica",
+    "title_es": "Vidas heroicas",
+    "original_title": "Disputed Passage"
+  },
+  "el séptimo cielo|1927": {
+    "url": "https://letterboxd.com/film/7th-heaven/",
+    "title_en": "7th Heaven",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1927,
+    "duration": 119,
+    "genre": "Drama, Romance",
+    "title_es": "El séptimo cielo",
+    "original_title": "7th Heaven"
+  },
+  "deseo|1936": {
+    "url": "https://letterboxd.com/film/desire-1936/",
+    "title_en": "Desire",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1936,
+    "duration": 95,
+    "genre": "Drama, Romance",
+    "title_es": "Deseo",
+    "original_title": "Desire"
+  },
+  "alas en la niebla|1940": {
+    "url": "https://letterboxd.com/film/flight-command/",
+    "title_en": "Flight Command",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1940,
+    "duration": 116,
+    "genre": "Bélica, Drama",
+    "original_title": "Flight Command"
+  },
+  "la ruta de los corsarios|1945": {
+    "url": "https://letterboxd.com/film/the-spanish-main/",
+    "title_en": "The Spanish Main",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1945,
+    "duration": 100,
+    "genre": "Drama, Romance",
+    "title_es": "Los piratas del mar Caribe",
+    "original_title": "The Spanish Main"
+  },
+  "noche sin luna|1948": {
+    "url": "https://letterboxd.com/film/moonrise/",
+    "title_en": "Moonrise",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1948,
+    "duration": 90,
+    "genre": "Drama",
+    "title_es": "Moonrise (Noche sin luna)",
+    "original_title": "Moonrise"
+  },
+  "la magnífica muñeca|1946": {
+    "url": "https://letterboxd.com/film/magnificent-doll/",
+    "title_en": "Magnificent Doll",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1946,
+    "duration": 95,
+    "genre": "Drama, Historia",
+    "title_es": "La primera dama",
+    "original_title": "Magnificent Doll"
+  },
+  "el maquinista de la general|1926": {
+    "url": "https://letterboxd.com/film/the-general/",
+    "title_en": "The General",
+    "director": "Clyde Bruckman, Buster Keaton",
+    "country": "USA",
+    "year": 1926,
+    "duration": 79,
+    "genre": "Romance, Comedia",
+    "title_es": "El maquinista de La General",
+    "original_title": "The General"
+  },
+  "el estudiante de praga|1926": {
+    "url": "https://letterboxd.com/film/der-student-von-prag-1926/",
+    "title_en": "The Student of Prague",
+    "director": "Henrik Galeen",
+    "country": "Germany",
+    "year": 1926,
+    "duration": 133,
+    "genre": "Terror, Drama",
+    "title_es": "El estudiante de Praga",
+    "original_title": "Der Student von Prag"
+  },
+  "la reina kelly|1929": {
+    "url": "https://letterboxd.com/film/queen-kelly/",
+    "title_en": "Queen Kelly",
+    "director": "Erich von Stroheim",
+    "country": "USA",
+    "year": 1929,
+    "duration": 101,
+    "genre": "Romance, Drama",
+    "title_es": "La reina Kelly",
+    "original_title": "Queen Kelly"
+  },
+  "el viento|1928": {
+    "url": "https://letterboxd.com/film/the-wind/",
+    "title_en": "The Wind",
+    "director": "Victor Sjöström",
+    "country": "USA",
+    "year": 1928,
+    "duration": 76,
+    "genre": "Thriller, Romance",
+    "title_es": "El viento",
+    "original_title": "The Wind"
   }
 }
