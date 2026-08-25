@@ -151,6 +151,46 @@
       "cine": "Sala Lugones", "title": "El hogar fue sepultado en esa tierra que nunca pudimos encontrar", "fecha": "2026-08-23", "hora": "20:30",
       "director": "Deimer Quintero Vertel", "year": 2026, "country": "Colombia", "duration": 92,
       "ciclo": "DocBuenosAires", "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/7adc1ec9-75eb-4bf4-bc0c-2fa5508433a5"
+    },
+    {
+      "_ciclo": "CCK — las funciones que se perdieron cuando el proxy se quedó sin créditos el 21/8/2026 y palaciolibertad.gob.ar dejó de bajarse desde el runner. El cine se vació solo (15 → 0 funciones en tres días) y estas siete son las que todavía no pasaron. Están verificadas contra la web del CCK el 25/8: mismos días, mismos horarios, mismos títulos. Se caen solas después del 30/8, así que no hay que borrarlas; y si el proxy revive antes, la de acá le gana a la scrapeada (scrape_manual corre primero) sin duplicar.",
+      "cine": "CCK", "title": "Borges/Santiago: Variaciones sobre un guion", "fecha": "2026-08-28", "hora": "16:30",
+      "director": "Alejo Moguillansky", "year": 2008, "duration": 76,
+      "original_title": "Borges/Santiago: variaciones sobre un guion",
+      "ciclo": "Borges y el cine", "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/"
+    },
+    {
+      "cine": "CCK", "title": "Los otros", "fecha": "2026-08-28", "hora": "19:00",
+      "director": "Hugo Santiago", "year": 1974, "country": "Francia", "duration": 127,
+      "ciclo": "Borges y el cine", "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/"
+    },
+    {
+      "cine": "CCK", "title": "Isabella", "fecha": "2026-08-29", "hora": "16:30",
+      "director": "Matías Piñeiro", "year": 2020, "country": "Argentina, Francia", "duration": 80,
+      "original_title": "Isabella",
+      "ciclo": "Retrospectiva: Matías Piñeiro", "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectiva-matias-pineiro/"
+    },
+    {
+      "cine": "CCK", "title": "Prefacio + Tú me abrasas", "fecha": "2026-08-29", "hora": "18:30",
+      "director": "Matías Piñeiro", "year": 2024, "country": "Argentina, España", "duration": 64,
+      "ciclo": "Retrospectiva: Matías Piñeiro", "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectiva-matias-pineiro/"
+    },
+    {
+      "cine": "CCK", "title": "Algo nuevo, algo viejo, algo prestado", "fecha": "2026-08-29", "hora": "19:00",
+      "director": "Hernán Rosselli", "year": 2024, "country": "Argentina, España", "duration": 103,
+      "original_title": "Algo viejo, algo nuevo, algo prestado",
+      "ciclo": "Miradas contemporáneas:Cecilia Kang / Hernán Rosselli", "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-cecilia-kang-hernan-rosselli/"
+    },
+    {
+      "cine": "CCK", "title": "Los otros", "fecha": "2026-08-30", "hora": "15:00",
+      "director": "Hugo Santiago", "year": 1974, "country": "Francia", "duration": 127,
+      "ciclo": "Borges y el cine", "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/"
+    },
+    {
+      "cine": "CCK", "title": "Invasión", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Hugo Santiago", "year": 1969, "country": "Argentina", "duration": 123,
+      "original_title": "Invasión",
+      "ciclo": "Borges y el cine", "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/"
     }
   ],
 
