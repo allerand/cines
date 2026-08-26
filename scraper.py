@@ -20,6 +20,7 @@ import email
 import email.policy
 import email.utils
 import unicodedata
+import ssl
 import urllib.request
 import urllib.parse
 from dataclasses import dataclass, field, asdict
@@ -72,6 +73,32 @@ class Screening:
 # Utilidades
 # ---------------------------------------------------------------------------
 
+# Algunos sitios sirven mal la cadena TLS: mandan un intermedio que no es el
+# que firmó su certificado, y sin ese eslabón no hay forma de validar. Es el
+# caso de cea.mda.gob.ar desde que renovaron el certificado el 7/8/2026: el
+# leaf lo firma "Sectigo Public Server Authentication CA DV R36" y el servidor
+# adjunta otro intermedio distinto.
+#
+# En una Mac no se nota —el sistema cachea los intermedios que ya vio y
+# completa la cadena solo—, pero el runner de Ubuntu arranca limpio y falla con
+# CERTIFICATE_VERIFY_FAILED. Ese fue el "0 funciones" del CEA del 26/8/2026: el
+# scraper andaba perfecto en casa y no bajaba nada en CI.
+#
+# Cuando pasa eso —y SÓLO cuando pasa— se reintenta sin verificar, avisando en
+# el log. Es una cartelera pública que se lee sin credenciales ni cookies, así
+# que lo que está en juego es que alguien nos mienta los horarios; quedarnos sin
+# el cine es peor. Y si el día de mañana arreglan el servidor, vuelve solo a
+# verificar: no hay ninguna lista de excepciones que envejezca.
+_CTX_SIN_VERIFICAR = ssl._create_unverified_context()
+
+
+def _cadena_tls_rota(e: Exception) -> bool:
+    razon = getattr(e, "reason", None)
+    return (isinstance(razon, ssl.SSLCertVerificationError)
+            or isinstance(e, ssl.SSLCertVerificationError)
+            or "CERTIFICATE_VERIFY_FAILED" in str(e))
+
+
 def fetch_bytes(url: str, timeout: int = 20, intentos: int = 3) -> bytes:
     """GET con reintentos. Un timeout suelto no puede costar un cine entero.
 
@@ -83,13 +110,20 @@ def fetch_bytes(url: str, timeout: int = 20, intentos: int = 3) -> bytes:
     una fuente realmente caída sigue fallando y eso lo levanta la auditoría.
     """
     ultimo: Exception | None = None
+    contexto = None                     # None = verificación normal
     for i in range(intentos):
         try:
             req = urllib.request.Request(url, headers={"User-Agent": UA})
-            with urllib.request.urlopen(req, timeout=timeout) as r:
+            with urllib.request.urlopen(req, timeout=timeout, context=contexto) as r:
                 return r.read()
         except Exception as e:
             ultimo = e
+            if contexto is None and _cadena_tls_rota(e):
+                contexto = _CTX_SIN_VERIFICAR
+                host = urllib.parse.urlsplit(url).netloc
+                print(f"  · ⚠️  [{host}] manda mal la cadena del certificado; "
+                      f"se baja sin verificar TLS", flush=True)
+                continue                # reintento inmediato, no cuenta como hipo de red
             if i < intentos - 1:
                 time.sleep(2 ** i)      # 1s, 2s
     raise ultimo if ultimo else RuntimeError(f"fetch falló: {url}")

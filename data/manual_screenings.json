@@ -191,6 +191,27 @@
       "director": "Hugo Santiago", "year": 1969, "country": "Argentina", "duration": 123,
       "original_title": "Invasión",
       "ciclo": "Borges y el cine", "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/"
+    },
+    {
+      "_ciclo": "CEA (Avellaneda) — cierre del Ciclo Sandro, del 27 al 30 de agosto, todas a las 19. Van a mano además del scraper: el 26/8 el CEA salió en cero porque cea.mda.gob.ar manda mal la cadena del certificado y el runner de Ubuntu no la pudo validar (en la Mac no se nota, el sistema la completa solo). Eso ya está arreglado en fetch_bytes, pero hasta que el ciclo termine estas quedan de red: el dedup se queda con la manual y son idénticas a las que trae el scraper, links de reserva incluidos. Se filtran solas después del 30/8.",
+      "cine": "CEA", "title": "Tú me enloqueces", "fecha": "2026-08-27", "hora": "19:00",
+      "director": "Sandro", "year": 1976,
+      "ciclo": "Ciclo Sandro", "ticket_url": "https://forms.gle/yUPhTdqo9vjLTc3w9"
+    },
+    {
+      "cine": "CEA", "title": "El deseo de vivir", "fecha": "2026-08-28", "hora": "19:00",
+      "director": "Julio Saraceni", "year": 1973,
+      "ciclo": "Ciclo Sandro", "ticket_url": "https://forms.gle/sHPFtP59j4ttPKDx7"
+    },
+    {
+      "cine": "CEA", "title": "Muchacho", "fecha": "2026-08-29", "hora": "19:00",
+      "director": "Leo Fleider", "year": 1970,
+      "ciclo": "Ciclo Sandro", "ticket_url": "https://forms.gle/VTSjGFMgr6p3CXVU6"
+    },
+    {
+      "cine": "CEA", "title": "Subí que te llevo", "fecha": "2026-08-30", "hora": "19:00",
+      "director": "Rubén W. Cavallotti", "year": 1980,
+      "ciclo": "Ciclo Sandro", "ticket_url": "https://forms.gle/PXGf7nmLUZoPAfZFA"
     }
   ],
 
