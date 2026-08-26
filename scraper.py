@@ -3324,6 +3324,13 @@ def _cosmos_programacion(det, today: date, end: date) -> list[tuple[date, str, s
 
     Devuelve [] si la página no es un ciclo — que es como se distingue del
     detalle de una película común.
+
+    OJO con lo que NO devuelve: la página del ciclo no trae ficha, así que estas
+    funciones salen sin director ni año y el enrichment de Letterboxd busca a
+    ciegas. Con títulos comunes se cuelga del homónimo más nuevo: en la Semana
+    del Cine Francés de agosto de 2026, "La Jetée" matcheó un corto chileno de
+    2024 y "Los amos del tiempo" una mexicana de 2025. Cuando pase, se corrige
+    en data/metadata_overrides.json — que es exactamente para esto.
     """
     desc = det.select_one(".peliculaDescp") or det
     texto = desc.get_text("\n")

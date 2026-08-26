@@ -1,68 +1,398 @@
 {
   "_comment": "Escape de ÚLTIMO RECURSO para corregir metadata cuando el enrichment matchea la película equivocada y la automatización no alcanza. Normalmente NO debería hacer falta: el scraper infiere director/año de la fuente (p.ej. Cacodelphia los saca del título del trailer) y el enrichment valida contra esos hints. Si aun así una peli queda mal, agregá un entry acá. Matchea por 'title' (case-insensitive) + 'cine' opcional, y pisa los campos presentes: director, year, country, genre, duration, letterboxd, title_en, original_title, title_es, ciclo. Poné \"\" para borrar un dato. Se aplica al final en run.py.",
   "overrides": [
-    { "_comment": "26° DocBuenosAires (18-23/8/2026). El Foco Tsai Ming-liang se reparte entre Lugones y Cacodelphia, y la ficha de Cacodelphia no publica director/país/año — sólo duración y sinopsis. Datos de la programación oficial (docbsas.com/2026/08/10/programacion-26-doc-buenosaires/); los slugs de Letterboxd verificados uno por uno." },
-    { "_comment": "El `ciclo` va forzado en las cuatro de Cacodelphia porque el cine dejó de marcarlas. Hasta el 18/8 les pegaba '- Doc Bsas' al título y de ahí lo deducía el scraper (_caco_titulo_y_ciclo); desde el 19/8 los títulos vienen pelados, así que las funciones quedaban sueltas, fuera del festival, aunque el resto de la ficha estuviera bien. El nombre tiene que coincidir carácter por carácter con el del Lugones o la web abre dos ciclos distintos." },
-    { "title": "Tu Rostro", "cine": "Cacodelphia", "ciclo": "DocBuenosAires", "title_es": "Tu rostro", "director": "Tsai Ming-liang", "country": "Taiwán/Francia", "year": 2018, "duration": 76, "genre": "Documental", "title_en": "Your Face", "letterboxd": "https://letterboxd.com/film/your-face-2018/" },
-    { "_comment": "La ficha de Cacodelphia trae el título en MAYÚSCULAS y sin datos, así que run.py se queda con la traducción de TMDb — y TMDb, sin director ni año con qué validar, matchea 'Tengo miedo de olvidar tu rostro' (Francisco Saco, Costa Rica). Resultado: el jueves 20 a las 19.00 figuraba una película costarricense en vez del 'Tu rostro' de Tsai que programa el festival. Este entry matchea el título MAL y lo reemplaza entero; el de arriba cubre el caso de que Cacodelphia arregle la ficha. original_title va vacío para borrar el 'Entre Luces Dibujo Tu Rostro' que arrastraba el match equivocado." },
-    { "title": "Tengo miedo de olvidar tu rostro", "cine": "Cacodelphia", "ciclo": "DocBuenosAires", "title_es": "Tu rostro", "director": "Tsai Ming-liang", "country": "Taiwán/Francia", "year": 2018, "duration": 76, "genre": "Documental", "title_en": "Your Face", "original_title": "", "letterboxd": "https://letterboxd.com/film/your-face-2018/" },
-    { "title": "Días", "cine": "Cacodelphia", "ciclo": "DocBuenosAires", "director": "Tsai Ming-liang", "country": "Taiwán/Francia", "year": 2020, "genre": "Documental", "title_en": "Days", "original_title": "日子", "letterboxd": "https://letterboxd.com/film/days-2020/" },
-    { "title": "La noche y los días de Miguel Burnier", "ciclo": "DocBuenosAires", "director": "João Dumans", "country": "Brasil", "year": 2026, "genre": "Documental", "title_en": "The Night and the Days of Miguel Burnier", "original_title": "A Noite e os Dias de Miguel Burnier", "letterboxd": "https://letterboxd.com/film/the-night-and-the-days-of-miguel-burnier/" },
-
-    { "_comment": "Todo parecía posible se da en las dos salas: sin 'cine' el entry las empareja a las dos. El país sale de la programación oficial (TMDb sólo listaba Puerto Rico)." },
-    { "title": "Todo parecía posible", "ciclo": "DocBuenosAires", "director": "Ramón Rivera Moret", "country": "Estados Unidos/Puerto Rico", "year": 2025, "genre": "Documental", "title_en": "Everything Seemed Possible", "original_title": "Todo parecía posible", "letterboxd": "https://letterboxd.com/film/todo-parecia-posible/" },
-
-    { "_comment": "Foco DIVEDCO en la Sala Mario Soffici (cargado a mano en manual_screenings.json). Son cortos puertorriqueños de los 50 con títulos comunes, así que los entries van scopeados por sala. Sin entry —y por lo tanto sin link— quedan tres que la búsqueda en Letterboxd no encuentra: 'Ignacio' (Á. F. Rivera, 1956), 'Una voz en la montaña' (Tirado, 1952) y 'Las Palmas, Chaco' (Fernández Mouján, 2002, que sí tiene IMDb tt0318539). Es a propósito: si algún día aparecen, el enrichment las resuelve solo; un entry con letterboxd vacío las dejaría mudas para siempre." },
-    { "title": "El puente", "cine": "Sala Mario Soffici", "director": "Amílcar Tirado", "country": "Puerto Rico", "year": 1951, "genre": "Documental", "original_title": "El puente", "letterboxd": "https://letterboxd.com/film/el-puente-1951/" },
-    { "title": "Las manos del hombre", "cine": "Sala Mario Soffici", "director": "Jack Delano", "country": "Puerto Rico", "year": 1952, "genre": "Documental", "original_title": "Las manos del hombre", "letterboxd": "https://letterboxd.com/film/las-manos-del-hombre/" },
-    { "title": "Cuando los padres olvidan", "cine": "Sala Mario Soffici", "director": "Amílcar Tirado", "country": "Puerto Rico", "year": 1957, "genre": "Documental", "title_en": "When Fathers Forget", "original_title": "Cuando los padres olvidan", "letterboxd": "https://letterboxd.com/film/when-fathers-forget/" },
-    { "title": "Modesta", "cine": "Sala Mario Soffici", "director": "Benjamín Doniger", "country": "Puerto Rico", "year": 1956, "genre": "Documental", "original_title": "Modesta", "letterboxd": "https://letterboxd.com/film/modesta/" },
-
-    { "_comment": "Dos datos que el enrichment trajo mal y la programación oficial desmiente: el nombre de Miriam Martín y el guion del nombre de Tsai Ming-liang (las otras siete del foco lo tienen bien). El scrape traía 'Mirian Matín' y la web del festival, 'Mirian Martín'; el programa de mano dice Miriam, y su ficha de directora (tamtampress.es, FilmFreeway) también: es Miriam." },
-    { "title": "Un río y una reina", "cine": "Sala Lugones", "director": "Miriam Martín", "title_en": "A River and a Queen", "original_title": "Un río y una reina", "letterboxd": "https://letterboxd.com/film/a-river-and-a-queen/" },
-    { "title": "Disciplina", "cine": "Sala Lugones", "letterboxd": "https://letterboxd.com/film/disciplina-1/" },
-    { "title": "El caminante", "cine": "Sala Lugones", "director": "Tsai Ming-liang" },
-    { "title": "Hojas secas", "cine": "Sala Lugones", "director": "Alexandre Koberidze", "original_title": "Dry Leaf", "letterboxd": "https://letterboxd.com/film/dry-leaf/" },
-
-    { "_comment": "El listado del CTBA titula la de Yulia Lokshina 'En las cercanías del paraíso'; el programa de mano del festival la llama 'Alrededor del paraíso' (Im Umkreis des Paradieses). Para el DocBuenosAires manda el PDF. Es sólo el título: el resto de la ficha ya está bien." },
-    { "title": "En las cercanías del paraíso", "cine": "Sala Lugones", "title_es": "Alrededor del paraíso" },
-
-    { "title": "El Ángel", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2018, "country": "Argentina", "genre": "Crimen, Drama", "duration": 115, "title_en": "El Angel", "original_title": "El Ángel", "letterboxd": "https://letterboxd.com/film/el-angel-2018/" },
-    { "title": "Lulú", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2014, "country": "Argentina", "genre": "Drama, Romance", "title_en": "Lulú", "original_title": "Lulú", "letterboxd": "https://letterboxd.com/film/lulu-2014/" },
-    { "title": "Siempre es de Noche", "cine": "Cacodelphia", "director": "Luis Ortega", "year": 2025, "country": "Argentina", "title_en": "Always Night", "original_title": "Siempre es de noche", "letterboxd": "https://letterboxd.com/film/always-night/" },
-
-    { "title": "La vida de Pi", "director": "Ang Lee", "year": 2012, "title_en": "Life of Pi", "original_title": "Life of Pi", "letterboxd": "https://letterboxd.com/film/life-of-pi/" },
-
-    { "title": "Obsesión", "director": "Curry Barker", "year": 2025, "country": "Estados Unidos", "genre": "Terror", "title_en": "Obsession", "original_title": "Obsession", "letterboxd": "https://letterboxd.com/film/obsession-2025/" },
-
-    { "_comment": "Cortos del festival Bendita Tú (Recoleta + Casa del Bicentenario). Cargados a mano en manual_screenings.json; el enrichment automático no los encuentra porque son estrenos 2025 de festival. Slugs verificados en letterboxd.com: coincide director en los 12." },
-    { "title": "Daria's Night Flowers", "director": "Maryam Tafakory", "year": 2025, "title_en": "Daria's Night Flowers", "letterboxd": "https://letterboxd.com/film/darias-night-flowers/" },
-    { "title": "Four Percent", "director": "Monika Masłoń", "year": 2025, "title_en": "Four Percent", "letterboxd": "https://letterboxd.com/film/four-percent/" },
-    { "title": "Utopías y otras especies", "director": "Júlia Izaguirre", "year": 2025, "original_title": "Utopies i altres espècies", "letterboxd": "https://letterboxd.com/film/utopias-y-otras-especies/" },
-    { "title": "En otra Palestina", "director": "Yaela Gottlieb", "year": 2025, "letterboxd": "https://letterboxd.com/film/en-otra-palestina/" },
-    { "title": "Beau temps, mauvais temps", "director": "Florence Lafond", "year": 2025, "title_en": "No Matter the Weather", "original_title": "Beau temps, mauvais temps", "letterboxd": "https://letterboxd.com/film/no-matter-the-weather/" },
-    { "title": "El ensayo", "cine": "Centro Cultural Recoleta", "director": "Carmen Ayala Marín, Alberto Martín Menacho", "year": 2025, "title_en": "The Essay", "original_title": "El ensayo", "letterboxd": "https://letterboxd.com/film/the-essay/" },
-    { "title": "Cuando ellas se fueron solo quedó un pequeño ruido en la montaña", "director": "Laura Dávila Argoty", "year": 2025, "title_en": "When They Left, All that Remained was a Small Noise in the Mountain", "letterboxd": "https://letterboxd.com/film/when-they-left-all-that-remained-was-a-small/" },
-    { "title": "Zamana", "cine": "Casa del Bicentenario", "director": "Marianela Siccardi", "year": 2025, "letterboxd": "https://letterboxd.com/film/zamana-2025/" },
-    { "title": "Can You Hear Me?", "cine": "Casa del Bicentenario", "director": "Anastazja Naumenko", "year": 2025, "letterboxd": "https://letterboxd.com/film/can-you-hear-me-2025/" },
-    { "title": "Vogliamo Una Vita Bella", "director": "Bianca Arnold", "year": 2025, "letterboxd": "https://letterboxd.com/film/vogliamo-una-vita-bella/" },
-    { "title": "How it begins", "director": "Chloé Wasp", "year": 2025, "letterboxd": "https://letterboxd.com/film/how-it-begins/" },
-    { "title": "Pude ver un fantasma desde mi ventana", "director": "Mayro Romero", "year": 2025, "title_en": "I Could See a Ghost from My Window", "letterboxd": "https://letterboxd.com/film/i-could-see-a-ghost-from-my-window/" },
-
-    { "_comment": "La Flor se exhibe en partes y Amorina publica runtime 0, así que el enrichment le pone a CADA parte la duración de la obra completa (803 min). El link a la película entera está bien —es la misma— pero la duración no: se borra. Letterboxd tiene entradas por parte, pero en francés y con otra numeración que la de Amorina, así que mapearlas sería adivinar." },
-    { "title": "La Flor - Parte I", "cine": "Amorina", "duration": "" },
-    { "title": "La Flor - Parte II", "cine": "Amorina", "duration": "" },
-    { "title": "La Flor - Parte III", "cine": "Amorina", "duration": "" },
-
-    { "_comment": "Títulos que el enrichment no puede matchear porque el cine invierte o traduce el original. Verificados en letterboxd.com." },
-    { "title": "Algo nuevo, algo viejo, algo prestado", "director": "Hernán Rosselli", "year": 2024, "title_en": "Something Old, Something New, Something Borrowed", "original_title": "Algo viejo, algo nuevo, algo prestado", "letterboxd": "https://letterboxd.com/film/something-old-something-new-something-borrowed/" },
-    { "title": "Marianela y el Cadáver", "year": 2024, "title_en": "Marianela & The Corpse", "original_title": "Marianela & el cadáver", "letterboxd": "https://letterboxd.com/film/marianela-the-corpse/" },
-
-    { "_comment": "Programa doble del Museo del Cine por los 90 años de la muerte de Lorca — el sitio lo publica como un título único." },
-    { "title": "La barraca: Lorca por los caminos de España", "director": "Edgardo Cozarinsky", "year": 1995, "country": "Francia, España", "duration": 55 },
-    { "title": "Lorca y el Río de la Plata", "director": "Eduardo Mignogna", "year": 1998, "country": "Argentina", "duration": 50 },
-
-    { "_comment": "Red de seguridad: TMDb devolvía el título en español de Five Feet Apart (2019) para esta película argentina. La validación de letterboxd.py ya no acepta títulos de un candidato sin confirmar, así que esto no debería volver a activarse — matchea sólo si el título equivocado reaparece." },
-    { "title": "A dos metros de ti", "cine": "Cacodelphia", "title_es": "A metros de distancia", "title_en": "A Few Feet Away", "original_title": "A metros de distancia", "director": "Tadeo Pestaña Caro", "year": 2025, "country": "Argentina", "duration": 89, "letterboxd": "https://letterboxd.com/film/a-few-feet-away/" }
+    {
+      "_comment": "26° DocBuenosAires (18-23/8/2026). El Foco Tsai Ming-liang se reparte entre Lugones y Cacodelphia, y la ficha de Cacodelphia no publica director/país/año — sólo duración y sinopsis. Datos de la programación oficial (docbsas.com/2026/08/10/programacion-26-doc-buenosaires/); los slugs de Letterboxd verificados uno por uno."
+    },
+    {
+      "_comment": "El `ciclo` va forzado en las cuatro de Cacodelphia porque el cine dejó de marcarlas. Hasta el 18/8 les pegaba '- Doc Bsas' al título y de ahí lo deducía el scraper (_caco_titulo_y_ciclo); desde el 19/8 los títulos vienen pelados, así que las funciones quedaban sueltas, fuera del festival, aunque el resto de la ficha estuviera bien. El nombre tiene que coincidir carácter por carácter con el del Lugones o la web abre dos ciclos distintos."
+    },
+    {
+      "title": "Tu Rostro",
+      "cine": "Cacodelphia",
+      "ciclo": "DocBuenosAires",
+      "title_es": "Tu rostro",
+      "director": "Tsai Ming-liang",
+      "country": "Taiwán/Francia",
+      "year": 2018,
+      "duration": 76,
+      "genre": "Documental",
+      "title_en": "Your Face",
+      "letterboxd": "https://letterboxd.com/film/your-face-2018/"
+    },
+    {
+      "_comment": "La ficha de Cacodelphia trae el título en MAYÚSCULAS y sin datos, así que run.py se queda con la traducción de TMDb — y TMDb, sin director ni año con qué validar, matchea 'Tengo miedo de olvidar tu rostro' (Francisco Saco, Costa Rica). Resultado: el jueves 20 a las 19.00 figuraba una película costarricense en vez del 'Tu rostro' de Tsai que programa el festival. Este entry matchea el título MAL y lo reemplaza entero; el de arriba cubre el caso de que Cacodelphia arregle la ficha. original_title va vacío para borrar el 'Entre Luces Dibujo Tu Rostro' que arrastraba el match equivocado."
+    },
+    {
+      "title": "Tengo miedo de olvidar tu rostro",
+      "cine": "Cacodelphia",
+      "ciclo": "DocBuenosAires",
+      "title_es": "Tu rostro",
+      "director": "Tsai Ming-liang",
+      "country": "Taiwán/Francia",
+      "year": 2018,
+      "duration": 76,
+      "genre": "Documental",
+      "title_en": "Your Face",
+      "original_title": "",
+      "letterboxd": "https://letterboxd.com/film/your-face-2018/"
+    },
+    {
+      "title": "Días",
+      "cine": "Cacodelphia",
+      "ciclo": "DocBuenosAires",
+      "director": "Tsai Ming-liang",
+      "country": "Taiwán/Francia",
+      "year": 2020,
+      "genre": "Documental",
+      "title_en": "Days",
+      "original_title": "日子",
+      "letterboxd": "https://letterboxd.com/film/days-2020/"
+    },
+    {
+      "title": "La noche y los días de Miguel Burnier",
+      "ciclo": "DocBuenosAires",
+      "director": "João Dumans",
+      "country": "Brasil",
+      "year": 2026,
+      "genre": "Documental",
+      "title_en": "The Night and the Days of Miguel Burnier",
+      "original_title": "A Noite e os Dias de Miguel Burnier",
+      "letterboxd": "https://letterboxd.com/film/the-night-and-the-days-of-miguel-burnier/"
+    },
+    {
+      "_comment": "Todo parecía posible se da en las dos salas: sin 'cine' el entry las empareja a las dos. El país sale de la programación oficial (TMDb sólo listaba Puerto Rico)."
+    },
+    {
+      "title": "Todo parecía posible",
+      "ciclo": "DocBuenosAires",
+      "director": "Ramón Rivera Moret",
+      "country": "Estados Unidos/Puerto Rico",
+      "year": 2025,
+      "genre": "Documental",
+      "title_en": "Everything Seemed Possible",
+      "original_title": "Todo parecía posible",
+      "letterboxd": "https://letterboxd.com/film/todo-parecia-posible/"
+    },
+    {
+      "_comment": "Foco DIVEDCO en la Sala Mario Soffici (cargado a mano en manual_screenings.json). Son cortos puertorriqueños de los 50 con títulos comunes, así que los entries van scopeados por sala. Sin entry —y por lo tanto sin link— quedan tres que la búsqueda en Letterboxd no encuentra: 'Ignacio' (Á. F. Rivera, 1956), 'Una voz en la montaña' (Tirado, 1952) y 'Las Palmas, Chaco' (Fernández Mouján, 2002, que sí tiene IMDb tt0318539). Es a propósito: si algún día aparecen, el enrichment las resuelve solo; un entry con letterboxd vacío las dejaría mudas para siempre."
+    },
+    {
+      "title": "El puente",
+      "cine": "Sala Mario Soffici",
+      "director": "Amílcar Tirado",
+      "country": "Puerto Rico",
+      "year": 1951,
+      "genre": "Documental",
+      "original_title": "El puente",
+      "letterboxd": "https://letterboxd.com/film/el-puente-1951/"
+    },
+    {
+      "title": "Las manos del hombre",
+      "cine": "Sala Mario Soffici",
+      "director": "Jack Delano",
+      "country": "Puerto Rico",
+      "year": 1952,
+      "genre": "Documental",
+      "original_title": "Las manos del hombre",
+      "letterboxd": "https://letterboxd.com/film/las-manos-del-hombre/"
+    },
+    {
+      "title": "Cuando los padres olvidan",
+      "cine": "Sala Mario Soffici",
+      "director": "Amílcar Tirado",
+      "country": "Puerto Rico",
+      "year": 1957,
+      "genre": "Documental",
+      "title_en": "When Fathers Forget",
+      "original_title": "Cuando los padres olvidan",
+      "letterboxd": "https://letterboxd.com/film/when-fathers-forget/"
+    },
+    {
+      "title": "Modesta",
+      "cine": "Sala Mario Soffici",
+      "director": "Benjamín Doniger",
+      "country": "Puerto Rico",
+      "year": 1956,
+      "genre": "Documental",
+      "original_title": "Modesta",
+      "letterboxd": "https://letterboxd.com/film/modesta/"
+    },
+    {
+      "_comment": "Dos datos que el enrichment trajo mal y la programación oficial desmiente: el nombre de Miriam Martín y el guion del nombre de Tsai Ming-liang (las otras siete del foco lo tienen bien). El scrape traía 'Mirian Matín' y la web del festival, 'Mirian Martín'; el programa de mano dice Miriam, y su ficha de directora (tamtampress.es, FilmFreeway) también: es Miriam."
+    },
+    {
+      "title": "Un río y una reina",
+      "cine": "Sala Lugones",
+      "director": "Miriam Martín",
+      "title_en": "A River and a Queen",
+      "original_title": "Un río y una reina",
+      "letterboxd": "https://letterboxd.com/film/a-river-and-a-queen/"
+    },
+    {
+      "title": "Disciplina",
+      "cine": "Sala Lugones",
+      "letterboxd": "https://letterboxd.com/film/disciplina-1/"
+    },
+    {
+      "title": "El caminante",
+      "cine": "Sala Lugones",
+      "director": "Tsai Ming-liang"
+    },
+    {
+      "title": "Hojas secas",
+      "cine": "Sala Lugones",
+      "director": "Alexandre Koberidze",
+      "original_title": "Dry Leaf",
+      "letterboxd": "https://letterboxd.com/film/dry-leaf/"
+    },
+    {
+      "_comment": "El listado del CTBA titula la de Yulia Lokshina 'En las cercanías del paraíso'; el programa de mano del festival la llama 'Alrededor del paraíso' (Im Umkreis des Paradieses). Para el DocBuenosAires manda el PDF. Es sólo el título: el resto de la ficha ya está bien."
+    },
+    {
+      "title": "En las cercanías del paraíso",
+      "cine": "Sala Lugones",
+      "title_es": "Alrededor del paraíso"
+    },
+    {
+      "title": "El Ángel",
+      "cine": "Cacodelphia",
+      "director": "Luis Ortega",
+      "year": 2018,
+      "country": "Argentina",
+      "genre": "Crimen, Drama",
+      "duration": 115,
+      "title_en": "El Angel",
+      "original_title": "El Ángel",
+      "letterboxd": "https://letterboxd.com/film/el-angel-2018/"
+    },
+    {
+      "title": "Lulú",
+      "cine": "Cacodelphia",
+      "director": "Luis Ortega",
+      "year": 2014,
+      "country": "Argentina",
+      "genre": "Drama, Romance",
+      "title_en": "Lulú",
+      "original_title": "Lulú",
+      "letterboxd": "https://letterboxd.com/film/lulu-2014/"
+    },
+    {
+      "title": "Siempre es de Noche",
+      "cine": "Cacodelphia",
+      "director": "Luis Ortega",
+      "year": 2025,
+      "country": "Argentina",
+      "title_en": "Always Night",
+      "original_title": "Siempre es de noche",
+      "letterboxd": "https://letterboxd.com/film/always-night/"
+    },
+    {
+      "title": "La vida de Pi",
+      "director": "Ang Lee",
+      "year": 2012,
+      "title_en": "Life of Pi",
+      "original_title": "Life of Pi",
+      "letterboxd": "https://letterboxd.com/film/life-of-pi/"
+    },
+    {
+      "title": "Obsesión",
+      "director": "Curry Barker",
+      "year": 2025,
+      "country": "Estados Unidos",
+      "genre": "Terror",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/"
+    },
+    {
+      "_comment": "Cortos del festival Bendita Tú (Recoleta + Casa del Bicentenario). Cargados a mano en manual_screenings.json; el enrichment automático no los encuentra porque son estrenos 2025 de festival. Slugs verificados en letterboxd.com: coincide director en los 12."
+    },
+    {
+      "title": "Daria's Night Flowers",
+      "director": "Maryam Tafakory",
+      "year": 2025,
+      "title_en": "Daria's Night Flowers",
+      "letterboxd": "https://letterboxd.com/film/darias-night-flowers/"
+    },
+    {
+      "title": "Four Percent",
+      "director": "Monika Masłoń",
+      "year": 2025,
+      "title_en": "Four Percent",
+      "letterboxd": "https://letterboxd.com/film/four-percent/"
+    },
+    {
+      "title": "Utopías y otras especies",
+      "director": "Júlia Izaguirre",
+      "year": 2025,
+      "original_title": "Utopies i altres espècies",
+      "letterboxd": "https://letterboxd.com/film/utopias-y-otras-especies/"
+    },
+    {
+      "title": "En otra Palestina",
+      "director": "Yaela Gottlieb",
+      "year": 2025,
+      "letterboxd": "https://letterboxd.com/film/en-otra-palestina/"
+    },
+    {
+      "title": "Beau temps, mauvais temps",
+      "director": "Florence Lafond",
+      "year": 2025,
+      "title_en": "No Matter the Weather",
+      "original_title": "Beau temps, mauvais temps",
+      "letterboxd": "https://letterboxd.com/film/no-matter-the-weather/"
+    },
+    {
+      "title": "El ensayo",
+      "cine": "Centro Cultural Recoleta",
+      "director": "Carmen Ayala Marín, Alberto Martín Menacho",
+      "year": 2025,
+      "title_en": "The Essay",
+      "original_title": "El ensayo",
+      "letterboxd": "https://letterboxd.com/film/the-essay/"
+    },
+    {
+      "title": "Cuando ellas se fueron solo quedó un pequeño ruido en la montaña",
+      "director": "Laura Dávila Argoty",
+      "year": 2025,
+      "title_en": "When They Left, All that Remained was a Small Noise in the Mountain",
+      "letterboxd": "https://letterboxd.com/film/when-they-left-all-that-remained-was-a-small/"
+    },
+    {
+      "title": "Zamana",
+      "cine": "Casa del Bicentenario",
+      "director": "Marianela Siccardi",
+      "year": 2025,
+      "letterboxd": "https://letterboxd.com/film/zamana-2025/"
+    },
+    {
+      "title": "Can You Hear Me?",
+      "cine": "Casa del Bicentenario",
+      "director": "Anastazja Naumenko",
+      "year": 2025,
+      "letterboxd": "https://letterboxd.com/film/can-you-hear-me-2025/"
+    },
+    {
+      "title": "Vogliamo Una Vita Bella",
+      "director": "Bianca Arnold",
+      "year": 2025,
+      "letterboxd": "https://letterboxd.com/film/vogliamo-una-vita-bella/"
+    },
+    {
+      "title": "How it begins",
+      "director": "Chloé Wasp",
+      "year": 2025,
+      "letterboxd": "https://letterboxd.com/film/how-it-begins/"
+    },
+    {
+      "title": "Pude ver un fantasma desde mi ventana",
+      "director": "Mayro Romero",
+      "year": 2025,
+      "title_en": "I Could See a Ghost from My Window",
+      "letterboxd": "https://letterboxd.com/film/i-could-see-a-ghost-from-my-window/"
+    },
+    {
+      "_comment": "La Flor se exhibe en partes y Amorina publica runtime 0, así que el enrichment le pone a CADA parte la duración de la obra completa (803 min). El link a la película entera está bien —es la misma— pero la duración no: se borra. Letterboxd tiene entradas por parte, pero en francés y con otra numeración que la de Amorina, así que mapearlas sería adivinar."
+    },
+    {
+      "title": "La Flor - Parte I",
+      "cine": "Amorina",
+      "duration": ""
+    },
+    {
+      "title": "La Flor - Parte II",
+      "cine": "Amorina",
+      "duration": ""
+    },
+    {
+      "title": "La Flor - Parte III",
+      "cine": "Amorina",
+      "duration": ""
+    },
+    {
+      "_comment": "Títulos que el enrichment no puede matchear porque el cine invierte o traduce el original. Verificados en letterboxd.com."
+    },
+    {
+      "title": "Algo nuevo, algo viejo, algo prestado",
+      "director": "Hernán Rosselli",
+      "year": 2024,
+      "title_en": "Something Old, Something New, Something Borrowed",
+      "original_title": "Algo viejo, algo nuevo, algo prestado",
+      "letterboxd": "https://letterboxd.com/film/something-old-something-new-something-borrowed/"
+    },
+    {
+      "title": "Marianela y el Cadáver",
+      "year": 2024,
+      "title_en": "Marianela & The Corpse",
+      "original_title": "Marianela & el cadáver",
+      "letterboxd": "https://letterboxd.com/film/marianela-the-corpse/"
+    },
+    {
+      "_comment": "Programa doble del Museo del Cine por los 90 años de la muerte de Lorca — el sitio lo publica como un título único."
+    },
+    {
+      "title": "La barraca: Lorca por los caminos de España",
+      "director": "Edgardo Cozarinsky",
+      "year": 1995,
+      "country": "Francia, España",
+      "duration": 55
+    },
+    {
+      "title": "Lorca y el Río de la Plata",
+      "director": "Eduardo Mignogna",
+      "year": 1998,
+      "country": "Argentina",
+      "duration": 50
+    },
+    {
+      "_comment": "Red de seguridad: TMDb devolvía el título en español de Five Feet Apart (2019) para esta película argentina. La validación de letterboxd.py ya no acepta títulos de un candidato sin confirmar, así que esto no debería volver a activarse — matchea sólo si el título equivocado reaparece."
+    },
+    {
+      "title": "A dos metros de ti",
+      "cine": "Cacodelphia",
+      "title_es": "A metros de distancia",
+      "title_en": "A Few Feet Away",
+      "original_title": "A metros de distancia",
+      "director": "Tadeo Pestaña Caro",
+      "year": 2025,
+      "country": "Argentina",
+      "duration": 89,
+      "letterboxd": "https://letterboxd.com/film/a-few-feet-away/"
+    },
+    {
+      "_por_que": "Las funciones de un ciclo del Cosmos salen sin ficha —la página del ciclo sólo tiene día, hora y título—, así que el enrichment busca a ciegas y se cuelga del homónimo más nuevo. Estas tres cayeron en la Semana del Cine Francés de agosto de 2026: 'La Jetée' matcheó un corto chileno de 2024, 'Los amos del tiempo' una mexicana de 2025 y 'Sin sol' una cubana. Los datos son los de Letterboxd de la película correcta.",
+      "title": "La Jetée",
+      "director": "Chris Marker",
+      "year": 1962,
+      "country": "Francia",
+      "duration": 29,
+      "genre": "Romance, Ciencia ficción",
+      "title_en": "La Jetée",
+      "original_title": "La jetée",
+      "letterboxd": "https://letterboxd.com/film/la-jetee/"
+    },
+    {
+      "title": "Los amos del tiempo",
+      "director": "René Laloux",
+      "year": 1982,
+      "country": "Francia, Alemania",
+      "duration": 80,
+      "genre": "Animación, Ciencia ficción",
+      "title_en": "Time Masters",
+      "original_title": "Les maîtres du temps",
+      "letterboxd": "https://letterboxd.com/film/time-masters/"
+    },
+    {
+      "title": "Sin sol",
+      "director": "Chris Marker",
+      "year": 1983,
+      "country": "Francia",
+      "duration": 100,
+      "genre": "Documental",
+      "title_en": "Sans Soleil",
+      "original_title": "Sans soleil",
+      "letterboxd": "https://letterboxd.com/film/sans-soleil/"
+    }
   ]
 }
