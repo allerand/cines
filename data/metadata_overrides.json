@@ -393,6 +393,17 @@
       "title_en": "Sans Soleil",
       "original_title": "Sans soleil",
       "letterboxd": "https://letterboxd.com/film/sans-soleil/"
+    },
+    {
+      "_por_que": "Hoyts la publica como 'Harry Potter 25° Aniversario', que no es el título de ninguna película, así que el enrichment no la puede matchear y salía sin ficha ni link en 77 funciones. Es el reestreno por los 25 años de la primera (2001 + 25 = 2026), confirmado por Mateo. Se deja el título tal como lo anuncia el cine —dice algo que el título real no dice— y se completan director, año, país y género. La duración NO se pisa: los 166 minutos son los de la función de Hoyts, con publicidad; la película son 152.",
+      "title": "Harry Potter 25° Aniversario",
+      "director": "Chris Columbus",
+      "year": 2001,
+      "country": "Reino Unido, Estados Unidos",
+      "genre": "Aventura, Fantasía",
+      "title_en": "Harry Potter and the Philosopher's Stone",
+      "original_title": "Harry Potter and the Philosopher's Stone",
+      "letterboxd": "https://letterboxd.com/film/harry-potter-and-the-philosophers-stone/"
     }
   ]
 }
