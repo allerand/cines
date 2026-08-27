@@ -6429,6 +6429,221 @@ def scrape_agn(semanas: int = 9) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
+# Bellas Artes  (bellasartes.gob.ar — agenda del MNBA)
+# ---------------------------------------------------------------------------
+# "Bellas Artes Cine" proyecta viernes y sábados a las 18 en el Auditorio de
+# Amigos del Bellas Artes (Figueroa Alcorta 2270). La programación vive
+# repartida en dos webs y ninguna alcanza sola:
+#
+#   · amigosdelbellasartes.org.ar/cine/ es la landing del ciclo VIGENTE, armada
+#     a mano en Elementor: trae la grilla completa del ciclo (cada película con
+#     todas sus fechas) pero se saltea las funciones especiales. Las entradas
+#     son productos de WooCommerce en la categoría "Bellas Artes Cine" (id 129,
+#     con una categoría espejo "(pasado)" a donde los mueven cuando la función
+#     ya pasó) y se pueden listar sin credenciales por
+#     /wp-json/wc/store/v1/products?category=129: la descripción del producto
+#     tiene la ficha técnica, pero NO la fecha. Por eso una función especial
+#     —el festival La Mujer y el Cine— tiene producto y link de reserva que
+#     funciona y sin embargo no figura en /cine/: nadie la agregó a esa página.
+#
+#   · la agenda del museo (la que scrapeamos acá) sí las lista TODAS. Cada
+#     tarjeta lleva un badge con el tipo de actividad y "Bellas Artes Cine" es
+#     exactamente el criterio que buscábamos: las otras ~50 tarjetas son
+#     visitas guiadas, talleres, horarios de sala y presentaciones de libros.
+#
+# De la agenda sacamos qué eventos son de cine; de la página del evento, las
+# fechas (con su hora), el link de reserva —que ya apunta al producto de
+# Amigos— y la ficha técnica de CADA película. Esa ficha viene en bloques
+# país/año + duración + dirección, así que un programa doble ("La sonriente
+# Madame Beudet" y "París 1900") sale como dos filas y no como una sola.
+
+BA_CINE = "Bellas Artes"
+BA_BASE = "https://www.bellasartes.gob.ar"
+BA_BADGE = "bellas artes cine"
+
+_BA_FECHA_RE = re.compile(r"(\d{1,2})\s+de\s+([A-Za-zÁÉÍÓÚáéíóúñ]+)\s+de\s+(\d{4})")
+_BA_HORA_RE = re.compile(r"a\s+las\s+(\d{1,2})(?:[.:](\d{2}))?", re.IGNORECASE)
+# Ficha técnica: "Francia, 1923" / "EE. UU., 1964"
+_BA_PAIS_ANIO_RE = re.compile(r"^(?P<pais>[^,]{2,40}),\s*(?P<anio>(?:19|20)\d{2})\.?$")
+_BA_DUR_RE = re.compile(r"Duraci[óo]n:\s*(\d{1,3})")
+_BA_DIR_RE = re.compile(r"Direcci[óo]n:\s*(.+)$")
+# Título arriba de la ficha: “Título” (“Título original”)
+_BA_TITULO_RE = re.compile(
+    r"^[“\"«](?P<t>[^”\"»]{2,120})[”\"»]\s*"
+    r"(?:\(\s*[“\"«](?P<orig>[^”\"»]{2,120})[”\"»]\s*\))?\.?$")
+# El h1 es CICLO: “PELÍCULA”, y el ciclo puede traer comillas y dos puntos
+# propios ("Festival “La Mujer y el Cine”: …", "Poe, Corman y Price: Gótico
+# americano: …"), así que el corte va en el ÚLTIMO ": “, no en el primero.
+_BA_CORTE_RE = re.compile(r":\s*(?=[“\"«])")
+
+
+def _ba_dia(texto: str) -> Optional[date]:
+    m = _BA_FECHA_RE.search(texto or "")
+    if not m:
+        return None
+    mes = MESES_ES.get(m.group(2).lower())
+    if not mes:
+        return None
+    try:
+        return date(int(m.group(3)), mes, int(m.group(1)))
+    except ValueError:
+        return None
+
+
+def _ba_hora(texto: str) -> str:
+    m = _BA_HORA_RE.search(texto or "")
+    return f"{int(m.group(1)):02d}:{m.group(2) or '00'}" if m else "??"
+
+
+def _ba_ciclo_y_titulos(h1: str) -> tuple[str, list[str]]:
+    """'Festival “La Mujer y el Cine”: “La sonriente Madame Beudet” y “París
+    1900”' → ('La Mujer y el Cine', ['La sonriente Madame Beudet', 'París
+    1900'])."""
+    cortes = [m.start() for m in _BA_CORTE_RE.finditer(h1 or "")]
+    if not cortes:
+        return "", []
+    ciclo = h1[:cortes[-1]].strip()
+    ciclo = re.sub(r"^Festival\s+", "", ciclo).strip(" “”\"«».:")
+    titulos = [t.strip() for t in
+               re.findall(r"[“\"«]([^”\"»]{2,120})[”\"»]", h1[cortes[-1]:])]
+    return ciclo, titulos
+
+
+def _ba_fichas(ps: list[str], titulos_h1: list[str]) -> list[dict]:
+    """Bloques de ficha técnica de la página del evento → una peli por bloque.
+
+    Dos formatos conviven: el programa doble escribe el título arriba de cada
+    ficha, y la función simple no lo escribe (el título está sólo en el h1).
+    """
+    fichas: list[dict] = []
+    for i, t in enumerate(ps):
+        m = _BA_PAIS_ANIO_RE.match(t)
+        if not m:
+            continue
+        dur: Optional[int] = None
+        director = ""
+        for sig in ps[i + 1:i + 4]:
+            md = _BA_DUR_RE.search(sig)
+            if md and dur is None:
+                dur = int(md.group(1))
+            mdir = _BA_DIR_RE.search(sig)
+            if mdir and not director:
+                director = mdir.group(1).strip(" .")
+        # Sin dirección no es una ficha: "Buenos Aires, 2026" de un copete no
+        # tiene por qué convertirse en una función.
+        if not director:
+            continue
+        titulo = original = ""
+        if i:
+            mt = _BA_TITULO_RE.match(ps[i - 1])
+            if mt:
+                titulo = mt.group("t").strip()
+                original = (mt.group("orig") or "").strip()
+        fichas.append({"title": titulo, "original_title": original,
+                       "country": m.group("pais").strip(), "year": int(m.group("anio")),
+                       "duration": dur, "director": director})
+    # Las fichas sin título propio se completan con los títulos del h1, en orden.
+    sin_titulo = [f for f in fichas if not f["title"]]
+    if sin_titulo and len(sin_titulo) == len(titulos_h1):
+        for f, t in zip(sin_titulo, titulos_h1):
+            f["title"] = t
+    elif len(sin_titulo) == 1 and titulos_h1:
+        sin_titulo[0]["title"] = titulos_h1[0]
+    return [f for f in fichas if f["title"]]
+
+
+def _parse_ba_evento(soup, url: str, hoy: date, fin: date) -> list[Screening]:
+    h1 = soup.find("h1")
+    ciclo, titulos_h1 = _ba_ciclo_y_titulos(h1.get_text(" ", strip=True) if h1 else "")
+
+    # Fechas: el evento las lista todas (las pasadas quedan en el HTML detrás de
+    # un "Mostrar fechas pasadas", pero la ventana las descarta sola).
+    fechas: list[tuple[date, str]] = []
+    for li in soup.find_all("li", class_="list-group-item"):
+        pf = li.find("p", class_="fecha")
+        tm = li.find("time")
+        if not pf or not tm:
+            continue
+        d = _ba_dia(pf.get_text(" ", strip=True))
+        if d and hoy <= d <= fin:
+            fechas.append((d, _ba_hora(tm.get_text(" ", strip=True))))
+    if not fechas:
+        return []
+
+    # La reserva es un producto de Amigos; si el evento no lo linkea, queda la
+    # ficha del museo, que igual explica cómo reservar.
+    a = soup.find("a", href=re.compile(r"amigosdelbellasartes\.org\.ar/producto/"))
+    ticket_url = a["href"].split("?")[0] if a else url
+
+    fichas = _ba_fichas([p.get_text(" ", strip=True) for p in soup.find_all("p")],
+                        titulos_h1)
+    if not fichas:
+        # Sin ficha técnica igual publicamos la función: el título del h1 es lo
+        # mínimo que le sirve a alguien que quiere ir.
+        fichas = [{"title": t, "original_title": "", "country": "", "year": None,
+                   "duration": None, "director": ""} for t in titulos_h1]
+
+    out: list[Screening] = []
+    for d, hora in fechas:
+        for f in fichas:
+            out.append(Screening(
+                cine=BA_CINE, title=f["title"], fecha=d.isoformat(), hora=hora,
+                ticket_url=ticket_url, ciclo=ciclo, director=f["director"],
+                country=f["country"], year=f["year"], duration=f["duration"],
+                original_title=f["original_title"],
+            ))
+    return out
+
+
+def scrape_bellasartes(semanas: int = 9) -> list[Screening]:
+    hoy = date.today()
+    fin = hoy + timedelta(weeks=semanas)
+
+    # /agenda/AAAA/M/D/ es una vista "desde esa fecha": devuelve las próximas
+    # ~45 actividades, no las de ese día. Con un salto semanal se barre toda la
+    # ventana sin depender de que la home de la agenda llegue tan lejos.
+    urls: list[str] = []
+    vistos: set[str] = set()
+    d = hoy
+    while d <= fin:
+        try:
+            soup = fetch_html(f"{BA_BASE}/agenda/{d.year}/{d.month}/{d.day}/")
+        except Exception:
+            d += timedelta(days=7)
+            continue
+        for card in soup.find_all("article", class_="card"):
+            badge = card.find("span", class_="badge")
+            if not badge or badge.get_text(strip=True).lower() != BA_BADGE:
+                continue
+            a = card.find("a", href=True)
+            if not a:
+                continue
+            u = a["href"]
+            if not u.startswith("http"):
+                u = BA_BASE + ("" if u.startswith("/") else "/") + u
+            u = u.split("?")[0].split("#")[0]
+            if u not in vistos:
+                vistos.add(u)
+                urls.append(u)
+        d += timedelta(days=7)
+
+    out: list[Screening] = []
+    seen: set = set()
+    for u in urls[:40]:
+        try:
+            esoup = fetch_html(u)
+        except Exception:
+            continue
+        for s in _parse_ba_evento(esoup, u, hoy, fin):
+            key = (s.title.lower(), s.fecha, s.hora)
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(s)
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Funciones manuales — data/manual_screenings.json
 # ---------------------------------------------------------------------------
 # Escape genérico para lo que ningún scraper puede sacar solo: festivales que
