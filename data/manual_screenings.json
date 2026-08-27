@@ -212,6 +212,315 @@
       "cine": "CEA", "title": "Subí que te llevo", "fecha": "2026-08-30", "hora": "19:00",
       "director": "Rubén W. Cavallotti", "year": 1980,
       "ciclo": "Ciclo Sandro", "ticket_url": "https://forms.gle/PXGf7nmLUZoPAfZFA"
+    },
+
+    {
+      "_ciclo": "MALBA — 38° La Mujer y el Cine (festival, 27 al 30 de agosto). MALBA publica cada programa como UNA función (\"Cortos 1 [ARG]\") y la lista de cortos queda en prosa dentro del párrafo: el scraper ve una fila sola, sin director ni duración, y el enrichment le encaja cualquier homónimo (a \"Cortos 3\" le puso una peli de Robert M. Young). Acá va un corto por fila con los datos tal cual los publica malba.org.ar/evento/la-mujer-y-el-cine-2026. Los programas paraguas, la ficha del ciclo y la ceremonia de cierre se sacan en `descartar`. El ciclo se escribe como el festival (y como lo escribe el MNBA, que proyecta las otras funciones): así las dos sedes quedan bajo la misma etiqueta.",
+      "_programa": "Cortometraje invitado — ganador del Óscar 2026, con la productora presente",
+      "cine": "MALBA", "title": "Deux personnes échangeant de la salive (Dos personas intercambiando saliva)", "fecha": "2026-08-27", "hora": "18:00",
+      "director": "Natalie Musteata y Alexandre Singh", "duration": 36,
+      "original_title": "Deux personnes échangeant de la salive",
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "_programa": "Cortos 1 [ARG]",
+      "cine": "MALBA", "title": "Inchegen Awka Liwen", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Yvana Juárez", "duration": 16,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Todos los nombres empiezan con M", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Carla Scolari", "duration": 19,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "En Buenos Aires no hay mar (apuntes para un poema de amor)", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Elena Herranz Benito", "duration": 14,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Los buenos tiempos", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Azul Lombardía", "duration": 18,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "El club de las pelis", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Eliana Ferreiro", "duration": 20,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Vestigios de un país que partió en tren", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Ana Paula Saravia", "duration": 12,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Romper el español", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Sofía Castro", "duration": 17,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Lo que queda del mar / after the sea", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Camila Adaro Liloff", "duration": 6,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "El esquilador", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Paloma Zaremba", "duration": 4,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "La cara de mi madre", "fecha": "2026-08-27", "hora": "20:00",
+      "director": "Anabel Villalba y Berenice Zapiola", "duration": 6,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "_programa": "Cortos 2 [ARG]",
+      "cine": "MALBA", "title": "Un verano adentro", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Julieta Falcón", "duration": 18,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Dra. Miranda", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Denise Anzarut", "duration": 15,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Renegrido", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "María Celia Ferrero", "duration": 24,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "El día del sorteo", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Serena Solis y Valentina Zuliani", "duration": 16,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Elida", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Lara Bettoni y Luna Kama Ailen Aba", "duration": 6,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Cardigan", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Lucía Ruocco", "duration": 3,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Petroka", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Giuliana Capparelli", "duration": 6,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Habitar el cine desde adentro", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Sol Corana", "duration": 16,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Let me show you the beauty of falling from grace", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Jimena Aguilar", "duration": 8,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Ya no soy mí", "fecha": "2026-08-27", "hora": "22:30",
+      "director": "Magdalena Ewert y Maria Celeste Beros", "duration": 18,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "_programa": "Cortos 3",
+      "cine": "MALBA", "title": "Mudanza", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Vanesa Spaulding", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Frágil carcasa", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Anabel Piñeiro", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Chicas en verano", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Magali y Micaela Cristoforo", "duration": 3,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "El toque", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Agustina Eraso", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Vera", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Matilda Lasarte", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "x100preCris", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Deborah Narvaez", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Como si hubiera", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Melina Kladniew", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "De tal palo tal astilla", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Rosario Manso, Rocio Pellegrino y Carolina Kallenbach", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Hacia dentro", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Sofia Ungar", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "En ese momento nos fuimos todas", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Macarena Sarsfield", "duration": 2,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Lo que aún queda de mi", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Elena Bursztein", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Casa Franklin", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Camila Sequeira Vega", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Infancias en pausa", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "María Laura Piastrellini", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Fernando y Neli", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Wanda Artaza", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Cambio de look", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Jessica Ileana Mina Carrasco", "duration": 2,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Bordado en la memoria", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Agustina Lasagni", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Hilvanes de la memoria", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "María Analía Feble Badano", "duration": 2,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Carta de presentación", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Victoria Hermo", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "El oro que se va", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Belén Astorga", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Una dirección", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Carolina Defossé", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "El aborigen que no sabía escribir", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Elizabeth Avalos Castillo", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Las cartas del cuartel", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Magali Ibertis", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Creck, Splash, Boom!", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Yas Souza", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Golondrina", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Verónica Eseberri", "duration": 1,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "La nena", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Josefina Lens", "duration": 20,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Mamita", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Chiara Boiani", "duration": 7,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Extraordinaria", "fecha": "2026-08-28", "hora": "18:00",
+      "director": "Tamara Mesri", "duration": 18,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "_programa": "Cortos 4 [ARG]",
+      "cine": "MALBA", "title": "Mudarse es lo segundo peor que te puede pasar en la vida", "fecha": "2026-08-29", "hora": "22:30",
+      "director": "Felicitas Páez", "duration": 18,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Seis de abril", "fecha": "2026-08-29", "hora": "22:30",
+      "director": "Agnese Boaretto", "duration": 30,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Partir y renunciar", "fecha": "2026-08-29", "hora": "22:30",
+      "director": "Marilú Varsky", "duration": 23,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Cráter", "fecha": "2026-08-29", "hora": "22:30",
+      "director": "Valentina Cabado Parcero", "duration": 13,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "_programa": "Cortos 5 [ARG]",
+      "cine": "MALBA", "title": "Fotos nuestras", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Emilia Herbst", "duration": 20,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Planetario", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Sofia Poncini", "duration": 9,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "El cuerpo de la noche", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Celina Wolffelt", "duration": 16,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Mientras tanto", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Flor Berthold y Carla Scatarelli", "duration": 11,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Nos vemos a la vuelta", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Rocío Alonso", "duration": 14,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Steve Buscemi", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Lucila Lopatin", "duration": 19,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "Nocturna", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Catalina Caimi", "duration": 13,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "cine": "MALBA", "title": "48 – La muerta que habla", "fecha": "2026-08-30", "hora": "18:00",
+      "director": "Agustín Fittipaldi y Candela Gonzalez Kelly", "duration": 20,
+      "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
     }
   ],
 
@@ -236,6 +545,42 @@
     {
       "_por_que": "El scraper del Recoleta ve el festival como UNA actividad. Los seis cortos van arriba como funciones propias, así que la entrada paraguas sobra y además no tiene Letterboxd posible. Sin `fecha`: el CCR publicó mal el día y si lo corrigen, la paraguas hay que sacarla igual.",
       "cine": "Centro Cultural Recoleta", "title_contiene": "Bendita Tú Festival de Cine"
+    },
+    {
+      "_por_que": "Programa de cortos que MALBA publica como una función sola. Cada corto va arriba como función propia.",
+      "cine": "MALBA", "fecha": "2026-08-27", "title_contiene": "Cortometraje invitado"
+    },
+    {
+      "cine": "MALBA", "fecha": "2026-08-27", "title_contiene": "Cortos 1"
+    },
+    {
+      "cine": "MALBA", "fecha": "2026-08-27", "title_contiene": "Cortos 2"
+    },
+    {
+      "cine": "MALBA", "fecha": "2026-08-28", "title_contiene": "Cortos 3"
+    },
+    {
+      "cine": "MALBA", "fecha": "2026-08-29", "title_contiene": "Cortos 4"
+    },
+    {
+      "cine": "MALBA", "fecha": "2026-08-30", "title_contiene": "Cortos 5"
+    },
+    {
+      "_por_que": "Ficha paraguas del festival: la agenda de MALBA la repite todos los días a las 18:00 y no es una función proyectable (sin director, sin duración, sin Letterboxd posible).",
+      "cine": "MALBA", "fecha": "2026-08-27", "title_contiene": "La mujer y el cine"
+    },
+    {
+      "cine": "MALBA", "fecha": "2026-08-28", "title_contiene": "La mujer y el cine"
+    },
+    {
+      "cine": "MALBA", "fecha": "2026-08-29", "title_contiene": "La mujer y el cine"
+    },
+    {
+      "cine": "MALBA", "fecha": "2026-08-30", "title_contiene": "La mujer y el cine"
+    },
+    {
+      "_por_que": "La ceremonia de cierre no es una proyección: son 120' de entrega de premios.",
+      "cine": "MALBA", "fecha": "2026-08-30", "title_contiene": "Ceremonia de cierre"
     }
   ]
 }
