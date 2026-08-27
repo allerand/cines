@@ -12445,7 +12445,7 @@
     "duration": 91,
     "genre": "Música",
     "title_es": "Queen: El concierto de Budapest",
-    "original_title": "Varázslat - A Queen Budapesten"
+    "original_title": "Queen Budapest"
   },
   "coyote vs acme": {
     "url": "https://letterboxd.com/film/coyote-vs-acme/",
@@ -13003,5 +13003,126 @@
     "genre": "Thriller, Romance",
     "title_es": "El viento",
     "original_title": "The Wind"
+  },
+  "tú me enloqueces|1976": {
+    "url": "https://letterboxd.com/film/tu-me-enloqueces/",
+    "title_en": "Tú me enloqueces",
+    "director": "Sandro",
+    "country": "",
+    "year": 1976,
+    "duration": 90,
+    "genre": "Música, Comedia",
+    "original_title": "Tú me enloqueces"
+  },
+  "el deseo de vivir|1973": {
+    "url": "https://letterboxd.com/film/el-deseo-de-vivir/",
+    "title_en": "El deseo de vivir",
+    "director": "Julio Saraceni",
+    "country": "Argentina",
+    "year": 1973,
+    "duration": 90,
+    "genre": "Drama",
+    "original_title": "El deseo de vivir"
+  },
+  "muchacho|1970": {
+    "url": "https://letterboxd.com/film/muchacho-1970/",
+    "title_en": "Muchacho",
+    "director": "Leo Fleider",
+    "country": "Argentina",
+    "year": 1970,
+    "duration": 100,
+    "genre": "Comedia, Drama",
+    "original_title": "Muchacho"
+  },
+  "subí que te llevo|1980": {
+    "url": "https://letterboxd.com/film/subi-que-te-llevo/",
+    "title_en": "Subí que te llevo",
+    "director": "Rubén W. Cavalloti",
+    "country": "Argentina",
+    "year": 1980,
+    "duration": 91,
+    "genre": "Comedia, Música",
+    "original_title": "Subí que te llevo"
+  },
+  "queen budapest": {
+    "url": "",
+    "title_en": "Queen Budapest",
+    "director": "János Zsombolyai",
+    "country": "Hungary, United Kingdom",
+    "year": 2012,
+    "duration": 91,
+    "genre": "Música",
+    "title_es": "Queen: El concierto de Budapest",
+    "original_title": "Queen Budapest"
+  },
+  "convocatoria de cortos: programa i|2026": {
+    "url": "",
+    "title_en": "CONVOCATORIA DE CORTOS: PROGRAMA I",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "convocatoria de cortos: programa ii|2026": {
+    "url": "",
+    "title_en": "CONVOCATORIA DE CORTOS: PROGRAMA II",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "convocatoria de cortos: programa iii|2026": {
+    "url": "",
+    "title_en": "CONVOCATORIA DE CORTOS: PROGRAMA III",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "convocatoria de cortos: programa iv|2026": {
+    "url": "",
+    "title_en": "CONVOCATORIA DE CORTOS: PROGRAMA IV",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "soy tu mensaje|2025": {
+    "url": "",
+    "title_en": "SOY TU MENSAJE",
+    "director": "Ricardo M. Jacobo",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 78,
+    "original_title": "Soy tu mensaje"
+  },
+  "la noche está marchándose ya|2025": {
+    "url": "https://letterboxd.com/film/the-night-is-fading-away/",
+    "title_en": "The Night Is Fading Away",
+    "director": "Ramiro Sonzini, Ezequiel Salinas",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 104,
+    "genre": "Drama"
+  },
+  "para hacer una película solo hace falta un arma|2026": {
+    "url": "",
+    "title_en": "PARA HACER UNA PELÍCULA SOLO HACE FALTA UN ARMA",
+    "director": "Santiago Sein",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 159,
+    "genre": "Documental",
+    "original_title": "Para hacer una película solo hace falta un arma"
+  },
+  "canelones|2026": {
+    "url": "",
+    "title_en": "CANELONES",
+    "director": "Christian Basilis, Ana Laura Gussoni",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 91,
+    "genre": "Comedia, Thriller",
+    "original_title": "Canelones"
   }
 }
