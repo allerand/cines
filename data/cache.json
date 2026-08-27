@@ -11788,7 +11788,7 @@
   },
   "harry potter y la piedra filosofal": {
     "url": "",
-    "title_en": "Harry Potter Y La Piedra Filosofal",
+    "title_en": "Harry Potter y la Piedra Filosofal",
     "director": "Chris Columbus",
     "country": "United Kingdom, United States of America",
     "year": 2001,
@@ -13124,5 +13124,26 @@
     "duration": 91,
     "genre": "Comedia, Thriller",
     "original_title": "Canelones"
+  },
+  "la imagen santa|2025": {
+    "url": "https://letterboxd.com/film/la-imagen-santa/",
+    "title_en": "The Holy Image",
+    "director": "Pablo Montllau",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 73,
+    "genre": "Documental",
+    "original_title": "La imagen santa"
+  },
+  "coyote vs. acme": {
+    "url": "https://letterboxd.com/film/coyote-vs-acme/",
+    "title_en": "Coyote vs. Acme",
+    "director": "Dave Green",
+    "country": "USA",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Aventura, Familiar",
+    "title_es": "Coyote vs. Acme",
+    "original_title": "Coyote vs. Acme"
   }
 }
