@@ -404,6 +404,75 @@
       "title_en": "Harry Potter and the Philosopher's Stone",
       "original_title": "Harry Potter and the Philosopher's Stone",
       "letterboxd": "https://letterboxd.com/film/harry-potter-and-the-philosophers-stone/"
+    },
+    {
+      "_comment": "Bellas Artes — el slug de Letterboxd de estas películas es el título en INGLÉS ('the-tomb-of-ligeia', 'the-smiling-madame-beudet'), que no se deduce del título en castellano con el que las programa el museo. El enrichment prueba el slug local y el del título original que trae la ficha ('La souriante Madame Beudet'), y ninguno existe: quedaban las nueve funciones sin link. URLs verificadas una por una contra la ficha de Letterboxd (director y duración)."
+    },
+    {
+      "title": "La sonriente Madame Beudet",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/the-smiling-madame-beudet/",
+      "title_en": "The Smiling Madame Beudet"
+    },
+    {
+      "title": "París 1900",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/paris-1900/",
+      "title_en": "Paris 1900"
+    },
+    {
+      "title": "Las aventuras del príncipe Achmed",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/the-adventures-of-prince-achmed/",
+      "title_en": "The Adventures of Prince Achmed"
+    },
+    {
+      "title": "La tumba de Ligeia",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/the-tomb-of-ligeia/",
+      "title_en": "The Tomb of Ligeia"
+    },
+    {
+      "title": "La máscara de la muerte roja",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/the-masque-of-the-red-death/",
+      "title_en": "The Masque of the Red Death"
+    },
+    {
+      "title": "El pozo y el péndulo",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/the-pit-and-the-pendulum-1961/",
+      "title_en": "The Pit and the Pendulum"
+    },
+    {
+      "_comment": "Además del link, el año: la ficha de Amigos del Bellas Artes dice 1964 para 'La caída de la casa Usher' y la película es de 1960 (la de 1964 es 'La tumba de Ligeia'). Con el año equivocado el validador rechazaba el match aunque lo encontrara, porque la diferencia es mayor a dos años."
+    },
+    {
+      "title": "La caída de la casa Usher",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/house-of-usher/",
+      "title_en": "House of Usher",
+      "year": 1960
+    },
+    {
+      "title": "El cuervo",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/the-raven-1963/",
+      "title_en": "The Raven"
+    },
+    {
+      "title": "Cuentos de terror",
+      "cine": "Bellas Artes",
+      "letterboxd": "https://letterboxd.com/film/tales-of-terror/",
+      "title_en": "Tales of Terror"
+    },
+    {
+      "_comment": "Cardigan (La Mujer y el Cine, MALBA): Letterboxd lo guarda en /film/cardigan-2025/ pero su ficha dice 2026, así que ni el slug con año ni el pelado dan con él. Verificado: Lucía Ruocco, 3′."
+    },
+    {
+      "title": "Cardigan",
+      "cine": "MALBA",
+      "letterboxd": "https://letterboxd.com/film/cardigan-2025/"
     }
   ]
 }
