@@ -6460,6 +6460,9 @@ def scrape_agn(semanas: int = 9) -> list[Screening]:
 BA_CINE = "Bellas Artes"
 BA_BASE = "https://www.bellasartes.gob.ar"
 BA_BADGE = "bellas artes cine"
+BA_AMIGOS = "https://amigosdelbellasartes.org.ar"
+BA_AMIGOS_CAT = 129   # categoría "Bellas Artes Cine" de la tienda (la de las
+                      # funciones vigentes; la 69 es el espejo "(pasado)")
 
 _BA_FECHA_RE = re.compile(r"(\d{1,2})\s+de\s+([A-Za-zÁÉÍÓÚáéíóúñ]+)\s+de\s+(\d{4})")
 _BA_HORA_RE = re.compile(r"a\s+las\s+(\d{1,2})(?:[.:](\d{2}))?", re.IGNORECASE)
@@ -6595,6 +6598,141 @@ def _parse_ba_evento(soup, url: str, hoy: date, fin: date) -> list[Screening]:
     return out
 
 
+# "Viernes 21 de agosto, 18h y sábado 12 de septiembre, 18h" — la línea de
+# fechas de cada película en la grilla de Amigos. Sin año: lo resolvemos contra
+# la ventana, como el resto de los cines que publican "día de mes" pelado.
+_BA_FUNCION_RE = re.compile(
+    r"(?:lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})\s+de\s+"
+    r"([a-záéíóúñ]+)\s*,?\s*(?:a\s+las\s+)?(\d{1,2})(?:[.:](\d{2}))?\s*h",
+    re.IGNORECASE)
+
+
+def _ba_fichas_productos() -> dict:
+    """slug de producto → fichas técnicas, desde la tienda de Amigos.
+
+    La Store API de WooCommerce es pública (sin credenciales) y la descripción
+    del producto trae la ficha en el mismo formato que la página del museo, así
+    que la parsea el mismo código. Lo que el producto NO tiene es la fecha.
+    """
+    url = f"{BA_AMIGOS}/wp-json/wc/store/v1/products?category={BA_AMIGOS_CAT}&per_page=100"
+    try:
+        data = json.loads(fetch_bytes(url).decode("utf-8", errors="replace"))
+    except Exception:
+        return {}
+    out: dict = {}
+    for p in data or []:
+        soup = BeautifulSoup(p.get("description") or "", "html.parser")
+        # La ficha va como UN párrafo con <br> entre líneas ("EE. UU., 1964<br>
+        # Duración: 81′<br>Dirección: Roger Corman"), así que el corte es el <br>
+        # y no el <p> como en la página del museo.
+        for br in soup.find_all("br"):
+            br.replace_with("\n")
+        lineas = [l.strip() for l in soup.get_text("\n").split("\n") if l.strip()]
+        out[p.get("slug", "")] = _ba_fichas(lineas, [p.get("name", "")])
+    return out
+
+
+def _scrape_ba_amigos(hoy: date, fin: date) -> list[Screening]:
+    """La landing del ciclo vigente en Amigos del Bellas Artes.
+
+    Es la única fuente que tiene el ciclo COMPLETO en una sola página —cada
+    película con todas sus fechas—, así que sirve de red por si la agenda del
+    museo no contesta (las dos están detrás de Cloudflare y la IP del runner no
+    siempre pasa). No cubre las funciones especiales: ésas están sólo en la
+    agenda del museo.
+    """
+    try:
+        soup = fetch_html(f"{BA_AMIGOS}/cine/")
+    except Exception:
+        return []
+    fichas = _ba_fichas_productos()
+
+    out: list[Screening] = []
+    vistos: set = set()
+    for a in soup.find_all("a", href=re.compile(r"/producto/")):
+        href = a["href"].split("?")[0]
+        slug = href.rstrip("/").rsplit("/", 1)[-1]
+        if slug in vistos:
+            continue
+        vistos.add(slug)
+        # La tarjeta: el ciclo en mayúsculas, el título, y la línea de fechas.
+        card = a
+        for _ in range(8):
+            card = card.parent
+            if card is None:
+                break
+            if len(card.get_text(" ", strip=True)) > 120:
+                break
+        if card is None:
+            continue
+        texto = re.sub(r"\s+", " ", card.get_text(" ", strip=True))
+        funciones = _BA_FUNCION_RE.findall(texto)
+        if not funciones:
+            continue
+        for f in fichas.get(slug, []):
+            for dia, mes_txt, hh, mm in funciones:
+                mes = MESES_ES.get(mes_txt.lower())
+                if not mes:
+                    continue
+                d = _fecha_en_ventana(int(dia), mes, hoy, fin)
+                if not d:
+                    continue
+                out.append(Screening(
+                    cine=BA_CINE, title=f["title"], fecha=d.isoformat(),
+                    hora=f"{int(hh):02d}:{mm or '00'}", ticket_url=href,
+                    ciclo=_ba_ciclo_de_tarjeta(texto), director=f["director"],
+                    country=f["country"], year=f["year"], duration=f["duration"],
+                    original_title=f["original_title"]))
+    return out
+
+
+def _ba_ciclo_de_tarjeta(texto: str) -> str:
+    """La tarjeta abre con el ciclo en mayúsculas ("POE, CORMAN Y PRICE: GÓTICO
+    AMERICANO") y sigue con el título de la película."""
+    m = re.match(r"^([A-ZÁÉÍÓÚÑÜ0-9][^a-z]{6,80}?)\s+[A-ZÁÉÍÓÚÑ][a-záéíóúñ]", texto)
+    if not m:
+        return ""
+    return _title_case_ciclo(m.group(1).strip(" :·-"))
+
+
+def _title_case_ciclo(s: str) -> str:
+    """"POE, CORMAN Y PRICE: GÓTICO AMERICANO" → "Poe, Corman y Price: Gótico
+    americano", que es como lo escribe el museo.
+
+    Antes de los dos puntos va el nombre del ciclo (nombres propios, cada
+    palabra en mayúscula); después va un subtítulo, que se escribe como una
+    frase. Sin esto las dos fuentes abrirían dos ciclos distintos en la web.
+    """
+    chicas = {"y", "de", "del", "la", "el", "los", "las", "en", "a", "con"}
+
+    def cap(w):
+        return w[:1].upper() + w[1:]
+
+    partes = []
+    for n, parte in enumerate(s.lower().split(":")):
+        ws = parte.split()
+        if not ws:
+            continue
+        if n == 0:
+            partes.append(" ".join(w if i and w in chicas else cap(w)
+                                   for i, w in enumerate(ws)))
+        else:
+            partes.append(" ".join([cap(ws[0])] + ws[1:]))
+    return ": ".join(partes)
+
+
+def _fecha_en_ventana(dia: int, mes: int, hoy: date, fin: date) -> Optional[date]:
+    """(día, mes) sin año → la fecha concreta que cae en la ventana."""
+    for anio in (hoy.year, hoy.year + 1):
+        try:
+            cand = date(anio, mes, dia)
+        except ValueError:
+            continue
+        if hoy <= cand <= fin:
+            return cand
+    return None
+
+
 def scrape_bellasartes(semanas: int = 9) -> list[Screening]:
     hoy = date.today()
     fin = hoy + timedelta(weeks=semanas)
@@ -6609,7 +6747,7 @@ def scrape_bellasartes(semanas: int = 9) -> list[Screening]:
         try:
             soup = fetch_html(f"{BA_BASE}/agenda/{d.year}/{d.month}/{d.day}/")
         except Exception:
-            d += timedelta(days=7)
+            d += timedelta(days=14)
             continue
         for card in soup.find_all("article", class_="card"):
             badge = card.find("span", class_="badge")
@@ -6625,7 +6763,7 @@ def scrape_bellasartes(semanas: int = 9) -> list[Screening]:
             if u not in vistos:
                 vistos.add(u)
                 urls.append(u)
-        d += timedelta(days=7)
+        d += timedelta(days=14)
 
     out: list[Screening] = []
     seen: set = set()
@@ -6640,6 +6778,19 @@ def scrape_bellasartes(semanas: int = 9) -> list[Screening]:
                 continue
             seen.add(key)
             out.append(s)
+
+    # Red de la grilla de Amigos: agrega lo que la agenda del museo no haya
+    # devuelto (una tarjeta que todavía no publicaron, o un día que Cloudflare
+    # no nos dejó ver). La agenda manda: acá sólo entra lo que falta.
+    try:
+        for s in _scrape_ba_amigos(hoy, fin):
+            key = (s.title.lower(), s.fecha, s.hora)
+            if key in seen:
+                continue
+            seen.add(key)
+            out.append(s)
+    except Exception:
+        pass
     return out
 
 

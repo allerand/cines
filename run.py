@@ -624,7 +624,11 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     #      tener pocas funciones a la vista (proyecta viernes a domingo): sólo el
     #      cero es inequívocamente una falla.
     COMMERCIAL_PREFIXES = ('Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex')
-    CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1}   # cine → mínimo sano
+    #      Bellas Artes entra en la misma red: el museo y Amigos están los dos
+    #      detrás de Cloudflare y el 28/8/2026 el scrape del runner volvió con
+    #      CERO funciones (desde casa, 11) — sólo sobrevivieron las de HOY por
+    #      el caso 2, así que la sala perdió todo el ciclo de septiembre.
+    CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1, 'Bellas Artes': 1}   # cine → mínimo sano
     if CARTELERA_JSON.exists():
         try:
             from datetime import date
