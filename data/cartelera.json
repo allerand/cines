@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-28T07:08:43",
+  "updated": "2026-08-28T15:04:55",
   "screenings": [
     {
       "cine": "Cinemark Palermo",
@@ -4749,7 +4749,7 @@
       "year": 2024,
       "duration": 20,
       "genre": "",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/la-nena-2024/",
       "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/",
       "ciclo": "La Mujer y el Cine"
     },
@@ -4870,14 +4870,14 @@
       "fecha": "2026-08-28",
       "hora": "18:00",
       "title_es": "La sonriente Madame Beudet",
-      "title_en": "La sonriente Madame Beudet",
+      "title_en": "The Smiling Madame Beudet",
       "original_title": "",
       "director": "Germaine Dulac",
       "country": "Francia",
       "year": 1923,
       "duration": 42,
       "genre": "",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/the-smiling-madame-beudet/",
       "ticket_url": "https://amigosdelbellasartes.org.ar/producto/la-sonriente-madame-beudet-y-paris-1900/",
       "ciclo": "La Mujer y el Cine"
     },
@@ -4886,14 +4886,14 @@
       "fecha": "2026-08-28",
       "hora": "18:00",
       "title_es": "París 1900",
-      "title_en": "París 1900",
+      "title_en": "Paris 1900",
       "original_title": "",
       "director": "Nicole Vedrès",
       "country": "Francia",
       "year": 1946,
       "duration": 82,
       "genre": "",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/paris-1900/",
       "ticket_url": "https://amigosdelbellasartes.org.ar/producto/la-sonriente-madame-beudet-y-paris-1900/",
       "ciclo": "La Mujer y el Cine"
     },
@@ -12402,6 +12402,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Bellas Artes",
+      "fecha": "2026-08-29",
+      "hora": "18:00",
+      "title_es": "Las aventuras del príncipe Achmed",
+      "title_en": "The Adventures of Prince Achmed",
+      "original_title": "",
+      "director": "Lotte Reiniger",
+      "country": "Alemania",
+      "year": 1926,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/the-adventures-of-prince-achmed/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/las-aventuras-del-principe-achmed/",
+      "ciclo": "La Mujer y el Cine"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-08-29",
       "hora": "18:10",
@@ -14829,7 +14845,7 @@
       "year": 2025,
       "duration": 13,
       "genre": "Romance",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/crater-2025/",
       "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/",
       "ciclo": "La Mujer y el Cine"
     },
@@ -19005,7 +19021,7 @@
       "year": 2025,
       "duration": 9,
       "genre": "",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/planetario-2025/",
       "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/",
       "ciclo": "La Mujer y el Cine"
     },
@@ -41074,6 +41090,22 @@
       "ciclo": "Shohei Imamura, antropólogo del deseo"
     },
     {
+      "cine": "Bellas Artes",
+      "fecha": "2026-09-04",
+      "hora": "18:00",
+      "title_es": "La tumba de Ligeia",
+      "title_en": "The Tomb of Ligeia",
+      "original_title": "",
+      "director": "Roger Corman",
+      "country": "EE.UU.",
+      "year": 1964,
+      "duration": 81,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/the-tomb-of-ligeia/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/la-tumba-de-ligeia/",
+      "ciclo": "Poe, Corman y Price: Gótico americano"
+    },
+    {
       "cine": "Filo Cine",
       "fecha": "2026-09-04",
       "hora": "18:30",
@@ -41424,6 +41456,22 @@
       "letterboxd": "https://letterboxd.com/film/pigs-and-battleships/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e209e38d-3329-417d-85be-3b7a8e709a9f",
       "ciclo": "Shohei Imamura, antropólogo del deseo"
+    },
+    {
+      "cine": "Bellas Artes",
+      "fecha": "2026-09-05",
+      "hora": "18:00",
+      "title_es": "La máscara de la muerte roja",
+      "title_en": "The Masque of the Red Death",
+      "original_title": "",
+      "director": "Roger Corman",
+      "country": "EE.UU.",
+      "year": 1964,
+      "duration": 89,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/the-masque-of-the-red-death/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/la-mascara-de-la-muerte-roja/",
+      "ciclo": "Poe, Corman y Price: Gótico americano"
     },
     {
       "cine": "Amorina",
@@ -42610,6 +42658,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Bellas Artes",
+      "fecha": "2026-09-11",
+      "hora": "18:00",
+      "title_es": "El pozo y el péndulo",
+      "title_en": "The Pit and the Pendulum",
+      "original_title": "",
+      "director": "Roger Corman",
+      "country": "EE.UU.",
+      "year": 1961,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/the-pit-and-the-pendulum-1961/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/el-pozo-y-el-pendulo/",
+      "ciclo": "Poe, Corman y Price: Gótico americano"
+    },
+    {
       "cine": "Centro Cultural Borges",
       "fecha": "2026-09-11",
       "hora": "19:00",
@@ -42752,6 +42816,22 @@
       "letterboxd": "https://letterboxd.com/film/casino-royale-2006/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/sabados-de-superaccion",
       "ciclo": ""
+    },
+    {
+      "cine": "Bellas Artes",
+      "fecha": "2026-09-12",
+      "hora": "18:00",
+      "title_es": "La caída de la casa Usher",
+      "title_en": "House of Usher",
+      "original_title": "",
+      "director": "Roger Corman",
+      "country": "EE.UU.",
+      "year": 1960,
+      "duration": 79,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/house-of-usher/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/la-caida-de-la-casa-usher/",
+      "ciclo": "Poe, Corman y Price: Gótico americano"
     },
     {
       "cine": "Amorina",
@@ -43394,6 +43474,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Bellas Artes",
+      "fecha": "2026-09-18",
+      "hora": "18:00",
+      "title_es": "El cuervo",
+      "title_en": "The Raven",
+      "original_title": "",
+      "director": "Roger Corman",
+      "country": "EE.UU.",
+      "year": 1963,
+      "duration": 86,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/the-raven-1963/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/el-cuervo/",
+      "ciclo": "Poe, Corman y Price: Gótico americano"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-09-18",
       "hora": "19:30",
@@ -43472,6 +43568,22 @@
       "letterboxd": "https://letterboxd.com/film/feherlofia/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/rarezas-del-este",
       "ciclo": ""
+    },
+    {
+      "cine": "Bellas Artes",
+      "fecha": "2026-09-19",
+      "hora": "18:00",
+      "title_es": "Cuentos de terror",
+      "title_en": "Tales of Terror",
+      "original_title": "",
+      "director": "Roger Corman",
+      "country": "EE.UU.",
+      "year": 1962,
+      "duration": 89,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/tales-of-terror/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/cuentos-de-terror/",
+      "ciclo": "Poe, Corman y Price: Gótico americano"
     },
     {
       "cine": "Sala Lugones",
@@ -44178,6 +44290,22 @@
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
     },
     {
+      "cine": "Bellas Artes",
+      "fecha": "2026-09-25",
+      "hora": "18:00",
+      "title_es": "La máscara de la muerte roja",
+      "title_en": "The Masque of the Red Death",
+      "original_title": "",
+      "director": "Roger Corman",
+      "country": "EE.UU.",
+      "year": 1964,
+      "duration": 89,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/the-masque-of-the-red-death/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/la-mascara-de-la-muerte-roja/",
+      "ciclo": "Poe, Corman y Price: Gótico americano"
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-09-25",
       "hora": "18:30",
@@ -44432,6 +44560,22 @@
       "letterboxd": "https://letterboxd.com/film/strange-cargo/",
       "ticket_url": "",
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
+    },
+    {
+      "cine": "Bellas Artes",
+      "fecha": "2026-09-26",
+      "hora": "18:00",
+      "title_es": "La tumba de Ligeia",
+      "title_en": "The Tomb of Ligeia",
+      "original_title": "",
+      "director": "Roger Corman",
+      "country": "EE.UU.",
+      "year": 1964,
+      "duration": 81,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/the-tomb-of-ligeia/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/la-tumba-de-ligeia/",
+      "ciclo": "Poe, Corman y Price: Gótico americano"
     },
     {
       "cine": "Multiplex Canning",
