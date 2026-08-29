@@ -10399,7 +10399,7 @@
     "url": "",
     "title_en": "JUAN GABRIEL: MI PRIMER BELLAS ARTES",
     "director": "María José Cuevas, Benjamin H. Stavillo",
-    "country": "",
+    "country": "Mexico",
     "year": 2026,
     "duration": 102,
     "genre": "Música",
@@ -10825,12 +10825,13 @@
     "original_title": "Umbracle"
   },
   "informe general sobre algunas cuestiones de interés para una proyección pública|1976": {
-    "url": "",
-    "title_en": "Informe general sobre algunas cuestiones de interés para una proyección pública",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/general-report/",
+    "title_en": "General Report",
+    "director": "Pere Portabella",
+    "country": "Spain",
+    "year": 1977,
+    "duration": 165,
+    "genre": "Documental"
   },
   "puente de varsovia|1989": {
     "url": "https://letterboxd.com/film/warsaw-bridge/",
@@ -13429,8 +13430,8 @@
     "original_title": "El cuerpo de la noche"
   },
   "mientras tanto": {
-    "url": "",
-    "title_en": "Mientras tanto",
+    "url": "https://letterboxd.com/film/meanwhile-2025-1/",
+    "title_en": "Meanwhile",
     "director": "Flor Berthold, Carla Scatarelli",
     "country": "",
     "year": 2025,
@@ -13459,12 +13460,13 @@
     "original_title": "Steve Buscemi"
   },
   "nocturna": {
-    "url": "",
+    "url": "https://letterboxd.com/film/nocturna-2024-3/",
     "title_en": "Nocturna",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Catalina Caimi",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 12,
+    "genre": ""
   },
   "48 – la muerta que habla": {
     "url": "https://letterboxd.com/film/48-la-muerta-que-habla/",
@@ -13672,20 +13674,22 @@
     "duration": null
   },
   "duro de ser hombre: los amores de tora en osaka|1981": {
-    "url": "",
-    "title_en": "DURO DE SER HOMBRE: LOS AMORES DE TORA EN OSAKA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/tora-sans-love-in-osaka/",
+    "title_en": "Tora-san's Love in Osaka",
+    "director": "Yoji Yamada",
+    "country": "Japan",
+    "year": 1981,
+    "duration": 104,
+    "genre": "Comedia"
   },
   "sumo sí, sumo no|1992": {
-    "url": "",
-    "title_en": "SUMO SÍ, SUMO NO",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/sumo-do-sumo-dont/",
+    "title_en": "Sumo Do, Sumo Don't",
+    "director": "Masayuki Suō",
+    "country": "Japan",
+    "year": 1992,
+    "duration": 105,
+    "genre": "Comedia"
   },
   "hachiko|1987": {
     "url": "https://letterboxd.com/film/hachiko/",
@@ -13781,12 +13785,13 @@
     "genre": "Historia, Música"
   },
   "pulp: ¿qué harías por una canción más?|2026": {
-    "url": "",
-    "title_en": "PULP: ¿QUÉ HARÍAS POR UNA CANCIÓN MÁS?",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/pulp-what-do-you-do-for-an-encore/",
+    "title_en": "Pulp: What Do You Do for an Encore?",
+    "director": "Garth Jennings",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": null,
+    "genre": "Documental, Música"
   },
   "bowie: the final act|2025": {
     "url": "https://letterboxd.com/film/bowie-the-final-act/",
@@ -14138,5 +14143,21 @@
     "duration": 95,
     "genre": "Música, Documental",
     "original_title": "El infierno está encantador - Gulp. 1985"
+  },
+  "maratón audiovisual i - fundación sagai": {
+    "url": "",
+    "title_en": "Maratón audiovisual I - Fundación Sagai",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "maratón audiovisual ii - fundación sagai": {
+    "url": "",
+    "title_en": "Maratón audiovisual II - Fundación Sagai",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
