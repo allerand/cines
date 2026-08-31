@@ -12706,8 +12706,8 @@
     "original_title": "CIN3 FILI4"
   },
   "el sabor de las cerezas": {
-    "url": "",
-    "title_en": "El sabor de las cerezas",
+    "url": "https://letterboxd.com/film/taste-of-cherry/",
+    "title_en": "Taste of Cherry",
     "director": "Abbas Kiarostami",
     "country": "Iran, France",
     "year": 1997,
@@ -14159,5 +14159,37 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "masha y los osos": {
+    "url": "https://letterboxd.com/film/masha-and-the-bears/",
+    "title_en": "Masha and the Bears",
+    "director": "Antonina Ruzhe",
+    "country": "Russia",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Fantasía, Aventura",
+    "title_es": "Masha y el oso",
+    "original_title": "Маша и Медведи"
+  },
+  "pepita la pistolera": {
+    "url": "https://letterboxd.com/film/pepita-the-gunslinger/",
+    "title_en": "Pepita the Gunslinger",
+    "director": "Lucía Puenzo",
+    "country": "Argentina, Spain",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Crimen, Thriller",
+    "original_title": "Pepita la pistolera"
+  },
+  "zona cero": {
+    "url": "https://letterboxd.com/film/colony-2026/",
+    "title_en": "Colony",
+    "director": "Yeon Sang-ho",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 123,
+    "genre": "Acción, Terror",
+    "title_es": "Colony",
+    "original_title": "군체"
   }
 }
