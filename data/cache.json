@@ -12232,13 +12232,13 @@
     "original_title": "Ahí donde no estás"
   },
   "canelones": {
-    "url": "",
-    "title_en": "Canelones",
+    "url": "https://letterboxd.com/film/cannelloni/",
+    "title_en": "Cannelloni",
     "director": "Christian Basilis, Ana Laura Gussoni",
     "country": "Argentina",
     "year": 2026,
     "duration": 91,
-    "genre": "Comedia, Thriller",
+    "genre": "Thriller, Comedia",
     "original_title": "Canelones"
   },
   "guerra de verano": {
@@ -13115,13 +13115,13 @@
     "original_title": "Para hacer una película solo hace falta un arma"
   },
   "canelones|2026": {
-    "url": "",
-    "title_en": "CANELONES",
+    "url": "https://letterboxd.com/film/cannelloni/",
+    "title_en": "Cannelloni",
     "director": "Christian Basilis, Ana Laura Gussoni",
     "country": "Argentina",
     "year": 2026,
     "duration": 91,
-    "genre": "Comedia, Thriller",
+    "genre": "Thriller, Comedia",
     "original_title": "Canelones"
   },
   "la imagen santa|2025": {
@@ -14191,5 +14191,15 @@
     "genre": "Acción, Terror",
     "title_es": "Colony",
     "original_title": "군체"
+  },
+  "hospital británico|2026": {
+    "url": "https://letterboxd.com/film/hospital-britanico/",
+    "title_en": "Hospital Británico",
+    "director": "Gustavo Fontán, Gloria Peirano",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 68,
+    "genre": "Documental",
+    "original_title": "Hospital Británico"
   }
 }
