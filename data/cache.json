@@ -10393,7 +10393,7 @@
     "year": 2026,
     "duration": 119,
     "genre": "Documental, Música",
-    "original_title": "Katy Perry: The Lifetimes Tour - Live from Paris"
+    "original_title": "Katy Perry: The Lifetimes Tour – Live from Paris"
   },
   "juan gabriel: mi primer bellas artes": {
     "url": "",
@@ -14201,5 +14201,104 @@
     "duration": 68,
     "genre": "Documental",
     "original_title": "Hospital Británico"
+  },
+  "colony: zona cero": {
+    "url": "https://letterboxd.com/film/colony-2026/",
+    "title_en": "Colony",
+    "director": "Yeon Sang-ho",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 123,
+    "genre": "Acción, Terror",
+    "title_es": "Colony",
+    "original_title": "군체"
+  },
+  "esa cosa con alas": {
+    "url": "https://letterboxd.com/film/the-thing-with-feathers-2025/",
+    "title_en": "The Thing with Feathers",
+    "director": "Dylan Southern",
+    "country": "UK",
+    "year": 2025,
+    "duration": 99,
+    "genre": "Drama",
+    "title_es": "Esa cosa con alas",
+    "original_title": "The Thing with Feathers"
+  },
+  "la negociación": {
+    "url": "https://letterboxd.com/film/la-negociacion/",
+    "title_en": "La Negociación",
+    "director": "Margarita Martínez Escallón",
+    "country": "",
+    "year": 2018,
+    "duration": 89,
+    "genre": "Documental",
+    "original_title": "La Negociación"
+  },
+  "una quinta en portugal": {
+    "url": "",
+    "title_en": "Una Quinta En Portugal",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "spider-man: un nuevo dia": {
+    "url": "https://letterboxd.com/film/spider-man-brand-new-day/",
+    "title_en": "Spider-Man: Brand New Day",
+    "director": "Destin Daniel Cretton",
+    "country": "USA",
+    "year": 2026,
+    "duration": 145,
+    "genre": "Ciencia ficción, Acción",
+    "title_es": "Spider-Man: Un nuevo día",
+    "original_title": "Spider-Man: Brand New Day"
+  },
+  "mailin": {
+    "url": "https://letterboxd.com/film/mailin/",
+    "title_en": "Mailin",
+    "director": "María Silvia Esteve",
+    "country": "Argentina, France",
+    "year": 2025,
+    "duration": 87,
+    "genre": "Documental",
+    "original_title": "Mailin"
+  },
+  "el espejo sobre la luna": {
+    "url": "",
+    "title_en": "EL ESPEJO SOBRE LA LUNA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "foreign travel": {
+    "url": "https://letterboxd.com/film/foreign-travel/",
+    "title_en": "Foreign Travel",
+    "director": "Ted Fendt",
+    "country": "Germany",
+    "year": 2026,
+    "duration": 63,
+    "genre": "Drama",
+    "original_title": "Auslandsreise"
+  },
+  "ramón vázquez": {
+    "url": "https://letterboxd.com/film/ramon-vazquez/",
+    "title_en": "Ramón Vázquez",
+    "director": "Gustavo Fontán",
+    "country": "",
+    "year": 2026,
+    "duration": 68,
+    "genre": "",
+    "original_title": "Ramón Vázquez"
+  },
+  "quinografía": {
+    "url": "https://letterboxd.com/film/quinografia/",
+    "title_en": "Quinografía",
+    "director": "Mariano Donoso, Federico Cardone",
+    "country": "Argentina, Spain",
+    "year": 2025,
+    "duration": 75,
+    "genre": "Documental",
+    "original_title": "Quinografía"
   }
 }
