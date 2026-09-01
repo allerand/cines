@@ -12444,7 +12444,7 @@
     "duration": 91,
     "genre": "Música",
     "title_es": "Queen: El concierto de Budapest",
-    "original_title": "Queen Budapest"
+    "original_title": "Queen: Budapest"
   },
   "coyote vs acme": {
     "url": "https://letterboxd.com/film/coyote-vs-acme/",
@@ -13052,7 +13052,7 @@
     "duration": 91,
     "genre": "Música",
     "title_es": "Queen: El concierto de Budapest",
-    "original_title": "Queen Budapest"
+    "original_title": "Queen: Budapest"
   },
   "convocatoria de cortos: programa i|2026": {
     "url": "",
@@ -14300,5 +14300,68 @@
     "duration": 75,
     "genre": "Documental",
     "original_title": "Quinografía"
+  },
+  "el ángel azul": {
+    "url": "https://letterboxd.com/film/the-blue-angel/",
+    "title_en": "The Blue Angel",
+    "director": "Josef von Sternberg",
+    "country": "Germany",
+    "year": 1930,
+    "duration": 108,
+    "genre": "Drama",
+    "title_es": "El ángel azul",
+    "original_title": "Der blaue Engel"
+  },
+  "marruecos": {
+    "url": "",
+    "title_en": "Marruecos",
+    "director": "Josef von Sternberg",
+    "country": "United States of America",
+    "year": 1930,
+    "duration": 92,
+    "genre": "Drama, Romance",
+    "title_es": "Marruecos",
+    "original_title": "Morocco"
+  },
+  "el expreso de shangai": {
+    "url": "",
+    "title_en": "El expreso de Shangai",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fatalidad": {
+    "url": "",
+    "title_en": "Fatalidad",
+    "director": "Josef von Sternberg",
+    "country": "United States of America",
+    "year": 1931,
+    "duration": 91,
+    "genre": "Drama, Bélica",
+    "title_es": "Fatalidad",
+    "original_title": "Dishonored"
+  },
+  "la venus rubia": {
+    "url": "",
+    "title_en": "La venus rubia",
+    "director": "Josef von Sternberg",
+    "country": "United States of America",
+    "year": 1932,
+    "duration": 93,
+    "genre": "Drama",
+    "title_es": "La Venus rubia",
+    "original_title": "Blonde Venus"
+  },
+  "capricho imperial": {
+    "url": "",
+    "title_en": "Capricho imperial",
+    "director": "Josef von Sternberg",
+    "country": "United States of America",
+    "year": 1934,
+    "duration": 104,
+    "genre": "Drama, Historia",
+    "title_es": "Capricho imperial",
+    "original_title": "The Scarlet Empress"
   }
 }
