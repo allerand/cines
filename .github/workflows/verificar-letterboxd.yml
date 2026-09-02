@@ -1,0 +1,52 @@
+name: Verificar links de Letterboxd
+
+# Corre scripts/verificar_letterboxd.py desde la red del runner y devuelve, para
+# las funciones que quedaron sin link, el slug de Letterboxd VERIFICADO (200 +
+# director y año coincidentes) listo para pegar en data/letterboxd_overrides.json.
+#
+# Existe porque el paso siguiente sin esto es escribir el slug a mano, y un slug
+# inventado que existe manda a otra película: la fila se ve completa y nadie la
+# revisa nunca más. El informe separa lo confirmado de lo que no se pudo
+# confirmar — cortos de festival y estrenos del año que muchas veces todavía no
+# existen en Letterboxd, y que hay que dejar sin link a propósito.
+
+on:
+  workflow_dispatch:
+    inputs:
+      cine:
+        description: 'Sólo este cine (vacío = todos)'
+        required: false
+      desde:
+        description: 'Fecha mínima YYYY-MM-DD (vacío = todas)'
+        required: false
+      hasta:
+        description: 'Fecha máxima YYYY-MM-DD (vacío = todas)'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install beautifulsoup4
+
+      - name: Verificar
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+        run: |
+          args=""
+          [ -n "${{ inputs.cine }}"  ] && args="$args --cine '${{ inputs.cine }}'"
+          [ -n "${{ inputs.desde }}" ] && args="$args --desde '${{ inputs.desde }}'"
+          [ -n "${{ inputs.hasta }}" ] && args="$args --hasta '${{ inputs.hasta }}'"
+          eval python3 scripts/verificar_letterboxd.py $args
