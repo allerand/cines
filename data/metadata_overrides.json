@@ -478,6 +478,17 @@
       "_comment": "La ficha de Sala Lúcida titula la función 'EL DIABLO NUNCA DUERME (1984)' y el documental de Lourdes Portillo es de 1994 — la sinopsis que publica la propia sala (el tío Oscar Ruiz Almeida, Chihuahua) es la de esa película, y Portillo no tiene ninguna de 1984. El año importa más que como dato suelto: el enrichment arma los candidatos de Letterboxd con él y con 1984 no encontraba nada, así que la función salía sin link."
     },
     {
+      "_comment": "Sala Lúcida titula la función 'ABALOS, una historia de 5 hermanos' y la web no muestra un solo título gritado — el resto de la cartelera no tiene ni uno en mayúsculas. _title_case_es no lo arregla solo (el título no está TODO en mayúsculas, así que no lo toca) y tampoco podría reponer la tilde. La ficha de Letterboxd, la misma que ya está verificada, titula 'Ábalos, A Five Brothers Tale' y firma 'Josefina Zavalía Ábalos': de ahí salen el acento del título y el del nombre."
+    },
+    {
+      "title": "ABALOS, una historia de 5 hermanos",
+      "cine": "Sala Lúcida",
+      "title_es": "Ábalos, una historia de 5 hermanos",
+      "director": "Josefina Zavalía Ábalos",
+      "year": 2017,
+      "country": "Argentina"
+    },
+    {
       "_comment": "Matria va acá y no en letterboxd_overrides.json porque el título es de varias películas distintas —está el de Álvaro Gago y el de Fernando Llanos— y una clave global le pegaría el link de la de Jimena Chavez a cualquiera de ellas. La sala no publica el año; el de Letterboxd (director idéntico, Argentina) es 2024."
     },
     {

@@ -29,7 +29,9 @@ mayúsculas y muchas veces sin tildes ("UNA CANCION PARA MI TIERRA"), y con ese
 título no hay match ni en TMDb ni en Letterboxd. El h2 del evento sí lo trae
 bien escrito, y el parser tiene que preferirlo cuando son la misma película.
 """
+import re
 import sys
+import textwrap
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -76,6 +78,20 @@ ESPERADO = {
     "sala_lucida_charla": [],
 }
 
+def helpers_de_run():
+    """Los normalizadores de casing tal como los escribe run.py.
+
+    Se leen del fuente en vez de importar run.py porque importarlo arranca
+    playwright; lo que se está probando es el código de verdad, no una copia.
+    """
+    src = (Path(__file__).parent / "run.py").read_text(encoding="utf-8")
+    ini = src.index("    SPANISH_STOPWORDS = {")
+    fin = src.index("    def _fix_country_caps(s: str) -> str:")
+    ns = {"re": re}
+    exec(textwrap.dedent(src[ini:fin]), ns)
+    return ns["_title_case_es"], ns["_fix_caps"]
+
+
 fallos = 0
 
 
@@ -121,6 +137,27 @@ def main() -> int:
              _lucida_parse_evento(soup, "u", date(2026, 9, 3), FIN) == [])
     chequear("una función más allá del corte queda afuera",
              _lucida_parse_evento(soup, "u", HOY, date(2026, 9, 1)) == [])
+
+    # La web no muestra un solo título ni un solo nombre a los gritos: los
+    # títulos en mayúsculas los baja run.py y los directores, _fix_caps. Los
+    # cortos llegan de la sala en mayúsculas, así que el que los arregla tiene
+    # que seguir estando.
+    print("\ncasing con el que sale a la web")
+    title_case, fix_caps = helpers_de_run()
+    soup = BeautifulSoup((FIXTURES / "sala_lucida_correspondencia.html").read_text(encoding="utf-8"),
+                         "html.parser")
+    cortos = _lucida_parse_evento(soup, "u", HOY, FIN)
+    titulos = [title_case(s.title) if s.title.isupper() else s.title for s in cortos]
+    chequear("los títulos de los cortos dejan de estar en mayúsculas",
+             titulos == ["Casi Ciudadanos", "Glosario", "La Sirena Mecánica",
+                         "Lo que Queda"], titulos)
+    # Una sola "y" en el medio hacía que isupper() dijera que no, y el nombre
+    # salía gritado igual.
+    directores = [fix_caps(s.director) for s in cortos]
+    chequear("un director gritado con conector en minúscula también se arregla",
+             "Violeta Vieytes Vivares y Damián Sato" in directores, directores)
+    chequear("un nombre bien escrito no se toca",
+             fix_caps("Laura Zambrano") == "Laura Zambrano")
 
     print(f"\n{'TODO OK' if not fallos else f'{fallos} casos fallando'}")
     return 1 if fallos else 0
