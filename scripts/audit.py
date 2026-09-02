@@ -119,6 +119,15 @@ FUENTE_SOLO_HOY = {
     "Cine Lorca", "Cinépolis Houssay", "Cinépolis Recoleta", "Showcase Belgrano",
 }
 
+# Un título que son varias películas, o una película más una actividad. El « + »
+# con espacios es como el CCK une un programa doble; el resto son las actividades
+# que cuelgan de la misma línea de horario. Se pide además que la función no
+# tenga director, para no marcar un título que legítimamente lleve alguna de
+# estas palabras.
+_TITULO_COMPUESTO = re.compile(
+    r"\s\+\s|\bcharlas?\s+con\b|\bconversatorio\b|\bpresentaci[óo]n\s+de\b|"
+    r"\bseguida\s+de\s+(?:charla|debate)\b", re.IGNORECASE)
+
 SEV_ERROR, SEV_WARN, SEV_INFO = "ERROR", "AVISO", "INFO"
 
 
@@ -666,8 +675,21 @@ def check_calidad(rep: Report, screenings: list[dict], today: date) -> None:
             # de festival y las antologías tipo "Heavy Metal" traen diez).
             flag("director que no es un nombre", cine, f"{titulo}: {director!r}")
 
+        # Un título que en realidad son VARIAS películas, o una película más
+        # una actividad. Pasó con el CCK, que arma programas dobles escribiendo
+        # «A + B + charlas con Fulano» en una sola línea de la agenda: entraba
+        # como una función con ese título entero.
+        #
+        # Lo que lo vuelve caro es que se lleva puesta la ficha completa —un
+        # título compuesto no matchea contra la fuente ni contra Letterboxd, así
+        # que la fila sale sin director, sin año y sin link— y que nadie se
+        # entera: no falla nada, sólo queda una fila muda entre las buenas.
+        # Por eso la regla mira el título y no el cine: el día que otra sala
+        # escriba así, esto lo dice el lunes siguiente en vez de nunca.
+        if _TITULO_COMPUESTO.search(titulo) and not director:
+            flag("título que son varias películas", cine, repr(titulo))
         # Título que en realidad es el copete/ciclo de la card.
-        if "·" in titulo or len(titulo) > 80:
+        elif "·" in titulo or len(titulo) > 80:
             flag("título con copete pegado", cine, repr(titulo))
         elif titulo.isupper() and len(titulo) > 3:
             flag("título todo en mayúsculas", cine, repr(titulo))
@@ -712,6 +734,13 @@ def check_calidad(rep: Report, screenings: list[dict], today: date) -> None:
         "director duplicado": "el crédito viene repetido desde la fuente",
         "título con copete pegado": "el título en realidad es el copete del "
                                     "ciclo o una actividad, no una película",
+        "título que son varias películas": "hay funciones cuyo título son varias "
+                                           "películas juntas (o una película más "
+                                           "una charla): así no matchean contra "
+                                           "la fuente ni contra Letterboxd y "
+                                           "quedan sin director, año ni link — "
+                                           "hay que desagregarlas en una fila "
+                                           "por película",
     }
     for (regla, cine), n in sorted(problemas.items(), key=lambda kv: -kv[1]):
         muestra = ejemplos[(regla, cine)][0]

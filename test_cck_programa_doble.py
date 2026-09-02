@@ -25,7 +25,8 @@ from datetime import date
 from pathlib import Path
 
 from scraper import (_CCK_SLOT_RE, _cck_fichas, _cck_ficha_programacion,
-                     _cck_norm, _cck_split_titulos)
+                     _cck_norm, _cck_split_titulos, _cck_titulos_declarados,
+                     _cck_titulos_en_slot)
 
 FIXTURE = Path(__file__).parent / "tests" / "fixtures" / "cck_cortar_y_contar.txt"
 
@@ -100,6 +101,46 @@ def main() -> int:
     for entrada, esperado in casos_sala:
         got = _cck_split_titulos(entrada)
         chequear(f"sala al final: «{entrada[:34]}»", got == [esperado], got)
+
+    # --- 1b. Lo robusto: matchear contra lo que el evento declara -----------
+    # Cortar por el separador hay que salir a arreglarlo cada vez que el CCK
+    # cambia de signo. Pero la página declara sus películas dos veces —la
+    # enumeración del copete y las cabeceras del bloque "Programación"—, así
+    # que se pueden buscar adentro del slot los títulos que ya sabemos que
+    # existen, y lo que sobra se cae solo.
+    decl = _cck_titulos_declarados(TEXTO)
+    chequear("se recuperan las 9 películas que declara el evento",
+             len(decl) == 9, f"{len(decl)}: {decl}")
+
+    # Sin la enumeración, el bloque "Programación" tiene que alcanzar solo.
+    sin_enum = TEXTO.replace("La programación incluye nueve títulos:", "Se proyecta:")
+    chequear("...y también sin la enumeración, sólo con el bloque Programación",
+             len(_cck_titulos_declarados(sin_enum)) == 9,
+             _cck_titulos_declarados(sin_enum))
+
+    # Una frase de sinopsis no es un título: aparece una sola vez en la página.
+    chequear("la sinopsis no se cuela como película",
+             not any("Favio Navoni" in t for t in decl), decl)
+
+    # El mismo programa doble escrito de seis formas: el separador deja de
+    # importar. Es lo que evita tener que volver a tocar esto.
+    esperado_doble = ["El chico en llamas", "Tres tiempos"]
+    for variante in [
+        "El chico en llamas + Tres tiempos + charlas con Alejo Santos y Natacha Valerga",
+        "El chico en llamas y Tres tiempos",
+        "El chico en llamas / Tres tiempos",
+        "El chico en llamas, Tres tiempos",
+        "El chico en llamas - Tres tiempos (charla posterior)",
+        "El chico en llamas Tres tiempos Sala María Luisa Bemberg",
+    ]:
+        got = _cck_titulos_en_slot(variante, decl)
+        chequear(f"separador «{variante[18:26].strip() or 'nada'}»",
+                 got == esperado_doble, f"{got}  ←  {variante}")
+
+    chequear("un título solo sigue saliendo solo",
+             _cck_titulos_en_slot("Romería", decl) == ["Romería"])
+    chequear("un slot que no es película no devuelve nada",
+             _cck_titulos_en_slot("Presentación del libro de Fulano", decl) == [])
 
     # --- 2. La ficha de cada película ----------------------------------------
     fichas_ciclo = _cck_fichas(TEXTO)

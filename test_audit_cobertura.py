@@ -160,6 +160,30 @@ def main() -> int:
     acc, _ = _correr({"Hoyts Abasto": [0] + [180] * 12})
     chequear("una sala con API propia en cero sí avisa", "Hoyts Abasto" in acc, str(acc))
 
+    # --- Calidad: un título que son varias películas -------------------------
+    # El detector que faltaba. El CCK publicó cuatro funciones así durante
+    # días —«A + B + charlas con Fulano», sin director, sin año, sin
+    # Letterboxd— y ningún chequeo las nombraba: no falla nada, sólo queda una
+    # fila muda entre las buenas. La regla mira el título y no el cine, para
+    # que sirva el día que otra sala escriba igual.
+    def _calidad(titulo, director=""):
+        rep = audit.Report()
+        audit.check_calidad(rep, [{"cine": "CCK", "fecha": HOY.isoformat(),
+                                   "hora": "15:00", "title_es": titulo,
+                                   "director": director, "ciclo": "X",
+                                   "year": 2025, "ticket_url": "https://x/"}], HOY)
+        return [m for _, m in rep.accion] + rep.cronico
+
+    marcado = lambda t, d="": any("varias películas" in m for m in _calidad(t, d))
+    chequear("un título con varias películas se marca",
+             marcado("El chico en llamas + Tres tiempos + charlas con Alejo Santos"))
+    chequear("una película con la charla pegada también",
+             marcado("Romería + charla con Carla Simon"))
+    chequear("ya desagregada y con ficha, no molesta",
+             not marcado("El chico en llamas", "Tadeo Martinez"))
+    chequear("un título normal sin director tampoco",
+             not marcado("Deuses de pedra"))
+
     print(f"\n{'TODO OK' if not fallos else f'{fallos} casos fallando'}")
     return 1 if fallos else 0
 

@@ -2942,6 +2942,84 @@ def _cck_fichas(texto: str) -> dict:
     return out
 
 
+def _cck_titulos_declarados(texto: str) -> list[str]:
+    """Las películas que el evento declara, en el orden en que aparecen.
+
+    Es la lista contra la que se lee la agenda. Un evento del CCK nombra sus
+    películas dos veces —la enumeración del copete y las cabeceras del bloque
+    "Programación"— y esa redundancia es lo que permite no adivinar: en vez de
+    inventar por dónde cortar «A + B + charlas con Fulano», se buscan adentro
+    los títulos que ya sabemos que existen.
+    """
+    titulos: list[str] = []
+
+    ml = _CCK_LISTA_RE.search(texto)
+    if ml:
+        for item in re.split(r",\s*(?![^()]*\))", ml.group(1)):
+            mm = re.match(r"\s*(.+?)\s*\(([^)]*)\)\s*$", item)
+            if mm and mm.group(1).strip():
+                titulos.append(mm.group(1).strip())
+
+    # Cabeceras del bloque "Programación". Suelto, _CCK_FICHA_RE se come
+    # «Título Director» en un solo grupo («Tres tiempos Marlene Grinberg»), y
+    # dónde termina uno y empieza el otro no se puede decidir por la forma: los
+    # dos son palabras capitalizadas.
+    #
+    # Lo que sí los distingue es que el título está escrito DOS veces en la
+    # página —arriba en la agenda y acá— y el director una sola. Así que se
+    # prueban los prefijos de más largo a más corto y gana el primero que
+    # aparezca repetido: eso es el título, y lo que sobra es el director.
+    desde = texto.find("Programación")
+    if desde >= 0:
+        for m in _CCK_FICHA_RE.finditer(texto, desde):
+            crudo = re.sub(r"^\s*(?:Programaci[óo]n)\s*", "", m.group(1)).strip()
+            palabras = crudo.split()
+            for corte in range(len(palabras) - 1, 0, -1):
+                cand = " ".join(palabras[:corte]).strip(" -–:.,;")
+                if not (2 < len(cand) <= 70):
+                    continue
+                if len(_cck_titulo_re(cand).findall(texto)) >= 2:
+                    titulos.append(cand)
+                    break
+
+    # Únicos, conservando el orden y la primera grafía vista.
+    vistos, out = set(), []
+    for t in titulos:
+        k = _cck_norm(t)
+        if k and k not in vistos:
+            vistos.add(k)
+            out.append(t)
+    return out
+
+
+def _cck_titulos_en_slot(chunk: str, declarados: list[str]) -> list[str]:
+    """Los títulos declarados que aparecen dentro de un slot de la agenda.
+
+    Esto es lo que hace robusto el parseo de los programas dobles: no depende
+    de con qué los una el CCK. « + », « y », « / », una coma o nada — mientras
+    los títulos estén declarados, se encuentran igual, y todo lo que sobra
+    («charlas con Fulano», el nombre de la sala) simplemente no matchea y se
+    cae solo. Cortar por el separador, en cambio, hay que salir a arreglarlo
+    cada vez que cambian de signo.
+    """
+    hits: list[tuple[int, int, str]] = []
+    for t in declarados:
+        for m in _cck_titulo_re(t).finditer(chunk):
+            hits.append((m.start(), m.end(), t))
+    hits.sort(key=lambda h: (h[0], -(h[1] - h[0])))
+
+    # Sin solaparse, y con el más largo ganando: si un título es prefijo de
+    # otro ("Romería" y "Romería en Vigo"), gana el largo.
+    out: list[str] = []
+    fin_previo = -1
+    for ini, fin, t in hits:
+        if ini < fin_previo:
+            continue
+        out.append(t)
+        fin_previo = fin
+    return out
+
+
 def _cck_titulo_re(titulo: str) -> "re.Pattern":
     """El mismo título con los espacios sueltos.
 
@@ -3049,7 +3127,8 @@ CCK_CACHE_HORAS = 20
 # Subir esta versión invalida todas las entradas de una. Hay que tocarla cada
 # vez que cambie CÓMO se parsea un evento (títulos, fechas, ficha), no cuando
 # cambia cómo se baja.
-#   2 — 2/9/2026: los programas dobles pasan a ser una función por película.
+#   2 — 2/9/2026: los programas dobles pasan a ser una función por
+#       película, matcheando contra los títulos que el evento declara.
 CCK_PARSER_VERSION = 2
 
 
@@ -3208,6 +3287,7 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
         # Fichas de este ciclo: la enumeración de títulos y, para las
         # retrospectivas de un solo autor, el director del ciclo entero.
         fichas_ciclo = _cck_fichas(full_text)
+        declarados = _cck_titulos_declarados(full_text)
         ma = _CCK_AUTOR_RE.search(full_text)
         autor_ciclo = ma.group(1).strip() if ma else ""
 
@@ -3260,7 +3340,23 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
                 # El doble espacio ya no separa nada: full_text viene colapsado
                 # con re.sub(r"\s+", " "), así que un programa doble entraba
                 # entero como un solo título.
-                for raw_title in _cck_split_titulos(raw_title_chunk):
+                # Primero contra lo que el evento declara —no depende de con
+                # qué una el CCK sus programas dobles— y sólo si el evento no
+                # declaró nada se cae al corte por separador.
+                titulos_slot = _cck_titulos_en_slot(raw_title_chunk, declarados)
+                if not titulos_slot:
+                    titulos_slot = _cck_split_titulos(raw_title_chunk)
+                    if declarados:
+                        # El evento sí declaró películas y este horario no
+                        # matcheó ninguna: o cambió el formato de la agenda, o
+                        # la función no es una película. Antes esto salía a la
+                        # cartelera como una fila muda, sin director ni año, y
+                        # no había forma de enterarse.
+                        print(f"  · ⚠️ [CCK] «{raw_title_chunk[:70]}» no matchea "
+                              f"ninguna de las {len(declarados)} películas que "
+                              f"declara {cycle_name!r} — revisar el parseo",
+                              flush=True)
+                for raw_title in titulos_slot:
                     hora = f"{hour:02d}:{minute:02d}"
                     # Ficha: primero la del bloque "Programación" (trae país y
                     # duración), después la enumeración, y de última el autor
