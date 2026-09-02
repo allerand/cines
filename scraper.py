@@ -2863,7 +2863,54 @@ _CCK_AUTOR_RE = re.compile(
 _CCK_FICHA_RE = re.compile(
     r"\s*[\"“]?\s*([^\".]{3,60})\.\s*(?:([^\".]{0,70}?),\s*)?"
     r"((?:19|20)\d{2})\.\s*(\d{2,3})\s*[’\'′]")
-_CCK_LISTA_RE = re.compile(r"[Ss]e\s+proyectan[^:]{0,40}:\s*(.+?)\.\s")
+# El CCK presenta la enumeración de títulos de dos maneras («Se proyectan diez
+# títulos: …» y «La programación incluye nueve títulos: …»). Con sólo la
+# primera, el festival Cortar y Contar quedaba sin enumeración y sus nueve
+# películas dependían enteramente del bloque "Programación".
+_CCK_LISTA_RE = re.compile(
+    r"(?:[Ss]e\s+proyectan|[Ll]a\s+programaci[óo]n\s+incluye)[^:]{0,40}:\s*(.+?)\.\s")
+
+# Un slot puede tener varias películas unidas con « + », y el CCK cuelga ahí
+# mismo las actividades que NO son películas:
+#     19 h: Desde el principio hasta el final + El sonido de antes
+#           + charlas con Valeria Racioppi Gómez y Laura Búa
+# Todo eso entraba como UN título. Además de leerse mal, rompía la ficha
+# entera: ningún título compuesto matchea contra el bloque "Programación" ni
+# contra Letterboxd, así que la función salía sin director, sin año y sin
+# link — que es exactamente lo que se veía en la grilla del 6/9.
+_CCK_NO_PELICULA_RE = re.compile(
+    r"^(?:charlas?|conversatorio|mesa\s+redonda|mesa\b|debate|entrevista|"
+    r"coloquio|presentaci[óo]n|q\s*&\s*a|encuentro)\b", re.IGNORECASE)
+
+
+# Un horario de la agenda y todo lo que cuelga de él hasta el próximo horario.
+# El \d* después de la "h" cubre los typos del CCK ("18:30 h1:" en la
+# retrospectiva de Piñeiro). Sin eso el horario no se reconoce como slot nuevo
+# y la película se pega al título de la función anterior.
+_CCK_SLOT_RE = re.compile(
+    r"(\d{1,2})(?::(\d{2}))?\s*h(?:s|oras)?\d*\s*[:.\-–]\s*"
+    r"(.+?)"
+    r"(?=\s+\d{1,2}(?::\d{2})?\s*h(?:s|oras)?\d*\s*[:.\-–]|\Z)",
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def _cck_split_titulos(chunk: str) -> list[str]:
+    """Un slot de la agenda → los títulos de película que contiene.
+
+    Se corta por « + » con espacios a los lados, que es como el CCK une un
+    programa doble; un '+' pegado a las letras se deja quieto por si alguna vez
+    forma parte de un título. Los tramos que son actividades (charlas,
+    presentaciones) se descartan: no son funciones y ensucian la fila.
+    """
+    partes = re.split(r"\s+\+\s+", chunk) if re.search(r"\s\+\s", chunk) else [chunk]
+    out = []
+    for p in partes:
+        p = p.strip(" -–:.,;")
+        if not p or len(p) < 2 or _CCK_NO_PELICULA_RE.match(p):
+            continue
+        out.append(_cck_sacar_sala(p))
+    return out
 
 
 def _cck_norm(t: str) -> str:
@@ -2933,6 +2980,26 @@ def _cck_ficha_programacion(texto: str, titulo: str) -> dict:
 _CCK_SALA_RE = re.compile(
     r"^(?:Auditorio|Sala|Microcine|Cine)\s+[^:]{1,30}:\s*", re.IGNORECASE)
 
+# La sala también aparece DESPUÉS del título y sin dos puntos que la delimiten
+# («17:30 h: Deuses de pedra Sala Manuel Antin»), y ahí queda pegada al título.
+# Es el mismo daño que un programa doble sin partir: el título deja de matchear
+# contra el bloque "Programación" y contra Letterboxd, y la función sale sin
+# director, sin año y sin link.
+#
+# Va conservador a propósito: el nombre de sala tiene que ser 1-4 palabras
+# capitalizadas al final del título, y sólo se saca si queda algo antes. Un
+# título que termine de verdad en «… Sala algo» es mucho menos probable que
+# esta pifia, pero el requisito de capitalización evita comerse un «… en la
+# sala de espera».
+_CCK_SALA_FINAL_RE = re.compile(
+    r"\s+(?:Sala|Auditorio|Microcine)"
+    r"(?:\s+[A-ZÁÉÍÓÚÑ][\wÁÉÍÓÚÑáéíóúñ.'’-]*|\s+\d{1,4}){1,4}\s*$")
+
+
+def _cck_sacar_sala(titulo: str) -> str:
+    limpio = _CCK_SALA_FINAL_RE.sub("", titulo).strip(" -–:.,;")
+    return limpio if len(limpio) >= 2 else titulo
+
 
 def _json_ld_loads(raw: Optional[str]):
     """json.loads tolerante para los bloques JSON-LD de los sitios.
@@ -2973,6 +3040,18 @@ def _json_ld_loads(raw: Optional[str]):
 CCK_CACHE_PATH = Path(__file__).parent / "data" / "cck_eventos.json"
 CCK_CACHE_HORAS = 20
 
+# Y justamente porque se guarda lo PARSEADO, arreglar el parser no alcanza para
+# arreglar la cartelera: las funciones mal parseadas siguen sirviéndose de la
+# caché hasta que expiren solas. Peor todavía para el que trabaja en el
+# scraper: con la caché caliente el fix parece no hacer nada, y lo que se está
+# leyendo es la salida del código viejo.
+#
+# Subir esta versión invalida todas las entradas de una. Hay que tocarla cada
+# vez que cambie CÓMO se parsea un evento (títulos, fechas, ficha), no cuando
+# cambia cómo se baja.
+#   2 — 2/9/2026: los programas dobles pasan a ser una función por película.
+CCK_PARSER_VERSION = 2
+
 
 def _cck_cache_load() -> dict:
     try:
@@ -2987,6 +3066,8 @@ def _cck_cache_get(cache: dict, url: str, semanas: int,
     e = cache.get(url)
     if not isinstance(e, dict):
         return None
+    if e.get("v") != CCK_PARSER_VERSION:
+        return None                      # parseada con otro código: no sirve
     try:
         edad = datetime.now() - datetime.fromisoformat(e["ts"])
     except Exception:
@@ -3005,6 +3086,7 @@ def _cck_cache_get(cache: dict, url: str, semanas: int,
 def _cck_cache_put(cache: dict, url: str, semanas: int,
                    funciones: list[Screening]) -> None:
     cache[url] = {"ts": datetime.now().isoformat(timespec="seconds"),
+                  "v": CCK_PARSER_VERSION,
                   "semanas": semanas,
                   "funciones": [asdict(s) for s in funciones]}
 
@@ -3116,15 +3198,7 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
             r"(\d{1,2})(?:\s+de\s+(\w+)(?:\s+(?:de\s+)?(\d{4}))?)?",
             re.IGNORECASE,
         )
-        # El \d* después de la "h" cubre los typos del CCK ("18:30 h1:" en la
-        # retrospectiva de Piñeiro). Sin eso el horario no se reconocía como
-        # slot nuevo y la película se pegaba al título de la función anterior.
-        slot_re = re.compile(
-            r"(\d{1,2})(?::(\d{2}))?\s*h(?:s|oras)?\d*\s*[:.\-–]\s*"
-            r"(.+?)"
-            r"(?=\s+\d{1,2}(?::\d{2})?\s*h(?:s|oras)?\d*\s*[:.\-–]|\Z)",
-            re.IGNORECASE | re.DOTALL,
-        )
+        slot_re = _CCK_SLOT_RE
 
         # Procesamos la descripción entera y agrupamos por header de fecha.
         # Si nunca aparece un header de fecha, los slots se asignan a ev_start.
@@ -3183,11 +3257,10 @@ def scrape_cck(semanas: int = 2) -> list[Screening]:
                 # Auditorio 511: La princesa de Francia"): el guion cuenta como
                 # separador de slot y la sala termina pegada al título.
                 raw_title_chunk = _CCK_SALA_RE.sub("", raw_title_chunk, count=1)
-                titles = re.split(r"\s{2,}|\n", raw_title_chunk)
-                for raw_title in titles:
-                    raw_title = raw_title.strip(" -–:.,;")
-                    if not raw_title or len(raw_title) < 2:
-                        continue
+                # El doble espacio ya no separa nada: full_text viene colapsado
+                # con re.sub(r"\s+", " "), así que un programa doble entraba
+                # entero como un solo título.
+                for raw_title in _cck_split_titulos(raw_title_chunk):
                     hora = f"{hour:02d}:{minute:02d}"
                     # Ficha: primero la del bloque "Programación" (trae país y
                     # duración), después la enumeración, y de última el autor
