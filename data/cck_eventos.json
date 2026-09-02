@@ -1,116 +1,241 @@
 {
-  "https://palaciolibertad.gob.ar/events/retrospectiva-matias-pineiro/": {
-    "ts": "2026-08-25T09:54:35",
+  "https://palaciolibertad.gob.ar/events/cortar-y-contar/": {
+    "ts": "2026-09-02T12:10:26",
     "semanas": 9,
     "funciones": [
       {
         "cine": "CCK",
-        "title": "Isabella",
-        "fecha": "2026-08-29",
-        "hora": "16:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectiva-matias-pineiro/",
-        "ciclo": "Retrospectiva: Matías Piñeiro",
-        "director": "Matías Piñeiro",
+        "title": "Desde el principio hasta el final + El sonido de antes + charlas con Valeria Racioppi Gómez y Laura Búa",
+        "fecha": "2026-09-04",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "",
         "country": "",
-        "year": 2020,
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Cómo ser Pehuén Pedre + Cuando las nubes esconden la sombra + charlas con Valeria Racioppi Gómez y Andrea Chignoli",
+        "fecha": "2026-09-05",
+        "hora": "16:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Sacrificio + A Simple Soldier + charlas con Alejo Santos e Inés Boffi",
+        "fecha": "2026-09-05",
+        "hora": "18:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "El chico en llamas + Tres tiempos + charlas con Alejo Santos y Natacha Valerga",
+        "fecha": "2026-09-06",
+        "hora": "15:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Romería",
+        "fecha": "2026-09-06",
+        "hora": "17:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "Carla Simon",
+        "country": "",
+        "year": 2025,
+        "duration": 115,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/": {
+    "ts": "2026-09-02T12:10:37",
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "360 curvas",
+        "fecha": "2026-09-06",
+        "hora": "15:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
+        "ciclo": "Ciclo Mestre Mateo",
+        "director": "Alejandro Gándara y Ariadna Silva Fernández",
+        "country": "",
+        "year": 2025,
         "duration": 80,
         "original_title": ""
       },
       {
         "cine": "CCK",
-        "title": "Prefacio + Tú me abrasas",
-        "fecha": "2026-08-29",
-        "hora": "18:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectiva-matias-pineiro/",
-        "ciclo": "Retrospectiva: Matías Piñeiro",
-        "director": "Matías Piñeiro",
+        "title": "Ao son da nova regueifa",
+        "fecha": "2026-09-06",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
+        "ciclo": "Ciclo Mestre Mateo",
+        "director": "Saúl Rivas y Manolo Maseda",
+        "country": "",
+        "year": 2025,
+        "duration": 60,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "O silencio heredado",
+        "fecha": "2026-09-13",
+        "hora": "15:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
+        "ciclo": "Ciclo Mestre Mateo",
+        "director": "Lucía Dapena Gonzalez",
+        "country": "",
+        "year": 2025,
+        "duration": 80,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Deuses de pedra Sala Manuel Antin",
+        "fecha": "2026-09-13",
+        "hora": "17:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
+        "ciclo": "Ciclo Mestre Mateo",
+        "director": "",
         "country": "",
         "year": null,
         "duration": null,
         "original_title": ""
-      }
-    ]
-  },
-  "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-cecilia-kang-hernan-rosselli/": {
-    "ts": "2026-08-25T09:54:37",
-    "semanas": 9,
-    "funciones": [
+      },
       {
         "cine": "CCK",
-        "title": "Algo nuevo, algo viejo, algo prestado",
-        "fecha": "2026-08-29",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-cecilia-kang-hernan-rosselli/",
-        "ciclo": "Miradas contemporáneas:Cecilia Kang / Hernán Rosselli",
-        "director": "Hernán Rosselli",
+        "title": "San Simón",
+        "fecha": "2026-09-13",
+        "hora": "15:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
+        "ciclo": "Ciclo Mestre Mateo",
+        "director": "Ángel Delgado",
         "country": "",
-        "year": 2024,
-        "duration": 103,
-        "original_title": ""
-      }
-    ]
-  },
-  "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/": {
-    "ts": "2026-08-25T09:54:37",
-    "semanas": 9,
-    "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Borges/Santiago: Variaciones sobre un guion",
-        "fecha": "2026-08-28",
-        "hora": "16:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/",
-        "ciclo": "Borges y el cine",
-        "director": "Alejo Moguillansky",
-        "country": "",
-        "year": 2008,
-        "duration": 76,
+        "year": 2025,
+        "duration": 107,
         "original_title": ""
       },
       {
         "cine": "CCK",
-        "title": "Los otros",
-        "fecha": "2026-08-28",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/",
-        "ciclo": "Borges y el cine",
-        "director": "Hugo Santiago",
-        "country": "",
-        "year": 1974,
-        "duration": 127,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Los otros",
-        "fecha": "2026-08-30",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/",
-        "ciclo": "Borges y el cine",
-        "director": "Hugo Santiago",
-        "country": "",
-        "year": 1974,
-        "duration": 127,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Invasión",
-        "fecha": "2026-08-30",
+        "title": "Antes de nos",
+        "fecha": "2026-09-13",
         "hora": "18:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/borges-y-el-cine-2026/",
-        "ciclo": "Borges y el cine",
-        "director": "Hugo Santiago",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
+        "ciclo": "Ciclo Mestre Mateo",
+        "director": "Ángeles Huerta",
         "country": "",
-        "year": 1969,
-        "duration": 123,
+        "year": 2025,
+        "duration": 88,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Las líneas discontinuas",
+        "fecha": "2026-09-20",
+        "hora": "15:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
+        "ciclo": "Ciclo Mestre Mateo",
+        "director": "Anxos Fanzas",
+        "country": "",
+        "year": 2025,
+        "duration": 90,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Sirat",
+        "fecha": "2026-09-20",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
+        "ciclo": "Ciclo Mestre Mateo",
+        "director": "Oliver Laxe",
+        "country": "",
+        "year": 2025,
+        "duration": 114,
         "original_title": ""
       }
     ]
   },
-  "https://palaciolibertad.gob.ar/events/anima-latina-9-o-festival-de-cine-de-animacion-latinoamericano-competencia-de-cortometrajes-argentinos/": {
-    "ts": "2026-08-25T09:54:38",
+  "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
+    "ts": "2026-09-02T12:10:48",
     "semanas": 9,
-    "funciones": []
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "Hombre de la Atlántida",
+        "fecha": "2026-09-12",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/",
+        "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
+        "director": "Simón Zorraquín",
+        "country": "Argentina",
+        "year": 2025,
+        "duration": 69,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Hombre de la Atlántida",
+        "fecha": "2026-09-19",
+        "hora": "17:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/",
+        "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
+        "director": "Simón Zorraquín",
+        "country": "Argentina",
+        "year": 2025,
+        "duration": 69,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "El placer es mío",
+        "fecha": "2026-09-19",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/",
+        "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
+        "director": "Sacha Amaral",
+        "country": "Argentina, Brasil, Francia",
+        "year": 2024,
+        "duration": 95,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "El placer es mío",
+        "fecha": "2026-09-26",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/",
+        "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
+        "director": "Sacha Amaral",
+        "country": "Argentina, Brasil, Francia",
+        "year": 2024,
+        "duration": 95,
+        "original_title": ""
+      }
+    ]
   }
 }
