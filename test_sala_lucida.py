@@ -15,6 +15,14 @@ porque cubren las cuatro formas en que la sala escribe una función:
                       metida en el encabezado del título; el h2 del evento
                       viene con el ciclo de prefijo.
   · el_diablo       — el año en el encabezado ("(1984)") y el ciclo en el h2.
+  · suerte_josefa   — el encabezado trae la ficha pegada al título
+                      ("SUERTE JOSEFA (2025)"): si no se limpia antes de
+                      compararlo con el nombre del evento, la película termina
+                      publicada como si fuera un ciclo.
+  · correspondencia — un programa de cortos: cuatro películas en una función,
+                      cada una con su título y su director en la misma línea.
+  · charla          — el ciclo de periodistas, que NO es cine: declara "Autor:"
+                      en vez de dirección y no tiene que entrar a la cartelera.
 
 Lo que se está protegiendo es el título: la descripción lo escribe en
 mayúsculas y muchas veces sin tildes ("UNA CANCION PARA MI TIERRA"), y con ese
@@ -49,6 +57,23 @@ ESPERADO = {
         ("El diablo nunca duerme", "Lourdes Portillo", 1984, 84,
          "Secretos Familiares", "2026-09-05", "16:00"),
     ],
+    "sala_lucida_suerte_josefa": [
+        ("Suerte Josefa", "Javier Témoli", 2025, 127, "", "2026-09-05", "22:00"),
+    ],
+    # Los cortos van uno por fila, y el nombre del programa queda de ciclo: es
+    # lo único que después los muestra juntos en la cartelera.
+    "sala_lucida_correspondencia": [
+        ("CASI CIUDADANOS", "Laura Zambrano", None, 16, "Correspondencia",
+         "2026-09-12", "17:00"),
+        ("GLOSARIO", "Laura Zambrano", None, 7, "Correspondencia",
+         "2026-09-12", "17:00"),
+        ("LA SIRENA MECÁNICA", "VIOLETA VIEYTES VIVARES y DAMIÁN SATO", None, 9,
+         "Correspondencia", "2026-09-12", "17:00"),
+        ("LO QUE QUEDA", "Denisse Laub", None, 10, "Correspondencia",
+         "2026-09-12", "17:00"),
+    ],
+    # Sin línea de dirección no hay película: el evento no entra.
+    "sala_lucida_charla": [],
 }
 
 fallos = 0

@@ -4304,17 +4304,6 @@ def _lucida_parse_evento(soup, url: str, today: date, cutoff: date) -> list[Scre
     if not desc:
         return []
 
-    # El ciclo es el primer encabezado de la descripción cuando no es el rótulo
-    # "CINE" ni el título de la película.
-    ciclo = ""
-    for nodo in desc.find_all(["h2", "h3"]):
-        t = _lucida_texto(nodo)
-        if not t or _lucida_norm(t) in _LUCIDA_ROTULOS:
-            continue
-        if _lucida_norm(t) != _lucida_norm(titulo_evento):
-            ciclo = _title_case_ciclo(t) if t.isupper() else t
-        break
-
     # "GALERIA NOCTURNA: Si muero antes de despertar" → el prefijo es el ciclo,
     # no parte del título. Se prueban las dos formas contra la descripción.
     variantes = [titulo_evento]
@@ -4323,7 +4312,28 @@ def _lucida_parse_evento(soup, url: str, today: date, cutoff: date) -> list[Scre
         if resto:
             variantes.append(resto)
 
+    # El ciclo es el primer encabezado de la descripción cuando no es el rótulo
+    # "CINE" ni el título de la película. La comparación va contra el título ya
+    # limpio: el encabezado suele traer la ficha pegada ("SUERTE JOSEFA (2025)")
+    # y sin sacarla no coincide con el nombre del evento, así que el título de
+    # la película terminaba publicado como si fuera un ciclo.
+    ciclo = ""
+    for nodo in desc.find_all(["h2", "h3"]):
+        t = _lucida_texto(nodo)
+        if not t or _lucida_norm(t) in _LUCIDA_ROTULOS:
+            continue
+        limpio = _lucida_norm(_lucida_limpiar_titulo(t))
+        if limpio not in {_lucida_norm(v) for v in variantes}:
+            ciclo = _title_case_ciclo(t) if t.isupper() else t
+        break
+
     pelis = _lucida_peliculas(desc, variantes)
+    # En un programa de cortos el nombre del evento no es ninguna de las
+    # películas: es el programa que las junta, y como ciclo es lo único que
+    # después las muestra juntas en la cartelera.
+    if len(pelis) > 1 and not ciclo:
+        ciclo = titulo_evento
+
     return [Screening(
         cine=LUCIDA_CINE, title=p["title"], fecha=d.isoformat(),
         hora=hora or "20:00", ticket_url=url, ciclo=ciclo,
