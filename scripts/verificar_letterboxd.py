@@ -69,7 +69,19 @@ def candidatos(titulo: str, anio, director: str) -> list[str]:
 
 
 def verificar(titulo: str, anio, director: str, duracion=None):
-    """(url, meta) del primer candidato que la validación acepta, o (None, motivo)."""
+    """(url, meta, fuerza) del primer candidato aceptado, o (None, motivo, "").
+
+    `fuerza` dice CON QUÉ se confirmó, porque no todos los sí valen lo mismo:
+      · "director+año"  — se cruzaron los dos, es el bueno.
+      · "sólo el slug"  — la función no traía director ni año, así que no hubo
+                          nada que cruzar y lo único que dice que es la película
+                          correcta es que el slug existe. Hay que mirarlo a ojo.
+
+    La duración NO se pasa como hint: _validate_meta la trata como veto (±5
+    min) y entre la copia de festival y la final hay diferencias mayores.
+    Rechazó "El sonido de antes" teniendo el director idéntico y el año a uno,
+    que es justo el match que se quiere. Se reporta como nota cuando no cierra.
+    """
     probados = 0
     for url in candidatos(titulo, anio, director):
         soup = fetch_film_page(url)
@@ -79,12 +91,15 @@ def verificar(titulo: str, anio, director: str, duracion=None):
         meta = parse_film_soup(soup, url)
         if not meta:
             continue
-        if _validate_meta(meta, anio, director, duracion):
-            return url, meta
+        if _validate_meta(meta, anio, director):
+            if duracion and meta.get("duration") and abs(int(meta["duration"]) - int(duracion)) > 5:
+                print(f"      (nota: el cine dice {duracion}′ y Letterboxd "
+                      f"{meta['duration']}′ — otra copia, no invalida el match)")
+            return url, meta, ("director+año" if director or anio else "sólo el slug")
         print(f"      ✗ {url} → {meta.get('director')!r} ({meta.get('year')}) "
               f"no coincide con {director!r} ({anio})")
     return None, ("ninguna página abrió" if not probados
-                  else "abrieron páginas pero ninguna coincide")
+                  else "abrieron páginas pero ninguna coincide"), ""
 
 
 def main() -> int:
@@ -122,25 +137,33 @@ def main() -> int:
 
     print(f"Verificando {len(faltan)} película(s) sin link…\n")
     confirmados: dict[str, str] = {}
+    flojos: dict[str, str] = {}
     sin_confirmar: list[tuple[str, str]] = []
 
     for clave, f in sorted(faltan.items()):
         cines = ", ".join(sorted(f["cines"]))
         print(f"· {f['title']} ({f['year'] or 's/año'}) — {f['director'] or 's/director'} "
               f"[{cines}]")
-        url, meta = verificar(f["title"], f["year"], f["director"], f["duration"])
+        url, meta, fuerza = verificar(f["title"], f["year"], f["director"], f["duration"])
         if url:
-            print(f"      ✅ {url}  → {meta.get('director')} ({meta.get('year')})")
-            confirmados[clave] = url
+            print(f"      ✅ {url}  → {meta.get('director')} ({meta.get('year')})"
+                  f"  [{fuerza}]")
+            (confirmados if fuerza == "director+año" else flojos)[clave] = url
         else:
             print(f"      ⚠️  sin confirmar: {meta}")
             sin_confirmar.append((f["title"], meta))
 
     print("\n" + "=" * 72)
-    print(f"CONFIRMADOS: {len(confirmados)} · SIN CONFIRMAR: {len(sin_confirmar)}")
+    print(f"CONFIRMADOS: {len(confirmados)} · A OJO: {len(flojos)} · "
+          f"SIN CONFIRMAR: {len(sin_confirmar)}")
     if confirmados:
         print("\nPegar en data/letterboxd_overrides.json:\n")
         for clave, url in sorted(confirmados.items()):
+            print(f'  {json.dumps(clave, ensure_ascii=False)}: {json.dumps(url)},')
+    if flojos:
+        print("\nMIRAR A OJO antes de pegar — la función no traía director ni año,")
+        print("así que lo único que dice que es la correcta es que el slug existe:")
+        for clave, url in sorted(flojos.items()):
             print(f'  {json.dumps(clave, ensure_ascii=False)}: {json.dumps(url)},')
     if sin_confirmar:
         print("\nSin confirmar — dejar SIN link, no inventar el slug:")
