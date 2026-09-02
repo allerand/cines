@@ -384,8 +384,24 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
 
     def _fix_caps(s: str) -> str:
         """Normaliza nombres que vienen TODO EN MAYÚSCULAS (p.ej. directores de
-        CEA, donde el innerText hereda un text-transform: uppercase)."""
-        return _title_case_es(s) if s and s.isupper() else s
+        CEA, donde el innerText hereda un text-transform: uppercase).
+
+        `isupper()` sola no alcanza: un nombre escrito a los gritos igual trae
+        minúsculas en los conectores, y con una sola "y" en el medio Python
+        contesta que no está en mayúsculas. Sala Lúcida firma un corto como
+        "VIOLETA VIEYTES VIVARES y DAMIÁN SATO" y así salía a la web, que no
+        muestra un solo título ni un solo nombre gritado. Se miran las palabras
+        que no son conectores: si TODAS están en mayúsculas, el nombre está
+        gritado.
+        """
+        if not s:
+            return s
+        palabras = [w for w in re.split(r"[\s,]+", s)
+                    if w and any(c.isalpha() for c in w)
+                    and w.lower() not in SPANISH_STOPWORDS]
+        if palabras and all(w.isupper() for w in palabras):
+            return _title_case_es(s)
+        return s
 
     def _fix_country_caps(s: str) -> str:
         """Como _fix_caps pero preserva las siglas de países (UK, USA, EEUU,
