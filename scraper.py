@@ -4178,6 +4178,18 @@ _LUCIDA_ANIO_RE = re.compile(r"\(((?:19|20)\d{2})\)")
 _LUCIDA_ROTULOS = {"cine", "estrenos", "descripcion", "sinopsis", "ciclo",
                    "programa", "funcion", "funciones"}
 
+# Los ciclos, escritos como se escriben. La sala los titula en mayúsculas y sin
+# tildes ("GALERIA NOCTURNA", "TRASNOCHE LUCIDA"); _title_case_ciclo le saca el
+# grito, pero un acento que la fuente no trae no hay función que lo reponga, y
+# en la cartelera no hay un solo ciclo sin tildar. La clave se compara
+# normalizada, así que el día que la sala escriba "GALERÍA NOCTURNA" sigue
+# entrando por la misma puerta. Un ciclo que no esté acá pasa igual, apenas
+# destildado: nunca se pierde una función por no figurar en la lista.
+_LUCIDA_CICLOS = {
+    "galeria nocturna": "Galería Nocturna",
+    "trasnoche lucida": "Trasnoche Lúcida",
+}
+
 
 def _lucida_texto(nodo) -> str:
     """Texto de un nodo, con los &nbsp; que deja el editor pasados a espacio."""
@@ -4325,6 +4337,7 @@ def _lucida_parse_evento(soup, url: str, today: date, cutoff: date) -> list[Scre
         limpio = _lucida_norm(_lucida_limpiar_titulo(t))
         if limpio not in {_lucida_norm(v) for v in variantes}:
             ciclo = _title_case_ciclo(t) if t.isupper() else t
+            ciclo = _LUCIDA_CICLOS.get(_lucida_norm(ciclo), ciclo)
         break
 
     pelis = _lucida_peliculas(desc, variantes)

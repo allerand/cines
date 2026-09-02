@@ -53,7 +53,7 @@ ESPERADO = {
     ],
     "sala_lucida_galeria_nocturna": [
         ("Si muero antes de despertar", "Carlos Hugo Christensen", None, 73,
-         "Galeria Nocturna", "2026-09-04", "22:00"),
+         "Galería Nocturna", "2026-09-04", "22:00"),
     ],
     "sala_lucida_el_diablo": [
         ("El diablo nunca duerme", "Lourdes Portillo", 1984, 84,
@@ -158,6 +158,17 @@ def main() -> int:
              "Violeta Vieytes Vivares y Damián Sato" in directores, directores)
     chequear("un nombre bien escrito no se toca",
              fix_caps("Laura Zambrano") == "Laura Zambrano")
+
+    # Los ciclos van escritos como se escriben. La sala los grita sin tildes y
+    # ninguna función puede reponer un acento que la fuente no trae, así que
+    # los conocidos están a mano; el que no figure pasa igual, sin tilde.
+    from scraper import _LUCIDA_CICLOS, _lucida_norm
+    chequear("un ciclo gritado sin tildes sale tildado",
+             _LUCIDA_CICLOS.get(_lucida_norm("Trasnoche Lucida")) == "Trasnoche Lúcida")
+    chequear("...y entra igual el día que la sala lo escriba con tilde",
+             _LUCIDA_CICLOS.get(_lucida_norm("GALERÍA NOCTURNA")) == "Galería Nocturna")
+    chequear("un ciclo que no está en la lista no se pierde",
+             _LUCIDA_CICLOS.get(_lucida_norm("Secretos Familiares")) is None)
 
     print(f"\n{'TODO OK' if not fallos else f'{fallos} casos fallando'}")
     return 1 if fallos else 0
