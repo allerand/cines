@@ -48,8 +48,9 @@ jobs:
           done
 
       - name: Sondeo
-        env:
-          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
-          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
         run: |
-          python3 scripts/_dump_sala.py
+          if [ -n "${{ inputs.url }}" ]; then
+            python3 scripts/probe_acceso.py --url "${{ inputs.url }}"
+          else
+            python3 scripts/probe_acceso.py
+          fi

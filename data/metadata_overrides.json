@@ -473,6 +473,27 @@
       "title": "Cardigan",
       "cine": "MALBA",
       "letterboxd": "https://letterboxd.com/film/cardigan-2025/"
+    },
+    {
+      "_comment": "La ficha de Sala Lúcida titula la función 'EL DIABLO NUNCA DUERME (1984)' y el documental de Lourdes Portillo es de 1994 — la sinopsis que publica la propia sala (el tío Oscar Ruiz Almeida, Chihuahua) es la de esa película, y Portillo no tiene ninguna de 1984. El año importa más que como dato suelto: el enrichment arma los candidatos de Letterboxd con él y con 1984 no encontraba nada, así que la función salía sin link."
+    },
+    {
+      "_comment": "Matria va acá y no en letterboxd_overrides.json porque el título es de varias películas distintas —está el de Álvaro Gago y el de Fernando Llanos— y una clave global le pegaría el link de la de Jimena Chavez a cualquiera de ellas. La sala no publica el año; el de Letterboxd (director idéntico, Argentina) es 2024."
+    },
+    {
+      "title": "Matria",
+      "cine": "Sala Lúcida",
+      "year": 2024,
+      "country": "Argentina",
+      "letterboxd": "https://letterboxd.com/film/matria-2024/"
+    },
+    {
+      "title": "El diablo nunca duerme",
+      "cine": "Sala Lúcida",
+      "year": 1994,
+      "country": "México, Estados Unidos",
+      "title_en": "The Devil Never Sleeps",
+      "letterboxd": "https://letterboxd.com/film/the-devil-never-sleeps/"
     }
   ]
 }
