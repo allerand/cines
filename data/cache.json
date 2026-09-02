@@ -14225,18 +14225,19 @@
     "original_title": "The Thing with Feathers"
   },
   "la negociación": {
-    "url": "https://letterboxd.com/film/la-negociacion/",
-    "title_en": "La Negociación",
-    "director": "Margarita Martínez Escallón",
-    "country": "",
-    "year": 2018,
-    "duration": 89,
-    "genre": "Documental",
-    "original_title": "La Negociación"
+    "url": "https://letterboxd.com/film/dead-mans-wire/",
+    "title_en": "Dead Man's Wire",
+    "director": "Gus Van Sant",
+    "country": "USA, Israel",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Crimen, Thriller",
+    "title_es": "Prime Crime: A True Story",
+    "original_title": "Dead Man's Wire"
   },
   "una quinta en portugal": {
     "url": "",
-    "title_en": "Una Quinta En Portugal",
+    "title_en": "UNA QUINTA EN PORTUGAL",
     "director": "",
     "country": "",
     "year": null,
@@ -14313,23 +14314,24 @@
     "original_title": "Der blaue Engel"
   },
   "marruecos": {
-    "url": "",
-    "title_en": "Marruecos",
+    "url": "https://letterboxd.com/film/morocco/",
+    "title_en": "Morocco",
     "director": "Josef von Sternberg",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1930,
     "duration": 92,
-    "genre": "Drama, Romance",
+    "genre": "Romance, Drama",
     "title_es": "Marruecos",
     "original_title": "Morocco"
   },
   "el expreso de shangai": {
-    "url": "",
-    "title_en": "El expreso de Shangai",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/shanghai-express/",
+    "title_en": "Shanghai Express",
+    "director": "Josef von Sternberg",
+    "country": "USA",
+    "year": 1932,
+    "duration": 82,
+    "genre": "Romance, Bélica"
   },
   "fatalidad": {
     "url": "",
@@ -14363,5 +14365,159 @@
     "genre": "Drama, Historia",
     "title_es": "Capricho imperial",
     "original_title": "The Scarlet Empress"
+  },
+  "el halcón maltés": {
+    "url": "",
+    "title_en": "El halcón maltés",
+    "director": "John Huston",
+    "country": "United States of America",
+    "year": 1941,
+    "duration": 100,
+    "genre": "Misterio, Crimen",
+    "title_es": "El halcón maltés",
+    "original_title": "The Maltese Falcon"
+  },
+  "aliens": {
+    "url": "https://letterboxd.com/film/aliens/",
+    "title_en": "Aliens",
+    "director": "James Cameron",
+    "country": "USA",
+    "year": 1986,
+    "duration": 137,
+    "genre": "Thriller, Ciencia ficción",
+    "title_es": "Aliens: El regreso",
+    "original_title": "Aliens"
+  },
+  "los de la mesa 10": {
+    "url": "https://letterboxd.com/film/los-de-la-mesa-10/",
+    "title_en": "Los de la mesa 10",
+    "director": "Simón Feldman",
+    "country": "Argentina",
+    "year": 1960,
+    "duration": 83,
+    "genre": "Drama",
+    "original_title": "Los de la mesa 10"
+  },
+  "el exilio de gardel|1985": {
+    "url": "https://letterboxd.com/film/tangos-the-exile-of-gardel/",
+    "title_en": "Tangos, the Exile of Gardel",
+    "director": "Fernando E. Solanas",
+    "country": "Argentina, France",
+    "year": 1985,
+    "duration": 119,
+    "genre": "Drama, Música",
+    "original_title": "El exilio de Gardel: Tangos"
+  },
+  "300|2006": {
+    "url": "https://letterboxd.com/film/300/",
+    "title_en": "300",
+    "director": "Zack Snyder",
+    "country": "USA",
+    "year": 2006,
+    "duration": 117,
+    "genre": "Acción, Bélica",
+    "title_es": "300",
+    "original_title": "300"
+  },
+  "pubis angelical|1982": {
+    "url": "https://letterboxd.com/film/pubis-angelical/",
+    "title_en": "Pubis angelical",
+    "director": "Raúl de la Torre",
+    "country": "Argentina",
+    "year": 1982,
+    "duration": 112,
+    "genre": "Drama",
+    "original_title": "Pubis angelical"
+  },
+  "2001: odisea del espacio|1968": {
+    "url": "",
+    "title_en": "2001: odisea del espacio",
+    "director": "Stanley Kubrick",
+    "country": "United Kingdom, United States of America",
+    "year": 1968,
+    "duration": 149,
+    "genre": "Ciencia ficción, Misterio",
+    "title_es": "2001. Una odisea del espacio",
+    "original_title": "2001: A Space Odyssey"
+  },
+  "momentos|1981": {
+    "url": "https://letterboxd.com/film/momentos/",
+    "title_en": "Momentos",
+    "director": "María Luisa Bemberg",
+    "country": "Argentina",
+    "year": 1981,
+    "duration": 90,
+    "genre": "Drama",
+    "original_title": "Momentos"
+  },
+  "ulysses plebeyo|2024": {
+    "url": "",
+    "title_en": "Ulysses plebeyo",
+    "director": "César González",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 70,
+    "genre": "Documental",
+    "title_es": "Plebeian Ulysses",
+    "original_title": "Ulises plebeyo"
+  },
+  "la película del rey|1986": {
+    "url": "https://letterboxd.com/film/a-king-and-his-movie/",
+    "title_en": "A King and His Movie",
+    "director": "Carlos Sorin",
+    "country": "Argentina",
+    "year": 1986,
+    "duration": 103,
+    "genre": "Comedia, Drama",
+    "original_title": "La película del rey"
+  },
+  "surau dan silek (2017) de arief malinmudo|2017": {
+    "url": "https://letterboxd.com/film/surau-dan-silek/",
+    "title_en": "Surau dan Silek",
+    "director": "Arief Malinmudo",
+    "country": "Indonesia",
+    "year": 2017,
+    "duration": 90,
+    "genre": "Drama, Familiar"
+  },
+  "perempuan dari pulau rote (2023) de jeremias nyangoen|2023": {
+    "url": "",
+    "title_en": "Perempuan dari pulau Rote (2023) de Jeremias Nyangoen",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sisters with transistors|2020": {
+    "url": "https://letterboxd.com/film/sisters-with-transistors/",
+    "title_en": "Sisters with Transistors",
+    "director": "Lisa Rovner",
+    "country": "UK, USA",
+    "year": 2020,
+    "duration": 86,
+    "genre": "Historia, Música",
+    "original_title": "Sisters with Transistors"
+  },
+  "terminator 2 - el juicio final": {
+    "url": "",
+    "title_en": "TERMINATOR 2 - EL JUICIO FINAL",
+    "director": "James Cameron",
+    "country": "France, United States of America",
+    "year": 1991,
+    "duration": 137,
+    "genre": "Acción, Thriller",
+    "title_es": "Terminator 2: El juicio final",
+    "original_title": "Terminator 2: Judgment Day"
+  },
+  "crónica de un niño solo": {
+    "url": "",
+    "title_en": "CRÓNICA DE UN NIÑO SOLO",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1965,
+    "duration": 79,
+    "genre": "Drama",
+    "title_es": "Crónica de un niño solo",
+    "original_title": "Crónica de un niño solo"
   }
 }
