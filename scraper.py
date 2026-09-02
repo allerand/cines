@@ -4135,6 +4135,240 @@ def scrape_cc25(semanas: int = 3) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
+# Sala Lúcida — portal.salalucida.org
+# La sala no publica cartelera en una web propia: la programación vive en su
+# ticketera, un portal de EventoSimple servido entero desde el servidor. No
+# hace falta navegador. La home lista una tarjeta por función —cada fecha es un
+# evento aparte, con su /eventos/<slug>-e<id>— y la ficha trae fecha, hora y
+# una descripción en HTML con el ciclo, la película y el "Dir: Fulana (NN min)".
+#
+# Dos cosas que el parser tiene que respetar:
+#
+#   · El portal NO es sólo cine. Entre las funciones hay ciclos de charlas
+#     ("Detrás de la primicia", que en vez de dirección declara "Autor:") y
+#     música. Lo que distingue una película del resto es la línea de dirección,
+#     así que un evento sin "Dir:" no entra. El filtro es por lo que la ficha
+#     afirma, no por una lista de títulos que envejece.
+#
+#   · Algunas funciones son programas de cortos: la misma ficha lista varios
+#     "TÍTULO Dir: Fulana (7:00 min)". Sale una fila por corto, igual que los
+#     programas dobles del CCK — un título compuesto no matchea contra nada
+#     (ni Letterboxd ni TMDb) y termina publicado sin ficha.
+# ---------------------------------------------------------------------------
+
+LUCIDA_CINE = "Sala Lúcida"
+LUCIDA_BASE = "https://portal.salalucida.org"
+
+# "2.SEP.2026 20:00hs"
+_LUCIDA_FECHA_RE = re.compile(
+    r"(\d{1,2})\.([A-Za-zÁÉÍÓÚáéíóú]{3,10})\.((?:19|20)\d{2})"
+    r"(?:\s+(\d{1,2}):(\d{2}))?")
+
+# "Dir: Fulano (65 min)". El sitio escribe siempre "Dir:", pero las variantes
+# salen gratis y no abren la puerta a falsos positivos.
+_LUCIDA_DIR_RE = re.compile(
+    r"\bDir(?:ecci[óo]n|ector[ae]?s?)?\s*[:.]\s*(.+)$", re.IGNORECASE)
+
+# "(65 min)", y en los cortos "(16:36 min)", que es mm:ss — nos quedamos con
+# los minutos.
+_LUCIDA_DUR_RE = re.compile(r"\(\s*(\d{1,3})(?::\d{2})?\s*(?:min|')", re.IGNORECASE)
+_LUCIDA_ANIO_RE = re.compile(r"\(((?:19|20)\d{2})\)")
+
+# Encabezados que rotulan la sección y no nombran ninguna película.
+_LUCIDA_ROTULOS = {"cine", "estrenos", "descripcion", "sinopsis", "ciclo",
+                   "programa", "funcion", "funciones"}
+
+
+def _lucida_texto(nodo) -> str:
+    """Texto de un nodo, con los &nbsp; que deja el editor pasados a espacio."""
+    return re.sub(r"\s+", " ", nodo.get_text(" ", strip=True).replace("\xa0", " ")).strip()
+
+
+def _lucida_norm(s: str) -> str:
+    """Clave para comparar títulos: sin acentos, sin puntuación, en minúscula."""
+    return re.sub(r"[^a-z0-9]+", " ", _sin_acentos(s or "").lower()).strip()
+
+
+def _lucida_fecha_hora(texto: str) -> "tuple[Optional[date], str]":
+    """"2.SEP.2026 20:00hs" → (date(2026, 9, 2), "20:00")."""
+    m = _LUCIDA_FECHA_RE.search(texto or "")
+    if not m:
+        return None, ""
+    tok = m.group(2).lower()
+    # "set" por "septiembre" no está en MESES_ES y el portal podría usarlo.
+    mes = MESES_ES.get(tok) or MESES_ES.get(tok[:3]) or (9 if tok.startswith("set") else None)
+    if not mes:
+        return None, ""
+    try:
+        d = date(int(m.group(3)), mes, int(m.group(1)))
+    except ValueError:
+        return None, ""
+    hora = f"{int(m.group(4)):02d}:{m.group(5)}" if m.group(4) else ""
+    return d, hora
+
+
+def _lucida_limpiar_titulo(t: str) -> str:
+    """Saca del encabezado los paréntesis de ficha: "(1984)", "(73 min)"."""
+    t = re.sub(r"\(\s*(?:19|20)\d{2}\s*\)", " ", t)
+    t = re.sub(r"\([^()]*\bmin\b[^()]*\)", " ", t, flags=re.IGNORECASE)
+    return re.sub(r"\s+", " ", t).strip(" .,;:–—-·")
+
+
+def _lucida_es_encabezado_de_peli(tag: str, texto: str) -> bool:
+    """¿Este encabezado nombra una película, o es el copete del ciclo?
+
+    Los copetes son frases —terminan en punto y son largos—; los títulos, no.
+    Sin esta distinción, una función cuyo encabezado de película falte se
+    publicaría con el eslogan del ciclo de título.
+    """
+    if tag not in ("h1", "h2", "h3", "h4", "h5", "h6"):
+        return False
+    if _lucida_norm(texto) in _LUCIDA_ROTULOS:
+        return False
+    if _LUCIDA_DIR_RE.search(texto):
+        return False
+    return len(texto) <= 90 and not texto.endswith(".")
+
+
+def _lucida_peliculas(desc, titulos_evento: list[str]) -> list[dict]:
+    """Las películas que declara la descripción de una ficha.
+
+    Una fila por película: las funciones sueltas traen una y los programas de
+    cortos, todas las que listan. La línea de dirección es la que manda —cada
+    "Dir:" es una película—, y el título sale de la misma línea (los cortos se
+    escriben "TÍTULO Dir: Fulana (7:00 min)") o, si no está ahí, del encabezado
+    más cercano hacia arriba.
+    """
+    lineas: list[tuple[str, str]] = []
+    for nodo in desc.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "p", "li"]):
+        t = _lucida_texto(nodo)
+        if t:
+            lineas.append((nodo.name, t))
+
+    pelis: list[dict] = []
+    for i, (_tag, texto) in enumerate(lineas):
+        m = _LUCIDA_DIR_RE.search(texto)
+        if not m:
+            continue
+
+        # El director llega hasta el paréntesis de la duración: lo que sigue en
+        # la misma línea es la sinopsis (así se escriben los cortos).
+        director = re.split(r"[(•]", m.group(1))[0].strip(" .,;:–—-·")
+        if len(director) > 80:      # es una frase, no un nombre
+            director = ""
+
+        titulo = _lucida_limpiar_titulo(texto[:m.start()])
+        contexto = texto
+        if not titulo:
+            for tag_prev, texto_prev in reversed(lineas[:i]):
+                if _lucida_es_encabezado_de_peli(tag_prev, texto_prev):
+                    titulo = _lucida_limpiar_titulo(texto_prev)
+                    contexto = f"{texto_prev} {texto}"
+                    break
+        if not titulo:
+            continue
+
+        # El h2 del evento trae el título con la tipografía cuidada ("Una
+        # canción para mi tierra"); la descripción lo repite en mayúsculas y a
+        # veces sin tildes. Cuando son la misma película gana el h2, porque el
+        # acento decide el match contra TMDb y Letterboxd.
+        for variante in titulos_evento:
+            if variante and _lucida_norm(variante) == _lucida_norm(titulo):
+                titulo = variante
+                break
+
+        dur = _LUCIDA_DUR_RE.search(contexto)
+        anio = _LUCIDA_ANIO_RE.search(contexto)
+        pelis.append({
+            "title": titulo,
+            "director": director,
+            "duration": int(dur.group(1)) if dur else None,
+            "year": int(anio.group(1)) if anio else None,
+        })
+    return pelis
+
+
+def _lucida_parse_evento(soup, url: str, today: date, cutoff: date) -> list[Screening]:
+    """Una ficha de /eventos/ → sus funciones. Vacío si no es cine."""
+    art = soup.select_one("main article")
+    if not art:
+        return []
+    h2 = art.find("h2")
+    titulo_evento = _lucida_texto(h2) if h2 else ""
+    fecha_nodo = art.select_one(".fecha h4")
+    d, hora = _lucida_fecha_hora(_lucida_texto(fecha_nodo) if fecha_nodo else "")
+    if not d or not (today <= d <= cutoff):
+        return []
+
+    desc = soup.select_one(".e-evento.descripcion")
+    if not desc:
+        return []
+
+    # El ciclo es el primer encabezado de la descripción cuando no es el rótulo
+    # "CINE" ni el título de la película.
+    ciclo = ""
+    for nodo in desc.find_all(["h2", "h3"]):
+        t = _lucida_texto(nodo)
+        if not t or _lucida_norm(t) in _LUCIDA_ROTULOS:
+            continue
+        if _lucida_norm(t) != _lucida_norm(titulo_evento):
+            ciclo = _title_case_ciclo(t) if t.isupper() else t
+        break
+
+    # "GALERIA NOCTURNA: Si muero antes de despertar" → el prefijo es el ciclo,
+    # no parte del título. Se prueban las dos formas contra la descripción.
+    variantes = [titulo_evento]
+    if ":" in titulo_evento:
+        resto = titulo_evento.split(":", 1)[1].strip()
+        if resto:
+            variantes.append(resto)
+
+    pelis = _lucida_peliculas(desc, variantes)
+    return [Screening(
+        cine=LUCIDA_CINE, title=p["title"], fecha=d.isoformat(),
+        hora=hora or "20:00", ticket_url=url, ciclo=ciclo,
+        director=p["director"], year=p["year"], duration=p["duration"],
+    ) for p in pelis]
+
+
+def scrape_sala_lucida(semanas: int = 9) -> list[Screening]:
+    """Scrapea portal.salalucida.org: junta los links de /eventos/ de la home y
+    entra a cada ficha.
+
+    La home lista sólo lo que está por venir, así que no hay archivo viejo que
+    filtrar; la ventana de fechas está igual porque un evento sin fecha
+    parseable no tiene por qué entrar a la cartelera.
+    """
+    today = date.today()
+    cutoff = today + timedelta(weeks=max(semanas, 6))
+    try:
+        listing = fetch_html(LUCIDA_BASE + "/")
+    except Exception as e:
+        print(f"[lucida: listing no carga — {e}]", end=" ", flush=True)
+        return []
+
+    links: list[str] = []
+    for a in listing.find_all("a", href=re.compile(r"/eventos/")):
+        u = a["href"]
+        if not u.startswith("http"):
+            u = LUCIDA_BASE + ("" if u.startswith("/") else "/") + u
+        u = u.split("?")[0].split("#")[0]
+        if u not in links:
+            links.append(u)
+    if not links:
+        print("[lucida: 0 links de evento en la home]", end=" ", flush=True)
+
+    result: list[Screening] = []
+    for url in links[:60]:
+        try:
+            soup = fetch_html(url)
+        except Exception:
+            continue
+        result.extend(_lucida_parse_evento(soup, url, today, cutoff))
+    return result
+
+
+# ---------------------------------------------------------------------------
 # Centro Cultural Borges — centroculturalborges.gob.ar
 # Consume la API pública del sitio eliminando la necesidad de automatizar el
 # navegador. Combina los datos de la cartelera general con los detalles de

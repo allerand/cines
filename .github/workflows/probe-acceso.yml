@@ -48,5 +48,8 @@ jobs:
           done
 
       - name: Sondeo
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+          TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
         run: |
           python3 scripts/_dump_sala.py

@@ -74,6 +74,12 @@ PROBES = {
                                  r"/actividad/[a-z0-9\-]+"),
     "Amorina":                  ("https://www.amorina.club/schedule.json", "@amorina"),
     "CEA":                      ("https://cea.mda.gob.ar/", "@cea"),
+    # La home de la ticketera lista TODO lo que programa la sala, no sólo cine
+    # (hay ciclos de charlas y música), así que el número es una cota superior
+    # de las funciones que nos corresponden. Sirve igual para lo que importa:
+    # si da 0, el que se rompió es el scraper o la fuente, no la programación.
+    "Sala Lúcida":              ("https://portal.salalucida.org/",
+                                 r"/eventos/[a-z0-9\-]+"),
     "Archivo General de la Nación": ("https://www.argentina.gob.ar/interior/"
                                      "archivo-general-de-la-nacion/"
                                      "cine-en-el-archivo-general-de-la-nacion",
