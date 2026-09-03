@@ -3024,14 +3024,14 @@
     "duration": null
   },
   "matria": {
-    "url": "",
+    "url": "https://letterboxd.com/film/matria-2024/",
     "title_en": "Matria",
     "director": "Jimena Chavez",
     "country": "Argentina",
     "year": 2024,
     "duration": 80,
-    "original_title": "Matria",
-    "genre": "Documental"
+    "genre": "Documental",
+    "original_title": "Matria"
   },
   "gioia mía, un verano en sicilia": {
     "url": "https://letterboxd.com/film/sweetheart-2025-3/",
@@ -3108,7 +3108,7 @@
   },
   "encuentro coleman": {
     "url": "",
-    "title_en": "ENCUENTRO COLEMAN",
+    "title_en": "Encuentro Coleman",
     "director": "",
     "country": "",
     "year": null,
@@ -14345,10 +14345,10 @@
     "original_title": "Dishonored"
   },
   "la venus rubia": {
-    "url": "",
-    "title_en": "La venus rubia",
+    "url": "https://letterboxd.com/film/blonde-venus/",
+    "title_en": "Blonde Venus",
     "director": "Josef von Sternberg",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1932,
     "duration": 93,
     "genre": "Drama",
@@ -14367,13 +14367,13 @@
     "original_title": "The Scarlet Empress"
   },
   "el halcón maltés": {
-    "url": "",
-    "title_en": "El halcón maltés",
+    "url": "https://letterboxd.com/film/the-maltese-falcon-1941/",
+    "title_en": "The Maltese Falcon",
     "director": "John Huston",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1941,
     "duration": 100,
-    "genre": "Misterio, Crimen",
+    "genre": "Misterio, Thriller",
     "title_es": "El halcón maltés",
     "original_title": "The Maltese Falcon"
   },
@@ -14451,8 +14451,8 @@
     "original_title": "Momentos"
   },
   "ulysses plebeyo|2024": {
-    "url": "",
-    "title_en": "Ulysses plebeyo",
+    "url": "https://letterboxd.com/film/ulises-plebeyo/",
+    "title_en": "Ulises plebeyo",
     "director": "César González",
     "country": "Argentina",
     "year": 2024,
@@ -14750,5 +14750,132 @@
     "year": 2025,
     "duration": null,
     "genre": "Documental, Música"
+  },
+  "tu nombre es tentación": {
+    "url": "",
+    "title_en": "Tu nombre es tentación",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "si muero antes de despertar": {
+    "url": "",
+    "title_en": "Si muero antes de despertar",
+    "director": "Carlos Hugo Christensen",
+    "country": "Argentina",
+    "year": 1952,
+    "duration": 67,
+    "genre": "Drama, Thriller",
+    "original_title": "Si muero antes de despertar"
+  },
+  "el diablo nunca duerme|1984": {
+    "url": "",
+    "title_en": "El diablo nunca duerme",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "suerte josefa|2025": {
+    "url": "",
+    "title_en": "Suerte Josefa",
+    "director": "Javier Temoli",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "original_title": "Suerte Josefa"
+  },
+  "abalos, una historia de 5 hermanos": {
+    "url": "",
+    "title_en": "ABALOS, una historia de 5 hermanos",
+    "director": "Pablo Noé, Josefina Zavalía Ábalos",
+    "country": "Argentina",
+    "year": 2017,
+    "duration": 74,
+    "genre": "Documental",
+    "original_title": "Ábalos, una historia de cinco hermanos"
+  },
+  "el club de la pelea": {
+    "url": "https://letterboxd.com/film/fight-club/",
+    "title_en": "Fight Club",
+    "director": "David Fincher",
+    "country": "Germany, USA",
+    "year": 1999,
+    "duration": 139,
+    "genre": "Drama, Thriller",
+    "title_es": "El club de la lucha",
+    "original_title": "Fight Club"
+  },
+  "casi ciudadanos": {
+    "url": "",
+    "title_en": "CASI CIUDADANOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "glosario": {
+    "url": "",
+    "title_en": "GLOSARIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la sirena mecánica": {
+    "url": "https://letterboxd.com/film/sirena-mecanica/",
+    "title_en": "Sirena Mecánica",
+    "director": "Damián Sato, Violeta Vieytes Vivares",
+    "country": "",
+    "year": 2026,
+    "duration": 9,
+    "genre": ""
+  },
+  "lo que queda": {
+    "url": "",
+    "title_en": "LO QUE QUEDA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "suite juárez": {
+    "url": "https://letterboxd.com/film/suite-juarez/",
+    "title_en": "Suite Juárez",
+    "director": "Alejandro Venturini, Jean-Luc Thomas",
+    "country": "",
+    "year": null,
+    "duration": 67,
+    "genre": "Música, Documental",
+    "original_title": "Suite Juárez"
+  },
+  "pepita, la pistolera": {
+    "url": "https://letterboxd.com/film/pepita-the-gunslinger/",
+    "title_en": "Pepita the Gunslinger",
+    "director": "Lucía Puenzo",
+    "country": "Argentina, Spain",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Crimen, Thriller",
+    "original_title": "Pepita la pistolera"
+  },
+  "la casa del minotauro": {
+    "url": "",
+    "title_en": "La casa del minotauro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tsunami, un océano de gente": {
+    "url": "https://letterboxd.com/film/tsunami-un-oceano-de-gente/",
+    "title_en": "Tsunami, un océano de gente",
+    "director": "Maximiliano Díaz, Julio Leiva",
+    "country": "Argentina",
+    "year": 2016,
+    "duration": 89,
+    "genre": "Música, Documental",
+    "original_title": "Tsunami, un océano de gente"
   }
 }
