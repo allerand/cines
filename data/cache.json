@@ -12312,7 +12312,7 @@
   },
   "terminator 2: el juicio final": {
     "url": "",
-    "title_en": "Terminator 2: El Juicio Final",
+    "title_en": "Terminator 2: El juicio final",
     "director": "James Cameron",
     "country": "France, United States of America",
     "year": 1991,
@@ -14236,12 +14236,13 @@
     "original_title": "Dead Man's Wire"
   },
   "una quinta en portugal": {
-    "url": "",
-    "title_en": "UNA QUINTA EN PORTUGAL",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-portuguese-house/",
+    "title_en": "The Portuguese House",
+    "director": "Avelina Prat",
+    "country": "Spain, Portugal",
+    "year": 2025,
+    "duration": 114,
+    "genre": "Drama"
   },
   "spider-man: un nuevo dia": {
     "url": "https://letterboxd.com/film/spider-man-brand-new-day/",
@@ -14789,7 +14790,7 @@
   "abalos, una historia de 5 hermanos": {
     "url": "",
     "title_en": "ABALOS, una historia de 5 hermanos",
-    "director": "Pablo Noé, Josefina Zavalía Ábalos",
+    "director": "Josefina Zavalía Ábalos, Pablo Noé",
     "country": "Argentina",
     "year": 2017,
     "duration": 74,
@@ -14877,5 +14878,106 @@
     "duration": 89,
     "genre": "Música, Documental",
     "original_title": "Tsunami, un océano de gente"
+  },
+  "oasis: dont look back in anger": {
+    "url": "https://letterboxd.com/film/oasis-dont-look-back-in-anger/",
+    "title_en": "Oasis: Don't Look Back in Anger",
+    "director": "Dylan Southern, Will Lovelace",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": null,
+    "genre": "Documental, Música",
+    "title_es": "Oasis: Don't Look Back in Anger",
+    "original_title": "Oasis: Don't Look Back in Anger"
+  },
+  "desde el principio hasta el final|2023": {
+    "url": "https://letterboxd.com/film/desde-el-principio-hasta-el-final/",
+    "title_en": "From Beginning to End",
+    "director": "Loana Pagani",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 17,
+    "genre": "Drama, Documental",
+    "original_title": "Desde el principio hasta el final"
+  },
+  "el sonido de antes|2024": {
+    "url": "",
+    "title_en": "El sonido de antes",
+    "director": "Yael Szmulewicz",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 80,
+    "genre": "Documental, Música",
+    "original_title": "El sonido de antes"
+  },
+  "cómo ser pehuén pedre|2024": {
+    "url": "https://letterboxd.com/film/como-ser-pehuen-pedre/",
+    "title_en": "How to Be Pehuén Pedre",
+    "director": "Federico Luis",
+    "country": "Argentina, Germany",
+    "year": 2024,
+    "duration": 22,
+    "genre": "Drama",
+    "original_title": "Cómo ser Pehuén Pedre"
+  },
+  "cuando las nubes esconden la sombra|2024": {
+    "url": "https://letterboxd.com/film/when-clouds-hide-the-shadow/",
+    "title_en": "When Clouds Hide the Shadow",
+    "director": "José Luis Torres Leiva",
+    "country": "South Korea, Argentina",
+    "year": 2024,
+    "duration": 71,
+    "genre": "Drama",
+    "original_title": "Cuando las nubes esconden la sombra"
+  },
+  "sacrificio|2025": {
+    "url": "",
+    "title_en": "Sacrificio",
+    "director": "Joaquín Cazenave",
+    "country": "Argentina",
+    "year": null,
+    "duration": 17,
+    "genre": "Drama, Comedia",
+    "original_title": "SACRIFICIO"
+  },
+  "a simple soldier|2025": {
+    "url": "https://letterboxd.com/film/a-simple-soldier/",
+    "title_en": "A Simple Soldier",
+    "director": "Artem Ryzhykov, Juan Camilo Cruz",
+    "country": "Ukraine, USA",
+    "year": 2025,
+    "duration": 96,
+    "genre": "Documental, Bélica",
+    "original_title": "Простий солдат"
+  },
+  "el chico en llamas|2024": {
+    "url": "https://letterboxd.com/film/el-chico-en-llamas/",
+    "title_en": "El chico en llamas",
+    "director": "Tadeo Martínez",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Documental",
+    "original_title": "El chico en llamas"
+  },
+  "tres tiempos|2025": {
+    "url": "https://letterboxd.com/film/tres-tiempos/",
+    "title_en": "Three Times",
+    "director": "Marlene Grinberg",
+    "country": "Argentina, Uruguay",
+    "year": 2025,
+    "genre": "Drama",
+    "duration": 99
+  },
+  "deuses de pedra|2025": {
+    "url": "https://letterboxd.com/film/deuses-de-pedra/",
+    "title_en": "Gods of Stone",
+    "director": "Iván Castiñeiras",
+    "country": "Spain, France",
+    "year": 2025,
+    "duration": 85,
+    "genre": "Documental",
+    "title_es": "Gods of Stone",
+    "original_title": "Deuses de pedra"
   }
 }
