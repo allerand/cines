@@ -1,9 +1,29 @@
-name: Post to Instagram (manual)
+name: Post to Instagram
 
-# Workflow separado para postear a IG sin volver a correr el scraper.
-# Usa las PNGs ya commiteadas en posts/YYYY-MM-DD/.
+# El posteo diario a Instagram: UNA vez por día, a la mañana.
+#
+# Vivía adentro de scrape.yml, y ahí la hora del posteo era "cuando el cron
+# arranque + lo que tarde el scraper" — entre 20 y 42 minutos según el día.
+# Peor: los workflows programados de GitHub arrancan tarde cuando hay cola, y
+# no un poco. Con el cron puesto a las 07:15 UTC, el 27/8/2026 la corrida
+# arrancó 18:18 y el 31/8 a las 15:08. Las stories salían a cualquier hora.
+#
+# Separado, la hora del posteo depende del cron y de dos minutos de job, no del
+# scraper: el scrape corre de madrugada y deja las PNG commiteadas, y esto sale
+# a las 8 de la mañana a publicarlas. Si el scrape se atrasó tanto que todavía
+# no hay slides de hoy —o quedaron viejas frente a la cartelera—, este workflow
+# las genera él mismo antes de postear, así un scheduler con cola no se lleva
+# puesto el posteo del día.
+#
+# Es el ÚNICO lugar que postea a Instagram. Si volvés a agregar el paso en
+# scrape.yml, se postea dos veces por día.
 
 on:
+  schedule:
+    # 11:08 UTC = 08:08 en Buenos Aires (UTC-3 todo el año, no hay horario de
+    # verano). El minuto es feo a propósito: GitHub encola los workflows que
+    # caen en punto y a la media, y ahí es donde se acumulan las demoras.
+    - cron: '8 11 * * *'
   workflow_dispatch:
     inputs:
       date:
@@ -14,22 +34,22 @@ on:
         description: 'Qué postear'
         type: choice
         options:
+          - stories-only
           - both
           - feed-only
-          - stories-only
-        default: both
+        default: stories-only
       dry_run:
         description: 'Dry run (no postea, solo loguea)'
         type: boolean
         default: false
 
 permissions:
-  contents: read
+  contents: write   # puede tener que commitear las slides que regenera
 
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -45,31 +65,94 @@ jobs:
           else
             d="${{ inputs.date }}"
           fi
+          hoy="$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
           echo "value=$d" >> "$GITHUB_OUTPUT"
-          echo "📅 fecha: $d"
+          echo "es_hoy=$([ "$d" = "$hoy" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
+          echo "📅 fecha: $d (hoy en Buenos Aires: $hoy)"
 
-      - name: Verify slides exist
+      - name: ¿Hay que regenerar las slides?
+        id: slides
         run: |
           d="${{ steps.date.outputs.value }}"
-          echo "📂 contenido de posts/$d/:"
-          ls -la "posts/$d/" || (echo "❌ No hay slides para $d"; exit 1)
+          dir="posts/$d/story"
+          motivo=""
 
-          # Este workflow postea los PNG ya commiteados: no los regenera. Si son
-          # más viejos que la cartelera, se estaría posteando programación
-          # desactualizada (pasó el 14/8: se repostearon stories con funciones
-          # duplicadas de Cosmos aunque los datos ya estaban corregidos).
-          nuevo=$(git log -1 --format=%ct -- data/cartelera.json)
-          slides=$(git log -1 --format=%ct -- "posts/$d/")
-          if [ -n "$nuevo" ] && [ -n "$slides" ] && [ "$slides" -lt "$nuevo" ]; then
-            echo "::warning::Los slides de $d son más viejos que data/cartelera.json." \
-                 "Corré 'Scrape cartelera (sin postear a IG)' con regenerate_stories" \
-                 "antes de postear, o vas a subir la cartelera vieja."
+          if ! ls "$dir"/slide-*.png >/dev/null 2>&1; then
+            motivo="no hay slides para $d"
+          else
+            # Slides más viejas que la cartelera = se estaría posteando
+            # programación desactualizada. Pasó el 14/8/2026: se repostearon
+            # stories con las funciones duplicadas de Cosmos aunque los datos
+            # ya estaban corregidos.
+            nuevo=$(git log -1 --format=%ct -- data/cartelera.json)
+            slides=$(git log -1 --format=%ct -- "posts/$d/")
+            if [ -n "$nuevo" ] && [ -n "$slides" ] && [ "$slides" -lt "$nuevo" ]; then
+              motivo="las slides de $d son más viejas que data/cartelera.json"
+            fi
           fi
+
+          # Sólo se regenera la fecha de HOY. Para una fecha pasada la cartelera
+          # ya no tiene sus funciones, así que regenerar daría slides vacías en
+          # vez del posteo que se quiso repetir.
+          if [ -n "$motivo" ] && [ "${{ steps.date.outputs.es_hoy }}" != "true" ]; then
+            echo "❌ $motivo, y no es hoy: no hay de dónde reconstruirlas."
+            exit 1
+          fi
+
+          if [ -n "$motivo" ]; then
+            echo "♻️  $motivo → se regeneran desde la cartelera actual"
+            echo "regenerar=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "✅ slides de $d listas"
+            ls "$dir"/slide-*.png | head -3
+            echo "regenerar=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Install deps
+        if: steps.slides.outputs.regenerar == 'true'
+        timeout-minutes: 10
+        # Mismo patrón que scrape.yml: apt se cuelga adentro de
+        # `playwright install --with-deps` y sin esto se come el job entero.
+        run: |
+          pip install -r requirements.txt
+          for i in 1 2 3; do
+            if timeout 300 playwright install --with-deps chromium; then break; fi
+            echo "::warning::playwright install falló (intento $i/3)"
+            sleep 15
+          done
+
+      - name: Generate Instagram stories
+        if: steps.slides.outputs.regenerar == 'true'
+        run: |
+          python3 scripts/generate_posts.py \
+            --date "${{ steps.date.outputs.value }}" --format story
+
+      - name: Commit slides
+        if: steps.slides.outputs.regenerar == 'true' && inputs.dry_run != true
+        # Instagram descarga las PNG por URL pública: si no están pusheadas a
+        # main, raw.githubusercontent devuelve 404 y el posteo falla.
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add "posts/${{ steps.date.outputs.value }}/"
+          if git diff --cached --quiet; then
+            echo "Nada que commitear"
+            exit 0
+          fi
+          git commit -m "posts: stories de ${{ steps.date.outputs.value }} regeneradas antes de postear"
+          git pull --rebase -X theirs origin main
+          git push origin main
+          # raw.githubusercontent tarda en indexar el commit nuevo.
+          sleep 20
 
       - name: Build mode flags
         id: flags
         run: |
-          case "${{ inputs.mode }}" in
+          # En la corrida programada no hay inputs: el posteo diario son las
+          # stories. El carousel del feed queda desactivado.
+          mode="${{ inputs.mode }}"
+          [ -z "$mode" ] && mode="stories-only"
+          case "$mode" in
             feed-only)    echo "flag=--feed-only"    >> "$GITHUB_OUTPUT" ;;
             stories-only) echo "flag=--stories-only" >> "$GITHUB_OUTPUT" ;;
             *)            echo "flag="               >> "$GITHUB_OUTPUT" ;;
@@ -79,6 +162,7 @@ jobs:
           else
             echo "dry="          >> "$GITHUB_OUTPUT"
           fi
+          echo "modo: $mode"
 
       - name: Post to Instagram
         env:

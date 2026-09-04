@@ -2,7 +2,12 @@ name: Scrape cartelera
 
 on:
   schedule:
-    - cron: '15 7 * * *'
+    # 06:47 UTC = 03:47 ART. El posteo a Instagram ya no cuelga de acá (lo hace
+    # post-ig.yml a las 08:08 ART), así que lo único que se le pide a esta hora
+    # es llegar con la cartelera y las PNG commiteadas antes de esa. Con las
+    # demoras habituales del scheduler de GitHub (30-90 min) y los 20-42 min
+    # que tarda el job, termina cerca de las 05:00 ART: tres horas de aire.
+    - cron: '47 6 * * *'
   workflow_dispatch:  # permite triggear manual desde la UI de GitHub
 
 permissions:
@@ -87,18 +92,7 @@ jobs:
           git pull --rebase -X theirs origin main
           git push origin main
           
-      - name: Post to Instagram (stories)
-        env:
-          IG_USER_ID: ${{ secrets.IG_USER_ID }}
-          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          # raw.githubusercontent sirve las PNGs apenas el commit anterior está pusheado
-          PUBLIC_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
-        run: |
-          if [ -z "$IG_USER_ID" ] || [ -z "$IG_ACCESS_TOKEN" ]; then
-            echo "⏭  IG secrets no seteados — salteando post"
-            exit 0
-          fi
-          # Pequeña espera para que raw.githubusercontent indexe el commit nuevo
-          sleep 20
-          # Sólo stories diarias — el carousel del feed queda desactivado.
-          python3 scripts/post_to_instagram.py --date "${{ steps.date.outputs.today }}" --stories-only
+      # El posteo a Instagram NO va acá. Vive en post-ig.yml, que corre a las
+      # 08:08 ART: acá la hora de publicación quedaba atada a cuánto tardara el
+      # scraper y a cuánta cola tuviera el scheduler, y las stories salían a
+      # cualquier hora. Si lo volvés a agregar, se postea dos veces por día.

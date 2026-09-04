@@ -1,12 +1,16 @@
 {
-  "_comment": "Cine Lorca publica su programación como imagen en Wix, e IMDb (la fuente automática) no responde a los runners de GitHub. Editá este archivo cada semana cuando salga la nueva programación — la semana del Lorca va de jueves a miércoles. Los horarios se aplican a todos los días del rango [period_start, period_end]. Si el rango vence, el scraper avisa en el log ('lorca_manual vencido'). Datos tomados de imdb.com/es/showtimes/cinema/AR/ci1036356/AR/C1134/<fecha>/",
-  "period_start": "2026-08-02",
-  "period_end": "2026-08-05",
+  "_comment": "Cine Lorca publica su programación como imagen en Wix, e IMDb (la fuente automática) no responde a los runners de GitHub. La cartelera sale de La Nación; esto es la red de seguridad para cuando esa fuente no contesta. Editá este archivo cada semana cuando salga la nueva programación — la semana del Lorca va de jueves a miércoles. Los horarios se aplican a todos los días del rango [period_start, period_end]. Si el rango vence, el scraper avisa en el log ('lorca_manual VENCIDO'). Datos tomados de la imagen que publica el cine en cinelorca.wixsite.com/cine-lorca/current-production.",
+  "_titulos": "Los títulos van como los publica La Nación y no como los abrevia el cartel del cine ('CAMPAMENTO MIASMA'), para que las filas del fallback se vean iguales a las normales y matcheen igual contra TMDb y Letterboxd.",
+  "period_start": "2026-09-03",
+  "period_end": "2026-09-09",
   "films": [
-    {"title": "La Odisea", "times": ["16:10", "21:30"]},
-    {"title": "Amarga Navidad", "times": ["22:20"]},
-    {"title": "La venue de l'avenir", "times": ["16:00", "19:15"]},
-    {"title": "The Love That Remains", "times": ["14:00", "18:15"]},
-    {"title": "Los domingos", "times": ["14:05", "20:15"]}
+    {"title": "El gran falsificador", "times": ["14:00"]},
+    {"title": "Una quinta en Portugal", "times": ["14:05", "18:10"]},
+    {"title": "La negociación", "times": ["16:10"]},
+    {"title": "Pepita la pistolera", "times": ["16:20", "22:30"]},
+    {"title": "Esa cosa con alas", "times": ["18:15"]},
+    {"title": "La invitación", "times": ["20:05"]},
+    {"title": "Los colores del tiempo", "times": ["20:15"]},
+    {"title": "Adolescencia, sexo y muerte en Campamento Miasma", "times": ["22:00"]}
   ]
 }
