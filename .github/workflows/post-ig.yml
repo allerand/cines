@@ -23,7 +23,19 @@ on:
     # 11:08 UTC = 08:08 en Buenos Aires (UTC-3 todo el año, no hay horario de
     # verano). El minuto es feo a propósito: GitHub encola los workflows que
     # caen en punto y a la media, y ahí es donde se acumulan las demoras.
+    #
+    # Son cuatro horarios y no uno porque el scheduler de GitHub no es puntual
+    # ni confiable: no es que llegue unos minutos tarde, es que a veces llega
+    # horas tarde o no llega. El 4/9/2026 el cron de las 11:08 no había
+    # disparado a las 14:15, y el de scrape.yml —puesto a las 06:47— arrancó
+    # 12:09. Con varios intentos, el primero que efectivamente corra publica y
+    # los demás se van en 20 segundos al ver la marca del día. La marca es lo
+    # que hace que esto sea seguro: sin ella, cuatro crons serían cuatro
+    # posteos.
     - cron: '8 11 * * *'
+    - cron: '38 11 * * *'
+    - cron: '13 12 * * *'
+    - cron: '43 12 * * *'
   workflow_dispatch:
     inputs:
       date:
@@ -40,6 +52,10 @@ on:
         default: stories-only
       dry_run:
         description: 'Dry run (no postea, solo loguea)'
+        type: boolean
+        default: false
+      force:
+        description: 'Postear aunque ya se haya posteado hoy'
         type: boolean
         default: false
 
@@ -70,8 +86,45 @@ jobs:
           echo "es_hoy=$([ "$d" = "$hoy" ] && echo true || echo false)" >> "$GITHUB_OUTPUT"
           echo "📅 fecha: $d (hoy en Buenos Aires: $hoy)"
 
+      - name: Build mode flags
+        id: flags
+        run: |
+          # En la corrida programada no hay inputs: el posteo diario son las
+          # stories. El carousel del feed queda desactivado.
+          mode="${{ inputs.mode }}"
+          [ -z "$mode" ] && mode="stories-only"
+          case "$mode" in
+            feed-only)    echo "flag=--feed-only"    >> "$GITHUB_OUTPUT" ;;
+            stories-only) echo "flag=--stories-only" >> "$GITHUB_OUTPUT" ;;
+            *)            echo "flag="               >> "$GITHUB_OUTPUT" ;;
+          esac
+          if [ "${{ inputs.dry_run }}" = "true" ]; then
+            echo "dry=--dry-run" >> "$GITHUB_OUTPUT"
+          else
+            echo "dry="          >> "$GITHUB_OUTPUT"
+          fi
+          # La marca del día se nombra con el modo, así un feed-only manual no
+          # queda bloqueado por el stories-only del posteo diario.
+          echo "modo=$mode" >> "$GITHUB_OUTPUT"
+          echo "modo: $mode"
+
+      - name: ¿Ya se posteó hoy?
+        id: marca
+        run: |
+          d="${{ steps.date.outputs.value }}"
+          marca="posts/$d/.posteado-${{ steps.flags.outputs.modo }}"
+          if [ -f "$marca" ] && [ "${{ inputs.force }}" != "true" ] \
+             && [ "${{ inputs.dry_run }}" != "true" ]; then
+            echo "⏭  ya se posteó $d en modo ${{ steps.flags.outputs.modo }} " \
+                 "($(cat "$marca")). No se postea de nuevo."
+            echo "saltear=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "saltear=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: ¿Hay que regenerar las slides?
         id: slides
+        if: steps.marca.outputs.saltear != 'true'
         run: |
           d="${{ steps.date.outputs.value }}"
           dir="posts/$d/story"
@@ -109,7 +162,7 @@ jobs:
           fi
 
       - name: Install deps
-        if: steps.slides.outputs.regenerar == 'true'
+        if: steps.marca.outputs.saltear != 'true' && steps.slides.outputs.regenerar == 'true'
         timeout-minutes: 10
         # Mismo patrón que scrape.yml: apt se cuelga adentro de
         # `playwright install --with-deps` y sin esto se come el job entero.
@@ -122,13 +175,13 @@ jobs:
           done
 
       - name: Generate Instagram stories
-        if: steps.slides.outputs.regenerar == 'true'
+        if: steps.marca.outputs.saltear != 'true' && steps.slides.outputs.regenerar == 'true'
         run: |
           python3 scripts/generate_posts.py \
             --date "${{ steps.date.outputs.value }}" --format story
 
       - name: Commit slides
-        if: steps.slides.outputs.regenerar == 'true' && inputs.dry_run != true
+        if: steps.marca.outputs.saltear != 'true' && steps.slides.outputs.regenerar == 'true' && inputs.dry_run != true
         # Instagram descarga las PNG por URL pública: si no están pusheadas a
         # main, raw.githubusercontent devuelve 404 y el posteo falla.
         run: |
@@ -145,26 +198,8 @@ jobs:
           # raw.githubusercontent tarda en indexar el commit nuevo.
           sleep 20
 
-      - name: Build mode flags
-        id: flags
-        run: |
-          # En la corrida programada no hay inputs: el posteo diario son las
-          # stories. El carousel del feed queda desactivado.
-          mode="${{ inputs.mode }}"
-          [ -z "$mode" ] && mode="stories-only"
-          case "$mode" in
-            feed-only)    echo "flag=--feed-only"    >> "$GITHUB_OUTPUT" ;;
-            stories-only) echo "flag=--stories-only" >> "$GITHUB_OUTPUT" ;;
-            *)            echo "flag="               >> "$GITHUB_OUTPUT" ;;
-          esac
-          if [ "${{ inputs.dry_run }}" = "true" ]; then
-            echo "dry=--dry-run" >> "$GITHUB_OUTPUT"
-          else
-            echo "dry="          >> "$GITHUB_OUTPUT"
-          fi
-          echo "modo: $mode"
-
       - name: Post to Instagram
+        if: steps.marca.outputs.saltear != 'true'
         env:
           IG_USER_ID:      ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
@@ -178,3 +213,21 @@ jobs:
             --date "${{ steps.date.outputs.value }}" \
             ${{ steps.flags.outputs.flag }} \
             ${{ steps.flags.outputs.dry }}
+
+      - name: Dejar la marca del día
+        if: steps.marca.outputs.saltear != 'true' && inputs.dry_run != true
+        # Va DESPUÉS de postear y sólo si el posteo salió bien: si falló, la
+        # marca no se escribe y el cron siguiente vuelve a intentar. Es lo que
+        # permite tener varios horarios sin postear varias veces.
+        run: |
+          d="${{ steps.date.outputs.value }}"
+          marca="posts/$d/.posteado-${{ steps.flags.outputs.modo }}"
+          mkdir -p "posts/$d"
+          date -u +"%Y-%m-%dT%H:%M:%SZ" > "$marca"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f "$marca"
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "posts: $d posteado a Instagram (${{ steps.flags.outputs.modo }})"
+          git pull --rebase -X theirs origin main
+          git push origin main
