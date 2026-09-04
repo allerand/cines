@@ -25,6 +25,7 @@ import urllib.request
 import urllib.parse
 from dataclasses import dataclass, field, asdict
 from datetime import date, datetime, timedelta, timezone
+from pathlib import Path
 from typing import Optional
 
 from bs4 import BeautifulSoup
@@ -1124,6 +1125,73 @@ def parse_ctba_program_text(normalized: str) -> dict[tuple[int, str], list[dict]
 
     return mapping
 
+# El listado de complejoteatral.gob.ar muestra los ciclos "próximos" y saca la
+# tarjeta ANTES de que el ciclo termine. La Integral Pere Portabella se cayó el
+# 1/9/2026 con funciones el 2 y el 3 todavía por delante, y como el scraper sólo
+# conoce lo que el listado le muestra, esas cinco funciones se borraron de la
+# cartelera. El merge de run.py preserva las de HOY, no las futuras, así que se
+# perdieron sin que nada lo dijera: el jueves 3 el Lugones publicaba una sola
+# función cuando tenía tres.
+#
+# La página /ver/ del ciclo, en cambio, sigue en pie: tres días después del
+# final todavía servía el programa completo. Así que alcanza con acordarse de
+# los eventos ya vistos y volver a leerlos aunque el listado los haya sacado.
+# No es una lista escrita a mano —se llena sola con lo que publica el CTBA— y
+# la fuente sigue siendo la misma página de siempre, no una copia nuestra.
+#
+# Un evento se olvida cuando su programa deja de tener funciones en la ventana
+# (el ciclo terminó) o cuando hace CTBA_MEMORIA_DIAS que no aparece en el
+# listado, lo que pase primero.
+CTBA_EVENTOS_PATH = Path(__file__).parent / "data" / "ctba_eventos.json"
+CTBA_MEMORIA_DIAS = 45
+
+
+def _ctba_eventos_load() -> dict:
+    try:
+        d = json.loads(CTBA_EVENTOS_PATH.read_text(encoding="utf-8"))
+        return d if isinstance(d, dict) else {}
+    except Exception:
+        return {}
+
+
+def _ctba_eventos_save(recordados: dict) -> None:
+    try:
+        CTBA_EVENTOS_PATH.parent.mkdir(parents=True, exist_ok=True)
+        CTBA_EVENTOS_PATH.write_text(
+            json.dumps(recordados, ensure_ascii=False, indent=2, sort_keys=True),
+            encoding="utf-8")
+    except Exception as e:
+        print(f"  · [Lugones] no se pudo guardar la memoria de eventos: {e}")
+
+
+def _ctba_eventos_pendientes(events: list[dict], recordados: dict,
+                             hoy: date) -> list[dict]:
+    """Los eventos que el listado ya no muestra pero que todavía puede valer la
+    pena releer. Anota de paso los que sí aparecieron hoy."""
+    en_listado = {ev["ver_url"] for ev in events if ev.get("ver_url")}
+    for ev in events:
+        if ev.get("ver_url"):
+            recordados[ev["ver_url"]] = {
+                "titulo": ev.get("title", ""),
+                "ticket_url": ev.get("ticket_url", ""),
+                "visto": hoy.isoformat(),
+            }
+    pendientes = []
+    for url, e in recordados.items():
+        if url in en_listado or not isinstance(e, dict):
+            continue
+        try:
+            visto = date.fromisoformat(e.get("visto", ""))
+        except ValueError:
+            continue
+        if not 0 <= (hoy - visto).days <= CTBA_MEMORIA_DIAS:
+            continue
+        pendientes.append({"title": e.get("titulo", ""),
+                           "ticket_url": e.get("ticket_url", ""),
+                           "ver_url": url})
+    return pendientes
+
+
 async def scrape_lugones(page: Page) -> list[Screening]:
     """
     1. Lista eventos cine en complejoteatral.gob.ar/sala-leopoldo-lugones
@@ -1169,10 +1237,24 @@ async def scrape_lugones(page: Page) -> list[Screening]:
     today = date.today()
     cutoff = today + timedelta(days=60)
 
+    # Los que el listado sacó pero que pueden seguir teniendo funciones: se
+    # releen de su propia página /ver/, igual que los del listado.
+    recordados = _ctba_eventos_load()
+    pendientes = _ctba_eventos_pendientes(events, recordados, today)
+    if pendientes:
+        print(f"  · {len(pendientes)} evento(s) fuera del listado, "
+              f"releídos de su /ver/: "
+              + ", ".join(e["title"][:28] or e["ver_url"][-28:] for e in pendientes),
+              flush=True)
+    events += pendientes
+    solo_recordados = {e["ver_url"] for e in pendientes}
+    rindieron: set[str] = set()
+
     for ev in events:
         cycle_name = ev["title"]
         ticket_url = ev["ticket_url"]
         ver_url = ev["ver_url"]
+        n_antes = len(result)
 
         # Fetch /ver/ page ONCE; try cycle-format parse, fallback to estreno parse
         program: dict[tuple[int, str], dict] = {}
@@ -1412,6 +1494,23 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                 cine="Sala Lugones", title=cycle_name,
                 fecha="Sin fecha", hora="??", ticket_url=ticket_url,
             ))
+
+        # "Sin fecha" no cuenta: es el parser avisando que no entendió la
+        # página, no un ciclo con funciones por delante.
+        if ver_url and any(s.fecha != "Sin fecha" for s in result[n_antes:]):
+            rindieron.add(ver_url)
+
+    # Un evento que ya no está en el listado y que tampoco dio funciones se
+    # olvida acá mismo: el ciclo terminó y no hay nada que releer mañana.
+    for url in solo_recordados - rindieron:
+        recordados.pop(url, None)
+    for url, e in list(recordados.items()):
+        try:
+            if (today - date.fromisoformat(e.get("visto", ""))).days > CTBA_MEMORIA_DIAS:
+                recordados.pop(url, None)
+        except (ValueError, AttributeError, TypeError):
+            recordados.pop(url, None)
+    _ctba_eventos_save(recordados)
 
     # Deduplicar
     seen: set[tuple] = set()

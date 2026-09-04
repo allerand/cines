@@ -49,7 +49,4 @@ jobs:
 
       - name: Sondeo
         run: |
-          echo "########## LORCA ##########"
-          python3 scripts/_dump_lorca.py || true
-          echo "########## LUGONES ##########"
-          python3 scripts/_dump_lugones.py || true
+          python3 scripts/_dump_lugones.py

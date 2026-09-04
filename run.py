@@ -697,8 +697,15 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                 hosts_hoy.setdefault(s.get("cine", ""), set()).add(_host(s))
 
             existing_keys = {_key(s) for s in screenings_out}
+            # (cine, película, fecha) que la corrida de hoy sí trajo. Un cine no
+            # publica dos juegos de horarios para la misma película el mismo
+            # día: si el scrape fresco la tiene, sus horarios son LOS horarios,
+            # y los de la corrida anterior son una versión vieja de la misma
+            # función, no una función que se cayó del listado.
+            frescas_titulo = {(s["cine"], s.get("title_es", ""), s.get("fecha", ""))
+                              for s in screenings_out}
             restored_comm = restored_today = restored_cache = 0
-            descartadas_host = 0
+            descartadas_host = descartadas_horario = 0
             for s in prev_data.get("screenings", []):
                 f = s.get("fecha", "")
                 is_comm = any(s.get("cine", "").startswith(p) for p in COMMERCIAL_PREFIXES)
@@ -714,6 +721,17 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                 if hosts and _host(s) not in hosts:
                     descartadas_host += 1
                     continue
+                # Misma película, mismo día, otro horario: la de hoy manda.
+                # El 3/9/2026 el Lorca estrenó su semana nueva y La Nación
+                # tardó en actualizar "La invitación": la corrida de las 22:10
+                # de Buenos Aires se llevó los horarios de la semana anterior
+                # (15:40 y 22:50) y, como la preservación de HOY no miraba si
+                # el scrape fresco ya traía la película, los 20:05 correctos se
+                # sumaban al lado de los viejos en vez de reemplazarlos. Una
+                # fuente que se corrige a sí misma no tenía forma de corregirnos.
+                if (s.get("cine", ""), s.get("title_es", ""), f) in frescas_titulo:
+                    descartadas_horario += 1
+                    continue
                 screenings_out.append(s)
                 existing_keys.add(_key(s))
                 if f == today_str:
@@ -725,6 +743,9 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             if descartadas_host:
                 print(f"  ↳ Merge: {descartadas_host} funciones viejas descartadas "
                       f"(apuntaban a un sitio que su cine ya no usa)")
+            if descartadas_horario:
+                print(f"  ↳ Merge: {descartadas_horario} horarios viejos descartados "
+                      f"(el cine publicó otro horario para la misma función)")
             if restored_comm or restored_today or restored_cache:
                 screenings_out.sort(key=sort_key)
                 caidos = ", ".join(sorted(cache_caidos)) or "—"
