@@ -1,58 +1,111 @@
 {
   "https://palaciolibertad.gob.ar/events/cortar-y-contar/": {
-    "ts": "2026-09-02T12:10:26",
+    "ts": "2026-09-03T12:09:52",
+    "v": 2,
     "semanas": 9,
     "funciones": [
       {
         "cine": "CCK",
-        "title": "Desde el principio hasta el final + El sonido de antes + charlas con Valeria Racioppi Gómez y Laura Búa",
+        "title": "Desde el principio hasta el final",
         "fecha": "2026-09-04",
         "hora": "19:00",
         "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
         "ciclo": "Cortar y Contar",
-        "director": "",
+        "director": "Loana Pagani",
         "country": "",
-        "year": null,
-        "duration": null,
+        "year": 2023,
+        "duration": 17,
         "original_title": ""
       },
       {
         "cine": "CCK",
-        "title": "Cómo ser Pehuén Pedre + Cuando las nubes esconden la sombra + charlas con Valeria Racioppi Gómez y Andrea Chignoli",
+        "title": "El sonido de antes",
+        "fecha": "2026-09-04",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "Yael Szmulewicz",
+        "country": "",
+        "year": 2024,
+        "duration": 74,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Cómo ser Pehuén Pedre",
         "fecha": "2026-09-05",
         "hora": "16:00",
         "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
         "ciclo": "Cortar y Contar",
-        "director": "",
+        "director": "Federico Luis Tachella",
         "country": "",
-        "year": null,
-        "duration": null,
+        "year": 2024,
+        "duration": 22,
         "original_title": ""
       },
       {
         "cine": "CCK",
-        "title": "Sacrificio + A Simple Soldier + charlas con Alejo Santos e Inés Boffi",
+        "title": "Cuando las nubes esconden la sombra",
+        "fecha": "2026-09-05",
+        "hora": "16:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "José Luis Torres Leiva",
+        "country": "",
+        "year": 2024,
+        "duration": 71,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Sacrificio",
         "fecha": "2026-09-05",
         "hora": "18:30",
         "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
         "ciclo": "Cortar y Contar",
-        "director": "",
+        "director": "Joaquín Cazenave",
         "country": "",
-        "year": null,
-        "duration": null,
+        "year": 2025,
+        "duration": 17,
         "original_title": ""
       },
       {
         "cine": "CCK",
-        "title": "El chico en llamas + Tres tiempos + charlas con Alejo Santos y Natacha Valerga",
+        "title": "A Simple Soldier",
+        "fecha": "2026-09-05",
+        "hora": "18:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "Juan Camilo Cruz y Artem Ryzhykov",
+        "country": "",
+        "year": 2025,
+        "duration": 96,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "El chico en llamas",
         "fecha": "2026-09-06",
         "hora": "15:00",
         "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
         "ciclo": "Cortar y Contar",
-        "director": "",
+        "director": "Tadeo Martinez",
         "country": "",
-        "year": null,
-        "duration": null,
+        "year": 2024,
+        "duration": 13,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Tres tiempos",
+        "fecha": "2026-09-06",
+        "hora": "15:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
+        "ciclo": "Cortar y Contar",
+        "director": "Marlene Grinberg",
+        "country": "",
+        "year": 2025,
+        "duration": 100,
         "original_title": ""
       },
       {
@@ -71,7 +124,8 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/": {
-    "ts": "2026-09-02T12:10:37",
+    "ts": "2026-09-03T12:10:12",
+    "v": 2,
     "semanas": 9,
     "funciones": [
       {
@@ -115,15 +169,15 @@
       },
       {
         "cine": "CCK",
-        "title": "Deuses de pedra Sala Manuel Antin",
+        "title": "Deuses de pedra",
         "fecha": "2026-09-13",
         "hora": "17:30",
         "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
         "ciclo": "Ciclo Mestre Mateo",
-        "director": "",
+        "director": "Ivan Castiñeiras",
         "country": "",
-        "year": null,
-        "duration": null,
+        "year": 2025,
+        "duration": 85,
         "original_title": ""
       },
       {
@@ -181,7 +235,8 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
-    "ts": "2026-09-02T12:10:48",
+    "ts": "2026-09-03T12:10:28",
+    "v": 2,
     "semanas": 9,
     "funciones": [
       {
