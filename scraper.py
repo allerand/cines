@@ -4280,14 +4280,34 @@ _LUCIDA_ROTULOS = {"cine", "estrenos", "descripcion", "sinopsis", "ciclo",
 # Los ciclos, escritos como se escriben. La sala los titula en mayúsculas y sin
 # tildes ("GALERIA NOCTURNA", "TRASNOCHE LUCIDA"); _title_case_ciclo le saca el
 # grito, pero un acento que la fuente no trae no hay función que lo reponga, y
-# en la cartelera no hay un solo ciclo sin tildar. La clave se compara
-# normalizada, así que el día que la sala escriba "GALERÍA NOCTURNA" sigue
-# entrando por la misma puerta. Un ciclo que no esté acá pasa igual, apenas
-# destildado: nunca se pierde una función por no figurar en la lista.
-_LUCIDA_CICLOS = {
-    "galeria nocturna": "Galería Nocturna",
-    "trasnoche lucida": "Trasnoche Lúcida",
+# en la cartelera no hay un solo ciclo sin tildar.
+#
+# Va palabra por palabra y no por nombre completo: la primera versión de esto
+# mapeaba "trasnoche lucida" entero y duró un día — la sala renombró el ciclo a
+# "Noche Lucida" y volvió a salir sin tilde. Las palabras, en cambio, son
+# siempre las mismas: la sala se llama Lúcida y bautiza sus ciclos con eso.
+# Cualquier "Medianoche Lúcida" que inventen mañana ya entra sola.
+#
+# Se compara sin acentos, así que una palabra que la sala escriba bien pasa
+# igual. Y lo que no esté acá pasa tal cual: la lista corrige, nunca filtra.
+_LUCIDA_PALABRAS = {
+    "lucida": "Lúcida", "lucidas": "Lúcidas",
+    "galeria": "Galería", "galerias": "Galerías",
 }
+
+
+def _lucida_tildar(ciclo: str) -> str:
+    """Repone los acentos que la sala se come al escribir en mayúsculas."""
+    out = []
+    for palabra in ciclo.split(" "):
+        buena = _LUCIDA_PALABRAS.get(_sin_acentos(palabra).lower())
+        if not buena:
+            out.append(palabra)
+        elif palabra[:1].islower():
+            out.append(buena[:1].lower() + buena[1:])
+        else:
+            out.append(buena)
+    return " ".join(out)
 
 
 def _lucida_texto(nodo) -> str:
@@ -4436,7 +4456,7 @@ def _lucida_parse_evento(soup, url: str, today: date, cutoff: date) -> list[Scre
         limpio = _lucida_norm(_lucida_limpiar_titulo(t))
         if limpio not in {_lucida_norm(v) for v in variantes}:
             ciclo = _title_case_ciclo(t) if t.isupper() else t
-            ciclo = _LUCIDA_CICLOS.get(_lucida_norm(ciclo), ciclo)
+            ciclo = _lucida_tildar(ciclo)
         break
 
     pelis = _lucida_peliculas(desc, variantes)

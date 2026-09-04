@@ -162,13 +162,19 @@ def main() -> int:
     # Los ciclos van escritos como se escriben. La sala los grita sin tildes y
     # ninguna función puede reponer un acento que la fuente no trae, así que
     # los conocidos están a mano; el que no figure pasa igual, sin tilde.
-    from scraper import _LUCIDA_CICLOS, _lucida_norm
+    from scraper import _lucida_tildar
     chequear("un ciclo gritado sin tildes sale tildado",
-             _LUCIDA_CICLOS.get(_lucida_norm("Trasnoche Lucida")) == "Trasnoche Lúcida")
-    chequear("...y entra igual el día que la sala lo escriba con tilde",
-             _LUCIDA_CICLOS.get(_lucida_norm("GALERÍA NOCTURNA")) == "Galería Nocturna")
-    chequear("un ciclo que no está en la lista no se pierde",
-             _LUCIDA_CICLOS.get(_lucida_norm("Secretos Familiares")) is None)
+             _lucida_tildar("Trasnoche Lucida") == "Trasnoche Lúcida")
+    # El arreglo por nombre completo duró un día: la sala renombró el ciclo a
+    # "Noche Lucida" y volvió a salir sin tilde. Por eso va palabra por palabra.
+    chequear("y sigue saliendo tildado si la sala renombra el ciclo",
+             _lucida_tildar("Noche Lucida") == "Noche Lúcida")
+    chequear("...también en plural",
+             _lucida_tildar("Sesiones Lucidas") == "Sesiones Lúcidas")
+    chequear("una palabra que la sala ya escribe bien no se toca",
+             _lucida_tildar("Galería Nocturna") == "Galería Nocturna")
+    chequear("un ciclo sin ninguna palabra de la lista pasa tal cual",
+             _lucida_tildar("Secretos Familiares") == "Secretos Familiares")
 
     print(f"\n{'TODO OK' if not fallos else f'{fallos} casos fallando'}")
     return 1 if fallos else 0
