@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-04T05:21:26",
+  "updated": "2026-09-04T12:02:03",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 4,
@@ -91,12 +91,12 @@
       "publicadas": 18
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 39,
-      "publicadas": 39
+      "scrapeadas": 41,
+      "publicadas": 42
     },
     "Filo Cine": {
-      "scrapeadas": 0,
-      "publicadas": 1
+      "scrapeadas": 10,
+      "publicadas": 10
     },
     "Hasta Trilce": {
       "scrapeadas": 6,
@@ -3464,15 +3464,15 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-09-04",
       "hora": "16:30",
-      "title_es": "Un año de escuela",
-      "title_en": "A Year of School",
-      "original_title": "",
-      "director": "Laura Samani",
-      "country": "Italia, Francia",
+      "title_es": "Cosas que no olvidaré",
+      "title_en": "Per te",
+      "original_title": "Per te",
+      "director": "Alessandro Aronadio",
+      "country": "Italia",
       "year": 2025,
-      "duration": 102,
+      "duration": 115,
       "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/a-year-of-school/",
+      "letterboxd": "https://letterboxd.com/film/per-te/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -3506,6 +3506,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b000b555b47d269e2760d4542a286fc4",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-09-04",
+      "hora": "16:30",
+      "title_es": "Un año de escuela",
+      "title_en": "A Year of School",
+      "original_title": "",
+      "director": "Laura Samani",
+      "country": "Italia, Francia",
+      "year": 2025,
+      "duration": 102,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/a-year-of-school/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -5013,6 +5029,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-04",
+      "hora": "18:30",
+      "title_es": "Nóstos: Il ritorno",
+      "title_en": "Nostos: The Return",
+      "original_title": "Nostos: il ritorno",
+      "director": "Franco Piavoli",
+      "country": "Italia",
+      "year": 1989,
+      "duration": 85,
+      "genre": "Drama, Aventura",
+      "letterboxd": "https://letterboxd.com/film/nostos-il-ritorno/",
+      "ticket_url": "https://www.filo.uba.ar/n%C3%B3stos-il-ritorno%C2%A0",
+      "ciclo": "Ficción"
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-04",
       "hora": "18:30",
@@ -5075,22 +5107,6 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
-    },
-    {
-      "cine": "Filo Cine",
-      "fecha": "2026-09-04",
-      "hora": "18:30",
-      "title_es": "Nóstos: Il ritorno",
-      "title_en": "Nostos: The Return",
-      "original_title": "Nostos: il ritorno",
-      "director": "Franco Piavoli",
-      "country": "Italia",
-      "year": 1989,
-      "duration": 85,
-      "genre": "Drama, Aventura",
-      "letterboxd": "https://letterboxd.com/film/nostos-il-ritorno/",
-      "ticket_url": "https://www.filo.uba.ar/index.php/n%C3%B3stos-il-ritorno%C2%A0",
-      "ciclo": "Ficción"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -5416,15 +5432,15 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-09-04",
       "hora": "19:00",
-      "title_es": "La vida es así",
-      "title_en": "¿Por qué la vida es así?",
-      "original_title": "¿Por qué la vida es así?",
-      "director": "Olallo Rubio",
-      "country": "México",
-      "year": 2022,
-      "duration": 97,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/por-que-la-vida-es-asi/",
+      "title_es": "Que Dios perdona a todos",
+      "title_en": "...God Forgives All",
+      "original_title": "",
+      "director": "Pif",
+      "country": "Italia",
+      "year": 2026,
+      "duration": 113,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/god-forgives-all/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -6565,6 +6581,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-09-04",
+      "hora": "20:15",
+      "title_es": "Que Dios perdona a todos",
+      "title_en": "...God Forgives All",
+      "original_title": "",
+      "director": "Pif",
+      "country": "Italia",
+      "year": 2026,
+      "duration": 113,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/god-forgives-all/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-04",
       "hora": "20:20",
@@ -7137,6 +7169,22 @@
       "duration": 172,
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-09-04",
+      "hora": "21:30",
+      "title_es": "La vida es así",
+      "title_en": "¿Por qué la vida es así?",
+      "original_title": "¿Por qué la vida es así?",
+      "director": "Olallo Rubio",
+      "country": "México",
+      "year": 2022,
+      "duration": 97,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/por-que-la-vida-es-asi/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -26965,6 +27013,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-07",
+      "hora": "18:45",
+      "title_es": "Todas las fuerzas",
+      "title_en": "All the Strength",
+      "original_title": "Todas las fuerzas",
+      "director": "Luciana Piantanida",
+      "country": "Argentina - Perú",
+      "year": 2025,
+      "duration": 70,
+      "genre": "Fantasía, Drama",
+      "letterboxd": "https://letterboxd.com/film/todas-las-fuerzas/",
+      "ticket_url": "https://www.filo.uba.ar/node/1008",
+      "ciclo": "Ficción"
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-07",
       "hora": "18:50",
@@ -39861,6 +39925,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-09",
+      "hora": "18:00",
+      "title_es": "Tos ferina",
+      "title_en": "Whooping Cough",
+      "original_title": "",
+      "director": "Péter Gárdos",
+      "country": "Hungría",
+      "year": 1986,
+      "duration": 91,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/whooping-cough/",
+      "ticket_url": "https://www.filo.uba.ar/tos-ferina",
+      "ciclo": "Ficción"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-09",
       "hora": "18:00",
@@ -43093,6 +43173,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-10",
+      "hora": "18:00",
+      "title_es": "La combattante",
+      "title_en": "La combattante",
+      "original_title": "La combattante",
+      "director": "Camille Ponsin",
+      "country": "Francia",
+      "year": 2022,
+      "duration": 94,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/la-combattante/",
+      "ticket_url": "https://www.filo.uba.ar/la-combattante",
+      "ciclo": "Documental"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-09-10",
       "hora": "18:00",
@@ -43365,6 +43461,22 @@
       "ciclo": "Marlene + Sternberg"
     },
     {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-11",
+      "hora": "18:00",
+      "title_es": "L´Histoire de Soulaymane",
+      "title_en": "Souleymane's Story",
+      "original_title": "",
+      "director": "Boris Lojkine",
+      "country": "Francia",
+      "year": 2024,
+      "duration": 94,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/souleymanes-story/",
+      "ticket_url": "https://www.filo.uba.ar/l%C2%B4histoire-de-soulaymane",
+      "ciclo": "Documental"
+    },
+    {
       "cine": "Bellas Artes",
       "fecha": "2026-09-11",
       "hora": "18:00",
@@ -43570,7 +43682,7 @@
       "genre": "Drama, Thriller",
       "letterboxd": "https://letterboxd.com/film/fight-club/",
       "ticket_url": "https://portal.salalucida.org/eventos/identidades-en-penumbra-el-club-de-la-pelea-e183",
-      "ciclo": "Noche Lucida"
+      "ciclo": "Noche Lúcida"
     },
     {
       "cine": "MALBA",
@@ -44309,6 +44421,22 @@
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
     },
     {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-14",
+      "hora": "18:00",
+      "title_es": "Maratón audiovisual I - Fundación Sagai",
+      "title_en": "Maratón audiovisual I - Fundación Sagai",
+      "original_title": "",
+      "director": "",
+      "country": "Argentina - diversos años",
+      "year": null,
+      "duration": 134,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.filo.uba.ar/marat%C3%B3n-audiovisual-i-fundaci%C3%B3n-sagai%C2%A0",
+      "ciclo": "Varios (Ficción, Documental, Experimental)"
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-09-14",
       "hora": "20:00",
@@ -44355,6 +44483,22 @@
       "letterboxd": "https://letterboxd.com/film/a-farewell-to-arms/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3d80d80f-94df-403a-b818-774f5f63727b",
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
+    },
+    {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-15",
+      "hora": "18:00",
+      "title_es": "Maratón audiovisual II - Fundación Sagai",
+      "title_en": "Maratón audiovisual II - Fundación Sagai",
+      "original_title": "",
+      "director": "",
+      "country": "Argentina - diversos años",
+      "year": null,
+      "duration": 134,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.filo.uba.ar/marat%C3%B3n-audiovisual-ii-fundaci%C3%B3n-sagai",
+      "ciclo": "Varios (Ficción, Documental, Experimental)"
     },
     {
       "cine": "Sala Lugones",
@@ -44499,6 +44643,22 @@
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/539",
       "ciclo": ""
+    },
+    {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-16",
+      "hora": "18:00",
+      "title_es": "Kuhle Wampe",
+      "title_en": "Kuhle Wampe or Who Owns the World?",
+      "original_title": "Kuhle Wampe oder: Wem gehört die Welt?",
+      "director": "Slatan Dudow",
+      "country": "Alemania",
+      "year": 1932,
+      "duration": 75,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/kuhle-wampe-or-who-owns-the-world/",
+      "ticket_url": "https://www.filo.uba.ar/kuhle-wampe%C2%A0",
+      "ciclo": "Ficción"
     },
     {
       "cine": "Sala Lugones",
@@ -44677,6 +44837,22 @@
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
     },
     {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-17",
+      "hora": "18:00",
+      "title_es": "Programa de cortometrajes",
+      "title_en": "Programa de cortometrajes",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.filo.uba.ar/programa-de-cortometrajes",
+      "ciclo": "Ficción"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-09-17",
       "hora": "18:00",
@@ -44803,6 +44979,22 @@
       "letterboxd": "https://letterboxd.com/film/strange-cargo/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3d80d80f-94df-403a-b818-774f5f63727b",
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
+    },
+    {
+      "cine": "Filo Cine",
+      "fecha": "2026-09-18",
+      "hora": "18:00",
+      "title_es": "Ernest Cole, photographe",
+      "title_en": "Ernest Cole: Lost and Found",
+      "original_title": "Ernest Cole, photographe",
+      "director": "Raoul Peck",
+      "country": "Francia",
+      "year": 2024,
+      "duration": 104,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/ernest-cole-lost-and-found/",
+      "ticket_url": "https://www.filo.uba.ar/ernest-cole-photographe%C2%A0",
+      "ciclo": "Documental"
     },
     {
       "cine": "Bellas Artes",

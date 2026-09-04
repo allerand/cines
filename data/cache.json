@@ -14790,7 +14790,7 @@
   "abalos, una historia de 5 hermanos": {
     "url": "",
     "title_en": "ABALOS, una historia de 5 hermanos",
-    "director": "Pablo Noé, Josefina Zavalía Ábalos",
+    "director": "Josefina Zavalía Ábalos, Pablo Noé",
     "country": "Argentina",
     "year": 2017,
     "duration": 74,
@@ -15047,5 +15047,25 @@
     "duration": 81,
     "genre": "Documental",
     "original_title": "Until the Sky Falls Quiet"
+  },
+  "cosas que no olvidaré": {
+    "url": "https://letterboxd.com/film/per-te/",
+    "title_en": "Per te",
+    "director": "Alessandro Aronadio",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 115,
+    "genre": "Drama",
+    "title_es": "Cosas que no olvidaré",
+    "original_title": "Per te"
+  },
+  "que dios perdona a todos": {
+    "url": "https://letterboxd.com/film/god-forgives-all/",
+    "title_en": "...God Forgives All",
+    "director": "Pif",
+    "country": "Italy",
+    "year": 2026,
+    "duration": 113,
+    "genre": "Comedia"
   }
 }
