@@ -14790,7 +14790,7 @@
   "abalos, una historia de 5 hermanos": {
     "url": "",
     "title_en": "ABALOS, una historia de 5 hermanos",
-    "director": "Josefina Zavalía Ábalos, Pablo Noé",
+    "director": "Pablo Noé, Josefina Zavalía Ábalos",
     "country": "Argentina",
     "year": 2017,
     "duration": 74,
@@ -14979,5 +14979,63 @@
     "genre": "Documental",
     "title_es": "Gods of Stone",
     "original_title": "Deuses de pedra"
+  },
+  "algo ha cambiado: un viaje quijotesco al pappo’s blues": {
+    "url": "",
+    "title_en": "Algo ha cambiado: un viaje quijotesco al Pappo’s Blues",
+    "director": "Sergio Bonacci Lapalma",
+    "country": "Argentina, United States of America",
+    "year": 2025,
+    "duration": 130,
+    "genre": "Documental",
+    "original_title": "Algo ha cambiado: Un viaje quijotesco al blues local"
+  },
+  "la última copa": {
+    "url": "https://letterboxd.com/film/the-last-house-2026/",
+    "title_en": "The Last House",
+    "director": "Louis Leterrier",
+    "country": "USA",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Thriller, Ciencia ficción"
+  },
+  "un año de escuela": {
+    "url": "https://letterboxd.com/film/a-year-of-school/",
+    "title_en": "A Year of School",
+    "director": "Laura Samani",
+    "country": "Italy, France",
+    "year": 2025,
+    "duration": 102,
+    "genre": "Drama"
+  },
+  "la vida es así": {
+    "url": "https://letterboxd.com/film/por-que-la-vida-es-asi/",
+    "title_en": "¿Por qué la vida es así?",
+    "director": "Olallo Rubio",
+    "country": "Mexico",
+    "year": 2022,
+    "duration": 97,
+    "genre": "Documental",
+    "original_title": "¿Por qué la vida es así?"
+  },
+  "el secuestro de arabella": {
+    "url": "https://letterboxd.com/film/the-kidnapping-of-arabella/",
+    "title_en": "The Kidnapping of Arabella",
+    "director": "Carolina Cavalli",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 107,
+    "genre": "Drama"
+  },
+  "islandia": {
+    "url": "",
+    "title_en": "ISLANDIA",
+    "director": "Leandro Cerro",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 18,
+    "genre": "Música, Documental",
+    "title_es": "Iceland",
+    "original_title": "Islandia"
   }
 }
