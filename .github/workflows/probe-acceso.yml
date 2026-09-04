@@ -49,8 +49,7 @@ jobs:
 
       - name: Sondeo
         run: |
-          if [ -n "${{ inputs.url }}" ]; then
-            python3 scripts/probe_acceso.py --url "${{ inputs.url }}"
-          else
-            python3 scripts/probe_acceso.py
-          fi
+          echo "########## LORCA ##########"
+          python3 scripts/_dump_lorca.py || true
+          echo "########## LUGONES ##########"
+          python3 scripts/_dump_lugones.py || true
