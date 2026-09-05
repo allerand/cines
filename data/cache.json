@@ -12447,13 +12447,13 @@
     "original_title": "Queen: Budapest"
   },
   "coyote vs acme": {
-    "url": "https://letterboxd.com/film/coyote-vs-acme/",
-    "title_en": "Coyote vs. Acme",
+    "url": "",
+    "title_en": "COYOTE VS ACME",
     "director": "Dave Green",
-    "country": "USA",
+    "country": "United States of America",
     "year": 2026,
     "duration": 103,
-    "genre": "Aventura, Familiar",
+    "genre": "Comedia, Aventura",
     "title_es": "Coyote vs. Acme",
     "original_title": "Coyote vs. Acme"
   },
@@ -12525,7 +12525,7 @@
   },
   "avengers: endgame (re estreno)": {
     "url": "",
-    "title_en": "Avengers: Endgame (re Estreno)",
+    "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
     "director": "",
     "country": "",
     "year": null,
@@ -14584,12 +14584,13 @@
     "original_title": "Ao son da Nova Regueifa"
   },
   "o silencio heredado|2025": {
-    "url": "",
-    "title_en": "O silencio heredado",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/o-silencio-herdado/",
+    "title_en": "O Silencio Herdado",
+    "director": "Lucía Dapena González",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 81,
+    "genre": "Documental"
   },
   "deuses de pedra sala manuel antin": {
     "url": "",
@@ -14711,12 +14712,13 @@
     "duration": null
   },
   "festival escenario: islandia": {
-    "url": "",
-    "title_en": "FESTIVAL ESCENARIO: ISLANDIA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/islandia-2025/",
+    "title_en": "Islandia",
+    "director": "Leandro Cerro",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 93,
+    "genre": "Música, Documental"
   },
   "festival escenario: the best summer": {
     "url": "https://letterboxd.com/film/the-best-summer/",
@@ -14790,7 +14792,7 @@
   "abalos, una historia de 5 hermanos": {
     "url": "",
     "title_en": "ABALOS, una historia de 5 hermanos",
-    "director": "Pablo Noé, Josefina Zavalía Ábalos",
+    "director": "Josefina Zavalía Ábalos, Pablo Noé",
     "country": "Argentina",
     "year": 2017,
     "duration": 74,
@@ -14931,13 +14933,13 @@
     "original_title": "Cuando las nubes esconden la sombra"
   },
   "sacrificio|2025": {
-    "url": "",
-    "title_en": "Sacrificio",
+    "url": "https://letterboxd.com/film/sacrificio-1/",
+    "title_en": "SACRIFICIO",
     "director": "Joaquín Cazenave",
     "country": "Argentina",
     "year": null,
     "duration": 17,
-    "genre": "Drama, Comedia",
+    "genre": "Comedia, Drama",
     "original_title": "SACRIFICIO"
   },
   "a simple soldier|2025": {
@@ -15076,5 +15078,15 @@
     "year": 2025,
     "duration": 97,
     "genre": "Comedia, Romance"
+  },
+  "hombre de la atlántida|2026": {
+    "url": "https://letterboxd.com/film/a-man-from-atlantis/",
+    "title_en": "A Man from Atlantis",
+    "director": "Simon Zorraquin",
+    "country": "",
+    "year": null,
+    "duration": 69,
+    "genre": "",
+    "original_title": "Hombre de la Atlántida"
   }
 }

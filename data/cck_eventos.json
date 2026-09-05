@@ -1,35 +1,9 @@
 {
   "https://palaciolibertad.gob.ar/events/cortar-y-contar/": {
-    "ts": "2026-09-04T11:49:16",
+    "ts": "2026-09-05T10:59:08",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Desde el principio hasta el final",
-        "fecha": "2026-09-04",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "Loana Pagani",
-        "country": "",
-        "year": 2023,
-        "duration": 17,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "El sonido de antes",
-        "fecha": "2026-09-04",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "Yael Szmulewicz",
-        "country": "",
-        "year": 2024,
-        "duration": 74,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Cómo ser Pehuén Pedre",
@@ -124,7 +98,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/": {
-    "ts": "2026-09-04T11:49:34",
+    "ts": "2026-09-05T10:59:21",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -235,7 +209,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
-    "ts": "2026-09-04T11:49:51",
+    "ts": "2026-09-05T10:59:32",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -248,7 +222,7 @@
         "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
         "director": "Simón Zorraquín",
         "country": "Argentina",
-        "year": 2025,
+        "year": 2026,
         "duration": 69,
         "original_title": ""
       },
@@ -261,7 +235,7 @@
         "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
         "director": "Simón Zorraquín",
         "country": "Argentina",
-        "year": 2025,
+        "year": 2026,
         "duration": 69,
         "original_title": ""
       },
