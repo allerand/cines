@@ -14,6 +14,14 @@ Uso:
     python3 scripts/post_to_instagram.py --stories-only   # solo stories
     python3 scripts/post_to_instagram.py --date 2026-05-12
     python3 scripts/post_to_instagram.py --dry-run        # solo loguea
+
+Antes de publicar le pregunta a Instagram si lo del día ya está publicado, y
+si ya está no lo repite (--force saltea ese chequeo).
+
+Códigos de salida — el workflow los usa para decidir si reintentar:
+    0  quedó publicado (por esta corrida, o ya estaba de antes)
+    3  NO se publicó nada y no había nada: es seguro reintentar más tarde
+    1  se publicó algo y además hubo un error: NO reintentar, se duplicaría
 """
 import argparse
 import json
@@ -24,9 +32,9 @@ import time
 import urllib.error
 import urllib.parse
 import urllib.request
-from datetime import date as date_cls
+from datetime import date as date_cls, datetime, timedelta, timezone
 from pathlib import Path
-from typing import Optional
+from typing import NamedTuple, Optional
 
 API_VERSION = "v21.0"
 API_BASE = f"https://graph.facebook.com/{API_VERSION}"
@@ -39,6 +47,24 @@ def _ipv4_only_getaddrinfo(host, port, family=0, type=0, proto=0, flags=0):
 socket.getaddrinfo = _ipv4_only_getaddrinfo
 
 HERE = Path(__file__).resolve().parent.parent
+
+# Buenos Aires es UTC-3 todo el año (no hay horario de verano), así que no hace
+# falta zoneinfo ni tzdata en el runner.
+BA = timezone(timedelta(hours=-3))
+
+
+class Resultado(NamedTuple):
+    """Qué pasó con un posteo. `ya_estaban` es Instagram diciendo que eso ya
+    está publicado — no es un error, es la razón de no volver a postear."""
+    publicados: int = 0
+    ya_estaban: bool = False
+    fallidos: int = 0
+
+    def __add__(self, otro):
+        return Resultado(self.publicados + otro.publicados,
+                         self.ya_estaban or otro.ya_estaban,
+                         self.fallidos + otro.fallidos)
+
 
 DAYS_ES = ["lunes", "martes", "miércoles", "jueves", "viernes", "sábado", "domingo"]
 MONTHS_ES = ["enero", "febrero", "marzo", "abril", "mayo", "junio",
@@ -71,6 +97,17 @@ def api_post(endpoint: str, params: dict) -> dict:
     return _request("POST", f"{API_BASE}{endpoint}", params)
 
 
+def api_publish(user_id: str, creation_id: str, token: str) -> dict:
+    """El POST que efectivamente publica. Va SIN reintentos de red a propósito:
+    si el pedido llegó a Meta y lo que se cayó fue la respuesta, reintentar
+    publica dos veces el mismo container. Perder una slide se nota menos que
+    duplicar el posteo, así que ante la duda no se reintenta."""
+    return _request("POST", f"{API_BASE}/{user_id}/media_publish", {
+        "creation_id": creation_id,
+        "access_token": token,
+    }, retries=1)
+
+
 def api_get(endpoint: str, params: dict) -> dict:
     return _request("GET", f"{API_BASE}{endpoint}", params)
 
@@ -90,6 +127,65 @@ def wait_container_ready(container_id: str, token: str, timeout: int = 180) -> N
             raise RuntimeError(f"Container {container_id} {status}: {data}")
         time.sleep(3)
     raise TimeoutError(f"Container {container_id} no llegó a FINISHED en {timeout}s")
+
+
+# ---------------------------------------------------------------------------
+# El último candado: preguntarle a Instagram qué hay publicado
+# ---------------------------------------------------------------------------
+#
+# El workflow ya trae dos candados (la marca posts/<fecha>/.posteado-<modo> y
+# el lock atómico en el tag ig-posted/<fecha>/<modo>), pero los dos viven en el
+# repo: si alguno se pierde, o alguien corre esto a mano desde otra máquina,
+# no protegen nada. Esto pregunta por el estado real de la cuenta, que es la
+# única fuente de verdad sobre si el día ya se posteó.
+#
+# El 5/9/2026 salieron las stories dos veces: dos corridas del cron se
+# solaparon y las dos vieron el directorio sin la marca, porque la marca se
+# escribe recién al final. Con este chequeo, la segunda hubiera visto las
+# stories de la primera y se hubiera ido sin postear.
+
+
+def _fecha_ba(ts: str) -> str:
+    """'2026-09-05T14:05:31+0000' → '2026-09-05' en hora de Buenos Aires."""
+    dt = datetime.strptime(ts.replace("Z", "+0000"), "%Y-%m-%dT%H:%M:%S%z")
+    return dt.astimezone(BA).date().isoformat()
+
+
+def _publicado_el(edge: str, dia_ba: str, user_id: str, token: str,
+                  media_type: Optional[str] = None) -> Optional[int]:
+    """Cuántos ítems del edge (`stories` o `media`) publicó la cuenta el día
+    `dia_ba`. None = no se pudo preguntar (token sin permiso, red caída): el
+    que llama decide, pero NO significa cero.
+
+    /stories devuelve sólo las stories vivas (24h), que es justo lo que hace
+    falta para un posteo diario.
+    """
+    try:
+        data = api_get(f"/{user_id}/{edge}", {
+            "fields": "id,timestamp,media_type",
+            "limit": "50",
+            "access_token": token,
+        })
+    except Exception as e:
+        print(f"  ⚠ no pude consultar /{edge} de la cuenta ({e})", file=sys.stderr)
+        print("    sigo adelante: el lock del workflow es el que protege ahora",
+              file=sys.stderr)
+        return None
+
+    encontrados = 0
+    for item in data.get("data") or []:
+        ts = item.get("timestamp")
+        if not ts:
+            continue
+        try:
+            if _fecha_ba(ts) != dia_ba:
+                continue
+        except ValueError:
+            continue
+        if media_type and item.get("media_type") != media_type:
+            continue
+        encontrados += 1
+    return encontrados
 
 
 HASHTAGS = (
@@ -172,13 +268,14 @@ def public_url(base: str, date_str: str, fmt: str, filename: str, weekly: bool =
 # ---------------------------------------------------------------------------
 
 def post_feed_carousel(date_str: str, user_id: str, token: str, base: str,
-                       dry_run: bool = False, weekly: bool = False) -> None:
+                       dry_run: bool = False, weekly: bool = False,
+                       force: bool = False) -> Resultado:
     slides = collect_slides(date_str, "portrait", weekly=weekly)
     if not slides:
         kind = "weekly feed" if weekly else "feed"
         print(f"  ✗ {kind}: no hay slides portrait para {date_str}",
               file=sys.stderr)
-        return
+        return Resultado()
     if len(slides) > 10:
         print(f"  ! feed: IG carousel max 10 — truncando ({len(slides)} → 10)")
         slides = slides[:10]
@@ -188,10 +285,24 @@ def post_feed_carousel(date_str: str, user_id: str, token: str, base: str,
     print(f"\n=== {label} ({len(slides)} slides) ===")
     print(f"Caption:\n{caption}\n")
 
+    # El carrusel se compara contra HOY y no contra date_str: el semanal se
+    # postea el día que se dispara, no el lunes que sale en las slides.
+    if user_id and token:
+        hoy_ba = datetime.now(BA).date().isoformat()
+        ya = _publicado_el("media", hoy_ba, user_id, token,
+                           media_type="CAROUSEL_ALBUM")
+        if ya:
+            print(f"  🔎 Instagram ya tiene {ya} carrusel(es) publicado(s) hoy ({hoy_ba})")
+            if not force:
+                print("  ⛔ no lo posteo de nuevo (con --force va igual)")
+                return Resultado(ya_estaban=True)
+        elif ya == 0:
+            print(f"  🔎 Instagram no tiene carruseles de hoy ({hoy_ba}) — sigo")
+
     if dry_run:
         for s in slides:
             print(f"  - {public_url(base, date_str, 'portrait', s.name, weekly=weekly)}")
-        return
+        return Resultado()
 
     # 1) Container por slide
     children: list[str] = []
@@ -220,11 +331,9 @@ def post_feed_carousel(date_str: str, user_id: str, token: str, base: str,
     wait_container_ready(carousel["id"], token)
 
     # 4) Publicar
-    publish = api_post(f"/{user_id}/media_publish", {
-        "creation_id": carousel["id"],
-        "access_token": token,
-    })
+    publish = api_publish(user_id, carousel["id"], token)
     print(f"  ✅ feed posteado — id: {publish.get('id')}")
+    return Resultado(publicados=1)
 
 
 # ---------------------------------------------------------------------------
@@ -249,10 +358,7 @@ def _publish_story(user_id: str, token: str, image_url: str) -> str:
     wait_container_ready(container["id"], token)
     for attempt in range(2):
         try:
-            r = api_post(f"/{user_id}/media_publish", {
-                "creation_id": container["id"],
-                "access_token": token,
-            })
+            r = api_publish(user_id, container["id"], token)
             return r.get("id", "")
         except RuntimeError as e:
             # IG código 2207006 = "media not found" típicamente significa
@@ -266,35 +372,53 @@ def _publish_story(user_id: str, token: str, image_url: str) -> str:
 
 
 def post_stories(date_str: str, user_id: str, token: str, base: str,
-                 dry_run: bool = False) -> None:
+                 dry_run: bool = False, force: bool = False) -> Resultado:
     slides = collect_slides(date_str, "story")
     if not slides:
         print(f"  ✗ story: no hay slides en posts/{date_str}/story/",
               file=sys.stderr)
-        return
+        return Resultado()
 
     if len(slides) > MAX_STORIES_PER_RUN:
         print(f"  ! story: cap a {MAX_STORIES_PER_RUN} de {len(slides)} (IG anti-spam)")
         slides = slides[:MAX_STORIES_PER_RUN]
 
     print(f"\n=== STORIES ({len(slides)} slides) ===")
+
+    # El chequeo corre también en dry-run: es la única forma de verificar que
+    # el token puede leer /stories sin postear nada de verdad.
+    if user_id and token:
+        ya = _publicado_el("stories", date_str, user_id, token)
+        if ya:
+            print(f"  🔎 Instagram ya tiene {ya} story(s) vivas de {date_str}")
+            if not force:
+                print("  ⛔ no las posteo de nuevo (con --force van igual)")
+                return Resultado(ya_estaban=True)
+        elif ya == 0:
+            print(f"  🔎 Instagram no tiene stories de {date_str} — sigo")
+
     if dry_run:
         for s in slides:
             print(f"  - {public_url(base, date_str, 'story', s.name)}")
-        return
+        return Resultado()
 
     import random
+    publicadas = 0
+    fallidas = 0
     for i, slide in enumerate(slides):
         url = public_url(base, date_str, "story", slide.name)
         print(f"  → story {slide.name}")
         try:
             pub_id = _publish_story(user_id, token, url)
+            publicadas += 1
             print(f"    ✓ id {pub_id}")
         except Exception as e:
+            fallidas += 1
             print(f"    ✗ falló {slide.name}: {e}", file=sys.stderr)
             # Si falla por anti-spam, no tiene sentido seguir martillando
             if "2207006" in str(e):
                 print(f"    ⏹  cortando — IG sigue detectando bot")
+                fallidas += len(slides) - i - 1
                 break
         # Delay largo con jitter entre stories para no parecer bot. Más alto
         # que antes (era 30-55s) para poder postear más sin disparar 2207006.
@@ -302,16 +426,34 @@ def post_stories(date_str: str, user_id: str, token: str, base: str,
             wait_s = random.randint(45, 75)
             print(f"    ⏳ {wait_s}s hasta la próxima")
             time.sleep(wait_s)
-    print(f"  ✅ {len(slides)} stories posteadas")
+    print(f"  ✅ {publicadas}/{len(slides)} stories posteadas"
+          + (f" ({fallidas} fallaron)" if fallidas else ""))
+    return Resultado(publicados=publicadas, fallidos=fallidas)
 
 
 # ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
+def _codigo_de_salida(total: Resultado, errores: list, dry_run: bool) -> int:
+    """Traduce lo que pasó al contrato que espera post-ig.yml (ver docstring)."""
+    if dry_run:
+        return 1 if errores else 0
+    if errores or total.fallidos:
+        # Si YA salió algo a Instagram, reintentar duplicaría lo publicado: el
+        # workflow deja el lock tomado y no vuelve a intentar solo.
+        return 1 if total.publicados else 3
+    if total.publicados == 0 and not total.ya_estaban:
+        # No había nada que postear (típico: faltan las slides). Que el próximo
+        # cron lo intente, y que el día NO quede marcado como posteado — antes
+        # quedaba marcado igual, y el día se perdía sin que nadie reintentara.
+        return 3
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--date", default=date_cls.today().isoformat())
+    parser.add_argument("--date", default=datetime.now(BA).date().isoformat())
     parser.add_argument("--week-start", default="",
                         help="YYYY-MM-DD — postea SOLO el feed semanal "
                              "(carrusel de 7 slides desde posts/<fecha>_week/portrait/)")
@@ -319,6 +461,9 @@ def main():
     parser.add_argument("--stories-only", action="store_true")
     parser.add_argument("--dry-run", action="store_true",
                         help="No postea — solo loguea")
+    parser.add_argument("--force", action="store_true",
+                        help="Postea aunque Instagram ya tenga publicado lo del "
+                             "día. Es el único modo de duplicar a propósito.")
     args = parser.parse_args()
 
     user_id = os.environ.get("IG_USER_ID", "")
@@ -338,12 +483,13 @@ def main():
     # Modo semanal: posteo SOLO feed carousel desde posts/<fecha>_week/portrait/
     if args.week_start:
         try:
-            post_feed_carousel(args.week_start, user_id, token, base,
-                               dry_run=args.dry_run, weekly=True)
-            return
+            total = post_feed_carousel(args.week_start, user_id, token, base,
+                                       dry_run=args.dry_run, weekly=True,
+                                       force=args.force)
         except Exception as e:
             print(f"\n❌ error: {e}", file=sys.stderr)
-            sys.exit(1)
+            sys.exit(_codigo_de_salida(Resultado(), [e], args.dry_run))
+        sys.exit(_codigo_de_salida(total, [], args.dry_run))
 
     do_feed = not args.stories_only
     do_stories = not args.feed_only
@@ -351,20 +497,22 @@ def main():
     # Feed y stories son independientes: si uno falla, igual intentamos el otro
     # (así un hipo puntual del carousel no nos deja sin stories, y viceversa).
     errors = []
+    total = Resultado()
     if do_feed:
         try:
-            post_feed_carousel(args.date, user_id, token, base, dry_run=args.dry_run)
+            total += post_feed_carousel(args.date, user_id, token, base,
+                                        dry_run=args.dry_run, force=args.force)
         except Exception as e:
             print(f"\n❌ feed falló: {e}", file=sys.stderr)
             errors.append(("feed", e))
     if do_stories:
         try:
-            post_stories(args.date, user_id, token, base, dry_run=args.dry_run)
+            total += post_stories(args.date, user_id, token, base,
+                                  dry_run=args.dry_run, force=args.force)
         except Exception as e:
             print(f"\n❌ stories falló: {e}", file=sys.stderr)
             errors.append(("stories", e))
-    if errors:
-        sys.exit(1)
+    sys.exit(_codigo_de_salida(total, errors, args.dry_run))
 
 
 if __name__ == "__main__":

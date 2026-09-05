@@ -21,6 +21,13 @@ on:
         type: boolean
         default: false
 
+# Es manual, pero dos "Run workflow" seguidos postearían el carrusel dos veces.
+# Esto los serializa; el chequeo contra Instagram de post_to_instagram.py frena
+# al segundo cuando ve que la cuenta ya tiene el carrusel de hoy.
+concurrency:
+  group: weekly-feed
+  cancel-in-progress: false
+
 permissions:
   contents: write
 

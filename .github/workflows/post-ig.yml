@@ -15,8 +15,29 @@ name: Post to Instagram
 # las genera él mismo antes de postear, así un scheduler con cola no se lleva
 # puesto el posteo del día.
 #
-# Es el ÚNICO lugar que postea a Instagram. Si volvés a agregar el paso en
-# scrape.yml, se postea dos veces por día.
+# Es el ÚNICO lugar que postea las stories diarias. Si volvés a agregar el paso
+# en scrape.yml, se postea dos veces por día.
+#
+# NO SE POSTEA DOS VECES — tres candados, y cada uno tapa el agujero del
+# anterior. El 5/9/2026 salieron las stories duplicadas: dos corridas del cron
+# arrancaron casi juntas (GitHub soltó la cola tardísimo, las marcas quedaron
+# 14:05:31Z y 14:14:50Z contra crons de 11:08-12:43 UTC), las dos leyeron el
+# directorio sin la marca del día —que se escribe recién al final, después de
+# los ~10 minutos que tarda el posteo— y las dos publicaron.
+#
+#   1. `concurrency` (abajo): dos corridas de este workflow no se ejecutan al
+#      mismo tiempo. La segunda espera, y cuando arranca ya ve la marca.
+#   2. El lock atómico en el tag `ig-posted/<fecha>/<modo>`: se toma JUSTO antes
+#      de postear. Crear un ref es atómico del lado de GitHub y cada corrida
+#      empuja un objeto distinto, así que si dos empujan, GitHub acepta uno solo
+#      y el otro se va sin postear. Es el candado que hubiera evitado el 5/9.
+#   3. El chequeo contra la Graph API adentro de post_to_instagram.py: antes de
+#      publicar pregunta si la cuenta ya tiene las stories del día. Es el único
+#      que sigue valiendo si el repo miente (marca borrada, corrida a mano
+#      desde otra máquina, --force de más).
+#
+# Los tres fallan cerrado: ante la duda NO se postea. Que un día falte la
+# story se ve mucho menos que verla dos veces.
 
 on:
   schedule:
@@ -55,17 +76,31 @@ on:
         type: boolean
         default: false
       force:
-        description: 'Postear aunque ya se haya posteado hoy'
+        description: 'Ignorar la marca del día y el lock (igual chequea Instagram)'
+        type: boolean
+        default: false
+      duplicar:
+        description: '⚠️ Postear aunque Instagram YA tenga lo del día (duplica)'
         type: boolean
         default: false
 
+# Dos corridas del posteo NUNCA corren a la vez. cancel-in-progress: false
+# porque cancelar sería peor: mataría a la que está publicando por la mitad.
+# La que llega segunda espera, y al arrancar ya ve la marca del día.
+concurrency:
+  group: post-ig-${{ inputs.date || 'hoy' }}-${{ inputs.mode || 'stories-only' }}
+  cancel-in-progress: false
+
 permissions:
-  contents: write   # puede tener que commitear las slides que regenera
+  contents: write   # commitea las slides que regenera y el tag del lock
 
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 45 y no 30: un día de 20 slides son ~20 esperas de hasta 75s más lo que
+    # tarda cada container, y si el job se corta a la mitad el día queda
+    # posteado por la mitad — el lock (bien) no lo deja reintentar.
+    timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
 
@@ -102,6 +137,16 @@ jobs:
             echo "dry=--dry-run" >> "$GITHUB_OUTPUT"
           else
             echo "dry="          >> "$GITHUB_OUTPUT"
+          fi
+          # --force del script saltea el chequeo contra Instagram. Va aparte de
+          # `force` a propósito: `force` es "ignorá lo que dice el repo",
+          # `duplicar` es "ignorá lo que dice Instagram", que es la única forma
+          # de postear dos veces el mismo día. No se activa sin querer.
+          if [ "${{ inputs.duplicar }}" = "true" ]; then
+            echo "dup=--force" >> "$GITHUB_OUTPUT"
+            echo "::warning::duplicar=true — se postea aunque IG ya tenga lo del día"
+          else
+            echo "dup=" >> "$GITHUB_OUTPUT"
           fi
           # La marca del día se nombra con el modo, así un feed-only manual no
           # queda bloqueado por el stories-only del posteo diario.
@@ -198,27 +243,104 @@ jobs:
           # raw.githubusercontent tarda en indexar el commit nuevo.
           sleep 20
 
-      - name: Post to Instagram
+      - name: ¿Están los secrets?
+        # Antes de tomar el lock: si falta el token, el día se tiene que poder
+        # reintentar, y un fallo con el lock tomado no se reintenta.
         if: steps.marca.outputs.saltear != 'true'
         env:
           IG_USER_ID:      ${{ secrets.IG_USER_ID }}
           IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
-          PUBLIC_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
         run: |
           if [ "${{ inputs.dry_run }}" != "true" ] && { [ -z "$IG_USER_ID" ] || [ -z "$IG_ACCESS_TOKEN" ]; }; then
             echo "❌ Faltan secrets IG_USER_ID / IG_ACCESS_TOKEN"
             exit 1
           fi
+
+      - name: Tomar el lock del día
+        id: lock
+        if: steps.marca.outputs.saltear != 'true' && inputs.dry_run != true
+        run: |
+          d="${{ steps.date.outputs.value }}"
+          modo="${{ steps.flags.outputs.modo }}"
+          ref="refs/tags/ig-posted/$d/$modo"
+          echo "ref=$ref" >> "$GITHUB_OUTPUT"
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # commit-tree arma un objeto suelto sin tocar HEAD ni el índice (si
+          # commiteáramos en la rama, el commit se colaría en el push a main de
+          # más abajo). El mensaje lleva el run id, así que dos corridas nunca
+          # generan el mismo sha: la segunda no puede ganar el push de casualidad
+          # —GitHub lo rechaza porque el tag ya existe apuntando a otro objeto—.
+          # Crear un ref es atómico del lado del servidor: esto es el mutex.
+          claim=$(git commit-tree 'HEAD^{tree}' -p HEAD \
+                  -m "ig lock $d $modo — run ${{ github.run_id }}.${{ github.run_attempt }}")
+
+          if [ "${{ inputs.force }}" = "true" ]; then
+            git push -f origin "$claim:$ref"
+            echo "🔓 force: tomo el lock igual ($ref)"
+            echo "saltear=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          if git push origin "$claim:$ref"; then
+            echo "🔒 lock tomado: $ref"
+            echo "saltear=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          # No se pudo crear el ref. Si ya existe, otra corrida está posteando
+          # este día (o lo posteó y falló después): nos vamos sin tocar
+          # Instagram. Si no existe, fue un error de red — también nos vamos,
+          # que es fallar cerrado, y el próximo cron encuentra el lock libre.
+          if [ -n "$(git ls-remote origin "$ref")" ]; then
+            echo "⏭  el lock de $d/$modo ya lo tiene otra corrida — no posteo."
+          else
+            echo "::warning::no pude tomar el lock y el tag no existe (¿red?) — no posteo por las dudas."
+          fi
+          echo "saltear=true" >> "$GITHUB_OUTPUT"
+
+      - name: Post to Instagram
+        id: post
+        if: steps.marca.outputs.saltear != 'true' && steps.lock.outputs.saltear != 'true'
+        env:
+          IG_USER_ID:      ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          PUBLIC_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
+        run: |
+          # El paso no falla acá: el código de salida decide qué pasa con el
+          # lock y con la marca, y recién al final se marca el job en rojo.
+          set +e
           python3 scripts/post_to_instagram.py \
             --date "${{ steps.date.outputs.value }}" \
             ${{ steps.flags.outputs.flag }} \
-            ${{ steps.flags.outputs.dry }}
+            ${{ steps.flags.outputs.dry }} \
+            ${{ steps.flags.outputs.dup }}
+          rc=$?
+          set -e
+          echo "rc=$rc" >> "$GITHUB_OUTPUT"
+          case "$rc" in
+            0) echo "✅ el día quedó posteado" ;;
+            3) echo "::warning::no se publicó nada — suelto el lock y que reintente el próximo cron" ;;
+            *) echo "::error::falló DESPUÉS de publicar algo — el lock queda tomado a propósito, reintentar duplicaría" ;;
+          esac
+
+      - name: Soltar el lock si no se publicó nada
+        # Sólo con rc=3, que es el script diciendo "no salió NADA a Instagram".
+        # Con cualquier otro fallo el lock se queda tomado: es la diferencia
+        # entre reintentar y duplicar.
+        if: always() && steps.lock.outputs.saltear == 'false' && steps.post.outputs.rc == '3'
+        run: |
+          git push origin ":${{ steps.lock.outputs.ref }}"
+          echo "🔓 lock soltado: ${{ steps.lock.outputs.ref }}"
 
       - name: Dejar la marca del día
-        if: steps.marca.outputs.saltear != 'true' && inputs.dry_run != true
-        # Va DESPUÉS de postear y sólo si el posteo salió bien: si falló, la
-        # marca no se escribe y el cron siguiente vuelve a intentar. Es lo que
-        # permite tener varios horarios sin postear varias veces.
+        if: steps.marca.outputs.saltear != 'true' && inputs.dry_run != true && steps.post.outputs.rc == '0'
+        # Va DESPUÉS de postear y sólo si el posteo salió bien (rc=0). Si no se
+        # publicó nada (rc=3) el día queda sin marcar y sin lock, y lo reintenta
+        # el cron siguiente: para eso están los cuatro horarios. Si falló con
+        # algo ya publicado (rc=1) tampoco se marca, pero el lock queda tomado
+        # y nadie reintenta solo — reintentar ahí sería duplicar.
         run: |
           d="${{ steps.date.outputs.value }}"
           marca="posts/$d/.posteado-${{ steps.flags.outputs.modo }}"
@@ -231,3 +353,9 @@ jobs:
           git commit -m "posts: $d posteado a Instagram (${{ steps.flags.outputs.modo }})"
           git pull --rebase -X theirs origin main
           git push origin main
+
+      - name: Fallar si el posteo no salió bien
+        if: always() && steps.post.outputs.rc != '' && steps.post.outputs.rc != '0'
+        run: |
+          echo "el posteo terminó con código ${{ steps.post.outputs.rc }}"
+          exit 1
