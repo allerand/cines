@@ -88,7 +88,7 @@ on:
 # porque cancelar sería peor: mataría a la que está publicando por la mitad.
 # La que llega segunda espera, y al arrancar ya ve la marca del día.
 concurrency:
-  group: post-ig-${{ inputs.date || 'hoy' }}-${{ inputs.mode || 'stories-only' }}
+  group: post-ig-${{ github.event.inputs.date || 'hoy' }}-${{ github.event.inputs.mode || 'stories-only' }}
   cancel-in-progress: false
 
 permissions:
@@ -274,7 +274,10 @@ jobs:
           # —GitHub lo rechaza porque el tag ya existe apuntando a otro objeto—.
           # Crear un ref es atómico del lado del servidor: esto es el mutex.
           claim=$(git commit-tree 'HEAD^{tree}' -p HEAD \
-                  -m "ig lock $d $modo — run ${{ github.run_id }}.${{ github.run_attempt }}")
+                  -m "ig lock $d $modo — run ${{ github.run_id }}.${{ github.run_attempt }}") || {
+            echo "::error::no pude armar el objeto del lock (git commit-tree)"
+            exit 1
+          }
 
           if [ "${{ inputs.force }}" = "true" ]; then
             git push -f origin "$claim:$ref"
