@@ -14790,7 +14790,7 @@
   "abalos, una historia de 5 hermanos": {
     "url": "",
     "title_en": "ABALOS, una historia de 5 hermanos",
-    "director": "Josefina Zavalía Ábalos, Pablo Noé",
+    "director": "Pablo Noé, Josefina Zavalía Ábalos",
     "country": "Argentina",
     "year": 2017,
     "duration": 74,
@@ -15067,5 +15067,14 @@
     "year": 2026,
     "duration": 113,
     "genre": "Comedia"
+  },
+  "una breve historia de amor": {
+    "url": "https://letterboxd.com/film/a-brief-affair/",
+    "title_en": "A Brief Affair",
+    "director": "Ludovica Rampoldi",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 97,
+    "genre": "Comedia, Romance"
   }
 }
