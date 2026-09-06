@@ -1,61 +1,9 @@
 {
   "https://palaciolibertad.gob.ar/events/cortar-y-contar/": {
-    "ts": "2026-09-05T10:59:08",
+    "ts": "2026-09-06T11:25:05",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Cómo ser Pehuén Pedre",
-        "fecha": "2026-09-05",
-        "hora": "16:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "Federico Luis Tachella",
-        "country": "",
-        "year": 2024,
-        "duration": 22,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Cuando las nubes esconden la sombra",
-        "fecha": "2026-09-05",
-        "hora": "16:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "José Luis Torres Leiva",
-        "country": "",
-        "year": 2024,
-        "duration": 71,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Sacrificio",
-        "fecha": "2026-09-05",
-        "hora": "18:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "Joaquín Cazenave",
-        "country": "",
-        "year": 2025,
-        "duration": 17,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "A Simple Soldier",
-        "fecha": "2026-09-05",
-        "hora": "18:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "Juan Camilo Cruz y Artem Ryzhykov",
-        "country": "",
-        "year": 2025,
-        "duration": 96,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "El chico en llamas",
@@ -98,7 +46,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/": {
-    "ts": "2026-09-05T10:59:21",
+    "ts": "2026-09-06T11:25:23",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -209,7 +157,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
-    "ts": "2026-09-05T10:59:32",
+    "ts": "2026-09-06T11:25:38",
     "v": 2,
     "semanas": 9,
     "funciones": [
