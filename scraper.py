@@ -3804,6 +3804,96 @@ LUMITON_VENUES: dict[str, str] = {
 }
 
 
+# Los programas de cortos ("CONVOCATORIA DE CORTOS: PROGRAMA I") traen un
+# párrafo por corto en el cuerpo del evento:
+#
+#     <p><strong>La continuidad de los patios</strong>
+#        (Dir. Luciano Scarcia | Arg. / 2025 / 2’ / +13)<br>sinopsis…</p>
+#
+# Sin desagregar, la cartelera publica una fila sola con el nombre del programa,
+# sin director y sin poder buscarse por película — que es justo lo que alguien
+# busca cuando quiere ver un corto.
+_LUMITON_DIR_RE = re.compile(r"\(\s*Dir(?:ecci[oó]n)?\.?\s*:?\s*", re.IGNORECASE)
+# La duración va con prima tipográfica o con "min": 2’ / 19′ / 15 min.
+_LUMITON_DUR_RE = re.compile(r"\b(\d{1,3})\s*(?:['′’´]|min\b)")
+
+
+def _lumiton_cortos(soup) -> list[dict]:
+    """Cortos de un programa de Lumiton: uno por párrafo con ficha "(Dir. …)".
+
+    Devuelve [] si el evento no es un programa: hace falta más de un corto para
+    considerarlo tal, así que la ficha suelta de una película normal —o el
+    párrafo de la sala, que también va en <strong>— no dispara nada.
+    """
+    cuerpo = soup.select_one("div.prose")
+    if cuerpo is None:
+        return []
+
+    cortos: list[dict] = []
+    for p in cuerpo.find_all("p"):
+        st = p.find(["strong", "b"])
+        if st is None:
+            continue
+        titulo = re.sub(r"\s+", " ", st.get_text(" ", strip=True)).strip(" .,:")
+        if not titulo:
+            continue
+        texto = re.sub(r"\s+", " ", p.get_text(" ", strip=True))
+        # El "(Dir." que vale es el que sigue al título: las sinopsis también
+        # llevan paréntesis (nombres de actores, años).
+        resto = texto.split(titulo, 1)[-1]
+        m = _LUMITON_DIR_RE.search(resto)
+        if not m:
+            continue
+        ficha = resto[m.end():]
+
+        # "Luciano Scarcia | Arg. / 2025 / 2’ / +13) sinopsis…". El paréntesis
+        # de cierre no sirve de límite —"Vir Zone (Virginia Tassone)" lo abre y
+        # lo cierra adentro, y a veces la página se olvida de cerrarlo—, así que
+        # se corta por el pipe y después por las barras.
+        partes = ficha.split("|", 1)
+        director = partes[0].split(")")[0].strip(" .,;") if len(partes) == 1 \
+            else partes[0].strip(" .,;")
+        campos = partes[1].split("/") if len(partes) > 1 else []
+        pais = campos[0].split(")")[0].strip(" .,;") if campos else ""
+        # Sólo los dos campos siguientes al país: más allá empieza la sinopsis,
+        # que tiene años y números propios.
+        cola = " / ".join(campos[1:3])
+        my = re.search(r"\b(19\d{2}|20\d{2})\b", cola)
+        md = _LUMITON_DUR_RE.search(cola)
+        cortos.append({
+            "title": titulo,
+            "director": director,
+            "country": pais,
+            "year": int(my.group(1)) if my else None,
+            "duration": int(md.group(1)) if md else None,
+        })
+
+    return cortos if len(cortos) > 1 else []
+
+
+# Lumiton escribe los títulos TODO EN MAYÚSCULAS. run.py title-casea lo que le
+# llega gritado, pero de paso le baja el numeral romano ("PROGRAMA II" →
+# "Programa Ii"), así que el nombre del programa se arma acá y llega presentable.
+_LUMITON_ROMANO_RE = re.compile(r"^[IVXLCDM]{1,4}$")
+_LUMITON_MINUSCULAS = {"de", "del", "la", "el", "los", "las", "y", "e", "en",
+                       "a", "con", "para", "por", "sin"}
+
+
+def _lumiton_ciclo(titulo: str) -> str:
+    """"CONVOCATORIA DE CORTOS: PROGRAMA II" → "Convocatoria de Cortos: Programa II"."""
+    if not titulo.isupper():
+        return titulo
+    palabras = []
+    for i, w in enumerate(titulo.split()):
+        if _LUMITON_ROMANO_RE.match(w.strip(":,.;")):
+            palabras.append(w)
+        elif i and w.lower() in _LUMITON_MINUSCULAS:
+            palabras.append(w.lower())
+        else:
+            palabras.append(w[:1] + w[1:].lower())
+    return " ".join(palabras)
+
+
 def fetch_lumiton_evento_meta(url: str) -> dict:
     """
     Extrae director / país / duración / año / título original desde una página
@@ -3822,6 +3912,10 @@ def fetch_lumiton_evento_meta(url: str) -> dict:
         return {}
 
     out: dict = {}
+
+    cortos = _lumiton_cortos(soup)
+    if cortos:
+        out["cortos"] = cortos
 
     # Director: text after <b>Dirección</b>, until next <br>/<b>/<div>
     for b in soup.find_all("b"):
@@ -4138,7 +4232,12 @@ def _parse_cc25_detail(h1: str, body: str, url: str,
     # Director: CC25 lo pone en el H1 como "Título – de Director" (limpio);
     # fallback al cuerpo "dirigido por ...".
     director = ""
-    md2 = re.search(r"[–-]\s*de\s+([^\n]+?)\s*$", h1, re.IGNORECASE)
+    # El "de …" corta en el siguiente guión largo: el H1 encadena subtítulos
+    # ("LA IMAGEN SANTA – de Pablo Montllau – Homenaje. 30 años del
+    # fallecimiento de Gilda") y hasta acá el director se llevaba puesto todo
+    # lo que venía después. Los guiones ASCII no cortan: se los comen los
+    # nombres compuestos (Jean-Pierre).
+    md2 = re.search(r"[–—-]\s*de\s+([^–—\n]+?)\s*(?:[–—]|$)", h1, re.IGNORECASE)
     if md2:
         director = md2.group(1).strip()
     else:
@@ -4853,18 +4952,36 @@ def scrape_lumiton_agenda() -> list[Screening]:
     # Enrich each screening with director / país / duración from its evento page.
     # Multiple screenings can share the same ticket_url (e.g. weekly cycle), so cache per URL.
     meta_cache: dict[str, dict] = {}
+    enriquecidas: list[Screening] = []
     for s in result:
         if not s.ticket_url:
+            enriquecidas.append(s)
             continue
         if s.ticket_url not in meta_cache:
             meta_cache[s.ticket_url] = fetch_lumiton_evento_meta(s.ticket_url)
         meta = meta_cache[s.ticket_url]
+
+        # Programa de cortos: una fila por corto, con el programa de ciclo. El
+        # orden de la página es el de proyección, y run.py ordena por (fecha,
+        # hora) de forma estable, así que se publican en ese mismo orden.
+        cortos = meta.get("cortos")
+        if cortos:
+            for c in cortos:
+                enriquecidas.append(Screening(
+                    cine=s.cine, title=c["title"], fecha=s.fecha, hora=s.hora,
+                    ticket_url=s.ticket_url, ciclo=_lumiton_ciclo(s.title),
+                    director=c["director"], country=c["country"],
+                    year=c["year"], duration=c["duration"],
+                ))
+            continue
+
         s.director = meta.get("director", "")
         s.country = meta.get("country", "")
         s.year = meta.get("year")
         s.duration = meta.get("duration")
+        enriquecidas.append(s)
 
-    return result
+    return enriquecidas
 
 
 # ---------------------------------------------------------------------------
@@ -6035,20 +6152,38 @@ def _ccd_expand_fecha(fecha_text: str, base_year: int,
     return out
 
 
-def _ccd_meta(desc: str) -> tuple[str, Optional[int]]:
-    """Extrae (director, duración_min) de la meta-descripción del evento."""
+# El bloque del evento en sí. La página repite la misma estructura de campos
+# más abajo, en "eventos relacionados", así que hay que quedarse con este div o
+# se mezcla la ficha de OTRA película.
+CCD_DETALLE_SEL = "div.view-display-id-pane_agenda_detalle"
+
+
+def _ccd_meta(texto: str, titulo: str = "") -> tuple[str, Optional[int]]:
+    """Extrae (director, duración_min) de la ficha del evento.
+
+    `texto` es el cuerpo de la página, donde cada campo va en su propio párrafo
+    ("Dirección: John Dickinson" / "Duración: 52 minutos"). La meta-descripción
+    sirve de respaldo, pero es peor fuente: el Drupal del CCC la arma pegando
+    los párrafos SIN separador, así que el nombre del director queda soldado a
+    la sinopsis ("John Dickinson Hornos sin fronteras retrata a esta agrupación
+    solidaria…") y encima suele cortarse antes de la duración. Como la sinopsis
+    empieza casi siempre repitiendo el título, `titulo` alcanza para cortar.
+    """
     director = ""
     m = re.search(r"(?:Gui[oó]n y direcci[oó]n|Direcci[oó]n|Dirige)\s*:?\s*"
-                  r"([^\n.]+)", desc, re.IGNORECASE)
+                  r"([^\n.]+)", texto, re.IGNORECASE)
     if m:
         director = re.split(
             r"\b(?:Duraci|Elenco|G[eé]nero|Guion|Pa[ií]s|A[ñn]o|Productor|Reparto)",
             m.group(1))[0].strip(" .,")
     else:
-        m = re.match(r"\s*De\s+(.+?)\.", desc)
+        m = re.match(r"\s*De\s+(.+?)\.", texto)
         if m:
             director = m.group(1).strip(" .,")
-    dm = re.search(r"(\d{1,3})\s*minutos", desc, re.IGNORECASE)
+    if titulo and titulo.lower() in director.lower():
+        i = director.lower().index(titulo.lower())
+        director = director[:i].strip(" .,")
+    dm = re.search(r"(\d{1,3})\s*minutos", texto, re.IGNORECASE)
     duration = int(dm.group(1)) if dm else None
     return director, duration
 
@@ -6095,9 +6230,13 @@ def scrape_ccd(meses: int = 3) -> list[Screening]:
                 director, duration = "", None
                 try:
                     dsoup = fetch_html(ev_url)
-                    dm = dsoup.find("meta", attrs={"name": "description"})
-                    if dm and dm.get("content"):
-                        director, duration = _ccd_meta(dm["content"])
+                    detalle = dsoup.select_one(CCD_DETALLE_SEL)
+                    if detalle is not None:
+                        director, duration = _ccd_meta(_inner_text(detalle), title)
+                    else:
+                        dm = dsoup.find("meta", attrs={"name": "description"})
+                        if dm and dm.get("content"):
+                            director, duration = _ccd_meta(dm["content"], title)
                 except Exception:
                     pass
                 meta_cache[ev_url] = (director, duration)

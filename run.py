@@ -464,6 +464,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         "brazil": "Brasil", "brasil": "Brasil",
         "peru": "Perú",
         "chile": "Chile", "argentina": "Argentina", "uruguay": "Uruguay",
+        "arg": "Argentina",   # las fichas de cortos de Lumiton abrevian "Arg."
         "paraguay": "Paraguay", "bolivia": "Bolivia", "colombia": "Colombia",
         "venezuela": "Venezuela", "ecuador": "Ecuador", "cuba": "Cuba",
         # Asia / África / Oceanía
