@@ -12447,13 +12447,13 @@
     "original_title": "Queen: Budapest"
   },
   "coyote vs acme": {
-    "url": "",
-    "title_en": "COYOTE VS ACME",
+    "url": "https://letterboxd.com/film/coyote-vs-acme/",
+    "title_en": "Coyote vs. Acme",
     "director": "Dave Green",
-    "country": "United States of America",
+    "country": "USA",
     "year": 2026,
     "duration": 103,
-    "genre": "Comedia, Aventura",
+    "genre": "Aventura, Familiar",
     "title_es": "Coyote vs. Acme",
     "original_title": "Coyote vs. Acme"
   },
@@ -12525,7 +12525,7 @@
   },
   "avengers: endgame (re estreno)": {
     "url": "",
-    "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
+    "title_en": "Avengers: Endgame (re Estreno)",
     "director": "",
     "country": "",
     "year": null,
@@ -15088,5 +15088,25 @@
     "duration": 69,
     "genre": "",
     "original_title": "Hombre de la Atlántida"
+  },
+  "200 metros|2020": {
+    "url": "https://letterboxd.com/film/200-meters/",
+    "title_en": "200 Meters",
+    "director": "Ameen Nayfeh",
+    "country": "Italy, Jordan",
+    "year": 2020,
+    "duration": 96,
+    "genre": "Aventura, Drama",
+    "title_es": "200 Metros",
+    "original_title": "٢٠٠ متر"
+  },
+  "la ciudad prohibída": {
+    "url": "https://letterboxd.com/film/the-forbidden-city-2025/",
+    "title_en": "The Forbidden City",
+    "director": "Gabriele Mainetti",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 138,
+    "genre": "Drama, Romance"
   }
 }
