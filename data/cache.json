@@ -15030,15 +15030,13 @@
     "genre": "Drama"
   },
   "islandia": {
-    "url": "",
-    "title_en": "ISLANDIA",
-    "director": "Leandro Cerro",
-    "country": "Argentina",
-    "year": 2025,
-    "duration": 18,
-    "genre": "Música, Documental",
-    "title_es": "Iceland",
-    "original_title": "Islandia"
+    "url": "https://letterboxd.com/film/spider-island/",
+    "title_en": "Spider Island",
+    "director": "Christopher Smith",
+    "country": "UK",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Comedia, Terror"
   },
   "until the sky falls quiet|2026": {
     "url": "",
@@ -15435,5 +15433,60 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "coraline": {
+    "url": "",
+    "title_en": "CORALINE",
+    "director": "Henry Selick",
+    "country": "United States of America",
+    "year": 2009,
+    "duration": 100,
+    "genre": "Animación, Familiar",
+    "title_es": "Los mundos de Coraline",
+    "original_title": "Coraline"
+  },
+  "volver al futuro": {
+    "url": "",
+    "title_en": "VOLVER AL FUTURO",
+    "director": "Robert Zemeckis",
+    "country": "United States of America",
+    "year": 1985,
+    "duration": 116,
+    "genre": "Aventura, Comedia",
+    "title_es": "Regreso al futuro",
+    "original_title": "Back to the Future"
+  },
+  "oasis: don´t look back in anger": {
+    "url": "https://letterboxd.com/film/oasis-dont-look-back-in-anger/",
+    "title_en": "Oasis: Don't Look Back in Anger",
+    "director": "Dylan Southern, Will Lovelace",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 123,
+    "genre": "Documental, Música",
+    "title_es": "Oasis: Don't Look Back in Anger",
+    "original_title": "Oasis: Don't Look Back in Anger"
+  },
+  "volver al futuro parte ii": {
+    "url": "",
+    "title_en": "VOLVER AL FUTURO PARTE II",
+    "director": "Robert Zemeckis",
+    "country": "United States of America",
+    "year": 1989,
+    "duration": 108,
+    "genre": "Aventura, Comedia",
+    "title_es": "Regreso al futuro II",
+    "original_title": "Back to the Future Part II"
+  },
+  "volver al futuro parte iii": {
+    "url": "",
+    "title_en": "VOLVER AL FUTURO PARTE III",
+    "director": "Robert Zemeckis",
+    "country": "United States of America",
+    "year": 1990,
+    "duration": 119,
+    "genre": "Aventura, Comedia",
+    "title_es": "Regreso al futuro III",
+    "original_title": "Back to the Future Part III"
   }
 }

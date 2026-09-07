@@ -1,81 +1,9 @@
 {
-  "https://palaciolibertad.gob.ar/events/cortar-y-contar/": {
-    "ts": "2026-09-06T11:25:05",
-    "v": 2,
-    "semanas": 9,
-    "funciones": [
-      {
-        "cine": "CCK",
-        "title": "El chico en llamas",
-        "fecha": "2026-09-06",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "Tadeo Martinez",
-        "country": "",
-        "year": 2024,
-        "duration": 13,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Tres tiempos",
-        "fecha": "2026-09-06",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "Marlene Grinberg",
-        "country": "",
-        "year": 2025,
-        "duration": 100,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Romería",
-        "fecha": "2026-09-06",
-        "hora": "17:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cortar-y-contar/",
-        "ciclo": "Cortar y Contar",
-        "director": "Carla Simon",
-        "country": "",
-        "year": 2025,
-        "duration": 115,
-        "original_title": ""
-      }
-    ]
-  },
   "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/": {
-    "ts": "2026-09-06T11:25:23",
+    "ts": "2026-09-07T13:05:52",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "360 curvas",
-        "fecha": "2026-09-06",
-        "hora": "15:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
-        "ciclo": "Ciclo Mestre Mateo",
-        "director": "Alejandro Gándara y Ariadna Silva Fernández",
-        "country": "",
-        "year": 2025,
-        "duration": 80,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Ao son da nova regueifa",
-        "fecha": "2026-09-06",
-        "hora": "18:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
-        "ciclo": "Ciclo Mestre Mateo",
-        "director": "Saúl Rivas y Manolo Maseda",
-        "country": "",
-        "year": 2025,
-        "duration": 60,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "O silencio heredado",
@@ -157,7 +85,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
-    "ts": "2026-09-06T11:25:38",
+    "ts": "2026-09-07T13:06:09",
     "v": 2,
     "semanas": 9,
     "funciones": [
