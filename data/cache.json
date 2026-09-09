@@ -15768,5 +15768,25 @@
     "duration": 50,
     "genre": "Comedia, Romance",
     "original_title": "An Old Fashioned Boy"
+  },
+  "operación claridad": {
+    "url": "",
+    "title_en": "Operación claridad",
+    "director": "Tomás Díaz Cassone",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "Documental",
+    "original_title": "OPERACIÓN CLARIDAD"
+  },
+  "el nacional": {
+    "url": "https://letterboxd.com/film/el-nacional/",
+    "title_en": "The National High School",
+    "director": "Alejandro Hartmann",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "El Nacional"
   }
 }
