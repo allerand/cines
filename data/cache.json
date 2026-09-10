@@ -15788,5 +15788,65 @@
     "duration": 80,
     "genre": "Documental",
     "original_title": "El Nacional"
+  },
+  "frida, naturaleza viva": {
+    "url": "https://letterboxd.com/film/natura-bizia/",
+    "title_en": "Natura Bizia",
+    "director": "Lexeia Larrañaga",
+    "country": "Spain",
+    "year": 2021,
+    "duration": null,
+    "genre": "Documental"
+  },
+  "shrek: 25 aniversario": {
+    "url": "",
+    "title_en": "SHREK: 25 ANIVERSARIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "gioia mía": {
+    "url": "https://letterboxd.com/film/gioia-mia/",
+    "title_en": "Sweetheart",
+    "director": "Margherita Spampinato",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Drama",
+    "original_title": "Gioia mia"
+  },
+  "cemetery of splendour": {
+    "url": "https://letterboxd.com/film/cemetery-of-splendour/",
+    "title_en": "Cemetery of Splendor",
+    "director": "Apichatpong Weerasethakul",
+    "country": "UK, USA",
+    "year": 2015,
+    "duration": 122,
+    "genre": "Fantasía, Drama",
+    "title_es": "Cemetery of Splendour",
+    "original_title": "รักที่ขอนแก่น"
+  },
+  "tres adioses": {
+    "url": "https://letterboxd.com/film/three-goodbyes/",
+    "title_en": "Three Goodbyes",
+    "director": "Isabel Coixet",
+    "country": "Italy, Spain",
+    "year": 2025,
+    "duration": 122,
+    "genre": "Romance, Drama",
+    "title_es": "Tres adioses",
+    "original_title": "Tre ciotole"
+  },
+  "zona cero - colony": {
+    "url": "https://letterboxd.com/film/colony-2026/",
+    "title_en": "Colony",
+    "director": "Yeon Sang-ho",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 123,
+    "genre": "Acción, Terror",
+    "title_es": "Colony",
+    "original_title": "군체"
   }
 }
