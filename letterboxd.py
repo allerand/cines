@@ -28,6 +28,18 @@ from typing import TYPE_CHECKING, Optional
 # una "Familia" de 1992.
 _NO_HINT_MIN_YEAR = date.today().year - 8
 
+# Tolerancia al comparar la duración que publica el cine con la del candidato de
+# TMDb en fill_meta_from_tmdb. Es ancha a propósito: los cines redondean y
+# suman la tanda de trailers, así que la diferencia legítima llega a los 20
+# minutos (10/9/2026: "Hechizo de Amor" 130 publicados vs 110 reales, "Regreso
+# al futuro II" 118 vs 108), mientras que los matches equivocados se pasan por
+# 60 o más ("OLD BOY" de Cacodelphia, 119 min, matcheaba una comedia yanki de
+# 1920 de 50). Acá rechazar sale caro —TMDb es la última fuente, y sin ella la
+# película se queda sin metadata— así que sólo descartamos la contradicción
+# flagrante, en vez de los ±5 de _validate_meta, donde rechazar un candidato
+# sólo significa seguir probando los que quedan.
+_TMDB_DUR_TOL = 30
+
 from bs4 import BeautifulSoup
 
 # Playwright sólo se necesita para enrich_title (búsqueda en LB con headless
@@ -485,11 +497,13 @@ def fill_meta_from_tmdb(
     hint_year: Optional[int],
     hint_original: str,
     hint_director: str,
+    hint_duration: Optional[int] = None,
 ) -> dict:
     """
     Si a `meta` le faltan duration/country/director, los completa via TMDb.
     Requiere TMDB_API_KEY o TMDB_READ_ACCESS_TOKEN. Sin credencial, retorna meta sin tocar.
-    Valida match con hint_year (±2) y hint_director (overlap de palabras).
+    Valida match con hint_year (±2), hint_director (overlap de palabras) y
+    hint_duration (±_TMDB_DUR_TOL).
     """
     # Disparamos TMDb si falta algún campo crítico O si todavía no tenemos
     # title_es (queremos siempre el título oficial en español si existe).
@@ -509,6 +523,13 @@ def fill_meta_from_tmdb(
     # en español de OTRA película termina siendo el título que se muestra.
     check_year = hint_year or meta.get("year")
     check_director = hint_director or meta.get("director")
+    # La duración que publica el cine es lo ÚNICO que desambigua cuando la
+    # ficha no trae director ni año — el caso de Cacodelphia, que los saca del
+    # título del trailer y se queda sin nada si el trailer no matchea el
+    # formato. Sin este chequeo, acá abajo cualquier resultado de TMDb pasaba:
+    # el 9/9/2026 un lector avisó que "OLD BOY" (viernes 11 y martes 15, 119
+    # min) figuraba como una comedia yanki de 1920 de 50 minutos.
+    check_duration = hint_duration or meta.get("duration")
 
     queries: list[tuple[str, Optional[int]]] = []
     if hint_original:
@@ -535,6 +556,9 @@ def fill_meta_from_tmdb(
                     continue
             if check_director and tmeta.get("director"):
                 if not _name_overlap(check_director, tmeta["director"]):
+                    continue
+            if check_duration and tmeta.get("duration"):
+                if abs(int(tmeta["duration"]) - int(check_duration)) > _TMDB_DUR_TOL:
                     continue
 
             # Los títulos son la identidad de la película, así que los tomamos
@@ -693,7 +717,8 @@ async def enrich_title(
 
     def _accept(m: dict) -> dict:
         """Antes de aceptar un match: completar campos faltantes desde IMDb."""
-        m = fill_meta_from_external(m, title, hint_year, hint_original, hint_director)
+        m = fill_meta_from_external(m, title, hint_year, hint_original,
+                                    hint_director, hint_duration)
         cache.set(cache_key, m)
         return m
 
@@ -841,13 +866,18 @@ async def enrich_title(
         # Si IMDb puede completar campos faltantes, lo intentamos
         fallback_meta = fill_meta_from_external(
             fallback_meta, title, hint_year, hint_original, hint_director,
+            hint_duration,
         )
         cache.set(cache_key, fallback_meta)
         return fallback_meta
 
-    # 7. Último intento: rellenar empty meta directo desde IMDb (sin LB)
+    # 7. Último intento: rellenar empty meta directo desde IMDb (sin LB).
+    # Es el único paso sin un match de Letterboxd que corrobore algo —el
+    # 10/9/2026 lo necesitaban 56 de los 307 títulos de la cartelera—, así que
+    # los hints del cine son toda la validación que hay.
     empty = _empty_meta(title)
-    empty = fill_meta_from_external(empty, title, hint_year, hint_original, hint_director)
+    empty = fill_meta_from_external(empty, title, hint_year, hint_original,
+                                    hint_director, hint_duration)
     cache.set(cache_key, empty)
     return empty
 

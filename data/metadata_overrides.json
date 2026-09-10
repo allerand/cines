@@ -505,6 +505,19 @@
       "country": "México, Estados Unidos",
       "title_en": "The Devil Never Sleeps",
       "letterboxd": "https://letterboxd.com/film/the-devil-never-sleeps/"
+    },
+    {
+      "_comment": "El 'Old Boy' de Cacodelphia (viernes 11 y martes 15/9/2026, 21:00) es el de Park Chan-wook, no 'An Old Fashioned Boy' (Jerome Storm, 1920, 50 min) — que es lo que un lector encontró en la cartelera y avisó por mail el 9/9/2026. La ficha del cine no publica director ni año (el trailer de YouTube no matcheaba el formato del que _cacodelphia_trailer_meta los saca), así que el enrichment llegaba a su último paso sin nada con qué validar y se quedaba con el primer resultado de TMDb para 'OLD BOY', que se titula exactamente así. La causa está arreglada en fill_meta_from_tmdb, que ahora descarta los candidatos que contradicen los 119 minutos que el cine sí publica; este entry es el respaldo por si TMDb no llega hasta el Oldboy de 2003 (ahí es una sola palabra) y la función se queda sin ficha. El link de Letterboxd se le deja al enrichment: no se agregó a mano porque no se pudo verificar el slug contra letterboxd.com."
+    },
+    {
+      "title": "Old Boy",
+      "cine": "Cacodelphia",
+      "director": "Park Chan-wook",
+      "year": 2003,
+      "country": "Corea del Sur",
+      "genre": "Drama, Thriller",
+      "title_en": "Oldboy",
+      "original_title": "올드보이"
     }
   ]
 }
