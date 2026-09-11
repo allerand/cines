@@ -358,6 +358,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             title_meta[title] = meta
 
         print()
+        # Lo que el enrichment dejó sin ficha a propósito (sin director ni año,
+        # y el título solo no alcanzaba para elegir): al log, para completarlo
+        # con un override si hace falta en vez de adivinar.
+        from letterboxd import SIN_FICHA
+        if SIN_FICHA:
+            print(f"  ↳ {len(SIN_FICHA)} títulos sin director ni año quedaron sin ficha:")
+            for t, motivo in SIN_FICHA.items():
+                print(f"     · {t}: {motivo}")
         await lb_browser.close()
 
     # Stopwords del español (palabras que NO se capitalizan en sentence case)

@@ -1943,13 +1943,24 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
         print("(sin mails; sólo SPA)", end=" ", flush=True)
         return await scrape_cacodelphia_spa(page)
 
-    try:
-        spa = await scrape_cacodelphia_spa(page)
-    except Exception as e:
-        # La SPA es la parte frágil y ya no es crítica: perdemos las funciones
-        # de más adelante y los hints de metadata, pero la semana en curso sale
-        # entera igual.
-        print(f"(SPA falló, seguimos con el mail — {e})", end=" ", flush=True)
+    # La SPA es la parte frágil y ya no es crítica para la cartelera: sin ella
+    # se pierden las funciones de más adelante, pero la semana en curso sale
+    # entera igual. Lo que sí se pierde son las duraciones, y sin director ni
+    # año la duración es lo único que tiene el enrichment para elegir entre
+    # homónimos: el 11/9/2026 la corrida de CI salió sin ninguna y Old Boy
+    # quedó como 'Old Suffolk Boy'. Por eso tiene un segundo intento.
+    spa: list[Screening] = []
+    for intento in (1, 2):
+        try:
+            spa = await scrape_cacodelphia_spa(page)
+        except Exception as e:
+            print(f"(SPA falló, intento {intento} — {e})", end=" ", flush=True)
+            continue
+        if spa:
+            break
+        print(f"(SPA vacía, intento {intento})", end=" ", flush=True)
+    if not spa:
+        print("(seguimos sólo con el mail)", end=" ", flush=True)
         return funciones
 
     # El mail no trae duración/director/año/país, pero la pasada por la SPA ya
@@ -2103,8 +2114,15 @@ async def scrape_cacodelphia_spa(page: Page) -> list[Screening]:
 
     for href, title, ciclo in movie_links:
         url = f"https://cineartecacodelphia.com.ar{href}"
-        await page.goto(url, wait_until="networkidle")
-        await page.wait_for_timeout(2000)
+        # Una ficha que no carga no puede llevarse puestas las demás: sin la
+        # SPA el mail queda sin duraciones, y la duración es lo que usa el
+        # enrichment para elegir entre homónimos.
+        try:
+            await page.goto(url, wait_until="networkidle")
+            await page.wait_for_timeout(2000)
+        except Exception as e:
+            print(f"(la ficha de {title!r} no cargó — {e})", end=" ", flush=True)
+            continue
 
         # Duración: la página muestra "NN MIN" justo debajo del título
         full_text = await page.evaluate("document.body.innerText")

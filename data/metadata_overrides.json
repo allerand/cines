@@ -507,7 +507,7 @@
       "letterboxd": "https://letterboxd.com/film/the-devil-never-sleeps/"
     },
     {
-      "_comment": "Oldboy de Park Chan-wook (2003), reestreno en 4K en Cacodelphia (sep 2026). La ficha no publica director ni año y el trailer se titula 'Trailer Old boy 2023 - Subs. español.' —sin '·', así que no deja hints—. Sin año, el enrichment descarta la de 2003 por vieja y se queda con cualquier homónimo: el 8/9 salió 'An Old Fashioned Boy' (Jerome Storm, 1920) y el 11/9 'Old Suffolk Boy' (Louis Holder, 1936), cuya página de Letterboxd no tiene año y por eso pasa el filtro de pelis viejas. La ficha dice 119 min; va el 120 de Letterboxd."
+      "_comment": "Oldboy de Park Chan-wook (2003), reestreno en 4K en Cacodelphia (sep 2026). La ficha no publica director ni año y el trailer se titula 'Trailer Old boy 2023 - Subs. español.' —sin '·', así que no deja hints—. Sin año, el enrichment descarta la de 2003 por vieja y se queda con cualquier homónimo: el 8/9 salió 'An Old Fashioned Boy' (Jerome Storm, 1920) y el 11/9 'Old Suffolk Boy' (Louis Holder, 1936), cuya página de Letterboxd no tiene año y por eso pasa el filtro de pelis viejas. La ficha dice 119 min; va el 120 de Letterboxd. Desde el fix del enrichment sin hints, con la duración de la ficha lo encuentra solo (es la única 'Old Boy' que dura eso); el override queda para las corridas en que la ficha no se puede leer y la duración no llega."
     },
     {
       "title": "Old Boy",
@@ -520,6 +520,44 @@
       "title_en": "Oldboy",
       "original_title": "올드보이",
       "letterboxd": "https://letterboxd.com/film/oldboy/"
+    },
+    {
+      "_comment": "Tres funciones que llegaban sin director ni año y que el enrichment matcheaba con otra película que se llama parecido (11/9/2026). Desde el fix de _enrich_sin_hints quedan sin ficha en vez de equivocadas; estos entries les ponen la correcta. 'Vértigo' es el ciclo Viernes de Hitchcock del Recoleta (salía Fall 2: Deadpoint, de 2026). 'Frida, naturaleza viva' es la de Paul Leduc (salía Natura Bizia, 2021); el año es el de Letterboxd. 'Michael: La historia de Michael Jackson' es la biopic de Fuqua que da Multiplex —la ficha dice 'drama biográfico', 127 min— y salía un documental de 2009 de 50 minutos; va sin 'cine' porque el título es el de la distribuidora."
+    },
+    {
+      "title": "Vértigo",
+      "cine": "Centro Cultural Recoleta",
+      "director": "Alfred Hitchcock",
+      "country": "Estados Unidos",
+      "year": 1958,
+      "duration": 128,
+      "genre": "Thriller, Romance",
+      "title_en": "Vertigo",
+      "original_title": "Vertigo",
+      "letterboxd": "https://letterboxd.com/film/vertigo/"
+    },
+    {
+      "title": "Frida, naturaleza viva",
+      "cine": "MALBA",
+      "director": "Paul Leduc",
+      "country": "México",
+      "year": 1985,
+      "duration": 108,
+      "genre": "Historia, Drama",
+      "title_en": "Frida Still Life",
+      "original_title": "Frida, naturaleza viva",
+      "letterboxd": "https://letterboxd.com/film/frida-still-life/"
+    },
+    {
+      "title": "Michael: La Historia De Michael Jackson",
+      "director": "Antoine Fuqua",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Música, Drama",
+      "title_en": "Michael",
+      "original_title": "Michael",
+      "letterboxd": "https://letterboxd.com/film/michael-2026/"
     }
   ]
 }

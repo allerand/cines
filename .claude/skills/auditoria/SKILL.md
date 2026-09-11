@@ -62,6 +62,12 @@ Por orden de preferencia:
 3. **`data/metadata_overrides.json`** para director/año/país/Letterboxd mal
    matcheados. Verificar cada slug de Letterboxd antes de agregarlo: que
    devuelva 200 y que coincida el director.
+   Los candidatos naturales están al final del log del scrape, en «↳ N
+   títulos sin director ni año quedaron sin ficha»: son funciones que
+   llegaron sin director ni año y cuyo título solo no alcanzaba para elegir
+   película (hay homónimos, o lo que aparece sólo se le parece). Quedan
+   vacías a propósito —mejor vacía que con la ficha de otra— y cada una trae
+   el motivo.
 
 Reglas de la casa: comentar el **por qué** del fix, no el qué; y arreglar el
 dato publicado en `data/cartelera.json` además del scraper, para que la web no

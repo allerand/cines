@@ -18,7 +18,7 @@ import re
 import unicodedata
 import urllib.error
 import urllib.request
-from datetime import date
+from datetime import date, timedelta
 from pathlib import Path
 from typing import TYPE_CHECKING, Optional
 
@@ -27,6 +27,23 @@ from typing import TYPE_CHECKING, Optional
 # estrenos (Cacodelphia, Lorca). Ej.: "Familia" (Costabile, 2024) matcheaba con
 # una "Familia" de 1992.
 _NO_HINT_MIN_YEAR = date.today().year - 8
+
+# Sin hints, y con un título que no coincide con ninguno de los de la película
+# —lo normal en un estreno: 'El gran falsificador' es The Money Maker y
+# Letterboxd no conoce el título argentino—, sólo aceptamos estrenos de verdad.
+# Una película de hace cinco años con otro nombre ya no es el título local de un
+# estreno sino otra película: 'Frida, naturaleza viva' (Leduc, 1983) salía como
+# 'Natura Bizia' (2021).
+_NO_HINT_MIN_YEAR_DISTINTO = date.today().year - 2
+
+# Una película de este año o del anterior está en cartel: entre varias que se
+# llaman igual, en una sala de estrenos es ésa (ver _decidir_sin_hints).
+_ESTRENO_DESDE = date.today().year - 1
+
+# Títulos que el enrichment dejó sin ficha a propósito, con el motivo. run.py
+# los lista al final de la corrida para completarlos con un override si hace
+# falta, en vez de adivinar.
+SIN_FICHA: dict[str, str] = {}
 
 from bs4 import BeautifulSoup
 
@@ -147,6 +164,24 @@ def parse_film_soup(soup: BeautifulSoup, url: str) -> Optional[dict]:
     genres = [LB_GENRE_ES.get(s, s.replace("-", " ").capitalize()) for s in genre_slugs[:2]]
     genre = ", ".join(genres)
 
+    # Título original y alternativos ("Alternative Titles" en la pestaña de
+    # detalles): con ellos se sabe si la película se llama de verdad como la
+    # anuncia el cine —Oldboy figura también como 'Old Boy'; Old Suffolk Boy,
+    # no—. Sólo los de alfabeto latino, que son los que se pueden comparar. No
+    # van al caché (ver _para_cache): son muchos y sólo sirven para validar.
+    titulos = [title_en]
+    original = soup.find("h2", class_="originalname")
+    if original:
+        titulos.append(original.get_text(strip=True))
+    for h3 in soup.find_all("h3"):
+        if h3.get_text(strip=True).lower().startswith("alternative title"):
+            lista = h3.find_next_sibling("div")
+            if lista:
+                titulos += lista.get_text(" ", strip=True).split(", ")
+            break
+    titulos = [t for t in dict.fromkeys(t.strip() for t in titulos)
+               if t and re.search(r"[a-z]", _ascii(t))]
+
     return {
         "url": url,
         "title_en": title_en,
@@ -155,6 +190,7 @@ def parse_film_soup(soup: BeautifulSoup, url: str) -> Optional[dict]:
         "year": year,
         "duration": duration,
         "genre": genre,
+        "titulos": titulos,
     }
 
 
@@ -205,17 +241,130 @@ class LetterboxdCache:
         return key.lower() in self._data
 
 
-_STOPWORDS_NAME = {"de", "del", "la", "el", "los", "las", "y", "and", "the"}
+def _ascii(s: str) -> str:
+    """Minúsculas y sin acentos: 'Fazáns' → 'fazans'."""
+    return unicodedata.normalize("NFKD", s or "").encode("ascii", "ignore").decode("ascii").lower()
+
+
+def _lev(a: str, b: str) -> int:
+    """Distancia de edición entre dos palabras."""
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def _misma_palabra(a: str, b: str) -> bool:
+    """Iguales, o con un error de tipeo: las fuentes escriben mal los apellidos
+    ('Frenkel' por Frankel, 'Fanzas' por Fazáns) y no por eso es otra persona."""
+    if a == b:
+        return True
+    n = min(len(a), len(b))
+    return n >= 5 and _lev(a, b) <= (1 if n < 6 else 2)
+
+
+_PARTICULAS = {"de", "del", "la", "las", "los", "van", "von", "da", "di", "du", "le"}
 
 
 def _name_overlap(a: str, b: str) -> bool:
-    """True si dos nombres comparten al menos una palabra significativa (>3 chars)."""
-    if not a or not b:
-        return False
-    def words(s: str) -> set[str]:
-        norm = unicodedata.normalize("NFKD", s.lower()).encode("ascii", "ignore").decode("ascii")
-        return {w for w in re.split(r"[\s,;.\-]+", norm) if len(w) > 3 and w not in _STOPWORDS_NAME}
-    return bool(words(a) & words(b))
+    """True si algún director de `a` y alguno de `b` comparten el apellido.
+
+    Antes alcanzaba con cualquier palabra en común, y la que más se repite es
+    el nombre de pila: 'Joaquín Pereyra' validaba un corto de 'Joaquín Farías
+    Caamaño' y la función salía con el Letterboxd de otra película. Ahora la
+    palabra compartida tiene que ser la última de alguno de los dos nombres —el
+    apellido, o el nombre en el orden coreano: 'Park Chan-wook' y 'Chan-wook
+    Park' coinciden igual—, con tolerancia a un error de tipeo.
+    """
+    def nombres(s: str) -> list[list[str]]:
+        out = []
+        for n in re.split(r",|;|&|\s+y\s+|\s+and\s+", s or ""):
+            toks = [w for w in re.split(r"[\s.\-]+", _ascii(n))
+                    if len(w) > 1 and w not in _PARTICULAS]
+            if toks:
+                out.append(toks)
+        return out
+    for x in nombres(a):
+        for y in nombres(b):
+            for tx in x:
+                for ty in y:
+                    if (tx == x[-1] or ty == y[-1]) and _misma_palabra(tx, ty):
+                        return True
+    return False
+
+
+# Conectores que no cambian un título ('Romeo & Ofelia' = 'Romeo y Ofelia') y
+# artículos, que no cuentan para decidir si un título contiene a otro.
+_CONECTORES = {"y", "and", "e", "et", "und"}
+_ARTICULOS = _CONECTORES | {"el", "la", "los", "las", "un", "una", "de", "del", "en",
+                            "the", "a", "an", "of", "le", "les", "des", "du", "il",
+                            "lo", "o", "da", "do", "das", "dos", "di"}
+
+
+def _norm_titulo(t: str) -> str:
+    """'Old Boy' y 'Oldboy' → 'oldboy'."""
+    return "".join(w for w in re.split(r"[^a-z0-9]+", _ascii(t)) if w and w not in _CONECTORES)
+
+
+def _variantes_titulo(t: str, separadores: tuple = (":", " - ", " – ")) -> set[str]:
+    """El título y sus formas cortas: sin subtítulo ('Oldboy: Cinco días para
+    vengarse' → Oldboy) y con o sin lo que va entre paréntesis ('Moonrise
+    (Noche sin luna)'), salvo que sea un año.
+
+    Al título del cine se le corta sólo lo que va después de un guion, que es
+    donde agrega cosas ('Zona Cero - Colony', 'Backrooms - Versión
+    extendida'); los dos puntos son parte del nombre, y 'Spider-Man: Un día
+    nuevo' sin ellos es 'Spider-Man', que es otra película."""
+    t = t or ""
+    vs = {t}
+    for sep in separadores:
+        if sep in t:
+            vs.add(t.split(sep)[0])
+    m = re.search(r"\(([^)]+)\)", t)
+    if m:
+        vs.add(re.sub(r"\([^)]*\)", "", t))
+        if not re.fullmatch(r"\s*(19|20)\d{2}\s*", m.group(1)):
+            vs.add(m.group(1))
+    return {_norm_titulo(v) for v in vs} - {""}
+
+
+def _palabras(t: str) -> set[str]:
+    return {w for w in re.split(r"[^a-z0-9]+", _ascii(t)) if w and w not in _ARTICULOS}
+
+
+def clase_titulo(titulos_fuente: list[str], titulos_film: list[str]) -> str:
+    """Compara cómo anuncia la película el cine con los títulos que tiene.
+
+      "exacto"   coincide con el título, el original o algún alternativo.
+      "pisado"   la película tiene todas las palabras del cine y además otras:
+                 'Old Boy' → 'Old Suffolk Boy', 'Tu rostro' → 'Tengo miedo de
+                 olvidar tu rostro', 'Vértigo' → 'Vértigo 2: Punto muerto'. Es
+                 lo que devuelve un buscador cuando no tiene la película —otra
+                 que se llama parecido—; una traducción no se parece así. Si el
+                 cine cortó un título largo ('Tadeo el explorador y la
+                 lámpara…'), la película empieza igual y eso no cuenta.
+      "distinto" ninguna de las dos. Es lo normal en un estreno cuyo título
+                 argentino Letterboxd no conoce ('El gran falsificador' es The
+                 Money Maker), así que por sí solo no dice nada.
+    """
+    fuente = [t for t in titulos_fuente if t]
+    film = [t for t in titulos_film if t]
+    vf: set[str] = set()
+    for t in fuente:
+        vf |= _variantes_titulo(t, separadores=(" - ", " – "))
+    if any(vf & _variantes_titulo(t) for t in film):
+        return "exacto"
+    for tf in fuente:
+        pw = _palabras(tf)
+        for t in film:
+            if pw and pw < _palabras(t):
+                cortado = len(pw) >= 3 and _norm_titulo(t).startswith(_norm_titulo(tf))
+                if not cortado:
+                    return "pisado"
+    return "distinto"
 
 
 def _validate_meta(
@@ -223,16 +372,24 @@ def _validate_meta(
     hint_year: Optional[int],
     hint_director: str,
     hint_duration: Optional[int] = None,
+    clase: Optional[str] = None,
 ) -> bool:
     """
     Decide si el match de Letterboxd es coherente con la metadata del cine.
       - Si hint_year ±2 difiere del LB year → rechazar
-      - Si hint_director y LB director no comparten ninguna palabra → rechazar
+      - Si hint_director y LB director no comparten el apellido → rechazar
       - Si meta no trae director ni year, no podemos validar → rechazar también
         cuando hay hint_director (mejor empty que wrong)
       - Si hint_duration ±5 difiere del LB duration → rechazar
-      - Sin NINGÚN hint, rechazar pelis más viejas que _NO_HINT_MIN_YEAR
-        (homónimos equivocados en salas de estrenos).
+      - Sin director que lo confirme, un título "pisado" es otra película que
+        se llama parecido → rechazar. `clase` es la de clase_titulo; sin ella
+        no se mira el título.
+      - Sin director ni año, la película tiene que tener año —si no, no hay con
+        qué descartar un homónimo viejo: así pasó 'Old Suffolk Boy', 1936 y sin
+        año en Letterboxd, por 'Old Boy'—, no puede ser más vieja que
+        _NO_HINT_MIN_YEAR y, si el título no coincide, tampoco que
+        _NO_HINT_MIN_YEAR_DISTINTO. Esas funciones las decide
+        _decidir_sin_hints; esto queda de red por si una llega por otro lado.
     """
     if hint_year and meta.get("year"):
         if abs(int(meta["year"]) - int(hint_year)) > 2:
@@ -246,12 +403,37 @@ def _validate_meta(
     if hint_duration and meta.get("duration"):
         if abs(int(meta["duration"]) - int(hint_duration)) > 5:
             return False
-    # Sin ningún hint para desambiguar, una peli claramente vieja es casi siempre
-    # un homónimo equivocado (salas de estrenos). Mejor empty que wrong.
-    if not hint_year and not hint_director and meta.get("year"):
-        if int(meta["year"]) < _NO_HINT_MIN_YEAR:
+    if not hint_director and clase == "pisado":
+        return False
+    if not hint_year and not hint_director:
+        year = meta.get("year")
+        if not year or int(year) < _NO_HINT_MIN_YEAR:
+            return False
+        if clase == "distinto" and int(year) < _NO_HINT_MIN_YEAR_DISTINTO:
             return False
     return True
+
+
+def _clase_de(meta: dict, title: str, hint_original: str = "") -> Optional[str]:
+    """clase_titulo de una ficha. Las del caché no guardan los títulos
+    alternativos, así que la primera vez se vuelve a leer la página y la clase
+    queda anotada en la ficha."""
+    if meta.get("clase_titulo"):
+        return meta["clase_titulo"]
+    titulos = meta.get("titulos")
+    if titulos is None and meta.get("url"):
+        s = fetch_film_page(meta["url"])
+        titulos = ((parse_film_soup(s, meta["url"]) if s else None) or {}).get("titulos")
+    if not titulos:
+        return None
+    meta["clase_titulo"] = clase_titulo([title, hint_original], titulos)
+    return meta["clase_titulo"]
+
+
+def _para_cache(meta: dict) -> dict:
+    """La ficha sin los títulos alternativos: ocupan y sólo sirven para
+    validar, y la clase ya quedó calculada."""
+    return {k: v for k, v in meta.items() if k != "titulos"}
 
 
 _SPANISH_STOPWORDS = {"el", "la", "los", "las", "un", "una", "de", "del", "y", "a"}
@@ -421,7 +603,7 @@ def fetch_tmdb_movie_meta(movie_id: int) -> dict:
     /translations). Si TMDb no tiene una traducción al español, queda vacío
     para que el caller use el título original.
     """
-    data = _tmdb_request(f"/movie/{movie_id}", {"append_to_response": "credits,translations", "language": "en-US"})
+    data = _tmdb_request(f"/movie/{movie_id}", {"append_to_response": "credits,translations,alternative_titles", "language": "en-US"})
     if not data:
         return {}
     out: dict = {}
@@ -462,12 +644,20 @@ def fetch_tmdb_movie_meta(movie_id: int) -> dict:
     title_es = ""
     priority = ["AR", "ES", "MX", "CL", "UY"]
     by_iso: dict[str, str] = {}
+    # Todos los títulos de la película, para compararlos con el del cine (ver
+    # clase_titulo): traducciones y alternativos de cada país.
+    titulos = [data.get("title") or "", data.get("original_title") or ""]
     for tr in data.get("translations", {}).get("translations", []):
+        title = ((tr.get("data") or {}).get("title") or "").strip()
+        if title:
+            titulos.append(title)
         if tr.get("iso_639_1") != "es":
             continue
-        title = (tr.get("data") or {}).get("title", "").strip()
         if title:
             by_iso[tr.get("iso_3166_1", "")] = title
+    for alt in (data.get("alternative_titles") or {}).get("titles", []):
+        titulos.append((alt.get("title") or "").strip())
+    out["titulos"] = [t for t in dict.fromkeys(titulos) if t and re.search(r"[a-z]", _ascii(t))]
     for code in priority:
         if code in by_iso:
             title_es = by_iso[code]
@@ -485,11 +675,16 @@ def fill_meta_from_tmdb(
     hint_year: Optional[int],
     hint_original: str,
     hint_director: str,
+    hint_duration: Optional[int] = None,
 ) -> dict:
     """
     Si a `meta` le faltan duration/country/director, los completa via TMDb.
     Requiere TMDB_API_KEY o TMDB_READ_ACCESS_TOKEN. Sin credencial, retorna meta sin tocar.
-    Valida match con hint_year (±2) y hint_director (overlap de palabras).
+    Valida match con hint_year (±2) y hint_director (apellido en común).
+
+    Completa desde UNA sola película, la primera que pasa los filtros. Antes
+    seguía mirando candidatos mientras faltara algún campo y cada uno ponía lo
+    suyo: el país de una, el título en español de otra.
     """
     # Disparamos TMDb si falta algún campo crítico O si todavía no tenemos
     # title_es (queremos siempre el título oficial en español si existe).
@@ -533,31 +728,33 @@ def fill_meta_from_tmdb(
             if check_year and tmeta.get("year"):
                 if abs(int(tmeta["year"]) - int(check_year)) > 2:
                     continue
-            if check_director and tmeta.get("director"):
-                if not _name_overlap(check_director, tmeta["director"]):
+            if check_director:
+                # Sabiendo de quién es, el candidato tiene que decirlo. Uno que
+                # apenas no lo contradice (TMDb sin director) no alcanza: pondría
+                # el país, la duración o el título de lo que puede ser otra
+                # película, y un título ajeno es lo primero que ve la gente.
+                if not (tmeta.get("director")
+                        and _name_overlap(check_director, tmeta["director"])):
+                    continue
+            else:
+                # Sin director con qué confirmar, TMDb es la única fuente: al
+                # menos que no sea otra película que se llama parecido ('An Old
+                # Fashioned Boy' por Old Boy), que la duración no la contradiga
+                # y, si tampoco hay año, que no sea un homónimo viejo.
+                if clase_titulo([title, hint_original], tmeta.get("titulos", [])) == "pisado":
+                    continue
+                if (hint_duration and tmeta.get("duration")
+                        and abs(int(tmeta["duration"]) - int(hint_duration)) > 5):
+                    continue
+                if not check_year and (not tmeta.get("year")
+                                       or int(tmeta["year"]) < _NO_HINT_MIN_YEAR):
                     continue
 
-            # Los títulos son la identidad de la película, así que los tomamos
-            # sólo de un candidato CONFIRMADO (el director coincide), nunca de
-            # uno que apenas no se contradice. Si ya sabemos de quién es la
-            # película y TMDb no dice director, el candidato no alcanza: una
-            # duración o un país de más pasan desapercibidos, un título de otra
-            # película es lo primero que ve la gente.
-            # Cuando no sabemos nada (sin match de Letterboxd), TMDb es la única
-            # fuente que hay y ahí sí aceptamos lo que traiga.
-            campos = ["director", "country", "year", "duration", "genre"]
-            confirmado = (not check_director) or bool(
-                tmeta.get("director") and _name_overlap(check_director, tmeta["director"])
-            )
-            if confirmado:
-                campos += ["title_en", "title_es", "original_title"]
-
-            for f in campos:
+            for f in ("director", "country", "year", "duration", "genre",
+                      "title_en", "title_es", "original_title"):
                 if not meta.get(f) and tmeta.get(f):
                     meta[f] = tmeta[f]
-            if (meta.get("duration") and meta.get("country") and meta.get("director")
-                    and meta.get("title_es")):
-                return meta
+            return meta
     return meta
 
 
@@ -647,11 +844,23 @@ async def enrich_title(
       3. Slug del título local → fetch + validar
       4. Letterboxd internal search → fetch + validar
       5. DuckDuckGo (con throttle) `letterboxd <title> <director>` → fetch + validar
-      6. Si nada validó pero la búsqueda interna devolvió SOMETHING (sin hints),
-         aceptarlo como mejor esfuerzo.
+    Sin director ni año va por _enrich_sin_hints, que junta los candidatos de
+    todas las fuentes y elige sólo si uno se destaca.
     """
     if is_non_film(title):
         return _empty_meta(title)
+
+    # Un año entre paréntesis al final es un dato de la fuente, no parte del
+    # nombre: 'Moana (2026)' separa la de acción real de la animada de 2016,
+    # que con el título solo empatarían.
+    if not hint_year:
+        m_anio = re.search(r"\(((?:19|20)\d{2})\)\s*$", title)
+        if m_anio:
+            hint_year = int(m_anio.group(1))
+
+    # Sin director ni año, validar candidato por candidato no alcanza.
+    if not hint_year and not hint_director:
+        return await _enrich_sin_hints(title, page, cache, delay, hint_original, hint_duration)
 
     # Key del cache scoped por año: dos películas homónimas en cartel al mismo
     # tiempo (ej. "Obsesión" de Visconti en Lugones y la de Curry Barker en
@@ -670,7 +879,8 @@ async def enrich_title(
         if not cached.get("url"):
             # Empty cached → re-intentar siempre por si la red estaba caída
             continue
-        if _validate_meta(cached, hint_year, hint_director, hint_duration):
+        if _validate_meta(cached, hint_year, hint_director, hint_duration,
+                          None if hint_director else _clase_de(cached, title, hint_original)):
             # Auto-backfill de campos nuevos (ej. genre se agregó al parser
             # después de muchas entries estar cacheadas). Si el cached tiene
             # URL pero le falta genre, re-fetch sólo para completar el campo.
@@ -691,9 +901,14 @@ async def enrich_title(
         s = fetch_film_page(u)
         return parse_film_soup(s, u) if s else None
 
+    def _clase(m: dict) -> Optional[str]:
+        # Con un director que confirme, el título no hace falta mirarlo.
+        return None if hint_director else _clase_de(m, title, hint_original)
+
     def _accept(m: dict) -> dict:
-        """Antes de aceptar un match: completar campos faltantes desde IMDb."""
-        m = fill_meta_from_external(m, title, hint_year, hint_original, hint_director)
+        """Antes de aceptar un match: completar campos faltantes desde TMDb."""
+        m = fill_meta_from_external(_para_cache(m), title, hint_year, hint_original,
+                                    hint_director, hint_duration)
         cache.set(cache_key, m)
         return m
 
@@ -709,15 +924,12 @@ async def enrich_title(
         candidates.append(f"https://letterboxd.com/film/{base_slug}-{hint_year}/")
     candidates.append(f"https://letterboxd.com/film/{base_slug}/")
 
-    fallback_meta: Optional[dict] = None  # mejor esfuerzo si nada valida
-
     for u in candidates:
         m = _try_url(u)
         if not m:
             continue
-        if _validate_meta(m, hint_year, hint_director, hint_duration):
+        if _validate_meta(m, hint_year, hint_director, hint_duration, _clase(m)):
             return _accept(m)
-        fallback_meta = fallback_meta or m
 
     # 4. Letterboxd internal search — devuelve TODOS los matches, validamos cada uno
     # OJO: agregar año al query rompe la búsqueda interna; usar sólo el título
@@ -744,9 +956,8 @@ async def enrich_title(
             m = _try_url(u)
             if not m:
                 continue
-            if _validate_meta(m, hint_year, hint_director, hint_duration):
+            if _validate_meta(m, hint_year, hint_director, hint_duration, _clase(m)):
                 return _accept(m)
-            fallback_meta = fallback_meta or m
     except Exception:
         pass
 
@@ -795,9 +1006,8 @@ async def enrich_title(
             m = _try_url(lb_url)
             if not m:
                 continue
-            if _validate_meta(m, hint_year, hint_director, hint_duration):
+            if _validate_meta(m, hint_year, hint_director, hint_duration, _clase(m)):
                 return _accept(m)
-            fallback_meta = fallback_meta or m
 
     # 5bis. TMDb search → IMDb id → LB. Cubre títulos locales cuyo título
     # canónico en LB está en otro idioma (slug inadivinable) y que la
@@ -808,9 +1018,8 @@ async def enrich_title(
         m = _try_url(lb_url)
         if not m:
             continue
-        if _validate_meta(m, hint_year, hint_director, hint_duration):
+        if _validate_meta(m, hint_year, hint_director, hint_duration, _clase(m)):
             return _accept(m)
-        fallback_meta = fallback_meta or m
 
     # 6. DuckDuckGo fallback (con throttle, último recurso)
     if hint_director:
@@ -819,37 +1028,278 @@ async def enrich_title(
             m = _try_url(u)
             if not m:
                 continue
-            if _validate_meta(m, hint_year, hint_director, hint_duration):
+            if _validate_meta(m, hint_year, hint_director, hint_duration, _clase(m)):
                 return _accept(m)
-            fallback_meta = fallback_meta or m
 
-    # 6. Si no validamos nada pero teníamos algún match razonable y NO hay hints
-    # estrictos, aceptarlo como mejor esfuerzo — PERO sólo si la duración no lo
-    # contradice. Antes la duración se ignoraba acá, así que un match con
-    # duración incompatible (peli homónima distinta) se colaba igual.
-    fb_dur_ok = not (
-        hint_duration and fallback_meta and fallback_meta.get("duration")
-        and abs(int(fallback_meta["duration"]) - int(hint_duration)) > 5
-    )
-    # Sin hints, no aceptamos como mejor esfuerzo una peli claramente vieja
-    # (homónimo equivocado en salas de estrenos).
-    fb_recent_ok = not (
-        not hint_year and not hint_director and fallback_meta and fallback_meta.get("year")
-        and int(fallback_meta["year"]) < _NO_HINT_MIN_YEAR
-    )
-    if fallback_meta and not (hint_year or hint_director) and fb_dur_ok and fb_recent_ok:
-        # Si IMDb puede completar campos faltantes, lo intentamos
-        fallback_meta = fill_meta_from_external(
-            fallback_meta, title, hint_year, hint_original, hint_director,
-        )
-        cache.set(cache_key, fallback_meta)
-        return fallback_meta
+    # (Acá había un "mejor esfuerzo" que, sin hints, aceptaba el primer
+    # candidato que NO había validado. Esas funciones ahora van por
+    # _enrich_sin_hints; con hints, un candidato que no valida es otra película.)
 
-    # 7. Último intento: rellenar empty meta directo desde IMDb (sin LB)
+    # 7. Último intento: rellenar empty meta directo desde TMDb (sin LB)
     empty = _empty_meta(title)
-    empty = fill_meta_from_external(empty, title, hint_year, hint_original, hint_director)
+    empty = fill_meta_from_external(empty, title, hint_year, hint_original, hint_director,
+                                    hint_duration)
     cache.set(cache_key, empty)
     return empty
+
+
+# Tope de candidatos a mirar sin hints: los primeros de cada buscador alcanzan
+# para saber si hay homónimos, y cada uno cuesta dos o tres requests.
+_MAX_CANDIDATOS = 10
+
+
+def _mismo_film(a: dict, b: dict) -> bool:
+    return (a.get("year") == b.get("year")
+            and _norm_titulo(a.get("title_en", "")) == _norm_titulo(b.get("title_en", "")))
+
+
+def _lista(ms: list[dict]) -> str:
+    return ", ".join(f"{m.get('title_en')} ({m.get('year')})" for m in ms[:4])
+
+
+def _decidir_sin_hints(
+    fuente: list[str],
+    hint_duration: Optional[int],
+    candidatos: list[tuple[dict, str]],
+    homonimo_fuera: bool = False,
+) -> tuple[Optional[dict], str]:
+    """
+    Elige entre los candidatos de una función que no trae director ni año.
+    `fuente` son los títulos con que la anuncia el cine; `candidatos`, pares
+    (ficha, vía) con vía "slug", "busqueda" (Letterboxd), "imdb" o "tmdb".
+    Devuelve (ficha elegida o None, motivo).
+
+    Sólo elige si uno se destaca sin discusión:
+      1. Afuera los que no tienen año, los que contradicen la duración y los de
+         título "pisado" (ver clase_titulo).
+      2. Si hay películas que se llaman exactamente así:
+         - con la duración de la función, gana la única que tiene duración y
+           coincide, sea del año que sea: Old Boy de 119 min es Oldboy (2003,
+           120 min) y no la 'Old Boy' de 2018;
+         - si no, sólo si es una sola y no es vieja;
+         - si son varias (con o sin duración), sólo si la más nueva es un
+           estreno (_ESTRENO_DESDE) y no empata con otra del mismo año: 'La
+           Odisea' es la de Nolan y no la miniserie de 1997; 'Código:
+           Venganza', Mutiny (2026) y no Tin Soldier (2025), que en su momento
+           se estrenó con el mismo nombre. Si no, no hay forma de saber cuál: 'Vértigo' es la de
+           Hitchcock, una de 2019 y también 'Fall' (2022), que en castellano se
+           llamó así. Lo del estreno es una apuesta de sala comercial: en un
+           ciclo de repertorio sin fichas pierde ('Los amos del tiempo' de
+           Laloux contra una mexicana de 2025), pero sin ella las películas
+           más vistas de los multiplex quedarían sin ficha.
+      3. Si ninguna se llama así, puede ser el título local de un estreno: la
+         primera que proponen IMDb o TMDb —que conocen los títulos de cada
+         país— siempre que sea de los últimos dos años. No las que salen de
+         adivinar el slug o de la búsqueda de Letterboxd: ahí un título que no
+         coincide es otra película, no una traducción. Y tampoco si existe
+         una película que se llama exactamente así, aunque no sirva porque
+         dura otra cosa o no está en Letterboxd (`homonimo_fuera`: la vio
+         IMDb): entonces el título es de ésa, y la otra sólo se le parece. El
+         'Islandia' de Cacodelphia es un documental que Letterboxd no tiene;
+         'Spider Island' sí, y dura 95 minutos contra 94.
+    """
+    exactos: list[dict] = []
+    traducidos: list[dict] = []
+    homonimos: list[dict] = []   # se llaman así pero no sirven
+    for m, via in candidatos:
+        clase = clase_titulo(fuente, m.get("titulos") or [m.get("title_en", "")])
+        m["clase_titulo"] = clase
+        if not m.get("year") or (hint_duration and m.get("duration")
+                                 and abs(int(m["duration"]) - int(hint_duration)) > 5):
+            if clase == "exacto":
+                homonimos.append(m)
+            continue
+        if clase == "exacto":
+            lista = exactos
+        elif clase == "distinto" and via in ("imdb", "tmdb"):
+            lista = traducidos
+        else:
+            continue
+        if not any(_mismo_film(m, otro) for otro in lista):
+            lista.append(m)
+
+    def unico_estreno(ms: list[dict]) -> Optional[dict]:
+        """La más nueva, si es un estreno y no empata con otra del mismo año."""
+        anio = max(int(m["year"]) for m in ms)
+        nuevas = [m for m in ms if int(m["year"]) == anio]
+        return nuevas[0] if anio >= _ESTRENO_DESDE and len(nuevas) == 1 else None
+
+    if exactos:
+        if hint_duration:
+            con_duracion = [m for m in exactos if m.get("duration")]
+            if len(con_duracion) == 1:
+                return con_duracion[0], "título y duración"
+            if len(con_duracion) > 1:
+                if unico_estreno(con_duracion):
+                    return unico_estreno(con_duracion), "el único estreno entre varias que se llaman así"
+                return None, f"varias se llaman así y duran lo mismo: {_lista(con_duracion)}"
+        if len(exactos) > 1:
+            if unico_estreno(exactos):
+                return unico_estreno(exactos), "el único estreno entre varias que se llaman así"
+            return None, f"varias se llaman así: {_lista(exactos)}"
+        m = exactos[0]
+        if int(m["year"]) >= _NO_HINT_MIN_YEAR:
+            return m, "título"
+        return None, f"la única que se llama así es {_lista([m])}, y puede ser otra"
+
+    if traducidos and (homonimos or homonimo_fuera):
+        cuales = f": {_lista(homonimos)}" if homonimos else " fuera de Letterboxd"
+        return None, (f"hay películas que se llaman así{cuales}; "
+                      f"{_lista(traducidos[:1])} sólo se le parece")
+    for m in traducidos:
+        if int(m["year"]) >= _NO_HINT_MIN_YEAR_DISTINTO:
+            return m, "título local de un estreno"
+    if traducidos:
+        return None, f"ninguna se llama así y lo que aparece no es estreno: {_lista(traducidos)}"
+    return None, "ninguna película se llama así"
+
+
+def _tmdb_candidatos(title: str, hint_original: str) -> list[tuple[dict, str]]:
+    """Fichas de TMDb, para cuando Letterboxd no tiene nada (una película
+    argentina chica, un estreno que todavía no cargaron)."""
+    if not _tmdb_credential()[0]:
+        return []
+    out: list[tuple[dict, str]] = []
+    vistos: set[int] = set()
+    for q in dict.fromkeys(x for x in (hint_original, title) if x):
+        for cand in tmdb_search_movie(q):
+            if not cand.get("id") or cand["id"] in vistos:
+                continue
+            vistos.add(cand["id"])
+            tmeta = fetch_tmdb_movie_meta(cand["id"])
+            if tmeta:
+                out.append((tmeta, "tmdb"))
+    return out
+
+
+async def _enrich_sin_hints(
+    title: str,
+    page: "Page",
+    cache: LetterboxdCache,
+    delay: float,
+    hint_original: str,
+    hint_duration: Optional[int],
+) -> dict:
+    """
+    Enrichment de las funciones que llegan sin director ni año —Lorca,
+    Multiplex, los comerciales de La Nación, Cacodelphia—: el título, a lo sumo
+    con la duración, es todo lo que hay.
+
+    Con director o año, cada candidato se valida contra el dato y gana el
+    primero que coincide. Sin ellos no hay contra qué validar, y "el primero"
+    era el que devolvía primero algún buscador: así salieron 'Old Suffolk Boy'
+    (1936) por Old Boy, 'Spider Island' por el documental 'Islandia' y 'Fall 2'
+    por el Vértigo de Hitchcock. Acá se juntan los candidatos de todas las
+    fuentes y se elige sólo si uno se destaca (_decidir_sin_hints). Si no, la
+    función queda sin ficha y el motivo va a SIN_FICHA: una fila vacía se nota
+    y se completa; la ficha de otra película se publica, se postea y nadie se
+    entera.
+    """
+    cached = cache.get(title) if cache.has(title) else None
+    if cached and cached.get("sin_hints"):
+        # Una decisión de esta misma lógica: vale mientras la duración no la
+        # contradiga.
+        if not (hint_duration and cached.get("duration")
+                and abs(int(cached["duration"]) - int(hint_duration)) > 5):
+            return cached
+    elif cached and cached.get("sin_ficha"):
+        # Quedó sin ficha porque no se pudo elegir. Se vuelve a intentar a los
+        # tres días, o antes si ahora llega una duración que antes no (la ficha
+        # de Cacodelphia a veces no se puede leer y la duración no viene).
+        reciente = cached.get("fecha", "") >= (date.today() - timedelta(days=3)).isoformat()
+        if reciente and cached.get("con_duracion") == bool(hint_duration):
+            SIN_FICHA[title] = cached["sin_ficha"]
+            return cached
+
+    search_title = title.title() if title == title.upper() else title
+    fuente = [title, hint_original]
+    candidatos: list[tuple[dict, str]] = []
+    urls: set[str] = set()
+
+    def probar(u: Optional[str], via: str) -> None:
+        if not u or u in urls or len(candidatos) >= _MAX_CANDIDATOS:
+            return
+        urls.add(u)
+        s = fetch_film_page(u)
+        m = parse_film_soup(s, u) if s else None
+        if m:
+            candidatos.append((m, via))
+
+    # 1. El slug que saldría del título (y del original, si lo hay).
+    if hint_original:
+        probar(f"https://letterboxd.com/film/{slugify(hint_original)}/", "slug")
+    probar(f"https://letterboxd.com/film/{slugify(search_title)}/", "slug")
+
+    # 2. La búsqueda de Letterboxd.
+    await asyncio.sleep(delay)
+    try:
+        from urllib.parse import quote_plus
+        await page.goto(
+            f"https://letterboxd.com/search/films/{quote_plus(hint_original or search_title)}/",
+            wait_until="domcontentloaded", timeout=20000,
+        )
+        await page.wait_for_timeout(1500)
+        soup = BeautifulSoup(await page.content(), "html.parser")
+        hrefs: list[str] = []
+        for a in soup.find_all("a", href=re.compile(r"^/film/[^/]+/?$")):
+            if a["href"] not in hrefs:
+                hrefs.append(a["href"])
+        for href in hrefs[:5]:
+            probar("https://letterboxd.com" + href.rstrip("/") + "/", "busqueda")
+    except Exception:
+        pass
+
+    # 3. IMDb, que conoce el título de cada país y encuentra la película aunque
+    # el cine la anuncie en castellano. Van todos sus candidatos, también los
+    # viejos: un homónimo que se llama igual es justamente lo que hace dudar.
+    vistos_tt: set[str] = set()
+    homonimo_fuera = False
+    for q in dict.fromkeys(x for x in (hint_original, search_title) if x):
+        for cand in imdb_suggest(q):
+            # Que IMDb conozca una película con este mismo nombre ya dice algo,
+            # esté o no en Letterboxd (ver _decidir_sin_hints).
+            if clase_titulo(fuente, [cand.get("title", "")]) == "exacto":
+                homonimo_fuera = True
+            if cand["tt"] not in vistos_tt and len(candidatos) < _MAX_CANDIDATOS:
+                vistos_tt.add(cand["tt"])
+                probar(letterboxd_url_from_imdb(cand["tt"]), "imdb")
+
+    # 4. TMDb, sólo si hasta acá no apareció nadie que se llame así ('Obsesión'
+    # de Curry Barker: el slug está en inglés e IMDb no la encuentra).
+    elegido, motivo = _decidir_sin_hints(fuente, hint_duration, candidatos, homonimo_fuera)
+    if not elegido and not any(m.get("clase_titulo") == "exacto" for m, _ in candidatos):
+        for u in tmdb_letterboxd_candidates(search_title, hint_original, None):
+            probar(u, "tmdb")
+        elegido, motivo = _decidir_sin_hints(fuente, hint_duration, candidatos, homonimo_fuera)
+
+    # 5. Nada en Letterboxd: la ficha sale de TMDb, con el mismo criterio.
+    if not elegido and not candidatos:
+        elegido, motivo = _decidir_sin_hints(
+            fuente, hint_duration, _tmdb_candidatos(search_title, hint_original), homonimo_fuera)
+
+    if elegido and elegido.get("url"):
+        # Lo que falte lo completa TMDb, que tiene que coincidir con el
+        # director que dice Letterboxd.
+        meta = fill_meta_from_external(_para_cache(elegido), title, None, hint_original, "")
+    elif elegido:
+        meta = _empty_meta(title)
+        for f in ("director", "country", "year", "duration", "genre", "title_es", "original_title"):
+            if elegido.get(f):
+                meta[f] = elegido[f]
+    else:
+        meta = _empty_meta(title)
+        SIN_FICHA[title] = motivo
+        if candidatos:
+            # Con candidatos en la mano y ninguno elegible, mañana la respuesta
+            # va a ser la misma. Sin ninguno puede haber sido la red: se
+            # reintenta en la próxima corrida.
+            meta.update(sin_ficha=motivo, fecha=date.today().isoformat(),
+                        con_duracion=bool(hint_duration))
+        cache.set(title, meta)
+        return meta
+    meta["sin_hints"] = motivo
+    cache.set(title, meta)
+    return meta
 
 
 def _empty_meta(title: str) -> dict:
