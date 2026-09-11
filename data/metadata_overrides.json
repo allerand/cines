@@ -505,6 +505,21 @@
       "country": "México, Estados Unidos",
       "title_en": "The Devil Never Sleeps",
       "letterboxd": "https://letterboxd.com/film/the-devil-never-sleeps/"
+    },
+    {
+      "_comment": "Oldboy de Park Chan-wook (2003), reestreno en 4K en Cacodelphia (sep 2026). La ficha no publica director ni año y el trailer se titula 'Trailer Old boy 2023 - Subs. español.' —sin '·', así que no deja hints—. Sin año, el enrichment descarta la de 2003 por vieja y se queda con cualquier homónimo: el 8/9 salió 'An Old Fashioned Boy' (Jerome Storm, 1920) y el 11/9 'Old Suffolk Boy' (Louis Holder, 1936), cuya página de Letterboxd no tiene año y por eso pasa el filtro de pelis viejas. La ficha dice 119 min; va el 120 de Letterboxd."
+    },
+    {
+      "title": "Old Boy",
+      "cine": "Cacodelphia",
+      "director": "Park Chan-wook",
+      "country": "Corea del Sur",
+      "year": 2003,
+      "duration": 120,
+      "genre": "Thriller, Misterio",
+      "title_en": "Oldboy",
+      "original_title": "올드보이",
+      "letterboxd": "https://letterboxd.com/film/oldboy/"
     }
   ]
 }
