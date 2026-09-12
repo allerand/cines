@@ -68,8 +68,8 @@
       "publicadas": 10
     },
     "Cine York": {
-      "scrapeadas": 33,
-      "publicadas": 33
+      "scrapeadas": 34,
+      "publicadas": 34
     },
     "Cinemark Caballito": {
       "scrapeadas": 189,
@@ -4876,6 +4876,22 @@
       "country": "Argentina",
       "year": 2025,
       "duration": 5,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://lumiton.ar/evento/convocatoria-de-cortos-programa-iii/",
+      "ciclo": "Convocatoria de Cortos: Programa III"
+    },
+    {
+      "cine": "Cine York",
+      "fecha": "2026-09-12",
+      "hora": "18:00",
+      "title_es": "Hipótesis sobre mis dos huevos",
+      "title_en": "Hipótesis sobre mis dos huevos",
+      "original_title": "",
+      "director": "Theo Fernandez",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 15,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/convocatoria-de-cortos-programa-iii/",
