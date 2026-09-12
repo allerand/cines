@@ -3837,7 +3837,7 @@ _LUMITON_DUR_RE = re.compile(r"\b(\d{1,3})\s*(?:['′’´]|min\b)")
 
 
 def _lumiton_cortos(soup) -> list[dict]:
-    """Cortos de un programa de Lumiton: uno por párrafo con ficha "(Dir. …)".
+    """Cortos de un programa de Lumiton: cada <strong> con ficha "(Dir. …)".
 
     Devuelve [] si el evento no es un programa: hace falta más de un corto para
     considerarlo tal, así que la ficha suelta de una película normal —o el
@@ -3849,42 +3849,53 @@ def _lumiton_cortos(soup) -> list[dict]:
 
     cortos: list[dict] = []
     for p in cuerpo.find_all("p"):
-        st = p.find(["strong", "b"])
-        if st is None:
-            continue
-        titulo = re.sub(r"\s+", " ", st.get_text(" ", strip=True)).strip(" .,:")
-        if not titulo:
+        # OJO: un párrafo puede traer VARIOS cortos. Lumiton a veces separa las
+        # fichas con <br><br> en vez de abrir un <p> nuevo, y así se perdió
+        # "Hipótesis sobre mis dos huevos" del Programa III (12/9/2026): el
+        # párrafo abría con Duende y el segundo <strong> no lo miraba nadie.
+        # Por eso se recorren TODOS los <strong> del párrafo y cada uno se queda
+        # con el texto que va hasta el título siguiente.
+        titulos = [re.sub(r"\s+", " ", st.get_text(" ", strip=True)).strip(" .,:")
+                   for st in p.find_all(["strong", "b"])]
+        if not titulos:
             continue
         texto = re.sub(r"\s+", " ", p.get_text(" ", strip=True))
-        # El "(Dir." que vale es el que sigue al título: las sinopsis también
-        # llevan paréntesis (nombres de actores, años).
-        resto = texto.split(titulo, 1)[-1]
-        m = _LUMITON_DIR_RE.search(resto)
-        if not m:
-            continue
-        ficha = resto[m.end():]
+        for i, titulo in enumerate(titulos):
+            if not titulo:
+                continue
+            cola = texto.split(titulo, 1)[-1]
+            texto = cola                 # el próximo título se busca más adelante
+            siguiente = titulos[i + 1] if i + 1 < len(titulos) else None
+            if siguiente and siguiente in cola:
+                cola = cola.split(siguiente, 1)[0]
+            # El "(Dir." que vale es el que sigue al título: las sinopsis también
+            # llevan paréntesis (nombres de actores, años).
+            m = _LUMITON_DIR_RE.search(cola)
+            if not m:
+                continue
+            ficha = cola[m.end():]
 
-        # "Luciano Scarcia | Arg. / 2025 / 2’ / +13) sinopsis…". El paréntesis
-        # de cierre no sirve de límite —"Vir Zone (Virginia Tassone)" lo abre y
-        # lo cierra adentro, y a veces la página se olvida de cerrarlo—, así que
-        # se corta por el pipe y después por las barras.
-        partes = ficha.split("|", 1)
-        director = partes[0].split(")")[0].strip(" .,;") if len(partes) == 1 \
-            else partes[0].strip(" .,;")
-        campos = partes[1].split("/") if len(partes) > 1 else []
-        pais = campos[0].split(")")[0].strip(" .,;") if campos else ""
-        # Sólo los dos campos siguientes al país: más allá empieza la sinopsis,
-        # que tiene años y números propios.
-        cola = " / ".join(campos[1:3])
-        my = re.search(r"\b(19\d{2}|20\d{2})\b", cola)
-        md = _LUMITON_DUR_RE.search(cola)
-        cortos.append({
-            "title": titulo,
-            "director": director,
-            "country": pais,
-            "year": int(my.group(1)) if my else None,
-            "duration": int(md.group(1)) if md else None,
-        })
+            # "Luciano Scarcia | Arg. / 2025 / 2’ / +13) sinopsis…". El paréntesis
+            # de cierre no sirve de límite —"Vir Zone (Virginia Tassone)" lo abre
+            # y lo cierra adentro, y a veces la página se olvida de cerrarlo—, así
+            # que se corta por el pipe y después por las barras.
+            partes = ficha.split("|", 1)
+            director = partes[0].split(")")[0].strip(" .,;") if len(partes) == 1 \
+                else partes[0].strip(" .,;")
+            campos = partes[1].split("/") if len(partes) > 1 else []
+            pais = campos[0].split(")")[0].strip(" .,;") if campos else ""
+            # Sólo los dos campos siguientes al país: más allá empieza la sinopsis,
+            # que tiene años y números propios.
+            resto_ficha = " / ".join(campos[1:3])
+            my = re.search(r"\b(19\d{2}|20\d{2})\b", resto_ficha)
+            md = _LUMITON_DUR_RE.search(resto_ficha)
+            cortos.append({
+                "title": titulo,
+                "director": director,
+                "country": pais,
+                "year": int(my.group(1)) if my else None,
+                "duration": int(md.group(1)) if md else None,
+            })
 
     return cortos if len(cortos) > 1 else []
 

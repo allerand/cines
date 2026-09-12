@@ -53,6 +53,29 @@ print("✓ los 5 cortos, con director/año/duración; la sala y la bajada no cue
 # le pisa el año a la película.
 assert cortos[3]["year"] == 2024
 
+# Dos cortos en el MISMO <p>, separados por <br><br>: así publicó Lumiton el
+# Programa III, y "Hipótesis sobre mis dos huevos" no salió en la web del
+# 12/9/2026 porque sólo se miraba el primer <strong> de cada párrafo.
+JUNTOS = """
+<p>Tercera jornada dedicada a los cortometrajes seleccionados.</p>
+<p><strong>Duende</strong> (Dir. Ornella Berardi y Luiza Loures | Arg. / 2025 / 5&#8242; / ATP)<br/>Floriana, 22, sigue a una niña de pollera roja.<br/><br/><strong>Hipótesis sobre mis dos huevos</strong> (Dir. Theo Fernandez | Arg. / 2026 / 15’ / +18)<br/>Un alter ego del director elabora una hipótesis.</p>
+<p><strong>Elogio a los fantasmas</strong> (Dir. Facundo Rodriguez Alonso | Arg. / 2025 / 17’ / +16)<br/>La búsqueda del fantasma de su madre.</p>
+<p><strong>en Cine York</strong> (Juan Bautista Alberdi 895, Olivos) Entrada no arancelada.</p>
+"""
+
+juntos = parsear(JUNTOS)
+assert [c["title"] for c in juntos] == [
+    "Duende", "Hipótesis sobre mis dos huevos", "Elogio a los fantasmas",
+], juntos
+assert [c["director"] for c in juntos] == [
+    "Ornella Berardi y Luiza Loures", "Theo Fernandez", "Facundo Rodriguez Alonso",
+], [c["director"] for c in juntos]
+# El año y la duración son los de CADA ficha: sin cortar en el título siguiente,
+# el segundo corto se comía los datos del primero.
+assert [c["year"] for c in juntos] == [2025, 2026, 2025], juntos
+assert [c["duration"] for c in juntos] == [5, 15, 17], juntos
+print("✓ dos cortos en un mismo párrafo salen los dos, con sus propios datos")
+
 # Una película sola NO es un programa: la ficha normal de un evento la parsea
 # fetch_lumiton_evento_meta con los <b>Dirección</b>, y desagregarla acá
 # duplicaría la función.
