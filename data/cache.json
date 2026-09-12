@@ -460,7 +460,9 @@
     "country": "USA",
     "year": 2026,
     "duration": 105,
-    "genre": "Romance, Drama"
+    "genre": "Romance, Drama",
+    "clase_titulo": "exacto",
+    "sin_hints": "título"
   },
   "the evil dead": {
     "url": "https://letterboxd.com/film/the-evil-dead/",
@@ -716,7 +718,11 @@
     "country": "USA",
     "year": 2026,
     "duration": 119,
-    "genre": "Comedia, Drama"
+    "genre": "Comedia, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "El diablo viste de Prada 2",
+    "original_title": "The Devil Wears Prada 2",
+    "sin_hints": "título"
   },
   "padre madre hermana hermano": {
     "url": "",
@@ -1600,7 +1606,9 @@
     "country": "USA, UK",
     "year": 2025,
     "duration": 109,
-    "genre": "Thriller, Terror"
+    "genre": "Thriller, Terror",
+    "clase_titulo": "exacto",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "michael": {
     "url": "https://letterboxd.com/film/michael-2026/",
@@ -1609,8 +1617,10 @@
     "country": "USA",
     "year": 2026,
     "duration": 128,
+    "genre": "Música, Drama",
+    "clase_titulo": "exacto",
     "original_title": "Michael",
-    "genre": "Música, Drama"
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "mortal kombat ii": {
     "url": "https://letterboxd.com/film/mortal-kombat-ii/",
@@ -1635,13 +1645,16 @@
   },
   "star wars: the mandalorian and grogu": {
     "url": "https://letterboxd.com/film/star-wars-the-mandalorian-and-grogu/",
-    "title_en": "Star Wars: The Mandalorian and Grogu",
+    "title_en": "The Mandalorian and Grogu",
     "director": "Jon Favreau",
     "country": "USA",
     "year": 2026,
     "duration": 132,
-    "original_title": "Star Wars: The Mandalorian and Grogu",
-    "genre": "Ciencia ficción, Acción"
+    "genre": "Ciencia ficción, Acción",
+    "clase_titulo": "exacto",
+    "title_es": "Star Wars: The Mandalorian and Grogu",
+    "original_title": "The Mandalorian and Grogu",
+    "sin_hints": "título"
   },
   "hokum: la maldición de la bruja": {
     "url": "https://letterboxd.com/film/hokum/",
@@ -2015,7 +2028,10 @@
     "country": "Argentina",
     "year": 2026,
     "duration": 91,
-    "genre": "Documental"
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "El Partido",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "la chica de colonia": {
     "url": "https://letterboxd.com/film/koln-75/",
@@ -2641,10 +2657,12 @@
     "director": "Kane Parsons",
     "country": "USA, Canada",
     "year": 2026,
-    "duration": 110,
+    "duration": 111,
     "genre": "Misterio, Ciencia ficción",
-    "title_es": "Backrooms: Sin Salida",
-    "original_title": "Backrooms"
+    "clase_titulo": "exacto",
+    "title_es": "Backrooms: Sin salida",
+    "original_title": "Backrooms",
+    "sin_hints": "título"
   },
   "familia sumergida": {
     "url": "https://letterboxd.com/film/familia-sumergida/",
@@ -3610,9 +3628,12 @@
     "director": "Andrew Stanton",
     "country": "USA",
     "year": 2026,
-    "duration": null,
+    "duration": 102,
     "genre": "Comedia, Familiar",
-    "original_title": "Toy Story 5"
+    "clase_titulo": "exacto",
+    "title_es": "Toy Story 5",
+    "original_title": "Toy Story 5",
+    "sin_hints": "título"
   },
   "scary movie (2026)": {
     "url": "https://letterboxd.com/film/scary-movie-2026/",
@@ -3993,10 +4014,12 @@
     "director": "Michael Tiddes",
     "country": "USA",
     "year": 2026,
-    "duration": 95,
-    "genre": "Comedia, Terror",
-    "title_es": "Scary Movie: Terroríficamente incorrecta",
-    "original_title": "Scary Movie"
+    "duration": 96,
+    "genre": "Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "Scary Movie: Terrorificamente Incorrecta",
+    "original_title": "Scary Movie",
+    "sin_hints": "título"
   },
   "the amazing digital circus: el último acto": {
     "url": "https://letterboxd.com/film/the-amazing-digital-circus-el-ultimo-acto/",
@@ -5053,8 +5076,10 @@
     "year": 2026,
     "duration": 90,
     "genre": "Aventura, Fantasía",
+    "clase_titulo": "exacto",
     "title_es": "Minions & Monstruos",
-    "original_title": "Minions & Monsters"
+    "original_title": "Minions & Monsters",
+    "sin_hints": "título"
   },
   "leviticus ritual de sangre": {
     "url": "https://letterboxd.com/film/leviticus-2026/",
@@ -5337,9 +5362,11 @@
     "country": "France, Belgium",
     "year": 2025,
     "duration": 126,
-    "genre": "Drama, Comedia",
+    "genre": "Drama, Romance",
+    "clase_titulo": "exacto",
     "title_es": "Los colores del tiempo",
-    "original_title": "La Venue de l'avenir"
+    "original_title": "La Venue de l'avenir",
+    "sin_hints": "título"
   },
   "repulsión": {
     "url": "",
@@ -5688,10 +5715,10 @@
     "director": "Christopher Nolan",
     "country": "UK, USA",
     "year": 2026,
-    "duration": 172,
+    "duration": 173,
     "genre": "Aventura, Acción",
-    "title_es": "La Odisea",
-    "original_title": "The Odyssey"
+    "clase_titulo": "exacto",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "76 89 03": {
     "url": "https://letterboxd.com/film/76-89-03/",
@@ -6457,15 +6484,17 @@
     "duration": null
   },
   "moana": {
-    "url": "https://letterboxd.com/film/moana-2026/",
+    "url": "https://letterboxd.com/film/moana/",
     "title_en": "Moana",
     "director": "Thomas Kail",
     "country": "USA",
     "year": 2026,
     "duration": 115,
     "genre": "Comedia, Familiar",
+    "clase_titulo": "exacto",
     "title_es": "Vaiana",
-    "original_title": "Moana"
+    "original_title": "Moana",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "tan de repente": {
     "url": "https://letterboxd.com/film/suddenly-2002/",
@@ -9673,7 +9702,9 @@
     "year": 2025,
     "duration": 89,
     "genre": "Comedia, Aventura",
-    "original_title": "A metros de distancia"
+    "clase_titulo": "exacto",
+    "original_title": "A metros de distancia",
+    "sin_hints": "título y duración"
   },
   "raptus": {
     "url": "https://letterboxd.com/film/double-cross-1951/",
@@ -10332,8 +10363,10 @@
     "year": 2026,
     "duration": 145,
     "genre": "Ciencia ficción, Acción",
+    "clase_titulo": "exacto",
     "title_es": "Spider-Man: Un nuevo día",
-    "original_title": "Spider-Man: Brand New Day"
+    "original_title": "Spider-Man: Brand New Day",
+    "sin_hints": "título"
   },
   "moana (2026)": {
     "url": "https://letterboxd.com/film/moana-2026/",
@@ -10342,7 +10375,8 @@
     "country": "USA",
     "year": 2026,
     "duration": 115,
-    "genre": "Comedia, Familiar"
+    "genre": "Comedia, Familiar",
+    "clase_titulo": "exacto"
   },
   "ateez light the way in cinemas": {
     "url": "https://letterboxd.com/film/ateez-light-the-way-in-cinemas/",
@@ -10713,7 +10747,8 @@
     "year": 2026,
     "duration": 107,
     "genre": "Romance, Drama",
-    "original_title": "La invitación"
+    "clase_titulo": "exacto",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "el día d: bajo presión": {
     "url": "https://letterboxd.com/film/pressure-2026/",
@@ -10972,24 +11007,28 @@
   },
   "yo, narciso": {
     "url": "https://letterboxd.com/film/yo-narciso/",
-    "title_en": "Yo, narciso",
+    "title_en": "Yo, Narciso",
     "director": "Adrián Suar",
     "country": "Argentina",
     "year": 2026,
-    "duration": null,
+    "duration": 95,
     "genre": "Comedia, Romance",
-    "original_title": "Yo, narciso"
+    "clase_titulo": "exacto",
+    "original_title": "Yo, Narciso",
+    "sin_hints": "título y duración"
   },
   "paw patrol: la dino película": {
     "url": "https://letterboxd.com/film/paw-patrol-the-dino-movie/",
     "title_en": "PAW Patrol: The Dino Movie",
     "director": "Cal Brunker",
-    "country": "Canada, France",
+    "country": "Canada, USA",
     "year": 2026,
     "duration": 88,
     "genre": "Comedia, Aventura",
+    "clase_titulo": "exacto",
     "title_es": "La Patrulla Canina: La dino película",
-    "original_title": "PAW Patrol: The Dino Movie"
+    "original_title": "PAW Patrol: The Dino Movie",
+    "sin_hints": "título y duración"
   },
   "por el dinero": {
     "url": "https://letterboxd.com/film/por-el-dinero/",
@@ -11047,7 +11086,9 @@
     "year": 2026,
     "duration": 76,
     "genre": "Fantasía, Drama",
-    "original_title": "Los Nadadores"
+    "clase_titulo": "exacto",
+    "original_title": "Los Nadadores",
+    "sin_hints": "título y duración"
   },
   "la ópera de tres centavos (die dreigroschenoper)|1931": {
     "url": "",
@@ -11239,13 +11280,15 @@
   },
   "yo narciso": {
     "url": "https://letterboxd.com/film/yo-narciso/",
-    "title_en": "Yo, narciso",
+    "title_en": "Yo, Narciso",
     "director": "Adrián Suar",
     "country": "Argentina",
     "year": 2026,
-    "duration": null,
+    "duration": 95,
     "genre": "Comedia, Romance",
-    "original_title": "Yo, narciso"
+    "clase_titulo": "exacto",
+    "original_title": "Yo, Narciso",
+    "sin_hints": "título"
   },
   "paw patrol: la dino pelicula": {
     "url": "https://letterboxd.com/film/paw-patrol-the-dino-movie/",
@@ -11255,8 +11298,10 @@
     "year": 2026,
     "duration": 88,
     "genre": "Comedia, Aventura",
+    "clase_titulo": "exacto",
     "title_es": "La Patrulla Canina: La dino película",
-    "original_title": "PAW Patrol: The Dino Movie"
+    "original_title": "PAW Patrol: The Dino Movie",
+    "sin_hints": "título"
   },
   "el final de la calle oak": {
     "url": "https://letterboxd.com/film/the-end-of-oak-street/",
@@ -11266,8 +11311,10 @@
     "year": 2026,
     "duration": 100,
     "genre": "Misterio, Thriller",
+    "clase_titulo": "exacto",
     "title_es": "El final de Oak Street",
-    "original_title": "The End of Oak Street"
+    "original_title": "The End of Oak Street",
+    "sin_hints": "título y duración"
   },
   "insaciable": {
     "url": "https://letterboxd.com/film/saccharine-2026/",
@@ -11287,7 +11334,9 @@
     "country": "USA",
     "year": 2026,
     "duration": 107,
-    "genre": "Romance, Drama"
+    "genre": "Romance, Drama",
+    "clase_titulo": "exacto",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "el dia d: bajo presion": {
     "url": "https://letterboxd.com/film/pressure-2026/",
@@ -11308,8 +11357,10 @@
     "year": 2026,
     "duration": 145,
     "genre": "Ciencia ficción, Acción",
+    "clase_titulo": "distinto",
     "title_es": "Spider-Man: Un nuevo día",
-    "original_title": "Spider-Man: Brand New Day"
+    "original_title": "Spider-Man: Brand New Day",
+    "sin_hints": "título local de un estreno"
   },
   "all that jazz|1979": {
     "url": "https://letterboxd.com/film/all-that-jazz/",
@@ -11692,7 +11743,8 @@
     "duration": 173,
     "genre": "Drama",
     "title_es": "El profundo deseo de los dioses",
-    "original_title": "神々の深き欲望"
+    "original_title": "神々の深き欲望",
+    "clase_titulo": "exacto"
   },
   "adolescencia, sexo y muerte en campamento miasma": {
     "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
@@ -11702,8 +11754,10 @@
     "year": 2026,
     "duration": 112,
     "genre": "Terror, Comedia",
+    "clase_titulo": "distinto",
     "title_es": "Adolescencia, sexo y muerte en campamento Miasma",
-    "original_title": "Teenage Sex and Death at Camp Miasma"
+    "original_title": "Teenage Sex and Death at Camp Miasma",
+    "sin_hints": "título local de un estreno"
   },
   "inscaciable (saccharine)": {
     "url": "",
@@ -11783,7 +11837,9 @@
     "year": 2026,
     "duration": 110,
     "genre": "Música, Documental",
-    "original_title": "LINKIN PARK: UNSHATTER"
+    "clase_titulo": "exacto",
+    "original_title": "LINKIN PARK: UNSHATTER",
+    "sin_hints": "título y duración"
   },
   "harry potter y la piedra filosofal": {
     "url": "",
@@ -11968,8 +12024,10 @@
     "year": 2026,
     "duration": 106,
     "genre": "Terror, Thriller",
+    "clase_titulo": "exacto",
     "title_es": "Insidious: Fuera del más allá",
-    "original_title": "Insidious: Out of the Further"
+    "original_title": "Insidious: Out of the Further",
+    "sin_hints": "título"
   },
   "días": {
     "url": "https://letterboxd.com/film/summer-days-2026/",
@@ -12024,7 +12082,9 @@
     "country": "France, Belgium",
     "year": 2025,
     "duration": 128,
-    "genre": "Crimen, Historia"
+    "genre": "Crimen, Historia",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   },
   "la muerte de robin hood": {
     "url": "https://letterboxd.com/film/the-death-of-robin-hood/",
@@ -12312,14 +12372,14 @@
   },
   "terminator 2: el juicio final": {
     "url": "",
-    "title_en": "Terminator 2: El juicio final",
-    "director": "James Cameron",
-    "country": "France, United States of America",
-    "year": 1991,
-    "duration": 137,
-    "genre": "Acción, Thriller",
-    "title_es": "Terminator 2: El juicio final",
-    "original_title": "Terminator 2: Judgment Day"
+    "title_en": "Terminator 2: El Juicio Final",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Terminator 2: Judgment Day (1991), y puede ser otra",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "la noche sin mí": {
     "url": "https://letterboxd.com/film/the-night-without-me/",
@@ -12438,13 +12498,13 @@
   "queen: live in budapest": {
     "url": "",
     "title_en": "QUEEN: LIVE IN BUDAPEST",
-    "director": "János Zsombolyai",
-    "country": "Hungary, United Kingdom",
-    "year": 2012,
-    "duration": 91,
-    "genre": "Música",
-    "title_es": "Queen: El concierto de Budapest",
-    "original_title": "Queen: Budapest"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "hay películas que se llaman así: Queen: Budapest (1986), Queen: Budapest (1986); We Will Rock You (1982) sólo se le parece",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "coyote vs acme": {
     "url": "https://letterboxd.com/film/coyote-vs-acme/",
@@ -12454,8 +12514,10 @@
     "year": 2026,
     "duration": 103,
     "genre": "Aventura, Familiar",
+    "clase_titulo": "exacto",
     "title_es": "Coyote vs. Acme",
-    "original_title": "Coyote vs. Acme"
+    "original_title": "Coyote vs. Acme",
+    "sin_hints": "título"
   },
   "la guerra de los últimos": {
     "url": "https://letterboxd.com/film/the-dog-stars/",
@@ -12465,8 +12527,10 @@
     "year": 2026,
     "duration": 119,
     "genre": "Ciencia ficción, Thriller",
+    "clase_titulo": "exacto",
     "title_es": "La constelación del perro",
-    "original_title": "The Dog Stars"
+    "original_title": "The Dog Stars",
+    "sin_hints": "título"
   },
   "sólo por una noche": {
     "url": "https://letterboxd.com/film/one-night-only-2026/",
@@ -12513,13 +12577,15 @@
     "original_title": "One Night Only"
   },
   "tierra de crimen": {
-    "url": "https://letterboxd.com/film/reedland/",
-    "title_en": "Reedland",
-    "director": "Sven Bresser",
-    "country": "Netherlands, Belgium",
-    "year": 2025,
-    "duration": 105,
-    "genre": "Drama"
+    "url": "",
+    "title_en": "Tierra de crimen",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Bad Country (2014), y puede ser otra",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "avengers: endgame (re estreno)": {
     "url": "",
@@ -12532,13 +12598,13 @@
   "michael: la historia de michael jackson": {
     "url": "",
     "title_en": "Michael: La Historia De Michael Jackson",
-    "director": "Sonia Anderson",
-    "country": "Canada, United States of America",
-    "year": 2009,
-    "duration": 50,
-    "genre": "Documental",
-    "title_es": "La historia de Michael Jackson",
-    "original_title": "The Michael Jackson Story"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Michael Jackson Story (2009)",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "norma también|2025": {
     "url": "https://letterboxd.com/film/norma-tambien/",
@@ -12606,7 +12672,8 @@
     "year": 1932,
     "duration": 74,
     "genre": "Drama",
-    "original_title": "Kuhle Wampe oder: Wem gehört die Welt?"
+    "original_title": "Kuhle Wampe oder: Wem gehört die Welt?",
+    "clase_titulo": "exacto"
   },
   "programa de cortometrajes": {
     "url": "",
@@ -12624,17 +12691,19 @@
     "year": 2024,
     "duration": 105,
     "genre": "Documental",
-    "original_title": "Ernest Cole, photographe"
+    "original_title": "Ernest Cole, photographe",
+    "clase_titulo": "exacto"
   },
   "nct 127 5th tour neo city: seoul the redline": {
-    "url": "https://letterboxd.com/film/nct-127-5th-tour-neo-city-seoul-the-redline/",
-    "title_en": "NCT 127 5TH TOUR ‘NEO CITY  SEOUL - THE REDLINE’ in CINEMAS",
+    "url": "",
+    "title_en": "NCT 127 5TH TOUR NEO CITY: SEOUL THE REDLINE",
     "director": "",
     "country": "",
-    "year": 2026,
-    "duration": 255,
-    "genre": "Música",
-    "original_title": "NCT 127 5TH TOUR ‘NEO CITY  SEOUL - THE REDLINE’ in CINEMAS"
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "lo que escribimos juntos|2025": {
     "url": "https://letterboxd.com/film/lo-que-escribimos-juntos/",
@@ -12746,35 +12815,35 @@
   "el hijo de la yegua blanca": {
     "url": "",
     "title_en": "El hijo de la yegua blanca",
-    "director": "Marcell Jankovics",
-    "country": "Hungary",
-    "year": 1981,
-    "duration": 86,
-    "genre": "Aventura, Animación",
-    "title_es": "El hijo de la yegua blanca",
-    "original_title": "Fehérlófia"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Son of the White Mare (1981), y puede ser otra",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "el color de la granada": {
     "url": "",
     "title_en": "El color de la granada",
-    "director": "Sergei Parajanov",
-    "country": "Soviet Union",
-    "year": 1969,
-    "duration": 80,
-    "genre": "Drama, Historia",
-    "title_es": "El color de la granada",
-    "original_title": "Նռան գույնը"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es The Color of Pomegranates (1969), y puede ser otra",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "viy, espíritu del mal": {
     "url": "",
     "title_en": "Viy, espíritu del mal",
-    "director": "Georgi Kropachyov, Konstantin Ershov",
-    "country": "Soviet Union",
-    "year": 1967,
-    "duration": 76,
-    "genre": "Drama, Fantasía",
-    "title_es": "El Viyi",
-    "original_title": "Вий"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Viy (1967), Headhunter (1988)",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "cuéntame tu vida": {
     "url": "",
@@ -12797,35 +12866,37 @@
     "genre": "Thriller"
   },
   "psicosis": {
-    "url": "https://letterboxd.com/film/delirium-2019-2/",
-    "title_en": "Delirium",
-    "director": "Till Endemann",
-    "country": "Germany, Austria",
-    "year": 2019,
-    "duration": 89,
-    "genre": "TV, Thriller",
-    "title_es": "Psicosis",
-    "original_title": "Im Schatten der Angst"
+    "url": "",
+    "title_en": "Psicosis",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: Psycho (1960), Psycho (1998)",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "frenesí": {
-    "url": "https://letterboxd.com/film/frenesi/",
-    "title_en": "frenesi.",
-    "director": "Wilson Neto",
-    "country": "Brazil",
-    "year": 2021,
-    "duration": 5,
-    "genre": "Música"
+    "url": "",
+    "title_en": "Frenesí",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: frenesi. (2021), Not Love, Just Frenzy (1996), Frenzy (1972)",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "casino royale": {
     "url": "",
     "title_en": "Casino Royale",
-    "director": "Martin Campbell",
-    "country": "United Kingdom, United States of America",
-    "year": 2006,
-    "duration": 144,
-    "genre": "Aventura, Acción",
-    "title_es": "Casino Royale",
-    "original_title": "Casino Royale"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: Casino Royale (1967), Casino Royale (2006)",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "pago retroactivo|1922": {
     "url": "https://letterboxd.com/film/back-pay-1922/",
@@ -13044,13 +13115,13 @@
   "queen budapest": {
     "url": "",
     "title_en": "Queen Budapest",
-    "director": "János Zsombolyai",
-    "country": "Hungary, United Kingdom",
-    "year": 2012,
-    "duration": 91,
-    "genre": "Música",
-    "title_es": "Queen: El concierto de Budapest",
-    "original_title": "Queen: Budapest"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Queen: Budapest (1986), y puede ser otra",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "convocatoria de cortos: programa i|2026": {
     "url": "",
@@ -13140,8 +13211,10 @@
     "year": 2026,
     "duration": 103,
     "genre": "Aventura, Familiar",
+    "clase_titulo": "exacto",
     "title_es": "Coyote vs. Acme",
-    "original_title": "Coyote vs. Acme"
+    "original_title": "Coyote vs. Acme",
+    "sin_hints": "título"
   },
   "frágil carcasa": {
     "url": "",
@@ -13884,14 +13957,16 @@
     "original_title": "Crónica de un niño solo"
   },
   "gatica el mono": {
-    "url": "",
-    "title_en": "GATICA EL MONO",
+    "url": "https://letterboxd.com/film/gatica-el-mono/",
+    "title_en": "Gatica, the Monkey",
     "director": "Leonardo Favio",
     "country": "Argentina",
     "year": 1993,
     "duration": 136,
     "genre": "Drama",
-    "original_title": "Gatica el Mono"
+    "clase_titulo": "exacto",
+    "original_title": "Gatica el Mono",
+    "sin_hints": "título y duración"
   },
   "los vencedores": {
     "url": "https://letterboxd.com/film/los-vencedores/",
@@ -13901,28 +13976,32 @@
     "year": 2026,
     "duration": 99,
     "genre": "Documental",
-    "original_title": "Los vencedores"
+    "clase_titulo": "exacto",
+    "original_title": "Los vencedores",
+    "sin_hints": "título y duración"
   },
   "nazareno cruz y el lobo": {
     "url": "",
     "title_en": "NAZARENO CRUZ Y EL LOBO",
-    "director": "Leonardo Favio",
-    "country": "Argentina",
-    "year": 1975,
-    "duration": 85,
-    "genre": "Drama, Fantasía",
-    "original_title": "Nazareno Cruz y el lobo"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "soñar soñar": {
-    "url": "",
-    "title_en": "SOÑAR SOÑAR",
-    "director": "Lily Fouche, Ramona Chisom, Lee John-Johnson",
-    "country": "United States of America",
-    "year": 2026,
-    "duration": 16,
-    "genre": "Terror",
-    "original_title": "sonar",
-    "title_es": "Soñar no cuesta nada"
+    "url": "https://letterboxd.com/film/sonar-sonar/",
+    "title_en": "Soñar, soñar",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1976,
+    "duration": 85,
+    "genre": "Drama, Comedia",
+    "clase_titulo": "exacto",
+    "original_title": "Soñar, soñar",
+    "sin_hints": "título y duración"
   },
   "un muro de silencio|1993": {
     "url": "https://letterboxd.com/film/a-wall-of-silence/",
@@ -13932,7 +14011,8 @@
     "year": 1993,
     "duration": 105,
     "genre": "Drama",
-    "original_title": "Un muro de silencio"
+    "original_title": "Un muro de silencio",
+    "clase_titulo": "exacto"
   },
   "arquitectura moderna": {
     "url": "",
@@ -14177,7 +14257,9 @@
     "year": 2026,
     "duration": 106,
     "genre": "Crimen, Thriller",
-    "original_title": "Pepita la pistolera"
+    "clase_titulo": "exacto",
+    "original_title": "Pepita la pistolera",
+    "sin_hints": "título y duración"
   },
   "zona cero": {
     "url": "https://letterboxd.com/film/colony-2026/",
@@ -14187,8 +14269,10 @@
     "year": 2026,
     "duration": 123,
     "genre": "Acción, Terror",
+    "clase_titulo": "exacto",
     "title_es": "Colony",
-    "original_title": "군체"
+    "original_title": "군체",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "hospital británico|2026": {
     "url": "https://letterboxd.com/film/hospital-britanico/",
@@ -14208,8 +14292,10 @@
     "year": 2026,
     "duration": 123,
     "genre": "Acción, Terror",
+    "clase_titulo": "exacto",
     "title_es": "Colony",
-    "original_title": "군체"
+    "original_title": "군체",
+    "sin_hints": "título y duración"
   },
   "esa cosa con alas": {
     "url": "https://letterboxd.com/film/the-thing-with-feathers-2025/",
@@ -14219,8 +14305,10 @@
     "year": 2025,
     "duration": 99,
     "genre": "Drama",
+    "clase_titulo": "exacto",
     "title_es": "Esa cosa con alas",
-    "original_title": "The Thing with Feathers"
+    "original_title": "The Thing with Feathers",
+    "sin_hints": "título"
   },
   "la negociación": {
     "url": "https://letterboxd.com/film/dead-mans-wire/",
@@ -14230,8 +14318,10 @@
     "year": 2025,
     "duration": 106,
     "genre": "Crimen, Thriller",
+    "clase_titulo": "exacto",
     "title_es": "Prime Crime: A True Story",
-    "original_title": "Dead Man's Wire"
+    "original_title": "Dead Man's Wire",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "una quinta en portugal": {
     "url": "https://letterboxd.com/film/the-portuguese-house/",
@@ -14240,7 +14330,9 @@
     "country": "Spain, Portugal",
     "year": 2025,
     "duration": 114,
-    "genre": "Drama"
+    "genre": "Drama",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   },
   "spider-man: un nuevo dia": {
     "url": "https://letterboxd.com/film/spider-man-brand-new-day/",
@@ -14477,7 +14569,8 @@
     "country": "Indonesia",
     "year": 2017,
     "duration": 90,
-    "genre": "Drama, Familiar"
+    "genre": "Drama, Familiar",
+    "clase_titulo": "distinto"
   },
   "perempuan dari pulau rote (2023) de jeremias nyangoen|2023": {
     "url": "",
@@ -14885,10 +14978,12 @@
     "director": "Dylan Southern, Will Lovelace",
     "country": "UK, USA",
     "year": 2026,
-    "duration": null,
+    "duration": 123,
     "genre": "Documental, Música",
+    "clase_titulo": "exacto",
     "title_es": "Oasis: Don't Look Back in Anger",
-    "original_title": "Oasis: Don't Look Back in Anger"
+    "original_title": "Oasis: Don't Look Back in Anger",
+    "sin_hints": "título"
   },
   "desde el principio hasta el final|2023": {
     "url": "https://letterboxd.com/film/desde-el-principio-hasta-el-final/",
@@ -15028,13 +15123,15 @@
     "genre": "Drama"
   },
   "islandia": {
-    "url": "https://letterboxd.com/film/spider-island/",
-    "title_en": "Spider Island",
-    "director": "Christopher Smith",
-    "country": "UK",
-    "year": 2026,
-    "duration": 95,
-    "genre": "Comedia, Terror"
+    "url": "",
+    "title_en": "ISLANDIA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "hay películas que se llaman así: Islandia (2018), Islandia (2023); Spider Island (2026) sólo se le parece",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "until the sky falls quiet|2026": {
     "url": "",
@@ -15433,26 +15530,30 @@
     "duration": null
   },
   "coraline": {
-    "url": "",
-    "title_en": "CORALINE",
+    "url": "https://letterboxd.com/film/coraline/",
+    "title_en": "Coraline",
     "director": "Henry Selick",
-    "country": "United States of America",
+    "country": "USA",
     "year": 2009,
     "duration": 100,
-    "genre": "Animación, Familiar",
+    "genre": "Animación, Terror",
+    "clase_titulo": "exacto",
     "title_es": "Los mundos de Coraline",
-    "original_title": "Coraline"
+    "original_title": "Coraline",
+    "sin_hints": "título y duración"
   },
   "volver al futuro": {
-    "url": "",
-    "title_en": "VOLVER AL FUTURO",
+    "url": "https://letterboxd.com/film/back-to-the-future/",
+    "title_en": "Back to the Future",
     "director": "Robert Zemeckis",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1985,
     "duration": 116,
     "genre": "Aventura, Comedia",
+    "clase_titulo": "exacto",
     "title_es": "Regreso al futuro",
-    "original_title": "Back to the Future"
+    "original_title": "Back to the Future",
+    "sin_hints": "título y duración"
   },
   "oasis: don´t look back in anger": {
     "url": "https://letterboxd.com/film/oasis-dont-look-back-in-anger/",
@@ -15462,30 +15563,32 @@
     "year": 2026,
     "duration": 123,
     "genre": "Documental, Música",
+    "clase_titulo": "exacto",
     "title_es": "Oasis: Don't Look Back in Anger",
-    "original_title": "Oasis: Don't Look Back in Anger"
+    "original_title": "Oasis: Don't Look Back in Anger",
+    "sin_hints": "título y duración"
   },
   "volver al futuro parte ii": {
     "url": "",
     "title_en": "VOLVER AL FUTURO PARTE II",
-    "director": "Robert Zemeckis",
-    "country": "United States of America",
-    "year": 1989,
-    "duration": 108,
-    "genre": "Aventura, Comedia",
-    "title_es": "Regreso al futuro II",
-    "original_title": "Back to the Future Part II"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Back to the Future Part III (1990), Back to the Future (1985)",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "volver al futuro parte iii": {
     "url": "",
     "title_en": "VOLVER AL FUTURO PARTE III",
-    "director": "Robert Zemeckis",
-    "country": "United States of America",
-    "year": 1990,
-    "duration": 119,
-    "genre": "Aventura, Comedia",
-    "title_es": "Regreso al futuro III",
-    "original_title": "Back to the Future Part III"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Back to the Future Part III (1990), Back to the Future (1985)",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "papeles al viento|2015": {
     "url": "https://letterboxd.com/film/papeles-en-el-viento/",
@@ -15532,7 +15635,10 @@
     "director": "",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Puella Magi Madoka Magica the Movie Part II: Eternal (2012)",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "pmmm la rebelion": {
     "url": "",
@@ -15549,7 +15655,10 @@
     "country": "USA",
     "year": 2026,
     "duration": 97,
-    "genre": "Música, Documental"
+    "genre": "Música, Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Always Lalisa",
+    "sin_hints": "título y duración"
   },
   "tadeo el explorador y la lampara": {
     "url": "https://letterboxd.com/film/tad-and-the-magic-lamp/",
@@ -15558,7 +15667,9 @@
     "country": "Spain",
     "year": 2026,
     "duration": 94,
-    "genre": "Familiar, Comedia"
+    "genre": "Familiar, Comedia",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   },
   "shrek 25 aniversario": {
     "url": "",
@@ -15584,8 +15695,10 @@
     "year": 2026,
     "duration": 130,
     "genre": "Romance, Comedia",
+    "clase_titulo": "exacto",
     "title_es": "Prácticamente magia 2",
-    "original_title": "Practical Magic 2"
+    "original_title": "Practical Magic 2",
+    "sin_hints": "título y duración"
   },
   "codigo: venganza": {
     "url": "https://letterboxd.com/film/mutiny-2026/",
@@ -15595,8 +15708,10 @@
     "year": 2026,
     "duration": 95,
     "genre": "Acción, Thriller",
+    "clase_titulo": "exacto",
     "title_es": "El motín",
-    "original_title": "Mutiny"
+    "original_title": "Mutiny",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "el heladero: dulce sabor a muerte": {
     "url": "https://letterboxd.com/film/ice-cream-man-2026/",
@@ -15606,8 +15721,10 @@
     "year": 2026,
     "duration": 86,
     "genre": "Comedia, Terror",
+    "clase_titulo": "exacto",
     "title_es": "Dulce sabor a Muerte",
-    "original_title": "Ice Cream Man"
+    "original_title": "Ice Cream Man",
+    "sin_hints": "título"
   },
   "tadeo : el explorador y la lampara maravillosa": {
     "url": "https://letterboxd.com/film/tad-and-the-magic-lamp/",
@@ -15616,7 +15733,9 @@
     "country": "Spain",
     "year": 2026,
     "duration": 94,
-    "genre": "Familiar, Comedia"
+    "genre": "Familiar, Comedia",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   },
   "super mario galaxy: la pelicula": {
     "url": "https://letterboxd.com/film/the-super-mario-galaxy-movie/",
@@ -15626,8 +15745,10 @@
     "year": 2026,
     "duration": 98,
     "genre": "Aventura, Fantasía",
+    "clase_titulo": "exacto",
     "title_es": "Super Mario Galaxy la película",
-    "original_title": "The Super Mario Galaxy Movie"
+    "original_title": "The Super Mario Galaxy Movie",
+    "sin_hints": "título"
   },
   "playlist | jamiroquai|2005": {
     "url": "",
@@ -15655,7 +15776,8 @@
     "year": 2017,
     "duration": 119,
     "genre": "Romance, Drama",
-    "original_title": "Sinfonía para Ana"
+    "original_title": "Sinfonía para Ana",
+    "clase_titulo": "exacto"
   },
   "código: venganza": {
     "url": "https://letterboxd.com/film/mutiny-2026/",
@@ -15665,19 +15787,23 @@
     "year": 2026,
     "duration": 95,
     "genre": "Acción, Thriller",
+    "clase_titulo": "exacto",
     "title_es": "El motín",
-    "original_title": "Mutiny"
+    "original_title": "Mutiny",
+    "sin_hints": "título y duración"
   },
   "los boxtrolls": {
-    "url": "",
-    "title_en": "LOS BOXTROLLS",
+    "url": "https://letterboxd.com/film/the-boxtrolls/",
+    "title_en": "The Boxtrolls",
     "director": "Graham Annable, Anthony Stacchi",
-    "country": "United States of America",
+    "country": "USA",
     "year": 2014,
     "duration": 97,
     "genre": "Animación, Comedia",
+    "clase_titulo": "exacto",
     "title_es": "Los Boxtrolls",
-    "original_title": "The Boxtrolls"
+    "original_title": "The Boxtrolls",
+    "sin_hints": "título y duración"
   },
   "el heladero": {
     "url": "https://letterboxd.com/film/ice-cream-man-2026/",
@@ -15687,19 +15813,23 @@
     "year": 2026,
     "duration": 86,
     "genre": "Comedia, Terror",
+    "clase_titulo": "exacto",
     "title_es": "Dulce sabor a Muerte",
-    "original_title": "Ice Cream Man"
+    "original_title": "Ice Cream Man",
+    "sin_hints": "título y duración"
   },
   "paranorman": {
-    "url": "",
-    "title_en": "PARANORMAN",
+    "url": "https://letterboxd.com/film/paranorman/",
+    "title_en": "ParaNorman",
     "director": "Sam Fell, Chris Butler",
-    "country": "United States of America",
+    "country": "USA",
     "year": 2012,
     "duration": 93,
-    "genre": "Familiar, Animación",
+    "genre": "Aventura, Comedia",
+    "clase_titulo": "exacto",
     "title_es": "El alucinante mundo de Norman",
-    "original_title": "ParaNorman"
+    "original_title": "ParaNorman",
+    "sin_hints": "título y duración"
   },
   "akira (1988)": {
     "url": "",
@@ -15728,8 +15858,10 @@
     "year": 2026,
     "duration": 146,
     "genre": "Thriller, Ciencia ficción",
+    "clase_titulo": "exacto",
     "title_es": "El día de la revelación",
-    "original_title": "Disclosure Day"
+    "original_title": "Disclosure Day",
+    "sin_hints": "título"
   },
   "maratón audiovisual de fundación sagai 1": {
     "url": "",
@@ -15758,14 +15890,15 @@
     "original_title": "Romeo y Ofelia"
   },
   "old boy": {
-    "url": "https://letterboxd.com/film/old-suffolk-boy/",
-    "title_en": "Old Suffolk Boy",
-    "director": "Louis Holder",
-    "country": "USA",
-    "year": 1936,
-    "duration": 135,
-    "genre": "Música, Historia",
-    "original_title": "Old Suffolk Boy"
+    "url": "https://letterboxd.com/film/oldboy/",
+    "title_en": "Oldboy",
+    "director": "Park Chan-wook",
+    "country": "South Korea",
+    "year": 2003,
+    "duration": 120,
+    "genre": "Thriller, Misterio",
+    "clase_titulo": "exacto",
+    "sin_hints": "título y duración"
   },
   "operación claridad": {
     "url": "",
@@ -15788,13 +15921,15 @@
     "original_title": "El Nacional"
   },
   "frida, naturaleza viva": {
-    "url": "https://letterboxd.com/film/natura-bizia/",
-    "title_en": "Natura Bizia",
-    "director": "Lexeia Larrañaga",
-    "country": "Spain",
-    "year": 2021,
+    "url": "",
+    "title_en": "Frida, naturaleza viva",
+    "director": "",
+    "country": "",
+    "year": null,
     "duration": null,
-    "genre": "Documental"
+    "sin_ficha": "la única que se llama así es Frida Still Life (1985), y puede ser otra",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "shrek: 25 aniversario": {
     "url": "",
@@ -15802,7 +15937,10 @@
     "director": "",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "gioia mía": {
     "url": "https://letterboxd.com/film/gioia-mia/",
@@ -15844,8 +15982,10 @@
     "year": 2026,
     "duration": 123,
     "genre": "Acción, Terror",
+    "clase_titulo": "exacto",
     "title_es": "Colony",
-    "original_title": "군체"
+    "original_title": "군체",
+    "sin_hints": "título"
   },
   "backrooms: versión extendida": {
     "url": "",
@@ -15853,7 +15993,10 @@
     "director": "",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "resident evil: noche cero": {
     "url": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
@@ -15861,32 +16004,34 @@
     "director": "Zach Cregger",
     "country": "USA, Germany",
     "year": 2026,
-    "duration": 90,
-    "genre": "Terror, Ciencia ficción",
+    "duration": 91,
+    "genre": "Thriller, Terror",
+    "clase_titulo": "exacto",
     "title_es": "Resident Evil: Noche cero",
-    "original_title": "Resident Evil"
+    "original_title": "Resident Evil",
+    "sin_hints": "título y duración"
   },
   "one piece: la película": {
     "url": "",
     "title_en": "ONE PIECE: LA PELÍCULA",
-    "director": "Hiroaki Miyamoto",
-    "country": "Japan",
-    "year": 2016,
-    "duration": 120,
-    "genre": "Acción, Animación",
-    "title_es": "One Piece Gold",
-    "original_title": "ONE PIECE FILM GOLD"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-09-12",
+    "con_duracion": true
   },
   "one piece: la pelicula": {
     "url": "",
     "title_en": "One Piece: La Pelicula",
-    "director": "Hiroaki Miyamoto",
-    "country": "Japan",
-    "year": 2016,
-    "duration": 120,
-    "genre": "Acción, Animación",
-    "title_es": "One Piece Gold",
-    "original_title": "ONE PIECE FILM GOLD"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es One Piece: The Movie (2000), y puede ser otra",
+    "fecha": "2026-09-12",
+    "con_duracion": false
   },
   "abeja": {
     "url": "",
@@ -15903,7 +16048,9 @@
     "country": "Spain",
     "year": 2026,
     "duration": 94,
-    "genre": "Familiar, Comedia"
+    "genre": "Familiar, Comedia",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   },
   "hechizo de amor: la magia continúa": {
     "url": "https://letterboxd.com/film/practical-magic-2/",
@@ -15911,10 +16058,12 @@
     "director": "Susanne Bier",
     "country": "USA",
     "year": 2026,
-    "duration": 110,
+    "duration": 130,
     "genre": "Romance, Comedia",
+    "clase_titulo": "exacto",
     "title_es": "Prácticamente magia 2",
-    "original_title": "Practical Magic 2"
+    "original_title": "Practical Magic 2",
+    "sin_hints": "título"
   },
   "mujeres que trabajan|1938": {
     "url": "https://letterboxd.com/film/mujeres-que-trabajan/",
@@ -15924,7 +16073,8 @@
     "year": 1938,
     "duration": 87,
     "genre": "Comedia, Drama",
-    "original_title": "Mujeres que trabajan"
+    "original_title": "Mujeres que trabajan",
+    "clase_titulo": "exacto"
   },
   "pmmm: walpurgisnacht rising": {
     "url": "",
@@ -15949,6 +16099,48 @@
     "country": "USA, Canada",
     "year": 2026,
     "duration": 111,
-    "genre": "Misterio, Ciencia ficción"
+    "genre": "Misterio, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "sin_hints": "título"
+  },
+  "akira (1988)|1988": {
+    "url": "https://letterboxd.com/film/akira/",
+    "title_en": "Akira",
+    "director": "Katsuhiro Otomo",
+    "country": "Japan",
+    "year": 1988,
+    "duration": 124,
+    "genre": "Acción, Animación",
+    "clase_titulo": "exacto"
+  },
+  "gurumbé. canciones de tu memoria negra": {
+    "url": "https://letterboxd.com/film/gurumbe-canciones-de-tu-memoria-negra/",
+    "title_en": "Gurumbé: Afro-Andalusian Memories",
+    "director": "Miguel Ángel Rosales",
+    "country": "Spain",
+    "year": 2016,
+    "duration": 72,
+    "genre": "Documental, Historia",
+    "original_title": "Gurumbé: canciones de tu memoria negra"
+  },
+  "gilda, no me arrepiento de este amor": {
+    "url": "https://letterboxd.com/film/gilda-no-me-arrepiento-de-este-amor/",
+    "title_en": "I'm Gilda",
+    "director": "Lorena Muñoz",
+    "country": "Uruguay, Argentina",
+    "year": 2016,
+    "duration": 118,
+    "genre": "Drama, Música",
+    "original_title": "Gilda: no me arrepiento de este amor"
+  },
+  "moana (2026)|2026": {
+    "url": "https://letterboxd.com/film/moana-2026/",
+    "title_en": "Moana",
+    "director": "Thomas Kail",
+    "country": "USA",
+    "year": 2026,
+    "duration": 115,
+    "genre": "Comedia, Familiar",
+    "clase_titulo": "exacto"
   }
 }
