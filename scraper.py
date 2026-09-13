@@ -4018,6 +4018,67 @@ _ARTHAUS_LINK_RE = re.compile(r"^(?:entradas|inscripci[óo]n\b.*)$", re.IGNORECA
 # "¡estreno!" viene como prefijo del título o en su propia línea.
 _ARTHAUS_ESTRENO_RE = re.compile(r"^\s*[¡!]*\s*estreno\s*!*\s*", re.IGNORECASE)
 
+# Las jornadas de festival ("día 3", "día 4") no traen una fecha por película:
+# la fecha está UNA sola vez, en la cabecera del día, y cada función arranca con
+# su propia línea de hora. Tal cual sale del innerText (la web parte el <strong>
+# de la hora del <em> del título, así que son dos líneas):
+#
+#     día 3
+#     Sábado 12 de septiembre, 18 H      ← cabecera: fecha de toda la jornada
+#     Conversación (entrada libre y gratuita) …
+#     +
+#     19.15 H –                          ← hora de la función
+#     LOS CRUCES
+#     Dir. Julián Galay
+#     (duración: 71’)
+#     +
+#     20.45 H –
+#     RAMÓN VÁZQUEZ
+#     Dir. Gustavo Fontán
+#     (duración: 68’)
+#     ENTRADAS                           ← un botón por jornada, no por película
+#
+# Hora suelta al principio de una línea: "19.30 H –", "20.45 H – RAMÓN VÁZQUEZ".
+# No matchea una línea de fecha ("12 de septiembre, 18 H") porque después del
+# número del día viene " de ", no la "H".
+_ARTHAUS_HORA_RE = re.compile(
+    r"^(\d{1,2})(?:[.:](\d{2}))?\s*(?:h|hs)\b\s*[–—\-:.]*\s*", re.IGNORECASE)
+# El rótulo de la jornada, que va pegado arriba de su cabecera de fecha.
+_ARTHAUS_DIA_RE = re.compile(r"^d[ií]a\s+\d+\b", re.IGNORECASE)
+# Las jornadas abren con una charla que no es una función de cine.
+_ARTHAUS_NO_PELICULA_RE = re.compile(
+    r"^(?:conversaci[óo]n|conversatorio|charlas?|mesa\b|debate|entrevista|"
+    r"coloquio|presentaci[óo]n|q\s*&\s*a|encuentro)\b", re.IGNORECASE)
+
+
+def _arthaus_fechas(linea: str, today: date, cutoff: date) -> list[tuple[str, str]]:
+    """Fechas de función (YYYY-MM-DD, HH:MM) que trae una línea, ya filtradas
+    por la ventana [today, cutoff]."""
+    out: list[tuple[str, str]] = []
+    for m in _ARTHAUS_DATE_RE.finditer(linea):
+        month = MESES_ES.get(m.group(2).lower())
+        if not month:
+            continue
+        hora = f"{int(m.group(3)):02d}:{m.group(4) or '00'}"
+        for day in (int(x) for x in re.findall(r"\d{1,2}", m.group(1))):
+            for y in (today.year, today.year + 1):
+                try:
+                    d = date(y, month, day)
+                except ValueError:
+                    continue
+                if today <= d <= cutoff:
+                    out.append((d.isoformat(), hora))
+                    break
+    return out
+
+
+def _arthaus_hora(linea: str) -> Optional[tuple[str, str]]:
+    """("HH:MM", resto de la línea) si arranca con una hora suelta; si no, None."""
+    m = _ARTHAUS_HORA_RE.match(linea)
+    if not m:
+        return None
+    return f"{int(m.group(1)):02d}:{m.group(2) or '00'}", linea[m.end():].strip()
+
 
 def _arthaus_clean_title(raw: str) -> str:
     """Quita el prefijo "CINE ARTHAUS." que llevan los títulos de cine."""
@@ -4118,6 +4179,170 @@ def _parse_arthaus_detail(title_raw: str, body: str, url: str,
     ]
 
 
+def _parse_arthaus_seccion(lineas: list[str], hrefs: list[str], ciclo_seccion: str,
+                           today: date, cutoff: date) -> list[Screening]:
+    """Funciones de una sección de arthaus.ar/cine/.
+
+    Hay dos formas de escribir una función y hasta acá sólo se leía una:
+
+      · Ficha suelta — "TÍTULO / Dir. NOMBRE / Sábados 8 y 29 de agosto, 20 H".
+        La fecha va DESPUÉS del "Dir." y es de esa película.
+      · Jornada de festival — una cabecera con la fecha del día y abajo varias
+        películas, cada una con su línea de hora. La fecha va ANTES del "Dir."
+        y es de todas las películas del día.
+
+    Leerlo todo como fichas sueltas es lo que rompió la programación del
+    festival del 12 y 13/9: el bloque de cada película se estiraba hasta el
+    próximo "Dir.", o sea que se comía la cabecera del día siguiente, y la
+    primera fecha que encontraba ahí adentro era la de OTRA jornada. Ramón
+    Vázquez —sábado 12 a las 20.45— salió publicada el domingo 13 a las 18 H,
+    que es el horario de la charla de apertura del domingo. Y las otras tres
+    películas del fin de semana no salieron: la suya se quedaba sin ninguna
+    línea de fecha adentro del bloque y se descartaban en silencio.
+
+    Lo que distingue una cabecera de día de la fecha propia de una ficha es la
+    posición: si viene una línea de fecha y hay una ficha "abierta" arriba
+    (un "Dir." al que todavía no le asignamos fecha), la fecha es de esa ficha;
+    si no hay ninguna ficha esperando, la fecha encabeza la jornada que sigue.
+    """
+    fichas = {i for i, l in enumerate(lineas) if _ARTHAUS_DIR_RE.match(l)}
+
+    # El botón de entradas: la k-ésima línea "ENTRADAS" es el k-ésimo <a>.
+    entradas = [j for j, l in enumerate(lineas) if _ARTHAUS_LINK_RE.match(l)]
+    href_de = {j: hrefs[k] for k, j in enumerate(entradas) if k < len(hrefs)}
+
+    # 1) Cabeceras de día vs. fechas propias de cada ficha.
+    cabeceras: list[int] = []
+    dia_de: dict[int, int] = {}   # línea del "Dir." -> línea de su cabecera
+    dia_vigente: Optional[int] = None
+    ficha_abierta = False
+    for j, l in enumerate(lineas):
+        if j in fichas:
+            if dia_vigente is None:
+                ficha_abierta = True
+            else:
+                dia_de[j] = dia_vigente
+                ficha_abierta = False
+        elif not ficha_abierta and _ARTHAUS_DATE_RE.search(l):
+            cabeceras.append(j)
+            dia_vigente = j
+
+    def fin_jornada(j: int) -> int:
+        """Dónde termina la jornada que empieza en la línea j."""
+        for h in cabeceras:
+            if h > j:
+                # El rótulo "día N" va pegado arriba de su cabecera.
+                return h - 1 if _ARTHAUS_DIA_RE.match(lineas[h - 1]) else h
+        return len(lineas)
+
+    def ticket_desde(desde: int, hasta: int) -> str:
+        for j in range(desde, hasta):
+            if j in href_de:
+                return href_de[j]
+        return ARTHAUS_CINE_URL
+
+    result: list[Screening] = []
+
+    # 2) Jornadas de festival: la fecha la pone la cabecera y cada función
+    #    arranca con su línea de hora ("19.30 H – Cortos II").
+    cubiertas: set[int] = set()   # fichas que ya publicó este camino
+    for h in cabeceras:
+        fechas = sorted({f for f, _ in _arthaus_fechas(lineas[h], today, cutoff)})
+        fin = fin_jornada(h)
+        horas = [j for j in range(h + 1, fin) if _arthaus_hora(lineas[j])]
+
+        for k, desde in enumerate(horas):
+            hasta = horas[k + 1] if k + 1 < len(horas) else fin
+            bloque = lineas[desde:hasta]
+            # Marcadas aunque la jornada esté fuera de la ventana: la fecha de
+            # estas fichas es la de su día, no la del día que venga después.
+            cubiertas |= {j for j in range(desde, hasta) if j in fichas}
+            if not fechas:
+                continue
+
+            hora, resto = _arthaus_hora(bloque[0])
+            title = _ARTHAUS_ESTRENO_RE.sub("", resto).strip()
+            if not title:
+                # La web parte el <strong> de la hora del <em> del título, así
+                # que el título suele caer en la línea siguiente.
+                for l in bloque[1:]:
+                    cand = _ARTHAUS_ESTRENO_RE.sub("", l).strip()
+                    if cand and not _ARTHAUS_DIR_RE.match(cand):
+                        title = cand
+                        break
+            if not title or _ARTHAUS_NO_PELICULA_RE.match(title):
+                continue
+
+            director = ""
+            duration: Optional[int] = None
+            for l in bloque:
+                md = _ARTHAUS_DIR_RE.match(l)
+                if md and not director:
+                    director = md.group(1).strip(" .,")
+                mdur = _ARTHAUS_DUR_RE.search(l)
+                if mdur and duration is None:
+                    duration = int(mdur.group(1))
+
+            # El botón de entradas es uno por jornada y va al final, así que se
+            # busca hasta el cierre del día y no sólo adentro de este tramo.
+            ticket = ticket_desde(desde, fin)
+            for fecha in fechas:
+                result.append(Screening(
+                    cine="Arthaus", title=title, fecha=fecha, hora=hora,
+                    ticket_url=ticket, director=director, duration=duration,
+                    ciclo=ciclo_seccion,
+                ))
+
+    # 3) Fichas sueltas: título, "Dir." y abajo sus propias líneas de fecha.
+    orden = sorted(fichas)
+    fin_anterior = -1
+    for n, i in enumerate(orden):
+        fin_bloque = orden[n + 1] - 1 if n + 1 < len(orden) else len(lineas)
+        bloque = lineas[i + 1:fin_bloque]
+        anterior, fin_anterior = fin_anterior, fin_bloque - 1
+        if i in cubiertas:
+            continue
+
+        director = _ARTHAUS_DIR_RE.match(lineas[i]).group(1).strip(" .,")
+        title = _ARTHAUS_ESTRENO_RE.sub("", lineas[i - 1]).strip() if i else ""
+        if not title:
+            continue
+
+        # Dos encabezados antes de la ficha → el primero es el ciclo. Se
+        # saltea el "¡estreno!", que también viene en su propia línea y si
+        # no se filtra termina publicado como si fuera el nombre del ciclo.
+        # Tampoco son ciclo el rótulo de la jornada ni su línea de fecha.
+        ciclo = ciclo_seccion
+        for j in range(anterior + 1, i - 1):
+            cand = _ARTHAUS_ESTRENO_RE.sub("", lineas[j]).strip()
+            if (not cand or j in cabeceras or _ARTHAUS_DIA_RE.match(cand)
+                    or _arthaus_hora(cand)):
+                continue
+            ciclo = cand
+            break
+
+        duration = None
+        funcs: set = set()
+        for l in bloque:
+            mdur = _ARTHAUS_DUR_RE.search(l)
+            if mdur:
+                duration = int(mdur.group(1))
+            funcs.update(_arthaus_fechas(l, today, cutoff))
+        # Ninguna fecha abajo del "Dir." y la ficha cuelga de una cabecera: la
+        # fecha estaba arriba del título, con el horario de la cabecera.
+        if not funcs and i in dia_de:
+            funcs.update(_arthaus_fechas(lineas[dia_de[i]], today, cutoff))
+
+        ticket = ticket_desde(i + 1, fin_bloque)
+        for fecha, hora in sorted(funcs):
+            result.append(Screening(
+                cine="Arthaus", title=title, fecha=fecha, hora=hora,
+                ticket_url=ticket, director=director, duration=duration,
+                ciclo=ciclo,
+            ))
+    return result
+
+
 def scrape_arthaus(semanas: int = 3) -> list[Screening]:
     """Scrapea arthaus.ar/cine/ — la programación de cine del mes.
 
@@ -4162,68 +4387,22 @@ def scrape_arthaus(semanas: int = 3) -> list[Screening]:
         if not lineas:
             continue
 
-        fichas = [i for i, l in enumerate(lineas) if _ARTHAUS_DIR_RE.match(l)]
-        if not fichas:
+        # Una sección tiene funciones si trae fichas ("Dir. NOMBRE") o si es una
+        # jornada de festival: una fecha arriba de todo y funciones con su hora.
+        hay_fichas = any(_ARTHAUS_DIR_RE.match(l) for l in lineas)
+        hay_jornada = any(
+            _ARTHAUS_DATE_RE.search(l)
+            and any(_arthaus_hora(p) for p in lineas[j + 1:])
+            for j, l in enumerate(lineas))
+        if not hay_fichas and not hay_jornada:
             if any(l.lower() == "ciclo de cine" for l in lineas):
                 ciclo_pendiente = lineas[0].strip()
             continue
 
         # El ciclo pendiente vale para esta sección y se consume acá.
         ciclo_seccion, ciclo_pendiente = ciclo_pendiente, ""
+        result += _parse_arthaus_seccion(lineas, hrefs, ciclo_seccion, today, cutoff)
 
-        link_k = 0
-        fin_anterior = -1
-        for n, i in enumerate(fichas):
-            director = _ARTHAUS_DIR_RE.match(lineas[i]).group(1).strip(" .,")
-            title = _ARTHAUS_ESTRENO_RE.sub("", lineas[i - 1]).strip() if i else ""
-            # Dos encabezados antes de la ficha → el primero es el ciclo. Se
-            # saltea el "¡estreno!", que también viene en su propia línea y si
-            # no se filtra termina publicado como si fuera el nombre del ciclo.
-            ciclo = ciclo_seccion
-            for j in range(fin_anterior + 1, i - 1):
-                cand = _ARTHAUS_ESTRENO_RE.sub("", lineas[j]).strip()
-                if cand:
-                    ciclo = cand
-                    break
-            if not title:
-                continue
-
-            fin_bloque = fichas[n + 1] - 1 if n + 1 < len(fichas) else len(lineas)
-            bloque = lineas[i + 1:fin_bloque]
-            fin_anterior = fin_bloque - 1
-
-            duration: Optional[int] = None
-            ticket = ARTHAUS_CINE_URL
-            funcs: set = set()
-            for l in bloque:
-                if _ARTHAUS_LINK_RE.match(l):
-                    if link_k < len(hrefs):
-                        ticket = hrefs[link_k]
-                    link_k += 1
-                mdur = _ARTHAUS_DUR_RE.search(l)
-                if mdur:
-                    duration = int(mdur.group(1))
-                for m in _ARTHAUS_DATE_RE.finditer(l):
-                    month = MESES_ES.get(m.group(2).lower())
-                    if not month:
-                        continue
-                    hora = f"{int(m.group(3)):02d}:{m.group(4) or '00'}"
-                    for day in (int(x) for x in re.findall(r"\d{1,2}", m.group(1))):
-                        for y in (today.year, today.year + 1):
-                            try:
-                                d = date(y, month, day)
-                            except ValueError:
-                                continue
-                            if today <= d <= cutoff:
-                                funcs.add((d.isoformat(), hora))
-                                break
-
-            for fecha, hora in sorted(funcs):
-                result.append(Screening(
-                    cine="Arthaus", title=title, fecha=fecha, hora=hora,
-                    ticket_url=ticket, director=director, duration=duration,
-                    ciclo=ciclo,
-                ))
     return result
 
 

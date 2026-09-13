@@ -2,8 +2,8 @@
   "updated": "2026-09-13T12:29:45",
   "fuentes": {
     "Arthaus": {
-      "scrapeadas": 7,
-      "publicadas": 7
+      "scrapeadas": 8,
+      "publicadas": 8
     },
     "Bellas Artes": {
       "scrapeadas": 4,
@@ -4833,22 +4833,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Arthaus",
-      "fecha": "2026-09-13",
-      "hora": "18:00",
-      "title_es": "Ramón Vázquez",
-      "title_en": "Ramón Vázquez",
-      "original_title": "Ramón Vázquez",
-      "director": "Gustavo Fontán",
-      "country": "",
-      "year": 2026,
-      "duration": 68,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/ramon-vazquez/",
-      "ticket_url": "https://www.alternativateatral.com/obra102780-dia-3-los-cruces-julian-galay-2025-ramon-vazquez-gustavo-fontan-2025",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-09-13",
       "hora": "18:00",
@@ -6065,6 +6049,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Arthaus",
+      "fecha": "2026-09-13",
+      "hora": "19:30",
+      "title_es": "Cortos II",
+      "title_en": "Cortos II",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://arthaus.ar/cine/",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-09-13",
       "hora": "19:35",
@@ -7070,6 +7070,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-souffleur/",
       "ticket_url": "https://lumiton.ar/evento/the-souffleur-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Arthaus",
+      "fecha": "2026-09-13",
+      "hora": "20:30",
+      "title_es": "Sabes de Mim Agora Esqueça",
+      "title_en": "Sabes de Mim Agora Esqueça",
+      "original_title": "",
+      "director": "Denise Vieira",
+      "country": "",
+      "year": null,
+      "duration": 96,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://arthaus.ar/cine/",
       "ciclo": ""
     },
     {
