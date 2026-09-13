@@ -3659,10 +3659,12 @@
     "director": "Steven Spielberg",
     "country": "USA",
     "year": 2026,
-    "duration": 145,
-    "genre": "Thriller, Misterio",
+    "duration": 146,
+    "genre": "Thriller, Ciencia ficción",
+    "clase_titulo": "exacto",
     "title_es": "El día de la revelación",
-    "original_title": "Disclosure Day"
+    "original_title": "Disclosure Day",
+    "sin_hints": "título"
   },
   "recién nacidas": {
     "url": "https://letterboxd.com/film/young-mothers/",
@@ -12378,7 +12380,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Terminator 2: Judgment Day (1991), y puede ser otra",
-    "fecha": "2026-09-12",
+    "fecha": "2026-09-13",
     "con_duracion": false
   },
   "la noche sin mí": {
@@ -16142,5 +16144,15 @@
     "duration": 115,
     "genre": "Comedia, Familiar",
     "clase_titulo": "exacto"
+  },
+  "la tierra explota": {
+    "url": "",
+    "title_en": "La Tierra explota",
+    "director": "Juan Pablo Lepore",
+    "country": "",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Documental",
+    "original_title": "La Tierra Explota, el Tiempo se Acaba"
   }
 }
