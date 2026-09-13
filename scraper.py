@@ -5240,21 +5240,29 @@ _MUSEOCINE_MONTHS = {
 }
 
 
-# La nota mensual es una noticia cuyo slug arranca con el nombre del mes
-# ("junio-en-nuestro-auditorio-0", "mayo-en-el-museo-del-cine", ...). El museo
-# va cambiando el sufijo (auditorio / museo-del-cine / etc.), así que NO nos
-# atamos a él: descubrimos por el prefijo de mes, que es la parte estable.
-_MUSEOCINE_NOTICIA_RE = re.compile(
-    r"/noticias/(?:" + "|".join(_MUSEOCINE_MONTHS) + r")-", re.IGNORECASE
+# El slug de la nota mensual NO es estable. Arrancó como "<mes>-en-el-museo-del-
+# cine", pasó por "<mes>-en-nuestro-auditorio" y el 11/9/2026 el museo publicó
+# "programacion-del-mes", sin mes ni nada: atarse al nombre del mes dejó
+# septiembre entero afuera de la cartelera. Ahora se toman TODAS las noticias
+# linkeadas desde el índice del museo y se las parsea; la que no tenga funciones
+# devuelve [] y se cae sola. El slug con mes se sigue mirando, pero sólo como
+# pista para desempatar el mes (_museocine_slug_month), nunca como filtro.
+_MUSEOCINE_SLUG_MES_RE = re.compile(
+    r"/noticias/(?P<mes>" + "|".join(_MUSEOCINE_MONTHS) + r")-", re.IGNORECASE
 )
+
+# Tope de notas a abrir por corrida: el índice muestra 3 y el museo nunca tuvo
+# más de un puñado. Es un cinturón de seguridad por si algún día el bloque de
+# noticias se llena de notas ajenas al museo.
+_MUSEOCINE_MAX_NOTAS = 8
 
 
 def _museocine_month_pages() -> list[str]:
-    """Lista URLs absolutas de las notas mensuales linkeadas desde el índice.
+    """URLs absolutas de las noticias linkeadas desde el índice del museo.
 
-    Detecta cualquier noticia cuyo slug empiece con un nombre de mes, sin
-    depender del sufijo (que el museo cambia). Las notas de meses pasados que se
-    cuelen las descarta después el filtro de ventana de fechas.
+    No filtra por slug: el museo le cambia el nombre a la nota cada tanto. Lo
+    que decide si una nota sirve es si tiene funciones adentro, y eso lo
+    resuelve _parse_museocine_page.
     """
     try:
         soup = fetch_html(MUSEOCINE_INDEX)
@@ -5262,19 +5270,36 @@ def _museocine_month_pages() -> list[str]:
         return []
     urls: list[str] = []
     seen: set[str] = set()
-    for a in soup.find_all("a", href=_MUSEOCINE_NOTICIA_RE):
-        h = a.get("href", "")
-        if not h:
+    for a in soup.find_all("a", href=True):
+        h = a["href"]
+        if "/noticias/" not in h:
             continue
         if h.startswith("/"):
             h = MUSEOCINE_BASE + h
-        if h not in seen:
-            seen.add(h)
-            urls.append(h)
+        h = h.split("#")[0]
+        if h in seen:
+            continue
+        seen.add(h)
+        urls.append(h)
+        if len(urls) >= _MUSEOCINE_MAX_NOTAS:
+            break
     return urls
 
 
-_MUSEO_PAREN_RE = re.compile(r"^(.+?)\s+\(([^)]*)\)\s*$")
+def _museocine_slug_month(url: str) -> Optional[int]:
+    """Mes del slug, si lo tiene ("agosto-en-el-museo-del-cine" → 8)."""
+    m = _MUSEOCINE_SLUG_MES_RE.search(url)
+    return _MUSEOCINE_MONTHS.get(m.group("mes").lower()) if m else None
+
+
+# "Título de Director (1946)" — el paréntesis con el año NO tiene por qué cerrar
+# la línea: el museo le agrega coletillas ("… (1942) en conversación con Iván
+# Morales."), y con el ancla en $ esas funciones salían con el título entero
+# como nombre de película y sin director. Se exige que el paréntesis tenga un
+# año adentro, así los paréntesis de las sinopsis ("(Anthony Quinn)") no
+# disparan nada, y que lo de adelante sea corto, para no tomar media sinopsis.
+_MUSEO_PAREN_RE = re.compile(
+    r"^(?P<prefix>.{3,140}?)\s+\((?P<paren>[^)]*\b(?:19|20)\d{2}\b[^)]*)\)")
 
 
 def _museo_film_parts(cand: str):
@@ -5289,7 +5314,7 @@ def _museo_film_parts(cand: str):
     m = _MUSEO_PAREN_RE.match(cand)
     if not m:
         return None
-    prefix, paren = m.group(1), m.group(2)
+    prefix, paren = m.group("prefix"), m.group("paren")
     ym = re.search(r"\b((?:19|20)\d{2})\b", paren)
     if not ym:
         return None
@@ -5311,6 +5336,66 @@ def _museo_film_parts(cand: str):
     return best[1], re.sub(r"\s+", " ", best[2]).strip(), year, original
 
 
+def _museo_fichas_del_segmento(seg_lines: list) -> list:
+    """Todas las fichas "Título de Director (año…)" de un segmento, en orden.
+
+    Una ficha ocupa una línea o dos: el museo parte "El corazón de la lengua de
+    Yanina Gruden" / "(2025, Argentina, 7 min.): sinopsis…".
+    """
+    fichas = []
+    i = 0
+    while i < len(seg_lines):
+        parts = _museo_film_parts(seg_lines[i])
+        if parts:
+            fichas.append(parts)
+            i += 1
+            continue
+        if i + 1 < len(seg_lines):
+            parts = _museo_film_parts(" ".join(seg_lines[i:i + 2]))
+            if parts:
+                fichas.append(parts)
+                i += 2
+                continue
+        i += 1
+    return fichas
+
+
+def _museo_mes_de_la_nota(text: str, meses_headers: list) -> Optional[int]:
+    """Mes de una nota que no lo trae en el slug (caso "programacion-del-mes").
+
+    En orden: el mes que más repiten los headers de función, después la bajada
+    ("…del 1 al 15 de septiembre") y, último recurso, el primer mes nombrado en
+    el texto. Ese último era el único criterio y es frágil: alcanza una sinopsis
+    que mencione "agosto" para correrle un mes a toda una nota de septiembre.
+    """
+    tally: dict = {}
+    for nombre in meses_headers:
+        if not nombre:
+            continue
+        n = _MUSEOCINE_MONTHS.get(nombre.lower())
+        if n:
+            tally[n] = tally.get(n, 0) + 1
+    if tally:
+        return max(tally, key=lambda n: tally[n])
+    bajada = re.search(
+        r"\b(?:al|del)\s+\d{1,2}\s+de\s+(" + "|".join(_MUSEOCINE_MONTHS) + r")\b",
+        text, re.IGNORECASE)
+    if bajada:
+        return _MUSEOCINE_MONTHS.get(bajada.group(1).lower())
+    bajo = text.lower()
+    for m_name, m_num in _MUSEOCINE_MONTHS.items():
+        if m_name in bajo:
+            return m_num
+    return None
+
+
+# "Muestra especial: Arder en la frontera" — una cabecera de sección sin horario
+# que le da ciclo a las funciones que vienen abajo.
+_MUSEO_MUESTRA_RE = re.compile(
+    r"^\s*(?:Muestra especial|Muestra|Ciclo|Foco)\s*:\s*(?P<nombre>.{3,80})\s*$",
+    re.IGNORECASE | re.MULTILINE)
+
+
 def _parse_museocine_page(text: str, slug_month: Optional[int],
                           today: Optional[date] = None) -> list[dict]:
     """
@@ -5320,21 +5405,31 @@ def _parse_museocine_page(text: str, slug_month: Optional[int],
     today = today or date.today()
     out: list[dict] = []
 
-    # Año: lo tomamos del header "Martes 05 de Mayo de 2026" o de "de 2026"
-    year = date.today().year
-    ym = re.search(r"\bde\s+(20\d{2})\b", text)
-    if ym:
-        year = int(ym.group(1))
+    # La nota termina donde el portal arranca su bloque "Últimas noticias": de
+    # ahí para abajo hay titulares de Deportes o Cultos, no funciones.
+    corte = re.search(r"(?im)^[ \t]*[ÚU]ltimas noticias[ \t]*$", text)
+    if corte:
+        text = text[:corte.start()]
 
-    # Mes: priorizar mes del slug; sino, detectar en el cuerpo
+    # Fecha de publicación: "Viernes 11 de Septiembre de 2026", arriba de todo.
+    # Da el año y, sobre todo, el mes en que se escribió la nota, que es con lo
+    # que después se decide si la programación cae en el año siguiente.
+    year = date.today().year
+    pub_month: Optional[int] = None
+    pub = re.search(
+        r"\b\d{1,2}\s+de\s+(?P<mon>" + "|".join(_MUSEOCINE_MONTHS) +
+        r")\s+de\s+(?P<yy>20\d{2})\b", text, re.IGNORECASE)
+    if pub:
+        year = int(pub.group("yy"))
+        pub_month = _MUSEOCINE_MONTHS.get(pub.group("mon").lower())
+    else:
+        ym = re.search(r"\bde\s+(20\d{2})\b", text)
+        if ym:
+            year = int(ym.group(1))
+
+    # Mes: el del slug manda; si la nota no lo trae, se decide con los headers
+    # (ver _museo_mes_de_la_nota), ya con los matches en la mano.
     month = slug_month
-    if month is None:
-        for m_name, m_num in _MUSEOCINE_MONTHS.items():
-            if m_name in text.lower():
-                month = m_num
-                break
-    if month is None:
-        return []
 
     # Header de función. El museo MEZCLA formatos en la misma nota:
     #   "Sábado 6 a las 16 h"                              (sin mes)
@@ -5362,6 +5457,18 @@ def _parse_museocine_page(text: str, slug_month: Optional[int],
     # Iteramos por cada match de header y escaneamos las líneas del segmento
     # (hasta el próximo header) buscando la primera que sea una línea de película.
     matches = list(header_re.finditer(text))
+    if month is None:
+        month = _museo_mes_de_la_nota(text, [hm.group("mon") for hm in matches])
+    if month is None:
+        return []
+
+    # Nota de fin de año que programa el mes siguiente: la de diciembre que
+    # anuncia enero se publica en diciembre, así que el año de publicación le
+    # daría a esas funciones doce meses de atraso. Se detecta por el salto hacia
+    # atrás contra el mes de publicación, no por "está en el pasado": las notas
+    # viejas TIENEN que quedar en el pasado para que el filtro las descarte.
+    if pub_month and month < pub_month - 6:
+        year += 1
     # Agrupamos matches contiguos de la MISMA línea de fecha (separados sólo por
     # " y [díasemana] "): comparten la película que viene después, y cada uno
     # aporta su propio horario → soporta "día X a las Hh y día Y a las Kh".
@@ -5373,10 +5480,22 @@ def _parse_museocine_page(text: str, slug_month: Optional[int],
         else:
             groups.append([hm])
 
+    muestra = ""          # ciclo declarado por una cabecera "Muestra especial: …"
     for gi, group in enumerate(groups):
         # Slots (día, mes, hora, minuto) de todo el grupo + ciclo.
         slots: list[tuple] = []
         ciclo = ""
+
+        # Entre el grupo anterior y éste puede haber una cabecera de sección
+        # ("Domingo 13 de septiembre" + "Muestra especial: Arder en la
+        # frontera"): no tiene horario, así que no es un header de función, pero
+        # sí es el ciclo de lo que viene abajo.
+        pre_ini = groups[gi - 1][-1].end() if gi else 0
+        mm = None
+        for mm in _MUSEO_MUESTRA_RE.finditer(text[pre_ini:group[0].start()]):
+            pass
+        if mm:
+            muestra = mm.group("nombre").strip().rstrip(".,;")
         for hm in group:
             hmonth = _MUSEOCINE_MONTHS.get(hm.group("mon").lower()) if hm.group("mon") else month
             hour = int(hm.group("hh"))
@@ -5392,6 +5511,24 @@ def _parse_museocine_page(text: str, slug_month: Optional[int],
                 # sólo con el nombre del ciclo.
                 ciclo = re.sub(r"\s+presenta$", "", ciclo, flags=re.IGNORECASE).strip()
 
+        title = director = original = ""
+        film_year: Optional[int] = None
+
+        # A veces la película va INLINE en el header, después del "|":
+        #   "Domingo 13 de septiembre a las 16 h | Deserto vértigo de Rocío
+        #    Barbenza (2025)"
+        # Eso no es un ciclo. Si el texto del "|" parsea como ficha, es la
+        # película: sin esto, el 13/9/2026 se perdieron las dos funciones de la
+        # muestra, porque abajo del header sólo había sinopsis.
+        inline = _museo_film_parts(ciclo) if ciclo else None
+        if inline:
+            title, director, film_year, original = inline
+            ciclo = muestra
+        elif ciclo:
+            muestra = ""       # un ciclo propio cierra la sección anterior
+        else:
+            ciclo = muestra
+
         # Película: segmento desde el fin del grupo hasta el próximo grupo.
         seg_start = group[-1].end()
         seg_end = groups[gi + 1][0].start() if gi + 1 < len(groups) else len(text)
@@ -5399,17 +5536,32 @@ def _parse_museocine_page(text: str, slug_month: Optional[int],
         # veces partidos (un <strong> los separa en get_text), así que probamos
         # uniendo hasta 4 líneas consecutivas desde el inicio del segmento.
         seg_lines = [ln.strip() for ln in text[seg_start:seg_end].splitlines() if ln.strip()]
-        title = director = original = ""
-        film_year: Optional[int] = None
-        for span in range(1, 5):
-            for start in range(min(5, len(seg_lines))):
-                parts = _museo_film_parts(" ".join(seg_lines[start:start + span]))
-                if parts:
-                    title, director, film_year, original = parts
+
+        # Programa de cortos: el segmento abre con el nombre del programa
+        # ("Futuras: Ciclo de cortos hecho por mujeres y disidencias") y abajo
+        # van las fichas, una por corto. Se publica UNA FILA POR CORTO, el mismo
+        # criterio que en Lumiton: resumir la función en el primer corto —o en
+        # el nombre del programa— esconde a los demás, que después no se
+        # encuentran buscando ni el título ni a quien los dirigió.
+        fichas_cortos: list = []
+        if not title and seg_lines and not _museo_film_parts(seg_lines[0]):
+            candidatas = _museo_fichas_del_segmento(seg_lines[1:])
+            if len(candidatas) > 1:
+                fichas_cortos = candidatas
+                programa = seg_lines[0].strip().rstrip(".,;")
+                if 3 <= len(programa) <= 90:
+                    ciclo = programa
+
+        if not title and not fichas_cortos:
+            for span in range(1, 5):
+                for start in range(min(5, len(seg_lines))):
+                    parts = _museo_film_parts(" ".join(seg_lines[start:start + span]))
+                    if parts:
+                        title, director, film_year, original = parts
+                        break
+                if title:
                     break
-            if title:
-                break
-        if not title and seg_lines:
+        if not title and not fichas_cortos and seg_lines:
             # Sin "Título de Director (año)": p.ej. un ciclo de cortos
             # ("Futuras: …") o un film cuyo director no está en la línea
             # ("Tambores apaches (Apache Drums, 1951, EE.UU.)"). Limpiamos el
@@ -5427,7 +5579,10 @@ def _parse_museocine_page(text: str, slug_month: Optional[int],
                 first = first[:pm.start()].strip()
             if 3 <= len(first) <= 100 and (first[:1].isupper() or first[:1] in "¡¿"):
                 title = first
-        if not title:
+        # Una película, o varias si el segmento era un programa de cortos.
+        peliculas = fichas_cortos or (
+            [(title, director, film_year, original)] if title else [])
+        if not peliculas:
             continue
 
         for dn, hmonth, hour, minute in slots:
@@ -5448,15 +5603,16 @@ def _parse_museocine_page(text: str, slug_month: Optional[int],
                     pass
             if d is None:
                 continue
-            out.append({
-                "fecha": d.isoformat(),
-                "hora": f"{hour:02d}:{minute:02d}",
-                "title": title,
-                "director": director,
-                "year": film_year,
-                "original_title": original,
-                "ciclo": ciclo,
-            })
+            for p_title, p_director, p_year, p_original in peliculas:
+                out.append({
+                    "fecha": d.isoformat(),
+                    "hora": f"{hour:02d}:{minute:02d}",
+                    "title": p_title,
+                    "director": p_director,
+                    "year": p_year,
+                    "original_title": p_original,
+                    "ciclo": ciclo,
+                })
     return out
 
 
@@ -5472,12 +5628,10 @@ def scrape_museo_cine(semanas: int = 4) -> list[Screening]:
     seen: set[tuple] = set()
 
     for url in page_urls:
-        # Mes desde el slug (mayo|abril|...)
-        slug_month: Optional[int] = None
-        for m_name, m_num in _MUSEOCINE_MONTHS.items():
-            if f"/{m_name}-" in url or url.endswith(f"/{m_name}-en-el-museo-del-cine"):
-                slug_month = m_num
-                break
+        # Mes desde el slug, si la nota lo trae ("agosto-en-el-museo-del-cine").
+        # Las notas nuevas ("programacion-del-mes") no lo traen y el mes sale
+        # del cuerpo.
+        slug_month = _museocine_slug_month(url)
 
         try:
             soup = fetch_html(url)
