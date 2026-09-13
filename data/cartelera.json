@@ -130,6 +130,10 @@
       "scrapeadas": 305,
       "publicadas": 308
     },
+    "Museo del Cine": {
+      "scrapeadas": 2,
+      "publicadas": 2
+    },
     "Sala Lugones": {
       "scrapeadas": 42,
       "publicadas": 42
@@ -3265,6 +3269,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-09-13",
+      "hora": "16:00",
+      "title_es": "Deserto vértigo",
+      "title_en": "Deserto vértigo",
+      "original_title": "",
+      "director": "Rocío Barbenza",
+      "country": "",
+      "year": 2025,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/programacion-del-mes",
+      "ciclo": "Arder en la frontera"
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-13",
       "hora": "16:10",
@@ -5039,6 +5059,22 @@
       "letterboxd": "https://letterboxd.com/film/history-is-made-at-night/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3d80d80f-94df-403a-b818-774f5f63727b",
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-09-13",
+      "hora": "18:00",
+      "title_es": "El origen de las especies",
+      "title_en": "El origen de las especies",
+      "original_title": "",
+      "director": "Ana Tiagx Vélez, Juliana Zuluaga y Analú Laferal",
+      "country": "",
+      "year": 2024,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/noticias/programacion-del-mes",
+      "ciclo": "Arder en la frontera"
     },
     {
       "cine": "Multiplex Belgrano",
