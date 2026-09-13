@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/": {
-    "ts": "2026-09-11T11:52:58",
+    "ts": "2026-09-13T12:21:43",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -85,23 +85,10 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
-    "ts": "2026-09-11T11:53:11",
+    "ts": "2026-09-13T12:21:52",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Hombre de la Atlántida",
-        "fecha": "2026-09-12",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/",
-        "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
-        "director": "Simón Zorraquín",
-        "country": "Argentina",
-        "year": 2026,
-        "duration": 69,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Hombre de la Atlántida",

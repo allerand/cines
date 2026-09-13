@@ -3642,7 +3642,8 @@
     "country": "USA",
     "year": 2026,
     "duration": 96,
-    "genre": "Comedia, Terror"
+    "genre": "Comedia, Terror",
+    "clase_titulo": "exacto"
   },
   "el pequeño ninja": {
     "url": "https://letterboxd.com/film/checkered-ninja/",
@@ -16154,5 +16155,15 @@
     "duration": 88,
     "genre": "Documental",
     "original_title": "La Tierra Explota, el Tiempo se Acaba"
+  },
+  "scary movie (2026)|2026": {
+    "url": "https://letterboxd.com/film/scary-movie-2026/",
+    "title_en": "Scary Movie",
+    "director": "Michael Tiddes",
+    "country": "USA",
+    "year": 2026,
+    "duration": 96,
+    "genre": "Comedia, Terror",
+    "clase_titulo": "exacto"
   }
 }
