@@ -12381,7 +12381,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Terminator 2: Judgment Day (1991), y puede ser otra",
-    "fecha": "2026-09-13",
+    "fecha": "2026-09-14",
     "con_duracion": false
   },
   "la noche sin mí": {
@@ -16088,12 +16088,13 @@
     "duration": null
   },
   "cuando te vi|2012": {
-    "url": "",
-    "title_en": "Cuando te vi",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/when-i-saw-you/",
+    "title_en": "When I Saw You",
+    "director": "Annemarie Jacir",
+    "country": "United Arab Emirates, State of Palestine",
+    "year": 2012,
+    "duration": 93,
+    "genre": "Drama"
   },
   "backrooms - versión extendida": {
     "url": "https://letterboxd.com/film/backrooms-2026/",
@@ -16165,5 +16166,16 @@
     "duration": 96,
     "genre": "Comedia, Terror",
     "clase_titulo": "exacto"
+  },
+  "crash": {
+    "url": "https://letterboxd.com/film/crash/",
+    "title_en": "Crash",
+    "director": "David Cronenberg",
+    "country": "Canada, UK",
+    "year": 1996,
+    "duration": 100,
+    "genre": "Thriller, Drama",
+    "title_es": "Crash: Extraños Placeres",
+    "original_title": "Crash"
   }
 }
