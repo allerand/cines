@@ -1,61 +1,9 @@
 {
   "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/": {
-    "ts": "2026-09-13T12:21:43",
+    "ts": "2026-09-14T13:25:25",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "O silencio heredado",
-        "fecha": "2026-09-13",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
-        "ciclo": "Ciclo Mestre Mateo",
-        "director": "Lucía Dapena Gonzalez",
-        "country": "",
-        "year": 2025,
-        "duration": 80,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Deuses de pedra",
-        "fecha": "2026-09-13",
-        "hora": "17:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
-        "ciclo": "Ciclo Mestre Mateo",
-        "director": "Ivan Castiñeiras",
-        "country": "",
-        "year": 2025,
-        "duration": 85,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "San Simón",
-        "fecha": "2026-09-13",
-        "hora": "15:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
-        "ciclo": "Ciclo Mestre Mateo",
-        "director": "Ángel Delgado",
-        "country": "",
-        "year": 2025,
-        "duration": 107,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Antes de nos",
-        "fecha": "2026-09-13",
-        "hora": "18:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
-        "ciclo": "Ciclo Mestre Mateo",
-        "director": "Ángeles Huerta",
-        "country": "",
-        "year": 2025,
-        "duration": 88,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Las líneas discontinuas",
@@ -85,7 +33,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
-    "ts": "2026-09-13T12:21:52",
+    "ts": "2026-09-14T13:25:41",
     "v": 2,
     "semanas": 9,
     "funciones": [
