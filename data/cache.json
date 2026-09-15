@@ -12381,7 +12381,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Terminator 2: Judgment Day (1991), y puede ser otra",
-    "fecha": "2026-09-14",
+    "fecha": "2026-09-15",
     "con_duracion": false
   },
   "la noche sin mí": {
@@ -16187,5 +16187,42 @@
     "duration": 67,
     "genre": "",
     "original_title": "Un ojo en la pared"
+  },
+  "el árbol mágico": {
+    "url": "https://letterboxd.com/film/the-magic-faraway-tree/",
+    "title_en": "The Magic Faraway Tree",
+    "director": "Ben Gregor",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Fantasía, Aventura",
+    "clase_titulo": "exacto",
+    "title_es": "El árbol muy muy lejano",
+    "original_title": "The Magic Faraway Tree",
+    "sin_hints": "título y duración"
+  },
+  "el arbol magico": {
+    "url": "https://letterboxd.com/film/the-magic-faraway-tree/",
+    "title_en": "The Magic Faraway Tree",
+    "director": "Ben Gregor",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Fantasía, Aventura",
+    "clase_titulo": "exacto",
+    "title_es": "El árbol muy muy lejano",
+    "original_title": "The Magic Faraway Tree",
+    "sin_hints": "título"
+  },
+  "the wicker man": {
+    "url": "https://letterboxd.com/film/the-wicker-man/",
+    "title_en": "The Wicker Man",
+    "director": "Robin Hardy",
+    "country": "UK",
+    "year": 1973,
+    "duration": 93,
+    "genre": "Terror",
+    "title_es": "El hombre de mimbre",
+    "original_title": "The Wicker Man"
   }
 }
