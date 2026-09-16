@@ -558,6 +558,20 @@
       "title_en": "Michael",
       "original_title": "Michael",
       "letterboxd": "https://letterboxd.com/film/michael-2026/"
+    },
+    {
+      "_comment": "Retrospectiva Leonardo Favio en Cacodelphia (16/9/2026). La ficha no trae director ni año y Letterboxd le da 85 minutos contra los 92 del cine, así que el enrichment la dejó vacía. Override para las funciones de ese día: con ANTHROPIC_API_KEY configurada la resuelve sola el crédito del poster (posters.py). Slug verificado."
+    },
+    {
+      "title": "Nazareno Cruz y el Lobo",
+      "cine": "Cacodelphia",
+      "director": "Leonardo Favio",
+      "country": "Argentina",
+      "year": 1975,
+      "genre": "Terror, Fantasía",
+      "title_en": "Nazareno Cruz and the Wolf",
+      "original_title": "Nazareno Cruz y el lobo",
+      "letterboxd": "https://letterboxd.com/film/nazareno-cruz-and-the-wolf/"
     }
   ]
 }
