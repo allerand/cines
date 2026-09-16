@@ -12518,7 +12518,7 @@
     "country": "USA",
     "year": 2026,
     "duration": 103,
-    "genre": "Aventura, Animación",
+    "genre": "Aventura, Familiar",
     "clase_titulo": "exacto",
     "title_es": "Coyote vs. Acme",
     "original_title": "Coyote vs. Acme",
@@ -16311,5 +16311,25 @@
     "genre": "Música",
     "clase_titulo": "distinto",
     "sin_hints": "título local de un estreno"
+  },
+  "los calvos": {
+    "url": "https://letterboxd.com/film/los-calvos/",
+    "title_en": "The Bald",
+    "director": "Marcos Mossello, Elías Gismondi",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 79,
+    "genre": "Documental",
+    "original_title": "Los calvos"
+  },
+  "gatillero": {
+    "url": "https://letterboxd.com/film/gatillero/",
+    "title_en": "Gunman",
+    "director": "Cristian Tapia Marchiori",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Thriller, Acción",
+    "original_title": "Gatillero"
   }
 }
