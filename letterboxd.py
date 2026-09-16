@@ -401,7 +401,14 @@ def _validate_meta(
         if not _name_overlap(hint_director, lb_director):
             return False
     if hint_duration and meta.get("duration"):
-        if abs(int(meta["duration"]) - int(hint_duration)) > 5:
+        # Sin director, ±5 minutos es lo que separa a Oldboy (2003) de 'Old
+        # Boy' (2018). Con el director ya confirmado el homónimo quedó afuera
+        # y lo que sobra son versiones de la misma película: Nazareno Cruz y
+        # el lobo (Favio, 1975) dura 92 minutos para Cacodelphia e IMDb y 85
+        # para Letterboxd. Ahí alcanza con un 10%, que igual separa las
+        # dos The Man Who Knew Too Much de Hitchcock (75 y 120).
+        tolerancia = max(5, round(int(hint_duration) * 0.10)) if hint_director else 5
+        if abs(int(meta["duration"]) - int(hint_duration)) > tolerancia:
             return False
     if not hint_director and clase == "pisado":
         return False
@@ -1151,6 +1158,18 @@ def _decidir_sin_hints(
             return m, "título local de un estreno"
     if traducidos:
         return None, f"ninguna se llama así y lo que aparece no es estreno: {_lista(traducidos)}"
+    otra_duracion: list[dict] = []
+    for m in homonimos:
+        if (hint_duration and m.get("duration")
+                and abs(int(m["duration"]) - int(hint_duration)) > 5
+                and not any(_mismo_film(m, otro) for otro in otra_duracion)):
+            otra_duracion.append(m)
+    if otra_duracion:
+        # No es que no exista: se descartó por duración, y con el director
+        # (ver _validate_meta) puede entrar.
+        return None, (f"se llama así pero no dura {hint_duration} min: "
+                      + ", ".join(f"{m.get('title_en')} ({m.get('year')}, {m.get('duration')} min)"
+                                  for m in otra_duracion[:4]))
     return None, "ninguna película se llama así"
 
 

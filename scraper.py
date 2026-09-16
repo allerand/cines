@@ -1925,6 +1925,18 @@ def scrape_cacodelphia_mail(dias: int = 30) -> list[Screening]:
 
 
 async def scrape_cacodelphia(page: Page) -> list[Screening]:
+    """Cartelera de Cacodelphia (mail + SPA), con la duración y el director
+    que agregan la API de fichas y el poster (ver _caco_completar)."""
+    funciones = await _scrape_cacodelphia_funciones(page)
+    try:
+        _caco_completar(funciones)
+    except Exception as e:
+        # Es metadata: sin ella las funciones salen igual.
+        print(f"(fichas por API fallaron — {e})", end=" ", flush=True)
+    return funciones
+
+
+async def _scrape_cacodelphia_funciones(page: Page) -> list[Screening]:
     """Cartelera de Cacodelphia: el newsletter manda sobre su semana, la SPA
     aporta el resto.
 
@@ -2006,6 +2018,130 @@ async def scrape_cacodelphia(page: Page) -> list[Screening]:
         por_horario.setdefault((s.fecha, s.hora), []).append(n)
         funciones.append(s)
     return funciones
+
+
+# ---------------------------------------------------------------------------
+# Cacodelphia — la ficha por API, y el director leído del poster
+# ---------------------------------------------------------------------------
+#
+# La SPA es una cáscara sobre la API de GAF, que es pública y contesta JSON:
+# /nowPlaying/86 lista la cartelera y /movie/86/<pref> trae de cada película la
+# duración, la sinopsis, el trailer y el poster. Director y año no los trae
+# nunca ("datosTecnicos": "." en todas), y sin ellos el enrichment elige por
+# título y duración: el 16/9/2026 Nazareno Cruz y el lobo quedó sin ficha.
+#
+# El poster sí los trae casi siempre ("Una película de Avelina Prat", "dirigida
+# por Leandro Cerro", "un film de Leonardo Favio"), y posters.py lo transcribe.
+# Con ese director la función va por el enrichment validado: la ficha tiene que
+# ser de ese director o queda vacía.
+#
+# La duración de la API, además, no depende de que cargue la SPA: el 11/9/2026
+# la SPA falló en CI, el mail quedó sin duraciones y Old Boy salió como 'Old
+# Suffolk Boy'.
+
+_GAF_API = "https://apiv2.gaf.adro.studio"
+_CACO_CINE_ID = 86
+_CACO_PREF_RE = re.compile(r"/pelicula/\d+/([0-9a-f]{32})")
+
+
+def _caco_api(path: str):
+    """El `data` de una respuesta de la API de GAF, o None."""
+    req = urllib.request.Request(
+        f"{_GAF_API}/{path}",
+        headers={"User-Agent": UA, "Accept": "application/json"},
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=15) as r:
+            resp = json.loads(r.read().decode("utf-8", errors="replace"))
+    except Exception:
+        return None
+    if not isinstance(resp, dict) or resp.get("status") != "ok":
+        return None
+    return resp.get("data")
+
+
+def _caco_fichas_api() -> list[dict]:
+    """Las películas en cartelera: pref, título, duración y poster."""
+    lista = _caco_api(f"nowPlaying/{_CACO_CINE_ID}")
+    if not isinstance(lista, list):
+        return []
+    fichas: list[dict] = []
+    for item in lista:
+        pref = (item or {}).get("pref") if isinstance(item, dict) else None
+        if not pref:
+            continue
+        data = _caco_api(f"movie/{_CACO_CINE_ID}/{pref}")
+        movie = (data or {}).get("movie") if isinstance(data, dict) else None
+        movie = movie or {}
+        titulo, _ = _caco_titulo_y_ciclo(movie.get("nombre") or item.get("nombre") or "")
+        try:
+            duracion = int(movie.get("Duracion") or 0)
+        except (TypeError, ValueError):
+            duracion = 0
+        fichas.append({
+            "pref": pref,
+            "titulo": titulo,
+            "duracion": duracion if 20 <= duracion <= 600 else None,
+            "poster": (movie.get("poster") or "").strip(),
+        })
+    return fichas
+
+
+def _caco_ficha_de(s: Screening, fichas: list[dict]) -> Optional[dict]:
+    """La ficha de una función: por el pref del link, que es exacto; si no,
+    por título, aceptando el truncado del mail ("TANGALANGA CONTRAATACA...")
+    sólo cuando una única ficha empieza así."""
+    m = _CACO_PREF_RE.search(s.ticket_url or "")
+    if m:
+        for f in fichas:
+            if f["pref"] == m.group(1):
+                return f
+    n = _caco_norm(s.title)
+    if not n:
+        return None
+    exactas = [f for f in fichas if _caco_norm(f["titulo"]) == n]
+    if len(exactas) == 1:
+        return exactas[0]
+    if exactas or len(n) < 8:
+        return None
+    prefijo = [f for f in fichas if _caco_norm(f["titulo"]).startswith(n)]
+    return prefijo[0] if len(prefijo) == 1 else None
+
+
+def _caco_completar(funciones: list[Screening], fichas: Optional[list[dict]] = None,
+                    leer_poster=None) -> None:
+    """Completa duración y director de las funciones con la API y el poster.
+
+    Nunca pisa lo que ya vino de la SPA. El poster se lee una vez por película
+    (y posters.py lo cachea entre corridas), sólo si a alguna función de esa
+    película le falta el director.
+    """
+    if not funciones:
+        return
+    if fichas is None:
+        fichas = _caco_fichas_api()
+    if not fichas:
+        print("(API de fichas sin respuesta)", end=" ", flush=True)
+        return
+    if leer_poster is None:
+        from posters import director_del_poster as leer_poster
+
+    directores: dict[str, str] = {}
+    for s in funciones:
+        f = _caco_ficha_de(s, fichas)
+        if not f:
+            continue
+        if not s.duration and f["duracion"]:
+            s.duration = f["duracion"]
+        if s.director or not f["poster"]:
+            continue
+        if f["pref"] not in directores:
+            directores[f["pref"]] = leer_poster(f["poster"], f["titulo"]) or ""
+        s.director = directores[f["pref"]]
+
+    leidos = sum(1 for d in directores.values() if d)
+    if directores:
+        print(f"(director del poster: {leidos}/{len(directores)})", end=" ", flush=True)
 
 
 # ---------------------------------------------------------------------------
