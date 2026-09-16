@@ -209,4 +209,59 @@ with tempfile.TemporaryDirectory() as d:
     assert meta["url"] == oldboy["url"], meta
     print("✓ la elección queda en el caché aunque la próxima corrida venga sin duración")
 
+# --- Cacodelphia: antes que vacía, la más nueva que se llama así -------------
+from letterboxd import _la_mas_nueva
+
+nazareno = dict(film("Nazareno Cruz and the Wolf", 1975, 85, "Leonardo Favio",
+                     ["Nazareno Cruz and the Wolf", "Nazareno Cruz y el lobo"]),
+                url="https://letterboxd.com/film/nazareno-cruz-y-el-lobo/")
+fuente = ["NAZARENO CRUZ Y EL LOBO", ""]
+assert _decidir_sin_hints(fuente, 92, [(nazareno, "slug")])[0] is None
+assert _la_mas_nueva(fuente, 92, [(nazareno, "slug")]) is nazareno
+print("✓ Nazareno Cruz y el lobo: la única que se llama así, aunque dure 85 contra 92")
+
+# Entre varias que se llaman así: la que coincide en duración; si ninguna, la más nueva.
+oldboy_2013 = film("Oldboy", 2013, 104, "Spike Lee", ["Oldboy", "Old Boy"])
+cands = [(oldboy, "slug"), (oldboy_2013, "imdb"), (oldboy_2018, "imdb")]
+assert _la_mas_nueva(["OLD BOY"], 119, cands) is oldboy
+assert _la_mas_nueva(["OLD BOY"], None, cands) is oldboy_2018
+print("✓ con duración gana la que coincide (Oldboy 2003); sin duración, la más nueva")
+
+# Los dos errores que ya se publicaron siguen afuera.
+spider = film("Spider Island", 2025, 95)
+assert _la_mas_nueva(["ISLANDIA"], 94, [(spider, "imdb")]) is None
+assert _la_mas_nueva(["OLD BOY"], None, [(old_suffolk, "busqueda"), (reluctant, "slug")]) is None
+print("✓ un título parecido (Spider Island) o una ficha sin año (Old Suffolk Boy) no entran")
+
+with tempfile.TemporaryDirectory() as d:
+    lb.imdb_suggest = lambda q: []
+    PAGINAS[nazareno["url"]] = nazareno     # el slug del título del cine
+    cache = lb.LetterboxdCache(Path(d) / "cache.json")
+
+    # Sin el flag (otro cine): vacía, como siempre.
+    meta = asyncio.run(lb.enrich_title("NAZARENO CRUZ Y EL LOBO", PaginaFalsa(), cache,
+                                       delay=0, hint_duration=92))
+    assert not meta["url"] and cache.get("NAZARENO CRUZ Y EL LOBO").get("sin_ficha")
+
+    # Con el flag, esa decisión cacheada no la frena.
+    meta = asyncio.run(lb.enrich_title("NAZARENO CRUZ Y EL LOBO", PaginaFalsa(), cache,
+                                       delay=0, hint_duration=92, al_mas_nuevo=True))
+    assert meta["url"] == nazareno["url"] and meta["year"] == 1975, meta
+    assert "NAZARENO CRUZ Y EL LOBO" in lb.POR_MAS_NUEVA
+    print(f"✓ camino completo en Cacodelphia: {lb.POR_MAS_NUEVA['NAZARENO CRUZ Y EL LOBO']}")
+
+    # Islandia: IMDb conoce el documental de 2025 pero Letterboxd no tiene su
+    # IMDb cargado. Sin probar el slug con el año, la más nueva era la de 2023.
+    islandia_2023 = film("Islandia", 2023, 77)
+    islandia_2025 = film("Islandia", 2025, 93, "Leandro Cerro")
+    PAGINAS.update({islandia_2023["url"]: islandia_2023, islandia_2025["url"]: islandia_2025})
+    lb.imdb_suggest = lambda q: [{"tt": "tt32535247", "title": "Islandia", "year": 2025},
+                                 {"tt": "tt25812202", "title": "Islandia", "year": 2023}]
+    lb.letterboxd_url_from_imdb = lambda tt: {"tt25812202": islandia_2023["url"]}.get(tt)
+    meta = asyncio.run(lb.enrich_title("ISLANDIA", PaginaFalsa(), cache, delay=0,
+                                       hint_duration=94, al_mas_nuevo=True))
+    assert meta["url"] == islandia_2025["url"], meta
+    assert "ISLANDIA" not in lb.POR_MAS_NUEVA, "sale por la regla estricta, no por la más nueva"
+    print("✓ Islandia → el documental de 2025 por título y duración, aunque Letterboxd no tenga su IMDb")
+
 print("\nTodo OK")

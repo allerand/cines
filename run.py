@@ -339,6 +339,11 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                 h["original"] = s.original_title
             if not h.get("duration") and getattr(s, "duration", None):
                 h["duration"] = s.duration
+            # Cacodelphia no publica director ni año: sin ficha que se destaque,
+            # prefiere la película más nueva que se llama así antes que una
+            # fila vacía (letterboxd._la_mas_nueva).
+            if s.cine == "Cacodelphia":
+                h["al_mas_nuevo"] = True
 
         unique_titles = list(hints.keys())
         print(f"\n🔍 Enriqueciendo {len(unique_titles)} títulos con Letterboxd...")
@@ -354,6 +359,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                 hint_director=h.get("director", ""),
                 hint_original=h.get("original", ""),
                 hint_duration=h.get("duration"),
+                al_mas_nuevo=h.get("al_mas_nuevo", False),
             )
             title_meta[title] = meta
 
@@ -366,6 +372,11 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             print(f"  ↳ {len(SIN_FICHA)} títulos sin director ni año quedaron sin ficha:")
             for t, motivo in SIN_FICHA.items():
                 print(f"     · {t}: {motivo}")
+        from letterboxd import POR_MAS_NUEVA
+        if POR_MAS_NUEVA:
+            print(f"  ↳ {len(POR_MAS_NUEVA)} títulos de Cacodelphia salieron con la más nueva que se llama así (revisar):")
+            for t, cual in POR_MAS_NUEVA.items():
+                print(f"     · {t}: {cual}")
         await lb_browser.close()
 
     # Stopwords del español (palabras que NO se capitalizan en sentence case)

@@ -45,6 +45,11 @@ _ESTRENO_DESDE = date.today().year - 1
 # falta, en vez de adivinar.
 SIN_FICHA: dict[str, str] = {}
 
+# Títulos de Cacodelphia que la regla de arriba dejaba sin ficha y salieron con
+# la película más nueva que se llama así (ver _la_mas_nueva). Van al log para
+# poder revisarlas: acá sí puede haber una ficha equivocada.
+POR_MAS_NUEVA: dict[str, str] = {}
+
 from bs4 import BeautifulSoup
 
 # Playwright sólo se necesita para enrich_title (búsqueda en LB con headless
@@ -839,6 +844,7 @@ async def enrich_title(
     hint_director: str = "",
     hint_original: str = "",
     hint_duration: Optional[int] = None,
+    al_mas_nuevo: bool = False,
 ) -> dict:
     """
     Dado un título y, opcionalmente, hints (año, director, título original) que el
@@ -852,7 +858,8 @@ async def enrich_title(
       4. Letterboxd internal search → fetch + validar
       5. DuckDuckGo (con throttle) `letterboxd <title> <director>` → fetch + validar
     Sin director ni año va por _enrich_sin_hints, que junta los candidatos de
-    todas las fuentes y elige sólo si uno se destaca.
+    todas las fuentes y elige sólo si uno se destaca; con `al_mas_nuevo`
+    (Cacodelphia), si ninguno se destaca, la más nueva que se llama así.
     """
     if is_non_film(title):
         return _empty_meta(title)
@@ -867,7 +874,8 @@ async def enrich_title(
 
     # Sin director ni año, validar candidato por candidato no alcanza.
     if not hint_year and not hint_director:
-        return await _enrich_sin_hints(title, page, cache, delay, hint_original, hint_duration)
+        return await _enrich_sin_hints(title, page, cache, delay, hint_original, hint_duration,
+                                       al_mas_nuevo)
 
     # Key del cache scoped por año: dos películas homónimas en cartel al mismo
     # tiempo (ej. "Obsesión" de Visconti en Lugones y la de Curry Barker en
@@ -1173,6 +1181,41 @@ def _decidir_sin_hints(
     return None, "ninguna película se llama así"
 
 
+def _la_mas_nueva(
+    fuente: list[str],
+    hint_duration: Optional[int],
+    candidatos: list[tuple[dict, str]],
+) -> Optional[dict]:
+    """Para Cacodelphia, cuando _decidir_sin_hints no elige: la película más
+    nueva de Letterboxd que se llama exactamente así.
+
+    Mateo lo pidió el 16/9/2026: mientras no se lea el director del poster
+    (posters.py), en Cacodelphia prefiere una ficha probable a una fila vacía.
+    Con Nazareno Cruz y el lobo la única que se llama así dura 85 minutos contra
+    los 92 del cine, y la regla estricta la dejaba vacía.
+
+    Dos límites, que son los errores que ya se publicaron: el título tiene que
+    ser el mismo —no uno parecido, así salieron 'Spider Island' por Islandia y
+    'Old Suffolk Boy' por Old Boy— y la película tiene que tener año. Entre
+    las que se llaman así gana la que coincide en duración, si hay alguna; si
+    no, la más nueva.
+    """
+    exactas: list[dict] = []
+    for m, _ in candidatos:
+        if not m.get("year"):
+            continue
+        if clase_titulo(fuente, m.get("titulos") or [m.get("title_en", "")]) != "exacto":
+            continue
+        if not any(_mismo_film(m, otra) for otra in exactas):
+            exactas.append(m)
+    if not exactas:
+        return None
+    con_duracion = [m for m in exactas
+                    if hint_duration and m.get("duration")
+                    and abs(int(m["duration"]) - int(hint_duration)) <= 5]
+    return max(con_duracion or exactas, key=lambda m: int(m["year"]))
+
+
 def _tmdb_candidatos(title: str, hint_original: str) -> list[tuple[dict, str]]:
     """Fichas de TMDb, para cuando Letterboxd no tiene nada (una película
     argentina chica, un estreno que todavía no cargaron)."""
@@ -1198,6 +1241,7 @@ async def _enrich_sin_hints(
     delay: float,
     hint_original: str,
     hint_duration: Optional[int],
+    al_mas_nuevo: bool = False,
 ) -> dict:
     """
     Enrichment de las funciones que llegan sin director ni año —Lorca,
@@ -1213,6 +1257,9 @@ async def _enrich_sin_hints(
     función queda sin ficha y el motivo va a SIN_FICHA: una fila vacía se nota
     y se completa; la ficha de otra película se publica, se postea y nadie se
     entera.
+
+    La excepción es `al_mas_nuevo` (los títulos de Cacodelphia): si no se
+    destaca ninguna, va la más nueva que se llama así (_la_mas_nueva).
     """
     cached = cache.get(title) if cache.has(title) else None
     if cached and cached.get("sin_hints"):
@@ -1225,8 +1272,10 @@ async def _enrich_sin_hints(
         # Quedó sin ficha porque no se pudo elegir. Se vuelve a intentar a los
         # tres días, o antes si ahora llega una duración que antes no (la ficha
         # de Cacodelphia a veces no se puede leer y la duración no viene).
+        # Una decisión tomada sin el fallback de Cacodelphia no vale para él.
         reciente = cached.get("fecha", "") >= (date.today() - timedelta(days=3)).isoformat()
-        if reciente and cached.get("con_duracion") == bool(hint_duration):
+        if (reciente and cached.get("con_duracion") == bool(hint_duration)
+                and bool(cached.get("al_mas_nuevo")) == al_mas_nuevo):
             SIN_FICHA[title] = cached["sin_ficha"]
             return cached
 
@@ -1277,11 +1326,20 @@ async def _enrich_sin_hints(
         for cand in imdb_suggest(q):
             # Que IMDb conozca una película con este mismo nombre ya dice algo,
             # esté o no en Letterboxd (ver _decidir_sin_hints).
-            if clase_titulo(fuente, [cand.get("title", "")]) == "exacto":
+            exacto = clase_titulo(fuente, [cand.get("title", "")]) == "exacto"
+            if exacto:
                 homonimo_fuera = True
             if cand["tt"] not in vistos_tt and len(candidatos) < _MAX_CANDIDATOS:
                 vistos_tt.add(cand["tt"])
-                probar(letterboxd_url_from_imdb(cand["tt"]), "imdb")
+                u = letterboxd_url_from_imdb(cand["tt"])
+                if not u and exacto and cand.get("year"):
+                    # Letterboxd no siempre tiene cargado el IMDb de la
+                    # película, y entonces /imdb/tt no lleva a ningún lado: el
+                    # documental Islandia (Leandro Cerro, 2025) no aparecía
+                    # nunca, y quedaban sólo las Islandia de 2018 y 2023. Los
+                    # homónimos Letterboxd los nombra con el año en el slug.
+                    u = f"https://letterboxd.com/film/{slugify(cand['title'])}-{cand['year']}/"
+                probar(u, "imdb")
 
     # 4. TMDb, sólo si hasta acá no apareció nadie que se llame así ('Obsesión'
     # de Curry Barker: el slug está en inglés e IMDb no la encuentra).
@@ -1295,6 +1353,13 @@ async def _enrich_sin_hints(
     if not elegido and not candidatos:
         elegido, motivo = _decidir_sin_hints(
             fuente, hint_duration, _tmdb_candidatos(search_title, hint_original), homonimo_fuera)
+
+    # 6. Cacodelphia: antes que vacía, la más nueva que se llama así.
+    if not elegido and al_mas_nuevo:
+        mas_nueva = _la_mas_nueva(fuente, hint_duration, candidatos)
+        if mas_nueva:
+            POR_MAS_NUEVA[title] = f"{_lista([mas_nueva])} (la regla estricta: {motivo})"
+            elegido, motivo = mas_nueva, "la más nueva que se llama así"
 
     if elegido and elegido.get("url"):
         # Lo que falte lo completa TMDb, que tiene que coincidir con el
@@ -1313,7 +1378,7 @@ async def _enrich_sin_hints(
             # va a ser la misma. Sin ninguno puede haber sido la red: se
             # reintenta en la próxima corrida.
             meta.update(sin_ficha=motivo, fecha=date.today().isoformat(),
-                        con_duracion=bool(hint_duration))
+                        con_duracion=bool(hint_duration), al_mas_nuevo=al_mas_nuevo)
         cache.set(title, meta)
         return meta
     meta["sin_hints"] = motivo
