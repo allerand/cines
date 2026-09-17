@@ -45,10 +45,11 @@ _ESTRENO_DESDE = date.today().year - 1
 # falta, en vez de adivinar.
 SIN_FICHA: dict[str, str] = {}
 
-# Títulos de Cacodelphia que la regla de arriba dejaba sin ficha y salieron con
-# la película más nueva que se llama así (ver _la_mas_nueva). Van al log para
-# poder revisarlas: acá sí puede haber una ficha equivocada.
-POR_MAS_NUEVA: dict[str, str] = {}
+# Títulos que la regla de arriba dejaba sin ficha y salieron por el desempate de
+# su cine: la más nueva (Cacodelphia) o la más popular (Cineclub Farus). Ver
+# _desempatar. Van al log para poder revisarlas: acá sí puede haber una ficha
+# equivocada.
+POR_DESEMPATE: dict[str, str] = {}
 
 from bs4 import BeautifulSoup
 
@@ -187,6 +188,18 @@ def parse_film_soup(soup: BeautifulSoup, url: str) -> Optional[dict]:
     titulos = [t for t in dict.fromkeys(t.strip() for t in titulos)
                if t and re.search(r"[a-z]", _ascii(t))]
 
+    # Cuántos la calificaron, del JSON-LD de la página (viene envuelto en un
+    # comentario CDATA). Es la medida de popularidad para _la_mas_popular:
+    # Heat (1995) tiene 1,3 millones y la miniserie Rosemary's Baby (2014), 2.636.
+    calificaciones: Optional[int] = None
+    for script in soup.find_all("script", type="application/ld+json"):
+        try:
+            ld = json.loads(re.sub(r"/\*.*?\*/", "", script.string or "", flags=re.S))
+            calificaciones = int(ld["aggregateRating"]["ratingCount"])
+            break
+        except (ValueError, KeyError, TypeError):
+            continue
+
     return {
         "url": url,
         "title_en": title_en,
@@ -196,6 +209,7 @@ def parse_film_soup(soup: BeautifulSoup, url: str) -> Optional[dict]:
         "duration": duration,
         "genre": genre,
         "titulos": titulos,
+        "calificaciones": calificaciones,
     }
 
 
@@ -443,9 +457,9 @@ def _clase_de(meta: dict, title: str, hint_original: str = "") -> Optional[str]:
 
 
 def _para_cache(meta: dict) -> dict:
-    """La ficha sin los títulos alternativos: ocupan y sólo sirven para
-    validar, y la clase ya quedó calculada."""
-    return {k: v for k, v in meta.items() if k != "titulos"}
+    """La ficha sin los títulos alternativos ni las calificaciones: ocupan y
+    sólo sirven para elegir, y la clase ya quedó calculada."""
+    return {k: v for k, v in meta.items() if k not in ("titulos", "calificaciones")}
 
 
 _SPANISH_STOPWORDS = {"el", "la", "los", "las", "un", "una", "de", "del", "y", "a"}
@@ -844,7 +858,7 @@ async def enrich_title(
     hint_director: str = "",
     hint_original: str = "",
     hint_duration: Optional[int] = None,
-    al_mas_nuevo: bool = False,
+    desempate: str = "",
 ) -> dict:
     """
     Dado un título y, opcionalmente, hints (año, director, título original) que el
@@ -858,8 +872,8 @@ async def enrich_title(
       4. Letterboxd internal search → fetch + validar
       5. DuckDuckGo (con throttle) `letterboxd <title> <director>` → fetch + validar
     Sin director ni año va por _enrich_sin_hints, que junta los candidatos de
-    todas las fuentes y elige sólo si uno se destaca; con `al_mas_nuevo`
-    (Cacodelphia), si ninguno se destaca, la más nueva que se llama así.
+    todas las fuentes y elige sólo si uno se destaca; con `desempate`
+    (Cacodelphia, Farus), si ninguno se destaca, ver _desempatar.
     """
     if is_non_film(title):
         return _empty_meta(title)
@@ -875,7 +889,7 @@ async def enrich_title(
     # Sin director ni año, validar candidato por candidato no alcanza.
     if not hint_year and not hint_director:
         return await _enrich_sin_hints(title, page, cache, delay, hint_original, hint_duration,
-                                       al_mas_nuevo)
+                                       desempate)
 
     # Key del cache scoped por año: dos películas homónimas en cartel al mismo
     # tiempo (ej. "Obsesión" de Visconti en Lugones y la de Curry Barker en
@@ -1181,24 +1195,33 @@ def _decidir_sin_hints(
     return None, "ninguna película se llama así"
 
 
-def _la_mas_nueva(
+# Desempates por cine, cuando _decidir_sin_hints no elige (los pone run.py).
+DESEMPATE_NUEVA = "nueva"        # Cacodelphia: estrenos
+DESEMPATE_POPULAR = "popular"    # Cineclub Farus: clásicos
+
+
+def _desempatar(
+    desempate: str,
     fuente: list[str],
     hint_duration: Optional[int],
     candidatos: list[tuple[dict, str]],
 ) -> Optional[dict]:
-    """Para Cacodelphia, cuando _decidir_sin_hints no elige: la película más
-    nueva de Letterboxd que se llama exactamente así.
+    """Cuando _decidir_sin_hints no elige, una ficha probable antes que una fila
+    vacía, entre las películas de Letterboxd que se llaman exactamente así.
 
-    Mateo lo pidió el 16/9/2026: mientras no se lea el director del poster
-    (posters.py), en Cacodelphia prefiere una ficha probable a una fila vacía.
-    Con Nazareno Cruz y el lobo la única que se llama así dura 85 minutos contra
-    los 92 del cine, y la regla estricta la dejaba vacía.
+    Mateo lo pidió para dos cines que no publican director ni año, mientras no
+    se lea el flyer (posters.py espera ANTHROPIC_API_KEY):
+      - "nueva" (Cacodelphia, 16/9/2026), que da estrenos: la más nueva. Con
+        Nazareno Cruz y el lobo la única que se llama así dura 85 minutos contra
+        los 92 del cine, y la regla estricta la dejaba vacía.
+      - "popular" (Cineclub Farus, 17/9/2026), que da clásicos: la que más gente
+        calificó. La más nueva ahí erraba: daba la miniserie Rosemary's Baby
+        (2014) y T2 Trainspotting (2017).
 
     Dos límites, que son los errores que ya se publicaron: el título tiene que
     ser el mismo —no uno parecido, así salieron 'Spider Island' por Islandia y
     'Old Suffolk Boy' por Old Boy— y la película tiene que tener año. Entre
-    las que se llaman así gana la que coincide en duración, si hay alguna; si
-    no, la más nueva.
+    las que se llaman así van primero las que coinciden en duración, si hay.
     """
     exactas: list[dict] = []
     for m, _ in candidatos:
@@ -1213,7 +1236,13 @@ def _la_mas_nueva(
     con_duracion = [m for m in exactas
                     if hint_duration and m.get("duration")
                     and abs(int(m["duration"]) - int(hint_duration)) <= 5]
-    return max(con_duracion or exactas, key=lambda m: int(m["year"]))
+    pool = con_duracion or exactas
+    if desempate == DESEMPATE_NUEVA:
+        return max(pool, key=lambda m: int(m["year"]))
+    if desempate == DESEMPATE_POPULAR:
+        calificadas = [m for m in pool if m.get("calificaciones")]
+        return max(calificadas, key=lambda m: int(m["calificaciones"])) if calificadas else None
+    return None
 
 
 def _tmdb_candidatos(title: str, hint_original: str) -> list[tuple[dict, str]]:
@@ -1241,7 +1270,7 @@ async def _enrich_sin_hints(
     delay: float,
     hint_original: str,
     hint_duration: Optional[int],
-    al_mas_nuevo: bool = False,
+    desempate: str = "",
 ) -> dict:
     """
     Enrichment de las funciones que llegan sin director ni año —Lorca,
@@ -1258,8 +1287,8 @@ async def _enrich_sin_hints(
     y se completa; la ficha de otra película se publica, se postea y nadie se
     entera.
 
-    La excepción es `al_mas_nuevo` (los títulos de Cacodelphia): si no se
-    destaca ninguna, va la más nueva que se llama así (_la_mas_nueva).
+    La excepción es `desempate` (Cacodelphia y Cineclub Farus): si no se
+    destaca ninguna, se desempata según el cine (_desempatar).
     """
     cached = cache.get(title) if cache.has(title) else None
     if cached and cached.get("sin_hints"):
@@ -1272,10 +1301,10 @@ async def _enrich_sin_hints(
         # Quedó sin ficha porque no se pudo elegir. Se vuelve a intentar a los
         # tres días, o antes si ahora llega una duración que antes no (la ficha
         # de Cacodelphia a veces no se puede leer y la duración no viene).
-        # Una decisión tomada sin el fallback de Cacodelphia no vale para él.
+        # Una decisión tomada con otro desempate (o sin) no vale para éste.
         reciente = cached.get("fecha", "") >= (date.today() - timedelta(days=3)).isoformat()
         if (reciente and cached.get("con_duracion") == bool(hint_duration)
-                and bool(cached.get("al_mas_nuevo")) == al_mas_nuevo):
+                and cached.get("desempate", "") == desempate):
             SIN_FICHA[title] = cached["sin_ficha"]
             return cached
 
@@ -1354,12 +1383,13 @@ async def _enrich_sin_hints(
         elegido, motivo = _decidir_sin_hints(
             fuente, hint_duration, _tmdb_candidatos(search_title, hint_original), homonimo_fuera)
 
-    # 6. Cacodelphia: antes que vacía, la más nueva que se llama así.
-    if not elegido and al_mas_nuevo:
-        mas_nueva = _la_mas_nueva(fuente, hint_duration, candidatos)
-        if mas_nueva:
-            POR_MAS_NUEVA[title] = f"{_lista([mas_nueva])} (la regla estricta: {motivo})"
-            elegido, motivo = mas_nueva, "la más nueva que se llama así"
+    # 6. Cacodelphia y Farus: antes que vacía, el desempate del cine.
+    if not elegido and desempate:
+        desempatada = _desempatar(desempate, fuente, hint_duration, candidatos)
+        if desempatada:
+            POR_DESEMPATE[title] = (f"{_lista([desempatada])}, la más {desempate} "
+                                    f"(la regla estricta: {motivo})")
+            elegido, motivo = desempatada, f"la más {desempate} que se llama así"
 
     if elegido and elegido.get("url"):
         # Lo que falte lo completa TMDb, que tiene que coincidir con el
@@ -1378,7 +1408,7 @@ async def _enrich_sin_hints(
             # va a ser la misma. Sin ninguno puede haber sido la red: se
             # reintenta en la próxima corrida.
             meta.update(sin_ficha=motivo, fecha=date.today().isoformat(),
-                        con_duracion=bool(hint_duration), al_mas_nuevo=al_mas_nuevo)
+                        con_duracion=bool(hint_duration), desempate=desempate)
         cache.set(title, meta)
         return meta
     meta["sin_hints"] = motivo

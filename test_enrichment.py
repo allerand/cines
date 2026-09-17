@@ -210,7 +210,11 @@ with tempfile.TemporaryDirectory() as d:
     print("✓ la elección queda en el caché aunque la próxima corrida venga sin duración")
 
 # --- Cacodelphia: antes que vacía, la más nueva que se llama así -------------
-from letterboxd import _la_mas_nueva
+from letterboxd import DESEMPATE_NUEVA, DESEMPATE_POPULAR, _desempatar
+
+
+def _la_mas_nueva(fuente, dur, cands):
+    return _desempatar(DESEMPATE_NUEVA, fuente, dur, cands)
 
 nazareno = dict(film("Nazareno Cruz and the Wolf", 1975, 85, "Leonardo Favio",
                      ["Nazareno Cruz and the Wolf", "Nazareno Cruz y el lobo"]),
@@ -245,10 +249,10 @@ with tempfile.TemporaryDirectory() as d:
 
     # Con el flag, esa decisión cacheada no la frena.
     meta = asyncio.run(lb.enrich_title("NAZARENO CRUZ Y EL LOBO", PaginaFalsa(), cache,
-                                       delay=0, hint_duration=92, al_mas_nuevo=True))
+                                       delay=0, hint_duration=92, desempate=DESEMPATE_NUEVA))
     assert meta["url"] == nazareno["url"] and meta["year"] == 1975, meta
-    assert "NAZARENO CRUZ Y EL LOBO" in lb.POR_MAS_NUEVA
-    print(f"✓ camino completo en Cacodelphia: {lb.POR_MAS_NUEVA['NAZARENO CRUZ Y EL LOBO']}")
+    assert "NAZARENO CRUZ Y EL LOBO" in lb.POR_DESEMPATE
+    print(f"✓ camino completo en Cacodelphia: {lb.POR_DESEMPATE['NAZARENO CRUZ Y EL LOBO']}")
 
     # Islandia: IMDb conoce el documental de 2025 pero Letterboxd no tiene su
     # IMDb cargado. Sin probar el slug con el año, la más nueva era la de 2023.
@@ -259,9 +263,36 @@ with tempfile.TemporaryDirectory() as d:
                                  {"tt": "tt25812202", "title": "Islandia", "year": 2023}]
     lb.letterboxd_url_from_imdb = lambda tt: {"tt25812202": islandia_2023["url"]}.get(tt)
     meta = asyncio.run(lb.enrich_title("ISLANDIA", PaginaFalsa(), cache, delay=0,
-                                       hint_duration=94, al_mas_nuevo=True))
+                                       hint_duration=94, desempate=DESEMPATE_NUEVA))
     assert meta["url"] == islandia_2025["url"], meta
-    assert "ISLANDIA" not in lb.POR_MAS_NUEVA, "sale por la regla estricta, no por la más nueva"
+    assert "ISLANDIA" not in lb.POR_DESEMPATE, "sale por la regla estricta, no por la más nueva"
     print("✓ Islandia → el documental de 2025 por título y duración, aunque Letterboxd no tenga su IMDb")
+
+# --- Cineclub Farus: la más popular ------------------------------------------
+def pop(title, year, calificaciones, titulos=None, duration=None):
+    return dict(film(title, year, duration, titulos=titulos), calificaciones=calificaciones)
+
+
+rosemary = [pop("Rosemary's Baby", 1968, 615770), pop("Rosemary's Baby", 2014, 2636)]
+trainspotting = [pop("Trainspotting", 1996, 1332454),
+                 pop("T2 Trainspotting", 2017, 219456, ["T2 Trainspotting", "Trainspotting"])]
+heat = [pop("Heat", 1986, 9120), pop("Heat", 1995, 1296812)]
+for fuente, cands, esperada in [(["ROSEMARY'S BABY"], rosemary, rosemary[0]),
+                                (["TRAINSPOTTING"], trainspotting, trainspotting[0]),
+                                (["HEAT"], heat, heat[1])]:
+    assert _decidir_sin_hints(fuente, None, [(c, "imdb") for c in cands])[0] is None
+    assert _desempatar(DESEMPATE_POPULAR, fuente, None, [(c, "imdb") for c in cands]) is esperada
+print("✓ Farus: la más calificada (Rosemary's Baby 1968, Trainspotting 1996, Heat 1995)")
+# Por qué no la más nueva: en un cineclub de clásicos daba la miniserie y la secuela.
+assert _la_mas_nueva(["ROSEMARY'S BABY"], None, [(c, "imdb") for c in rosemary]) is rosemary[1]
+assert _la_mas_nueva(["TRAINSPOTTING"], None, [(c, "imdb") for c in trainspotting]) is trainspotting[1]
+
+la_haine = pop("La Haine", 1995, 1192920)
+assert _desempatar(DESEMPATE_POPULAR, ["LA HAINE"], None, [(la_haine, "slug")]) is la_haine
+# Sin calificaciones no hay con qué medir: vacía.
+assert _desempatar(DESEMPATE_POPULAR, ["ISLANDIA"], None, [(film("Islandia", 2023, 77), "imdb")]) is None
+# Y los límites de siempre: nada de títulos parecidos.
+assert _desempatar(DESEMPATE_POPULAR, ["ISLANDIA"], None, [(pop("Spider Island", 2025, 50000), "imdb")]) is None
+print("✓ Farus: la única que se llama así entra; sin calificaciones o con otro título, no")
 
 print("\nTodo OK")

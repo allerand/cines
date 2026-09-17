@@ -122,7 +122,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     except Exception as e:
         ccr_screenings = []
         print(f"error — {e}")
-    from letterboxd import LetterboxdCache, enrich_title
+    from letterboxd import (LetterboxdCache, enrich_title,
+                            DESEMPATE_NUEVA, DESEMPATE_POPULAR)
+    # Cómo se elige la ficha en los cines que no publican director ni año
+    # cuando ninguna película se destaca (letterboxd._desempatar).
+    DESEMPATE_POR_CINE = {
+        "Cacodelphia": DESEMPATE_NUEVA,         # estrenos
+        "Cineclub Farus": DESEMPATE_POPULAR,    # clásicos
+    }
 
     cache = LetterboxdCache(CACHE_JSON)
     all_screenings = []
@@ -347,11 +354,10 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                 h["original"] = s.original_title
             if not h.get("duration") and getattr(s, "duration", None):
                 h["duration"] = s.duration
-            # Cacodelphia no publica director ni año: sin ficha que se destaque,
-            # prefiere la película más nueva que se llama así antes que una
-            # fila vacía (letterboxd._la_mas_nueva).
-            if s.cine == "Cacodelphia":
-                h["al_mas_nuevo"] = True
+            # Cines que no publican director ni año: sin ficha que se destaque,
+            # una probable antes que una fila vacía (letterboxd._desempatar).
+            if s.cine in DESEMPATE_POR_CINE:
+                h.setdefault("desempate", DESEMPATE_POR_CINE[s.cine])
 
         unique_titles = list(hints.keys())
         print(f"\n🔍 Enriqueciendo {len(unique_titles)} títulos con Letterboxd...")
@@ -367,7 +373,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                 hint_director=h.get("director", ""),
                 hint_original=h.get("original", ""),
                 hint_duration=h.get("duration"),
-                al_mas_nuevo=h.get("al_mas_nuevo", False),
+                desempate=h.get("desempate", ""),
             )
             title_meta[title] = meta
 
@@ -380,10 +386,10 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             print(f"  ↳ {len(SIN_FICHA)} títulos sin director ni año quedaron sin ficha:")
             for t, motivo in SIN_FICHA.items():
                 print(f"     · {t}: {motivo}")
-        from letterboxd import POR_MAS_NUEVA
-        if POR_MAS_NUEVA:
-            print(f"  ↳ {len(POR_MAS_NUEVA)} títulos de Cacodelphia salieron con la más nueva que se llama así (revisar):")
-            for t, cual in POR_MAS_NUEVA.items():
+        from letterboxd import POR_DESEMPATE
+        if POR_DESEMPATE:
+            print(f"  ↳ {len(POR_DESEMPATE)} títulos salieron por el desempate de su cine (revisar):")
+            for t, cual in POR_DESEMPATE.items():
                 print(f"     · {t}: {cual}")
         await lb_browser.close()
 
