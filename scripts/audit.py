@@ -80,6 +80,9 @@ PROBES = {
     # si da 0, el que se rompió es el scraper o la fuente, no la programación.
     "Sala Lúcida":              ("https://portal.salalucida.org/",
                                  r"/eventos/[a-z0-9\-]+"),
+    # Cuenta eventos, no funciones: una doble función es un evento con dos.
+    "Cineclub Farus":           ("https://centralticket.net/search?q=farus",
+                                 r"/event/[a-z0-9\-]*farus[a-z0-9\-]*"),
     "Archivo General de la Nación": ("https://www.argentina.gob.ar/interior/"
                                      "archivo-general-de-la-nacion/"
                                      "cine-en-el-archivo-general-de-la-nacion",

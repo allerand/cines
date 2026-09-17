@@ -51,7 +51,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_filo, scrape_bn, scrape_cc25, scrape_ccd, scrape_cb,
         scrape_borges, scrape_bcn, scrape_agn, scrape_bellasartes,
         scrape_sala_lucida, scrape_manual, descartar_manual,
-        scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex,
+        scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
         resumen_proxy,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
@@ -228,6 +228,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     print("🎬 Scrapeando Peña sin cadenas (Hasta Trilce)...", end=" ", flush=True)
     try:
         r = scrape_pena_sin_cadenas(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
+    print("🎬 Scrapeando Cineclub Farus...", end=" ", flush=True)
+    try:
+        r = scrape_farus(semanas)
         all_screenings.extend(r)
         print(f"{len(r)} funciones")
     except Exception as e:
