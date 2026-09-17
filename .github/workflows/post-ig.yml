@@ -41,9 +41,18 @@ name: Post to Instagram
 
 on:
   schedule:
-    # 11:08 UTC = 08:08 en Buenos Aires (UTC-3 todo el año, no hay horario de
-    # verano). El minuto es feo a propósito: GitHub encola los workflows que
-    # caen en punto y a la media, y ahí es donde se acumulan las demoras.
+    # Están adelantados cuatro horas a propósito: 07:08 UTC = 04:08 en Buenos
+    # Aires (UTC-3 todo el año). Hasta el 17/9/2026 eran 11:08-12:43 UTC (08:08
+    # ART), y GitHub los venía largando entre 3 y 5 horas tarde: las stories
+    # salían entre las 11:50 y las 15:00 (del 8 al 16/9 la primera corrida del
+    # día arrancó siempre después de las 14:53 UTC). Con esa demora, los de las
+    # 07:08 caen hacia las 8 de la mañana. El día que GitHub llegue en hora
+    # salen de madrugada, con la cartelera del scrape de la noche anterior:
+    # Mateo eligió eso antes que depender de un disparo externo. El de las
+    # 12:43 queda de red por si los tempranos no llegan nunca.
+    #
+    # El minuto es feo a propósito: GitHub encola los workflows que caen en
+    # punto y a la media, y ahí es donde se acumulan las demoras.
     #
     # Son cuatro horarios y no uno porque el scheduler de GitHub no es puntual
     # ni confiable: no es que llegue unos minutos tarde, es que a veces llega
@@ -53,9 +62,10 @@ on:
     # los demás se van en 20 segundos al ver la marca del día. La marca es lo
     # que hace que esto sea seguro: sin ella, cuatro crons serían cuatro
     # posteos.
-    - cron: '8 11 * * *'
-    - cron: '38 11 * * *'
-    - cron: '13 12 * * *'
+    - cron: '8 7 * * *'
+    - cron: '38 7 * * *'
+    - cron: '13 8 * * *'
+    - cron: '43 8 * * *'
     - cron: '43 12 * * *'
   workflow_dispatch:
     inputs:

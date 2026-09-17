@@ -2,12 +2,15 @@ name: Scrape cartelera
 
 on:
   schedule:
-    # 06:47 UTC = 03:47 ART. El posteo a Instagram ya no cuelga de acá (lo hace
-    # post-ig.yml a las 08:08 ART), así que lo único que se le pide a esta hora
-    # es llegar con la cartelera y las PNG commiteadas antes de esa. Con las
-    # demoras habituales del scheduler de GitHub (30-90 min) y los 20-42 min
-    # que tarda el job, termina cerca de las 05:00 ART: tres horas de aire.
-    - cron: '47 6 * * *'
+    # 03:47 UTC = 00:47 ART. Hasta el 17/9/2026 estaba a las 06:47 UTC, pero el
+    # scheduler de GitHub venía largándolo cinco horas tarde (arrancó 12:10,
+    # 12:09, 12:12, 13:23 y 12:19 UTC del 13 al 17/9): la cartelera del día se
+    # actualizaba a las 9 de la mañana y llegaba después del posteo. Tres horas
+    # antes, con esa demora termina hacia las 6 ART y el posteo (post-ig.yml)
+    # ya la encuentra. Si un día GitHub llega en hora, corre a las 00:47 ART,
+    # que para las fuentes es lo mismo. No antes de las 03:00 UTC: ahí la fecha
+    # UTC del runner todavía es la del día anterior en Buenos Aires.
+    - cron: '47 3 * * *'
   workflow_dispatch:  # permite triggear manual desde la UI de GitHub
 
 permissions:
