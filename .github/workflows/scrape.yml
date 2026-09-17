@@ -67,9 +67,6 @@ jobs:
           # aplicación de Google (no la de la cuenta), con 2FA activado.
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
-          # Lee el crédito de dirección de los posters de Cacodelphia (posters.py).
-          # Opcional: sin la clave no se leen y el enrichment sigue como antes.
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python3 run.py
 
       - name: Compute today's date (Buenos Aires)
@@ -84,7 +81,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/cartelera.json data/cache.json data/posters.json data/cck_eventos.json data/ctba_eventos.json posts/
+          git add data/cartelera.json data/cache.json data/cck_eventos.json data/ctba_eventos.json posts/
 
           if git diff --cached --quiet; then
             echo "No hay cambios para commitear"

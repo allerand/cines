@@ -1209,8 +1209,8 @@ def _desempatar(
     """Cuando _decidir_sin_hints no elige, una ficha probable antes que una fila
     vacía, entre las películas de Letterboxd que se llaman exactamente así.
 
-    Mateo lo pidió para dos cines que no publican director ni año, mientras no
-    se lea el flyer (posters.py espera ANTHROPIC_API_KEY):
+    Mateo lo pidió para dos cines que no publican director ni año (están sólo
+    impresos en el flyer):
       - "nueva" (Cacodelphia, 16/9/2026), que da estrenos: la más nueva. Con
         Nazareno Cruz y el lobo la única que se llama así dura 85 minutos contra
         los 92 del cine, y la regla estricta la dejaba vacía.

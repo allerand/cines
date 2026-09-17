@@ -560,7 +560,7 @@
       "letterboxd": "https://letterboxd.com/film/michael-2026/"
     },
     {
-      "_comment": "Retrospectiva Leonardo Favio en Cacodelphia (16/9/2026). La ficha no trae director ni año y Letterboxd le da 85 minutos contra los 92 del cine, así que el enrichment la dejó vacía. Override para las funciones de ese día: con ANTHROPIC_API_KEY configurada la resuelve sola el crédito del poster (posters.py). Slug verificado."
+      "_comment": "Retrospectiva Leonardo Favio en Cacodelphia (16/9/2026). La ficha no trae director ni año y Letterboxd le da 85 minutos contra los 92 del cine, así que el enrichment la dejó vacía. Override para las funciones de ese día; desde el 17/9 la resuelve sola el desempate de Cacodelphia (la más nueva que se llama así). Slug verificado."
     },
     {
       "title": "Nazareno Cruz y el Lobo",

@@ -1925,8 +1925,8 @@ def scrape_cacodelphia_mail(dias: int = 30) -> list[Screening]:
 
 
 async def scrape_cacodelphia(page: Page) -> list[Screening]:
-    """Cartelera de Cacodelphia (mail + SPA), con la duración y el director
-    que agregan la API de fichas y el poster (ver _caco_completar)."""
+    """Cartelera de Cacodelphia (mail + SPA), con la duración que agrega la API
+    de fichas (ver _caco_completar)."""
     funciones = await _scrape_cacodelphia_funciones(page)
     try:
         _caco_completar(funciones)
@@ -2021,23 +2021,20 @@ async def _scrape_cacodelphia_funciones(page: Page) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
-# Cacodelphia — la ficha por API, y el director leído del poster
+# Cacodelphia — la duración por la API de fichas
 # ---------------------------------------------------------------------------
 #
 # La SPA es una cáscara sobre la API de GAF, que es pública y contesta JSON:
 # /nowPlaying/86 lista la cartelera y /movie/86/<pref> trae de cada película la
 # duración, la sinopsis, el trailer y el poster. Director y año no los trae
-# nunca ("datosTecnicos": "." en todas), y sin ellos el enrichment elige por
-# título y duración: el 16/9/2026 Nazareno Cruz y el lobo quedó sin ficha.
+# nunca ("datosTecnicos": "." en todas): están sólo impresos en el poster, y
+# leerlo necesita un modelo con visión. Se probó con Claude (commit 0985fc8) y
+# el 17/9/2026 se sacó a pedido de Mateo mientras no haya clave de Anthropic;
+# sin director, el enrichment usa el desempate del cine (letterboxd._desempatar).
 #
-# El poster sí los trae casi siempre ("Una película de Avelina Prat", "dirigida
-# por Leandro Cerro", "un film de Leonardo Favio"), y posters.py lo transcribe.
-# Con ese director la función va por el enrichment validado: la ficha tiene que
-# ser de ese director o queda vacía.
-#
-# La duración de la API, además, no depende de que cargue la SPA: el 11/9/2026
-# la SPA falló en CI, el mail quedó sin duraciones y Old Boy salió como 'Old
-# Suffolk Boy'.
+# La duración de la API sí sirve ya: no depende de que cargue la SPA. El
+# 11/9/2026 la SPA falló en CI, el mail quedó sin duraciones y Old Boy salió
+# como 'Old Suffolk Boy'.
 
 _GAF_API = "https://apiv2.gaf.adro.studio"
 _CACO_CINE_ID = 86
@@ -2061,7 +2058,7 @@ def _caco_api(path: str):
 
 
 def _caco_fichas_api() -> list[dict]:
-    """Las películas en cartelera: pref, título, duración y poster."""
+    """Las películas en cartelera: pref, título y duración."""
     lista = _caco_api(f"nowPlaying/{_CACO_CINE_ID}")
     if not isinstance(lista, list):
         return []
@@ -2082,7 +2079,6 @@ def _caco_fichas_api() -> list[dict]:
             "pref": pref,
             "titulo": titulo,
             "duracion": duracion if 20 <= duracion <= 600 else None,
-            "poster": (movie.get("poster") or "").strip(),
         })
     return fichas
 
@@ -2108,14 +2104,9 @@ def _caco_ficha_de(s: Screening, fichas: list[dict]) -> Optional[dict]:
     return prefijo[0] if len(prefijo) == 1 else None
 
 
-def _caco_completar(funciones: list[Screening], fichas: Optional[list[dict]] = None,
-                    leer_poster=None) -> None:
-    """Completa duración y director de las funciones con la API y el poster.
-
-    Nunca pisa lo que ya vino de la SPA. El poster se lee una vez por película
-    (y posters.py lo cachea entre corridas), sólo si a alguna función de esa
-    película le falta el director.
-    """
+def _caco_completar(funciones: list[Screening], fichas: Optional[list[dict]] = None) -> None:
+    """Completa la duración de las funciones con la API de fichas. Nunca pisa
+    la que ya vino de la SPA."""
     if not funciones:
         return
     if fichas is None:
@@ -2123,25 +2114,10 @@ def _caco_completar(funciones: list[Screening], fichas: Optional[list[dict]] = N
     if not fichas:
         print("(API de fichas sin respuesta)", end=" ", flush=True)
         return
-    if leer_poster is None:
-        from posters import director_del_poster as leer_poster
-
-    directores: dict[str, str] = {}
     for s in funciones:
         f = _caco_ficha_de(s, fichas)
-        if not f:
-            continue
-        if not s.duration and f["duracion"]:
+        if f and not s.duration and f["duracion"]:
             s.duration = f["duracion"]
-        if s.director or not f["poster"]:
-            continue
-        if f["pref"] not in directores:
-            directores[f["pref"]] = leer_poster(f["poster"], f["titulo"]) or ""
-        s.director = directores[f["pref"]]
-
-    leidos = sum(1 for d in directores.values() if d)
-    if directores:
-        print(f"(director del poster: {leidos}/{len(directores)})", end=" ", flush=True)
 
 
 # ---------------------------------------------------------------------------
