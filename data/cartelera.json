@@ -70,6 +70,10 @@
       "scrapeadas": 10,
       "publicadas": 10
     },
+    "Cineclub Farus": {
+      "scrapeadas": 4,
+      "publicadas": 4
+    },
     "Cinemark Caballito": {
       "scrapeadas": 200,
       "publicadas": 244
@@ -14609,6 +14613,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-09-18",
+      "hora": "21:00",
+      "title_es": "Rosemary's Baby",
+      "title_en": "Rosemary's Baby",
+      "original_title": "",
+      "director": "Roman Polanski",
+      "country": "Estados Unidos",
+      "year": 1968,
+      "duration": 138,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/rosemarys-baby/",
+      "ticket_url": "https://centralticket.net/event/cineclubfarusvol4",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-09-18",
       "hora": "21:10",
@@ -28305,6 +28325,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-09-20",
+      "hora": "20:00",
+      "title_es": "Trainspotting",
+      "title_en": "Trainspotting",
+      "original_title": "",
+      "director": "Danny Boyle",
+      "country": "Reino Unido",
+      "year": 1996,
+      "duration": 94,
+      "genre": "Crimen, Drama",
+      "letterboxd": "https://letterboxd.com/film/trainspotting/",
+      "ticket_url": "https://centralticket.net/event/cineclubfarusdoblefuncion2",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-20",
       "hora": "20:05",
@@ -29390,6 +29426,22 @@
       "genre": "Comedia, Romance",
       "letterboxd": "https://letterboxd.com/film/yo-narciso/",
       "ticket_url": "https://multiplex.com.ar/peliculas/yo-narciso/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-09-20",
+      "hora": "22:15",
+      "title_es": "La Haine",
+      "title_en": "La Haine",
+      "original_title": "",
+      "director": "Mathieu Kassovitz",
+      "country": "Francia",
+      "year": 1995,
+      "duration": 98,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-haine/",
+      "ticket_url": "https://centralticket.net/event/cineclubfarusdoblefuncion2",
       "ciclo": ""
     },
     {
@@ -53055,6 +53107,22 @@
       "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
       "ticket_url": "https://malba.org.ar/evento/202508102000/",
       "ciclo": "Continúa"
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-09-27",
+      "hora": "20:00",
+      "title_es": "Heat",
+      "title_en": "Heat",
+      "original_title": "",
+      "director": "Michael Mann",
+      "country": "Estados Unidos",
+      "year": 1995,
+      "duration": 170,
+      "genre": "Crimen, Acción",
+      "letterboxd": "https://letterboxd.com/film/heat-1995/",
+      "ticket_url": "https://centralticket.net/event/cineclubfarusvol5",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
