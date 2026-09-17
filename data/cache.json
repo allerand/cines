@@ -966,12 +966,15 @@
     "genre": "Documental"
   },
   "de troya a malvinas": {
-    "url": "https://letterboxd.com/film/de-troya-a-malvinas/",
-    "title_en": "From Troy to Malvinas",
-    "director": "Juan Oyharçabal, Osvaldo Peluffo, Gabriel Scavelli",
+    "url": "",
+    "title_en": "DE TROYA A MALVINAS",
+    "director": "",
     "country": "",
-    "year": 2025,
-    "duration": 88
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 98 min: From Troy to Malvinas (2025, 88 min)",
+    "fecha": "2026-09-17",
+    "con_duracion": true
   },
   "76-89-23": {
     "url": "https://letterboxd.com/film/76-89-23/",
@@ -12582,15 +12585,13 @@
     "original_title": "One Night Only"
   },
   "tierra de crimen": {
-    "url": "",
-    "title_en": "Tierra de crimen",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "la única que se llama así es Bad Country (2014), y puede ser otra",
-    "fecha": "2026-09-16",
-    "con_duracion": false
+    "url": "https://letterboxd.com/film/reedland/",
+    "title_en": "Reedland",
+    "director": "Sven Bresser",
+    "country": "Netherlands, Belgium",
+    "year": 2025,
+    "duration": 105,
+    "genre": "Drama"
   },
   "avengers: endgame (re estreno)": {
     "url": "",
@@ -13161,12 +13162,13 @@
     "duration": null
   },
   "soy tu mensaje|2025": {
-    "url": "",
-    "title_en": "SOY TU MENSAJE",
+    "url": "https://letterboxd.com/film/soy-tu-mensaje/",
+    "title_en": "I Am Your Message",
     "director": "Ricardo M. Jacobo",
     "country": "Argentina",
     "year": 2025,
     "duration": 78,
+    "genre": "",
     "original_title": "Soy tu mensaje"
   },
   "la noche está marchándose ya|2025": {
@@ -13179,8 +13181,8 @@
     "genre": "Drama"
   },
   "para hacer una película solo hace falta un arma|2026": {
-    "url": "",
-    "title_en": "PARA HACER UNA PELÍCULA SOLO HACE FALTA UN ARMA",
+    "url": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+    "title_en": "All You Need to Make a Movie Is a Gun",
     "director": "Santiago Sein",
     "country": "Argentina",
     "year": 2026,
@@ -16331,5 +16333,105 @@
     "duration": 80,
     "genre": "Thriller, Acción",
     "original_title": "Gatillero"
+  },
+  "panda plan la tribu mágica": {
+    "url": "https://letterboxd.com/film/panda-plan-the-magical-tribe/",
+    "title_en": "Panda Plan: The Magical Tribe",
+    "director": "Derek Hui Wang-Yu",
+    "country": "China",
+    "year": 2026,
+    "duration": 100,
+    "genre": "Fantasía, Comedia",
+    "clase_titulo": "distinto",
+    "title_es": "Panda Plan: The Magical Tribe",
+    "original_title": "熊猫计划之部落奇遇记",
+    "sin_hints": "título local de un estreno"
+  },
+  "bts world tour 'arirang in são paulo": {
+    "url": "",
+    "title_en": "BTS WORLD TOUR 'ARIRANG IN SÃO PAULO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS WORLD TOUR [ARIRANG] in Busan (2026) sólo se le parece",
+    "fecha": "2026-09-17",
+    "con_duracion": true
+  },
+  "visita guiada": {
+    "url": "",
+    "title_en": "VISITA GUIADA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Guided Tour (2009), y puede ser otra",
+    "fecha": "2026-09-17",
+    "con_duracion": false
+  },
+  "una tarde en el museo | stop motion... ¿qué es? taller para infancias": {
+    "url": "",
+    "title_en": "UNA TARDE EN EL MUSEO | STOP MOTION... ¿QUÉ ES? TALLER PARA INFANCIAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el bosco": {
+    "url": "",
+    "title_en": "El Bosco",
+    "director": "José Luis López-Linares",
+    "country": "France, Spain",
+    "year": 2016,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "El Bosco: el jardín de los sueños"
+  },
+  "the quiet girl": {
+    "url": "https://letterboxd.com/film/the-quiet-girl/",
+    "title_en": "The Quiet Girl",
+    "director": "Colm Bairéad",
+    "country": "Ireland",
+    "year": 2022,
+    "duration": 95,
+    "genre": "Drama",
+    "title_es": "The Quiet Girl",
+    "original_title": "An Cailín Ciúin"
+  },
+  "lo malo del amor": {
+    "url": "",
+    "title_en": "Lo Malo del Amor",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los días posibles - trilogía de la ternura": {
+    "url": "",
+    "title_en": "Los días posibles - Trilogía de la ternura",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "un buen día": {
+    "url": "https://letterboxd.com/film/un-buen-dia/",
+    "title_en": "A Good Day",
+    "director": "Nicolás del Boca",
+    "country": "Argentina, USA",
+    "year": 2010,
+    "duration": 98,
+    "genre": "Drama",
+    "original_title": "Un buen día"
+  },
+  "después de un buen día": {
+    "url": "https://letterboxd.com/film/despues-de-un-buen-dia/",
+    "title_en": "Después de un buen día",
+    "director": "Néstor Frenkel",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "Después de un buen día"
   }
 }
