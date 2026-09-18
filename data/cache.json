@@ -5275,8 +5275,10 @@
     "year": 1995,
     "duration": 170,
     "genre": "Crimen, Acción",
+    "clase_titulo": "exacto",
     "title_es": "Fuego contra Fuego",
-    "original_title": "Heat"
+    "original_title": "Heat",
+    "sin_hints": "la más popular que se llama así"
   },
   "the dark knight": {
     "url": "https://letterboxd.com/film/the-dark-knight-2008/",
@@ -15130,15 +15132,17 @@
     "genre": "Drama"
   },
   "islandia": {
-    "url": "",
-    "title_en": "ISLANDIA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-09-16",
-    "con_duracion": true
+    "url": "https://letterboxd.com/film/islandia-2025/",
+    "title_en": "Islandia",
+    "director": "Leandro Cerro",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 93,
+    "genre": "Música, Documental",
+    "clase_titulo": "exacto",
+    "title_es": "Iceland",
+    "original_title": "Islandia",
+    "sin_hints": "título y duración"
   },
   "until the sky falls quiet|2026": {
     "url": "",
@@ -16022,14 +16026,15 @@
   },
   "one piece: la película": {
     "url": "",
-    "title_en": "ONE PIECE: LA PELÍCULA",
+    "title_en": "One Piece: La película",
     "director": "",
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-09-16",
-    "con_duracion": true
+    "sin_ficha": "la única que se llama así es One Piece: The Movie (2000), y puede ser otra",
+    "fecha": "2026-09-18",
+    "con_duracion": false,
+    "desempate": ""
   },
   "one piece: la pelicula": {
     "url": "",
@@ -16378,8 +16383,8 @@
     "duration": null
   },
   "el bosco": {
-    "url": "",
-    "title_en": "El Bosco",
+    "url": "https://letterboxd.com/film/bosch-the-garden-of-dreams/",
+    "title_en": "Bosch: The Garden of Dreams",
     "director": "José Luis López-Linares",
     "country": "France, Spain",
     "year": 2016,
@@ -16433,5 +16438,88 @@
     "duration": 85,
     "genre": "Documental",
     "original_title": "Después de un buen día"
+  },
+  "rosemary's baby": {
+    "url": "https://letterboxd.com/film/rosemarys-baby/",
+    "title_en": "Rosemary's Baby",
+    "director": "Roman Polanski",
+    "country": "USA",
+    "year": 1968,
+    "duration": 138,
+    "genre": "Terror, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "La semilla del diablo",
+    "original_title": "Rosemary's Baby",
+    "sin_hints": "la más popular que se llama así"
+  },
+  "trainspotting": {
+    "url": "https://letterboxd.com/film/trainspotting/",
+    "title_en": "Trainspotting",
+    "director": "Danny Boyle",
+    "country": "UK",
+    "year": 1996,
+    "duration": 94,
+    "genre": "Crimen, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Trainspotting: La Vida en el Abismo",
+    "original_title": "Trainspotting",
+    "sin_hints": "la más popular que se llama así"
+  },
+  "la haine": {
+    "url": "https://letterboxd.com/film/la-haine/",
+    "title_en": "La Haine",
+    "director": "Mathieu Kassovitz",
+    "country": "France",
+    "year": 1995,
+    "duration": 98,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "title_es": "El odio",
+    "original_title": "La Haine",
+    "sin_hints": "la más popular que se llama así"
+  },
+  "luisa": {
+    "url": "",
+    "title_en": "Luisa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Luisa (2009), y puede ser otra",
+    "fecha": "2026-09-18",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "next generation short tiger 2026": {
+    "url": "",
+    "title_en": "Next Generation Short Tiger 2026",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el hombre que se desvanece": {
+    "url": "https://letterboxd.com/film/a-fading-man/",
+    "title_en": "A Fading Man",
+    "director": "Welf Reinhart",
+    "country": "Germany",
+    "year": 2026,
+    "duration": 100,
+    "genre": "Drama",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "panda plan: la tribu mágica": {
+    "url": "https://letterboxd.com/film/panda-plan-the-magical-tribe/",
+    "title_en": "Panda Plan: The Magical Tribe",
+    "director": "Derek Hui Wang-Yu",
+    "country": "China",
+    "year": 2026,
+    "duration": 100,
+    "genre": "Fantasía, Comedia",
+    "clase_titulo": "distinto",
+    "title_es": "Panda Plan: The Magical Tribe",
+    "original_title": "熊猫计划之部落奇遇记",
+    "sin_hints": "título local de un estreno"
   }
 }
