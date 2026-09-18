@@ -16237,12 +16237,14 @@
     "original_title": "The Wicker Man"
   },
   "que perforado era mi valle|2026": {
-    "url": "",
-    "title_en": "Que perforado era mi valle",
-    "director": "",
+    "url": "https://letterboxd.com/film/que-perforado-esta-mi-valle/",
+    "title_en": "Qué perforado está mi valle",
+    "director": "Gastón Bejas, Natalia Gelós, Martín Alvarez Mullally",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 61,
+    "genre": "Documental",
+    "clase_titulo": "distinto"
   },
   "kajianteya. la que tiene fortaleza|2012": {
     "url": "https://letterboxd.com/film/kajianteya-la-que-tiene-fortaleza/",
@@ -16412,12 +16414,13 @@
     "duration": null
   },
   "los días posibles - trilogía de la ternura": {
-    "url": "",
-    "title_en": "Los días posibles - Trilogía de la ternura",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
+    "title_en": "Possible Days - Trilogy on Tenderness",
+    "director": "Rodrigo Guerrero",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 65,
+    "genre": ""
   },
   "un buen día": {
     "url": "https://letterboxd.com/film/un-buen-dia/",
@@ -16521,5 +16524,43 @@
     "title_es": "Panda Plan: The Magical Tribe",
     "original_title": "熊猫计划之部落奇遇记",
     "sin_hints": "título local de un estreno"
+  },
+  "festival de cine experimental de bogotá": {
+    "url": "",
+    "title_en": "Festival de Cine Experimental de Bogotá",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "estrellas": {
+    "url": "https://letterboxd.com/film/estrellas/",
+    "title_en": "Stars",
+    "director": "Federico León, Marcos Martínez",
+    "country": "Argentina",
+    "year": 2007,
+    "duration": 64,
+    "genre": "Documental",
+    "original_title": "Estrellas"
+  },
+  "el amo del jardín": {
+    "url": "https://letterboxd.com/film/el-amo-del-jardin/",
+    "title_en": "El amo del jardín",
+    "director": "Fernando Krapp",
+    "country": "Argentina, Japan",
+    "year": 2025,
+    "duration": 82,
+    "genre": "Documental",
+    "original_title": "El amo del jardín"
+  },
+  "la cama": {
+    "url": "https://letterboxd.com/film/the-bed-2018/",
+    "title_en": "The Bed",
+    "director": "Mónica Lairana",
+    "country": "Argentina, Brazil",
+    "year": 2018,
+    "duration": 95,
+    "genre": "Drama",
+    "original_title": "La cama"
   }
 }
