@@ -16032,7 +16032,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es One Piece: The Movie (2000), y puede ser otra",
-    "fecha": "2026-09-18",
+    "fecha": "2026-09-19",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16562,5 +16562,58 @@
     "duration": 95,
     "genre": "Drama",
     "original_title": "La cama"
+  },
+  "i am greta|2020": {
+    "url": "https://letterboxd.com/film/i-am-greta/",
+    "title_en": "I Am Greta",
+    "director": "Nathan Grossman",
+    "country": "Germany, Sweden",
+    "year": 2020,
+    "duration": 97,
+    "genre": "Documental",
+    "title_es": "Yo soy Greta",
+    "original_title": "Greta"
+  },
+  "del mar a la montaña|2025": {
+    "url": "",
+    "title_en": "DEL MAR A LA MONTAÑA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ay, ese vacío, ese espantoso vacío": {
+    "url": "https://letterboxd.com/film/ach-diese-lucke-diese-entsetzliche-lucke/",
+    "title_en": "Ach, diese Lücke, diese entsetzliche Lücke",
+    "director": "Simon Verhoeven",
+    "country": "Germany",
+    "year": 2026,
+    "duration": 137,
+    "genre": "Drama, Comedia",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "rave on": {
+    "url": "https://letterboxd.com/film/rave-on/",
+    "title_en": "Rave On",
+    "director": "Nikias Chryssos, Viktor Jakovleski",
+    "country": "Germany",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Drama, Música",
+    "clase_titulo": "exacto",
+    "original_title": "Rave On",
+    "sin_hints": "título"
+  },
+  "la rana y el agua": {
+    "url": "https://letterboxd.com/film/the-frog-and-the-water/",
+    "title_en": "The Frog and the Water",
+    "director": "Thomas Stuber",
+    "country": "Germany, Switzerland",
+    "year": 2025,
+    "duration": 113,
+    "genre": "Comedia, Drama",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   }
 }
