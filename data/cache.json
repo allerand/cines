@@ -16615,5 +16615,17 @@
     "genre": "Comedia, Drama",
     "clase_titulo": "distinto",
     "sin_hints": "título local de un estreno"
+  },
+  "el héroe de berlín": {
+    "url": "",
+    "title_en": "El héroe de Berlín",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Race (2016), y puede ser otra",
+    "fecha": "2026-09-19",
+    "con_duracion": false,
+    "desempate": ""
   }
 }
