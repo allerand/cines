@@ -16691,5 +16691,39 @@
     "genre": "Drama",
     "clase_titulo": "distinto",
     "sin_hints": "título local de un estreno"
+  },
+  "2 metros de esta tierra|2012": {
+    "url": "https://letterboxd.com/film/two-meters-of-this-land/",
+    "title_en": "Two Meters of This Land",
+    "director": "Ahmad Natche",
+    "country": "State of Palestine",
+    "year": 2012,
+    "duration": 80,
+    "genre": "Drama, Documental",
+    "title_es": "Dos metros de esta tierra",
+    "original_title": "Metran Men Hada Al-Turab"
+  },
+  "circusboy": {
+    "url": "https://letterboxd.com/film/circusboy/",
+    "title_en": "Circusboy",
+    "director": "Julia Lemke, Anna Koch",
+    "country": "Germany",
+    "year": 2025,
+    "duration": 86,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Zirkuskind",
+    "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "entiendo su descontento": {
+    "url": "https://letterboxd.com/film/i-understand-your-displeasure/",
+    "title_en": "I Understand Your Displeasure",
+    "director": "Kilian Armando Friedrich",
+    "country": "Germany",
+    "year": 2026,
+    "duration": 93,
+    "genre": "Drama",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   }
 }
