@@ -973,8 +973,9 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 98 min: From Troy to Malvinas (2025, 88 min)",
-    "fecha": "2026-09-17",
-    "con_duracion": true
+    "fecha": "2026-09-21",
+    "con_duracion": true,
+    "desempate": ""
   },
   "76-89-23": {
     "url": "https://letterboxd.com/film/76-89-23/",
@@ -16041,7 +16042,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es One Piece: The Movie (2000), y puede ser otra",
-    "fecha": "2026-09-20",
+    "fecha": "2026-09-21",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16373,8 +16374,9 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS WORLD TOUR [ARIRANG] in Busan (2026) sólo se le parece",
-    "fecha": "2026-09-17",
-    "con_duracion": true
+    "fecha": "2026-09-21",
+    "con_duracion": true,
+    "desempate": ""
   },
   "visita guiada": {
     "url": "",
@@ -16384,8 +16386,9 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Guided Tour (2009), y puede ser otra",
-    "fecha": "2026-09-17",
-    "con_duracion": false
+    "fecha": "2026-09-21",
+    "con_duracion": false,
+    "desempate": ""
   },
   "una tarde en el museo | stop motion... ¿qué es? taller para infancias": {
     "url": "",
@@ -16662,12 +16665,13 @@
     "original_title": "Lola rennt"
   },
   "atahualpa yupanqui. un trashumante + la ferni": {
-    "url": "",
-    "title_en": "Atahualpa Yupanqui. Un trashumante + La Ferni",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/atahualpa-yupanqui-un-trashumante/",
+    "title_en": "Atahualpa Yupanqui, un trashumante",
+    "director": "Federico Randazzo Abad",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 92,
+    "genre": "Documental"
   },
   "home stories": {
     "url": "https://letterboxd.com/film/home-stories-2026/",
@@ -16725,5 +16729,60 @@
     "genre": "Drama",
     "clase_titulo": "distinto",
     "sin_hints": "título local de un estreno"
+  },
+  "rita, lado b": {
+    "url": "https://letterboxd.com/film/rita-lado-b/",
+    "title_en": "Rita, lado B",
+    "director": "Gabriela González Fuentes",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 82,
+    "genre": "Documental",
+    "original_title": "Rita, lado B"
+  },
+  "sebastián moro, el caminante": {
+    "url": "https://letterboxd.com/film/sebastian-moro-el-caminante/",
+    "title_en": "Sebastián Moro, el caminante",
+    "director": "María Laura Cali",
+    "country": "Argentina, Bolivia",
+    "year": 2023,
+    "duration": null,
+    "genre": "Documental",
+    "original_title": "Sebastián Moro, el caminante"
+  },
+  "el sonido al caer": {
+    "url": "https://letterboxd.com/film/sound-of-falling/",
+    "title_en": "Sound of Falling",
+    "director": "Mascha Schilinski",
+    "country": "Germany",
+    "year": 2025,
+    "duration": 148,
+    "genre": "Drama, Bélica",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "nct 127 5th tour ‘neo city : seoul - the redline’ in cinemas": {
+    "url": "https://letterboxd.com/film/nct-127-5th-tour-neo-city-seoul-the-redline/",
+    "title_en": "NCT 127 5TH TOUR ‘NEO CITY  SEOUL - THE REDLINE’ in CINEMAS",
+    "director": "Kyung Chan Kim, Doyeon Kim, Soyoung Park",
+    "country": "",
+    "year": 2026,
+    "duration": 255,
+    "genre": "Música",
+    "clase_titulo": "exacto",
+    "original_title": "NCT 127 5TH TOUR ‘NEO CITY  SEOUL - THE REDLINE’ in CINEMAS",
+    "sin_hints": "título"
+  },
+  "babystar": {
+    "url": "https://letterboxd.com/film/babystar/",
+    "title_en": "Babystar",
+    "director": "Joscha Bongard",
+    "country": "Germany",
+    "year": 2025,
+    "duration": 98,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "original_title": "Babystar",
+    "sin_hints": "título"
   }
 }
