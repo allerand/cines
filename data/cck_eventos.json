@@ -1,39 +1,6 @@
 {
-  "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/": {
-    "ts": "2026-09-20T08:51:59",
-    "v": 2,
-    "semanas": 9,
-    "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Las líneas discontinuas",
-        "fecha": "2026-09-20",
-        "hora": "15:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
-        "ciclo": "Ciclo Mestre Mateo",
-        "director": "Anxos Fanzas",
-        "country": "",
-        "year": 2025,
-        "duration": 90,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Sirat",
-        "fecha": "2026-09-20",
-        "hora": "18:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/ciclo-mestre-mateo/",
-        "ciclo": "Ciclo Mestre Mateo",
-        "director": "Oliver Laxe",
-        "country": "",
-        "year": 2025,
-        "duration": 114,
-        "original_title": ""
-      }
-    ]
-  },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
-    "ts": "2026-09-20T08:52:25",
+    "ts": "2026-09-21T09:20:41",
     "v": 2,
     "semanas": 9,
     "funciones": [
