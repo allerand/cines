@@ -1,5 +1,6 @@
 """
-Scrapers de cartelera para cines de arte de Buenos Aires.
+Scrapers de cartelera para cines de arte de Buenos Aires (y, al final del
+archivo, de Madrid).
 Sala Lugones · Cacodelphia · Cine Lorca · Cine York · MALBA
 """
 
@@ -27,6 +28,7 @@ from dataclasses import dataclass, field, asdict
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
+from zoneinfo import ZoneInfo
 
 from bs4 import BeautifulSoup
 from playwright.async_api import Page
@@ -8366,3 +8368,402 @@ def scrape_farus(semanas: int = 9) -> list[Screening]:
             print(f"[farus: {slug} sin películas en las entradas]", end=" ", flush=True)
         result.extend(s for s in funciones if today <= date.fromisoformat(s.fecha) <= cutoff)
     return result
+
+
+# ---------------------------------------------------------------------------
+# Madrid
+# ---------------------------------------------------------------------------
+# La web tiene una cartelera por ciudad (la perilla de arriba a la derecha de
+# index.html). Las funciones de Madrid se publican en data/cartelera-madrid.json
+# y NO en data/cartelera.json, que es lo que leen las stories y el feed de
+# Instagram, el newsletter y la auditoría: todo eso sigue siendo sólo de Buenos
+# Aires sin tener que filtrar nada en ningún lado. run.py reparte por este set,
+# así que un cine nuevo de Madrid tiene que entrar acá.
+CINES_MADRID = {"Cine Doré", "Cines Ideal"}
+
+_MADRID = ZoneInfo("Europe/Madrid")
+
+
+def hoy_madrid() -> date:
+    """El día de hoy en Madrid. El runner corre en UTC y el pase de la noche
+    de Buenos Aires (23:15 UTC) ya es el día siguiente allá: con date.today()
+    se publicarían como de hoy las funciones que ya pasaron."""
+    return datetime.now(_MADRID).date()
+
+
+def _norm_madrid(s: str) -> str:
+    """Clave para comparar títulos y nombres entre dos fuentes: sin acentos,
+    sin mayúsculas y sin nada que no sea letra o número ("GOODBYE, DRAGON
+    INN" y "Goodbye Dragon Inn" son lo mismo)."""
+    s = unicodedata.normalize("NFD", s or "").encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+# ---------------------------------------------------------------------------
+# Cine Doré — Filmoteca Española (Madrid)
+# ---------------------------------------------------------------------------
+# Dos fuentes, porque ninguna alcanza sola:
+#
+#   · La boletería (entradasfilmoteca.sacatuentrada.es) lista cada sesión con
+#     título, año, director, sala y ciclo, y el link de compra. Es HTML armado
+#     en el server y paginado (/es/busqueda?&pagina=N).
+#   · El programa del mes en PDF, que se linkea desde la página de
+#     proyecciones de la Filmoteca ("fe202609-programa.pdf").
+#
+# Manda el PDF en la HORA. La boletería carga las sesiones antes de abrir la
+# venta y en esas el horario es un texto a mano que no siempre es el bueno: el
+# 22/9/2026 decía 20:00 para My Heart is That Eternal Rose (27/9) y Goodbye
+# Dragon Inn (29/9), y el programa las da a las 21:00. La del 29 no podía ser:
+# La tierra de la gran promesa empieza a las 17:30 en la misma sala y dura
+# 179'. Todas las diferencias eran de sesiones sin venta abierta.
+#
+# Del PDF sale además la duración, y las sesiones que la boletería todavía no
+# cargó. El texto del PDF viene en mayúsculas y con el kerning roto ("V ARIETY",
+# "REV ANCHA"), así que cuando la sesión está en la boletería el título sale de
+# ahí. Si el PDF no se puede leer, se publica sólo lo que ya está a la venta:
+# mejor una sesión menos que una a la hora equivocada.
+
+DORE_CINE = "Cine Doré"
+DORE_PROYECCIONES = ("https://www.cultura.gob.es/cultura/areas/cine/mc/fe/"
+                     "programacion-actividades/proyecciones.html")
+DORE_BOLETERIA = "https://entradasfilmoteca.sacatuentrada.es/es/busqueda?&pagina={n}"
+
+_DORE_PDF_RE = re.compile(r'href="(/dam/jcr:[^"]*?programa[^"]*?\.pdf)"', re.I)
+_DORE_DIA_RE = re.compile(
+    r"^(?:LUNES|MARTES|MI[EÉ]RCOLES|JUEVES|VIERNES|S[AÁ]BADO|DOMINGO)\s+(\d{1,2})$")
+# "17:30 H · SALA 1 · 127’", " 17:30 H             ·SALA 1 · 127", "19:00 H · SALA2 · 80’"
+_DORE_HORA_RE = re.compile(r"^(\d{1,2}):(\d{2})\s*H\s*·\s*SALA\s*(\d+)\s*·?\s*(.*)$")
+# "ANDRZEJ WAJDA, 1969", "RINGO LAM, TSUI HARK, 1992", "BARBARA HAMMER, 2026;"
+_DORE_FICHA_RE = re.compile(r"^(?P<dir>.+?)\s*,\s*(?P<anio>(?:18|19|20)\d{2})\s*;?$")
+# Notas al pie del calendario: "M1. Sesión con presentación", "X30. Cortometraje…"
+_DORE_NOTA_RE = re.compile(r"^[A-Z]\d{1,2}\.\s")
+_DORE_TARJETA_HORA_RE = re.compile(r"a las\s+(\d{1,2})[:.](\d{2})", re.I)
+_DORE_TARJETA_SALA_RE = re.compile(r"\(\s*Sala\s*\d+\s*\.\s*(.+?)\s*\)\s*$", re.I)
+
+
+def _dore_arreglar_kerning(t: str) -> str:
+    """'V ARIETY' → 'VARIETY', 'RETRATOS F ANTASMA' → 'RETRATOS FANTASMA'.
+    El texto del PDF parte la palabra donde el diseño le achicó el espacio a
+    un par de letras. Sólo se pega el caso inequívoco, una consonante suelta:
+    en castellano y en inglés no hay palabras de una consonante. 'REV ANCHA'
+    queda como está, porque pegar cualquier palabra terminada en V o F a una
+    que empieza con A rompería títulos de verdad ('WOLF AT THE DOOR')."""
+    return re.sub(r"\b([B-DF-HJ-NP-TV-XZÑ]) (?=[A-ZÁÉÍÓÚÑ])", r"\1", t)
+
+
+def _dore_programa(texto: str, anio: int, mes: int) -> list[dict]:
+    """Sesiones del programa mensual en PDF (el texto que devuelve pypdf).
+
+    Cada día es un bloque "MARTES 22" + una o dos líneas con los ciclos de las
+    columnas, y cada sesión termina en su línea de hora:
+
+        EVERYTHING FOR SALE
+        ANDRZEJ WAJDA, 1969
+        17:30 H · SALA 1 · 105’
+        DCP. VOSE*. COLOR
+
+    El título es lo que queda arriba de la ficha. En la primera sesión del día
+    no se sabe dónde terminan los ciclos y dónde empieza un título de dos
+    líneas, así que ahí el título queda vacío si es ambiguo (lo completa la
+    boletería o la sesión no entra)."""
+    dias: list[tuple[int, list[str]]] = []
+    for linea in texto.splitlines():
+        linea = linea.strip()
+        if not linea or linea.startswith("PROGRAMA") or _DORE_NOTA_RE.match(linea):
+            continue
+        m = _DORE_DIA_RE.match(linea)
+        if m:
+            dias.append((int(m.group(1)), []))
+        elif dias:
+            dias[-1][1].append(linea)
+
+    sesiones: list[dict] = []
+    for dia, lineas in dias:
+        try:
+            fecha = date(anio, mes, dia)
+        except ValueError:
+            continue
+        # Dónde empieza lo de cada sesión: después del formato de la anterior
+        # (la línea que sigue a su hora). Para la primera, después de los ciclos.
+        desde = 0
+        primera = True
+        for i, linea in enumerate(lineas):
+            m = _DORE_HORA_RE.match(linea)
+            if not m:
+                continue
+            previas = lineas[desde:i]
+            fichas: list[tuple[str, int]] = []
+            while previas and _DORE_FICHA_RE.match(previas[-1]):
+                f = _DORE_FICHA_RE.match(previas.pop())
+                fichas.insert(0, (f.group("dir").strip(), int(f.group("anio"))))
+            if primera:
+                # Al menos una línea es de los ciclos; si quedan dos, la otra
+                # es el título. Con tres o más no se sabe cuál es cuál.
+                previas = previas[1:] if len(previas) == 2 else []
+            titulo = _dore_arreglar_kerning(" ".join(previas)).strip()
+            minutos = [int(x) for x in re.findall(r"(\d{1,3})\s*['’]", m.group(4))]
+            sesiones.append({
+                "fecha": fecha.isoformat(),
+                "hora": f"{int(m.group(1)):02d}:{m.group(2)}",
+                "titulo": titulo,
+                "fichas": fichas,
+                "duracion": sum(minutos) or None,
+            })
+            desde = i + 2      # la hora + la línea del formato (DCP. VOSE. COLOR)
+            primera = False
+    return sesiones
+
+
+def _dore_tarjetas(html: str) -> list[dict]:
+    """Las sesiones de una página de la boletería."""
+    soup = BeautifulSoup(html, "html.parser")
+    out = []
+    for c in soup.select("div[data-fecha]"):
+        h2 = c.select_one("h2.titulo")
+        desc = c.select_one(".descripcion")
+        if not h2 or not desc:
+            continue
+        texto = desc.get_text(" ", strip=True)
+        hora = _DORE_TARJETA_HORA_RE.search(texto)
+        if not hora:
+            continue                      # bonos y abonos: no son sesiones
+        titulo = h2.get_text(" ", strip=True)
+        anio = None
+        m = re.search(r"\s*\((\d{4})\)\s*$", titulo)
+        if m:
+            anio = int(m.group(1))
+            titulo = titulo[:m.start()].strip()
+        sub = c.select_one("h3.subtitulo")
+        # Hasta la hora: lo de después es el aviso de la taquilla.
+        fecha_hora = texto.split("*")[0].strip()
+        ciclo = _DORE_TARJETA_SALA_RE.search(fecha_hora)
+        compra = [a["href"].strip() for a in c.find_all("a", href=True)
+                  if "/entradas/" in a["href"]]
+        info = [a["href"].strip() for a in c.find_all("a", href=True)
+                if "/productos/descripcion/" in a["href"]]
+        out.append({
+            "fecha": c["data-fecha"],
+            "hora": f"{int(hora.group(1)):02d}:{hora.group(2)}",
+            "titulo": titulo,
+            "anio": anio,
+            "director": sub.get_text(" ", strip=True) if sub else "",
+            "ciclo": ciclo.group(1) if ciclo else "",
+            "a_la_venta": bool(compra),
+            "url": (compra or info or [""])[0],
+        })
+    return out
+
+
+def _dore_misma_sesion(t: dict, p: dict) -> bool:
+    """¿La tarjeta de la boletería `t` y la sesión del PDF `p` son la misma
+    película? Por título (sin acentos ni puntuación, uno adentro del otro, que
+    cubre los programas dobles: "Shirin" es "AUDIENCE + SHIRIN") o por
+    director y año, que sobreviven a las erratas de un lado o del otro."""
+    nt, np_ = _norm_madrid(t["titulo"]), _norm_madrid(p["titulo"])
+    if nt and np_ and (nt in np_ or np_ in nt):
+        return True
+    nd = _norm_madrid(t["director"])
+    for director, anio in p["fichas"]:
+        if t["anio"] == anio and nd and (nd in _norm_madrid(director)
+                                          or _norm_madrid(director) in nd):
+            return True
+    return False
+
+
+def _dore_combinar(tarjetas: list[dict], programa: list[dict],
+                   meses_con_programa: set[tuple[int, int]]) -> list[Screening]:
+    result: list[Screening] = []
+    usadas: set[int] = set()
+    for t in tarjetas:
+        y, m = int(t["fecha"][:4]), int(t["fecha"][5:7])
+        candidatas = [i for i, p in enumerate(programa)
+                      if p["fecha"] == t["fecha"] and i not in usadas
+                      and _dore_misma_sesion(t, p)]
+        # Si hay más de una (la misma película dos veces el mismo día), la de
+        # la misma hora; si no, la única.
+        misma_hora = [i for i in candidatas if programa[i]["hora"] == t["hora"]]
+        elegida = (misma_hora or candidatas)[0] if (misma_hora or len(candidatas) == 1) else None
+        hora, duracion = t["hora"], None
+        if elegida is not None:
+            usadas.add(elegida)
+            p = programa[elegida]
+            if p["hora"] != t["hora"]:
+                print(f"[doré: {t['titulo']} {t['fecha']}: la boletería dice "
+                      f"{t['hora']} y el programa {p['hora']} → {p['hora']}]",
+                      end=" ", flush=True)
+            hora, duracion = p["hora"], p["duracion"]
+        elif (y, m) not in meses_con_programa and not t["a_la_venta"]:
+            # Sin programa contra el cual chequear, la hora de una sesión que
+            # todavía no está a la venta no es confiable (ver arriba).
+            continue
+        result.append(Screening(
+            cine=DORE_CINE, title=t["titulo"], fecha=t["fecha"], hora=hora,
+            ticket_url=t["url"] or DORE_PROYECCIONES, ciclo=t["ciclo"],
+            director=t["director"], year=t["anio"], duration=duracion,
+        ))
+    # Las del programa que la boletería todavía no cargó.
+    for i, p in enumerate(programa):
+        if i in usadas or not p["titulo"]:
+            continue
+        director = ", ".join(d for d, _ in p["fichas"])
+        anio = p["fichas"][0][1] if len(p["fichas"]) == 1 else None
+        result.append(Screening(
+            cine=DORE_CINE, title=p["titulo"], fecha=p["fecha"], hora=p["hora"],
+            ticket_url=DORE_PROYECCIONES, director=director, year=anio,
+            duration=p["duracion"],
+        ))
+    return result
+
+
+def _dore_programas() -> tuple[list[dict], set[tuple[int, int]]]:
+    """Las sesiones de los programas en PDF que estén linkeados hoy (a fin de
+    mes suele haber dos: el que termina y el que viene)."""
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        print("[doré: falta pypdf, sin programa en PDF]", end=" ", flush=True)
+        return [], set()
+    import io
+    try:
+        html = fetch_bytes(DORE_PROYECCIONES).decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"[doré: la página de proyecciones no carga — {e}]", end=" ", flush=True)
+        return [], set()
+    sesiones: list[dict] = []
+    meses: set[tuple[int, int]] = set()
+    for ruta in dict.fromkeys(_DORE_PDF_RE.findall(html)):
+        # "fe202609-programa.pdf" → septiembre de 2026
+        m = re.search(r"(20\d{2})(0[1-9]|1[0-2])", ruta.rsplit("/", 1)[-1])
+        if not m:
+            continue
+        anio, mes = int(m.group(1)), int(m.group(2))
+        try:
+            pdf = PdfReader(io.BytesIO(fetch_bytes(
+                "https://www.cultura.gob.es" + ruta, timeout=60)))
+            texto = "\n".join(p.extract_text() or "" for p in pdf.pages)
+        except Exception as e:
+            print(f"[doré: el programa {anio}-{mes:02d} no se pudo leer — {e}]",
+                  end=" ", flush=True)
+            continue
+        del_mes = _dore_programa(texto, anio, mes)
+        if del_mes:
+            sesiones.extend(del_mes)
+            meses.add((anio, mes))
+    return sesiones, meses
+
+
+def scrape_dore(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    cutoff = hoy + timedelta(weeks=semanas)
+    tarjetas: list[dict] = []
+    for n in range(1, 16):
+        try:
+            html = fetch_bytes(DORE_BOLETERIA.format(n=n)).decode("utf-8", errors="replace")
+        except Exception as e:
+            print(f"[doré: la boletería no carga (página {n}) — {e}]", end=" ", flush=True)
+            break
+        pagina = _dore_tarjetas(html)
+        if not pagina:
+            break
+        tarjetas.extend(pagina)
+    programa, meses = _dore_programas()
+    if not tarjetas and not programa:
+        marcar_fuente_caida(DORE_CINE, "no cargan ni la boletería ni el programa")
+        return []
+    funciones = _dore_combinar(tarjetas, programa, meses)
+    vistas: set[tuple] = set()
+    result = []
+    for s in funciones:
+        k = (s.title, s.fecha, s.hora)
+        if k in vistas or not (hoy <= date.fromisoformat(s.fecha) <= cutoff):
+            continue
+        vistas.add(k)
+        result.append(s)
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Cines Ideal — Yelmo (Madrid)
+# ---------------------------------------------------------------------------
+# yelmocines.es está detrás de Cloudflare y bloquea todo lo que no sea un
+# navegador: curl y urllib reciben el "Sorry, you have been blocked" hasta
+# desde una IP española. Con Playwright la página carga y ella misma pide la
+# cartelera de TODOS los Yelmo de la ciudad a now-playing.aspx/GetNowPlaying,
+# un JSON con cine → días → películas → formatos → sesiones. Se lee esa
+# respuesta: pedirla aparte con las cookies del contexto también da 403.
+#
+# Trae director, duración y el id de cada sesión, que es lo que arma el link
+# directo a la compra. Las óperas, el teatro y los conciertos que el cine
+# proyecta (MET, Teatro Real, BTS) quedan afuera: la cartelera es de cine.
+
+IDEAL_CINE = "Cines Ideal"
+IDEAL_URL = "https://www.yelmocines.es/cartelera/madrid/ideal"
+IDEAL_COMPRA = "https://compra.yelmocines.es/?cinemaVistaId={cine}&showtimeVistaId={sesion}"
+_IDEAL_TIPOS = {"Movie", "Eventos Especiales"}
+_IDEAL_DIA_RE = re.compile(r"(\d{1,2})\s+([a-záéíóú]+)", re.I)
+
+
+def _ideal_funciones(data: dict, hoy: date, cutoff: date) -> list[Screening]:
+    d = data.get("d", data) if isinstance(data, dict) else {}
+    result: list[Screening] = []
+    vistas: set[tuple] = set()
+    for cine in d.get("Cinemas") or []:
+        if cine.get("Key") != "ideal":
+            continue
+        vista = cine.get("VistaId") or ""
+        for dia in cine.get("Dates") or []:
+            m = _IDEAL_DIA_RE.search(dia.get("ShowtimeDate") or "")
+            mes = MESES_ES.get((m.group(2) if m else "").lower())
+            if not mes:
+                continue
+            # "22 septiembre", sin año: los días publicados llegan hasta junio
+            # del año siguiente.
+            anio = hoy.year + (1 if mes < hoy.month - 1 else 0)
+            try:
+                fecha = date(anio, mes, int(m.group(1)))
+            except ValueError:
+                continue
+            if not (hoy <= fecha <= cutoff):
+                continue
+            for peli in dia.get("Movies") or []:
+                if peli.get("ProjectionType") not in _IDEAL_TIPOS:
+                    continue
+                titulo = re.sub(r"\s+", " ", peli.get("Title") or "").strip()
+                if not titulo:
+                    continue
+                dur = str(peli.get("RunTime") or "")
+                for formato in peli.get("Formats") or []:
+                    for ses in formato.get("Showtimes") or []:
+                        hora = ses.get("Time") or ""
+                        if not re.fullmatch(r"\d{2}:\d{2}", hora):
+                            continue
+                        k = (titulo, fecha, hora)
+                        if k in vistas:
+                            continue
+                        vistas.add(k)
+                        result.append(Screening(
+                            cine=IDEAL_CINE, title=titulo, fecha=fecha.isoformat(),
+                            hora=hora,
+                            ticket_url=IDEAL_COMPRA.format(
+                                cine=ses.get("VistaCinemaId") or vista,
+                                sesion=ses.get("ShowtimeId") or ""),
+                            director=re.sub(r"\s+", " ", peli.get("Director") or "").strip(),
+                            duration=int(dur) if dur.isdigit() else None,
+                        ))
+    return result
+
+
+async def scrape_ideal(page: Page, semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    try:
+        async with page.expect_response(
+                lambda r: "GetNowPlaying" in r.url, timeout=45000) as info:
+            await page.goto(IDEAL_URL, wait_until="domcontentloaded", timeout=45000)
+        resp = await info.value
+        data = await resp.json()
+    except Exception as e:
+        print(f"[ideal: la cartelera de Yelmo no cargó — {e}]", end=" ", flush=True)
+        marcar_fuente_caida(IDEAL_CINE, "yelmocines.es no devolvió la cartelera "
+                                        "(¿Cloudflare?)")
+        return []
+    return _ideal_funciones(data, hoy, hoy + timedelta(weeks=semanas))

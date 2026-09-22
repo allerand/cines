@@ -27,6 +27,10 @@ DATA_DIR = HERE / "data"
 DATA_DIR.mkdir(exist_ok=True)
 
 CARTELERA_JSON = DATA_DIR / "cartelera.json"
+# Las funciones de Madrid van aparte (ver CINES_MADRID en scraper.py): así lo
+# que lee cartelera.json —stories, feed, newsletter, auditoría— sigue siendo
+# sólo de Buenos Aires sin tener que filtrar nada.
+CARTELERA_MADRID_JSON = DATA_DIR / "cartelera-madrid.json"
 CACHE_JSON = DATA_DIR / "cache.json"
 LB_OVERRIDES_JSON = DATA_DIR / "letterboxd_overrides.json"
 METADATA_OVERRIDES_JSON = DATA_DIR / "metadata_overrides.json"
@@ -52,6 +56,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_borges, scrape_bcn, scrape_agn, scrape_bellasartes,
         scrape_sala_lucida, scrape_manual, descartar_manual,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
+        scrape_dore, scrape_ideal, CINES_MADRID, hoy_madrid,
         resumen_proxy,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
@@ -272,6 +277,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     except Exception as e:
         print(f"error — {e}")
 
+    print("🎬 Scrapeando Cine Doré (Madrid)...", end=" ", flush=True)
+    try:
+        r = scrape_dore(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
     print("📝 Funciones manuales...", end=" ", flush=True)
     try:
         r = scrape_manual(semanas)
@@ -311,6 +324,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         salas_playwright = [
             ("Sala Lugones", lambda p: scrape_lugones(p)),
             ("Cacodelphia",  lambda p: scrape_cacodelphia(p)),
+            ("Cines Ideal (Madrid)", lambda p: scrape_ideal(p, semanas)),
         ]
         if sin_proxy:
             print("🎬 Scrapeando Centro Cultural Borges... salteado (--sin-proxy)")
@@ -686,7 +700,10 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     #      detrás de Cloudflare y el 28/8/2026 el scrape del runner volvió con
     #      CERO funciones (desde casa, 11) — sólo sobrevivieron las de HOY por
     #      el caso 2, así que la sala perdió todo el ciclo de septiembre.
-    CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1, 'Bellas Artes': 1}   # cine → mínimo sano
+    #      Los dos de Madrid también: yelmocines.es está detrás de Cloudflare y
+    #      desde el runner puede no abrir, y el Doré depende de dos sitios.
+    CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1, 'Bellas Artes': 1,
+                       'Cine Doré': 1, 'Cines Ideal': 1}   # cine → mínimo sano
 
     # Cuánto trajo cada cine ANTES del merge, o sea de la fuente, hoy. Después
     # del merge no se puede distinguir: un cine que no se pudo scrapear y quedó
@@ -701,10 +718,23 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         try:
             from datetime import date
             prev_data = json.loads(CARTELERA_JSON.read_text(encoding="utf-8"))
+            # La corrida anterior de Madrid vive en su propio archivo.
+            if CARTELERA_MADRID_JSON.exists():
+                prev_data.setdefault("screenings", []).extend(json.loads(
+                    CARTELERA_MADRID_JSON.read_text(encoding="utf-8")
+                ).get("screenings", []))
             today_str = date.today().isoformat()
 
             def _key(s):
                 return (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
+
+            # "Hoy" en Madrid: el pase de la noche de Buenos Aires ya es el día
+            # siguiente allá, y preservar las funciones de "hoy" en UTC
+            # revivía las de ayer.
+            hoy_md = hoy_madrid().isoformat()
+
+            def _hoy(s):
+                return hoy_md if s.get("cine") in CINES_MADRID else today_str
 
             # Cines detrás del proxy cuyo scrape se cayó hoy: los que trajeron
             # menos funciones que su mínimo sano (el Borges sano trae 15-20).
@@ -742,11 +772,12 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             descartadas_host = descartadas_horario = 0
             for s in prev_data.get("screenings", []):
                 f = s.get("fecha", "")
+                hoy = _hoy(s)
                 is_comm = any(s.get("cine", "").startswith(p) for p in COMMERCIAL_PREFIXES)
                 is_cache = s.get("cine") in cache_caidos
                 keep = ((is_comm and f > today_str)
-                        or (f == today_str)
-                        or (is_cache and f > today_str))
+                        or (f == hoy)
+                        or (is_cache and f > hoy))
                 if not keep or _key(s) in existing_keys:
                     continue
                 # El cine trajo funciones hoy pero desde otro origen: la vieja
@@ -768,7 +799,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                     continue
                 screenings_out.append(s)
                 existing_keys.add(_key(s))
-                if f == today_str:
+                if f == hoy:
                     restored_today += 1
                 elif is_cache:
                     restored_cache += 1
@@ -827,16 +858,19 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         print(f"  ↳ Publicando sin fuente viva: {', '.join(en_soporte)} "
               f"(caché u override; la fuente no contestó hoy)")
 
-    output = {
-        "updated": datetime.now().isoformat(timespec="seconds"),
-        "fuentes": fuentes,
-        "screenings": screenings_out,
-    }
-
-    CARTELERA_JSON.write_text(
-        json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8"
-    )
-    print(f"\n✅ {len(screenings_out)} funciones guardadas en {CARTELERA_JSON}")
+    # Un archivo por ciudad, con el mismo formato. Buenos Aires queda igual que
+    # siempre; Madrid sale con sus propias fuentes.
+    updated = datetime.now().isoformat(timespec="seconds")
+    for destino, de_madrid in ((CARTELERA_JSON, False), (CARTELERA_MADRID_JSON, True)):
+        output = {
+            "updated": updated,
+            "fuentes": {c: f for c, f in fuentes.items() if (c in CINES_MADRID) == de_madrid},
+            "screenings": [s for s in screenings_out if (s["cine"] in CINES_MADRID) == de_madrid],
+        }
+        destino.write_text(
+            json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        print(f"\n✅ {len(output['screenings'])} funciones guardadas en {destino}")
     gasto = resumen_proxy()
     if gasto:
         print(f"💳 {gasto}")

@@ -110,6 +110,79 @@
       display: flex;
       align-items: center;
     }
+    /* ── Ciudad: perilla del header y recuadro de la primera visita ── */
+    .header-meta {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .city-switch {
+      display: inline-flex;
+      border: 1px solid var(--border);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .city-switch button {
+      background: transparent;
+      border: 0;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 0.7rem;
+      line-height: 1;
+      padding: 0.3rem 0.55rem;
+      cursor: pointer;
+      white-space: nowrap;
+      /* Sin transición en el fondo: la ciudad se fija justo cuando se va el
+         loader, y el verde se vería pasar de un botón al otro. */
+      transition: color 0.12s;
+    }
+    .city-switch button + button { border-left: 1px solid var(--border); }
+    .city-switch button:hover { color: var(--text); }
+    .city-switch button[aria-pressed="true"] {
+      background: var(--accent);
+      color: #000;
+      font-weight: 600;
+    }
+    /* Chips y toggles de la ciudad que no se está mostrando. */
+    .otra-ciudad { display: none !important; }
+
+    .city-modal {
+      position: fixed; inset: 0;
+      z-index: 200;               /* arriba del #loading */
+      background: rgba(0, 0, 0, 0.72);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .city-modal[hidden] { display: none; }
+    .city-modal-box {
+      background: var(--bg2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 1.5rem 1.6rem;
+      width: 100%;
+      max-width: 22rem;
+      text-align: center;
+    }
+    .city-modal-box h2 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .city-modal-box p { font-size: 0.78rem; color: var(--muted); margin-bottom: 1.1rem; }
+    .city-modal-btns { display: flex; gap: 0.6rem; }
+    .city-modal-btns button {
+      flex: 1;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.65rem 0.5rem;
+      border-radius: 3px;
+      font-family: inherit;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: border-color 0.12s, color 0.12s;
+    }
+    .city-modal-btns button:hover,
+    .city-modal-btns button:focus-visible { border-color: var(--accent); color: var(--accent); outline: none; }
+
     /* ── Responsive Header ── */
       @media (max-width: 768px) {
         .header-main-content {
@@ -557,6 +630,9 @@
     .cine-mnba     { border-color: #1d3340; color: #6fb3d2; }
     .cine-lucida   { border-color: #2b2340; color: #9d8ae8; }
     .cine-farus    { border-color: #3a3514; color: #e8c547; }
+    /* Madrid */
+    .cine-dore     { border-color: #3a1f1c; color: #e0705e; }
+    .cine-ideal    { border-color: #1c2e3a; color: #5aa8e0; }
     /* Comerciales — paleta gris/azulada para diferenciarlos visualmente */
     .cine-cinemark { border-color: #2a2a2a; color: #aaa; }
     .cine-hoyts    { border-color: #2a2a2a; color: #aaa; }
@@ -679,13 +755,25 @@
   <p>Cargando cartelera…</p>
 </div>
 
+<!-- Sólo aparece si no se pudo saber la ciudad (ver detectarCiudad). -->
+<div id="city-modal" class="city-modal" hidden>
+  <div class="city-modal-box" role="dialog" aria-modal="true" aria-labelledby="city-modal-title">
+    <h2 id="city-modal-title">¿En qué ciudad estás?</h2>
+    <p>Después la podés cambiar arriba a la derecha.</p>
+    <div class="city-modal-btns">
+      <button type="button" data-ciudad="ba">Buenos Aires</button>
+      <button type="button" data-ciudad="madrid">Madrid</button>
+    </div>
+  </div>
+</div>
+
 <header>
   <div class="header-main-content">
     <div class="header-left">
       <img src="logo.png" alt="Logo" class="logo-img">
       <div class="header-text">
         <h1>Si te digo</h1>
-        <span class="subtitle">Cartelera de cines - Buenos Aires</span>
+        <span class="subtitle">Cartelera de cines - <span id="city-name">Buenos Aires</span></span>
         <a href="https://www.instagram.com/sitedigocine/" target="_blank" rel="noopener" class="insta-link-mobile">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
           <span>@sitedigocine</span>
@@ -694,7 +782,13 @@
     </div>
 
     <div class="header-right">
-      <span class="updated-badge" id="updated-badge"></span>
+      <div class="header-meta">
+        <span class="updated-badge" id="updated-badge"></span>
+        <div class="city-switch" id="city-switch" role="group" aria-label="Ciudad">
+          <button type="button" data-ciudad="ba" aria-pressed="true">Buenos Aires</button>
+          <button type="button" data-ciudad="madrid" aria-pressed="false">Madrid</button>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -736,6 +830,9 @@
   <button class="filter-btn" data-cine="Sala Lúcida">Sala Lúcida</button>
   <button class="filter-btn" data-cine="Hasta Trilce">Hasta Trilce</button>
   <button class="filter-btn" data-cine="Cineclub Farus">Cineclub Farus</button>
+  <!-- Madrid: data-ciudad marca de qué ciudad es cada sala (sin él, Buenos Aires) -->
+  <button class="filter-btn otra-ciudad" data-cine="Cine Doré" data-ciudad="madrid">Doré</button>
+  <button class="filter-btn otra-ciudad" data-cine="Cines Ideal" data-ciudad="madrid">Ideal</button>
   <button class="filter-btn commercial-chip" data-cine="Cinemark" hidden>Cinemark</button>
   <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
@@ -794,6 +891,9 @@ const CINE_ADDRESSES = {
   'Bellas Artes':             'Av. Figueroa Alcorta 2270',
   'Sala Lúcida':              'Av. Cabildo 4740',
   'Cineclub Farus':           'Venezuela 932',
+  // Madrid
+  'Cine Doré':                'Santa Isabel 3',
+  'Cines Ideal':              'Doctor Cortezo 6',
   // Comerciales — una entrada por sucursal
   'Cinemark Caballito':       'Av. La Plata 96',
   'Cinemark Palermo':         'Beruti 3399',
@@ -815,6 +915,109 @@ const CINE_ADDRESSES = {
 const COMMERCIAL_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'];
 function isCommercial(cine) {
   return COMMERCIAL_PREFIXES.some(p => cine && cine.startsWith(p));
+}
+
+// ── Ciudades ───────────────────────────────────────────────────────────
+// Una cartelera por ciudad, cada una en su archivo: Madrid va aparte para que
+// las stories, el feed y el newsletter, que leen cartelera.json, sigan siendo
+// sólo de Buenos Aires. Cuál se muestra, en este orden:
+//   1. la del link (#madrid/… o una sala de esa ciudad), sin guardarla;
+//   2. la que la persona eligió antes, con la perilla o el recuadro;
+//   3. la de su IP. Cloudflare, que ya está adelante de sitedigo.com, contesta
+//      el país en /cdn-cgi/trace sin pedirle permiso a nadie. La ubicación del
+//      navegador le abriría un cartel de permisos a todo el que entra, y el
+//      que lo rechaza terminaría igual en el recuadro;
+//   4. la zona horaria del dispositivo, por si el trace no contesta o dice
+//      otro país (una VPN, por ejemplo);
+//   5. si nada de eso alcanza, el recuadro que pregunta.
+const CIUDADES = {
+  ba:     { nombre: 'Buenos Aires', slug: 'buenos-aires', archivo: 'data/cartelera.json',        corto: 'BA' },
+  madrid: { nombre: 'Madrid',       slug: 'madrid',       archivo: 'data/cartelera-madrid.json', corto: 'Madrid',
+            tz: 'Europe/Madrid' },
+};
+let ciudad = 'ba';
+
+// La ciudad de cada sala sale de su chip (data-ciudad; sin él, Buenos Aires).
+function ciudadDeCine(cine) {
+  const btn = document.querySelector(`.filter-btn[data-cine="${CSS.escape(cine)}"]`);
+  return (btn && btn.dataset.ciudad) || 'ba';
+}
+
+function ciudadPorSlug(slug) {
+  return Object.keys(CIUDADES).find(c => CIUDADES[c].slug === slug) || null;
+}
+
+// La ciudad que pide el link, si pide alguna: su segmento o el de una sala.
+function ciudadDelHash() {
+  for (let seg of location.hash.replace(/^#/, '').split('/')) {
+    try { seg = decodeURIComponent(seg); } catch (_) {}
+    const slug = seg.toLowerCase();
+    if (!slug || slug.startsWith('q=')) continue;
+    const c = ciudadPorSlug(slug);
+    if (c) return c;
+    const cine = findCineBySlug(slug);
+    if (cine) return ciudadDeCine(cine);
+  }
+  return null;
+}
+
+function ciudadGuardada() {
+  try { const c = localStorage.getItem('sd:ciudad'); return CIUDADES[c] ? c : null; }
+  catch (_) { return null; }
+}
+
+function guardarCiudad(c) {
+  try { localStorage.setItem('sd:ciudad', c); } catch (_) {}
+}
+
+async function detectarCiudad() {
+  try {
+    const ctrl = new AbortController();
+    const timer = setTimeout(() => ctrl.abort(), 2500);
+    const res = await fetch('/cdn-cgi/trace', { cache: 'no-store', signal: ctrl.signal });
+    clearTimeout(timer);
+    const pais = ((await res.text()).match(/^loc=([A-Z]{2})$/m) || [])[1];
+    if (pais === 'AR') return 'ba';
+    if (pais === 'ES') return 'madrid';
+  } catch (_) {}
+  const tz = (Intl.DateTimeFormat().resolvedOptions().timeZone || '');
+  if (tz.startsWith('America/Argentina/') || tz === 'America/Buenos_Aires') return 'ba';
+  if (tz === 'Europe/Madrid') return 'madrid';
+  return null;
+}
+
+function preguntarCiudad() {
+  const modal = document.getElementById('city-modal');
+  modal.hidden = false;
+  return new Promise(resolve => {
+    modal.querySelectorAll('button[data-ciudad]').forEach(b => {
+      b.addEventListener('click', () => { modal.hidden = true; resolve(b.dataset.ciudad); });
+    });
+    modal.querySelector('button[data-ciudad]').focus();
+  });
+}
+
+// Cada cartelera se baja una sola vez: ir y volver con la perilla es instantáneo.
+const carteleras = {};
+function cargarCartelera(c) {
+  if (!carteleras[c]) {
+    carteleras[c] = fetch(CIUDADES[c].archivo + '?t=' + Date.now())
+      .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .catch(e => { delete carteleras[c]; throw e; });
+  }
+  return carteleras[c];
+}
+
+// Nombre en el subtítulo, perilla, y chips de la otra ciudad afuera. Los
+// comerciales son cadenas de Buenos Aires, así que su toggle también.
+function applyCiudad() {
+  document.getElementById('city-name').textContent = CIUDADES[ciudad].nombre;
+  document.querySelectorAll('#city-switch button').forEach(b =>
+    b.setAttribute('aria-pressed', b.dataset.ciudad === ciudad ? 'true' : 'false'));
+  document.querySelectorAll('.filter-btn[data-cine]').forEach(b => {
+    if (b.dataset.cine !== 'all') b.classList.toggle('otra-ciudad', (b.dataset.ciudad || 'ba') !== ciudad);
+  });
+  document.getElementById('toggle-commercial').classList.toggle('otra-ciudad', ciudad !== 'ba');
 }
 
 let allScreenings = [];
@@ -885,14 +1088,16 @@ function findCineBySlug(slug) {
 let lastHashWritten = null;
 
 function updateHash() {
-  const parts = [];
+  // La ciudad va siempre: un día o una búsqueda no dicen de qué ciudad son, y
+  // el link lo puede abrir alguien que está en la otra.
+  const parts = [CIUDADES[ciudad].slug];
   // Con búsqueda activa la tabla junta funciones de TODOS los días, así que
   // el día no aplica y no va en la URL (sería engañoso al compartirla).
   if (activeDay && !searchQuery) parts.push(daySlug(activeDay));
   // Un segmento por sala, en el orden en que se fueron clickeando.
   for (const c of activeCines) parts.push(cineSlug(c));
   if (searchQuery) parts.push('q=' + encodeURIComponent(searchQuery));
-  const hash = parts.length ? '#' + parts.join('/') : '';
+  const hash = '#' + parts.join('/');
   if (hash === location.hash) return;
   lastHashWritten = hash;
   // replaceState: no ensucia el historial con cada click de tab/chip
@@ -914,10 +1119,11 @@ function applyHashState() {
       continue;
     }
     const slug = seg.toLowerCase();
+    if (ciudadPorSlug(slug)) continue;      // ya la resolvió ciudadDelHash
     const fecha = dates.find(f => daySlug(f) === slug);
     if (fecha) { activeDay = fecha; continue; }
     const cine = findCineBySlug(slug);
-    if (cine) {
+    if (cine && ciudadDeCine(cine) === ciudad) {
       activeCines.add(cine);
       // Un link a un cine comercial tiene que mostrarlo aunque el toggle
       // esté apagado en este dispositivo.
@@ -933,6 +1139,8 @@ window.addEventListener('hashchange', () => {
   activeDay = null; activeCines.clear(); searchQuery = '';
   const inp = document.getElementById('search-input');
   if (inp) inp.value = '';
+  const c = ciudadDelHash();
+  if (c && c !== ciudad) { mostrarCiudad(c, true); return; }
   applyHashState();
   applyCommercialToggle();
   renderTable();
@@ -987,6 +1195,7 @@ function paramsFuncion(s, extra) {
     fecha_funcion: s.fecha || '',
     dias_anticipacion: diasHasta(s.fecha),
     canal: CANAL_ORIGEN,
+    ciudad: ciudad,
   }, extra || {});
 }
 
@@ -1230,56 +1439,111 @@ function applyCommercialToggle() {
 
 async function loadData() {
   try {
+    // Si el link o una visita anterior ya dicen la ciudad, su cartelera empieza
+    // a bajar en paralelo con los contadores.
+    let c = ciudadDelHash() || ciudadGuardada();
+    if (c) cargarCartelera(c).catch(() => {});
     // 1. Traer primero los contadores globales del backend de Google Sheets
-    // Usamos 'reload' para obligar al navegador a pedir datos frescos si estás en incógnito
-    await fetchStarCounts();
-
-    // 2. Traer la cartelera local
-    const res = await fetch('data/cartelera.json?t=' + Date.now());
-    const data = await res.json();
-    allScreenings = data.screenings || [];
-
-    if (data.updated) {
-      const dateObj = new Date(data.updated);
-      // Ajuste de 3 horas si el JSON viene en UTC pero necesitas hora local de Argentina
-      dateObj.setHours(dateObj.getHours() - 3); 
-      
-      const updated = dateObj.toLocaleString('es-AR', {
-          day: '2-digit',
-          month: 'short',
-          hour: '2-digit',
-          minute: '2-digit',
-          hour12: false
-        });
-      document.getElementById('updated-badge').textContent = 'Actualizado ' + updated;
+    // (con la detección de la ciudad, si hace falta, en paralelo).
+    const [, detectada] = await Promise.all([fetchStarCounts(), c ? null : detectarCiudad()]);
+    c = c || detectada;
+    if (!c) {
+      c = await preguntarCiudad();
+      guardarCiudad(c);
+      track('elegir_ciudad', { ciudad: c, origen: 'recuadro', canal: CANAL_ORIGEN });
     }
-
-    applyHashState();                 // Deep link: #dia/cine/q=... → estado inicial
-    applyCommercialToggle();          // Sincroniza chips + label del toggle
-    buildDayTabs();                   // Arma las pestañas de los días
-
-    // Deep link a una sala sin día explícito: si el día activo no tiene
-    // funciones de esa sala, saltamos al primero que sí (como el click en chip).
-    // Lo resolvemos sobre los datos y no sobre las clases .has-cine del DOM,
-    // que dependen del orden en que corren buildDayTabs/highlightCineDays.
-    if (activeCines.size && activeDay) {
-      const pool = visibleScreenings().filter(matchesCine);
-      if (!pool.some(s => s.fecha === activeDay)) {
-        const firstDay = pool.map(s => s.fecha).sort()[0];
-        if (firstDay) selectDay(firstDay);
-      }
-    }
-    
-    // Ocultar el loader de la pantalla
-    document.getElementById('loading').classList.add('hidden');
-    
-    // 3. Renderizar la tabla (ahora sí, con starCounts ya cargado en memoria)
-    renderTable();
+    await mostrarCiudad(c, true);
   } catch (e) {
     console.error(e);
     document.getElementById('loading').innerHTML = '<p style="color:#c44">Error al cargar datos.</p>';
   }
 }
+
+// Muestra la cartelera de `c`. Con `desdeHash`, el estado inicial (día, salas,
+// búsqueda) sale del link; si no, arranca de cero.
+async function mostrarCiudad(c, desdeHash) {
+  ciudad = c;
+  applyCiudad();
+  const loading = document.getElementById('loading');
+  let data;
+  try {
+    // 2. Traer la cartelera de la ciudad
+    data = await cargarCartelera(c);
+  } catch (e) {
+    console.error(e);
+    if (loading.classList.contains('hidden')) {
+      document.getElementById('main').innerHTML = '<div class="empty">Error al cargar datos.</div>';
+    } else {
+      loading.innerHTML = '<p style="color:#c44">Error al cargar datos.</p>';
+    }
+    return;
+  }
+  if (c !== ciudad) return;           // mientras bajaba, eligieron la otra
+  allScreenings = data.screenings || [];
+
+  const badge = document.getElementById('updated-badge');
+  badge.textContent = '';
+  if (data.updated && CIUDADES[c].tz) {
+    // `updated` es la hora del runner: UTC y sin zona.
+    badge.textContent = 'Actualizado ' + new Date(data.updated + 'Z').toLocaleString('es-AR', {
+      timeZone: CIUDADES[c].tz, day: '2-digit', month: 'short',
+      hour: '2-digit', minute: '2-digit', hour12: false,
+    });
+  } else if (data.updated) {
+    const dateObj = new Date(data.updated);
+    // Ajuste de 3 horas si el JSON viene en UTC pero necesitas hora local de Argentina
+    dateObj.setHours(dateObj.getHours() - 3); 
+    
+    const updated = dateObj.toLocaleString('es-AR', {
+        day: '2-digit',
+        month: 'short',
+        hour: '2-digit',
+        minute: '2-digit',
+        hour12: false
+      });
+    badge.textContent = 'Actualizado ' + updated;
+  }
+
+  if (desdeHash) applyHashState();  // Deep link: #ciudad/dia/cine/q=... → estado inicial
+  applyCommercialToggle();          // Sincroniza chips + label del toggle
+  buildDayTabs();                   // Arma las pestañas de los días
+
+  // Deep link a una sala sin día explícito: si el día activo no tiene
+  // funciones de esa sala, saltamos al primero que sí (como el click en chip).
+  // Lo resolvemos sobre los datos y no sobre las clases .has-cine del DOM,
+  // que dependen del orden en que corren buildDayTabs/highlightCineDays.
+  if (activeCines.size && activeDay) {
+    const pool = visibleScreenings().filter(matchesCine);
+    if (!pool.some(s => s.fecha === activeDay)) {
+      const firstDay = pool.map(s => s.fecha).sort()[0];
+      if (firstDay) selectDay(firstDay);
+    }
+  }
+
+  // Ocultar el loader de la pantalla
+  loading.classList.add('hidden');
+
+  // 3. Renderizar la tabla (ahora sí, con starCounts ya cargado en memoria)
+  renderTable();
+  updateHash();
+}
+
+// Perilla de ciudad: la elección queda guardada para la próxima visita.
+document.getElementById('city-switch').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-ciudad]');
+  if (!btn) return;
+  const c = btn.dataset.ciudad;
+  guardarCiudad(c);
+  if (c === ciudad) return;
+  track('elegir_ciudad', { ciudad: c, origen: 'perilla', canal: CANAL_ORIGEN });
+  // Día, salas y búsqueda eran de la otra cartelera.
+  activeDay = null; activeCines.clear(); searchQuery = '';
+  const inp = document.getElementById('search-input');
+  if (inp) inp.value = '';
+  resetSort();
+  syncCineButtons();
+  mostrarCiudad(c, false);
+});
   
 function buildDayTabs() {
   const pool = visibleScreenings();
@@ -1414,7 +1678,7 @@ document.getElementById('search-input').addEventListener('input', e => {
 // Texto humano de la vista actual — es lo que hace que el mensaje de
 // WhatsApp/Telegram salga legible en vez de una URL pelada.
 function shareText() {
-  const parts = ['Cartelera de cines BA'];
+  const parts = ['Cartelera de cines ' + CIUDADES[ciudad].corto];
   if (activeCines.size) parts.push([...activeCines].join(' + '));
   if (searchQuery) parts.push(`"${searchQuery}"`);
   else if (activeDay) parts.push(fmtShortDate(activeDay));
@@ -1457,7 +1721,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';

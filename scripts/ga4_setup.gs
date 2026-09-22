@@ -36,6 +36,9 @@ const DIMENSIONES = [
   // Del evento `buscar` (y `compartir_busqueda`).
   ["termino",           "Término buscado",      "Lo que la persona escribió en el buscador"],
   ["resultados",        "Resultados",           "Cuántas funciones devolvió esa búsqueda (0 = no encontró nada)"],
+  // Va en todos los eventos de función; `origen` es del evento `elegir_ciudad`.
+  ["ciudad",            "Ciudad",               "Cartelera en la que se hizo el click (ba o madrid)"],
+  ["origen",            "Origen de la ciudad",  "Cómo se eligió la ciudad: recuadro de la primera visita o perilla"],
 ];
 
 function setupDimensiones() {

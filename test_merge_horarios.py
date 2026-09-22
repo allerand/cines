@@ -30,7 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 
 
-def merge_de_run(screenings_out, previas, today_str):
+def merge_de_run(screenings_out, previas, today_str, hoy_madrid=None):
     """Corre el bloque de merge de run.py sobre dos listas de funciones.
 
     Se extrae del fuente en vez de importar run.py porque importarlo arranca
@@ -46,6 +46,8 @@ def merge_de_run(screenings_out, previas, today_str):
         "screenings_out": screenings_out,
         "prev_data": {"screenings": previas},
         "today_str": today_str,
+        "hoy_madrid": lambda: __import__("datetime").date.fromisoformat(hoy_madrid or today_str),
+        "CINES_MADRID": {"Cine Doré", "Cines Ideal"},
         "COMMERCIAL_PREFIXES": ("Cinemark", "Hoyts", "Cinépolis", "Showcase", "Multiplex"),
         "CINES_CON_CACHE": {"Centro Cultural Borges": 3, "CCK": 1, "Bellas Artes": 1},
         "urlparse": __import__("urllib.parse", fromlist=["urlparse"]).urlparse,
@@ -116,6 +118,20 @@ def main() -> int:
     previas = [f("Cine Lorca", "La invitación", HOY, "20:05")]
     out = merge_de_run(list(frescas), previas, HOY)
     chequear("una función idéntica no se duplica", len(out) == 1, out)
+
+    print("\nMadrid va un día adelante")
+    # El pase de la noche de Buenos Aires corre a las 23:15 UTC: en el runner
+    # todavía es el 4, en Madrid ya es el 5. Lo de "hoy" que se preserva es lo
+    # del 5 en Madrid, y lo del 4 ya pasó.
+    doré = "https://entradasfilmoteca.sacatuentrada.es/es"
+    frescas = [f("Cine Doré", "Matinee", manana, "17:30", doré)]
+    previas = [f("Cine Doré", "Shirin", HOY, "20:00", doré),
+               f("Cine Doré", "Fallen Angels", manana, "20:00", doré),
+               f("Cine Lorca", "La invitación", HOY, "20:05")]
+    out = merge_de_run(list(frescas), previas, HOY, hoy_madrid=manana)
+    titulos = sorted(s["title_es"] for s in out)
+    chequear("la de ayer en Madrid no vuelve; la de hoy allá y la de hoy acá sí",
+             titulos == ["Fallen Angels", "La invitación", "Matinee"], titulos)
 
     print(f"\n{'TODO OK' if not fallos else f'{fallos} casos fallando'}")
     return 1 if fallos else 0
