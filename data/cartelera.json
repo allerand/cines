@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-23T01:38:20",
+  "updated": "2026-09-23T09:01:59",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 6,
@@ -18,7 +18,7 @@
       "publicadas": 2
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 1,
       "publicadas": 1
     },
     "CEA": {
@@ -39,7 +39,7 @@
       "publicadas": 6
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
+      "scrapeadas": 22,
       "publicadas": 22
     },
     "Centro Cultural Munro": {
@@ -91,8 +91,8 @@
       "publicadas": 14
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 42,
-      "publicadas": 42
+      "scrapeadas": 43,
+      "publicadas": 43
     },
     "Filo Cine": {
       "scrapeadas": 5,
@@ -123,7 +123,7 @@
       "publicadas": 378
     },
     "Multiplex Canning": {
-      "scrapeadas": 223,
+      "scrapeadas": 199,
       "publicadas": 223
     },
     "Multiplex Lavalle": {
@@ -135,8 +135,8 @@
       "publicadas": 345
     },
     "Sala Lugones": {
-      "scrapeadas": 36,
-      "publicadas": 36
+      "scrapeadas": 48,
+      "publicadas": 48
     },
     "Sala Lúcida": {
       "scrapeadas": 10,
@@ -1541,22 +1541,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-09-23",
-      "hora": "14:00",
-      "title_es": "Next Generation Short Tiger 2026",
-      "title_en": "Next Generation Short Tiger 2026",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-23",
       "hora": "14:00",
@@ -2104,22 +2088,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-23",
       "hora": "15:00",
-      "title_es": "Oasis: Don´t Look Back In Anger",
-      "title_en": "Oasis: Don't Look Back in Anger",
-      "original_title": "Oasis: Don't Look Back in Anger",
-      "director": "Dylan Southern, Will Lovelace",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 123,
-      "genre": "Documental, Música",
-      "letterboxd": "https://letterboxd.com/film/oasis-dont-look-back-in-anger/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-09-23",
-      "hora": "15:00",
       "title_es": "La Odisea",
       "title_en": "The Odyssey",
       "original_title": "",
@@ -2129,6 +2097,22 @@
       "duration": 175,
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-09-23",
+      "hora": "15:00",
+      "title_es": "Oasis: Don´t Look Back In Anger",
+      "title_en": "Oasis: Don't Look Back in Anger",
+      "original_title": "Oasis: Don't Look Back in Anger",
+      "director": "Dylan Southern, Will Lovelace",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 123,
+      "genre": "Documental, Música",
+      "letterboxd": "https://letterboxd.com/film/oasis-dont-look-back-in-anger/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -2920,22 +2904,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-23",
       "hora": "16:00",
-      "title_es": "El árbol muy muy lejano",
-      "title_en": "The Magic Faraway Tree",
-      "original_title": "The Magic Faraway Tree",
-      "director": "Ben Gregor",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Fantasía, Aventura",
-      "letterboxd": "https://letterboxd.com/film/the-magic-faraway-tree/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-09-23",
-      "hora": "16:00",
       "title_es": "Resident Evil: Noche cero",
       "title_en": "Resident Evil",
       "original_title": "Resident Evil",
@@ -2945,6 +2913,22 @@
       "duration": 94,
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-09-23",
+      "hora": "16:00",
+      "title_es": "El árbol muy muy lejano",
+      "title_en": "The Magic Faraway Tree",
+      "original_title": "The Magic Faraway Tree",
+      "director": "Ben Gregor",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-magic-faraway-tree/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -4360,22 +4344,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-23",
       "hora": "17:50",
-      "title_es": "Coyote Vs Acme",
-      "title_en": "Coyote vs. Acme",
-      "original_title": "Coyote vs. Acme",
-      "director": "Dave Green",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-09-23",
-      "hora": "17:50",
       "title_es": "Yo, Narciso",
       "title_en": "Yo, Narciso",
       "original_title": "Yo, Narciso",
@@ -4385,6 +4353,22 @@
       "duration": 95,
       "genre": "Comedia, Romance",
       "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-09-23",
+      "hora": "17:50",
+      "title_es": "Coyote Vs Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -5810,7 +5794,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -5845,19 +5829,19 @@
       "ciclo": ""
     },
     {
-      "cine": "Showcase Belgrano",
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-09-23",
       "hora": "19:30",
-      "title_es": "Spider-Man: Un nuevo día",
-      "title_en": "Spider-Man: Brand New Day",
-      "original_title": "Spider-Man: Brand New Day",
-      "director": "Destin Daniel Cretton",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 145,
-      "genre": "Ciencia ficción, Acción",
-      "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
-      "ticket_url": "https://www.todoshowcase.com/",
+      "title_es": "Next Generation Short Tiger 2026",
+      "title_en": "Next Generation Short Tiger 2026",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -6002,7 +5986,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -6291,6 +6275,22 @@
       "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
       "ticket_url": "https://portal.salalucida.org/eventos/atlas-de-directoras-hijo-mayor-e254",
       "ciclo": "Atlas de Directoras"
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-09-23",
+      "hora": "20:00",
+      "title_es": "Oasis: don´t look back in anger",
+      "title_en": "Oasis: Don't Look Back in Anger",
+      "original_title": "Oasis: Don't Look Back in Anger",
+      "director": "Dylan Southern, Will Lovelace",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 123,
+      "genre": "Documental, Música",
+      "letterboxd": "https://letterboxd.com/film/oasis-dont-look-back-in-anger/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -6760,22 +6760,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-23",
       "hora": "20:30",
-      "title_es": "De Troya a Malvinas",
-      "title_en": "DE TROYA A MALVINAS",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": 98,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-23",
-      "hora": "20:30",
       "title_es": "Yo, Narciso",
       "title_en": "Yo, Narciso",
       "original_title": "Yo, Narciso",
@@ -6785,6 +6769,22 @@
       "duration": 95,
       "genre": "Comedia, Romance",
       "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-23",
+      "hora": "20:30",
+      "title_es": "De Troya a Malvinas",
+      "title_en": "DE TROYA A MALVINAS",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -7250,7 +7250,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1136",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -7314,7 +7314,7 @@
       "genre": "Crimen, Thriller",
       "letterboxd": "https://letterboxd.com/film/street-wanderers/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1137",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -7457,6 +7457,22 @@
       "duration": null,
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/terminator-2-judgment-day/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-09-23",
+      "hora": "22:00",
+      "title_es": "Seis semanas después",
+      "title_en": "Six Weeks On",
+      "original_title": "",
+      "director": "Jacqueline Jansen",
+      "country": "Alemania",
+      "year": 2025,
+      "duration": 98,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/six-weeks-on/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -9160,22 +9176,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-24",
       "hora": "13:00",
-      "title_es": "Toy Story 5",
-      "title_en": "Toy Story 5",
-      "original_title": "Toy Story 5",
-      "director": "Andrew Stanton",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 102,
-      "genre": "Comedia, Familiar",
-      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-24",
-      "hora": "13:00",
       "title_es": "Insidious: Fuera del más allá",
       "title_en": "Insidious: Out of the Further",
       "original_title": "Insidious: Out of the Further",
@@ -9185,6 +9185,22 @@
       "duration": 106,
       "genre": "Terror, Thriller",
       "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-24",
+      "hora": "13:00",
+      "title_es": "Toy Story 5",
+      "title_en": "Toy Story 5",
+      "original_title": "Toy Story 5",
+      "director": "Andrew Stanton",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Comedia, Familiar",
+      "letterboxd": "https://letterboxd.com/film/toy-story-5/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -9224,22 +9240,6 @@
       "cine": "Cinemark Caballito",
       "fecha": "2026-09-24",
       "hora": "13:00",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Caballito",
-      "fecha": "2026-09-24",
-      "hora": "13:00",
       "title_es": "Coyote Vs Acme",
       "title_en": "Coyote vs. Acme",
       "original_title": "Coyote vs. Acme",
@@ -9249,6 +9249,22 @@
       "duration": 110,
       "genre": "Aventura, Familiar",
       "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Caballito",
+      "fecha": "2026-09-24",
+      "hora": "13:00",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -9954,7 +9970,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -10136,15 +10152,15 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-24",
       "hora": "15:00",
-      "title_es": "Yo, Narciso",
-      "title_en": "Yo, Narciso",
-      "original_title": "Yo, Narciso",
-      "director": "Adrián Suar",
-      "country": "Argentina",
+      "title_es": "La isla olvidada",
+      "title_en": "Forgotten Island",
+      "original_title": "Forgotten Island",
+      "director": "Januel Mercado, Joel Crawford",
+      "country": "Estados Unidos",
       "year": 2026,
-      "duration": 95,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "duration": 109,
+      "genre": "Familiar, Comedia",
+      "letterboxd": "https://letterboxd.com/film/forgotten-island-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -10168,15 +10184,15 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-24",
       "hora": "15:00",
-      "title_es": "La isla olvidada",
-      "title_en": "Forgotten Island",
-      "original_title": "Forgotten Island",
-      "director": "Januel Mercado, Joel Crawford",
-      "country": "Estados Unidos",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
       "year": 2026,
-      "duration": 109,
-      "genre": "Familiar, Comedia",
-      "letterboxd": "https://letterboxd.com/film/forgotten-island-2026/",
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -10213,7 +10229,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-09-24",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -10229,7 +10245,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-09-24",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -12306,7 +12322,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1136",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Pilar",
@@ -14274,7 +14290,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -14552,22 +14568,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-24",
       "hora": "23:00",
-      "title_es": "Insidious: Fuera del más allá",
-      "title_en": "Insidious: Out of the Further",
-      "original_title": "Insidious: Out of the Further",
-      "director": "Jacob Chase",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-24",
-      "hora": "23:00",
       "title_es": "El último gran golpe",
       "title_en": "The Get Out",
       "original_title": "The Get Out",
@@ -14577,6 +14577,22 @@
       "duration": 111,
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-24",
+      "hora": "23:00",
+      "title_es": "Insidious: Fuera del más allá",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -15890,7 +15906,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -16072,15 +16088,15 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-25",
       "hora": "15:00",
-      "title_es": "Yo, Narciso",
-      "title_en": "Yo, Narciso",
-      "original_title": "Yo, Narciso",
-      "director": "Adrián Suar",
-      "country": "Argentina",
+      "title_es": "La isla olvidada",
+      "title_en": "Forgotten Island",
+      "original_title": "Forgotten Island",
+      "director": "Januel Mercado, Joel Crawford",
+      "country": "Estados Unidos",
       "year": 2026,
-      "duration": 95,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "duration": 109,
+      "genre": "Familiar, Comedia",
+      "letterboxd": "https://letterboxd.com/film/forgotten-island-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -16104,15 +16120,15 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-25",
       "hora": "15:00",
-      "title_es": "La isla olvidada",
-      "title_en": "Forgotten Island",
-      "original_title": "Forgotten Island",
-      "director": "Januel Mercado, Joel Crawford",
-      "country": "Estados Unidos",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
       "year": 2026,
-      "duration": 109,
-      "genre": "Familiar, Comedia",
-      "letterboxd": "https://letterboxd.com/film/forgotten-island-2026/",
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -16149,7 +16165,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-09-25",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -16165,7 +16181,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-09-25",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -18274,7 +18290,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1136",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Pilar",
@@ -20306,7 +20322,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -20584,22 +20600,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-25",
       "hora": "23:00",
-      "title_es": "Insidious: Fuera del más allá",
-      "title_en": "Insidious: Out of the Further",
-      "original_title": "Insidious: Out of the Further",
-      "director": "Jacob Chase",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-25",
-      "hora": "23:00",
       "title_es": "El último gran golpe",
       "title_en": "The Get Out",
       "original_title": "The Get Out",
@@ -20609,6 +20609,22 @@
       "duration": 111,
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-25",
+      "hora": "23:00",
+      "title_es": "Insidious: Fuera del más allá",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -21128,6 +21144,22 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-26",
       "hora": "12:40",
+      "title_es": "En el corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-09-26",
+      "hora": "12:40",
       "title_es": "Yo, Narciso",
       "title_en": "Yo, Narciso",
       "original_title": "Yo, Narciso",
@@ -21153,22 +21185,6 @@
       "duration": 94,
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-09-26",
-      "hora": "12:40",
-      "title_es": "En el corazón de la bestia",
-      "title_en": "Heart of the Beast",
-      "original_title": "Heart of the Beast",
-      "director": "David Ayer",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 101,
-      "genre": "Aventura, Thriller",
-      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -21288,22 +21304,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-26",
       "hora": "13:00",
-      "title_es": "Insidious: Fuera del más allá",
-      "title_en": "Insidious: Out of the Further",
-      "original_title": "Insidious: Out of the Further",
-      "director": "Jacob Chase",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-26",
-      "hora": "13:00",
       "title_es": "Toy Story 5",
       "title_en": "Toy Story 5",
       "original_title": "Toy Story 5",
@@ -21313,6 +21313,22 @@
       "duration": 102,
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-26",
+      "hora": "13:00",
+      "title_es": "Insidious: Fuera del más allá",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -22130,7 +22146,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -22389,7 +22405,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-09-26",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -22405,7 +22421,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-09-26",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -24530,7 +24546,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1136",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Pilar",
@@ -24677,22 +24693,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cacodelphia",
-      "fecha": "2026-09-26",
-      "hora": "19:00",
-      "title_es": "La Invitación",
-      "title_en": "The Invite",
-      "original_title": "",
-      "director": "Olivia Wilde",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 107,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
-      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/e17e78a5f64342ee4efb73499e422760",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-09-26",
       "hora": "19:00",
@@ -24707,6 +24707,22 @@
       "letterboxd": "https://letterboxd.com/film/el-placer-es-mio/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/",
       "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-09-26",
+      "hora": "19:00",
+      "title_es": "La Invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 107,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/e17e78a5f64342ee4efb73499e422760",
+      "ciclo": ""
     },
     {
       "cine": "Multiplex Lavalle",
@@ -26578,7 +26594,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -26856,22 +26872,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-26",
       "hora": "23:00",
-      "title_es": "Insidious: Fuera del más allá",
-      "title_en": "Insidious: Out of the Further",
-      "original_title": "Insidious: Out of the Further",
-      "director": "Jacob Chase",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-26",
-      "hora": "23:00",
       "title_es": "El último gran golpe",
       "title_en": "The Get Out",
       "original_title": "The Get Out",
@@ -26881,6 +26881,22 @@
       "duration": 111,
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-26",
+      "hora": "23:00",
+      "title_es": "Insidious: Fuera del más allá",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -27336,22 +27352,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-27",
       "hora": "12:40",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-09-27",
-      "hora": "12:40",
       "title_es": "Yo, Narciso",
       "title_en": "Yo, Narciso",
       "original_title": "Yo, Narciso",
@@ -27361,6 +27361,22 @@
       "duration": 95,
       "genre": "Comedia, Romance",
       "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-09-27",
+      "hora": "12:40",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -28322,7 +28338,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -28581,7 +28597,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-09-27",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -28597,7 +28613,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-09-27",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -30754,7 +30770,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1136",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Pilar",
@@ -32392,22 +32408,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-27",
       "hora": "22:10",
-      "title_es": "El último gran golpe",
-      "title_en": "The Get Out",
-      "original_title": "The Get Out",
-      "director": "Derrick Borte",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 111,
-      "genre": "Acción, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-27",
-      "hora": "22:10",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -32417,6 +32417,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-27",
+      "hora": "22:10",
+      "title_es": "El último gran golpe",
+      "title_en": "The Get Out",
+      "original_title": "The Get Out",
+      "director": "Derrick Borte",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -32802,7 +32818,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -33080,22 +33096,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-27",
       "hora": "23:00",
-      "title_es": "Insidious: Fuera del más allá",
-      "title_en": "Insidious: Out of the Further",
-      "original_title": "Insidious: Out of the Further",
-      "director": "Jacob Chase",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-27",
-      "hora": "23:00",
       "title_es": "El último gran golpe",
       "title_en": "The Get Out",
       "original_title": "The Get Out",
@@ -33105,6 +33105,22 @@
       "duration": 111,
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-27",
+      "hora": "23:00",
+      "title_es": "Insidious: Fuera del más allá",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -34021,6 +34037,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-09-28",
+      "hora": "13:45",
+      "title_es": "Los Colores Del Tiempo",
+      "title_en": "Colours of Time",
+      "original_title": "La Venue de l'avenir",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-09-28",
       "hora": "13:45",
@@ -34050,22 +34082,6 @@
       "genre": "Aventura, Familiar",
       "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
       "ticket_url": "https://multiplex.com.ar/peliculas/coyote-vs-acme/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-09-28",
-      "hora": "13:45",
-      "title_es": "Los Colores Del Tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
       "ciclo": ""
     },
     {
@@ -34386,7 +34402,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Pilar",
@@ -34584,6 +34600,22 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-28",
       "hora": "15:00",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-09-28",
+      "hora": "15:00",
       "title_es": "La isla olvidada",
       "title_en": "Forgotten Island",
       "original_title": "Forgotten Island",
@@ -34609,22 +34641,6 @@
       "duration": 95,
       "genre": "Comedia, Romance",
       "letterboxd": "https://letterboxd.com/film/yo-narciso/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-09-28",
-      "hora": "15:00",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -34661,22 +34677,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-09-28",
-      "hora": "15:00",
-      "title_es": "Avengers: Endgame (re Estreno)",
-      "title_en": "Avengers: Endgame (re Estreno)",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-09-28",
       "hora": "15:00",
@@ -34707,6 +34707,22 @@
       "letterboxd": "https://letterboxd.com/film/suite-juarez/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1107",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-09-28",
+      "hora": "15:00",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
     },
     {
       "cine": "Multiplex Pilar",
@@ -35173,6 +35189,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-28",
+      "hora": "16:00",
+      "title_es": "Canelones",
+      "title_en": "Cannelloni",
+      "original_title": "Canelones",
+      "director": "Christian Basilis, Ana Laura Gussoni",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Comedia",
+      "letterboxd": "https://letterboxd.com/film/cannelloni/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1077",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-09-28",
       "hora": "16:00",
@@ -35203,22 +35235,6 @@
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-odisea/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-28",
-      "hora": "16:00",
-      "title_es": "Canelones",
-      "title_en": "Cannelloni",
-      "original_title": "Canelones",
-      "director": "Christian Basilis, Ana Laura Gussoni",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 91,
-      "genre": "Thriller, Comedia",
-      "letterboxd": "https://letterboxd.com/film/cannelloni/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1077",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -35752,22 +35768,6 @@
       "cine": "Hoyts Dot",
       "fecha": "2026-09-28",
       "hora": "17:30",
-      "title_es": "En el corazón de la bestia",
-      "title_en": "Heart of the Beast",
-      "original_title": "Heart of the Beast",
-      "director": "David Ayer",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 101,
-      "genre": "Aventura, Thriller",
-      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Dot",
-      "fecha": "2026-09-28",
-      "hora": "17:30",
       "title_es": "Resident Evil: Noche cero",
       "title_en": "Resident Evil",
       "original_title": "Resident Evil",
@@ -35777,6 +35777,22 @@
       "duration": 94,
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-09-28",
+      "hora": "17:30",
+      "title_es": "En el corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -35893,22 +35909,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-09-28",
-      "hora": "17:35",
-      "title_es": "Resident Evil: Noche Cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 91,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-28",
       "hora": "17:35",
@@ -35922,6 +35922,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-09-28",
+      "hora": "17:35",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
       "ciclo": ""
     },
     {
@@ -36165,6 +36181,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-28",
+      "hora": "18:00",
+      "title_es": "Yo, narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1060",
+      "ciclo": "En cartel"
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-09-28",
       "hora": "18:00",
@@ -36195,22 +36227,6 @@
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-28",
-      "hora": "18:00",
-      "title_es": "Yo, narciso",
-      "title_en": "Yo, Narciso",
-      "original_title": "Yo, Narciso",
-      "director": "Adrián Suar",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 95,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1060",
-      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Pilar",
@@ -36546,7 +36562,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1136",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Canning",
@@ -37205,22 +37221,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-09-28",
-      "hora": "20:20",
-      "title_es": "La Noche Del Demonio: Estan Entre Nosotros",
-      "title_en": "Insidious: Out of the Further",
-      "original_title": "Insidious: Out of the Further",
-      "director": "Jacob Chase",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/la-noche-del-demonio-estan-entre-nosotros/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-28",
       "hora": "20:20",
@@ -37234,6 +37234,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-invitacion/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-09-28",
+      "hora": "20:20",
+      "title_es": "La Noche Del Demonio: Estan Entre Nosotros",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/la-noche-del-demonio-estan-entre-nosotros/",
       "ciclo": ""
     },
     {
@@ -37397,7 +37413,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Lavalle",
       "fecha": "2026-09-28",
       "hora": "20:45",
       "title_es": "El Corazon De La Bestia",
@@ -37413,7 +37429,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Lavalle",
+      "cine": "Multiplex Canning",
       "fecha": "2026-09-28",
       "hora": "20:45",
       "title_es": "El Corazon De La Bestia",
@@ -37864,22 +37880,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-28",
       "hora": "22:10",
-      "title_es": "El último gran golpe",
-      "title_en": "The Get Out",
-      "original_title": "The Get Out",
-      "director": "Derrick Borte",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 111,
-      "genre": "Acción, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-28",
-      "hora": "22:10",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -37889,6 +37889,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-28",
+      "hora": "22:10",
+      "title_es": "El último gran golpe",
+      "title_en": "The Get Out",
+      "original_title": "The Get Out",
+      "director": "Derrick Borte",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -38165,22 +38181,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-09-28",
-      "hora": "22:30",
-      "title_es": "El Ultimo Gran Golpe",
-      "title_en": "The Get Out",
-      "original_title": "The Get Out",
-      "director": "Derrick Borte",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 111,
-      "genre": "Acción, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/el-ultimo-gran-golpe/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-28",
       "hora": "22:30",
@@ -38242,7 +38242,23 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-09-28",
+      "hora": "22:30",
+      "title_es": "El Ultimo Gran Golpe",
+      "title_en": "The Get Out",
+      "original_title": "The Get Out",
+      "director": "Derrick Borte",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/el-ultimo-gran-golpe/",
+      "ciclo": ""
     },
     {
       "cine": "Multiplex Pilar",
@@ -38280,22 +38296,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-28",
       "hora": "22:40",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-28",
-      "hora": "22:40",
       "title_es": "Spider-Man: Un nuevo día",
       "title_en": "Spider-Man: Brand New Day",
       "original_title": "Spider-Man: Brand New Day",
@@ -38305,6 +38305,22 @@
       "duration": 150,
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-28",
+      "hora": "22:40",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -39826,7 +39842,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -40024,22 +40040,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-29",
       "hora": "15:00",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-09-29",
-      "hora": "15:00",
       "title_es": "Yo, Narciso",
       "title_en": "Yo, Narciso",
       "original_title": "Yo, Narciso",
@@ -40049,6 +40049,22 @@
       "duration": 95,
       "genre": "Comedia, Romance",
       "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-09-29",
+      "hora": "15:00",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -40085,7 +40101,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-09-29",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -40101,7 +40117,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-09-29",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -41224,22 +41240,6 @@
       "cine": "Hoyts Dot",
       "fecha": "2026-09-29",
       "hora": "17:30",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Dot",
-      "fecha": "2026-09-29",
-      "hora": "17:30",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -41249,6 +41249,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-09-29",
+      "hora": "17:30",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -41416,22 +41432,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-29",
       "hora": "17:40",
-      "title_es": "La Invitación",
-      "title_en": "The Invite",
-      "original_title": "",
-      "director": "Olivia Wilde",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 108,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-29",
-      "hora": "17:40",
       "title_es": "La Odisea",
       "title_en": "The Odyssey",
       "original_title": "",
@@ -41441,6 +41441,22 @@
       "duration": 175,
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-29",
+      "hora": "17:40",
+      "title_es": "La Invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -42114,7 +42130,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1136",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Pilar",
@@ -44018,7 +44034,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -44824,22 +44840,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-30",
       "hora": "13:00",
-      "title_es": "Insidious: Fuera del más allá",
-      "title_en": "Insidious: Out of the Further",
-      "original_title": "Insidious: Out of the Further",
-      "director": "Jacob Chase",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-30",
-      "hora": "13:00",
       "title_es": "Toy Story 5",
       "title_en": "Toy Story 5",
       "original_title": "Toy Story 5",
@@ -44849,6 +44849,22 @@
       "duration": 102,
       "genre": "Comedia, Familiar",
       "letterboxd": "https://letterboxd.com/film/toy-story-5/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-30",
+      "hora": "13:00",
+      "title_es": "Insidious: Fuera del más allá",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -44888,22 +44904,6 @@
       "cine": "Cinemark Caballito",
       "fecha": "2026-09-30",
       "hora": "13:00",
-      "title_es": "Coyote Vs Acme",
-      "title_en": "Coyote vs. Acme",
-      "original_title": "Coyote vs. Acme",
-      "director": "Dave Green",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Caballito",
-      "fecha": "2026-09-30",
-      "hora": "13:00",
       "title_es": "Resident Evil: Noche cero",
       "title_en": "Resident Evil",
       "original_title": "Resident Evil",
@@ -44913,6 +44913,22 @@
       "duration": 94,
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Caballito",
+      "fecha": "2026-09-30",
+      "hora": "13:00",
+      "title_es": "Coyote Vs Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -45429,6 +45445,22 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-09-30",
+      "hora": "14:00",
+      "title_es": "Imperium",
+      "title_en": "Imperium",
+      "original_title": "Imperium",
+      "director": "Sergei Loznitsa",
+      "country": "Alemania/Francia/Italia/Lituania",
+      "year": 2026,
+      "duration": 176,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/imperium-2026/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-30",
       "hora": "14:05",
@@ -45618,7 +45650,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -45832,6 +45864,22 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-09-30",
       "hora": "15:00",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-09-30",
+      "hora": "15:00",
       "title_es": "Yo, Narciso",
       "title_en": "Yo, Narciso",
       "original_title": "Yo, Narciso",
@@ -45857,22 +45905,6 @@
       "duration": 109,
       "genre": "Familiar, Comedia",
       "letterboxd": "https://letterboxd.com/film/forgotten-island-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-09-30",
-      "hora": "15:00",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -45909,7 +45941,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-09-30",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -45925,7 +45957,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-09-30",
       "hora": "15:00",
       "title_es": "Avengers: Endgame (re Estreno)",
@@ -45971,6 +46003,22 @@
       "letterboxd": "https://letterboxd.com/film/suite-juarez/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1107",
       "ciclo": "En cartel"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-09-30",
+      "hora": "15:00",
+      "title_es": "La hija cóndor",
+      "title_en": "The Condor Daughter",
+      "original_title": "La hija cóndor",
+      "director": "Álvaro Olmos Torrico",
+      "country": "Bolivia/Perú/Uruguay",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Música, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-condor-daughter/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -47272,22 +47320,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-30",
       "hora": "17:40",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 175,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-30",
-      "hora": "17:40",
       "title_es": "La Invitación",
       "title_en": "The Invite",
       "original_title": "",
@@ -47297,6 +47329,22 @@
       "duration": 108,
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-30",
+      "hora": "17:40",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 175,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -47906,7 +47954,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1136",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Pilar",
@@ -49077,6 +49125,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-09-30",
+      "hora": "21:00",
+      "title_es": "Machado",
+      "title_en": "Machado",
+      "original_title": "Machado",
+      "director": "Julián Tagle",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 72,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/machado/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-09-30",
       "hora": "21:05",
@@ -49464,22 +49528,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-30",
       "hora": "22:10",
-      "title_es": "En el corazón de la bestia",
-      "title_en": "Heart of the Beast",
-      "original_title": "Heart of the Beast",
-      "director": "David Ayer",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 101,
-      "genre": "Aventura, Thriller",
-      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-30",
-      "hora": "22:10",
       "title_es": "El último gran golpe",
       "title_en": "The Get Out",
       "original_title": "The Get Out",
@@ -49489,6 +49537,22 @@
       "duration": 111,
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-30",
+      "hora": "22:10",
+      "title_es": "En el corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -49890,7 +49954,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -49912,22 +49976,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-30",
       "hora": "22:40",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-30",
-      "hora": "22:40",
       "title_es": "Spider-Man: Un nuevo día",
       "title_en": "Spider-Man: Brand New Day",
       "original_title": "Spider-Man: Brand New Day",
@@ -49937,6 +49985,22 @@
       "duration": 150,
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-30",
+      "hora": "22:40",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -50453,6 +50517,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-02",
+      "hora": "18:00",
+      "title_es": "Chicas tristes",
+      "title_en": "Sad Girlz",
+      "original_title": "Chicas tristes",
+      "director": "Fernanda Tovar",
+      "country": "México/España/Francia",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/chicas-tristes/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
       "cine": "Sala Lúcida",
       "fecha": "2026-10-02",
       "hora": "19:00",
@@ -50645,6 +50725,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-03",
+      "hora": "18:00",
+      "title_es": "Le Journal d'une femme de chambre",
+      "title_en": "The Diary of a Chambermaid",
+      "original_title": "Le Journal d'une femme de chambre",
+      "director": "Radu Jude",
+      "country": "Francia/Rumania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-diary-of-a-chambermaid-2026/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-03",
       "hora": "19:00",
@@ -50805,6 +50901,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-04",
+      "hora": "21:00",
+      "title_es": "Red Rocks",
+      "title_en": "Red Rocks",
+      "original_title": "Les Roches Rouges",
+      "director": "Bruno Dumont",
+      "country": "Portugal/Francia/Italia/España/Catar",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/les-roches-rouges/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-05",
+      "hora": "15:00",
+      "title_es": "Ghost School",
+      "title_en": "Ghost School",
+      "original_title": "گوسٹ اسکول",
+      "director": "Seemab Gul",
+      "country": "Pakistán/Alemania/Arabia Saudita",
+      "year": 2025,
+      "duration": 88,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/ghost-school-2025/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-05",
       "hora": "17:00",
@@ -50819,6 +50947,38 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-05",
+      "hora": "18:00",
+      "title_es": "Testa o croce?",
+      "title_en": "Heads or Tails?",
+      "original_title": "Testa o croce?",
+      "director": "Alessio Rigo de Righi, Matteo Zoppis",
+      "country": "Italia/Estados Unidos",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Western, Comedia",
+      "letterboxd": "https://letterboxd.com/film/testa-o-croce/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-05",
+      "hora": "21:00",
+      "title_es": "Tierra de mi padre",
+      "title_en": "Fatherland",
+      "original_title": "Ojczyzna",
+      "director": "Paweł Pawlikowski",
+      "country": "Polonia/Alemania/Italia/Francia",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
     },
     {
       "cine": "Hoyts Abasto",
@@ -50885,6 +51045,38 @@
       "ciclo": "Peña sin cadenas"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-06",
+      "hora": "21:00",
+      "title_es": "La Perra",
+      "title_en": "La Perra",
+      "original_title": "La Perra",
+      "director": "Dominga Sotomayor",
+      "country": "Chile/Colombia",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-perra-2026/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-07",
+      "hora": "14:00",
+      "title_es": "Imperium",
+      "title_en": "Imperium",
+      "original_title": "Imperium",
+      "director": "Sergei Loznitsa",
+      "country": "Alemania/Francia/Italia/Lituania",
+      "year": 2026,
+      "duration": 176,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/imperium-2026/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-07",
       "hora": "17:00",
@@ -50899,6 +51091,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-07",
+      "hora": "18:00",
+      "title_es": "Mala sangre",
+      "title_en": "Mauvais Sang",
+      "original_title": "Mauvais Sang",
+      "director": "Leos Carax",
+      "country": "Francia/Suiza",
+      "year": 1986,
+      "duration": 119,
+      "genre": "Romance, Crimen",
+      "letterboxd": "https://letterboxd.com/film/mauvais-sang/",
+      "ticket_url": "",
+      "ciclo": "4° FIC.UBA - Festival Internacional de Cine de la UBA"
     },
     {
       "cine": "Centro Cultural Borges",
