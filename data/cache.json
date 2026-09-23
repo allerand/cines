@@ -12383,13 +12383,13 @@
   },
   "terminator 2: el juicio final": {
     "url": "",
-    "title_en": "Terminator 2: El Juicio Final",
+    "title_en": "Terminator 2: El juicio final",
     "director": "",
     "country": "",
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Terminator 2: Judgment Day (1991), y puede ser otra",
-    "fecha": "2026-09-20",
+    "fecha": "2026-09-23",
     "con_duracion": false,
     "desempate": ""
   },
@@ -12879,15 +12879,15 @@
     "genre": "Thriller"
   },
   "psicosis": {
-    "url": "",
-    "title_en": "Psicosis",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "varias se llaman así: Psycho (1960), Psycho (1998)",
-    "fecha": "2026-09-16",
-    "con_duracion": false
+    "url": "https://letterboxd.com/film/psycho/",
+    "title_en": "Psycho",
+    "director": "Alfred Hitchcock",
+    "country": "USA",
+    "year": 1960,
+    "duration": 109,
+    "genre": "Misterio, Thriller",
+    "title_es": "Psicosis",
+    "original_title": "Psycho"
   },
   "frenesí": {
     "url": "",
@@ -16043,7 +16043,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es One Piece: The Movie (2000), y puede ser otra",
-    "fecha": "2026-09-22",
+    "fecha": "2026-09-23",
     "con_duracion": false,
     "desempate": ""
   },
@@ -17168,10 +17168,12 @@
   "padre nuestro|1985": {
     "url": "",
     "title_en": "Padre nuestro",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Francisco Regueiro",
+    "country": "Spain",
+    "year": 1985,
+    "duration": 91,
+    "genre": "Drama",
+    "original_title": "Padre nuestro"
   },
   "comrades: almost a love story|1996": {
     "url": "https://letterboxd.com/film/comrades-almost-a-love-story/",
@@ -17352,5 +17354,80 @@
     "year": 2026,
     "duration": 90,
     "genre": "Aventura, Fantasía"
+  },
+  "una y mil veces de ernesto fontán|2025": {
+    "url": "",
+    "title_en": "UNA Y MIL VECES de Ernesto Fontán",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tragedia, un documental sobre las que hacen comedia|2026": {
+    "url": "",
+    "title_en": "Tragedia, un documental sobre las que hacen comedia",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fragmentos de laura linares|2026": {
+    "url": "",
+    "title_en": "FRAGMENTOS de Laura Linares",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "marcado": {
+    "url": "https://letterboxd.com/film/marcado/",
+    "title_en": "Marked",
+    "director": "Ivan Morawski",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 187,
+    "genre": "Crimen, Thriller",
+    "original_title": "Marcado"
+  },
+  "encantador": {
+    "url": "https://letterboxd.com/film/encantador/",
+    "title_en": "The Dollmaker",
+    "director": "José María Cicala",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 97,
+    "genre": "Terror, Crimen",
+    "original_title": "Encantador"
+  },
+  "éramos tan flacos": {
+    "url": "https://letterboxd.com/film/eramos-tan-flacos/",
+    "title_en": "Éramos Tan Flacos",
+    "director": "Carlos Castro",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 80,
+    "genre": "",
+    "original_title": "Éramos Tan Flacos"
+  },
+  "soy ella": {
+    "url": "https://letterboxd.com/film/soy-ella/",
+    "title_en": "Soy ella",
+    "director": "Cecilia Pinotti",
+    "country": "",
+    "year": null,
+    "duration": 85,
+    "genre": "",
+    "original_title": "Soy ella"
+  },
+  "la negociacion": {
+    "url": "https://letterboxd.com/film/dead-mans-wire/",
+    "title_en": "Dead Man's Wire",
+    "director": "Gus Van Sant",
+    "country": "USA, Israel",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Crimen, Thriller",
+    "title_es": "Prime Crime: A True Story",
+    "original_title": "Dead Man's Wire"
   }
 }
