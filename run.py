@@ -54,7 +54,8 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_ccr, scrape_imdb_then_lanacion, scrape_amorina, scrape_cea,
         scrape_filo, scrape_bn, scrape_cc25, scrape_ccd, scrape_cb,
         scrape_borges, scrape_bcn, scrape_agn, scrape_bellasartes,
-        scrape_sala_lucida, scrape_manual, descartar_manual,
+        scrape_sala_lucida, scrape_manual, descartar_manual, aplicar_festivales,
+        titulo_norm, misma_pelicula,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
         scrape_dore, scrape_ideal, CINES_MADRID, hoy_madrid,
         resumen_proxy,
@@ -138,6 +139,20 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
 
     cache = LetterboxdCache(CACHE_JSON)
     all_screenings = []
+
+    # Las manuales van primero: cuando un scraper trae la misma función, la
+    # deduplicación del final se queda con la primera que ve, y los hints del
+    # enrichment también toman el primer director/año. Corría en el medio y
+    # FIC.UBA lo destapó: Filo Cine se scrapea antes, así que sus funciones
+    # del festival le ganaban a las de la guía y se publicaban con el género
+    # ("Documental") como ciclo.
+    print("📝 Funciones manuales...", end=" ", flush=True)
+    try:
+        r = scrape_manual(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
 
     print("🎬 Scrapeando MALBA...", end=" ", flush=True)
     try:
@@ -285,14 +300,6 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     except Exception as e:
         print(f"error — {e}")
 
-    print("📝 Funciones manuales...", end=" ", flush=True)
-    try:
-        r = scrape_manual(semanas)
-        all_screenings.extend(r)
-        print(f"{len(r)} funciones")
-    except Exception as e:
-        print(f"error — {e}")
-
     async with async_playwright() as pw:
         # Scraping phase — dedicated browser context
         browser = await pw.chromium.launch(headless=True)
@@ -354,6 +361,10 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         all_screenings, n_desc = descartar_manual(all_screenings)
         if n_desc:
             print(f"  ↳ Descartadas {n_desc} funciones por manual_screenings.json")
+        all_screenings, n_fest = aplicar_festivales(all_screenings)
+        if n_fest:
+            print(f"  ↳ Descartadas {n_fest} funciones que la sala publicó por su cuenta "
+                  f"durante un festival cargado a mano (manda la guía)")
 
         # Para cada título único, juntamos los mejores hints disponibles desde
         # cualquier screening que lo cite (director / año / título original)
@@ -826,13 +837,19 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     # cine después corrige su propio listado: la regla de `descartar` deja de
     # matchear y quedan las dos. Nos quedamos con la primera, que es la manual —
     # scrape_manual corre antes que todos los scrapers.
-    vistas: set[tuple] = set()
+    #
+    # El título se compara normalizado y alcanza con que uno contenga al otro
+    # (scraper.misma_pelicula): "La perra" de la guía de FIC.UBA contra
+    # "La Perra" del CTBA.
+    vistas: dict[tuple, list[str]] = {}
     unicas = []
     for s in screenings_out:
-        k = (s["cine"], s.get("title_es", ""), s.get("fecha", ""), s.get("hora", ""))
-        if k in vistas:
+        slot = (s["cine"], s.get("fecha", ""), s.get("hora", ""))
+        titulo = titulo_norm(s.get("title_es", ""))
+        previas = vistas.setdefault(slot, [])
+        if any(misma_pelicula(titulo, p) for p in previas):
             continue
-        vistas.add(k)
+        previas.append(titulo)
         unicas.append(s)
     if len(unicas) != len(screenings_out):
         print(f"  ↳ {len(screenings_out) - len(unicas)} funciones duplicadas descartadas")

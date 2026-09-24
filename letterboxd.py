@@ -71,6 +71,10 @@ NON_FILMS = {
     "canapé session", "canape session",
     "ciclo", "session", "película sorpresa",
     "cielos rojos", "claude chabrol bis", "érase una vez con",
+    # Programas de cortos ("Competencia de cortometrajes UBA – Programa 1",
+    # "Cortometrajes de Alice Guy"): una fila con varias películas no tiene
+    # una ficha, y buscarla sólo puede traer la de otra.
+    "cortometrajes",
 }
 
 

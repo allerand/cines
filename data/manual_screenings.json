@@ -1,5 +1,5 @@
 {
-  "_comment": "Funciones cargadas a mano para CUALQUIER cine. Para festivales que publican la grilla en prosa (los cortos quedan dentro de un párrafo y ningún scraper los ve) y para reemplazar funciones que el scraper trae mal. Se filtran solas a [hoy, hoy+semanas], así que las viejas no hay que borrarlas. El link de Letterboxd de cada título va en metadata_overrides.json. `descartar` saca funciones mal scrapeadas: matchea cine + fecha (+hora opcional) + substring del título.",
+  "_comment": "Funciones cargadas a mano para CUALQUIER cine. Para festivales que publican la grilla en prosa (los cortos quedan dentro de un párrafo y ningún scraper los ve) y para reemplazar funciones que el scraper trae mal. Se filtran solas a [hoy, hoy+semanas], así que las viejas no hay que borrarlas. El link de Letterboxd de cada título va en metadata_overrides.json. `descartar` saca funciones mal scrapeadas: matchea cine + fecha (+hora opcional) + substring del título. `festivales` hace que, en un rango de fechas y unas salas, la grilla manual de un festival (ciclo \"<festival>\" o \"<festival> - <sección>\") mande sobre lo que publiquen las salas: ver aplicar_festivales en scraper.py. Un programa de cortos va en una fila, con los títulos en `cortos`.",
 
   "screenings": [
     {
@@ -521,6 +521,667 @@
       "cine": "MALBA", "title": "48 – La muerta que habla", "fecha": "2026-08-30", "hora": "18:00",
       "director": "Agustín Fittipaldi y Candela Gonzalez Kelly", "year": 2026, "duration": 20,
       "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
+    },
+    {
+      "_ciclo": "FIC.UBA 2026 (30/9 al 7/10), transcripto de la Guía de Programación en PDF (ficuba.com/prensa/Guia-de-Programacion-FICUBA-2026.pdf). El ciclo va como \"FICUBA - <sección>\", con el nombre de la sección de la guía (Foco, Homenaje y Honoris Causa llevan además a quién). Van todas las sedes, también las que ya se scrapean, para que la grilla esté completa aunque una fuente se caiga o publique tarde; lo que las salas publiquen del festival por su cuenta lo saca `festivales` (abajo). Cada programa de cortos va en una sola fila, con los cortos en `cortos`. FADU es sede sólo del festival. Quedan afuera seminarios, charlas y ceremonias: no son funciones de cine. La entrada es gratuita y se retira media hora antes, así que el link va a la programación.",
+      "cine": "Cine Cosmos", "title": "Primavera temprana", "fecha": "2026-09-30", "hora": "13:30",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1956, "duration": 144, "original_title": "Sōshun",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Imperium", "fecha": "2026-09-30", "hora": "14:00",
+      "director": "Sergei Loznitsa", "country": "Alemania, Italia, Francia, Lituania", "year": 2026, "duration": 176,
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "La libertad doble", "fecha": "2026-09-30", "hora": "19:30",
+      "director": "Lisandro Alonso", "country": "Argentina", "duration": 100,
+      "ciclo": "FICUBA - Función de apertura", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Machado", "fecha": "2026-09-30", "hora": "21:00",
+      "director": "Julián Tagle", "country": "Argentina", "year": 2026, "duration": 72,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "El gran arco", "fecha": "2026-10-01", "hora": "09:30",
+      "director": "Stéphane Demoustier", "country": "Francia", "year": 2025, "duration": 106, "original_title": "L'Inconnu de la Grande Arche",
+      "ciclo": "FICUBA - Cine y ciudades: París", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "El sabor del sake", "fecha": "2026-10-01", "hora": "13:30",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1962, "duration": 112, "original_title": "Sanma no aji",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "La hija cóndor", "fecha": "2026-10-01", "hora": "15:00",
+      "director": "Álvaro Olmos Torrico", "country": "Bolivia, Perú, Uruguay", "year": 2025, "duration": 109,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Todas las estrellas están muertas", "fecha": "2026-10-01", "hora": "15:30",
+      "director": "Gonzalo Moiguer y Rodrigo Melendez Aquino", "country": "Argentina", "duration": 92,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Museo de la noche", "fecha": "2026-10-01", "hora": "15:45",
+      "director": "Fermín Eloy Acosta", "country": "Argentina", "duration": 88,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Muña Muña", "fecha": "2026-10-01", "hora": "16:00",
+      "director": "Paula Morel", "country": "Argentina", "duration": 71,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "El salto cuántico de las termitas", "fecha": "2026-10-01", "hora": "16:00",
+      "director": "Paula Otero", "country": "Argentina", "duration": 70,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "We Are Making A Film About Mark Fisher", "fecha": "2026-10-01", "hora": "17:00",
+      "director": "Simon Poulter y Sophie Mellor", "country": "Reino Unido", "duration": 65,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 1", "fecha": "2026-10-01", "hora": "18:00",
+      "director": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton", "country": "Argentina", "duration": 61,
+      "cortos": ["El último Turf", "La ciudad de colmenas", "La hora de la siesta", "Franca", "Larga vida a Kong", "Retruco", "Mover montañas"],
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La noche de la infancia", "fecha": "2026-10-01", "hora": "18:15",
+      "director": "Xisi Sofia Ye Chen", "country": "España, Francia", "duration": 93,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "La libertad", "fecha": "2026-10-01", "hora": "18:30",
+      "director": "Lisandro Alonso", "country": "Argentina", "year": 2001, "duration": 73,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 1", "fecha": "2026-10-01", "hora": "18:30",
+      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani", "country": "Argentina", "duration": 60,
+      "cortos": ["48 – La muerta que habla", "Como las estrellas", "Escena final", "Mamita"],
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Los nadadores", "fecha": "2026-10-01", "hora": "19:30",
+      "director": "Sol Iglesias", "country": "Argentina, México, Estados Unidos", "duration": 76,
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Chicas tristes", "fecha": "2026-10-01", "hora": "20:30",
+      "director": "Fernanda Tovar", "country": "México", "year": 2026, "duration": 90,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Amantes en el cielo", "fecha": "2026-10-01", "hora": "20:45",
+      "director": "Fermín de la Serna", "country": "Argentina", "duration": 77,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Pedro en el país", "fecha": "2026-10-01", "hora": "21:00",
+      "director": "María Alché y Benjamín Naishtat", "country": "Argentina", "duration": 70,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Testa o croce?", "fecha": "2026-10-01", "hora": "21:00",
+      "director": "Matteo Zoppis y Alessio Rigo de Righi", "country": "Italia, Estados Unidos", "year": 2025, "duration": 116,
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Hierbas flotantes", "fecha": "2026-10-02", "hora": "13:30",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1959, "duration": 115, "original_title": "Ukigusa",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Under the Turquoise Sky", "fecha": "2026-10-02", "hora": "14:00",
+      "director": "Kentaro", "country": "Japón, Francia", "duration": 95,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "The Edge of the Blade", "fecha": "2026-10-02", "hora": "14:30",
+      "director": "Vincent Perez", "country": "Francia", "year": 2023, "duration": 101, "original_title": "Une affaire d'honneur",
+      "ciclo": "FICUBA - Cine y ciudades: París", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Yo, la peor de todas", "fecha": "2026-10-02", "hora": "14:30",
+      "director": "María Luisa Bemberg", "country": "Argentina", "year": 1990, "duration": 105,
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Bajo las banderas, el sol", "fecha": "2026-10-02", "hora": "15:30",
+      "director": "Juanjo Pereira", "country": "Paraguay, Argentina", "duration": 90,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Amantes en el cielo", "fecha": "2026-10-02", "hora": "15:45",
+      "director": "Fermín de la Serna", "country": "Argentina", "duration": 77,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La era de la cancelación", "fecha": "2026-10-02", "hora": "16:00",
+      "director": "Martín Erhardt", "country": "Argentina", "duration": 74,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Cortometrajes graduados DIS – Programa 1", "fecha": "2026-10-02", "hora": "16:00",
+      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani", "country": "Argentina", "duration": 60,
+      "cortos": ["48 – La muerta que habla", "Como las estrellas", "Escena final", "Mamita"],
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Chango, la luz descubre", "fecha": "2026-10-02", "hora": "17:00",
+      "director": "Alejandra Martín y Paola Rizzi", "country": "Argentina", "duration": 84,
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "López, el hombre que desapareció dos veces", "fecha": "2026-10-02", "hora": "18:00",
+      "director": "Jorge Leandro Colás", "country": "Argentina", "duration": 68,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Chicas tristes", "fecha": "2026-10-02", "hora": "18:00",
+      "director": "Fernanda Tovar", "country": "México", "year": 2026, "duration": 90,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La hija cóndor", "fecha": "2026-10-02", "hora": "18:15",
+      "director": "Álvaro Olmos Torrico", "country": "Bolivia, Perú, Uruguay", "year": 2025, "duration": 109,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Cortometrajes UBA – Programa 2", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa", "country": "Argentina", "duration": 70,
+      "cortos": ["Antes que desaparezca", "Azul", "Betty", "Condenados", "El deseo", "Tracción a sangre", "Ni una sola flor"],
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Second Skin", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Mariia Lapidus", "country": "Estados Unidos", "duration": 62,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Pedro en el país", "fecha": "2026-10-02", "hora": "19:30",
+      "director": "María Alché y Benjamín Naishtat", "country": "Argentina", "duration": 70,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "Deux personnes échangeant de la salive", "fecha": "2026-10-02", "hora": "20:00",
+      "director": "Natalie Musteata y Alexandre Singh", "country": "Francia", "year": 2024, "duration": 35,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "Les Fiancées du Sud", "fecha": "2026-10-02", "hora": "20:00",
+      "director": "Elena López Riera", "country": "Francia", "duration": 40,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La carn", "fecha": "2026-10-02", "hora": "20:30",
+      "director": "Joan Porcel", "country": "España", "duration": 83,
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Ghost School", "fecha": "2026-10-02", "hora": "20:45",
+      "director": "Seemab Gul", "country": "Pakistán", "year": 2025, "duration": 88,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "La libertad doble", "fecha": "2026-10-02", "hora": "21:00",
+      "director": "Lisandro Alonso", "country": "Argentina", "duration": 100,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Tierra de mi padre", "fecha": "2026-10-02", "hora": "21:00",
+      "director": "Paweł Pawlikowski", "country": "Polonia, Alemania", "year": 2026, "duration": 82, "original_title": "Fatherland",
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "El sabor del té verde con arroz", "fecha": "2026-10-03", "hora": "13:30",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1952, "duration": 116, "original_title": "Ochazuke no aji",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La perra", "fecha": "2026-10-03", "hora": "13:45",
+      "director": "Dominga Sotomayor", "country": "Chile", "year": 2026, "duration": 112,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "López, el hombre que desapareció dos veces", "fecha": "2026-10-03", "hora": "14:00",
+      "director": "Jorge Leandro Colás", "country": "Argentina", "duration": 68,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 2", "fecha": "2026-10-03", "hora": "15:30",
+      "director": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa", "country": "Argentina", "duration": 70,
+      "cortos": ["Antes que desaparezca", "Azul", "Betty", "Condenados", "El deseo", "Tracción a sangre", "Ni una sola flor"],
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "El salto cuántico de las termitas", "fecha": "2026-10-03", "hora": "15:45",
+      "director": "Paula Otero", "country": "Argentina", "duration": 70,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Los nadadores", "fecha": "2026-10-03", "hora": "16:00",
+      "director": "Sol Iglesias", "country": "Argentina, México, Estados Unidos", "duration": 76,
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Oca", "fecha": "2026-10-03", "hora": "16:00",
+      "director": "Karla Badillo", "country": "México, Argentina, España", "duration": 109,
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Cortometrajes de Alice Guy", "fecha": "2026-10-03", "hora": "17:00",
+      "director": "Alice Guy", "country": "Francia", "duration": 50,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La carn", "fecha": "2026-10-03", "hora": "18:00",
+      "director": "Joan Porcel", "country": "España", "duration": 83,
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Le Journal d'une femme de chambre", "fecha": "2026-10-03", "hora": "18:00",
+      "director": "Radu Jude", "country": "Francia, Rumania", "year": 2026, "duration": 94,
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 3", "fecha": "2026-10-03", "hora": "18:15",
+      "director": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano", "country": "Argentina", "duration": 72,
+      "cortos": ["Mudarse es lo segundo peor que te puede pasar en la vida", "Operación 29", "Operación claridad", "Patricio Bisso", "Pim, pum, ¡pam!", "Un camión lleno de besos"],
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Del otro lado del puente están las cosas que nunca dije", "fecha": "2026-10-03", "hora": "18:30",
+      "director": "Anahí Giménez", "country": "Argentina", "duration": 78,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 2", "fecha": "2026-10-03", "hora": "18:30",
+      "director": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve", "country": "Argentina", "duration": 68,
+      "cortos": ["Los deudos", "Maia: La unión de los mundos", "Patas arriba", "Sibilancias", "Línea de flotación"],
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "La libertad", "fecha": "2026-10-03", "hora": "19:30",
+      "director": "Lisandro Alonso", "country": "Argentina", "year": 2001, "duration": 73,
+      "ciclo": "FICUBA - Foco Lisandro Alonso", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Ghost School", "fecha": "2026-10-03", "hora": "20:30",
+      "director": "Seemab Gul", "country": "Pakistán", "year": 2025, "duration": 88,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Plata o mierda", "fecha": "2026-10-03", "hora": "20:45",
+      "director": "Toia Bonino y Marcos Joubert", "country": "Argentina", "duration": 88,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Hierbas flotantes", "fecha": "2026-10-03", "hora": "21:00",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1959, "duration": 115, "original_title": "Ukigusa",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Second Skin", "fecha": "2026-10-03", "hora": "21:00",
+      "director": "Mariia Lapidus", "country": "Estados Unidos", "duration": 62,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "El sabor del té verde con arroz", "fecha": "2026-10-04", "hora": "13:30",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1952, "duration": 116, "original_title": "Ochazuke no aji",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La hija cóndor", "fecha": "2026-10-04", "hora": "15:00",
+      "director": "Álvaro Olmos Torrico", "country": "Bolivia, Perú, Uruguay", "year": 2025, "duration": 109,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Los vencedores", "fecha": "2026-10-04", "hora": "15:30",
+      "director": "Pablo Aparo", "country": "Argentina", "duration": 96,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 2", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve", "country": "Argentina", "duration": 68,
+      "cortos": ["Los deudos", "Maia: La unión de los mundos", "Patas arriba", "Sibilancias", "Línea de flotación"],
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Cortometrajes UBA – Programa 1", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton", "country": "Argentina", "duration": 61,
+      "cortos": ["El último Turf", "La ciudad de colmenas", "La hora de la siesta", "Franca", "Larga vida a Kong", "Retruco", "Mover montañas"],
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "C'est pas moi", "fecha": "2026-10-04", "hora": "17:30",
+      "director": "Leos Carax", "country": "Francia", "year": 2024, "duration": 41,
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Boy Meets Girl", "fecha": "2026-10-04", "hora": "17:30",
+      "director": "Leos Carax", "country": "Francia", "year": 1984, "duration": 100,
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Tres tiempos", "fecha": "2026-10-04", "hora": "18:00",
+      "director": "Marlene Grinberg", "country": "Argentina", "duration": 100,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Cortometrajes iberoamericanos – Programa 1", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA", "country": "Argentina, Brasil, México, España, Cuba, Costa Rica", "duration": 62,
+      "cortos": ["101", "Abrir Um Cinema", "Carry On!", "Cucarachas", "Los caminos de María", "Si pudiese mataría a la nostalgia", "Todo es amor"],
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Oca", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "Karla Badillo", "country": "México, Argentina, España", "duration": 109,
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Los amantes del Pont-Neuf", "fecha": "2026-10-04", "hora": "20:30",
+      "director": "Leos Carax", "country": "Francia", "year": 1991, "duration": 125, "original_title": "Les Amants du Pont-Neuf",
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Del otro lado del puente están las cosas que nunca dije", "fecha": "2026-10-04", "hora": "20:45",
+      "director": "Anahí Giménez", "country": "Argentina", "duration": 78,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Shana", "fecha": "2026-10-04", "hora": "21:00",
+      "director": "Lila Pinell", "country": "Francia", "duration": 83,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La perra", "fecha": "2026-10-04", "hora": "21:00",
+      "director": "Dominga Sotomayor", "country": "Chile", "year": 2026, "duration": 112,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Red Rocks", "fecha": "2026-10-04", "hora": "21:00",
+      "director": "Bruno Dumont", "country": "Francia, Bélgica", "year": 2026, "duration": 91,
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Los vencedores", "fecha": "2026-10-05", "hora": "13:30",
+      "director": "Pablo Aparo", "country": "Argentina", "duration": 96,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "El sabor del sake", "fecha": "2026-10-05", "hora": "14:00",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1962, "duration": 112, "original_title": "Sanma no aji",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "The Story of Souleymane", "fecha": "2026-10-05", "hora": "14:30",
+      "director": "Boris Lojkine", "country": "Francia", "year": 2024, "duration": 93, "original_title": "L'Histoire de Souleymane",
+      "ciclo": "FICUBA - Cine y ciudades: París", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Ghost School", "fecha": "2026-10-05", "hora": "15:00",
+      "director": "Seemab Gul", "country": "Pakistán", "year": 2025, "duration": 88,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 3", "fecha": "2026-10-05", "hora": "15:30",
+      "director": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano", "country": "Argentina", "duration": 72,
+      "cortos": ["Mudarse es lo segundo peor que te puede pasar en la vida", "Operación 29", "Operación claridad", "Patricio Bisso", "Pim, pum, ¡pam!", "Un camión lleno de besos"],
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Los caminantes de la calle", "fecha": "2026-10-05", "hora": "15:45",
+      "director": "Juan Martín Hsu", "country": "Argentina", "duration": 90,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Holy Motors", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "Leos Carax", "country": "Francia", "year": 2012, "duration": 116,
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes iberoamericanos – Programa 1", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA", "country": "Argentina, Brasil, México, España, Cuba, Costa Rica", "duration": 62,
+      "cortos": ["101", "Abrir Um Cinema", "Carry On!", "Cucarachas", "Los caminos de María", "Si pudiese mataría a la nostalgia", "Todo es amor"],
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Yo, la peor de todas", "fecha": "2026-10-05", "hora": "17:00",
+      "director": "María Luisa Bemberg", "country": "Argentina", "year": 1990, "duration": 105,
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Machado", "fecha": "2026-10-05", "hora": "18:00",
+      "director": "Julián Tagle", "country": "Argentina", "year": 2026, "duration": 72,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Testa o croce?", "fecha": "2026-10-05", "hora": "18:00",
+      "director": "Matteo Zoppis y Alessio Rigo de Righi", "country": "Italia, Estados Unidos", "year": 2025, "duration": 116,
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Todo es cárcel", "fecha": "2026-10-05", "hora": "18:15",
+      "director": "Eloy Enciso Cachafeiro", "country": "España", "duration": 109,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes iberoamericanos – Programa 2", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros", "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España", "duration": 67,
+      "cortos": ["Decaer", "En los valles", "Just Thoughts", "Lo que fue nuestro hogar", "Puertas abiertas", "Quedamos así", "Una decisión difícil"],
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Museo de la noche", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Fermín Eloy Acosta", "country": "Argentina", "duration": 88,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Muña Muña", "fecha": "2026-10-05", "hora": "19:30",
+      "director": "Paula Morel", "country": "Argentina", "duration": 71,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cortometrajes de Lucas Vignale", "fecha": "2026-10-05", "hora": "20:30",
+      "director": "Lucas Vignale", "country": "Argentina", "duration": 91,
+      "cortos": ["La pasión", "Diablo suelto", "Mi gran noche", "Ilusión Supersport", "La vuelta de Gaspi", "Camino a la velada"],
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Mala sangre", "fecha": "2026-10-05", "hora": "20:45",
+      "director": "Leos Carax", "country": "Francia", "year": 1986, "duration": 116, "original_title": "Mauvais sang",
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Whispers in May", "fecha": "2026-10-05", "hora": "21:00",
+      "director": "Dongnan Chen", "country": "Hong Kong, Países Bajos", "duration": 95,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Le Journal d'une femme de chambre", "fecha": "2026-10-05", "hora": "21:00",
+      "director": "Radu Jude", "country": "Francia, Rumania", "year": 2026, "duration": 94,
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Tierra de mi padre", "fecha": "2026-10-05", "hora": "21:00",
+      "director": "Paweł Pawlikowski", "country": "Polonia, Alemania", "year": 2026, "duration": 82, "original_title": "Fatherland",
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Buenos días", "fecha": "2026-10-06", "hora": "14:00",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1959, "duration": 90, "original_title": "Ohayō",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Los caminantes de la calle", "fecha": "2026-10-06", "hora": "14:00",
+      "director": "Juan Martín Hsu", "country": "Argentina", "duration": 90,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "La niña santa", "fecha": "2026-10-06", "hora": "14:30",
+      "director": "Lucrecia Martel", "country": "Argentina", "year": 2004, "duration": 106,
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "C'est pas moi", "fecha": "2026-10-06", "hora": "15:00",
+      "director": "Leos Carax", "country": "Francia", "year": 2024, "duration": 41,
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Boy Meets Girl", "fecha": "2026-10-06", "hora": "15:00",
+      "director": "Leos Carax", "country": "Francia", "year": 1984, "duration": 100,
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Yellow Cake", "fecha": "2026-10-06", "hora": "15:45",
+      "director": "Tiago Melo", "country": "Brasil", "duration": 97,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Cortometrajes iberoamericanos – Programa 2", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros", "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España", "duration": 67,
+      "cortos": ["Decaer", "En los valles", "Just Thoughts", "Lo que fue nuestro hogar", "Puertas abiertas", "Quedamos así", "Una decisión difícil"],
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La era de la cancelación", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Martín Erhardt", "country": "Argentina", "duration": 74,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Vlasta, el recuerdo no es eterno", "fecha": "2026-10-06", "hora": "17:00",
+      "director": "Candela Vey y Tino Pereira", "country": "Argentina", "duration": 80,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Chango, la luz descubre", "fecha": "2026-10-06", "hora": "18:00",
+      "director": "Alejandra Martín y Paola Rizzi", "country": "Argentina", "duration": 84,
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Todo es cárcel", "fecha": "2026-10-06", "hora": "18:15",
+      "director": "Eloy Enciso Cachafeiro", "country": "España", "duration": 109,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "El último viaje a China", "fecha": "2026-10-06", "hora": "18:30",
+      "director": "Alejandro Maci", "country": "Argentina", "duration": 80,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Todas las estrellas están muertas", "fecha": "2026-10-06", "hora": "18:30",
+      "director": "Gonzalo Moiguer y Rodrigo Melendez Aquino", "country": "Argentina", "duration": 92,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "Apnées", "fecha": "2026-10-06", "hora": "19:30",
+      "director": "Nicolas Panay", "country": "Francia", "duration": 16,
+      "ciclo": "FICUBA - Cine y ciudades: París", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Plata o mierda", "fecha": "2026-10-06", "hora": "19:30",
+      "director": "Toia Bonino y Marcos Joubert", "country": "Argentina", "duration": 88,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "Montsouris Park", "fecha": "2026-10-06", "hora": "19:46",
+      "director": "Guil Sela", "country": "Francia", "duration": 14,
+      "ciclo": "FICUBA - Cine y ciudades: París", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "The Great Arc", "fecha": "2026-10-06", "hora": "20:00",
+      "director": "Camille Authouart", "country": "Francia", "duration": 12,
+      "ciclo": "FICUBA - Cine y ciudades: París", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Holy Motors", "fecha": "2026-10-06", "hora": "20:30",
+      "director": "Leos Carax", "country": "Francia", "year": 2012, "duration": 116,
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Yellow Cake", "fecha": "2026-10-06", "hora": "20:45",
+      "director": "Tiago Melo", "country": "Brasil", "duration": 97,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Red Rocks", "fecha": "2026-10-06", "hora": "21:00",
+      "director": "Bruno Dumont", "country": "Francia, Bélgica", "year": 2026, "duration": 91,
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Un muro de silencio", "fecha": "2026-10-06", "hora": "21:00",
+      "director": "Lita Stantic", "country": "Argentina", "year": 1993, "duration": 107,
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "La perra", "fecha": "2026-10-06", "hora": "21:00",
+      "director": "Dominga Sotomayor", "country": "Chile", "year": 2026, "duration": 112,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "FADU", "title": "Los amantes del Pont-Neuf", "fecha": "2026-10-07", "hora": "09:30",
+      "director": "Leos Carax", "country": "Francia", "year": 1991, "duration": 125, "original_title": "Les Amants du Pont-Neuf",
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Buenos días", "fecha": "2026-10-07", "hora": "13:30",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1959, "duration": 90, "original_title": "Ohayō",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Imperium", "fecha": "2026-10-07", "hora": "14:00",
+      "director": "Sergei Loznitsa", "country": "Alemania, Italia, Francia, Lituania", "year": 2026, "duration": 176,
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Whispers in May", "fecha": "2026-10-07", "hora": "15:30",
+      "director": "Dongnan Chen", "country": "Hong Kong, Países Bajos", "duration": 95,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Primavera temprana", "fecha": "2026-10-07", "hora": "15:30",
+      "director": "Yasujiro Ozu", "country": "Japón", "year": 1956, "duration": 144, "original_title": "Sōshun",
+      "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Tres tiempos", "fecha": "2026-10-07", "hora": "15:45",
+      "director": "Marlene Grinberg", "country": "Argentina", "duration": 100,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La noche de la infancia", "fecha": "2026-10-07", "hora": "16:00",
+      "director": "Xisi Sofia Ye Chen", "country": "España, Francia", "duration": 93,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Un muro de silencio", "fecha": "2026-10-07", "hora": "17:00",
+      "director": "Lita Stantic", "country": "Argentina", "year": 1993, "duration": 107,
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Sala Lugones", "title": "Mala sangre", "fecha": "2026-10-07", "hora": "18:00",
+      "director": "Leos Carax", "country": "Francia", "year": 1986, "duration": 116, "original_title": "Mauvais sang",
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Shana", "fecha": "2026-10-07", "hora": "18:30",
+      "director": "Lila Pinell", "country": "Francia", "duration": 83,
+      "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Filo Cine", "title": "Bajo las banderas, el sol", "fecha": "2026-10-07", "hora": "19:30",
+      "director": "Juanjo Pereira", "country": "Paraguay, Argentina", "duration": 90,
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "La niña santa", "fecha": "2026-10-07", "hora": "21:00",
+      "director": "Lucrecia Martel", "country": "Argentina", "year": 2004, "duration": 106,
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/programacion"
     }
   ],
 
@@ -581,6 +1242,19 @@
     {
       "_por_que": "La ceremonia de cierre no es una proyección: son 120' de entrega de premios.",
       "cine": "MALBA", "fecha": "2026-08-30", "title_contiene": "Ceremonia de cierre"
+    },
+    {
+      "_por_que": "FIC.UBA: el banner del festival (\"FICUBA | del 30/9 al 7/10\") entra al listado de Filo Cine como si fuera una película.",
+      "cine": "Filo Cine", "fecha": "2026-09-30", "title_contiene": "FICUBA |"
+    }
+  ],
+
+  "festivales": [
+    {
+      "_por_que": "Durante el festival, en sus salas, manda la grilla de arriba (las funciones con ciclo \"FICUBA - …\"): aplicar_festivales saca lo que la sala publique en un horario del festival o con una película del festival. El Cosmos renueva cartelera los jueves y la publica de jueves a lunes con el mismo horario todos los días, así que una película del festival que da una sola vez aparecería cinco; el CTBA puso La hija cóndor el 30/9 en vez del 1/10. La programación propia de cada sala, en otro horario y con otra película, queda.",
+      "ciclo": "FICUBA",
+      "desde": "2026-09-30", "hasta": "2026-10-07",
+      "cines": ["Cine Cosmos", "Cacodelphia", "Sala Lugones", "Filo Cine", "FADU"]
     }
   ]
 }

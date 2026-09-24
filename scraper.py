@@ -8073,6 +8073,90 @@ def descartar_manual(screenings: list) -> tuple[list, int]:
     return filtradas, len(screenings) - len(filtradas)
 
 
+def titulo_norm(t: str) -> str:
+    """Título para comparar: sin tildes, caja ni puntuación.
+
+    El apóstrofo se borra en vez de separar: el curvo ("d’une") no pasa a
+    ASCII y el recto ("d'une") partiría la palabra en dos."""
+    t = re.sub(r"['’‘`´]", "", t or "")
+    t = unicodedata.normalize("NFKD", t).encode("ascii", "ignore").decode()
+    return " ".join(re.findall(r"[a-z0-9]+", t.lower()))
+
+
+def misma_pelicula(a: str, b: str) -> bool:
+    """¿Dos títulos ya normalizados (titulo_norm) son la misma película?
+
+    Alcanza con que uno contenga al otro: la guía de FIC.UBA escribe "La perra"
+    y el CTBA "La Perra"; Cacodelphia le pega el festival al título. El mínimo
+    de largo es para que un título corto ("Oca") no se coma a otro que lo
+    contenga de casualidad."""
+    if a == b:
+        return True
+    corto, largo = sorted((a, b), key=len)
+    return len(corto) >= 8 and f" {corto} " in f" {largo} "
+
+
+def aplicar_festivales(screenings: list, data: Optional[dict] = None) -> tuple[list, int]:
+    """Durante un festival cargado a mano, la grilla manual manda en sus salas.
+
+    Cada entrada de `festivales` (manual_screenings.json) dice un festival,
+    un rango de fechas y las salas. Las funciones del festival son las de la
+    grilla manual cuyo ciclo es el festival o "<festival> - <sección>"
+    ("FICUBA - Foco Yasujiro Ozu"). En esas salas y fechas, cualquier
+    función que NO sea de la grilla manual se va si cae en un horario de la
+    grilla —la sala está con el festival— o si es una película del festival
+    en esa sala —la fecha y la hora son las de la guía, no las de la sala—.
+
+    Hace falta porque las salas publican el festival a su manera. El Cosmos
+    arma la cartelera de jueves a lunes con el mismo horario todos los días
+    ("Ju Vi Sá Do Lu | 18:30"), así que una película que da una sola vez
+    aparecería cinco. El CTBA puso La hija cóndor en el Lugones el 30/9 a
+    las 15, cuando la guía la da el 1/10 (el 30 a esa hora la sala está con
+    Imperium, de 176'). Y Cacodelphia suele pegarle el festival al título.
+    Lo que la sala programa por fuera del festival, en otro horario y con
+    otra película, queda.
+    """
+    data = _load_manual() if data is None else data
+    festivales = data.get("festivales", [])
+    if not festivales:
+        return screenings, 0
+
+    def campo(s, attr, key):
+        return getattr(s, attr) if hasattr(s, attr) else s.get(key, "")
+
+    def del_festival(ciclo: str, fest: dict) -> bool:
+        return ciclo == fest["ciclo"] or ciclo.startswith(fest["ciclo"] + " - ")
+
+    reglas = []
+    for fest in festivales:
+        grilla = [m for m in data.get("screenings", []) if del_festival(m.get("ciclo", ""), fest)]
+        titulos: dict[str, list[str]] = {}
+        for m in grilla:
+            for t in [m.get("title", "")] + m.get("cortos", []):
+                titulos.setdefault(m["cine"], []).append(titulo_norm(t))
+        reglas.append((fest, titulos,
+                       {(m["cine"], m["fecha"], m["hora"]) for m in grilla},
+                       {(m["cine"], m["title"], m["fecha"], m["hora"], m["ciclo"]) for m in grilla}))
+
+    def afuera(s) -> bool:
+        cine, fecha = campo(s, "cine", "cine"), campo(s, "fecha", "fecha")
+        hora, title = campo(s, "hora", "hora"), campo(s, "title", "title_es")
+        for fest, titulos, slots, propias in reglas:
+            if cine not in fest["cines"] or not (fest["desde"] <= fecha <= fest["hasta"]):
+                continue
+            if (cine, title, fecha, hora, campo(s, "ciclo", "ciclo")) in propias:
+                return False
+            if (cine, fecha, hora) in slots:
+                return True
+            t = titulo_norm(title)
+            if any(misma_pelicula(t, p) for p in titulos.get(cine, [])):
+                return True
+        return False
+
+    quedan = [s for s in screenings if not afuera(s)]
+    return quedan, len(screenings) - len(quedan)
+
+
 # ---------------------------------------------------------------------------
 # Cinemark / Hoyts — API propia (bff.cinemark.com.ar)
 # ---------------------------------------------------------------------------

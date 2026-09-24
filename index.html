@@ -630,6 +630,7 @@
     .cine-mnba     { border-color: #1d3340; color: #6fb3d2; }
     .cine-lucida   { border-color: #2b2340; color: #9d8ae8; }
     .cine-farus    { border-color: #3a3514; color: #e8c547; }
+    .cine-fadu     { border-color: #3a1f30; color: #e07ab8; }
     /* Madrid */
     .cine-dore     { border-color: #3a1f1c; color: #e0705e; }
     .cine-ideal    { border-color: #1c2e3a; color: #5aa8e0; }
@@ -819,6 +820,7 @@
   <button class="filter-btn" data-cine="Amorina">Amorina</button>
   <button class="filter-btn" data-cine="CEA">CEA</button>
   <button class="filter-btn" data-cine="Filo Cine">Filo Cine</button>
+  <button class="filter-btn" data-cine="FADU">FADU</button>
   <button class="filter-btn" data-cine="Biblioteca Nacional">Biblioteca Nacional</button>
   <button class="filter-btn" data-cine="Centro Cultural 25 de Mayo">CC 25 de Mayo</button>
   <button class="filter-btn" data-cine="Centro Cultural de la Cooperación">La Cooperación</button>
@@ -881,6 +883,7 @@ const CINE_ADDRESSES = {
   'Amorina':                  'Triunvirato 5184',
   'CEA':                       'Colón 1133, Avellaneda',
   'Filo Cine':                'Puan 480',
+  'FADU':                     'Av. Int. Güiraldes 2160, Ciudad Universitaria',
   'Biblioteca Nacional':      'Agüero 2502',
   'Centro Cultural 25 de Mayo': 'Av. Triunvirato 4444',
   'Centro Cultural de la Cooperación': 'Av. Corrientes 1543',
@@ -1721,7 +1724,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';
