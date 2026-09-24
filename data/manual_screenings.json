@@ -654,7 +654,7 @@
     {
       "cine": "Filo Cine", "title": "Los nadadores", "fecha": "2026-10-01", "hora": "19:30",
       "director": "Sol Iglesias", "country": "Argentina, México, Estados Unidos", "duration": 76,
-      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/pelicula/los-nadadores"
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
       "cine": "Cacodelphia", "title": "Chicas tristes", "fecha": "2026-10-01", "hora": "20:30",
@@ -809,7 +809,7 @@
     {
       "cine": "FADU", "title": "Les Fiancées du Sud", "fecha": "2026-10-02", "hora": "20:00",
       "director": "Elena López Riera", "country": "Francia", "duration": 40,
-      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/pelicula/les-fiancees-du-sud"
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
       "cine": "Cacodelphia", "title": "La carn", "fecha": "2026-10-02", "hora": "20:30",
@@ -893,7 +893,7 @@
     {
       "cine": "Cacodelphia", "title": "Los nadadores", "fecha": "2026-10-03", "hora": "16:00",
       "director": "Sol Iglesias", "country": "Argentina, México, Estados Unidos", "duration": 76,
-      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/pelicula/los-nadadores"
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
       "cine": "Cine Cosmos", "title": "Oca", "fecha": "2026-10-03", "hora": "16:00",
@@ -903,7 +903,7 @@
     {
       "cine": "Filo Cine", "title": "Cortometrajes de Alice Guy", "fecha": "2026-10-03", "hora": "17:00",
       "director": "Alice Guy", "country": "Francia", "duration": 50,
-      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/pelicula/cortometrajes-alice-guy"
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/pelicula/cortometrajes-de-alice-guy"
     },
     {
       "cine": "Cacodelphia", "title": "La carn", "fecha": "2026-10-03", "hora": "18:00",
@@ -913,7 +913,7 @@
     {
       "cine": "Sala Lugones", "title": "Le Journal d'une femme de chambre", "fecha": "2026-10-03", "hora": "18:00",
       "director": "Radu Jude", "country": "Francia, Rumania", "year": 2026, "duration": 94,
-      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/pelicula/le-journal-dune-femme-de-chambre"
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
       "_programa": "Cortos UBA, programa 3 (6 cortos, 72')",
@@ -1083,7 +1083,7 @@
     {
       "cine": "Cacodelphia", "title": "C'est pas moi", "fecha": "2026-10-04", "hora": "17:30",
       "director": "Leos Carax", "country": "Francia", "year": 2024, "duration": 41,
-      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/pelicula/cest-pas-moi"
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
       "cine": "Cacodelphia", "title": "Boy Meets Girl", "fecha": "2026-10-04", "hora": "17:30",
@@ -1358,7 +1358,7 @@
     {
       "cine": "Cacodelphia", "title": "Mala sangre", "fecha": "2026-10-05", "hora": "20:45",
       "director": "Leos Carax", "country": "Francia", "year": 1986, "duration": 116, "original_title": "Mauvais sang",
-      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/pelicula/mala-sangre"
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/pelicula/mauvais-sang"
     },
     {
       "cine": "Cine Cosmos", "title": "Whispers in May", "fecha": "2026-10-05", "hora": "21:00",
@@ -1368,7 +1368,7 @@
     {
       "cine": "Cacodelphia", "title": "Le Journal d'une femme de chambre", "fecha": "2026-10-05", "hora": "21:00",
       "director": "Radu Jude", "country": "Francia, Rumania", "year": 2026, "duration": 94,
-      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/pelicula/le-journal-dune-femme-de-chambre"
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
       "cine": "Sala Lugones", "title": "Tierra de mi padre", "fecha": "2026-10-05", "hora": "21:00",
@@ -1393,7 +1393,7 @@
     {
       "cine": "Cacodelphia", "title": "C'est pas moi", "fecha": "2026-10-06", "hora": "15:00",
       "director": "Leos Carax", "country": "Francia", "year": 2024, "duration": 41,
-      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/pelicula/cest-pas-moi"
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
       "cine": "Cacodelphia", "title": "Boy Meets Girl", "fecha": "2026-10-06", "hora": "15:00",
@@ -1559,7 +1559,7 @@
     {
       "cine": "Sala Lugones", "title": "Mala sangre", "fecha": "2026-10-07", "hora": "18:00",
       "director": "Leos Carax", "country": "Francia", "year": 1986, "duration": 116, "original_title": "Mauvais sang",
-      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/pelicula/mala-sangre"
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/pelicula/mauvais-sang"
     },
     {
       "cine": "Cine Cosmos", "title": "Shana", "fecha": "2026-10-07", "hora": "18:30",
