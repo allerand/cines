@@ -6028,14 +6028,16 @@
     "genre": "Terror, Thriller"
   },
   "yo, la peor de todas": {
-    "url": "https://letterboxd.com/film/i-the-worst-of-all/",
-    "title_en": "I, the Worst of All",
-    "director": "María Luisa Bemberg",
-    "country": "Argentina",
-    "year": 1990,
-    "duration": 105,
-    "genre": "Romance, Historia",
-    "original_title": "Yo, la peor de todas"
+    "url": "",
+    "title_en": "Yo, la peor de todas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: Yo, La Peor de Todas (2016), I, the Worst of All (1990)",
+    "fecha": "2026-09-24",
+    "con_duracion": false,
+    "desempate": ""
   },
   "un muro de silencio": {
     "url": "https://letterboxd.com/film/a-wall-of-silence/",
@@ -12389,7 +12391,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Terminator 2: Judgment Day (1991), y puede ser otra",
-    "fecha": "2026-09-23",
+    "fecha": "2026-09-24",
     "con_duracion": false,
     "desempate": ""
   },
@@ -12842,7 +12844,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es The Color of Pomegranates (1969), y puede ser otra",
-    "fecha": "2026-09-20",
+    "fecha": "2026-09-24",
     "con_duracion": false,
     "desempate": ""
   },
@@ -12854,7 +12856,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Viy (1967), Headhunter (1988)",
-    "fecha": "2026-09-20",
+    "fecha": "2026-09-24",
     "con_duracion": false,
     "desempate": ""
   },
@@ -12897,7 +12899,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: frenesi. (2021), Not Love, Just Frenzy (1996), Frenzy (1972)",
-    "fecha": "2026-09-20",
+    "fecha": "2026-09-24",
     "con_duracion": false,
     "desempate": ""
   },
@@ -13134,7 +13136,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Queen: Budapest (1986), y puede ser otra",
-    "fecha": "2026-09-20",
+    "fecha": "2026-09-24",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16319,7 +16321,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS WORLD TOUR [ARIRANG] in Busan (2026) sólo se le parece",
-    "fecha": "2026-09-20",
+    "fecha": "2026-09-24",
     "con_duracion": true,
     "desempate": ""
   },
@@ -17555,5 +17557,59 @@
     "genre": "Romance, Crimen",
     "title_es": "Mala sangre",
     "original_title": "Mauvais Sang"
+  },
+  "we are making a film about mark fisher": {
+    "url": "https://letterboxd.com/film/we-are-making-a-film-about-mark-fisher/",
+    "title_en": "We Are Making a Film About Mark Fisher",
+    "director": "Sophie Mellor, Simon Poulter",
+    "country": "UK",
+    "year": 2025,
+    "duration": 66,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "We Are Making a Film About Mark Fisher",
+    "sin_hints": "título"
+  },
+  "chango, la luz descubre": {
+    "url": "https://letterboxd.com/film/chango-la-luz-descubre/",
+    "title_en": "Chango, the Light Uncovers",
+    "director": "Paola Rizzi, Alejandra Martín",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 85,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Chango, la luz descubre",
+    "sin_hints": "título"
+  },
+  "pedro en el país": {
+    "url": "https://letterboxd.com/film/pedro-en-el-pais/",
+    "title_en": "Pedro en el país",
+    "director": "María Alché, Benjamín Naishtat",
+    "country": "Argentina, Mexico",
+    "year": 2026,
+    "duration": 61,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Pedro en el país",
+    "sin_hints": "título"
+  },
+  "4° fic.uba - festival internacional de cine de la uba": {
+    "url": "",
+    "title_en": "4° FIC.UBA - Festival Internacional de Cine de la UBA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "digger": {
+    "url": "https://letterboxd.com/film/digger-2026/",
+    "title_en": "Digger",
+    "director": "Alejandro G. Iñárritu",
+    "country": "USA",
+    "year": 2026,
+    "duration": 129,
+    "genre": "Comedia",
+    "original_title": "Digger"
   }
 }
