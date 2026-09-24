@@ -26,8 +26,8 @@
       "publicadas": 2
     },
     "Cacodelphia": {
-      "scrapeadas": 163,
-      "publicadas": 163
+      "scrapeadas": 113,
+      "publicadas": 113
     },
     "Casa del Bicentenario": {
       "scrapeadas": 0,
@@ -55,8 +55,8 @@
       "publicadas": 1
     },
     "Cine Cosmos": {
-      "scrapeadas": 97,
-      "publicadas": 98
+      "scrapeadas": 70,
+      "publicadas": 71
     },
     "Cine Gaumont": {
       "scrapeadas": 94,
@@ -99,7 +99,7 @@
       "publicadas": 9
     },
     "Filo Cine": {
-      "scrapeadas": 22,
+      "scrapeadas": 17,
       "publicadas": 17
     },
     "Hasta Trilce": {
@@ -139,7 +139,7 @@
       "publicadas": 324
     },
     "Sala Lugones": {
-      "scrapeadas": 56,
+      "scrapeadas": 45,
       "publicadas": 45
     },
     "Sala Lúcida": {
@@ -38822,7 +38822,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Hoyts Abasto",
@@ -39030,7 +39030,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/imperium-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Hoyts Abasto",
@@ -41862,7 +41862,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Función de apertura"
     },
     {
       "cine": "Hoyts Dot",
@@ -42790,7 +42790,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/machado/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -44086,7 +44086,7 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/the-great-arch-2025/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Cine y ciudades: París"
     },
     {
       "cine": "Cinemark Palermo",
@@ -44198,7 +44198,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Cinemark Caballito",
@@ -44278,7 +44278,7 @@
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/the-condor-daughter/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cinemark Caballito",
@@ -44342,7 +44342,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -44374,7 +44374,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -44406,7 +44406,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cacodelphia",
@@ -44422,7 +44422,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cinemark Caballito",
@@ -44454,7 +44454,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/we-are-making-a-film-about-mark-fisher/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Hoyts Abasto",
@@ -44588,113 +44588,17 @@
       "cine": "Cacodelphia",
       "fecha": "2026-10-01",
       "hora": "18:00",
-      "title_es": "El último Turf",
-      "title_en": "El último Turf",
+      "title_es": "Cortometrajes UBA – Programa 1",
+      "title_en": "Cortometrajes UBA – Programa 1",
       "original_title": "",
-      "director": "Felipe Benedetti",
+      "director": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton",
       "country": "Argentina",
       "year": null,
-      "duration": 18,
+      "duration": 61,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:00",
-      "title_es": "La ciudad de colmenas",
-      "title_en": "La ciudad de colmenas",
-      "original_title": "",
-      "director": "Olivia Maly",
-      "country": "Argentina",
-      "year": null,
-      "duration": 5,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:00",
-      "title_es": "La hora de la siesta",
-      "title_en": "La hora de la siesta",
-      "original_title": "",
-      "director": "Almendra Groppo Trupia",
-      "country": "Argentina",
-      "year": null,
-      "duration": 6,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:00",
-      "title_es": "Franca",
-      "title_en": "Franca",
-      "original_title": "",
-      "director": "Julia Vier Abinet",
-      "country": "Argentina",
-      "year": null,
-      "duration": 16,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:00",
-      "title_es": "Larga vida a Kong",
-      "title_en": "Larga vida a Kong",
-      "original_title": "",
-      "director": "Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin",
-      "country": "Argentina",
-      "year": null,
-      "duration": 6,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:00",
-      "title_es": "Retruco",
-      "title_en": "Retruco",
-      "original_title": "",
-      "director": "Matías Iván Sisaric Moscarola",
-      "country": "Argentina",
-      "year": null,
-      "duration": 2,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:00",
-      "title_es": "Mover montañas",
-      "title_en": "Mover montañas",
-      "original_title": "",
-      "director": "Agustín Pereyra y Nicolás Talenton",
-      "country": "Argentina",
-      "year": null,
-      "duration": 8,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA"
     },
     {
       "cine": "Cacodelphia",
@@ -44710,7 +44614,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cine Cosmos",
@@ -44726,71 +44630,23 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Cacodelphia",
       "fecha": "2026-10-01",
       "hora": "18:30",
-      "title_es": "48 – La muerta que habla",
-      "title_en": "48 – La muerta que habla",
+      "title_es": "Cortometrajes graduados DIS – Programa 1",
+      "title_en": "Cortometrajes graduados DIS – Programa 1",
       "original_title": "",
-      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 20,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:30",
-      "title_es": "Como las estrellas",
-      "title_en": "Como las estrellas",
-      "original_title": "",
-      "director": "Violeta Gillert y Constanza Browarski",
+      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani",
       "country": "Argentina",
       "year": null,
-      "duration": 13,
+      "duration": 60,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:30",
-      "title_es": "Escena final",
-      "title_en": "Escena final",
-      "original_title": "",
-      "director": "Diego Kompel",
-      "country": "Argentina",
-      "year": null,
-      "duration": 20,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-01",
-      "hora": "18:30",
-      "title_es": "Mamita",
-      "title_en": "MAMITA",
-      "original_title": "MAMITA",
-      "director": "Chiara Boiani",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 7,
-      "genre": "Animación",
-      "letterboxd": "https://letterboxd.com/film/mamita-2025/",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -44838,7 +44694,7 @@
       "genre": "Fantasía, Drama",
       "letterboxd": "https://letterboxd.com/film/the-swimmers-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)"
     },
     {
       "cine": "Cinemark Caballito",
@@ -45030,7 +44886,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/chicas-tristes/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -45078,7 +44934,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/lovers-in-the-sky/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cine Cosmos",
@@ -45094,7 +44950,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cacodelphia",
@@ -45110,7 +44966,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -45446,7 +45302,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Cinemark Caballito",
@@ -45478,7 +45334,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "FADU",
@@ -45494,7 +45350,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Cine y ciudades: París"
     },
     {
       "cine": "Filo Cine",
@@ -45510,7 +45366,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -45638,7 +45494,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -45670,7 +45526,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/lovers-in-the-sky/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -45702,71 +45558,23 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-10-02",
       "hora": "16:00",
-      "title_es": "48 – La muerta que habla",
-      "title_en": "48 – La muerta que habla",
+      "title_es": "Cortometrajes graduados DIS – Programa 1",
+      "title_en": "Cortometrajes graduados DIS – Programa 1",
       "original_title": "",
-      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 20,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "16:00",
-      "title_es": "Como las estrellas",
-      "title_en": "Como las estrellas",
-      "original_title": "",
-      "director": "Violeta Gillert y Constanza Browarski",
+      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani",
       "country": "Argentina",
       "year": null,
-      "duration": 13,
+      "duration": 60,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "16:00",
-      "title_es": "Escena final",
-      "title_en": "Escena final",
-      "original_title": "",
-      "director": "Diego Kompel",
-      "country": "Argentina",
-      "year": null,
-      "duration": 20,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "16:00",
-      "title_es": "Mamita",
-      "title_en": "MAMITA",
-      "original_title": "MAMITA",
-      "director": "Chiara Boiani",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 7,
-      "genre": "Animación",
-      "letterboxd": "https://letterboxd.com/film/mamita-2025/",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS"
     },
     {
       "cine": "Cinemark Caballito",
@@ -45798,7 +45606,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/chango-la-luz-descubre/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti"
     },
     {
       "cine": "Hoyts Abasto",
@@ -45942,7 +45750,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Sala Lugones",
@@ -45958,7 +45766,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/chicas-tristes/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cacodelphia",
@@ -45974,119 +45782,23 @@
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/the-condor-daughter/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-10-02",
       "hora": "18:30",
-      "title_es": "Antes que desaparezca",
-      "title_en": "Antes que desaparezca",
+      "title_es": "Cortometrajes UBA – Programa 2",
+      "title_en": "Cortometrajes UBA – Programa 2",
       "original_title": "",
-      "director": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter",
+      "director": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
       "country": "Argentina",
       "year": null,
-      "duration": 16,
+      "duration": 70,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "18:30",
-      "title_es": "Azul",
-      "title_en": "Azul",
-      "original_title": "",
-      "director": "Iara Moyano, Luciano Vera, Nicolas Bazan Povedano",
-      "country": "Argentina",
-      "year": null,
-      "duration": 4,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "18:30",
-      "title_es": "Betty",
-      "title_en": "Betty",
-      "original_title": "",
-      "director": "Oriana Carossa",
-      "country": "Argentina",
-      "year": null,
-      "duration": 4,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "18:30",
-      "title_es": "Condenados",
-      "title_en": "Condenados",
-      "original_title": "",
-      "director": "Segundo Pruden",
-      "country": "Argentina",
-      "year": null,
-      "duration": 20,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "18:30",
-      "title_es": "El deseo",
-      "title_en": "El deseo",
-      "original_title": "",
-      "director": "Lucero Caneda y Malena Reynoso Fischer",
-      "country": "Argentina",
-      "year": null,
-      "duration": 9,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "18:30",
-      "title_es": "Tracción a sangre",
-      "title_en": "Tracción a sangre",
-      "original_title": "",
-      "director": "Agustín Rai y Oliverio Hamdan",
-      "country": "Argentina",
-      "year": null,
-      "duration": 4,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-02",
-      "hora": "18:30",
-      "title_es": "Ni una sola flor",
-      "title_en": "Ni una sola flor",
-      "original_title": "",
-      "director": "Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
-      "country": "Argentina",
-      "year": null,
-      "duration": 13,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA"
     },
     {
       "cine": "Cacodelphia",
@@ -46102,7 +45814,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Sala Lúcida",
@@ -46166,7 +45878,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/pedro-en-el-pais/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cinemark Caballito",
@@ -46198,7 +45910,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "FADU",
@@ -46214,7 +45926,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -46390,7 +46102,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -46454,7 +46166,7 @@
       "genre": "Drama, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ghost-school-2025/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cine Cosmos",
@@ -46470,7 +46182,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Cacodelphia",
@@ -46486,7 +46198,7 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -46838,7 +46550,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Cacodelphia",
@@ -46854,7 +46566,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/la-perra-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cinemark Caballito",
@@ -46886,7 +46598,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -47036,113 +46748,17 @@
       "cine": "Cacodelphia",
       "fecha": "2026-10-03",
       "hora": "15:30",
-      "title_es": "Antes que desaparezca",
-      "title_en": "Antes que desaparezca",
+      "title_es": "Cortometrajes UBA – Programa 2",
+      "title_en": "Cortometrajes UBA – Programa 2",
       "original_title": "",
-      "director": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter",
+      "director": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
       "country": "Argentina",
       "year": null,
-      "duration": 16,
+      "duration": 70,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "15:30",
-      "title_es": "Azul",
-      "title_en": "Azul",
-      "original_title": "",
-      "director": "Iara Moyano, Luciano Vera, Nicolas Bazan Povedano",
-      "country": "Argentina",
-      "year": null,
-      "duration": 4,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "15:30",
-      "title_es": "Betty",
-      "title_en": "Betty",
-      "original_title": "",
-      "director": "Oriana Carossa",
-      "country": "Argentina",
-      "year": null,
-      "duration": 4,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "15:30",
-      "title_es": "Condenados",
-      "title_en": "Condenados",
-      "original_title": "",
-      "director": "Segundo Pruden",
-      "country": "Argentina",
-      "year": null,
-      "duration": 20,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "15:30",
-      "title_es": "El deseo",
-      "title_en": "El deseo",
-      "original_title": "",
-      "director": "Lucero Caneda y Malena Reynoso Fischer",
-      "country": "Argentina",
-      "year": null,
-      "duration": 9,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "15:30",
-      "title_es": "Tracción a sangre",
-      "title_en": "Tracción a sangre",
-      "original_title": "",
-      "director": "Agustín Rai y Oliverio Hamdan",
-      "country": "Argentina",
-      "year": null,
-      "duration": 4,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "15:30",
-      "title_es": "Ni una sola flor",
-      "title_en": "Ni una sola flor",
-      "original_title": "",
-      "director": "Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
-      "country": "Argentina",
-      "year": null,
-      "duration": 13,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -47174,7 +46790,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -47206,7 +46822,7 @@
       "genre": "Fantasía, Drama",
       "letterboxd": "https://letterboxd.com/film/the-swimmers-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)"
     },
     {
       "cine": "Cine Cosmos",
@@ -47222,7 +46838,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)"
     },
     {
       "cine": "Cinemark Caballito",
@@ -47254,7 +46870,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Hoyts Abasto",
@@ -47414,7 +47030,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)"
     },
     {
       "cine": "Sala Lugones",
@@ -47430,7 +47046,7 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-diary-of-a-chambermaid-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Amorina",
@@ -47452,97 +47068,17 @@
       "cine": "Cacodelphia",
       "fecha": "2026-10-03",
       "hora": "18:15",
-      "title_es": "Mudarse es lo segundo peor que te puede pasar en la vida",
-      "title_en": "Mudarse es lo segundo peor que te puede pasar en la vida",
-      "original_title": "Mudarse es lo segundo peor que te puede pasar en la vida",
-      "director": "Felicitas Páez",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 18,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/mudarse-es-lo-segundo-peor-que-te-puede-pasar/",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:15",
-      "title_es": "Operación 29",
-      "title_en": "Operación 29",
+      "title_es": "Cortometrajes UBA – Programa 3",
+      "title_en": "Cortometrajes UBA – Programa 3",
       "original_title": "",
-      "director": "Malena Caset y Matias Becerrica",
+      "director": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano",
       "country": "Argentina",
       "year": null,
-      "duration": 5,
+      "duration": 72,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:15",
-      "title_es": "Operación claridad",
-      "title_en": "Operación claridad",
-      "original_title": "",
-      "director": "Tomas Agustín Diaz Cassone",
-      "country": "Argentina",
-      "year": null,
-      "duration": 19,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:15",
-      "title_es": "Patricio Bisso",
-      "title_en": "Patricio Bisso",
-      "original_title": "",
-      "director": "Raúl Emiliano González",
-      "country": "Argentina",
-      "year": null,
-      "duration": 9,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:15",
-      "title_es": "Pim, pum, ¡pam!",
-      "title_en": "Pim, pum, ¡pam!",
-      "original_title": "",
-      "director": "Mora Albamonte",
-      "country": "Argentina",
-      "year": null,
-      "duration": 16,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:15",
-      "title_es": "Un camión lleno de besos",
-      "title_en": "Un camión lleno de besos",
-      "original_title": "",
-      "director": "Malena Arellano",
-      "country": "Argentina",
-      "year": null,
-      "duration": 5,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA"
     },
     {
       "cine": "Cine Cosmos",
@@ -47558,87 +47094,23 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cacodelphia",
       "fecha": "2026-10-03",
       "hora": "18:30",
-      "title_es": "Los deudos",
-      "title_en": "Los deudos",
+      "title_es": "Cortometrajes graduados DIS – Programa 2",
+      "title_en": "Cortometrajes graduados DIS – Programa 2",
       "original_title": "",
-      "director": "Pablo Marino",
+      "director": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve",
       "country": "Argentina",
       "year": null,
-      "duration": 20,
+      "duration": 68,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:30",
-      "title_es": "Maia: La unión de los mundos",
-      "title_en": "Maia: La unión de los mundos",
-      "original_title": "",
-      "director": "Tamia Berenice",
-      "country": "Argentina",
-      "year": null,
-      "duration": 11,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:30",
-      "title_es": "Patas arriba",
-      "title_en": "Patas arriba",
-      "original_title": "",
-      "director": "Paulina Jensen y Vanesa Martin",
-      "country": "Argentina",
-      "year": null,
-      "duration": 13,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:30",
-      "title_es": "Sibilancias",
-      "title_en": "Sibilancias",
-      "original_title": "",
-      "director": "Alejandro Giorlando",
-      "country": "Argentina",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-03",
-      "hora": "18:30",
-      "title_es": "Línea de flotación",
-      "title_en": "Línea de flotación",
-      "original_title": "",
-      "director": "Lucila de Oto y Gastón Bonalve",
-      "country": "Argentina",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -47686,7 +47158,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Lisandro Alonso"
     },
     {
       "cine": "Cinemark Caballito",
@@ -47878,7 +47350,7 @@
       "genre": "Drama, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ghost-school-2025/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -47926,7 +47398,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cine Cosmos",
@@ -47942,7 +47414,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Cacodelphia",
@@ -47958,7 +47430,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -48294,7 +47766,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Cinemark Caballito",
@@ -48374,7 +47846,7 @@
       "genre": "Música, Drama",
       "letterboxd": "https://letterboxd.com/film/the-condor-daughter/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cinemark Caballito",
@@ -48454,7 +47926,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/los-vencedores/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -48492,193 +47964,33 @@
       "cine": "Cacodelphia",
       "fecha": "2026-10-04",
       "hora": "16:00",
-      "title_es": "Los deudos",
-      "title_en": "Los deudos",
+      "title_es": "Cortometrajes graduados DIS – Programa 2",
+      "title_en": "Cortometrajes graduados DIS – Programa 2",
       "original_title": "",
-      "director": "Pablo Marino",
+      "director": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve",
       "country": "Argentina",
       "year": null,
-      "duration": 20,
+      "duration": 68,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "Maia: La unión de los mundos",
-      "title_en": "Maia: La unión de los mundos",
-      "original_title": "",
-      "director": "Tamia Berenice",
-      "country": "Argentina",
-      "year": null,
-      "duration": 11,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "Patas arriba",
-      "title_en": "Patas arriba",
-      "original_title": "",
-      "director": "Paulina Jensen y Vanesa Martin",
-      "country": "Argentina",
-      "year": null,
-      "duration": 13,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "Sibilancias",
-      "title_en": "Sibilancias",
-      "original_title": "",
-      "director": "Alejandro Giorlando",
-      "country": "Argentina",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "Línea de flotación",
-      "title_en": "Línea de flotación",
-      "original_title": "",
-      "director": "Lucila de Oto y Gastón Bonalve",
-      "country": "Argentina",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS"
     },
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-10-04",
       "hora": "16:00",
-      "title_es": "El último Turf",
-      "title_en": "El último Turf",
+      "title_es": "Cortometrajes UBA – Programa 1",
+      "title_en": "Cortometrajes UBA – Programa 1",
       "original_title": "",
-      "director": "Felipe Benedetti",
+      "director": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton",
       "country": "Argentina",
       "year": null,
-      "duration": 18,
+      "duration": 61,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "La ciudad de colmenas",
-      "title_en": "La ciudad de colmenas",
-      "original_title": "",
-      "director": "Olivia Maly",
-      "country": "Argentina",
-      "year": null,
-      "duration": 5,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "La hora de la siesta",
-      "title_en": "La hora de la siesta",
-      "original_title": "",
-      "director": "Almendra Groppo Trupia",
-      "country": "Argentina",
-      "year": null,
-      "duration": 6,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "Franca",
-      "title_en": "Franca",
-      "original_title": "",
-      "director": "Julia Vier Abinet",
-      "country": "Argentina",
-      "year": null,
-      "duration": 16,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "Larga vida a Kong",
-      "title_en": "Larga vida a Kong",
-      "original_title": "",
-      "director": "Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin",
-      "country": "Argentina",
-      "year": null,
-      "duration": 6,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "Retruco",
-      "title_en": "Retruco",
-      "original_title": "",
-      "director": "Matías Iván Sisaric Moscarola",
-      "country": "Argentina",
-      "year": null,
-      "duration": 2,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "16:00",
-      "title_es": "Mover montañas",
-      "title_en": "Mover montañas",
-      "original_title": "",
-      "director": "Agustín Pereyra y Nicolás Talenton",
-      "country": "Argentina",
-      "year": null,
-      "duration": 8,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -48790,7 +48102,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Cacodelphia",
@@ -48806,7 +48118,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Cinemark Palermo",
@@ -48902,119 +48214,23 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/tres-tiempos/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cine Cosmos",
       "fecha": "2026-10-04",
       "hora": "18:30",
-      "title_es": "101",
-      "title_en": "101",
+      "title_es": "Cortometrajes iberoamericanos – Programa 1",
+      "title_en": "Cortometrajes iberoamericanos – Programa 1",
       "original_title": "",
-      "director": "Lara Luser y Santiago Crucitta",
-      "country": "Argentina",
+      "director": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA",
+      "country": "Argentina, Brasil, México, España, Cuba, Costa Rica",
       "year": null,
-      "duration": 4,
+      "duration": 62,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "18:30",
-      "title_es": "Abrir Um Cinema",
-      "title_en": "Abrir Um Cinema",
-      "original_title": "",
-      "director": "Lucas Lyrio",
-      "country": "Brasil",
-      "year": null,
-      "duration": 11,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "18:30",
-      "title_es": "Carry On!",
-      "title_en": "Carry On!",
-      "original_title": "",
-      "director": "Karla Isaura Velázquez Rocha",
-      "country": "México",
-      "year": null,
-      "duration": 8,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "18:30",
-      "title_es": "Cucarachas",
-      "title_en": "Cucarachas",
-      "original_title": "",
-      "director": "Alma Prieto",
-      "country": "España",
-      "year": null,
-      "duration": 11,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "18:30",
-      "title_es": "Los caminos de María",
-      "title_en": "Los caminos de María",
-      "original_title": "",
-      "director": "Gabriel Coêlho",
-      "country": "Cuba",
-      "year": null,
-      "duration": 10,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "18:30",
-      "title_es": "Si pudiese mataría a la nostalgia",
-      "title_en": "Si pudiese mataría a la nostalgia",
-      "original_title": "",
-      "director": "Diego Valverde León",
-      "country": "Costa Rica",
-      "year": null,
-      "duration": 6,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-04",
-      "hora": "18:30",
-      "title_es": "Todo es amor",
-      "title_en": "Todo es amor",
-      "original_title": "",
-      "director": "No docentes APUBA",
-      "country": "Argentina",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes"
     },
     {
       "cine": "Cacodelphia",
@@ -49030,7 +48246,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Zonazine (Festival de Málaga)"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -49254,7 +48470,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -49318,7 +48534,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cine Cosmos",
@@ -49334,7 +48550,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cacodelphia",
@@ -49350,7 +48566,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/la-perra-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Sala Lugones",
@@ -49366,7 +48582,7 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/les-roches-rouges/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Hoyts Abasto",
@@ -49686,7 +48902,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/los-vencedores/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cinemark Caballito",
@@ -49718,7 +48934,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "FADU",
@@ -49734,7 +48950,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Cine y ciudades: París"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -49798,7 +49014,7 @@
       "genre": "Drama, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ghost-school-2025/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cinemark Caballito",
@@ -49852,97 +49068,17 @@
       "cine": "Cacodelphia",
       "fecha": "2026-10-05",
       "hora": "15:30",
-      "title_es": "Mudarse es lo segundo peor que te puede pasar en la vida",
-      "title_en": "Mudarse es lo segundo peor que te puede pasar en la vida",
-      "original_title": "Mudarse es lo segundo peor que te puede pasar en la vida",
-      "director": "Felicitas Páez",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 18,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/mudarse-es-lo-segundo-peor-que-te-puede-pasar/",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "15:30",
-      "title_es": "Operación 29",
-      "title_en": "Operación 29",
+      "title_es": "Cortometrajes UBA – Programa 3",
+      "title_en": "Cortometrajes UBA – Programa 3",
       "original_title": "",
-      "director": "Malena Caset y Matias Becerrica",
+      "director": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano",
       "country": "Argentina",
       "year": null,
-      "duration": 5,
+      "duration": 72,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "15:30",
-      "title_es": "Operación claridad",
-      "title_en": "Operación claridad",
-      "original_title": "",
-      "director": "Tomas Agustín Diaz Cassone",
-      "country": "Argentina",
-      "year": null,
-      "duration": 19,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "15:30",
-      "title_es": "Patricio Bisso",
-      "title_en": "Patricio Bisso",
-      "original_title": "",
-      "director": "Raúl Emiliano González",
-      "country": "Argentina",
-      "year": null,
-      "duration": 9,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "15:30",
-      "title_es": "Pim, pum, ¡pam!",
-      "title_en": "Pim, pum, ¡pam!",
-      "original_title": "",
-      "director": "Mora Albamonte",
-      "country": "Argentina",
-      "year": null,
-      "duration": 16,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "15:30",
-      "title_es": "Un camión lleno de besos",
-      "title_en": "Un camión lleno de besos",
-      "original_title": "",
-      "director": "Malena Arellano",
-      "country": "Argentina",
-      "year": null,
-      "duration": 5,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -49974,7 +49110,7 @@
       "genre": "Crimen, Thriller",
       "letterboxd": "https://letterboxd.com/film/street-wanderers/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -50006,119 +49142,23 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Cacodelphia",
       "fecha": "2026-10-05",
       "hora": "16:00",
-      "title_es": "101",
-      "title_en": "101",
+      "title_es": "Cortometrajes iberoamericanos – Programa 1",
+      "title_en": "Cortometrajes iberoamericanos – Programa 1",
       "original_title": "",
-      "director": "Lara Luser y Santiago Crucitta",
-      "country": "Argentina",
+      "director": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA",
+      "country": "Argentina, Brasil, México, España, Cuba, Costa Rica",
       "year": null,
-      "duration": 4,
+      "duration": 62,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "16:00",
-      "title_es": "Abrir Um Cinema",
-      "title_en": "Abrir Um Cinema",
-      "original_title": "",
-      "director": "Lucas Lyrio",
-      "country": "Brasil",
-      "year": null,
-      "duration": 11,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "16:00",
-      "title_es": "Carry On!",
-      "title_en": "Carry On!",
-      "original_title": "",
-      "director": "Karla Isaura Velázquez Rocha",
-      "country": "México",
-      "year": null,
-      "duration": 8,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "16:00",
-      "title_es": "Cucarachas",
-      "title_en": "Cucarachas",
-      "original_title": "",
-      "director": "Alma Prieto",
-      "country": "España",
-      "year": null,
-      "duration": 11,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "16:00",
-      "title_es": "Los caminos de María",
-      "title_en": "Los caminos de María",
-      "original_title": "",
-      "director": "Gabriel Coêlho",
-      "country": "Cuba",
-      "year": null,
-      "duration": 10,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "16:00",
-      "title_es": "Si pudiese mataría a la nostalgia",
-      "title_en": "Si pudiese mataría a la nostalgia",
-      "original_title": "",
-      "director": "Diego Valverde León",
-      "country": "Costa Rica",
-      "year": null,
-      "duration": 6,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "16:00",
-      "title_es": "Todo es amor",
-      "title_en": "Todo es amor",
-      "original_title": "",
-      "director": "No docentes APUBA",
-      "country": "Argentina",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes"
     },
     {
       "cine": "Cinemark Caballito",
@@ -50150,7 +49190,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti"
     },
     {
       "cine": "Hoyts Abasto",
@@ -50294,7 +49334,7 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/machado/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Sala Lugones",
@@ -50310,7 +49350,7 @@
       "genre": "Western, Comedia",
       "letterboxd": "https://letterboxd.com/film/testa-o-croce/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Cacodelphia",
@@ -50326,119 +49366,23 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cacodelphia",
       "fecha": "2026-10-05",
       "hora": "18:30",
-      "title_es": "Decaer",
-      "title_en": "Decaer",
+      "title_es": "Cortometrajes iberoamericanos – Programa 2",
+      "title_en": "Cortometrajes iberoamericanos – Programa 2",
       "original_title": "",
-      "director": "Juan Camilo González",
-      "country": "Colombia",
+      "director": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros",
+      "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España",
       "year": null,
-      "duration": 7,
+      "duration": 67,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "18:30",
-      "title_es": "En los valles",
-      "title_en": "En los valles",
-      "original_title": "",
-      "director": "Emanuel Alejandro Figueroa",
-      "country": "Argentina",
-      "year": null,
-      "duration": 9,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "18:30",
-      "title_es": "Just Thoughts",
-      "title_en": "Just Thoughts",
-      "original_title": "",
-      "director": "Daniel Jacomee",
-      "country": "Ecuador",
-      "year": null,
-      "duration": 7,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "18:30",
-      "title_es": "Lo que fue nuestro hogar",
-      "title_en": "Lo que fue nuestro hogar",
-      "original_title": "",
-      "director": "Angelo Lobos",
-      "country": "Chile",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "18:30",
-      "title_es": "Puertas abiertas",
-      "title_en": "Puertas abiertas",
-      "original_title": "",
-      "director": "Iván Bustinduy",
-      "country": "Argentina",
-      "year": null,
-      "duration": 9,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "18:30",
-      "title_es": "Quedamos así",
-      "title_en": "Quedamos así",
-      "original_title": "",
-      "director": "Elías De Martino",
-      "country": "Uruguay",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "18:30",
-      "title_es": "Una decisión difícil",
-      "title_en": "Una decisión difícil",
-      "original_title": "",
-      "director": "Laura Muñoz Ros",
-      "country": "España",
-      "year": null,
-      "duration": 11,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes"
     },
     {
       "cine": "Cine Cosmos",
@@ -50454,7 +49398,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -50486,7 +49430,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cinemark Caballito",
@@ -50652,97 +49596,17 @@
       "cine": "Cacodelphia",
       "fecha": "2026-10-05",
       "hora": "20:30",
-      "title_es": "La pasión",
-      "title_en": "La pasión",
+      "title_es": "Cortometrajes de Lucas Vignale",
+      "title_en": "Cortometrajes de Lucas Vignale",
       "original_title": "",
       "director": "Lucas Vignale",
       "country": "Argentina",
       "year": null,
-      "duration": 15,
+      "duration": 91,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "20:30",
-      "title_es": "Diablo suelto",
-      "title_en": "Diablo suelto",
-      "original_title": "",
-      "director": "Lucas Vignale",
-      "country": "Argentina",
-      "year": null,
-      "duration": 4,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "20:30",
-      "title_es": "Mi gran noche",
-      "title_en": "Mi gran noche",
-      "original_title": "",
-      "director": "Lucas Vignale",
-      "country": "Argentina",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "20:30",
-      "title_es": "Ilusión Supersport",
-      "title_en": "Ilusión Supersport",
-      "original_title": "",
-      "director": "Lucas Vignale",
-      "country": "Argentina",
-      "year": null,
-      "duration": 14,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "20:30",
-      "title_es": "La vuelta de Gaspi",
-      "title_en": "La vuelta de Gaspi",
-      "original_title": "",
-      "director": "Lucas Vignale",
-      "country": "Argentina",
-      "year": null,
-      "duration": 16,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-05",
-      "hora": "20:30",
-      "title_es": "Camino a la velada",
-      "title_en": "Camino a la velada",
-      "original_title": "",
-      "director": "Lucas Vignale",
-      "country": "Argentina",
-      "year": null,
-      "duration": 30,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -50790,7 +49654,7 @@
       "genre": "Romance, Crimen",
       "letterboxd": "https://letterboxd.com/film/mauvais-sang/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Cine Cosmos",
@@ -50806,7 +49670,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cacodelphia",
@@ -50822,7 +49686,7 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/the-diary-of-a-chambermaid-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Sala Lugones",
@@ -50838,7 +49702,7 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Hoyts Abasto",
@@ -51174,7 +50038,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Cacodelphia",
@@ -51190,7 +50054,7 @@
       "genre": "Crimen, Thriller",
       "letterboxd": "https://letterboxd.com/film/street-wanderers/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Filo Cine",
@@ -51206,7 +50070,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-holy-girl/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -51270,7 +50134,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Cacodelphia",
@@ -51286,7 +50150,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Cinemark Caballito",
@@ -51366,7 +50230,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Hoyts Abasto",
@@ -51388,113 +50252,17 @@
       "cine": "Cine Cosmos",
       "fecha": "2026-10-06",
       "hora": "16:00",
-      "title_es": "Decaer",
-      "title_en": "Decaer",
+      "title_es": "Cortometrajes iberoamericanos – Programa 2",
+      "title_en": "Cortometrajes iberoamericanos – Programa 2",
       "original_title": "",
-      "director": "Juan Camilo González",
-      "country": "Colombia",
+      "director": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros",
+      "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España",
       "year": null,
-      "duration": 7,
+      "duration": 67,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-06",
-      "hora": "16:00",
-      "title_es": "En los valles",
-      "title_en": "En los valles",
-      "original_title": "",
-      "director": "Emanuel Alejandro Figueroa",
-      "country": "Argentina",
-      "year": null,
-      "duration": 9,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-06",
-      "hora": "16:00",
-      "title_es": "Just Thoughts",
-      "title_en": "Just Thoughts",
-      "original_title": "",
-      "director": "Daniel Jacomee",
-      "country": "Ecuador",
-      "year": null,
-      "duration": 7,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-06",
-      "hora": "16:00",
-      "title_es": "Lo que fue nuestro hogar",
-      "title_en": "Lo que fue nuestro hogar",
-      "original_title": "",
-      "director": "Angelo Lobos",
-      "country": "Chile",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-06",
-      "hora": "16:00",
-      "title_es": "Puertas abiertas",
-      "title_en": "Puertas abiertas",
-      "original_title": "",
-      "director": "Iván Bustinduy",
-      "country": "Argentina",
-      "year": null,
-      "duration": 9,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-06",
-      "hora": "16:00",
-      "title_es": "Quedamos así",
-      "title_en": "Quedamos así",
-      "original_title": "",
-      "director": "Elías De Martino",
-      "country": "Uruguay",
-      "year": null,
-      "duration": 12,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
-    },
-    {
-      "cine": "Cine Cosmos",
-      "fecha": "2026-10-06",
-      "hora": "16:00",
-      "title_es": "Una decisión difícil",
-      "title_en": "Una decisión difícil",
-      "original_title": "",
-      "director": "Laura Muñoz Ros",
-      "country": "España",
-      "year": null,
-      "duration": 11,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes"
     },
     {
       "cine": "Cacodelphia",
@@ -51510,7 +50278,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cinemark Caballito",
@@ -51542,7 +50310,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Hoyts Abasto",
@@ -51686,7 +50454,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti"
     },
     {
       "cine": "Sala Lugones",
@@ -51718,7 +50486,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cacodelphia",
@@ -51734,7 +50502,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/el-ultimo-viaje-a-china/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Proyecciones especiales"
     },
     {
       "cine": "Cine Cosmos",
@@ -51750,7 +50518,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -51798,7 +50566,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Cine y ciudades: París"
     },
     {
       "cine": "Filo Cine",
@@ -51814,7 +50582,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cinemark Caballito",
@@ -51846,7 +50614,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Cine y ciudades: París"
     },
     {
       "cine": "FADU",
@@ -51862,7 +50630,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Cine y ciudades: París"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -52022,7 +50790,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -52070,7 +50838,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cacodelphia",
@@ -52086,7 +50854,7 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/les-roches-rouges/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Cine Cosmos",
@@ -52102,7 +50870,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/a-wall-of-silence/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti"
     },
     {
       "cine": "Sala Lugones",
@@ -52118,7 +50886,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/la-perra-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Hasta Trilce",
@@ -52358,7 +51126,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Cinemark Palermo",
@@ -52470,7 +51238,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Cinemark Caballito",
@@ -52502,7 +51270,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/imperium-2026/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Panorama internacional"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -52614,7 +51382,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cine Cosmos",
@@ -52630,7 +51398,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Foco Yasujiro Ozu"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -52662,7 +51430,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/tres-tiempos/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Hoyts Abasto",
@@ -52694,7 +51462,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Cinemark Caballito",
@@ -52726,7 +51494,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/a-wall-of-silence/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti"
     },
     {
       "cine": "Hoyts Abasto",
@@ -52870,7 +51638,7 @@
       "genre": "Romance, Crimen",
       "letterboxd": "https://letterboxd.com/film/mauvais-sang/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Homenaje Leos Carax"
     },
     {
       "cine": "Cine Cosmos",
@@ -52886,7 +51654,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia internacional de largometrajes"
     },
     {
       "cine": "Hoyts Abasto",
@@ -52934,7 +51702,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Competencia de largometrajes graduados DIS"
     },
     {
       "cine": "Cinemark Caballito",
@@ -53302,7 +52070,7 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-holy-girl/",
       "ticket_url": "https://www.ficuba.com/es/programacion",
-      "ciclo": "FIC.UBA - Festival Internacional de Cine de la UBA"
+      "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti"
     },
     {
       "cine": "Sala Lugones",
