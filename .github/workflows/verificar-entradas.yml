@@ -1,0 +1,44 @@
+name: Verificar links de entradas
+
+# Corre scripts/verificar_entradas.py desde la red del runner: abre el link de
+# entradas de cada función cargada a mano de un festival y confirma que la
+# página es la de esa película. Para las que no, sugiere el link bueno.
+#
+# Existe porque esos links se arman con el título ("Primavera temprana" →
+# ficuba.com/es/pelicula/primavera-temprana) y un signo mal adivinado manda a
+# una página vacía que nadie revisa: la fila se ve completa.
+
+on:
+  workflow_dispatch:
+    inputs:
+      ciclo:
+        description: 'Festival: funciones con ciclo "X" o "X - …" (ej. FICUBA)'
+        required: true
+      listado:
+        description: 'Listado de películas del festival, para sugerir links (opcional)'
+        required: false
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Verificar
+        env:
+          CICLO: ${{ inputs.ciclo }}
+          LISTADO: ${{ inputs.listado }}
+        run: |
+          if [ -n "$LISTADO" ]; then
+            python3 scripts/verificar_entradas.py --ciclo "$CICLO" --listado "$LISTADO"
+          else
+            python3 scripts/verificar_entradas.py --ciclo "$CICLO"
+          fi
