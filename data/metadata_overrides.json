@@ -574,7 +574,7 @@
       "letterboxd": "https://letterboxd.com/film/nazareno-cruz-and-the-wolf/"
     },
     {
-      "_comment": "FIC.UBA 2026 (30/9 al 7/10): Letterboxd de cada película del festival, fijo para que no dependa del enrichment. Uno por título y sala, porque hay títulos genéricos (\"Franca\", \"Oca\", \"Decaer\") que en otra sala pueden ser otra película. Verificados el 24/9/2026: la mayoría con verificar-letterboxd.yml (200 + director y año); los que el verificador aceptó con un slug viejo van con el actual de Letterboxd, confirmado con director y año (\"Plata o mierda\" → do-or-die-2025, \"La libertad doble\" → double-freedom). \"La noche de la infancia\" es From Dawn to Dawn: misma directora, 93', España/Francia, 2026. Sin link a propósito: los cortos que no están en Letterboxd y Hierbas flotantes, que el verificador no pudo confirmar."
+      "_comment": "FIC.UBA 2026 (30/9 al 7/10): Letterboxd de cada película del festival, fijo para que no dependa del enrichment. Uno por título y sala, porque hay títulos genéricos (\"Franca\", \"Oca\", \"Decaer\") que en otra sala pueden ser otra película. Verificados el 24/9/2026: la mayoría con verificar-letterboxd.yml (200 + director y año); los que el verificador aceptó con un slug viejo van con el actual de Letterboxd, confirmado con director y año (\"Plata o mierda\" → do-or-die-2025, \"La libertad doble\" → double-freedom). \"La noche de la infancia\" es From Dawn to Dawn: misma directora, 93', España/Francia, 2026. Sin link a propósito: los cortos que no están en Letterboxd. Hierbas flotantes (floating-weeds, 1959; no confundir con A Story of Floating Weeds, la muda de 1934) se confirmó aparte, con director y año."
     },
     {"title": "48 – La muerta que habla", "cine": "Cacodelphia", "letterboxd": "https://letterboxd.com/film/48-la-muerta-que-habla/"},
     {"title": "48 – La muerta que habla", "cine": "Cine Cosmos", "letterboxd": "https://letterboxd.com/film/48-la-muerta-que-habla/"},
@@ -615,6 +615,7 @@
     {"title": "Ghost School", "cine": "Cacodelphia", "letterboxd": "https://letterboxd.com/film/ghost-school-2025/"},
     {"title": "Ghost School", "cine": "Sala Lugones", "letterboxd": "https://letterboxd.com/film/ghost-school-2025/"},
     {"title": "Holy Motors", "cine": "Cacodelphia", "letterboxd": "https://letterboxd.com/film/holy-motors/"},
+    {"title": "Hierbas flotantes", "cine": "Cine Cosmos", "letterboxd": "https://letterboxd.com/film/floating-weeds/"},
     {"title": "Holy Motors", "cine": "Cine Cosmos", "letterboxd": "https://letterboxd.com/film/holy-motors/"},
     {"title": "Imperium", "cine": "Sala Lugones", "letterboxd": "https://letterboxd.com/film/imperium-2026/"},
     {"title": "Just Thoughts", "cine": "Cacodelphia", "letterboxd": "https://letterboxd.com/film/just-thoughts/"},
