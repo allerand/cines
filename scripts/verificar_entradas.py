@@ -135,14 +135,21 @@ def main() -> int:
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--ciclo", required=True,
                     help='festival: se verifican las funciones con ciclo "X" o "X - …"')
-    ap.add_argument("--listado", help="listado de películas del festival, para sugerir links")
+    ap.add_argument("--listado", action="append", default=[],
+                    help="página que linkea películas del festival (repetible), para sugerir links")
+    ap.add_argument("--solo", action="append", default=[],
+                    help="verificar sólo los títulos que contengan esto (repetible)")
     args = ap.parse_args()
 
     data = json.loads(MANUAL.read_text(encoding="utf-8"))
     pelis: dict[str, dict] = {}
+    rutas: list[str] = []          # dónde viven las fichas, de todos los links del festival
     for m in data.get("screenings", []):
         c = m.get("ciclo", "")
         if not (c == args.ciclo or c.startswith(args.ciclo + " - ")) or not m.get("ticket_url"):
+            continue
+        rutas.append(urllib.parse.urlparse(m["ticket_url"]).path.rsplit("/", 1)[0] + "/")
+        if args.solo and not any(norm(x) in norm(m["title"]) for x in args.solo):
             continue
         pelis.setdefault(m["ticket_url"], {
             "title": m["title"], "original": m.get("original_title", ""),
@@ -171,9 +178,12 @@ def main() -> int:
 
     listado = {}
     if malos and args.listado:
-        prefijo = urllib.parse.urlparse(next(iter(malos))).path.rsplit("/", 1)[0] + "/"
-        listado = links_del_listado(args.listado, prefijo)
-        print(f"\nEl listado tiene {len(listado)} película(s).")
+        # Donde viven la mayoría de los links del festival: el que falló puede
+        # apuntar a la programación general, y su ruta no sirve de prefijo.
+        prefijo = max(set(rutas), key=rutas.count)
+        for l in args.listado:
+            listado.update(links_del_listado(l, prefijo))
+        print(f"\nLos listados tienen {len(listado)} película(s).")
 
     reemplazos, sin_arreglo = {}, []
     for url, p in malos.items():
