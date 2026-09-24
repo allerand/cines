@@ -156,11 +156,12 @@ def main() -> int:
             s for s in (slug(p["title"], "-"), slug(p["title"]), slug(p["original"]),
                         slug(re.sub(r"\(.*?\)", "", p["title"])))
             if s and f"{base}/{s}" != url)]
-        # Del listado: el slug que contiene todas las palabras del título, o al revés.
-        t = set(norm(p["title"]).split())
+        # Del listado: el slug que tiene el título adentro, pegado (así
+        # "c-est-pas-moi" y "cest-pas-moi" son lo mismo), o al revés.
+        pegados = [norm(x).replace(" ", "") for x in (p["title"], p["original"]) if norm(x)]
         candidatos += [u for s, u in listado.items()
                        if u not in candidatos and u != url
-                       and (t <= set(s.split("-")) or set(s.split("-")) <= t)]
+                       and any(t in s.replace("-", "") or s.replace("-", "") in t for t in pegados)]
         for c in candidatos:
             status, final, cuerpo = bajar(c)
             if status == 200 and final == c and es_la_pelicula(cuerpo, p["title"], p["directores"]):
@@ -168,6 +169,14 @@ def main() -> int:
                 break
         else:
             sin_arreglo.append((url, p["title"]))
+
+    if listado:
+        # Lo que el listado tiene y no usa ninguna función: ahí suele estar el
+        # link bueno de las que no se pudieron arreglar solas.
+        usados = set(pelis) | set(reemplazos.values())
+        sobran = sorted(s for s, u in listado.items() if u not in usados)
+        if sobran:
+            print(f"\nEn el listado y sin usar ({len(sobran)}): {', '.join(sobran)}")
 
     print("\n" + "=" * 72)
     print(f"OK: {len(pelis) - len(malos)} · ARREGLADOS: {len(reemplazos)} · "
