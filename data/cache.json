@@ -17609,7 +17609,35 @@
     "country": "USA",
     "year": 2026,
     "duration": 129,
-    "genre": "Comedia",
-    "original_title": "Digger"
+    "genre": "Drama, Comedia",
+    "clase_titulo": "exacto",
+    "original_title": "Digger",
+    "sin_hints": "título y duración"
+  },
+  "verity: la sombra de un engaño": {
+    "url": "https://letterboxd.com/film/verity-2026/",
+    "title_en": "Verity",
+    "director": "Michael Showalter",
+    "country": "USA",
+    "year": 2026,
+    "duration": 117,
+    "genre": "Misterio, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Verity. La sombra de un engaño",
+    "original_title": "Verity",
+    "sin_hints": "título y duración"
+  },
+  "verity,la sombra de un engaño": {
+    "url": "https://letterboxd.com/film/verity-2026/",
+    "title_en": "Verity",
+    "director": "Michael Showalter",
+    "country": "USA",
+    "year": 2026,
+    "duration": 117,
+    "genre": "Misterio, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Verity. La sombra de un engaño",
+    "original_title": "Verity",
+    "sin_hints": "título"
   }
 }
