@@ -903,7 +903,7 @@
     {
       "cine": "Filo Cine", "title": "Cortometrajes de Alice Guy", "fecha": "2026-10-03", "hora": "17:00",
       "director": "Alice Guy", "country": "Francia", "duration": 50,
-      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/pelicula/cortometrajes-de-alice-guy"
     },
     {
       "cine": "Cacodelphia", "title": "La carn", "fecha": "2026-10-03", "hora": "18:00",
@@ -913,7 +913,7 @@
     {
       "cine": "Sala Lugones", "title": "Le Journal d'une femme de chambre", "fecha": "2026-10-03", "hora": "18:00",
       "director": "Radu Jude", "country": "Francia, Rumania", "year": 2026, "duration": 94,
-      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/pelicula/le-journal-d-039-une-femme-de-chambre"
     },
     {
       "_programa": "Cortos UBA, programa 3 (6 cortos, 72')",
@@ -1083,7 +1083,7 @@
     {
       "cine": "Cacodelphia", "title": "C'est pas moi", "fecha": "2026-10-04", "hora": "17:30",
       "director": "Leos Carax", "country": "Francia", "year": 2024, "duration": 41,
-      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/pelicula/c-039-est-pas-moi"
     },
     {
       "cine": "Cacodelphia", "title": "Boy Meets Girl", "fecha": "2026-10-04", "hora": "17:30",
@@ -1368,7 +1368,7 @@
     {
       "cine": "Cacodelphia", "title": "Le Journal d'une femme de chambre", "fecha": "2026-10-05", "hora": "21:00",
       "director": "Radu Jude", "country": "Francia, Rumania", "year": 2026, "duration": 94,
-      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
+      "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/pelicula/le-journal-d-039-une-femme-de-chambre"
     },
     {
       "cine": "Sala Lugones", "title": "Tierra de mi padre", "fecha": "2026-10-05", "hora": "21:00",
@@ -1393,7 +1393,7 @@
     {
       "cine": "Cacodelphia", "title": "C'est pas moi", "fecha": "2026-10-06", "hora": "15:00",
       "director": "Leos Carax", "country": "Francia", "year": 2024, "duration": 41,
-      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
+      "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/pelicula/c-039-est-pas-moi"
     },
     {
       "cine": "Cacodelphia", "title": "Boy Meets Girl", "fecha": "2026-10-06", "hora": "15:00",

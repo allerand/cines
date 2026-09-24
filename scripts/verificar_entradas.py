@@ -151,7 +151,7 @@ def main() -> int:
         rutas.append(urllib.parse.urlparse(m["ticket_url"]).path.rsplit("/", 1)[0] + "/")
         if args.solo and not any(norm(x) in norm(m["title"]) for x in args.solo):
             continue
-        pelis.setdefault(m["ticket_url"], {
+        pelis.setdefault((m["ticket_url"], m["title"]), {
             "title": m["title"], "original": m.get("original_title", ""),
             "directores": m.get("_directores") or m.get("director", ""),
         })
@@ -159,7 +159,9 @@ def main() -> int:
     print(f"Verificando {len(pelis)} link(s)…\n")
     malos: dict[str, dict] = {}
     rechazos = 0
-    for url, p in pelis.items():
+    # Por (link, título): varias pueden compartir el link genérico a la
+    # programación, y cada una necesita su propia ficha.
+    for (url, titulo), p in pelis.items():
         status, final, cuerpo = bajar(url)
         # Si el sitio nos está bloqueando, seguir sólo alarga el bloqueo.
         rechazos = rechazos + 1 if status in (403, 429) else 0
@@ -174,20 +176,21 @@ def main() -> int:
         print(f"❌ {url}  (HTTP {status}"
               f"{f', otra página: linkea a {otras} películas' if status == 200 else ''}"
               f"{', redirige a ' + final if final != url else ''}) — {p['title']}")
-        malos[url] = p
+        malos[(url, titulo)] = p
 
+    # Donde viven la mayoría de los links del festival: el que falló puede
+    # apuntar a la programación general, y su ruta no sirve de prefijo.
+    prefijo = max(set(rutas), key=rutas.count) if rutas else "/"
     listado = {}
     if malos and args.listado:
-        # Donde viven la mayoría de los links del festival: el que falló puede
-        # apuntar a la programación general, y su ruta no sirve de prefijo.
-        prefijo = max(set(rutas), key=rutas.count)
         for l in args.listado:
             listado.update(links_del_listado(l, prefijo))
         print(f"\nLos listados tienen {len(listado)} película(s).")
 
     reemplazos, sin_arreglo = {}, []
-    for url, p in malos.items():
-        base = url.rsplit("/", 1)[0]
+    for (url, titulo), p in malos.items():
+        u = urllib.parse.urlparse(url)
+        base = f"{u.scheme}://{u.netloc}{prefijo.rstrip('/')}"
         candidatos = [f"{base}/{s}" for s in dict.fromkeys(
             s for s in (slug(p["title"], "-"), slug(p["title"]), slug(p["original"]),
                         slug(re.sub(r"\(.*?\)", "", p["title"])))
@@ -201,15 +204,15 @@ def main() -> int:
         for c in candidatos:
             status, final, cuerpo = bajar(c)
             if status == 200 and final == c and es_la_pelicula(cuerpo, p["title"], p["directores"], c):
-                reemplazos[url] = c
+                reemplazos[titulo] = c
                 break
         else:
-            sin_arreglo.append((url, p["title"]))
+            sin_arreglo.append((url, titulo))
 
     if listado:
         # Lo que el listado tiene y no usa ninguna función: ahí suele estar el
         # link bueno de las que no se pudieron arreglar solas.
-        usados = set(pelis) | set(reemplazos.values())
+        usados = {u for u, _ in pelis} | set(reemplazos.values())
         sobran = sorted(s for s, u in listado.items() if u not in usados)
         if sobran:
             print(f"\nEn el listado y sin usar ({len(sobran)}): {', '.join(sobran)}")
@@ -218,7 +221,7 @@ def main() -> int:
     print(f"OK: {len(pelis) - len(malos)} · ARREGLADOS: {len(reemplazos)} · "
           f"SIN ARREGLO: {len(sin_arreglo)}")
     if reemplazos:
-        print("\nReemplazar en data/manual_screenings.json:\n")
+        print("\nLink bueno por título (reemplazar en data/manual_screenings.json):\n")
         print(json.dumps(reemplazos, ensure_ascii=False, indent=2))
     if sin_arreglo:
         print("\nSin arreglo — mirar a mano:")
