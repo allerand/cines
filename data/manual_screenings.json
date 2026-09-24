@@ -585,8 +585,9 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 1", "fecha": "2026-10-01", "hora": "18:00",
-      "director": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton", "country": "Argentina", "duration": 61,
+      "director": "Varios directores", "country": "Argentina", "duration": 61,
       "cortos": ["El último Turf", "La ciudad de colmenas", "La hora de la siesta", "Franca", "Larga vida a Kong", "Retruco", "Mover montañas"],
+      "_directores": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -601,8 +602,9 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 1", "fecha": "2026-10-01", "hora": "18:30",
-      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani", "country": "Argentina", "duration": 60,
+      "director": "Varios directores", "country": "Argentina", "duration": 60,
       "cortos": ["48 – La muerta que habla", "Como las estrellas", "Escena final", "Mamita"],
+      "_directores": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani",
       "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -667,8 +669,9 @@
     },
     {
       "cine": "Cine Cosmos", "title": "Cortometrajes graduados DIS – Programa 1", "fecha": "2026-10-02", "hora": "16:00",
-      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani", "country": "Argentina", "duration": 60,
+      "director": "Varios directores", "country": "Argentina", "duration": 60,
       "cortos": ["48 – La muerta que habla", "Como las estrellas", "Escena final", "Mamita"],
+      "_directores": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani",
       "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -693,8 +696,9 @@
     },
     {
       "cine": "Cine Cosmos", "title": "Cortometrajes UBA – Programa 2", "fecha": "2026-10-02", "hora": "18:30",
-      "director": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa", "country": "Argentina", "duration": 70,
+      "director": "Varios directores", "country": "Argentina", "duration": 70,
       "cortos": ["Antes que desaparezca", "Azul", "Betty", "Condenados", "El deseo", "Tracción a sangre", "Ni una sola flor"],
+      "_directores": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -754,8 +758,9 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 2", "fecha": "2026-10-03", "hora": "15:30",
-      "director": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa", "country": "Argentina", "duration": 70,
+      "director": "Varios directores", "country": "Argentina", "duration": 70,
       "cortos": ["Antes que desaparezca", "Azul", "Betty", "Condenados", "El deseo", "Tracción a sangre", "Ni una sola flor"],
+      "_directores": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -790,8 +795,9 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 3", "fecha": "2026-10-03", "hora": "18:15",
-      "director": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano", "country": "Argentina", "duration": 72,
+      "director": "Varios directores", "country": "Argentina", "duration": 72,
       "cortos": ["Mudarse es lo segundo peor que te puede pasar en la vida", "Operación 29", "Operación claridad", "Patricio Bisso", "Pim, pum, ¡pam!", "Un camión lleno de besos"],
+      "_directores": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -801,8 +807,9 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 2", "fecha": "2026-10-03", "hora": "18:30",
-      "director": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve", "country": "Argentina", "duration": 68,
+      "director": "Varios directores", "country": "Argentina", "duration": 68,
       "cortos": ["Los deudos", "Maia: La unión de los mundos", "Patas arriba", "Sibilancias", "Línea de flotación"],
+      "_directores": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve",
       "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -847,14 +854,16 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 2", "fecha": "2026-10-04", "hora": "16:00",
-      "director": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve", "country": "Argentina", "duration": 68,
+      "director": "Varios directores", "country": "Argentina", "duration": 68,
       "cortos": ["Los deudos", "Maia: La unión de los mundos", "Patas arriba", "Sibilancias", "Línea de flotación"],
+      "_directores": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve",
       "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
       "cine": "Cine Cosmos", "title": "Cortometrajes UBA – Programa 1", "fecha": "2026-10-04", "hora": "16:00",
-      "director": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton", "country": "Argentina", "duration": 61,
+      "director": "Varios directores", "country": "Argentina", "duration": 61,
       "cortos": ["El último Turf", "La ciudad de colmenas", "La hora de la siesta", "Franca", "Larga vida a Kong", "Retruco", "Mover montañas"],
+      "_directores": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -874,8 +883,9 @@
     },
     {
       "cine": "Cine Cosmos", "title": "Cortometrajes iberoamericanos – Programa 1", "fecha": "2026-10-04", "hora": "18:30",
-      "director": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA", "country": "Argentina, Brasil, México, España, Cuba, Costa Rica", "duration": 62,
+      "director": "Varios directores", "country": "Argentina, Brasil, México, España, Cuba, Costa Rica", "duration": 62,
       "cortos": ["101", "Abrir Um Cinema", "Carry On!", "Cucarachas", "Los caminos de María", "Si pudiese mataría a la nostalgia", "Todo es amor"],
+      "_directores": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA",
       "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -930,8 +940,9 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 3", "fecha": "2026-10-05", "hora": "15:30",
-      "director": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano", "country": "Argentina", "duration": 72,
+      "director": "Varios directores", "country": "Argentina", "duration": 72,
       "cortos": ["Mudarse es lo segundo peor que te puede pasar en la vida", "Operación 29", "Operación claridad", "Patricio Bisso", "Pim, pum, ¡pam!", "Un camión lleno de besos"],
+      "_directores": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -946,8 +957,9 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes iberoamericanos – Programa 1", "fecha": "2026-10-05", "hora": "16:00",
-      "director": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA", "country": "Argentina, Brasil, México, España, Cuba, Costa Rica", "duration": 62,
+      "director": "Varios directores", "country": "Argentina, Brasil, México, España, Cuba, Costa Rica", "duration": 62,
       "cortos": ["101", "Abrir Um Cinema", "Carry On!", "Cucarachas", "Los caminos de María", "Si pudiese mataría a la nostalgia", "Todo es amor"],
+      "_directores": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA",
       "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -972,8 +984,9 @@
     },
     {
       "cine": "Cacodelphia", "title": "Cortometrajes iberoamericanos – Programa 2", "fecha": "2026-10-05", "hora": "18:30",
-      "director": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros", "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España", "duration": 67,
+      "director": "Varios directores", "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España", "duration": 67,
       "cortos": ["Decaer", "En los valles", "Just Thoughts", "Lo que fue nuestro hogar", "Puertas abiertas", "Quedamos así", "Una decisión difícil"],
+      "_directores": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros",
       "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -1044,8 +1057,9 @@
     },
     {
       "cine": "Cine Cosmos", "title": "Cortometrajes iberoamericanos – Programa 2", "fecha": "2026-10-06", "hora": "16:00",
-      "director": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros", "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España", "duration": 67,
+      "director": "Varios directores", "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España", "duration": 67,
       "cortos": ["Decaer", "En los valles", "Just Thoughts", "Lo que fue nuestro hogar", "Puertas abiertas", "Quedamos así", "Una decisión difícil"],
+      "_directores": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros",
       "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
