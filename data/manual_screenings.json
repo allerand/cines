@@ -1,5 +1,5 @@
 {
-  "_comment": "Funciones cargadas a mano para CUALQUIER cine. Para festivales que publican la grilla en prosa (los cortos quedan dentro de un párrafo y ningún scraper los ve) y para reemplazar funciones que el scraper trae mal. Se filtran solas a [hoy, hoy+semanas], así que las viejas no hay que borrarlas. El link de Letterboxd de cada título va en metadata_overrides.json. `descartar` saca funciones mal scrapeadas: matchea cine + fecha (+hora opcional) + substring del título. `festivales` hace que, en un rango de fechas y unas salas, la grilla manual de un festival (ciclo \"<festival>\" o \"<festival> - <sección>\") mande sobre lo que publiquen las salas: ver aplicar_festivales en scraper.py. Un programa de cortos va en una fila, con los títulos en `cortos`.",
+  "_comment": "Funciones cargadas a mano para CUALQUIER cine. Para festivales que publican la grilla en prosa (los cortos quedan dentro de un párrafo y ningún scraper los ve) y para reemplazar funciones que el scraper trae mal. Se filtran solas a [hoy, hoy+semanas], así que las viejas no hay que borrarlas. El link de Letterboxd de cada título va en metadata_overrides.json. `descartar` saca funciones mal scrapeadas: matchea cine + fecha (+hora opcional) + substring del título. `festivales` hace que, en un rango de fechas y unas salas, la grilla manual de un festival (ciclo \"<festival>\" o \"<festival> - <sección>\") mande sobre lo que publiquen las salas: ver aplicar_festivales en scraper.py.",
 
   "screenings": [
     {
@@ -523,7 +523,7 @@
       "ciclo": "La Mujer y el Cine", "ticket_url": "https://malba.org.ar/evento/la-mujer-y-el-cine-2026/"
     },
     {
-      "_ciclo": "FIC.UBA 2026 (30/9 al 7/10), transcripto de la Guía de Programación en PDF (ficuba.com/prensa/Guia-de-Programacion-FICUBA-2026.pdf). El ciclo va como \"FICUBA - <sección>\", con el nombre de la sección de la guía (Foco, Homenaje y Honoris Causa llevan además a quién). Van todas las sedes, también las que ya se scrapean, para que la grilla esté completa aunque una fuente se caiga o publique tarde; lo que las salas publiquen del festival por su cuenta lo saca `festivales` (abajo). Cada programa de cortos va en una sola fila, con los cortos en `cortos`. FADU es sede sólo del festival. Quedan afuera seminarios, charlas y ceremonias: no son funciones de cine. La entrada es gratuita y se retira media hora antes, así que el link va a la programación.",
+      "_ciclo": "FIC.UBA 2026 (30/9 al 7/10), transcripto de la Guía de Programación en PDF (ficuba.com/prensa/Guia-de-Programacion-FICUBA-2026.pdf). El ciclo va como \"FICUBA - <sección>\", con el nombre de la sección de la guía (Foco, Homenaje y Honoris Causa llevan además a quién). Van todas las sedes, también las que ya se scrapean, para que la grilla esté completa aunque una fuente se caiga o publique tarde; lo que las salas publiquen del festival por su cuenta lo saca `festivales` (abajo). Cada corto va en su fila, a la hora de su programa; el primero de cada programa lleva `_programa`. Con más de dos directores va \"Varios directores\" y la lista queda en `_directores`. FADU es sede sólo del festival. Quedan afuera seminarios, charlas y ceremonias: no son funciones de cine. La entrada es gratuita y se retira media hora antes, así que el link va a la programación.",
       "cine": "Cine Cosmos", "title": "Primavera temprana", "fecha": "2026-09-30", "hora": "13:30",
       "director": "Yasujiro Ozu", "country": "Japón", "year": 1956, "duration": 144, "original_title": "Sōshun",
       "ciclo": "FICUBA - Foco Yasujiro Ozu", "ticket_url": "https://www.ficuba.com/es/programacion"
@@ -584,10 +584,40 @@
       "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 1", "fecha": "2026-10-01", "hora": "18:00",
-      "director": "Varios directores", "country": "Argentina", "duration": 61,
-      "cortos": ["El último Turf", "La ciudad de colmenas", "La hora de la siesta", "Franca", "Larga vida a Kong", "Retruco", "Mover montañas"],
-      "_directores": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton",
+      "_programa": "Cortos UBA, programa 1 (7 cortos, 61')",
+      "cine": "Cacodelphia", "title": "El último Turf", "fecha": "2026-10-01", "hora": "18:00",
+      "director": "Felipe Benedetti", "country": "Argentina", "duration": 18,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La ciudad de colmenas", "fecha": "2026-10-01", "hora": "18:00",
+      "director": "Olivia Maly", "country": "Argentina", "duration": 5,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La hora de la siesta", "fecha": "2026-10-01", "hora": "18:00",
+      "director": "Almendra Groppo Trupia", "country": "Argentina", "duration": 6,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Franca", "fecha": "2026-10-01", "hora": "18:00",
+      "director": "Julia Vier Abinet", "country": "Argentina", "duration": 16,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Larga vida a Kong", "fecha": "2026-10-01", "hora": "18:00",
+      "director": "Varios directores", "country": "Argentina", "duration": 6,
+      "_directores": "Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin",
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Retruco", "fecha": "2026-10-01", "hora": "18:00",
+      "director": "Matías Iván Sisaric Moscarola", "country": "Argentina", "duration": 2,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Mover montañas", "fecha": "2026-10-01", "hora": "18:00",
+      "director": "Agustín Pereyra y Nicolás Talenton", "country": "Argentina", "duration": 8,
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -601,10 +631,24 @@
       "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 1", "fecha": "2026-10-01", "hora": "18:30",
-      "director": "Varios directores", "country": "Argentina", "duration": 60,
-      "cortos": ["48 – La muerta que habla", "Como las estrellas", "Escena final", "Mamita"],
-      "_directores": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani",
+      "_programa": "Cortos graduados DIS, programa 1 (4 cortos, 60')",
+      "cine": "Cacodelphia", "title": "48 – La muerta que habla", "fecha": "2026-10-01", "hora": "18:30",
+      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly", "country": "Argentina", "year": 2026, "duration": 20,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Como las estrellas", "fecha": "2026-10-01", "hora": "18:30",
+      "director": "Violeta Gillert y Constanza Browarski", "country": "Argentina", "duration": 13,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Escena final", "fecha": "2026-10-01", "hora": "18:30",
+      "director": "Diego Kompel", "country": "Argentina", "duration": 20,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Mamita", "fecha": "2026-10-01", "hora": "18:30",
+      "director": "Chiara Boiani", "country": "Argentina", "duration": 7,
       "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -668,10 +712,24 @@
       "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cine Cosmos", "title": "Cortometrajes graduados DIS – Programa 1", "fecha": "2026-10-02", "hora": "16:00",
-      "director": "Varios directores", "country": "Argentina", "duration": 60,
-      "cortos": ["48 – La muerta que habla", "Como las estrellas", "Escena final", "Mamita"],
-      "_directores": "Agustín Fittipaldi, Candela Gonzalez Kelly, Violeta Gillert y Constanza Browarski, Diego Kompel, Chiara Boiani",
+      "_programa": "Cortos graduados DIS, programa 2 (4 cortos, 60')",
+      "cine": "Cine Cosmos", "title": "48 – La muerta que habla", "fecha": "2026-10-02", "hora": "16:00",
+      "director": "Agustín Fittipaldi, Candela Gonzalez Kelly", "country": "Argentina", "year": 2026, "duration": 20,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Como las estrellas", "fecha": "2026-10-02", "hora": "16:00",
+      "director": "Violeta Gillert y Constanza Browarski", "country": "Argentina", "duration": 13,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Escena final", "fecha": "2026-10-02", "hora": "16:00",
+      "director": "Diego Kompel", "country": "Argentina", "duration": 20,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Mamita", "fecha": "2026-10-02", "hora": "16:00",
+      "director": "Chiara Boiani", "country": "Argentina", "duration": 7,
       "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -695,10 +753,42 @@
       "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cine Cosmos", "title": "Cortometrajes UBA – Programa 2", "fecha": "2026-10-02", "hora": "18:30",
-      "director": "Varios directores", "country": "Argentina", "duration": 70,
-      "cortos": ["Antes que desaparezca", "Azul", "Betty", "Condenados", "El deseo", "Tracción a sangre", "Ni una sola flor"],
-      "_directores": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
+      "_programa": "Cortos UBA, programa 2 (7 cortos, 70')",
+      "cine": "Cine Cosmos", "title": "Antes que desaparezca", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Varios directores", "country": "Argentina", "duration": 16,
+      "_directores": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter",
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Azul", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Varios directores", "country": "Argentina", "duration": 4,
+      "_directores": "Iara Moyano, Luciano Vera, Nicolas Bazan Povedano",
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Betty", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Oriana Carossa", "country": "Argentina", "duration": 4,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Condenados", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Segundo Pruden", "country": "Argentina", "duration": 20,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "El deseo", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Lucero Caneda y Malena Reynoso Fischer", "country": "Argentina", "duration": 9,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Tracción a sangre", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Agustín Rai y Oliverio Hamdan", "country": "Argentina", "duration": 4,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Ni una sola flor", "fecha": "2026-10-02", "hora": "18:30",
+      "director": "Varios directores", "country": "Argentina", "duration": 13,
+      "_directores": "Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -757,10 +847,42 @@
       "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 2", "fecha": "2026-10-03", "hora": "15:30",
-      "director": "Varios directores", "country": "Argentina", "duration": 70,
-      "cortos": ["Antes que desaparezca", "Azul", "Betty", "Condenados", "El deseo", "Tracción a sangre", "Ni una sola flor"],
-      "_directores": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter, Iara Moyano, Luciano Vera, Nicolas Bazan Povedano, Oriana Carossa, Segundo Pruden, Lucero Caneda y Malena Reynoso Fischer, Agustín Rai y Oliverio Hamdan, Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
+      "_programa": "Cortos UBA, programa 2 (7 cortos, 70')",
+      "cine": "Cacodelphia", "title": "Antes que desaparezca", "fecha": "2026-10-03", "hora": "15:30",
+      "director": "Varios directores", "country": "Argentina", "duration": 16,
+      "_directores": "Nina Turdó D'Antonio, Rita Braun, Catalina Gragero y Lucía Flechter",
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Azul", "fecha": "2026-10-03", "hora": "15:30",
+      "director": "Varios directores", "country": "Argentina", "duration": 4,
+      "_directores": "Iara Moyano, Luciano Vera, Nicolas Bazan Povedano",
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Betty", "fecha": "2026-10-03", "hora": "15:30",
+      "director": "Oriana Carossa", "country": "Argentina", "duration": 4,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Condenados", "fecha": "2026-10-03", "hora": "15:30",
+      "director": "Segundo Pruden", "country": "Argentina", "duration": 20,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "El deseo", "fecha": "2026-10-03", "hora": "15:30",
+      "director": "Lucero Caneda y Malena Reynoso Fischer", "country": "Argentina", "duration": 9,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Tracción a sangre", "fecha": "2026-10-03", "hora": "15:30",
+      "director": "Agustín Rai y Oliverio Hamdan", "country": "Argentina", "duration": 4,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Ni una sola flor", "fecha": "2026-10-03", "hora": "15:30",
+      "director": "Varios directores", "country": "Argentina", "duration": 13,
+      "_directores": "Amanda Arzeno, Ana Cura, Leticia Nuñez, Catalina Ochoa, Marianela Ochoa",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -794,10 +916,34 @@
       "ciclo": "FICUBA - Panorama internacional", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 3", "fecha": "2026-10-03", "hora": "18:15",
-      "director": "Varios directores", "country": "Argentina", "duration": 72,
-      "cortos": ["Mudarse es lo segundo peor que te puede pasar en la vida", "Operación 29", "Operación claridad", "Patricio Bisso", "Pim, pum, ¡pam!", "Un camión lleno de besos"],
-      "_directores": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano",
+      "_programa": "Cortos UBA, programa 3 (6 cortos, 72')",
+      "cine": "Cacodelphia", "title": "Mudarse es lo segundo peor que te puede pasar en la vida", "fecha": "2026-10-03", "hora": "18:15",
+      "director": "Felicitas Páez", "country": "Argentina", "duration": 18,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Operación 29", "fecha": "2026-10-03", "hora": "18:15",
+      "director": "Malena Caset y Matias Becerrica", "country": "Argentina", "duration": 5,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Operación claridad", "fecha": "2026-10-03", "hora": "18:15",
+      "director": "Tomas Agustín Diaz Cassone", "country": "Argentina", "duration": 19,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Patricio Bisso", "fecha": "2026-10-03", "hora": "18:15",
+      "director": "Raúl Emiliano González", "country": "Argentina", "duration": 9,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Pim, pum, ¡pam!", "fecha": "2026-10-03", "hora": "18:15",
+      "director": "Mora Albamonte", "country": "Argentina", "duration": 16,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Un camión lleno de besos", "fecha": "2026-10-03", "hora": "18:15",
+      "director": "Malena Arellano", "country": "Argentina", "duration": 5,
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -806,10 +952,29 @@
       "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 2", "fecha": "2026-10-03", "hora": "18:30",
-      "director": "Varios directores", "country": "Argentina", "duration": 68,
-      "cortos": ["Los deudos", "Maia: La unión de los mundos", "Patas arriba", "Sibilancias", "Línea de flotación"],
-      "_directores": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve",
+      "_programa": "Cortos graduados DIS, programa 3 (5 cortos, 68')",
+      "cine": "Cacodelphia", "title": "Los deudos", "fecha": "2026-10-03", "hora": "18:30",
+      "director": "Pablo Marino", "country": "Argentina", "duration": 20,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Maia: La unión de los mundos", "fecha": "2026-10-03", "hora": "18:30",
+      "director": "Tamia Berenice", "country": "Argentina", "duration": 11,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Patas arriba", "fecha": "2026-10-03", "hora": "18:30",
+      "director": "Paulina Jensen y Vanesa Martin", "country": "Argentina", "duration": 13,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Sibilancias", "fecha": "2026-10-03", "hora": "18:30",
+      "director": "Alejandro Giorlando", "country": "Argentina", "duration": 12,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Línea de flotación", "fecha": "2026-10-03", "hora": "18:30",
+      "director": "Lucila de Oto y Gastón Bonalve", "country": "Argentina", "duration": 12,
       "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -853,17 +1018,66 @@
       "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes graduados DIS – Programa 2", "fecha": "2026-10-04", "hora": "16:00",
-      "director": "Varios directores", "country": "Argentina", "duration": 68,
-      "cortos": ["Los deudos", "Maia: La unión de los mundos", "Patas arriba", "Sibilancias", "Línea de flotación"],
-      "_directores": "Pablo Marino, Tamia Berenice, Paulina Jensen y Vanesa Martin, Alejandro Giorlando, Lucila de Oto y Gastón Bonalve",
+      "_programa": "Cortos graduados DIS, programa 3 (5 cortos, 68')",
+      "cine": "Cacodelphia", "title": "Los deudos", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Pablo Marino", "country": "Argentina", "duration": 20,
       "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cine Cosmos", "title": "Cortometrajes UBA – Programa 1", "fecha": "2026-10-04", "hora": "16:00",
-      "director": "Varios directores", "country": "Argentina", "duration": 61,
-      "cortos": ["El último Turf", "La ciudad de colmenas", "La hora de la siesta", "Franca", "Larga vida a Kong", "Retruco", "Mover montañas"],
-      "_directores": "Felipe Benedetti, Olivia Maly, Almendra Groppo Trupia, Julia Vier Abinet, Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin, Matías Iván Sisaric Moscarola, Agustín Pereyra y Nicolás Talenton",
+      "cine": "Cacodelphia", "title": "Maia: La unión de los mundos", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Tamia Berenice", "country": "Argentina", "duration": 11,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Patas arriba", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Paulina Jensen y Vanesa Martin", "country": "Argentina", "duration": 13,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Sibilancias", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Alejandro Giorlando", "country": "Argentina", "duration": 12,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Línea de flotación", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Lucila de Oto y Gastón Bonalve", "country": "Argentina", "duration": 12,
+      "ciclo": "FICUBA - Competencia de cortometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "_programa": "Cortos UBA, programa 1 (7 cortos, 61')",
+      "cine": "Cine Cosmos", "title": "El último Turf", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Felipe Benedetti", "country": "Argentina", "duration": 18,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "La ciudad de colmenas", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Olivia Maly", "country": "Argentina", "duration": 5,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "La hora de la siesta", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Almendra Groppo Trupia", "country": "Argentina", "duration": 6,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Franca", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Julia Vier Abinet", "country": "Argentina", "duration": 16,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Larga vida a Kong", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Varios directores", "country": "Argentina", "duration": 6,
+      "_directores": "Lucía Napoli, Gaspar Merkin Saavedra, Lara Sirlin",
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Retruco", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Matías Iván Sisaric Moscarola", "country": "Argentina", "duration": 2,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Mover montañas", "fecha": "2026-10-04", "hora": "16:00",
+      "director": "Agustín Pereyra y Nicolás Talenton", "country": "Argentina", "duration": 8,
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -882,10 +1096,39 @@
       "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cine Cosmos", "title": "Cortometrajes iberoamericanos – Programa 1", "fecha": "2026-10-04", "hora": "18:30",
-      "director": "Varios directores", "country": "Argentina, Brasil, México, España, Cuba, Costa Rica", "duration": 62,
-      "cortos": ["101", "Abrir Um Cinema", "Carry On!", "Cucarachas", "Los caminos de María", "Si pudiese mataría a la nostalgia", "Todo es amor"],
-      "_directores": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA",
+      "_programa": "Cortos iberoamericanos, programa 1 (7 cortos, 62')",
+      "cine": "Cine Cosmos", "title": "101", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "Lara Luser y Santiago Crucitta", "country": "Argentina", "duration": 4,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Abrir Um Cinema", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "Lucas Lyrio", "country": "Brasil", "duration": 11,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Carry On!", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "Karla Isaura Velázquez Rocha", "country": "México", "duration": 8,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Cucarachas", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "Alma Prieto", "country": "España", "duration": 11,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Los caminos de María", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "Gabriel Coêlho", "country": "Cuba", "duration": 10,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Si pudiese mataría a la nostalgia", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "Diego Valverde León", "country": "Costa Rica", "duration": 6,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Todo es amor", "fecha": "2026-10-04", "hora": "18:30",
+      "director": "No docentes APUBA", "country": "Argentina", "duration": 12,
       "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -939,10 +1182,34 @@
       "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes UBA – Programa 3", "fecha": "2026-10-05", "hora": "15:30",
-      "director": "Varios directores", "country": "Argentina", "duration": 72,
-      "cortos": ["Mudarse es lo segundo peor que te puede pasar en la vida", "Operación 29", "Operación claridad", "Patricio Bisso", "Pim, pum, ¡pam!", "Un camión lleno de besos"],
-      "_directores": "Felicitas Páez, Malena Caset y Matias Becerrica, Tomas Agustín Diaz Cassone, Raúl Emiliano González, Mora Albamonte, Malena Arellano",
+      "_programa": "Cortos UBA, programa 3 (6 cortos, 72')",
+      "cine": "Cacodelphia", "title": "Mudarse es lo segundo peor que te puede pasar en la vida", "fecha": "2026-10-05", "hora": "15:30",
+      "director": "Felicitas Páez", "country": "Argentina", "duration": 18,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Operación 29", "fecha": "2026-10-05", "hora": "15:30",
+      "director": "Malena Caset y Matias Becerrica", "country": "Argentina", "duration": 5,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Operación claridad", "fecha": "2026-10-05", "hora": "15:30",
+      "director": "Tomas Agustín Diaz Cassone", "country": "Argentina", "duration": 19,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Patricio Bisso", "fecha": "2026-10-05", "hora": "15:30",
+      "director": "Raúl Emiliano González", "country": "Argentina", "duration": 9,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Pim, pum, ¡pam!", "fecha": "2026-10-05", "hora": "15:30",
+      "director": "Mora Albamonte", "country": "Argentina", "duration": 16,
+      "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Un camión lleno de besos", "fecha": "2026-10-05", "hora": "15:30",
+      "director": "Malena Arellano", "country": "Argentina", "duration": 5,
       "ciclo": "FICUBA - Competencia de cortometrajes UBA", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -956,10 +1223,39 @@
       "ciclo": "FICUBA - Homenaje Leos Carax", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes iberoamericanos – Programa 1", "fecha": "2026-10-05", "hora": "16:00",
-      "director": "Varios directores", "country": "Argentina, Brasil, México, España, Cuba, Costa Rica", "duration": 62,
-      "cortos": ["101", "Abrir Um Cinema", "Carry On!", "Cucarachas", "Los caminos de María", "Si pudiese mataría a la nostalgia", "Todo es amor"],
-      "_directores": "Lara Luser y Santiago Crucitta, Lucas Lyrio, Karla Isaura Velázquez Rocha, Alma Prieto, Gabriel Coêlho, Diego Valverde León, No docentes APUBA",
+      "_programa": "Cortos iberoamericanos, programa 1 (7 cortos, 62')",
+      "cine": "Cacodelphia", "title": "101", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "Lara Luser y Santiago Crucitta", "country": "Argentina", "duration": 4,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Abrir Um Cinema", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "Lucas Lyrio", "country": "Brasil", "duration": 11,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Carry On!", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "Karla Isaura Velázquez Rocha", "country": "México", "duration": 8,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Cucarachas", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "Alma Prieto", "country": "España", "duration": 11,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Los caminos de María", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "Gabriel Coêlho", "country": "Cuba", "duration": 10,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Si pudiese mataría a la nostalgia", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "Diego Valverde León", "country": "Costa Rica", "duration": 6,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Todo es amor", "fecha": "2026-10-05", "hora": "16:00",
+      "director": "No docentes APUBA", "country": "Argentina", "duration": 12,
       "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -983,10 +1279,39 @@
       "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes iberoamericanos – Programa 2", "fecha": "2026-10-05", "hora": "18:30",
-      "director": "Varios directores", "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España", "duration": 67,
-      "cortos": ["Decaer", "En los valles", "Just Thoughts", "Lo que fue nuestro hogar", "Puertas abiertas", "Quedamos así", "Una decisión difícil"],
-      "_directores": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros",
+      "_programa": "Cortos iberoamericanos, programa 2 (7 cortos, 67')",
+      "cine": "Cacodelphia", "title": "Decaer", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Juan Camilo González", "country": "Colombia", "duration": 7,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "En los valles", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Emanuel Alejandro Figueroa", "country": "Argentina", "duration": 9,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Just Thoughts", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Daniel Jacomee", "country": "Ecuador", "duration": 7,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Lo que fue nuestro hogar", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Angelo Lobos", "country": "Chile", "duration": 12,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Puertas abiertas", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Iván Bustinduy", "country": "Argentina", "duration": 9,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Quedamos así", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Elías De Martino", "country": "Uruguay", "duration": 12,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Una decisión difícil", "fecha": "2026-10-05", "hora": "18:30",
+      "director": "Laura Muñoz Ros", "country": "España", "duration": 11,
       "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -1000,9 +1325,34 @@
       "ciclo": "FICUBA - Competencia de largometrajes graduados DIS", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cacodelphia", "title": "Cortometrajes de Lucas Vignale", "fecha": "2026-10-05", "hora": "20:30",
-      "director": "Lucas Vignale", "country": "Argentina", "duration": 91,
-      "cortos": ["La pasión", "Diablo suelto", "Mi gran noche", "Ilusión Supersport", "La vuelta de Gaspi", "Camino a la velada"],
+      "_programa": "Cortometrajes de Lucas Vignale (6 cortos, 91')",
+      "cine": "Cacodelphia", "title": "La pasión", "fecha": "2026-10-05", "hora": "20:30",
+      "director": "Lucas Vignale", "country": "Argentina", "duration": 15,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Diablo suelto", "fecha": "2026-10-05", "hora": "20:30",
+      "director": "Lucas Vignale", "country": "Argentina", "duration": 4,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Mi gran noche", "fecha": "2026-10-05", "hora": "20:30",
+      "director": "Lucas Vignale", "country": "Argentina", "duration": 12,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Ilusión Supersport", "fecha": "2026-10-05", "hora": "20:30",
+      "director": "Lucas Vignale", "country": "Argentina", "duration": 14,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "La vuelta de Gaspi", "fecha": "2026-10-05", "hora": "20:30",
+      "director": "Lucas Vignale", "country": "Argentina", "duration": 16,
+      "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cacodelphia", "title": "Camino a la velada", "fecha": "2026-10-05", "hora": "20:30",
+      "director": "Lucas Vignale", "country": "Argentina", "duration": 30,
       "ciclo": "FICUBA - Proyecciones especiales", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
@@ -1056,10 +1406,39 @@
       "ciclo": "FICUBA - Competencia internacional de largometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {
-      "cine": "Cine Cosmos", "title": "Cortometrajes iberoamericanos – Programa 2", "fecha": "2026-10-06", "hora": "16:00",
-      "director": "Varios directores", "country": "Colombia, Argentina, Ecuador, Chile, Uruguay, España", "duration": 67,
-      "cortos": ["Decaer", "En los valles", "Just Thoughts", "Lo que fue nuestro hogar", "Puertas abiertas", "Quedamos así", "Una decisión difícil"],
-      "_directores": "Juan Camilo González, Emanuel Alejandro Figueroa, Daniel Jacomee, Angelo Lobos, Iván Bustinduy, Elías De Martino, Laura Muñoz Ros",
+      "_programa": "Cortos iberoamericanos, programa 2 (7 cortos, 67')",
+      "cine": "Cine Cosmos", "title": "Decaer", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Juan Camilo González", "country": "Colombia", "duration": 7,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "En los valles", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Emanuel Alejandro Figueroa", "country": "Argentina", "duration": 9,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Just Thoughts", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Daniel Jacomee", "country": "Ecuador", "duration": 7,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Lo que fue nuestro hogar", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Angelo Lobos", "country": "Chile", "duration": 12,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Puertas abiertas", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Iván Bustinduy", "country": "Argentina", "duration": 9,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Quedamos así", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Elías De Martino", "country": "Uruguay", "duration": 12,
+      "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
+    },
+    {
+      "cine": "Cine Cosmos", "title": "Una decisión difícil", "fecha": "2026-10-06", "hora": "16:00",
+      "director": "Laura Muñoz Ros", "country": "España", "duration": 11,
       "ciclo": "FICUBA - Competencia iberoamericana de cortometrajes", "ticket_url": "https://www.ficuba.com/es/programacion"
     },
     {

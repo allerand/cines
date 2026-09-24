@@ -8132,8 +8132,7 @@ def aplicar_festivales(screenings: list, data: Optional[dict] = None) -> tuple[l
         grilla = [m for m in data.get("screenings", []) if del_festival(m.get("ciclo", ""), fest)]
         titulos: dict[str, list[str]] = {}
         for m in grilla:
-            for t in [m.get("title", "")] + m.get("cortos", []):
-                titulos.setdefault(m["cine"], []).append(titulo_norm(t))
+            titulos.setdefault(m["cine"], []).append(titulo_norm(m.get("title", "")))
         reglas.append((fest, titulos,
                        {(m["cine"], m["fecha"], m["hora"]) for m in grilla},
                        {(m["cine"], m["title"], m["fecha"], m["hora"], m["ciclo"]) for m in grilla}))

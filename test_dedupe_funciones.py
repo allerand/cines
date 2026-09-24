@@ -101,9 +101,11 @@ GRILLA = {
     "screenings": [
         {"cine": "Cine Cosmos", "title": "La libertad doble", "fecha": "2026-10-02",
          "hora": "21:00", "ciclo": "FICUBA - Proyecciones especiales"},
-        {"cine": "Cine Cosmos", "title": "Cortometrajes UBA – Programa 1",
-         "fecha": "2026-10-04", "hora": "16:00", "ciclo": UBAC,
-         "cortos": ["El último Turf", "La hora de la siesta"]},
+        # Un programa de cortos: una fila por corto, a la hora del programa.
+        {"cine": "Cine Cosmos", "title": "El último Turf",
+         "fecha": "2026-10-04", "hora": "16:00", "ciclo": UBAC},
+        {"cine": "Cine Cosmos", "title": "La hora de la siesta",
+         "fecha": "2026-10-04", "hora": "16:00", "ciclo": UBAC},
         {"cine": "Sala Lugones", "title": "La hija cóndor", "fecha": "2026-10-01",
          "hora": "15:00", "ciclo": INTL},
         {"cine": "Sala Lugones", "title": "Imperium", "fecha": "2026-09-30",
