@@ -26,6 +26,7 @@ import html
 import json
 import re
 import sys
+import time
 import unicodedata
 import urllib.error
 import urllib.parse
@@ -50,8 +51,15 @@ def slug(t: str, apostrofo: str = "") -> str:
     return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
 
 
+PAUSA = 1.0
+
+
 def bajar(url: str) -> tuple[int, str, str]:
-    """(status, url final, texto de la página)."""
+    """(status, url final, texto de la página).
+
+    Con una pausa antes de cada pedido: la segunda corrida seguida contra
+    ficuba.com (unos 250 pedidos en diez minutos) volvió con 403 en todo."""
+    time.sleep(PAUSA)
     req = urllib.request.Request(url, headers={"User-Agent": UA})
     try:
         with urllib.request.urlopen(req, timeout=25) as r:
@@ -68,19 +76,28 @@ def texto(cuerpo: str) -> str:
     return norm(html.unescape(sin_tags))
 
 
-def es_la_pelicula(cuerpo: str, titulo: str, directores: str) -> bool:
-    """La página es la ficha de la película: el título en un encabezado, o el
-    apellido de alguno de sus directores en una página que no sea un listado.
+def fichas_linkeadas(cuerpo: str, url: str) -> int:
+    """A cuántas OTRAS películas linkea la página."""
+    propia = urllib.parse.urlparse(url).path.rstrip("/")
+    otras = {urllib.parse.urlparse(h).path.rstrip("/")
+             for h in re.findall(r'href="([^"]*/pelicula/[^"#?]+)', cuerpo)}
+    return len(otras - {propia})
 
-    Una ficha inexistente suele volver 200 igual (la plantilla vacía, la home o
-    el listado), así que el status solo no alcanza. Y un listado nombra todas
-    las películas: por eso el título tiene que estar en un encabezado y el
-    director no vale si la página linkea a muchas fichas."""
+
+def es_la_pelicula(cuerpo: str, titulo: str, directores: str, url: str = "") -> bool:
+    """La página es la ficha de la película: no es un listado, y nombra la
+    película (el título en un encabezado, o el apellido de un director).
+
+    Una ficha inexistente vuelve 200 igual, y en ficuba.com lo que vuelve es el
+    listado de la programación, que nombra a todas las películas de su página
+    con su título en un encabezado. La primera versión miraba el título antes
+    que el listado y aprobó cortometrajes-de-alice-guy, que no abre: por eso
+    el listado se descarta primero, con cualquier señal."""
+    if fichas_linkeadas(cuerpo, url) > 3:
+        return False
     encabezados = " ".join(re.findall(r"(?is)<h[1-4][^>]*>(.*?)</h[1-4]>", cuerpo))
     if norm(titulo) and f" {norm(titulo)} " in f" {texto(encabezados)} ":
         return True
-    if len(re.findall(r'href="[^"]*/pelicula/', cuerpo)) > 10:
-        return False
     t = f" {texto(cuerpo)} "
     for d in re.split(r",|\sy\s", directores or ""):
         apellido = norm(d).split(" ")[-1:]
@@ -134,12 +151,21 @@ def main() -> int:
 
     print(f"Verificando {len(pelis)} link(s)…\n")
     malos: dict[str, dict] = {}
+    rechazos = 0
     for url, p in pelis.items():
         status, final, cuerpo = bajar(url)
-        if status == 200 and final == url and es_la_pelicula(cuerpo, p["title"], p["directores"]):
+        # Si el sitio nos está bloqueando, seguir sólo alarga el bloqueo.
+        rechazos = rechazos + 1 if status in (403, 429) else 0
+        if rechazos >= 5:
+            print(f"\n⛔ {rechazos} rechazos seguidos (HTTP {status}): el sitio está bloqueando "
+                  f"al runner. Corta acá; probar más tarde.")
+            return 1
+        if status == 200 and final == url and es_la_pelicula(cuerpo, p["title"], p["directores"], url):
             print(f"✅ {url}")
             continue
-        print(f"❌ {url}  (HTTP {status}{', otra página' if status == 200 else ''}"
+        otras = fichas_linkeadas(cuerpo, url) if status == 200 else 0
+        print(f"❌ {url}  (HTTP {status}"
+              f"{f', otra página: linkea a {otras} películas' if status == 200 else ''}"
               f"{', redirige a ' + final if final != url else ''}) — {p['title']}")
         malos[url] = p
 
@@ -164,7 +190,7 @@ def main() -> int:
                        and any(t in s.replace("-", "") or s.replace("-", "") in t for t in pegados)]
         for c in candidatos:
             status, final, cuerpo = bajar(c)
-            if status == 200 and final == c and es_la_pelicula(cuerpo, p["title"], p["directores"]):
+            if status == 200 and final == c and es_la_pelicula(cuerpo, p["title"], p["directores"], c):
                 reemplazos[url] = c
                 break
         else:
