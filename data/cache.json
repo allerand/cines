@@ -12384,16 +12384,15 @@
     "duration": null
   },
   "terminator 2: el juicio final": {
-    "url": "",
-    "title_en": "Terminator 2: El juicio final",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "la única que se llama así es Terminator 2: Judgment Day (1991), y puede ser otra",
-    "fecha": "2026-09-24",
-    "con_duracion": false,
-    "desempate": ""
+    "url": "https://letterboxd.com/film/terminator-2-judgment-day/",
+    "title_en": "Terminator 2: Judgment Day",
+    "director": "James Cameron",
+    "country": "France, USA",
+    "year": 1991,
+    "duration": 137,
+    "genre": "Thriller, Acción",
+    "title_es": "Terminator 2: El juicio final",
+    "original_title": "Terminator 2: Judgment Day"
   },
   "la noche sin mí": {
     "url": "https://letterboxd.com/film/the-night-without-me/",
@@ -16377,7 +16376,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS WORLD TOUR [ARIRANG] in Busan (2026) sólo se le parece",
-    "fecha": "2026-09-21",
+    "fecha": "2026-09-25",
     "con_duracion": true,
     "desempate": ""
   },
@@ -17583,16 +17582,14 @@
     "sin_hints": "título"
   },
   "pedro en el país": {
-    "url": "https://letterboxd.com/film/pedro-en-el-pais/",
+    "url": "",
     "title_en": "Pedro en el país",
     "director": "María Alché, Benjamín Naishtat",
     "country": "Argentina, Mexico",
     "year": 2026,
     "duration": 61,
     "genre": "Documental",
-    "clase_titulo": "exacto",
-    "original_title": "Pedro en el país",
-    "sin_hints": "título"
+    "original_title": "Pedro en el país"
   },
   "4° fic.uba - festival internacional de cine de la uba": {
     "url": "",
@@ -17639,5 +17636,981 @@
     "title_es": "Verity. La sombra de un engaño",
     "original_title": "Verity",
     "sin_hints": "título"
+  },
+  "primavera temprana|1956": {
+    "url": "https://letterboxd.com/film/early-spring/",
+    "title_en": "Early Spring",
+    "director": "Yasujirō Ozu",
+    "country": "Japan",
+    "year": 1956,
+    "duration": 145,
+    "genre": "Drama, Romance",
+    "title_es": "Primavera precoz",
+    "original_title": "早春"
+  },
+  "la libertad doble": {
+    "url": "https://letterboxd.com/film/la-libertad-doble/",
+    "title_en": "Double Freedom",
+    "director": "Lisandro Alonso",
+    "country": "Chile, Argentina",
+    "year": 2026,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "La libertad doble"
+  },
+  "el sabor del sake|1962": {
+    "url": "https://letterboxd.com/film/an-autumn-afternoon/",
+    "title_en": "An Autumn Afternoon",
+    "director": "Yasujirō Ozu",
+    "country": "Japan",
+    "year": 1962,
+    "duration": 113,
+    "genre": "Drama",
+    "title_es": "El sabor del sake",
+    "original_title": "秋刀魚の味"
+  },
+  "todas las estrellas están muertas": {
+    "url": "https://letterboxd.com/film/todas-las-estrellas-estan-muertas/",
+    "title_en": "All The Stars Are Dead",
+    "director": "Gonzalo Moiguer, Rodrigo Melendez Aquino",
+    "country": "Argentina",
+    "year": null,
+    "duration": 93,
+    "genre": "Drama",
+    "original_title": "Todas Las Estrellas Están Muertas"
+  },
+  "museo de la noche": {
+    "url": "https://letterboxd.com/film/museo-de-la-noche/",
+    "title_en": "Museum of the Night",
+    "director": "Fermín Eloy Acosta",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 88,
+    "genre": "Documental",
+    "original_title": "Museo de la noche"
+  },
+  "muña muña": {
+    "url": "https://letterboxd.com/film/muna-muna/",
+    "title_en": "Blooming",
+    "director": "Paula Morel",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 71,
+    "genre": "Drama",
+    "original_title": "Muña Muña"
+  },
+  "el salto cuántico de las termitas": {
+    "url": "",
+    "title_en": "El salto cuántico de las termitas",
+    "director": "Paula Otero",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 62,
+    "genre": "Documental",
+    "original_title": "El salto cuántico de Las Termitas"
+  },
+  "el último turf": {
+    "url": "https://letterboxd.com/film/el-ultimo-turf/",
+    "title_en": "El Último Turf",
+    "director": "Felipe Benedetti",
+    "country": "",
+    "year": 2026,
+    "duration": 18,
+    "genre": "Comedia",
+    "original_title": "El Último Turf"
+  },
+  "la ciudad de colmenas": {
+    "url": "https://letterboxd.com/film/la-ciudad-de-colmenas/",
+    "title_en": "La ciudad de colmenas",
+    "director": "Olivia Maly",
+    "country": "",
+    "year": 2026,
+    "duration": 5,
+    "genre": "",
+    "original_title": "La ciudad de colmenas"
+  },
+  "la hora de la siesta": {
+    "url": "",
+    "title_en": "La hora de la siesta",
+    "director": "Almendra Groppo Trupia",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 6,
+    "genre": "Fantasía",
+    "original_title": "La hora de la siesta"
+  },
+  "franca": {
+    "url": "https://letterboxd.com/film/franca/",
+    "title_en": "Franca",
+    "director": "Julia Vier Abinet",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 16,
+    "genre": "",
+    "original_title": "Franca"
+  },
+  "larga vida a kong": {
+    "url": "",
+    "title_en": "Larga vida a Kong",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "retruco": {
+    "url": "",
+    "title_en": "Retruco",
+    "director": "Matías Sisaric",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 2,
+    "original_title": "Retruco"
+  },
+  "mover montañas": {
+    "url": "https://letterboxd.com/film/mover-montanas/",
+    "title_en": "Mover Montañas",
+    "director": "Agustin Pereyra, Nicolas Talentón",
+    "country": "",
+    "year": 2025,
+    "duration": 8,
+    "genre": "Documental, Drama",
+    "original_title": "Mover Montañas"
+  },
+  "la noche de la infancia": {
+    "url": "",
+    "title_en": "La noche de la infancia",
+    "director": "Xisi Sofia Ye Chen",
+    "country": "Spain, France",
+    "year": 2026,
+    "duration": 93,
+    "genre": "Documental",
+    "title_es": "La noche de la infancia",
+    "original_title": "La noche de la infancia"
+  },
+  "la libertad|2001": {
+    "url": "https://letterboxd.com/film/la-libertad/",
+    "title_en": "La libertad",
+    "director": "Lisandro Alonso",
+    "country": "Argentina",
+    "year": 2001,
+    "duration": 73,
+    "genre": "Drama",
+    "original_title": "La libertad"
+  },
+  "como las estrellas": {
+    "url": "https://letterboxd.com/film/como-las-estrellas/",
+    "title_en": "Como las estrellas",
+    "director": "Violeta Gillert, Constanza Browarski",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 12,
+    "genre": "",
+    "original_title": "Como las estrellas"
+  },
+  "escena final": {
+    "url": "https://letterboxd.com/film/escena-final/",
+    "title_en": "Final Scene",
+    "director": "Diego Kompel",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 20,
+    "genre": "",
+    "original_title": "Escena final"
+  },
+  "hierbas flotantes|1959": {
+    "url": "https://letterboxd.com/film/floating-weeds/",
+    "title_en": "Floating Weeds",
+    "director": "Yasujirō Ozu",
+    "country": "Japan",
+    "year": 1959,
+    "duration": 115,
+    "genre": "Drama",
+    "title_es": "La hierba errante",
+    "original_title": "浮草"
+  },
+  "under the turquoise sky": {
+    "url": "https://letterboxd.com/film/under-the-turquoise-sky/",
+    "title_en": "Under the Turquoise Sky",
+    "director": "Kentaro",
+    "country": "France, Japan",
+    "year": 2021,
+    "duration": 95,
+    "genre": "Drama",
+    "original_title": "ターコイズの空の下で"
+  },
+  "the edge of the blade|2023": {
+    "url": "https://letterboxd.com/film/une-affaire-dhonneur/",
+    "title_en": "The Edge of the Blade",
+    "director": "Vincent Perez",
+    "country": "France",
+    "year": 2023,
+    "duration": 101,
+    "genre": "Drama, Historia",
+    "title_es": "El profesor de esgrima",
+    "original_title": "Une affaire d'honneur"
+  },
+  "yo, la peor de todas|1990": {
+    "url": "https://letterboxd.com/film/i-the-worst-of-all/",
+    "title_en": "I, the Worst of All",
+    "director": "María Luisa Bemberg",
+    "country": "Argentina",
+    "year": 1990,
+    "duration": 105,
+    "genre": "Romance, Historia",
+    "original_title": "Yo, la peor de todas"
+  },
+  "bajo las banderas, el sol": {
+    "url": "https://letterboxd.com/film/bajo-las-banderas-el-sol/",
+    "title_en": "Under the Flags, the Sun",
+    "director": "Juanjo Pereira",
+    "country": "USA, Argentina",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "Bajo las banderas, el sol"
+  },
+  "la era de la cancelación": {
+    "url": "",
+    "title_en": "La era de la cancelación",
+    "director": "Martín Erhardt",
+    "country": "Argentina",
+    "year": null,
+    "duration": 65,
+    "genre": "Documental",
+    "original_title": "La era de la cancelación"
+  },
+  "lópez, el hombre que desapareció dos veces": {
+    "url": "https://letterboxd.com/film/lopez-el-hombre-que-desaparecio-dos-veces/",
+    "title_en": "López, el hombre que desapareció dos veces",
+    "director": "Jorge Leandro Colás",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 68,
+    "genre": "",
+    "original_title": "López, el hombre que desapareció dos veces"
+  },
+  "antes que desaparezca": {
+    "url": "",
+    "title_en": "Antes que desaparezca",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "azul": {
+    "url": "",
+    "title_en": "Azul",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "betty": {
+    "url": "",
+    "title_en": "Betty",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "condenados": {
+    "url": "",
+    "title_en": "Condenados",
+    "director": "Segundo Pruden",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "Terror, Thriller",
+    "original_title": "Condenados"
+  },
+  "el deseo": {
+    "url": "",
+    "title_en": "El deseo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tracción a sangre": {
+    "url": "",
+    "title_en": "Tracción a sangre",
+    "director": "Agustín RAI, Oliverio Hamdan",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 4,
+    "genre": "Documental",
+    "original_title": "Tracción a Sangre"
+  },
+  "ni una sola flor": {
+    "url": "",
+    "title_en": "Ni una sola flor",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "second skin": {
+    "url": "https://letterboxd.com/film/the-second-skin/",
+    "title_en": "The Second Skin",
+    "director": "Mariia Lapidus",
+    "country": "USA, Mexico",
+    "year": 2026,
+    "duration": 62,
+    "genre": "Documental"
+  },
+  "deux personnes échangeant de la salive|2024": {
+    "url": "https://letterboxd.com/film/deux-personnes-echangeant-de-la-salive/",
+    "title_en": "Two People Exchanging Saliva",
+    "director": "Alexandre Singh, Natalie Musteata",
+    "country": "France",
+    "year": 2024,
+    "duration": 36,
+    "genre": "Ciencia ficción, Fantasía",
+    "title_es": "Dos personas intercambiando saliva",
+    "original_title": "Deux personnes échangeant de la salive"
+  },
+  "les fiancées du sud": {
+    "url": "https://letterboxd.com/film/southern-brides/",
+    "title_en": "Southern Brides",
+    "director": "Elena López Riera",
+    "country": "Spain, Switzerland",
+    "year": 2024,
+    "duration": 39,
+    "genre": "Documental",
+    "original_title": "Las novias del sur"
+  },
+  "la carn": {
+    "url": "https://letterboxd.com/film/la-carn/",
+    "title_en": "La Carn",
+    "director": "Joan Porcel",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 83,
+    "genre": "Documental, Drama",
+    "original_title": "La Carn"
+  },
+  "el sabor del té verde con arroz|1952": {
+    "url": "https://letterboxd.com/film/the-flavor-of-green-tea-over-rice/",
+    "title_en": "The Flavor of Green Tea Over Rice",
+    "director": "Yasujirō Ozu",
+    "country": "Japan",
+    "year": 1952,
+    "duration": 116,
+    "genre": "Drama",
+    "title_es": "El sabor del té verde con arroz",
+    "original_title": "お茶漬けの味"
+  },
+  "oca": {
+    "url": "https://letterboxd.com/film/oca/",
+    "title_en": "Oca",
+    "director": "Karla Badillo",
+    "country": "Argentina, Mexico",
+    "year": 2025,
+    "duration": 109,
+    "genre": "Drama, Comedia",
+    "original_title": "Oca"
+  },
+  "operación 29": {
+    "url": "https://letterboxd.com/film/operacion-29/",
+    "title_en": "Operation 29",
+    "director": "Malena Caset, Matías Hernán Becerrica",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 5,
+    "genre": "",
+    "original_title": "Operación 29"
+  },
+  "patricio bisso": {
+    "url": "https://letterboxd.com/film/patricio-bisso/",
+    "title_en": "Patricio Bisso",
+    "director": "Raúl Emiliano González",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 9,
+    "genre": "Documental",
+    "original_title": "Patricio Bisso"
+  },
+  "pim, pum, ¡pam!": {
+    "url": "https://letterboxd.com/film/pim-pum-pam/",
+    "title_en": "PIM, PUM, ¡PAM!",
+    "director": "Mora Albamonte",
+    "country": "",
+    "year": 2026,
+    "duration": 16,
+    "genre": "Drama, Comedia",
+    "original_title": "PIM, PUM, ¡PAM!"
+  },
+  "un camión lleno de besos": {
+    "url": "https://letterboxd.com/film/un-camion-lleno-de-besos/",
+    "title_en": "A Truck Full of Kisses",
+    "director": "Malena Arellano",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 5,
+    "genre": "Documental",
+    "original_title": "Un camión lleno de besos"
+  },
+  "del otro lado del puente están las cosas que nunca dije": {
+    "url": "",
+    "title_en": "Del otro lado del puente están las cosas que nunca dije",
+    "director": "Anahí Giménez",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 78,
+    "genre": "Drama",
+    "original_title": "Del otro lado del puente están las cosas que nunca dije"
+  },
+  "los deudos": {
+    "url": "https://letterboxd.com/film/los-deudos/",
+    "title_en": "Los Deudos",
+    "director": "Pablo Alberto Marino",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 21,
+    "genre": "Comedia",
+    "original_title": "Los Deudos"
+  },
+  "maia: la unión de los mundos": {
+    "url": "https://letterboxd.com/film/maia-la-union-de-los-mundos/",
+    "title_en": "Maia: Threshold of Worlds",
+    "director": "Tamia Berenice",
+    "country": "Argentina, UK",
+    "year": 2026,
+    "duration": 10,
+    "genre": "Animación",
+    "original_title": "Maia: La unión de los mundos"
+  },
+  "patas arriba": {
+    "url": "https://letterboxd.com/film/patas-arriba/",
+    "title_en": "Upside Down",
+    "director": "Paulina Jensen, Vanesa Martin",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 13,
+    "genre": "Animación",
+    "original_title": "Patas arriba"
+  },
+  "sibilancias": {
+    "url": "https://letterboxd.com/film/sibilancias/",
+    "title_en": "Sibilancias",
+    "director": "Alejandro Giorlando",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Thriller",
+    "original_title": "Sibilancias"
+  },
+  "línea de flotación": {
+    "url": "https://letterboxd.com/film/linea-de-flotacion/",
+    "title_en": "Waterline",
+    "director": "Lucila de Oto, Gastón Bonalve",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 12,
+    "genre": "",
+    "original_title": "Línea de flotación"
+  },
+  "c'est pas moi|2024": {
+    "url": "https://letterboxd.com/film/its-not-me-2024/",
+    "title_en": "It's Not Me",
+    "director": "Leos Carax",
+    "country": "France",
+    "year": 2024,
+    "duration": 42,
+    "genre": "Drama, Documental",
+    "title_es": "It's Not Me",
+    "original_title": "C'est pas moi"
+  },
+  "boy meets girl|1984": {
+    "url": "https://letterboxd.com/film/boy-meets-girl/",
+    "title_en": "Boy Meets Girl",
+    "director": "Leos Carax",
+    "country": "France",
+    "year": 1984,
+    "duration": 104,
+    "genre": "Drama, Romance",
+    "title_es": "Chico conoce chica",
+    "original_title": "Boy Meets Girl"
+  },
+  "101": {
+    "url": "",
+    "title_en": "101",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "abrir um cinema": {
+    "url": "https://letterboxd.com/film/abrir-um-cinema/",
+    "title_en": "Abrir Um Cinema",
+    "director": "Lucas Lyrio",
+    "country": "",
+    "year": null,
+    "duration": 10,
+    "genre": "Documental",
+    "original_title": "Abrir Um Cinema"
+  },
+  "carry on!": {
+    "url": "",
+    "title_en": "Carry On!",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cucarachas": {
+    "url": "https://letterboxd.com/film/cucarachas/",
+    "title_en": "Cockroach",
+    "director": "Alma Prieto",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 12,
+    "genre": "",
+    "original_title": "Cucarachas"
+  },
+  "los caminos de maría": {
+    "url": "https://letterboxd.com/film/los-caminos-de-maria/",
+    "title_en": "The Paths of Maria",
+    "director": "Gabriel Coêlho",
+    "country": "Cuba",
+    "year": 2026,
+    "duration": 10,
+    "genre": "",
+    "original_title": "Los caminos de Maria"
+  },
+  "si pudiese mataría a la nostalgia": {
+    "url": "https://letterboxd.com/film/si-pudiese-mataria-a-la-nostalgia/",
+    "title_en": "If I Could, I'd Kill Nostalgia",
+    "director": "Diego Valverde León",
+    "country": "",
+    "year": 2026,
+    "duration": 6,
+    "genre": "",
+    "original_title": "Si pudiese, mataría a la nostalgia"
+  },
+  "todo es amor": {
+    "url": "",
+    "title_en": "Todo es amor",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los amantes del pont-neuf|1991": {
+    "url": "https://letterboxd.com/film/les-amants-du-pont-neuf/",
+    "title_en": "The Lovers on the Bridge",
+    "director": "Leos Carax",
+    "country": "France",
+    "year": 1991,
+    "duration": 126,
+    "genre": "Drama, Romance",
+    "title_es": "Los amantes del Pont-Neuf",
+    "original_title": "Les Amants du Pont-Neuf"
+  },
+  "shana": {
+    "url": "https://letterboxd.com/film/shana/",
+    "title_en": "Shana",
+    "director": "Lila Pinell",
+    "country": "France",
+    "year": 2026,
+    "duration": 83,
+    "genre": "Drama, Comedia",
+    "original_title": "Shana"
+  },
+  "the story of souleymane|2024": {
+    "url": "https://letterboxd.com/film/lhistoire-de-souleymane/",
+    "title_en": "Souleymane's Story",
+    "director": "Boris Lojkine",
+    "country": "France",
+    "year": 2024,
+    "duration": 94,
+    "genre": "Drama",
+    "title_es": "La historia de Souleymane",
+    "original_title": "L'Histoire de Souleymane"
+  },
+  "holy motors|2012": {
+    "url": "https://letterboxd.com/film/holy-motors/",
+    "title_en": "Holy Motors",
+    "director": "Leos Carax",
+    "country": "Germany, France",
+    "year": 2012,
+    "duration": 116,
+    "genre": "Drama, Fantasía",
+    "original_title": "Holy Motors"
+  },
+  "todo es cárcel": {
+    "url": "https://letterboxd.com/film/letters-from-an-inner-exile/",
+    "title_en": "Letters from an Inner Exile",
+    "director": "Eloy Enciso",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 109,
+    "genre": "",
+    "original_title": "Todo es cárcel"
+  },
+  "decaer": {
+    "url": "https://letterboxd.com/film/decaer/",
+    "title_en": "decay",
+    "director": "Juan Camilo González",
+    "country": "Colombia",
+    "year": 2026,
+    "duration": 7,
+    "genre": "Animación, Documental",
+    "original_title": "decaer"
+  },
+  "en los valles": {
+    "url": "https://letterboxd.com/film/en-los-valles/",
+    "title_en": "In the Valleys",
+    "director": "Emanuel Alejandro Figueroa",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 9,
+    "genre": "",
+    "original_title": "En los  valles"
+  },
+  "just thoughts": {
+    "url": "https://letterboxd.com/film/just-thoughts/",
+    "title_en": "Just Thoughts",
+    "director": "Daniel Jácome",
+    "country": "Ecuador",
+    "year": 2026,
+    "duration": 7,
+    "genre": "",
+    "original_title": "Just Thoughts"
+  },
+  "lo que fue nuestro hogar": {
+    "url": "https://letterboxd.com/film/lo-que-fue-nuestro-hogar/",
+    "title_en": "Lo que fue nuestro hogar",
+    "director": "Angelo Lobos",
+    "country": "Chile",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Drama",
+    "original_title": "Lo que fue nuestro hogar"
+  },
+  "puertas abiertas": {
+    "url": "",
+    "title_en": "Puertas abiertas",
+    "director": "Iván Bustinduy",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "Documental",
+    "title_es": "Open Doors",
+    "original_title": "Puertas abiertas"
+  },
+  "quedamos así": {
+    "url": "https://letterboxd.com/film/quedamos-asi/",
+    "title_en": "Quedamos Así",
+    "director": "Elías De Martino",
+    "country": "Uruguay",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Comedia, Drama",
+    "original_title": "Quedamos Así"
+  },
+  "una decisión difícil": {
+    "url": "",
+    "title_en": "Una decisión difícil",
+    "director": "Laura Muñoz",
+    "country": "Spain",
+    "year": 2026,
+    "duration": null,
+    "genre": "Drama, Fantasía",
+    "original_title": "Una decisión difícil"
+  },
+  "la pasión": {
+    "url": "",
+    "title_en": "La pasión",
+    "director": "Lorenzo Ferro, Lucas A. Vignale",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": null,
+    "genre": "Drama",
+    "original_title": "La pasión"
+  },
+  "diablo suelto": {
+    "url": "",
+    "title_en": "Diablo suelto",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mi gran noche": {
+    "url": "",
+    "title_en": "Mi gran noche",
+    "director": "Lorenzo Ferro, Lucas A. Vignale",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 12,
+    "original_title": "Mi gran noche"
+  },
+  "ilusión supersport": {
+    "url": "",
+    "title_en": "Ilusión Supersport",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la vuelta de gaspi": {
+    "url": "https://letterboxd.com/film/la-vuelta-de-gaspi/",
+    "title_en": "La vuelta de Gaspi",
+    "director": "Lucas A. Vignale, Gaspar \"Gaspi\" Prim Díaz",
+    "country": "Argentina",
+    "year": null,
+    "duration": 16,
+    "genre": "",
+    "original_title": "La vuelta de Gaspi"
+  },
+  "camino a la velada": {
+    "url": "",
+    "title_en": "Camino a la velada",
+    "director": "Lucas A. Vignale, Gaspar \"Gaspi\" Prim Díaz",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 11,
+    "original_title": "Camino a la velada"
+  },
+  "whispers in may": {
+    "url": "https://letterboxd.com/film/whispers-in-may/",
+    "title_en": "Whispers in May",
+    "director": "Chen Dongnan",
+    "country": "South Korea, Netherlands",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Documental",
+    "original_title": "春日幻游"
+  },
+  "buenos días|1959": {
+    "url": "https://letterboxd.com/film/ohayo/",
+    "title_en": "Good Morning",
+    "director": "Yasujirō Ozu",
+    "country": "Japan",
+    "year": 1959,
+    "duration": 94,
+    "genre": "Comedia, Familiar",
+    "title_es": "Buenos días",
+    "original_title": "お早よう"
+  },
+  "la niña santa|2004": {
+    "url": "https://letterboxd.com/film/the-holy-girl/",
+    "title_en": "The Holy Girl",
+    "director": "Lucrecia Martel",
+    "country": "Argentina, Italy",
+    "year": 2004,
+    "genre": "Drama",
+    "duration": 106
+  },
+  "yellow cake": {
+    "url": "https://letterboxd.com/film/yellow-cake-2026/",
+    "title_en": "Yellow Cake",
+    "director": "Tiago Melo",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Drama, Comedia",
+    "original_title": "Yellow Cake"
+  },
+  "vlasta, el recuerdo no es eterno": {
+    "url": "",
+    "title_en": "Vlasta, el recuerdo no es eterno",
+    "director": "Candela Vey, Tino Pereira",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 70,
+    "genre": "Documental",
+    "original_title": "Vlasta, el recuerdo no es eterno"
+  },
+  "apnées": {
+    "url": "https://letterboxd.com/film/apnees/",
+    "title_en": "Alarms",
+    "director": "Nicolas Panay",
+    "country": "France",
+    "year": 2024,
+    "duration": 17,
+    "genre": "Drama",
+    "original_title": "Apnées"
+  },
+  "montsouris park": {
+    "url": "https://letterboxd.com/film/montsouris-park/",
+    "title_en": "Montsouris Park",
+    "director": "Guil Sela",
+    "country": "France",
+    "year": 2024,
+    "duration": 14,
+    "genre": "Drama",
+    "original_title": "Montsouris"
+  },
+  "the great arc": {
+    "url": "https://letterboxd.com/film/the-great-arc/",
+    "title_en": "The Great Arc",
+    "director": "Camille Authouart",
+    "country": "France",
+    "year": 2023,
+    "duration": 12,
+    "genre": "Animación",
+    "original_title": "La Grande Arche"
+  },
+  "voces de libertad|2024": {
+    "url": "https://letterboxd.com/film/waves-2024-1/",
+    "title_en": "Waves",
+    "director": "Jiří Mádl",
+    "country": "Czechia, Slovakia",
+    "year": 2024,
+    "duration": 131,
+    "genre": "Historia, Thriller",
+    "title_es": "Voces de libertad",
+    "original_title": "Vlny"
+  },
+  "long good thursday|2024": {
+    "url": "https://letterboxd.com/film/long-good-thursday/",
+    "title_en": "Long Good Thursday",
+    "director": "Mika Kaurismäki",
+    "country": "Finland",
+    "year": 2024,
+    "duration": 97,
+    "genre": "Comedia, Drama",
+    "original_title": "Mielensäpahoittajan rakkaustarina"
+  },
+  "no hay fantasmas en la calle dobra|2025": {
+    "url": "",
+    "title_en": "No hay fantasmas en la calle Dobra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "smaragda|2024": {
+    "url": "https://letterboxd.com/film/smaragda-i-got-thick-skin-and-i-cant-jump/",
+    "title_en": "Smaragda - I Got Thick Skin and I Can't Jump",
+    "director": "Emilios Avraam",
+    "country": "Cyprus",
+    "year": 2024,
+    "duration": 99,
+    "genre": "Drama",
+    "original_title": "Σμαράγδα"
+  },
+  "cuatro madres|2024": {
+    "url": "https://letterboxd.com/film/four-mothers-2024/",
+    "title_en": "Four Mothers",
+    "director": "Darren Thornton",
+    "country": "Ireland",
+    "year": 2024,
+    "duration": 89,
+    "genre": "Comedia, Drama",
+    "title_es": "Cuatro madres",
+    "original_title": "Four Mothers"
+  },
+  "la gioia|2025": {
+    "url": "https://letterboxd.com/film/la-gioia/",
+    "title_en": "Gioia",
+    "director": "Nicolangelo Gelormini",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 108,
+    "genre": "Drama",
+    "original_title": "La gioia"
+  },
+  "la furia|2025": {
+    "url": "https://letterboxd.com/film/fury-2025/",
+    "title_en": "Fury",
+    "director": "Gemma Blasco",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 107,
+    "genre": "Drama",
+    "original_title": "La furia"
+  },
+  "gente oculta|2025": {
+    "url": "",
+    "title_en": "Gente oculta",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sin aire|2023": {
+    "url": "",
+    "title_en": "Sin aire",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "stelios|2024": {
+    "url": "https://letterboxd.com/film/stelios/",
+    "title_en": "Stelios",
+    "director": "Yorgos Tsemberopoulos",
+    "country": "Greece, Norway",
+    "year": 2024,
+    "duration": 132,
+    "genre": "Drama, Música",
+    "original_title": "Υπάρχω"
+  },
+  "jippie no more!|2023": {
+    "url": "https://letterboxd.com/film/jippie-no-more/",
+    "title_en": "Jippie No More!",
+    "director": "Margien Rogaar",
+    "country": "Netherlands",
+    "year": 2023,
+    "duration": 94,
+    "genre": "Comedia, Drama",
+    "original_title": "Jippie No More!"
+  },
+  "peacock|2024": {
+    "url": "https://letterboxd.com/film/peacock-2024/",
+    "title_en": "Peacock",
+    "director": "Bernhard Wenger",
+    "country": "Austria, Germany",
+    "year": 2024,
+    "duration": 102,
+    "genre": "Comedia",
+    "title_es": "Aquí un amigo",
+    "original_title": "Pfau - Bin ich echt?"
+  },
+  "picnic en hanging rock|1975": {
+    "url": "https://letterboxd.com/film/picnic-at-hanging-rock/",
+    "title_en": "Picnic at Hanging Rock",
+    "director": "Peter Weir",
+    "country": "Australia",
+    "year": 1975,
+    "duration": 107,
+    "genre": "Misterio, Drama",
+    "title_es": "Picnic en Hanging Rock",
+    "original_title": "Picnic at Hanging Rock"
+  },
+  "avengers: endgame bonus": {
+    "url": "https://letterboxd.com/film/avengers-endgame/",
+    "title_en": "Avengers: Endgame",
+    "director": "Anthony Russo, Joe Russo",
+    "country": "USA",
+    "year": 2019,
+    "duration": 181,
+    "genre": "Ciencia ficción, Acción",
+    "clase_titulo": "exacto",
+    "title_es": "Vengadores: Endgame",
+    "original_title": "Avengers: Endgame",
+    "sin_hints": "título"
+  },
+  "avengers: endgame bonus - infinity vision": {
+    "url": "",
+    "title_en": "Avengers: Endgame Bonus - Infinity Vision",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el tren fluvial|2026": {
+    "url": "https://letterboxd.com/film/el-tren-fluvial/",
+    "title_en": "The River Train",
+    "director": "Lorenzo Ferro, Lucas A. Vignale",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 75,
+    "genre": "Drama, Fantasía",
+    "clase_titulo": "exacto",
+    "original_title": "El Tren Fluvial"
   }
 }
