@@ -16861,7 +16861,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 110 min: Rammstein - Live in Mexico City (2026, 148 min)",
-    "fecha": "2026-09-22",
+    "fecha": "2026-09-26",
     "con_duracion": true,
     "desempate": ""
   },
@@ -18533,7 +18533,7 @@
   },
   "sin aire|2023": {
     "url": "",
-    "title_en": "Sin aire",
+    "title_en": "SIN AIRE",
     "director": "",
     "country": "",
     "year": null,
@@ -18612,5 +18612,424 @@
     "genre": "Drama, Fantasía",
     "clase_titulo": "exacto",
     "original_title": "El Tren Fluvial"
+  },
+  "la trampa|1949": {
+    "url": "https://letterboxd.com/film/la-trampa/",
+    "title_en": "La trampa",
+    "director": "Carlos Hugo Christensen",
+    "country": "Argentina",
+    "year": 1949,
+    "duration": 84,
+    "genre": "Romance, Misterio",
+    "original_title": "La trampa"
+  },
+  "una canta, la otra no|1977": {
+    "url": "https://letterboxd.com/film/lune-chante-lautre-pas/",
+    "title_en": "One Sings, the Other Doesn't",
+    "director": "Agnès Varda",
+    "country": "Belgium, France",
+    "year": 1977,
+    "duration": 122,
+    "title_es": "Una canta, la otra no",
+    "original_title": "L'une chante, l'autre pas",
+    "genre": "Música, Drama"
+  },
+  "la forma del agua|2017": {
+    "url": "https://letterboxd.com/film/the-shape-of-water/",
+    "title_en": "The Shape of Water",
+    "director": "Guillermo del Toro",
+    "country": "USA",
+    "year": 2017,
+    "duration": 123,
+    "genre": "Fantasía, Drama",
+    "title_es": "La forma del agua",
+    "original_title": "The Shape of Water"
+  },
+  "india song|1975": {
+    "url": "",
+    "title_en": "INDIA SONG",
+    "director": "Marguerite Duras",
+    "country": "France",
+    "year": 1975,
+    "duration": 115,
+    "genre": "Drama, Romance",
+    "original_title": "India Song"
+  },
+  "la ceremonia|1995": {
+    "url": "https://letterboxd.com/film/la-ceremonie/",
+    "title_en": "La Cérémonie",
+    "director": "Claude Chabrol",
+    "country": "France, Germany",
+    "year": 1995,
+    "duration": 112,
+    "genre": "Thriller, Drama",
+    "title_es": "La ceremonia",
+    "original_title": "La Cérémonie"
+  },
+  "el bello sergio|1958": {
+    "url": "",
+    "title_en": "EL BELLO SERGIO",
+    "director": "Claude Chabrol",
+    "country": "France",
+    "year": 1959,
+    "duration": 98,
+    "genre": "Drama",
+    "title_es": "El bello Sergio",
+    "original_title": "Le Beau Serge"
+  },
+  "la mujer del río|2025": {
+    "url": "https://letterboxd.com/film/la-mujer-del-rio/",
+    "title_en": "The Woman of the River",
+    "director": "Néstor Mazzini",
+    "country": "Argentina, Uruguay",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Thriller, Drama",
+    "original_title": "La mujer del río"
+  },
+  "václav havel, castillo de praga|2009": {
+    "url": "",
+    "title_en": "VÁCLAV HAVEL, CASTILLO DE PRAGA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "que la bestia muera|1969": {
+    "url": "https://letterboxd.com/film/this-man-must-die/",
+    "title_en": "This Man Must Die",
+    "director": "Claude Chabrol",
+    "country": "France, Italy",
+    "year": 1969,
+    "duration": 113,
+    "genre": "Crimen, Drama",
+    "title_es": "Accidente sin huella",
+    "original_title": "Que la bête meure"
+  },
+  "la mujer infiel|1969": {
+    "url": "https://letterboxd.com/film/the-unfaithful-wife/",
+    "title_en": "The Unfaithful Wife",
+    "director": "Claude Chabrol",
+    "country": "France, Italy",
+    "year": 1969,
+    "duration": 94,
+    "genre": "Drama, Crimen",
+    "title_es": "La mujer infiel",
+    "original_title": "La Femme infidèle"
+  },
+  "ainda - himnos nacionales vol.1|2026": {
+    "url": "",
+    "title_en": "AINDA - HIMNOS NACIONALES VOL.1",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sara facio, haber estado ahí|2024": {
+    "url": "https://letterboxd.com/film/sara-facio-having-been-there/",
+    "title_en": "Sara Facio: Having Been There",
+    "director": "Cinthia Rajschmir",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 70,
+    "genre": "Documental",
+    "original_title": "Sara Facio: Haber estado ahí"
+  },
+  "comer cuenta|2019": {
+    "url": "",
+    "title_en": "COMER CUENTA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "una luz en la ventana|1942": {
+    "url": "https://letterboxd.com/film/una-luz-en-la-ventana/",
+    "title_en": "A Light in the Window",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1942,
+    "duration": 72,
+    "genre": "Thriller, Terror",
+    "original_title": "Una luz en la ventana"
+  },
+  "misterioso asesinato en la montaña|2024": {
+    "url": "https://letterboxd.com/film/how-to-make-a-killing/",
+    "title_en": "How to Make a Killing",
+    "director": "Franck Dubosc",
+    "country": "France",
+    "year": 2024,
+    "duration": 113,
+    "genre": "Crimen, Comedia",
+    "title_es": "Misterioso asesinato en la montaña",
+    "original_title": "Un ours dans le Jura"
+  },
+  "weser|2025": {
+    "url": "https://letterboxd.com/film/weser/",
+    "title_en": "Weser",
+    "director": "Fernando Spiner",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 85,
+    "genre": "Drama, Documental",
+    "original_title": "Weser"
+  },
+  "las brujas|1991": {
+    "url": "https://letterboxd.com/film/the-witches/",
+    "title_en": "The Witches",
+    "director": "Nicolas Roeg",
+    "country": "UK, USA",
+    "year": 1990,
+    "duration": 91,
+    "genre": "Terror, Familiar",
+    "title_es": "La maldición de las brujas",
+    "original_title": "The Witches"
+  },
+  "tierra citrus|2025": {
+    "url": "https://letterboxd.com/film/tierra-citrus/",
+    "title_en": "Tierra Citrus",
+    "director": "Ayelén Agüero",
+    "country": "",
+    "year": 2025,
+    "duration": 65,
+    "genre": "",
+    "original_title": "Tierra Citrus"
+  },
+  "siete días|2024": {
+    "url": "",
+    "title_en": "SIETE DÍAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "critters|1986": {
+    "url": "https://letterboxd.com/film/critters/",
+    "title_en": "Critters",
+    "director": "Stephen Herek",
+    "country": "UK, USA",
+    "year": 1986,
+    "duration": 86,
+    "genre": "Comedia, Ciencia ficción",
+    "title_es": "Critters: Extrañas criaturas",
+    "original_title": "Critters"
+  },
+  "la memoria del perfume de las cosas|2025": {
+    "url": "",
+    "title_en": "LA MEMORIA DEL PERFUME DE LAS COSAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "dražen|2024": {
+    "url": "https://letterboxd.com/film/drazen/",
+    "title_en": "Drazen",
+    "director": "Danilo Šerbedžija",
+    "country": "Croatia, USA",
+    "year": 2024,
+    "duration": 100,
+    "genre": "Historia, Drama",
+    "title_es": "Drazen",
+    "original_title": "Dražen"
+  },
+  "el enigma de otro mundo|1982": {
+    "url": "https://letterboxd.com/film/the-thing/",
+    "title_en": "The Thing",
+    "director": "John Carpenter",
+    "country": "USA",
+    "year": 1982,
+    "duration": 109,
+    "genre": "Misterio, Ciencia ficción",
+    "title_es": "La cosa (El enigma de otro mundo)",
+    "original_title": "The Thing"
+  },
+  "el cadáver de la novia|2005": {
+    "url": "https://letterboxd.com/film/corpse-bride/",
+    "title_en": "Corpse Bride",
+    "director": "Tim Burton, Mike Johnson",
+    "country": "UK, USA",
+    "year": 2005,
+    "duration": 77,
+    "genre": "Fantasía, Animación",
+    "title_es": "La novia cadáver",
+    "original_title": "Corpse Bride"
+  },
+  "vicente lópez en pantalla: programa de cortos|2025": {
+    "url": "",
+    "title_en": "VICENTE LÓPEZ EN PANTALLA: PROGRAMA DE CORTOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "bastardos sin gloria|2009": {
+    "url": "https://letterboxd.com/film/inglourious-basterds/",
+    "title_en": "Inglourious Basterds",
+    "director": "Quentin Tarantino",
+    "country": "Germany, USA",
+    "year": 2009,
+    "duration": 153,
+    "genre": "Bélica, Drama",
+    "title_es": "Malditos bastardos",
+    "original_title": "Inglourious Basterds"
+  },
+  "depredador|1987": {
+    "url": "https://letterboxd.com/film/predator/",
+    "title_en": "Predator",
+    "director": "John McTiernan",
+    "country": "USA",
+    "year": 1987,
+    "duration": 107,
+    "genre": "Thriller, Aventura",
+    "title_es": "Depredador",
+    "original_title": "Predator"
+  },
+  "octubre 23, una historia de estudiantes secundarios|2018": {
+    "url": "",
+    "title_en": "OCTUBRE 23, UNA HISTORIA DE ESTUDIANTES SECUNDARIOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the rocky horror picture show|1975": {
+    "url": "https://letterboxd.com/film/the-rocky-horror-picture-show/",
+    "title_en": "The Rocky Horror Picture Show",
+    "director": "Jim Sharman",
+    "country": "UK, USA",
+    "year": 1975,
+    "duration": 100,
+    "genre": "Terror, Comedia",
+    "title_es": "El Show de Terror de Rocky",
+    "original_title": "The Rocky Horror Picture Show"
+  },
+  "la hora del espanto|1985": {
+    "url": "https://letterboxd.com/film/fright-night/",
+    "title_en": "Fright Night",
+    "director": "Tom Holland",
+    "country": "USA",
+    "year": 1985,
+    "duration": 107,
+    "genre": "Comedia, Terror",
+    "title_es": "Noche de miedo",
+    "original_title": "Fright Night"
+  },
+  "pesadilla en lo profundo de la noche 3: guerreros del sueño|1987": {
+    "url": "https://letterboxd.com/film/a-nightmare-on-elm-street-3-dream-warriors/",
+    "title_en": "A Nightmare on Elm Street 3: Dream Warriors",
+    "director": "Chuck Russell",
+    "country": "USA",
+    "year": 1987,
+    "duration": 96,
+    "genre": "Thriller, Fantasía",
+    "title_es": "Pesadilla en Elm Street 3: Los guerreros del sueño",
+    "original_title": "A Nightmare on Elm Street 3: Dream Warriors"
+  },
+  "el extraño mundo de jack|1993": {
+    "url": "https://letterboxd.com/film/the-nightmare-before-christmas/",
+    "title_en": "The Nightmare Before Christmas",
+    "director": "Henry Selick",
+    "country": "USA",
+    "year": 1993,
+    "duration": 76,
+    "genre": "Familiar, Animación",
+    "title_es": "Pesadilla antes de Navidad",
+    "original_title": "The Nightmare Before Christmas"
+  },
+  "vampiros en 35 mm|1998": {
+    "url": "",
+    "title_en": "VAMPIROS EN 35 MM",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "franz|2025": {
+    "url": "https://letterboxd.com/film/franz-2025/",
+    "title_en": "Franz",
+    "director": "Agnieszka Holland",
+    "country": "Czechia, Poland",
+    "year": 2025,
+    "duration": 127,
+    "genre": "Drama, Historia",
+    "title_es": "Franz Kafka",
+    "original_title": "Franz"
+  },
+  "drácula, de bram stoker|1992": {
+    "url": "https://letterboxd.com/film/bram-stokers-dracula/",
+    "title_en": "Bram Stoker's Dracula",
+    "director": "Francis Ford Coppola",
+    "country": "USA",
+    "year": 1992,
+    "duration": 128,
+    "genre": "Terror, Romance",
+    "title_es": "Drácula de Bram Stoker",
+    "original_title": "Bram Stoker's Dracula"
+  },
+  "el llanto|2024": {
+    "url": "https://letterboxd.com/film/the-wailing-2024/",
+    "title_en": "The Wailing",
+    "director": "Pedro Martín Calero",
+    "country": "Argentina, France",
+    "year": 2024,
+    "duration": 107,
+    "genre": "Terror",
+    "original_title": "El llanto"
+  },
+  "¿qué clase de joven le abre la puerta a un vampiro?|2024": {
+    "url": "",
+    "title_en": "¿QUÉ CLASE DE JOVEN LE ABRE LA PUERTA A UN VAMPIRO?",
+    "director": "Boom Boom Kid, Green Martino",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 115,
+    "original_title": "¿Qué clase de joven le abre la puerta a un vampiro?"
+  },
+  "muere, monstruo, muere|2018": {
+    "url": "https://letterboxd.com/film/murder-me-monster/",
+    "title_en": "Murder Me, Monster",
+    "director": "Alejandro Fadel",
+    "country": "Argentina, Chile",
+    "year": 2018,
+    "duration": 109,
+    "genre": "Thriller, Drama",
+    "original_title": "Muere, monstruo, muere"
+  },
+  "nosferatu musicalizada por el juego infinito|1922": {
+    "url": "",
+    "title_en": "NOSFERATU MUSICALIZADA POR EL JUEGO INFINITO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el exorcista en 35 mm|1973": {
+    "url": "",
+    "title_en": "EL EXORCISTA EN 35 MM",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los locos adams|1991": {
+    "url": "https://letterboxd.com/film/the-addams-family/",
+    "title_en": "The Addams Family",
+    "director": "Barry Sonnenfeld",
+    "country": "USA",
+    "year": 1991,
+    "duration": 100,
+    "genre": "Comedia, Fantasía",
+    "title_es": "La familia Addams",
+    "original_title": "The Addams Family"
+  },
+  "érase una vez en holywood|2019": {
+    "url": "https://letterboxd.com/film/once-upon-a-time-in-hollywood/",
+    "title_en": "Once Upon a Time... in Hollywood",
+    "director": "Quentin Tarantino",
+    "country": "China, UK",
+    "year": 2019,
+    "duration": 162,
+    "genre": "Thriller, Drama"
   }
 }
