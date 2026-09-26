@@ -18322,7 +18322,7 @@
   "la pasión": {
     "url": "",
     "title_en": "La pasión",
-    "director": "Lorenzo Ferro, Lucas A. Vignale",
+    "director": "Lucas A. Vignale, Lorenzo Ferro",
     "country": "Argentina",
     "year": 2024,
     "duration": null,
@@ -19031,5 +19031,15 @@
     "year": 2019,
     "duration": 162,
     "genre": "Thriller, Drama"
+  },
+  "ku handza": {
+    "url": "https://letterboxd.com/film/ku-handza/",
+    "title_en": "Ku Handza",
+    "director": "André Guiomar",
+    "country": "Portugal",
+    "year": 2025,
+    "duration": 75,
+    "genre": "Documental",
+    "original_title": "Ku Handza"
   }
 }
