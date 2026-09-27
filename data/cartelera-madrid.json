@@ -1,13 +1,14 @@
 {
-  "updated": "2026-09-27T01:49:31",
+  "updated": "2026-09-27T09:44:49",
   "fuentes": {
     "Cine Doré": {
       "scrapeadas": 7,
       "publicadas": 7
     },
     "Cines Ideal": {
-      "scrapeadas": 201,
-      "publicadas": 201
+      "scrapeadas": 0,
+      "publicadas": 201,
+      "fuente_caida": "yelmocines.es no devolvió la cartelera (¿Cloudflare?)"
     }
   },
   "screenings": [
