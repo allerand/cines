@@ -67,8 +67,8 @@
       "publicadas": 41
     },
     "Cineclub Farus": {
-      "scrapeadas": 1,
-      "publicadas": 1
+      "scrapeadas": 12,
+      "publicadas": 12
     },
     "Cinemark Caballito": {
       "scrapeadas": 171,
@@ -31557,6 +31557,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-04",
+      "hora": "19:00",
+      "title_es": "Batman",
+      "title_en": "Batman",
+      "original_title": "",
+      "director": "Tim Burton",
+      "country": "Estados Unidos",
+      "year": 1989,
+      "duration": 126,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/batman-1989/",
+      "ticket_url": "https://centralticket.net/event/10737",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-04",
       "hora": "19:30",
@@ -31939,6 +31955,22 @@
       "letterboxd": "https://letterboxd.com/film/les-roches-rouges/",
       "ticket_url": "https://www.ficuba.com/es/pelicula/red-rocks",
       "ciclo": "FICUBA - Panorama internacional"
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-04",
+      "hora": "21:30",
+      "title_es": "The Matrix",
+      "title_en": "The Matrix",
+      "original_title": "",
+      "director": "Lana Wachowski, Lilly Wachowski",
+      "country": "Estados Unidos",
+      "year": 1999,
+      "duration": 136,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-matrix/",
+      "ticket_url": "https://centralticket.net/event/10737",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -36533,6 +36565,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-07",
+      "hora": "20:00",
+      "title_es": "Eyes Wide Shut",
+      "title_en": "Eyes Wide Shut",
+      "original_title": "",
+      "director": "Stanley Kubrick",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 1999,
+      "duration": 159,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/eyes-wide-shut/",
+      "ticket_url": "https://centralticket.net/event/10738",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-07",
       "hora": "20:10",
@@ -37749,6 +37797,22 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-12",
+      "hora": "18:30",
+      "title_es": "Star Wars: Episode V",
+      "title_en": "The Empire Strikes Back",
+      "original_title": "",
+      "director": "Irvin Kershner",
+      "country": "Estados Unidos",
+      "year": 1980,
+      "duration": 124,
+      "genre": "Ciencia ficción, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-empire-strikes-back/",
+      "ticket_url": "https://centralticket.net/event/10739",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-12",
       "hora": "20:00",
@@ -37826,6 +37890,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://multiplex.com.ar/peliculas/queen-budapest/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-12",
+      "hora": "21:00",
+      "title_es": "There Will Be Blood",
+      "title_en": "There Will Be Blood",
+      "original_title": "",
+      "director": "Paul Thomas Anderson",
+      "country": "Estados Unidos",
+      "year": 2007,
+      "duration": 158,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/there-will-be-blood/",
+      "ticket_url": "https://centralticket.net/event/10739",
       "ciclo": ""
     },
     {
@@ -38325,6 +38405,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-18",
+      "hora": "19:00",
+      "title_es": "Annie Hall",
+      "title_en": "Annie Hall",
+      "original_title": "",
+      "director": "Woody Allen",
+      "country": "Estados Unidos",
+      "year": 1977,
+      "duration": 93,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/annie-hall/",
+      "ticket_url": "https://centralticket.net/event/10742",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-18",
+      "hora": "21:00",
+      "title_es": "In The Mood For Love",
+      "title_en": "In the Mood for Love",
+      "original_title": "",
+      "director": "Wong Kar-Wai",
+      "country": "Hong Kong, Francia",
+      "year": 2000,
+      "duration": 99,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/in-the-mood-for-love/",
+      "ticket_url": "https://centralticket.net/event/10742",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-21",
       "hora": "19:00",
@@ -38338,6 +38450,38 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/591",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-21",
+      "hora": "20:00",
+      "title_es": "Stand By Me",
+      "title_en": "Stand by Me",
+      "original_title": "",
+      "director": "Rob Reiner",
+      "country": "Estados Unidos",
+      "year": 1986,
+      "duration": 89,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/stand-by-me/",
+      "ticket_url": "https://centralticket.net/event/10741",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-21",
+      "hora": "22:00",
+      "title_es": "12 Angry Men",
+      "title_en": "12 Angry Men",
+      "original_title": "",
+      "director": "Sidney Lumet",
+      "country": "Estados Unidos",
+      "year": 1957,
+      "duration": 97,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/12-angry-men/",
+      "ticket_url": "https://centralticket.net/event/10741",
       "ciclo": ""
     },
     {
@@ -38690,6 +38834,38 @@
       "genre": "Terror, Romance",
       "letterboxd": "https://letterboxd.com/film/bram-stokers-dracula/",
       "ticket_url": "https://lumiton.ar/evento/dracula-de-bram-stoker/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-28",
+      "hora": "20:00",
+      "title_es": "Evil Dead",
+      "title_en": "The Evil Dead",
+      "original_title": "",
+      "director": "Sam Raimi",
+      "country": "Estados Unidos",
+      "year": 1981,
+      "duration": 85,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/the-evil-dead/",
+      "ticket_url": "https://centralticket.net/event/10743",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-10-28",
+      "hora": "21:40",
+      "title_es": "La Masacre De Texas",
+      "title_en": "The Texas Chain Saw Massacre",
+      "original_title": "",
+      "director": "Tobe Hooper",
+      "country": "Estados Unidos",
+      "year": 1974,
+      "duration": 83,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/the-texas-chain-saw-massacre/",
+      "ticket_url": "https://centralticket.net/event/10743",
       "ciclo": ""
     },
     {
