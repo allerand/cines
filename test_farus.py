@@ -53,6 +53,18 @@ assert [(s.fecha, s.hora) for s in fs] == [("2026-09-18", "21:00")], fs
 print("✓ la fecha sale en hora de Buenos Aires (Rosemary's Baby, viernes 18)")
 
 
+assert _farus_funcion("Batman 7 PM + CONSUMICIÓN") == ("Batman", "19:00")
+assert _farus_funcion("Star Wars: Episode V 6.30PM + CONSUMICIÓN") == ("Star Wars: Episode V", "18:30")
+assert _farus_funcion("La Masacre De Texas 9.40PM + CONSUMICIÓN") == ("La Masacre De Texas", "21:40")
+assert _farus_funcion("12 Angry Men 10PM + CONSUMICIÓN") == ("12 Angry Men", "22:00")
+print("✓ entradas de octubre: '7 PM', '6.30PM', '9.40PM', y un título que empieza con número")
+
+# La combinada ahora separa con "|" en vez de "/".
+assert _farus_funcion("Batman | The Matrix  + 2 CONSUMICIONES") is None
+assert _farus_funcion("Evil Dead | La Masacre de Texas  (8PM)  + 2 CONSUMICIONES") is None
+print("✓ la combinada de la doble función, separe con / o con |, no es una función")
+
+
 # --- Descubrimiento por la búsqueda ------------------------------------------
 BUSQUEDA = """
 <a href="/event/cineclubfarusdoblefuncion2">Cineclub Farus - Doble Función</a>
@@ -68,7 +80,27 @@ EVENTOS = {
 }
 
 
+TAPLINK = """
+{"options":{"title":"4/10 BATMAN | THE MATRIX","value":"https://centralticket.net/10737?refer=2504"}},
+{"options":{"title":"18/9 - Rosemary's Baby","value":"https://centralticket.net/10409?refer=2504"}},
+{"options":{"title":"Seguinos","value":"https://instagram.com/cineclubfarus"}}
+"""
+EVENTOS["10737"] = {"name": "Cineclub Farus - Doble Función", "groupId": 2025,
+                    "date": "2026-10-04T22:00:00.000Z",
+                    "items": [{"name": "Batman 7 PM + CONSUMICIÓN"},
+                              {"name": "The Matrix 9.30 PM + CONSUMICIÓN"},
+                              {"name": "Batman | The Matrix  + 2 CONSUMICIONES"}]}
+EVENTOS["10409"] = rosemary
+# Un evento ajeno linkeado desde el taplink no entra.
+EVENTOS["99999"] = {"name": "Fiesta de otra productora", "groupId": 7,
+                    "date": "2026-10-05T03:00:00.000Z", "items": [{"name": "PISTA 1 AM"}]}
+
+taplink_vacio = False
+
+
 def fetch_falso(url, *a, **k):
+    if url == scraper.FARUS_TAPLINK:
+        return b"" if taplink_vacio else TAPLINK.encode()
     if url == scraper.FARUS_BUSQUEDA:
         return BUSQUEDA.encode()
     slug = url.rsplit("/", 1)[-1]
@@ -87,9 +119,20 @@ scraper.date = HoyFijo
 fs = scraper.scrape_farus(9)
 assert sorted((s.fecha, s.hora, s.title) for s in fs) == [
     ("2026-09-18", "21:00", "ROSEMARY'S BABY"),
+    ("2026-10-04", "19:00", "Batman"),
+    ("2026-10-04", "21:30", "The Matrix"),
+], fs
+print("✓ taplink: los eventos que linkea, con los ids numéricos de Central Ticket")
+
+# Los eventos de octubre son /10737, /10738… sin "farus" en la dirección: si el
+# taplink se cae, la búsqueda sólo pesca los slugs viejos.
+taplink_vacio = True
+fs = scraper.scrape_farus(9)
+assert sorted((s.fecha, s.hora, s.title) for s in fs) == [
+    ("2026-09-18", "21:00", "ROSEMARY'S BABY"),
     ("2026-09-20", "20:00", "TRAINSPOTTING"),
     ("2026-09-20", "22:15", "LA HAINE"),
 ], fs
-print("✓ búsqueda: cada evento una vez, y uno que no es de Farus queda afuera")
+print("✓ sin taplink, la búsqueda queda de respaldo; un evento ajeno nunca entra")
 
 print("\nTodo OK")

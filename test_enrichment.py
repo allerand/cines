@@ -283,9 +283,34 @@ for fuente, cands, esperada in [(["ROSEMARY'S BABY"], rosemary, rosemary[0]),
     assert _decidir_sin_hints(fuente, None, [(c, "imdb") for c in cands])[0] is None
     assert _desempatar(DESEMPATE_POPULAR, fuente, None, [(c, "imdb") for c in cands]) is esperada
 print("✓ Farus: la más calificada (Rosemary's Baby 1968, Trainspotting 1996, Heat 1995)")
-# Por qué no la más nueva: en un cineclub de clásicos daba la miniserie y la secuela.
+# Por qué no la más nueva: en un cineclub de clásicos daba la miniserie.
 assert _la_mas_nueva(["ROSEMARY'S BABY"], None, [(c, "imdb") for c in rosemary]) is rosemary[1]
-assert _la_mas_nueva(["TRAINSPOTTING"], None, [(c, "imdb") for c in trainspotting]) is trainspotting[1]
+
+# Un título alternativo no alcanza si el principal agrega palabras: Letterboxd
+# tiene "Batman" entre los alternativos de The Batman (2022) y "Evil Dead"
+# entre los de Evil Dead Rise, las dos más populares que la del cineclub.
+batman = [pop("Batman", 1989, 707000, ["Batman"]),
+          pop("The Batman", 2022, 1500000, ["The Batman", "Batman"]),
+          pop("Evil Dead Rise", 2023, 400000, ["Evil Dead Rise", "Evil Dead"])]
+assert _desempatar(DESEMPATE_POPULAR, ["Batman"], None, [(c, "imdb") for c in batman]) is batman[0]
+# Pero si ninguna se llama al pie de la letra así, valen los alternativos:
+# "Evil Dead" en el cine es The Evil Dead (1981), y "La Masacre de Texas" es
+# la traducción de The Texas Chain Saw Massacre.
+evil = [pop("The Evil Dead", 1981, 720000, ["The Evil Dead", "Evil Dead"]),
+        pop("Evil Dead Rise", 2023, 400000, ["Evil Dead Rise", "Evil Dead"])]
+assert _desempatar(DESEMPATE_POPULAR, ["Evil Dead"], None, [(c, "imdb") for c in evil]) is evil[0]
+masacre = pop("The Texas Chain Saw Massacre", 1974, 900000,
+              ["The Texas Chain Saw Massacre", "La masacre de Texas"])
+assert _desempatar(DESEMPATE_POPULAR, ["La Masacre De Texas"], None, [(masacre, "imdb")]) is masacre
+print("✓ Farus: Batman (1989) y no The Batman; The Evil Dead y La Masacre de Texas por el alternativo")
+
+# Y en un cineclub no manda el estreno: la regla estricta daba el de 2026.
+doce = [pop("12 Angry Men", 1957, 900000), pop("12 Angry Men", 2026, 120)]
+assert _decidir_sin_hints(["12 Angry Men"], None, [(c, "imdb") for c in doce])[0] is doce[1]
+assert _decidir_sin_hints(["12 Angry Men"], None, [(c, "imdb") for c in doce],
+                          desempate=DESEMPATE_POPULAR)[0] is None
+assert _desempatar(DESEMPATE_POPULAR, ["12 Angry Men"], None, [(c, "imdb") for c in doce]) is doce[0]
+print("✓ Farus: 12 Angry Men es el de Lumet, no el estreno de 2026")
 
 la_haine = pop("La Haine", 1995, 1192920)
 assert _desempatar(DESEMPATE_POPULAR, ["LA HAINE"], None, [(la_haine, "slug")]) is la_haine

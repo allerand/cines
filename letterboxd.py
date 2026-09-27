@@ -1095,6 +1095,7 @@ def _decidir_sin_hints(
     hint_duration: Optional[int],
     candidatos: list[tuple[dict, str]],
     homonimo_fuera: bool = False,
+    desempate: str = "",
 ) -> tuple[Optional[dict], str]:
     """
     Elige entre los candidatos de una función que no trae director ni año.
@@ -1152,7 +1153,15 @@ def _decidir_sin_hints(
             lista.append(m)
 
     def unico_estreno(ms: list[dict]) -> Optional[dict]:
-        """La más nueva, si es un estreno y no empata con otra del mismo año."""
+        """La más nueva, si es un estreno y no empata con otra del mismo año.
+
+        En un cineclub de clásicos (desempate "popular") no aplica: es al
+        revés, el estreno que se llama igual es justamente el equivocado.
+        Farus daba 'Batman: Knightfall Part 1' (2026) por el Batman de Burton,
+        '12 Angry Men' (2026) por el de Lumet y 'Evil Dead Burn' (2026).
+        """
+        if desempate == DESEMPATE_POPULAR:
+            return None
         anio = max(int(m["year"]) for m in ms)
         nuevas = [m for m in ms if int(m["year"]) == anio]
         return nuevas[0] if anio >= _ESTRENO_DESDE and len(nuevas) == 1 else None
@@ -1233,6 +1242,14 @@ def _desempatar(
             continue
         if clase_titulo(fuente, m.get("titulos") or [m.get("title_en", "")]) != "exacto":
             continue
+        # Que coincida un título alternativo no alcanza si el principal le
+        # agrega palabras al del cine: Letterboxd tiene "Batman" entre los
+        # alternativos de The Batman (2022) y "Evil Dead" entre los de Evil
+        # Dead Rise, y las dos son más populares que la que dan en el cineclub.
+        # Un título principal distinto (The Texas Chain Saw Massacre por "La
+        # Masacre de Texas") sí vale: es la traducción, no otra película.
+        if clase_titulo(fuente, [m.get("title_en", "")]) == "pisado":
+            continue
         if not any(_mismo_film(m, otra) for otra in exactas):
             exactas.append(m)
     if not exactas:
@@ -1241,6 +1258,15 @@ def _desempatar(
                     if hint_duration and m.get("duration")
                     and abs(int(m["duration"]) - int(hint_duration)) <= 5]
     pool = con_duracion or exactas
+    # Si alguna se llama EXACTAMENTE así, con artículo y todo, es ésa: para
+    # Letterboxd "Batman" y "The Batman" (2022) son el mismo título —lo tiene
+    # entre los alternativos— y la de Reeves tiene el triple de calificaciones
+    # que la de Burton. Cuando ninguna coincide al pie de la letra siguen
+    # valiendo todas, que es como entra The Evil Dead (1981) por "Evil Dead".
+    literales = [m for m in pool
+                 if _norm_titulo(m.get("title_en", "")) in
+                 {_norm_titulo(t) for t in fuente if t}]
+    pool = literales or pool
     if desempate == DESEMPATE_NUEVA:
         return max(pool, key=lambda m: int(m["year"]))
     if desempate == DESEMPATE_POPULAR:
@@ -1376,16 +1402,17 @@ async def _enrich_sin_hints(
 
     # 4. TMDb, sólo si hasta acá no apareció nadie que se llame así ('Obsesión'
     # de Curry Barker: el slug está en inglés e IMDb no la encuentra).
-    elegido, motivo = _decidir_sin_hints(fuente, hint_duration, candidatos, homonimo_fuera)
+    elegido, motivo = _decidir_sin_hints(fuente, hint_duration, candidatos, homonimo_fuera, desempate)
     if not elegido and not any(m.get("clase_titulo") == "exacto" for m, _ in candidatos):
         for u in tmdb_letterboxd_candidates(search_title, hint_original, None):
             probar(u, "tmdb")
-        elegido, motivo = _decidir_sin_hints(fuente, hint_duration, candidatos, homonimo_fuera)
+        elegido, motivo = _decidir_sin_hints(fuente, hint_duration, candidatos, homonimo_fuera, desempate)
 
     # 5. Nada en Letterboxd: la ficha sale de TMDb, con el mismo criterio.
     if not elegido and not candidatos:
         elegido, motivo = _decidir_sin_hints(
-            fuente, hint_duration, _tmdb_candidatos(search_title, hint_original), homonimo_fuera)
+            fuente, hint_duration, _tmdb_candidatos(search_title, hint_original), homonimo_fuera,
+            desempate)
 
     # 6. Cacodelphia y Farus: antes que vacía, el desempate del cine.
     if not elegido and desempate:

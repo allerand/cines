@@ -8348,31 +8348,48 @@ def scrape_pena_sin_cadenas(semanas: int = 9) -> list[Screening]:
 # ---------------------------------------------------------------------------
 # Cineclub Farus — Paradiso Cultural (vía Central Ticket)
 # ---------------------------------------------------------------------------
-# Farus proyecta clásicos en Paradiso Cultural (Venezuela 930) y vende por
-# Central Ticket. Publica un taplink por mes (cineclubfarusseptiembre.taplink.ws)
-# que sólo linkea a esos eventos, así que la fuente es Central Ticket directo:
+# Farus proyecta clásicos en Paradiso Cultural (Venezuela 932) y vende por
+# Central Ticket. Los eventos salen de dos lados, y alcanza con que ande uno:
 #
-#   · /search?q=farus lista los eventos a la venta (renderizado en el server,
-#     con links /event/<slug>). No hay que saber el taplink de cada mes.
-#   · /api/event/getOne/<slug> es el JSON que usa la página del evento: fecha
-#     de inicio y las entradas ("items").
+#   · El link de la bio de su Instagram, cineclubfarus.taplink.bio, que lista
+#     los eventos del mes. Desde el 28/9/2026 es fijo; antes publicaban uno por
+#     mes (cineclubfarusseptiembre.taplink.ws) y por eso no se usaba.
+#   · /search?q=farus, que hasta septiembre listaba sus eventos. Quedó de
+#     respaldo: ahora devuelve TODO el sitio, así que sólo sirve para pescar
+#     los slugs que dicen "farus".
+#
+# Hizo falta sumar el taplink porque el descubrimiento por slug dejó de
+# alcanzar: los eventos de octubre son /10737, /10738… sin nombre, y con la
+# búsqueda rota la cartelera se quedó con una sola función.
+#
+# De cada evento, /api/event/getOne/<id-o-slug> devuelve el JSON que usa la
+# página: fecha de inicio y entradas ("items").
 #
 # Las películas salen de las ENTRADAS y no del nombre del evento, que es
 # genérico ("Cineclub Farus", "Cineclub Farus - Doble Función"). Cada película
-# tiene la suya, con la hora: "TRAINSPOTTING 8 PM + CONSUMISIÓN", "LA HAINE
-# 10:15 PM + CONSUMISIÓN". La combinada de una doble función ("TRAINSPOTTING/LA
-# HAINE 8 PM + 2 CONSUMISIONES") se saltea: no es una función más. La hora de
-# la entrada manda sobre la descripción: el 20/9/2026 la descripción y el
-# taplink decían La Haine a las 22 y la entrada y el flyer, 22:15.
+# tiene la suya, con la hora: "TRAINSPOTTING 8 PM + CONSUMISIÓN", "Batman 7 PM
+# + CONSUMICIÓN", "La Masacre De Texas 9.40PM + CONSUMICIÓN". La combinada de
+# una doble función se saltea —no es una función más—: se reconoce porque
+# nombra dos películas separadas por "/" o "|" ("Evil Dead | La Masacre de
+# Texas (8PM) + 2 CONSUMICIONES"). La hora de la entrada manda sobre la
+# descripción: el 20/9/2026 la descripción y el taplink decían La Haine a las
+# 22 y la entrada y el flyer, 22:15.
 #
 # Director, año y duración están sólo en el flyer ("ROMAN POLANSKI | 1968 | 137
 # MIN"), que es una imagen: el enrichment trabaja con el título solo.
 
 FARUS_CINE = "Cineclub Farus"
+FARUS_TAPLINK = "https://cineclubfarus.taplink.bio/"
 FARUS_BUSQUEDA = "https://centralticket.net/search?q=farus"
 FARUS_API = "https://centralticket.net/api/event/getOne/{slug}"
 FARUS_EVENTO = "https://centralticket.net/event/{slug}"
+# El grupo de Farus en Central Ticket. Con el taplink cualquiera puede meter un
+# evento ajeno en la lista; esto y el nombre del evento son el filtro.
+FARUS_GRUPO = "2025"
 
+# En el taplink los eventos son centralticket.net/10737?refer=2504; en la
+# búsqueda, /event/<slug>. La API acepta las dos formas.
+_FARUS_ID_RE = re.compile(r"centralticket\.net/(?:event/)?([A-Za-z0-9][A-Za-z0-9\-]{1,60})")
 _FARUS_SLUG_RE = re.compile(r'href="(?:https://centralticket\.net)?/event/([a-z0-9\-]*farus[a-z0-9\-]*)"', re.I)
 # "ROSEMARY´S BABY 9 PM", "LA HAINE 10:15 PM", "HEAT 20HS"
 _FARUS_ENTRADA_RE = re.compile(
@@ -8388,8 +8405,9 @@ def _farus_funcion(nombre: str) -> Optional[tuple[str, str]]:
     m = _FARUS_ENTRADA_RE.match(base)
     if not m:
         return None
-    titulo = m.group("titulo").strip(" -–|")
-    if not titulo or "/" in titulo:       # la combinada de la doble función
+    titulo = m.group("titulo").strip(" -–")
+    # La combinada de una doble función nombra las dos películas.
+    if not titulo or "/" in titulo or "|" in titulo:
         return None
     h, mins = int(m.group("h")), int(m.group("m") or 0)
     sufijo = (m.group("sufijo") or "").upper()
@@ -8424,29 +8442,53 @@ def _farus_evento(data: dict, slug: str) -> list[Screening]:
     return out
 
 
+def _farus_eventos() -> list[str]:
+    """Los eventos de Central Ticket a mirar: el taplink primero, la búsqueda
+    de respaldo. Devuelve ids o slugs, sin repetir y en ese orden."""
+    ids: list[str] = []
+    try:
+        taplink = fetch_bytes(FARUS_TAPLINK).decode("utf-8", errors="replace")
+        ids += _FARUS_ID_RE.findall(taplink)
+    except Exception as e:
+        print(f"[farus: el taplink no carga — {e}]", end=" ", flush=True)
+    if ids:
+        return list(dict.fromkeys(i.lower() for i in ids))
+    # Sólo si el taplink no dio nada: la búsqueda devuelve slugs viejos que la
+    # API ya no resuelve, así que de entrada son requests al pedo.
+    print("[farus: taplink vacío, voy por la búsqueda]", end=" ", flush=True)
+    try:
+        busqueda = fetch_bytes(FARUS_BUSQUEDA).decode("utf-8", errors="replace")
+        ids += _FARUS_SLUG_RE.findall(busqueda)
+    except Exception as e:
+        print(f"[farus: la búsqueda no carga — {e}]", end=" ", flush=True)
+    return list(dict.fromkeys(i.lower() for i in ids))
+
+
 def scrape_farus(semanas: int = 9) -> list[Screening]:
     today = date.today()
     cutoff = today + timedelta(weeks=semanas)
-    try:
-        html = fetch_bytes(FARUS_BUSQUEDA).decode("utf-8", errors="replace")
-    except Exception as e:
-        print(f"[farus: la búsqueda no carga — {e}]", end=" ", flush=True)
+    eventos = _farus_eventos()
+    if not eventos:
+        print("[farus: no se encontraron eventos]", end=" ", flush=True)
         return []
 
     result: list[Screening] = []
-    for slug in dict.fromkeys(s.lower() for s in _FARUS_SLUG_RE.findall(html)):
+    for slug in eventos:
         try:
             data = json.loads(fetch_bytes(FARUS_API.format(slug=slug)).decode("utf-8", errors="replace"))
         except Exception as e:
             print(f"[farus: {slug} no carga — {e}]", end=" ", flush=True)
             continue
-        # La búsqueda es por texto: que el evento sea de verdad del cineclub.
-        if not isinstance(data, dict) or "farus" not in (data.get("name") or "").lower():
+        if not isinstance(data, dict) or not data.get("items"):
             continue
-        if data.get("published") is False:
+        # Que el evento sea de verdad del cineclub: en el taplink puede haber
+        # links a cualquier cosa, y la búsqueda ya no filtra nada.
+        de_farus = ("farus" in (data.get("name") or "").lower()
+                    or str(data.get("groupId") or "") == FARUS_GRUPO)
+        if not de_farus or data.get("published") is False:
             continue
         funciones = _farus_evento(data, slug)
-        if not funciones and data.get("items"):
+        if not funciones:
             # Entradas que no dicen película y hora: que lo levante el log.
             print(f"[farus: {slug} sin películas en las entradas]", end=" ", flush=True)
         result.extend(s for s in funciones if today <= date.fromisoformat(s.fecha) <= cutoff)
