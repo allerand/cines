@@ -20,6 +20,7 @@ wrangler.jsonc
 .gitignore
 
 # Solo el cartelera.json se sirve; el cache y logs no son para público
+data/tessdata/**
 data/cache.json
 data/test_cache.json
 data/lorca_manual.json

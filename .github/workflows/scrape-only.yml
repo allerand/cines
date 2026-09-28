@@ -56,7 +56,9 @@ jobs:
           # OCR para el cartel semanal del Cine Lorca (scraper.scrape_lorca_cartel).
           # Es opcional a propósito: si apt falla, el scraper avisa y el Lorca
           # sale del archivo a mano o de La Nación, sin romper la corrida.
-          timeout 180 sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-spa \
+          # El modelo de idioma va en el repo (data/tessdata), así que acá
+          # alcanza con el binario.
+          timeout 180 sudo apt-get install -y -qq tesseract-ocr \
             || echo "::warning::tesseract no se instaló; el cartel del Lorca no se va a leer"
 
       - name: Run scraper

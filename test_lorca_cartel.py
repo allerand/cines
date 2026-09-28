@@ -63,10 +63,15 @@ def variar(**cambios):
 
 
 assert _lorca_lectura_sana(variar(rango=None), HOY) is None
-assert _lorca_lectura_sana(variar(conf_min=42.0), HOY) is None
+assert _lorca_lectura_sana(variar(conf_horas=42.0), HOY) is None
+assert _lorca_lectura_sana(variar(conf_titulos=20.0), HOY) is None
 assert _lorca_lectura_sana(variar(grilla={"UNA SOLA": ["20:00"]}), HOY) is None
 assert _lorca_lectura_sana(variar(grilla={t: ["20:00"] * 7 for t in ("A B C D", "E F G H")}), HOY) is None
 print("✓ sin rango, con poca confianza, con una sola película o con siete horarios: no se publica")
+
+# Los títulos aguantan menos confianza que los horarios: van en negrita sobre
+# gris y el OCR les baja la nota aunque los lea bien.
+assert _lorca_lectura_sana(variar(conf_titulos=55.0), HOY) is not None
 
 # El cartel de la semana pasada, todavía colgado, no se publica.
 assert _lorca_lectura_sana(ok, date(2026, 10, 6)) is None

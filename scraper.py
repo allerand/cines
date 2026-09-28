@@ -9673,8 +9673,17 @@ LORCA_CARTEL_PAGINA = "https://cinelorca.wixsite.com/cine-lorca/current-producti
 # entera—, así que se prueban varias y tienen que coincidir dos.
 LORCA_CARTEL_LECTURAS = ((1490, 6), (1490, 11), (1700, 4), (1300, 6), (2000, 11))
 LORCA_CARTEL_LECTURAS_IGUALES = 2
-LORCA_CARTEL_CONF_MIN = 70
-
+# El modelo de idioma va en el repo (tessdata_fast, Apache 2.0) en vez de salir
+# del paquete del sistema: el `tesseract-ocr-spa` de Ubuntu trae otro modelo y
+# lee distinto —con él ninguna de las cinco lecturas pasaba los controles—, así
+# que el runner leía peor que la máquina donde se probó. Con el modelo fijo,
+# CI y casa leen igual.
+LORCA_TESSDATA = Path(__file__).parent / "data" / "tessdata"
+# Confianza mínima de tesseract. Los horarios son lo que no se puede errar; los
+# títulos aguantan menos porque están en negrita sobre fondo gris y el OCR baja
+# la nota aunque los lea bien (y además se corrigen contra la cartelera).
+LORCA_CONF_MIN_HORAS = 70
+LORCA_CONF_MIN_TITULOS = 50
 _LORCA_IMG_RE = re.compile(
     r"https://static\.wixstatic\.com/media/([\w~.%-]+\.jpe?g)/v1/[^\"'\\\s]*", re.I)
 _LORCA_FILL_RE = re.compile(r"/fill/w_(\d+),h_(\d+)")
@@ -9777,8 +9786,8 @@ def _lorca_leer_tsv(filas: list) -> Optional[dict]:
         "anio": int(anio.group(1)) if anio else None,
         "grilla": {t: sorted(set(v)) for t, v in grilla.items()},
         "huerfanas": huerfanas,
-        "conf_min": min([t["conf"] for t in titulos] + [h["conf"] for h in horas],
-                        default=0.0),
+        "conf_horas": min([h["conf"] for h in horas], default=0.0),
+        "conf_titulos": min([t["conf"] for t in titulos], default=0.0),
     }
 
 
@@ -9786,7 +9795,10 @@ def _lorca_lectura_sana(lectura: Optional[dict], hoy: date) -> Optional[tuple]:
     """Valida una lectura y devuelve (desde, hasta) si se puede publicar."""
     if not lectura or not lectura["rango"] or not lectura["grilla"]:
         return None
-    if lectura["huerfanas"] or lectura["conf_min"] < LORCA_CARTEL_CONF_MIN:
+    if lectura["huerfanas"]:
+        return None
+    if (lectura["conf_horas"] < LORCA_CONF_MIN_HORAS
+            or lectura["conf_titulos"] < LORCA_CONF_MIN_TITULOS):
         return None
     d1, m1, d2, m2 = lectura["rango"]
     anio = lectura["anio"] or hoy.year
@@ -9844,10 +9856,16 @@ def _lorca_ocr(imagen: bytes, psm: int = 6) -> list:
         ruta = Path(tmp) / "cartel.jpg"
         ruta.write_bytes(imagen)
         salida = Path(tmp) / "out"
-        idioma = "spa" if _lorca_tiene_idioma("spa") else "eng"
-        subprocess.run(["tesseract", str(ruta), str(salida), "-l", idioma,
-                        "--psm", str(psm), "tsv"],
-                       check=True, capture_output=True, timeout=180)
+        propio = (LORCA_TESSDATA / "spa.traineddata").exists()
+        idioma = "spa" if propio or _lorca_tiene_idioma("spa") else "eng"
+        # El TSV se pide por parámetro y no por el archivo de configuración
+        # "tsv", que vive en el tessdata del sistema: con --tessdata-dir propio
+        # tesseract lo busca ahí adentro y no lo encuentra.
+        comando = ["tesseract", str(ruta), str(salida), "-l", idioma,
+                   "--psm", str(psm), "-c", "tessedit_create_tsv=1"]
+        if propio:
+            comando[1:1] = ["--tessdata-dir", str(LORCA_TESSDATA)]
+        subprocess.run(comando, check=True, capture_output=True, timeout=180)
         with open(salida.with_suffix(".tsv"), encoding="utf-8") as fh:
             return list(csv.DictReader(fh, delimiter="\t", quoting=csv.QUOTE_NONE))
 
