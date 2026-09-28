@@ -9,11 +9,11 @@ reales del 22/9/2026, recortados a lo que usa el scraper.
 """
 from datetime import date
 
-from scraper import (CINES_MADRID, DORE_PROYECCIONES, _dore_arreglar_kerning,
-                     _dore_combinar, _dore_programa, _dore_tarjetas,
-                     _ideal_funciones)
+from scraper import (CINES_MADRID, DORE_PROYECCIONES, _cineteca_ficha,
+                     _dore_arreglar_kerning, _dore_combinar, _dore_programa,
+                     _dore_tarjetas, _ideal_funciones)
 
-assert CINES_MADRID == {"Cine Doré", "Cines Ideal"}
+assert CINES_MADRID == {"Cine Doré", "Cines Ideal", "Cineteca Madrid"}
 
 # --- Programa del mes (texto de pypdf) ---------------------------------------
 PROGRAMA = """\
@@ -212,5 +212,69 @@ assert s.ticket_url == "https://compra.yelmocines.es/?cinemaVistaId=780&showtime
 assert (s.director, s.duration) == ("Christopher Nolan", 173)
 assert ideal[2].director == "Will Lovelace"
 print("✓ ideal: link directo a la compra de la sesión, director y duración")
+
+
+# --- Cineteca Madrid ---------------------------------------------------------
+# El HTML real de una actividad, recortado: ficha, y pases de dos meses con un
+# día de dos horarios.
+CINETECA_HTML = """
+<div class="node node--type-activity">
+  <div class="field field-name-dynamic-token-fieldnode-ciclo-copia"><a href="/ciclo/foco-pedro-pinho">FOCO: PEDRO PINHO</a></div>
+  <div class="field field-name-field-parent-section"><span class="fCategory"><a href="/secciones/estrenos">ESTRENOS</a></span></div>
+  <div class="field field-name-node-title"><h2 class="title">La risa y la navaja (versión integral)</h2></div>
+  <div class="field field--name-field-original-title field__item"><span>(</span>O Riso e a Faca<span>)</span></div>
+  <div class="field field--name-field-director field__item">Pedro Pinho</div>
+  <div class="field field--name-field-pais field__item">Portugal, Brasil, Francia, Rumanía</div>
+  <div class="field field--name-field-ano-filmacion field__item">2025</div>
+  <div class="field field-name-field-duration"><span>(330')</span></div>
+  <div class="field field--name-field-sessions sb-sessions">
+    <div class="field__label sb-sessions__label">Pases:</div>
+    <div class="sb-sessions__items">
+      <h2 class="sb-sessions__date-month">Octubre</h2>
+      <h4 class="sb-sessions__date-day">Jueves 1</h4>
+      <ul class="sb-sessions__date-hours">
+        <li class="sb-sessions__date-hours-hour">17:00 h</li>
+        <li class="sb-sessions__date-hours-space">Sala Azcona</li>
+        <li class="sb-sessions__date-hours-hour">21:30 h</li>
+        <li class="sb-sessions__date-hours-space">Sala Plató</li>
+      </ul>
+      <h4 class="sb-sessions__date-day">Sábado 3</h4>
+      <ul class="sb-sessions__date-hours">
+        <li class="sb-sessions__date-hours-hour">17:00 h</li>
+        <li class="sb-sessions__date-hours-space">Sala Azcona</li>
+      </ul>
+      <h2 class="sb-sessions__date-month">Noviembre</h2>
+      <h4 class="sb-sessions__date-day">Domingo 8</h4>
+      <ul class="sb-sessions__date-hours">
+        <li class="sb-sessions__date-hours-hour">20:00 h</li>
+        <li class="sb-sessions__date-hours-space">Sala Borau</li>
+      </ul>
+      <h2 class="sb-sessions__date-month">Enero</h2>
+      <h4 class="sb-sessions__date-day">Viernes 9</h4>
+      <ul class="sb-sessions__date-hours">
+        <li class="sb-sessions__date-hours-hour">19:00 h</li>
+      </ul>
+    </div>
+  </div>
+</div>
+"""
+
+URL_CT = "https://www.cinetecamadrid.com/programacion/la-risa-y-la-navaja-version-integral"
+ct = _cineteca_ficha(CINETECA_HTML, URL_CT, date(2026, 10, 1), date(2026, 12, 3))
+assert [(s.fecha, s.hora) for s in ct] == [
+    ("2026-10-01", "17:00"), ("2026-10-01", "21:30"), ("2026-10-03", "17:00"),
+    ("2026-11-08", "20:00")], [(s.fecha, s.hora) for s in ct]
+print("✓ cineteca: un día con dos pases, dos meses seguidos, y enero queda fuera de la ventana")
+
+s = ct[0]
+assert s.cine == "Cineteca Madrid" and s.title == "La risa y la navaja (versión integral)"
+assert (s.director, s.year, s.duration) == ("Pedro Pinho", 2025, 330)
+assert s.original_title == "O Riso e a Faca"
+assert s.country == "Portugal, Brasil, Francia, Rumanía"
+assert s.ciclo == "FOCO: PEDRO PINHO" and s.ticket_url == URL_CT
+print("✓ cineteca: título original, director, país, año y duración de la ficha")
+
+assert _cineteca_ficha("<div>nada</div>", URL_CT, date(2026, 10, 1), date(2026, 12, 3)) == []
+print("✓ cineteca: una página sin ficha no inventa funciones")
 
 print("\nTodo OK")

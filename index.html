@@ -634,6 +634,7 @@
     /* Madrid */
     .cine-dore     { border-color: #3a1f1c; color: #e0705e; }
     .cine-ideal    { border-color: #1c2e3a; color: #5aa8e0; }
+    .cine-cineteca { border-color: #2b2340; color: #a98ae0; }
     /* Comerciales — paleta gris/azulada para diferenciarlos visualmente */
     .cine-cinemark { border-color: #2a2a2a; color: #aaa; }
     .cine-hoyts    { border-color: #2a2a2a; color: #aaa; }
@@ -835,6 +836,7 @@
   <!-- Madrid: data-ciudad marca de qué ciudad es cada sala (sin él, Buenos Aires) -->
   <button class="filter-btn otra-ciudad" data-cine="Cine Doré" data-ciudad="madrid">Doré</button>
   <button class="filter-btn otra-ciudad" data-cine="Cines Ideal" data-ciudad="madrid">Ideal</button>
+  <button class="filter-btn otra-ciudad" data-cine="Cineteca Madrid" data-ciudad="madrid">Cineteca</button>
   <button class="filter-btn commercial-chip" data-cine="Cinemark" hidden>Cinemark</button>
   <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
@@ -897,6 +899,7 @@ const CINE_ADDRESSES = {
   // Madrid
   'Cine Doré':                'Santa Isabel 3',
   'Cines Ideal':              'Doctor Cortezo 6',
+  'Cineteca Madrid':          'Plaza de Legazpi 8',
   // Comerciales — una entrada por sucursal
   'Cinemark Caballito':       'Av. La Plata 96',
   'Cinemark Palermo':         'Beruti 3399',
@@ -1724,7 +1727,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';

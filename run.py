@@ -57,7 +57,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_sala_lucida, scrape_manual, descartar_manual, aplicar_festivales,
         titulo_norm, misma_pelicula,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
-        scrape_dore, scrape_ideal, CINES_MADRID, hoy_madrid,
+        scrape_dore, scrape_ideal, scrape_cineteca, CINES_MADRID, hoy_madrid,
         resumen_proxy,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
@@ -146,6 +146,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     # FIC.UBA lo destapó: Filo Cine se scrapea antes, así que sus funciones
     # del festival le ganaban a las de la guía y se publicaban con el género
     # ("Documental") como ciclo.
+    print("🎬 Scrapeando Cineteca Madrid...", end=" ", flush=True)
+    try:
+        r = scrape_cineteca(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
     print("📝 Funciones manuales...", end=" ", flush=True)
     try:
         r = scrape_manual(semanas)
@@ -714,7 +722,8 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     #      Los dos de Madrid también: yelmocines.es está detrás de Cloudflare y
     #      desde el runner puede no abrir, y el Doré depende de dos sitios.
     CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1, 'Bellas Artes': 1,
-                       'Cine Doré': 1, 'Cines Ideal': 1}   # cine → mínimo sano
+                       'Cine Doré': 1, 'Cines Ideal': 1,
+                       'Cineteca Madrid': 1}   # cine → mínimo sano
 
     # Cuánto trajo cada cine ANTES del merge, o sea de la fuente, hoy. Después
     # del merge no se puede distinguir: un cine que no se pudo scrapear y quedó

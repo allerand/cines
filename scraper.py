@@ -8504,7 +8504,7 @@ def scrape_farus(semanas: int = 9) -> list[Screening]:
 # Instagram, el newsletter y la auditoría: todo eso sigue siendo sólo de Buenos
 # Aires sin tener que filtrar nada en ningún lado. run.py reparte por este set,
 # así que un cine nuevo de Madrid tiene que entrar acá.
-CINES_MADRID = {"Cine Doré", "Cines Ideal"}
+CINES_MADRID = {"Cine Doré", "Cines Ideal", "Cineteca Madrid"}
 
 _MADRID = ZoneInfo("Europe/Madrid")
 
@@ -8892,3 +8892,131 @@ async def scrape_ideal(page: Page, semanas: int = 9) -> list[Screening]:
                                         "(¿Cloudflare?)")
         return []
     return _ideal_funciones(data, hoy, hoy + timedelta(weeks=semanas))
+
+
+# ---------------------------------------------------------------------------
+# Cineteca Madrid (Matadero)
+# ---------------------------------------------------------------------------
+# El Drupal del cine publica la programación en /programacion, con dos filtros
+# de fecha cuyos nombres están al revés de lo que parece: `to` es el DESDE y
+# `since` el HASTA. Sin filtros la lista arranca por lo que ya pasó.
+#
+# El listado alcanza para enumerar las actividades y poco más —el alt de la
+# foto es casi siempre el título pelado—, así que la ficha sale de la página de
+# cada actividad, que trae título original, director, países, año, duración y
+# los pases con su sala. Son ~70 páginas por corrida: es la única forma de
+# tener director y año, que es lo que evita que el enrichment le encaje la
+# ficha de otra película (letterboxd._decidir_sin_hints).
+
+CINETECA_CINE = "Cineteca Madrid"
+CINETECA_BASE = "https://www.cinetecamadrid.com"
+CINETECA_LISTADO = CINETECA_BASE + "/programacion?to={desde}&since={hasta}&page={page}"
+
+_CINETECA_DIA_RE = re.compile(r"(\d{1,2})\s*$")
+_CINETECA_HORA_RE = re.compile(r"(\d{1,2})[:.](\d{2})")
+_CINETECA_DUR_RE = re.compile(r"(\d{1,4})\s*['’]")
+
+
+def _cineteca_texto(soup, selector: str) -> str:
+    el = soup.select_one(selector)
+    return re.sub(r"\s+", " ", el.get_text(" ", strip=True)).strip() if el else ""
+
+
+def _cineteca_ficha(html: str, url: str, hoy: date, cutoff: date) -> list[Screening]:
+    """Las funciones de una página de actividad de la Cineteca."""
+    soup = BeautifulSoup(html, "html.parser")
+    titulo = _cineteca_texto(soup, ".field-name-node-title h2.title") or \
+        _cineteca_texto(soup, "h2.title")
+    if not titulo:
+        return []
+    original = _cineteca_texto(soup, ".field--name-field-original-title").strip("() ")
+    director = _cineteca_texto(soup, ".field--name-field-director")
+    pais = _cineteca_texto(soup, ".field--name-field-pais")
+    anio = _cineteca_texto(soup, ".field--name-field-ano-filmacion")
+    dur = _CINETECA_DUR_RE.search(_cineteca_texto(soup, ".field-name-field-duration"))
+    ciclo = _cineteca_texto(soup, ".field-name-dynamic-token-fieldnode-ciclo-copia a") or \
+        _cineteca_texto(soup, ".field-name-field-program a")
+
+    result: list[Screening] = []
+    mes = None
+    dia = None
+    for el in soup.select(".sb-sessions__items h2, .sb-sessions__items h4, "
+                          ".sb-sessions__items ul"):
+        clases = el.get("class") or []
+        texto = el.get_text(" ", strip=True)
+        if "sb-sessions__date-month" in clases:
+            mes = MESES_ES.get(_sin_acentos(texto).lower())
+            dia = None
+        elif "sb-sessions__date-day" in clases:
+            m = _CINETECA_DIA_RE.search(texto)
+            dia = int(m.group(1)) if m else None
+        elif "sb-sessions__date-hours" in clases and mes and dia:
+            # Un mismo día puede tener varios pases: cada <li> de hora es uno.
+            for li in el.select("li.sb-sessions__date-hours-hour"):
+                h = _CINETECA_HORA_RE.search(li.get_text(" ", strip=True))
+                if not h:
+                    continue
+                # Los pases no dicen el año: el de diciembre visto en enero es
+                # del año pasado, no del que viene.
+                anio_pase = hoy.year + (1 if mes < hoy.month - 1 else 0)
+                try:
+                    fecha = date(anio_pase, mes, dia)
+                except ValueError:
+                    continue
+                if not (hoy <= fecha <= cutoff):
+                    continue
+                result.append(Screening(
+                    cine=CINETECA_CINE, title=titulo, fecha=fecha.isoformat(),
+                    hora=f"{int(h.group(1)):02d}:{h.group(2)}",
+                    ticket_url=url, ciclo=ciclo, director=director, country=pais,
+                    year=int(anio) if anio.isdigit() else None,
+                    duration=int(dur.group(1)) if dur else None,
+                    original_title=original,
+                ))
+    return result
+
+
+def _cineteca_actividades(desde: date, hasta: date, paginas: int = 12) -> list[str]:
+    """Las URLs de las actividades programadas entre las dos fechas."""
+    urls: list[str] = []
+    for page in range(paginas):
+        try:
+            html = fetch_bytes(CINETECA_LISTADO.format(
+                desde=desde.isoformat(), hasta=hasta.isoformat(), page=page)
+            ).decode("utf-8", errors="replace")
+        except Exception as e:
+            print(f"[cineteca: el listado no carga (página {page}) — {e}]",
+                  end=" ", flush=True)
+            break
+        soup = BeautifulSoup(html, "html.parser")
+        filas = soup.select(".views-row")
+        if not filas:
+            break
+        for f in filas:
+            a = f.select_one("h2.title a[href]")
+            if a and a["href"] not in urls:
+                urls.append(a["href"])
+    return urls
+
+
+def scrape_cineteca(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    cutoff = hoy + timedelta(weeks=semanas)
+    urls = _cineteca_actividades(hoy, cutoff)
+    if not urls:
+        marcar_fuente_caida(CINETECA_CINE, "el listado de programación no contesta")
+        return []
+    result: list[Screening] = []
+    caidas = 0
+    for ruta in urls:
+        url = ruta if ruta.startswith("http") else CINETECA_BASE + ruta
+        try:
+            html = fetch_bytes(url).decode("utf-8", errors="replace")
+        except Exception:
+            caidas += 1
+            continue
+        result.extend(_cineteca_ficha(html, url, hoy, cutoff))
+    if caidas:
+        print(f"[cineteca: {caidas} de {len(urls)} actividades no cargaron]",
+              end=" ", flush=True)
+    return result
