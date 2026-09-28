@@ -342,14 +342,22 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         print("🎬 Scrapeando Lorca + Comerciales (IMDb → Lanación fallback)...")
         try:
             imdb_screenings = await scrape_imdb_then_lanacion(page, semanas)
+            # La grilla que publica el cine —data/lorca_manual.json, transcripta
+            # del cartel semanal que sube a su Wix— manda sobre La Nación. El
+            # 28/9/2026 el aggregador daba otra semana entera: dos películas que
+            # no estaban en el cartel (Los colores del tiempo, Coyote vs. Acme) y
+            # horarios cambiados, y encima sólo el día de hoy. El cartel vale de
+            # jueves a miércoles, así que scrape_lorca() llena la franja completa.
+            # Si el rango del archivo venció, devuelve [] avisando en el log y
+            # queda La Nación, que para eso sigue estando.
+            lorca_manual = scrape_lorca()
+            if lorca_manual:
+                imdb_screenings = [s for s in imdb_screenings if s.cine != "Cine Lorca"]
             all_screenings.extend(imdb_screenings)
             print(f"  ↳ total: {len(imdb_screenings)} funciones")
-            # Si Lorca quedó sin nada, último fallback: lorca_manual.json
-            if not any(s.cine == "Cine Lorca" for s in imdb_screenings):
-                lorca_manual = scrape_lorca()
-                if lorca_manual:
-                    all_screenings.extend(lorca_manual)
-                    print(f"  ↳ fallback manual Lorca: {len(lorca_manual)} funciones")
+            if lorca_manual:
+                all_screenings.extend(lorca_manual)
+                print(f"  ↳ Lorca: {len(lorca_manual)} funciones de la grilla del cine")
         except Exception as e:
             print(f"error — {e}")
 

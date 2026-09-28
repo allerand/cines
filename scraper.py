@@ -24,7 +24,7 @@ import unicodedata
 import ssl
 import urllib.request
 import urllib.parse
-from dataclasses import dataclass, field, asdict
+from dataclasses import dataclass, field, asdict, replace
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Optional
@@ -2578,14 +2578,62 @@ def _scrape_lanacion_sala(slug: str, lanacion_name: str, cine_name: str,
     return result
 
 
+# Cines que publican UNA grilla por semana, de jueves a miércoles: el mismo
+# cuadro de horarios vale todos los días de esa franja. El Lorca lo dice en su
+# propia cartelera —"PROGRAMACIÓN VÁLIDA DESDE EL 24/09 AL 30/09"—, pero esa
+# cartelera es una imagen escaneada en un Wix y la fuente que se lee (La
+# Nación) expone sólo el día de hoy. Resultado: la web mostraba las diez
+# funciones de hoy y el resto de la semana en cero, cuando el cine ya había
+# publicado los mismos horarios hasta el miércoles.
+#
+# Los multicines que también salen de La Nación (Cinépolis, Showcase) NO entran
+# acá: cambian la grilla entre semana y fin de semana, así que repetirles el
+# día de hoy sería inventarles funciones.
+CINES_GRILLA_SEMANAL = {"Cine Lorca"}
+
+
+def _cierre_de_la_semana(hoy: date) -> date:
+    """El miércoles con el que termina la semana de programación en curso.
+    Los estrenos entran los jueves, así que la franja va de jueves a
+    miércoles; si hoy ES miércoles, la semana se termina hoy."""
+    return hoy + timedelta(days=(2 - hoy.weekday()) % 7)
+
+
+def proyectar_grilla_semanal(funciones: list[Screening],
+                             hoy: Optional[date] = None) -> list[Screening]:
+    """Completa hacia adelante las funciones de hoy de los cines que publican
+    una grilla semanal, hasta el miércoles que cierra la franja.
+
+    No pisa nada: si la fuente ya trajo esa función ese día, se deja la
+    scrapeada. Y no se proyecta hacia atrás ni más allá del miércoles, que es
+    donde la grilla publicada deja de valer."""
+    hoy = hoy or date.today()
+    hasta = _cierre_de_la_semana(hoy)
+    if hasta <= hoy:
+        return funciones
+    vistas = {(s.cine, s.title, s.fecha, s.hora) for s in funciones}
+    proyectadas: list[Screening] = []
+    for s in funciones:
+        if s.cine not in CINES_GRILLA_SEMANAL or s.fecha != hoy.isoformat():
+            continue
+        dia = hoy + timedelta(days=1)
+        while dia <= hasta:
+            k = (s.cine, s.title, dia.isoformat(), s.hora)
+            if k not in vistas:
+                vistas.add(k)
+                proyectadas.append(replace(s, fecha=dia.isoformat()))
+            dia += timedelta(days=1)
+    return funciones + proyectadas
+
+
 def scrape_lorca_lanacion() -> list[Screening]:
     """Cine Lorca via lanacion (fallback cuando IMDb no responde)."""
-    return _scrape_lanacion_sala(
+    return proyectar_grilla_semanal(_scrape_lanacion_sala(
         slug="lorca-sa110",
         lanacion_name="Lorca",
         cine_name="Cine Lorca",
         ticket_url="https://cinelorca.wixsite.com/cine-lorca",
-    )
+    ))
 
 
 # ───── IMDb + La Nación combinados ────────────────────────────────────
@@ -2676,7 +2724,8 @@ async def scrape_imdb_then_lanacion(page: Page, semanas: int = 2) -> list[Screen
         else:
             print("0 funciones")
 
-        for s in ss:
+        # El Lorca publica una grilla para toda la semana; La Nación, sólo hoy.
+        for s in proyectar_grilla_semanal(ss):
             k = (s.cine, s.title, s.fecha, s.hora)
             if k in seen:
                 continue

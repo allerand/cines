@@ -47,8 +47,8 @@
       "publicadas": 40
     },
     "Cine Lorca": {
-      "scrapeadas": 10,
-      "publicadas": 10
+      "scrapeadas": 30,
+      "publicadas": 30
     },
     "Cine York": {
       "scrapeadas": 37,
@@ -1221,22 +1221,6 @@
       "ciclo": "En cartel"
     },
     {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "14:00",
-      "title_es": "Los colores del tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-09-28",
       "hora": "14:00",
@@ -1269,6 +1253,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "14:00",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-28",
       "hora": "14:05",
@@ -1282,6 +1282,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "14:05",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 107,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -1330,22 +1346,6 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "14:10",
-      "title_es": "La invitación",
-      "title_en": "The Invite",
-      "original_title": "",
-      "director": "Olivia Wilde",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 107,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -2629,6 +2629,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "16:00",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "16:05",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia, España",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-28",
       "hora": "16:10",
@@ -2642,22 +2674,6 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "16:10",
-      "title_es": "Una quinta en Portugal",
-      "title_en": "The Portuguese House",
-      "original_title": "",
-      "director": "Avelina Prat",
-      "country": "España, Portugal",
-      "year": 2025,
-      "duration": 114,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -2707,22 +2723,6 @@
       "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1106",
       "ciclo": "En cartel"
-    },
-    {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "16:15",
-      "title_es": "Tres adioses",
-      "title_en": "Three Goodbyes",
-      "original_title": "Tre ciotole",
-      "director": "Isabel Coixet",
-      "country": "Italia, España",
-      "year": 2025,
-      "duration": 122,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -3781,6 +3781,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "17:50",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia, España",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-28",
       "hora": "17:55",
@@ -4037,22 +4053,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "18:15",
-      "title_es": "Coyote vs. Acme",
-      "title_en": "Coyote vs. Acme",
-      "original_title": "Coyote vs. Acme",
-      "director": "Dave Green",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 103,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-09-28",
       "hora": "18:15",
@@ -4066,6 +4066,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "18:15",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -4146,22 +4162,6 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "18:25",
-      "title_es": "Una quinta en Portugal",
-      "title_en": "The Portuguese House",
-      "original_title": "",
-      "director": "Avelina Prat",
-      "country": "España, Portugal",
-      "year": 2025,
-      "duration": 114,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -5240,7 +5240,7 @@
       "cine": "Cine Lorca",
       "fecha": "2026-09-28",
       "hora": "20:10",
-      "title_es": "Pepita La Pistolera",
+      "title_es": "Pepita la pistolera",
       "title_en": "Pepita the Gunslinger",
       "original_title": "Pepita la pistolera",
       "director": "Lucía Puenzo",
@@ -5365,6 +5365,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "20:20",
+      "title_es": "Su propio infierno",
+      "title_en": "Her Private Hell",
+      "original_title": "Her Private Hell",
+      "director": "Nicolas Winding Refn",
+      "country": "Estados Unidos, Dinamarca",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/her-private-hell-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-28",
       "hora": "20:30",
@@ -5475,22 +5491,6 @@
       "letterboxd": "https://letterboxd.com/film/una-directora-extraordinaria/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=901",
       "ciclo": "Funciones Especiales"
-    },
-    {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "20:30",
-      "title_es": "Tres adioses",
-      "title_en": "Three Goodbyes",
-      "original_title": "Tre ciotole",
-      "director": "Isabel Coixet",
-      "country": "Italia, España",
-      "year": 2025,
-      "duration": 122,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
     },
     {
       "cine": "Multiplex Pilar",
@@ -5973,22 +5973,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "22:00",
-      "title_es": "La invitación",
-      "title_en": "The Invite",
-      "original_title": "",
-      "director": "Olivia Wilde",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 107,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-09-28",
       "hora": "22:00",
@@ -6293,6 +6277,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "22:10",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-09-28",
       "hora": "22:15",
@@ -6450,6 +6450,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-28",
+      "hora": "22:20",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "Pepita la pistolera",
+      "director": "Lucía Puenzo",
+      "country": "Argentina, España",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -6850,22 +6866,6 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Lorca",
-      "fecha": "2026-09-28",
-      "hora": "22:40",
-      "title_es": "Pepita La Pistolera",
-      "title_en": "Pepita the Gunslinger",
-      "original_title": "Pepita la pistolera",
-      "director": "Lucía Puenzo",
-      "country": "Argentina, España",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Crimen, Thriller",
-      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
-      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -8229,6 +8229,22 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "14:00",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-29",
       "hora": "14:05",
@@ -8242,6 +8258,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "14:05",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 107,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -9285,6 +9317,38 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "16:00",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "16:05",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia, España",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-29",
       "hora": "16:10",
@@ -10117,6 +10181,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "17:50",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia, España",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-29",
       "hora": "17:55",
@@ -10402,6 +10482,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "18:15",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -11397,6 +11493,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "20:10",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "Pepita la pistolera",
+      "director": "Lucía Puenzo",
+      "country": "Argentina, España",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-29",
       "hora": "20:20",
@@ -11458,6 +11570,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-invitacion/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "20:20",
+      "title_es": "Su propio infierno",
+      "title_en": "Her Private Hell",
+      "original_title": "Her Private Hell",
+      "director": "Nicolas Winding Refn",
+      "country": "Estados Unidos, Dinamarca",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/her-private-hell-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -12309,6 +12437,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "22:10",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-29",
       "hora": "22:20",
@@ -12402,6 +12546,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-29",
+      "hora": "22:20",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "Pepita la pistolera",
+      "director": "Lucía Puenzo",
+      "country": "Argentina, España",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -14069,6 +14229,22 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "14:00",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-30",
       "hora": "14:05",
@@ -14082,6 +14258,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "14:05",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 107,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -15109,6 +15301,38 @@
       "ciclo": "En cartel"
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "16:00",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "16:05",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia, España",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-30",
       "hora": "16:10",
@@ -16037,6 +16261,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "17:50",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia, España",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-30",
       "hora": "17:55",
@@ -16290,6 +16530,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "18:15",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -17413,6 +17669,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "20:10",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "Pepita la pistolera",
+      "director": "Lucía Puenzo",
+      "country": "Argentina, España",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-09-30",
       "hora": "20:20",
@@ -17458,6 +17730,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-invitacion/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "20:20",
+      "title_es": "Su propio infierno",
+      "title_en": "Her Private Hell",
+      "original_title": "Her Private Hell",
+      "director": "Nicolas Winding Refn",
+      "country": "Estados Unidos, Dinamarca",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/her-private-hell-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
@@ -18261,6 +18549,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "22:10",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-30",
       "hora": "22:20",
@@ -18354,6 +18658,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Lorca",
+      "fecha": "2026-09-30",
+      "hora": "22:20",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "Pepita la pistolera",
+      "director": "Lucía Puenzo",
+      "country": "Argentina, España",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
     },
     {
