@@ -53,7 +53,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_gaumont, scrape_cck, scrape_arthaus, scrape_museo_cine,
         scrape_ccr, scrape_imdb_then_lanacion, scrape_amorina, scrape_cea,
         scrape_filo, scrape_bn, scrape_cc25, scrape_ccd, scrape_cb,
-        scrape_borges, scrape_bcn, scrape_agn, scrape_bellasartes,
+        scrape_borges, scrape_bcn, scrape_agn, scrape_bellasartes, scrape_lorca_cartel,
         scrape_sala_lucida, scrape_manual, descartar_manual, aplicar_festivales,
         titulo_norm, misma_pelicula,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
@@ -141,6 +141,17 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
 
     cache = LetterboxdCache(CACHE_JSON)
     all_screenings = []
+
+    # Cómo escribe la cartelera los títulos que ya publica. Lo usa el cartel del
+    # Lorca, que viene en mayúsculas y sin acentos, para escribirlos igual que
+    # el resto (y que el enrichment los encuentre).
+    titulos_conocidos: list = []
+    if CARTELERA_JSON.exists():
+        try:
+            titulos_conocidos = [s.get("title_es", "") for s in json.loads(
+                CARTELERA_JSON.read_text(encoding="utf-8")).get("screenings", [])]
+        except Exception:
+            pass
 
     # Las manuales van primero: cuando un scraper trae la misma función, la
     # deduplicación del final se queda con la primera que ve, y los hints del
@@ -342,22 +353,26 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         print("🎬 Scrapeando Lorca + Comerciales (IMDb → Lanación fallback)...")
         try:
             imdb_screenings = await scrape_imdb_then_lanacion(page, semanas)
-            # La grilla que publica el cine —data/lorca_manual.json, transcripta
-            # del cartel semanal que sube a su Wix— manda sobre La Nación. El
-            # 28/9/2026 el aggregador daba otra semana entera: dos películas que
-            # no estaban en el cartel (Los colores del tiempo, Coyote vs. Acme) y
-            # horarios cambiados, y encima sólo el día de hoy. El cartel vale de
-            # jueves a miércoles, así que scrape_lorca() llena la franja completa.
-            # Si el rango del archivo venció, devuelve [] avisando en el log y
-            # queda La Nación, que para eso sigue estando.
-            lorca_manual = scrape_lorca()
-            if lorca_manual:
+            # El Lorca sale del cartel semanal que el cine sube a su Wix, que
+            # es la única fuente que tiene la semana entera y la tiene bien: el
+            # 28/9/2026 La Nación daba otra semana —dos películas que no estaban
+            # en el cartel y horarios cambiados— y encima sólo el día de hoy.
+            # El cartel es una imagen, así que se lee con OCR (tesseract, sin
+            # clave ni costo) y sólo se publica si la lectura pasa todos los
+            # controles. Si no, queda la transcripción a mano del mismo cartel
+            # (data/lorca_manual.json) mientras su rango esté vigente, y si
+            # tampoco, La Nación.
+            lorca_cartel = scrape_lorca_cartel(titulos_conocidos)
+            lorca_manual = [] if lorca_cartel else scrape_lorca()
+            lorca = lorca_cartel or lorca_manual
+            if lorca:
                 imdb_screenings = [s for s in imdb_screenings if s.cine != "Cine Lorca"]
             all_screenings.extend(imdb_screenings)
             print(f"  ↳ total: {len(imdb_screenings)} funciones")
-            if lorca_manual:
-                all_screenings.extend(lorca_manual)
-                print(f"  ↳ Lorca: {len(lorca_manual)} funciones de la grilla del cine")
+            if lorca:
+                de_donde = "el cartel del cine" if lorca_cartel else "el archivo a mano"
+                all_screenings.extend(lorca)
+                print(f"  ↳ Lorca: {len(lorca)} funciones de {de_donde}")
         except Exception as e:
             print(f"error — {e}")
 

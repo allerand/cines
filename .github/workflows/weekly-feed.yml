@@ -56,6 +56,11 @@ jobs:
             sleep 15
           done
           [ "$ok" = 1 ] || { echo "::error::playwright install falló 3 veces"; exit 1; }
+          # OCR para el cartel semanal del Cine Lorca (scraper.scrape_lorca_cartel).
+          # Es opcional a propósito: si apt falla, el scraper avisa y el Lorca
+          # sale del archivo a mano o de La Nación, sin romper la corrida.
+          timeout 180 sudo apt-get install -y -qq tesseract-ocr tesseract-ocr-spa \
+            || echo "::warning::tesseract no se instaló; el cartel del Lorca no se va a leer"
 
       - name: Compute Monday's date
         id: monday

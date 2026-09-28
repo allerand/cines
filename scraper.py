@@ -13,7 +13,11 @@ from __future__ import annotations
 
 import re
 import os
+import csv
 import json
+import shutil
+import subprocess
+import tempfile
 import time
 import base64
 import imaplib
@@ -9634,3 +9638,310 @@ def scrape_callao(semanas: int = 9) -> list[Screening]:
         marcar_fuente_caida(CALLAO_CINE, "la cartelera no contesta")
         return []
     return _callao_funciones(html, hoy, hoy + timedelta(weeks=semanas))
+
+
+# ---------------------------------------------------------------------------
+# Cine Lorca — leer el cartel de la semana (OCR con tesseract)
+# ---------------------------------------------------------------------------
+# El cine sube a su Wix un cartel escaneado con la programación de la semana:
+# el rango de fechas, y en dos columnas cada película con sus horarios y sala.
+# Es la única fuente que tiene la semana completa y la tiene bien —La Nación,
+# que es la otra, el 28/9/2026 publicaba otra semana— y hasta ahora salía
+# transcripta a mano en data/lorca_manual.json.
+#
+# tesseract es OCR libre: no hay clave ni cuenta ni costo, y se instala en el
+# runner con apt-get (ver .github/workflows/scrape*.yml). Si no está instalado,
+# esto devuelve [] y siguen funcionando el archivo a mano y La Nación.
+#
+# Leer una imagen es adivinar, así que la lectura se publica sólo si pasa todo:
+#
+#   · se lee DOS VECES, a dos tamaños distintos, y las dos tienen que dar
+#     exactamente lo mismo (a algunos tamaños tesseract se saltea una fila
+#     entera del cartel, y eso no se nota de otra forma);
+#   · cada horario tiene que tener un título justo encima en su columna. Si una
+#     fila se perdió, sus horarios quedan huérfanos y la lectura se descarta —
+#     si no, se le colgarían a la película de arriba, que es peor que no tener
+#     nada ([[cartelera-mejor-vacia-que-equivocada]]);
+#   · el rango de fechas tiene que parsearse y ser una semana verosímil.
+
+LORCA_CARTEL_PAGINA = "https://cinelorca.wixsite.com/cine-lorca/current-production"
+# El cartel se lee varias veces, cambiando el ancho al que se pide la imagen y
+# el modo de segmentación de tesseract (--psm). El ancho es en píxeles: el
+# original mide 745 y el OCR lee bastante mejor agrandado (Wix agranda en el
+# server, así que no hace falta ninguna librería de imágenes). Cada
+# combinación falla distinto —a ciertos tamaños tesseract se saltea una fila
+# entera—, así que se prueban varias y tienen que coincidir dos.
+LORCA_CARTEL_LECTURAS = ((1490, 6), (1490, 11), (1700, 4), (1300, 6), (2000, 11))
+LORCA_CARTEL_LECTURAS_IGUALES = 2
+LORCA_CARTEL_CONF_MIN = 70
+
+_LORCA_IMG_RE = re.compile(
+    r"https://static\.wixstatic\.com/media/([\w~.%-]+\.jpe?g)/v1/[^\"'\\\s]*", re.I)
+_LORCA_FILL_RE = re.compile(r"/fill/w_(\d+),h_(\d+)")
+_LORCA_CROP_RE = re.compile(r"/crop/x_\d+,y_\d+,w_(\d+),h_(\d+)")
+_LORCA_HORA_RE = re.compile(r"^(\d{1,2})[.:](\d{2})$")
+_LORCA_RANGO_RE = re.compile(
+    r"(\d{1,2})\s*/\s*(\d{1,2})\s*AL\s*(\d{1,2})\s*/\s*(\d{1,2})", re.I)
+# Lo que en el cartel está en mayúsculas pero no es una película.
+_LORCA_RUIDO_RE = re.compile(
+    r"SALA|DURACI|PRECIO|ENTRADA|JUEVES|LUNES|MARTES|MI[EÉ]RCOLES|DOMINGO|"
+    r"FERIADO|PROGRAMACI|V[ÁA]LIDA|DESDE|CINE\s+LORCA|CORRIENTES|TEL|ABRE|"
+    r"MIN\b|SUBT|^\s*AL\s*$|\d{2,}", re.I)
+
+
+def _lorca_es_titulo(texto: str) -> bool:
+    """El cartel escribe las películas entre comillas y en mayúsculas, pero el
+    OCR se come una comilla cada tanto. Lo estable es la caja: un bloque en
+    mayúsculas que no sea ninguna de las etiquetas del cartel."""
+    t = texto.strip(" .\"'")
+    letras = [c for c in t if c.isalpha()]
+    if len(letras) < 4 or _LORCA_RUIDO_RE.search(t):
+        return False
+    return sum(1 for c in letras if c.isupper()) / len(letras) >= 0.8
+
+
+def _lorca_bloques(palabras: list, ancho: int):
+    """Parte cada línea en bloques cortando por los huecos horizontales: así se
+    separan la banda lateral (donde está el rango de fechas) y las dos columnas
+    de películas, sin saber de antemano dónde caen."""
+    salto = ancho * 0.04
+    for linea_id in dict.fromkeys(
+            (f["block_num"], f["par_num"], f["line_num"]) for f in palabras):
+        linea = sorted((f for f in palabras
+                        if (f["block_num"], f["par_num"], f["line_num"]) == linea_id),
+                       key=lambda f: int(f["left"]))
+        grupo = [linea[0]]
+        for previa, palabra in zip(linea, linea[1:]):
+            if int(palabra["left"]) - (int(previa["left"]) + int(previa["width"])) > salto:
+                yield grupo
+                grupo = []
+            grupo.append(palabra)
+        yield grupo
+
+
+def _lorca_centro(grupo: list) -> float:
+    return (int(grupo[0]["left"]) + int(grupo[-1]["left"]) + int(grupo[-1]["width"])) / 2
+
+
+def _lorca_leer_tsv(filas: list) -> Optional[dict]:
+    """De la salida TSV de tesseract al cartel: rango, año y película → horarios."""
+    pagina = next((f for f in filas if f.get("level") == "1"), None)
+    palabras = [f for f in filas
+                if (f.get("text") or "").strip() and float(f.get("conf", -1)) >= 60]
+    if not palabras:
+        return None
+    ancho = int(pagina["width"]) if pagina else max(
+        int(f["left"]) + int(f["width"]) for f in palabras)
+    alto = int(pagina["height"]) if pagina else max(
+        int(f["top"]) + int(f["height"]) for f in palabras)
+
+    titulos: list[dict] = []
+    horas: list[dict] = []
+    texto_todo: list[str] = []
+    for grupo in _lorca_bloques(palabras, ancho):
+        texto = re.sub(r"[“”„‟＂'’`´]", '"', " ".join(f["text"] for f in grupo)).strip()
+        texto_todo.append(texto)
+        y = min(int(f["top"]) for f in grupo)
+        if _lorca_es_titulo(texto):
+            titulos.append({"titulo": " ".join(texto.strip(' ."').split()),
+                            "x": _lorca_centro(grupo), "y": y,
+                            "conf": min(float(f["conf"]) for f in grupo)})
+        for f in grupo:
+            h = _LORCA_HORA_RE.match(f["text"].strip())
+            if h and 10 <= int(h.group(1)) <= 23 and int(h.group(2)) < 60:
+                horas.append({"hora": f"{int(h.group(1)):02d}:{h.group(2)}",
+                              "x": _lorca_centro([f]), "y": int(f["top"]),
+                              "conf": float(f["conf"])})
+
+    grilla: dict[str, list[str]] = {}
+    huerfanas = 0
+    for h in horas:
+        # El título de una función es el que tiene JUSTO encima en su columna.
+        # El límite vertical es lo que detecta que se perdió una fila; el
+        # desempate horizontal, que los dos títulos de una fila están a la
+        # misma altura y si no toda la fila se le cuelga al de la izquierda.
+        arriba = [t for t in titulos
+                  if 0 < h["y"] - t["y"] < alto * 0.15
+                  and abs(t["x"] - h["x"]) < ancho * 0.2]
+        if not arriba:
+            huerfanas += 1
+            continue
+        elegido = max(arriba, key=lambda t: (t["y"], -abs(t["x"] - h["x"])))
+        grilla.setdefault(elegido["titulo"], []).append(h["hora"])
+
+    texto = " ".join(texto_todo)
+    rango = _LORCA_RANGO_RE.search(texto)
+    anio = re.search(r"\b(20\d{2})\b", texto)
+    return {
+        "rango": tuple(int(x) for x in rango.groups()) if rango else None,
+        "anio": int(anio.group(1)) if anio else None,
+        "grilla": {t: sorted(set(v)) for t, v in grilla.items()},
+        "huerfanas": huerfanas,
+        "conf_min": min([t["conf"] for t in titulos] + [h["conf"] for h in horas],
+                        default=0.0),
+    }
+
+
+def _lorca_lectura_sana(lectura: Optional[dict], hoy: date) -> Optional[tuple]:
+    """Valida una lectura y devuelve (desde, hasta) si se puede publicar."""
+    if not lectura or not lectura["rango"] or not lectura["grilla"]:
+        return None
+    if lectura["huerfanas"] or lectura["conf_min"] < LORCA_CARTEL_CONF_MIN:
+        return None
+    d1, m1, d2, m2 = lectura["rango"]
+    anio = lectura["anio"] or hoy.year
+    try:
+        desde = date(anio, m1, d1)
+        hasta = date(anio + (1 if (m2, d2) < (m1, d1) else 0), m2, d2)
+    except ValueError:
+        return None
+    # Una semana verosímil, y que llegue hasta hoy o más adelante: si el cartel
+    # que está colgado es el de la semana pasada, no se publica nada.
+    if not (1 <= (hasta - desde).days + 1 <= 8):
+        return None
+    if hasta < hoy or desde > hoy + timedelta(days=10):
+        return None
+    grilla = lectura["grilla"]
+    if not (2 <= len(grilla) <= 12):
+        return None
+    if any(not (1 <= len(horas) <= 6) for horas in grilla.values()):
+        return None
+    if sum(len(h) for h in grilla.values()) < 3:
+        return None
+    return desde, hasta
+
+
+def _lorca_titulo_conocido(titulo: str, conocidos: Optional[list]) -> str:
+    """El cartel escribe en mayúsculas y sin acentos ('EL CORAZON DE LA
+    BESTIA'). Si la película ya está en la cartelera, se usa cómo la escribe
+    ella, que además es como la busca el enrichment. Entre varias formas de la
+    misma ('Pepita la pistolera', 'Pepita, La Pistolera') gana la más natural."""
+    if not conocidos:
+        return titulo
+    clave = _norm_madrid(titulo)
+    cuenta: dict = {}
+    for otro in conocidos:
+        if otro and _norm_madrid(otro) == clave:
+            cuenta[otro] = cuenta.get(otro, 0) + 1
+    if not cuenta:
+        return titulo
+
+    def _puntaje(t: str) -> tuple:
+        # Gana la forma más natural: la que no escribe media frase en
+        # mayúsculas ('El corazón de la bestia' antes que 'El Corazon De La
+        # Bestia', aunque esta última la repitan más cines), y con acentos.
+        palabras = t.split()
+        mayusculas = sum(1 for p in palabras[1:] if p[:1].isupper())
+        acentos = sum(1 for c in t if c.isalpha() and not c.isascii())
+        return (-mayusculas, acentos, cuenta[t])
+
+    return max(cuenta, key=_puntaje)
+
+
+def _lorca_ocr(imagen: bytes, psm: int = 6) -> list:
+    """Corre tesseract sobre la imagen y devuelve su salida TSV."""
+    with tempfile.TemporaryDirectory() as tmp:
+        ruta = Path(tmp) / "cartel.jpg"
+        ruta.write_bytes(imagen)
+        salida = Path(tmp) / "out"
+        idioma = "spa" if _lorca_tiene_idioma("spa") else "eng"
+        subprocess.run(["tesseract", str(ruta), str(salida), "-l", idioma,
+                        "--psm", str(psm), "tsv"],
+                       check=True, capture_output=True, timeout=180)
+        with open(salida.with_suffix(".tsv"), encoding="utf-8") as fh:
+            return list(csv.DictReader(fh, delimiter="\t", quoting=csv.QUOTE_NONE))
+
+
+def _lorca_tiene_idioma(idioma: str) -> bool:
+    try:
+        salida = subprocess.run(["tesseract", "--list-langs"],
+                                capture_output=True, timeout=30)
+        return idioma in salida.stdout.decode("utf-8", "replace").split()
+    except Exception:
+        return False
+
+
+def _lorca_carteles(html: str) -> list[tuple]:
+    """(archivo, proporción alto/ancho) de cada imagen de la página, sin
+    repetir. Los parámetros con los que Wix la sirve en la web —compresión
+    fuerte, enfoque, avif— le bajan la puntería al OCR, así que de la página
+    sólo se usan el nombre del archivo y su proporción; el tamaño se lo pedimos
+    nosotros (Wix escala en el server, no hace falta ninguna librería de
+    imágenes)."""
+    vistos: dict = {}
+    for m in _LORCA_IMG_RE.finditer(html):
+        url = m.group(0)
+        archivo = m.group(1)
+        medidas = _LORCA_FILL_RE.search(url) or _LORCA_CROP_RE.search(url)
+        if not medidas or archivo in vistos:
+            continue
+        w, h = int(medidas.group(1)), int(medidas.group(2))
+        if not w or not (0.3 <= h / w <= 3):
+            continue
+        vistos[archivo] = h / w
+    return list(vistos.items())[:3]
+
+
+def _lorca_render(archivo: str, proporcion: float, ancho: int) -> str:
+    """La misma imagen al ancho que le va bien al OCR y sin filtros."""
+    return (f"https://static.wixstatic.com/media/{archivo}/v1/fill/"
+            f"w_{ancho},h_{round(ancho * proporcion)},al_c,q_90,enc_auto/cartel.jpg")
+
+
+def scrape_lorca_cartel(titulos_conocidos: Optional[list] = None,
+                        hoy: Optional[date] = None) -> list[Screening]:
+    """Las funciones de la semana leyendo el cartel que publica el cine."""
+    hoy = hoy or date.today()
+    if not shutil.which("tesseract"):
+        print("[lorca: sin tesseract, no se lee el cartel]", end=" ", flush=True)
+        return []
+    try:
+        html = fetch_bytes(LORCA_CARTEL_PAGINA).decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"[lorca: la página del cartel no carga — {e}]", end=" ", flush=True)
+        return []
+
+    for archivo, proporcion in _lorca_carteles(html):
+        # Una lectura con horarios huérfanos o con el rango ilegible ya se
+        # descartó sola; de las que quedan, tienen que coincidir dos.
+        sanas: dict = {}
+        imagenes: dict = {}
+        acuerdo = None
+        for ancho, psm in LORCA_CARTEL_LECTURAS:
+            try:
+                if ancho not in imagenes:
+                    imagenes[ancho] = fetch_bytes(_lorca_render(archivo, proporcion, ancho))
+                lectura = _lorca_leer_tsv(_lorca_ocr(imagenes[ancho], psm))
+            except Exception as e:
+                print(f"[lorca: el OCR falló — {e}]", end=" ", flush=True)
+                return []
+            fechas = _lorca_lectura_sana(lectura, hoy)
+            if not fechas:
+                continue
+            clave = (fechas, tuple(sorted((t, tuple(h)) for t, h in lectura["grilla"].items())))
+            sanas.setdefault(clave, []).append(lectura)
+            if len(sanas[clave]) >= LORCA_CARTEL_LECTURAS_IGUALES:
+                acuerdo = (clave, sanas[clave])
+                break
+        if not acuerdo:
+            leidas = sum(len(v) for v in sanas.values())
+            print(f"[lorca: el cartel no se leyó igual dos veces ({leidas}/"
+                  f"{len(LORCA_CARTEL_LECTURAS)} lecturas sanas)]", end=" ", flush=True)
+            continue
+        (fechas, _), lecturas = acuerdo
+        desde, hasta = fechas
+        result: list[Screening] = []
+        dia = max(desde, hoy)
+        while dia <= hasta:
+            for titulo, horas in lecturas[0]["grilla"].items():
+                for hora in horas:
+                    result.append(Screening(
+                        cine="Cine Lorca",
+                        title=_lorca_titulo_conocido(titulo, titulos_conocidos),
+                        fecha=dia.isoformat(), hora=hora,
+                        ticket_url="https://cinelorca.wixsite.com/cine-lorca"))
+            dia += timedelta(days=1)
+        print(f"[lorca: cartel del {desde.isoformat()} al {hasta.isoformat()}, "
+              f"{len(lecturas[0]['grilla'])} películas]", end=" ", flush=True)
+        return result
+    return []
