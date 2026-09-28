@@ -8504,7 +8504,9 @@ def scrape_farus(semanas: int = 9) -> list[Screening]:
 # Instagram, el newsletter y la auditoría: todo eso sigue siendo sólo de Buenos
 # Aires sin tener que filtrar nada en ningún lado. run.py reparte por este set,
 # así que un cine nuevo de Madrid tiene que entrar acá.
-CINES_MADRID = {"Cine Doré", "Cines Ideal", "Cineteca Madrid"}
+CINES_MADRID = {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
+                "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
+                "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla"}
 
 _MADRID = ZoneInfo("Europe/Madrid")
 
@@ -8522,6 +8524,52 @@ def _norm_madrid(s: str) -> str:
     INN" y "Goodbye Dragon Inn" son lo mismo)."""
     s = unicodedata.normalize("NFD", s or "").encode("ascii", "ignore").decode()
     return re.sub(r"[^a-z0-9]", "", s.lower())
+
+
+# Marcas de formato que los cines de Madrid le pegan al título: no son parte
+# del nombre de la película y, si quedan, la misma peli sale dos veces (una por
+# versión) y las dos veces sin ficha, porque Letterboxd no la encuentra.
+_MADRID_FORMATO_RE = re.compile(
+    r"\s*[\(\[]\s*(?:V\.?O\.?S\.?[EI]?\.?|VOSE|VOSI|V\.?E\.?|DOBLADA(?:\s+AL\s+ESPA[ÑN]OL)?|"
+    r"SUBTITULADA|3D|2D|ATMOS|OCAP|DIGITAL)\s*[\)\]]\s*$", re.I)
+# Ciclos que van pegados al título, adelante con dos puntos o atrás entre
+# corchetes. Es una lista a mano a propósito: partir por cualquier ":" se
+# llevaría puesto "Spider-Man: Brand New Day".
+_MADRID_CICLOS = (
+    "domingo de clásicos", "domingos de clásicos", "clásicos al detalle",
+    "cine en clave de piano", "sesión teta", "wilder cinema", "docs del mes",
+    "martes cultural", "miércoles cultural", "aula renoir", "cine en familia",
+)
+
+
+# Lo que las salas proyectan pero no es cine: ópera, ballet y conciertos en
+# directo o en diferido. Se filtran como en el Ideal (allá lo dice el propio
+# JSON con ProjectionType); acá hay que mirar el título.
+_MADRID_NO_CINE_RE = re.compile(
+    r"(?:\b(?:[óo]pera|ballet)\b.{0,40}\ben\s+(?:directo|diferido)\b"
+    r"|\blive\s+viewing\b|^concierto\b)", re.I)
+
+
+def _madrid_es_cine(titulo: str) -> bool:
+    return not _MADRID_NO_CINE_RE.search(titulo or "")
+
+
+def _madrid_titulo_y_ciclo(titulo: str, ciclo: str = "") -> tuple[str, str]:
+    """Saca del título la versión ('(VOSE)') y el ciclo ('Domingo de clásicos:
+    El hombre tranquilo', 'Suspiria [wilder Cinema]'), que van a su columna."""
+    t = re.sub(r"\s+", " ", titulo or "").strip()
+    anterior = None
+    while anterior != t:
+        anterior = t
+        t = _MADRID_FORMATO_RE.sub("", t).strip()
+    for nombre in _MADRID_CICLOS:
+        pref = re.match(rf"^\s*{re.escape(nombre)}\s*[:\-–]\s*(.+)$", t, re.I)
+        if pref:
+            return pref.group(1).strip(), ciclo or nombre.capitalize()
+        suf = re.match(rf"^(.+?)\s*[\(\[]\s*{re.escape(nombre)}\s*[\)\]]\s*$", t, re.I)
+        if suf:
+            return suf.group(1).strip(), ciclo or nombre.capitalize()
+    return t, ciclo
 
 
 # ---------------------------------------------------------------------------
@@ -9019,4 +9067,305 @@ def scrape_cineteca(semanas: int = 9) -> list[Screening]:
     if caidas:
         print(f"[cineteca: {caidas} de {len(urls)} actividades no cargaron]",
               end=" ", flush=True)
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Renoir — Princesa, Plaza de España y Retiro (Madrid)
+# ---------------------------------------------------------------------------
+# Las tres salas de versión original del grupo. La web las publica en HTML
+# hecho en el server, una página por cine y día (?fecha=YYYY-MM-DD), con el
+# director, la duración y la sala de cada pase, y el link directo a la butaca
+# en pillalas.com. Sólo publican cuatro días: es la ventana del cine, no un
+# scrape a medias.
+#
+# Cada pase aparece dos veces en el HTML (el bloque de escritorio y el de
+# móvil). Se deduplica por el id del pase, que es único y además es el link de
+# la entrada; agrupar por hora y sala tropezaría con las funciones repetidas.
+
+RENOIR_BASE = "https://www.cinesrenoir.com"
+RENOIR_CARTELERA = RENOIR_BASE + "/cine/{slug}/cartelera/"
+RENOIR_CINES = {
+    "cines-princesa": "Cines Princesa",
+    "renoir-plaza-de-espana": "Renoir Plaza de España",
+    "renoir-retiro": "Renoir Retiro",
+}
+
+_RENOIR_PASE_RE = re.compile(r"/pase/(\d+)")
+_RENOIR_DUR_RE = re.compile(r"Duraci[óo]n\s+(\d{1,3})\s*minutos", re.I)
+_RENOIR_DIR_RE = re.compile(r"^de\s+(.+)$", re.I)
+
+
+def _renoir_funciones(html: str, cine: str, fecha: str) -> list[Screening]:
+    soup = BeautifulSoup(html, "html.parser")
+    result: list[Screening] = []
+    vistos: set[str] = set()
+    for pase in soup.select(".pase-cartelera"):
+        a = pase.select_one('a[href*="/pase/"]')
+        if not a:
+            continue
+        m = _RENOIR_PASE_RE.search(a["href"])
+        hora = parse_time_str(a.get_text(" ", strip=True))
+        if not m or not hora or m.group(1) in vistos:
+            continue
+        vistos.add(m.group(1))
+        # La ficha de la película es el ancestro más cercano que la linkea.
+        fila = pase
+        while fila is not None and not fila.select_one('a[href^="/pelicula/"]'):
+            fila = fila.parent
+        peli = fila.select_one('a[href^="/pelicula/"]') if fila else None
+        if not peli:
+            continue
+        director = ""
+        duracion = None
+        for small in (fila.select("small") if fila else []):
+            texto = small.get_text(" ", strip=True)
+            d = _RENOIR_DIR_RE.match(texto)
+            if d and not director:
+                director = d.group(1).strip()
+            dur = _RENOIR_DUR_RE.search(texto)
+            if dur and not duracion:
+                duracion = int(dur.group(1))
+        titulo, ciclo = _madrid_titulo_y_ciclo(peli.get_text(" ", strip=True))
+        if not _madrid_es_cine(titulo):
+            continue
+        result.append(Screening(
+            cine=cine, title=titulo, fecha=fecha, hora=hora, ciclo=ciclo,
+            ticket_url=a["href"], director=director, duration=duracion,
+        ))
+    return result
+
+
+def scrape_renoir(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    cutoff = hoy + timedelta(weeks=semanas)
+    result: list[Screening] = []
+    for slug, cine in RENOIR_CINES.items():
+        base = RENOIR_CARTELERA.format(slug=slug)
+        try:
+            html = fetch_bytes(base).decode("utf-8", errors="replace")
+        except Exception as e:
+            print(f"[renoir: {slug} no carga — {e}]", end=" ", flush=True)
+            marcar_fuente_caida(cine, "la cartelera no contesta")
+            continue
+        soup = BeautifulSoup(html, "html.parser")
+        dias: dict[str, str] = {}
+        for op in soup.select('option[value*="fecha="]'):
+            f = op["value"].rsplit("fecha=", 1)[-1]
+            if re.fullmatch(r"\d{4}-\d{2}-\d{2}", f):
+                dias[f] = RENOIR_BASE + op["value"] if op["value"].startswith("/") else op["value"]
+        for fecha, url in sorted(dias.items()):
+            if not (hoy.isoformat() <= fecha <= cutoff.isoformat()):
+                continue
+            try:
+                # El primer día ya lo bajamos: la página sin ?fecha es la de hoy.
+                pagina = html if fecha == min(dias) else fetch_bytes(url).decode("utf-8", errors="replace")
+            except Exception:
+                continue
+            result.extend(_renoir_funciones(pagina, cine, fecha))
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Cines Embajadores — Glorieta y Ercilla (Madrid)
+# ---------------------------------------------------------------------------
+# Una sola página (/madrid/) con las dos salas de la ciudad. Cada pase es un
+# <p> con todo en atributos —data-dia, data-hora y data-direccion, que es lo
+# que dice a qué sala va— y adentro el link a la butaca en reservaentradas.com.
+# La ficha de la película (duración y dirección) está en el <li class="movie">
+# que los contiene.
+
+EMBAJADORES_URL = "https://cinesembajadores.es/madrid/"
+EMBAJADORES_CINES = {
+    "ercilla": "Embajadores Ercilla",
+    "cabeza": "Embajadores Glorieta",
+}
+_EMB_DIR_RE = re.compile(r"Direcci[óo]n\s*:?\s*(.+)$", re.I)
+_EMB_DUR_RE = re.compile(r"(\d{1,3})\s*min", re.I)
+
+
+def _embajadores_cine(direccion: str) -> str:
+    d = _sin_acentos(direccion or "").lower()
+    for clave, cine in EMBAJADORES_CINES.items():
+        if clave in d:
+            return cine
+    return ""
+
+
+def _embajadores_funciones(html: str, hoy: date, cutoff: date) -> list[Screening]:
+    soup = BeautifulSoup(html, "html.parser")
+    result: list[Screening] = []
+    vistos: set[tuple] = set()
+    for peli in soup.select("li.movie"):
+        a = peli.select_one(".info h2 a")
+        if not a:
+            continue
+        titulo, ciclo = _madrid_titulo_y_ciclo(a.get_text(" ", strip=True))
+        if not _madrid_es_cine(titulo):
+            continue
+        director = ""
+        for h5 in peli.select(".more h5"):
+            m = _EMB_DIR_RE.search(h5.get_text(" ", strip=True))
+            if m:
+                director = m.group(1).strip()
+                break
+        dur = _EMB_DUR_RE.search(
+            peli.select_one("li.minutos").get_text(" ", strip=True)
+            if peli.select_one("li.minutos") else "")
+        for pase in peli.select("p[data-hora]"):
+            hora = parse_time_str(pase.get("data-hora") or "")
+            dia = (pase.get("data-dia") or "").split("/")
+            cine = _embajadores_cine(pase.get("data-direccion") or "")
+            if not hora or len(dia) != 2 or not cine:
+                continue
+            try:
+                d, mes = int(dia[0]), int(dia[1])
+                # El día viene sin año: diciembre visto en enero es del año
+                # pasado, no del que viene.
+                fecha = date(hoy.year + (1 if mes < hoy.month - 1 else 0), mes, d)
+            except ValueError:
+                continue
+            if not (hoy <= fecha <= cutoff):
+                continue
+            k = (cine, titulo, fecha, hora)
+            if k in vistos:
+                continue
+            vistos.add(k)
+            compra = pase.select_one("a.compraTicket[href]")
+            result.append(Screening(
+                cine=cine, title=titulo, fecha=fecha.isoformat(), hora=hora,
+                ciclo=ciclo, ticket_url=compra["href"] if compra else EMBAJADORES_URL,
+                director=director,
+                duration=int(dur.group(1)) if dur else None,
+            ))
+    return result
+
+
+def scrape_embajadores(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    try:
+        html = fetch_bytes(EMBAJADORES_URL).decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"[embajadores: la cartelera no carga — {e}]", end=" ", flush=True)
+        for cine in EMBAJADORES_CINES.values():
+            marcar_fuente_caida(cine, "la cartelera no contesta")
+        return []
+    return _embajadores_funciones(html, hoy, hoy + timedelta(weeks=semanas))
+
+
+# ---------------------------------------------------------------------------
+# Golem Madrid
+# ---------------------------------------------------------------------------
+# HTML de tablas anidadas, sin una clase por función: lo que sí es estable son
+# las clases del enlace del título (txtNegXXL) y las de cada hora (horaXXXL,
+# que además es el link de compra). Se recorre el documento en orden y cada
+# hora se le cuelga al último título que apareció.
+#
+# La ficha —título original, dirección, duración, nacionalidad— está en la
+# página de cada película, que se baja una sola vez por corrida aunque la peli
+# se dé los cinco días.
+
+GOLEM_BASE = "https://www.golem.es"
+GOLEM_CINE = "Golem Madrid"
+GOLEM_CARTELERA = GOLEM_BASE + "/golem/golem-madrid"
+
+_GOLEM_DIA_RE = re.compile(r"/golem/golem-madrid/(\d{8})$")
+_GOLEM_FICHA_RE = {
+    "original_title": re.compile(r"T[ií]tulo original:\s*(.+)"),
+    "director": re.compile(r"Dirigida por:\s*(.+)"),
+    "duration": re.compile(r"Duraci[óo]n:\s*(\d{1,3})\s*min"),
+    "country": re.compile(r"Nacionalidad:\s*(.+)"),
+}
+
+
+def _golem_ficha(html: str) -> dict:
+    soup = BeautifulSoup(html, "html.parser")
+    for sc in soup(["script", "style"]):
+        sc.decompose()
+    texto = soup.get_text("\n", strip=True)
+    out: dict = {}
+    for campo, rx in _GOLEM_FICHA_RE.items():
+        m = rx.search(texto)
+        if not m:
+            continue
+        valor = m.group(1).strip()
+        out[campo] = int(valor) if campo == "duration" else valor
+    if out.get("country"):
+        out["country"] = out["country"].title()
+    return out
+
+
+def _golem_funciones(html: str, fecha: str) -> list[tuple[str, Screening]]:
+    """(slug de la película, función) de una página de día."""
+    soup = BeautifulSoup(html, "html.parser")
+    result: list[tuple[str, Screening]] = []
+    titulo = slug = ciclo = ""
+    for a in soup.select("a.txtNegXXL, a.horaXXXL"):
+        clases = a.get("class") or []
+        href = a.get("href") or ""
+        if "txtNegXXL" in clases:
+            titulo, ciclo = _madrid_titulo_y_ciclo(a.get_text(" ", strip=True))
+            slug = href
+            if not _madrid_es_cine(titulo):
+                titulo = ""
+        elif titulo:
+            hora = parse_time_str(a.get_text(" ", strip=True))
+            if not hora:
+                continue
+            result.append((slug, Screening(
+                cine=GOLEM_CINE, title=titulo, fecha=fecha, hora=hora, ciclo=ciclo,
+                ticket_url=GOLEM_BASE + href if href.startswith("/") else href,
+            )))
+    return result
+
+
+def scrape_golem(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    cutoff = hoy + timedelta(weeks=semanas)
+    try:
+        primera = fetch_bytes(GOLEM_CARTELERA).decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"[golem: la cartelera no carga — {e}]", end=" ", flush=True)
+        marcar_fuente_caida(GOLEM_CINE, "la cartelera no contesta")
+        return []
+    dias: dict[str, str] = {}
+    for a in BeautifulSoup(primera, "html.parser").select('a[href*="/golem/golem-madrid/"]'):
+        m = _GOLEM_DIA_RE.search(a["href"])
+        if not m:
+            continue
+        try:
+            f = datetime.strptime(m.group(1), "%Y%m%d").date()
+        except ValueError:
+            continue
+        if hoy <= f <= cutoff:
+            dias[f.isoformat()] = GOLEM_BASE + a["href"]
+
+    # La tira de días linkea a los que vienen: el de hoy es la página que ya
+    # bajamos (el día en curso no es un enlace).
+    funciones = _golem_funciones(primera, hoy.isoformat())
+    for fecha, url in sorted(dias.items()):
+        if fecha == hoy.isoformat():
+            continue
+        try:
+            html = fetch_bytes(url).decode("utf-8", errors="replace")
+        except Exception:
+            continue
+        funciones.extend(_golem_funciones(html, fecha))
+
+    fichas: dict[str, dict] = {}
+    for slug, _ in funciones:
+        if slug and slug not in fichas:
+            # Los títulos van en la URL tal cual, con acentos y paréntesis:
+            # sin escapar, el server contesta una página sin ficha.
+            url = GOLEM_BASE + slug if slug.startswith("/") else slug
+            url = urllib.parse.quote(url, safe=":/?&=%")
+            try:
+                fichas[slug] = _golem_ficha(fetch_bytes(url).decode("utf-8", errors="replace"))
+            except Exception:
+                fichas[slug] = {}
+    result = []
+    for slug, s in funciones:
+        for campo, valor in (fichas.get(slug) or {}).items():
+            setattr(s, campo, valor)
+        result.append(s)
     return result

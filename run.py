@@ -57,7 +57,8 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_sala_lucida, scrape_manual, descartar_manual, aplicar_festivales,
         titulo_norm, misma_pelicula,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
-        scrape_dore, scrape_ideal, scrape_cineteca, CINES_MADRID, hoy_madrid,
+        scrape_dore, scrape_ideal, scrape_cineteca, scrape_renoir,
+        scrape_embajadores, scrape_golem, CINES_MADRID, hoy_madrid,
         resumen_proxy,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
@@ -153,6 +154,18 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         print(f"{len(r)} funciones")
     except Exception as e:
         print(f"error — {e}")
+
+    for nombre, fn in (("Renoir (3 salas)", scrape_renoir),
+                       ("Cines Embajadores", scrape_embajadores),
+                       ("Golem Madrid", scrape_golem)):
+        print(f"🎬 Scrapeando {nombre} (Madrid)...", end=" ", flush=True)
+        try:
+            r = fn(semanas)
+            all_screenings.extend(r)
+            from collections import Counter as _C
+            print(", ".join(f"{c}: {n}" for c, n in _C(x.cine for x in r).items()) or "0")
+        except Exception as e:
+            print(f"error — {e}")
 
     print("📝 Funciones manuales...", end=" ", flush=True)
     try:
@@ -723,7 +736,10 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     #      desde el runner puede no abrir, y el Doré depende de dos sitios.
     CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1, 'Bellas Artes': 1,
                        'Cine Doré': 1, 'Cines Ideal': 1,
-                       'Cineteca Madrid': 1}   # cine → mínimo sano
+                       'Cineteca Madrid': 1, 'Cines Princesa': 1,
+                       'Renoir Plaza de España': 1, 'Renoir Retiro': 1,
+                       'Golem Madrid': 1, 'Embajadores Glorieta': 1,
+                       'Embajadores Ercilla': 1}   # cine → mínimo sano
 
     # Cuánto trajo cada cine ANTES del merge, o sea de la fuente, hoy. Después
     # del merge no se puede distinguir: un cine que no se pudo scrapear y quedó

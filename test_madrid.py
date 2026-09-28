@@ -11,9 +11,13 @@ from datetime import date
 
 from scraper import (CINES_MADRID, DORE_PROYECCIONES, _cineteca_ficha,
                      _dore_arreglar_kerning, _dore_combinar, _dore_programa,
-                     _dore_tarjetas, _ideal_funciones)
+                     _dore_tarjetas, _embajadores_funciones, _golem_ficha,
+                     _golem_funciones, _ideal_funciones, _madrid_es_cine,
+                     _madrid_titulo_y_ciclo, _renoir_funciones)
 
-assert CINES_MADRID == {"Cine Doré", "Cines Ideal", "Cineteca Madrid"}
+assert CINES_MADRID == {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
+                        "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
+                        "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla"}
 
 # --- Programa del mes (texto de pypdf) ---------------------------------------
 PROGRAMA = """\
@@ -276,5 +280,119 @@ print("✓ cineteca: título original, director, país, año y duración de la f
 
 assert _cineteca_ficha("<div>nada</div>", URL_CT, date(2026, 10, 1), date(2026, 12, 3)) == []
 print("✓ cineteca: una página sin ficha no inventa funciones")
+
+
+# --- Renoir ------------------------------------------------------------------
+# El mismo pase va dos veces en el HTML: el bloque de escritorio y el de móvil.
+def _renoir_bloque():
+    return """
+    <div class="my-account-content"><div class="row">
+      <div class="col-4"><a href="/pelicula/bad-apples/">BAD APPLES</a>
+        <br><small><b> de Jonatan Etzler </b></small>
+        <br><small>Versión Original subtitulada a Castellano</small>
+        <br><small> Duración 100 minutos </small>
+        <br><small>No recomendada para menores de 16 años</small>
+      </div>
+      <div class="col-7">
+        <div class="pase-cartelera"><span>sala 07</span>
+          <span><a href="https://www.pillalas.com/pase/1089142/" class="btn">16:00</a></span></div>
+        <div class="pase-cartelera"><span>sala 07</span>
+          <span><a href="https://www.pillalas.com/pase/1089144/" class="btn">18:00</a></span></div>
+      </div>
+    </div></div>"""
+
+
+renoir = _renoir_funciones(_renoir_bloque() + _renoir_bloque(), "Cines Princesa", "2026-09-28")
+assert [(s.hora, s.title) for s in renoir] == [("16:00", "BAD APPLES"), ("18:00", "BAD APPLES")]
+assert renoir[0].ticket_url == "https://www.pillalas.com/pase/1089142/"
+assert (renoir[0].director, renoir[0].duration) == ("Jonatan Etzler", 100)
+assert renoir[0].cine == "Cines Princesa"
+print("✓ renoir: cada pase una sola vez (el id manda), con su butaca, director y duración")
+
+
+# --- Cines Embajadores -------------------------------------------------------
+def _emb_pase(direccion, dia, hora, id_):
+    return (f'<p data-direccion="{direccion}" data-sala="Emb1" data-dia="{dia}" data-hora="{hora}">'
+            f'<a class="compraTicket" href="https://www.reservaentradas.com/entrada/madrid/'
+            f'cineembajadores/la-bola-negra/{id_}/">{hora}</a></p>')
+
+
+EMB_HTML = """
+<ul class="cartelera"><li class="movie">
+  <div class="info"><h2><a href="https://cinesembajadores.es/pelicula/la-bola-negra/">La bola negra</a></h2>
+    <ul class="buttons"><li class="minutos">159 min.</li><li class="doblaje">V.E.</li></ul>
+    <div class="more"><h5><strong>Dirección</strong>:Javier Ambrossi, Javier Calvo</h5>
+      <h5><strong>Reparto</strong>:Penélope Cruz</h5></div>
+  </div>
+  <div class="tabla-horarios">""" + \
+    _emb_pase("Gta. Sta. Mª de la Cabeza", "28/09", "16:00", "38660") + \
+    _emb_pase("Calle Ercilla, 53", "28/09", "19:40", "38736") + \
+    _emb_pase("Calle Ercilla, 53", "15/12", "20:00", "39999") + \
+    _emb_pase("Calle Corrida, 1", "29/09", "20:00", "40000") + """
+  </div></li></ul>"""
+
+emb = _embajadores_funciones(EMB_HTML, date(2026, 9, 28), date(2026, 11, 30))
+assert [(s.cine, s.fecha, s.hora) for s in emb] == [
+    ("Embajadores Glorieta", "2026-09-28", "16:00"),
+    ("Embajadores Ercilla", "2026-09-28", "19:40")], [(s.cine, s.fecha, s.hora) for s in emb]
+assert emb[0].director == "Javier Ambrossi, Javier Calvo" and emb[0].duration == 159
+assert emb[1].ticket_url.endswith("/38736/")
+print("✓ embajadores: cada pase a su sala; fuera de la ventana y sala de otra ciudad no entran")
+
+
+# --- Golem -------------------------------------------------------------------
+GOLEM_HTML = """
+<table>
+ <tr><td><a href="/golem/pelicula/Vivir-la-tierra-(V.O.S.E.)" class="txtNegXXL">Vivir la tierra (V.O.S.E.)</a></td></tr>
+ <tr><td><a href="/golem/urlcheck.php?idCine=8&perfCode=99986&eventCode=115025" class="horaXXXL">21:00</a>
+         <a href="/golem/urlcheck.php?idCine=8&perfCode=99987&eventCode=115025" class="horaTexto">Comprar</a></td></tr>
+ <tr><td><a href="/golem/pelicula/La-bola-negra" class="txtNegXXL">La bola negra</a></td></tr>
+ <tr><td><a href="/golem/urlcheck.php?idCine=8&perfCode=99896&eventCode=112109" class="horaXXXL">16:10</a></td></tr>
+</table>"""
+
+golem = _golem_funciones(GOLEM_HTML, "2026-09-28")
+assert [(slug.split("/")[-1], f.hora, f.title) for slug, f in golem] == [
+    ("Vivir-la-tierra-(V.O.S.E.)", "21:00", "Vivir la tierra"),
+    ("La-bola-negra", "16:10", "La bola negra")], golem
+assert golem[0][1].ticket_url.startswith("https://www.golem.es/golem/urlcheck.php")
+print("✓ golem: la hora se le cuelga al último título, y (V.O.S.E.) no es parte del nombre")
+
+GOLEM_FICHA = """<div>Ficha Técnica:
+ Título original: Sheng xi zhi di
+ Dirigida por: Huo Meng
+ Duración: 132 min.
+ Nacionalidad: CHINA
+ Sinopsis: En 1991…</div>"""
+assert _golem_ficha(GOLEM_FICHA) == {"original_title": "Sheng xi zhi di", "director": "Huo Meng",
+                                     "duration": 132, "country": "China"}
+print("✓ golem: la ficha de la película, con el país en minúsculas de las de siempre")
+
+
+# --- Versiones y ciclos pegados al título ------------------------------------
+casos = [
+    ("Tiempo de victoria (VOSE)",                 ("Tiempo de victoria", "")),
+    ("Cinco segundos (DOBLADA AL ESPAÑOL)",       ("Cinco segundos", "")),
+    ("El ser querido (OCAP)",                     ("El ser querido", "")),
+    ("Vivir la tierra (V.O.S.E.)",                ("Vivir la tierra", "")),
+    ("Suspiria [wilder Cinema]",                  ("Suspiria", "Wilder cinema")),
+    ("Las Culpables [docs del Mes]",              ("Las Culpables", "Docs del mes")),
+    ("SESIÓN TETA: La bola negra",                ("La bola negra", "Sesión teta")),
+    ("Domingo de clásicos: El hombre tranquilo (VOSE)",
+                                                  ("El hombre tranquilo", "Domingo de clásicos")),
+    # Un título con dos puntos que NO es un ciclo se queda como está.
+    ("Spider-Man: Brand New Day",                 ("Spider-Man: Brand New Day", "")),
+    ("La odisea",                                 ("La odisea", "")),
+]
+for entrada, esperado in casos:
+    assert _madrid_titulo_y_ciclo(entrada) == esperado, (entrada, _madrid_titulo_y_ciclo(entrada))
+assert _madrid_titulo_y_ciclo("Suspiria [wilder Cinema]", "Halloween") == ("Suspiria", "Halloween")
+print("✓ título y ciclo: la versión se cae, el ciclo va a su columna y 'Spider-Man:' no se parte")
+
+assert not _madrid_es_cine("Manon (Ballet EN DIRECTO desde The Royal Ballet)")
+assert not _madrid_es_cine("L’elisir D’amore (Ópera EN DIFERIDO desde la Ópera Estatal de Viena)")
+assert not _madrid_es_cine("Concierto Pavarotti 90th – The Grand Tribute")
+assert not _madrid_es_cine("BTS WORLD TOUR ARIRANG: LIVE VIEWING")
+assert _madrid_es_cine("El concierto") and _madrid_es_cine("La ópera de los tres centavos")
+print("✓ la ópera y el ballet en directo no entran; una película con 'concierto' u 'ópera' en el título, sí")
 
 print("\nTodo OK")
