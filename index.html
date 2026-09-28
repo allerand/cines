@@ -641,6 +641,9 @@
     .cine-golem    { border-color: #3a3514; color: #e8c547; }
     .cine-embglo   { border-color: #153331; color: #3fbfae; }
     .cine-emberc   { border-color: #1d3340; color: #6fb3d2; }
+    .cine-metropol { border-color: #3a1f28; color: #e07a9a; }
+    .cine-cbaest   { border-color: #24333a; color: #78c2cf; }
+    .cine-callao   { border-color: #333a1f; color: #bcd16a; }
     /* Comerciales — paleta gris/azulada para diferenciarlos visualmente */
     .cine-cinemark { border-color: #2a2a2a; color: #aaa; }
     .cine-hoyts    { border-color: #2a2a2a; color: #aaa; }
@@ -849,6 +852,9 @@
   <button class="filter-btn otra-ciudad" data-cine="Golem Madrid" data-ciudad="madrid">Golem</button>
   <button class="filter-btn otra-ciudad" data-cine="Embajadores Glorieta" data-ciudad="madrid">Embajadores Glorieta</button>
   <button class="filter-btn otra-ciudad" data-cine="Embajadores Ercilla" data-ciudad="madrid">Embajadores Ercilla</button>
+  <button class="filter-btn otra-ciudad" data-cine="Artistic Metropol" data-ciudad="madrid">Metropol</button>
+  <button class="filter-btn otra-ciudad" data-cine="Cine Estudio" data-ciudad="madrid">Cine Estudio</button>
+  <button class="filter-btn otra-ciudad" data-cine="Cines Callao" data-ciudad="madrid">Callao</button>
   <button class="filter-btn commercial-chip" data-cine="Cinemark" hidden>Cinemark</button>
   <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
@@ -918,6 +924,9 @@ const CINE_ADDRESSES = {
   'Golem Madrid':             'Martín de los Heros 14',
   'Embajadores Glorieta':     'Gta. Sta. Mª de la Cabeza 5',
   'Embajadores Ercilla':      'Ercilla 53',
+  'Artistic Metropol':        'Cigarreras 6',
+  'Cine Estudio':             'Alcalá 42',
+  'Cines Callao':             'Plaza del Callao 3',
   // Comerciales — una entrada por sucursal
   'Cinemark Caballito':       'Av. La Plata 96',
   'Cinemark Palermo':         'Beruti 3399',
@@ -1046,12 +1055,13 @@ function applyCiudad() {
 
 let allScreenings = [];
 let activeDay = null;
-// Salas seleccionadas. Set vacío = "Todos": no guardamos 'all' adentro para no
-// tener dos formas de decir lo mismo. Clickear una sala ya elegida la saca.
+// La sala elegida. Se elige de a una: clickear otra reemplaza a la anterior y
+// clickear la que ya estaba la saca. Sigue siendo un Set —vacío = "Todos"— y
+// no guardamos 'all' adentro para no tener dos formas de decir lo mismo.
 let activeCines = new Set();
 let searchQuery = '';
 
-// ¿Esta función entra en la selección actual? Sin selección entra todo.
+// ¿Esta función entra en la sala elegida? Sin ninguna elegida entra todo.
 // Los chips comerciales (data-cine="Cinemark") matchean por PREFIJO, así un
 // solo chip cubre todas las sucursales de la cadena; el resto matchea exacto.
 function matchesCine(s) {
@@ -1079,10 +1089,10 @@ let sortKey = 'hora';
 let sortDir = 'asc';
 
 // ── Deep links: el estado (día / cine / búsqueda) vive en el hash ──────
-// Formato: #sab-25-jul/gaumont/q=nolan — cada segmento es opcional y el
-// orden no importa. Los slugs de cine salen del label del chip ("Gaumont",
-// "El Recoleta") para que las URLs queden legibles y compartibles.
-// Con varias salas elegidas va un segmento por sala: #sab-25-jul/lorca/cosmos.
+// Formato: #buenos-aires/sab-25-jul/gaumont/q=nolan — cada segmento es
+// opcional (salvo la ciudad) y el orden no importa. Los slugs de cine salen
+// del label del chip ("Gaumont", "El Recoleta") para que las URLs queden
+// legibles y compartibles.
 function slugify(t) {
   return String(t).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '')
     .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
@@ -1118,8 +1128,7 @@ function updateHash() {
   // Con búsqueda activa la tabla junta funciones de TODOS los días, así que
   // el día no aplica y no va en la URL (sería engañoso al compartirla).
   if (activeDay && !searchQuery) parts.push(daySlug(activeDay));
-  // Un segmento por sala, en el orden en que se fueron clickeando.
-  for (const c of activeCines) parts.push(cineSlug(c));
+  if (activeCines.size) parts.push(cineSlug([...activeCines][0]));
   if (searchQuery) parts.push('q=' + encodeURIComponent(searchQuery));
   const hash = '#' + parts.join('/');
   if (hash === location.hash) return;
@@ -1146,7 +1155,8 @@ function applyHashState() {
     if (ciudadPorSlug(slug)) continue;      // ya la resolvió ciudadDelHash
     const fecha = dates.find(f => daySlug(f) === slug);
     if (fecha) { activeDay = fecha; continue; }
-    const cine = findCineBySlug(slug);
+    // Los links viejos podían traer varias salas; ahora se elige de a una.
+    const cine = activeCines.size ? null : findCineBySlug(slug);
     if (cine && ciudadDeCine(cine) === ciudad) {
       activeCines.add(cine);
       // Un link a un cine comercial tiene que mostrarlo aunque el toggle
@@ -1604,8 +1614,8 @@ function buildDayTabs() {
   highlightCineDays();
 }
 
-// Marca en la grilla de días los que tienen funciones para las salas
-// seleccionadas. Sin ninguna elegida no resalta nada.
+// Marca en la grilla de días los que tienen funciones para la sala elegida.
+// Sin ninguna elegida no resalta nada.
 function highlightCineDays() {
   const container = document.getElementById('day-tabs');
   const tabs = container.querySelectorAll('.day-tab');
@@ -1649,21 +1659,22 @@ document.getElementById('filters').addEventListener('click', e => {
   const btn = e.target.closest('.filter-btn');
   if (!btn) return;
   const cine = btn.dataset.cine;
-  // Toggle: si la sala ya estaba elegida la sacamos. "Todos" limpia todo.
-  if (cine === 'all') activeCines.clear();
-  else if (activeCines.has(cine)) activeCines.delete(cine);
-  else activeCines.add(cine);
+  // Una sala por vez: la nueva reemplaza a la anterior, y clickear la que ya
+  // estaba vuelve a "Todos". "Todos" limpia la selección.
+  const yaEstaba = activeCines.has(cine);
+  activeCines.clear();
+  if (cine !== 'all' && !yaEstaba) activeCines.add(cine);
   // Va acá arriba y no al final: más abajo hay un return temprano cuando el
   // día activo no tiene funciones de esas salas, y el filtro se aplicó igual.
   track('filtrar_cine', {
     cine: cinesLabel(),
-    cines_elegidos: activeCines.size,
+    ciudad: ciudad,
     canal: CANAL_ORIGEN,
   });
   resetSort();
   syncCineButtons();
   highlightCineDays();
-  // Si el día seleccionado no tiene funciones para estas salas, saltamos al
+  // Si el día seleccionado no tiene funciones para esa sala, saltamos al
   // primer día disponible para que no quede la tabla vacía.
   if (activeCines.size) {
     const firstDay = document.querySelector('.day-tab.has-cine');
@@ -1745,7 +1756,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Cines Callao':'cine-callao' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';

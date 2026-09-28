@@ -9,15 +9,17 @@ reales del 22/9/2026, recortados a lo que usa el scraper.
 """
 from datetime import date
 
-from scraper import (CINES_MADRID, DORE_PROYECCIONES, _cineteca_ficha,
-                     _dore_arreglar_kerning, _dore_combinar, _dore_programa,
-                     _dore_tarjetas, _embajadores_funciones, _golem_ficha,
-                     _golem_funciones, _ideal_funciones, _madrid_es_cine,
-                     _madrid_titulo_y_ciclo, _renoir_funciones)
+from scraper import (CINES_MADRID, DORE_PROYECCIONES, _callao_funciones,
+                     _cba_funciones, _cineteca_ficha, _dore_arreglar_kerning,
+                     _dore_combinar, _dore_programa, _dore_tarjetas,
+                     _embajadores_funciones, _golem_ficha, _golem_funciones,
+                     _ideal_funciones, _madrid_es_cine, _madrid_titulo_y_ciclo,
+                     _metropol_funciones, _renoir_funciones)
 
 assert CINES_MADRID == {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
                         "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
-                        "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla"}
+                        "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla",
+                        "Artistic Metropol", "Cine Estudio", "Cines Callao"}
 
 # --- Programa del mes (texto de pypdf) ---------------------------------------
 PROGRAMA = """\
@@ -394,5 +396,70 @@ assert not _madrid_es_cine("Concierto Pavarotti 90th – The Grand Tribute")
 assert not _madrid_es_cine("BTS WORLD TOUR ARIRANG: LIVE VIEWING")
 assert _madrid_es_cine("El concierto") and _madrid_es_cine("La ópera de los tres centavos")
 print("✓ la ópera y el ballet en directo no entran; una película con 'concierto' u 'ópera' en el título, sí")
+
+# La marca de versión también viene suelta, sin paréntesis (Artistic Metropol).
+assert _madrid_titulo_y_ciclo("PATRICK V.O.S.E.") == ("PATRICK", "")
+assert _madrid_titulo_y_ciclo("PALESTINA 36 Doblada al español") == ("PALESTINA 36", "")
+print("✓ la versión suelta al final también se cae")
+
+
+# --- Artistic Metropol (API de eventos) --------------------------------------
+METROPOL = [
+    {"title": "SALA 1: PALESTINA 36 (2025) Doblada al español", "start_date": "2026-09-29 17:50:00",
+     "url": "https://artisticmetropol.es/sesion/sala-1-palestina-36-2025-doblada-al-espanol-6/"},
+    {"title": "SALA 2: Pase PRIVADO", "start_date": "2026-09-29 18:00:00", "url": "x"},
+    {"title": "SALA 2: PATRICK (1978) V.O.S.E.", "start_date": "2026-09-29 16:00:00", "url": "y"},
+    {"title": "SALA 1: AYER (2019)", "start_date": "2026-08-01 20:00:00", "url": "z"},
+]
+met = _metropol_funciones(METROPOL, date(2026, 9, 28), date(2026, 11, 30))
+assert [(s.fecha, s.hora, s.title, s.year) for s in met] == [
+    ("2026-09-29", "17:50", "PALESTINA 36", 2025),
+    ("2026-09-29", "16:00", "PATRICK", 1978)], [(s.fecha, s.hora, s.title, s.year) for s in met]
+assert met[0].cine == "Artistic Metropol"
+print("✓ metropol: sala y versión fuera del título, el año adentro, y los pases privados no son cartelera")
+
+
+# --- Cine Estudio (Círculo de Bellas Artes) ----------------------------------
+CBA_HTML = """
+<h1 class="fl-heading"><span class="fl-heading-text">Círculo de Bellas Artes de Madrid</span></h1>
+<div class="fl-col-content">
+  <h1 class="fl-heading"><span class="fl-heading-text">Anoche conquisté Tebas</span></h1>
+  <h3 class="fl-heading"><span class="fl-heading-text">Gabriel Azorín</span></h3>
+</div>
+<a href="https://www.circulobellasartes.com/ciclos-cine/ciclos-de-cine/fid-marseille/">FID Marseille</a>
+<table class="cba_tabla_sesiones"><tbody>
+  <tr><td>Mié 23/09, 17:00</td><td>Precio reducido</td></tr>
+  <tr><td>Sáb 03/10, 17:00</td><td></td></tr>
+  <tr><td>Dom 04/10, 21:15</td><td></td></tr>
+</tbody></table>"""
+
+URL_CBA = "https://www.circulobellasartes.com/ciclos-cine/peliculas/anoche-conquiste-tebas/"
+cba = _cba_funciones(CBA_HTML, URL_CBA, date(2026, 9, 28), date(2026, 11, 30))
+assert [(s.fecha, s.hora) for s in cba] == [("2026-10-03", "17:00"), ("2026-10-04", "21:15")]
+assert cba[0].title == "Anoche conquisté Tebas" and cba[0].director == "Gabriel Azorín"
+assert cba[0].ciclo == "FID Marseille" and cba[0].cine == "Cine Estudio"
+print("✓ cine estudio: el título es el de la película y no el del Círculo; la sesión pasada no entra")
+
+
+# --- Cines Callao ------------------------------------------------------------
+CALLAO_HTML = """
+<div class="et_pb_column">
+  <div><p style="text-align: center;">ESTRENO</p></div>
+  <div><p style="text-align: center;"><strong>Spider-Man: Brand New Day</strong></p></div>
+  <div>
+    <p style="text-align: center;">Sábado<span> 26/09<strong> 15:50</strong></span></p>
+    <p style="text-align: center;"><span><strong>_____</strong></span></p>
+    <p style="text-align: center;">Lunes 28<span>/09<strong> 16:00, 19:00, 22:00</strong></span></p>
+    <p style="text-align: center;"><span>Martes 29/09<strong> ---</strong></span></p>
+  </div>
+  <a href="https://www.reservaentradas.com/sesiones/madrid/callao/spiderman/">Comprar entradas</a>
+</div>"""
+
+callao = _callao_funciones(CALLAO_HTML, date(2026, 9, 28), date(2026, 11, 30))
+assert [(s.fecha, s.hora) for s in callao] == [
+    ("2026-09-28", "16:00"), ("2026-09-28", "19:00"), ("2026-09-28", "22:00")]
+assert callao[0].title == "Spider-Man: Brand New Day"
+assert callao[0].ticket_url.endswith("/callao/spiderman/")
+print("✓ callao: los tres horarios del día, el día pasado y el '---' afuera")
 
 print("\nTodo OK")

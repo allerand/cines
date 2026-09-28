@@ -8506,7 +8506,8 @@ def scrape_farus(semanas: int = 9) -> list[Screening]:
 # así que un cine nuevo de Madrid tiene que entrar acá.
 CINES_MADRID = {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
                 "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
-                "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla"}
+                "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla",
+                "Artistic Metropol", "Cine Estudio", "Cines Callao"}
 
 _MADRID = ZoneInfo("Europe/Madrid")
 
@@ -8529,9 +8530,15 @@ def _norm_madrid(s: str) -> str:
 # Marcas de formato que los cines de Madrid le pegan al título: no son parte
 # del nombre de la película y, si quedan, la misma peli sale dos veces (una por
 # versión) y las dos veces sin ficha, porque Letterboxd no la encuentra.
+_MADRID_VERSION = (r"V\.?O\.?S\.?[EI]?\.?|VOSE|VOSI|V\.?E\.?|"
+                   r"DOBLADA(?:\s+AL\s+ESPA[ÑN]OL)?|SUBTITULADA|3D|2D|ATMOS|OCAP|DIGITAL")
 _MADRID_FORMATO_RE = re.compile(
-    r"\s*[\(\[]\s*(?:V\.?O\.?S\.?[EI]?\.?|VOSE|VOSI|V\.?E\.?|DOBLADA(?:\s+AL\s+ESPA[ÑN]OL)?|"
-    r"SUBTITULADA|3D|2D|ATMOS|OCAP|DIGITAL)\s*[\)\]]\s*$", re.I)
+    rf"\s*[\(\[]\s*(?:{_MADRID_VERSION})\s*[\)\]]\s*$", re.I)
+# Los mismos marcadores pero sueltos al final, como los escribe Artistic
+# Metropol ("PATRICK (1978) V.O.S.E."). Van aparte para no comerse un título
+# que termine en una palabra parecida: acá se pide la marca entera.
+_MADRID_FORMATO_SUELTO_RE = re.compile(
+    rf"\s+(?:{_MADRID_VERSION})\s*$", re.I)
 # Ciclos que van pegados al título, adelante con dos puntos o atrás entre
 # corchetes. Es una lista a mano a propósito: partir por cualquier ":" se
 # llevaría puesto "Spider-Man: Brand New Day".
@@ -8562,6 +8569,7 @@ def _madrid_titulo_y_ciclo(titulo: str, ciclo: str = "") -> tuple[str, str]:
     while anterior != t:
         anterior = t
         t = _MADRID_FORMATO_RE.sub("", t).strip()
+        t = _MADRID_FORMATO_SUELTO_RE.sub("", t).strip()
     for nombre in _MADRID_CICLOS:
         pref = re.match(rf"^\s*{re.escape(nombre)}\s*[:\-–]\s*(.+)$", t, re.I)
         if pref:
@@ -9369,3 +9377,211 @@ def scrape_golem(semanas: int = 9) -> list[Screening]:
             setattr(s, campo, valor)
         result.append(s)
     return result
+
+
+# ---------------------------------------------------------------------------
+# Artistic Metropol (Madrid)
+# ---------------------------------------------------------------------------
+# WordPress con The Events Calendar, que trae su API pública: una sesión por
+# evento, con la fecha y hora ya resueltas. El título dice sala, película, año
+# y versión ("SALA 1: PALESTINA 36 (2025) Doblada al español"). Los pases
+# privados (la sala alquilada) no son cartelera.
+
+METROPOL_CINE = "Artistic Metropol"
+METROPOL_API = ("https://artisticmetropol.es/wp-json/tribe/events/v1/events"
+                "?per_page=50&start_date={desde}&end_date={hasta}&page={page}")
+_METROPOL_SALA_RE = re.compile(r"^\s*SALA\s*\d+\s*:\s*", re.I)
+_METROPOL_ANIO_RE = re.compile(r"\s*\((\d{4})\)\s*")
+_METROPOL_PRIVADO_RE = re.compile(r"pase\s+privado|alquiler", re.I)
+
+
+def _metropol_funciones(eventos: list, hoy: date, cutoff: date) -> list[Screening]:
+    result: list[Screening] = []
+    for ev in eventos:
+        if not isinstance(ev, dict):
+            continue
+        titulo = _METROPOL_SALA_RE.sub("", (ev.get("title") or "").strip())
+        if not titulo or _METROPOL_PRIVADO_RE.search(titulo):
+            continue
+        anio = None
+        m = _METROPOL_ANIO_RE.search(titulo)
+        if m:
+            anio = int(m.group(1))
+            titulo = (titulo[:m.start()] + " " + titulo[m.end():]).strip()
+        titulo, ciclo = _madrid_titulo_y_ciclo(titulo)
+        if not titulo or not _madrid_es_cine(titulo):
+            continue
+        inicio = (ev.get("start_date") or "").split(" ")
+        if len(inicio) != 2:
+            continue
+        try:
+            fecha = date.fromisoformat(inicio[0])
+        except ValueError:
+            continue
+        hora = parse_time_str(inicio[1][:5])
+        if not hora or not (hoy <= fecha <= cutoff):
+            continue
+        result.append(Screening(
+            cine=METROPOL_CINE, title=titulo, fecha=fecha.isoformat(), hora=hora,
+            ticket_url=ev.get("url") or "", ciclo=ciclo, year=anio,
+        ))
+    return result
+
+
+def scrape_metropol(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    cutoff = hoy + timedelta(weeks=semanas)
+    eventos: list = []
+    for page in range(1, 8):
+        url = METROPOL_API.format(desde=hoy.isoformat(), hasta=cutoff.isoformat(), page=page)
+        try:
+            data = json.loads(fetch_bytes(url).decode("utf-8", errors="replace"))
+        except Exception as e:
+            if page == 1:
+                print(f"[metropol: la API no contesta — {e}]", end=" ", flush=True)
+                marcar_fuente_caida(METROPOL_CINE, "la API de eventos no contesta")
+            break
+        pagina = data.get("events") or []
+        eventos.extend(pagina)
+        if len(pagina) < 50 or page >= (data.get("total_pages") or 1):
+            break
+    return _metropol_funciones(eventos, hoy, cutoff)
+
+
+# ---------------------------------------------------------------------------
+# Cine Estudio — Círculo de Bellas Artes (Madrid)
+# ---------------------------------------------------------------------------
+# El índice lista las películas en cartel y cada ficha trae el director, el
+# ciclo al que pertenece y una tabla de sesiones ("Mié 23/09, 17:00"), que es
+# de donde salen las funciones. Son ~30 fichas por corrida.
+
+CBA_CINE = "Cine Estudio"
+CBA_BASE = "https://www.circulobellasartes.com"
+CBA_INDICE = CBA_BASE + "/ciclos-cine/peliculas/"
+_CBA_SESION_RE = re.compile(r"(\d{1,2})/(\d{1,2}).{0,4}?(\d{1,2})[:.](\d{2})")
+
+
+def _cba_funciones(html: str, url: str, hoy: date, cutoff: date) -> list[Screening]:
+    soup = BeautifulSoup(html, "html.parser")
+    # El h1 de la película es el último: los primeros son los del encabezado
+    # del Círculo ("Círculo de Bellas Artes de Madrid", "Casa Europa").
+    titulos = soup.select("h1.fl-heading .fl-heading-text") or soup.select("h1")
+    if not titulos:
+        return []
+    h1 = titulos[-1]
+    titulo = h1.get_text(" ", strip=True)
+    # El director es el subtítulo que va pegado abajo del título.
+    director = ""
+    cabecera = h1.find_parent("div", class_="fl-col-content")
+    if cabecera:
+        h3 = cabecera.select_one("h3.fl-heading .fl-heading-text")
+        if h3:
+            director = h3.get_text(" ", strip=True)
+    ciclo_link = soup.select_one('a[href*="/ciclos-de-cine/"]')
+    ciclo = ciclo_link.get_text(" ", strip=True) if ciclo_link else ""
+    result: list[Screening] = []
+    for td in soup.select("table.cba_tabla_sesiones td"):
+        m = _CBA_SESION_RE.search(td.get_text(" ", strip=True))
+        if not m:
+            continue
+        mes = int(m.group(2))
+        try:
+            fecha = date(hoy.year + (1 if mes < hoy.month - 1 else 0), mes, int(m.group(1)))
+        except ValueError:
+            continue
+        if not (hoy <= fecha <= cutoff):
+            continue
+        result.append(Screening(
+            cine=CBA_CINE, title=titulo, fecha=fecha.isoformat(),
+            hora=f"{int(m.group(3)):02d}:{m.group(4)}",
+            ticket_url=url, ciclo=ciclo, director=director,
+        ))
+    return result
+
+
+def scrape_cine_estudio(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    cutoff = hoy + timedelta(weeks=semanas)
+    try:
+        indice = fetch_bytes(CBA_INDICE).decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"[cine estudio: el índice no carga — {e}]", end=" ", flush=True)
+        marcar_fuente_caida(CBA_CINE, "el índice de películas no contesta")
+        return []
+    urls: list[str] = []
+    for a in BeautifulSoup(indice, "html.parser").select('a[href*="/ciclos-cine/peliculas/"]'):
+        url = a["href"]
+        if url.rstrip("/").endswith("/peliculas") or url in urls:
+            continue
+        urls.append(url if url.startswith("http") else CBA_BASE + url)
+    result: list[Screening] = []
+    for url in urls:
+        try:
+            result.extend(_cba_funciones(
+                fetch_bytes(url).decode("utf-8", errors="replace"), url, hoy, cutoff))
+        except Exception:
+            continue
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Cines Callao (Madrid)
+# ---------------------------------------------------------------------------
+# La cartelera es una fila de columnas escritas a mano en el maquetador: el
+# título en negrita y, debajo, una línea por día ("Lunes 28/09 16:00, 19:00,
+# 22:00", o "---" cuando no hay función). Se leen sólo las líneas con forma de
+# día y horas: cualquier otra cosa que escriban no entra.
+
+CALLAO_CINE = "Cines Callao"
+CALLAO_URL = "https://cinescallao.es/"
+_CALLAO_DIA_RE = re.compile(r"(\d{1,2})\s*/\s*(\d{1,2})\s*(.*)$")
+_CALLAO_HORA_RE = re.compile(r"\b(\d{1,2})[:.](\d{2})\b")
+_CALLAO_NO_TITULO_RE = re.compile(r"\d{1,2}[:.]\d{2}|\d{1,2}/\d{1,2}|^[_\-\s]+$")
+
+
+def _callao_funciones(html: str, hoy: date, cutoff: date) -> list[Screening]:
+    soup = BeautifulSoup(html, "html.parser")
+    result: list[Screening] = []
+    vistos: set[tuple] = set()
+    for col in soup.select(".et_pb_column"):
+        titulos = [x.get_text(" ", strip=True) for x in col.select("strong")]
+        titulos = [t for t in titulos if t and not _CALLAO_NO_TITULO_RE.search(t)]
+        if not titulos:
+            continue
+        titulo, ciclo = _madrid_titulo_y_ciclo(titulos[0])
+        if not _madrid_es_cine(titulo):
+            continue
+        compra = col.select_one('a[href*="reservaentradas"], a[href*="entradas"]')
+        for p in col.select("p"):
+            m = _CALLAO_DIA_RE.search(re.sub(r"\s+", " ", p.get_text(" ", strip=True)))
+            if not m:
+                continue
+            try:
+                mes = int(m.group(2))
+                fecha = date(hoy.year + (1 if mes < hoy.month - 1 else 0), mes, int(m.group(1)))
+            except ValueError:
+                continue
+            if not (hoy <= fecha <= cutoff):
+                continue
+            for h in _CALLAO_HORA_RE.finditer(m.group(3)):
+                hora = f"{int(h.group(1)):02d}:{h.group(2)}"
+                k = (titulo, fecha, hora)
+                if k in vistos:
+                    continue
+                vistos.add(k)
+                result.append(Screening(
+                    cine=CALLAO_CINE, title=titulo, fecha=fecha.isoformat(), hora=hora,
+                    ticket_url=compra["href"] if compra else CALLAO_URL, ciclo=ciclo,
+                ))
+    return result
+
+
+def scrape_callao(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    try:
+        html = fetch_bytes(CALLAO_URL).decode("utf-8", errors="replace")
+    except Exception as e:
+        print(f"[callao: la cartelera no carga — {e}]", end=" ", flush=True)
+        marcar_fuente_caida(CALLAO_CINE, "la cartelera no contesta")
+        return []
+    return _callao_funciones(html, hoy, hoy + timedelta(weeks=semanas))
