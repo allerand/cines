@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T02:58:00",
+  "updated": "2026-09-29T10:35:31",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 4,
@@ -31,7 +31,7 @@
       "publicadas": 5
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
+      "scrapeadas": 17,
       "publicadas": 17
     },
     "Centro Cultural Munro": {
@@ -127,8 +127,8 @@
       "publicadas": 322
     },
     "Multiplex Pilar": {
-      "scrapeadas": 115,
-      "publicadas": 115
+      "scrapeadas": 193,
+      "publicadas": 193
     },
     "Sala Lugones": {
       "scrapeadas": 45,
@@ -3508,22 +3508,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-29",
       "hora": "17:40",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 175,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-29",
-      "hora": "17:40",
       "title_es": "La Invitación",
       "title_en": "The Invite",
       "original_title": "",
@@ -3533,6 +3517,22 @@
       "duration": 108,
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-29",
+      "hora": "17:40",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 175,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -5134,7 +5134,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/los-calvos/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1159",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -5982,7 +5982,7 @@
       "genre": "Terror, Crimen",
       "letterboxd": "https://letterboxd.com/film/encantador/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1160",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -7252,22 +7252,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-29",
       "hora": "23:00",
-      "title_es": "El último gran golpe",
-      "title_en": "The Get Out",
-      "original_title": "The Get Out",
-      "director": "Derrick Borte",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 111,
-      "genre": "Acción, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-29",
-      "hora": "23:00",
       "title_es": "Insidious: Fuera del más allá",
       "title_en": "Insidious: Out of the Further",
       "original_title": "Insidious: Out of the Further",
@@ -7277,6 +7261,22 @@
       "duration": 106,
       "genre": "Terror, Thriller",
       "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-29",
+      "hora": "23:00",
+      "title_es": "El último gran golpe",
+      "title_en": "The Get Out",
+      "original_title": "The Get Out",
+      "director": "Derrick Borte",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -10404,22 +10404,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-30",
       "hora": "17:40",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 175,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-30",
-      "hora": "17:40",
       "title_es": "La Invitación",
       "title_en": "The Invite",
       "original_title": "",
@@ -10429,6 +10413,22 @@
       "duration": 108,
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-30",
+      "hora": "17:40",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 175,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -11652,22 +11652,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-30",
       "hora": "20:00",
-      "title_es": "Linkin Park: Unshatter",
-      "title_en": "LINKIN PARK: UNSHATTER",
-      "original_title": "LINKIN PARK: UNSHATTER",
-      "director": "Joe Hahn",
-      "country": "Estados Unidos, Corea del Sur",
-      "year": 2026,
-      "duration": 108,
-      "genre": "Música, Documental",
-      "letterboxd": "https://letterboxd.com/film/linkin-park-unshatter/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-30",
-      "hora": "20:00",
       "title_es": "Resident Evil: Noche cero",
       "title_en": "Resident Evil",
       "original_title": "Resident Evil",
@@ -11677,6 +11661,22 @@
       "duration": 94,
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-30",
+      "hora": "20:00",
+      "title_es": "Linkin Park: Unshatter",
+      "title_en": "LINKIN PARK: UNSHATTER",
+      "original_title": "LINKIN PARK: UNSHATTER",
+      "director": "Joe Hahn",
+      "country": "Estados Unidos, Corea del Sur",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/linkin-park-unshatter/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -11774,7 +11774,7 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/los-calvos/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1159",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -12446,7 +12446,7 @@
       "genre": "Terror, Crimen",
       "letterboxd": "https://letterboxd.com/film/encantador/",
       "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1160",
-      "ciclo": "Estreno"
+      "ciclo": "En cartel"
     },
     {
       "cine": "Hoyts Abasto",
@@ -12692,22 +12692,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-09-30",
       "hora": "22:10",
-      "title_es": "El último gran golpe",
-      "title_en": "The Get Out",
-      "original_title": "The Get Out",
-      "director": "Derrick Borte",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 111,
-      "genre": "Acción, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-09-30",
-      "hora": "22:10",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -12717,6 +12701,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-09-30",
+      "hora": "22:10",
+      "title_es": "El último gran golpe",
+      "title_en": "The Get Out",
+      "original_title": "The Get Out",
+      "director": "Derrick Borte",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -13444,22 +13444,6 @@
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-30",
       "hora": "23:00",
-      "title_es": "El último gran golpe",
-      "title_en": "The Get Out",
-      "original_title": "The Get Out",
-      "director": "Derrick Borte",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 111,
-      "genre": "Acción, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Abasto",
-      "fecha": "2026-09-30",
-      "hora": "23:00",
       "title_es": "Insidious: Fuera del más allá",
       "title_en": "Insidious: Out of the Further",
       "original_title": "Insidious: Out of the Further",
@@ -13469,6 +13453,22 @@
       "duration": 106,
       "genre": "Terror, Thriller",
       "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Abasto",
+      "fecha": "2026-09-30",
+      "hora": "23:00",
+      "title_es": "El último gran golpe",
+      "title_en": "The Get Out",
+      "original_title": "The Get Out",
+      "director": "Derrick Borte",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 111,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-get-out-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -15521,22 +15521,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-01",
-      "hora": "17:40",
-      "title_es": "Los Colores Del Tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-01",
       "hora": "17:40",
@@ -15550,6 +15534,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-01",
+      "hora": "17:40",
+      "title_es": "Los Colores Del Tiempo",
+      "title_en": "Colours of Time",
+      "original_title": "La Venue de l'avenir",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
       "ciclo": ""
     },
     {
@@ -18017,6 +18017,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "12:10",
+      "title_es": "Guardianes Del Museo 2",
+      "title_en": "Cats in the Museum 2: Treasures of Egypt",
+      "original_title": "Коты Эрмитажа 2. Тайна египетского зала",
+      "director": "Vasily Rovensky",
+      "country": "Rusia",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Animación",
+      "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "12:10",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-02",
       "hora": "12:20",
@@ -18046,6 +18078,38 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "12:20",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "12:20",
+      "title_es": "La Isla Olvidada",
+      "title_en": "Forgotten Island",
+      "original_title": "Forgotten Island",
+      "director": "Januel Mercado, Joel Crawford",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 109,
+      "genre": "Familiar, Comedia",
+      "letterboxd": "https://letterboxd.com/film/forgotten-island-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/la-isla-olvidada/",
       "ciclo": ""
     },
     {
@@ -18081,6 +18145,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "12:30",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-02",
       "hora": "12:40",
@@ -18110,6 +18190,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "12:40",
+      "title_es": "Cuentos Del Jardin Magico",
+      "title_en": "Tales from the Magic Garden",
+      "original_title": "",
+      "director": "Jean-Claude Rozec, Patrik Pašš, Leon Vidmar",
+      "country": "República Checa, Slovakia",
+      "year": 2025,
+      "duration": 70,
+      "genre": "Familiar, Animación",
+      "letterboxd": "https://letterboxd.com/film/tales-from-the-magic-garden/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cuentos-del-jardin-magico/",
       "ciclo": ""
     },
     {
@@ -18385,6 +18481,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "13:20",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-02",
       "hora": "13:20",
@@ -18398,6 +18510,22 @@
       "genre": "Thriller, Drama",
       "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
       "ticket_url": "https://multiplex.com.ar/peliculas/hangar-rojo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "13:20",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -18641,6 +18769,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "14:00",
+      "title_es": "Relajadas Y Muy Peligrosas",
+      "title_en": "Spa Weekend",
+      "original_title": "Spa Weekend",
+      "director": "Jon Lucas, Scott Moore",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 97,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/spa-weekend-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/relajadas-y-muy-peligrosas/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-10-02",
       "hora": "14:00",
@@ -18654,6 +18798,22 @@
       "genre": "Animación",
       "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
       "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "14:00",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -18702,6 +18862,38 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "14:10",
+      "title_es": "Hangar Rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile, Argentina",
+      "year": 2026,
+      "duration": 81,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/hangar-rojo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "14:20",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
       "ciclo": ""
     },
     {
@@ -18766,6 +18958,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "14:30",
+      "title_es": "Guardianes Del Museo 2",
+      "title_en": "Cats in the Museum 2: Treasures of Egypt",
+      "original_title": "Коты Эрмитажа 2. Тайна египетского зала",
+      "director": "Vasily Rovensky",
+      "country": "Rusia",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Animación",
+      "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
       "ciclo": ""
     },
     {
@@ -18910,6 +19118,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "14:50",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
       "ciclo": ""
     },
     {
@@ -19329,6 +19553,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "15:50",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "15:50",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-10-02",
       "hora": "15:50",
@@ -19342,6 +19598,22 @@
       "genre": "Animación",
       "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
       "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "15:50",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -19601,6 +19873,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "16:20",
+      "title_es": "El Corazon De La Bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-02",
       "hora": "16:30",
@@ -19665,6 +19953,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "16:30",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 173,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/la-odisea/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Caballito",
       "fecha": "2026-10-02",
       "hora": "16:40",
@@ -19678,6 +19982,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "16:40",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -19726,6 +20046,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "16:50",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
       "ciclo": ""
     },
     {
@@ -19806,6 +20142,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "17:10",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
       "ciclo": ""
     },
     {
@@ -19937,6 +20289,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "17:30",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-02",
       "hora": "17:30",
@@ -19985,22 +20353,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-02",
-      "hora": "17:40",
-      "title_es": "Los Colores Del Tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-02",
       "hora": "17:40",
@@ -20014,6 +20366,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-02",
+      "hora": "17:40",
+      "title_es": "Los Colores Del Tiempo",
+      "title_en": "Colours of Time",
+      "original_title": "La Venue de l'avenir",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
       "ciclo": ""
     },
     {
@@ -20273,6 +20641,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "18:10",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-10-02",
       "hora": "18:15",
@@ -20302,6 +20686,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "18:20",
+      "title_es": "Escondida En Mi Cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": null,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/escondida-en-mi-cabeza/",
       "ciclo": ""
     },
     {
@@ -20358,12 +20758,12 @@
       "hora": "18:30",
       "title_es": "Betty",
       "title_en": "Betty",
-      "original_title": "",
+      "original_title": "Betty",
       "director": "Oriana Carossa",
       "country": "Argentina",
-      "year": null,
+      "year": 2026,
       "duration": 4,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/pelicula/betty",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA"
@@ -20529,6 +20929,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "18:30",
+      "title_es": "El Corazon De La Bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lúcida",
       "fecha": "2026-10-02",
       "hora": "18:30",
@@ -20622,6 +21038,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "18:50",
+      "title_es": "Escondida En Mi Cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": null,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/escondida-en-mi-cabeza/",
       "ciclo": ""
     },
     {
@@ -20801,6 +21233,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "19:20",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Filo Cine",
       "fecha": "2026-10-02",
       "hora": "19:30",
@@ -20897,6 +21345,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "19:40",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-02",
       "hora": "19:50",
@@ -20926,6 +21390,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "19:50",
+      "title_es": "Spider-man: Un Dia Nuevo",
+      "title_en": "Spider-Man: Brand New Day",
+      "original_title": "Spider-Man: Brand New Day",
+      "director": "Destin Daniel Cretton",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
       "ciclo": ""
     },
     {
@@ -21182,6 +21662,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "20:10",
+      "title_es": "El Corazon De La Bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
       "ciclo": ""
     },
     {
@@ -21601,6 +22097,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "21:00",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-02",
       "hora": "21:00",
@@ -21630,6 +22142,22 @@
       "genre": "Música, Documental",
       "letterboxd": "https://letterboxd.com/film/linkin-park-unshatter/",
       "ticket_url": "https://multiplex.com.ar/peliculas/linkin-park-unshatter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "21:10",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -21905,6 +22433,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "22:10",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-02",
       "hora": "22:10",
@@ -21998,6 +22542,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "22:20",
+      "title_es": "La Noche Del Demonio: Estan Entre Nosotros",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/la-noche-del-demonio-estan-entre-nosotros/",
       "ciclo": ""
     },
     {
@@ -22177,6 +22737,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "22:40",
+      "title_es": "Vertigo 2",
+      "title_en": "Fall 2: Deadpoint",
+      "original_title": "Fall 2: Deadpoint",
+      "director": "Michael Spierig, Peter Spierig",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Thriller",
+      "letterboxd": "https://letterboxd.com/film/fall-2-deadpoint/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/vertigo-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-10-02",
       "hora": "22:40",
@@ -22337,7 +22913,39 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "22:50",
+      "title_es": "Escondida En Mi Cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": null,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/escondida-en-mi-cabeza/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
+      "fecha": "2026-10-02",
+      "hora": "22:50",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
       "fecha": "2026-10-02",
       "hora": "22:50",
       "title_es": "Resident Evil: Noche Cero",
@@ -22446,6 +23054,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-02",
+      "hora": "23:00",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
       "ciclo": ""
     },
     {
@@ -23846,12 +24470,12 @@
       "hora": "15:30",
       "title_es": "Betty",
       "title_en": "Betty",
-      "original_title": "",
+      "original_title": "Betty",
       "director": "Oriana Carossa",
       "country": "Argentina",
-      "year": null,
+      "year": 2026,
       "duration": 4,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "",
       "ticket_url": "https://www.ficuba.com/es/pelicula/betty",
       "ciclo": "FICUBA - Competencia de cortometrajes UBA"
@@ -24673,22 +25297,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-03",
-      "hora": "17:40",
-      "title_es": "Los Colores Del Tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-03",
       "hora": "17:40",
@@ -24702,6 +25310,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-03",
+      "hora": "17:40",
+      "title_es": "Los Colores Del Tiempo",
+      "title_en": "Colours of Time",
+      "original_title": "La Venue de l'avenir",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
       "ciclo": ""
     },
     {
@@ -27233,6 +27857,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "12:10",
+      "title_es": "Guardianes Del Museo 2",
+      "title_en": "Cats in the Museum 2: Treasures of Egypt",
+      "original_title": "Коты Эрмитажа 2. Тайна египетского зала",
+      "director": "Vasily Rovensky",
+      "country": "Rusia",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Animación",
+      "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "12:10",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-04",
       "hora": "12:20",
@@ -27262,6 +27918,38 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "12:20",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "12:20",
+      "title_es": "La Isla Olvidada",
+      "title_en": "Forgotten Island",
+      "original_title": "Forgotten Island",
+      "director": "Januel Mercado, Joel Crawford",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 109,
+      "genre": "Familiar, Comedia",
+      "letterboxd": "https://letterboxd.com/film/forgotten-island-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/la-isla-olvidada/",
       "ciclo": ""
     },
     {
@@ -27297,6 +27985,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "12:30",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-04",
       "hora": "12:40",
@@ -27326,6 +28030,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "12:40",
+      "title_es": "Cuentos Del Jardin Magico",
+      "title_en": "Tales from the Magic Garden",
+      "original_title": "",
+      "director": "Jean-Claude Rozec, Patrik Pašš, Leon Vidmar",
+      "country": "República Checa, Slovakia",
+      "year": 2025,
+      "duration": 70,
+      "genre": "Familiar, Animación",
+      "letterboxd": "https://letterboxd.com/film/tales-from-the-magic-garden/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cuentos-del-jardin-magico/",
       "ciclo": ""
     },
     {
@@ -27601,6 +28321,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "13:20",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-04",
       "hora": "13:20",
@@ -27614,6 +28350,22 @@
       "genre": "Thriller, Drama",
       "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
       "ticket_url": "https://multiplex.com.ar/peliculas/hangar-rojo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "13:20",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -27841,6 +28593,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "14:00",
+      "title_es": "Relajadas Y Muy Peligrosas",
+      "title_en": "Spa Weekend",
+      "original_title": "Spa Weekend",
+      "director": "Jon Lucas, Scott Moore",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 97,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/spa-weekend-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/relajadas-y-muy-peligrosas/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-10-04",
       "hora": "14:00",
@@ -27854,6 +28622,22 @@
       "genre": "Animación",
       "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
       "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "14:00",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -27905,6 +28689,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "14:10",
+      "title_es": "Hangar Rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile, Argentina",
+      "year": 2026,
+      "duration": 81,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/hangar-rojo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "14:20",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-04",
       "hora": "14:30",
@@ -27934,6 +28750,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "14:30",
+      "title_es": "Guardianes Del Museo 2",
+      "title_en": "Cats in the Museum 2: Treasures of Egypt",
+      "original_title": "Коты Эрмитажа 2. Тайна египетского зала",
+      "director": "Vasily Rovensky",
+      "country": "Rusia",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Animación",
+      "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
       "ciclo": ""
     },
     {
@@ -28078,6 +28910,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "14:50",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
       "ciclo": ""
     },
     {
@@ -28497,6 +29345,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "15:50",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "15:50",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-10-04",
       "hora": "15:50",
@@ -28510,6 +29390,22 @@
       "genre": "Animación",
       "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
       "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "15:50",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -28913,6 +29809,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "16:20",
+      "title_es": "El Corazon De La Bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-04",
       "hora": "16:30",
@@ -28977,6 +29889,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "16:30",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 173,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/la-odisea/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-10-04",
       "hora": "16:30",
@@ -29006,6 +29934,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "16:40",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
     },
     {
@@ -29054,6 +29998,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "16:50",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
       "ciclo": ""
     },
     {
@@ -29134,6 +30094,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "17:10",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
       "ciclo": ""
     },
     {
@@ -29297,6 +30273,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "17:30",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-04",
       "hora": "17:30",
@@ -29345,22 +30337,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-04",
-      "hora": "17:40",
-      "title_es": "Los Colores Del Tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-04",
       "hora": "17:40",
@@ -29374,6 +30350,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-04",
+      "hora": "17:40",
+      "title_es": "Los Colores Del Tiempo",
+      "title_en": "Colours of Time",
+      "original_title": "La Venue de l'avenir",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
       "ciclo": ""
     },
     {
@@ -29649,6 +30641,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "18:10",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-04",
       "hora": "18:15",
@@ -29662,6 +30670,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "18:20",
+      "title_es": "Escondida En Mi Cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": null,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/escondida-en-mi-cabeza/",
       "ciclo": ""
     },
     {
@@ -29889,6 +30913,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "18:30",
+      "title_es": "El Corazon De La Bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-10-04",
       "hora": "18:30",
@@ -29982,6 +31022,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "18:50",
+      "title_es": "Escondida En Mi Cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": null,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/escondida-en-mi-cabeza/",
       "ciclo": ""
     },
     {
@@ -30161,6 +31217,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "19:20",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-04",
       "hora": "19:30",
@@ -30241,6 +31313,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "19:40",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-04",
       "hora": "19:50",
@@ -30270,6 +31358,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "19:50",
+      "title_es": "Spider-man: Un Dia Nuevo",
+      "title_en": "Spider-Man: Brand New Day",
+      "original_title": "Spider-Man: Brand New Day",
+      "director": "Destin Daniel Cretton",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
       "ciclo": ""
     },
     {
@@ -30526,6 +31630,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "20:10",
+      "title_es": "El Corazon De La Bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
       "ciclo": ""
     },
     {
@@ -30929,6 +32049,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "21:00",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "21:10",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "Avengers: Endgame (re Estreno)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-04",
       "hora": "21:30",
@@ -31201,6 +32353,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "22:10",
+      "title_es": "Verity,la Sombra De Un Engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 117,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-04",
       "hora": "22:10",
@@ -31294,6 +32462,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "22:20",
+      "title_es": "La Noche Del Demonio: Estan Entre Nosotros",
+      "title_en": "Insidious: Out of the Further",
+      "original_title": "Insidious: Out of the Further",
+      "director": "Jacob Chase",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/la-noche-del-demonio-estan-entre-nosotros/",
       "ciclo": ""
     },
     {
@@ -31473,6 +32657,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "22:40",
+      "title_es": "Vertigo 2",
+      "title_en": "Fall 2: Deadpoint",
+      "original_title": "Fall 2: Deadpoint",
+      "director": "Michael Spierig, Peter Spierig",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Thriller",
+      "letterboxd": "https://letterboxd.com/film/fall-2-deadpoint/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/vertigo-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-10-04",
       "hora": "22:40",
@@ -31633,7 +32833,39 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "22:50",
+      "title_es": "Escondida En Mi Cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": null,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/escondida-en-mi-cabeza/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
+      "fecha": "2026-10-04",
+      "hora": "22:50",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
       "fecha": "2026-10-04",
       "hora": "22:50",
       "title_es": "Resident Evil: Noche Cero",
@@ -31742,6 +32974,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-04",
+      "hora": "23:00",
+      "title_es": "Resident Evil: Noche Cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
       "ciclo": ""
     },
     {
@@ -33921,22 +35169,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-05",
-      "hora": "17:40",
-      "title_es": "Los Colores Del Tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-05",
       "hora": "17:40",
@@ -33950,6 +35182,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-05",
+      "hora": "17:40",
+      "title_es": "Los Colores Del Tiempo",
+      "title_en": "Colours of Time",
+      "original_title": "La Venue de l'avenir",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
       "ciclo": ""
     },
     {
@@ -35572,22 +36820,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-05",
       "hora": "22:00",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 175,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-10-05",
-      "hora": "22:00",
       "title_es": "Digger",
       "title_en": "Digger",
       "original_title": "Digger",
@@ -35597,6 +36829,22 @@
       "duration": 129,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-10-05",
+      "hora": "22:00",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 175,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -38369,22 +39617,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-06",
-      "hora": "17:40",
-      "title_es": "Los Colores Del Tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-06",
       "hora": "17:40",
@@ -38398,6 +39630,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-06",
+      "hora": "17:40",
+      "title_es": "Los Colores Del Tiempo",
+      "title_en": "Colours of Time",
+      "original_title": "La Venue de l'avenir",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
       "ciclo": ""
     },
     {
@@ -39940,22 +41188,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-06",
       "hora": "22:00",
-      "title_es": "Digger",
-      "title_en": "Digger",
-      "original_title": "Digger",
-      "director": "Alejandro G. Iñárritu",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 129,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-10-06",
-      "hora": "22:00",
       "title_es": "La Odisea",
       "title_en": "The Odyssey",
       "original_title": "",
@@ -39965,6 +41197,22 @@
       "duration": 175,
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-10-06",
+      "hora": "22:00",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -42625,22 +43873,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-07",
-      "hora": "17:40",
-      "title_es": "Los Colores Del Tiempo",
-      "title_en": "Colours of Time",
-      "original_title": "La Venue de l'avenir",
-      "director": "Cédric Klapisch",
-      "country": "Francia, Bélgica",
-      "year": 2025,
-      "duration": 126,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-07",
       "hora": "17:40",
@@ -42654,6 +43886,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-07",
+      "hora": "17:40",
+      "title_es": "Los Colores Del Tiempo",
+      "title_en": "Colours of Time",
+      "original_title": "La Venue de l'avenir",
+      "director": "Cédric Klapisch",
+      "country": "Francia, Bélgica",
+      "year": 2025,
+      "duration": 126,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/colours-of-time/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
       "ciclo": ""
     },
     {
@@ -43412,22 +44660,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-07",
       "hora": "20:00",
-      "title_es": "Digger",
-      "title_en": "Digger",
-      "original_title": "Digger",
-      "director": "Alejandro G. Iñárritu",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 129,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-10-07",
-      "hora": "20:00",
       "title_es": "Queen: Live In Budapest",
       "title_en": "Queen: Budapest",
       "original_title": "",
@@ -43437,6 +44669,22 @@
       "duration": 97,
       "genre": "Música, Documental",
       "letterboxd": "https://letterboxd.com/film/queen-live-in-budapest/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-10-07",
+      "hora": "20:00",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -44132,22 +45380,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-07",
       "hora": "22:00",
-      "title_es": "Digger",
-      "title_en": "Digger",
-      "original_title": "Digger",
-      "director": "Alejandro G. Iñárritu",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 129,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-10-07",
-      "hora": "22:00",
       "title_es": "La Odisea",
       "title_en": "The Odyssey",
       "original_title": "",
@@ -44157,6 +45389,22 @@
       "duration": 175,
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-10-07",
+      "hora": "22:00",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },

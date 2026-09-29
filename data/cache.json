@@ -17914,10 +17914,12 @@
   "betty": {
     "url": "",
     "title_en": "Betty",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Oriana Carossa",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 4,
+    "genre": "Documental",
+    "original_title": "Betty"
   },
   "condenados": {
     "url": "https://letterboxd.com/film/condenados-2026/",

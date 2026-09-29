@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-29T02:58:00",
+  "updated": "2026-09-29T10:35:31",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 20,
@@ -18,32 +18,32 @@
       "publicadas": 12
     },
     "Cines Ideal": {
-      "scrapeadas": 134,
-      "publicadas": 134
+      "scrapeadas": 155,
+      "publicadas": 155
     },
     "Cines Princesa": {
-      "scrapeadas": 108,
-      "publicadas": 111
+      "scrapeadas": 110,
+      "publicadas": 113
     },
     "Cineteca Madrid": {
       "scrapeadas": 82,
       "publicadas": 82
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 104,
-      "publicadas": 104
+      "scrapeadas": 114,
+      "publicadas": 114
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 99,
-      "publicadas": 99
+      "scrapeadas": 108,
+      "publicadas": 108
     },
     "Golem Madrid": {
-      "scrapeadas": 46,
-      "publicadas": 46
+      "scrapeadas": 45,
+      "publicadas": 45
     },
     "Renoir Plaza de España": {
-      "scrapeadas": 126,
-      "publicadas": 126
+      "scrapeadas": 125,
+      "publicadas": 125
     },
     "Renoir Retiro": {
       "scrapeadas": 36,
@@ -1652,22 +1652,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-09-29",
-      "hora": "21:00",
-      "title_es": "El ser querido",
-      "title_en": "The Beloved",
-      "original_title": "",
-      "director": "Rodrigo Sorogoyen",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=99954&eventCode=114842",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Doré",
       "fecha": "2026-09-29",
       "hora": "21:00",
@@ -1777,6 +1761,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=35581",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Princesa",
+      "fecha": "2026-09-29",
+      "hora": "22:00",
+      "title_es": "El Ser Querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1090063/",
       "ciclo": ""
     },
     {
@@ -1991,22 +1991,6 @@
       "cine": "Cines Princesa",
       "fecha": "2026-09-29",
       "hora": "22:15",
-      "title_es": "Cronos",
-      "title_en": "Operation Cronos",
-      "original_title": "",
-      "director": "Fernando González Molina",
-      "country": "España",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Thriller, Drama",
-      "letterboxd": "https://letterboxd.com/film/operation-cronos/",
-      "ticket_url": "https://www.pillalas.com/pase/1089766/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cines Princesa",
-      "fecha": "2026-09-29",
-      "hora": "22:15",
       "title_es": "En el Corazón de la Bestia",
       "title_en": "Heart of the Beast",
       "original_title": "",
@@ -2113,6 +2097,38 @@
       "genre": "Romance, Comedia",
       "letterboxd": "https://letterboxd.com/film/practical-magic-2/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36363",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Princesa",
+      "fecha": "2026-09-29",
+      "hora": "22:35",
+      "title_es": "Bad Apples",
+      "title_en": "Bad Apples",
+      "original_title": "",
+      "director": "Jonatan Etzler",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2025,
+      "duration": 100,
+      "genre": "Thriller, Comedia",
+      "letterboxd": "https://letterboxd.com/film/bad-apples-2025/",
+      "ticket_url": "https://www.pillalas.com/pase/1090065/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Princesa",
+      "fecha": "2026-09-29",
+      "hora": "22:35",
+      "title_es": "Cronos",
+      "title_en": "Operation Cronos",
+      "original_title": "",
+      "director": "Fernando González Molina",
+      "country": "España",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/operation-cronos/",
+      "ticket_url": "https://www.pillalas.com/pase/1090064/",
       "ciclo": ""
     },
     {
@@ -3601,22 +3617,6 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19666/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-09-30",
-      "hora": "19:35",
-      "title_es": "La isla olvidada",
-      "title_en": "La isla olvidada",
-      "original_title": "Forgotten Island",
-      "director": "Januel Mercado, Joel Crawford",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 98,
-      "genre": "Animación, Aventura",
-      "letterboxd": "",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-isla-olvidada-doblada-al-espanol/38698/",
       "ciclo": ""
     },
     {
@@ -7044,6 +7044,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "15:45",
+      "title_es": "Jim Queen",
+      "title_en": "Jim Queen",
+      "original_title": "",
+      "director": "Marco N'Guyen",
+      "country": "Francia, Bélgica",
+      "year": 2026,
+      "duration": 85,
+      "genre": "Comedia, Animación",
+      "letterboxd": "https://letterboxd.com/film/jim-queen/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36456",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-10-02",
       "hora": "15:50",
@@ -7073,6 +7089,38 @@
       "genre": "Thriller, Misterio",
       "letterboxd": "https://letterboxd.com/film/narciso-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1089979/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "15:50",
+      "title_es": "Resident Evil",
+      "title_en": "Resident Evil",
+      "original_title": "",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Terror, Aventura",
+      "letterboxd": "https://letterboxd.com/film/resident-evil-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36433",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "15:55",
+      "title_es": "Prácticamente magia 2",
+      "title_en": "Practical Magic 2",
+      "original_title": "",
+      "director": "Susanne Bier",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 130,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/practical-magic-2/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36432",
       "ciclo": ""
     },
     {
@@ -7124,6 +7172,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "16:00",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36434",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-10-02",
       "hora": "16:10",
@@ -7169,6 +7233,38 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/38765/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "16:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36442",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "16:30",
+      "title_es": "Coyote vs. Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36430",
       "ciclo": ""
     },
     {
@@ -7284,6 +7380,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "17:40",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36440",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-10-02",
       "hora": "17:50",
@@ -7297,6 +7409,22 @@
       "genre": "Bélica, Drama",
       "letterboxd": "https://letterboxd.com/film/palestine-36/",
       "ticket_url": "https://www.pillalas.com/pase/1089982/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "17:50",
+      "title_es": "La isla olvidada",
+      "title_en": "La isla olvidada",
+      "original_title": "Forgotten Island",
+      "director": "Joel Crawford",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 109,
+      "genre": "Animación, Aventura",
+      "letterboxd": "",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36428",
       "ciclo": ""
     },
     {
@@ -7366,6 +7494,22 @@
     {
       "cine": "Cines Ideal",
       "fecha": "2026-10-02",
+      "hora": "18:35",
+      "title_es": "En el corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36429",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
       "hora": "18:50",
       "title_es": "La bola negra",
       "title_en": "La Bola Negra",
@@ -7428,6 +7572,22 @@
       "ciclo": "Andrzej Waja: entre el Mito y la Historia"
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "19:00",
+      "title_es": "Vengadores: Endgame Encore",
+      "title_en": "Avengers: Endgame",
+      "original_title": "",
+      "director": "Joe Russo",
+      "country": "Estados Unidos",
+      "year": 2019,
+      "duration": 183,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36437",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-10-02",
       "hora": "19:10",
@@ -7460,6 +7620,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "19:15",
+      "title_es": "Resident Evil",
+      "title_en": "Resident Evil",
+      "original_title": "",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Terror, Aventura",
+      "letterboxd": "https://letterboxd.com/film/resident-evil-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36448",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-02",
       "hora": "19:30",
@@ -7473,6 +7649,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/38774/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36443",
       "ciclo": ""
     },
     {
@@ -7636,6 +7828,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "20:15",
+      "title_es": "Narciso",
+      "title_en": "Narciso",
+      "original_title": "Narciso",
+      "director": "Marcelo Martinessi",
+      "country": "Paraguay, Alemania",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/narciso-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36447",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-10-02",
       "hora": "20:35",
@@ -7649,6 +7857,54 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-ser-querido/19776/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "20:45",
+      "title_es": "En el corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36445",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "20:50",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36441",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "21:20",
+      "title_es": "Resident Evil",
+      "title_en": "Resident Evil",
+      "original_title": "",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Terror, Aventura",
+      "letterboxd": "https://letterboxd.com/film/resident-evil-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36449",
       "ciclo": ""
     },
     {
@@ -7748,22 +8004,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Renoir Plaza de España",
-      "fecha": "2026-10-02",
-      "hora": "22:15",
-      "title_es": "Palestina 36",
-      "title_en": "Palestine 36",
-      "original_title": "Palestine 36",
-      "director": "Annemarie Jacir",
-      "country": "State of Palestine, Reino Unido",
-      "year": 2025,
-      "duration": 119,
-      "genre": "Bélica, Drama",
-      "letterboxd": "https://letterboxd.com/film/palestine-36/",
-      "ticket_url": "https://www.pillalas.com/pase/1089989/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-02",
       "hora": "22:20",
@@ -7777,6 +8017,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36187",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "22:25",
+      "title_es": "La odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 173,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36435",
       "ciclo": ""
     },
     {
@@ -7844,6 +8100,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "22:40",
+      "title_es": "Spider-Man: Brand New Day",
+      "title_en": "Spider-Man: Brand New Day",
+      "original_title": "",
+      "director": "Destin Daniel Cretton",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36427",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "22:50",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36444",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-10-02",
       "hora": "23:00",
@@ -7860,6 +8148,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "23:00",
+      "title_es": "En el corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36446",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-10-02",
       "hora": "23:10",
@@ -7873,6 +8177,22 @@
       "genre": "Crimen, Romance",
       "letterboxd": "https://letterboxd.com/film/fallen-angels/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/fallen-angels-vose/19777/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-02",
+      "hora": "23:30",
+      "title_es": "Resident Evil",
+      "title_en": "Resident Evil",
+      "original_title": "",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Terror, Aventura",
+      "letterboxd": "https://letterboxd.com/film/resident-evil-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36450",
       "ciclo": ""
     },
     {
@@ -8534,7 +8854,7 @@
     {
       "cine": "Cines Ideal",
       "fecha": "2026-10-03",
-      "hora": "19:45",
+      "hora": "19:50",
       "title_es": "Digger",
       "title_en": "Digger",
       "original_title": "Digger",
@@ -9574,7 +9894,7 @@
     {
       "cine": "Cines Ideal",
       "fecha": "2026-10-04",
-      "hora": "20:00",
+      "hora": "20:05",
       "title_es": "Verity. La sombra de un engaño",
       "title_en": "Verity",
       "original_title": "",
@@ -10516,6 +10836,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "15:30",
+      "title_es": "El odio",
+      "title_en": "La Haine",
+      "original_title": "",
+      "director": "Mathieu Kassovitz",
+      "country": "Francia",
+      "year": 1995,
+      "duration": 95,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-haine/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-odio-vose/19837/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-06",
       "hora": "15:45",
@@ -10529,6 +10865,86 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36405",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19834/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "16:00",
+      "title_es": "Narciso",
+      "title_en": "Narciso",
+      "original_title": "Narciso",
+      "director": "Marcelo Martinessi",
+      "country": "Paraguay, Alemania",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/narciso-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/narciso/38837/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "16:00",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro González Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/digger-doblada-al-espanol/38841/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "16:10",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/38834/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "16:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19841/",
       "ciclo": ""
     },
     {
@@ -10548,6 +10964,22 @@
       "ciclo": "Día del Cine Español"
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "17:25",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19838/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-10-06",
       "hora": "17:30",
@@ -10562,6 +10994,38 @@
       "letterboxd": "https://letterboxd.com/film/el-inquilino-1958/",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/el-inquilino",
       "ciclo": "Día del Cine Español"
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "18:00",
+      "title_es": "Narciso",
+      "title_en": "Narciso",
+      "original_title": "Narciso",
+      "director": "Marcelo Martinessi",
+      "country": "Paraguay, Alemania",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Thriller, Misterio",
+      "letterboxd": "https://letterboxd.com/film/narciso-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/narciso/38838/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "18:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/38842/",
+      "ciclo": ""
     },
     {
       "cine": "Cines Ideal",
@@ -10596,6 +11060,38 @@
       "ciclo": "Exilios"
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19835/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "19:10",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/38835/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-06",
       "hora": "19:30",
@@ -10610,6 +11106,38 @@
       "letterboxd": "https://letterboxd.com/film/mientras-el-cuerpo-aguante/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/chicho-o-mientras-el-cuerpo-aguante-una-comedia-didactica",
       "ciclo": "Día del Cine Español (2026)"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19842/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "20:00",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro González Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/digger-doblada-al-espanol/38839/",
+      "ciclo": ""
     },
     {
       "cine": "Artistic Metropol",
@@ -10660,6 +11188,38 @@
       "ciclo": "Día del Cine Español"
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "20:25",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-ser-querido/19839/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "21:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/38843/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-06",
       "hora": "21:55",
@@ -10673,6 +11233,86 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36407",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19836/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "22:10",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/38836/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "22:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19843/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-06",
+      "hora": "22:30",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro González Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/digger-vose/38840/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-06",
+      "hora": "22:55",
+      "title_es": "Fallen angels",
+      "title_en": "Fallen Angels",
+      "original_title": "墮落天使",
+      "director": "Wong Kar-Wai",
+      "country": "Hong Kong",
+      "year": 1995,
+      "duration": 92,
+      "genre": "Crimen, Romance",
+      "letterboxd": "https://letterboxd.com/film/fallen-angels/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/fallen-angels-vose/19840/",
       "ciclo": ""
     },
     {
