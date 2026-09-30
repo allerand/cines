@@ -2743,13 +2743,13 @@
   },
   "divorcio en montevideo": {
     "url": "",
-    "title_en": "DIVORCIO EN MONTEVIDEO",
+    "title_en": "Divorcio en Montevideo",
     "director": "Manuel Romero",
     "country": "Argentina",
     "year": 1939,
     "duration": 70,
-    "original_title": "Divorcio en Montevideo",
-    "genre": "Comedia, Romance"
+    "genre": "Comedia, Romance",
+    "original_title": "Divorcio en Montevideo"
   },
   "pecadora equivocada": {
     "url": "https://letterboxd.com/film/the-philadelphia-story/",
@@ -16866,8 +16866,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "se llama así pero no dura 110 min: Rammstein - Live in Mexico City (2026, 148 min)",
-    "fecha": "2026-09-26",
+    "sin_ficha": "se llama así pero no dura 110 min: Rammstein - Live in Mexico City (2026, 148 min), Rammstein - Live aus Berlin (1999, 97 min)",
+    "fecha": "2026-09-30",
     "con_duracion": true,
     "desempate": ""
   },
@@ -18382,7 +18382,7 @@
     "country": "Argentina",
     "year": 2026,
     "duration": 11,
-    "original_title": "Camino a la velada"
+    "original_title": "Gaspi: Camino a la Velada"
   },
   "whispers in may": {
     "url": "https://letterboxd.com/film/whispers-in-may/",
@@ -19829,7 +19829,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -21557,5 +21557,566 @@
     "genre": "Comedia, Western",
     "title_es": "La hermana Annie",
     "original_title": "Klondike Annie"
+  },
+  "suspiria|1977": {
+    "url": "https://letterboxd.com/film/suspiria/",
+    "title_en": "Suspiria",
+    "director": "Dario Argento",
+    "country": "Italy",
+    "year": 1977,
+    "duration": 99,
+    "title_es": "Suspiria: Alarido",
+    "original_title": "Suspiria",
+    "genre": "Terror"
+  },
+  "la reina de áfrica": {
+    "url": "",
+    "title_en": "LA REINA DE ÁFRICA",
+    "director": "John Huston",
+    "country": "United Kingdom, United States of America",
+    "year": 1952,
+    "duration": 105,
+    "genre": "Aventura, Romance",
+    "title_es": "La reina de África",
+    "original_title": "The African Queen"
+  },
+  "mendi tour: eternal solo | ephemeral | cantos y flores": {
+    "url": "",
+    "title_en": "Mendi Tour: ETERNAL SOLO | EPHEMERAL | CANTOS Y FLORES",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "amenaza en la sombra|1973": {
+    "url": "https://letterboxd.com/film/dont-look-now/",
+    "title_en": "Don't Look Now",
+    "director": "Nicolas Roeg",
+    "country": "Italy, UK",
+    "year": 1973,
+    "duration": 110,
+    "genre": "Drama, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Amenaza en la sombra",
+    "original_title": "Don't Look Now"
+  },
+  "femeni, singular|2026": {
+    "url": "https://letterboxd.com/film/femeni-singular/",
+    "title_en": "Femení, singular",
+    "director": "Xavi Puebla",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 91,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Femenino, Singular",
+    "original_title": "Femení, singular"
+  },
+  "el otro|1972": {
+    "url": "https://letterboxd.com/film/the-other/",
+    "title_en": "The Other",
+    "director": "Robert Mulligan",
+    "country": "USA",
+    "year": 1972,
+    "duration": 108,
+    "genre": "Terror, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "El otro",
+    "original_title": "The Other"
+  },
+  "reanimator ii|1990": {
+    "url": "https://letterboxd.com/film/bride-of-re-animator/",
+    "title_en": "Bride of Re-Animator",
+    "director": "Brian Yuzna",
+    "country": "USA",
+    "year": 1990,
+    "duration": 96,
+    "genre": "Comedia, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "La novia de Re-Animator",
+    "original_title": "Bride of Re-Animator"
+  },
+  "la última casa a la izquierda|1972": {
+    "url": "https://letterboxd.com/film/the-last-house-on-the-left/",
+    "title_en": "The Last House on the Left",
+    "director": "Wes Craven",
+    "country": "USA",
+    "year": 1972,
+    "duration": 84,
+    "genre": "Terror, Crimen",
+    "clase_titulo": "exacto",
+    "title_es": "La última casa a la izquierda",
+    "original_title": "The Last House on the Left"
+  },
+  "el vampiro de la noche|1972": {
+    "url": "https://letterboxd.com/film/the-night-stalker/",
+    "title_en": "The Night Stalker",
+    "director": "John Llewellyn Moxey",
+    "country": "USA",
+    "year": 1972,
+    "duration": 74,
+    "genre": "Thriller, Terror",
+    "clase_titulo": "distinto"
+  },
+  "programa doble: suspiria + rojo oscuro (1975)|1977": {
+    "url": "",
+    "title_en": "PROGRAMA DOBLE: SUSPIRIA + ROJO OSCURO (1975)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "rojo oscuro|1975": {
+    "url": "https://letterboxd.com/film/deep-red/",
+    "title_en": "Deep Red",
+    "director": "Dario Argento",
+    "country": "Italy",
+    "year": 1975,
+    "duration": 127,
+    "genre": "Misterio, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "Rojo oscuro",
+    "original_title": "Profondo rosso"
+  },
+  "los crazies|1972": {
+    "url": "https://letterboxd.com/film/cries-and-whispers/",
+    "title_en": "Cries and Whispers",
+    "director": "Ingmar Bergman",
+    "country": "Sweden",
+    "year": 1972,
+    "duration": 95,
+    "genre": "Drama",
+    "clase_titulo": "distinto"
+  },
+  "carnaval de antaño": {
+    "url": "https://letterboxd.com/film/carnaval-de-antano/",
+    "title_en": "Carnaval de antaño",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1940,
+    "duration": 79,
+    "genre": "Música, Comedia",
+    "original_title": "Carnaval de antaño"
+  },
+  "una luz en la ventana": {
+    "url": "https://letterboxd.com/film/una-luz-en-la-ventana/",
+    "title_en": "A Light in the Window",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1942,
+    "duration": 72,
+    "genre": "Thriller, Terror",
+    "original_title": "Una luz en la ventana"
+  },
+  "el caballo del pueblo": {
+    "url": "https://letterboxd.com/film/el-caballo-del-pueblo/",
+    "title_en": "El caballo del pueblo",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1935,
+    "duration": 67,
+    "genre": "Comedia, Música",
+    "original_title": "El caballo del pueblo"
+  },
+  "fuera de la ley": {
+    "url": "",
+    "title_en": "Fuera de la ley",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1937,
+    "duration": 90,
+    "genre": "Drama, Crimen",
+    "original_title": "Fuera de la ley"
+  },
+  "derecho viejo": {
+    "url": "",
+    "title_en": "Derecho viejo",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1951,
+    "duration": 81,
+    "genre": "Drama",
+    "original_title": "Derecho viejo"
+  },
+  "yo quiero ser bataclana": {
+    "url": "https://letterboxd.com/film/yo-quiero-ser-bataclana/",
+    "title_en": "Yo quiero ser bataclana",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1941,
+    "duration": 76,
+    "genre": "Música, Comedia",
+    "original_title": "Yo quiero ser bataclana"
+  },
+  "un bebé de parís": {
+    "url": "https://letterboxd.com/film/un-bebe-de-paris/",
+    "title_en": "Un bebé de París",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1941,
+    "duration": 71,
+    "genre": "Comedia",
+    "original_title": "Un bebé de París"
+  },
+  "morir en su ley": {
+    "url": "https://letterboxd.com/film/morir-en-su-ley/",
+    "title_en": "Morir en su ley",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1949,
+    "duration": 75,
+    "genre": "Drama",
+    "original_title": "Morir en su ley"
+  },
+  "la vida es un tango": {
+    "url": "https://letterboxd.com/film/la-vida-es-un-tango/",
+    "title_en": "La vida es un tango",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1939,
+    "duration": 79,
+    "genre": "Música, Comedia",
+    "original_title": "La vida es un tango"
+  },
+  "el tango vuelve a parís": {
+    "url": "",
+    "title_en": "El tango vuelve a París",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1948,
+    "duration": 85,
+    "genre": "Drama, Música",
+    "original_title": "El tango vuelve a París"
+  },
+  "la rubia del camino": {
+    "url": "",
+    "title_en": "La rubia del camino",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1938,
+    "duration": 70,
+    "genre": "Comedia, Romance",
+    "original_title": "La rubia del camino"
+  },
+  "muchachas que estudian": {
+    "url": "https://letterboxd.com/film/muchachas-que-estudian/",
+    "title_en": "Muchachas que estudian",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1939,
+    "duration": 78,
+    "genre": "Comedia",
+    "original_title": "Muchachas que estudian"
+  },
+  "ven… mi corazón te llama": {
+    "url": "https://letterboxd.com/film/ven-mi-corazon-te-llama/",
+    "title_en": "When My Heart Calls",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1942,
+    "duration": 89,
+    "genre": "Thriller, Música",
+    "original_title": "Ven... mi corazón te llama"
+  },
+  "el diablo andaba en los choclos": {
+    "url": "https://letterboxd.com/film/el-diablo-andaba-en-los-choclos/",
+    "title_en": "El diablo andaba en los choclos",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1946,
+    "duration": 91,
+    "genre": "Comedia",
+    "original_title": "El diablo andaba en los choclos"
+  },
+  "mujeres que bailan": {
+    "url": "https://letterboxd.com/film/mujeres-que-bailan/",
+    "title_en": "Mujeres que bailan",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1949,
+    "duration": 105,
+    "genre": "Música, Comedia",
+    "original_title": "Mujeres que bailan"
+  },
+  "elvira fernández, vendedora de tienda": {
+    "url": "https://letterboxd.com/film/elvira-fernandez-vendedora-de-tienda/",
+    "title_en": "Elvira Fernández, vendedora de tienda",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1942,
+    "duration": 88,
+    "genre": "Comedia",
+    "original_title": "Elvira Fernández, vendedora de tienda"
+  },
+  "el cañonero de giles": {
+    "url": "https://letterboxd.com/film/el-canonero-de-giles/",
+    "title_en": "El cañonero de Giles",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1937,
+    "duration": 69,
+    "genre": "Comedia",
+    "title_es": "El cañonero de Giles",
+    "original_title": "El cañonero de Giles"
+  },
+  "noches de buenos aires": {
+    "url": "https://letterboxd.com/film/noches-de-buenos-aires/",
+    "title_en": "Noches de Buenos Aires",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1935,
+    "duration": 66,
+    "genre": "Comedia, Música",
+    "original_title": "Noches de Buenos Aires"
+  },
+  "porteña de corazón": {
+    "url": "https://letterboxd.com/film/portena-de-corazon/",
+    "title_en": "Porteña de corazón",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1948,
+    "duration": 83,
+    "genre": "Comedia",
+    "title_es": "Porteña de corazón",
+    "original_title": "Porteña de corazón"
+  },
+  "la rubia mireya": {
+    "url": "https://letterboxd.com/film/la-rubia-mireya/",
+    "title_en": "La rubia Mireya",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1948,
+    "duration": 81,
+    "genre": "Música, Drama",
+    "original_title": "La rubia Mireya"
+  },
+  "la modelo y la estrella": {
+    "url": "https://letterboxd.com/film/la-modelo-y-la-estrella/",
+    "title_en": "La modelo y la estrella",
+    "director": "Manuel Romero",
+    "country": "",
+    "year": 1939,
+    "duration": 85,
+    "genre": "Comedia, Música",
+    "original_title": "La modelo y la estrella"
+  },
+  "el hincha": {
+    "url": "https://letterboxd.com/film/el-hincha/",
+    "title_en": "El hincha",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1951,
+    "duration": 88,
+    "genre": "Comedia, Música",
+    "original_title": "El hincha"
+  },
+  "hellraiser + pesadilla en la calle elm|1987": {
+    "url": "",
+    "title_en": "Hellraiser + Pesadilla en la calle Elm",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the wall|1982": {
+    "url": "",
+    "title_en": "The Wall",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "creep + the house of the devil|2014": {
+    "url": "",
+    "title_en": "Creep + The House of the Devil",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ginger snaps + may|2000": {
+    "url": "",
+    "title_en": "Ginger Snaps + May",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "alucarda + cat people|1977": {
+    "url": "",
+    "title_en": "Alucarda + Cat People",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "godzilla + tetsuo: the iron man|1954": {
+    "url": "",
+    "title_en": "Godzilla + Tetsuo: The Iron Man",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "freddy vs. jason|2003": {
+    "url": "",
+    "title_en": "Freddy vs. Jason",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "it follows + la masacre de texas|2014": {
+    "url": "",
+    "title_en": "It Follows + La masacre de Texas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mandy|2018": {
+    "url": "",
+    "title_en": "Mandy",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "shifty|2025": {
+    "url": "",
+    "title_en": "Shifty",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "christine + titane|1983": {
+    "url": "",
+    "title_en": "Christine + Titane",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "videodrome|1983": {
+    "url": "",
+    "title_en": "Videodrome",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la belle personne + martyrs|2008": {
+    "url": "",
+    "title_en": "La Belle Personne + Martyrs",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the innocents + frankenhooker|1961": {
+    "url": "",
+    "title_en": "The Innocents + Frankenhooker",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "scream + scream 2|1996": {
+    "url": "",
+    "title_en": "Scream + Scream 2",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ensayo sobre la vejez": {
+    "url": "",
+    "title_en": "Ensayo sobre la vejez",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "hybe cheering party": {
+    "url": "",
+    "title_en": "HYBE CHEERING PARTY",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "seventeen world tour 'new_'": {
+    "url": "",
+    "title_en": "SEVENTEEN WORLD TOUR 'NEW_'",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-09-30",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "tomorrow x together world tour 'act tomorrow": {
+    "url": "",
+    "title_en": "TOMORROW X TOGETHER WORLD TOUR 'ACT TOMORROW",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 97 min: TOMORROW X TOGETHER WORLD TOUR 'ACT:TOMORROW' (2025, 160 min)",
+    "fecha": "2026-09-30",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "enhypen world tour 'blood saga'": {
+    "url": "",
+    "title_en": "ENHYPEN WORLD TOUR 'BLOOD SAGA'",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "apuntes desde el encierro": {
+    "url": "https://letterboxd.com/film/apuntes-desde-el-encierro/",
+    "title_en": "Apuntes desde el encierro",
+    "director": "Franca González",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": 76,
+    "genre": "Documental",
+    "original_title": "Apuntes desde el encierro"
+  },
+  "mover": {
+    "url": "",
+    "title_en": "Mover",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la casa": {
+    "url": "https://letterboxd.com/film/la-casa/",
+    "title_en": "La casa",
+    "director": "Gustavo Fontán",
+    "country": "Argentina, Spain",
+    "year": 2012,
+    "duration": 62,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "sin_hints": "la más nueva que se llama así"
+  },
+  "ficuba": {
+    "url": "",
+    "title_en": "FICUBA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-09-30",
+    "con_duracion": true,
+    "desempate": "nueva"
   }
 }
