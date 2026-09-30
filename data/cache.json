@@ -19829,7 +19829,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -22118,5 +22118,166 @@
     "fecha": "2026-09-30",
     "con_duracion": true,
     "desempate": "nueva"
+  },
+  "sorpresas|1974": {
+    "url": "https://letterboxd.com/film/las-sorpresas/",
+    "title_en": "Las sorpresas",
+    "director": "Luis Puenzo, Carlos Galettini, Alberto Fischerman",
+    "country": "Argentina",
+    "year": 1975,
+    "duration": 93,
+    "genre": "Comedia, Drama",
+    "original_title": "Las sorpresas"
+  },
+  "juan que reía|1976": {
+    "url": "https://letterboxd.com/film/juan-que-reia/",
+    "title_en": "Juan que reía",
+    "director": "Carlos Galettini",
+    "country": "Argentina",
+    "year": 1976,
+    "duration": 97,
+    "genre": "Drama"
+  },
+  "seré cualquier cosa pero te quiero|1986": {
+    "url": "https://letterboxd.com/film/sere-cualquier-cosa-pero-te-quiero/",
+    "title_en": "Seré cualquier cosa, pero te quiero",
+    "director": "Carlos Galettini",
+    "country": "Argentina",
+    "year": 1986,
+    "duration": 89,
+    "genre": "Comedia",
+    "original_title": "Seré cualquier cosa, pero te quiero"
+  },
+  "convivencia|1993": {
+    "url": "https://letterboxd.com/film/living-together/",
+    "title_en": "Living Together",
+    "director": "Carlos Galettini",
+    "country": "Argentina",
+    "year": 1994,
+    "duration": 97,
+    "genre": "",
+    "original_title": "Convivencia"
+  },
+  "besos en la frente|1996": {
+    "url": "https://letterboxd.com/film/besos-en-la-frente/",
+    "title_en": "Besos en la frente",
+    "director": "Carlos Galettini",
+    "country": "Argentina",
+    "year": 1996,
+    "duration": 95,
+    "genre": "",
+    "original_title": "Besos en la frente"
+  },
+  "dormir con los ojos abiertos|2024": {
+    "url": "https://letterboxd.com/film/sleep-with-your-eyes-open/",
+    "title_en": "Sleep with Your Eyes Open",
+    "director": "Nele Wohlatz",
+    "country": "Argentina, Brazil",
+    "year": 2024,
+    "duration": 97,
+    "genre": "Comedia, Drama",
+    "title_es": "Dormir con los ojos abiertos",
+    "original_title": "Dormir de olhos abertos"
+  },
+  "las corrientes|2025": {
+    "url": "https://letterboxd.com/film/las-corrientes/",
+    "title_en": "The Currents",
+    "director": "Milagros Mumenthaler",
+    "country": "Argentina, Switzerland",
+    "year": 2025,
+    "duration": 104,
+    "genre": "Drama",
+    "original_title": "Las corrientes"
+  },
+  "la muerte de un maestro de té": {
+    "url": "",
+    "title_en": "La muerte de un maestro de té",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Death of a Tea Master (1989), y puede ser otra",
+    "fecha": "2026-09-30",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "desde entonces": {
+    "url": "",
+    "title_en": "Desde entonces",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: You're the One (2000)",
+    "fecha": "2026-09-30",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "takeshi|1991": {
+    "url": "",
+    "title_en": "Takeshi",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el caído": {
+    "url": "",
+    "title_en": "El caído",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Caido (2009)",
+    "fecha": "2026-09-30",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "todo bajo la luna": {
+    "url": "",
+    "title_en": "Todo bajo la luna",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: All Under the Moon (1993)",
+    "fecha": "2026-09-30",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "escenas en el mar": {
+    "url": "",
+    "title_en": "Escenas en el mar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Escenas en el mar (2012), y puede ser otra",
+    "fecha": "2026-09-30",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "un verano con los extraños": {
+    "url": "https://letterboxd.com/film/talking-to-a-stranger/",
+    "title_en": "Talking to a Stranger",
+    "director": "Adrián García Bogliano",
+    "country": "Mexico",
+    "year": 2026,
+    "duration": 104,
+    "genre": "Terror",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "las gafas": {
+    "url": "",
+    "title_en": "Las gafas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-09-30",
+    "con_duracion": false,
+    "desempate": ""
   }
 }

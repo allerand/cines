@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T02:29:23",
+  "updated": "2026-09-30T10:25:44",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 17,
@@ -8,6 +8,10 @@
     "Bellas Artes": {
       "scrapeadas": 12,
       "publicadas": 12
+    },
+    "CCK": {
+      "scrapeadas": 22,
+      "publicadas": 22
     },
     "CEA": {
       "scrapeadas": 4,
@@ -27,8 +31,8 @@
       "publicadas": 5
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
-      "publicadas": 17
+      "scrapeadas": 16,
+      "publicadas": 16
     },
     "Centro Cultural Munro": {
       "scrapeadas": 14,
@@ -47,7 +51,7 @@
       "publicadas": 57
     },
     "Cine Gaumont": {
-      "scrapeadas": 14,
+      "scrapeadas": 0,
       "publicadas": 14
     },
     "Cine Lorca": {
@@ -79,8 +83,8 @@
       "publicadas": 16
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 36,
-      "publicadas": 36
+      "scrapeadas": 34,
+      "publicadas": 34
     },
     "FADU": {
       "scrapeadas": 9,
@@ -91,8 +95,8 @@
       "publicadas": 14
     },
     "Hasta Trilce": {
-      "scrapeadas": 4,
-      "publicadas": 4
+      "scrapeadas": 6,
+      "publicadas": 6
     },
     "Hoyts Abasto": {
       "scrapeadas": 438,
@@ -107,8 +111,8 @@
       "publicadas": 5
     },
     "MALBA": {
-      "scrapeadas": 46,
-      "publicadas": 46
+      "scrapeadas": 23,
+      "publicadas": 23
     },
     "Multiplex Belgrano": {
       "scrapeadas": 391,
@@ -592,22 +596,6 @@
       "cine": "Cinemark Caballito",
       "fecha": "2026-09-30",
       "hora": "13:00",
-      "title_es": "Coyote Vs Acme",
-      "title_en": "Coyote vs. Acme",
-      "original_title": "Coyote vs. Acme",
-      "director": "Dave Green",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Caballito",
-      "fecha": "2026-09-30",
-      "hora": "13:00",
       "title_es": "Resident Evil: Noche cero",
       "title_en": "Resident Evil",
       "original_title": "Resident Evil",
@@ -617,6 +605,22 @@
       "duration": 94,
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Caballito",
+      "fecha": "2026-09-30",
+      "hora": "13:00",
+      "title_es": "Coyote Vs Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -1213,22 +1217,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "14:00",
-      "title_es": "Yo, narciso",
-      "title_en": "Yo, Narciso",
-      "original_title": "Yo, Narciso",
-      "director": "Adrián Suar",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 95,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1060",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-09-30",
       "hora": "14:00",
@@ -1275,6 +1263,22 @@
       "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "14:00",
+      "title_es": "Yo, narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1060",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -1485,22 +1489,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "14:30",
-      "title_es": "Los días posibles - Trilogía de la ternura",
-      "title_en": "Possible Days - Trilogy on Tenderness",
-      "original_title": "",
-      "director": "Rodrigo Guerrero",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 65,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-09-30",
       "hora": "14:30",
@@ -1547,6 +1535,22 @@
       "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "14:30",
+      "title_es": "Los días posibles - Trilogía de la ternura",
+      "title_en": "Possible Days - Trilogy on Tenderness",
+      "original_title": "",
+      "director": "Rodrigo Guerrero",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/possible-days-trilogy-on-tenderness/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1138",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Showcase Belgrano",
@@ -1949,22 +1953,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "15:00",
-      "title_es": "Suite Juárez",
-      "title_en": "Suite Juárez",
-      "original_title": "Suite Juárez",
-      "director": "Alejandro Venturini y Jean-Luc Thomas",
-      "country": "",
-      "year": null,
-      "duration": 67,
-      "genre": "Música, Documental",
-      "letterboxd": "https://letterboxd.com/film/suite-juarez/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1107",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-09-30",
       "hora": "15:00",
@@ -1977,22 +1965,6 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-09-30",
-      "hora": "15:00",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 173,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -2027,6 +1999,22 @@
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/539",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "15:00",
+      "title_es": "Suite Juárez",
+      "title_en": "Suite Juárez",
+      "original_title": "Suite Juárez",
+      "director": "Alejandro Venturini y Jean-Luc Thomas",
+      "country": "",
+      "year": null,
+      "duration": 67,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/suite-juarez/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1107",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -2477,6 +2465,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-09-30",
+      "hora": "15:45",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 173,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-09-30",
       "hora": "15:50",
@@ -2605,22 +2609,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "16:00",
-      "title_es": "Canelones",
-      "title_en": "Cannelloni",
-      "original_title": "Canelones",
-      "director": "Christian Basilis, Ana Laura Gussoni",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 91,
-      "genre": "Thriller, Comedia",
-      "letterboxd": "https://letterboxd.com/film/cannelloni/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1077",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-09-30",
       "hora": "16:00",
@@ -2635,6 +2623,22 @@
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "16:00",
+      "title_es": "Canelones",
+      "title_en": "Cannelloni",
+      "original_title": "Canelones",
+      "director": "Christian Basilis, Ana Laura Gussoni",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 91,
+      "genre": "Thriller, Comedia",
+      "letterboxd": "https://letterboxd.com/film/cannelloni/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1077",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Cine Lorca",
@@ -2845,22 +2849,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "16:30",
-      "title_es": "Los domingos",
-      "title_en": "Sundays",
-      "original_title": "Los domingos",
-      "director": "Alauda Ruiz de Azúa",
-      "country": "España, Francia",
-      "year": 2025,
-      "duration": 115,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/los-domingos/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1118",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-09-30",
       "hora": "16:30",
@@ -2907,6 +2895,22 @@
       "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/f8b1423b2b60747850a6d217a3542a17",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "16:30",
+      "title_es": "Los domingos",
+      "title_en": "Sundays",
+      "original_title": "Los domingos",
+      "director": "Alauda Ruiz de Azúa",
+      "country": "España, Francia",
+      "year": 2025,
+      "duration": 115,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/los-domingos/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1118",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -3981,22 +3985,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "18:00",
-      "title_es": "Yo, narciso",
-      "title_en": "Yo, Narciso",
-      "original_title": "Yo, Narciso",
-      "director": "Adrián Suar",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 95,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1060",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-09-30",
       "hora": "18:00",
@@ -4027,6 +4015,22 @@
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "18:00",
+      "title_es": "Yo, narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1060",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -4493,22 +4497,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-09-30",
-      "hora": "18:50",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 173,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cacodelphia",
       "fecha": "2026-09-30",
       "hora": "18:50",
@@ -4877,22 +4865,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "19:30",
-      "title_es": "Psicosis",
-      "title_en": "Psycho",
-      "original_title": "Psycho",
-      "director": "Alfred Hitchcock",
-      "country": "Estados Unidos",
-      "year": 1960,
-      "duration": 109,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/psycho/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1157",
-      "ciclo": "American Cinematheque"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-09-30",
       "hora": "19:30",
@@ -4923,6 +4895,22 @@
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "19:30",
+      "title_es": "Psicosis",
+      "title_en": "Psycho",
+      "original_title": "Psycho",
+      "director": "Alfred Hitchcock",
+      "country": "Estados Unidos",
+      "year": 1960,
+      "duration": 109,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/psycho/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1157",
+      "ciclo": "American Cinematheque"
     },
     {
       "cine": "Showcase Belgrano",
@@ -5325,22 +5313,6 @@
       "ciclo": "Atlas de Directoras"
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "20:00",
-      "title_es": "Los Calvos",
-      "title_en": "The Bald",
-      "original_title": "Los calvos",
-      "director": "Marcos Mossello, Elías Gismondi",
-      "country": "Argentina",
-      "year": 2024,
-      "duration": 79,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/los-calvos/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1159",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-09-30",
       "hora": "20:00",
@@ -5373,22 +5345,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-09-30",
-      "hora": "20:00",
-      "title_es": "Su propio infierno",
-      "title_en": "Her Private Hell",
-      "original_title": "Her Private Hell",
-      "director": "Nicolas Winding Refn",
-      "country": "Estados Unidos, Dinamarca",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Terror, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/her-private-hell-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-09-30",
       "hora": "20:00",
@@ -5403,6 +5359,22 @@
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "20:00",
+      "title_es": "Los Calvos",
+      "title_en": "The Bald",
+      "original_title": "Los calvos",
+      "director": "Marcos Mossello, Elías Gismondi",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 79,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/los-calvos/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1159",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -6301,22 +6273,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "22:00",
-      "title_es": "Pepita, La Pistolera",
-      "title_en": "Pepita the Gunslinger",
-      "original_title": "Pepita la pistolera",
-      "director": "Lucía Puenzo",
-      "country": "Argentina, España",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Crimen, Thriller",
-      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1106",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-09-30",
       "hora": "22:00",
@@ -6379,6 +6335,22 @@
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "22:00",
+      "title_es": "Pepita, La Pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "Pepita la pistolera",
+      "director": "Lucía Puenzo",
+      "country": "Argentina, España",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1106",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -7037,22 +7009,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-09-30",
-      "hora": "22:30",
-      "title_es": "La noche está marchándose ya",
-      "title_en": "The Night Is Fading Away",
-      "original_title": "",
-      "director": "Ezequiel Salinas y Ramiro Sonzini",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 104,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
-      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
-      "ciclo": "En cartel"
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-09-30",
       "hora": "22:30",
@@ -7065,22 +7021,6 @@
       "duration": null,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-09-30",
-      "hora": "22:30",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 173,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -7099,6 +7039,22 @@
       "letterboxd": "https://letterboxd.com/film/the-dog-stars/",
       "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-09-30",
+      "hora": "22:30",
+      "title_es": "La noche está marchándose ya",
+      "title_en": "The Night Is Fading Away",
+      "original_title": "",
+      "director": "Ezequiel Salinas y Ramiro Sonzini",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 104,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
+      "ticket_url": "https://www.cinegaumont.ar/pelicula.aspx?filmid=1135",
+      "ciclo": "En cartel"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -7242,6 +7198,22 @@
       "genre": "Terror, Thriller",
       "letterboxd": "https://letterboxd.com/film/insidious-out-of-the-further/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-noche-del-demonio-estan-entre-nosotros/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-09-30",
+      "hora": "22:40",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 173,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -12685,22 +12657,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-01",
-      "hora": "21:30",
-      "title_es": "Carnaval de antaño",
-      "title_en": "Carnaval de antaño",
-      "original_title": "Carnaval de antaño",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1940,
-      "duration": 79,
-      "genre": "Música, Comedia",
-      "letterboxd": "https://letterboxd.com/film/carnaval-de-antano/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-01",
       "hora": "21:30",
@@ -13376,22 +13332,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-01",
       "hora": "22:40",
-      "title_es": "Verity. La sombra de un engaño",
-      "title_en": "Verity",
-      "original_title": "Verity",
-      "director": "Michael Showalter",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 114,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-01",
-      "hora": "22:40",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -13401,6 +13341,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-01",
+      "hora": "22:40",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -13707,22 +13663,6 @@
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-01",
-      "hora": "23:00",
-      "title_es": "Una luz en la ventana",
-      "title_en": "A Light in the Window",
-      "original_title": "Una luz en la ventana",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1942,
-      "duration": 72,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/una-luz-en-la-ventana/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
     },
     {
       "cine": "Hoyts Abasto",
@@ -15296,22 +15236,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-02",
       "hora": "14:40",
-      "title_es": "Verity. La sombra de un engaño",
-      "title_en": "Verity",
-      "original_title": "Verity",
-      "director": "Michael Showalter",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 114,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-02",
-      "hora": "14:40",
       "title_es": "Avengers: Endgame (re Estreno)",
       "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
       "original_title": "",
@@ -15321,6 +15245,22 @@
       "duration": 183,
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-02",
+      "hora": "14:40",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -18317,6 +18257,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Lavalle",
+      "fecha": "2026-10-02",
+      "hora": "20:00",
+      "title_es": "Linkin Park: Unshatter",
+      "title_en": "LINKIN PARK: UNSHATTER",
+      "original_title": "LINKIN PARK: UNSHATTER",
+      "director": "Joe Hahn",
+      "country": "Estados Unidos, Corea del Sur",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/linkin-park-unshatter/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/linkin-park-unshatter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-02",
       "hora": "20:00",
@@ -18346,22 +18302,6 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-10-02",
-      "hora": "20:00",
-      "title_es": "Linkin Park: Unshatter",
-      "title_en": "LINKIN PARK: UNSHATTER",
-      "original_title": "LINKIN PARK: UNSHATTER",
-      "director": "Joe Hahn",
-      "country": "Estados Unidos, Corea del Sur",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Música, Documental",
-      "letterboxd": "https://letterboxd.com/film/linkin-park-unshatter/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/linkin-park-unshatter/",
       "ciclo": ""
     },
     {
@@ -18765,22 +18705,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-02",
-      "hora": "20:30",
-      "title_es": "Hangar Rojo",
-      "title_en": "The Red Hangar",
-      "original_title": "Hangar Rojo",
-      "director": "Juan Pablo Sallato",
-      "country": "Chile, Argentina",
-      "year": 2026,
-      "duration": 81,
-      "genre": "Thriller, Drama",
-      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/hangar-rojo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-02",
       "hora": "20:30",
@@ -18794,6 +18718,22 @@
       "genre": "Música, Documental",
       "letterboxd": "https://letterboxd.com/film/linkin-park-unshatter/",
       "ticket_url": "https://multiplex.com.ar/peliculas/linkin-park-unshatter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-02",
+      "hora": "20:30",
+      "title_es": "Hangar Rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile, Argentina",
+      "year": 2026,
+      "duration": 81,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/hangar-rojo/",
       "ciclo": ""
     },
     {
@@ -19885,22 +19825,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-02",
-      "hora": "22:45",
-      "title_es": "El caballo del pueblo",
-      "title_en": "El caballo del pueblo",
-      "original_title": "El caballo del pueblo",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1935,
-      "duration": 67,
-      "genre": "Comedia, Música",
-      "letterboxd": "https://letterboxd.com/film/el-caballo-del-pueblo/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-02",
       "hora": "22:45",
@@ -20331,22 +20255,6 @@
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-02",
-      "hora": "24:00",
-      "title_es": "Fuera de la ley",
-      "title_en": "Fuera de la ley",
-      "original_title": "Fuera de la ley",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1937,
-      "duration": 90,
-      "genre": "Drama, Crimen",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
     },
     {
       "cine": "Cinemark Palermo",
@@ -21776,22 +21684,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-03",
       "hora": "14:40",
-      "title_es": "Avengers: Endgame (re Estreno)",
-      "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": 183,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-03",
-      "hora": "14:40",
       "title_es": "Verity. La sombra de un engaño",
       "title_en": "Verity",
       "original_title": "Verity",
@@ -21801,6 +21693,22 @@
       "duration": 114,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-03",
+      "hora": "14:40",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 183,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -22779,6 +22687,22 @@
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-03",
+      "hora": "16:00",
+      "title_es": "sorpresas",
+      "title_en": "Las sorpresas",
+      "original_title": "Las sorpresas",
+      "director": "Alberto Fischerman, Carlos Galettini, Luis Puenzo",
+      "country": "Argentina",
+      "year": 1974,
+      "duration": 93,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/las-sorpresas/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -24301,6 +24225,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-03",
+      "hora": "18:30",
+      "title_es": "Juan que reía",
+      "title_en": "Juan que reía",
+      "original_title": "",
+      "director": "Carlos Galettini",
+      "country": "Argentina",
+      "year": 1976,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/juan-que-reia/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-03",
       "hora": "18:35",
@@ -24475,6 +24415,22 @@
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-03",
+      "hora": "19:00",
+      "title_es": "Dormir con los ojos abiertos",
+      "title_en": "Sleep with Your Eyes Open",
+      "original_title": "Dormir de olhos abertos",
+      "director": "Nele Wohlatz",
+      "country": "Argentina, Brasil",
+      "year": 2024,
+      "duration": 100,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/sleep-with-your-eyes-open/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
+      "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler"
     },
     {
       "cine": "Centro Cultural Borges",
@@ -26320,22 +26276,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-03",
       "hora": "22:40",
-      "title_es": "Verity. La sombra de un engaño",
-      "title_en": "Verity",
-      "original_title": "Verity",
-      "director": "Michael Showalter",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 114,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-03",
-      "hora": "22:40",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -26345,6 +26285,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-03",
+      "hora": "22:40",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -28429,6 +28385,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-04",
+      "hora": "15:00",
+      "title_es": "La muerte de un maestro de té",
+      "title_en": "La muerte de un maestro de té",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-04",
       "hora": "15:00",
@@ -29931,6 +29903,22 @@
       "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
       "ticket_url": "https://multiplex.com.ar/peliculas/tres-adioses/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-04",
+      "hora": "17:30",
+      "title_es": "Desde entonces",
+      "title_en": "Desde entonces",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
     },
     {
       "cine": "Hoyts Dot",
@@ -31805,22 +31793,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-10-04",
-      "hora": "20:30",
-      "title_es": "Hangar Rojo",
-      "title_en": "The Red Hangar",
-      "original_title": "Hangar Rojo",
-      "director": "Juan Pablo Sallato",
-      "country": "Chile, Argentina",
-      "year": 2026,
-      "duration": 81,
-      "genre": "Thriller, Drama",
-      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/hangar-rojo/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-04",
       "hora": "20:30",
@@ -31834,6 +31806,22 @@
       "genre": "Música, Documental",
       "letterboxd": "https://letterboxd.com/film/linkin-park-unshatter/",
       "ticket_url": "https://multiplex.com.ar/peliculas/linkin-park-unshatter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-04",
+      "hora": "20:30",
+      "title_es": "Hangar Rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile, Argentina",
+      "year": 2026,
+      "duration": 81,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/hangar-rojo/",
       "ciclo": ""
     },
     {
@@ -32768,22 +32756,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-04",
       "hora": "22:40",
-      "title_es": "Verity. La sombra de un engaño",
-      "title_en": "Verity",
-      "original_title": "Verity",
-      "director": "Michael Showalter",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 114,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-04",
-      "hora": "22:40",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -32793,6 +32765,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-04",
+      "hora": "22:40",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -34656,22 +34644,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-05",
       "hora": "14:40",
-      "title_es": "Verity. La sombra de un engaño",
-      "title_en": "Verity",
-      "original_title": "Verity",
-      "director": "Michael Showalter",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 114,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-05",
-      "hora": "14:40",
       "title_es": "Avengers: Endgame (re Estreno)",
       "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
       "original_title": "",
@@ -34681,6 +34653,22 @@
       "duration": 183,
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-05",
+      "hora": "14:40",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -47184,22 +47172,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-07",
       "hora": "14:40",
-      "title_es": "Avengers: Endgame (re Estreno)",
-      "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": 183,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-07",
-      "hora": "14:40",
       "title_es": "Verity. La sombra de un engaño",
       "title_en": "Verity",
       "original_title": "Verity",
@@ -47209,6 +47181,22 @@
       "duration": 114,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-07",
+      "hora": "14:40",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 183,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -51949,22 +51937,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-08",
-      "hora": "19:00",
-      "title_es": "Derecho viejo",
-      "title_en": "Derecho viejo",
-      "original_title": "Derecho viejo",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1951,
-      "duration": 81,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Sala Lúcida",
       "fecha": "2026-10-08",
       "hora": "19:00",
@@ -52029,22 +52001,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-08",
-      "hora": "21:00",
-      "title_es": "Yo quiero ser bataclana",
-      "title_en": "Yo quiero ser bataclana",
-      "original_title": "Yo quiero ser bataclana",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1941,
-      "duration": 76,
-      "genre": "Música, Comedia",
-      "letterboxd": "https://letterboxd.com/film/yo-quiero-ser-bataclana/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-08",
       "hora": "21:00",
@@ -52061,22 +52017,6 @@
       "ciclo": "Estreno"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-08",
-      "hora": "23:00",
-      "title_es": "Divorcio en Montevideo",
-      "title_en": "Divorcio en Montevideo",
-      "original_title": "Divorcio en Montevideo",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1939,
-      "duration": 70,
-      "genre": "Comedia, Romance",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-09",
       "hora": "15:00",
@@ -52091,22 +52031,6 @@
       "letterboxd": "https://letterboxd.com/film/the-maids-of-wilko/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
       "ciclo": "Andrzej Wajda: entre el mito y la historia"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-09",
-      "hora": "18:00",
-      "title_es": "Un bebé de París",
-      "title_en": "Un bebé de París",
-      "original_title": "Un bebé de París",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1941,
-      "duration": 71,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/un-bebe-de-paris/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
     },
     {
       "cine": "Lumiton",
@@ -52349,22 +52273,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-09",
-      "hora": "23:00",
-      "title_es": "Morir en su ley",
-      "title_en": "Morir en su ley",
-      "original_title": "Morir en su ley",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1949,
-      "duration": 75,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/morir-en-su-ley/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-10",
       "hora": "14:00",
@@ -52493,6 +52401,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-10",
+      "hora": "16:00",
+      "title_es": "Seré cualquier cosa pero te quiero",
+      "title_en": "Seré cualquier cosa, pero te quiero",
+      "original_title": "Seré cualquier cosa, pero te quiero",
+      "director": "Carlos Galettini",
+      "country": "Argentina",
+      "year": 1986,
+      "duration": 89,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/sere-cualquier-cosa-pero-te-quiero/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-10-10",
       "hora": "16:00",
@@ -52589,6 +52513,22 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-10",
+      "hora": "18:30",
+      "title_es": "Convivencia",
+      "title_en": "Living Together",
+      "original_title": "Convivencia",
+      "director": "Carlos Galettini",
+      "country": "Argentina",
+      "year": 1993,
+      "duration": 93,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/living-together/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-10-10",
       "hora": "18:40",
@@ -52603,6 +52543,22 @@
       "letterboxd": "https://letterboxd.com/film/la-casa/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/dd91baa067c6baa0118fc26db4a2b588",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-10",
+      "hora": "19:00",
+      "title_es": "Las corrientes",
+      "title_en": "The Currents",
+      "original_title": "Las corrientes",
+      "director": "Milagros Mumenthaler",
+      "country": "Argentina, Suiza",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/las-corrientes/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
+      "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler"
     },
     {
       "cine": "Amorina",
@@ -52765,6 +52721,22 @@
       "ciclo": "Andrzej Wajda: entre el mito y la historia"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-11",
+      "hora": "15:00",
+      "title_es": "Takeshi",
+      "title_en": "Takeshi",
+      "original_title": "",
+      "director": "Kitano",
+      "country": "",
+      "year": 1991,
+      "duration": 101,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
+    },
+    {
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-11",
       "hora": "15:00",
@@ -52843,6 +52815,22 @@
       "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/518",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-11",
+      "hora": "17:30",
+      "title_es": "El caído",
+      "title_en": "El caído",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
     },
     {
       "cine": "MALBA",
@@ -53469,22 +53457,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-15",
-      "hora": "19:00",
-      "title_es": "La vida es un tango",
-      "title_en": "La vida es un tango",
-      "original_title": "La vida es un tango",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1939,
-      "duration": 79,
-      "genre": "Música, Comedia",
-      "letterboxd": "https://letterboxd.com/film/la-vida-es-un-tango/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-15",
       "hora": "19:00",
@@ -53531,54 +53503,6 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/la-memoria-del-perfume-de-las-cosas/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-15",
-      "hora": "21:00",
-      "title_es": "El tango vuelve a París",
-      "title_en": "El tango vuelve a París",
-      "original_title": "El tango vuelve a París",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1948,
-      "duration": 85,
-      "genre": "Drama, Música",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-15",
-      "hora": "23:00",
-      "title_es": "La rubia del camino",
-      "title_en": "La rubia del camino",
-      "original_title": "La rubia del camino",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1938,
-      "duration": 70,
-      "genre": "Comedia, Romance",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-16",
-      "hora": "18:00",
-      "title_es": "Muchachas que estudian",
-      "title_en": "Muchachas que estudian",
-      "original_title": "Muchachas que estudian",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1939,
-      "duration": 78,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/muchachas-que-estudian/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
     },
     {
       "cine": "Cine York",
@@ -53675,22 +53599,6 @@
       "letterboxd": "",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": "Función especial"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-16",
-      "hora": "23:00",
-      "title_es": "Ven… mi corazón te llama",
-      "title_en": "When My Heart Calls",
-      "original_title": "Ven... mi corazón te llama",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1942,
-      "duration": 89,
-      "genre": "Thriller, Música",
-      "letterboxd": "https://letterboxd.com/film/ven-mi-corazon-te-llama/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
     },
     {
       "cine": "Hoyts Abasto",
@@ -53853,6 +53761,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-17",
+      "hora": "19:00",
+      "title_es": "Dormir con los ojos abiertos",
+      "title_en": "Sleep with Your Eyes Open",
+      "original_title": "Dormir de olhos abertos",
+      "director": "Nele Wohlatz",
+      "country": "Argentina, Brasil",
+      "year": 2024,
+      "duration": 100,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/sleep-with-your-eyes-open/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
+      "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-10-17",
       "hora": "20:30",
@@ -53883,6 +53807,22 @@
       "letterboxd": "https://letterboxd.com/film/los-vencedores/",
       "ticket_url": "https://malba.org.ar/evento/los-vencedores/",
       "ciclo": "Continúa"
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-18",
+      "hora": "15:00",
+      "title_es": "Todo bajo la luna",
+      "title_en": "Todo bajo la luna",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
     },
     {
       "cine": "Sala Lugones",
@@ -53947,6 +53887,22 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/vicente-lopez-en-pantalla-programa-de-cortos/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-18",
+      "hora": "17:30",
+      "title_es": "Escenas en el mar",
+      "title_en": "Escenas en el mar",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/a-scene-at-the-sea/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
     },
     {
       "cine": "MALBA",
@@ -54075,6 +54031,38 @@
       "letterboxd": "https://letterboxd.com/film/belle-of-the-nineties/",
       "ticket_url": "",
       "ciclo": "Seis tardes con Mae West"
+    },
+    {
+      "cine": "Hasta Trilce",
+      "fecha": "2026-10-20",
+      "hora": "19:00",
+      "title_es": "Película sorpresa",
+      "title_en": "Película sorpresa",
+      "original_title": "",
+      "director": "Desconocido",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://publico.alternativateatral.com/entradas75124-pena-sin-cadenas?o=14",
+      "ciclo": "Peña sin cadenas"
+    },
+    {
+      "cine": "Hasta Trilce",
+      "fecha": "2026-10-20",
+      "hora": "21:00",
+      "title_es": "Película sorpresa",
+      "title_en": "Película sorpresa",
+      "original_title": "",
+      "director": "Desconocido",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://publico.alternativateatral.com/entradas75124-pena-sin-cadenas?o=14",
+      "ciclo": "Peña sin cadenas"
     },
     {
       "cine": "Sala Lugones",
@@ -54221,70 +54209,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-22",
-      "hora": "19:00",
-      "title_es": "El diablo andaba en los choclos",
-      "title_en": "El diablo andaba en los choclos",
-      "original_title": "El diablo andaba en los choclos",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1946,
-      "duration": 91,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/el-diablo-andaba-en-los-choclos/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-22",
-      "hora": "21:00",
-      "title_es": "Mujeres que bailan",
-      "title_en": "Mujeres que bailan",
-      "original_title": "Mujeres que bailan",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1949,
-      "duration": 105,
-      "genre": "Música, Comedia",
-      "letterboxd": "https://letterboxd.com/film/mujeres-que-bailan/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-22",
-      "hora": "23:00",
-      "title_es": "Elvira Fernández, vendedora de tienda",
-      "title_en": "Elvira Fernández, vendedora de tienda",
-      "original_title": "Elvira Fernández, vendedora de tienda",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1942,
-      "duration": 88,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/elvira-fernandez-vendedora-de-tienda/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-23",
-      "hora": "18:00",
-      "title_es": "El cañonero de giles",
-      "title_en": "El cañonero de Giles",
-      "original_title": "El cañonero de Giles",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1937,
-      "duration": 69,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/el-canonero-de-giles/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Bellas Artes",
       "fecha": "2026-10-23",
       "hora": "18:00",
@@ -54331,6 +54255,22 @@
       "letterboxd": "https://letterboxd.com/film/the-little-shop-of-horrors/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/comedias-de-terror",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-23",
+      "hora": "19:00",
+      "title_es": "Besos en la frente",
+      "title_en": "Besos en la frente",
+      "original_title": "Besos en la frente",
+      "director": "Carlos Galettini",
+      "country": "Argentina",
+      "year": 1996,
+      "duration": 95,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/besos-en-la-frente/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
     },
     {
       "cine": "MALBA",
@@ -54381,22 +54321,6 @@
       "ciclo": "Función especial"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-23",
-      "hora": "23:00",
-      "title_es": "Noches de Buenos Aires",
-      "title_en": "Noches de Buenos Aires",
-      "original_title": "Noches de Buenos Aires",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1935,
-      "duration": 66,
-      "genre": "Comedia, Música",
-      "letterboxd": "https://letterboxd.com/film/noches-de-buenos-aires/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-24",
       "hora": "13:00",
@@ -54427,6 +54351,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-24",
+      "hora": "16:00",
+      "title_es": "Convivencia",
+      "title_en": "Living Together",
+      "original_title": "Convivencia",
+      "director": "Carlos Galettini",
+      "country": "Argentina",
+      "year": 1993,
+      "duration": 93,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/living-together/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
     },
     {
       "cine": "Centro Cultural Borges",
@@ -54523,6 +54463,22 @@
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-24",
+      "hora": "18:30",
+      "title_es": "Seré cualquier cosa pero te quiero",
+      "title_en": "Seré cualquier cosa, pero te quiero",
+      "original_title": "Seré cualquier cosa, pero te quiero",
+      "director": "Carlos Galettini",
+      "country": "Argentina",
+      "year": 1986,
+      "duration": 89,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/sere-cualquier-cosa-pero-te-quiero/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
     },
     {
       "cine": "Bellas Artes",
@@ -54669,6 +54625,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-25",
+      "hora": "15:00",
+      "title_es": "Un verano con los extraños",
+      "title_en": "Talking to a Stranger",
+      "original_title": "",
+      "director": "Adrián García Bogliano",
+      "country": "México",
+      "year": 2026,
+      "duration": 104,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/talking-to-a-stranger/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-10-25",
       "hora": "16:00",
@@ -54699,6 +54671,22 @@
       "letterboxd": "https://letterboxd.com/film/the-nightmare-before-christmas/",
       "ticket_url": "https://lumiton.ar/evento/el-extrano-mundo-de-jack-2/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-25",
+      "hora": "17:30",
+      "title_es": "Las gafas",
+      "title_en": "Las gafas",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
     },
     {
       "cine": "MALBA",
@@ -55421,22 +55409,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-29",
-      "hora": "19:00",
-      "title_es": "Porteña de corazón",
-      "title_en": "Porteña de corazón",
-      "original_title": "Porteña de corazón",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1948,
-      "duration": 83,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/portena-de-corazon/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-29",
       "hora": "19:15",
@@ -55533,22 +55505,6 @@
       "ciclo": ""
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-29",
-      "hora": "23:00",
-      "title_es": "La rubia Mireya",
-      "title_en": "La rubia Mireya",
-      "original_title": "La rubia Mireya",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1948,
-      "duration": 81,
-      "genre": "Música, Drama",
-      "letterboxd": "https://letterboxd.com/film/la-rubia-mireya/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-30",
       "hora": "13:00",
@@ -55563,22 +55519,6 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-10-30",
-      "hora": "18:00",
-      "title_es": "La modelo y la estrella",
-      "title_en": "La modelo y la estrella",
-      "original_title": "La modelo y la estrella",
-      "director": "Manuel Romero",
-      "country": "",
-      "year": 1939,
-      "duration": 85,
-      "genre": "Comedia, Música",
-      "letterboxd": "https://letterboxd.com/film/la-modelo-y-la-estrella/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
     },
     {
       "cine": "Bellas Artes",
@@ -55643,6 +55583,22 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/una-velada-con-narciso-ibanez-menta/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-30",
+      "hora": "19:00",
+      "title_es": "sorpresas",
+      "title_en": "Las sorpresas",
+      "original_title": "Las sorpresas",
+      "director": "Alberto Fischerman, Carlos Galettini, Luis Puenzo",
+      "country": "Argentina",
+      "year": 1974,
+      "duration": 93,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/las-sorpresas/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
     },
     {
       "cine": "Hoyts Abasto",
@@ -55757,22 +55713,6 @@
       "ciclo": "Función especial"
     },
     {
-      "cine": "MALBA",
-      "fecha": "2026-10-30",
-      "hora": "23:00",
-      "title_es": "El hincha",
-      "title_en": "El hincha",
-      "original_title": "El hincha",
-      "director": "Manuel Romero",
-      "country": "Argentina",
-      "year": 1951,
-      "duration": 88,
-      "genre": "Comedia, Música",
-      "letterboxd": "https://letterboxd.com/film/el-hincha/",
-      "ticket_url": "https://malba.org.ar/evento/el-romerazo",
-      "ciclo": "El Romerazo"
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-31",
       "hora": "13:00",
@@ -55787,6 +55727,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-31",
+      "hora": "16:00",
+      "title_es": "Besos en la frente",
+      "title_en": "Besos en la frente",
+      "original_title": "Besos en la frente",
+      "director": "Carlos Galettini",
+      "country": "Argentina",
+      "year": 1996,
+      "duration": 95,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/besos-en-la-frente/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -55869,6 +55825,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-31",
+      "hora": "18:30",
+      "title_es": "Juan que reía",
+      "title_en": "Juan que reía",
+      "original_title": "",
+      "director": "Carlos Galettini",
+      "country": "Argentina",
+      "year": 1976,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/juan-que-reia/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
+      "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-31",
       "hora": "18:45",
@@ -55947,6 +55919,22 @@
       "letterboxd": "https://letterboxd.com/film/without-air-2023/",
       "ticket_url": "https://amigosdelbellasartes.org.ar/producto/sin-aire/",
       "ciclo": ""
+    },
+    {
+      "cine": "CCK",
+      "fecha": "2026-10-31",
+      "hora": "19:00",
+      "title_es": "Las corrientes",
+      "title_en": "The Currents",
+      "original_title": "Las corrientes",
+      "director": "Milagros Mumenthaler",
+      "country": "Argentina, Suiza",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/las-corrientes/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
+      "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -56218,22 +56206,6 @@
       "genre": "Comedia",
       "letterboxd": "https://letterboxd.com/film/peacock-2024/",
       "ticket_url": "https://amigosdelbellasartes.org.ar/producto/peacock/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Centro Cultural Borges",
-      "fecha": "2026-11-13",
-      "hora": "17:00",
-      "title_es": "Piazzolla, los años del tiburón",
-      "title_en": "Piazzolla: The Years of the Shark",
-      "original_title": "Piazzolla: los años del tiburón",
-      "director": "Daniel Rosenfeld",
-      "country": "Argentina",
-      "year": 2018,
-      "duration": 90,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/524",
       "ciclo": ""
     }
   ]
