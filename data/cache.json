@@ -18253,7 +18253,7 @@
     "country": "Spain",
     "year": 2026,
     "duration": 109,
-    "genre": "",
+    "genre": "Documental",
     "original_title": "Todo es cárcel"
   },
   "decaer": {
@@ -19829,7 +19829,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -22404,5 +22404,46 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "noche alucinante": {
+    "url": "",
+    "title_en": "Noche alucinante",
+    "director": "Sam Raimi",
+    "country": "United States of America",
+    "year": 1987,
+    "duration": 84,
+    "genre": "Terror, Comedia",
+    "title_es": "Terroríficamente muertos",
+    "original_title": "Evil Dead II"
+  },
+  "el ejército de las tinieblas": {
+    "url": "",
+    "title_en": "El ejército de las tinieblas",
+    "director": "Sam Raimi",
+    "country": "United States of America",
+    "year": 1992,
+    "duration": 89,
+    "genre": "Fantasía, Terror",
+    "title_es": "El ejército de las tinieblas",
+    "original_title": "Army of Darkness"
+  },
+  "pesadilla": {
+    "url": "",
+    "title_en": "Pesadilla",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pesadilla en lo profundo de la noche": {
+    "url": "",
+    "title_en": "Pesadilla en lo profundo de la noche",
+    "director": "Wes Craven",
+    "country": "United States of America",
+    "year": 1984,
+    "duration": 91,
+    "genre": "Terror",
+    "title_es": "Pesadilla en Elm Street",
+    "original_title": "A Nightmare on Elm Street"
   }
 }
