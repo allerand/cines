@@ -14541,13 +14541,13 @@
     "original_title": "Pubis angelical"
   },
   "2001: odisea del espacio|1968": {
-    "url": "",
-    "title_en": "2001: odisea del espacio",
+    "url": "https://letterboxd.com/film/2001-a-space-odyssey/",
+    "title_en": "2001: A Space Odyssey",
     "director": "Stanley Kubrick",
-    "country": "United Kingdom, United States of America",
+    "country": "UK, USA",
     "year": 1968,
     "duration": 149,
-    "genre": "Ciencia ficción, Misterio",
+    "genre": "Ciencia ficción, Aventura",
     "title_es": "2001. Una odisea del espacio",
     "original_title": "2001: A Space Odyssey"
   },
@@ -22279,5 +22279,130 @@
     "fecha": "2026-09-30",
     "con_duracion": false,
     "desempate": ""
+  },
+  "mendi tour: aldabide | harri, orri, arkatz | bhagirathi iii": {
+    "url": "",
+    "title_en": "Mendi Tour: ALDABIDE | HARRI, ORRI, ARKATZ | BHAGIRATHI III",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "programa doble: programa doble: la última casa &#8230; + el vampiro de la noche|1972": {
+    "url": "",
+    "title_en": "PROGRAMA DOBLE: PROGRAMA DOBLE: LA ÚLTIMA CASA &#8230; + EL VAMPIRO DE LA NOCHE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "día del cine español: canciones para después de una guerra": {
+    "url": "",
+    "title_en": "Día del cine español: Canciones para después de una guerra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "portrait d’une jeune fille de la fin des années 60 à bruxelles": {
+    "url": "",
+    "title_en": "Portrait d’une jeune fille de la fin des années 60 à Bruxelles",
+    "director": "Chantal Akerman",
+    "country": "France",
+    "year": 1994,
+    "duration": 60,
+    "genre": "TV, Drama",
+    "original_title": "Portrait d’une jeune fille de la fin des années 60 à Bruxelles"
+  },
+  "news from home": {
+    "url": "https://letterboxd.com/film/news-from-home/",
+    "title_en": "News from Home",
+    "director": "Chantal Akerman",
+    "country": "Belgium, France",
+    "year": 1976,
+    "duration": 89,
+    "genre": "Documental",
+    "original_title": "News from Home"
+  },
+  "30 segundos de amor": {
+    "url": "https://letterboxd.com/film/30-segundos-de-amor/",
+    "title_en": "30 seconds of love",
+    "director": "Luis Mottura",
+    "country": "Argentina",
+    "year": 1947,
+    "duration": 77,
+    "genre": "Comedia",
+    "original_title": "30 segundos de amor"
+  },
+  "noche de brujas": {
+    "url": "",
+    "title_en": "Noche de brujas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "¿dónde estás, hermano?|2000": {
+    "url": "https://letterboxd.com/film/o-brother-where-art-thou/",
+    "title_en": "O Brother, Where Art Thou?",
+    "director": "Joel Coen",
+    "country": "France, UK",
+    "year": 2000,
+    "duration": 107,
+    "genre": "Comedia, Aventura",
+    "title_es": "O Brother!",
+    "original_title": "O Brother, Where Art Thou?"
+  },
+  "21.° festival de cine inusual de buenos aires": {
+    "url": "",
+    "title_en": "21.° Festival de Cine Inusual de Buenos Aires",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cielomoto": {
+    "url": "",
+    "title_en": "Cielomoto",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la reina, el buda y buñuel": {
+    "url": "",
+    "title_en": "La Reina, el Buda y Buñuel",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "réimon": {
+    "url": "https://letterboxd.com/film/reimon/",
+    "title_en": "Reimon",
+    "director": "Rodrigo Moreno",
+    "country": "Germany, Argentina",
+    "year": 2014,
+    "duration": 72,
+    "genre": "Drama",
+    "original_title": "Réimon"
+  },
+  "la biblioteca de todas las cosas posibles": {
+    "url": "https://letterboxd.com/film/la-biblioteca-de-todas-las-cosas-posibles/",
+    "title_en": "La biblioteca de todas las cosas posibles",
+    "director": "Ana Fraile, Lucas Scavino",
+    "country": "Argentina",
+    "year": null,
+    "duration": 73,
+    "genre": "Documental",
+    "original_title": "La biblioteca de todas las cosas posibles"
+  },
+  "volver al abrazo|2025": {
+    "url": "",
+    "title_en": "Volver al abrazo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
