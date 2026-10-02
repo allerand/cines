@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T02:35:41",
+  "updated": "2026-10-02T10:25:50",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 42,
@@ -30,8 +30,8 @@
       "publicadas": 80
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 83,
-      "publicadas": 83
+      "scrapeadas": 86,
+      "publicadas": 86
     },
     "Embajadores Glorieta": {
       "scrapeadas": 83,
@@ -5105,22 +5105,6 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19772/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-10-04",
-      "hora": "11:45",
-      "title_es": "La isla olvidada",
-      "title_en": "La isla olvidada",
-      "original_title": "Forgotten Island",
-      "director": "Januel Mercado, Joel Crawford",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 98,
-      "genre": "Animación, Aventura",
-      "letterboxd": "",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-isla-olvidada-doblada-al-espanol/19845/",
       "ciclo": ""
     },
     {
@@ -12343,22 +12327,6 @@
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-07",
       "hora": "15:45",
-      "title_es": "Fallen angels",
-      "title_en": "Fallen Angels",
-      "original_title": "墮落天使",
-      "director": "Wong Kar-Wai",
-      "country": "Hong Kong",
-      "year": 1995,
-      "duration": 92,
-      "genre": "Crimen, Romance",
-      "letterboxd": "https://letterboxd.com/film/fallen-angels/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/fallen-angels-vose/38813/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-10-07",
-      "hora": "15:45",
       "title_es": "Cabeza borradora",
       "title_en": "Cabeza borradora",
       "original_title": "Eraserhead",
@@ -12369,6 +12337,22 @@
       "genre": "Terror, Ciencia ficción",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/cabeza-borradora-vose/38809/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-07",
+      "hora": "15:45",
+      "title_es": "Fallen angels",
+      "title_en": "Fallen Angels",
+      "original_title": "墮落天使",
+      "director": "Wong Kar-Wai",
+      "country": "Hong Kong",
+      "year": 1995,
+      "duration": 92,
+      "genre": "Crimen, Romance",
+      "letterboxd": "https://letterboxd.com/film/fallen-angels/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/fallen-angels-vose/38813/",
       "ciclo": ""
     },
     {
@@ -19508,6 +19492,22 @@
       "ciclo": "Another Way Film Festival 2026"
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-22",
+      "hora": "20:00",
+      "title_es": "Terror Total: [REC]",
+      "title_en": "Terror Total: [REC]",
+      "original_title": "",
+      "director": "Jaume Balagueró, Paco Plaza",
+      "country": "",
+      "year": null,
+      "duration": 76,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/rec/19868/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-22",
       "hora": "20:30",
@@ -19771,7 +19771,7 @@
       "title_en": "Érase una vez en América",
       "original_title": "Once Upon a Time in America",
       "director": "Sergio Leone",
-      "country": "Estados Unidos, Italia",
+      "country": "Italia, Estados Unidos",
       "year": 1984,
       "duration": 225,
       "genre": "Drama, Crimen",
@@ -20116,6 +20116,22 @@
       "ciclo": "Fuera del Radar. Mes del Archivo. Cinemateca Lisboa"
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-29",
+      "hora": "19:30",
+      "title_es": "Terror Total: It follows",
+      "title_en": "Terror Total: It follows",
+      "original_title": "",
+      "director": "David Robert Mitchell",
+      "country": "",
+      "year": null,
+      "duration": 100,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/it-follows-vose/19869/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-29",
       "hora": "20:00",
@@ -20127,7 +20143,7 @@
       "year": 2026,
       "duration": 59,
       "genre": "Documental",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/el-irreal-valerio/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/el-irreal-valerio",
       "ciclo": ""
     },
@@ -20216,14 +20232,14 @@
       "fecha": "2026-10-30",
       "hora": "19:00",
       "title_es": "Crossroads. El viaje circular de Boa Mistura",
-      "title_en": "Crossroads. El viaje circular de Boa Mistura",
+      "title_en": "Crossroads. Boa Mistura's Circular Journey",
       "original_title": "Crossroads. El viaje circular de Boa Mistura",
       "director": "Dan Barreri",
       "country": "España",
       "year": 2022,
       "duration": 61,
       "genre": "Documental",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/crossroads-el-viaje-circular-de-boa-mistura/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/crossroads-el-viaje-circular-de-boa-mistura-0",
       "ciclo": "Madrid es Paisaje"
     },
@@ -20450,6 +20466,38 @@
       "letterboxd": "https://letterboxd.com/film/exorcisms-daughter/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/las-melancolicas",
       "ciclo": "Especial Halloween 2026"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-05",
+      "hora": "19:30",
+      "title_es": "Terror Total: Hereditary",
+      "title_en": "Terror Total: Hereditary",
+      "original_title": "",
+      "director": "Ari Aster",
+      "country": "",
+      "year": null,
+      "duration": 126,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hereditary-vose/19872/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-12",
+      "hora": "20:00",
+      "title_es": "Terror Total: Adolescencia, sexo y muerte en Campamento Miasma",
+      "title_en": "Teenage Sex and Death at Camp Miasma",
+      "original_title": "",
+      "director": "Jane Schoenbrun",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Terror, Comedia",
+      "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/adolescencia-sexo-y-muerte-en-campamento-miasma-vose/19871/",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",

@@ -19769,7 +19769,7 @@
     "genre": "Documental, TV"
   },
   "el irreal valerio|2026": {
-    "url": "",
+    "url": "https://letterboxd.com/film/el-irreal-valerio/",
     "title_en": "El irreal Valerio",
     "director": "Gemma Soriano",
     "country": "",
@@ -19797,8 +19797,8 @@
     "duration": null
   },
   "crossroads. el viaje circular de boa mistura|2022": {
-    "url": "",
-    "title_en": "Crossroads. El viaje circular de Boa Mistura",
+    "url": "https://letterboxd.com/film/crossroads-el-viaje-circular-de-boa-mistura/",
+    "title_en": "Crossroads. Boa Mistura's Circular Journey",
     "director": "Dan Barreri",
     "country": "",
     "year": 2022,
@@ -19837,7 +19837,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -20545,7 +20545,7 @@
     "url": "",
     "title_en": "Érase una vez en América",
     "director": "Sergio Leone",
-    "country": "United States of America, Italy",
+    "country": "Italy, United States of America",
     "year": 1984,
     "duration": 139,
     "genre": "Drama, Crimen",
@@ -22707,5 +22707,38 @@
     "duration": 125,
     "genre": "Fantasía, Acción",
     "original_title": "Street Fighter"
+  },
+  "terror total: [rec]": {
+    "url": "",
+    "title_en": "Terror Total: [REC]",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "terror total: it follows": {
+    "url": "",
+    "title_en": "Terror Total: It follows",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "terror total: hereditary": {
+    "url": "",
+    "title_en": "Terror Total: Hereditary",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "terror total: adolescencia, sexo y muerte en campamento miasma": {
+    "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+    "title_en": "Teenage Sex and Death at Camp Miasma",
+    "director": "Jane Schoenbrun",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Terror, Comedia"
   }
 }
