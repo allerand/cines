@@ -15125,14 +15125,16 @@
     "genre": "Drama"
   },
   "la vida es así": {
-    "url": "https://letterboxd.com/film/por-que-la-vida-es-asi/",
-    "title_en": "¿Por qué la vida es así?",
-    "director": "Olallo Rubio",
-    "country": "Mexico",
-    "year": 2022,
-    "duration": 97,
-    "genre": "Documental",
-    "original_title": "¿Por qué la vida es así?"
+    "url": "",
+    "title_en": "LA VIDA ES ASÍ",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-02",
+    "con_duracion": true,
+    "desempate": "nueva"
   },
   "el secuestro de arabella": {
     "url": "https://letterboxd.com/film/the-kidnapping-of-arabella/",
@@ -16326,7 +16328,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS WORLD TOUR [ARIRANG] in Busan (2026) sólo se le parece",
-    "fecha": "2026-09-28",
+    "fecha": "2026-10-02",
     "con_duracion": true,
     "desempate": ""
   },
@@ -19455,12 +19457,13 @@
     "duration": null
   },
   "eugènia balcells. sesión i": {
-    "url": "",
-    "title_en": "Eugènia Balcells. Sesión I",
-    "director": "",
+    "url": "https://letterboxd.com/film/for-against/",
+    "title_en": "For / Against",
+    "director": "Eugènia Balcells",
     "country": "",
-    "year": null,
-    "duration": null
+    "year": 1983,
+    "duration": null,
+    "genre": ""
   },
   "en el balcón vacío|1962": {
     "url": "https://letterboxd.com/film/en-el-balcon-vacio/",
@@ -19728,12 +19731,13 @@
     "duration": null
   },
   "cima proyecta: la mujer rubia (la mujer sin cabeza)|2008": {
-    "url": "",
-    "title_en": "CIMA Proyecta: La mujer rubia (La mujer sin cabeza)",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-headless-woman/",
+    "title_en": "The Headless Woman",
+    "director": "Lucrecia Martel",
+    "country": "Argentina, France",
+    "year": 2008,
+    "duration": 87,
+    "genre": "Misterio, Drama"
   },
   "weak rangers|2022": {
     "url": "https://letterboxd.com/film/weak-rangers/",
@@ -19767,10 +19771,12 @@
   "el irreal valerio|2026": {
     "url": "",
     "title_en": "El irreal Valerio",
-    "director": "",
+    "director": "Gemma Soriano",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 59,
+    "genre": "Documental",
+    "original_title": "El irreal Valerio"
   },
   "fire supply|2023": {
     "url": "https://letterboxd.com/film/fire-supply/",
@@ -19793,10 +19799,12 @@
   "crossroads. el viaje circular de boa mistura|2022": {
     "url": "",
     "title_en": "Crossroads. El viaje circular de Boa Mistura",
-    "director": "",
+    "director": "Dan Barreri",
     "country": "",
-    "year": null,
-    "duration": null
+    "year": 2022,
+    "duration": 61,
+    "genre": "Documental",
+    "original_title": "Crossroads. El viaje circular de Boa Mistura"
   },
   "rezar como quería|2026": {
     "url": "",
@@ -19829,7 +19837,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -21567,7 +21575,8 @@
     "duration": 99,
     "title_es": "Suspiria: Alarido",
     "original_title": "Suspiria",
-    "genre": "Terror"
+    "genre": "Terror",
+    "clase_titulo": "exacto"
   },
   "la reina de áfrica": {
     "url": "",
@@ -22076,7 +22085,11 @@
     "director": "",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-02",
+    "con_duracion": true,
+    "desempate": ""
   },
   "apuntes desde el encierro": {
     "url": "https://letterboxd.com/film/apuntes-desde-el-encierro/",
@@ -22445,5 +22458,254 @@
     "genre": "Terror",
     "title_es": "Pesadilla en Elm Street",
     "original_title": "A Nightmare on Elm Street"
+  },
+  "mendi tour: k2 mon amour | old man lightning": {
+    "url": "",
+    "title_en": "Mendi Tour: K2 MON AMOUR | OLD MAN LIGHTNING",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el ocaso de una vida|1950": {
+    "url": "https://letterboxd.com/film/sunset-boulevard/",
+    "title_en": "Sunset Boulevard",
+    "director": "Billy Wilder",
+    "country": "USA",
+    "year": 1950,
+    "duration": 110,
+    "genre": "Drama",
+    "title_es": "El crepúsculo de los dioses",
+    "original_title": "Sunset Boulevard"
+  },
+  "blade runner|1982": {
+    "url": "https://letterboxd.com/film/blade-runner/",
+    "title_en": "Blade Runner",
+    "director": "Ridley Scott",
+    "country": "USA, Hong Kong",
+    "year": 1982,
+    "duration": 118,
+    "genre": "Thriller, Drama",
+    "title_es": "Blade Runner",
+    "original_title": "Blade Runner"
+  },
+  "¿qué pasó con baby jane?|1962": {
+    "url": "https://letterboxd.com/film/what-ever-happened-to-baby-jane/",
+    "title_en": "What Ever Happened to Baby Jane?",
+    "director": "Robert Aldrich",
+    "country": "USA",
+    "year": 1962,
+    "duration": 135,
+    "genre": "Thriller, Terror",
+    "title_es": "¿Qué fue de Baby Jane?",
+    "original_title": "What Ever Happened to Baby Jane?"
+  },
+  "terciopelo azul|1986": {
+    "url": "https://letterboxd.com/film/blue-velvet/",
+    "title_en": "Blue Velvet",
+    "director": "David Lynch",
+    "country": "USA",
+    "year": 1986,
+    "duration": 120,
+    "genre": "Crimen, Misterio",
+    "title_es": "Terciopelo azul",
+    "original_title": "Blue Velvet"
+  },
+  "los pájaros|1963": {
+    "url": "https://letterboxd.com/film/the-birds/",
+    "title_en": "The Birds",
+    "director": "Alfred Hitchcock",
+    "country": "USA",
+    "year": 1963,
+    "duration": 119,
+    "genre": "Terror, Thriller",
+    "title_es": "Los pájaros",
+    "original_title": "The Birds"
+  },
+  "dragon": {
+    "url": "",
+    "title_en": "DRAGON",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "videofilia": {
+    "url": "",
+    "title_en": "VIDEOFILIA",
+    "director": "J.D. Fernández Molero",
+    "country": "Peru",
+    "year": 2015,
+    "duration": 112,
+    "genre": "Fantasía, Terror",
+    "original_title": "Videofilia (y otros síndromes virales)"
+  },
+  "verity: la sombra del engaño": {
+    "url": "https://letterboxd.com/film/verity-2026/",
+    "title_en": "Verity",
+    "director": "Michael Showalter",
+    "country": "USA",
+    "year": 2026,
+    "duration": 117,
+    "genre": "Misterio, Thriller",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "cuentos del jardín mágico": {
+    "url": "https://letterboxd.com/film/tales-from-the-magic-garden/",
+    "title_en": "Tales from the Magic Garden",
+    "director": "Jean-Claude Rozec, Patrik Pašš, Leon Vidmar",
+    "country": "Czechia, Slovakia",
+    "year": 2025,
+    "duration": 70,
+    "genre": "Familiar, Animación",
+    "clase_titulo": "distinto",
+    "title_es": "Los misteriosos cuentos del manzano",
+    "original_title": "Pohádky po babičce",
+    "sin_hints": "título local de un estreno"
+  },
+  "vértigo 2": {
+    "url": "https://letterboxd.com/film/fall-2-deadpoint/",
+    "title_en": "Fall 2: Deadpoint",
+    "director": "Michael Spierig, Peter Spierig",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 98,
+    "genre": "Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Vértigo 2: Punto muerto",
+    "original_title": "Fall 2: Deadpoint",
+    "sin_hints": "título"
+  },
+  "las alas del deseo|1987": {
+    "url": "https://letterboxd.com/film/wings-of-desire/",
+    "title_en": "Wings of Desire",
+    "director": "Wim Wenders",
+    "country": "Germany, France",
+    "year": 1987,
+    "duration": 128,
+    "genre": "Drama, Fantasía",
+    "title_es": "El cielo sobre Berlín",
+    "original_title": "Der Himmel über Berlin"
+  },
+  "el miedo del arquero al tiro penal|1972": {
+    "url": "https://letterboxd.com/film/the-goalies-anxiety-at-the-penalty-kick/",
+    "title_en": "The Goalie's Anxiety at the Penalty Kick",
+    "director": "Wim Wenders",
+    "country": "Austria, Germany",
+    "year": 1972,
+    "duration": 101,
+    "genre": "Drama"
+  },
+  "el amigo americano|1977": {
+    "url": "https://letterboxd.com/film/the-american-friend/",
+    "title_en": "The American Friend",
+    "director": "Wim Wenders",
+    "country": "France, Germany",
+    "year": 1977,
+    "duration": 125,
+    "genre": "Crimen, Drama",
+    "title_es": "El amigo americano",
+    "original_title": "Der amerikanische Freund"
+  },
+  "paris, texas|1984": {
+    "url": "https://letterboxd.com/film/paris-texas/",
+    "title_en": "Paris, Texas",
+    "director": "Wim Wenders",
+    "country": "UK, Germany",
+    "year": 1984,
+    "duration": 145,
+    "genre": "Drama",
+    "title_es": "París, Texas",
+    "original_title": "Paris, Texas"
+  },
+  "buena vista social club|1999": {
+    "url": "https://letterboxd.com/film/buena-vista-social-club/",
+    "title_en": "Buena Vista Social Club",
+    "director": "Wim Wenders",
+    "country": "Germany, USA",
+    "year": 1999,
+    "duration": 105,
+    "genre": "Música, Documental",
+    "title_es": "Buena Vista Social Club",
+    "original_title": "Buena Vista Social Club"
+  },
+  "alicia en las ciudades|1974": {
+    "url": "https://letterboxd.com/film/alice-in-the-cities/",
+    "title_en": "Alice in the Cities",
+    "director": "Wim Wenders",
+    "country": "Germany",
+    "year": 1974,
+    "duration": 110,
+    "genre": "Drama",
+    "title_es": "Alicia en las ciudades",
+    "original_title": "Alice in den Städten"
+  },
+  "el estado de las cosas|1982": {
+    "url": "https://letterboxd.com/film/the-state-of-things/",
+    "title_en": "The State of Things",
+    "director": "Wim Wenders",
+    "country": "Germany, UK",
+    "year": 1982,
+    "duration": 121,
+    "genre": "Drama",
+    "title_es": "El estado de las cosas",
+    "original_title": "Der Stand der Dinge"
+  },
+  "en el curso del tiempo|1976": {
+    "url": "https://letterboxd.com/film/kings-of-the-road/",
+    "title_en": "Kings of the Road",
+    "director": "Wim Wenders",
+    "country": "Germany",
+    "year": 1976,
+    "duration": 177,
+    "genre": "Drama",
+    "title_es": "En el curso del tiempo",
+    "original_title": "Im Lauf der Zeit"
+  },
+  "tokyo-ga|1985": {
+    "url": "https://letterboxd.com/film/tokyo-ga/",
+    "title_en": "Tokyo-Ga",
+    "director": "Wim Wenders",
+    "country": "Germany, USA",
+    "year": 1985,
+    "duration": 92,
+    "genre": "Documental",
+    "title_es": "Tokio-Ga",
+    "original_title": "Tokyo-Ga"
+  },
+  "hope el primer impacto": {
+    "url": "https://letterboxd.com/film/hope-2026/",
+    "title_en": "Hope",
+    "director": "Na Hong-jin",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 157,
+    "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "title_es": "Hope",
+    "original_title": "호프",
+    "sin_hints": "título y duración"
+  },
+  "la otra madre": {
+    "url": "https://letterboxd.com/film/other-mommy/",
+    "title_en": "Other Mommy",
+    "director": "Rob Savage",
+    "country": "USA",
+    "year": 2026,
+    "duration": 93,
+    "genre": "Terror",
+    "title_es": "La otra madre",
+    "original_title": "Other Mommy"
+  },
+  "street fighter": {
+    "url": "https://letterboxd.com/film/street-fighter-2026/",
+    "title_en": "Street Fighter",
+    "director": "Kitao Sakurai",
+    "country": "Japan, USA",
+    "year": 2026,
+    "duration": 125,
+    "genre": "Fantasía, Acción",
+    "original_title": "Street Fighter"
   }
 }
