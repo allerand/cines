@@ -629,7 +629,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Vamp (1986), y puede ser otra",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -2057,7 +2057,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es The Little Shop of Horrors (1960), y puede ser otra",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -15955,7 +15955,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Frida Still Life (1985), y puede ser otra",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16384,7 +16384,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS WORLD TOUR [ARIRANG] in Busan (2026) sólo se le parece",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": true,
     "desempate": ""
   },
@@ -19837,7 +19837,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -20560,7 +20560,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: Apocalypse Now (1979, 147 min)",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": true,
     "desempate": ""
   },
@@ -21376,7 +21376,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Nadie inquietó más (2008)",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -21484,7 +21484,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Young Frankenstein (1974), y puede ser otra",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -21496,7 +21496,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Fright Night (1985), y puede ser otra",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -21508,7 +21508,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Prince Valiant (1997), Prince Valiant (1954)",
-    "fecha": "2026-09-29",
+    "fecha": "2026-10-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22740,5 +22740,37 @@
     "year": 2026,
     "duration": 112,
     "genre": "Terror, Comedia"
+  },
+  "naza": {
+    "url": "https://letterboxd.com/film/naza/",
+    "title_en": "NAZA",
+    "director": "Yuval Abraham, Rachel Szor",
+    "country": "USA, UK",
+    "year": 2026,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "NAZA"
+  },
+  "la voz quebrada": {
+    "url": "https://letterboxd.com/film/the-broken-voice/",
+    "title_en": "The Broken Voice",
+    "director": "Manuel Menchón",
+    "country": "Spain, Argentina",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Documental",
+    "original_title": "La voz quebrada"
+  },
+  "berlín, estación de friedrichstrasse 1990 (berlin, bahnhof friedrichstraße 1990)": {
+    "url": "",
+    "title_en": "BERLÍN, ESTACIÓN DE FRIEDRICHSTRASSE 1990 (Berlin, Bahnhof Friedrichstraße 1990)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Berlin, Bahnhof Friedrichstraße, 1990 (1991), y puede ser otra",
+    "fecha": "2026-10-03",
+    "con_duracion": false,
+    "desempate": ""
   }
 }
