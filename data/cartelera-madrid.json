@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T02:18:15",
+  "updated": "2026-10-03T09:48:07",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 38,
@@ -18,9 +18,8 @@
       "publicadas": 27
     },
     "Cines Ideal": {
-      "scrapeadas": 0,
-      "publicadas": 261,
-      "fuente_caida": "yelmocines.es no devolvió la cartelera (¿Cloudflare?)"
+      "scrapeadas": 266,
+      "publicadas": 266
     },
     "Cines Princesa": {
       "scrapeadas": 223,
@@ -3026,6 +3025,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36167",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-04",
+      "hora": "15:25",
+      "title_es": "Como cabras",
+      "title_en": "GOAT",
+      "original_title": "",
+      "director": "Tyree Dillihay",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Familiar, Animación",
+      "letterboxd": "https://letterboxd.com/film/goat-2026/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=35889",
       "ciclo": ""
     },
     {
@@ -9944,22 +9959,6 @@
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-07",
       "hora": "15:45",
-      "title_es": "Cabeza borradora",
-      "title_en": "Cabeza borradora",
-      "original_title": "Eraserhead",
-      "director": "David Lynch",
-      "country": "Estados Unidos",
-      "year": 1977,
-      "duration": 86,
-      "genre": "Terror, Ciencia ficción",
-      "letterboxd": "",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/cabeza-borradora-vose/38809/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-10-07",
-      "hora": "15:45",
       "title_es": "Fallen angels",
       "title_en": "Fallen Angels",
       "original_title": "墮落天使",
@@ -9970,6 +9969,22 @@
       "genre": "Crimen, Romance",
       "letterboxd": "https://letterboxd.com/film/fallen-angels/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/fallen-angels-vose/38813/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-07",
+      "hora": "15:45",
+      "title_es": "Cabeza borradora",
+      "title_en": "Cabeza borradora",
+      "original_title": "Eraserhead",
+      "director": "David Lynch",
+      "country": "Estados Unidos",
+      "year": 1977,
+      "duration": 86,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/cabeza-borradora-vose/38809/",
       "ciclo": ""
     },
     {
@@ -17448,6 +17463,22 @@
       "cine": "Cines Ideal",
       "fecha": "2026-10-25",
       "hora": "16:00",
+      "title_es": "Hybe Cheering Party",
+      "title_en": "HYBE CHEERING PARTY",
+      "original_title": "",
+      "director": "Yunjeong Kim",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36704",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-25",
+      "hora": "16:00",
       "title_es": "Minions & Monsters",
       "title_en": "Minions & Monsters",
       "original_title": "",
@@ -17635,6 +17666,22 @@
       "letterboxd": "https://letterboxd.com/film/saturdays-disorders/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/saturdays-disorders",
       "ciclo": "Retrospectiva Lucía Seles"
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-28",
+      "hora": "18:00",
+      "title_es": "Hybe Cheering Party",
+      "title_en": "HYBE CHEERING PARTY",
+      "original_title": "",
+      "director": "Yunjeong Kim",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36705",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -17893,6 +17940,22 @@
       "ciclo": "Retrospectiva Lucía Seles"
     },
     {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-30",
+      "hora": "18:00",
+      "title_es": "Hybe Cheering Party",
+      "title_en": "HYBE CHEERING PARTY",
+      "original_title": "",
+      "director": "Yunjeong Kim",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36706",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-30",
       "hora": "19:00",
@@ -17987,6 +18050,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/clasicos-al-detalle-apocalypse-now/19728/",
       "ciclo": "Clásicos al detalle"
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-31",
+      "hora": "16:00",
+      "title_es": "Hybe Cheering Party",
+      "title_en": "HYBE CHEERING PARTY",
+      "original_title": "",
+      "director": "Yunjeong Kim",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36707",
+      "ciclo": ""
     },
     {
       "cine": "Cine Doré",

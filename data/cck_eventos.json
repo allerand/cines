@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-02T10:05:59",
+    "ts": "2026-10-03T09:29:19",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -137,7 +137,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-02T10:06:16",
+    "ts": "2026-10-03T09:29:34",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -196,7 +196,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-02T10:06:27",
+    "ts": "2026-10-03T09:29:48",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -302,6 +302,26 @@
         "country": "",
         "year": null,
         "duration": null,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
+    "ts": "2026-10-03T09:29:04",
+    "v": 2,
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "El placer es mío",
+        "fecha": "2026-10-03",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/",
+        "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
+        "director": "Sacha Amaral",
+        "country": "Argentina, Brasil, Francia",
+        "year": 2024,
+        "duration": 95,
         "original_title": ""
       }
     ]
