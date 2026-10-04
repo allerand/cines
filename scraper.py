@@ -5851,9 +5851,130 @@ CCR_BASE = "http://centroculturalrecoleta.org"
 CCR_INDEX = CCR_BASE + "/agenda?categoria=9"
 
 
+_CCR_DATE_LINE_RE = re.compile(
+    r"(?:Lun|Mar|Mi[ée]|Jue|Vie|S[áa]b|Dom)\.\s+\d{1,2}\.\d{1,2}",
+    re.IGNORECASE,
+)
+_CCR_DDMM_RE = re.compile(r"\b(\d{1,2})\.(\d{1,2})\b")
+_CCR_HOUR_RE = re.compile(r"(\d{1,2})(?:[.:](\d{2}))?\s*h\b", re.IGNORECASE)
+_CCR_GENERICOS = {"actividades", "horarios", "cine"}
+# Renglones de ficha que pueden ir entre la fecha y la sinopsis y que no son
+# el título ("Dirección: …", "Finlandia, 2023, 81 min", "ATP").
+_CCR_FICHA_RE = re.compile(
+    r"^(?:dir(?:ecci[oó]n|ector[a]?)?\.?\s*[:|]|de\s*:|guion|elenco|con\s*:|"
+    r"pa[ií]s|duraci[oó]n|idioma|subt[ií]tul|atp\b|sam\s*\d|\+\s*\d{1,2}\b|"
+    r"entrada\s+(?:libre|gratuita))",
+    re.IGNORECASE,
+)
+_CCR_FICHA_DATOS_RE = re.compile(r"\b(?:19|20)\d{2}\b.*\b\d{2,3}\s*(?:min|['’´])", re.IGNORECASE)
+
+
+def _ccr_es_sinopsis(linea: str) -> bool:
+    """Prosa de sinopsis, no un título: una oración larga."""
+    palabras = len(linea.split())
+    return palabras >= 15 or (palabras >= 9 and linea.rstrip().endswith((".", "!", "?", "…")))
+
+
+def _ccr_es_titulo(linea: str) -> bool:
+    if not linea or linea.startswith("#") or len(linea) < 2:
+        return False
+    if _CCR_DATE_LINE_RE.search(linea) or linea.lower() in _CCR_GENERICOS:
+        return False
+    if _CCR_FICHA_RE.search(linea) or _CCR_FICHA_DATOS_RE.search(linea):
+        return False
+    return not _ccr_es_sinopsis(linea)
+
+
+def _ccr_parse_lineas(lines: list[str], url: str, today: date) -> list[Screening]:
+    """
+    Funciones de una página de evento del CCR, a partir de su texto en renglones.
+
+    El sitio usa dos maquetas:
+      · título → fecha  (ciclos chicos: "Cine | La hora del espanto" y abajo
+        "Vie. 09.10 | 18 h | Cine").
+      · fecha → título → sinopsis  (el Encuentro de Cine Europeo 2026). Acá el
+        renglón anterior a cada fecha es la sinopsis de la película ANTERIOR,
+        y leerlo como título publicaba sinopsis corridas una función (y el
+        encabezado "Programación en el Ccr" como primera película).
+    Si el renglón anterior a alguna fecha es prosa, la página es de la segunda
+    clase y el título se busca después de la fecha. Una función sin un renglón
+    con pinta de título se descarta: mejor no publicarla que publicar la
+    sinopsis.
+    """
+    cutoff = today + timedelta(days=90)
+    lines = [ln.strip() for ln in lines if ln and ln.strip()]
+    idx_fechas = [i for i, ln in enumerate(lines)
+                  if _CCR_DATE_LINE_RE.search(ln) and _CCR_DDMM_RE.search(ln)]
+
+    fecha_primero = any(i > 0 and _ccr_es_sinopsis(lines[i - 1]) for i in idx_fechas)
+
+    result: list[Screening] = []
+    seen_keys: set[tuple] = set()
+    for n, i in enumerate(idx_fechas):
+        line = lines[i]
+        title = ""
+        if fecha_primero:
+            fin = idx_fechas[n + 1] if n + 1 < len(idx_fechas) else len(lines)
+            for cand in lines[i + 1:fin]:
+                if _ccr_es_titulo(cand):
+                    title = cand
+                    break
+                if _ccr_es_sinopsis(cand):
+                    break  # el título va antes que la sinopsis
+        else:
+            j = i - 1
+            while j >= 0 and _CCR_DATE_LINE_RE.search(lines[j]):
+                j -= 1
+            if j >= 0 and _ccr_es_titulo(lines[j]):
+                title = lines[j]
+        if not title:
+            continue
+
+        # El título viene prefijado con la categoría ("Cine | …", "Taller |
+        # …", "Música | …"). Sólo cine; se saca el prefijo. Además, si la
+        # línea de fecha trae la categoría al final ("| 18 h | Taller"),
+        # descartamos lo que no sea cine.
+        pm = re.match(r"^([A-Za-zÁÉÍÓÚáéíóúñ]+)\s*\|\s*(.+)$", title)
+        if pm:
+            if pm.group(1).strip().lower() != "cine":
+                continue
+            title = pm.group(2).strip()
+        segs = [s.strip() for s in line.split("|") if s.strip()]
+        if len(segs) >= 2 and re.fullmatch(r"[A-Za-zÁÉÍÓÚáéíóúñ ]{3,}", segs[-1]) \
+                and "cine" not in segs[-1].lower():
+            continue
+
+        hm = _CCR_HOUR_RE.search(line)
+        if not hm:
+            continue
+        hora = f"{int(hm.group(1)):02d}:{int(hm.group(2) or 0):02d}"
+
+        for dm in _CCR_DDMM_RE.finditer(line):
+            day, month = int(dm.group(1)), int(dm.group(2))
+            # Año: mes pasado → próximo año
+            year = today.year + (1 if month < today.month else 0)
+            try:
+                d = date(year, month, day)
+            except ValueError:
+                continue
+            if d < today or d > cutoff:
+                continue
+            key = (title, d.isoformat(), hora)
+            if key in seen_keys:
+                continue
+            seen_keys.add(key)
+            result.append(Screening(
+                cine="Centro Cultural Recoleta",
+                title=title,
+                fecha=d.isoformat(),
+                hora=hora,
+                ticket_url=url,
+            ))
+    return result
+
+
 def scrape_ccr() -> list[Screening]:
     today = date.today()
-    cutoff = today + timedelta(days=90)
     try:
         idx_soup = fetch_html(CCR_INDEX)
     except Exception:
@@ -5870,94 +5991,19 @@ def scrape_ccr() -> list[Screening]:
             seen_urls.add(u)
             event_urls.append(u)
 
-    # Línea de fechas: precedida por DíaAbbr y con DD.MM + HH
-    date_line_re = re.compile(
-        r"(?:Lun|Mar|Mi[ée]|Jue|Vie|S[áa]b|Dom)\.\s+\d{1,2}\.\d{1,2}",
-        re.IGNORECASE,
-    )
-    # Para extraer todos los DD.MM
-    ddmm_re = re.compile(r"\b(\d{1,2})\.(\d{1,2})\b")
-    hour_re = re.compile(r"(\d{1,2})(?:[.:](\d{2}))?\s*h\b", re.IGNORECASE)
-
     result: list[Screening] = []
     seen_keys: set[tuple] = set()
-
     for url in event_urls:
         try:
             soup = fetch_html(url)
         except Exception:
             continue
-        text = soup.get_text("\n", strip=True)
-        lines = [ln.strip() for ln in text.splitlines()]
-
-        # Iterar líneas; cada línea que matchee date_line_re es una función,
-        # y el título es la línea no-vacía inmediata anterior.
-        for i, line in enumerate(lines):
-            if not date_line_re.search(line):
-                continue
-            # Skip the index-style "Sábados y domingos de mayo" header
-            if not ddmm_re.search(line):
-                continue
-
-            title = ""
-            j = i - 1
-            while j >= 0:
-                cand = lines[j].strip()
-                if cand and not date_line_re.search(cand):
-                    title = cand
-                    break
-                j -= 1
-            if not title or title.startswith("#") or len(title) < 2:
-                continue
-            # Filtrar headers genéricos
-            if title.lower() in {"actividades", "horarios", "cine"}:
-                continue
-
-            # El título viene prefijado con la categoría ("Cine | …", "Taller |
-            # …", "Música | …"). Sólo cine; se saca el prefijo. Además, si la
-            # línea de fecha trae la categoría al final ("| 18 h | Taller"),
-            # descartamos lo que no sea cine.
-            pm = re.match(r"^([A-Za-zÁÉÍÓÚáéíóúñ]+)\s*\|\s*(.+)$", title)
-            if pm:
-                if pm.group(1).strip().lower() != "cine":
-                    continue
-                title = pm.group(2).strip()
-            segs = [s.strip() for s in line.split("|") if s.strip()]
-            if len(segs) >= 2 and re.fullmatch(r"[A-Za-zÁÉÍÓÚáéíóúñ ]{3,}", segs[-1]) \
-                    and "cine" not in segs[-1].lower():
-                continue
-
-            hm = hour_re.search(line)
-            if not hm:
-                continue
-            hour = int(hm.group(1))
-            minute = int(hm.group(2) or 0)
-            hora = f"{hour:02d}:{minute:02d}"
-
-            for dm in ddmm_re.finditer(line):
-                day = int(dm.group(1))
-                month = int(dm.group(2))
-                # Año: mes pasado → próximo año
-                year = today.year
-                if month < today.month:
-                    year += 1
-                try:
-                    d = date(year, month, day)
-                except ValueError:
-                    continue
-                if d < today or d > cutoff:
-                    continue
-                key = (title, d.isoformat(), hora)
-                if key in seen_keys:
-                    continue
+        lines = soup.get_text("\n", strip=True).splitlines()
+        for sc in _ccr_parse_lineas(lines, url, today):
+            key = (sc.title, sc.fecha, sc.hora)
+            if key not in seen_keys:
                 seen_keys.add(key)
-                result.append(Screening(
-                    cine="Centro Cultural Recoleta",
-                    title=title,
-                    fecha=d.isoformat(),
-                    hora=hora,
-                    ticket_url=url,
-                ))
+                result.append(sc)
     return result
 
 
@@ -6584,6 +6630,7 @@ def scrape_bn() -> list[Screening]:
             event_urls.append(u)
 
     result: list[Screening] = []
+    seen_keys: set[tuple] = set()
     for url in event_urls:
         try:
             soup = fetch_html(url)
