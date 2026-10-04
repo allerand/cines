@@ -1,35 +1,9 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-03T09:29:19",
+    "ts": "2026-10-04T10:09:11",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "sorpresas",
-        "fecha": "2026-10-03",
-        "hora": "16:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
-        "ciclo": "Retrospectivas:Carlos Galettini",
-        "director": "Alberto Fischerman, Carlos Galettini, Luis Puenzo",
-        "country": "",
-        "year": 1974,
-        "duration": 93,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Juan que reía",
-        "fecha": "2026-10-03",
-        "hora": "18:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
-        "ciclo": "Retrospectivas:Carlos Galettini",
-        "director": "Carlos Galettini",
-        "country": "",
-        "year": 1976,
-        "duration": 100,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Seré cualquier cosa pero te quiero",
@@ -137,23 +111,10 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-03T09:29:34",
+    "ts": "2026-10-04T10:09:23",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Dormir con los ojos abiertos",
-        "fecha": "2026-10-03",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
-        "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler",
-        "director": "Nele Wohlatz",
-        "country": "",
-        "year": 2024,
-        "duration": 100,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Las corrientes",
@@ -196,7 +157,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-03T09:29:48",
+    "ts": "2026-10-04T10:09:44",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -302,26 +263,6 @@
         "country": "",
         "year": null,
         "duration": null,
-        "original_title": ""
-      }
-    ]
-  },
-  "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/": {
-    "ts": "2026-10-03T09:29:04",
-    "v": 2,
-    "semanas": 9,
-    "funciones": [
-      {
-        "cine": "CCK",
-        "title": "El placer es mío",
-        "fecha": "2026-10-03",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-sacha-amaral-simon-zorraquin/",
-        "ciclo": "Miradas contemporáneas:Sacha Amaral / Simón Zorraquín",
-        "director": "Sacha Amaral",
-        "country": "Argentina, Brasil, Francia",
-        "year": 2024,
-        "duration": 95,
         "original_title": ""
       }
     ]

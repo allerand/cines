@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T02:54:52",
+  "updated": "2026-10-04T10:27:56",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 35,
@@ -18,9 +18,8 @@
       "publicadas": 22
     },
     "Cines Ideal": {
-      "scrapeadas": 0,
-      "publicadas": 226,
-      "fuente_caida": "yelmocines.es no devolvió la cartelera (¿Cloudflare?)"
+      "scrapeadas": 227,
+      "publicadas": 227
     },
     "Cines Princesa": {
       "scrapeadas": 185,
@@ -5506,6 +5505,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19841/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Ideal",
+      "fecha": "2026-10-06",
+      "hora": "16:30",
+      "title_es": "Coyote vs. Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
+      "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36570",
       "ciclo": ""
     },
     {

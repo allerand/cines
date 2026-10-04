@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T02:54:52",
+  "updated": "2026-10-04T10:27:56",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 13,
@@ -18,7 +18,7 @@
       "publicadas": 9
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 19,
       "publicadas": 19
     },
     "CEA": {
@@ -39,8 +39,8 @@
       "publicadas": 3
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
-      "publicadas": 11
+      "scrapeadas": 13,
+      "publicadas": 13
     },
     "Centro Cultural Munro": {
       "scrapeadas": 13,
@@ -49,6 +49,10 @@
     "Centro Cultural Recoleta": {
       "scrapeadas": 18,
       "publicadas": 18
+    },
+    "Centro Cultural de la Cooperación": {
+      "scrapeadas": 4,
+      "publicadas": 4
     },
     "Cine Cosmos": {
       "scrapeadas": 34,
@@ -83,8 +87,8 @@
       "publicadas": 19
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 40,
-      "publicadas": 40
+      "scrapeadas": 41,
+      "publicadas": 41
     },
     "FADU": {
       "scrapeadas": 5,
@@ -111,8 +115,8 @@
       "publicadas": 4
     },
     "MALBA": {
-      "scrapeadas": 60,
-      "publicadas": 60
+      "scrapeadas": 61,
+      "publicadas": 61
     },
     "Multiplex Belgrano": {
       "scrapeadas": 198,
@@ -139,11 +143,27 @@
       "publicadas": 12
     },
     "Showcase Belgrano": {
-      "scrapeadas": 40,
-      "publicadas": 40
+      "scrapeadas": 41,
+      "publicadas": 41
     }
   },
   "screenings": [
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-10-04",
+      "hora": "00:40",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
     {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-04",
@@ -1425,6 +1445,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-10-04",
+      "hora": "14:00",
+      "title_es": "Linkin park: unshatter",
+      "title_en": "LINKIN PARK: UNSHATTER",
+      "original_title": "LINKIN PARK: UNSHATTER",
+      "director": "Joe Hahn",
+      "country": "Estados Unidos, Corea del Sur",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/linkin-park-unshatter/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-04",
       "hora": "14:05",
@@ -2161,6 +2197,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-04",
+      "hora": "15:00",
+      "title_es": "La muerte de un maestro de té",
+      "title_en": "La muerte de un maestro de té",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
+    },
+    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-10-04",
       "hora": "15:00",
@@ -2191,22 +2243,6 @@
       "letterboxd": "https://letterboxd.com/film/pokolenie/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
       "ciclo": "Andrzej Wajda: entre el mito y la historia"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-10-04",
-      "hora": "15:00",
-      "title_es": "La muerte de un maestro de té",
-      "title_en": "La muerte de un maestro de té",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-      "ciclo": "Cine japonés en 16 mm"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -4033,22 +4069,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-04",
-      "hora": "17:30",
-      "title_es": "Relajadas y muy peligrosas",
-      "title_en": "Spa Weekend",
-      "original_title": "Spa Weekend",
-      "director": "Jon Lucas, Scott Moore",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 97,
-      "genre": "Comedia",
-      "letterboxd": "https://letterboxd.com/film/spa-weekend-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-04",
       "hora": "17:30",
@@ -4063,6 +4083,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-10-04",
+      "hora": "17:30",
+      "title_es": "Relajadas y muy peligrosas",
+      "title_en": "Spa Weekend",
+      "original_title": "Spa Weekend",
+      "director": "Jon Lucas, Scott Moore",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 97,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/spa-weekend-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Dot",
@@ -6964,22 +7000,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-04",
       "hora": "22:00",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 175,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-10-04",
-      "hora": "22:00",
       "title_es": "Digger",
       "title_en": "Digger",
       "original_title": "Digger",
@@ -6989,6 +7009,22 @@
       "duration": 129,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-10-04",
+      "hora": "22:00",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 175,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -7540,22 +7576,6 @@
       "cine": "Hoyts Dot",
       "fecha": "2026-10-04",
       "hora": "22:30",
-      "title_es": "En el corazón de la bestia",
-      "title_en": "Heart of the Beast",
-      "original_title": "Heart of the Beast",
-      "director": "David Ayer",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 101,
-      "genre": "Aventura, Thriller",
-      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Dot",
-      "fecha": "2026-10-04",
-      "hora": "22:30",
       "title_es": "Digger",
       "title_en": "Digger",
       "original_title": "Digger",
@@ -7565,6 +7585,22 @@
       "duration": 129,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-10-04",
+      "hora": "22:30",
+      "title_es": "En el corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -10308,22 +10344,6 @@
       "cine": "Hoyts Dot",
       "fecha": "2026-10-05",
       "hora": "15:30",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Dot",
-      "fecha": "2026-10-05",
-      "hora": "15:30",
       "title_es": "Digger",
       "title_en": "Digger",
       "original_title": "Digger",
@@ -10333,6 +10353,22 @@
       "duration": 129,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-10-05",
+      "hora": "15:30",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -13780,22 +13816,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-05",
       "hora": "22:00",
-      "title_es": "Digger",
-      "title_en": "Digger",
-      "original_title": "Digger",
-      "director": "Alejandro G. Iñárritu",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 129,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-10-05",
-      "hora": "22:00",
       "title_es": "La Odisea",
       "title_en": "The Odyssey",
       "original_title": "",
@@ -13805,6 +13825,22 @@
       "duration": 175,
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-10-05",
+      "hora": "22:00",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -14196,22 +14232,6 @@
       "cine": "Hoyts Dot",
       "fecha": "2026-10-05",
       "hora": "22:30",
-      "title_es": "Digger",
-      "title_en": "Digger",
-      "original_title": "Digger",
-      "director": "Alejandro G. Iñárritu",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 129,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Dot",
-      "fecha": "2026-10-05",
-      "hora": "22:30",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -14221,6 +14241,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-10-05",
+      "hora": "22:30",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -14340,22 +14376,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-05",
       "hora": "22:40",
-      "title_es": "Verity. La sombra de un engaño",
-      "title_en": "Verity",
-      "original_title": "Verity",
-      "director": "Michael Showalter",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 114,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-05",
-      "hora": "22:40",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -14365,6 +14385,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-05",
+      "hora": "22:40",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -16244,22 +16280,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-06",
       "hora": "14:40",
-      "title_es": "Avengers: Endgame (re Estreno)",
-      "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": 183,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-06",
-      "hora": "14:40",
       "title_es": "Verity. La sombra de un engaño",
       "title_en": "Verity",
       "original_title": "Verity",
@@ -16269,6 +16289,22 @@
       "duration": 114,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-06",
+      "hora": "14:40",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 183,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -20004,22 +20040,6 @@
       "cine": "Hoyts Dot",
       "fecha": "2026-10-06",
       "hora": "21:30",
-      "title_es": "Avengers: Endgame (re Estreno)",
-      "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": 183,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Dot",
-      "fecha": "2026-10-06",
-      "hora": "21:30",
       "title_es": "La Odisea",
       "title_en": "The Odyssey",
       "original_title": "",
@@ -20029,6 +20049,22 @@
       "duration": 175,
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-10-06",
+      "hora": "21:30",
+      "title_es": "Avengers: Endgame (re Estreno)",
+      "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 183,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -20724,22 +20760,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-06",
       "hora": "22:40",
-      "title_es": "Verity. La sombra de un engaño",
-      "title_en": "Verity",
-      "original_title": "Verity",
-      "director": "Michael Showalter",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 114,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-06",
-      "hora": "22:40",
       "title_es": "En el corazón de la bestia",
       "title_en": "Heart of the Beast",
       "original_title": "Heart of the Beast",
@@ -20749,6 +20769,22 @@
       "duration": 101,
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-06",
+      "hora": "22:40",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -25297,6 +25333,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-10-07",
+      "hora": "20:00",
+      "title_es": "Ensayo sobre la vejez",
+      "title_en": "Ensayo sobre la vejez",
+      "original_title": "",
+      "director": "Valeria Sampedro y Daniel Raichijk",
+      "country": "",
+      "year": null,
+      "duration": 48,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/ensayo-sobre-la-vejez",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-07",
       "hora": "20:00",
@@ -25364,22 +25416,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-07",
       "hora": "20:00",
-      "title_es": "Digger",
-      "title_en": "Digger",
-      "original_title": "Digger",
-      "director": "Alejandro G. Iñárritu",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 129,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-10-07",
-      "hora": "20:00",
       "title_es": "Queen: Live In Budapest",
       "title_en": "Queen: Budapest",
       "original_title": "",
@@ -25389,6 +25425,22 @@
       "duration": 97,
       "genre": "Música, Documental",
       "letterboxd": "https://letterboxd.com/film/queen-live-in-budapest/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-10-07",
+      "hora": "20:00",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -26340,22 +26392,6 @@
       "cine": "Cinemark Palermo",
       "fecha": "2026-10-07",
       "hora": "22:00",
-      "title_es": "Digger",
-      "title_en": "Digger",
-      "original_title": "Digger",
-      "director": "Alejandro G. Iñárritu",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 129,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Palermo",
-      "fecha": "2026-10-07",
-      "hora": "22:00",
       "title_es": "La Odisea",
       "title_en": "The Odyssey",
       "original_title": "",
@@ -26365,6 +26401,22 @@
       "duration": 175,
       "genre": "Aventura, Acción",
       "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Palermo",
+      "fecha": "2026-10-07",
+      "hora": "22:00",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro G. Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -26884,22 +26936,6 @@
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-07",
       "hora": "22:40",
-      "title_es": "En el corazón de la bestia",
-      "title_en": "Heart of the Beast",
-      "original_title": "Heart of the Beast",
-      "director": "David Ayer",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 101,
-      "genre": "Aventura, Thriller",
-      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
-      "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinemark Puerto Madero",
-      "fecha": "2026-10-07",
-      "hora": "22:40",
       "title_es": "Verity. La sombra de un engaño",
       "title_en": "Verity",
       "original_title": "Verity",
@@ -26909,6 +26945,22 @@
       "duration": 114,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Puerto Madero",
+      "fecha": "2026-10-07",
+      "hora": "22:40",
+      "title_es": "En el corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
     },
@@ -28145,22 +28197,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-10",
-      "hora": "16:00",
-      "title_es": "Prínicipe Valiente",
-      "title_en": "Prínicipe Valiente",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/sabados-de-superaccion",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-10",
       "hora": "16:00",
@@ -28175,6 +28211,22 @@
       "letterboxd": "https://letterboxd.com/film/sere-cualquier-cosa-pero-te-quiero/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-10",
+      "hora": "16:00",
+      "title_es": "Prínicipe Valiente",
+      "title_en": "Prínicipe Valiente",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/sabados-de-superaccion",
+      "ciclo": ""
     },
     {
       "cine": "Sala Lúcida",
@@ -28222,6 +28274,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/comer-cuenta/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-10",
+      "hora": "17:00",
+      "title_es": "Los Calvos",
+      "title_en": "The Bald",
+      "original_title": "Los calvos",
+      "director": "Elias Gismondi, Marcos Mossello",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 79,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/los-calvos/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/579",
       "ciclo": ""
     },
     {
@@ -28351,6 +28419,22 @@
       "letterboxd": "https://letterboxd.com/film/las-corrientes/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
       "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler"
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-10",
+      "hora": "19:00",
+      "title_es": "Gatillero",
+      "title_en": "Gunman",
+      "original_title": "Gatillero",
+      "director": "Cris Tapia Marchiori",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 80,
+      "genre": "Thriller, Acción",
+      "letterboxd": "https://letterboxd.com/film/gatillero/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/580",
+      "ciclo": ""
     },
     {
       "cine": "MALBA",
@@ -29297,6 +29381,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-10-14",
+      "hora": "20:00",
+      "title_es": "Ensayo sobre la vejez",
+      "title_en": "Ensayo sobre la vejez",
+      "original_title": "",
+      "director": "Valeria Sampedro y Daniel Raichijk",
+      "country": "",
+      "year": null,
+      "duration": 48,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/ensayo-sobre-la-vejez",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-14",
       "hora": "20:00",
@@ -30001,6 +30101,22 @@
       "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler"
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-10-17",
+      "hora": "20:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro, Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://malba.org.ar/evento/el-tren-fluvial/",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-10-17",
       "hora": "20:30",
@@ -30081,22 +30197,6 @@
       "ciclo": "Cineclub Nocturna"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-18",
-      "hora": "15:00",
-      "title_es": "No soy un ángel",
-      "title_en": "I'm No Angel",
-      "original_title": "I'm No Angel",
-      "director": "Wesley Ruggles",
-      "country": "Estados Unidos",
-      "year": 1933,
-      "duration": 87,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/im-no-angel/",
-      "ticket_url": "",
-      "ciclo": "Seis tardes con Mae West"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-18",
       "hora": "15:00",
@@ -30111,6 +30211,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-18",
+      "hora": "15:00",
+      "title_es": "No soy un ángel",
+      "title_en": "I'm No Angel",
+      "original_title": "I'm No Angel",
+      "director": "Wesley Ruggles",
+      "country": "Estados Unidos",
+      "year": 1933,
+      "duration": 87,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/im-no-angel/",
+      "ticket_url": "",
+      "ciclo": "Seis tardes con Mae West"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -30462,6 +30578,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/591",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-10-21",
+      "hora": "20:00",
+      "title_es": "Ensayo sobre la vejez",
+      "title_en": "Ensayo sobre la vejez",
+      "original_title": "",
+      "director": "Valeria Sampedro y Daniel Raichijk",
+      "country": "",
+      "year": null,
+      "duration": 48,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/ensayo-sobre-la-vejez",
       "ciclo": ""
     },
     {
@@ -31329,22 +31461,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-25",
-      "hora": "15:00",
-      "title_es": "Tokyo-Ga",
-      "title_en": "Tokyo-Ga",
-      "original_title": "Tokyo-Ga",
-      "director": "Wim Wenders",
-      "country": "República Federal de Alemania/EE.UU.",
-      "year": 1985,
-      "duration": 92,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
-      "ticket_url": "",
-      "ciclo": "En las rutas de Wim Wenders"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "15:00",
@@ -31359,6 +31475,22 @@
       "letterboxd": "https://letterboxd.com/film/talking-to-a-stranger/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "15:00",
+      "title_es": "Tokyo-Ga",
+      "title_en": "Tokyo-Ga",
+      "original_title": "Tokyo-Ga",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/EE.UU.",
+      "year": 1985,
+      "duration": 92,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
+      "ticket_url": "",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -31393,22 +31525,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-25",
-      "hora": "17:30",
-      "title_es": "Paris, Texas",
-      "title_en": "Paris, Texas",
-      "original_title": "Paris, Texas",
-      "director": "Wim Wenders",
-      "country": "EE.UU/República Federal de Alemania/ Francia/Reino Unido",
-      "year": 1984,
-      "duration": 145,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/paris-texas/",
-      "ticket_url": "",
-      "ciclo": "En las rutas de Wim Wenders"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "17:30",
@@ -31423,6 +31539,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "17:30",
+      "title_es": "Paris, Texas",
+      "title_en": "Paris, Texas",
+      "original_title": "Paris, Texas",
+      "director": "Wim Wenders",
+      "country": "EE.UU/República Federal de Alemania/ Francia/Reino Unido",
+      "year": 1984,
+      "duration": 145,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/paris-texas/",
+      "ticket_url": "",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Cine York",
@@ -31983,6 +32115,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": "Doble función"
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-10-28",
+      "hora": "20:00",
+      "title_es": "Ensayo sobre la vejez",
+      "title_en": "Ensayo sobre la vejez",
+      "original_title": "",
+      "director": "Valeria Sampedro y Daniel Raichijk",
+      "country": "",
+      "year": null,
+      "duration": 48,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/ensayo-sobre-la-vejez",
+      "ciclo": ""
     },
     {
       "cine": "Cineclub Farus",
@@ -32769,22 +32917,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-31",
-      "hora": "16:00",
-      "title_es": "La familia de Jippie completa viaja a casa del abuelo en el campo para celebrar la boda de su hermana mayor. Mientras todo el mundo se pone a trabajar para conseguir la boda perfecta, Jippie, un chico de dieciséis años con Síndrome de Down y enormes ganas de cantar y de vivir, descubrirá tanto el amor como la tristeza de no verlo correspondido.",
-      "title_en": "La familia de Jippie completa viaja a casa del abuelo en el campo para celebrar la boda de su hermana mayor. Mientras todo el mundo se pone a trabajar para conseguir la boda perfecta, Jippie, un chico de dieciséis años con Síndrome de Down y enormes ganas de cantar y de vivir, descubrirá tanto el amor como la tristeza de no verlo correspondido.",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-31",
       "hora": "16:00",
@@ -32799,6 +32931,22 @@
       "letterboxd": "https://letterboxd.com/film/besos-en-la-frente/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-31",
+      "hora": "16:00",
+      "title_es": "La familia de Jippie completa viaja a casa del abuelo en el campo para celebrar la boda de su hermana mayor. Mientras todo el mundo se pone a trabajar para conseguir la boda perfecta, Jippie, un chico de dieciséis años con Síndrome de Down y enormes ganas de cantar y de vivir, descubrirá tanto el amor como la tristeza de no verlo correspondido.",
+      "title_en": "La familia de Jippie completa viaja a casa del abuelo en el campo para celebrar la boda de su hermana mayor. Mientras todo el mundo se pone a trabajar para conseguir la boda perfecta, Jippie, un chico de dieciséis años con Síndrome de Down y enormes ganas de cantar y de vivir, descubrirá tanto el amor como la tristeza de no verlo correspondido.",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Bellas Artes",
