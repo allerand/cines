@@ -16869,7 +16869,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 110 min: Rammstein - Live in Mexico City (2026, 148 min), Rammstein - Live aus Berlin (1999, 97 min)",
-    "fecha": "2026-09-30",
+    "fecha": "2026-10-04",
     "con_duracion": true,
     "desempate": ""
   },
@@ -18610,12 +18610,15 @@
     "sin_hints": "título"
   },
   "avengers: endgame bonus - infinity vision": {
-    "url": "",
-    "title_en": "Avengers: Endgame Bonus - Infinity Vision",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/avengers-endgame/",
+    "title_en": "Avengers: Endgame",
+    "director": "Anthony Russo, Joe Russo",
+    "country": "USA",
+    "year": 2019,
+    "duration": 181,
+    "genre": "Ciencia ficción, Acción",
+    "clase_titulo": "exacto",
+    "sin_hints": "título"
   },
   "el tren fluvial|2026": {
     "url": "https://letterboxd.com/film/el-tren-fluvial/",
@@ -22063,7 +22066,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-09-30",
+    "fecha": "2026-10-04",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22075,7 +22078,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 97 min: TOMORROW X TOGETHER WORLD TOUR 'ACT:TOMORROW' (2025, 160 min)",
-    "fecha": "2026-09-30",
+    "fecha": "2026-10-04",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22128,7 +22131,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-09-30",
+    "fecha": "2026-10-04",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -22772,5 +22775,127 @@
     "fecha": "2026-10-03",
     "con_duracion": false,
     "desempate": ""
+  },
+  "vorágine": {
+    "url": "https://letterboxd.com/film/voragine/",
+    "title_en": "Vorágine",
+    "director": "Daniela Escolar, Paula Monesterolo",
+    "country": "",
+    "year": 2026,
+    "duration": 91,
+    "genre": "",
+    "original_title": "Vorágine"
+  },
+  "siemprevivas": {
+    "url": "https://letterboxd.com/film/siemprevivas/",
+    "title_en": "Siemprevivas",
+    "director": "Mar López Zapata",
+    "country": "",
+    "year": 2026,
+    "duration": 75,
+    "genre": "Comedia, Documental",
+    "original_title": "Siemprevivas"
+  },
+  "las hijas del fuego": {
+    "url": "https://letterboxd.com/film/las-hijas-del-fuego/",
+    "title_en": "The Daughters of Fire",
+    "director": "Albertina Carri",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 115,
+    "genre": "Drama",
+    "original_title": "Las Hijas del Fuego"
+  },
+  "deserto vértigo": {
+    "url": "https://letterboxd.com/film/deserto-vertigo/",
+    "title_en": "Deserto Vértigo",
+    "director": "Rocío Barbenza",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 76,
+    "genre": "Documental",
+    "original_title": "Deserto Vértigo"
+  },
+  "cómo tú me ves": {
+    "url": "https://letterboxd.com/film/como-tu-me-ves/",
+    "title_en": "The Way You See Me",
+    "director": "M Sin Título",
+    "country": "Mexico, Argentina",
+    "year": 2026,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "Como tú me ves"
+  },
+  "retrospectiva rafael maino": {
+    "url": "",
+    "title_en": "Retrospectiva Rafael Maino",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sueño pélvico": {
+    "url": "https://letterboxd.com/film/sueno-pelvico/",
+    "title_en": "Pelvic Dream",
+    "director": "Nico Marcet, Celest",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 70,
+    "genre": "",
+    "original_title": "Sueño pélvico"
+  },
+  "donn: le danseur du xxe siècle": {
+    "url": "",
+    "title_en": "Donn: Le danseur du XXe siècle",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ruge": {
+    "url": "",
+    "title_en": "Ruge",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "gente de la ruta": {
+    "url": "https://letterboxd.com/film/gente-de-la-ruta/",
+    "title_en": "People from the Road",
+    "director": "Lucas Koziarski",
+    "country": "Argentina",
+    "year": null,
+    "duration": 67,
+    "genre": "",
+    "original_title": "Gente de la ruta"
+  },
+  "art, chaos, riot": {
+    "url": "https://letterboxd.com/film/art-chaos-riot/",
+    "title_en": "Art, Chaos, Riot",
+    "director": "Carmina, Sören Brûlé",
+    "country": "France",
+    "year": 2026,
+    "duration": 73,
+    "genre": "Documental",
+    "original_title": "Art, Chaos, Riot"
+  },
+  "amar amando + peña de cantores de nidia, de la mano de juan villarreal": {
+    "url": "",
+    "title_en": "Amar Amando + Peña de cantores de Nidia, de la mano de Juan Villarreal",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "retrato de un pianista": {
+    "url": "https://letterboxd.com/film/retrato-de-un-pianista/",
+    "title_en": "Potrait of a Pianist",
+    "director": "José Luis Nacci, Elena Konieczny",
+    "country": "",
+    "year": 2025,
+    "duration": 69,
+    "genre": "Documental",
+    "original_title": "Retrato de un pianista"
   }
 }
