@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-04T10:09:11",
+    "ts": "2026-10-05T10:55:07",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -111,7 +111,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-04T10:09:23",
+    "ts": "2026-10-05T10:55:17",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -157,36 +157,10 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-04T10:09:44",
+    "ts": "2026-10-05T10:55:30",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "La muerte de un maestro de té",
-        "fecha": "2026-10-04",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-        "ciclo": "Cine japonés en 16 mm",
-        "director": "",
-        "country": "",
-        "year": null,
-        "duration": null,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Desde entonces",
-        "fecha": "2026-10-04",
-        "hora": "17:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-        "ciclo": "Cine japonés en 16 mm",
-        "director": "",
-        "country": "",
-        "year": null,
-        "duration": null,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Takeshi",
