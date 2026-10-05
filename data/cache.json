@@ -19479,12 +19479,13 @@
     "original_title": "En el balcón vacío"
   },
   "eugènia balcells. sesión ii": {
-    "url": "",
-    "title_en": "Eugènia Balcells. Sesión II",
-    "director": "",
+    "url": "https://letterboxd.com/film/for-against/",
+    "title_en": "For / Against",
+    "director": "Eugènia Balcells",
     "country": "",
-    "year": null,
-    "duration": null
+    "year": 1983,
+    "duration": null,
+    "genre": ""
   },
   "érem una gran família|2026": {
     "url": "",
@@ -20376,12 +20377,13 @@
     "original_title": "Palestine 36"
   },
   "canino": {
-    "url": "",
-    "title_en": "Canino",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/dogtooth/",
+    "title_en": "Dogtooth",
+    "director": "Yorgos Lanthimos",
+    "country": "Greece",
+    "year": 2009,
+    "duration": 98,
+    "genre": "Drama"
   },
   "retrato de una mujer en llamas": {
     "url": "https://letterboxd.com/film/portrait-of-a-lady-on-fire/",
@@ -20395,13 +20397,13 @@
     "original_title": "Portrait de la jeune fille en feu"
   },
   "cabeza borradora": {
-    "url": "",
-    "title_en": "Cabeza borradora",
+    "url": "https://letterboxd.com/film/eraserhead/",
+    "title_en": "Eraserhead",
     "director": "David Lynch",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1977,
     "duration": 89,
-    "genre": "Terror, Ciencia ficción",
+    "genre": "Ciencia ficción, Terror",
     "title_es": "Cabeza borradora",
     "original_title": "Eraserhead"
   },
@@ -20428,13 +20430,13 @@
     "original_title": "Donnie Darko"
   },
   "deseando amar": {
-    "url": "",
-    "title_en": "Deseando amar",
+    "url": "https://letterboxd.com/film/in-the-mood-for-love/",
+    "title_en": "In the Mood for Love",
     "director": "Wong Kar-Wai",
     "country": "Hong Kong, France",
     "year": 2000,
     "duration": 99,
-    "genre": "Drama, Romance",
+    "genre": "Romance, Drama",
     "title_es": "Deseando amar",
     "original_title": "花樣年華"
   },
@@ -20534,13 +20536,13 @@
     "original_title": "추격자"
   },
   "el hombre tranquilo": {
-    "url": "",
-    "title_en": "El hombre tranquilo",
+    "url": "https://letterboxd.com/film/the-quiet-man/",
+    "title_en": "The Quiet Man",
     "director": "John Ford",
-    "country": "United States of America, Ireland",
+    "country": "USA, Ireland",
     "year": 1952,
     "duration": 129,
-    "genre": "Romance, Comedia",
+    "genre": "Comedia, Romance",
     "title_es": "El hombre tranquilo",
     "original_title": "The Quiet Man"
   },
@@ -21582,13 +21584,13 @@
     "clase_titulo": "exacto"
   },
   "la reina de áfrica": {
-    "url": "",
-    "title_en": "LA REINA DE ÁFRICA",
+    "url": "https://letterboxd.com/film/the-african-queen/",
+    "title_en": "The African Queen",
     "director": "John Huston",
-    "country": "United Kingdom, United States of America",
-    "year": 1952,
+    "country": "UK, USA",
+    "year": 1951,
     "duration": 105,
-    "genre": "Aventura, Romance",
+    "genre": "Romance, Bélica",
     "title_es": "La reina de África",
     "original_title": "The African Queen"
   },
@@ -22712,12 +22714,13 @@
     "original_title": "Street Fighter"
   },
   "terror total: [rec]": {
-    "url": "",
-    "title_en": "Terror Total: [REC]",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/rec/",
+    "title_en": "[REC]",
+    "director": "Jaume Balagueró, Paco Plaza",
+    "country": "Spain",
+    "year": 2007,
+    "duration": 78,
+    "genre": "Misterio, Terror"
   },
   "terror total: it follows": {
     "url": "",
@@ -22897,5 +22900,13 @@
     "duration": 69,
     "genre": "Documental",
     "original_title": "Retrato de un pianista"
+  },
+  "lola y billy the kid (lola und bilidikid)": {
+    "url": "",
+    "title_en": "LOLA Y BILLY THE KID (Lola und Bilidikid)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
