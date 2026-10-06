@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-06T03:17:45",
+  "updated": "2026-10-06T11:07:57",
   "fuentes": {
     "Artistic Metropol": {
-      "scrapeadas": 27,
-      "publicadas": 27
+      "scrapeadas": 32,
+      "publicadas": 32
     },
     "Cine Doré": {
       "scrapeadas": 64,
@@ -23,20 +23,20 @@
       "fuente_caida": "yelmocines.es no devolvió la cartelera (¿Cloudflare?)"
     },
     "Cines Princesa": {
-      "scrapeadas": 110,
-      "publicadas": 110
+      "scrapeadas": 111,
+      "publicadas": 111
     },
     "Cineteca Madrid": {
-      "scrapeadas": 72,
-      "publicadas": 72
+      "scrapeadas": 90,
+      "publicadas": 90
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 100,
-      "publicadas": 100
+      "scrapeadas": 101,
+      "publicadas": 101
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 96,
-      "publicadas": 96
+      "scrapeadas": 97,
+      "publicadas": 97
     },
     "Golem Madrid": {
       "scrapeadas": 42,
@@ -7669,6 +7669,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-09",
+      "hora": "21:45",
+      "title_es": "La esfinge",
+      "title_en": "Sphinx",
+      "original_title": "Sphinx",
+      "director": "Franklin J. Schaffner",
+      "country": "Estados Unidos",
+      "year": 1981,
+      "duration": 118,
+      "genre": "Aventura, Misterio",
+      "letterboxd": "https://letterboxd.com/film/sphinx/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-la-esfinge-1981-v-o-s-e/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-09",
       "hora": "21:55",
@@ -8290,6 +8306,22 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/other-mommy/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36667",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Princesa",
+      "fecha": "2026-10-10",
+      "hora": "20:10",
+      "title_es": "Las ciegas hormigas",
+      "title_en": "Blind Ants",
+      "original_title": "Inurri itsuak",
+      "director": "Igor Legarreta",
+      "country": "España, Bélgica",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/blind-ants/",
+      "ticket_url": "https://www.pillalas.com/pase/1090996/",
       "ciclo": ""
     },
     {
@@ -9013,6 +9045,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-11",
+      "hora": "21:45",
+      "title_es": "Coma",
+      "title_en": "Coma",
+      "original_title": "Coma",
+      "director": "Michael Crichton",
+      "country": "Estados Unidos",
+      "year": 1978,
+      "duration": 113,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/coma/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-coma-1978-v-o-s-e/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-11",
       "hora": "21:55",
@@ -9525,6 +9573,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-12",
+      "hora": "22:15",
+      "title_es": "El fantasma de la ópera",
+      "title_en": "The Phantom of the Opera",
+      "original_title": "The Phantom of the Opera",
+      "director": "Dwight H. Little",
+      "country": "Estados Unidos",
+      "year": 1989,
+      "duration": 93,
+      "genre": "Romance, Terror",
+      "letterboxd": "https://letterboxd.com/film/the-phantom-of-the-opera-1989/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-el-fantasma-de-la-opera-1989-v-o-s-e/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-13",
       "hora": "15:45",
@@ -9698,6 +9762,22 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/other-mommy/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36680",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-13",
+      "hora": "22:15",
+      "title_es": "Ghost Ship (Barco fantasma)",
+      "title_en": "Ghost Ship",
+      "original_title": "Ghost Ship",
+      "director": "Steve Beck",
+      "country": "Estados Unidos",
+      "year": 2002,
+      "duration": 91,
+      "genre": "Misterio, Terror",
+      "letterboxd": "https://letterboxd.com/film/ghost-ship/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-ghost-ship-2002-v-o-s-e/",
       "ciclo": ""
     },
     {
@@ -10146,6 +10226,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19940/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-14",
+      "hora": "22:00",
+      "title_es": "La Lavadora Asesina",
+      "title_en": "The Washing Machine",
+      "original_title": "Vortice mortale",
+      "director": "Ruggero Deodato",
+      "country": "Francia, Hungría",
+      "year": 1993,
+      "duration": 90,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-washing-machine/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-la-lavadora-asesina-1993-v-o-s-e/",
       "ciclo": ""
     },
     {
@@ -11717,6 +11813,22 @@
       "ciclo": "Another Way Film Festival 2026"
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-24",
+      "hora": "12:00",
+      "title_es": "Laca y Palomitas: Película SORPRESA Edición HALLOWEEN",
+      "title_en": "Laca y Palomitas: Película SORPRESA Edición HALLOWEEN",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/laca-y-palomitas-pelicula-sorpresa-edicion-halloween/19972/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-24",
       "hora": "16:00",
@@ -12293,6 +12405,22 @@
       "ciclo": "Andrzej Wajda: entre el Mito y la Historia"
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-29",
+      "hora": "20:15",
+      "title_es": "Sesión de cortometrajes: Terror 2026",
+      "title_en": "Sesión de cortometrajes: Terror 2026",
+      "original_title": "",
+      "director": "Carlos Moriana, Kiko Prada, Lucas Paulino, Nacho Solana, Pablo Pastor, Raúl Cerezo, Raúl Monge",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/sesion-de-cortometrajes-terror-2026/38966/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-29",
       "hora": "20:30",
@@ -12629,6 +12757,102 @@
       "ciclo": "Halloween: Cuerpos Sometidos"
     },
     {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-04",
+      "hora": "18:30",
+      "title_es": "El deshielo",
+      "title_en": "The Meltdown",
+      "original_title": "El deshielo",
+      "director": "Manuela Martelli",
+      "country": "Chile, Estados Unidos, España, México",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-meltdown/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/el-deshielo",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-04",
+      "hora": "19:00",
+      "title_es": "Deux femmes en or",
+      "title_en": "Two Women",
+      "original_title": "Deux femmes en or",
+      "director": "Chloe Robichaud",
+      "country": "Canadá",
+      "year": 2025,
+      "duration": 100,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/two-women-2025/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/deux-femmes-en-or",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-04",
+      "hora": "20:00",
+      "title_es": "Mecenaten",
+      "title_en": "The Patron",
+      "original_title": "Mecenaten",
+      "director": "Julia Thelin",
+      "country": "Suecia",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-patron-2026/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/mecenaten",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-04",
+      "hora": "20:30",
+      "title_es": "Se busca",
+      "title_en": "Missing",
+      "original_title": "Se busca",
+      "director": "Kenya Márquez",
+      "country": "México",
+      "year": 2026,
+      "duration": 97,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/se-busca/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/se-busca",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-05",
+      "hora": "18:30",
+      "title_es": "Ah Girl",
+      "title_en": "Ah Girl",
+      "original_title": "泡泡糖女孩",
+      "director": "Ang Geck Geck Priscilla",
+      "country": "Singapur",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ah-girl/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/ah-girl",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-05",
+      "hora": "19:00",
+      "title_es": "Kaïros",
+      "title_en": "Kaïros",
+      "original_title": "Kaïros",
+      "director": "Jennifer Alleyn",
+      "country": "Canadá",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/kairos-2026/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/kairos",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-05",
       "hora": "19:30",
@@ -12645,6 +12869,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-05",
+      "hora": "20:00",
+      "title_es": "The Pupil",
+      "title_en": "The Pupil",
+      "original_title": "De pupil",
+      "director": "Karin Junger",
+      "country": "Países Bajos, Bélgica",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/de-pupil/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/pupil",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-05",
+      "hora": "20:30",
+      "title_es": "The Last Resort",
+      "title_en": "The Last Resort",
+      "original_title": "Paradis",
+      "director": "Maria Sødahl",
+      "country": "Dinamarca",
+      "year": 2025,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-last-resort-2026/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/last-resort",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-05",
       "hora": "22:30",
@@ -12659,6 +12915,166 @@
       "letterboxd": "https://letterboxd.com/film/hereditary/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hereditary-vose/19879/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-06",
+      "hora": "18:30",
+      "title_es": "The Girls From Above",
+      "title_en": "The Girls From Above",
+      "original_title": "Les Filles du ciel",
+      "director": "Bérangère McNeese",
+      "country": "Bélgica, Francia",
+      "year": 2025,
+      "duration": 96,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/les-filles-du-ciel/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/girls-above",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-06",
+      "hora": "19:00",
+      "title_es": "Vidas en la orilla",
+      "title_en": "Vidas en la orilla",
+      "original_title": "Vidas en la orilla",
+      "director": "Lucía Gajá",
+      "country": "México",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/vidas-en-la-orilla/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/vidas-en-la-orilla",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-06",
+      "hora": "20:00",
+      "title_es": "La Gradiva",
+      "title_en": "La Gradiva",
+      "original_title": "La Gradiva",
+      "director": "Marine Atlan",
+      "country": "Francia, Italia",
+      "year": 2026,
+      "duration": 145,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-gradiva/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/la-gradiva",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-06",
+      "hora": "20:30",
+      "title_es": "Jimpa",
+      "title_en": "Jimpa",
+      "original_title": "Jimpa",
+      "director": "Sophie Hyde",
+      "country": "Australia, Países Bajos, Finlandia",
+      "year": 2025,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/jimpa/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/jimpa",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-07",
+      "hora": "18:00",
+      "title_es": "Don’t Call Me Mama",
+      "title_en": "Don't Call Me Mama",
+      "original_title": "Se meg",
+      "director": "Nina Knag",
+      "country": "Noruega",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/se-meg/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/dont-call-me-mama",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-07",
+      "hora": "18:30",
+      "title_es": "Póstumo",
+      "title_en": "Posthumous",
+      "original_title": "Póstumo",
+      "director": "Lucía Carreras",
+      "country": "México",
+      "year": 2025,
+      "duration": 101,
+      "genre": "Fantasía, Drama",
+      "letterboxd": "https://letterboxd.com/film/postumo/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/postumo",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-07",
+      "hora": "19:00",
+      "title_es": "Tangles",
+      "title_en": "Tangles",
+      "original_title": "Tangles",
+      "director": "Leah Nelson",
+      "country": "Canadá, Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Animación, Drama",
+      "letterboxd": "https://letterboxd.com/film/tangles/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/tangles",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-07",
+      "hora": "20:30",
+      "title_es": "Woman Unknown",
+      "title_en": "Woman Unknown",
+      "original_title": "Kvinde ukendt",
+      "director": "May el-Toukhy",
+      "country": "Dinamarca, Suecia, Letonia",
+      "year": 2026,
+      "duration": 126,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/woman-unknown/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/woman-unknown",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-08",
+      "hora": "17:30",
+      "title_es": "Timestamp",
+      "title_en": "Timestamp",
+      "original_title": "Стрічка часу",
+      "director": "Kateryna Gornostai",
+      "country": "Ucrania, Luxemburgo, Países Bajos, Francia",
+      "year": 2025,
+      "duration": 125,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/timestamp/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/timestamp",
+      "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-08",
+      "hora": "18:00",
+      "title_es": "Gentle Monster",
+      "title_en": "Gentle Monster",
+      "original_title": "Gentle Monster",
+      "director": "Marie Kreutzer",
+      "country": "Austria, Francia",
+      "year": 2026,
+      "duration": 115,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/gentle-monster/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/gentle-monster",
+      "ciclo": "Cine por Mujeres Madrid 2026"
     },
     {
       "cine": "Embajadores Ercilla",
