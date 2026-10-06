@@ -15132,7 +15132,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-02",
+    "fecha": "2026-10-06",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -16327,8 +16327,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS WORLD TOUR [ARIRANG] in Busan (2026) sólo se le parece",
-    "fecha": "2026-10-02",
+    "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS World Tour 'Arirang' In São Paulo: Live Viewing (2026) sólo se le parece",
+    "fecha": "2026-10-06",
     "con_duracion": true,
     "desempate": ""
   },
@@ -16905,7 +16905,7 @@
     "country": "USA",
     "year": 2026,
     "duration": 109,
-    "genre": "Familiar, Comedia",
+    "genre": "Comedia, Animación",
     "clase_titulo": "exacto",
     "title_es": "La isla olvidada",
     "original_title": "Forgotten Island",
@@ -19841,7 +19841,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -20547,13 +20547,13 @@
     "original_title": "The Quiet Man"
   },
   "érase una vez en américa": {
-    "url": "",
-    "title_en": "Érase una vez en América",
+    "url": "https://letterboxd.com/film/once-upon-a-time-in-america/",
+    "title_en": "Once Upon a Time in America",
     "director": "Sergio Leone",
-    "country": "Italy, United States of America",
+    "country": "Italy, USA",
     "year": 1984,
-    "duration": 139,
-    "genre": "Drama, Crimen",
+    "duration": 229,
+    "genre": "Crimen, Drama",
     "title_es": "Érase una vez en América",
     "original_title": "Once Upon a Time in America"
   },
@@ -22085,16 +22085,16 @@
     "desempate": ""
   },
   "enhypen world tour 'blood saga'": {
-    "url": "",
+    "url": "https://letterboxd.com/film/enhypen-world-tour-blood-saga/",
     "title_en": "ENHYPEN WORLD TOUR 'BLOOD SAGA'",
     "director": "",
     "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-02",
-    "con_duracion": true,
-    "desempate": ""
+    "year": 2026,
+    "duration": 101,
+    "genre": "Música",
+    "clase_titulo": "exacto",
+    "original_title": "ENHYPEN WORLD TOUR 'BLOOD SAGA'",
+    "sin_hints": "título y duración"
   },
   "apuntes desde el encierro": {
     "url": "https://letterboxd.com/film/apuntes-desde-el-encierro/",
@@ -22731,12 +22731,13 @@
     "duration": null
   },
   "terror total: hereditary": {
-    "url": "",
-    "title_en": "Terror Total: Hereditary",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/hereditary/",
+    "title_en": "Hereditary",
+    "director": "Ari Aster",
+    "country": "USA, UK",
+    "year": 2018,
+    "duration": 128,
+    "genre": "Thriller, Terror"
   },
   "terror total: adolescencia, sexo y muerte en campamento miasma": {
     "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
@@ -22916,5 +22917,252 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "la vida de una mujer": {
+    "url": "https://letterboxd.com/film/a-womans-life-2026/",
+    "title_en": "A Woman's Life",
+    "director": "Charline Bourgeois-Tacquet",
+    "country": "France, Belgium",
+    "year": 2026,
+    "duration": 98,
+    "genre": "Drama, Comedia",
+    "title_es": "La vida de una mujer",
+    "original_title": "La vie d'une femme"
+  },
+  "mascotas al rescate": {
+    "url": "",
+    "title_en": "Mascotas al rescate",
+    "director": "Benoît Daffis, Jean-Christian Tassy",
+    "country": "France, United States of America",
+    "year": 2025,
+    "duration": 86,
+    "genre": "Animación, Comedia",
+    "title_es": "Mascotas al rescate",
+    "original_title": "Falcon Express"
+  },
+  "memories of murder": {
+    "url": "https://letterboxd.com/film/memories-of-murder/",
+    "title_en": "Memories of Murder",
+    "director": "Bong Joon Ho",
+    "country": "South Korea",
+    "year": 2003,
+    "duration": 131,
+    "genre": "Thriller, Crimen",
+    "title_es": "Memories of Murder (Crónica de un asesino en serie)",
+    "original_title": "살인의 추억"
+  },
+  "mysterious skin": {
+    "url": "https://letterboxd.com/film/mysterious-skin/",
+    "title_en": "Mysterious Skin",
+    "director": "Gregg Araki",
+    "country": "USA, Netherlands",
+    "year": 2004,
+    "duration": 105,
+    "genre": "Drama",
+    "title_es": "Mysterious Skin (Oscura inocencia)",
+    "original_title": "Mysterious Skin"
+  },
+  "stockholm": {
+    "url": "https://letterboxd.com/film/stockholm/",
+    "title_en": "Stockholm",
+    "director": "Rodrigo Sorogoyen, Borja Soler",
+    "country": "Spain",
+    "year": 2013,
+    "duration": 89,
+    "genre": "Romance, Drama"
+  },
+  "hope": {
+    "url": "https://letterboxd.com/film/hope-2026/",
+    "title_en": "Hope",
+    "director": "Na Hong-jin",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 157,
+    "genre": "Acción, Ciencia ficción",
+    "title_es": "Hope",
+    "original_title": "호프"
+  },
+  "machado": {
+    "url": "https://letterboxd.com/film/machado/",
+    "title_en": "Machado",
+    "director": "Julián Tagle",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 72,
+    "genre": "",
+    "clase_titulo": "exacto",
+    "original_title": "Machado",
+    "sin_hints": "título"
+  },
+  "eami": {
+    "url": "https://letterboxd.com/film/eami/",
+    "title_en": "Eami",
+    "director": "Paz Encina",
+    "country": "Argentina, France",
+    "year": 2022,
+    "duration": 85,
+    "genre": "Drama, Documental",
+    "clase_titulo": "exacto",
+    "title_es": "Eami",
+    "original_title": "Eami",
+    "sin_hints": "título"
+  },
+  "quiero llenarme de ti": {
+    "url": "",
+    "title_en": "Quiero llenarme de ti",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Quiero llenarme de ti (1969), y puede ser otra",
+    "fecha": "2026-10-06",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "operación rosa rosa": {
+    "url": "",
+    "title_en": "Operación Rosa Rosa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Operation Rosa Rosa (1974), y puede ser otra",
+    "fecha": "2026-10-06",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "cemento: el documental|2017": {
+    "url": "https://letterboxd.com/film/cemento-el-documental/",
+    "title_en": "Cemento: The Documentary",
+    "director": "Lisandro Carcavallo",
+    "country": "Argentina",
+    "year": 2017,
+    "duration": 105,
+    "genre": "Documental",
+    "original_title": "Cemento: El documental"
+  },
+  "ciudad de pobres corazones|1987": {
+    "url": "https://letterboxd.com/film/ciudad-de-pobres-corazones/",
+    "title_en": "Ciudad de Pobres Corazones",
+    "director": "Fernando Spiner",
+    "country": "",
+    "year": 1987,
+    "duration": 53,
+    "genre": "Música",
+    "original_title": "Ciudad de Pobres Corazones"
+  },
+  "argentina beat|2006": {
+    "url": "https://letterboxd.com/film/argentina-beat/",
+    "title_en": "Argentina Beat",
+    "director": "Hernán Gaffet",
+    "country": "Argentina",
+    "year": 2006,
+    "duration": 120,
+    "genre": "Documental",
+    "original_title": "Argentina Beat"
+  },
+  "radio olmos|2019": {
+    "url": "https://letterboxd.com/film/radio-olmos/",
+    "title_en": "Radio Olmos",
+    "director": "Gustavo Mosquera R.",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 125,
+    "genre": "Documental",
+    "title_es": "Radio Olmos",
+    "original_title": "Radio Olmos"
+  },
+  "madre siniestra": {
+    "url": "https://letterboxd.com/film/other-mommy/",
+    "title_en": "Other Mommy",
+    "director": "Rob Savage",
+    "country": "USA",
+    "year": 2026,
+    "duration": 93,
+    "genre": "Terror",
+    "clase_titulo": "exacto",
+    "title_es": "La otra madre",
+    "original_title": "Other Mommy",
+    "sin_hints": "título y duración"
+  },
+  "cars 20° aniversario": {
+    "url": "",
+    "title_en": "CARS 20° ANIVERSARIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-06",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "hope: el primer impacto": {
+    "url": "https://letterboxd.com/film/hope-2026/",
+    "title_en": "Hope",
+    "director": "Na Hong-jin",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 157,
+    "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "title_es": "Hope",
+    "original_title": "호프",
+    "sin_hints": "título y duración"
+  },
+  "a cualquier precio": {
+    "url": "https://letterboxd.com/film/by-any-means-2026/",
+    "title_en": "By Any Means",
+    "director": "Elegance Bratton",
+    "country": "USA, Australia",
+    "year": 2026,
+    "duration": 107,
+    "genre": "Drama, Historia",
+    "clase_titulo": "exacto",
+    "title_es": "A cualquier precio",
+    "original_title": "By Any Means",
+    "sin_hints": "título y duración"
+  },
+  "cars (re estreno)": {
+    "url": "",
+    "title_en": "Cars (re Estreno)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "hope:el primer impacto": {
+    "url": "https://letterboxd.com/film/hope-2026/",
+    "title_en": "Hope",
+    "director": "Na Hong-jin",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 157,
+    "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "title_es": "Hope",
+    "original_title": "호프",
+    "sin_hints": "título"
+  },
+  "remake. remix. rip off": {
+    "url": "https://letterboxd.com/film/remake-remix-rip-off/",
+    "title_en": "Remake, Remix, Rip-Off: About Copy Culture & Turkish Pop Cinema",
+    "director": "Cem Kaya",
+    "country": "Germany, Turkey",
+    "year": 2014,
+    "duration": 96,
+    "genre": "Documental"
+  },
+  "cinema kabuki": {
+    "url": "",
+    "title_en": "Cinema Kabuki",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; Shinema Kabuki: Renjishi (2010) sólo se le parece",
+    "fecha": "2026-10-06",
+    "con_duracion": false,
+    "desempate": ""
   }
 }
