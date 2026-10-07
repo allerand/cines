@@ -629,7 +629,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Vamp (1986), y puede ser otra",
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -2057,7 +2057,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es The Little Shop of Horrors (1960), y puede ser otra",
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16377,16 +16377,16 @@
     "sin_hints": "título local de un estreno"
   },
   "bts world tour 'arirang in são paulo": {
-    "url": "",
-    "title_en": "BTS WORLD TOUR 'ARIRANG IN SÃO PAULO",
-    "director": "",
+    "url": "https://letterboxd.com/film/bts-world-tour-arirang-in-sao-paulo-live/",
+    "title_en": "BTS World Tour 'Arirang' In São Paulo: Live Viewing",
+    "director": "Ha Jung-jae",
     "country": "",
-    "year": null,
+    "year": 2026,
     "duration": null,
-    "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS WORLD TOUR [ARIRANG] in Busan (2026) sólo se le parece",
-    "fecha": "2026-10-03",
-    "con_duracion": true,
-    "desempate": ""
+    "genre": "Música",
+    "clase_titulo": "exacto",
+    "original_title": "BTS World Tour 'Arirang' In São Paulo: Live Viewing",
+    "sin_hints": "título"
   },
   "visita guiada": {
     "url": "",
@@ -20565,7 +20565,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: Apocalypse Now (1979, 147 min)",
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-07",
     "con_duracion": true,
     "desempate": ""
   },
@@ -21381,7 +21381,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Nadie inquietó más (2008)",
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -21489,7 +21489,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Young Frankenstein (1974), y puede ser otra",
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -21501,7 +21501,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Fright Night (1985), y puede ser otra",
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -21512,8 +21512,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Prince Valiant (1997), Prince Valiant (1954)",
-    "fecha": "2026-10-03",
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Prince Valiant (1997), Prince Valiant (1954), Horus: Prince of the Sun (1968)",
+    "fecha": "2026-10-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22776,7 +22776,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Berlin, Bahnhof Friedrichstraße, 1990 (1991), y puede ser otra",
-    "fecha": "2026-10-03",
+    "fecha": "2026-10-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23437,5 +23437,207 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "el precio de la red": {
+    "url": "https://letterboxd.com/film/the-social-reckoning/",
+    "title_en": "The Social Reckoning",
+    "director": "Aaron Sorkin",
+    "country": "USA",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Drama, Thriller",
+    "title_es": "El Precio de la Red",
+    "original_title": "The Social Reckoning"
+  },
+  "gilda": {
+    "url": "https://letterboxd.com/film/gilda/",
+    "title_en": "Gilda",
+    "director": "Charles Vidor",
+    "country": "USA",
+    "year": 1946,
+    "duration": 110,
+    "genre": "Romance, Thriller",
+    "title_es": "Gilda",
+    "original_title": "Gilda"
+  },
+  "humano: por el camino de en medio": {
+    "url": "",
+    "title_en": "Humano: Por el camino de en medio",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "humano: ciudad sin sueño": {
+    "url": "https://letterboxd.com/film/sleepless-city/",
+    "title_en": "Sleepless City",
+    "director": "Guillermo Galoe",
+    "country": "Spain, France",
+    "year": 2025,
+    "duration": 97,
+    "genre": "Drama"
+  },
+  "humano: you no mashallah! + spain is not different": {
+    "url": "",
+    "title_en": "Humano: You no Mashallah! + Spain is not different",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "humano: deseos mayores + soy tribulete 7": {
+    "url": "",
+    "title_en": "Humano: Deseos Mayores + Soy Tribulete 7",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "humano: aminetu": {
+    "url": "",
+    "title_en": "Humano: Aminetu",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "humano: my name is hope + buscando a lisette": {
+    "url": "",
+    "title_en": "Humano: My name is Hope + Buscando a Lisette",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "humano: el aleteo de las libélulas": {
+    "url": "",
+    "title_en": "Humano: El aleteo de las libélulas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la isla de la muerte|1967": {
+    "url": "https://letterboxd.com/film/island-of-the-doomed/",
+    "title_en": "Island of the Doomed",
+    "director": "Mel Welles",
+    "country": "Germany, Spain",
+    "year": 1967,
+    "duration": 88,
+    "genre": "Ciencia ficción, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "La isla de la muerte",
+    "original_title": "La isla de la muerte"
+  },
+  "jack, el destripador|1944": {
+    "url": "https://letterboxd.com/film/the-lodger-1944/",
+    "title_en": "The Lodger",
+    "director": "John Brahm",
+    "country": "USA",
+    "year": 1944,
+    "duration": 84,
+    "genre": "Terror, Misterio",
+    "clase_titulo": "distinto",
+    "title_es": "Jack, el destripador",
+    "original_title": "The Lodger"
+  },
+  "muchacho": {
+    "url": "",
+    "title_en": "Muchacho",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Muchacho (1970), y puede ser otra",
+    "fecha": "2026-10-07",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "siempre te amaré": {
+    "url": "",
+    "title_en": "Siempre te amaré",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: Siempre te amaré (1971), Journey to Italy (1954)",
+    "fecha": "2026-10-07",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "destino de un capricho": {
+    "url": "",
+    "title_en": "Destino de un capricho",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Destino de un capricho (1972), y puede ser otra",
+    "fecha": "2026-10-07",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "el deseo de vivir": {
+    "url": "",
+    "title_en": "El deseo de vivir",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es El deseo de vivir (1973), y puede ser otra",
+    "fecha": "2026-10-07",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "embrujo de amor": {
+    "url": "",
+    "title_en": "Embrujo de amor",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Embrujo de amor (1971), y puede ser otra",
+    "fecha": "2026-10-07",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "fic.uba - festival internacional de cine de la uba": {
+    "url": "",
+    "title_en": "FIC.UBA - Festival Internacional de Cine de la UBA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "frank borzage, un romántico en hollywood – parte 1": {
+    "url": "",
+    "title_en": "Frank Borzage, un romántico en Hollywood – Parte 1",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "kontinental 25": {
+    "url": "https://letterboxd.com/film/kontinental-25/",
+    "title_en": "Kontinental '25",
+    "director": "Radu Jude",
+    "country": "Romania, Brazil",
+    "year": 2025,
+    "duration": 109,
+    "genre": "Drama, Comedia",
+    "clase_titulo": "exacto",
+    "original_title": "Kontinental '25",
+    "sin_hints": "título y duración"
+  },
+  "godzilla minus zero": {
+    "url": "https://letterboxd.com/film/godzilla-minus-zero/",
+    "title_en": "Godzilla Minus Zero",
+    "director": "Takashi Yamazaki",
+    "country": "Japan",
+    "year": 2026,
+    "duration": 135,
+    "genre": "Acción, Terror",
+    "title_es": "Godzilla Minus Zero",
+    "original_title": "ゴジラ-0.0"
   }
 }
