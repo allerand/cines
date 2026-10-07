@@ -19357,12 +19357,13 @@
     "duration": null
   },
   "it’s for you!|2004": {
-    "url": "",
-    "title_en": "it’s for you!",
-    "director": "",
+    "url": "https://letterboxd.com/film/es-para-ti/",
+    "title_en": "¡Es para ti!",
+    "director": "Bruno Lázaro Pacheco",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 94,
+    "genre": ""
   },
   "raquel meller. insumisa y divina|2026": {
     "url": "https://letterboxd.com/film/raquel-meller-insumisa-y-divina/",
@@ -19841,7 +19842,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -23639,5 +23640,139 @@
     "genre": "Acción, Terror",
     "title_es": "Godzilla Minus Zero",
     "original_title": "ゴジラ-0.0"
+  },
+  "sus hijos|2026": {
+    "url": "https://letterboxd.com/film/sons-2025/",
+    "title_en": "& Sons",
+    "director": "Pablo Trapero",
+    "country": "Argentina, UK",
+    "year": 2025,
+    "duration": 119,
+    "genre": "Drama",
+    "title_es": "Sus hijos",
+    "original_title": "& Sons"
+  },
+  "ceniza en la boca|2026": {
+    "url": "https://letterboxd.com/film/ashes-2026-3/",
+    "title_en": "Ashes",
+    "director": "Diego Luna",
+    "country": "Mexico, Spain",
+    "year": 2026,
+    "duration": 98,
+    "genre": "Drama, Thriller",
+    "original_title": "Ceniza en la Boca"
+  },
+  "cinco segundos|2026": {
+    "url": "https://letterboxd.com/film/five-seconds-2025/",
+    "title_en": "Five Seconds",
+    "director": "Paolo Virzì",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 105,
+    "genre": "Drama",
+    "title_es": "Cinco segundos",
+    "original_title": "Cinque secondi"
+  },
+  "el tren fluvial": {
+    "url": "https://letterboxd.com/film/el-tren-fluvial/",
+    "title_en": "The River Train",
+    "director": "Lorenzo Ferro, Lucas A. Vignale",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 75,
+    "genre": "Drama, Fantasía",
+    "clase_titulo": "exacto",
+    "original_title": "El Tren Fluvial",
+    "sin_hints": "título"
+  },
+  "los juegos del hambre (2012)|2012": {
+    "url": "https://letterboxd.com/film/the-hunger-games/",
+    "title_en": "The Hunger Games",
+    "director": "Gary Ross",
+    "country": "USA",
+    "year": 2012,
+    "duration": 142,
+    "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "exacto"
+  },
+  "los juegos del hambre: en llamas (2013)|2013": {
+    "url": "https://letterboxd.com/film/the-hunger-games-catching-fire/",
+    "title_en": "The Hunger Games: Catching Fire",
+    "director": "Francis Lawrence",
+    "country": "USA",
+    "year": 2013,
+    "duration": 146,
+    "genre": "Ciencia ficción, Aventura",
+    "clase_titulo": "exacto"
+  },
+  "los juegos del hambre: sinsajo 1 (2014)|2014": {
+    "url": "https://letterboxd.com/film/the-hunger-games-mockingjay-part-1/",
+    "title_en": "The Hunger Games: Mockingjay – Part 1",
+    "director": "Francis Lawrence",
+    "country": "USA",
+    "year": 2014,
+    "duration": 123,
+    "genre": "Thriller, Ciencia ficción",
+    "clase_titulo": "distinto"
+  },
+  "los juegos del hambre: sinsajo 2 (2015)|2015": {
+    "url": "https://letterboxd.com/film/the-hunger-games-mockingjay-part-2/",
+    "title_en": "The Hunger Games: Mockingjay – Part 2",
+    "director": "Francis Lawrence",
+    "country": "Germany, USA",
+    "year": 2015,
+    "duration": 137,
+    "genre": "Aventura, Acción",
+    "clase_titulo": "distinto"
+  },
+  "en llamas:los juegos del hambre (re)": {
+    "url": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+    "title_en": "The Hunger Games: Sunrise on the Reaping",
+    "director": "Francis Lawrence",
+    "country": "USA, Germany",
+    "year": 2026,
+    "duration": 150,
+    "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "that they may face the rising sun|2023": {
+    "url": "https://letterboxd.com/film/that-they-may-face-the-rising-sun/",
+    "title_en": "That They May Face the Rising Sun",
+    "director": "Pat Collins",
+    "country": "Ireland, UK",
+    "year": 2023,
+    "duration": 111,
+    "genre": "Drama",
+    "original_title": "That They May Face the Rising Sun"
+  },
+  "foscadh|2021": {
+    "url": "https://letterboxd.com/film/foscadh/",
+    "title_en": "Foscadh",
+    "director": "Seán Breathnach",
+    "country": "Ireland",
+    "year": 2021,
+    "duration": 93,
+    "genre": "Drama",
+    "original_title": "Foscadh"
+  },
+  "róise & frank|2022": {
+    "url": "https://letterboxd.com/film/roise-frank/",
+    "title_en": "Róise & Frank",
+    "director": "Rachael Moriarty, Peter Murphy",
+    "country": "Ireland",
+    "year": 2022,
+    "duration": 88,
+    "genre": "Drama, Comedia",
+    "title_es": "Róise y Frank",
+    "original_title": "Róise & Frank"
+  },
+  "arracht|2019": {
+    "url": "",
+    "title_en": "Arracht",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }

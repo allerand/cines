@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-06T10:50:01",
+    "ts": "2026-10-07T10:37:46",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -111,7 +111,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-06T10:50:15",
+    "ts": "2026-10-07T10:38:02",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -157,7 +157,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-06T10:50:37",
+    "ts": "2026-10-07T10:38:24",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -237,6 +237,65 @@
         "country": "",
         "year": null,
         "duration": null,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/cine-irlandes/": {
+    "ts": "2026-10-07T10:38:42",
+    "v": 2,
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "That they may face the rising sun",
+        "fecha": "2026-10-11",
+        "hora": "15:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
+        "ciclo": "Cine irlandés",
+        "director": "Pat Collins",
+        "country": "",
+        "year": 2023,
+        "duration": 107,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Foscadh",
+        "fecha": "2026-10-11",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
+        "ciclo": "Cine irlandés",
+        "director": "Seán Breathnach",
+        "country": "",
+        "year": 2021,
+        "duration": 93,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Róise & Frank",
+        "fecha": "2026-10-25",
+        "hora": "15:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
+        "ciclo": "Cine irlandés",
+        "director": "Rachael Moriarty y Peter Murphy",
+        "country": "",
+        "year": 2022,
+        "duration": 84,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Arracht",
+        "fecha": "2026-10-25",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
+        "ciclo": "Cine irlandés",
+        "director": "Tom Sullivan",
+        "country": "",
+        "year": 2019,
+        "duration": 86,
         "original_title": ""
       }
     ]
