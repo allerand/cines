@@ -767,6 +767,10 @@
     .fest-nombre { font-weight: 600; font-size: 0.95rem; }
     .fest-bajada { color: var(--muted); font-size: 0.8rem; font-weight: 400; margin-left: 0.4rem; }
     .fest-meta { color: var(--muted); font-size: 0.75rem; margin-top: 0.3rem; line-height: 1.4; }
+    /* Partes de una ficha (lugar, sedes, fechas; director, año, duración):
+       separadas por espacio, sin signos de por medio. */
+    .fest-meta, .film-meta-inline { flex-wrap: wrap; column-gap: 0.9rem; row-gap: 0.1rem; }
+    .fest-meta { display: flex; }
     .fest-lugar { color: var(--text); }
     .fest-n { color: var(--muted); font-size: 0.75rem; white-space: nowrap; transition: color 0.12s; }
 
@@ -843,7 +847,7 @@
       .lb-full  { display: none; }
       .lb-short { display: inline; }
       .screening-table th, .screening-table td { padding: 0.45rem 0.4rem; }
-      .film-meta-inline { display: block; }
+      .film-meta-inline { display: flex; }
       .film-ciclo-inline { display: block; }
       .secciones { padding: 0 1rem; }
       .festival-head { padding: 0.9rem 1rem 0.8rem; }
@@ -1476,7 +1480,7 @@ function gcalUrl(s) {
   ].filter(Boolean).join('\n');
   const params = new URLSearchParams({
     action: 'TEMPLATE',
-    text: `${title} — ${s.cine || ''}`,
+    text: s.cine ? `${title} en ${s.cine}` : title,
     dates: `${fmt(start)}/${fmt(end)}`,
     details: details,
     location: s.cine || '',
@@ -1932,8 +1936,8 @@ function applySeccion() {
   document.getElementById('filters').hidden = !conTabla;
   document.getElementById('cine-btns').hidden = enFest;
   document.getElementById('sede-btns').hidden = !enFest;
-  document.title = festivalActivo ? `${festivalActivo.nombre} · Si te digo`
-    : enFest ? 'Festivales · Si te digo' : 'Si te digo';
+  document.title = festivalActivo ? `${festivalActivo.nombre} - Si te digo`
+    : enFest ? 'Festivales - Si te digo' : 'Si te digo';
 }
 
 // #festivales → el listado; #festivales/<slug>/… → la página de un festival
@@ -1985,7 +1989,7 @@ function renderCabeceraFestival(f) {
     <a class="fest-volver" href="#festivales">← Festivales</a>
     <h2>${escapeHtml(f.nombre)}</h2>
     ${f.bajada ? `<span class="fest-bajada">${escapeHtml(f.bajada)}</span>` : ''}
-    <div class="fest-meta">${meta.join(' · ')}</div>`;
+    <div class="fest-meta">${partesMeta(meta)}</div>`;
 }
 
 function renderListadoFestivales(lista) {
@@ -2017,7 +2021,7 @@ function itemFestival(f) {
   return `<a class="fest-item" href="${escapeHtml(hrefFestival(f))}" data-nombre="${escapeHtml(f.nombre)}">
     <div>
       <div class="fest-nombre">${escapeHtml(f.nombre)}${f.bajada ? `<span class="fest-bajada">${escapeHtml(f.bajada)}</span>` : ''}</div>
-      <div class="fest-meta">${meta.join(' · ')}</div>
+      <div class="fest-meta">${partesMeta(meta)}</div>
     </div>
     <span class="fest-n">${n ? `${n} func. →` : 'Próximamente'}</span>
   </a>`;
@@ -2179,7 +2183,7 @@ function shareText() {
   if (activeCines.size) parts.push([...activeCines].join(' + '));
   if (searchQuery) parts.push(`"${searchQuery}"`);
   else if (activeDay) parts.push(fmtShortDate(activeDay));
-  return parts.join(' · ');
+  return parts.join(', ');
 }
 
 document.getElementById('share-btn').addEventListener('click', async () => {
@@ -2227,6 +2231,11 @@ function cineCssClass(cine) {
   if (cine && cine.startsWith('Showcase'))  return 'cine-showcase';
   if (cine && cine.startsWith('Multiplex')) return 'cine-multiplex';
   return '';
+}
+
+// Partes de una ficha, ya escapadas, sin separador: el espacio lo pone el CSS.
+function partesMeta(partes) {
+  return partes.map(x => `<span>${x}</span>`).join('');
 }
 
 function escapeHtml(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
@@ -2368,7 +2377,7 @@ function renderTable() {
     const ciclo = cicloDeFila(s);
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}${alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : ''}</div>
       ${ciclo.texto ? `<div class="film-ciclo-inline">${ciclo.href ? `<a href="${escapeHtml(ciclo.href)}">${escapeHtml(ciclo.texto)}</a>` : escapeHtml(ciclo.texto)}</div>` : ''}
-      <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
+      <div class="film-meta-inline">${partesMeta([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).map(escapeHtml))}</div>
       ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
 
     return `<tr>
