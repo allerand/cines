@@ -7252,7 +7252,13 @@ def _bcn_parse_corta(text: str) -> dict:
     # El director es lo que va antes del año. El separador es coma
     # ("Steven Spielberg, 1987, 152’") o punto ("Hugo Santiago. 1969. 123´"):
     # cortar sólo por coma dejaba la ficha entera como nombre del director.
-    cabeza = re.split(r"[.,;]\s*(?=\d)", t)[0].strip(" .,")
+    partes = re.split(r"[.,;]\s*(?=\d)", t)
+    # Sin año/duración después, la bajada no es una ficha sino una frase
+    # ("La BCN será nuevamente sede del Festival."): nada de director.
+    cabeza = partes[0].strip(" .,") if len(partes) > 1 else ""
+    # "Proyección película de Ridley Scott" / "Película de César González".
+    cabeza = re.sub(r"^(?:proyecci[oó]n\s+(?:de\s+(?:la\s+)?)?)?pel[ií]cula\s+de\s+",
+                    "", cabeza, flags=re.IGNORECASE).strip(" .,")
     if cabeza and not re.fullmatch(r"[\d\s’'´`\-–]+", cabeza):
         out["director"] = cabeza
     ym = re.search(r"\b(19|20)\d{2}\b", t)
@@ -7265,51 +7271,75 @@ def _bcn_parse_corta(text: str) -> dict:
 
 
 # Cronograma de un ciclo/festival de la BCN. La agenda muestra una card por
-# FECHA con un título de relleno ("Proyección de 'Collateral' y 'Aqui nao entra
-# luz'") y la bajada institucional donde debería ir el director; las películas
-# de verdad, con ficha técnica, están en el bloque "Cronograma" de la página del
-# ciclo, con esta forma:
+# FECHA con un título de relleno ("Proyección de cortometrajes", o el nombre del
+# festival) y la bajada institucional donde debería ir el director ("Dentro del
+# marco del 21.° Festival…"); las películas de verdad, con ficha técnica, están
+# en el bloque "Cronograma" de la página del ciclo. Dos formas vistas:
 #
-#     calendar_clock
-#     Martes 18 de agosto -
-#     18.30 h
-#     Cortometraje:
-#     The Fortunate
-#     Dirección: Habtamu Gebrehiwot,
-#     Año: 2026
-#     Duración: 15´
+#     calendar_clock                      Cronograma:
+#     Martes 18 de agosto -               Proyección de cortometrajes:
+#     18.30 h                             calendar_clock
+#     Cortometraje:                       Jueves 8 de octubre -
+#     The Fortunate                       18.30 h
+#     Dirección: Habtamu Gebrehiwot,      place / Auditorio… / Entradas
+#     Año: 2026                           7 minutos
+#     Duración: 15´                       Dirección: Pablo Panaro
+#                                         Año: 2026
+#                                         Duración: 08´ 35’’ + sinopsis
 #
-# Cuando la página tiene cronograma, cada película es una función propia y las
-# cards de la agenda se ignoran.
+# En las dos, el título es la línea de arriba de "Dirección:" (sin la etiqueta
+# "Cortometraje:" si la trae). Cada película es una función propia y las cards
+# de la agenda que caen en esa fecha+hora se ignoran.
 _BCN_CRONO_DIA_RE = re.compile(
     r"^(?:lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+"
     r"(\d{1,2})\s+de\s+([a-záéíóúñ]+)", re.IGNORECASE)
-_BCN_CRONO_HORA_RE = re.compile(r"^(\d{1,2})[.:](\d{2})\s*h?\b")
-_BCN_CRONO_FILM_RE = re.compile(
-    r"^(?:corto|largo)metraje\s*:\s*(.*)$", re.IGNORECASE)
+_BCN_CRONO_HORA_RE = re.compile(r"(?:^|[\s\-–])(\d{1,2})[.:](\d{2})\s*h?\b")
+_BCN_CRONO_LABEL_RE = re.compile(
+    r"^(?:corto|largo)metrajes?\s*:\s*", re.IGNORECASE)
+_BCN_CRONO_DIR_RE = re.compile(r"^Direcci[oó]n\s*:", re.IGNORECASE)
+_BCN_CRONO_FIN_RE = re.compile(
+    r"^(?:contenido relacionado|compart[ií])$", re.IGNORECASE)
+# "La Reina, el Buda y Buñuel (México)": el paréntesis es el país, no el
+# título original.
+_BCN_PAISES = {
+    "argentina", "méxico", "mexico", "chile", "uruguay", "brasil", "perú",
+    "peru", "colombia", "bolivia", "paraguay", "venezuela", "ecuador", "cuba",
+    "españa", "portugal", "francia", "italia", "alemania", "reino unido",
+    "estados unidos", "eeuu", "ee.uu", "canadá", "japón", "china", "corea del sur",
+    "india", "irán",
+}
 
 
 def _bcn_cronograma(soup, ciclo: str, ticket_url: str,
                     today: date) -> list[Screening]:
     """Una Screening por película del bloque "Cronograma". [] si no hay."""
-    lines = [re.sub(r"[ \t]+", " ", l).strip()
+    lines = [re.sub(r"[ \t\xa0]+", " ", l).strip()
              for l in soup.get_text("\n").splitlines()]
     lines = [l for l in lines if l]
     try:
-        inicio = next(i for i, l in enumerate(lines) if l.lower() == "cronograma")
+        inicio = next(i for i, l in enumerate(lines)
+                      if l.lower().rstrip(" :") == "cronograma")
     except StopIteration:
         return []
+
+    # Un botón "Entradas" por fecha, en el mismo orden que los días.
+    entradas = [a["href"] for a in soup.find_all("a", href=True)
+                if a.get_text(strip=True).lower() == "entradas"
+                and a["href"].startswith("http")]
 
     out: list[Screening] = []
     d: Optional[date] = None
     hora = "18:30"
-    i = inicio + 1
-    while i < len(lines):
+    ticket = ticket_url
+    for i in range(inicio + 1, len(lines)):
         ln = lines[i]
+        if _BCN_CRONO_FIN_RE.match(ln):
+            break
 
         md = _BCN_CRONO_DIA_RE.match(ln)
         if md:
             mes = MESES_ES.get(md.group(2).lower())
+            d = None
             if mes:
                 dia = int(md.group(1))
                 # La agenda sólo publica funciones futuras: si el mes ya pasó,
@@ -7319,53 +7349,83 @@ def _bcn_cronograma(soup, ciclo: str, ticket_url: str,
                     d = date(anio, mes, dia)
                 except ValueError:
                     d = None
-            # La hora va en la línea siguiente ("18.30 h").
-            for j in range(i + 1, min(i + 3, len(lines))):
-                mh = _BCN_CRONO_HORA_RE.match(lines[j])
+            # La hora va en la misma línea ("Jueves 15 de octubre - 18.30 h")
+            # o en la siguiente.
+            for cand in [ln[md.end():]] + lines[i + 1:i + 3]:
+                mh = _BCN_CRONO_HORA_RE.search(cand)
                 if mh:
                     hora = f"{int(mh.group(1)):02d}:{mh.group(2)}"
                     break
-            i += 1
+            ticket = ticket_url
             continue
 
-        mf = _BCN_CRONO_FILM_RE.match(ln)
-        if not mf or d is None:
-            i += 1
+        if ln.lower() == "entradas":
+            if entradas:
+                ticket = entradas.pop(0)
             continue
 
-        # El título va pegado a la etiqueta o en la línea siguiente.
-        titulo = mf.group(1).strip(" .,:")
-        j = i + 1
-        if not titulo and j < len(lines):
-            titulo = lines[j].strip(" .,:")
-            j += 1
-        # Ficha técnica: las líneas Dirección/Año/Duración que siguen, hasta la
-        # próxima película o el próximo día.
+        if not _BCN_CRONO_DIR_RE.match(ln) or d is None or i == inicio + 1:
+            continue
+
+        titulo = _BCN_CRONO_LABEL_RE.sub("", lines[i - 1]).strip(" .,:")
+        if (not titulo or _BCN_CRONO_DIA_RE.match(titulo)
+                or _BCN_CRONO_HORA_RE.match(titulo)):
+            continue
+        # Ficha técnica: Dirección/Año/Duración/País, hasta la próxima
+        # película o el próximo día.
         ficha: dict = {}
-        while j < len(lines) and j < i + 10:
-            if (_BCN_CRONO_FILM_RE.match(lines[j])
-                    or _BCN_CRONO_DIA_RE.match(lines[j])):
+        for j in range(i, min(i + 5, len(lines))):
+            if j > i and (_BCN_CRONO_DIR_RE.match(lines[j])
+                          or _BCN_CRONO_DIA_RE.match(lines[j])):
                 break
-            ficha.update(_bcn_parse_ficha(lines[j]))
-            j += 1
+            for k, v in _bcn_parse_ficha(lines[j]).items():
+                ficha.setdefault(k, v)
 
-        if titulo and today <= d:
+        if today <= d:
             titulo, original = _bcn_split_title(titulo)
+            country = ficha.get("country", "")
+            if original.lower() in _BCN_PAISES:
+                country = country or original
+                original = ""
             out.append(Screening(
                 cine="Biblioteca del Congreso",
                 title=titulo,
                 fecha=d.isoformat(),
                 hora=hora,
-                ticket_url=ticket_url,
+                ticket_url=ticket,
                 ciclo=ciclo,
                 director=ficha.get("director", ""),
-                country=ficha.get("country", ""),
+                country=country,
                 year=ficha.get("year"),
                 duration=ficha.get("duration"),
                 original_title=original,
             ))
-        i = j
     return out
+
+
+def _bcn_fetch(url: str):
+    """
+    fetch_html que sigue el redirect por JavaScript de la BCN: las páginas de
+    las películas de un festival ("/21-festival-…/cielomoto") son un cascarón
+    con `window.location.href = '<página del festival>'`.
+    """
+    soup = fetch_html(url)
+    body = soup.find("body")
+    # Sólo el cascarón: el resto de las páginas también tienen un
+    # `window.location = …` (el buscador del catálogo), pero con contenido.
+    if body is None or any(t.strip() for t in body.find_all(string=True)
+                           if t.parent.name != "script"):
+        return soup
+    for sc in body.find_all("script"):
+        m = re.search(r"window\.location(?:\.href)?\s*=\s*['\"]([^'\"]+)['\"]",
+                      sc.string or "")
+        if m:
+            dest = m.group(1)
+            if dest.startswith("/"):
+                dest = BCN_BASE + dest
+            if dest != url and "bcn.gob.ar" in dest:
+                return fetch_html(dest)
+    return soup
 
 
 def _bcn_detail_meta(url: str, soup=None) -> dict:
@@ -7487,7 +7547,7 @@ def scrape_bcn() -> list[Screening]:
             dsoup = None
             if detail_url != BCN_AGENDA:
                 try:
-                    dsoup = fetch_html(detail_url)
+                    dsoup = _bcn_fetch(detail_url)
                 except Exception:
                     dsoup = None
             detalles[detail_url] = (

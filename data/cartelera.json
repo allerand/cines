@@ -14,8 +14,8 @@
       "publicadas": 11
     },
     "Biblioteca del Congreso": {
-      "scrapeadas": 8,
-      "publicadas": 8
+      "scrapeadas": 13,
+      "publicadas": 13
     },
     "CCK": {
       "scrapeadas": 21,
@@ -4561,38 +4561,6 @@
       "ciclo": "Ficción"
     },
     {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-10-08",
-      "hora": "18:30",
-      "title_es": "21.° Festival de Cine Inusual de Buenos Aires",
-      "title_en": "21.° Festival de Cine Inusual de Buenos Aires",
-      "original_title": "",
-      "director": "La BCN será nuevamente sede del Festival",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://bcn.gob.ar/cine/21-festival-de-cine-inusual-de-buenos-aires",
-      "ciclo": "Cine en el Auditorio Leonardo Favio"
-    },
-    {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-10-08",
-      "hora": "18:30",
-      "title_es": "Proyección de cortometrajes",
-      "title_en": "Proyección de cortometrajes",
-      "original_title": "",
-      "director": "Dentro del marco del marco del 21.° Festival de Cine Inusual de Buenos Aires",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://bcn.gob.ar/21-festival-de-cine-inusual-de-buenos-aires/proyeccion-de-cortometrajes-1",
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-08",
       "hora": "18:30",
@@ -4719,6 +4687,118 @@
       "letterboxd": "",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b50304ffcaf6c638d8195a239c97ac66",
       "ciclo": ""
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-08",
+      "hora": "18:30",
+      "title_es": "7 minutos",
+      "title_en": "7 minutos",
+      "original_title": "",
+      "director": "Pablo Panaro",
+      "country": "",
+      "year": 2026,
+      "duration": 8,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.eventbrite.com.ar/e/proyeccion-de-cortometrajes-tickets-2002633608031?aff=oddtdtcreator",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-08",
+      "hora": "18:30",
+      "title_es": "El eco",
+      "title_en": "El eco",
+      "original_title": "",
+      "director": "Leandro Panei",
+      "country": "",
+      "year": 2026,
+      "duration": 19,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.eventbrite.com.ar/e/proyeccion-de-cortometrajes-tickets-2002633608031?aff=oddtdtcreator",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-08",
+      "hora": "18:30",
+      "title_es": "Gordo Muerte",
+      "title_en": "Gordo Muerte",
+      "original_title": "",
+      "director": "Sergio Marzano",
+      "country": "",
+      "year": 2026,
+      "duration": 7,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.eventbrite.com.ar/e/proyeccion-de-cortometrajes-tickets-2002633608031?aff=oddtdtcreator",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-08",
+      "hora": "18:30",
+      "title_es": "Identidad verificada",
+      "title_en": "Identidad verificada",
+      "original_title": "",
+      "director": "Alejandro Giorlando",
+      "country": "",
+      "year": 2026,
+      "duration": 12,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.eventbrite.com.ar/e/proyeccion-de-cortometrajes-tickets-2002633608031?aff=oddtdtcreator",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-08",
+      "hora": "18:30",
+      "title_es": "La audiencia",
+      "title_en": "La audiencia",
+      "original_title": "",
+      "director": "Luciano Romano",
+      "country": "",
+      "year": 2026,
+      "duration": 6,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.eventbrite.com.ar/e/proyeccion-de-cortometrajes-tickets-2002633608031?aff=oddtdtcreator",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-08",
+      "hora": "18:30",
+      "title_es": "La muerte vino a visitarme",
+      "title_en": "La muerte vino a visitarme",
+      "original_title": "",
+      "director": "Maximiliano Parodis",
+      "country": "",
+      "year": 2025,
+      "duration": 6,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.eventbrite.com.ar/e/proyeccion-de-cortometrajes-tickets-2002633608031?aff=oddtdtcreator",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-08",
+      "hora": "18:30",
+      "title_es": "Sean jóvenes",
+      "title_en": "Sean jóvenes",
+      "original_title": "",
+      "director": "Francisco Bonadeo",
+      "country": "",
+      "year": 2026,
+      "duration": 14,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.eventbrite.com.ar/e/proyeccion-de-cortometrajes-tickets-2002633608031?aff=oddtdtcreator",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -37953,22 +38033,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-10-13",
-      "hora": "18:30",
-      "title_es": "Cielomoto",
-      "title_en": "Cielomoto",
-      "original_title": "",
-      "director": "Dentro del marco del marco del 21.° Festival de Cine Inusual de Buenos Aires",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://bcn.gob.ar/21-festival-de-cine-inusual-de-buenos-aires/cielomoto",
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-13",
       "hora": "18:30",
@@ -38095,6 +38159,22 @@
       "letterboxd": "",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b50304ffcaf6c638d8195a239c97ac66",
       "ciclo": ""
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-13",
+      "hora": "18:30",
+      "title_es": "Cielomoto",
+      "title_en": "Cielomoto",
+      "original_title": "",
+      "director": "Manuel López Márquez",
+      "country": "",
+      "year": 2026,
+      "duration": 65,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://bcn.gob.ar/21-festival-de-cine-inusual-de-buenos-aires/cielomoto",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -47521,22 +47601,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-10-15",
-      "hora": "18:30",
-      "title_es": "La Reina, el Buda y Buñuel",
-      "title_en": "La Reina, el Buda y Buñuel",
-      "original_title": "",
-      "director": "Dentro del marco del marco del 21.° Festival de Cine Inusual de Buenos Aires",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://bcn.gob.ar/21-festival-de-cine-inusual-de-buenos-aires/la-reina-el-buda-y-bunuel",
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
-    },
-    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-10-15",
       "hora": "18:30",
@@ -47551,6 +47615,22 @@
       "letterboxd": "https://letterboxd.com/film/critters/",
       "ticket_url": "https://lumiton.ar/evento/critters/",
       "ciclo": ""
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-15",
+      "hora": "18:30",
+      "title_es": "La Reina, el Buda y Buñuel",
+      "title_en": "La Reina, el Buda y Buñuel",
+      "original_title": "",
+      "director": "Alexander Katzowicz",
+      "country": "México",
+      "year": 2026,
+      "duration": 81,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://bcn.gob.ar/21-festival-de-cine-inusual-de-buenos-aires/la-reina-el-buda-y-bunuel",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires"
     },
     {
       "cine": "MALBA",
@@ -51447,7 +51527,7 @@
       "title_es": "Blade Runner",
       "title_en": "Blade Runner",
       "original_title": "Blade Runner",
-      "director": "Proyección película de Ridley Scott",
+      "director": "Ridley Scott",
       "country": "Estados Unidos, Hong Kong",
       "year": 1982,
       "duration": 117,
@@ -52609,22 +52689,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-10-22",
-      "hora": "18:30",
-      "title_es": "¿Qué pasó con Baby Jane?",
-      "title_en": "What Ever Happened to Baby Jane?",
-      "original_title": "What Ever Happened to Baby Jane?",
-      "director": "Proyección película de Robert Aldrich",
-      "country": "Estados Unidos",
-      "year": 1962,
-      "duration": 133,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/what-ever-happened-to-baby-jane/",
-      "ticket_url": "https://www.eventbrite.com.ar/e/que-paso-con-baby-jane-tickets-2002627983207?aff=oddtdtcreator",
-      "ciclo": "Clásicos de cine noir norteamericano"
-    },
-    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-10-22",
       "hora": "18:30",
@@ -52639,6 +52703,22 @@
       "letterboxd": "https://letterboxd.com/film/predator/",
       "ticket_url": "https://lumiton.ar/evento/depredador/",
       "ciclo": ""
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-22",
+      "hora": "18:30",
+      "title_es": "¿Qué pasó con Baby Jane?",
+      "title_en": "What Ever Happened to Baby Jane?",
+      "original_title": "What Ever Happened to Baby Jane?",
+      "director": "Robert Aldrich",
+      "country": "Estados Unidos",
+      "year": 1962,
+      "duration": 133,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/what-ever-happened-to-baby-jane/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/que-paso-con-baby-jane-tickets-2002627983207?aff=oddtdtcreator",
+      "ciclo": "Clásicos de cine noir norteamericano"
     },
     {
       "cine": "MALBA",
@@ -53697,22 +53777,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-10-27",
-      "hora": "18:30",
-      "title_es": "Terciopelo azul",
-      "title_en": "Blue Velvet",
-      "original_title": "Blue Velvet",
-      "director": "Proyección película de David Lynch",
-      "country": "Estados Unidos",
-      "year": 1986,
-      "duration": 120,
-      "genre": "Crimen, Misterio",
-      "letterboxd": "https://letterboxd.com/film/blue-velvet/",
-      "ticket_url": "https://www.eventbrite.com.ar/e/terciopelo-azul-tickets-2002629432542?aff=oddtdtcreator",
-      "ciclo": "Clásicos de cine noir norteamericano"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-27",
       "hora": "18:30",
@@ -53743,6 +53807,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-27",
+      "hora": "18:30",
+      "title_es": "Terciopelo azul",
+      "title_en": "Blue Velvet",
+      "original_title": "Blue Velvet",
+      "director": "David Lynch",
+      "country": "Estados Unidos",
+      "year": 1986,
+      "duration": 120,
+      "genre": "Crimen, Misterio",
+      "letterboxd": "https://letterboxd.com/film/blue-velvet/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/terciopelo-azul-tickets-2002629432542?aff=oddtdtcreator",
+      "ciclo": "Clásicos de cine noir norteamericano"
     },
     {
       "cine": "Hasta Trilce",
@@ -54145,22 +54225,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-10-29",
-      "hora": "18:30",
-      "title_es": "Los pájaros",
-      "title_en": "The Birds",
-      "original_title": "The Birds",
-      "director": "Proyección película de Alfred Hitchcock",
-      "country": "Estados Unidos",
-      "year": 1963,
-      "duration": 119,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-birds/",
-      "ticket_url": "https://www.eventbrite.com.ar/e/los-pajaros-tickets-2002630870844?aff=oddtdtcreator",
-      "ciclo": "Clásicos de cine noir norteamericano"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-29",
       "hora": "18:30",
@@ -54191,6 +54255,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-10-29",
+      "hora": "18:30",
+      "title_es": "Los pájaros",
+      "title_en": "The Birds",
+      "original_title": "The Birds",
+      "director": "Alfred Hitchcock",
+      "country": "Estados Unidos",
+      "year": 1963,
+      "duration": 119,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-birds/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/los-pajaros-tickets-2002630870844?aff=oddtdtcreator",
+      "ciclo": "Clásicos de cine noir norteamericano"
     },
     {
       "cine": "MALBA",
