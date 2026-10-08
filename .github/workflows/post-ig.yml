@@ -41,15 +41,21 @@ name: Post to Instagram
 
 on:
   schedule:
-    # Están adelantados cuatro horas a propósito: 07:08 UTC = 04:08 en Buenos
-    # Aires (UTC-3 todo el año). Hasta el 17/9/2026 eran 11:08-12:43 UTC (08:08
-    # ART), y GitHub los venía largando entre 3 y 5 horas tarde: las stories
-    # salían entre las 11:50 y las 15:00 (del 8 al 16/9 la primera corrida del
-    # día arrancó siempre después de las 14:53 UTC). Con esa demora, los de las
-    # 07:08 caen hacia las 8 de la mañana. El día que GitHub llegue en hora
-    # salen de madrugada, con la cartelera del scrape de la noche anterior:
-    # Mateo eligió eso antes que depender de un disparo externo. El de las
-    # 12:43 queda de red por si los tempranos no llegan nunca.
+    # Están adelantados a propósito: 02:08 UTC = 23:08 en Buenos Aires del día
+    # anterior (UTC-3 todo el año). GitHub los larga con horas de demora y la
+    # demora fue creciendo: hasta el 17/9/2026 eran 11:08-12:43 UTC y salían
+    # entre las 11:50 y las 15:00; se pasaron a 07:08 UTC, y en octubre el de
+    # las 07:08 arrancaba entre las 12:25 y las 15:51 UTC (unas 7 horas tarde),
+    # así que las stories salían a las 11 de la mañana. Con esa demora, los de
+    # las 02:08 caen hacia las 6.
+    #
+    # Uno que llegue en hora antes de las 03:00 UTC todavía es el día anterior
+    # en Buenos Aires: encuentra la marca de ese día y se va sin publicar nada.
+    # Por eso los primeros pueden ir antes de medianoche ART sin riesgo. El día
+    # que GitHub llegue en hora, los de después de las 03:00 UTC salen de
+    # madrugada, con la cartelera del scrape de la noche anterior: Mateo eligió
+    # eso antes que depender de un disparo externo. El de las 12:43 queda de
+    # red por si los tempranos no llegan nunca.
     #
     # El minuto es feo a propósito: GitHub encola los workflows que caen en
     # punto y a la media, y ahí es donde se acumulan las demoras.
@@ -62,10 +68,10 @@ on:
     # los demás se van en 20 segundos al ver la marca del día. La marca es lo
     # que hace que esto sea seguro: sin ella, cuatro crons serían cuatro
     # posteos.
-    - cron: '8 7 * * *'
-    - cron: '38 7 * * *'
-    - cron: '13 8 * * *'
-    - cron: '43 8 * * *'
+    - cron: '8 2 * * *'
+    - cron: '38 2 * * *'
+    - cron: '13 3 * * *'
+    - cron: '43 3 * * *'
     - cron: '43 12 * * *'
   workflow_dispatch:
     inputs:
