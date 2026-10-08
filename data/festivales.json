@@ -1,0 +1,27 @@
+{
+  "_comment": "Festivales de la sección Festivales de la web (index.html). Por ahora sólo de Argentina. Los de Buenos Aires no tienen grilla propia: son una búsqueda en la cartelera por el nombre LITERAL de su `ciclo`, y tocar el festival lleva a #buenos-aires/q=<ciclo>. Para que esa búsqueda sea exhaustiva, el scraper le pone ese mismo ciclo a las funciones del festival de todas las salas (unificar_ciclos_festivales en scraper.py): cualquier ciclo que contenga un `alias` —palabras enteras, sin caja ni tildes— pasa a ser `ciclo`, conservando la sección (\"Asterisco - Competencia\" → \"<ciclo> - Competencia\"). El alias tiene que ser específico: si aparece en el ciclo de otra cosa, esa función queda con el nombre del festival. Un ciclo que dice 'Festival' y no está acá aparece igual en la web, con su nombre. Los de otro lugar llevan `lugar` y `archivo` (mismo formato que cartelera.json, cargado a mano), tienen su propia página y no entran a cartelera.json, así no se mezclan con Buenos Aires ni con las stories. Opcionales: `bajada`, `web`, `desde`/`hasta` (si no, salen de las funciones), `cuando` (texto mientras no haya fechas), `sedes` ({sala: dirección}, para las que la web no conoce).",
+  "festivales": [
+    {
+      "slug": "cine-inusual",
+      "nombre": "Festival de Cine Inusual",
+      "bajada": "21.ª edición",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires",
+      "alias": ["Festival de Cine Inusual"]
+    },
+    {
+      "slug": "asterisco",
+      "nombre": "Asterisco",
+      "bajada": "Festival Internacional de Cine LGBTIQ+",
+      "ciclo": "Asterisco Festival Internacional de Cine LGBTIQ+",
+      "alias": ["Asterisco"]
+    },
+    {
+      "slug": "fuera-de-campo",
+      "nombre": "Fuera de Campo",
+      "bajada": "Muestra de cine argentino",
+      "lugar": "Mar del Plata",
+      "cuando": "Noviembre · fechas a confirmar",
+      "archivo": "data/festival-fuera-de-campo.json"
+    }
+  ]
+}

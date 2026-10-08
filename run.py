@@ -884,6 +884,16 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         except Exception as e:
             print(f"  ↳ Merge omitido: {e}")
 
+    # Un festival de Buenos Aires, en la web, es una búsqueda por el nombre
+    # literal de su ciclo: acá las salas que lo escriben distinto pasan a
+    # escribirlo igual (data/festivales.json). Va sobre la lista final para
+    # que también lo reciban las funciones preservadas de corridas anteriores.
+    from scraper import unificar_ciclos_festivales
+    de_buenos_aires = [s for s in screenings_out if s["cine"] not in CINES_MADRID]
+    _, n_ciclos = unificar_ciclos_festivales(de_buenos_aires)
+    if n_ciclos:
+        print(f"  ↳ {n_ciclos} funciones con el ciclo de su festival unificado")
+
     # Una misma película no se da dos veces en la misma sala a la misma hora: si
     # aparece repetida es que dos fuentes trajeron la misma función. Pasa cuando
     # una función manual reemplaza a una scrapeada (manual_screenings.json) y el

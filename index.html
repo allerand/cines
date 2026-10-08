@@ -16,6 +16,9 @@
   
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* `hidden` tiene que ganarle a los display de las clases (.filter-btns,
+       .day-tabs-wrap…), que la sección Festivales prende y apaga. */
+    [hidden] { display: none !important; }
 
     :root {
       --bg:        #0a0a0a;
@@ -345,6 +348,15 @@
       transition: all 0.12s;
     }
     .filter-btn:hover { color: var(--text); border-color: #444; }
+    /* Sala sin funciones (ver marcarSalasSinFunciones). */
+    .filters .filter-btn:disabled,
+    .filters .filter-btn:disabled:hover {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--muted);
+      opacity: 0.3;
+      cursor: default;
+    }
     .filter-btn.active {
       background: var(--accent);
       border-color: var(--accent);
@@ -688,6 +700,87 @@
       margin-top: 0.18rem;
       line-height: 1.35;
     }
+    /* Ciclo que es un festival: lleva a su página en la sección Festivales. */
+    a.ciclo-tag, .film-ciclo-inline a { color: inherit; text-decoration: underline; text-decoration-color: var(--border); text-underline-offset: 2px; }
+    a.ciclo-tag:hover, .film-ciclo-inline a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+
+    /* ── Secciones: Cartelera / Festivales ── */
+    .secciones {
+      display: flex;
+      gap: 1.6rem;
+      padding: 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .seccion-link {
+      padding: 0.6rem 0 0.55rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .seccion-link:hover { color: var(--text); }
+    .seccion-link:focus { outline: none; }
+    .seccion-link:focus-visible { outline: 1px dotted var(--muted); outline-offset: 3px; }
+    .seccion-link.activa { color: var(--text); border-bottom-color: var(--text); }
+    .seccion-n {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0 0.35rem;
+      border-radius: 2px;
+      background: var(--accent);
+      color: #000;
+      font-size: 0.65rem;
+      letter-spacing: 0;
+      vertical-align: 1px;
+    }
+
+    /* ── Festivales: listado ── */
+    .fest-list { max-width: 56rem; }
+    .fest-grupo {
+      font-size: 0.68rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .fest-grupo + .fest-item { border-top: none; }
+    .fest-grupo:not(:first-child) { margin-top: 2rem; }
+    .fest-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.9rem 0.8rem;
+      border-bottom: 1px solid var(--border);
+      color: var(--text);
+      text-decoration: none;
+    }
+    .fest-item:hover { background: var(--hover-row); }
+    .fest-item:hover .fest-n { color: var(--accent); }
+    .fest-nombre { font-weight: 600; font-size: 0.95rem; }
+    .fest-bajada { color: var(--muted); font-size: 0.8rem; font-weight: 400; margin-left: 0.4rem; }
+    .fest-meta { color: var(--muted); font-size: 0.75rem; margin-top: 0.3rem; line-height: 1.4; }
+    .fest-lugar { color: var(--text); }
+    .fest-n { color: var(--muted); font-size: 0.75rem; white-space: nowrap; transition: color 0.12s; }
+
+    /* ── Festivales: cabecera de un festival ── */
+    .festival-head { padding: 1.1rem 2rem 1rem; border-bottom: 1px solid var(--border); }
+    .fest-volver { font-size: 0.72rem; color: var(--muted); text-decoration: none; }
+    .fest-volver:hover { color: var(--accent); }
+    .festival-head h2 { font-size: 1.35rem; font-weight: 600; margin-top: 0.5rem; letter-spacing: 0.01em; }
+    .festival-head .fest-bajada { margin-left: 0; display: block; margin-top: 0.2rem; }
+    .festival-head .fest-meta { margin-top: 0.5rem; }
+    .festival-head .fest-meta a { color: var(--accent); text-decoration: none; }
+    .festival-head .fest-meta a:hover { text-decoration: underline; }
+    .sede-unica { font-size: 0.75rem; color: var(--text); }
+    .sin-seccion .col-ciclo { display: none; }
 
     .lb-link {
       display: inline-flex;
@@ -752,6 +845,10 @@
       .screening-table th, .screening-table td { padding: 0.45rem 0.4rem; }
       .film-meta-inline { display: block; }
       .film-ciclo-inline { display: block; }
+      .secciones { padding: 0 1rem; }
+      .festival-head { padding: 0.9rem 1rem 0.8rem; }
+      .fest-item { padding: 0.8rem 0.2rem; align-items: flex-start; }
+      .fest-bajada { display: block; margin-left: 0; margin-top: 0.15rem; }
       .cine-tag { font-size: 0.62rem; padding: 0.12rem 0.35rem; }
       .lb-link { padding: 0.2rem 0.35rem; }
       .lb-link .lb-dots span { width: 5px; height: 5px; }
@@ -804,13 +901,22 @@
   </div>
 </header>
 
+<nav class="secciones" id="secciones" aria-label="Secciones">
+  <a class="seccion-link activa" data-seccion="cartelera" href="#buenos-aires">Cartelera</a>
+  <a class="seccion-link" data-seccion="festivales" href="#festivales">Festivales<span class="seccion-n" id="festivales-n" hidden></span></a>
+</nav>
 
-<div class="day-tabs-wrap">
+<!-- Nombre, lugar y fechas del festival abierto (ver abrirFestival). -->
+<div class="festival-head" id="festival-head" hidden></div>
+
+<div class="day-tabs-wrap" id="day-tabs-wrap">
   <div class="day-tabs" id="day-tabs"></div>
 </div>
 
 <div class="filters" id="filters">
-  <div class="filter-btns">
+  <!-- Sedes del festival abierto; las arma armarChipsSede. -->
+  <div class="filter-btns" id="sede-btns" hidden></div>
+  <div class="filter-btns" id="cine-btns">
   <span class="filter-label">Cine</span>
   <button class="filter-btn active" data-cine="all">Todos</button>
   <button class="filter-btn" data-cine="MALBA">MALBA</button>
@@ -972,7 +1078,7 @@ let ciudad = 'ba';
 
 // La ciudad de cada sala sale de su chip (data-ciudad; sin él, Buenos Aires).
 function ciudadDeCine(cine) {
-  const btn = document.querySelector(`.filter-btn[data-cine="${CSS.escape(cine)}"]`);
+  const btn = document.querySelector(`#cine-btns .filter-btn[data-cine="${CSS.escape(cine)}"]`);
   return (btn && btn.dataset.ciudad) || 'ba';
 }
 
@@ -982,7 +1088,7 @@ function ciudadPorSlug(slug) {
 
 // La ciudad que pide el link, si pide alguna: su segmento o el de una sala.
 function ciudadDelHash() {
-  for (let seg of location.hash.replace(/^#/, '').split('/')) {
+  for (let seg of hashActual().replace(/^#/, '').split('/')) {
     try { seg = decodeURIComponent(seg); } catch (_) {}
     const slug = seg.toLowerCase();
     if (!slug || slug.startsWith('q=')) continue;
@@ -1047,7 +1153,7 @@ function applyCiudad() {
   document.getElementById('city-name').textContent = CIUDADES[ciudad].nombre;
   document.querySelectorAll('#city-switch button').forEach(b =>
     b.setAttribute('aria-pressed', b.dataset.ciudad === ciudad ? 'true' : 'false'));
-  document.querySelectorAll('.filter-btn[data-cine]').forEach(b => {
+  document.querySelectorAll('#cine-btns .filter-btn[data-cine]').forEach(b => {
     if (b.dataset.cine !== 'all') b.classList.toggle('otra-ciudad', (b.dataset.ciudad || 'ba') !== ciudad);
   });
   document.getElementById('toggle-commercial').classList.toggle('otra-ciudad', ciudad !== 'ba');
@@ -1104,13 +1210,22 @@ function daySlug(fecha) {
   return `${slugify(DAYS_ES[dt.getDay()])}-${d}-${slugify(MONTHS_ES[m - 1])}`;
 }
 
+// El chip de la sala: el de la cartelera, o si no tiene, el de las sedes del
+// festival abierto (Fuera de Campo usa salas que la cartelera no conoce).
+function chipDeSala(cine) {
+  const sel = `.filter-btn[data-cine="${CSS.escape(cine)}"]`;
+  return document.querySelector('#cine-btns ' + sel) || document.querySelector('#sede-btns ' + sel);
+}
+
 function cineSlug(cine) {
-  const btn = document.querySelector(`.filter-btn[data-cine="${CSS.escape(cine)}"]`);
+  const btn = chipDeSala(cine);
   return slugify(btn ? btn.textContent : cine);
 }
 
-function findCineBySlug(slug) {
-  for (const b of document.querySelectorAll('.filter-btn[data-cine]')) {
+// `donde`: en qué fila de chips buscar — las salas de la cartelera, o las
+// sedes del festival abierto.
+function findCineBySlug(slug, donde) {
+  for (const b of document.querySelectorAll(`${donde || '#cine-btns'} .filter-btn[data-cine]`)) {
     const c = b.dataset.cine;
     if (!c || c === 'all') continue;
     if (slugify(b.textContent) === slug || slugify(c) === slug) return c;
@@ -1123,23 +1238,54 @@ let lastHashWritten = null;
 
 function updateHash() {
   // La ciudad va siempre: un día o una búsqueda no dicen de qué ciudad son, y
-  // el link lo puede abrir alguien que está en la otra.
-  const parts = [CIUDADES[ciudad].slug];
+  // el link lo puede abrir alguien que está en la otra. En Festivales, en su
+  // lugar va la sección y el festival: #festivales/asterisco/jue-22-oct/…
+  const parts = seccion === 'festivales'
+    ? ['festivales'].concat(festivalActivo ? [festivalActivo.slug] : [])
+    : [CIUDADES[ciudad].slug];
+  const conTabla = seccion === 'cartelera' || festivalActivo;
   // Con búsqueda activa la tabla junta funciones de TODOS los días, así que
   // el día no aplica y no va en la URL (sería engañoso al compartirla).
-  if (activeDay && !searchQuery) parts.push(daySlug(activeDay));
-  if (activeCines.size) parts.push(cineSlug([...activeCines][0]));
-  if (searchQuery) parts.push('q=' + encodeURIComponent(searchQuery));
+  if (conTabla && activeDay && !searchQuery) parts.push(daySlug(activeDay));
+  if (conTabla && activeCines.size) parts.push(cineSlug([...activeCines][0]));
+  if (conTabla && searchQuery) parts.push('q=' + encodeURIComponent(searchQuery));
   const hash = '#' + parts.join('/');
-  if (hash === location.hash) return;
+  if (hash === hashActual()) return;
   lastHashWritten = hash;
   // replaceState: no ensucia el historial con cada click de tab/chip
-  history.replaceState(null, '', hash || location.pathname + location.search);
+  try { history.replaceState(null, '', hash || location.pathname + location.search); } catch (_) {}
+  hashPropio = location.hash === hash ? null : hash;
+}
+
+// El hash vigente. Casi siempre es location.hash; donde el navegador no deja
+// cambiar la URL (la página embebida en un visor, por ejemplo), es el último
+// que escribimos o al que se navegó, para que la página igual funcione.
+let hashPropio = null;
+function hashActual() {
+  return hashPropio !== null ? hashPropio : location.hash;
+}
+
+// Los links internos (#festivales, #buenos-aires, el ciclo de un festival…)
+// navegan desde acá en vez de dejar que el navegador cambie el hash: así
+// andan también donde los links de ancla no navegan solos. Con ⌘/Ctrl o el
+// botón del medio se abren en otra pestaña, como cualquier link.
+document.addEventListener('click', e => {
+  const a = e.target.closest('a[href^="#"]:not([href="#"])');
+  if (!a || e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+  e.preventDefault();
+  irA(a.getAttribute('href'));
+});
+
+function irA(hash) {
+  if (hash === hashActual()) return;
+  try { history.pushState(null, '', hash); } catch (_) {}
+  hashPropio = location.hash === hash ? null : hash;
+  rutear();
 }
 
 // Lee el hash y lo vuelca al estado (sin renderizar — el caller decide).
 function applyHashState() {
-  const raw = location.hash.replace(/^#/, '');
+  const raw = hashActual().replace(/^#/, '');
   if (!raw) return;
   const dates = [...new Set(allScreenings.map(s => s.fecha))];
   for (let seg of raw.split('/')) {
@@ -1153,11 +1299,13 @@ function applyHashState() {
     }
     const slug = seg.toLowerCase();
     if (ciudadPorSlug(slug)) continue;      // ya la resolvió ciudadDelHash
+    const enFestival = seccion === 'festivales';
+    if (enFestival && (slug === 'festivales' || slug === festivalActivo.slug)) continue;
     const fecha = dates.find(f => daySlug(f) === slug);
     if (fecha) { activeDay = fecha; continue; }
     // Los links viejos podían traer varias salas; ahora se elige de a una.
-    const cine = activeCines.size ? null : findCineBySlug(slug);
-    if (cine && ciudadDeCine(cine) === ciudad) {
+    const cine = activeCines.size ? null : findCineBySlug(slug, enFestival ? '#sede-btns' : null);
+    if (cine && (enFestival || ciudadDeCine(cine) === ciudad)) {
       activeCines.add(cine);
       // Un link a un cine comercial tiene que mostrarlo aunque el toggle
       // esté apagado en este dispositivo.
@@ -1169,16 +1317,25 @@ function applyHashState() {
 
 // Soporta editar el hash a mano / navegar con back-forward entre hashes.
 window.addEventListener('hashchange', () => {
-  if (location.hash === lastHashWritten || !allScreenings.length) return;
+  if (location.hash === lastHashWritten) return;
+  hashPropio = null;
+  rutear();
+});
+
+// Muestra lo que pide el hash: Festivales, otra ciudad, o la misma cartelera
+// con otro día/sala/búsqueda.
+function rutear() {
+  if (!listo) return;
   activeDay = null; activeCines.clear(); searchQuery = '';
   const inp = document.getElementById('search-input');
   if (inp) inp.value = '';
-  const c = ciudadDelHash();
-  if (c && c !== ciudad) { mostrarCiudad(c, true); return; }
+  if (hashEsDeFestivales()) { resetSort(); mostrarFestivales(); return; }
+  const c = ciudadDelHash() || ciudad;
+  if (c !== ciudad || seccion !== 'cartelera') { resetSort(); mostrarCiudad(c, true); return; }
   applyHashState();
   applyCommercialToggle();
   renderTable();
-});
+}
 
 // ── Analítica ──────────────────────────────────────────────────────────
 // Lo que hay que poder demostrar no es tráfico: es cuánta gente sale de acá
@@ -1441,8 +1598,9 @@ let showCommercial = (() => {
 
 function visibleScreenings() {
   // Aplica el filtro global del toggle comerciales. Usado por todo el
-  // resto de la UI (tabs por día, conteos, render, etc.).
-  if (showCommercial) return allScreenings;
+  // resto de la UI (tabs por día, conteos, render, etc.). Un festival se
+  // muestra entero, pase donde pase.
+  if (showCommercial || seccion === 'festivales') return allScreenings;
   return allScreenings.filter(s => !isCommercial(s.cine));
 }
 
@@ -1473,13 +1631,24 @@ function applyCommercialToggle() {
 
 async function loadData() {
   try {
+    const registro = cargarRegistroFestivales();
+    // Un link a Festivales no necesita saber la ciudad: no se le pregunta a
+    // nadie que llegó a ver un festival. Si después toca "Cartelera", va la
+    // que eligió antes o, si no, la del festival que abrió (abrirFestival).
+    if (hashEsDeFestivales()) {
+      const guardada = ciudadGuardada();
+      if (guardada) ciudad = guardada;
+      await Promise.all([fetchStarCounts(), registro]);
+      await mostrarFestivales();
+      return;
+    }
     // Si el link o una visita anterior ya dicen la ciudad, su cartelera empieza
     // a bajar en paralelo con los contadores.
     let c = ciudadDelHash() || ciudadGuardada();
     if (c) cargarCartelera(c).catch(() => {});
     // 1. Traer primero los contadores globales del backend de Google Sheets
     // (con la detección de la ciudad, si hace falta, en paralelo).
-    const [, detectada] = await Promise.all([fetchStarCounts(), c ? null : detectarCiudad()]);
+    const [, detectada] = await Promise.all([fetchStarCounts(), c ? null : detectarCiudad(), registro]);
     c = c || detectada;
     if (!c) {
       c = await preguntarCiudad();
@@ -1497,7 +1666,10 @@ async function loadData() {
 // búsqueda) sale del link; si no, arranca de cero.
 async function mostrarCiudad(c, desdeHash) {
   ciudad = c;
+  seccion = 'cartelera';
+  festivalActivo = null;
   applyCiudad();
+  applySeccion();
   const loading = document.getElementById('loading');
   let data;
   try {
@@ -1512,7 +1684,8 @@ async function mostrarCiudad(c, desdeHash) {
     }
     return;
   }
-  if (c !== ciudad) return;           // mientras bajaba, eligieron la otra
+  // Mientras bajaba, eligieron la otra ciudad o se fueron a Festivales.
+  if (c !== ciudad || seccion !== 'cartelera') return;
   allScreenings = data.screenings || [];
 
   const badge = document.getElementById('updated-badge');
@@ -1538,6 +1711,14 @@ async function mostrarCiudad(c, desdeHash) {
     badge.textContent = 'Actualizado ' + updated;
   }
 
+  mostrarTabla(desdeHash);
+  actualizarContadorFestivales();
+}
+
+// Días, chips y tabla de lo que haya en allScreenings: la cartelera de una
+// ciudad o las funciones de un festival.
+function mostrarTabla(desdeHash) {
+  const loading = document.getElementById('loading');
   if (desdeHash) applyHashState();  // Deep link: #ciudad/dia/cine/q=... → estado inicial
   applyCommercialToggle();          // Sincroniza chips + label del toggle
   buildDayTabs();                   // Arma las pestañas de los días
@@ -1560,6 +1741,286 @@ async function mostrarCiudad(c, desdeHash) {
   // 3. Renderizar la tabla (ahora sí, con starCounts ya cargado en memoria)
   renderTable();
   updateHash();
+  listo = true;
+}
+
+// ── Festivales ─────────────────────────────────────────────────────────
+// Por ahora sólo de Argentina: Madrid es una prueba chica y queda como estaba.
+//
+// Un festival de Buenos Aires no tiene grilla propia: es una búsqueda en la
+// cartelera por el nombre literal de su ciclo (`ciclo` en
+// data/festivales.json), y tocarlo lleva a #buenos-aires/q=<ciclo>: todas sus
+// funciones, de todos los días y todas las salas, con el buscador de siempre.
+// Así no hay dos grillas que mantener, y lo que publique cualquier sala entra
+// solo. Para que el nombre literal alcance, el scraper le pone ese mismo ciclo
+// a las funciones del festival de todas las salas, aunque cada una lo escriba
+// distinto (`alias`; ver unificar_ciclos_festivales en scraper.py). Un ciclo
+// que dice "Festival" y no está en el registro aparece igual, con su nombre.
+//
+// La excepción son los de afuera (Fuera de Campo, en Mar del Plata): llevan
+// `archivo` con la grilla cargada a mano y tienen su propia página con la
+// misma tabla. No entran a cartelera.json, así no se mezclan con Buenos Aires
+// ni con las stories.
+
+let seccion = 'cartelera';   // 'cartelera' | 'festivales'
+let festivalActivo = null;   // el festival de afuera abierto; null si no hay
+let registroFestivales = [];
+let listo = false;           // ya se mostró algo: de acá en adelante manda el hash
+
+function cargarRegistroFestivales() {
+  return fetch('data/festivales.json?t=' + Date.now())
+    .then(r => (r.ok ? r.json() : {}))
+    .then(d => { registroFestivales = (d.festivales || []).filter(f => f.slug && f.nombre); })
+    .catch(() => {});
+}
+
+function hashEsDeFestivales() {
+  return hashActual().replace(/^#/, '').split('/')[0].toLowerCase() === 'festivales';
+}
+
+// La misma cuenta que hace el buscador, así el número del listado es el de
+// funciones que aparecen al tocar el festival.
+function coincideBusqueda(s, q) {
+  return [s.title_es, s.title_en, s.original_title, s.director, s.ciclo]
+    .join(' ').toLowerCase().includes(q);
+}
+
+function busquedaDe(f) {
+  return (f.ciclo || '').trim().toLowerCase();
+}
+
+// Adónde lleva: la búsqueda en la cartelera, o la página del de afuera.
+function hrefFestival(f) {
+  return f.archivo ? '#festivales/' + encodeURIComponent(f.slug)
+    : '#' + CIUDADES.ba.slug + '/q=' + encodeURIComponent(busquedaDe(f));
+}
+
+// Los que arma solo un ciclo que dice "Festival": uno por nombre de ciclo.
+const festivalesSueltos = {};
+function festivalSuelto(ciclo) {
+  const slug = slugify(ciclo);
+  return festivalesSueltos[slug] || (festivalesSueltos[slug] = { slug, nombre: ciclo, ciclo });
+}
+
+// El festival de una función de la cartelera de Buenos Aires, si es de alguno.
+function festivalDeFuncion(s) {
+  if (!s.ciclo) return null;
+  const ciclo = s.ciclo.toLowerCase();
+  return registroFestivales.find(f => !f.archivo && busquedaDe(f) && ciclo.includes(busquedaDe(f)))
+    || (/\bfestival\b/i.test(s.ciclo) ? festivalSuelto(s.ciclo) : null);
+}
+
+// La lista de festivales con sus funciones. `cartelera`: las funciones de
+// Buenos Aires; `archivos`: {slug: funciones} de los de afuera.
+function armarFestivales(cartelera, archivos) {
+  const lista = registroFestivales.map(f => Object.assign({}, f));
+  for (const s of cartelera) {
+    const f = festivalDeFuncion(s);
+    if (f && !lista.some(x => x.slug === f.slug)) lista.push(Object.assign({}, f));
+  }
+  const pool = cartelera.filter(s => showCommercial || !isCommercial(s.cine));
+  for (const f of lista) {
+    f.funciones = f.archivo ? (archivos[f.slug] || [])
+      : busquedaDe(f) ? pool.filter(s => coincideBusqueda(s, busquedaDe(f))) : [];
+  }
+  return lista;
+}
+
+// Para el listado: la cartelera de Buenos Aires y el archivo de cada festival
+// de afuera. Se arma una vez por visita; la cartelera queda en caché.
+let festivalesTodos = null;
+function cargarFestivales() {
+  if (!festivalesTodos) {
+    festivalesTodos = (async () => {
+      const afuera = registroFestivales.filter(f => f.archivo);
+      const [ba, archs] = await Promise.all([
+        cargarCartelera('ba').catch(() => ({})),
+        Promise.all(afuera.map(f => fetch(f.archivo + '?t=' + Date.now())
+          .then(r => (r.ok ? r.json() : {})).catch(() => ({})))),
+      ]);
+      const archivos = {};
+      afuera.forEach((f, i) => { archivos[f.slug] = archs[i].screenings || []; });
+      return armarFestivales(ba.screenings || [], archivos);
+    })();
+  }
+  return festivalesTodos;
+}
+
+function hoyISO() {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, '0')}-${String(n.getDate()).padStart(2, '0')}`;
+}
+
+// Desde y hasta: los del registro o, si no los tiene, los de sus funciones.
+// Las funciones que ya pasaron no están en la cartelera, así que un festival
+// empezado arranca "hoy": para decir si está en curso alcanza.
+function rangoFestival(f) {
+  const fechas = f.funciones.map(s => s.fecha).filter(Boolean).sort();
+  return { desde: f.desde || fechas[0] || '', hasta: f.hasta || fechas[fechas.length - 1] || '' };
+}
+
+function estadoFestival(f) {
+  const { desde, hasta } = rangoFestival(f);
+  const hoy = hoyISO();
+  if (hasta && hasta < hoy) return 'terminado';
+  if (desde && desde <= hoy) return 'en-curso';
+  return 'proximo';
+}
+
+// "8 al 15 oct", "22 oct al 1 nov", o el `cuando` del registro si no hay fechas.
+function fechasFestival(f) {
+  const { desde, hasta } = rangoFestival(f);
+  if (!desde) return f.cuando || '';
+  const [, m1, d1] = desde.split('-').map(Number);
+  const [, m2, d2] = (hasta || desde).split('-').map(Number);
+  if (!hasta || hasta === desde) return `${d1} ${MONTHS_ES[m1 - 1]}`;
+  return m1 === m2 ? `${d1} al ${d2} ${MONTHS_ES[m2 - 1]}`
+                   : `${d1} ${MONTHS_ES[m1 - 1]} al ${d2} ${MONTHS_ES[m2 - 1]}`;
+}
+
+// Cómo se llama la sala en los chips de la cartelera ("Sala Mario Soffici" →
+// "Sala DAC"); las que la cartelera no conoce, con su nombre.
+function etiquetaSala(cine) {
+  const b = document.querySelector(`#cine-btns .filter-btn[data-cine="${CSS.escape(cine)}"]`);
+  return b ? b.textContent.trim() : cine;
+}
+
+function sedesFestival(f) {
+  return [...new Set(f.funciones.map(s => s.cine).filter(Boolean))]
+    .sort((a, b) => etiquetaSala(a).localeCompare(etiquetaSala(b), 'es'));
+}
+
+// La columna Ciclo: en un festival de afuera es la sección, que se carga
+// directamente como ciclo; en la Cartelera, si el ciclo es de un festival,
+// lleva a sus funciones.
+function cicloDeFila(s) {
+  if (festivalActivo) return { texto: s.ciclo || '', href: '' };
+  const f = ciudad === 'ba' && s.ciclo ? festivalDeFuncion(s) : null;
+  return { texto: s.ciclo || '', href: f ? hrefFestival(f) : '' };
+}
+
+function direccionSala(cine) {
+  return CINE_ADDRESSES[cine] || (festivalActivo && festivalActivo.sedes && festivalActivo.sedes[cine]) || '';
+}
+
+function mostrarContadorFestivales(n) {
+  const el = document.getElementById('festivales-n');
+  el.textContent = n;
+  el.hidden = !n;
+}
+
+// Cuántos hay en curso, para la pestaña: los de la cartelera de Buenos Aires
+// por sus funciones, y los de afuera por las fechas del registro.
+function actualizarContadorFestivales() {
+  if (ciudad !== 'ba') return;
+  mostrarContadorFestivales(armarFestivales(allScreenings, {})
+    .filter(f => estadoFestival(f) === 'en-curso').length);
+}
+
+// El header no cambia entre secciones (ni la perilla de ciudad ni el
+// "Actualizado"), así la fila de pestañas queda siempre a la misma altura.
+function applySeccion() {
+  const enFest = seccion === 'festivales';
+  const conTabla = !enFest || (festivalActivo && festivalActivo.funciones.length > 0);
+  document.getElementById('secciones').hidden = !enFest && ciudad !== 'ba';
+  document.querySelectorAll('#secciones .seccion-link').forEach(a =>
+    a.classList.toggle('activa', a.dataset.seccion === seccion));
+  document.querySelector('#secciones [data-seccion="cartelera"]')
+    .setAttribute('href', '#' + CIUDADES[ciudad].slug);
+  document.getElementById('festival-head').hidden = !(enFest && festivalActivo);
+  document.getElementById('day-tabs-wrap').hidden = !conTabla;
+  document.getElementById('filters').hidden = !conTabla;
+  document.getElementById('cine-btns').hidden = enFest;
+  document.getElementById('sede-btns').hidden = !enFest;
+  document.title = festivalActivo ? `${festivalActivo.nombre} · Si te digo`
+    : enFest ? 'Festivales · Si te digo' : 'Si te digo';
+}
+
+// #festivales → el listado; #festivales/<slug>/… → la página de un festival
+// de afuera. Los de Buenos Aires no tienen página: son una búsqueda.
+async function mostrarFestivales() {
+  seccion = 'festivales';
+  festivalActivo = null;
+  let lista = [];
+  try { lista = await cargarFestivales(); } catch (e) { console.error(e); }
+  if (seccion !== 'festivales') return;     // mientras bajaba, volvieron a la Cartelera
+  mostrarContadorFestivales(lista.filter(f => estadoFestival(f) === 'en-curso').length);
+  let slug = hashActual().replace(/^#/, '').split('/')[1] || '';
+  try { slug = decodeURIComponent(slug).toLowerCase(); } catch (_) {}
+  const f = slug && lista.find(x => x.slug === slug && x.archivo);
+  if (f) { abrirFestival(f); return; }
+  applySeccion();
+  renderListadoFestivales(lista);
+  document.getElementById('loading').classList.add('hidden');
+  updateHash();
+  listo = true;
+}
+
+function abrirFestival(f) {
+  festivalActivo = f;
+  allScreenings = f.funciones;
+  armarChipsSede(f);
+  renderCabeceraFestival(f);
+  applySeccion();
+  mostrarTabla(true);
+}
+
+// Una sola sede no se filtra: va el nombre y listo.
+function armarChipsSede(f) {
+  const sedes = sedesFestival(f);
+  const cont = document.getElementById('sede-btns');
+  const label = '<span class="filter-label">Sede</span>';
+  if (sedes.length < 2) {
+    cont.innerHTML = label + sedes.map(c => `<span class="sede-unica">${escapeHtml(etiquetaSala(c))}</span>`).join('');
+    return;
+  }
+  cont.innerHTML = label + '<button class="filter-btn" data-cine="all">Todas</button>' +
+    sedes.map(c => `<button class="filter-btn" data-cine="${escapeHtml(c)}">${escapeHtml(etiquetaSala(c))}</button>`).join('');
+}
+
+function renderCabeceraFestival(f) {
+  const meta = [f.lugar, fechasFestival(f)].filter(Boolean).map(escapeHtml);
+  if (f.web) meta.push(`<a href="${escapeHtml(f.web)}" target="_blank" rel="noopener">Web del festival ↗</a>`);
+  document.getElementById('festival-head').innerHTML = `
+    <a class="fest-volver" href="#festivales">← Festivales</a>
+    <h2>${escapeHtml(f.nombre)}</h2>
+    ${f.bajada ? `<span class="fest-bajada">${escapeHtml(f.bajada)}</span>` : ''}
+    <div class="fest-meta">${meta.join(' · ')}</div>`;
+}
+
+function renderListadoFestivales(lista) {
+  // Uno del registro sin funciones ni fechas (no salió la grilla y no se
+  // sabe cuándo es) no tiene nada que mostrar.
+  const visibles = lista.filter(f => f.funciones.length || f.desde || f.cuando);
+  const desde = f => rangoFestival(f).desde || '9999';
+  let html = '';
+  for (const [estado, titulo] of [['en-curso', 'En curso'], ['proximo', 'Próximos']]) {
+    const fs = visibles.filter(f => estadoFestival(f) === estado)
+      .sort((a, b) => (desde(a) < desde(b) ? -1 : desde(a) > desde(b) ? 1 : 0));
+    if (fs.length) html += `<h3 class="fest-grupo">${titulo}</h3>` + fs.map(itemFestival).join('');
+  }
+  const main = document.getElementById('main');
+  main.innerHTML = html
+    ? `<div class="fest-list">${html}</div>`
+    : '<div class="empty">No hay festivales en curso ni anunciados.</div>';
+  main.querySelectorAll('.fest-item').forEach(a => a.addEventListener('click', () =>
+    track('ver_festival', { ciclo: a.dataset.nombre, canal: CANAL_ORIGEN })));
+}
+
+function itemFestival(f) {
+  const n = f.funciones.length;
+  const sedes = sedesFestival(f).map(etiquetaSala);
+  const meta = [`<span class="fest-lugar">${escapeHtml(f.lugar || CIUDADES.ba.nombre)}</span>`];
+  if (sedes.length) meta.push(escapeHtml(sedes.length > 3
+    ? `${sedes.slice(0, 3).join(', ')} y ${sedes.length - 3} más` : sedes.join(', ')));
+  if (fechasFestival(f)) meta.push(escapeHtml(fechasFestival(f)));
+  return `<a class="fest-item" href="${escapeHtml(hrefFestival(f))}" data-nombre="${escapeHtml(f.nombre)}">
+    <div>
+      <div class="fest-nombre">${escapeHtml(f.nombre)}${f.bajada ? `<span class="fest-bajada">${escapeHtml(f.bajada)}</span>` : ''}</div>
+      <div class="fest-meta">${meta.join(' · ')}</div>
+    </div>
+    <span class="fest-n">${n ? `${n} func. →` : 'Grilla a confirmar'}</span>
+  </a>`;
 }
 
 // Perilla de ciudad: la elección queda guardada para la próxima visita.
@@ -1568,7 +2029,7 @@ document.getElementById('city-switch').addEventListener('click', e => {
   if (!btn) return;
   const c = btn.dataset.ciudad;
   guardarCiudad(c);
-  if (c === ciudad) return;
+  if (c === ciudad && seccion === 'cartelera') return;
   track('elegir_ciudad', { ciudad: c, origen: 'perilla', canal: CANAL_ORIGEN });
   // Día, salas y búsqueda eran de la otra cartelera.
   activeDay = null; activeCines.clear(); searchQuery = '';
@@ -1614,13 +2075,14 @@ function buildDayTabs() {
   highlightCineDays();
 }
 
-// Marca en la grilla de días los que tienen funciones para la sala elegida.
-// Sin ninguna elegida no resalta nada.
+// Marca en la grilla de días los que tienen funciones para la sala elegida
+// y/o la búsqueda, y el contador de cada día pasa a contar sólo esas. Sin sala
+// ni búsqueda no resalta nada.
 function highlightCineDays() {
   const container = document.getElementById('day-tabs');
   const tabs = container.querySelectorAll('.day-tab');
-  const pool = visibleScreenings();
-  if (!activeCines.size) {
+  let pool = visibleScreenings();
+  if (!activeCines.size && !searchQuery) {
     container.classList.remove('cine-filter');
     tabs.forEach(t => {
       t.classList.remove('has-cine');
@@ -1632,11 +2094,13 @@ function highlightCineDays() {
     return;
   }
   container.classList.add('cine-filter');
+  pool = pool.filter(matchesCine);
+  if (searchQuery) pool = pool.filter(s => coincideBusqueda(s, searchQuery));
   tabs.forEach(t => {
     const fecha = t.dataset.fecha;
-    const n = pool.filter(s => s.fecha === fecha && matchesCine(s)).length;
+    const n = pool.filter(s => s.fecha === fecha).length;
     t.classList.toggle('has-cine', n > 0);
-    // El contador muestra las funciones de la sala seleccionada
+    // El contador muestra las funciones de la sala seleccionada / la búsqueda
     const c = t.querySelector('.day-count');
     if (c) c.textContent = `${n} func.`;
   });
@@ -1698,9 +2162,7 @@ document.getElementById('search-input').addEventListener('input', e => {
   clearTimeout(searchTrackTimer);
   searchTrackTimer = setTimeout(() => {
     if (searchQuery.length >= 3) {
-      const resultados = visibleScreenings().filter(s =>
-        [s.title_es, s.title_en, s.original_title, s.director, s.ciclo]
-          .join(' ').toLowerCase().includes(searchQuery)).length;
+      const resultados = visibleScreenings().filter(s => coincideBusqueda(s, searchQuery)).length;
       track('buscar', { termino: searchQuery, resultados, canal: CANAL_ORIGEN });
       pingBusqueda(searchQuery, resultados);
     }
@@ -1713,7 +2175,7 @@ document.getElementById('search-input').addEventListener('input', e => {
 // Texto humano de la vista actual — es lo que hace que el mensaje de
 // WhatsApp/Telegram salga legible en vez de una URL pelada.
 function shareText() {
-  const parts = ['Cartelera de cines ' + CIUDADES[ciudad].corto];
+  const parts = [festivalActivo ? festivalActivo.nombre : 'Cartelera de cines ' + CIUDADES[ciudad].corto];
   if (activeCines.size) parts.push([...activeCines].join(' + '));
   if (searchQuery) parts.push(`"${searchQuery}"`);
   else if (activeDay) parts.push(fmtShortDate(activeDay));
@@ -1801,12 +2263,40 @@ function isTransliterated(s) {
   return norm(orig) !== norm(s.title_en || '');
 }
 
-// El original va de título principal sólo si se lee acá: quedan afuera los
-// alfabetos no latinos y las transliteraciones.
-function displayTitle(s) {
+// Países donde una película se habla, casi siempre, en una lengua romance o
+// en inglés. No hay dato del idioma (Letterboxd no lo da): sale del primer
+// país, que es el de la producción principal. Bélgica, Suiza y Canadá quedan
+// adentro aunque también se hable otra cosa, para no cambiarles el título a
+// las que hoy se ven bien.
+const PAISES_ROMANCE_O_INGLES = new Set([
+  'argentina', 'uruguay', 'chile', 'paraguay', 'bolivia', 'peru', 'ecuador',
+  'colombia', 'venezuela', 'mexico', 'cuba', 'republica dominicana',
+  'puerto rico', 'guatemala', 'honduras', 'el salvador', 'nicaragua',
+  'costa rica', 'panama', 'espana', 'portugal', 'brasil', 'francia', 'italia',
+  'rumania', 'belgica', 'suiza', 'luxemburgo', 'monaco', 'andorra', 'moldavia',
+  'haiti', 'senegal', 'costa de marfil', 'mali', 'burkina faso', 'camerun',
+  'angola', 'mozambique', 'cabo verde', 'estados unidos', 'reino unido',
+  'irlanda', 'australia', 'nueva zelanda', 'canada', 'sudafrica', 'jamaica',
+  'escocia', 'inglaterra', 'gales',
+]);
+
+// ¿El original se lee acá? Sí si está en una lengua romance o en inglés. Un
+// título en finlandés ("Mielensäpahoittajan rakkaustarina") no le dice nada
+// al público de acá, igual que uno en japonés: para esos va el castellano.
+function originalLegible(s) {
   const orig = s.original_title || '';
-  if (orig && !isNonLatinTitle(orig) && !isTransliterated(s)) return orig;
-  return s.title_es || s.title_en || orig;
+  if (!orig || isNonLatinTitle(orig) || isTransliterated(s)) return false;
+  const norm = t => String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+  if (norm(orig) === norm(s.title_en || '')) return true;   // ya es el inglés
+  const pais = norm((s.country || '').split(',')[0]);
+  return !pais || PAISES_ROMANCE_O_INGLES.has(pais);
+}
+
+// El original de título principal si está en una lengua romance o en inglés;
+// si no, el título en castellano del cine.
+function displayTitle(s) {
+  if (originalLegible(s)) return s.original_title;
+  return s.title_es || normalizeAllCaps(s.title_en || '') || s.original_title || '';
 }
 
 // "TOM Y JERRY" → "Tom y jerry". Algunos cines devuelven el título en
@@ -1817,6 +2307,7 @@ function normalizeAllCaps(t) {
   return t;
 }
 
+// Entre «comillas», el título en inglés cuando no es el mismo que el principal.
 function altTitle(s) {
   const main = displayTitle(s);
   const en = normalizeAllCaps(s.title_en || '');
@@ -1825,7 +2316,25 @@ function altTitle(s) {
   return en;
 }
 
+// Las salas sin funciones —en toda la cartelera, o en la búsqueda si hay
+// una— quedan apagadas y no se pueden tocar: de un vistazo se ve dónde hay
+// algo. No se mira el día, porque tocar una sala salta al primer día en que
+// tiene funciones. La elegida queda tocable, para poder sacarla.
+function marcarSalasSinFunciones() {
+  let pool = visibleScreenings();
+  if (searchQuery) pool = pool.filter(s => coincideBusqueda(s, searchQuery));
+  const cines = new Set(pool.map(s => s.cine));
+  document.querySelectorAll('#filters .filter-btn[data-cine]').forEach(b => {
+    const c = b.dataset.cine;
+    if (c === 'all') return;
+    const hay = isCommercial(c) ? [...cines].some(x => x && x.startsWith(c)) : cines.has(c);
+    b.disabled = !hay && !activeCines.has(c);
+  });
+}
+
 function renderTable() {
+  marcarSalasSinFunciones();
+  highlightCineDays();
   const main = document.getElementById('main');
   const searching = !!searchQuery;
   // Con búsqueda activa mostramos funciones de TODOS los días (p.ej. todas las
@@ -1833,12 +2342,14 @@ function renderTable() {
   let rows = visibleScreenings();
   if (!searching) rows = rows.filter(s => s.fecha === activeDay);
   if (activeCines.size) rows = rows.filter(matchesCine);
-  if (searching) rows = rows.filter(s => [s.title_es, s.title_en, s.original_title, s.director, s.ciclo].join(' ').toLowerCase().includes(searchQuery));
+  if (searching) rows = rows.filter(s => coincideBusqueda(s, searchQuery));
 
   rows = searching ? sortByDateTime(rows) : sortRows(rows);
 
   if (rows.length === 0) {
-    main.innerHTML = '<div class="empty">No hay funciones.</div>';
+    main.innerHTML = festivalActivo && !allScreenings.length
+      ? '<div class="empty">Todavía no salió la grilla. Va a aparecer acá apenas la publiquen.</div>'
+      : '<div class="empty">No hay funciones.</div>';
     return;
   }
 
@@ -1854,17 +2365,20 @@ function renderTable() {
     const addBtn = `<button class="add-btn${isStarred ? ' starred' : ''}" data-row="${i}" title="Agendar en Google Calendar"><span class="add-icon">${icon}</span>${countHtml}</button>`;
 
     const alt = altTitle(s);
+    const ciclo = cicloDeFila(s);
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}${alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : ''}</div>
-      ${s.ciclo ? `<div class="film-ciclo-inline">${escapeHtml(s.ciclo)}</div>` : ''}
+      ${ciclo.texto ? `<div class="film-ciclo-inline">${ciclo.href ? `<a href="${escapeHtml(ciclo.href)}">${escapeHtml(ciclo.texto)}</a>` : escapeHtml(ciclo.texto)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml([s.director, s.year, s.duration ? s.duration + ' min' : '', s.country].filter(Boolean).join(' · '))}</div>
       ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
 
     return `<tr>
       <td class="col-hora">${searching ? `<span class="hora-date">${fmtShortDate(s.fecha)}</span>` : ''}<span class="hora-tag">${horaText}</span></td>
-      <td class="col-cine"><div class="cine-cell"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>${CINE_ADDRESSES[s.cine] ? `<div class="cine-addr">${escapeHtml(CINE_ADDRESSES[s.cine])}</div>` : ''}</div></td>
+      <td class="col-cine"><div class="cine-cell"><span class="cine-tag ${cineCssClass(s.cine)}">${escapeHtml(s.cine)}</span>${direccionSala(s.cine) ? `<div class="cine-addr">${escapeHtml(direccionSala(s.cine))}</div>` : ''}</div></td>
       <td class="col-add">${addBtn}</td>
       <td class="col-film">${filmCell}</td>
-      <td class="col-ciclo">${s.ciclo ? `<span class="ciclo-tag">${escapeHtml(s.ciclo)}</span>` : ''}</td>
+      <td class="col-ciclo">${!ciclo.texto ? '' : ciclo.href
+        ? `<a class="ciclo-tag" href="${escapeHtml(ciclo.href)}">${escapeHtml(ciclo.texto)}</a>`
+        : `<span class="ciclo-tag">${escapeHtml(ciclo.texto)}</span>`}</td>
       <td class="col-dir">${escapeHtml(s.director || '')}</td>
       <td class="col-genre">${escapeHtml(s.genre || '')}</td>
       <td class="col-pais">${escapeHtml(s.country || '')}</td>
@@ -1879,7 +2393,7 @@ function renderTable() {
     ['cine',     'col-cine', 'Cine'],
     ['__add',    'col-add',  '<svg class="cal-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>'],          // botón "agendar" — no sorteable
     ['title',    'col-film', 'Película'],
-    ['ciclo',    'col-ciclo','Ciclo'],
+    ['ciclo',    'col-ciclo', festivalActivo ? 'Sección' : 'Ciclo'],
     ['director', 'col-dir',  'Director'],
     ['genre',    'col-genre','Género'],
     ['country',  'col-pais', 'País'],
@@ -1894,7 +2408,9 @@ function renderTable() {
     return `<th class="${cls}${isActive ? ' sort-active' : ''}" data-sort="${key}">${label}${ind}</th>`;
   }).join('');
 
-  main.innerHTML = `<table class="screening-table"><thead><tr>${thead}</tr></thead><tbody>${tbody}</tbody></table>`;
+  // En un festival sin secciones la columna Sección quedaría vacía entera.
+  const sinSeccion = festivalActivo && !allScreenings.some(s => s.ciclo);
+  main.innerHTML = `<table class="screening-table${sinSeccion ? ' sin-seccion' : ''}"><thead><tr>${thead}</tr></thead><tbody>${tbody}</tbody></table>`;
 
   // Handler de sort por click en header
   main.querySelectorAll('th[data-sort]').forEach(th => {
