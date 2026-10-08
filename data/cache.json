@@ -13134,13 +13134,16 @@
     "original_title": "Subí que te llevo"
   },
   "queen budapest": {
-    "url": "https://letterboxd.com/film/queen-budapest/",
-    "title_en": "Queen: Budapest",
-    "director": "János Zsombolyai",
-    "country": "Hungary, UK",
-    "year": 1986,
-    "duration": 96,
-    "genre": "Música, Documental"
+    "url": "",
+    "title_en": "Queen Budapest",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Queen: Budapest (1986), y puede ser otra",
+    "fecha": "2026-10-08",
+    "con_duracion": false,
+    "desempate": ""
   },
   "convocatoria de cortos: programa i|2026": {
     "url": "",
@@ -16869,7 +16872,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 110 min: Rammstein - Live in Mexico City (2026, 148 min), Rammstein - Live aus Berlin (1999, 97 min)",
-    "fecha": "2026-10-04",
+    "fecha": "2026-10-08",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22069,7 +22072,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-04",
+    "fecha": "2026-10-08",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22081,7 +22084,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 97 min: TOMORROW X TOGETHER WORLD TOUR 'ACT:TOMORROW' (2025, 160 min)",
-    "fecha": "2026-10-04",
+    "fecha": "2026-10-08",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22344,14 +22347,16 @@
     "original_title": "News from Home"
   },
   "30 segundos de amor": {
-    "url": "https://letterboxd.com/film/30-segundos-de-amor/",
-    "title_en": "30 seconds of love",
-    "director": "Luis Mottura",
-    "country": "Argentina",
-    "year": 1947,
-    "duration": 77,
-    "genre": "Comedia",
-    "original_title": "30 segundos de amor"
+    "url": "",
+    "title_en": "30 segundos de amor",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es 30 seconds of love (1947), y puede ser otra",
+    "fecha": "2026-10-08",
+    "con_duracion": false,
+    "desempate": ""
   },
   "noche de brujas": {
     "url": "",
@@ -22933,7 +22938,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Benoît Daffis, Jean-Christian Tassy",
+    "director": "Jean-Christian Tassy, Benoît Daffis",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -23774,5 +23779,138 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "cima proyecta: la mujer rubia (la mujer sin cabeza) + libra": {
+    "url": "",
+    "title_en": "CIMA Proyecta: La mujer rubia (La mujer sin cabeza) + Libra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "taller de análisis fílmico y metacine sobre horror & guerra [renoir]": {
+    "url": "",
+    "title_en": "TALLER DE ANÁLISIS FÍLMICO Y METACINE SOBRE HORROR & GUERRA [RENOIR]",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cine a ciegas": {
+    "url": "https://letterboxd.com/film/enhypen-walk-the-line-summer-edition-in-cinemas/",
+    "title_en": "ENHYPEN [WALK THE LINE SUMMER EDITION] IN CINEMAS",
+    "director": "Park Jae-seok, Oh Yoon-dong",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 124,
+    "genre": "Documental, Música",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "en construcción": {
+    "url": "https://letterboxd.com/film/en-construccion/",
+    "title_en": "Work in Progress",
+    "director": "José Luis Guerín",
+    "country": "Spain, France",
+    "year": 2001,
+    "duration": 125,
+    "genre": "Documental",
+    "original_title": "En construcción"
+  },
+  "el rayo verde: poet, de darezhan omirbayev": {
+    "url": "",
+    "title_en": "El rayo verde: Poet, de Darezhan Omirbayev",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "juguetes. pequeña historia política": {
+    "url": "",
+    "title_en": "Juguetes. Pequeña historia política",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "nuestras cosas perdidas. conversaciones sobre el duelo": {
+    "url": "",
+    "title_en": "Nuestras cosas perdidas. Conversaciones sobre el duelo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "che is alive": {
+    "url": "https://letterboxd.com/film/we-live-in-time/",
+    "title_en": "We Live in Time",
+    "director": "John Crowley",
+    "country": "UK",
+    "year": 2024,
+    "duration": 108,
+    "genre": "Drama, Romance",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "los juegos del hambre (re)": {
+    "url": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+    "title_en": "The Hunger Games: Sunrise on the Reaping",
+    "director": "Francis Lawrence",
+    "country": "USA, Germany",
+    "year": 2026,
+    "duration": 150,
+    "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "sin_hints": "título"
+  },
+  "sinsajo parte uno:los juegos del hambre (re)": {
+    "url": "",
+    "title_en": "Sinsajo Parte Uno:los Juegos Del Hambre (re)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
+    "fecha": "2026-10-08",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "sinsajo parte dos:los juegos del hambre (re)": {
+    "url": "",
+    "title_en": "Sinsajo Parte Dos:los Juegos Del Hambre (re)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
+    "fecha": "2026-10-08",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "fragmentos|2026": {
+    "url": "",
+    "title_en": "FRAGMENTOS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "terror y fantástico en formato breve": {
+    "url": "",
+    "title_en": "Terror y fantástico en formato breve",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el bosco, el jardín de los sueños": {
+    "url": "https://letterboxd.com/film/el-bosco-el-jardin-de-los-suenos/",
+    "title_en": "Bosch: The Garden of Dreams",
+    "director": "José Luis López-Linares",
+    "country": "France, Spain",
+    "year": 2016,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "El Bosco: el jardín de los sueños"
   }
 }
