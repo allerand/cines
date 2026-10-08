@@ -2013,10 +2013,7 @@ function renderListadoFestivales(lista) {
 
 function itemFestival(f) {
   const n = f.funciones.length;
-  const sedes = sedesFestival(f).map(etiquetaSala);
   const meta = [`<span class="fest-lugar">${escapeHtml(f.lugar || CIUDADES.ba.nombre)}</span>`];
-  if (sedes.length) meta.push(escapeHtml(sedes.length > 3
-    ? `${sedes.slice(0, 3).join(', ')} y ${sedes.length - 3} más` : sedes.join(', ')));
   if (fechasFestival(f)) meta.push(escapeHtml(fechasFestival(f)));
   return `<a class="fest-item" href="${escapeHtml(hrefFestival(f))}" data-nombre="${escapeHtml(f.nombre)}">
     <div>
