@@ -1575,6 +1575,52 @@
       "cine": "Cine Cosmos", "title": "La niña santa", "fecha": "2026-10-07", "hora": "21:00",
       "director": "Lucrecia Martel", "country": "Argentina", "year": 2004, "duration": 106,
       "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/pelicula/la-nina-santa"
+    },
+    {
+      "_ciclo": "Festival de Cine Inusual 2026, Competencia oficial de largometrajes ficcionales, de la grilla que publica Primordiales (festivaldecineinusual.blogspot.com). El Gaumont y el Museo del Cine no lo publican en ningún lado que se scrapee. Falta La reina, el Buda y Buñuel (15/10 18:30, Espacio Cultural BCN) porque ya la trae el scraper de la BCN; Una chica en la estación fue el 8/10.",
+      "cine": "Cine Gaumont", "title": "La película que quisieras ver", "fecha": "2026-10-09", "hora": "22:00",
+      "director": "Esteban Pablo Pérez Ghersi", "country": "Argentina", "year": 2026, "duration": 100,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+    },
+    {
+      "cine": "Museo del Cine", "title": "Monólogo final", "fecha": "2026-10-10", "hora": "12:00",
+      "director": "Eduardo Poli", "country": "Argentina", "year": 2026, "duration": 83,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+    },
+    {
+      "cine": "Museo del Cine", "title": "El odio en el cuerpo", "fecha": "2026-10-10", "hora": "16:00",
+      "director": "Galo Ontivero", "country": "Argentina", "year": 2026, "duration": 63,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+    },
+    {
+      "cine": "Museo del Cine", "title": "Desencontrados", "fecha": "2026-10-11", "hora": "12:00",
+      "director": "Darío Javier Rovere", "country": "Argentina", "year": 2026, "duration": 67,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Bárbara", "fecha": "2026-10-11", "hora": "22:00",
+      "director": "Tomás Emanuel Brunella", "country": "Argentina", "year": 2026, "duration": 128,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+    },
+    {
+      "cine": "Museo del Cine", "title": "Retrato, elogio al duelo", "fecha": "2026-10-12", "hora": "18:00",
+      "director": "Rodrigo Martini", "country": "Argentina", "year": 2026, "duration": 78,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "El silencio de Marilyn", "fecha": "2026-10-13", "hora": "22:00",
+      "director": "Edgardo Gabo", "country": "Argentina", "year": 2026, "duration": 84,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Yo soy Hermes", "fecha": "2026-10-14", "hora": "22:00",
+      "director": "Gonzalo Albornoz", "country": "Argentina, Bolivia", "year": 2026, "duration": 73,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+    },
+    {
+      "cine": "Museo del Cine", "title": "Decepciones del alma - La agonía de la soledad", "fecha": "2026-10-18", "hora": "16:00",
+      "director": "Lucas Giuggia", "country": "Argentina", "year": 2026, "duration": 131,
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
     }
   ],
 
