@@ -76,6 +76,14 @@ ESPERADO = {
     ],
     # Sin línea de dirección no hay película: el evento no entra.
     "sala_lucida_charla": [],
+    # El encabezado trae el original entre paréntesis y la ficha va en una
+    # sola línea ("Dir.: … Alemania, 1991, 86 min."): antes salía el título
+    # con el paréntesis pegado y sin director, año ni duración.
+    "sala_lucida_berlin_1990": [
+        ("Berlín, estación de Friedrichstrasse 1990",
+         "Konstanze Binder, Lilly Grote, Ulrike Herdin y Julia Kunert", 1991, 86,
+         "Lost in the 90s - Berlín", "2026-10-11", "18:00"),
+    ],
 }
 
 def helpers_de_run():
@@ -125,6 +133,10 @@ def main() -> int:
                     for s in got]
         chequear(f"{len(esperado)} función(es) con la ficha completa",
                  obtenido == esperado, obtenido)
+        if nombre == "sala_lucida_berlin_1990" and got:
+            chequear("el original y el país salen de la ficha",
+                     (got[0].original_title, got[0].country) == ("Berlin, Bahnhof Friedrichstraße 1990", "Alemania"),
+                     (got[0].original_title, got[0].country))
         chequear("todas apuntan al ticket del evento",
                  all(s.ticket_url == url and s.cine == "Sala Lúcida" for s in got))
 

@@ -12,7 +12,7 @@ de OTRA función. Es el error más caro del scraper del Lugones (alguien llega
 tres horas antes), así que el parser tiene que aceptar todas las variantes con
 las que el CTBA escribe el horario.
 """
-from scraper import parse_ctba_program_text
+from scraper import _ctba_partir_por_mes, parse_ctba_program_text
 
 # Formato real de la página /ver/ del CTBA: encabezado de día, cabecera de
 # horario, y cada película como TÍTULO + (original; país; año) + Dirección.
@@ -73,6 +73,20 @@ def main() -> int:
           got.get("21:00") == ["Pequeños poemas en prosa"]
     print(f"{'ok ' if dos else 'MAL'} doble horario en una cabecera → {got}")
     if not dos:
+        fallos += 1
+
+    # Un ciclo de más de un mes (Borzage: del 11/9 al 14/10) repite números de
+    # día. Leído entero, el 13 de octubre se pisaba con el 13 de septiembre;
+    # partido por mes, cada parte tiene sus propios días.
+    texto = ("\nIntro del ciclo\n"
+             "\nDomingo 13\nA las 15 horas\nPelícula de septiembre\n(EE.UU.; 1930)\nDirección: X.\n"
+             "\nMartes 29\nA las 18 horas\nOtra de septiembre\n(EE.UU.; 1931)\nDirección: X.\n"
+             "\nMartes 13\nA las 15 horas\nPelícula de octubre\n(EE.UU.; 1932)\nDirección: X.\n")
+    partes = _ctba_partir_por_mes(texto)
+    titulos = [sorted(e["title"] for v in parse_ctba_program_text(pt).values() for e in v) for pt in partes]
+    bien = titulos == [["Otra de septiembre", "Película de septiembre"], ["Película de octubre"]]
+    print(f"{'ok ' if bien else 'MAL'} ciclo de dos meses partido por mes → {titulos}")
+    if not bien:
         fallos += 1
 
     print(f"\n{'TODO OK' if not fallos else f'{fallos} casos fallando'}")

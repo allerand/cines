@@ -1198,28 +1198,55 @@ def _ctba_eventos_pendientes(events: list[dict], recordados: dict,
     return pendientes
 
 
+# En octubre de 2026 el CTBA rehízo la web en WordPress: la página de la sala
+# (/sala-leopoldo-lugones) da 404 y la de cada ciclo pasó de /ver/<Título> a
+# /produccion/<slug>/, con el mismo texto de programa. Las tarjetas son las de
+# siempre, pero ahora están en la home, mezcladas con las de las otras salas:
+# se toman las de cine que dicen Lugones en el lugar.
+CTBA_HOME = "https://complejoteatral.gob.ar/"
+
+
+def _ctba_partir_por_mes(texto: str) -> list[str]:
+    """Corta el programa de un ciclo donde el número de día baja (empieza otro
+    mes). Cada parte arranca en el encabezado de su primer día."""
+    day_re = re.compile(
+        r"\n(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[aá]bado|Domingo)\s+(\d{1,2})(?=\s*\n)")
+    partes, ini, prev = [], 0, None
+    for m in day_re.finditer(texto):
+        dia = int(m.group(1))
+        if prev is not None and dia < prev:
+            partes.append(texto[ini:m.start()])
+            ini = m.start()
+        prev = dia
+    partes.append(texto[ini:])
+    return partes
+
+
 async def scrape_lugones(page: Page) -> list[Screening]:
     """
-    1. Lista eventos cine en complejoteatral.gob.ar/sala-leopoldo-lugones
+    1. Lista los eventos de cine de la Sala Lugones en la home del CTBA.
     2. Para cada evento, scrapea la página de entradasba para obtener
        fechas y horarios exactos.
-    3. Para eventos con ciclos (múltiples películas), parsea la página /ver/
-       para extraer información de cada película del ciclo.
+    3. Para eventos con ciclos (múltiples películas), parsea la página del
+       ciclo (/produccion/) para extraer información de cada película.
     """
-    await page.goto(
-        "https://complejoteatral.gob.ar/sala-leopoldo-lugones",
-        wait_until="networkidle", timeout=30000,
-    )
-    await page.wait_for_timeout(3000)
-    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)")
-    await page.wait_for_timeout(2000)
-
-    soup = BeautifulSoup(await page.content(), "html.parser")
+    soup = None
+    try:
+        soup = fetch_html(CTBA_HOME)
+    except Exception as e:
+        print(f"  · [Lugones] home por HTTP: {e}", flush=True)
+    if soup is None or not soup.select("div.list-item-programacion"):
+        await page.goto(CTBA_HOME, wait_until="networkidle", timeout=30000)
+        await page.wait_for_timeout(3000)
+        soup = BeautifulSoup(await page.content(), "html.parser")
     events: list[dict] = []
 
     for card in soup.select("div.list-item-programacion"):
         cat_el = card.select_one("span.category")
         if not cat_el or "cine" not in cat_el.get_text(strip=True).lower():
+            continue
+        lugar = card.select_one("span.place")
+        if not lugar or "lugones" not in lugar.get_text(" ", strip=True).lower():
             continue
 
         title_el = card.select_one("h2.mango-grotesque")
@@ -1229,7 +1256,7 @@ async def scrape_lugones(page: Page) -> list[Screening]:
         if not title:
             continue
 
-        ver_link = card.select_one("a[href*='/ver/']")
+        ver_link = card.select_one("a[href*='/produccion/'], a[href*='/ver/']")
         ver_url = ver_link["href"] if ver_link and ver_link.get("href") else ""
         if ver_url and not ver_url.startswith("http"):
             ver_url = "https://complejoteatral.gob.ar" + ver_url
@@ -1245,7 +1272,9 @@ async def scrape_lugones(page: Page) -> list[Screening]:
 
     # Los que el listado sacó pero que pueden seguir teniendo funciones: se
     # releen de su propia página /ver/, igual que los del listado.
-    recordados = _ctba_eventos_load()
+    # Las /ver/ del sitio viejo redirigen a una /produccion/ que no existe: el
+    # ciclo ya vuelve por la home con su dirección nueva.
+    recordados = {u: e for u, e in _ctba_eventos_load().items() if "/ver/" not in u}
     pendientes = _ctba_eventos_pendientes(events, recordados, today)
     if pendientes:
         print(f"  · {len(pendientes)} evento(s) fuera del listado, "
@@ -1337,7 +1366,31 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                 cycle_month = MESES_ES.get(anchor.group(1).lower())
                 if anchor.group(2):
                     cycle_year = int(anchor.group(2))
-            # Fallback: buscar cualquier mención de mes
+            # Sin "Del <día> de <mes>" (funciones sueltas: "Miércoles 28"),
+            # el mes sale del día de la semana: el primer mes, desde el
+            # pasado, en que ese número cae ese día. Buscar cualquier mes
+            # nombrado en el texto agarraba el de una cita ("Radar. Agosto
+            # 1999") y mandaba las funciones de Imamura a agosto.
+            if not cycle_month:
+                primero = re.search(
+                    r"\n(Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[aá]bado|Domingo)\s+(\d{1,2})(?=\s*\n)",
+                    ver_text)
+                if primero:
+                    dia_sem = ["lunes", "martes", "miercoles", "jueves", "viernes",
+                               "sabado", "domingo"].index(
+                        unicodedata.normalize("NFKD", primero.group(1).lower())
+                        .encode("ascii", "ignore").decode())
+                    for k in range(-1, 7):
+                        mes = (today.month - 1 + k) % 12 + 1
+                        anio = today.year + (today.month - 1 + k) // 12
+                        try:
+                            cand = date(anio, mes, int(primero.group(2)))
+                        except ValueError:
+                            continue
+                        if cand.weekday() == dia_sem and cand >= today - timedelta(days=31):
+                            cycle_month, cycle_year = mes, anio
+                            break
+            # Último recurso: cualquier mención de mes.
             if not cycle_month:
                 for m_name, m_num in MESES_ES.items():
                     if len(m_name) > 3 and m_name in ver_text.lower():
@@ -1345,33 +1398,34 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                         break
 
             if cycle_month:
-                # Si el mes inicial ya pasó este año, la programación es del que
-                # viene (archivo / programación adelantada).
-                if cycle_year == today.year and cycle_month < today.month:
+                # Un mes inicial que "ya pasó" puede ser de un ciclo que empezó
+                # hace poco y sigue (Borzage, del 11 de septiembre al 14 de
+                # octubre, leído en octubre) o de programación adelantada del
+                # año que viene (enero, leído en diciembre). Antes se pasaba
+                # al año siguiente siempre, y el ciclo de Borzage desaparecía
+                # entero en su última semana. Sólo es del año que viene si el
+                # mes quedó más de medio año atrás.
+                if (cycle_year == today.year
+                        and (today.month - cycle_month) % 12 > 6):
                     cycle_year += 1
 
-                # Encabezados de día en el orden en que aparecen (cronológico).
-                ordered_days = [
-                    int(m.group(1)) for m in re.finditer(
-                        r"\n(?:Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[aá]bado|Domingo)"
-                        r"\s+(\d{1,2})(?=\s*\n)",
-                        ver_text,
-                    )
-                ]
-                # Mapear cada día → (mes, año), avanzando de mes en cada bajada.
-                day_to_ym: dict[int, tuple[int, int]] = {}
+                # El programa se lee por mes: parse_ctba_program_text indexa
+                # por (día, hora), y en un ciclo de más de un mes el 13 de
+                # septiembre y el 13 de octubre a la misma hora se pisaban
+                # (Borzage, del 11/9 al 14/10, perdía la función del 13/10).
+                # Los encabezados de día están en orden cronológico, así que
+                # cada vez que el número baja empieza el mes siguiente.
+                funciones_ciclo = []
                 cur_month, cur_year = cycle_month, cycle_year
-                prev_day: Optional[int] = None
-                for dnum in ordered_days:
-                    if prev_day is not None and dnum < prev_day:
+                for k, parte in enumerate(_ctba_partir_por_mes(ver_text)):
+                    if k:
                         cur_month += 1
                         if cur_month > 12:
                             cur_month, cur_year = 1, cur_year + 1
-                    day_to_ym.setdefault(dnum, (cur_month, cur_year))
-                    prev_day = dnum
+                    for (day_num, hora), entries in parse_ctba_program_text(parte).items():
+                        funciones_ciclo.append(((cur_month, cur_year), day_num, hora, entries))
 
-                for (day_num, hora), entries in program.items():
-                    ym = day_to_ym.get(day_num, (cycle_month, cycle_year))
+                for ym, day_num, hora, entries in funciones_ciclo:
                     try:
                         d = date(ym[1], ym[0], day_num)
                     except ValueError:
@@ -2982,135 +3036,140 @@ def scrape_lorca() -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
-# Cine Gaumont  (cinegaumont.ar — pelis con API JSON pública /films/ID/tree)
+# Cine Gaumont  (cinegaumont.ar — API de Cinexo)
 # ---------------------------------------------------------------------------
+# En octubre de 2026 la web pasó a ser una app de Next.js hecha por Cinexo, y
+# las páginas viejas (/Default, /pelicula.aspx, la API /films/ID/tree de
+# cinegaumont.com.ar) dejaron de existir. Los horarios los pide el navegador a
+# la API de Cinexo, que es pública y no pide headers:
+#
+#   apifront.cinexo.com.ar/mobile/consultas/peliculas/
+#     PeliculasConFuncionesYHorarios?idComplejo=372001&fecha=DD/MM/AAAA
+#
+# Devuelve `datos` (todas las películas en cartel, con director, duración y
+# género) y `funciones` (las de ESA fecha: codPelicula + hora). La fecha va
+# como DD/MM/AAAA; en ISO contesta 500. La web publica una semana, de jueves
+# a miércoles: después de eso la API contesta éxito con cero funciones.
+#
+# El país no viene en la API: está en la página de cada película
+# (/es-AR/programacion/<código>), en el JSON que Next.js mete en el HTML.
+
+GAUMONT_WEB = "https://www.cinegaumont.ar/es-AR"
+GAUMONT_API = ("https://apifront.cinexo.com.ar/mobile/consultas/peliculas/"
+               "PeliculasConFuncionesYHorarios?idComplejo=372001&fecha={fecha}")
+
+# Países de más de una palabra: el Gaumont los escribe separados por espacios
+# y en mayúsculas ("ESPAÑA FRANCIA"), así que hay que saber dónde cortar.
+_PAISES_COMPUESTOS = [
+    "estados unidos", "reino unido", "corea del sur", "corea del norte",
+    "nueva zelanda", "republica checa", "república checa", "paises bajos",
+    "países bajos", "hong kong", "arabia saudita", "costa rica", "puerto rico",
+    "republica dominicana", "república dominicana", "el salvador", "sri lanka",
+    "bosnia y herzegovina", "macedonia del norte", "emiratos arabes unidos",
+    "emiratos árabes unidos",
+]
+
+
+def _gaumont_paises(texto: str) -> str:
+    """'ESPAÑA FRANCIA' → 'ESPAÑA, FRANCIA'; 'ESTADOS UNIDOS' queda entero."""
+    texto = re.sub(r"\s+", " ", (texto or "").strip())
+    if not texto or "," in texto:
+        return texto
+    palabras = texto.split(" ")
+    partes, i = [], 0
+    while i < len(palabras):
+        for compuesto in sorted(_PAISES_COMPUESTOS, key=lambda c: -len(c.split())):
+            n = len(compuesto.split())
+            if " ".join(palabras[i:i + n]).lower() == compuesto:
+                partes.append(" ".join(palabras[i:i + n]))
+                i += n
+                break
+        else:
+            partes.append(palabras[i])
+            i += 1
+    # Algunas fichas lo escriben en minúscula ("argentina"); las mayúsculas las
+    # arregla run.py como en todos los cines.
+    return ", ".join(" ".join(w if w in ("y", "del", "de") else w.capitalize() for w in x.split())
+                     if x.islower() else x for x in partes)
+
+
+def _gaumont_json(url: str, intentos: int = 3) -> Optional[dict]:
+    # La API a veces tarda más de 20 s en contestar un día y al siguiente
+    # intento contesta enseguida.
+    for i in range(intentos):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA, "Accept": "application/json"})
+            with urllib.request.urlopen(req, timeout=20) as r:
+                return json.loads(r.read())
+        except Exception as e:
+            if i == intentos - 1:
+                print(f"[gaumont] {url}: {e}", flush=True)
+            else:
+                time.sleep(2)
+    return None
+
 
 def scrape_gaumont(semanas: int = 2) -> list[Screening]:
-    """
-    1. Lista filmids desde cinegaumont.ar/Default (links /pelicula.aspx?filmid=N)
-    2. Para cada filmid, parsea metadata de la página de detalle.
-    3. Llama a la API JSON oficial cinegaumont.com.ar/films/ID/tree para
-       obtener fechas y horarios.
-    """
-    BASE_WEB = "https://www.cinegaumont.ar"
-    BASE_API = "https://www.cinegaumont.com.ar"
-
-    try:
-        home = fetch_html(f"{BASE_WEB}/Default")
-    except Exception:
-        return []
-
-    filmids: list[str] = []
-    seen: set[str] = set()
-    for a in home.find_all("a", href=re.compile(r"pelicula\.aspx\?filmid=\d+")):
-        m = re.search(r"filmid=(\d+)", a["href"])
-        if m and m.group(1) not in seen:
-            seen.add(m.group(1))
-            filmids.append(m.group(1))
-
-    # Mapeo filmid → nombre del ciclo. La home tiene varios headings que
-    # agrupan films, todos como <div class="col-12">:
-    #   - "Ciclo X"            → ciclo = "X"           (ej. "Ciclo Funciones Unicas")
-    #   - "Estrenos"           → ciclo = "Estreno"
-    #   - "Películas en cartel"→ ciclo = "En cartel"
-    # Los films del grupo son los siblings hasta el próximo heading.
-    HEADING_TO_CICLO = {
-        "estrenos": "Estreno",
-        "películas en cartel": "En cartel",
-        "peliculas en cartel": "En cartel",
-    }
-    filmid_to_ciclo: dict[str, str] = {}
-    ciclo_re = re.compile(r"^Ciclo\s+(.+)$", re.IGNORECASE)
-
-    def _heading_to_ciclo(text: str) -> str:
-        text = text.strip()
-        m = ciclo_re.match(text)
-        if m:
-            return m.group(1).strip()
-        return HEADING_TO_CICLO.get(text.lower(), "")
-
-    def _is_heading(text: str) -> bool:
-        return bool(_heading_to_ciclo(text))
-
-    for div in home.find_all("div", class_="col-12"):
-        ciclo_name = _heading_to_ciclo(div.get_text(strip=True))
-        if not ciclo_name:
+    today = date.today()
+    pelis: dict[str, dict] = {}
+    funciones: list[tuple[str, str, str]] = []   # (codPelicula, fecha ISO, hora)
+    vacios = 0
+    for k in range(semanas * 7):
+        d = today + timedelta(days=k)
+        data = _gaumont_json(GAUMONT_API.format(fecha=d.strftime("%d/%m/%Y")))
+        if data is None or not data.get("success"):
+            # Un día que no contesta se saltea: cortar ahí perdía el resto de
+            # la semana. No cuenta como vacío.
+            FUENTES_CAIDAS.setdefault("Cine Gaumont", f"la API no contestó el {d:%d/%m}")
             continue
-        nxt = div
-        while True:
-            nxt = nxt.find_next_sibling()
-            if nxt is None:
-                break
-            if nxt.name == "div" and "col-12" in (nxt.get("class") or []):
-                if _is_heading(nxt.get_text(strip=True)):
-                    break
-                continue
-            for a in nxt.find_all("a", href=re.compile(r"filmid=")) if hasattr(nxt, "find_all") else []:
-                mm = re.search(r"filmid=(\d+)", a["href"])
-                if mm and mm.group(1) not in filmid_to_ciclo:
-                    filmid_to_ciclo[mm.group(1)] = ciclo_name
+        cuerpo = data.get("data") or {}
+        if not isinstance(cuerpo, dict):
+            cuerpo = {}
+        for p in cuerpo.get("datos") or []:
+            pelis.setdefault(str(p.get("peliculas_codigo")), p)
+        del_dia = cuerpo.get("funciones") or []
+        for f in del_dia:
+            m = re.match(r"(\d{1,2}):(\d{2})", f.get("hora") or "")
+            if m:
+                funciones.append((str(f.get("codPelicula")), d.isoformat(),
+                                  f"{int(m.group(1)):02d}:{m.group(2)}"))
+        # Pasada la semana publicada, la API contesta vacío: con dos días
+        # seguidos sin funciones ya no hay más.
+        vacios = 0 if del_dia else vacios + 1
+        if vacios >= 2:
+            break
+
+    paises: dict[str, str] = {}
+    for cod in {c for c, _, _ in funciones}:
+        try:
+            html = urllib.request.urlopen(urllib.request.Request(
+                f"{GAUMONT_WEB}/programacion/{cod}", headers={"User-Agent": UA}), timeout=20
+            ).read().decode("utf-8", "replace")
+            m = re.search(r'\\"paisOrigen\\":\\"([^"\\]*)\\"', html)
+            if m:
+                paises[cod] = _gaumont_paises(m.group(1))
+        except Exception:
+            pass
 
     result: list[Screening] = []
-    today = date.today()
-    end = today + timedelta(weeks=semanas)
-
-    for fid in filmids:
-        # Metadata de la peli (título, director, país, duración)
-        meta: dict = {}
-        try:
-            soup = fetch_html(f"{BASE_WEB}/pelicula.aspx?filmid={fid}")
-            h1 = soup.find(["h1", "h2"])
-            title = h1.get_text(strip=True) if h1 else ""
-            text = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
-            m = re.search(r"Dirección\s*:\s*([^\n.]+?)(?:\s+Elenco|\s+Origen|\s+Género|\s*©|\s*$)", text)
-            director = m.group(1).strip() if m else ""
-            m = re.search(r"Orig?en\s*:\s*([^\n.]+?)\s+Género", text)
-            country = m.group(1).strip() if m else ""
-            m = re.search(r"(\d{2,3})\s+minutos?\b", text)
-            duration = int(m.group(1)) if m else None
-            meta = {"title": title, "director": director, "country": country, "duration": duration}
-        except Exception:
+    for cod, fecha, hora in funciones:
+        p = pelis.get(cod)
+        if not p:
             continue
-        if not meta.get("title"):
+        titulo = re.sub(r"\s+", " ", (p.get("peliculas_nombre") or "")).strip()
+        if not titulo:
             continue
-
-        # Horarios via API JSON
-        try:
-            req = urllib.request.Request(
-                f"{BASE_API}/films/{fid}/tree",
-                headers={"User-Agent": UA, "Accept": "application/json"},
-            )
-            import json as _json
-            data = _json.loads(urllib.request.urlopen(req, timeout=15).read())
-        except Exception:
-            continue
-
-        for fecha_str, venues in (data.get("days") or {}).items():
-            try:
-                d = date.fromisoformat(fecha_str)
-            except ValueError:
-                continue
-            if d < today or d > end:
-                continue
-            for venue in venues:
-                for fmt in venue.get("formats", []):
-                    for perf in fmt.get("performances", []):
-                        st = perf.get("showTime") or ""
-                        m = re.match(r"(\d{1,2}):(\d{2})", st)
-                        if not m:
-                            continue
-                        hora = f"{int(m.group(1)):02d}:{m.group(2)}"
-                        result.append(Screening(
-                            cine="Cine Gaumont",
-                            title=meta["title"],
-                            fecha=d.isoformat(),
-                            hora=hora,
-                            ticket_url=f"{BASE_WEB}/pelicula.aspx?filmid={fid}",
-                            ciclo=filmid_to_ciclo.get(fid, ""),
-                            director=meta.get("director", ""),
-                            country=meta.get("country", ""),
-                            duration=meta.get("duration"),
-                        ))
+        dur = str(p.get("peliculas_duracion") or "").strip()
+        result.append(Screening(
+            cine="Cine Gaumont",
+            title=titulo,
+            fecha=fecha,
+            hora=hora,
+            ticket_url=f"{GAUMONT_WEB}/programacion/{cod}",
+            director=re.sub(r"\s+", " ", (p.get("director") or "")).strip(),
+            country=paises.get(cod, ""),
+            duration=int(dur) if dur.isdigit() and int(dur) > 0 else None,
+        ))
     return result
 
 
@@ -4747,6 +4806,20 @@ _LUCIDA_DIR_RE = re.compile(
 _LUCIDA_DUR_RE = re.compile(r"\(\s*(\d{1,3})(?::\d{2})?\s*(?:min|')", re.IGNORECASE)
 _LUCIDA_ANIO_RE = re.compile(r"\(((?:19|20)\d{2})\)")
 
+# La ficha en una línea, después de "Dir.:": "Konstanze Binder, Lilly Grote,
+# Ulrike Herdin y Julia Kunert. Alemania, 1991, 86 min." El país no lleva
+# puntos, así un director con iniciales ("F. W. Murnau. Alemania, 1927") no
+# se corta en la primera.
+_LUCIDA_FICHA_RE = re.compile(
+    r"^(?P<dir>.+?)\.\s+(?P<pais>[A-ZÁÉÍÓÚÑ][^\d.]*?),\s*(?P<anio>(?:19|20)\d{2})"
+    r"(?:,\s*(?P<dur>\d{1,3})\s*min)?")
+
+# "BERLÍN, ESTACIÓN DE FRIEDRICHSTRASSE 1990 (Berlin, Bahnhof Friedrichstraße
+# 1990)": el título en mayúsculas y el original entre paréntesis, en su caja.
+# Sólo así se separa: "Videofilia (y otros síndromes virales)" es un título
+# con paréntesis, no un original.
+_LUCIDA_ORIGINAL_RE = re.compile(r"^(?P<titulo>[^()]*[A-ZÁÉÍÓÚÑ][^()]*?)\s*\((?P<orig>[A-ZÁÉÍÓÚÑ][^()]+)\)$")
+
 # Encabezados que rotulan la sección y no nombran ninguna película.
 _LUCIDA_ROTULOS = {"cine", "estrenos", "descripcion", "sinopsis", "ciclo",
                    "programa", "funcion", "funciones"}
@@ -4859,6 +4932,13 @@ def _lucida_peliculas(desc, titulos_evento: list[str]) -> list[dict]:
         # El director llega hasta el paréntesis de la duración: lo que sigue en
         # la misma línea es la sinopsis (así se escriben los cortos).
         director = re.split(r"[(•]", m.group(1))[0].strip(" .,;:–—-·")
+        pais = anio_ficha = dur_ficha = None
+        fm = _LUCIDA_FICHA_RE.match(m.group(1).strip())
+        if fm:
+            director = fm.group("dir").strip(" .,;:–—-·")
+            pais = fm.group("pais").strip()
+            anio_ficha = int(fm.group("anio"))
+            dur_ficha = int(fm.group("dur")) if fm.group("dur") else None
         if len(director) > 80:      # es una frase, no un nombre
             director = ""
 
@@ -4872,6 +4952,11 @@ def _lucida_peliculas(desc, titulos_evento: list[str]) -> list[dict]:
                     break
         if not titulo:
             continue
+
+        original = ""
+        om = _LUCIDA_ORIGINAL_RE.match(titulo)
+        if om and om.group("titulo") == om.group("titulo").upper():
+            titulo, original = om.group("titulo").strip(" .,;:–—-·"), om.group("orig").strip()
 
         # El h2 del evento trae el título con la tipografía cuidada ("Una
         # canción para mi tierra"); la descripción lo repite en mayúsculas y a
@@ -4887,8 +4972,10 @@ def _lucida_peliculas(desc, titulos_evento: list[str]) -> list[dict]:
         pelis.append({
             "title": titulo,
             "director": director,
-            "duration": int(dur.group(1)) if dur else None,
-            "year": int(anio.group(1)) if anio else None,
+            "duration": int(dur.group(1)) if dur else dur_ficha,
+            "year": int(anio.group(1)) if anio else anio_ficha,
+            "country": pais or "",
+            "original_title": original,
         })
     return pelis
 
@@ -4944,6 +5031,7 @@ def _lucida_parse_evento(soup, url: str, today: date, cutoff: date) -> list[Scre
         cine=LUCIDA_CINE, title=p["title"], fecha=d.isoformat(),
         hora=hora or "20:00", ticket_url=url, ciclo=ciclo,
         director=p["director"], year=p["year"], duration=p["duration"],
+        country=p["country"], original_title=p["original_title"],
     ) for p in pelis]
 
 
@@ -6438,9 +6526,25 @@ def scrape_cea(semanas: int = 9) -> list[Screening]:
         if dm:
             director, year = dm.group(1).strip(), int(dm.group(2))
 
-        ciclo = _cea_campo(card, "ciclo", ".fc-cycle").split("·")[0].strip()
+        # El ciclo es el chip ("Que CEA Rock"); lo que sigue en el renglón es
+        # una bajada que cambia de función en función ("Documental · El
+        # templo del rock argentino", "★ Con la presencia del director ★"), y
+        # pegada al ciclo partía uno solo en tres. De la bajada sólo se guarda
+        # lo que va entre estrellas, que es un aviso de esa función, como
+        # sección: "Que CEA Rock - Con la presencia del director".
+        renglon = card.select_one('[data-field="ciclo"]') or card.select_one(".fc-cycle")
+        chip = renglon.select_one(".chip") if renglon else None
+        if chip:
+            ciclo = re.sub(r"\s+", " ", chip.get_text(" ", strip=True))
+            aviso = re.search(r"★\s*([^★]+?)\s*★", renglon.get_text(" ", strip=True))
+            if aviso:
+                ciclo = f"{ciclo} - {aviso.group(1)}"
+        else:
+            ciclo = _cea_campo(card, "ciclo", ".fc-cycle").split("·")[0].strip()
         if ciclo.isupper():
             ciclo = ciclo.title()      # "CICLO SANDRO" → "Ciclo Sandro"
+
+        dur_m = re.search(r"(\d{2,3})\s*min", _cea_campo(card, "dur", ".fc-dur"))
 
         clave = (d.isoformat(), _cea_norm(titulo))
         if clave in vistas:
@@ -6454,6 +6558,7 @@ def scrape_cea(semanas: int = 9) -> list[Screening]:
             ticket_url=form_url or CEA_URL,
             director=director,
             year=year or None,
+            duration=int(dur_m.group(1)) if dur_m else None,
             ciclo=ciclo,
         ))
 
@@ -8485,6 +8590,74 @@ def aplicar_festivales(screenings: list, data: Optional[dict] = None) -> tuple[l
 
     quedan = [s for s in screenings if not afuera(s)]
     return quedan, len(screenings) - len(quedan)
+
+
+# ---------------------------------------------------------------------------
+# Festivales — un solo nombre de ciclo por festival (data/festivales.json)
+# ---------------------------------------------------------------------------
+# En la web, un festival de Buenos Aires es una búsqueda en la cartelera por el
+# nombre literal de su ciclo ("Asterisco Festival Internacional de Cine
+# LGBTIQ+"). Eso es exhaustivo sólo si todas las salas que lo pasan lo escriben
+# igual, y cada una lo escribe a su manera: el MALBA con el nombre largo, otra
+# sala "Asterisco" a secas, Cacodelphia pegado al título. Acá cada ciclo que
+# matchee un `alias` del festival pasa a ser su `ciclo`, y la sección, si la
+# hay, se conserva ("Asterisco - Competencia" → "<ciclo> - Competencia").
+#
+# El alias matchea por palabras enteras, sin caja ni tildes (titulo_norm), así
+# que tiene que ser específico: un alias que aparezca en el ciclo de otra cosa
+# le pondría a esa función el nombre del festival.
+
+FESTIVALES_PATH = Path(__file__).parent / "data" / "festivales.json"
+_SECCION_RE = re.compile(r"^(.+?)\s+[-–—]\s+(.+)$")
+
+
+def _cargar_festivales() -> list:
+    if not FESTIVALES_PATH.exists():
+        return []
+    try:
+        return json.loads(FESTIVALES_PATH.read_text(encoding="utf-8")).get("festivales", [])
+    except Exception as e:
+        print(f"[festivales] festivales.json ilegible: {e}", flush=True)
+        return []
+
+
+def unificar_ciclos_festivales(screenings: list, festivales: Optional[list] = None) -> tuple[list, int]:
+    """Le pone a cada función de un festival el nombre de ciclo del registro.
+    Sirve para objetos Screening y para dicts. Devuelve (lista, cuántas cambió)."""
+    festivales = _cargar_festivales() if festivales is None else festivales
+    reglas = []
+    for f in festivales:
+        canonico = (f.get("ciclo") or "").strip()
+        if not canonico or f.get("archivo"):
+            continue
+        claves = [titulo_norm(x) for x in [canonico] + list(f.get("alias", []))]
+        reglas.append((canonico, [c for c in claves if c]))
+
+    def es_de(texto: str, claves: list) -> bool:
+        n = f" {titulo_norm(texto)} "
+        return any(f" {c} " in n for c in claves)
+
+    cambiadas = 0
+    for s in screenings:
+        ciclo = (getattr(s, "ciclo", None) if not isinstance(s, dict) else s.get("ciclo")) or ""
+        if not ciclo:
+            continue
+        m = _SECCION_RE.match(ciclo)
+        nuevo = None
+        for canonico, claves in reglas:
+            if m and es_de(m.group(1), claves):
+                nuevo = f"{canonico} - {m.group(2)}"
+            elif es_de(ciclo, claves):
+                nuevo = canonico
+            if nuevo:
+                break
+        if nuevo and nuevo != ciclo:
+            if isinstance(s, dict):
+                s["ciclo"] = nuevo
+            else:
+                s.ciclo = nuevo
+            cambiadas += 1
+    return screenings, cambiadas
 
 
 # ---------------------------------------------------------------------------
