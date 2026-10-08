@@ -10122,7 +10122,16 @@ LORCA_CARTEL_PAGINA = "https://cinelorca.wixsite.com/cine-lorca/current-producti
 # server, así que no hace falta ninguna librería de imágenes). Cada
 # combinación falla distinto —a ciertos tamaños tesseract se saltea una fila
 # entera—, así que se prueban varias y tienen que coincidir dos.
-LORCA_CARTEL_LECTURAS = ((1490, 6), (1490, 11), (1700, 4), (1300, 6), (2000, 11))
+#
+# El cartel del 08/10 al 14/10/2026 sólo lo leyó bien una de las cinco
+# originales (1300, psm 6) y se publicó La Nación, que daba otra grilla (Tre
+# ciotole, Hangar rojo, Pepita la pistolera, que el cine no pasaba). Probando
+# de 900 a 2000 px, psm 6 a 1300, 1400 y 1600 dio las tres veces la grilla
+# exacta y el resto perdía filas: se agregan 1400 y 1600. Más lecturas no
+# aflojan el control —siguen teniendo que coincidir dos—, sólo le dan más
+# chances a un cartel bien escrito.
+LORCA_CARTEL_LECTURAS = ((1490, 6), (1490, 11), (1700, 4), (1300, 6), (2000, 11),
+                         (1400, 6), (1600, 6))
 LORCA_CARTEL_LECTURAS_IGUALES = 2
 # El modelo de idioma va en el repo (tessdata_fast, Apache 2.0) en vez de salir
 # del paquete del sistema: el `tesseract-ocr-spa` de Ubuntu trae otro modelo y
