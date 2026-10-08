@@ -779,6 +779,13 @@
     .festival-head .fest-meta a { color: var(--accent); text-decoration: none; }
     .festival-head .fest-meta a:hover { text-decoration: underline; }
     .sede-unica { font-size: 0.75rem; color: var(--text); }
+    /* Logo del festival: un círculo a la izquierda del nombre. */
+    .fest-logo-slot { flex: 0 0 36px; height: 36px; }
+    .fest-texto { flex: 1 1 auto; min-width: 0; }
+    .fest-logo { width: 36px; height: 36px; border-radius: 50%; display: block; }
+    .fest-titulo-fila { display: flex; align-items: center; gap: 0.9rem; margin-top: 0.5rem; }
+    .festival-head .fest-titulo-fila h2 { margin-top: 0; }
+    .fest-logo-grande { width: 56px; height: 56px; flex: 0 0 auto; }
     .sin-seccion .col-ciclo { display: none; }
 
     .lb-link {
@@ -1981,15 +1988,20 @@ function renderCabeceraFestival(f) {
   const web = f.web ? `<br><a href="${escapeHtml(f.web)}" target="_blank" rel="noopener">Web del festival ↗</a>` : '';
   document.getElementById('festival-head').innerHTML = `
     <a class="fest-volver" href="#festivales">← Festivales</a>
+    <div class="fest-titulo-fila">${f.logo ? `<img class="fest-logo fest-logo-grande" src="${escapeHtml(f.logo)}" alt="">` : ''}<div>
     <h2>${escapeHtml(f.nombre)}</h2>
     ${f.bajada ? `<span class="fest-bajada">${escapeHtml(f.bajada)}</span>` : ''}
-    <div class="fest-meta">${escapeHtml(lugarYFechas(f))}${web}</div>`;
+    <div class="fest-meta">${escapeHtml(lugarYFechas(f))}${web}</div></div></div>`;
 }
 
+// Si algún festival del listado tiene logo, todas las filas reservan su
+// columna a la izquierda: así los nombres arrancan todos en el mismo lugar.
+let hayLogos = false;
 function renderListadoFestivales(lista) {
   // Uno del registro sin funciones ni fechas (no salió la grilla y no se
   // sabe cuándo es) no tiene nada que mostrar.
   const visibles = lista.filter(f => f.funciones.length || f.desde || f.cuando);
+  hayLogos = visibles.some(f => f.logo);
   const desde = f => rangoFestival(f).desde || '9999';
   let html = '';
   for (const [estado, titulo] of [['en-curso', 'En curso'], ['proximo', 'Próximos']]) {
@@ -2008,7 +2020,7 @@ function renderListadoFestivales(lista) {
 function itemFestival(f) {
   const n = f.funciones.length;
   return `<a class="fest-item" href="${escapeHtml(hrefFestival(f))}" data-nombre="${escapeHtml(f.nombre)}">
-    <div>
+    ${hayLogos ? `<span class="fest-logo-slot">${f.logo ? `<img class="fest-logo" src="${escapeHtml(f.logo)}" alt="">` : ''}</span>` : ''}<div class="fest-texto">
       <div class="fest-nombre">${escapeHtml(f.nombre)}${f.bajada ? `<span class="fest-bajada">${escapeHtml(f.bajada)}</span>` : ''}</div>
       <div class="fest-meta">${escapeHtml(lugarYFechas(f))}</div>
     </div>

@@ -1,5 +1,5 @@
 {
-  "_comment": "Festivales de la sección Festivales de la web (index.html). Por ahora sólo de Argentina. Los de Buenos Aires no tienen grilla propia: son una búsqueda en la cartelera por el nombre LITERAL de su `ciclo`, y tocar el festival lleva a #buenos-aires/q=<ciclo>. Para que esa búsqueda sea exhaustiva, el scraper le pone ese mismo ciclo a las funciones del festival de todas las salas (unificar_ciclos_festivales en scraper.py): cualquier ciclo que contenga un `alias` —palabras enteras, sin caja ni tildes— pasa a ser `ciclo`, conservando la sección (\"Asterisco - Competencia\" → \"<ciclo> - Competencia\"). El alias tiene que ser específico: si aparece en el ciclo de otra cosa, esa función queda con el nombre del festival. Un ciclo que dice 'Festival' y no está acá aparece igual en la web, con su nombre. Los de otro lugar llevan `lugar` y `archivo` (mismo formato que cartelera.json, cargado a mano), tienen su propia página y no entran a cartelera.json, así no se mezclan con Buenos Aires ni con las stories. Opcionales: `bajada`, `web`, `desde`/`hasta` (si no, salen de las funciones), `cuando` (texto mientras no haya fechas), `sedes` ({sala: dirección}, para las que la web no conoce).",
+  "_comment": "Festivales de la sección Festivales de la web (index.html). Por ahora sólo de Argentina. Los de Buenos Aires no tienen grilla propia: son una búsqueda en la cartelera por el nombre LITERAL de su `ciclo`, y tocar el festival lleva a #buenos-aires/q=<ciclo>. Para que esa búsqueda sea exhaustiva, el scraper le pone ese mismo ciclo a las funciones del festival de todas las salas (unificar_ciclos_festivales en scraper.py): cualquier ciclo que contenga un `alias` —palabras enteras, sin caja ni tildes— pasa a ser `ciclo`, conservando la sección (\"Asterisco - Competencia\" → \"<ciclo> - Competencia\"). El alias tiene que ser específico: si aparece en el ciclo de otra cosa, esa función queda con el nombre del festival. Un ciclo que dice 'Festival' y no está acá aparece igual en la web, con su nombre. Los de otro lugar llevan `lugar` y `archivo` (mismo formato que cartelera.json, cargado a mano), tienen su propia página y no entran a cartelera.json, así no se mezclan con Buenos Aires ni con las stories. Opcionales: `bajada`, `web`, `desde`/`hasta` (si no, salen de las funciones), `cuando` (texto mientras no haya fechas), `sedes` ({sala: dirección}, para las que la web no conoce), `logo` (ruta a la imagen, cuadrada; se muestra en un círculo a la izquierda). El listado los ordena por fecha de inicio; con la misma fecha, en el orden de este archivo.",
   "festivales": [
     {
       "slug": "cine-inusual",
@@ -22,7 +22,17 @@
       "lugar": "Mar del Plata",
       "desde": "2026-11-05",
       "hasta": "2026-11-10",
-      "archivo": "data/festival-fuera-de-campo.json"
+      "archivo": "data/festival-fuera-de-campo.json",
+      "logo": "data/logos/fuera-de-campo.png"
+    },
+    {
+      "slug": "mar-del-plata",
+      "nombre": "Festival Internacional de Cine de Mar del Plata",
+      "bajada": "41.ª edición",
+      "lugar": "Mar del Plata",
+      "desde": "2026-11-05",
+      "hasta": "2026-11-15",
+      "archivo": "data/festival-mar-del-plata.json"
     }
   ]
 }
