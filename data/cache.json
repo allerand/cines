@@ -15129,15 +15129,15 @@
   },
   "la vida es así": {
     "url": "",
-    "title_en": "LA VIDA ES ASÍ",
+    "title_en": "La vida es así",
     "director": "",
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-06",
-    "con_duracion": true,
-    "desempate": "nueva"
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
+    "fecha": "2026-10-08",
+    "con_duracion": false,
+    "desempate": ""
   },
   "el secuestro de arabella": {
     "url": "https://letterboxd.com/film/the-kidnapping-of-arabella/",
@@ -19845,7 +19845,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -22251,7 +22251,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Caido (2009)",
-    "fecha": "2026-10-04",
+    "fecha": "2026-10-08",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22263,7 +22263,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: All Under the Moon (1993)",
-    "fecha": "2026-10-04",
+    "fecha": "2026-10-08",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22275,7 +22275,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Escenas en el mar (2012), y puede ser otra",
-    "fecha": "2026-10-04",
+    "fecha": "2026-10-08",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22297,8 +22297,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-04",
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ήρωες της γκάφας (1959)",
+    "fecha": "2026-10-08",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22938,7 +22938,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Jean-Christian Tassy, Benoît Daffis",
+    "director": "Benoît Daffis, Jean-Christian Tassy",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -23467,12 +23467,13 @@
     "original_title": "Gilda"
   },
   "humano: por el camino de en medio": {
-    "url": "",
-    "title_en": "Humano: Por el camino de en medio",
-    "director": "",
+    "url": "https://letterboxd.com/film/por-el-camino-de-en-medio/",
+    "title_en": "Por el camino de en medio",
+    "director": "Arsenio Mayo",
     "country": "",
-    "year": null,
-    "duration": null
+    "year": 2025,
+    "duration": 119,
+    "genre": "Comedia"
   },
   "humano: ciudad sin sueño": {
     "url": "https://letterboxd.com/film/sleepless-city/",
@@ -23912,5 +23913,17 @@
     "duration": 90,
     "genre": "Documental",
     "original_title": "El Bosco: el jardín de los sueños"
+  },
+  "cars": {
+    "url": "",
+    "title_en": "Cars",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: Cars (2006), Cars 3 (2017), Cars on the Road (2022)",
+    "fecha": "2026-10-08",
+    "con_duracion": false,
+    "desempate": ""
   }
 }
