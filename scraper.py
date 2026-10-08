@@ -5855,10 +5855,31 @@ _CCR_FECHA_RE = re.compile(
     r"\b(Lun|Mar|Mi[ée]|Jue|Vie|S[áa]b|Dom)\.?\s+(\d{1,2})\.(\d{1,2})\b",
     re.IGNORECASE,
 )
+# "Vie. 02.10 y 30.10": la segunda fecha va sin el día de la semana.
+_CCR_FECHA_SIGUE_RE = re.compile(r"\s*(?:,|y)\s*(\d{1,2})\.(\d{1,2})\b(?![.:]?\d|\s*h\b)")
+# "Jueves de octubre | 18 h" (Buscando a Shakespeare): todos los jueves del mes.
+_CCR_RECURRENTE_RE = re.compile(
+    r"^(Lunes|Martes|Mi[ée]rcoles|Jueves|Viernes|S[áa]bados?|Domingos?)\s+de\s+"
+    r"([A-Za-zé]+)\b",
+    re.IGNORECASE,
+)
 _CCR_HOUR_RE = re.compile(r"\b(\d{1,2})(?:[.:](\d{2}))?\s*h\b", re.IGNORECASE)
 _CCR_DIAS = {"lun": 0, "mar": 1, "mie": 2, "mié": 2, "jue": 3, "vie": 4,
              "sab": 5, "sáb": 5, "dom": 6}
 _CCR_GENERICOS = {"actividades", "horarios", "cine"}
+# La ficha de la página de cada película, después de la sinopsis:
+#   "La tiendita del horror, dirigida por Frank Oz. EE.UU., 1986. Duración: 100'. + 13"
+#   "Casino Royale dirigida por John Huston, Robert Parrish, …. EE.UU./Gran Bretaña, 1967. 137 ‘. +13."
+# El país admite puntos ("EE.UU.") pero no ". ": así un director con inicial
+# ("Richard C. Sarafian") no corta antes de tiempo. La duración no se toma: es
+# un redondeo (90' para La hora del espanto, que dura 107), y como dato del
+# cine pisa a la de Letterboxd y le hace descartar la película correcta.
+_CCR_FICHA_RE = re.compile(
+    r"^(?P<titulo>.+?),?\s+dirigid[ao]\s+por\s+(?P<director>.+?)\.\s+"
+    r"(?P<pais>(?:[^,.]|\.(?!\s))+?),\s*(?P<year>(?:19|20)\d{2})\b",
+    re.IGNORECASE,
+)
+_CCR_HREF_RE = re.compile(r"^(?:https?://(?:www\.)?centroculturalrecoleta\.org)?(/agenda/[^?#]+)")
 # Lo que sigue a la hora en las grillas en prosa: “Título”, de Director (País)
 _CCR_INLINE_RE = re.compile(
     r"^[“\"«]\s*(?P<titulo>[^”\"»]+?)\s*[”\"»]\s*,?"
@@ -5913,6 +5934,69 @@ def _ccr_fecha(dia: str, day: int, month: int, today: date) -> Optional[date]:
     return next((d for d in candidatas if d.year == year), None)
 
 
+def _ccr_fechas(line: str, today: date, recurrentes: bool) -> tuple[list[date], int]:
+    """Las fechas de un renglón y dónde termina la última (ahí se busca la
+    hora). Una fecha sin día de la semana ("Vie. 02.10 y 30.10") toma el de
+    la anterior para elegir el año. Con `recurrentes`, "Jueves de octubre" son
+    todos los jueves de octubre."""
+    fechas: list[date] = []
+    fin = 0
+    for fm in _CCR_FECHA_RE.finditer(line):
+        dia = fm.group(1)
+        sueltas = [(int(fm.group(2)), int(fm.group(3)))]
+        fin = fm.end()
+        while sm := _CCR_FECHA_SIGUE_RE.match(line, fin):
+            sueltas.append((int(sm.group(1)), int(sm.group(2))))
+            fin = sm.end()
+        for day, month in sueltas:
+            d = _ccr_fecha(dia, day, month, today)
+            if d:
+                fechas.append(d)
+    if fechas or not recurrentes:
+        return fechas, fin
+    rm = _CCR_RECURRENTE_RE.match(line)
+    month = MESES_ES.get(rm.group(2).lower()) if rm else None
+    if not month:
+        return [], 0
+    wd = _CCR_DIAS[unicodedata.normalize("NFKD", rm.group(1).lower())
+                   .encode("ascii", "ignore").decode()[:3]]
+    year = today.year + (1 if month < today.month else 0)
+    d = date(year, month, 1)
+    while d.month == month:
+        if d.weekday() == wd:
+            fechas.append(d)
+        d += timedelta(days=1)
+    return fechas, rm.end()
+
+
+def _ccr_norm(titulo: str) -> str:
+    t = unicodedata.normalize("NFKD", titulo).encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9]+", " ", t.lower()).strip()
+
+
+def _ccr_fichas(lines: list[str]) -> dict[str, dict]:
+    """Las fichas técnicas de una página ("Título, dirigida por …"), por
+    título normalizado."""
+    fichas: dict[str, dict] = {}
+    for line in lines:
+        fm = _CCR_FICHA_RE.match(line.strip())
+        if not fm:
+            continue
+        fichas[_ccr_norm(fm.group("titulo"))] = {
+            "director": _ccr_directores(fm.group("director")),
+            # "EE.UU./Gran Bretaña": run.py normaliza los países separados por coma.
+            "country": ", ".join(p.strip() for p in fm.group("pais").split("/") if p.strip()),
+            "year": int(fm.group("year")),
+        }
+    return fichas
+
+
+def _ccr_completar(sc: Screening, ficha: dict) -> None:
+    sc.director = sc.director or ficha.get("director", "")
+    sc.country = sc.country or ficha.get("country", "")
+    sc.year = sc.year or ficha.get("year")
+
+
 def _ccr_parse_lineas(lines: list[str], url: str, today: date) -> list[Screening]:
     """
     Funciones de una página de evento del CCR, a partir de su texto en renglones.
@@ -5927,68 +6011,82 @@ def _ccr_parse_lineas(lines: list[str], url: str, today: date) -> list[Screening
         arriba como título publicaba la sinopsis de la función anterior.
     Un renglón de arriba que es prosa nunca es el título: la función se
     descarta antes que publicar una sinopsis como película.
+
+    "Jueves de octubre | 18 h" sin una sola fecha (Buscando a Shakespeare)
+    son todos los jueves de octubre: así lo vende Entradas BA. Vale sólo si la
+    página no trae nada más preciso y no es un ciclo: en Comedias de terror,
+    "Viernes de octubre | 18 h" va debajo del nombre del ciclo, y cada
+    película tiene su fecha en "Actividades".
     """
     cutoff = today + timedelta(days=90)
     lines = [ln.strip() for ln in lines if ln and ln.strip()]
+    fichas = _ccr_fichas(lines)
 
-    result: list[Screening] = []
-    seen_keys: set[tuple] = set()
-    for i, line in enumerate(lines):
-        fechas = list(_CCR_FECHA_RE.finditer(line))
-        if not fechas:
-            continue
-        hm = _CCR_HOUR_RE.search(line, fechas[-1].end())
-        if not hm:
-            continue  # "Sáb. 03.10 al Dom. 01.11": el rango del ciclo, no una función
-        hora = f"{int(hm.group(1)):02d}:{int(hm.group(2) or 0):02d}"
+    def leer(recurrentes: bool) -> list[Screening]:
+        result: list[Screening] = []
+        seen_keys: set[tuple] = set()
+        for i, line in enumerate(lines):
+            fechas, fin = _ccr_fechas(line, today, recurrentes)
+            if not fechas:
+                continue
+            hm = _CCR_HOUR_RE.search(line, fin)
+            if not hm:
+                continue  # "Sáb. 03.10 al Dom. 01.11": el rango del ciclo, no una función
+            hora = f"{int(hm.group(1)):02d}:{int(hm.group(2) or 0):02d}"
 
-        title, director, country = "", "", ""
-        resto = re.sub(r"^[\s:|\-–—]+", "", line[hm.end():]).strip()
-        if resto:
-            im = _CCR_INLINE_RE.match(resto)
-            if im:
-                title = im.group("titulo").strip()
-                director = _ccr_directores(im.group("director") or "")
-                country = (im.group("pais") or "").strip()
-            elif re.fullmatch(r"[A-Za-zÁÉÍÓÚáéíóúñ ]{3,}", resto) and \
-                    not _ccr_es_sinopsis(resto):
-                # "| 18 h | Cine" / "| 18 h | Taller": la categoría.
-                if "cine" not in resto.lower():
+            title, director, country = "", "", ""
+            resto = re.sub(r"^[\s:|\-–—]+", "", line[hm.end():]).strip()
+            if resto:
+                im = _CCR_INLINE_RE.match(resto)
+                if im:
+                    title = im.group("titulo").strip()
+                    director = _ccr_directores(im.group("director") or "")
+                    country = (im.group("pais") or "").strip()
+                elif re.fullmatch(r"[A-Za-zÁÉÍÓÚáéíóúñ ]{3,}", resto) and \
+                        not _ccr_es_sinopsis(resto):
+                    # "| 18 h | Cine" / "| 18 h | Taller": la categoría.
+                    if "cine" not in resto.lower():
+                        continue
+                else:
+                    continue  # algo distinto a la grilla conocida: no adivinar
+            if not title:
+                j = i - 1
+                while j >= 0 and _CCR_FECHA_RE.search(lines[j]):
+                    j -= 1
+                if j < 0 or not _ccr_es_titulo(lines[j]):
                     continue
-            else:
-                continue  # algo distinto a la grilla conocida: no adivinar
-        if not title:
-            j = i - 1
-            while j >= 0 and _CCR_FECHA_RE.search(lines[j]):
-                j -= 1
-            if j < 0 or not _ccr_es_titulo(lines[j]):
-                continue
-            title = lines[j]
-            # El título viene prefijado con la categoría ("Cine | …", "Taller |
-            # …", "Música | …"). Sólo cine; se saca el prefijo.
-            pm = re.match(r"^([A-Za-zÁÉÍÓÚáéíóúñ]+)\s*\|\s*(.+)$", title)
-            if pm:
-                if pm.group(1).strip().lower() != "cine":
-                    continue
-                title = pm.group(2).strip()
+                title = lines[j]
+                # El título viene prefijado con la categoría ("Cine | …", "Taller |
+                # …", "Música | …"). Sólo cine; se saca el prefijo.
+                pm = re.match(r"^([A-Za-zÁÉÍÓÚáéíóúñ]+)\s*\|\s*(.+)$", title)
+                if pm:
+                    if pm.group(1).strip().lower() != "cine":
+                        continue
+                    title = pm.group(2).strip()
 
-        for fm in fechas:
-            d = _ccr_fecha(fm.group(1), int(fm.group(2)), int(fm.group(3)), today)
-            if d is None or d < today or d > cutoff:
-                continue
-            key = (title, d.isoformat(), hora)
-            if key in seen_keys:
-                continue
-            seen_keys.add(key)
-            result.append(Screening(
-                cine="Centro Cultural Recoleta",
-                title=title,
-                fecha=d.isoformat(),
-                hora=hora,
-                ticket_url=url,
-                director=director,
-                country=country,
-            ))
+            for d in fechas:
+                if d < today or d > cutoff:
+                    continue
+                key = (title, d.isoformat(), hora)
+                if key in seen_keys:
+                    continue
+                seen_keys.add(key)
+                sc = Screening(
+                    cine="Centro Cultural Recoleta",
+                    title=title,
+                    fecha=d.isoformat(),
+                    hora=hora,
+                    ticket_url=url,
+                    director=director,
+                    country=country,
+                )
+                _ccr_completar(sc, fichas.get(_ccr_norm(title), {}))
+                result.append(sc)
+        return result
+
+    result = leer(recurrentes=False)
+    if not result and "Actividades" not in lines:
+        result = leer(recurrentes=True)
     return result
 
 
@@ -6002,8 +6100,33 @@ def _ccr_lineas(soup: BeautifulSoup) -> list[str]:
     return soup.get_text("\n", strip=True).splitlines()
 
 
-def scrape_ccr() -> list[Screening]:
-    today = date.today()
+def _ccr_actividades(soup: BeautifulSoup) -> list[tuple[str, str]]:
+    """(título, url) de las "Actividades" de un ciclo. Sábados de superacción
+    linkea cada película; Comedias de terror pone el título en un <strong> sin
+    link, pero la página existe igual, con el título como slug
+    (/agenda/la-tiendita-del-horror). Va antes de _ccr_lineas, que desarma
+    los <strong>."""
+    h2 = soup.find(lambda t: t.name in ("h2", "h3")
+                   and t.get_text(strip=True).lower() == "actividades")
+    ul = h2.find_next("ul") if h2 else None
+    out: list[tuple[str, str]] = []
+    for li in (ul.find_all("li") if ul else []):
+        a = li.find("a", href=True)
+        el = a or li.find(["strong", "b"])
+        title = el.get_text(" ", strip=True) if el else ""
+        if not title:
+            continue
+        m = _CCR_HREF_RE.match(a["href"]) if a else None
+        if m:
+            out.append((title, CCR_BASE + m.group(1)))
+        else:
+            slug = re.sub(r"[^a-z0-9]+", "-", _ccr_norm(title)).strip("-")
+            out.append((title, f"{CCR_BASE}/agenda/{slug}"))
+    return out
+
+
+def scrape_ccr(today: Optional[date] = None) -> list[Screening]:
+    today = today or date.today()
     try:
         idx_soup = fetch_html(CCR_INDEX)
     except Exception:
@@ -6011,9 +6134,8 @@ def scrape_ccr() -> list[Screening]:
 
     event_urls: list[str] = []
     seen_urls: set[str] = set()
-    href_re = re.compile(r"^(?:https?://(?:www\.)?centroculturalrecoleta\.org)?(/agenda/[^?#]+)")
     for a in idx_soup.find_all("a", href=True):
-        m = href_re.match(a["href"])
+        m = _CCR_HREF_RE.match(a["href"])
         if not m:
             continue
         u = CCR_BASE + m.group(1)
@@ -6028,7 +6150,27 @@ def scrape_ccr() -> list[Screening]:
             soup = fetch_html(url)
         except Exception:
             continue
-        for sc in _ccr_parse_lineas(_ccr_lineas(soup), url, today):
+        actividades = _ccr_actividades(soup)
+        funciones = _ccr_parse_lineas(_ccr_lineas(soup), url, today)
+        # La página de un ciclo da sólo título y fecha; director, país y año
+        # están en la ficha de la página de cada película. Sin eso el
+        # enrichment no se anima a elegir entre homónimos (La tiendita del
+        # horror de Corman o la de Frank Oz) y la función queda sin ficha.
+        for title, film_url in actividades:
+            propias = [sc for sc in funciones
+                       if _ccr_norm(sc.title) == _ccr_norm(title) and not sc.director]
+            if not propias:
+                continue  # ya pasó, o no es cine
+            try:
+                fichas = _ccr_fichas(_ccr_lineas(fetch_html(film_url)))
+            except Exception:
+                continue
+            ficha = fichas.get(_ccr_norm(title))
+            if ficha is None and len(fichas) == 1:
+                ficha = next(iter(fichas.values()))
+            for sc in propias:
+                _ccr_completar(sc, ficha or {})
+        for sc in funciones:
             key = (sc.title, sc.fecha, sc.hora)
             if key not in seen_keys:
                 seen_keys.add(key)

@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang='es'>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='width=device-width, initial-scale=1.0, user-scalable=no' name='viewport'>
+    
+    
+	
+    
+    <meta name='description' content='Conocé toda nuestra programación.' />
+<meta property='og:description' content='Conocé toda nuestra programación.' />
+<meta property='og:type' content='website' />
+<meta property='og:title' content='Agenda' />
+  <meta property='og:url' content='http://centroculturalrecoleta.org/agenda' />
+  <link rel='canonical' href='http://centroculturalrecoleta.org/agenda' />
+    <title>Centro Cultural Recoleta &mdash; Agenda</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    <link href="//cdn.jsdelivr.net/bootstrap/3/css/bootstrap.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,700i,800" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css?1709780030" />    <link rel="stylesheet" type="text/css" href="/css/style.css?1711580964" />    
+	
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-41784010-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-41784010-1');
+</script>
+  </head>
+  <body data-page='schedule-events'>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" ></script>
+    <header>
+  <div class='header-ba'>
+    <div class='wrapper'>
+      <!--<img srcset="/images/common/logo-ba-2x.png 2x" alt="Buenos Aires Ciudad" class="logo-ba" src="/images/common/logo-ba.png" />
+      <img srcset="/images/common/slogan-ba-2x.png 2x" alt="En todo estás vos" class="slogan-ba" src="/images/common/slogan-ba.png" />-->
+    </div>
+  </div>
+  <div class='wrapper site-header'>
+    <a href="/"><img alt="Centro Cultural Recoleta" class="logo" src="/images/common/logo.svg" /></a>
+    <button class='only-mobile' id='mobile-menu-button' type='button'></button>
+    <nav>
+      <img alt="Centro Cultural Recoleta" class="logo only-mobile" src="/images/common/logo.svg" />
+      <ul id='main-nav'><li>
+        <a href="/el-recoleta">El recoleta</a></li><li>
+		<a href="/clave1317">Ingreso y horarios</a></li><li>
+        <a href="/agenda">Agenda</a></li><li>
+        <a href="/talleres">Talleres</a></li><!--<li>
+        <a href="/volvemos-al-reco">Posta de vacunación</a></li>-->
+        <li><a href="/tienda">CeDIP</a></li>
+
+                    <li><a href="/cafe">LIPM</a></li>
+              </ul>
+      <ul class='social-networks'>
+        <li class="search-widget-list-item">
+          <div class="search-widget-container">
+            <div id="search-widget" class="search-widget">
+              <form action="/buscar">
+                <input class="search-widget-input" placeholder="Buscar..." type="search" value="" name="q" id="search">
+                <input class="icon icon-search search-widget-submit" type="submit" value="">
+                <span class="icon icon-search search-widget-toggle"></span>
+              </form>
+            </div>
+          </div>
+        </li>
+        <li><a class="icon icon-facebook" href="https://www.facebook.com/CentroCulturalRecoleta/" target='_blank'></a></li><li><a class="icon icon-instagram" href="https://www.instagram.com/elrecoleta/" target='_blank'></a></li><li><a class="icon icon-twitter" href="https://twitter.com/ElRecoleta" target='_blank'></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+    <div id='schedule-events' class='content wrapper'>
+      <div class='page-header'>
+  <picture class="page-header-background">
+    <source media="(max-width: 767px)" srcset="/upload/headers/4/mobile_mobile_Header-Agenda.jpg?1743446681" />
+    <img srcset="/upload/headers/4/1200x220_desktop_Header-Agenda.jpg?1743446680 1x, /upload/headers/4/2400x440_desktop_Header-Agenda.jpg?1743446680 2x" alt="" />
+  </picture>
+	<h1></h1>
+	</div>
+<div class='section-intro'>
+  </div>
+<div class='filters'>
+  <div class="container-filter-select" >
+    <h3 class='only-mobile'>Filtrar</h3>
+    <ul class='filters-select'>
+      <li>
+        <label class='filter-select-label'>Categoría</label>
+        <select id='filter-category-select' name="categoria" multiple>
+                                <option value='1'>Teatro</option>
+                      <option value='2'>Danza</option>
+                      <option value='3'>Música</option>
+                      <option value='4'>Charla</option>
+                      <option value='5'>Muestras</option>
+                      <option value='6'>Otros</option>
+                      <option value='7'>Cultura Hip Hop</option>
+                      <option value='8'>Lecturas Performáticas</option>
+                      <option value='9'>Cine</option>
+                      <option value='10'>Festival</option>
+                      <option value='11'>Música Clásica</option>
+                      <option value='12'>Clases Abiertas</option>
+                      <option value='13'>Presentación de Libro</option>
+                      <option value='14'>Performance</option>
+                      <option value='34'>Visitas Guiadas</option>
+                      <option value='35'>Espacios</option>
+                      <option value='36'>Convocatoria</option>
+                  </select>
+      </li>
+    </ul>
+  </div>
+  <div class="container-cancel-date" style="display:none;">
+    <a  id="cancel-date" class="glyphicon glyphicon-remove" title="Cancelar búsqueda" ></a> CANCELAR FILTROS
+  </div>
+  <div class='filter-date'>
+    <input class='date-button' id='daterange' type='text' readonly>
+  </div>
+  <div class='filters-mobile-actions only-mobile'>
+    <button class='button' id='mobile-cancel-filter-button' type='button'>Cancelar</button>
+    <button class='button' id='mobile-apply-filter-button' type='button'>Filtrar</button>
+  </div>
+</div><section class='events-wrapper'>
+  <button class="filter-button only-mobile" type='button'>Filtrar</button>
+  <button class="filled toggle-button only-mobile" type='button'>Ver exposiciones</button>
+  <ul class='events' data-url='/agenda'><li class='box event ' >
+  <picture>
+    <source srcset="/upload/schedule-events/3694/462x454_Smaragda_Film_Still_keyvisual780.jpg?1790610586" media="(max-width: 1024px)">
+    <img src="/upload/schedule-events/3694/462x454_Smaragda_Film_Still_keyvisual780.jpg?1790610586" alt="Encuentro de Cine Europeo"/>
+  </picture>
+  <div class='box-info event-info' style='background-color: #000000; color: #ffffff;'>
+          <a class="link1" style='color: #ffffff;' href="">#Cine</a>
+            <h3><span class='text-ellipsis' title='Encuentro de Cine Europeo'>Encuentro de Cine Europeo</span></h3>
+        <div class='more-info' style='color: #000000;'>
+      <div class='date' style='color: #ffffff; border-color: #ffffff;'><span>Sáb. 03.10 al Dom. 01.11</span></div><a class="button see-more-button" style='color: #ffffff; border-color: #ffffff;' href="/agenda/encuentro-de-cine-europeo">Ver más</a>
+    </div>
+  </div>
+</li><li class='box event ' >
+  <picture>
+    <source srcset="/upload/event-cycles/287/462x454_LA%20TIENDITA%20DEL%20HORROR.jpg?1790611713" media="(max-width: 1024px)">
+    <img src="/upload/event-cycles/287/462x454_LA%20TIENDITA%20DEL%20HORROR.jpg?1790611713" alt="Comedias de terror"/>
+  </picture>
+  <div class='box-info event-info' style='background-color: #000000; color: #ffffff;'>
+          <a class="link1" style='color: #ffffff;' href="">#Cine</a>
+            <h3><span class='text-ellipsis' title='Comedias de terror'>Comedias de terror</span></h3>
+        <div class='more-info' style='color: #000000;'>
+      <div class='date' style='color: #ffffff; border-color: #ffffff;'><span>Viernes de octubre | 18 h</span></div><a class="button see-more-button" style='color: #ffffff; border-color: #ffffff;' href="/agenda/ciclos/comedias-de-terror">Ver más</a>
+    </div>
+  </div>
+</li><li class='box event ' >
+  <picture>
+    <source srcset="/upload/schedule-events/2866/462x454_sorp.jpg?1709756687" media="(max-width: 1024px)">
+    <img src="/upload/schedule-events/2866/462x454_sorp.jpg?1709756687" alt="Película sorpresa"/>
+  </picture>
+  <div class='box-info event-info' style='background-color: #000000; color: #ffffff;'>
+          <a class="link1" style='color: #ffffff;' href="">#Cine</a>
+            <h3><span class='text-ellipsis' title='Película sorpresa'>Película sorpresa</span></h3>
+        <div class='more-info' style='color: #000000;'>
+      <div class='date' style='color: #ffffff; border-color: #ffffff;'><span> Dom. 18.10 | 16 h | Cine</span></div><a class="button see-more-button" style='color: #ffffff; border-color: #ffffff;' href="/agenda/pelicula-sorpresa">Ver más</a>
+    </div>
+  </div>
+</li><li class='box event ' >
+  <picture>
+    <source srcset="/upload/schedule-events/3699/462x454_BUSCANDO%20A%20SHAKESPEARE.jpg?1790614348" media="(max-width: 1024px)">
+    <img src="/upload/schedule-events/3699/462x454_BUSCANDO%20A%20SHAKESPEARE.jpg?1790614348" alt="Buscando a Shakespeare"/>
+  </picture>
+  <div class='box-info event-info' style='background-color: #000000; color: #ffffff;'>
+          <a class="link1" style='color: #ffffff;' href="">#Cine</a>
+            <h3><span class='text-ellipsis' title='Buscando a Shakespeare'>Buscando a Shakespeare</span></h3>
+        <div class='more-info' style='color: #000000;'>
+      <div class='date' style='color: #ffffff; border-color: #ffffff;'><span> Jueves de octubre | 18 h</span></div><a class="button see-more-button" style='color: #ffffff; border-color: #ffffff;' href="/agenda/buscando-a-shakespeare">Ver más</a>
+    </div>
+  </div>
+</li><li class='box event ' >
+  <picture>
+    <source srcset="/upload/event-cycles/207/462x454_bbbbb.jpg?1713279490" media="(max-width: 1024px)">
+    <img src="/upload/event-cycles/207/462x454_bbbbb.jpg?1713279490" alt="Sábados de superacción"/>
+  </picture>
+  <div class='box-info event-info' style='background-color: #000000; color: #ffffff;'>
+          <a class="link1" style='color: #ffffff;' href="">#Cine</a>
+            <h3><span class='text-ellipsis' title='Sábados de superacción'>Sábados de superacción</span></h3>
+        <div class='more-info' style='color: #000000;'>
+      <div class='date' style='color: #ffffff; border-color: #ffffff;'><span>Sábados</span></div><a class="button see-more-button" style='color: #ffffff; border-color: #ffffff;' href="/agenda/ciclos/sabados-de-superaccion">Ver más</a>
+    </div>
+  </div>
+</li></ul>
+  <div class='no-events-message '>
+    <p></p>
+  </div>
+</section>
+<script id='event-template' type='x-tmpl-mustache'>
+  <li class='box event loading {{#format}}double{{/format}}'>
+    <picture>
+      <source srcset='{{ photo }}' media="(max-width: 1024px)">
+      <img src='{{ photo_hd }}' alt='{{ title }}' />
+    </picture>
+    <div class='box-info event-info' style='background-color: {{ bg_color }}; color: {{ font_color }};'>
+      {{#link1}}<a class="link1" style='color: {{ font_color }};' href="{{ link1.url }}">{{ link1.text }}</a> <a class="link1" style='color: {{ font_color }};' href="{{ link1.url }}">{{ link1.title }}</a>{{/link1}}
+      {{#link2}}<a class="link2" style='color: {{ font_color }};' href="{{ link2.url }}">{{ link2.text }}</a> <a class="link2" style='color: {{ font_color }};' href="{{ link2.url }}">{{ link2.title }}</a>{{/link2}}
+      <h3><span class='text-ellipsis'>{{ title }}</span></h3>
+      {{ #preview }}<p>{{ description }}</p>{{ /preview }}
+      <div class='more-info' style='color: {{ bg_color }};'>
+        <div class='date' style='color: {{ font_color }}; border-color: {{ font_color }}'><span>{{ date }}</span></div><a class="button see-more-button" style='color: {{ font_color }}; border-color: {{ font_color }}' href="{{ url }}">Ver más</a>
+      </div>
+    </div>
+  </li>
+</script>
+    </div>
+    <footer class='wrapper'>
+  <img srcset="/images/common/logo-ba-light-2x.png 2x" alt="Buenos Aires Ciudad" class="logo-ba" src="/images/common/logo-ba-light.png" />
+  <div class='social-networks'>
+    <span class='hashtag'>#elrecoleta</span>
+    <ul><li><a class="icon icon-facebook" href="https://www.facebook.com/CentroCulturalRecoleta/" target='_blank'></a></li><li><a class="icon icon-instagram" href="https://www.instagram.com/elrecoleta/" target='_blank'></a></li><li><a class="icon icon-twitter" href="https://twitter.com/ElRecoleta" target='_blank'></a></li></ul>
+  </div>
+</footer>    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://apis.google.com/js/client.js?onload=googleApiClientReady"></script>
+    <script src="//cdn.jsdelivr.net/momentjs/latest/moment-with-locales.min.js" type="text/javascript"></script>
+    <script src="//cdn.jsdelivr.net/bootstrap.daterangepicker/2/daterangepicker.js" type="text/javascript"></script>
+	<script type="text/javascript" src="/js/app/search.js?1519423924"></script>
+    <script type="text/javascript" src="/js/app/app.js?1605589109"></script>    
+	
+      </body>
+</html>
