@@ -20,7 +20,8 @@
       "nombre": "Fuera de Campo",
       "bajada": "Muestra de cine argentino",
       "lugar": "Mar del Plata",
-      "cuando": "Noviembre · fechas a confirmar",
+      "desde": "2026-11-05",
+      "hasta": "2026-11-10",
       "archivo": "data/festival-fuera-de-campo.json"
     }
   ]

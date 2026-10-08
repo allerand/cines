@@ -2019,7 +2019,7 @@ function itemFestival(f) {
       <div class="fest-nombre">${escapeHtml(f.nombre)}${f.bajada ? `<span class="fest-bajada">${escapeHtml(f.bajada)}</span>` : ''}</div>
       <div class="fest-meta">${meta.join(' · ')}</div>
     </div>
-    <span class="fest-n">${n ? `${n} func. →` : 'Grilla a confirmar'}</span>
+    <span class="fest-n">${n ? `${n} func. →` : 'Próximamente'}</span>
   </a>`;
 }
 
@@ -2348,7 +2348,7 @@ function renderTable() {
 
   if (rows.length === 0) {
     main.innerHTML = festivalActivo && !allScreenings.length
-      ? '<div class="empty">Todavía no salió la grilla. Va a aparecer acá apenas la publiquen.</div>'
+      ? '<div class="empty">Próximamente.</div>'
       : '<div class="empty">No hay funciones.</div>';
     return;
   }
