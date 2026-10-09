@@ -3073,6 +3073,8 @@ _PAISES_COMPUESTOS = [
 def _gaumont_paises(texto: str) -> str:
     """'ESPAÑA FRANCIA' → 'ESPAÑA, FRANCIA'; 'ESTADOS UNIDOS' queda entero."""
     texto = re.sub(r"\s+", " ", (texto or "").strip())
+    # Un "-" suelto es un país que la ficha dejó vacío ("ARGENTINA, -, ESPAÑA").
+    texto = ", ".join(x.strip() for x in texto.split(",") if x.strip(" -"))
     if not texto or "," in texto:
         return texto
     palabras = texto.split(" ")
