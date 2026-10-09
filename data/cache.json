@@ -15135,7 +15135,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-09",
     "con_duracion": false,
     "desempate": ""
   },
@@ -20824,16 +20824,15 @@
     "original_title": "Alice, Darling"
   },
   "frida": {
-    "url": "",
+    "url": "https://letterboxd.com/film/frida/",
     "title_en": "Frida",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "varias se llaman así: Frida (2002), Frida (2024), Frida (2022)",
-    "fecha": "2026-09-29",
-    "con_duracion": false,
-    "desempate": ""
+    "director": "Julie Taymor",
+    "country": "USA",
+    "year": 2002,
+    "duration": 123,
+    "genre": "Drama, Romance",
+    "title_es": "Frida",
+    "original_title": "Frida"
   },
   "the house of the devil|2009": {
     "url": "https://letterboxd.com/film/the-house-of-the-devil/",
@@ -22119,15 +22118,16 @@
     "duration": null
   },
   "la casa": {
-    "url": "https://letterboxd.com/film/la-casa/",
-    "title_en": "La casa",
-    "director": "Gustavo Fontán",
-    "country": "Argentina, Spain",
-    "year": 2012,
-    "duration": 62,
-    "genre": "Documental",
-    "clase_titulo": "exacto",
-    "sin_hints": "la más nueva que se llama así"
+    "url": "",
+    "title_en": "La Casa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es La casa (2012), y puede ser otra",
+    "fecha": "2026-10-09",
+    "con_duracion": false,
+    "desempate": ""
   },
   "ficuba": {
     "url": "",
@@ -23656,7 +23656,8 @@
     "duration": 119,
     "genre": "Drama",
     "title_es": "Sus hijos",
-    "original_title": "& Sons"
+    "original_title": "& Sons",
+    "clase_titulo": "exacto"
   },
   "ceniza en la boca|2026": {
     "url": "https://letterboxd.com/film/ashes-2026-3/",
@@ -23677,7 +23678,8 @@
     "duration": 105,
     "genre": "Drama",
     "title_es": "Cinco segundos",
-    "original_title": "Cinque secondi"
+    "original_title": "Cinque secondi",
+    "clase_titulo": "exacto"
   },
   "el tren fluvial": {
     "url": "https://letterboxd.com/film/el-tren-fluvial/",
@@ -23925,5 +23927,422 @@
     "fecha": "2026-10-08",
     "con_duracion": false,
     "desempate": ""
+  },
+  "la princesa mononoke": {
+    "url": "",
+    "title_en": "LA PRINCESA MONONOKE",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 1997,
+    "duration": 134,
+    "genre": "Aventura, Fantasía",
+    "title_es": "La princesa Mononoke",
+    "original_title": "もののけ姫"
+  },
+  "xy9|2026": {
+    "url": "https://letterboxd.com/film/xy9/",
+    "title_en": "XY9",
+    "director": "David Huergo",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 65,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "original_title": "XY9"
+  },
+  "la película que quisieras ver|2026": {
+    "url": "",
+    "title_en": "La película que quisieras ver",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "monólogo final|2026": {
+    "url": "",
+    "title_en": "Monólogo final",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el odio en el cuerpo|2026": {
+    "url": "",
+    "title_en": "El odio en el cuerpo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "desencontrados|2026": {
+    "url": "",
+    "title_en": "Desencontrados",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "bárbara|2026": {
+    "url": "",
+    "title_en": "Bárbara",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "retrato, elogio al duelo|2026": {
+    "url": "",
+    "title_en": "Retrato, elogio al duelo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el silencio de marilyn|2026": {
+    "url": "",
+    "title_en": "El silencio de Marilyn",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "yo soy hermes|2026": {
+    "url": "",
+    "title_en": "Yo soy Hermes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "decepciones del alma - la agonía de la soledad|2026": {
+    "url": "",
+    "title_en": "Decepciones del alma - La agonía de la soledad",
+    "director": "Lucas Giuggia",
+    "country": "",
+    "year": 2026,
+    "duration": 93,
+    "genre": "Drama, Romance",
+    "original_title": "Decepciones del Alma (La Agonía de la Soledad)"
+  },
+  "cielomoto|2026": {
+    "url": "",
+    "title_en": "Cielomoto",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la reina, el buda y buñuel|2026": {
+    "url": "",
+    "title_en": "La Reina, el Buda y Buñuel",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "berlín, estación de friedrichstrasse 1990|1991": {
+    "url": "https://letterboxd.com/film/berlin-bahnhof-friedrichstrae-1990/",
+    "title_en": "Berlin, Bahnhof Friedrichstraße, 1990",
+    "director": "Ulrike Herdin, Lilly Grote, Julia Kunert",
+    "country": "Germany",
+    "year": 1991,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "Berlin, Bahnhof Friedrichstraße, 1990"
+  },
+  "crotos libres": {
+    "url": "https://letterboxd.com/film/crotos-libres/",
+    "title_en": "Crotos Libres",
+    "director": "Magalí Flaks",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "",
+    "original_title": "Crotos Libres"
+  },
+  "lo dejamos aca": {
+    "url": "",
+    "title_en": "LO DEJAMOS ACA",
+    "director": "Hernán Goldfrid",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Thriller, Drama",
+    "original_title": "Lo dejamos acá"
+  },
+  "la pelicula que quisieras ver": {
+    "url": "",
+    "title_en": "LA PELICULA QUE QUISIERAS VER",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "rocambole": {
+    "url": "",
+    "title_en": "ROCAMBOLE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "camino de brujas": {
+    "url": "https://letterboxd.com/film/camino-de-brujas/",
+    "title_en": "Camino de Brujas",
+    "director": "Rodrigo Cardozo",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "Terror",
+    "original_title": "Camino de Brujas"
+  },
+  "una película de parque chas": {
+    "url": "https://letterboxd.com/film/una-pelicula-de-parque-chas/",
+    "title_en": "Una Película de Parque Chas",
+    "director": "Aye Redigonda",
+    "country": "",
+    "year": 2025,
+    "duration": 64,
+    "genre": "Documental",
+    "original_title": "Una Película de Parque Chas"
+  },
+  "barbara": {
+    "url": "",
+    "title_en": "BARBARA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "razones del corazon": {
+    "url": "",
+    "title_en": "RAZONES DEL CORAZON",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el silencio de marilyn": {
+    "url": "",
+    "title_en": "EL SILENCIO DE MARILYN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "yo soy hermes": {
+    "url": "",
+    "title_en": "YO SOY HERMES",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el septimo sello": {
+    "url": "",
+    "title_en": "EL SEPTIMO SELLO",
+    "director": "Ingmar Bergman",
+    "country": "Sweden",
+    "year": 1957,
+    "duration": 96,
+    "genre": "Fantasía, Drama",
+    "title_es": "El séptimo sello",
+    "original_title": "Det sjunde inseglet"
+  },
+  "misterioso asesinato en la montaña": {
+    "url": "https://letterboxd.com/film/how-to-make-a-killing/",
+    "title_en": "How to Make a Killing",
+    "director": "Franck Dubosc",
+    "country": "France",
+    "year": 2024,
+    "duration": 113,
+    "genre": "Crimen, Comedia",
+    "title_es": "Misterioso asesinato en la montaña",
+    "original_title": "Un ours dans le Jura"
+  },
+  "siete días": {
+    "url": "",
+    "title_en": "Siete días",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "voces de libertad": {
+    "url": "https://letterboxd.com/film/waves-2024-1/",
+    "title_en": "Waves",
+    "director": "Jiří Mádl",
+    "country": "Czechia, Slovakia",
+    "year": 2024,
+    "duration": 131,
+    "genre": "Historia, Thriller",
+    "title_es": "Voces de libertad",
+    "original_title": "Vlny"
+  },
+  "la memoria del perfume de las cosas": {
+    "url": "",
+    "title_en": "La memoria del perfume de las cosas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "dražen": {
+    "url": "https://letterboxd.com/film/drazen/",
+    "title_en": "Drazen",
+    "director": "Danilo Šerbedžija",
+    "country": "Croatia, USA",
+    "year": 2024,
+    "duration": 100,
+    "genre": "Historia, Drama",
+    "title_es": "Drazen",
+    "original_title": "Dražen"
+  },
+  "la tiendita del horror|1986": {
+    "url": "https://letterboxd.com/film/little-shop-of-horrors/",
+    "title_en": "Little Shop of Horrors",
+    "director": "Frank Oz",
+    "country": "USA",
+    "year": 1986,
+    "duration": 94,
+    "genre": "Comedia, Terror"
+  },
+  "el joven frankenstein|1974": {
+    "url": "https://letterboxd.com/film/young-frankenstein/",
+    "title_en": "Young Frankenstein",
+    "director": "Mel Brooks",
+    "country": "USA",
+    "year": 1974,
+    "duration": 106,
+    "genre": "Comedia",
+    "title_es": "El jovencito Frankenstein",
+    "original_title": "Young Frankenstein"
+  },
+  "el club del terror|1986": {
+    "url": "https://letterboxd.com/film/vamp/",
+    "title_en": "Vamp",
+    "director": "Richard Wenk",
+    "country": "USA",
+    "year": 1986,
+    "duration": 93,
+    "genre": "Terror, Comedia",
+    "original_title": "Vamp"
+  },
+  "buscando a shakespeare|2025": {
+    "url": "https://letterboxd.com/film/buscando-a-shakespeare/",
+    "title_en": "Searching for Shakespeare",
+    "director": "Gustavo Garzón",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 93,
+    "genre": "Documental",
+    "original_title": "Buscando a Shakespeare"
+  },
+  "prínicipe valiente|1954": {
+    "url": "https://letterboxd.com/film/prince-valiant/",
+    "title_en": "Prince Valiant",
+    "director": "Henry Hathaway",
+    "country": "USA",
+    "year": 1954,
+    "duration": 100,
+    "genre": "Romance, Acción"
+  },
+  "verity": {
+    "url": "https://letterboxd.com/film/verity-2026/",
+    "title_en": "Verity",
+    "director": "Michael Showalter",
+    "country": "USA",
+    "year": 2026,
+    "duration": 114,
+    "genre": "Misterio, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Verity. La sombra de un engaño",
+    "original_title": "Verity",
+    "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "el ángel de la calle|1928": {
+    "url": "https://letterboxd.com/film/street-angel/",
+    "title_en": "Street Angel",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1928,
+    "duration": 102,
+    "genre": "Drama, Romance",
+    "title_es": "El ángel de la calle",
+    "original_title": "Street Angel"
+  },
+  "una chica mala|1931": {
+    "url": "https://letterboxd.com/film/bad-girl/",
+    "title_en": "Bad Girl",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1931,
+    "duration": 90,
+    "genre": "Drama, Romance",
+    "original_title": "Bad Girl"
+  },
+  "fueros humanos|1933": {
+    "url": "https://letterboxd.com/film/mans-castle/",
+    "title_en": "Man's Castle",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1933,
+    "duration": 75,
+    "genre": "Drama, Romance",
+    "title_es": "Fueros humanos",
+    "original_title": "Man's Castle"
+  },
+  "la hora fatal|1940": {
+    "url": "https://letterboxd.com/film/the-mortal-storm/",
+    "title_en": "The Mortal Storm",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1940,
+    "duration": 100,
+    "genre": "Drama",
+    "title_es": "Tormenta mortal",
+    "original_title": "The Mortal Storm"
+  },
+  "siempre te he querido|1946": {
+    "url": "https://letterboxd.com/film/ive-always-loved-you/",
+    "title_en": "I've Always Loved You",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1946,
+    "duration": 117,
+    "genre": "Drama, Romance",
+    "title_es": "La gran pasión",
+    "original_title": "I've Always Loved You"
+  },
+  "tigre de la china|1958": {
+    "url": "https://letterboxd.com/film/china-doll/",
+    "title_en": "China Doll",
+    "director": "Frank Borzage",
+    "country": "USA",
+    "year": 1958,
+    "duration": 99,
+    "genre": "Romance, Drama",
+    "title_es": "Muñeca de porcelana",
+    "original_title": "China Doll"
+  },
+  "las furias|1960": {
+    "url": "https://letterboxd.com/film/las-furias-1960/",
+    "title_en": "The Furies",
+    "director": "Vlasta Lah",
+    "country": "Argentina",
+    "year": 1960,
+    "duration": 85,
+    "genre": "Drama",
+    "original_title": "Las furias"
+  },
+  "lo que le pasó a reynoso|1955": {
+    "url": "https://letterboxd.com/film/lo-que-le-paso-a-reynoso/",
+    "title_en": "Lo que le pasó a Reynoso",
+    "director": "Leopoldo Torres Ríos",
+    "country": "Argentina",
+    "year": 1955,
+    "duration": 94,
+    "genre": "Drama",
+    "original_title": "Lo que le pasó a Reynoso"
   }
 }
