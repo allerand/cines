@@ -364,13 +364,17 @@
       font-weight: 600;
     }
     /* Toggle "+ Comerciales" — visualmente distinto a los filtros de cine */
+    /* "+ Comerciales": en verde mientras las cadenas están ocultas, para que
+       se vea que hay más; prendido pasa a un tono neutro. Gris y punteado
+       sobre el fondo negro no se veía. */
     .filter-toggle {
-      background: transparent;
-      border: 1px dashed var(--border);
-      color: var(--muted);
+      background: rgba(0, 208, 96, 0.08);
+      border: 1px solid rgba(0, 208, 96, 0.55);
+      color: var(--accent);
       padding: 0.3rem 0.75rem;
       border-radius: 3px;
       font-size: 0.72rem;
+      font-weight: 600;
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 0.06em;
@@ -379,15 +383,18 @@
       margin-left: 0.4rem;
     }
     .filter-toggle:hover {
-      color: var(--text);
-      border-color: var(--text);
-      border-style: solid;
+      background: rgba(0, 208, 96, 0.16);
+      border-color: var(--accent);
     }
     .filter-toggle[aria-pressed="true"] {
-      background: var(--bg3);
-      color: var(--accent);
-      border-color: var(--accent);
-      border-style: solid;
+      background: transparent;
+      color: var(--muted);
+      border-color: var(--border);
+      font-weight: 400;
+    }
+    .filter-toggle[aria-pressed="true"]:hover {
+      color: var(--text);
+      border-color: var(--text);
     }
     /* Chips de cines comerciales — mismos estilos que .filter-btn pero
        con borde punteado para que se vean visualmente "agregados" */
