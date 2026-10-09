@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T03:17:50",
+  "updated": "2026-10-09T11:17:53",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 12,
@@ -18,7 +18,7 @@
       "publicadas": 6
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 21,
       "publicadas": 21
     },
     "CEA": {
@@ -39,7 +39,7 @@
       "publicadas": 3
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
+      "scrapeadas": 9,
       "publicadas": 9
     },
     "Centro Cultural Munro": {
@@ -49,6 +49,10 @@
     "Centro Cultural Recoleta": {
       "scrapeadas": 21,
       "publicadas": 21
+    },
+    "Centro Cultural de la Cooperación": {
+      "scrapeadas": 3,
+      "publicadas": 3
     },
     "Cine Cosmos": {
       "scrapeadas": 48,
@@ -87,8 +91,8 @@
       "publicadas": 18
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 48,
-      "publicadas": 48
+      "scrapeadas": 44,
+      "publicadas": 44
     },
     "Filo Cine": {
       "scrapeadas": 9,
@@ -111,8 +115,8 @@
       "publicadas": 4
     },
     "MALBA": {
-      "scrapeadas": 59,
-      "publicadas": 59
+      "scrapeadas": 60,
+      "publicadas": 60
     },
     "Multiplex Belgrano": {
       "scrapeadas": 328,
@@ -127,8 +131,8 @@
       "publicadas": 249
     },
     "Multiplex Pilar": {
-      "scrapeadas": 297,
-      "publicadas": 297
+      "scrapeadas": 301,
+      "publicadas": 301
     },
     "Museo del Cine": {
       "scrapeadas": 5,
@@ -162,6 +166,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-10-09",
+      "hora": "11:30",
+      "title_es": "Coyote vs. Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -450,22 +470,6 @@
       "genre": "Animación",
       "letterboxd": "https://letterboxd.com/film/cats-in-the-museum-2-treasures-of-egypt/",
       "ticket_url": "https://multiplex.com.ar/peliculas/guardianes-del-museo-2/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "12:30",
-      "title_es": "Coyote vs. Acme",
-      "title_en": "Coyote vs. Acme",
-      "original_title": "Coyote vs. Acme",
-      "director": "Dave Green",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 103,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -1080,6 +1084,22 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-10-09",
       "hora": "13:30",
+      "title_es": "Avengers: Endgame Bonus - Infinity Vision",
+      "title_en": "Avengers: Endgame",
+      "original_title": "",
+      "director": "Anthony Russo, Joe Russo",
+      "country": "Estados Unidos",
+      "year": 2019,
+      "duration": 181,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-10-09",
+      "hora": "13:30",
       "title_es": "Madre siniestra",
       "title_en": "Other Mommy",
       "original_title": "Other Mommy",
@@ -1138,22 +1158,6 @@
       "genre": "Familiar, Comedia",
       "letterboxd": "https://letterboxd.com/film/forgotten-island-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-isla-olvidada/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "13:40",
-      "title_es": "Avengers: Endgame Bonus - Infinity Vision",
-      "title_en": "Avengers: Endgame",
-      "original_title": "",
-      "director": "Anthony Russo, Joe Russo",
-      "country": "Estados Unidos",
-      "year": 2019,
-      "duration": 181,
-      "genre": "Ciencia ficción, Acción",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -1282,6 +1286,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/digger/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-10-09",
+      "hora": "13:50",
+      "title_es": "Coyote vs. Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -1573,6 +1593,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-10-09",
+      "hora": "14:15",
+      "title_es": "Coyote vs. Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-09",
       "hora": "14:20",
@@ -1768,22 +1804,6 @@
       "cine": "Showcase Belgrano",
       "fecha": "2026-10-09",
       "hora": "14:35",
-      "title_es": "Coyote vs. Acme",
-      "title_en": "Coyote vs. Acme",
-      "original_title": "Coyote vs. Acme",
-      "director": "Dave Green",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 103,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
-      "ticket_url": "https://www.todoshowcase.com/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Showcase Belgrano",
-      "fecha": "2026-10-09",
-      "hora": "14:35",
       "title_es": "Cars",
       "title_en": "Cars",
       "original_title": "",
@@ -1889,38 +1909,6 @@
       "duration": 129,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "14:40",
-      "title_es": "Coyote vs. Acme",
-      "title_en": "Coyote vs. Acme",
-      "original_title": "Coyote vs. Acme",
-      "director": "Dave Green",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 103,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "14:40",
-      "title_es": "Avengers: Endgame Bonus - Infinity Vision",
-      "title_en": "Avengers: Endgame",
-      "original_title": "",
-      "director": "Anthony Russo, Joe Russo",
-      "country": "Estados Unidos",
-      "year": 2019,
-      "duration": 181,
-      "genre": "Ciencia ficción, Acción",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -3064,6 +3052,22 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-10-09",
       "hora": "16:20",
+      "title_es": "Coyote vs. Acme",
+      "title_en": "Coyote vs. Acme",
+      "original_title": "Coyote vs. Acme",
+      "director": "Dave Green",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-10-09",
+      "hora": "16:20",
       "title_es": "Hope: El primer impacto",
       "title_en": "Hope",
       "original_title": "호프",
@@ -3415,7 +3419,7 @@
     {
       "cine": "Showcase Belgrano",
       "fecha": "2026-10-09",
-      "hora": "16:55",
+      "hora": "16:50",
       "title_es": "Coyote vs. Acme",
       "title_en": "Coyote vs. Acme",
       "original_title": "Coyote vs. Acme",
@@ -3650,22 +3654,6 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "17:10",
-      "title_es": "Coyote vs. Acme",
-      "title_en": "Coyote vs. Acme",
-      "original_title": "Coyote vs. Acme",
-      "director": "Dave Green",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 103,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -4177,22 +4165,6 @@
       "duration": null,
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/la-vita-va-cosi/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "17:40",
-      "title_es": "Avengers: Endgame Bonus - Infinity Vision",
-      "title_en": "Avengers: Endgame",
-      "original_title": "",
-      "director": "Anthony Russo, Joe Russo",
-      "country": "Estados Unidos",
-      "year": 2019,
-      "duration": 181,
-      "genre": "Ciencia ficción, Acción",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -4898,22 +4870,6 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/franz-2025/",
       "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=430",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "18:40",
-      "title_es": "Avengers: Endgame Bonus - Infinity Vision",
-      "title_en": "Avengers: Endgame",
-      "original_title": "",
-      "director": "Anthony Russo, Joe Russo",
-      "country": "Estados Unidos",
-      "year": 2019,
-      "duration": 181,
-      "genre": "Ciencia ficción, Acción",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -6965,22 +6921,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "21:40",
-      "title_es": "Avengers: Endgame Bonus - Infinity Vision",
-      "title_en": "Avengers: Endgame",
-      "original_title": "",
-      "director": "Anthony Russo, Joe Russo",
-      "country": "Estados Unidos",
-      "year": 2019,
-      "duration": 181,
-      "genre": "Ciencia ficción, Acción",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-10-09",
       "hora": "21:45",
@@ -8149,22 +8089,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-10-09",
-      "hora": "22:40",
-      "title_es": "Avengers: Endgame Bonus - Infinity Vision",
-      "title_en": "Avengers: Endgame",
-      "original_title": "",
-      "director": "Anthony Russo, Joe Russo",
-      "country": "Estados Unidos",
-      "year": 2019,
-      "duration": 181,
-      "genre": "Ciencia ficción, Acción",
-      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Canning",
       "fecha": "2026-10-09",
       "hora": "22:45",
@@ -8209,6 +8133,22 @@
       "duration": 117,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-10-09",
+      "hora": "22:45",
+      "title_es": "Avengers: Endgame Bonus - Infinity Vision",
+      "title_en": "Avengers: Endgame",
+      "original_title": "",
+      "director": "Anthony Russo, Joe Russo",
+      "country": "Estados Unidos",
+      "year": 2019,
+      "duration": 181,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -10917,22 +10857,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-10",
-      "hora": "16:00",
-      "title_es": "Prínicipe Valiente",
-      "title_en": "Prince Valiant",
-      "original_title": "",
-      "director": "Henry Hathaway",
-      "country": "Estados Unidos",
-      "year": 1954,
-      "duration": 100,
-      "genre": "Romance, Acción",
-      "letterboxd": "https://letterboxd.com/film/prince-valiant/",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/sabados-de-superaccion",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-10",
       "hora": "16:00",
@@ -10947,6 +10871,22 @@
       "letterboxd": "https://letterboxd.com/film/sere-cualquier-cosa-pero-te-quiero/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-10",
+      "hora": "16:00",
+      "title_es": "Prínicipe Valiente",
+      "title_en": "Prince Valiant",
+      "original_title": "",
+      "director": "Henry Hathaway",
+      "country": "Estados Unidos",
+      "year": 1954,
+      "duration": 100,
+      "genre": "Romance, Acción",
+      "letterboxd": "https://letterboxd.com/film/prince-valiant/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/sabados-de-superaccion",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -12581,22 +12521,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-10",
-      "hora": "18:30",
-      "title_es": "La Vida es Así",
-      "title_en": "LA VIDA ES ASÍ",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": 121,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/la-vita-va-cosi/",
-      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b50304ffcaf6c638d8195a239c97ac66",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-10",
       "hora": "18:30",
@@ -12611,6 +12535,22 @@
       "letterboxd": "https://letterboxd.com/film/living-together/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-10-10",
+      "hora": "18:30",
+      "title_es": "La Vida es Así",
+      "title_en": "LA VIDA ES ASÍ",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/la-vita-va-cosi/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b50304ffcaf6c638d8195a239c97ac66",
+      "ciclo": ""
     },
     {
       "cine": "Multiplex Belgrano",
@@ -19285,22 +19225,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-11",
-      "hora": "18:00",
-      "title_es": "Misterioso asesinato en la montaña",
-      "title_en": "How to Make a Killing",
-      "original_title": "Un ours dans le Jura",
-      "director": "Franck Dubosc",
-      "country": "Francia",
-      "year": 2024,
-      "duration": 113,
-      "genre": "Crimen, Comedia",
-      "letterboxd": "https://letterboxd.com/film/how-to-make-a-killing/",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-11",
       "hora": "18:00",
@@ -19315,6 +19239,22 @@
       "letterboxd": "https://letterboxd.com/film/foscadh/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
       "ciclo": "Cine irlandés"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-11",
+      "hora": "18:00",
+      "title_es": "Misterioso asesinato en la montaña",
+      "title_en": "How to Make a Killing",
+      "original_title": "Un ours dans le Jura",
+      "director": "Franck Dubosc",
+      "country": "Francia",
+      "year": 2024,
+      "duration": 113,
+      "genre": "Crimen, Comedia",
+      "letterboxd": "https://letterboxd.com/film/how-to-make-a-killing/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -39925,6 +39865,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-10-14",
+      "hora": "20:00",
+      "title_es": "Ensayo sobre la vejez",
+      "title_en": "Ensayo sobre la vejez",
+      "original_title": "",
+      "director": "Valeria Sampedro y Daniel Raichijk",
+      "country": "",
+      "year": null,
+      "duration": 48,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/ensayo-sobre-la-vejez",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-14",
       "hora": "20:00",
@@ -44869,6 +44825,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-17",
+      "hora": "20:20",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 125,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-10-17",
       "hora": "20:30",
@@ -44904,6 +44876,22 @@
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-17",
       "hora": "20:50",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 125,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-17",
+      "hora": "21:00",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -45141,6 +45129,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-17",
+      "hora": "22:30",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 125,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-17",
       "hora": "22:40",
@@ -45208,6 +45212,22 @@
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-17",
       "hora": "23:05",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 125,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-17",
+      "hora": "23:10",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -45365,22 +45385,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-18",
-      "hora": "15:00",
-      "title_es": "No soy un ángel",
-      "title_en": "I'm No Angel",
-      "original_title": "I'm No Angel",
-      "director": "Wesley Ruggles",
-      "country": "Estados Unidos",
-      "year": 1933,
-      "duration": 87,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/im-no-angel/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
-      "ciclo": "Seis tardes con Mae West"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-18",
       "hora": "15:00",
@@ -45395,6 +45399,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-18",
+      "hora": "15:00",
+      "title_es": "No soy un ángel",
+      "title_en": "I'm No Angel",
+      "original_title": "I'm No Angel",
+      "director": "Wesley Ruggles",
+      "country": "Estados Unidos",
+      "year": 1933,
+      "duration": 87,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/im-no-angel/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
+      "ciclo": "Seis tardes con Mae West"
     },
     {
       "cine": "Multiplex Canning",
@@ -48133,6 +48153,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-10-21",
+      "hora": "20:00",
+      "title_es": "Ensayo sobre la vejez",
+      "title_en": "Ensayo sobre la vejez",
+      "original_title": "",
+      "director": "Valeria Sampedro y Daniel Raichijk",
+      "country": "",
+      "year": null,
+      "duration": 48,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/ensayo-sobre-la-vejez",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-21",
       "hora": "20:00",
@@ -49365,6 +49401,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-10-24",
+      "hora": "20:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro, Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://malba.org.ar/evento/el-tren-fluvial/",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Arthaus",
       "fecha": "2026-10-24",
       "hora": "20:00",
@@ -49493,22 +49545,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-25",
-      "hora": "15:00",
-      "title_es": "Tokyo-Ga",
-      "title_en": "Tokyo-Ga",
-      "original_title": "Tokyo-Ga",
-      "director": "Wim Wenders",
-      "country": "República Federal de Alemania/EE.UU.",
-      "year": 1985,
-      "duration": 92,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
-      "ciclo": "En las rutas de Wim Wenders"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "15:00",
@@ -49523,6 +49559,22 @@
       "letterboxd": "https://letterboxd.com/film/talking-to-a-stranger/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "15:00",
+      "title_es": "Tokyo-Ga",
+      "title_en": "Tokyo-Ga",
+      "original_title": "Tokyo-Ga",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/EE.UU.",
+      "year": 1985,
+      "duration": 92,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "CCK",
@@ -49573,22 +49625,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-25",
-      "hora": "17:30",
-      "title_es": "Paris, Texas",
-      "title_en": "Paris, Texas",
-      "original_title": "Paris, Texas",
-      "director": "Wim Wenders",
-      "country": "EE.UU/República Federal de Alemania/ Francia/Reino Unido",
-      "year": 1984,
-      "duration": 145,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/paris-texas/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
-      "ciclo": "En las rutas de Wim Wenders"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "17:30",
@@ -49603,6 +49639,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "17:30",
+      "title_es": "Paris, Texas",
+      "title_en": "Paris, Texas",
+      "original_title": "Paris, Texas",
+      "director": "Wim Wenders",
+      "country": "EE.UU/República Federal de Alemania/ Francia/Reino Unido",
+      "year": 1984,
+      "duration": 145,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/paris-texas/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Cine York",
@@ -49621,22 +49673,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-25",
-      "hora": "18:00",
-      "title_es": "Siete días",
-      "title_en": "Siete días",
-      "original_title": "",
-      "director": "Ali Samadi Ahadi",
-      "country": "Alemania",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "18:00",
@@ -49651,6 +49687,22 @@
       "letterboxd": "https://letterboxd.com/film/arracht/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
       "ciclo": "Cine irlandés"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-25",
+      "hora": "18:00",
+      "title_es": "Siete días",
+      "title_en": "Siete días",
+      "original_title": "",
+      "director": "Ali Samadi Ahadi",
+      "country": "Alemania",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Munro",
@@ -50243,6 +50295,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": "Doble función"
+    },
+    {
+      "cine": "Centro Cultural de la Cooperación",
+      "fecha": "2026-10-28",
+      "hora": "20:00",
+      "title_es": "Ensayo sobre la vejez",
+      "title_en": "Ensayo sobre la vejez",
+      "original_title": "",
+      "director": "Valeria Sampedro y Daniel Raichijk",
+      "country": "",
+      "year": null,
+      "duration": 48,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.centrocultural.coop/eventos/ensayo-sobre-la-vejez",
+      "ciclo": ""
     },
     {
       "cine": "Cineclub Farus",
@@ -51141,22 +51209,6 @@
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-31",
-      "hora": "16:00",
-      "title_es": "La memoria del perfume de las cosas",
-      "title_en": "La memoria del perfume de las cosas",
-      "original_title": "",
-      "director": "António Fonseca",
-      "country": "Portugal",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-31",
       "hora": "16:00",
@@ -51171,6 +51223,22 @@
       "letterboxd": "https://letterboxd.com/film/besos-en-la-frente/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-31",
+      "hora": "16:00",
+      "title_es": "La memoria del perfume de las cosas",
+      "title_en": "La memoria del perfume de las cosas",
+      "original_title": "",
+      "director": "António Fonseca",
+      "country": "Portugal",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Bellas Artes",

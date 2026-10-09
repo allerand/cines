@@ -1,12 +1,12 @@
 {
-  "updated": "2026-10-09T03:17:50",
+  "updated": "2026-10-09T11:17:53",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 43,
       "publicadas": 43
     },
     "Cine Doré": {
-      "scrapeadas": 55,
+      "scrapeadas": 56,
       "publicadas": 55
     },
     "Cine Estudio": {
@@ -16605,7 +16605,7 @@
       "director": "Andrzej Wajda",
       "country": "",
       "year": null,
-      "duration": 101,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/el-director-de-orquesta-15oct",
@@ -18541,7 +18541,7 @@
       "director": "Keisuke Kinoshita",
       "country": "",
       "year": null,
-      "duration": null,
+      "duration": 102,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/farewell-to-spring",
