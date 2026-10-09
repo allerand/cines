@@ -16,6 +16,12 @@
       "alias": ["Asterisco"]
     },
     {
+      "slug": "mubi-fest",
+      "nombre": "MUBI Fest",
+      "ciclo": "MUBI Fest Buenos Aires",
+      "alias": ["MUBI Fest"]
+    },
+    {
       "slug": "fuera-de-campo",
       "nombre": "Fuera de Campo",
       "bajada": "Muestra de cine argentino",

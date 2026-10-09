@@ -88,7 +88,7 @@
     },
     "Cinépolis Houssay": {
       "scrapeadas": 18,
-      "publicadas": 18
+      "publicadas": 64
     },
     "Cinépolis Recoleta": {
       "scrapeadas": 44,
@@ -7029,7 +7029,7 @@
       "duration": 100,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6355",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -8629,7 +8629,7 @@
       "duration": 83,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -10741,7 +10741,7 @@
       "duration": 63,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -15605,7 +15605,7 @@
       "duration": 67,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -21189,7 +21189,7 @@
       "duration": 128,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6357",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -25765,7 +25765,7 @@
       "duration": 78,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -34325,7 +34325,7 @@
       "duration": 84,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6359",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -40933,7 +40933,7 @@
       "duration": 73,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6360",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -45445,7 +45445,7 @@
       "duration": 131,
       "genre": "Drama, Romance",
       "letterboxd": "",
-      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
@@ -48777,6 +48777,22 @@
       "ciclo": "En las rutas de Wim Wenders"
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-22",
+      "hora": "20:20",
+      "title_es": "Minotauro",
+      "title_en": "Minotaur",
+      "original_title": "",
+      "director": "Andrey Zvyagintsev",
+      "country": "Francia, Letonia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-minotauro",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-22",
       "hora": "21:00",
@@ -48791,6 +48807,22 @@
       "letterboxd": "https://letterboxd.com/film/mujeres-que-bailan/",
       "ticket_url": "https://malba.org.ar/evento/mujeres-que-bailan/",
       "ciclo": "Ciclo El Romerazo"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-22",
+      "hora": "21:30",
+      "title_es": "Minotauro",
+      "title_en": "Minotaur",
+      "original_title": "",
+      "director": "Andrey Zvyagintsev",
+      "country": "Francia, Letonia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-minotauro",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
     },
     {
       "cine": "MALBA",
@@ -48841,6 +48873,54 @@
       "ciclo": "Asterisco Festival Internacional de Cine LGBTIQ+"
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "13:50",
+      "title_es": "Erupcja",
+      "title_en": "Erupcja",
+      "original_title": "",
+      "director": "Pete Ohs",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 71,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/erupcja/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-erupcja",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "14:20",
+      "title_es": "Su propio infierno",
+      "title_en": "Her Private Hell",
+      "original_title": "",
+      "director": "Nicolas Winding Refn",
+      "country": "Estados Unidos, Dinamarca",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/her-private-hell-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-su-propio-infierno",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "14:50",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "original_title": "",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-moscas",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-23",
       "hora": "15:00",
@@ -48855,6 +48935,38 @@
       "letterboxd": "https://letterboxd.com/film/street-angel/",
       "ticket_url": "",
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "15:15",
+      "title_es": "Voilà Varda: cortometrajes de Agnès Varda",
+      "title_en": "Voilà Varda: cortometrajes de Agnès Varda",
+      "original_title": "",
+      "director": "Agnès Varda",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-voila-varda-cortos-de-agnes-varda",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "15:50",
+      "title_es": "La niña santa",
+      "title_en": "The Holy Girl",
+      "original_title": "",
+      "director": "Lucrecia Martel",
+      "country": "Argentina, Italia",
+      "year": 2004,
+      "duration": 106,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-holy-girl/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-nina-santa",
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino"
     },
     {
       "cine": "Filo Cine",
@@ -48873,6 +48985,38 @@
       "ciclo": "Ficción"
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "16:40",
+      "title_es": "Sheep in the Box",
+      "title_en": "Sheep in the Box",
+      "original_title": "",
+      "director": "Hirokazu Koreeda",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-sheep-in-the-box",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "17:10",
+      "title_es": "La casa del ángel",
+      "title_en": "The House of the Angel",
+      "original_title": "",
+      "director": "Leopoldo Torre Nilsson",
+      "country": "Argentina",
+      "year": 1957,
+      "duration": 76,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-house-of-the-angel/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-casa-del-angel",
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-23",
       "hora": "17:30",
@@ -48887,6 +49031,22 @@
       "letterboxd": "https://letterboxd.com/film/alice-in-the-cities/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
       "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "17:40",
+      "title_es": "Últimos días de la víctima",
+      "title_en": "Last Days of the Victim",
+      "original_title": "",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1982,
+      "duration": 92,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/last-days-of-the-victim/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-ultimos-dias-de-la-victima",
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino"
     },
     {
       "cine": "MALBA",
@@ -48985,6 +49145,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "18:50",
+      "title_es": "Cobarde",
+      "title_en": "Coward",
+      "original_title": "",
+      "director": "Lukas Dhont",
+      "country": "Bélgica, Francia",
+      "year": 2026,
+      "duration": 120,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/coward-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-cobarde",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-10-23",
       "hora": "19:00",
@@ -48999,6 +49175,38 @@
       "letterboxd": "https://letterboxd.com/film/besos-en-la-frente/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "19:20",
+      "title_es": "Hope: El primer impacto",
+      "title_en": "Hope",
+      "original_title": "",
+      "director": "Na Hong-jin",
+      "country": "Corea del Sur",
+      "year": 2026,
+      "duration": 157,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/hope-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-hope",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "19:50",
+      "title_es": "Videodrome",
+      "title_en": "Videodrome",
+      "original_title": "",
+      "director": "David Cronenberg",
+      "country": "Canadá",
+      "year": 1983,
+      "duration": 88,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/videodrome/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-videodrome",
+      "ciclo": "MUBI Fest Buenos Aires"
     },
     {
       "cine": "MALBA",
@@ -49033,6 +49241,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "20:20",
+      "title_es": "Tierra de mi padre",
+      "title_en": "Fatherland",
+      "original_title": "",
+      "director": "Paweł Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tierra-de-mi-padre",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-10-23",
       "hora": "20:30",
@@ -49065,6 +49289,22 @@
       "ciclo": "En las rutas de Wim Wenders"
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "21:20",
+      "title_es": "The Thing",
+      "title_en": "The Thing",
+      "original_title": "",
+      "director": "John Carpenter",
+      "country": "Estados Unidos",
+      "year": 1982,
+      "duration": 109,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-thing/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-the-thing",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-23",
       "hora": "21:30",
@@ -49081,6 +49321,22 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "21:50",
+      "title_es": "Making Marie Antoinette",
+      "title_en": "Making Marie Antoinette",
+      "original_title": "",
+      "director": "Eleanor Coppola",
+      "country": "Italia, Francia",
+      "year": 2026,
+      "duration": 86,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/making-marie-antoinette/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-making-marie-antoinette",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
       "cine": "Amorina",
       "fecha": "2026-10-23",
       "hora": "22:00",
@@ -49095,6 +49351,38 @@
       "letterboxd": "https://letterboxd.com/film/videodrome/",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": "Función especial"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "22:20",
+      "title_es": "Pulp: ¿Qué harías por una canción más?",
+      "title_en": "Pulp: What Do You Do for an Encore?",
+      "original_title": "",
+      "director": "Garth Jennings",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Documental, Música",
+      "letterboxd": "https://letterboxd.com/film/pulp-what-do-you-do-for-an-encore/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-pulp-que-harias-por-una-cancion-mas",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-23",
+      "hora": "22:50",
+      "title_es": "Adolescencia, sexo y muerte en Campamento Miasma",
+      "title_en": "Teenage Sex and Death at Camp Miasma",
+      "original_title": "",
+      "director": "Jane Schoenbrun",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Terror, Comedia",
+      "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-campamento-miasma",
+      "ciclo": "MUBI Fest Buenos Aires"
     },
     {
       "cine": "MALBA",
@@ -49161,6 +49449,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "13:30",
+      "title_es": "La misteriosa mirada del flamenco",
+      "title_en": "The Mysterious Gaze of the Flamingo",
+      "original_title": "",
+      "director": "Diego Céspedes",
+      "country": "Chile, Francia",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-mysterious-gaze-of-the-flamingo/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-misteriosa-mirada-del-flamenco",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "14:00",
+      "title_es": "Tiempo de revancha",
+      "title_en": "Time for Revenge",
+      "original_title": "",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1981,
+      "duration": 112,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/time-for-revenge/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tiempo-de-revancha",
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-24",
       "hora": "14:30",
@@ -49175,6 +49495,38 @@
       "letterboxd": "https://letterboxd.com/film/bad-girl/",
       "ticket_url": "",
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "14:30",
+      "title_es": "La niña santa",
+      "title_en": "The Holy Girl",
+      "original_title": "",
+      "director": "Lucrecia Martel",
+      "country": "Argentina, Italia",
+      "year": 2004,
+      "duration": 106,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-holy-girl/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-nina-santa",
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "15:00",
+      "title_es": "Erupcja",
+      "title_en": "Erupcja",
+      "original_title": "",
+      "director": "Pete Ohs",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 71,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/erupcja/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-erupcja",
+      "ciclo": "MUBI Fest Buenos Aires"
     },
     {
       "cine": "CCK",
@@ -49209,6 +49561,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "16:10",
+      "title_es": "La casa del ángel",
+      "title_en": "The House of the Angel",
+      "original_title": "",
+      "director": "Leopoldo Torre Nilsson",
+      "country": "Argentina",
+      "year": 1957,
+      "duration": 76,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-house-of-the-angel/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-casa-del-angel",
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "16:40",
+      "title_es": "El deshielo",
+      "title_en": "The Meltdown",
+      "original_title": "",
+      "director": "Manuela Martelli",
+      "country": "Chile, México",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-meltdown/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-el-deshielo",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
       "cine": "Bellas Artes",
       "fecha": "2026-10-24",
       "hora": "17:00",
@@ -49239,6 +49623,38 @@
       "letterboxd": "https://letterboxd.com/film/wings-of-desire/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
       "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "17:10",
+      "title_es": "Making Marie Antoinette",
+      "title_en": "Making Marie Antoinette",
+      "original_title": "",
+      "director": "Eleanor Coppola",
+      "country": "Italia, Francia",
+      "year": 2026,
+      "duration": 86,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/making-marie-antoinette/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-making-marie-antoinette",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "17:40",
+      "title_es": "Voilà Varda: cortometrajes de Agnès Varda",
+      "title_en": "Voilà Varda: cortometrajes de Agnès Varda",
+      "original_title": "",
+      "director": "Agnès Varda",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-voila-varda-cortos-de-agnes-varda",
+      "ciclo": "MUBI Fest Buenos Aires"
     },
     {
       "cine": "MALBA",
@@ -49305,6 +49721,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "18:20",
+      "title_es": "Sheep in the Box",
+      "title_en": "Sheep in the Box",
+      "original_title": "",
+      "director": "Hirokazu Koreeda",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-sheep-in-the-box",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-10-24",
       "hora": "18:30",
@@ -49335,6 +49767,38 @@
       "letterboxd": "https://letterboxd.com/film/la-gioia/",
       "ticket_url": "https://amigosdelbellasartes.org.ar/producto/la-gioia/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "19:10",
+      "title_es": "Pulp: ¿Qué harías por una canción más?",
+      "title_en": "Pulp: What Do You Do for an Encore?",
+      "original_title": "",
+      "director": "Garth Jennings",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Documental, Música",
+      "letterboxd": "https://letterboxd.com/film/pulp-what-do-you-do-for-an-encore/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-pulp-que-harias-por-una-cancion-mas",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "19:40",
+      "title_es": "Cobarde",
+      "title_en": "Coward",
+      "original_title": "",
+      "director": "Lukas Dhont",
+      "country": "Bélgica, Francia",
+      "year": 2026,
+      "duration": 120,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/coward-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-cobarde",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
     },
     {
       "cine": "Hoyts Abasto",
@@ -49449,6 +49913,22 @@
       "ciclo": "En las rutas de Wim Wenders"
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "20:10",
+      "title_es": "Tierra de mi padre",
+      "title_en": "Fatherland",
+      "original_title": "",
+      "director": "Paweł Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tierra-de-mi-padre",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-10-24",
       "hora": "20:30",
@@ -49481,6 +49961,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "21:10",
+      "title_es": "Videodrome",
+      "title_en": "Videodrome",
+      "original_title": "",
+      "director": "David Cronenberg",
+      "country": "Canadá",
+      "year": 1983,
+      "duration": 88,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/videodrome/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-videodrome",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "21:40",
+      "title_es": "Últimos días de la víctima",
+      "title_en": "Last Days of the Victim",
+      "original_title": "",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1982,
+      "duration": 92,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/last-days-of-the-victim/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-ultimos-dias-de-la-victima",
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-24",
       "hora": "22:00",
@@ -49495,6 +50007,38 @@
       "letterboxd": "https://letterboxd.com/film/los-vencedores/",
       "ticket_url": "https://malba.org.ar/evento/los-vencedores/",
       "ciclo": "Continúa"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "22:10",
+      "title_es": "The Chronology of Water",
+      "title_en": "The Chronology of Water",
+      "original_title": "",
+      "director": "Kristen Stewart",
+      "country": "Estados Unidos, Francia",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-chronology-of-water/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-the-chronology-of-water",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-24",
+      "hora": "22:40",
+      "title_es": "Hope: El primer impacto",
+      "title_en": "Hope",
+      "original_title": "",
+      "director": "Na Hong-jin",
+      "country": "Corea del Sur",
+      "year": 2026,
+      "duration": 157,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/hope-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-hope",
+      "ciclo": "MUBI Fest Buenos Aires"
     },
     {
       "cine": "MALBA",
@@ -49545,6 +50089,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "14:00",
+      "title_es": "Moscas",
+      "title_en": "Flies",
+      "original_title": "",
+      "director": "Fernando Eimbcke",
+      "country": "México",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/flies-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-moscas",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "14:30",
+      "title_es": "Su propio infierno",
+      "title_en": "Her Private Hell",
+      "original_title": "",
+      "director": "Nicolas Winding Refn",
+      "country": "Estados Unidos, Dinamarca",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/her-private-hell-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-su-propio-infierno",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "15:00",
@@ -49577,6 +50153,22 @@
       "ciclo": "En las rutas de Wim Wenders"
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "15:00",
+      "title_es": "Making Marie Antoinette",
+      "title_en": "Making Marie Antoinette",
+      "original_title": "",
+      "director": "Eleanor Coppola",
+      "country": "Italia, Francia",
+      "year": 2026,
+      "duration": 86,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/making-marie-antoinette/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-making-marie-antoinette",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "15:30",
@@ -49591,6 +50183,22 @@
       "letterboxd": "https://letterboxd.com/film/roise-frank/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
       "ciclo": "Cine irlandés"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "15:30",
+      "title_es": "Tierra de mi padre",
+      "title_en": "Fatherland",
+      "original_title": "",
+      "director": "Paweł Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tierra-de-mi-padre",
+      "ciclo": "MUBI Fest Buenos Aires"
     },
     {
       "cine": "Centro Cultural Recoleta",
@@ -49625,6 +50233,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "17:00",
+      "title_es": "Sheep in the Box",
+      "title_en": "Sheep in the Box",
+      "original_title": "",
+      "director": "Hirokazu Koreeda",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-sheep-in-the-box",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "17:30",
@@ -49655,6 +50279,22 @@
       "letterboxd": "https://letterboxd.com/film/paris-texas/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
       "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "17:30",
+      "title_es": "El deshielo",
+      "title_en": "The Meltdown",
+      "original_title": "",
+      "director": "Manuela Martelli",
+      "country": "Chile, México",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-meltdown/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-el-deshielo",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
     },
     {
       "cine": "Cine York",
@@ -49705,6 +50345,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "18:00",
+      "title_es": "Tiempo de revancha",
+      "title_en": "Time for Revenge",
+      "original_title": "",
+      "director": "Adolfo Aristarain",
+      "country": "Argentina",
+      "year": 1981,
+      "duration": 112,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/time-for-revenge/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tiempo-de-revancha",
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-10-25",
       "hora": "18:30",
@@ -49719,6 +50375,22 @@
       "letterboxd": "https://letterboxd.com/film/franz-2025/",
       "ticket_url": "https://lumiton.ar/evento/franz/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "18:30",
+      "title_es": "The Chronology of Water",
+      "title_en": "The Chronology of Water",
+      "original_title": "",
+      "director": "Kristen Stewart",
+      "country": "Estados Unidos, Francia",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-chronology-of-water/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-the-chronology-of-water",
+      "ciclo": "MUBI Fest Buenos Aires"
     },
     {
       "cine": "Hoyts Abasto",
@@ -49785,6 +50457,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "19:50",
+      "title_es": "Cobarde",
+      "title_en": "Coward",
+      "original_title": "",
+      "director": "Lukas Dhont",
+      "country": "Bélgica, Francia",
+      "year": 2026,
+      "duration": 120,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/coward-2026/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-cobarde",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "20:20",
+      "title_es": "La misteriosa mirada del flamenco",
+      "title_en": "The Mysterious Gaze of the Flamingo",
+      "original_title": "",
+      "director": "Diego Céspedes",
+      "country": "Chile, Francia",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-mysterious-gaze-of-the-flamingo/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-misteriosa-mirada-del-flamenco",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-10-25",
       "hora": "20:30",
@@ -49801,6 +50505,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "20:50",
+      "title_es": "The Thing",
+      "title_en": "The Thing",
+      "original_title": "",
+      "director": "John Carpenter",
+      "country": "Estados Unidos",
+      "year": 1982,
+      "duration": 109,
+      "genre": "Misterio, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-thing/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-the-thing",
+      "ciclo": "MUBI Fest Buenos Aires"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-25",
       "hora": "21:00",
@@ -49815,6 +50535,22 @@
       "letterboxd": "https://letterboxd.com/film/the-state-of-things/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
       "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-10-25",
+      "hora": "21:20",
+      "title_es": "Adolescencia, sexo y muerte en Campamento Miasma",
+      "title_en": "Teenage Sex and Death at Camp Miasma",
+      "original_title": "",
+      "director": "Jane Schoenbrun",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Terror, Comedia",
+      "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+      "ticket_url": "https://mubifest.com/es/buenos-aires/ar-campamento-miasma",
+      "ciclo": "MUBI Fest Buenos Aires"
     },
     {
       "cine": "Hoyts Abasto",

@@ -696,6 +696,7 @@
       letter-spacing: 0.02em;
     }
     .ticket-link:hover { text-decoration: underline; }
+    .gratis { font-size: 0.66rem; color: var(--muted); margin-left: 0.4rem; }
     .ciclo-tag { display: inline-block; font-size: 0.7rem; color: var(--muted); font-style: italic; }
     /* Ciclo dentro de la celda de película — sólo visible en mobile (en desktop
        está la columna Ciclo). */
@@ -1065,6 +1066,9 @@ const CINE_ADDRESSES = {
 // "Hoyts Abasto", etc. — matcheamos por PREFIJO así una sola entrada
 // cubre todas las sucursales de la cadena.
 const COMMERCIAL_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'];
+// Salas con entrada libre y gratuita: al lado de "Entradas" va un "gratis" chico.
+const CINES_GRATIS = new Set(['Museo del Cine']);
+
 function isCommercial(cine) {
   return COMMERCIAL_PREFIXES.some(p => cine && cine.startsWith(p));
 }
@@ -1619,7 +1623,7 @@ function visibleScreenings() {
   // Aplica el filtro global del toggle comerciales. Usado por todo el
   // resto de la UI (tabs por día, conteos, render, etc.). Un festival se
   // muestra entero, pase donde pase.
-  if (showCommercial || seccion === 'festivales') return allScreenings;
+  if (showCommercial || seccion === 'festivales' || esBusquedaDeFestival()) return allScreenings;
   return allScreenings.filter(s => !isCommercial(s.cine));
 }
 
@@ -1804,6 +1808,12 @@ function coincideBusqueda(s, q) {
     .join(' ').toLowerCase().includes(q);
 }
 
+// ¿La búsqueda de ahora es la de un festival? Entonces se ven todas sus
+// funciones, también las de cadenas comerciales, con el toggle apagado.
+function esBusquedaDeFestival() {
+  return !!searchQuery && registroFestivales.some(f => !f.archivo && busquedaDe(f) === searchQuery);
+}
+
 function busquedaDe(f) {
   return (f.ciclo || '').trim().toLowerCase();
 }
@@ -1837,7 +1847,9 @@ function armarFestivales(cartelera, archivos) {
     const f = festivalDeFuncion(s);
     if (f && !lista.some(x => x.slug === f.slug)) lista.push(Object.assign({}, f));
   }
-  const pool = cartelera.filter(s => showCommercial || !isCommercial(s.cine));
+  // Un festival se cuenta entero, aunque pase por una cadena comercial (el
+  // MUBI Fest es en Cinépolis): su búsqueda también las muestra.
+  const pool = cartelera;
   for (const f of lista) {
     f.funciones = f.archivo ? (archivos[f.slug] || [])
       : busquedaDe(f) ? pool.filter(s => coincideBusqueda(s, busquedaDe(f))) : [];
@@ -2026,13 +2038,17 @@ function renderListadoFestivales(lista) {
   main.innerHTML = html
     ? `<div class="fest-list">${html}</div>`
     : '<div class="empty">No hay festivales en curso ni anunciados.</div>';
-  main.querySelectorAll('.fest-item').forEach(a => a.addEventListener('click', () =>
-    track('ver_festival', { ciclo: a.dataset.nombre, canal: CANAL_ORIGEN })));
+  // Tocar un festival cuenta como búsqueda: va a GA4 y a la pestaña
+  // "busquedas" de la planilla, como lo que se escribe en el buscador.
+  main.querySelectorAll('.fest-item').forEach(a => a.addEventListener('click', () => {
+    track('ver_festival', { ciclo: a.dataset.nombre, canal: CANAL_ORIGEN });
+    pingBusqueda(a.dataset.busqueda, Number(a.dataset.n) || 0);
+  }));
 }
 
 function itemFestival(f) {
   const n = f.funciones.length;
-  return `<a class="fest-item" href="${escapeHtml(hrefFestival(f))}" data-nombre="${escapeHtml(f.nombre)}">
+  return `<a class="fest-item" href="${escapeHtml(hrefFestival(f))}" data-nombre="${escapeHtml(f.nombre)}" data-busqueda="${escapeHtml(f.archivo ? f.nombre : busquedaDe(f))}" data-n="${n}">
     ${hayLogos ? `<span class="fest-logo-slot">${f.logo ? `<img class="fest-logo" src="${escapeHtml(f.logo)}" alt="">` : ''}</span>` : ''}<div class="fest-texto">
       <div class="fest-nombre">${escapeHtml(f.nombre)}${f.bajada ? `<span class="fest-bajada">${escapeHtml(f.bajada)}</span>` : ''}</div>
       <div class="fest-meta">${escapeHtml(lugarYFechas(f))}</div>
@@ -2402,7 +2418,7 @@ function renderTable() {
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}${alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : ''}</div>
       ${ciclo.texto ? `<div class="film-ciclo-inline">${ciclo.href ? `<a href="${escapeHtml(ciclo.href)}">${escapeHtml(ciclo.texto)}</a>` : escapeHtml(ciclo.texto)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml(fichaCorta(s))}</div>
-      ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
+      ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a>${CINES_GRATIS.has(s.cine) ? '<span class="gratis">gratis</span>' : ''}</div>` : ''}`;
 
     return `<tr>
       <td class="col-hora">${searching ? `<span class="hora-date">${fmtShortDate(s.fecha)}</span>` : ''}<span class="hora-tag">${horaText}</span></td>

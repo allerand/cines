@@ -1577,50 +1577,281 @@
       "ciclo": "FICUBA - Honoris Causa Lita Stantic y Chango Monti", "ticket_url": "https://www.ficuba.com/es/pelicula/la-nina-santa"
     },
     {
-      "_ciclo": "Festival de Cine Inusual 2026, Competencia oficial de largometrajes ficcionales, de la grilla que publica Primordiales (festivaldecineinusual.blogspot.com). El Gaumont y el Museo del Cine no lo publican en ningún lado que se scrapee. Falta La reina, el Buda y Buñuel (15/10 18:30, Espacio Cultural BCN) porque ya la trae el scraper de la BCN; Una chica en la estación fue el 8/10.",
+      "_ciclo": "Festival de Cine Inusual 2026, Competencia oficial de largometrajes ficcionales, de la grilla que publica Primordiales (festivaldecineinusual.blogspot.com). El Museo del Cine no lo publica en ningún lado que se scrapee; el Gaumont sí (API de Cinexo), pero sin el ciclo, y acá manda la carga manual. Las entradas llevan a la página de cada sala. Falta La reina, el Buda y Buñuel (15/10 18:30, Espacio Cultural BCN) porque ya la trae el scraper de la BCN; Una chica en la estación fue el 8/10.",
       "cine": "Cine Gaumont", "title": "La película que quisieras ver", "fecha": "2026-10-09", "hora": "22:00",
       "director": "Esteban Pablo Pérez Ghersi", "country": "Argentina", "year": 2026, "duration": 100,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6355"
     },
     {
       "cine": "Museo del Cine", "title": "Monólogo final", "fecha": "2026-10-10", "hora": "12:00",
       "director": "Eduardo Poli", "country": "Argentina", "year": 2026, "duration": 83,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine"
     },
     {
       "cine": "Museo del Cine", "title": "El odio en el cuerpo", "fecha": "2026-10-10", "hora": "16:00",
       "director": "Galo Ontivero", "country": "Argentina", "year": 2026, "duration": 63,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine"
     },
     {
       "cine": "Museo del Cine", "title": "Desencontrados", "fecha": "2026-10-11", "hora": "12:00",
       "director": "Darío Javier Rovere", "country": "Argentina", "year": 2026, "duration": 67,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine"
     },
     {
       "cine": "Cine Gaumont", "title": "Bárbara", "fecha": "2026-10-11", "hora": "22:00",
       "director": "Tomás Emanuel Brunella", "country": "Argentina", "year": 2026, "duration": 128,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6357"
     },
     {
       "cine": "Museo del Cine", "title": "Retrato, elogio al duelo", "fecha": "2026-10-12", "hora": "18:00",
       "director": "Rodrigo Martini", "country": "Argentina", "year": 2026, "duration": 78,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine"
     },
     {
       "cine": "Cine Gaumont", "title": "El silencio de Marilyn", "fecha": "2026-10-13", "hora": "22:00",
       "director": "Edgardo Gabo", "country": "Argentina", "year": 2026, "duration": 84,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6359"
     },
     {
       "cine": "Cine Gaumont", "title": "Yo soy Hermes", "fecha": "2026-10-14", "hora": "22:00",
       "director": "Gonzalo Albornoz", "country": "Argentina, Bolivia", "year": 2026, "duration": 73,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6360"
     },
     {
       "cine": "Museo del Cine", "title": "Decepciones del alma - La agonía de la soledad", "fecha": "2026-10-18", "hora": "16:00",
       "director": "Lucas Giuggia", "country": "Argentina", "year": 2026, "duration": 131,
-      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://festivaldecineinusual.blogspot.com/"
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes", "ticket_url": "https://buenosaires.gob.ar/gcaba_historico/cultura/museos/museodelcine"
+    },
+    {
+      "_ciclo": "MUBI Fest Buenos Aires (22 al 25/10/2026), Cinépolis Houssay. Grilla de mubifest.com/es/buenos-aires?timetable; las actividades gratuitas (charlas, shows, DJ, instalación) no son funciones de cine y quedan afuera. La Nación sólo trae el día de hoy de Cinépolis, así que sin esto el festival no estaba.",
+      "cine": "Cinépolis Houssay", "title": "Minotauro", "fecha": "2026-10-22", "hora": "20:20",
+      "director": "Andrey Zvyagintsev", "country": "Francia, Letonia", "year": 2026, "duration": 135,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-minotauro"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Minotauro", "fecha": "2026-10-22", "hora": "21:30",
+      "director": "Andrey Zvyagintsev", "country": "Francia, Letonia", "year": 2026, "duration": 135,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-minotauro"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Erupcja", "fecha": "2026-10-23", "hora": "13:50",
+      "director": "Pete Ohs", "country": "Estados Unidos", "year": 2025, "duration": 71,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-erupcja"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Su propio infierno", "fecha": "2026-10-23", "hora": "14:20",
+      "director": "Nicolas Winding Refn", "country": "Estados Unidos, Dinamarca", "year": 2026, "duration": 110,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-su-propio-infierno"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Moscas", "fecha": "2026-10-23", "hora": "14:50",
+      "director": "Fernando Eimbcke", "country": "México", "year": 2026, "duration": 101,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-moscas"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Voilà Varda: cortometrajes de Agnès Varda", "fecha": "2026-10-23", "hora": "15:15",
+      "director": "Agnès Varda", "country": "",
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-voila-varda-cortos-de-agnes-varda"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "La niña santa", "fecha": "2026-10-23", "hora": "15:50",
+      "director": "Lucrecia Martel", "country": "Argentina, Italia", "year": 2004, "duration": 106,
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-nina-santa"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Sheep in the Box", "fecha": "2026-10-23", "hora": "16:40",
+      "director": "Hirokazu Koreeda", "country": "",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-sheep-in-the-box"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "La casa del ángel", "fecha": "2026-10-23", "hora": "17:10",
+      "director": "Leopoldo Torre Nilsson", "country": "Argentina", "year": 1957, "duration": 76,
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-casa-del-angel"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Últimos días de la víctima", "fecha": "2026-10-23", "hora": "17:40",
+      "director": "Adolfo Aristarain", "country": "Argentina", "year": 1982, "duration": 92,
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-ultimos-dias-de-la-victima"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Cobarde", "fecha": "2026-10-23", "hora": "18:50",
+      "director": "Lukas Dhont", "country": "Bélgica, Francia", "year": 2026, "duration": 120,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-cobarde"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Hope: El primer impacto", "fecha": "2026-10-23", "hora": "19:20",
+      "director": "Na Hong-jin", "country": "Corea del Sur", "year": 2026, "duration": 157,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-hope"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Videodrome", "fecha": "2026-10-23", "hora": "19:50",
+      "director": "David Cronenberg", "country": "Canadá", "year": 1983, "duration": 88,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-videodrome"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Tierra de mi padre", "fecha": "2026-10-23", "hora": "20:20",
+      "director": "Paweł Pawlikowski", "country": "Polonia, Alemania", "year": 2026, "duration": 82,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tierra-de-mi-padre"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "The Thing", "fecha": "2026-10-23", "hora": "21:20",
+      "director": "John Carpenter", "country": "Estados Unidos", "year": 1982, "duration": 109,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-the-thing"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Making Marie Antoinette", "fecha": "2026-10-23", "hora": "21:50",
+      "director": "Eleanor Coppola", "country": "Italia, Francia", "year": 2026, "duration": 86,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-making-marie-antoinette"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Pulp: ¿Qué harías por una canción más?", "fecha": "2026-10-23", "hora": "22:20",
+      "director": "Garth Jennings", "country": "Reino Unido, Estados Unidos", "year": 2026, "duration": 98,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-pulp-que-harias-por-una-cancion-mas"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Adolescencia, sexo y muerte en Campamento Miasma", "fecha": "2026-10-23", "hora": "22:50",
+      "director": "Jane Schoenbrun", "country": "Reino Unido, Estados Unidos", "year": 2026, "duration": 112,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-campamento-miasma"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "La misteriosa mirada del flamenco", "fecha": "2026-10-24", "hora": "13:30",
+      "director": "Diego Céspedes", "country": "Chile, Francia", "year": 2025, "duration": 108,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-misteriosa-mirada-del-flamenco"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Tiempo de revancha", "fecha": "2026-10-24", "hora": "14:00",
+      "director": "Adolfo Aristarain", "country": "Argentina", "year": 1981, "duration": 112,
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tiempo-de-revancha"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "La niña santa", "fecha": "2026-10-24", "hora": "14:30",
+      "director": "Lucrecia Martel", "country": "Argentina, Italia", "year": 2004, "duration": 106,
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-nina-santa"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Erupcja", "fecha": "2026-10-24", "hora": "15:00",
+      "director": "Pete Ohs", "country": "Estados Unidos", "year": 2025, "duration": 71,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-erupcja"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "La casa del ángel", "fecha": "2026-10-24", "hora": "16:10",
+      "director": "Leopoldo Torre Nilsson", "country": "Argentina", "year": 1957, "duration": 76,
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-casa-del-angel"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "El deshielo", "fecha": "2026-10-24", "hora": "16:40",
+      "director": "Manuela Martelli", "country": "Chile, México", "year": 2026, "duration": 110,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-el-deshielo"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Making Marie Antoinette", "fecha": "2026-10-24", "hora": "17:10",
+      "director": "Eleanor Coppola", "country": "Italia, Francia", "year": 2026, "duration": 86,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-making-marie-antoinette"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Voilà Varda: cortometrajes de Agnès Varda", "fecha": "2026-10-24", "hora": "17:40",
+      "director": "Agnès Varda", "country": "",
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-voila-varda-cortos-de-agnes-varda"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Sheep in the Box", "fecha": "2026-10-24", "hora": "18:20",
+      "director": "Hirokazu Koreeda", "country": "",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-sheep-in-the-box"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Pulp: ¿Qué harías por una canción más?", "fecha": "2026-10-24", "hora": "19:10",
+      "director": "Garth Jennings", "country": "Reino Unido, Estados Unidos", "year": 2026, "duration": 98,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-pulp-que-harias-por-una-cancion-mas"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Cobarde", "fecha": "2026-10-24", "hora": "19:40",
+      "director": "Lukas Dhont", "country": "Bélgica, Francia", "year": 2026, "duration": 120,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-cobarde"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Tierra de mi padre", "fecha": "2026-10-24", "hora": "20:10",
+      "director": "Paweł Pawlikowski", "country": "Polonia, Alemania", "year": 2026, "duration": 82,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tierra-de-mi-padre"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Videodrome", "fecha": "2026-10-24", "hora": "21:10",
+      "director": "David Cronenberg", "country": "Canadá", "year": 1983, "duration": 88,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-videodrome"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Últimos días de la víctima", "fecha": "2026-10-24", "hora": "21:40",
+      "director": "Adolfo Aristarain", "country": "Argentina", "year": 1982, "duration": 92,
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-ultimos-dias-de-la-victima"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "The Chronology of Water", "fecha": "2026-10-24", "hora": "22:10",
+      "director": "Kristen Stewart", "country": "Estados Unidos, Francia", "year": 2025, "duration": 128,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-the-chronology-of-water"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Hope: El primer impacto", "fecha": "2026-10-24", "hora": "22:40",
+      "director": "Na Hong-jin", "country": "Corea del Sur", "year": 2026, "duration": 157,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-hope"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Moscas", "fecha": "2026-10-25", "hora": "14:00",
+      "director": "Fernando Eimbcke", "country": "México", "year": 2026, "duration": 101,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-moscas"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Su propio infierno", "fecha": "2026-10-25", "hora": "14:30",
+      "director": "Nicolas Winding Refn", "country": "Estados Unidos, Dinamarca", "year": 2026, "duration": 110,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-su-propio-infierno"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Making Marie Antoinette", "fecha": "2026-10-25", "hora": "15:00",
+      "director": "Eleanor Coppola", "country": "Italia, Francia", "year": 2026, "duration": 86,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-making-marie-antoinette"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Tierra de mi padre", "fecha": "2026-10-25", "hora": "15:30",
+      "director": "Paweł Pawlikowski", "country": "Polonia, Alemania", "year": 2026, "duration": 82,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tierra-de-mi-padre"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Sheep in the Box", "fecha": "2026-10-25", "hora": "17:00",
+      "director": "Hirokazu Koreeda", "country": "",
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-sheep-in-the-box"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "El deshielo", "fecha": "2026-10-25", "hora": "17:30",
+      "director": "Manuela Martelli", "country": "Chile, México", "year": 2026, "duration": 110,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-el-deshielo"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Tiempo de revancha", "fecha": "2026-10-25", "hora": "18:00",
+      "director": "Adolfo Aristarain", "country": "Argentina", "year": 1981, "duration": 112,
+      "ciclo": "MUBI Fest Buenos Aires - Cine argentino", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-tiempo-de-revancha"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "The Chronology of Water", "fecha": "2026-10-25", "hora": "18:30",
+      "director": "Kristen Stewart", "country": "Estados Unidos, Francia", "year": 2025, "duration": 128,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-the-chronology-of-water"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Cobarde", "fecha": "2026-10-25", "hora": "19:50",
+      "director": "Lukas Dhont", "country": "Bélgica, Francia", "year": 2026, "duration": 120,
+      "ciclo": "MUBI Fest Buenos Aires - Premiere", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-cobarde"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "La misteriosa mirada del flamenco", "fecha": "2026-10-25", "hora": "20:20",
+      "director": "Diego Céspedes", "country": "Chile, Francia", "year": 2025, "duration": 108,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-la-misteriosa-mirada-del-flamenco"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "The Thing", "fecha": "2026-10-25", "hora": "20:50",
+      "director": "John Carpenter", "country": "Estados Unidos", "year": 1982, "duration": 109,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-the-thing"
+    },
+    {
+      "cine": "Cinépolis Houssay", "title": "Adolescencia, sexo y muerte en Campamento Miasma", "fecha": "2026-10-25", "hora": "21:20",
+      "director": "Jane Schoenbrun", "country": "Reino Unido, Estados Unidos", "year": 2026, "duration": 112,
+      "ciclo": "MUBI Fest Buenos Aires", "ticket_url": "https://mubifest.com/es/buenos-aires/ar-campamento-miasma"
     }
   ],
 
