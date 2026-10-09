@@ -1,47 +1,41 @@
 {
   "_comment": "Cine Lorca publica su programación como imagen en Wix, e IMDb (la fuente automática) no responde a los runners de GitHub. Esta grilla es la que manda: es la que publica el cine. La Nación queda de red de seguridad para cuando el rango de acá vence (el 28/9/2026 el aggregador daba otra semana entera). Editá este archivo cada semana cuando salga la nueva programación — la semana del Lorca va de jueves a miércoles. Los horarios se aplican a todos los días del rango [period_start, period_end]. Si el rango vence, el scraper avisa en el log ('lorca_manual VENCIDO'). Datos tomados de la imagen que publica el cine en cinelorca.wixsite.com/cine-lorca/current-production.",
   "_titulos": "Los títulos van como los publica La Nación y no como los abrevia el cartel del cine ('CAMPAMENTO MIASMA'), para que las filas del fallback se vean iguales a las normales y matcheen igual contra TMDb y Letterboxd.",
-  "period_start": "2026-09-24",
-  "period_end": "2026-09-30",
+  "period_start": "2026-10-08",
+  "period_end": "2026-10-14",
   "films": [
+    {
+      "title": "Hope",
+      "times": [
+        "16:15",
+        "21:50"
+      ]
+    },
     {
       "title": "Una quinta en Portugal",
       "times": [
+        "14:10",
+        "20:30"
+      ]
+    },
+    {
+      "title": "La vida es así",
+      "times": [
+        "16:20",
+        "18:25"
+      ]
+    },
+    {
+      "title": "Digger",
+      "times": [
         "14:00",
-        "18:15"
+        "19:10"
       ]
     },
     {
-      "title": "La invitación",
+      "title": "Verity: La sombra del engaño",
       "times": [
-        "14:05"
-      ]
-    },
-    {
-      "title": "El corazón de la bestia",
-      "times": [
-        "16:00",
-        "22:10"
-      ]
-    },
-    {
-      "title": "Tres adioses",
-      "times": [
-        "16:05",
-        "17:50"
-      ]
-    },
-    {
-      "title": "Pepita la pistolera",
-      "times": [
-        "20:10",
-        "22:20"
-      ]
-    },
-    {
-      "title": "Su propio infierno",
-      "times": [
-        "20:20"
+        "22:30"
       ]
     }
   ]
