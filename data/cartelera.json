@@ -58,6 +58,10 @@
       "scrapeadas": 56,
       "publicadas": 56
     },
+    "Cine Gaumont": {
+      "scrapeadas": 81,
+      "publicadas": 81
+    },
     "Cine Lorca": {
       "scrapeadas": 63,
       "publicadas": 63
@@ -130,9 +134,13 @@
       "scrapeadas": 344,
       "publicadas": 344
     },
+    "Museo del Cine": {
+      "scrapeadas": 0,
+      "publicadas": 5
+    },
     "Sala Lugones": {
-      "scrapeadas": 3,
-      "publicadas": 3
+      "scrapeadas": 65,
+      "publicadas": 63
     },
     "Sala Lúcida": {
       "scrapeadas": 15,
@@ -2212,17 +2220,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-10-08",
       "hora": "15:00",
-      "title_es": "Frank Borzage, un romántico en Hollywood – Parte 1",
-      "title_en": "Frank Borzage, un romántico en Hollywood – Parte 1",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
+      "title_es": "Tres camaradas",
+      "title_en": "Three Comrades",
+      "original_title": "Three Comrades",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1938,
+      "duration": 98,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/three-comrades/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3d80d80f-94df-403a-b818-774f5f63727b",
-      "ciclo": "Estreno"
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -4417,6 +4425,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-08",
+      "hora": "18:00",
+      "title_es": "Las señoritas de Wilko",
+      "title_en": "The Maids of Wilko",
+      "original_title": "Panny z Wilka",
+      "director": "Andrzej Wajda",
+      "country": "Polonia/Francia",
+      "year": 1979,
+      "duration": 116,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-maids-of-wilko/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-08",
       "hora": "18:10",
@@ -6417,6 +6441,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-08",
+      "hora": "20:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-08",
       "hora": "20:40",
@@ -6673,6 +6713,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-08",
+      "hora": "21:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro y Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/2d4ff5e7-a693-4a59-b8c2-3a2065b12e1c",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-08",
       "hora": "21:10",
@@ -6718,6 +6774,22 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/other-mommy/",
       "ticket_url": "https://multiplex.com.ar/peliculas/madre-siniestra/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-08",
+      "hora": "21:30",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
       "ciclo": ""
     },
     {
@@ -7054,6 +7126,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-08",
+      "hora": "22:00",
+      "title_es": "Una Chica en la Estacion",
+      "title_en": "A Girl in the Gas Station",
+      "original_title": "",
+      "director": "Cristian Biadone",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Thriller, Crimen",
+      "letterboxd": "https://letterboxd.com/film/a-girl-in-the-gas-station/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6354",
       "ciclo": ""
     },
     {
@@ -7742,6 +7830,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-08",
+      "hora": "22:30",
+      "title_es": "Hangar rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Argenina, Chile",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/18",
       "ciclo": ""
     },
     {
@@ -9457,6 +9561,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "14:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-09",
       "hora": "14:10",
@@ -9534,6 +9654,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "14:15",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
       "ciclo": ""
     },
     {
@@ -9630,6 +9766,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "14:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
       "ciclo": ""
     },
     {
@@ -9951,6 +10103,22 @@
       "letterboxd": "https://letterboxd.com/film/cars/",
       "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-09",
+      "hora": "15:00",
+      "title_es": "Las señoritas de Wilko",
+      "title_en": "The Maids of Wilko",
+      "original_title": "Panny z Wilka",
+      "director": "Andrzej Wajda",
+      "country": "Polonia/Francia",
+      "year": 1979,
+      "duration": 116,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/the-maids-of-wilko/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -10545,6 +10713,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "16:00",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-09",
       "hora": "16:10",
@@ -10785,6 +10969,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "16:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-10-09",
       "hora": "16:35",
@@ -10846,6 +11046,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "16:45",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/514",
       "ciclo": ""
     },
     {
@@ -11825,6 +12041,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "18:00",
+      "title_es": "Escondida en mi cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/512",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-09",
+      "hora": "18:00",
+      "title_es": "Los brujos inocentes",
+      "title_en": "Innocent Sorcerers",
+      "original_title": "Niewinni czarodzieje",
+      "director": "Andrzej Wajda",
+      "country": "Polonia",
+      "year": 1960,
+      "duration": 83,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/innocent-sorcerers/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-09",
       "hora": "18:10",
@@ -12049,6 +12297,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "18:30",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-09",
       "hora": "18:40",
@@ -12254,6 +12518,22 @@
       "genre": "Terror, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/578",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "19:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
       "ciclo": ""
     },
     {
@@ -12833,6 +13113,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "20:00",
+      "title_es": "Crotos Libres",
+      "title_en": "Crotos Libres",
+      "original_title": "",
+      "director": "Magalí Flaks",
+      "country": "Argentina",
+      "year": null,
+      "duration": 64,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/crotos-libres/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/519",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-09",
       "hora": "20:10",
@@ -13345,6 +13641,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "20:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-09",
       "hora": "20:40",
@@ -13601,6 +13913,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-09",
+      "hora": "21:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro y Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/2d4ff5e7-a693-4a59-b8c2-3a2065b12e1c",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-09",
       "hora": "21:10",
@@ -13663,6 +13991,22 @@
       "letterboxd": "https://letterboxd.com/film/machado/",
       "ticket_url": "https://malba.org.ar/evento/machado/",
       "ciclo": "Estreno"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "21:30",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -13887,6 +14231,22 @@
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "22:00",
+      "title_es": "La película que quisieras ver",
+      "title_en": "La película que quisieras ver",
+      "original_title": "",
+      "director": "Esteban Pablo Pérez Ghersi",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 100,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
       "cine": "Hoyts Dot",
@@ -14382,6 +14742,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-09",
+      "hora": "22:30",
+      "title_es": "Hangar rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Argenina, Chile",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/18",
       "ciclo": ""
     },
     {
@@ -14975,6 +15351,22 @@
       "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-10-10",
+      "hora": "12:00",
+      "title_es": "Monólogo final",
+      "title_en": "Monólogo final",
+      "original_title": "",
+      "director": "Eduardo Poli",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 83,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
       "cine": "Cinemark Palermo",
@@ -16065,6 +16457,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "14:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-10",
       "hora": "14:10",
@@ -16142,6 +16550,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "14:15",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
       "ciclo": ""
     },
     {
@@ -16223,6 +16647,38 @@
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "14:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-10",
+      "hora": "14:30",
+      "title_es": "El hombre de hierro",
+      "title_en": "Man of Iron",
+      "original_title": "Czlowiek z zelaza",
+      "director": "Andrzej Wajda",
+      "country": "Polonia",
+      "year": 1981,
+      "duration": 152,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/man-of-iron/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
     },
     {
       "cine": "Hoyts Abasto",
@@ -17121,6 +17577,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-10-10",
+      "hora": "16:00",
+      "title_es": "El odio en el cuerpo",
+      "title_en": "El odio en el cuerpo",
+      "original_title": "",
+      "director": "Galo Ontivero",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 63,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "16:00",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-10",
       "hora": "16:10",
@@ -17377,6 +17865,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "16:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-10-10",
       "hora": "16:35",
@@ -17438,6 +17942,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "16:45",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/514",
       "ciclo": ""
     },
     {
@@ -18433,6 +18953,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "18:00",
+      "title_es": "Escondida en mi cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/512",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-10",
+      "hora": "18:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro y Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/2d4ff5e7-a693-4a59-b8c2-3a2065b12e1c",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-10",
       "hora": "18:10",
@@ -18689,6 +19241,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "18:30",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-10",
       "hora": "18:40",
@@ -18862,6 +19430,22 @@
       "genre": "Thriller, Acción",
       "letterboxd": "https://letterboxd.com/film/gatillero/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/580",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "19:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
       "ciclo": ""
     },
     {
@@ -19521,6 +20105,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "20:00",
+      "title_es": "Rocambole",
+      "title_en": "Rocambole",
+      "original_title": "",
+      "director": "Marcia Paradiso, Matías González",
+      "country": "Argentina",
+      "year": null,
+      "duration": 89,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/520",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-10",
+      "hora": "20:00",
+      "title_es": "El hombre de mármol",
+      "title_en": "Man of Marble",
+      "original_title": "Czlowiek z marmuru",
+      "director": "Andrzej Wajda",
+      "country": "Polonia",
+      "year": 1977,
+      "duration": 164,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/man-of-marble/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-10",
       "hora": "20:10",
@@ -20017,6 +20633,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "20:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-10",
       "hora": "20:40",
@@ -20289,6 +20921,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "21:30",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-10",
       "hora": "21:50",
@@ -20542,6 +21190,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "22:00",
+      "title_es": "Camino de Brujas",
+      "title_en": "Camino de Brujas",
+      "original_title": "",
+      "director": "Rodrigo Cardozo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/camino-de-brujas/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6356",
       "ciclo": ""
     },
     {
@@ -21054,6 +21718,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-10",
+      "hora": "22:30",
+      "title_es": "Hangar rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Argenina, Chile",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/18",
       "ciclo": ""
     },
     {
@@ -21631,6 +22311,22 @@
       "letterboxd": "https://letterboxd.com/film/coyote-vs-acme/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-10-11",
+      "hora": "12:00",
+      "title_es": "Desencontrados",
+      "title_en": "Desencontrados",
+      "original_title": "",
+      "director": "Darío Javier Rovere",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 67,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
       "cine": "Cinemark Palermo",
@@ -22657,6 +23353,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "14:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-11",
+      "hora": "14:00",
+      "title_es": "Paisaje después de la batalla",
+      "title_en": "Landscape After Battle",
+      "original_title": "Krajobraz po bitwie",
+      "director": "Andrzej Wajda",
+      "country": "Polonia",
+      "year": 1970,
+      "duration": 109,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/landscape-after-battle/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-11",
       "hora": "14:10",
@@ -22734,6 +23462,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "14:15",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
       "ciclo": ""
     },
     {
@@ -22830,6 +23574,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "14:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
       "ciclo": ""
     },
     {
@@ -23793,6 +24553,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "16:00",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-11",
       "hora": "16:10",
@@ -24113,6 +24889,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "16:45",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/514",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-11",
       "hora": "16:50",
@@ -24255,6 +25047,22 @@
       "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/518",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-11",
+      "hora": "17:00",
+      "title_es": "El hombre de mármol",
+      "title_en": "Man of Marble",
+      "original_title": "Czlowiek z marmuru",
+      "director": "Andrzej Wajda",
+      "country": "Polonia",
+      "year": 1977,
+      "duration": 153,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/man-of-marble/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
     },
     {
       "cine": "Hoyts Abasto",
@@ -25105,6 +25913,22 @@
       "ciclo": "Cine irlandés"
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "18:00",
+      "title_es": "Escondida en mi cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/512",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-11",
       "hora": "18:10",
@@ -25518,6 +26342,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/los-vencedores/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/0bdfe76e6d1d1c67f885ecf69268ea0c",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "19:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
       "ciclo": ""
     },
     {
@@ -26113,6 +26953,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "20:00",
+      "title_es": "Una Película de Parque Chas",
+      "title_en": "Una Película de Parque Chas",
+      "original_title": "",
+      "director": "Ayelén Laura Redigonda",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 64,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/una-pelicula-de-parque-chas/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/522",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-11",
       "hora": "20:05",
@@ -26625,6 +27481,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "20:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-11",
       "hora": "20:40",
@@ -26849,6 +27721,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-11",
+      "hora": "21:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro y Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/2d4ff5e7-a693-4a59-b8c2-3a2065b12e1c",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-11",
       "hora": "21:10",
@@ -26894,6 +27782,22 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/other-mommy/",
       "ticket_url": "https://multiplex.com.ar/peliculas/madre-siniestra/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "21:30",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
       "ciclo": ""
     },
     {
@@ -27119,6 +28023,22 @@
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "22:00",
+      "title_es": "Bárbara",
+      "title_en": "Bárbara",
+      "original_title": "",
+      "director": "Tomás Emanuel Brunella",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 128,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
       "cine": "Hoyts Dot",
@@ -29201,6 +30121,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "14:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-12",
       "hora": "14:05",
@@ -29297,6 +30233,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "14:15",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-12",
       "hora": "14:20",
@@ -29390,6 +30342,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "14:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
       "ciclo": ""
     },
     {
@@ -30273,6 +31241,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "16:00",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-12",
       "hora": "16:10",
@@ -30513,6 +31497,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "16:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-10-12",
       "hora": "16:35",
@@ -30574,6 +31574,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "16:45",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/514",
       "ciclo": ""
     },
     {
@@ -31473,6 +32489,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo del Cine",
+      "fecha": "2026-10-12",
+      "hora": "18:00",
+      "title_es": "Retrato, elogio al duelo",
+      "title_en": "Retrato, elogio al duelo",
+      "original_title": "",
+      "director": "Rodrigo Martini",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 78,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "18:00",
+      "title_es": "Escondida en mi cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/512",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-12",
       "hora": "18:10",
@@ -31729,6 +32777,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "18:30",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-12",
       "hora": "18:40",
@@ -31870,6 +32934,22 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/other-mommy/",
       "ticket_url": "https://multiplex.com.ar/peliculas/madre-siniestra/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "19:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
       "ciclo": ""
     },
     {
@@ -32465,6 +33545,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "20:00",
+      "title_es": "Bajo Tus Pies",
+      "title_en": "Under Your Feet",
+      "original_title": "",
+      "director": "Cristian Bernard",
+      "country": "Argentina, -, España",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/under-your-feet-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/513",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-12",
       "hora": "20:05",
@@ -32929,6 +34025,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "20:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-12",
       "hora": "20:40",
@@ -33217,6 +34329,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "21:30",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-12",
       "hora": "21:50",
@@ -33454,6 +34582,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "22:00",
+      "title_es": "Razones del Corazon",
+      "title_en": "Razones del Corazon",
+      "original_title": "",
+      "director": "Silvia Romero",
+      "country": "Argentina",
+      "year": null,
+      "duration": 100,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6358",
       "ciclo": ""
     },
     {
@@ -33950,6 +35094,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-12",
+      "hora": "22:30",
+      "title_es": "Hangar rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Argenina, Chile",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/18",
       "ciclo": ""
     },
     {
@@ -35537,6 +36697,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "14:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-13",
       "hora": "14:10",
@@ -35614,6 +36790,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "14:15",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
       "ciclo": ""
     },
     {
@@ -35710,6 +36902,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "14:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
       "ciclo": ""
     },
     {
@@ -36036,17 +37244,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-10-13",
       "hora": "15:00",
-      "title_es": "Frank Borzage, un romántico en Hollywood – Parte 1",
-      "title_en": "Frank Borzage, un romántico en Hollywood – Parte 1",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
+      "title_es": "Extraño cargamento",
+      "title_en": "Strange Cargo",
+      "original_title": "Strange Cargo",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1940,
+      "duration": 113,
+      "genre": "Aventura, Romance",
+      "letterboxd": "https://letterboxd.com/film/strange-cargo/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3d80d80f-94df-403a-b818-774f5f63727b",
-      "ciclo": "Estreno"
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -36625,6 +37833,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "16:00",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-13",
       "hora": "16:10",
@@ -36926,6 +38150,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "16:45",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/514",
       "ciclo": ""
     },
     {
@@ -37823,6 +39063,38 @@
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://multiplex.com.ar/peliculas/avengers-endgame-re-estreno/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "18:00",
+      "title_es": "Escondida en mi cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/512",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-13",
+      "hora": "18:00",
+      "title_es": "Paisaje después de la batalla",
+      "title_en": "Landscape After Battle",
+      "original_title": "Krajobraz po bitwie",
+      "director": "Andrzej Wajda",
+      "country": "Polonia",
+      "year": 1970,
+      "duration": 109,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/landscape-after-battle/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
     },
     {
       "cine": "Hoyts Abasto",
@@ -38257,6 +39529,22 @@
       "ciclo": "Peña sin cadenas"
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "19:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-13",
       "hora": "19:05",
@@ -38782,6 +40070,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "20:00",
+      "title_es": "Canelones",
+      "title_en": "Cannelloni",
+      "original_title": "",
+      "director": "Christian Basilis, Ana Laura Gussoni",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 92,
+      "genre": "Thriller, Comedia",
+      "letterboxd": "https://letterboxd.com/film/cannelloni/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/508",
       "ciclo": ""
     },
     {
@@ -39537,6 +40841,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-13",
+      "hora": "21:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro y Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/2d4ff5e7-a693-4a59-b8c2-3a2065b12e1c",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-13",
       "hora": "21:10",
@@ -39582,6 +40902,38 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/other-mommy/",
       "ticket_url": "https://multiplex.com.ar/peliculas/madre-siniestra/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "21:30",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "21:45",
+      "title_es": "El heladero: dulce sabor a muerte",
+      "title_en": "Ice Cream Man",
+      "original_title": "",
+      "director": "Eli Roth",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 86,
+      "genre": "Comedia, Thriller",
+      "letterboxd": "https://letterboxd.com/film/ice-cream-man-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/504",
       "ciclo": ""
     },
     {
@@ -39807,6 +41159,22 @@
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-13",
+      "hora": "22:00",
+      "title_es": "El silencio de Marilyn",
+      "title_en": "El silencio de Marilyn",
+      "original_title": "",
+      "director": "Edgardo Gabo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 84,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
       "cine": "Hoyts Dot",
@@ -41905,6 +43273,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "14:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-14",
       "hora": "14:10",
@@ -41982,6 +43366,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "14:15",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
       "ciclo": ""
     },
     {
@@ -42078,6 +43478,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "14:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
       "ciclo": ""
     },
     {
@@ -42420,17 +43836,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-10-14",
       "hora": "15:00",
-      "title_es": "Frank Borzage, un romántico en Hollywood – Parte 1",
-      "title_en": "Frank Borzage, un romántico en Hollywood – Parte 1",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
+      "title_es": "Noche sin luna",
+      "title_en": "Moonrise",
+      "original_title": "Moonrise",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1948,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/moonrise/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/3d80d80f-94df-403a-b818-774f5f63727b",
-      "ciclo": "Estreno"
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 1"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -42993,6 +44409,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "16:00",
+      "title_es": "Yo, Narciso",
+      "title_en": "Yo, Narciso",
+      "original_title": "Yo, Narciso",
+      "director": "Adrián Suar",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 95,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/yo-narciso/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/490",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-14",
       "hora": "16:10",
@@ -43233,6 +44665,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "16:30",
+      "title_es": "Lo Dejamos Aca",
+      "title_en": "Lo Dejamos Aca",
+      "original_title": "",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": null,
+      "duration": 98,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-10-14",
       "hora": "16:35",
@@ -43278,6 +44726,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "16:45",
+      "title_es": "Una quinta en Portugal",
+      "title_en": "The Portuguese House",
+      "original_title": "",
+      "director": "Avelina Prat",
+      "country": "España, Portugal",
+      "year": 2025,
+      "duration": 114,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-portuguese-house/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/514",
       "ciclo": ""
     },
     {
@@ -44193,6 +45657,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "18:00",
+      "title_es": "Escondida en mi cabeza",
+      "title_en": "Escondida en mi cabeza",
+      "original_title": "Escondida en mi cabeza",
+      "director": "Lucas Vivo García Lagos",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/escondida-en-mi-cabeza/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/512",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-14",
+      "hora": "18:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro y Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/2d4ff5e7-a693-4a59-b8c2-3a2065b12e1c",
+      "ciclo": "Estreno"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-14",
       "hora": "18:10",
@@ -44593,6 +46089,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "19:00",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-14",
       "hora": "19:05",
@@ -44830,6 +46342,22 @@
       "genre": "Ciencia ficción, Acción",
       "letterboxd": "https://letterboxd.com/film/spider-man-brand-new-day/",
       "ticket_url": "https://multiplex.com.ar/peliculas/spider-man-un-dia-nuevo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "19:30",
+      "title_es": "El Septimo Sello",
+      "title_en": "The Seventh Seal",
+      "original_title": "",
+      "director": "Ingmar Bergman",
+      "country": "Suecia",
+      "year": 1957,
+      "duration": 86,
+      "genre": "Fantasía, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-seventh-seal/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6361",
       "ciclo": ""
     },
     {
@@ -45231,6 +46759,38 @@
       "letterboxd": "https://letterboxd.com/film/always-lalisa/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "20:00",
+      "title_es": "Soy ella",
+      "title_en": "Soy ella",
+      "original_title": "Soy ella",
+      "director": "Cecilia Pinotti",
+      "country": "Argentina",
+      "year": null,
+      "duration": 86,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/soy-ella/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/524",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-14",
+      "hora": "20:00",
+      "title_es": "El hombre de hierro",
+      "title_en": "Man of Iron",
+      "original_title": "Czlowiek z zelaza",
+      "director": "Andrzej Wajda",
+      "country": "Polonia",
+      "year": 1981,
+      "duration": 147,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/man-of-iron/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/e7136f79-b8e6-4cc3-97a4-d94387f49b75",
+      "ciclo": "Andrzej Wajda: entre el mito y la historia"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -45985,6 +47545,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "21:30",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-10-14",
       "hora": "21:50",
@@ -46223,6 +47799,22 @@
       "letterboxd": "https://letterboxd.com/film/avengers-endgame/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "22:00",
+      "title_es": "Yo soy Hermes",
+      "title_en": "Yo soy Hermes",
+      "original_title": "",
+      "director": "Gonzalo Albornoz",
+      "country": "Argentina, Bolivia",
+      "year": 2026,
+      "duration": 73,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
       "cine": "Hoyts Dot",
@@ -46718,6 +48310,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-14",
+      "hora": "22:30",
+      "title_es": "Hangar rojo",
+      "title_en": "The Red Hangar",
+      "original_title": "Hangar Rojo",
+      "director": "Juan Pablo Sallato",
+      "country": "Argenina, Chile",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/hangar-rojo/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/18",
       "ciclo": ""
     },
     {
@@ -47377,6 +48985,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-15",
+      "hora": "15:00",
+      "title_es": "Noche tras noche",
+      "title_en": "Night After Night",
+      "original_title": "Night After Night",
+      "director": "Archie Mayo",
+      "country": "Ee.uu.",
+      "year": 1932,
+      "duration": 73,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/night-after-night/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
+      "ciclo": "Seis tardes con Mae West"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-15",
       "hora": "16:20",
@@ -47407,6 +49031,22 @@
       "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-15",
+      "hora": "17:30",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro y Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/2d4ff5e7-a693-4a59-b8c2-3a2065b12e1c",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -47743,6 +49383,22 @@
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/la-memoria-del-perfume-de-las-cosas/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-15",
+      "hora": "20:30",
+      "title_es": "Las alas del deseo",
+      "title_en": "Wings of Desire",
+      "original_title": "Der Himmel über Berlin",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/Reino Unido/Francia",
+      "year": 1987,
+      "duration": 127,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/wings-of-desire/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -48385,6 +50041,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-16",
+      "hora": "18:00",
+      "title_es": "El miedo del arquero al tiro penal",
+      "title_en": "The Goalie's Anxiety at the Penalty Kick",
+      "original_title": "Die Angst des Tormanns beim Elfmeter",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/Austria",
+      "year": 1972,
+      "duration": 101,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-goalies-anxiety-at-the-penalty-kick/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-10-16",
       "hora": "19:00",
@@ -48591,6 +50263,22 @@
       "letterboxd": "https://letterboxd.com/film/la-gioia/",
       "ticket_url": "https://lumiton.ar/evento/la-gioia/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-16",
+      "hora": "20:30",
+      "title_es": "El amigo americano",
+      "title_en": "The American Friend",
+      "original_title": "Der Amerikanische Freund",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/Francia",
+      "year": 1977,
+      "duration": 127,
+      "genre": "Crimen, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-american-friend/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -49473,6 +51161,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-17",
+      "hora": "20:30",
+      "title_es": "Paris, Texas",
+      "title_en": "Paris, Texas",
+      "original_title": "",
+      "director": "Wim Wenders",
+      "country": "EE.UU/República Federal de Alemania/Francia/Reino Unido",
+      "year": 1984,
+      "duration": 148,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/paris-texas/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-17",
       "hora": "20:50",
@@ -49937,6 +51641,22 @@
       "ciclo": "Cine japonés en 16 mm"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-18",
+      "hora": "15:00",
+      "title_es": "No soy un ángel",
+      "title_en": "I'm No Angel",
+      "original_title": "I’m No Angel",
+      "director": "Wesley Ruggles",
+      "country": "Ee.uu.",
+      "year": 1933,
+      "duration": 87,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/im-no-angel/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
+      "ciclo": "Seis tardes con Mae West"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-10-18",
       "hora": "16:00",
@@ -49951,6 +51671,22 @@
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/pelicula-sorpresa",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo del Cine",
+      "fecha": "2026-10-18",
+      "hora": "16:00",
+      "title_es": "Decepciones del alma - La agonía de la soledad",
+      "title_en": "Decepciones del alma - La agonía de la soledad",
+      "original_title": "",
+      "director": "Lucas Giuggia",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 131,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://festivaldecineinusual.blogspot.com/",
+      "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
       "cine": "Hoyts Abasto",
@@ -50337,6 +52073,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-18",
+      "hora": "21:00",
+      "title_es": "Buena Vista Social Club",
+      "title_en": "Buena Vista Social Club",
+      "original_title": "",
+      "director": "Wim Wenders",
+      "country": "EE.UU./Alemania/Cuba/Francia",
+      "year": 1999,
+      "duration": 105,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/buena-vista-social-club/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-18",
       "hora": "22:00",
@@ -51297,6 +53049,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-20",
+      "hora": "15:00",
+      "title_es": "No es pecado",
+      "title_en": "Belle of the Nineties",
+      "original_title": "Belle of the Nineties",
+      "director": "Leo McCarey",
+      "country": "Ee.uu.",
+      "year": 1934,
+      "duration": 73,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/belle-of-the-nineties/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
+      "ciclo": "Seis tardes con Mae West"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-20",
       "hora": "16:20",
@@ -51407,6 +53175,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.filo.uba.ar/juguetes-peque%C3%B1a-historia-pol%C3%ADtica",
       "ciclo": "Ficción"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-20",
+      "hora": "18:00",
+      "title_es": "Buena Vista Social Club",
+      "title_en": "Buena Vista Social Club",
+      "original_title": "",
+      "director": "Wim Wenders",
+      "country": "EE.UU./Alemania/Cuba/Francia",
+      "year": 1999,
+      "duration": 105,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/buena-vista-social-club/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Biblioteca del Congreso",
@@ -51583,6 +53367,22 @@
       "letterboxd": "",
       "ticket_url": "https://publico.alternativateatral.com/entradas75124-pena-sin-cadenas?o=14",
       "ciclo": "Peña sin cadenas"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-20",
+      "hora": "21:00",
+      "title_es": "Alicia en las ciudades",
+      "title_en": "Alice in the Cities",
+      "original_title": "Alice in den Städten",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania",
+      "year": 1974,
+      "duration": 110,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/alice-in-the-cities/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Hoyts Abasto",
@@ -51953,6 +53753,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-21",
+      "hora": "15:00",
+      "title_es": "Ahora soy una señora",
+      "title_en": "Goin' to Town",
+      "original_title": "Goin’ to Town",
+      "director": "Alexander Hall",
+      "country": "Ee.uu.",
+      "year": 1935,
+      "duration": 71,
+      "genre": "Comedia, Música",
+      "letterboxd": "https://letterboxd.com/film/goin-to-town/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
+      "ciclo": "Seis tardes con Mae West"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-21",
       "hora": "16:20",
@@ -51983,6 +53799,22 @@
       "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-21",
+      "hora": "17:30",
+      "title_es": "El estado de las cosas",
+      "title_en": "The State of Things",
+      "original_title": "Der Stand der Dinge",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/EE.UU./Portugal",
+      "year": 1982,
+      "duration": 121,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-state-of-things/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -52257,6 +54089,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-21",
+      "hora": "21:00",
+      "title_es": "El miedo del arquero al tiro penal",
+      "title_en": "The Goalie's Anxiety at the Penalty Kick",
+      "original_title": "Die Angst des Tormanns beim Elfmeter",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/Austria",
+      "year": 1972,
+      "duration": 101,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-goalies-anxiety-at-the-penalty-kick/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-21",
       "hora": "22:00",
@@ -52529,6 +54377,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-22",
+      "hora": "15:00",
+      "title_es": "La llama de Alaska",
+      "title_en": "Klondike Annie",
+      "original_title": "Klondike Annie",
+      "director": "Raoul Walsh",
+      "country": "Ee.uu.",
+      "year": 1936,
+      "duration": 73,
+      "genre": "Comedia, Western",
+      "letterboxd": "https://letterboxd.com/film/klondike-annie/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
+      "ciclo": "Seis tardes con Mae West"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-22",
+      "hora": "17:00",
+      "title_es": "El amigo americano",
+      "title_en": "The American Friend",
+      "original_title": "Der Amerikanische Freund",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/Francia",
+      "year": 1977,
+      "duration": 125,
+      "genre": "Crimen, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-american-friend/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-22",
       "hora": "18:00",
@@ -52641,6 +54521,22 @@
       "ciclo": "Asterisco Festival Internacional de Cine LGBTIQ+"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-22",
+      "hora": "20:00",
+      "title_es": "En el curso del tiempo",
+      "title_en": "Kings of the Road",
+      "original_title": "Im Lauf der Zeit",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania",
+      "year": 1976,
+      "duration": 177,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/kings-of-the-road/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-22",
       "hora": "21:00",
@@ -52703,6 +54599,38 @@
       "letterboxd": "https://letterboxd.com/film/las-hijas-del-fuego/",
       "ticket_url": "https://malba.org.ar/evento/asterisco-festival-internacional-de-cine-lgbtiq-2",
       "ciclo": "Asterisco Festival Internacional de Cine LGBTIQ+"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-23",
+      "hora": "15:00",
+      "title_es": "El ángel de la calle",
+      "title_en": "Street Angel",
+      "original_title": "Street Angel",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1928,
+      "duration": 102,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/street-angel/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-23",
+      "hora": "17:30",
+      "title_es": "Alicia en las ciudades",
+      "title_en": "Alice in the Cities",
+      "original_title": "Alice in den Städten",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania",
+      "year": 1974,
+      "duration": 110,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/alice-in-the-cities/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "MALBA",
@@ -52849,6 +54777,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-23",
+      "hora": "21:00",
+      "title_es": "Tokyo-Ga",
+      "title_en": "Tokyo-Ga",
+      "original_title": "",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/EE.UU.",
+      "year": 1985,
+      "duration": 92,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-23",
       "hora": "21:30",
@@ -52945,6 +54889,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-24",
+      "hora": "14:30",
+      "title_es": "Una chica mala",
+      "title_en": "Bad Girl",
+      "original_title": "Bad Girl",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1931,
+      "duration": 90,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/bad-girl/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-10-24",
       "hora": "16:00",
@@ -52991,6 +54951,22 @@
       "letterboxd": "https://letterboxd.com/film/four-mothers-2024/",
       "ticket_url": "https://amigosdelbellasartes.org.ar/producto/cuatro-madres/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-24",
+      "hora": "17:00",
+      "title_es": "Las alas del deseo",
+      "title_en": "Wings of Desire",
+      "original_title": "Der Himmel über Berlin",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/Reino Unido/Francia",
+      "year": 1987,
+      "duration": 128,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/wings-of-desire/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "MALBA",
@@ -53153,6 +55129,22 @@
       "ciclo": "¡Única función!"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-24",
+      "hora": "20:00",
+      "title_es": "En el curso del tiempo",
+      "title_en": "Kings of the Road",
+      "original_title": "Im Lauf der Zeit",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania",
+      "year": 1976,
+      "duration": 177,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/kings-of-the-road/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "Cine York",
       "fecha": "2026-10-24",
       "hora": "20:30",
@@ -53265,6 +55257,22 @@
       "ciclo": "Cine japonés en 16 mm"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "15:00",
+      "title_es": "Tokyo-Ga",
+      "title_en": "Tokyo-Ga",
+      "original_title": "",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/EE.UU.",
+      "year": 1985,
+      "duration": 92,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "15:30",
@@ -53311,6 +55319,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "17:30",
+      "title_es": "Paris, Texas",
+      "title_en": "Paris, Texas",
+      "original_title": "",
+      "director": "Wim Wenders",
+      "country": "EE.UU/República Federal de Alemania/ Francia/Reino Unido",
+      "year": 1984,
+      "duration": 145,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/paris-texas/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Cine York",
@@ -53439,6 +55463,22 @@
       "letterboxd": "https://letterboxd.com/film/bram-stokers-dracula/",
       "ticket_url": "https://lumiton.ar/evento/dracula-de-bram-stoker/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "21:00",
+      "title_es": "El estado de las cosas",
+      "title_en": "The State of Things",
+      "original_title": "Der Stand der Dinge",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/EE.UU./Portugal",
+      "year": 1982,
+      "duration": 121,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-state-of-things/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Hoyts Abasto",
@@ -53809,6 +55849,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-28",
+      "hora": "15:00",
+      "title_es": "Fueros humanos",
+      "title_en": "Man's Castle",
+      "original_title": "Man’s Castle",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1933,
+      "duration": 78,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/mans-castle/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-28",
       "hora": "16:30",
@@ -53839,6 +55895,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-28",
+      "hora": "18:00",
+      "title_es": "Las furias",
+      "title_en": "The Furies",
+      "original_title": "",
+      "director": "Vlasta Lah",
+      "country": "Argentina",
+      "year": 1960,
+      "duration": 80,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-furies-1960/",
+      "ticket_url": "",
+      "ciclo": "Las furias y Lo que le pasó a Reynoso"
     },
     {
       "cine": "Hoyts Abasto",
@@ -53919,6 +55991,22 @@
       "letterboxd": "https://letterboxd.com/film/the-evil-dead/",
       "ticket_url": "https://centralticket.net/event/10743",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-28",
+      "hora": "21:00",
+      "title_es": "Lo que le pasó a Reynoso",
+      "title_en": "Lo que le pasó a Reynoso",
+      "original_title": "",
+      "director": "Leopoldo Torres Ríos",
+      "country": "Argentina",
+      "year": 1955,
+      "duration": 94,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/lo-que-le-paso-a-reynoso/",
+      "ticket_url": "",
+      "ciclo": "Las furias y Lo que le pasó a Reynoso"
     },
     {
       "cine": "Cineclub Farus",
@@ -54017,6 +56105,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-29",
+      "hora": "14:00",
+      "title_es": "La hora fatal",
+      "title_en": "The Mortal Storm",
+      "original_title": "The Mortal Storm",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1940,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-mortal-storm/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-29",
       "hora": "15:10",
@@ -54079,6 +56183,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-29",
+      "hora": "16:30",
+      "title_es": "El profundo deseo de los dioses",
+      "title_en": "Profound Desires of the Gods",
+      "original_title": "Kamigami no fukaki yokubo",
+      "director": "Shohei Imamura",
+      "country": "Japón",
+      "year": 1968,
+      "duration": 173,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/profound-desires-of-the-gods/",
+      "ticket_url": "",
+      "ciclo": "Shohei Imamura bis"
     },
     {
       "cine": "MALBA",
@@ -54225,6 +56345,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-29",
+      "hora": "20:30",
+      "title_es": "La balada de Narayama",
+      "title_en": "The Ballad of Narayama",
+      "original_title": "Narayama bushikō",
+      "director": "Shohei Imamura",
+      "country": "Japón",
+      "year": 1983,
+      "duration": 130,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-ballad-of-narayama/",
+      "ticket_url": "",
+      "ciclo": "Shohei Imamura bis"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-29",
       "hora": "22:00",
@@ -54351,6 +56487,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-30",
+      "hora": "15:00",
+      "title_es": "Siempre te he querido",
+      "title_en": "I've Always Loved You",
+      "original_title": "I’ve Always Loved You",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1946,
+      "duration": 117,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/ive-always-loved-you/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
     },
     {
       "cine": "MALBA",
@@ -54673,6 +56825,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-31",
+      "hora": "15:00",
+      "title_es": "El ángel de la calle",
+      "title_en": "Street Angel",
+      "original_title": "Street Angel",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1928,
+      "duration": 102,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/street-angel/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-31",
+      "hora": "15:00",
+      "title_es": "Tigre de la China",
+      "title_en": "China Doll",
+      "original_title": "China Doll",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1958,
+      "duration": 99,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/china-doll/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
       "cine": "CCK",
       "fecha": "2026-10-31",
       "hora": "16:00",
@@ -54735,6 +56919,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": "Doble función"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-31",
+      "hora": "18:00",
+      "title_es": "Fueros humanos",
+      "title_en": "Man's Castle",
+      "original_title": "Man’s Castle",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1933,
+      "duration": 75,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/mans-castle/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
     },
     {
       "cine": "CCK",
@@ -54913,6 +57113,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-31",
+      "hora": "21:00",
+      "title_es": "Tigre de la China",
+      "title_en": "China Doll",
+      "original_title": "China Doll",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1958,
+      "duration": 99,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/china-doll/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-31",
       "hora": "22:00",
@@ -55073,6 +57289,70 @@
       "ciclo": "Asterisco Festival Internacional de Cine LGBTIQ+"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-03",
+      "hora": "18:00",
+      "title_es": "Siempre te he querido",
+      "title_en": "I've Always Loved You",
+      "original_title": "I’ve Always Loved You",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1946,
+      "duration": 117,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/ive-always-loved-you/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-03",
+      "hora": "21:00",
+      "title_es": "Fueros humanos",
+      "title_en": "Man's Castle",
+      "original_title": "Man’s Castle",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1933,
+      "duration": 75,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/mans-castle/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-04",
+      "hora": "15:00",
+      "title_es": "Siempre te he querido",
+      "title_en": "I've Always Loved You",
+      "original_title": "I’ve Always Loved You",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1946,
+      "duration": 117,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/ive-always-loved-you/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-04",
+      "hora": "18:00",
+      "title_es": "La hora fatal",
+      "title_en": "The Mortal Storm",
+      "original_title": "The Mortal Storm",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1940,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-mortal-storm/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-04",
       "hora": "20:00",
@@ -55089,6 +57369,54 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-04",
+      "hora": "21:00",
+      "title_es": "Una chica mala",
+      "title_en": "Bad Girl",
+      "original_title": "Bad Girl",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1931,
+      "duration": 90,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/bad-girl/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-05",
+      "hora": "15:00",
+      "title_es": "La hora fatal",
+      "title_en": "The Mortal Storm",
+      "original_title": "The Mortal Storm",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1940,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-mortal-storm/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-05",
+      "hora": "18:00",
+      "title_es": "El ángel de la calle",
+      "title_en": "Street Angel",
+      "original_title": "Street Angel",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1928,
+      "duration": 102,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/street-angel/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
+    },
+    {
       "cine": "Bellas Artes",
       "fecha": "2026-11-06",
       "hora": "18:00",
@@ -55103,6 +57431,22 @@
       "letterboxd": "https://letterboxd.com/film/stelios/",
       "ticket_url": "https://amigosdelbellasartes.org.ar/producto/stelios/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-06",
+      "hora": "18:00",
+      "title_es": "Una chica mala",
+      "title_en": "Bad Girl",
+      "original_title": "Bad Girl",
+      "director": "Frank Borzage",
+      "country": "Ee.uu",
+      "year": 1931,
+      "duration": 90,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/bad-girl/",
+      "ticket_url": "",
+      "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
     },
     {
       "cine": "Hoyts Abasto",
