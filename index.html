@@ -1148,6 +1148,12 @@ function cargarCartelera(c) {
   if (!carteleras[c]) {
     carteleras[c] = fetch(CIUDADES[c].archivo + '?t=' + Date.now())
       .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(d => {
+        // Un ciclo anunciado sin días llega como "Sin fecha": no cae en ningún
+        // día y en una búsqueda se vería con la fecha rota.
+        d.screenings = (d.screenings || []).filter(s => /^\d{4}-\d{2}-\d{2}$/.test(s.fecha || ''));
+        return d;
+      })
       .catch(e => { delete carteleras[c]; throw e; });
   }
   return carteleras[c];

@@ -1359,6 +1359,27 @@
       "title": "Hangar rojo",
       "cine": "Cine Gaumont",
       "country": "Chile, Argentina"
+    },
+    {
+      "_comment": "El Gaumont escribe el director 'HERNAN GOLDFRIND' y el título sin tildes; en Letterboxd es Therapy Done Right.",
+      "title": "Lo Dejamos Aca",
+      "cine": "Cine Gaumont",
+      "title_es": "Lo dejamos acá",
+      "director": "Hernán Goldfrid",
+      "title_en": "Therapy Done Right",
+      "letterboxd": "https://letterboxd.com/film/therapy-done-right/"
+    },
+    {
+      "_comment": "Hay otra La casa (Gustavo Fontán) en Letterboxd: ésta es la de Gustavo Triviño.",
+      "title": "La Casa",
+      "cine": "Cine Gaumont",
+      "year": 2025,
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/"
+    },
+    {
+      "title": "El séptimo sello",
+      "cine": "Cine Gaumont",
+      "letterboxd": "https://letterboxd.com/film/the-seventh-seal/"
     }
   ]
 }
