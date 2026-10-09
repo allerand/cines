@@ -1623,7 +1623,9 @@ function visibleScreenings() {
   // Aplica el filtro global del toggle comerciales. Usado por todo el
   // resto de la UI (tabs por día, conteos, render, etc.). Un festival se
   // muestra entero, pase donde pase.
-  if (showCommercial || seccion === 'festivales' || esBusquedaDeFestival()) return allScreenings;
+  // Con una búsqueda (la del buscador o la de un festival) entran también las
+  // cadenas comerciales: quien busca una película la quiere encontrar donde sea.
+  if (showCommercial || seccion === 'festivales' || searchQuery) return allScreenings;
   return allScreenings.filter(s => !isCommercial(s.cine));
 }
 
@@ -1806,12 +1808,6 @@ function hashEsDeFestivales() {
 function coincideBusqueda(s, q) {
   return [s.title_es, s.title_en, s.original_title, s.director, s.ciclo]
     .join(' ').toLowerCase().includes(q);
-}
-
-// ¿La búsqueda de ahora es la de un festival? Entonces se ven todas sus
-// funciones, también las de cadenas comerciales, con el toggle apagado.
-function esBusquedaDeFestival() {
-  return !!searchQuery && registroFestivales.some(f => !f.archivo && busquedaDe(f) === searchQuery);
 }
 
 function busquedaDe(f) {
