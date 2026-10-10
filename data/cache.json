@@ -22724,7 +22724,9 @@
     "year": 2026,
     "duration": 125,
     "genre": "Fantasía, Acción",
-    "original_title": "Street Fighter"
+    "clase_titulo": "exacto",
+    "original_title": "Street Fighter",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "terror total: [rec]": {
     "url": "https://letterboxd.com/film/rec/",
@@ -22947,7 +22949,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Benoît Daffis, Jean-Christian Tassy",
+    "director": "Jean-Christian Tassy, Benoît Daffis",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -23004,7 +23006,7 @@
     "country": "Argentina",
     "year": 2026,
     "duration": 72,
-    "genre": "",
+    "genre": "Documental",
     "clase_titulo": "exacto",
     "original_title": "Machado",
     "sin_hints": "título"

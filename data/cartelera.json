@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T02:41:09",
+  "updated": "2026-10-10T10:34:07",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 11,
@@ -18,7 +18,7 @@
       "publicadas": 6
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 21,
       "publicadas": 21
     },
     "CEA": {
@@ -39,8 +39,8 @@
       "publicadas": 3
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
-      "publicadas": 8
+      "scrapeadas": 9,
+      "publicadas": 9
     },
     "Centro Cultural Munro": {
       "scrapeadas": 11,
@@ -59,8 +59,8 @@
       "publicadas": 40
     },
     "Cine Gaumont": {
-      "scrapeadas": 66,
-      "publicadas": 63
+      "scrapeadas": 67,
+      "publicadas": 64
     },
     "Cine Lorca": {
       "scrapeadas": 45,
@@ -131,8 +131,8 @@
       "publicadas": 213
     },
     "Multiplex Pilar": {
-      "scrapeadas": 254,
-      "publicadas": 254
+      "scrapeadas": 258,
+      "publicadas": 258
     },
     "Museo del Cine": {
       "scrapeadas": 5,
@@ -2905,22 +2905,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-10",
-      "hora": "16:00",
-      "title_es": "Prínicipe Valiente",
-      "title_en": "Prince Valiant",
-      "original_title": "",
-      "director": "Henry Hathaway",
-      "country": "Estados Unidos",
-      "year": 1954,
-      "duration": 100,
-      "genre": "Romance, Acción",
-      "letterboxd": "https://letterboxd.com/film/prince-valiant/",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/sabados-de-superaccion",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-10",
       "hora": "16:00",
@@ -2935,6 +2919,22 @@
       "letterboxd": "https://letterboxd.com/film/sere-cualquier-cosa-pero-te-quiero/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-10",
+      "hora": "16:00",
+      "title_es": "Prínicipe Valiente",
+      "title_en": "Prince Valiant",
+      "original_title": "",
+      "director": "Henry Hathaway",
+      "country": "Estados Unidos",
+      "year": 1954,
+      "duration": 100,
+      "genre": "Romance, Acción",
+      "letterboxd": "https://letterboxd.com/film/prince-valiant/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/sabados-de-superaccion",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -4953,22 +4953,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cacodelphia",
-      "fecha": "2026-10-10",
-      "hora": "18:30",
-      "title_es": "La Vida es Así",
-      "title_en": "LA VIDA ES ASÍ",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": 121,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/la-vita-va-cosi/",
-      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b50304ffcaf6c638d8195a239c97ac66",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-10",
       "hora": "18:30",
@@ -4983,6 +4967,22 @@
       "letterboxd": "https://letterboxd.com/film/living-together/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-10-10",
+      "hora": "18:30",
+      "title_es": "La Vida es Así",
+      "title_en": "LA VIDA ES ASÍ",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/la-vita-va-cosi/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b50304ffcaf6c638d8195a239c97ac66",
+      "ciclo": ""
     },
     {
       "cine": "Multiplex Belgrano",
@@ -5161,22 +5161,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Showcase Belgrano",
-      "fecha": "2026-10-10",
-      "hora": "19:00",
-      "title_es": "La Odisea",
-      "title_en": "The Odyssey",
-      "original_title": "",
-      "director": "Christopher Nolan",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 173,
-      "genre": "Aventura, Acción",
-      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
-      "ticket_url": "https://www.todoshowcase.com/",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-10",
       "hora": "19:00",
@@ -5191,6 +5175,22 @@
       "letterboxd": "https://letterboxd.com/film/las-corrientes/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
       "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler"
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-10-10",
+      "hora": "19:00",
+      "title_es": "La Odisea",
+      "title_en": "The Odyssey",
+      "original_title": "",
+      "director": "Christopher Nolan",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 173,
+      "genre": "Aventura, Acción",
+      "letterboxd": "https://letterboxd.com/film/the-odyssey-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Borges",
@@ -11321,6 +11321,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-10-11",
+      "hora": "16:30",
+      "title_es": "Lo dejamos acá",
+      "title_en": "Therapy Done Right",
+      "original_title": "Lo dejamos acá",
+      "director": "Hernán Goldfrid",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/therapy-done-right/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-10-11",
       "hora": "16:30",
@@ -12425,22 +12441,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-11",
-      "hora": "18:00",
-      "title_es": "Misterioso asesinato en la montaña",
-      "title_en": "How to Make a Killing",
-      "original_title": "Un ours dans le Jura",
-      "director": "Franck Dubosc",
-      "country": "Francia",
-      "year": 2024,
-      "duration": 113,
-      "genre": "Crimen, Comedia",
-      "letterboxd": "https://letterboxd.com/film/how-to-make-a-killing/",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-11",
       "hora": "18:00",
@@ -12455,6 +12455,22 @@
       "letterboxd": "https://letterboxd.com/film/foscadh/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
       "ciclo": "Cine irlandés"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-11",
+      "hora": "18:00",
+      "title_es": "Misterioso asesinato en la montaña",
+      "title_en": "How to Make a Killing",
+      "original_title": "Un ours dans le Jura",
+      "director": "Franck Dubosc",
+      "country": "Francia",
+      "year": 2024,
+      "duration": 113,
+      "genre": "Crimen, Comedia",
+      "letterboxd": "https://letterboxd.com/film/how-to-make-a-killing/",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -36873,6 +36889,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-16",
+      "hora": "19:00",
+      "title_es": "La Frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "original_title": "",
+      "director": "Cristian Jesús Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/578",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-16",
       "hora": "19:10",
@@ -37155,7 +37187,7 @@
       "country": "Argentina",
       "year": 2026,
       "duration": 72,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/machado/",
       "ticket_url": "https://malba.org.ar/evento/machado/",
       "ciclo": "Estreno"
@@ -38681,22 +38713,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-18",
-      "hora": "15:00",
-      "title_es": "No soy un ángel",
-      "title_en": "I'm No Angel",
-      "original_title": "I'm No Angel",
-      "director": "Wesley Ruggles",
-      "country": "Estados Unidos",
-      "year": 1933,
-      "duration": 87,
-      "genre": "Comedia, Romance",
-      "letterboxd": "https://letterboxd.com/film/im-no-angel/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
-      "ciclo": "Seis tardes con Mae West"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-18",
       "hora": "15:00",
@@ -38711,6 +38727,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-18",
+      "hora": "15:00",
+      "title_es": "No soy un ángel",
+      "title_en": "I'm No Angel",
+      "original_title": "I'm No Angel",
+      "director": "Wesley Ruggles",
+      "country": "Estados Unidos",
+      "year": 1933,
+      "duration": 87,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/im-no-angel/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
+      "ciclo": "Seis tardes con Mae West"
     },
     {
       "cine": "Multiplex Canning",
@@ -39209,9 +39241,41 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-18",
+      "hora": "20:20",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 125,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-18",
       "hora": "20:50",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 125,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-18",
+      "hora": "21:00",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -39449,6 +39513,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-18",
+      "hora": "22:30",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 125,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-10-18",
       "hora": "22:40",
@@ -39516,6 +39596,22 @@
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-18",
       "hora": "23:05",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 125,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-18",
+      "hora": "23:10",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -42611,7 +42707,7 @@
       "country": "Argentina",
       "year": 2026,
       "duration": 72,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/machado/",
       "ticket_url": "https://malba.org.ar/evento/machado/",
       "ciclo": "Estreno"
@@ -43449,22 +43545,6 @@
       "ciclo": "MUBI Fest Buenos Aires - Premiere"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-25",
-      "hora": "15:00",
-      "title_es": "Tokyo-Ga",
-      "title_en": "Tokyo-Ga",
-      "original_title": "Tokyo-Ga",
-      "director": "Wim Wenders",
-      "country": "República Federal de Alemania/EE.UU.",
-      "year": 1985,
-      "duration": 92,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
-      "ciclo": "En las rutas de Wim Wenders"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "15:00",
@@ -43479,6 +43559,22 @@
       "letterboxd": "https://letterboxd.com/film/talking-to-a-stranger/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "15:00",
+      "title_es": "Tokyo-Ga",
+      "title_en": "Tokyo-Ga",
+      "original_title": "Tokyo-Ga",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/EE.UU.",
+      "year": 1985,
+      "duration": 92,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -43577,22 +43673,6 @@
       "ciclo": "MUBI Fest Buenos Aires - Premiere"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-25",
-      "hora": "17:30",
-      "title_es": "Paris, Texas",
-      "title_en": "Paris, Texas",
-      "original_title": "Paris, Texas",
-      "director": "Wim Wenders",
-      "country": "EE.UU/República Federal de Alemania/ Francia/Reino Unido",
-      "year": 1984,
-      "duration": 145,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/paris-texas/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
-      "ciclo": "En las rutas de Wim Wenders"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "17:30",
@@ -43607,6 +43687,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "17:30",
+      "title_es": "Paris, Texas",
+      "title_en": "Paris, Texas",
+      "original_title": "Paris, Texas",
+      "director": "Wim Wenders",
+      "country": "EE.UU/República Federal de Alemania/ Francia/Reino Unido",
+      "year": 1984,
+      "duration": 145,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/paris-texas/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -43641,22 +43737,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-25",
-      "hora": "18:00",
-      "title_es": "Siete días",
-      "title_en": "Siete días",
-      "original_title": "",
-      "director": "Ali Samadi Ahadi",
-      "country": "Alemania",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "18:00",
@@ -43671,6 +43751,22 @@
       "letterboxd": "https://letterboxd.com/film/arracht/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
       "ciclo": "Cine irlandés"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-25",
+      "hora": "18:00",
+      "title_es": "Siete días",
+      "title_en": "Siete días",
+      "original_title": "",
+      "director": "Ali Samadi Ahadi",
+      "country": "Alemania",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -45155,7 +45251,7 @@
       "country": "Argentina",
       "year": 2026,
       "duration": 72,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/machado/",
       "ticket_url": "https://malba.org.ar/evento/machado/",
       "ciclo": "Estreno"
@@ -45257,22 +45353,6 @@
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-31",
-      "hora": "16:00",
-      "title_es": "La memoria del perfume de las cosas",
-      "title_en": "La memoria del perfume de las cosas",
-      "original_title": "",
-      "director": "António Fonseca",
-      "country": "Portugal",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-31",
       "hora": "16:00",
@@ -45287,6 +45367,22 @@
       "letterboxd": "https://letterboxd.com/film/besos-en-la-frente/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-31",
+      "hora": "16:00",
+      "title_es": "La memoria del perfume de las cosas",
+      "title_en": "La memoria del perfume de las cosas",
+      "original_title": "",
+      "director": "António Fonseca",
+      "country": "Portugal",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Bellas Artes",

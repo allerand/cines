@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-10T02:41:09",
+  "updated": "2026-10-10T10:34:07",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 37,
@@ -18,8 +18,9 @@
       "publicadas": 27
     },
     "Cines Ideal": {
-      "scrapeadas": 285,
-      "publicadas": 285
+      "scrapeadas": 0,
+      "publicadas": 285,
+      "fuente_caida": "yelmocines.es no devolvió la cartelera (¿Cloudflare?)"
     },
     "Cines Princesa": {
       "scrapeadas": 233,
@@ -30,12 +31,12 @@
       "publicadas": 78
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 73,
-      "publicadas": 73
+      "scrapeadas": 74,
+      "publicadas": 74
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 77,
-      "publicadas": 77
+      "scrapeadas": 79,
+      "publicadas": 79
     },
     "Golem Madrid": {
       "scrapeadas": 94,
@@ -4500,6 +4501,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-11",
+      "hora": "19:55",
+      "title_es": "Naza",
+      "title_en": "NAZA",
+      "original_title": "NAZA",
+      "director": "Rachel Szor, Yuval Abraham",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/naza/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/naza-vose/39025/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-11",
       "hora": "20:00",
@@ -4993,6 +5010,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36786",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-11",
+      "hora": "21:45",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 159,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39026/",
       "ciclo": ""
     },
     {
@@ -7585,6 +7618,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/19935/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-12",
+      "hora": "20:45",
+      "title_es": "Naza",
+      "title_en": "NAZA",
+      "original_title": "NAZA",
+      "director": "Rachel Szor, Yuval Abraham",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/naza/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/naza-vose/20016/",
       "ciclo": ""
     },
     {
