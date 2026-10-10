@@ -696,7 +696,7 @@
       letter-spacing: 0.02em;
     }
     .ticket-link:hover { text-decoration: underline; }
-    .gratis { font-size: 0.66rem; color: var(--muted); margin-left: 0.4rem; }
+    .gratis { font-size: 0.7rem; color: var(--muted); font-weight: 600; letter-spacing: 0.02em; }
     .ciclo-tag { display: inline-block; font-size: 0.7rem; color: var(--muted); font-style: italic; }
     /* Ciclo dentro de la celda de película — sólo visible en mobile (en desktop
        está la columna Ciclo). */
@@ -1066,7 +1066,8 @@ const CINE_ADDRESSES = {
 // "Hoyts Abasto", etc. — matcheamos por PREFIJO así una sola entrada
 // cubre todas las sucursales de la cadena.
 const COMMERCIAL_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'];
-// Salas con entrada libre y gratuita: al lado de "Entradas" va un "gratis" chico.
+// Salas con entrada libre y gratuita: no hay entradas que sacar, así que en
+// lugar del link va "Entrada gratis".
 const CINES_GRATIS = new Set(['Museo del Cine']);
 
 function isCommercial(cine) {
@@ -2414,7 +2415,8 @@ function renderTable() {
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}${alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : ''}</div>
       ${ciclo.texto ? `<div class="film-ciclo-inline">${ciclo.href ? `<a href="${escapeHtml(ciclo.href)}">${escapeHtml(ciclo.texto)}</a>` : escapeHtml(ciclo.texto)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml(fichaCorta(s))}</div>
-      ${s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a>${CINES_GRATIS.has(s.cine) ? '<span class="gratis">gratis</span>' : ''}</div>` : ''}`;
+      ${CINES_GRATIS.has(s.cine) ? '<div class="film-meta-row"><span class="gratis">Entrada gratis</span></div>'
+        : s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
 
     return `<tr>
       <td class="col-hora">${searching ? `<span class="hora-date">${fmtShortDate(s.fecha)}</span>` : ''}<span class="hora-tag">${horaText}</span></td>
