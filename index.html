@@ -2364,6 +2364,8 @@ const PAISES_ROMANCE_O_INGLES = new Set([
 function originalLegible(s) {
   const orig = s.original_title || '';
   if (!orig || isNonLatinTitle(orig) || isTransliterated(s)) return false;
+  // Cualquier letra fuera del alfabeto latino (griego, por ejemplo) no se lee acá.
+  if (/[^\u0000-\u024F\u1E00-\u1EFF\u2000-\u206F]/.test(orig)) return false;
   const norm = t => String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
   if (norm(orig) === norm(s.title_en || '')) return true;   // ya es el inglés
   const pais = norm((s.country || '').split(',')[0]);

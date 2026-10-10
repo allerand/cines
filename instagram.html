@@ -394,10 +394,36 @@ function isTransliterated(s) {
   return norm(orig) !== norm(s.title_en || '');
 }
 
-function displayTitle(s) {
+// Mismo criterio que la web (index.html): el original va de título principal
+// sólo si está en una lengua romance o en inglés. El idioma no viene en los
+// datos: sale del primer país. Con la regla de antes, que sólo miraba el
+// alfabeto y no contemplaba el griego, una story salió titulada "σμαράγδα".
+const PAISES_ROMANCE_O_INGLES = new Set([
+  'argentina', 'uruguay', 'chile', 'paraguay', 'bolivia', 'peru', 'ecuador',
+  'colombia', 'venezuela', 'mexico', 'cuba', 'republica dominicana',
+  'puerto rico', 'guatemala', 'honduras', 'el salvador', 'nicaragua',
+  'costa rica', 'panama', 'espana', 'portugal', 'brasil', 'francia', 'italia',
+  'rumania', 'belgica', 'suiza', 'luxemburgo', 'monaco', 'andorra', 'moldavia',
+  'haiti', 'senegal', 'costa de marfil', 'mali', 'burkina faso', 'camerun',
+  'angola', 'mozambique', 'cabo verde', 'estados unidos', 'reino unido',
+  'irlanda', 'australia', 'nueva zelanda', 'canada', 'sudafrica', 'jamaica',
+  'escocia', 'inglaterra', 'gales',
+]);
+
+function originalLegible(s) {
   const orig = s.original_title || '';
-  if (orig && !isNonLatinTitle(orig) && !isTransliterated(s)) return orig;
-  return normalizeAllCaps(s.title_es || '') || s.title_en || orig;
+  if (!orig || isNonLatinTitle(orig) || isTransliterated(s)) return false;
+  // Cualquier letra fuera del alfabeto latino (griego, por ejemplo) no se lee acá.
+  if (/[^\u0000-\u024F\u1E00-\u1EFF\u2000-\u206F]/.test(orig)) return false;
+  const norm = t => String(t || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim();
+  if (norm(orig) === norm(s.title_en || '')) return true;
+  const pais = norm((s.country || '').split(',')[0]);
+  return !pais || PAISES_ROMANCE_O_INGLES.has(pais);
+}
+
+function displayTitle(s) {
+  if (originalLegible(s)) return s.original_title;
+  return normalizeAllCaps(s.title_es || '') || s.title_en || s.original_title || '';
 }
 
 function altTitle(s) {
