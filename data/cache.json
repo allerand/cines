@@ -3138,7 +3138,11 @@
     "director": "",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hills Have Eyes Part 2 (1984), The Grim Adventures of Billy & Mandy: Meet the Reaper (2000), Filming Obstinately, Meeting Patricio Guzman (2014)",
+    "fecha": "2026-10-10",
+    "con_duracion": false,
+    "desempate": ""
   },
   "los bobos": {
     "url": "https://letterboxd.com/film/los-bobos/",
@@ -15135,7 +15139,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-09",
+    "fecha": "2026-10-10",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16331,7 +16335,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS World Tour 'Arirang' In São Paulo: Live Viewing (2026) sólo se le parece",
-    "fecha": "2026-10-06",
+    "fecha": "2026-10-10",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22016,12 +22020,15 @@
     "duration": null
   },
   "videodrome|1983": {
-    "url": "",
+    "url": "https://letterboxd.com/film/videodrome/",
     "title_en": "Videodrome",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "David Cronenberg",
+    "country": "Canada",
+    "year": 1983,
+    "duration": 88,
+    "genre": "Misterio, Ciencia ficción",
+    "title_es": "Cuerpos invadidos",
+    "original_title": "Videodrome"
   },
   "la belle personne + martyrs|2008": {
     "url": "",
@@ -22125,7 +22132,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es La casa (2012), y puede ser otra",
-    "fecha": "2026-10-09",
+    "fecha": "2026-10-10",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22857,10 +22864,12 @@
   "donn: le danseur du xxe siècle": {
     "url": "",
     "title_en": "Donn: Le danseur du XXe siècle",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Florencia Dávila, Mariano Baez",
+    "country": "Argentina, France",
+    "year": 2026,
+    "duration": 72,
+    "genre": "Documental",
+    "original_title": "Donn, le danseur du XXe siècle"
   },
   "ruge": {
     "url": "",
@@ -23099,7 +23108,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-06",
+    "fecha": "2026-10-10",
     "con_duracion": true,
     "desempate": ""
   },
@@ -23167,7 +23176,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; Shinema Kabuki: Renjishi (2010) sólo se le parece",
-    "fecha": "2026-10-06",
+    "fecha": "2026-10-10",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23432,7 +23441,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-06",
+    "fecha": "2026-10-10",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24355,5 +24364,314 @@
     "genre": "Romance, Drama",
     "title_es": "Un amor inmortal",
     "original_title": "永遠の人"
+  },
+  "su propio infierno|2026": {
+    "url": "https://letterboxd.com/film/her-private-hell-2026/",
+    "title_en": "Her Private Hell",
+    "director": "Nicolas Winding Refn",
+    "country": "USA, Denmark",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Terror, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "title_es": "Su propio infierno",
+    "original_title": "Her Private Hell",
+    "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "euforia bloque i: fantasía y camp": {
+    "url": "",
+    "title_en": "Euforia Bloque I: Fantasía y Camp",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "linea imaginaria: los ahogados": {
+    "url": "",
+    "title_en": "Linea Imaginaria: Los ahogados",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "euforia bloque iii: erótica": {
+    "url": "",
+    "title_en": "Euforia Bloque III: Erótica",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "euforia bloque ii: autodefensa colectiva": {
+    "url": "",
+    "title_en": "Euforia Bloque II: Autodefensa colectiva",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "linea imaginaria: nunkui": {
+    "url": "",
+    "title_en": "Linea Imaginaria: Nunkui",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "euforia: retrospectiva ian de la rosa": {
+    "url": "",
+    "title_en": "Euforia: Retrospectiva Ian de la Rosa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "linea imaginaria: hiedra": {
+    "url": "",
+    "title_en": "Linea Imaginaria: Hiedra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "minotauro|2026": {
+    "url": "https://letterboxd.com/film/minotaur-2026/",
+    "title_en": "Minotaur",
+    "director": "Andrey Zvyagintsev",
+    "country": "France, Latvia",
+    "year": 2026,
+    "duration": 135,
+    "genre": "Crimen, Thriller",
+    "title_es": "Minotauro",
+    "original_title": "Minotaure"
+  },
+  "erupcja|2025": {
+    "url": "https://letterboxd.com/film/erupcja/",
+    "title_en": "Erupcja",
+    "director": "Pete Ohs",
+    "country": "USA",
+    "year": 2025,
+    "duration": 71,
+    "genre": "Drama, Comedia",
+    "title_es": "Erupción",
+    "original_title": "Erupcja"
+  },
+  "moscas|2026": {
+    "url": "https://letterboxd.com/film/flies-2026/",
+    "title_en": "Flies",
+    "director": "Fernando Eimbcke",
+    "country": "Mexico",
+    "year": 2026,
+    "duration": 99,
+    "genre": "Drama, Comedia",
+    "original_title": "Moscas"
+  },
+  "sheep in the box": {
+    "url": "",
+    "title_en": "Sheep in the Box",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la casa del ángel|1957": {
+    "url": "https://letterboxd.com/film/la-casa-del-angel/",
+    "title_en": "The House of the Angel",
+    "director": "Leopoldo Torre Nilsson",
+    "country": "Argentina",
+    "year": 1957,
+    "duration": 76,
+    "genre": "Drama",
+    "original_title": "La casa del ángel"
+  },
+  "últimos días de la víctima|1982": {
+    "url": "https://letterboxd.com/film/ultimos-dias-de-la-victima/",
+    "title_en": "Last Days of the Victim",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina",
+    "year": 1982,
+    "duration": 92,
+    "original_title": "Últimos días de la víctima",
+    "genre": "Drama, Thriller"
+  },
+  "cobarde|2026": {
+    "url": "https://letterboxd.com/film/coward-2026/",
+    "title_en": "Coward",
+    "director": "Lukas Dhont",
+    "country": "Belgium, France",
+    "year": 2026,
+    "duration": 120,
+    "genre": "Romance, Drama",
+    "title_es": "Cobarde",
+    "original_title": "Coward"
+  },
+  "hope: el primer impacto|2026": {
+    "url": "https://letterboxd.com/film/hope-2026/",
+    "title_en": "Hope",
+    "director": "Na Hong-jin",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 157,
+    "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "title_es": "Hope",
+    "original_title": "호프",
+    "sin_hints": "título y duración"
+  },
+  "the thing|1982": {
+    "url": "https://letterboxd.com/film/the-thing/",
+    "title_en": "The Thing",
+    "director": "John Carpenter",
+    "country": "USA",
+    "year": 1982,
+    "duration": 109,
+    "genre": "Misterio, Ciencia ficción",
+    "title_es": "La cosa (El enigma de otro mundo)",
+    "original_title": "The Thing"
+  },
+  "making marie antoinette|2026": {
+    "url": "https://letterboxd.com/film/making-marie-antoinette/",
+    "title_en": "Making Marie Antoinette",
+    "director": "Eleanor Coppola",
+    "country": "Italy, France",
+    "year": 2026,
+    "duration": 86,
+    "genre": "Documental",
+    "original_title": "Making Marie Antoinette"
+  },
+  "adolescencia, sexo y muerte en campamento miasma|2026": {
+    "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+    "title_en": "Teenage Sex and Death at Camp Miasma",
+    "director": "Jane Schoenbrun",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Terror, Comedia",
+    "clase_titulo": "distinto",
+    "title_es": "Adolescencia, sexo y muerte en campamento Miasma",
+    "original_title": "Teenage Sex and Death at Camp Miasma",
+    "sin_hints": "título local de un estreno"
+  },
+  "la misteriosa mirada del flamenco|2025": {
+    "url": "https://letterboxd.com/film/the-mysterious-gaze-of-the-flamingo/",
+    "title_en": "The Mysterious Gaze of the Flamingo",
+    "director": "Diego Céspedes",
+    "country": "Chile, France",
+    "year": 2025,
+    "duration": 108,
+    "genre": "Drama",
+    "original_title": "La misteriosa mirada del flamenco"
+  },
+  "tiempo de revancha|1981": {
+    "url": "https://letterboxd.com/film/time-for-revenge/",
+    "title_en": "Time for Revenge",
+    "director": "Adolfo Aristarain",
+    "country": "Argentina",
+    "year": 1981,
+    "duration": 112,
+    "genre": "Thriller, Drama",
+    "original_title": "Tiempo de revancha"
+  },
+  "the chronology of water|2025": {
+    "url": "https://letterboxd.com/film/the-chronology-of-water/",
+    "title_en": "The Chronology of Water",
+    "director": "Kristen Stewart",
+    "country": "USA, France",
+    "year": 2025,
+    "duration": 128,
+    "genre": "Drama",
+    "title_es": "La cronología del agua",
+    "original_title": "The Chronology of Water"
+  },
+  "la garra de satanás the blood on satan's claw": {
+    "url": "",
+    "title_en": "LA GARRA DE SATANÁS The Blood on Satan's Claw",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "whalefall": {
+    "url": "https://letterboxd.com/film/whalefall/",
+    "title_en": "Whalefall",
+    "director": "Brian Duffield",
+    "country": "USA",
+    "year": 2026,
+    "duration": 98,
+    "genre": "Thriller",
+    "title_es": "La caída de la ballena",
+    "original_title": "Whalefall"
+  },
+  "clayface": {
+    "url": "https://letterboxd.com/film/clayface/",
+    "title_en": "Clayface",
+    "director": "James Watkins",
+    "country": "USA",
+    "year": 2026,
+    "duration": 108,
+    "genre": "Thriller, Terror",
+    "original_title": "Clayface"
+  },
+  "manon - ballet live roh 26-27": {
+    "url": "",
+    "title_en": "MANON - BALLET LIVE ROH 26-27",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pesadilla antes de navidad": {
+    "url": "https://letterboxd.com/film/the-nightmare-before-christmas/",
+    "title_en": "The Nightmare Before Christmas",
+    "director": "Henry Selick",
+    "country": "USA",
+    "year": 1993,
+    "duration": 76,
+    "genre": "Familiar, Animación",
+    "clase_titulo": "exacto",
+    "title_es": "Pesadilla antes de Navidad",
+    "original_title": "The Nightmare Before Christmas",
+    "sin_hints": "título y duración"
+  },
+  "el resplandor - versión extendida": {
+    "url": "",
+    "title_en": "El Resplandor - Versión Extendida",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pesadilla en elm street": {
+    "url": "",
+    "title_en": "Pesadilla en Elm Street",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así y duran lo mismo: A Nightmare on Elm Street (1984), A Nightmare on Elm Street (2010)",
+    "fecha": "2026-10-10",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "los cazafantasmas": {
+    "url": "https://letterboxd.com/film/ghostbusters/",
+    "title_en": "Ghostbusters",
+    "director": "Ivan Reitman",
+    "country": "USA",
+    "year": 1984,
+    "duration": 105,
+    "genre": "Comedia, Fantasía",
+    "clase_titulo": "exacto",
+    "title_es": "Cazafantasmas",
+    "original_title": "Ghostbusters",
+    "sin_hints": "título y duración"
+  },
+  "el cascanueces- ballet live roh 26-27": {
+    "url": "",
+    "title_en": "EL CASCANUECES- BALLET LIVE ROH 26-27",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
