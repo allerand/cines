@@ -6,7 +6,8 @@
       "nombre": "Festival de Cine Inusual",
       "bajada": "21.ª edición",
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires",
-      "alias": ["Festival de Cine Inusual"]
+      "alias": ["Festival de Cine Inusual"],
+      "logo": "data/logos/cine-inusual.png"
     },
     {
       "slug": "cine-experimental-bogota",
@@ -20,13 +21,15 @@
       "nombre": "Asterisco",
       "bajada": "Festival Internacional de Cine LGBTIQ+",
       "ciclo": "Asterisco Festival Internacional de Cine LGBTIQ+",
-      "alias": ["Asterisco"]
+      "alias": ["Asterisco"],
+      "logo": "data/logos/asterisco.png"
     },
     {
       "slug": "mubi-fest",
       "nombre": "MUBI Fest",
       "ciclo": "MUBI Fest Buenos Aires",
-      "alias": ["MUBI Fest"]
+      "alias": ["MUBI Fest"],
+      "logo": "data/logos/mubi-fest.png"
     },
     {
       "slug": "fuera-de-campo",
@@ -45,7 +48,8 @@
       "lugar": "Mar del Plata",
       "desde": "2026-11-05",
       "hasta": "2026-11-15",
-      "archivo": "data/festival-mar-del-plata.json"
+      "archivo": "data/festival-mar-del-plata.json",
+      "logo": "data/logos/mar-del-plata.png"
     }
   ]
 }
