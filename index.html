@@ -288,12 +288,16 @@
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
-    .day-tab .day-name { font-size: 0.76rem; color: #8c8c8c; text-transform: uppercase; letter-spacing: 0.05em; }
-    .day-tab .day-date { font-size: 1.25rem; font-weight: 500; margin: 1px 0; }
-    .day-tab .day-count { font-size: 0.84rem; color: #8c8c8c; min-height: 0.9rem; }
+    /* Los días sin elegir van apagados, para que el elegido sea el único que
+       llama la atención; al pasar el mouse se encienden. */
+    .day-tab .day-name { font-size: 0.74rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .day-tab .day-date { font-size: 1.25rem; color: #b4b4b4; margin: 1px 0; }
+    .day-tab .day-count { font-size: 0.78rem; color: var(--muted); min-height: 0.85rem; }
     .day-tab:hover { border-color: #555; z-index: 1; }
+    .day-tab:hover .day-date { color: var(--text); }
+    .day-tab:hover .day-name, .day-tab:hover .day-count { color: #999; }
     .day-tab.active { border-color: var(--accent); color: var(--accent); z-index: 2; }
-    .day-tab.active .day-name, .day-tab.active .day-count { color: var(--accent); }
+    .day-tab.active .day-name, .day-tab.active .day-date, .day-tab.active .day-count { color: var(--accent); }
     /* Con una sala elegida o una búsqueda, los días sin funciones se atenúan. */
     .day-tabs.cine-filter .day-tab:not(.has-cine) { opacity: 0.32; }
 
