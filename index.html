@@ -420,6 +420,37 @@
       transition: border-color 0.12s;
     }
     .search-input:focus { outline: none; border-color: var(--accent); }
+    /* Con algo buscado, el buscador queda marcado: se ve que hay un filtro puesto. */
+    .search-input.con-busqueda { border-color: var(--accent); background: rgba(0, 208, 96, 0.08); }
+    .busqueda-activa {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.6rem 1rem;
+      margin-bottom: 1rem;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid rgba(0, 208, 96, 0.45);
+      border-radius: 3px;
+      background: rgba(0, 208, 96, 0.06);
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .busqueda-activa b { color: var(--text); font-weight: 600; }
+    .busqueda-activa button {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      padding: 0.25rem 0.65rem;
+      border-radius: 3px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      font-family: inherit;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .busqueda-activa button:hover { background: var(--accent); color: #000; }
+    .home-link { display: block; line-height: 0; }
     .search-input::placeholder { color: var(--muted); }
 
     /* Botón compartir — sólo ícono, copia el deep link con el estado actual
@@ -892,7 +923,7 @@
 <header>
   <div class="header-main-content">
     <div class="header-left">
-      <img src="logo.png" alt="Logo" class="logo-img">
+      <a href="#buenos-aires" id="home-link" class="home-link" title="Volver al inicio" aria-label="Volver al inicio"><img src="logo.png" alt="Si te digo" class="logo-img"></a>
       <div class="header-text">
         <h1>Si te digo</h1>
         <span class="subtitle">Cartelera de cines - <span id="city-name">Buenos Aires</span></span>
@@ -1955,6 +1986,7 @@ function applySeccion() {
     a.classList.toggle('activa', a.dataset.seccion === seccion));
   document.querySelector('#secciones [data-seccion="cartelera"]')
     .setAttribute('href', '#' + CIUDADES[ciudad].slug);
+  document.getElementById('home-link').setAttribute('href', '#' + CIUDADES[ciudad].slug);
   document.getElementById('festival-head').hidden = !(enFest && festivalActivo);
   document.getElementById('day-tabs-wrap').hidden = !conTabla;
   document.getElementById('filters').hidden = !conTabla;
@@ -2378,6 +2410,18 @@ function marcarSalasSinFunciones() {
   });
 }
 
+// "Quitar búsqueda": vacía el buscador y vuelve a la cartelera del día.
+function conectarQuitarBusqueda() {
+  const b = document.getElementById('quitar-busqueda');
+  if (!b) return;
+  b.addEventListener('click', () => {
+    searchQuery = '';
+    document.getElementById('search-input').value = '';
+    renderTable();
+    updateHash();
+  });
+}
+
 function renderTable() {
   marcarSalasSinFunciones();
   highlightCineDays();
@@ -2392,10 +2436,21 @@ function renderTable() {
 
   rows = searching ? sortByDateTime(rows) : sortRows(rows);
 
+  // Con una búsqueda puesta (escrita o por haber tocado un festival) arriba
+  // de los resultados dice qué se busca y cómo salir: si no, la tabla
+  // filtrada parece la cartelera entera.
+  const fest = searching && registroFestivales.find(f => !f.archivo && busquedaDe(f) === searchQuery);
+  const avisoBusqueda = !searching ? '' : `<div class="busqueda-activa">
+    <span>${fest ? `Festival <b>${escapeHtml(fest.nombre)}</b>` : `Búsqueda <b>${escapeHtml(searchQuery)}</b>`}, ${rows.length} ${rows.length === 1 ? 'función' : 'funciones'}</span>
+    <button type="button" id="quitar-busqueda">✕ Quitar búsqueda</button>
+  </div>`;
+  document.getElementById('search-input').classList.toggle('con-busqueda', searching);
+
   if (rows.length === 0) {
-    main.innerHTML = festivalActivo && !allScreenings.length
+    main.innerHTML = avisoBusqueda + (festivalActivo && !allScreenings.length
       ? '<div class="empty">Próximamente.</div>'
-      : '<div class="empty">No hay funciones.</div>';
+      : '<div class="empty">No hay funciones.</div>');
+    conectarQuitarBusqueda();
     return;
   }
 
@@ -2457,7 +2512,8 @@ function renderTable() {
 
   // En un festival sin secciones la columna Sección quedaría vacía entera.
   const sinSeccion = festivalActivo && !allScreenings.some(s => s.ciclo);
-  main.innerHTML = `<table class="screening-table${sinSeccion ? ' sin-seccion' : ''}"><thead><tr>${thead}</tr></thead><tbody>${tbody}</tbody></table>`;
+  main.innerHTML = `${avisoBusqueda}<table class="screening-table${sinSeccion ? ' sin-seccion' : ''}"><thead><tr>${thead}</tr></thead><tbody>${tbody}</tbody></table>`;
+  conectarQuitarBusqueda();
 
   // Handler de sort por click en header
   main.querySelectorAll('th[data-sort]').forEach(th => {
