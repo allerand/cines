@@ -9,6 +9,13 @@
       "alias": ["Festival de Cine Inusual"]
     },
     {
+      "slug": "cine-experimental-bogota",
+      "nombre": "Festival de Cine Experimental de Bogotá",
+      "bajada": "CineAutopsia",
+      "ciclo": "Festival de Cine Experimental de Bogotá",
+      "alias": ["Festival de Cine Experimental de Bogotá"]
+    },
+    {
       "slug": "asterisco",
       "nombre": "Asterisco",
       "bajada": "Festival Internacional de Cine LGBTIQ+",
