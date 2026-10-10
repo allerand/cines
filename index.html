@@ -420,36 +420,34 @@
       transition: border-color 0.12s;
     }
     .search-input:focus { outline: none; border-color: var(--accent); }
-    /* Con algo buscado, el buscador queda marcado: se ve que hay un filtro puesto. */
-    .search-input.con-busqueda { border-color: var(--accent); background: rgba(0, 208, 96, 0.08); }
+    /* Con algo buscado, el buscador queda marcado: se ve que hay un filtro
+       puesto. Es el único verde: la línea de arriba de los resultados va en
+       gris, que dos recuadros verdes juntos era demasiado. */
+    .search-input.con-busqueda { border-color: var(--accent); }
     .busqueda-activa {
       display: flex;
       align-items: center;
       justify-content: space-between;
       flex-wrap: wrap;
-      gap: 0.6rem 1rem;
-      margin-bottom: 1rem;
-      padding: 0.6rem 0.8rem;
-      border: 1px solid rgba(0, 208, 96, 0.45);
-      border-radius: 3px;
-      background: rgba(0, 208, 96, 0.06);
+      gap: 0.5rem 1rem;
+      margin-bottom: 0.9rem;
       font-size: 0.8rem;
       color: var(--muted);
     }
     .busqueda-activa b { color: var(--text); font-weight: 600; }
     .busqueda-activa button {
       background: transparent;
-      border: 1px solid var(--accent);
-      color: var(--accent);
+      border: 1px solid var(--border);
+      color: var(--muted);
       padding: 0.25rem 0.65rem;
       border-radius: 3px;
       font-size: 0.72rem;
-      font-weight: 600;
       font-family: inherit;
       cursor: pointer;
       white-space: nowrap;
+      transition: color 0.12s, border-color 0.12s;
     }
-    .busqueda-activa button:hover { background: var(--accent); color: #000; }
+    .busqueda-activa button:hover { color: var(--text); border-color: var(--text); }
     .home-link { display: block; line-height: 0; }
     .search-input::placeholder { color: var(--muted); }
 
