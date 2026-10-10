@@ -8663,6 +8663,114 @@ def unificar_ciclos_festivales(screenings: list, festivales: Optional[list] = No
 
 
 # ---------------------------------------------------------------------------
+# Una sola ficha por película
+# ---------------------------------------------------------------------------
+# Cada sala escribe la misma película a su manera, y como la ficha de la sala
+# manda sobre la de Letterboxd, la misma película salía distinta según dónde
+# se diera. En Madrid, La bola negra (271 funciones, un solo Letterboxd)
+# aparecía como "La bola negra" y "La Bola Negra", con tres formas de escribir
+# a los directores, dos países y dos duraciones.
+#
+# El criterio: las funciones que comparten Letterboxd son la misma película y
+# muestran la misma ficha; en cada dato gana lo que dice la mayoría de las
+# salas, escrito de la mejor forma en que alguna lo escribió. Los datos vacíos
+# no votan y se completan con el que gane. Va por
+# ciudad (el título con que se estrena cambia entre países) y al final, sobre
+# la lista que se publica, para que también alcance a los overrides.
+
+_FICHA_TEXTO = ("title_es", "title_en", "original_title", "genre")
+_FICHA_LISTA = ("director", "country")     # nombres: ni el orden ni el separador cuentan
+_FICHA_NUMERO = ("year", "duration")
+_NUMERO_FINAL = re.compile(r"(?:^| )(\d{1,2}|i{1,3}|iv|v|vi{0,3}|ix|x)$")
+_SEPARA_NOMBRES = re.compile(r"\s*(?:,|/|&|\by\b|\band\b)\s*", re.IGNORECASE)
+
+
+def _ficha_clave(campo: str, valor) -> object:
+    if campo in _FICHA_NUMERO:
+        return valor
+    if campo in _FICHA_LISTA:
+        return frozenset(n for n in (titulo_norm(x) for x in _SEPARA_NOMBRES.split(str(valor))) if n)
+    return titulo_norm(str(valor))
+
+
+def _ficha_calidad(campo: str, valor) -> int:
+    """Qué tan bien escrito está: las cadenas publican "Hope:el Primer
+    Impacto" y "La Vida Es Asi", y tienen tantas funciones que por cantidad
+    ganarían siempre."""
+    v = str(valor)
+    q = sum(1 for c in v if unicodedata.normalize("NFD", c)[0] != c)   # tildes y eñes
+    if re.search(r"[:;,.]\S", v):          # sin espacio después del signo
+        q -= 2
+    if v.isupper():
+        q -= 2
+    if campo in _FICHA_LISTA and re.search(r"\by\b", v):   # "A y B" en vez de "A, B"
+        q -= 1
+    return q
+
+
+def _ficha_ganadora(campo: str, votos: list):
+    """El valor de la ficha. `votos` son pares (valor, sala): cada sala vota
+    una vez, así una cadena con cien funciones no pesa más que una sala con
+    dos. Entre las formas de escribir lo que ganó ("La Bola Negra" / "La bola
+    negra") va la mejor escrita, después la más usada y, si empatan, la que
+    tiene menos mayúsculas."""
+    votos = [(v, c) for v, c in votos if v not in ("", None)]
+    if not votos:
+        return None
+    por_clave: dict = {}
+    for v, cine in votos:
+        por_clave.setdefault(_ficha_clave(campo, v), []).append((v, cine))
+
+    def peso(clave):
+        pares = por_clave[clave]
+        return (len({c for _, c in pares}), len(pares))
+
+    if campo in _FICHA_NUMERO:
+        return max(por_clave, key=lambda k: (peso(k), k))
+    formas = [v for v, _ in por_clave[max(por_clave, key=lambda k: (peso(k), str(sorted(map(str, k)) if isinstance(k, frozenset) else k)))]]
+    usos: dict = {}
+    for v in formas:
+        usos[v] = usos.get(v, 0) + 1
+    if campo in _FICHA_LISTA:
+        return max(usos, key=lambda v: (_ficha_calidad(campo, v), usos[v], str(v)))
+    # En los títulos, escrito como oración ("La bola negra") antes que la forma
+    # más usada: las que ponen cada palabra en mayúscula son las cadenas.
+    return max(usos, key=lambda v: (_ficha_calidad(campo, v), -sum(c.isupper() for c in str(v)),
+                                    usos[v], str(v)))
+
+
+def unificar_fichas(screenings: list) -> int:
+    """Deja una sola ficha por película entre las funciones (dicts) que
+    comparten Letterboxd. Devuelve cuántas funciones cambió."""
+    grupos: dict = {}
+    for s in screenings:
+        if s.get("letterboxd"):
+            grupos.setdefault(s["letterboxd"], []).append(s)
+    cambiadas = 0
+    for funciones in grupos.values():
+        if len(funciones) < 2:
+            continue
+        ficha = {c: _ficha_ganadora(c, [(f.get(c), f.get("cine")) for f in funciones])
+                 for c in _FICHA_TEXTO + _FICHA_LISTA + _FICHA_NUMERO}
+        # Dos títulos que sólo cambian en el número del final ("Sesión I" /
+        # "Sesión II", "Parte 1" / "Parte 2") son programas distintos con el
+        # mismo Letterboxd, no dos formas de escribir una película.
+        finales = {m.group(1) for m in (_NUMERO_FINAL.search(titulo_norm(f.get("title_es") or ""))
+                                        for f in funciones) if m}
+        if len(finales) > 1:
+            for c in ("title_es", "title_en", "original_title", "duration"):
+                ficha[c] = None
+        for f in funciones:
+            tocada = False
+            for campo, valor in ficha.items():
+                if valor is not None and f.get(campo) != valor:
+                    f[campo] = valor
+                    tocada = True
+            cambiadas += tocada
+    return cambiadas
+
+
+# ---------------------------------------------------------------------------
 # Cinemark / Hoyts — API propia (bff.cinemark.com.ar)
 # ---------------------------------------------------------------------------
 # Cinemark y Hoyts son la misma empresa en Argentina (Cinemark Hoyts) y comparten

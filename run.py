@@ -894,6 +894,16 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     if n_ciclos:
         print(f"  ↳ {n_ciclos} funciones con el ciclo de su festival unificado")
 
+    # Una sola ficha por película: las funciones que comparten Letterboxd
+    # muestran el mismo título, director, país, año y duración, lo que diga la
+    # mayoría. Por ciudad, y antes del dedupe, que así también reconoce como
+    # repetida una función que dos fuentes titularon distinto.
+    from scraper import unificar_fichas
+    n_fichas = unificar_fichas(de_buenos_aires)
+    n_fichas += unificar_fichas([s for s in screenings_out if s["cine"] in CINES_MADRID])
+    if n_fichas:
+        print(f"  ↳ {n_fichas} funciones con la ficha de su película unificada")
+
     # Una misma película no se da dos veces en la misma sala a la misma hora: si
     # aparece repetida es que dos fuentes trajeron la misma función. Pasa cuando
     # una función manual reemplaza a una scrapeada (manual_screenings.json) y el

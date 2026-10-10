@@ -2441,7 +2441,7 @@ function renderTable() {
   // filtrada parece la cartelera entera.
   const fest = searching && registroFestivales.find(f => !f.archivo && busquedaDe(f) === searchQuery);
   const avisoBusqueda = !searching ? '' : `<div class="busqueda-activa">
-    <span>${fest ? `Festival <b>${escapeHtml(fest.nombre)}</b>` : `Búsqueda <b>${escapeHtml(searchQuery)}</b>`}, ${rows.length} ${rows.length === 1 ? 'función' : 'funciones'}</span>
+    <span>${fest ? `<b>${escapeHtml(fest.nombre)}</b>` : `Búsqueda <b>${escapeHtml(searchQuery)}</b>`}, ${rows.length} ${rows.length === 1 ? 'función' : 'funciones'}</span>
     <button type="button" id="quitar-busqueda">✕ Quitar búsqueda</button>
   </div>`;
   document.getElementById('search-input').classList.toggle('con-busqueda', searching);
