@@ -250,66 +250,52 @@
     }
     .day-tabs-wrap::-webkit-scrollbar { display: none; }
 
+    /* El tablero de días: cuadraditos iguales y pegados, con letra de máquina,
+       como un tablero de horarios. El mes va en su propio cuadradito donde
+       empieza. El día elegido se marca con borde y letras verdes. */
     .day-tabs {
       display: flex;
-      padding: 0 1.5rem;
+      padding: 0.8rem 2rem;
       gap: 0;
       width: max-content;    /* El contenido interior sí puede ser ancho */
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
     }
 
-    .day-tab {
+    .day-tab, .day-mes {
       position: relative;
-      flex-shrink: 0;        /* IMPORTANTE: Evita que los días se achiquen */
-      padding: 0.85rem 1.2rem;
-      cursor: pointer;
-      font-size: 0.82rem;
-      color: var(--muted);
-      border-bottom: 2px solid transparent;
-      transition: color 0.15s, border-color 0.15s, opacity 0.15s;
-      white-space: nowrap;
-      user-select: none;
+      flex: 0 0 46px;        /* IMPORTANTE: Evita que los días se achiquen */
+      width: 46px;
+      height: 46px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 0.15rem;
-      min-width: 80px;
+      justify-content: center;
+      border: 1px solid var(--border);
+      margin-right: -1px;
+      line-height: 1.05;
+      white-space: nowrap;
+      user-select: none;
     }
-    .day-tab .day-name {
-      font-weight: 600;
-      font-size: 0.78rem;
+    .day-tab {
+      cursor: pointer;
+      color: var(--text);
+      transition: color 0.15s, border-color 0.15s, opacity 0.15s;
+    }
+    .day-mes {
+      background: var(--bg3);
+      color: var(--text);
+      font-size: 0.72rem;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
     }
-    .day-tab .day-date { font-size: 0.75rem; }
-    .day-tab .day-count { font-size: 0.68rem; color: var(--muted); }
-    .day-tab:hover { color: var(--text); }
-    .day-tab.active {
-      color: var(--accent);
-      border-bottom-color: var(--accent);
-    }
-    .day-tab.active .day-count { color: var(--accent2); }
-    .day-tab.today .day-name::before {
-      content: "•";
-      color: var(--accent);
-      margin-right: 0.25rem;
-    }
-    /* Resaltado de días con funciones para la sala seleccionada.
-       Cuando hay un cine filtrado (#day-tabs.cine-filter), los días con
-       función para esa sala se marcan con un punto verde y quedan brillantes;
-       el resto se atenúa. */
+    .day-tab .day-name { font-size: 0.62rem; color: var(--muted); text-transform: lowercase; }
+    .day-tab .day-date { font-size: 0.95rem; }
+    .day-tab .day-count { font-size: 0.56rem; color: var(--muted); min-height: 0.6rem; }
+    .day-tab:hover { border-color: #555; z-index: 1; }
+    .day-tab.active { border-color: var(--accent); color: var(--accent); z-index: 2; }
+    .day-tab.active .day-name, .day-tab.active .day-count { color: var(--accent); }
+    /* Con una sala elegida o una búsqueda, los días sin funciones se atenúan. */
     .day-tabs.cine-filter .day-tab:not(.has-cine) { opacity: 0.32; }
-    .day-tabs.cine-filter .day-tab.has-cine { color: var(--text); }
-    .day-tab.has-cine::after {
-      content: "";
-      position: absolute;
-      bottom: 5px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--accent);
-    }
 
     /* ── Filters bar ── */
     .filters {
@@ -878,7 +864,7 @@
       main { padding: 1rem; }
       .filters { padding: 0.6rem 1rem; }
       .search-input { width: 100%; }
-      .day-tabs { padding: 0 0.5rem; }
+      .day-tabs { padding: 0.6rem 1rem; }
       .col-ciclo, .col-dir, .col-genre, .col-pais, .col-anio, .col-dur { display: none; }
       .col-cine { width: 5rem; }
       .col-hora { width: 4rem; }
@@ -2124,7 +2110,15 @@ function buildDayTabs() {
     const tab = document.createElement('div');
     tab.className = 'day-tab' + (fecha === todayStr ? ' today' : '');
     tab.dataset.fecha = fecha;
-    tab.innerHTML = `<span class="day-name">${dayName}</span><span class="day-date">${d} ${monthName}</span><span class="day-count">${count} func.</span>`;
+    // El mes, en su cuadradito, al principio y cada vez que cambia.
+    if (i === 0 || fecha.slice(0, 7) !== dates[i - 1].slice(0, 7)) {
+      const mes = document.createElement('div');
+      mes.className = 'day-mes';
+      mes.textContent = monthName;
+      container.appendChild(mes);
+    }
+    tab.title = `${dayName} ${d} de ${monthName}, ${count} ${count === 1 ? 'función' : 'funciones'}`;
+    tab.innerHTML = `<span class="day-name">${dayName}</span><span class="day-date">${d}</span><span class="day-count">${count}</span>`;
     tab.addEventListener('click', () => selectDay(fecha));
     container.appendChild(tab);
     // Si no había día seleccionado o el seleccionado ya no existe, tomamos
@@ -2150,7 +2144,7 @@ function highlightCineDays() {
       // Restaurar el contador total del día
       const total = pool.filter(s => s.fecha === t.dataset.fecha).length;
       const c = t.querySelector('.day-count');
-      if (c) c.textContent = `${total} func.`;
+      if (c) c.textContent = total || '';
     });
     return;
   }
@@ -2163,7 +2157,7 @@ function highlightCineDays() {
     t.classList.toggle('has-cine', n > 0);
     // El contador muestra las funciones de la sala seleccionada / la búsqueda
     const c = t.querySelector('.day-count');
-    if (c) c.textContent = `${n} func.`;
+    if (c) c.textContent = n || '';
   });
 }
 
