@@ -263,9 +263,9 @@
 
     .day-tab, .day-mes {
       position: relative;
-      flex: 0 0 46px;        /* IMPORTANTE: Evita que los días se achiquen */
-      width: 46px;
-      height: 46px;
+      flex: 0 0 58px;        /* IMPORTANTE: Evita que los días se achiquen */
+      width: 58px;
+      height: 58px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -284,13 +284,13 @@
     .day-mes {
       background: var(--bg3);
       color: var(--text);
-      font-size: 0.72rem;
+      font-size: 0.85rem;
       text-transform: uppercase;
       letter-spacing: 0.04em;
     }
-    .day-tab .day-name { font-size: 0.62rem; color: var(--muted); text-transform: lowercase; }
-    .day-tab .day-date { font-size: 0.95rem; }
-    .day-tab .day-count { font-size: 0.56rem; color: var(--muted); min-height: 0.6rem; }
+    .day-tab .day-name { font-size: 0.74rem; color: var(--muted); text-transform: lowercase; }
+    .day-tab .day-date { font-size: 1.2rem; }
+    .day-tab .day-count { font-size: 0.66rem; color: var(--muted); min-height: 0.7rem; }
     .day-tab:hover { border-color: #555; z-index: 1; }
     .day-tab.active { border-color: var(--accent); color: var(--accent); z-index: 2; }
     .day-tab.active .day-name, .day-tab.active .day-count { color: var(--accent); }
@@ -865,6 +865,12 @@
       .filters { padding: 0.6rem 1rem; }
       .search-input { width: 100%; }
       .day-tabs { padding: 0.6rem 1rem; }
+      /* En el celular el tablero queda en su tamaño compacto. */
+      .day-tab, .day-mes { flex-basis: 46px; width: 46px; height: 46px; }
+      .day-mes { font-size: 0.72rem; }
+      .day-tab .day-name { font-size: 0.62rem; }
+      .day-tab .day-date { font-size: 0.95rem; }
+      .day-tab .day-count { font-size: 0.56rem; min-height: 0.6rem; }
       .col-ciclo, .col-dir, .col-genre, .col-pais, .col-anio, .col-dur { display: none; }
       .col-cine { width: 5rem; }
       .col-hora { width: 4rem; }
