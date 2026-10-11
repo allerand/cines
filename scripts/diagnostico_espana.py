@@ -95,7 +95,9 @@ def rangos_cloudflare() -> list:
     redes = []
     for v in ("ips-v4", "ips-v6"):
         try:
-            with urllib.request.urlopen(f"https://www.cloudflare.com/{v}", timeout=20) as r:
+            req = urllib.request.Request(f"https://www.cloudflare.com/{v}",
+                                         headers={"User-Agent": "sitedigo-diagnostico"})
+            with urllib.request.urlopen(req, timeout=20) as r:
                 redes += [ipaddress.ip_network(l.strip()) for l in r.read().decode().split() if l.strip()]
         except Exception as e:
             out(f"- no pude bajar los rangos de Cloudflare ({v}): {e}")
@@ -109,7 +111,7 @@ def es_cloudflare(ip: str, redes: list) -> bool:
 
 # ── hayahora.futbol ───────────────────────────────────────────────────────
 
-def hayahora(ips: list[str]) -> None:
+def hayahora(ips: dict[str, str]) -> None:
     """Qué IPs bloquea LaLiga ahora, según hayahora.futbol. Es un proyecto de
     terceros y su formato puede cambiar: si no lo entiende, avisa y sigue."""
     status, data = http_json("https://hayahora.futbol/estado/data.json")
@@ -127,12 +129,12 @@ def hayahora(ips: list[str]) -> None:
             bloqueadas.setdefault(f.get("ip"), set()).add(f.get("isp") or "?")
     out(f"- hayahora.futbol (actualizado {data.get('lastUpdate', '?')}): "
         f"{len(bloqueadas)} IPs bloqueadas ahora mismo en alguna operadora.")
-    for ip in ips:
+    for ip, donde in ips.items():
         if ip in bloqueadas:
-            out(f"  - **`{ip}` (sitedigo.com) está BLOQUEADA ahora en: "
+            out(f"  - **`{ip}` ({donde}) está BLOQUEADA ahora en: "
                 f"{', '.join(sorted(bloqueadas[ip]))}**")
         else:
-            out(f"  - `{ip}` no figura bloqueada ahora mismo.")
+            out(f"  - `{ip}` ({donde}) no figura bloqueada ahora mismo.")
 
 
 # ── Globalping ────────────────────────────────────────────────────────────
@@ -173,7 +175,7 @@ def probar_operadora(nombre: str, asn: int, objetivo: str) -> dict:
     mid, err = medir(objetivo, [{"country": "ES", "asn": asn, "limit": SONDAS_POR_OPERADORA}])
     if not mid:
         out(f"| {nombre} | — | sin sondas o error: {err} | | |")
-        return {"sondas": 0}
+        return {"sondas": 0, "ips": set()}
     principal = esperar(mid)
     # Las mismas sondas, contra los controles: así una falla del sitio no se
     # confunde con una sonda sin internet.
@@ -192,10 +194,12 @@ def probar_operadora(nombre: str, asn: int, objetivo: str) -> dict:
                 return lista.pop(j)
         return None
 
-    cuenta = {"sondas": 0, "sitio_ok": 0, "pages_ok": 0}
+    cuenta = {"sondas": 0, "sitio_ok": 0, "pages_ok": 0, "ips": set()}
     for res in principal:
         p = res.get("probe") or {}
         ok_sitio, txt_sitio = veredicto(res)
+        if (res.get("result") or {}).get("resolvedAddress"):
+            cuenta["ips"].add(res["result"]["resolvedAddress"])
         red = emparejar(res, controles[CONTROL_RED])
         pag = emparejar(res, controles[CONTROL_PAGES])
         ok_red = veredicto(red)[0] if red else False
@@ -223,16 +227,13 @@ def main() -> int:
     out()
     out("### DNS")
     redes_cf = rangos_cloudflare()
-    ips = []
+    ips = {}
     for host in (objetivo, f"www.{objetivo}"):
         for ip in ips_de(host):
             cf = es_cloudflare(ip, redes_cf) if redes_cf else None
             out(f"- `{host}` → `{ip}`" + (" — **IP compartida de Cloudflare**" if cf else ""))
             if host == objetivo:
-                ips.append(ip)
-    out()
-    out("### hayahora.futbol")
-    hayahora(ips)
+                ips[ip] = "DNS desde el runner"
     out()
     out("### Desde redes españolas (Globalping)")
     out(f"| Operadora | Sonda | {objetivo} | {CONTROL_RED} | {CONTROL_PAGES} (GitHub Pages) |")
@@ -242,6 +243,13 @@ def main() -> int:
         c = probar_operadora(nombre, asn, objetivo)
         for k in total:
             total[k] += c.get(k, 0)
+        # Cloudflare no le da a España las mismas IPs que al runner: las que
+        # importan para el bloqueo son las que resolvieron las sondas.
+        for ip in sorted(c.get("ips", ())):
+            ips.setdefault(ip, "así resuelve desde España")
+    out()
+    out("### hayahora.futbol")
+    hayahora(ips)
     out()
     out("### Veredicto")
     n = total["sondas"]
