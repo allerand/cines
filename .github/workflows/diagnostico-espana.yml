@@ -1,0 +1,50 @@
+name: Diagnóstico desde España
+
+# Corre scripts/diagnostico_espana.py: pide sitedigo.com desde conexiones de
+# casa de Movistar, Vodafone, Orange, Jazztel y Digi (sondas de Globalping), con
+# github.com y GitHub Pages de control, y cruza las IPs del dominio con
+# hayahora.futbol. El resultado sale en el resumen de la corrida.
+#
+# Sirve para contestar "¿se cayó el sitio o lo están bloqueando en España?".
+# Los bloqueos de LaLiga van con los partidos: corrido un martes a la mañana va
+# a decir que todo entra. Para ver el problema, correlo un finde con fútbol.
+
+on:
+  workflow_dispatch:
+    inputs:
+      objetivo:
+        description: 'Dominio a probar'
+        required: false
+        default: 'sitedigo.com'
+  push:
+    branches: ['claude/**']
+    paths:
+      - 'scripts/diagnostico_espana.py'
+      - '.github/workflows/diagnostico-espana.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostico:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: DNS
+        run: |
+          for host in sitedigo.com www.sitedigo.com; do
+            for t in A AAAA CNAME NS CAA; do
+              echo "$host $t: $(dig +short "$host" "$t" | tr '\n' ' ')"
+            done
+          done
+          echo
+          curl -sS -o /dev/null -D - --max-time 20 https://sitedigo.com/ \
+            | grep -iE '^(HTTP|server|cf-ray|cache-control|strict-transport)' || true
+
+      - name: Diagnóstico
+        env:
+          GLOBALPING_TOKEN: ${{ secrets.GLOBALPING_TOKEN }}
+          OBJETIVO: ${{ inputs.objetivo || 'sitedigo.com' }}
+        run: python3 scripts/diagnostico_espana.py --objetivo "$OBJETIVO"
