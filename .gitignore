@@ -14,3 +14,4 @@ data/cron.log
 .vscode/
 .idea/
 *.swp
+_site/

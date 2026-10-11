@@ -25,3 +25,16 @@ data/cache.json
 data/test_cache.json
 data/lorca_manual.json
 data/cron.log
+
+# Las stories y el feed de Instagram: Meta las baja de raw.githubusercontent.com
+# (PUBLIC_BASE_URL en post-ig.yml y weekly-feed.yml) y la web no las usa. Son
+# casi todo el peso del repo: con ellas el sitio pasa los 400 MB, y GitHub
+# Pages no publica más de 1 GB.
+posts/**
+
+# El código de Apps Script y los tests tampoco van al browser
+scripts/**
+tests/**
+
+# La salida de scripts/build_site.py
+_site/**

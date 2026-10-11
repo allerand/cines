@@ -1,0 +1,69 @@
+name: Publicar sitio (GitHub Pages)
+
+# Publica sitedigo.com en GitHub Pages. El dominio sigue registrado en
+# Cloudflare y el DNS también, pero con los registros en "DNS only" (nube
+# gris): Cloudflare contesta a qué IP ir y el tráfico ya no pasa por él.
+#
+# Por qué: desde el 2024 LaLiga consigue que Movistar, Vodafone, Orange, Digi y
+# compañía bloqueen en España, durante los partidos, las IPs compartidas de
+# Cloudflare por donde se ve fútbol pirata. Detrás de cada una hay miles de
+# sitios, y el Worker que servía sitedigo.com salía por esas mismas IPs: cada
+# finde con fútbol el sitio se caía desde España. Con el proxy de Cloudflare
+# no hay forma de evitarlo en el plan gratis (las IPs dedicadas son de
+# Enterprise). scripts/diagnostico_espana.py lo mide desde las operadoras.
+#
+# Qué se publica lo arma scripts/build_site.py con la lista de .assetsignore.
+#
+# Cuándo: los commits de los workflows de datos los empuja el GITHUB_TOKEN, y
+# GitHub no larga workflows por pushes de ese token. Por eso, además del push
+# a main (los commits a mano), corre cuando termina cada workflow que commitea
+# algo que la web sirve.
+
+on:
+  push:
+    branches: [main]
+  workflow_run:
+    workflows:
+      - 'Scrape cartelera'
+      - 'Scrape cartelera (sin postear a IG)'
+      - 'Weekly feed (lunes)'
+      - 'Auditoría semanal'
+    types: [completed]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Una publicación a la vez, y si entra otra mientras tanto espera: la última
+# siempre sale.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  publicar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      # Siempre main tal como está ahora: el workflow_run trae el commit con el
+      # que arrancó el workflow de datos, no el que dejó al terminar.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Armar _site
+        run: python3 scripts/build_site.py --out _site
+
+      - uses: actions/configure-pages@v5
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - id: deploy
+        uses: actions/deploy-pages@v4
