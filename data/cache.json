@@ -15139,7 +15139,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -18273,7 +18273,9 @@
     "year": 2026,
     "duration": 7,
     "genre": "Animación, Documental",
-    "original_title": "decaer"
+    "clase_titulo": "exacto",
+    "original_title": "decaer",
+    "sin_hints": "título"
   },
   "en los valles": {
     "url": "https://letterboxd.com/film/en-los-valles/",
@@ -18545,12 +18547,13 @@
     "original_title": "La furia"
   },
   "gente oculta|2025": {
-    "url": "",
-    "title_en": "Gente oculta",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/hidden-people/",
+    "title_en": "Hidden People",
+    "director": "Miha Hočevar",
+    "country": "Serbia, Slovenia",
+    "year": 2025,
+    "duration": 96,
+    "genre": "Drama, Comedia"
   },
   "sin aire|2023": {
     "url": "https://letterboxd.com/film/without-air-2023/",
@@ -19496,12 +19499,13 @@
     "genre": ""
   },
   "érem una gran família|2026": {
-    "url": "",
-    "title_en": "Érem una gran família",
-    "director": "",
+    "url": "https://letterboxd.com/film/we-were-a-great-family/",
+    "title_en": "We Were a Great Family",
+    "director": "Cristina Rosselló",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 80,
+    "genre": ""
   },
   "la sexta parte del mundo|1926": {
     "url": "https://letterboxd.com/film/a-sixth-part-of-the-world/",
@@ -20573,7 +20577,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: Apocalypse Now (1979, 147 min)",
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-11",
     "con_duracion": true,
     "desempate": ""
   },
@@ -20768,8 +20772,8 @@
     "original_title": "Riccy Mabel"
   },
   "chicho o mientras el cuerpo aguante (una comedia didáctica)": {
-    "url": "",
-    "title_en": "Chicho o mientras el cuerpo aguante (una comedia didáctica)",
+    "url": "https://letterboxd.com/film/chicho-o-mientras-el-cuerpo-aguante-una-comedia/",
+    "title_en": "Chicho o Mientras el cuerpo aguante (una comedia didáctica)",
     "director": "Fernando Trueba",
     "country": "Spain",
     "year": 1982,
@@ -21388,7 +21392,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Nadie inquietó más (2008)",
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -21800,23 +21804,23 @@
     "original_title": "La vida es un tango"
   },
   "el tango vuelve a parís": {
-    "url": "",
-    "title_en": "El tango vuelve a París",
+    "url": "https://letterboxd.com/film/the-tango-returns-to-paris/",
+    "title_en": "The Tango Returns to Paris",
     "director": "Manuel Romero",
     "country": "Argentina",
     "year": 1948,
     "duration": 85,
-    "genre": "Drama, Música",
+    "genre": "Música, Drama",
     "original_title": "El tango vuelve a París"
   },
   "la rubia del camino": {
-    "url": "",
-    "title_en": "La rubia del camino",
+    "url": "https://letterboxd.com/film/the-blonde-on-the-road/",
+    "title_en": "The Blonde on the Road",
     "director": "Manuel Romero",
     "country": "Argentina",
     "year": 1938,
     "duration": 70,
-    "genre": "Comedia, Romance",
+    "genre": "Romance, Comedia",
     "original_title": "La rubia del camino"
   },
   "muchachas que estudian": {
@@ -22126,15 +22130,13 @@
   },
   "la casa": {
     "url": "",
-    "title_en": "La Casa",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "la única que se llama así es La casa (2012), y puede ser otra",
-    "fecha": "2026-10-10",
-    "con_duracion": false,
-    "desempate": ""
+    "title_en": "La casa",
+    "director": "Gustavo Triviño",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Drama",
+    "original_title": "La casa"
   },
   "ficuba": {
     "url": "",
@@ -22366,12 +22368,13 @@
     "desempate": ""
   },
   "noche de brujas": {
-    "url": "",
-    "title_en": "Noche de brujas",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/halloween-1978/",
+    "title_en": "Halloween",
+    "director": "John Carpenter",
+    "country": "USA",
+    "year": 1978,
+    "duration": 91,
+    "genre": "Thriller, Terror"
   },
   "¿dónde estás, hermano?|2000": {
     "url": "https://letterboxd.com/film/o-brother-where-art-thou/",
@@ -22459,18 +22462,19 @@
     "original_title": "Army of Darkness"
   },
   "pesadilla": {
-    "url": "",
-    "title_en": "Pesadilla",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/wes-cravens-new-nightmare/",
+    "title_en": "Wes Craven's New Nightmare",
+    "director": "Wes Craven",
+    "country": "USA",
+    "year": 1994,
+    "duration": 112,
+    "genre": "Fantasía, Misterio"
   },
   "pesadilla en lo profundo de la noche": {
-    "url": "",
-    "title_en": "Pesadilla en lo profundo de la noche",
+    "url": "https://letterboxd.com/film/a-nightmare-on-elm-street/",
+    "title_en": "A Nightmare on Elm Street",
     "director": "Wes Craven",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1984,
     "duration": 91,
     "genre": "Terror",
@@ -22724,9 +22728,7 @@
     "year": 2026,
     "duration": 125,
     "genre": "Fantasía, Acción",
-    "clase_titulo": "exacto",
-    "original_title": "Street Fighter",
-    "sin_hints": "el único estreno entre varias que se llaman así"
+    "original_title": "Street Fighter"
   },
   "terror total: [rec]": {
     "url": "https://letterboxd.com/film/rec/",
@@ -22864,8 +22866,8 @@
     "original_title": "Sueño pélvico"
   },
   "donn: le danseur du xxe siècle": {
-    "url": "",
-    "title_en": "Donn: Le danseur du XXe siècle",
+    "url": "https://letterboxd.com/film/donn-dancer-of-the-20th-century/",
+    "title_en": "Donn. Dancer of the 20th century",
     "director": "Florencia Dávila, Mariano Baez",
     "country": "Argentina, France",
     "year": 2026,
@@ -22874,12 +22876,13 @@
     "original_title": "Donn, le danseur du XXe siècle"
   },
   "ruge": {
-    "url": "",
-    "title_en": "Ruge",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/pelicula/",
+    "title_en": "Película",
+    "director": "Diego Stickar",
+    "country": "Argentina",
+    "year": 2017,
+    "duration": 87,
+    "genre": "Documental, Drama"
   },
   "gente de la ruta": {
     "url": "https://letterboxd.com/film/gente-de-la-ruta/",
@@ -22902,12 +22905,13 @@
     "original_title": "Art, Chaos, Riot"
   },
   "amar amando + peña de cantores de nidia, de la mano de juan villarreal": {
-    "url": "",
-    "title_en": "Amar Amando + Peña de cantores de Nidia, de la mano de Juan Villarreal",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/amar-amando/",
+    "title_en": "Amar amando",
+    "director": "Yael Szmulewicz",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": null,
+    "genre": "Documental, Música"
   },
   "retrato de un pianista": {
     "url": "https://letterboxd.com/film/retrato-de-un-pianista/",
@@ -22949,7 +22953,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Jean-Christian Tassy, Benoît Daffis",
+    "director": "Benoît Daffis, Jean-Christian Tassy",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -22996,8 +23000,10 @@
     "year": 2026,
     "duration": 157,
     "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "exacto",
     "title_es": "Hope",
-    "original_title": "호프"
+    "original_title": "호프",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "machado": {
     "url": "https://letterboxd.com/film/machado/",
@@ -23496,12 +23502,13 @@
     "genre": "Drama"
   },
   "humano: you no mashallah! + spain is not different": {
-    "url": "",
-    "title_en": "Humano: You no Mashallah! + Spain is not different",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/spain-is-not-different/",
+    "title_en": "Spain is not different",
+    "director": "Samuel Sebastián",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 77,
+    "genre": "Drama"
   },
   "humano: deseos mayores + soy tribulete 7": {
     "url": "",
@@ -23567,7 +23574,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Muchacho (1970), y puede ser otra",
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23579,7 +23586,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Siempre te amaré (1971), Journey to Italy (1954)",
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23591,7 +23598,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Destino de un capricho (1972), y puede ser otra",
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23603,7 +23610,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es El deseo de vivir (1973), y puede ser otra",
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23994,12 +24001,13 @@
     "duration": null
   },
   "bárbara|2026": {
-    "url": "",
+    "url": "https://letterboxd.com/film/barbara-4/",
     "title_en": "Bárbara",
-    "director": "",
-    "country": "",
+    "director": "Emanuel Brunella",
+    "country": "Argentina",
     "year": null,
-    "duration": null
+    "duration": 128,
+    "genre": ""
   },
   "retrato, elogio al duelo|2026": {
     "url": "",
@@ -24389,12 +24397,13 @@
     "duration": null
   },
   "linea imaginaria: los ahogados": {
-    "url": "",
-    "title_en": "Linea Imaginaria: Los ahogados",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/los-ahogados/",
+    "title_en": "Deep End",
+    "director": "Juan Sebastián Jácome",
+    "country": "Ecuador, Uruguay",
+    "year": 2025,
+    "duration": 87,
+    "genre": "Thriller"
   },
   "euforia bloque iii: erótica": {
     "url": "",
@@ -24429,12 +24438,13 @@
     "duration": null
   },
   "linea imaginaria: hiedra": {
-    "url": "",
-    "title_en": "Linea Imaginaria: Hiedra",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-ivy-2025/",
+    "title_en": "The Ivy",
+    "director": "Ana Cristina Barragán",
+    "country": "Ecuador, Mexico",
+    "year": 2025,
+    "duration": 99,
+    "genre": "Drama"
   },
   "minotauro|2026": {
     "url": "https://letterboxd.com/film/minotaur-2026/",
@@ -24671,6 +24681,82 @@
   "el cascanueces- ballet live roh 26-27": {
     "url": "",
     "title_en": "EL CASCANUECES- BALLET LIVE ROH 26-27",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "chaika": {
+    "url": "https://letterboxd.com/film/chaika-2025/",
+    "title_en": "Chaika",
+    "director": "Ingrid Paola Bonilla Rodriguez",
+    "country": "",
+    "year": 2025,
+    "duration": 15,
+    "genre": "",
+    "original_title": "Chaika"
+  },
+  "posdata para el fin del mundo": {
+    "url": "https://letterboxd.com/film/posdata-para-el-fin-del-mundo/",
+    "title_en": "Posdata para el fin del mundo",
+    "director": "John Melo",
+    "country": "Colombia",
+    "year": 2025,
+    "duration": 17,
+    "genre": "",
+    "original_title": "Posdata para el fin del mundo"
+  },
+  "anoche a medianoche": {
+    "url": "https://letterboxd.com/film/last-night-at-midnight/",
+    "title_en": "Last Night at Midnight",
+    "director": "Ricardo Muñoz Izquierdo",
+    "country": "Colombia",
+    "year": 2026,
+    "duration": 15,
+    "genre": ""
+  },
+  "mal de tierra": {
+    "url": "",
+    "title_en": "Mal de Tierra",
+    "director": "Laura Camila Caballero, Sara Idárraga",
+    "country": "Colombia",
+    "year": 2025,
+    "duration": 10,
+    "original_title": "Mal de tierra"
+  },
+  "desbordes": {
+    "url": "https://letterboxd.com/film/desbordes/",
+    "title_en": "Desbordes",
+    "director": "Vanessa Stefani Morales",
+    "country": "Colombia",
+    "year": 2025,
+    "duration": 6,
+    "genre": "Animación",
+    "original_title": "Desbordes"
+  },
+  "filme pin": {
+    "url": "https://letterboxd.com/film/filme-pin/",
+    "title_en": "Filme Pin",
+    "director": "Maria Rojas Arias, Andrés Jurado",
+    "country": "Colombia, Portugal",
+    "year": 2026,
+    "duration": 7,
+    "genre": "Documental",
+    "original_title": "Filme Pin"
+  },
+  "pudor ante el asalto de los ojos furtivos": {
+    "url": "https://letterboxd.com/film/pudor-ante-el-asalto-de-los-ojos-furtivos/",
+    "title_en": "Shame in the Face of Furtive Eyes",
+    "director": "Laura María Rodríguez Moreno",
+    "country": "Colombia",
+    "year": 2025,
+    "duration": 8,
+    "genre": "Animación",
+    "original_title": "Pudor ante el asalto de los ojos furtivos"
+  },
+  "inmarcesible": {
+    "url": "",
+    "title_en": "Inmarcesible",
     "director": "",
     "country": "",
     "year": null,
