@@ -19505,7 +19505,7 @@
     "country": "",
     "year": null,
     "duration": 80,
-    "genre": ""
+    "genre": "Documental"
   },
   "la sexta parte del mundo|1926": {
     "url": "https://letterboxd.com/film/a-sixth-part-of-the-world/",
@@ -22270,7 +22270,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: All Under the Moon (1993)",
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-12",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22282,7 +22282,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Escenas en el mar (2012), y puede ser otra",
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-12",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22304,8 +22304,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ήρωες της γκάφας (1959)",
-    "fecha": "2026-10-08",
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-12",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24768,5 +24768,13 @@
     "year": 1999,
     "duration": 93,
     "genre": "Drama"
+  },
+  "stray kids world tour <run it> live viewing": {
+    "url": "",
+    "title_en": "STRAY KIDS WORLD TOUR <RUN IT> LIVE VIEWING",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }

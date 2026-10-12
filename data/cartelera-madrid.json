@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-12T02:38:27",
+  "updated": "2026-10-12T11:41:52",
   "fuentes": {
     "Artistic Metropol": {
-      "scrapeadas": 30,
-      "publicadas": 30
+      "scrapeadas": 32,
+      "publicadas": 32
     },
     "Cine Doré": {
       "scrapeadas": 48,
@@ -8894,7 +8894,7 @@
       "country": "España, Colombia",
       "year": 2026,
       "duration": 80,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/we-were-a-great-family/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/erem-una-gran-familia",
       "ciclo": ""
@@ -10110,7 +10110,7 @@
       "country": "España, Colombia",
       "year": 2026,
       "duration": 80,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/we-were-a-great-family/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/erem-una-gran-familia",
       "ciclo": ""
@@ -10414,7 +10414,7 @@
       "country": "España, Colombia",
       "year": 2026,
       "duration": 80,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/we-were-a-great-family/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/erem-una-gran-familia",
       "ciclo": ""
@@ -10686,7 +10686,7 @@
       "country": "España, Colombia",
       "year": 2026,
       "duration": 80,
-      "genre": "",
+      "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/we-were-a-great-family/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/erem-una-gran-familia",
       "ciclo": ""
@@ -10802,6 +10802,22 @@
       "letterboxd": "https://letterboxd.com/film/derek-vs-derek/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/derek-vs-derek",
       "ciclo": "Another Way Film Festival 2026"
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-20",
+      "hora": "20:00",
+      "title_es": "ESTUDIOS DE CINE con Alejandro Mucientes",
+      "title_en": "ESTUDIOS DE CINE con Alejandro Mucientes",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-estudios-de-cine-con-alejandro-mucientes-13/",
+      "ciclo": ""
     },
     {
       "cine": "Cine Doré",
@@ -10930,6 +10946,22 @@
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/torre-bela",
       "ciclo": "Fuera del Radar. Mes del Archivo. Cinemateca Lisboa"
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-22",
+      "hora": "11:00",
+      "title_es": "ESTUDIOS DE CINE con Alejandro Mucientes",
+      "title_en": "ESTUDIOS DE CINE con Alejandro Mucientes",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-estudios-de-cine-con-alejandro-mucientes-14/",
+      "ciclo": ""
     },
     {
       "cine": "Cine Doré",

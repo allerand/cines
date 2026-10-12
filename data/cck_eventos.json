@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-11T10:22:03",
+    "ts": "2026-10-12T11:22:41",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -85,7 +85,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-11T10:22:14",
+    "ts": "2026-10-12T11:23:23",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -118,36 +118,10 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-11T10:22:26",
+    "ts": "2026-10-12T11:23:38",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Takeshi",
-        "fecha": "2026-10-11",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-        "ciclo": "Cine japonés en 16 mm",
-        "director": "Kitano",
-        "country": "",
-        "year": 1991,
-        "duration": 101,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "El caído",
-        "fecha": "2026-10-11",
-        "hora": "17:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-        "ciclo": "Cine japonés en 16 mm",
-        "director": "",
-        "country": "",
-        "year": null,
-        "duration": null,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Todo bajo la luna",
@@ -203,36 +177,10 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-irlandes/": {
-    "ts": "2026-10-11T10:22:49",
+    "ts": "2026-10-12T11:23:53",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "That they may face the rising sun",
-        "fecha": "2026-10-11",
-        "hora": "15:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
-        "ciclo": "Cine irlandés",
-        "director": "Pat Collins",
-        "country": "",
-        "year": 2023,
-        "duration": 107,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Foscadh",
-        "fecha": "2026-10-11",
-        "hora": "18:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
-        "ciclo": "Cine irlandés",
-        "director": "Seán Breathnach",
-        "country": "",
-        "year": 2021,
-        "duration": 93,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Róise & Frank",
