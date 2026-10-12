@@ -13144,8 +13144,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "la única que se llama así es Queen: Budapest (1986), y puede ser otra",
-    "fecha": "2026-10-08",
+    "sin_ficha": "la única que se llama así es Queen: Live in Budapest (1986), y puede ser otra",
+    "fecha": "2026-10-12",
     "con_duracion": false,
     "desempate": ""
   },
@@ -15139,7 +15139,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-12",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16869,16 +16869,16 @@
     "sin_hints": "título"
   },
   "rammstein - live in mexico city": {
-    "url": "",
-    "title_en": "RAMMSTEIN - LIVE IN MEXICO CITY",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "se llama así pero no dura 110 min: Rammstein - Live in Mexico City (2026, 148 min), Rammstein - Live aus Berlin (1999, 97 min)",
-    "fecha": "2026-10-08",
-    "con_duracion": true,
-    "desempate": ""
+    "url": "https://letterboxd.com/film/rammstein-live-in-mexico-city/",
+    "title_en": "Rammstein – Live in Mexico City",
+    "director": "Paul Dugdale",
+    "country": "Germany",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Documental, Música",
+    "clase_titulo": "exacto",
+    "original_title": "Rammstein – Live in Mexico City",
+    "sin_hints": "título y duración"
   },
   "el corazón de la bestia": {
     "url": "https://letterboxd.com/film/heart-of-the-beast-2026/",
@@ -19853,7 +19853,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -22082,7 +22082,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-12",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22094,7 +22094,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 97 min: TOMORROW X TOGETHER WORLD TOUR 'ACT:TOMORROW' (2025, 160 min)",
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-12",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22131,12 +22131,10 @@
   "la casa": {
     "url": "",
     "title_en": "La casa",
-    "director": "Gustavo Triviño",
-    "country": "Argentina",
-    "year": 2026,
-    "duration": 95,
-    "genre": "Drama",
-    "original_title": "La casa"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "ficuba": {
     "url": "",
@@ -23892,7 +23890,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-12",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23904,7 +23902,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-12",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23942,7 +23940,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Cars (2006), Cars 3 (2017), Cars on the Road (2022)",
-    "fecha": "2026-10-08",
+    "fecha": "2026-10-12",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24761,5 +24759,14 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "lola y billy the kid|1998": {
+    "url": "https://letterboxd.com/film/lola-and-billy-the-kid/",
+    "title_en": "Lola and Billy the Kid",
+    "director": "Kutluğ Ataman",
+    "country": "Germany",
+    "year": 1999,
+    "duration": 93,
+    "genre": "Drama"
   }
 }
