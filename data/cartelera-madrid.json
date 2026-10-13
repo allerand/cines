@@ -1,9 +1,9 @@
 {
-  "updated": "2026-10-13T03:50:56",
+  "updated": "2026-10-13T11:26:52",
   "fuentes": {
     "Artistic Metropol": {
-      "scrapeadas": 28,
-      "publicadas": 28
+      "scrapeadas": 30,
+      "publicadas": 30
     },
     "Cine Doré": {
       "scrapeadas": 48,
@@ -38,8 +38,8 @@
       "publicadas": 43
     },
     "Golem Madrid": {
-      "scrapeadas": 46,
-      "publicadas": 46
+      "scrapeadas": 47,
+      "publicadas": 47
     },
     "Renoir Plaza de España": {
       "scrapeadas": 54,
@@ -6135,6 +6135,22 @@
       "cine": "Golem Madrid",
       "fecha": "2026-10-15",
       "hora": "19:30",
+      "title_es": "La voz quebrada",
+      "title_en": "The Broken Voice",
+      "original_title": "La voz quebrada",
+      "director": "Manuel Menchón Romero",
+      "country": "España",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100235&eventCode=115798",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-15",
+      "hora": "19:30",
       "title_es": "La bola negra",
       "title_en": "La Bola Negra",
       "original_title": "",
@@ -7732,6 +7748,22 @@
       "ciclo": "Puente Aéreo. el Cine de Warren Sonbert"
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-17",
+      "hora": "18:00",
+      "title_es": "EL PINTOR DE LOS MILAGROS Entradas agotadas",
+      "title_en": "EL PINTOR DE LOS MILAGROS Entradas agotadas",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": 2026,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-pintor-de-los-milagros-2026-entradas-agotadas/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-17",
       "hora": "18:50",
@@ -7777,6 +7809,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/we-were-a-great-family/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/erem-una-gran-familia",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-10-17",
+      "hora": "20:00",
+      "title_es": "EL PINTOR DE LOS MILAGROS Entradas agotadas",
+      "title_en": "EL PINTOR DE LOS MILAGROS Entradas agotadas",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": 2026,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-pintor-de-los-milagros-2026-entradas-agotadas-2/",
       "ciclo": ""
     },
     {
@@ -8580,22 +8628,6 @@
       "ciclo": "Another Way Film Festival 2026"
     },
     {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-10-23",
-      "hora": "20:00",
-      "title_es": "Euforia Bloque I: Fantasía y Camp",
-      "title_en": "Euforia Bloque I: Fantasía y Camp",
-      "original_title": "",
-      "director": "Ada Morandin y Marria Biserni, Alesia de la Parra, Cerradynho, Kolbrún Inga Söring, Maria João Vaz, Noah Mancini e Zuma Link, R Tavares, Rebeca de Castro",
-      "country": "",
-      "year": null,
-      "duration": 120,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/euforia-bloque-i-fantasia-y-camp/20004/",
-      "ciclo": ""
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-23",
       "hora": "20:00",
@@ -8609,6 +8641,22 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/los-ahogados/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/linea-imaginaria-los-ahogados/39016/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-23",
+      "hora": "20:00",
+      "title_es": "Euforia Bloque I: Fantasía y Camp",
+      "title_en": "Euforia Bloque I: Fantasía y Camp",
+      "original_title": "",
+      "director": "Ada Morandin y Marria Biserni, Alesia de la Parra, Cerradynho, Kolbrún Inga Söring, Maria João Vaz, Noah Mancini e Zuma Link, R Tavares, Rebeca de Castro",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/euforia-bloque-i-fantasia-y-camp/20004/",
       "ciclo": ""
     },
     {

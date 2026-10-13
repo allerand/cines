@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T03:50:56",
+  "updated": "2026-10-13T11:26:52",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 10,
@@ -18,7 +18,7 @@
       "publicadas": 6
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 14,
       "publicadas": 14
     },
     "Cacodelphia": {
@@ -35,8 +35,8 @@
       "publicadas": 3
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 9,
-      "publicadas": 9
+      "scrapeadas": 17,
+      "publicadas": 17
     },
     "Centro Cultural Munro": {
       "scrapeadas": 9,
@@ -119,16 +119,16 @@
       "publicadas": 137
     },
     "Multiplex Canning": {
-      "scrapeadas": 118,
-      "publicadas": 119
+      "scrapeadas": 111,
+      "publicadas": 112
     },
     "Multiplex Lavalle": {
-      "scrapeadas": 113,
-      "publicadas": 113
+      "scrapeadas": 110,
+      "publicadas": 110
     },
     "Multiplex Pilar": {
-      "scrapeadas": 428,
-      "publicadas": 430
+      "scrapeadas": 442,
+      "publicadas": 444
     },
     "Museo del Cine": {
       "scrapeadas": 1,
@@ -12261,6 +12261,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-14",
+      "hora": "19:00",
+      "title_es": "Ciclo Cuadro a Cuadro. la Otra Forma",
+      "title_en": "CICLO CUADRO A CUADRO. LA OTRA FORMA",
+      "original_title": "",
+      "director": "Diego Felipe Guzmán Ramírez",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/591",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-14",
       "hora": "19:05",
@@ -15173,6 +15189,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-15",
+      "hora": "13:00",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-15",
       "hora": "13:20",
@@ -15413,22 +15445,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-15",
-      "hora": "15:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-15",
       "hora": "15:40",
@@ -15445,7 +15461,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-15",
       "hora": "15:50",
       "title_es": "Street Fighter",
@@ -15461,9 +15477,9 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-10-15",
-      "hora": "16:00",
+      "hora": "15:50",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -15490,6 +15506,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-15",
+      "hora": "16:10",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
     },
     {
@@ -15701,6 +15733,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-15",
+      "hora": "18:00",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-15",
       "hora": "18:00",
@@ -15778,22 +15826,6 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-15",
-      "hora": "18:10",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -16130,22 +16162,6 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-10-15",
-      "hora": "20:00",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -16583,22 +16599,6 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-10-15",
-      "hora": "22:15",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-10-15",
       "hora": "22:20",
       "title_es": "Los Juegos del Hambre: en Llamas (2013)",
       "title_en": "The Hunger Games: Catching Fire",
@@ -16693,22 +16693,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-15",
-      "hora": "22:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-15",
       "hora": "22:30",
@@ -16726,6 +16710,22 @@
     },
     {
       "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-15",
+      "hora": "22:40",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-15",
       "hora": "22:40",
       "title_es": "Street Fighter",
@@ -16850,22 +16850,6 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-10-15",
-      "hora": "23:05",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -17010,6 +16994,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-16",
+      "hora": "13:00",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
     },
     {
@@ -17237,22 +17237,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-16",
-      "hora": "15:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-16",
       "hora": "15:40",
@@ -17266,6 +17250,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-16",
+      "hora": "15:50",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -17301,22 +17301,6 @@
       "ciclo": "Ficción"
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-16",
-      "hora": "16:00",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-16",
       "hora": "16:00",
@@ -17330,6 +17314,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-16",
+      "hora": "16:10",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
     },
     {
@@ -17557,6 +17557,22 @@
       "ciclo": "Ficción"
     },
     {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-16",
+      "hora": "18:00",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-16",
       "hora": "18:00",
@@ -17653,22 +17669,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-16",
-      "hora": "18:10",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-16",
       "hora": "18:30",
@@ -17730,6 +17730,22 @@
       "genre": "Música, Documental",
       "letterboxd": "https://letterboxd.com/film/islandia-2025/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/63e15521bfdd1af91e3da2fe553157eb",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-16",
+      "hora": "19:00",
+      "title_es": "La Frecuencia Kirlian",
+      "title_en": "The Kirlian Frequency",
+      "original_title": "",
+      "director": "Cristian Jesús Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/578",
       "ciclo": ""
     },
     {
@@ -18389,22 +18405,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-16",
-      "hora": "22:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-16",
       "hora": "22:30",
@@ -18438,6 +18438,22 @@
     },
     {
       "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-16",
+      "hora": "22:40",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-16",
       "hora": "22:40",
       "title_es": "Street Fighter",
@@ -18741,6 +18757,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-17",
+      "hora": "13:00",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-17",
       "hora": "13:20",
@@ -19029,22 +19061,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-17",
-      "hora": "15:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-17",
       "hora": "15:40",
@@ -19061,7 +19077,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-17",
       "hora": "15:50",
       "title_es": "Street Fighter",
@@ -19077,9 +19093,9 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-10-17",
-      "hora": "16:00",
+      "hora": "15:50",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -19106,6 +19122,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-17",
+      "hora": "16:10",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
     },
     {
@@ -19202,6 +19234,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-17",
+      "hora": "17:00",
+      "title_es": "Los Calvos",
+      "title_en": "The Bald",
+      "original_title": "Los calvos",
+      "director": "Elias Gismondi, Marcos Mossello",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 79,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/los-calvos/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/579",
       "ciclo": ""
     },
     {
@@ -19349,6 +19397,22 @@
       "ciclo": "Función especial"
     },
     {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-17",
+      "hora": "18:00",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-17",
       "hora": "18:00",
@@ -19429,22 +19493,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-17",
-      "hora": "18:10",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-17",
       "hora": "18:30",
@@ -19507,6 +19555,22 @@
       "letterboxd": "https://letterboxd.com/film/sleep-with-your-eyes-open/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
       "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler"
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-17",
+      "hora": "19:00",
+      "title_es": "Gatillero",
+      "title_en": "Gunman",
+      "original_title": "Gatillero",
+      "director": "Cris Tapia Marchiori",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 80,
+      "genre": "Thriller, Acción",
+      "letterboxd": "https://letterboxd.com/film/gatillero/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/580",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -20165,22 +20229,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-17",
-      "hora": "22:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-17",
       "hora": "22:30",
@@ -20198,6 +20246,22 @@
     },
     {
       "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-17",
+      "hora": "22:40",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-17",
       "hora": "22:40",
       "title_es": "Street Fighter",
@@ -20501,6 +20565,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-18",
+      "hora": "13:00",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-18",
       "hora": "13:20",
@@ -20693,6 +20773,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-10-18",
+      "hora": "15:00",
+      "title_es": "Todo bajo la luna",
+      "title_en": "Todo bajo la luna",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
+      "ciclo": "Cine japonés en 16 mm"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-10-18",
       "hora": "15:00",
@@ -20709,20 +20805,20 @@
       "ciclo": "Seis tardes con Mae West"
     },
     {
-      "cine": "CCK",
+      "cine": "Centro Cultural Borges",
       "fecha": "2026-10-18",
       "hora": "15:00",
-      "title_es": "Todo bajo la luna",
-      "title_en": "Todo bajo la luna",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-      "ciclo": "Cine japonés en 16 mm"
+      "title_es": "El Amo del Jardín",
+      "title_en": "El amo del jardín",
+      "original_title": "El amo del jardín",
+      "director": "Fernando Krapp",
+      "country": "Argentina, Japón",
+      "year": 2025,
+      "duration": 82,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-amo-del-jardin/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/590",
+      "ciclo": ""
     },
     {
       "cine": "Multiplex Pilar",
@@ -20757,22 +20853,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-18",
-      "hora": "15:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-18",
       "hora": "15:40",
@@ -20786,6 +20866,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-18",
+      "hora": "15:50",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -20821,22 +20917,6 @@
       "ciclo": "21.° Festival de Cine Inusual de Buenos Aires - Competencia oficial de largometrajes"
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-18",
-      "hora": "16:00",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-18",
       "hora": "16:00",
@@ -20866,6 +20946,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/pelicula-sorpresa",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-18",
+      "hora": "16:10",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
     },
     {
@@ -20978,6 +21074,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://lumiton.ar/evento/vicente-lopez-en-pantalla-programa-de-cortos/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-18",
+      "hora": "17:00",
+      "title_es": "El príncipe de Nanawa",
+      "title_en": "The Prince of Nanawa",
+      "original_title": "",
+      "director": "Clarisa Navas",
+      "country": "Argentina, Paraguay",
+      "year": 2025,
+      "duration": 212,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/518",
       "ciclo": ""
     },
     {
@@ -21125,6 +21237,22 @@
       "ciclo": "Continúa"
     },
     {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-18",
+      "hora": "18:00",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-18",
       "hora": "18:00",
@@ -21218,22 +21346,6 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-18",
-      "hora": "18:10",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -21925,22 +22037,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-18",
-      "hora": "22:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-18",
       "hora": "22:30",
@@ -21958,6 +22054,22 @@
     },
     {
       "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-18",
+      "hora": "22:40",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-18",
       "hora": "22:40",
       "title_es": "Street Fighter",
@@ -22229,6 +22341,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-19",
+      "hora": "13:00",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-19",
       "hora": "13:20",
@@ -22453,22 +22581,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-19",
-      "hora": "15:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-19",
       "hora": "15:40",
@@ -22485,7 +22597,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-19",
       "hora": "15:50",
       "title_es": "Street Fighter",
@@ -22501,9 +22613,9 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-10-19",
-      "hora": "16:00",
+      "hora": "15:50",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -22530,6 +22642,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-19",
+      "hora": "16:10",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
     },
     {
@@ -22725,6 +22853,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-19",
+      "hora": "18:00",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-19",
       "hora": "18:00",
@@ -22770,22 +22914,6 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-19",
-      "hora": "18:10",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -23381,22 +23509,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-19",
-      "hora": "22:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-19",
       "hora": "22:30",
@@ -23414,6 +23526,22 @@
     },
     {
       "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-19",
+      "hora": "22:40",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-19",
       "hora": "22:40",
       "title_es": "Street Fighter",
@@ -23685,6 +23813,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-20",
+      "hora": "13:00",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-20",
       "hora": "13:20",
@@ -23925,22 +24069,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-20",
-      "hora": "15:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-20",
       "hora": "15:40",
@@ -23957,7 +24085,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-20",
       "hora": "15:50",
       "title_es": "Street Fighter",
@@ -23973,9 +24101,9 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-10-20",
-      "hora": "16:00",
+      "hora": "15:50",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -24002,6 +24130,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-20",
+      "hora": "16:10",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
     },
     {
@@ -24213,6 +24357,22 @@
       "ciclo": "Ficción"
     },
     {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-20",
+      "hora": "18:00",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-20",
       "hora": "18:00",
@@ -24274,22 +24434,6 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-20",
-      "hora": "18:10",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -24917,22 +25061,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-20",
-      "hora": "22:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-20",
       "hora": "22:30",
@@ -24950,6 +25078,22 @@
     },
     {
       "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-20",
+      "hora": "22:40",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-20",
       "hora": "22:40",
       "title_es": "Street Fighter",
@@ -25237,6 +25381,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-21",
+      "hora": "13:00",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-21",
       "hora": "13:20",
@@ -25477,22 +25637,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-21",
-      "hora": "15:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-21",
       "hora": "15:40",
@@ -25509,7 +25653,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-21",
       "hora": "15:50",
       "title_es": "Street Fighter",
@@ -25525,9 +25669,9 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
+      "cine": "Multiplex Pilar",
       "fecha": "2026-10-21",
-      "hora": "16:00",
+      "hora": "15:50",
       "title_es": "Street Fighter",
       "title_en": "Street Fighter",
       "original_title": "Street Fighter",
@@ -25554,6 +25698,22 @@
       "genre": "Aventura, Thriller",
       "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-corazon-de-la-bestia/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-10-21",
+      "hora": "16:10",
+      "title_es": "Cars 20° Aniversario",
+      "title_en": "CARS 20° ANIVERSARIO",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 121,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cars/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/cars-re-estreno/",
       "ciclo": ""
     },
     {
@@ -25781,6 +25941,22 @@
       "ciclo": "Ficción"
     },
     {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-10-21",
+      "hora": "18:00",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-21",
       "hora": "18:00",
@@ -25826,22 +26002,6 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-21",
-      "hora": "18:10",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
       "ciclo": ""
     },
     {
@@ -25891,6 +26051,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.amorina.club/peliculas",
       "ciclo": "Doble función"
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-21",
+      "hora": "19:00",
+      "title_es": "Ciclo Cuadro a Cuadro. la Otra Forma",
+      "title_en": "CICLO CUADRO A CUADRO. LA OTRA FORMA",
+      "original_title": "",
+      "director": "Diego Felipe Guzmán Ramírez",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/591",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -26501,22 +26677,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-10-21",
-      "hora": "22:30",
-      "title_es": "Street Fighter",
-      "title_en": "Street Fighter",
-      "original_title": "Street Fighter",
-      "director": "Kitao Sakurai",
-      "country": "Japón, Estados Unidos",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Fantasía, Acción",
-      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-21",
       "hora": "22:30",
@@ -26534,6 +26694,22 @@
     },
     {
       "cine": "Multiplex Belgrano",
+      "fecha": "2026-10-21",
+      "hora": "22:40",
+      "title_es": "Street Fighter",
+      "title_en": "Street Fighter",
+      "original_title": "Street Fighter",
+      "director": "Kitao Sakurai",
+      "country": "Japón, Estados Unidos",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Fantasía, Acción",
+      "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
       "fecha": "2026-10-21",
       "hora": "22:40",
       "title_es": "Street Fighter",
@@ -27653,6 +27829,22 @@
       "ciclo": "Retrospectivas:Carlos Galettini"
     },
     {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-24",
+      "hora": "16:00",
+      "title_es": "La Cama",
+      "title_en": "The Bed",
+      "original_title": "La cama",
+      "director": "Mónica Lairana",
+      "country": "Argentina, Brasil",
+      "year": 2018,
+      "duration": 95,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-bed-2018/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/588",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-10-24",
       "hora": "16:10",
@@ -28229,22 +28421,6 @@
       "ciclo": "MUBI Fest Buenos Aires - Premiere"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-25",
-      "hora": "15:00",
-      "title_es": "Tokyo-Ga",
-      "title_en": "Tokyo-Ga",
-      "original_title": "Tokyo-Ga",
-      "director": "Wim Wenders",
-      "country": "República Federal de Alemania/EE.UU.",
-      "year": 1985,
-      "duration": 92,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
-      "ciclo": "En las rutas de Wim Wenders"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "15:00",
@@ -28259,6 +28435,22 @@
       "letterboxd": "https://letterboxd.com/film/talking-to-a-stranger/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "15:00",
+      "title_es": "Tokyo-Ga",
+      "title_en": "Tokyo-Ga",
+      "original_title": "Tokyo-Ga",
+      "director": "Wim Wenders",
+      "country": "República Federal de Alemania/EE.UU.",
+      "year": 1985,
+      "duration": 92,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -28357,22 +28549,6 @@
       "ciclo": "MUBI Fest Buenos Aires - Premiere"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-10-25",
-      "hora": "17:30",
-      "title_es": "Paris, Texas",
-      "title_en": "Paris, Texas",
-      "original_title": "Paris, Texas",
-      "director": "Wim Wenders",
-      "country": "EE.UU/República Federal de Alemania/Francia/Reino Unido",
-      "year": 1984,
-      "duration": 148,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/paris-texas/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
-      "ciclo": "En las rutas de Wim Wenders"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "17:30",
@@ -28387,6 +28563,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
       "ciclo": "Cine japonés en 16 mm"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-10-25",
+      "hora": "17:30",
+      "title_es": "Paris, Texas",
+      "title_en": "Paris, Texas",
+      "original_title": "Paris, Texas",
+      "director": "Wim Wenders",
+      "country": "EE.UU/República Federal de Alemania/Francia/Reino Unido",
+      "year": 1984,
+      "duration": 148,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/paris-texas/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
+      "ciclo": "En las rutas de Wim Wenders"
     },
     {
       "cine": "Cinépolis Houssay",
@@ -28421,22 +28613,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-25",
-      "hora": "18:00",
-      "title_es": "Siete días",
-      "title_en": "Siete días",
-      "original_title": "",
-      "director": "Ali Samadi Ahadi",
-      "country": "Alemania",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-25",
       "hora": "18:00",
@@ -28451,6 +28627,22 @@
       "letterboxd": "https://letterboxd.com/film/arracht/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
       "ciclo": "Cine irlandés"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-25",
+      "hora": "18:00",
+      "title_es": "Siete días",
+      "title_en": "Siete días",
+      "original_title": "",
+      "director": "Ali Samadi Ahadi",
+      "country": "Alemania",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Cinépolis Houssay",
@@ -30069,22 +30261,6 @@
       "ciclo": "Frank Borzage, un romántico en Hollywood – Parte 2"
     },
     {
-      "cine": "Centro Cultural Recoleta",
-      "fecha": "2026-10-31",
-      "hora": "16:00",
-      "title_es": "La memoria del perfume de las cosas",
-      "title_en": "La memoria del perfume de las cosas",
-      "original_title": "",
-      "director": "António Fonseca",
-      "country": "Portugal",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-10-31",
       "hora": "16:00",
@@ -30099,6 +30275,22 @@
       "letterboxd": "https://letterboxd.com/film/besos-en-la-frente/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Centro Cultural Recoleta",
+      "fecha": "2026-10-31",
+      "hora": "16:00",
+      "title_es": "La memoria del perfume de las cosas",
+      "title_en": "La memoria del perfume de las cosas",
+      "original_title": "",
+      "director": "António Fonseca",
+      "country": "Portugal",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
+      "ciclo": ""
     },
     {
       "cine": "Bellas Artes",
