@@ -15139,7 +15139,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-13",
     "con_duracion": false,
     "desempate": ""
   },
@@ -21874,15 +21874,16 @@
     "original_title": "Elvira Fernández, vendedora de tienda"
   },
   "el cañonero de giles": {
-    "url": "https://letterboxd.com/film/el-canonero-de-giles/",
-    "title_en": "El cañonero de Giles",
-    "director": "Manuel Romero",
-    "country": "Argentina",
-    "year": 1937,
-    "duration": 69,
-    "genre": "Comedia",
-    "title_es": "El cañonero de Giles",
-    "original_title": "El cañonero de Giles"
+    "url": "",
+    "title_en": "El cañonero de giles",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es El cañonero de Giles (1937), y puede ser otra",
+    "fecha": "2026-10-13",
+    "con_duracion": false,
+    "desempate": ""
   },
   "noches de buenos aires": {
     "url": "https://letterboxd.com/film/noches-de-buenos-aires/",
@@ -24775,6 +24776,137 @@
     "director": "",
     "country": "",
     "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-13",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "dune: parte tres": {
+    "url": "https://letterboxd.com/film/dune-part-three/",
+    "title_en": "Dune: Part Three",
+    "director": "Denis Villeneuve",
+    "country": "USA, United Arab Emirates",
+    "year": 2026,
+    "duration": 140,
+    "genre": "Ciencia ficción, Aventura",
+    "title_es": "Dune: Parte tres",
+    "original_title": "Dune: Part Three"
+  },
+  "oro rojo: latidos de vida entradas agotadas|2026": {
+    "url": "",
+    "title_en": "ORO ROJO: LATIDOS DE VIDA Entradas agotadas",
+    "director": "",
+    "country": "",
+    "year": null,
     "duration": null
+  },
+  "oro rojo: latidos de vida|2026": {
+    "url": "https://letterboxd.com/film/oro-rojo-latidos-de-vida/",
+    "title_en": "Oro rojo: Latidos de vida",
+    "director": "David Benito del Olmo",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 108,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Oro rojo: Latidos de vida"
+  },
+  "un suelo lejano": {
+    "url": "https://letterboxd.com/film/un-suelo-lejano/",
+    "title_en": "Un suelo lejano",
+    "director": "Gabriel Muro",
+    "country": "",
+    "year": 2017,
+    "duration": 93,
+    "genre": "Documental, Historia",
+    "original_title": "Un suelo lejano"
+  },
+  "adiós a la memoria|2021": {
+    "url": "https://letterboxd.com/film/adios-a-la-memoria/",
+    "title_en": "A Farewell to Memory",
+    "director": "Nicolás Prividera",
+    "country": "Argentina",
+    "year": 2020,
+    "duration": 95,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Adiós a la memoria"
+  },
+  "duna: parte tres": {
+    "url": "https://letterboxd.com/film/dune-part-three/",
+    "title_en": "Dune: Part Three",
+    "director": "Denis Villeneuve",
+    "country": "USA, United Arab Emirates",
+    "year": 2026,
+    "duration": 140,
+    "genre": "Ciencia ficción, Aventura",
+    "clase_titulo": "exacto",
+    "title_es": "Dune: Parte tres",
+    "original_title": "Dune: Part Three",
+    "sin_hints": "título"
+  },
+  "avengers: doomsday": {
+    "url": "https://letterboxd.com/film/avengers-doomsday/",
+    "title_en": "Avengers: Doomsday",
+    "director": "Joe Russo, Anthony Russo",
+    "country": "USA",
+    "year": 2026,
+    "duration": 165,
+    "genre": "Acción, Aventura",
+    "clase_titulo": "exacto",
+    "title_es": "Vengadores: Doomsday",
+    "original_title": "Avengers: Doomsday",
+    "sin_hints": "título y duración"
+  },
+  "escuela de monstruos": {
+    "url": "https://letterboxd.com/film/monster-mia/",
+    "title_en": "Monster Mia",
+    "director": "Verena Fels",
+    "country": "Austria, Germany",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Animación, Fantasía",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "la caida de la ballena": {
+    "url": "https://letterboxd.com/film/whalefall/",
+    "title_en": "Whalefall",
+    "director": "Brian Duffield",
+    "country": "USA",
+    "year": 2026,
+    "duration": 98,
+    "genre": "Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "La caída de la ballena",
+    "original_title": "Whalefall",
+    "sin_hints": "título"
+  },
+  "quiero tu sexo": {
+    "url": "https://letterboxd.com/film/i-want-your-sex/",
+    "title_en": "I Want Your Sex",
+    "director": "Gregg Araki",
+    "country": "USA",
+    "year": 2026,
+    "duration": 90,
+    "genre": "Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "Quiero Tu Sexo",
+    "original_title": "I Want Your Sex",
+    "sin_hints": "título"
+  },
+  "tiempos de ilusion": {
+    "url": "https://letterboxd.com/film/just-an-illusion-2026/",
+    "title_en": "Just an Illusion",
+    "director": "Olivier Nakache, Éric Toledano",
+    "country": "France",
+    "year": 2026,
+    "duration": 119,
+    "genre": "Comedia, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Tiempos de ilusión",
+    "original_title": "Juste une illusion",
+    "sin_hints": "título"
   }
 }
