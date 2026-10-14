@@ -22725,7 +22725,8 @@
     "country": "Japan, USA",
     "year": 2026,
     "duration": 125,
-    "genre": "Fantasía, Acción"
+    "genre": "Fantasía, Acción",
+    "original_title": "Street Fighter"
   },
   "terror total: [rec]": {
     "url": "https://letterboxd.com/film/rec/",
@@ -22950,7 +22951,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Jean-Christian Tassy, Benoît Daffis",
+    "director": "Benoît Daffis, Jean-Christian Tassy",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -25093,5 +25094,77 @@
     "genre": "Terror, Thriller",
     "title_es": "Insidious: Fuera del más allá",
     "original_title": "Insidious: Out of the Further"
+  },
+  "nightborn|2026": {
+    "url": "https://letterboxd.com/film/nightborn/",
+    "title_en": "Nightborn",
+    "director": "Hanna Bergholm",
+    "country": "Finland, Lithuania",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Terror",
+    "clase_titulo": "exacto",
+    "title_es": "Engendro",
+    "original_title": "Yön lapsi"
+  },
+  "parkour en gaza|2024": {
+    "url": "https://letterboxd.com/film/yalla-parkour/",
+    "title_en": "Yalla Parkour",
+    "director": "Areeb Zuaiter",
+    "country": "State of Palestine, Qatar",
+    "year": 2024,
+    "duration": 89,
+    "genre": "Documental, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Parkour en Gaza",
+    "original_title": "يلّا باركور"
+  },
+  "festival bitbang: la huella de oro (proyección + q&a)": {
+    "url": "",
+    "title_en": "FESTIVAL BITBANG: LA HUELLA DE ORO (PROYECCIÓN + Q&A)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival bitbang: proyección de cortos latinoamericanos": {
+    "url": "",
+    "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Latinoamericanos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival bitbang: retrospectiva alberto vázquez": {
+    "url": "",
+    "title_en": "FESTIVAL BITBANG: Retrospectiva Alberto Vázquez",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival bitbang: retrospectiva frederic siegel": {
+    "url": "",
+    "title_en": "FESTIVAL BITBANG: Retrospectiva Frederic Siegel",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival bitbang: proyección de cortos de graduación latinoamericanos": {
+    "url": "",
+    "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival bitbang: proyección de cortos internacionales": {
+    "url": "",
+    "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Internacionales",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
