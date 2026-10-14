@@ -3140,7 +3140,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hills Have Eyes Part 2 (1984), The Grim Adventures of Billy & Mandy: Meet the Reaper (2000), Filming Obstinately, Meeting Patricio Guzman (2014)",
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-14",
     "con_duracion": false,
     "desempate": ""
   },
@@ -15139,7 +15139,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-13",
+    "fecha": "2026-10-14",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16335,7 +16335,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; BTS World Tour 'Arirang' In São Paulo: Live Viewing (2026) sólo se le parece",
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-14",
     "con_duracion": true,
     "desempate": ""
   },
@@ -21874,16 +21874,15 @@
     "original_title": "Elvira Fernández, vendedora de tienda"
   },
   "el cañonero de giles": {
-    "url": "",
-    "title_en": "El cañonero de giles",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "la única que se llama así es El cañonero de Giles (1937), y puede ser otra",
-    "fecha": "2026-10-13",
-    "con_duracion": false,
-    "desempate": ""
+    "url": "https://letterboxd.com/film/el-canonero-de-giles/",
+    "title_en": "El cañonero de Giles",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1937,
+    "duration": 69,
+    "genre": "Comedia",
+    "title_es": "El cañonero de Giles",
+    "original_title": "El cañonero de Giles"
   },
   "noches de buenos aires": {
     "url": "https://letterboxd.com/film/noches-de-buenos-aires/",
@@ -22726,8 +22725,7 @@
     "country": "Japan, USA",
     "year": 2026,
     "duration": 125,
-    "genre": "Fantasía, Acción",
-    "original_title": "Street Fighter"
+    "genre": "Fantasía, Acción"
   },
   "terror total: [rec]": {
     "url": "https://letterboxd.com/film/rec/",
@@ -22952,7 +22950,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Benoît Daffis, Jean-Christian Tassy",
+    "director": "Jean-Christian Tassy, Benoît Daffis",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -23115,7 +23113,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-14",
     "con_duracion": true,
     "desempate": ""
   },
@@ -23183,7 +23181,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; Shinema Kabuki: Renjishi (2010) sólo se le parece",
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-14",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23448,7 +23446,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-14",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24660,7 +24658,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así y duran lo mismo: A Nightmare on Elm Street (1984), A Nightmare on Elm Street (2010)",
-    "fecha": "2026-10-10",
+    "fecha": "2026-10-14",
     "con_duracion": true,
     "desempate": ""
   },
@@ -24916,5 +24914,184 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "el mal hijo": {
+    "url": "https://letterboxd.com/film/el-mal-hijo/",
+    "title_en": "The Bad Son",
+    "director": "Jaime Lorente",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Drama",
+    "original_title": "El mal hijo"
+  },
+  "kakeru (sheep in the box)": {
+    "url": "",
+    "title_en": "KAKERU (SHEEP IN THE BOX)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la maleta": {
+    "url": "https://letterboxd.com/film/la-maleta/",
+    "title_en": "La maleta",
+    "director": "Carlos Therón",
+    "country": "Spain",
+    "year": 2026,
+    "duration": null,
+    "genre": "Acción, Comedia",
+    "original_title": "La maleta"
+  },
+  "los demonios": {
+    "url": "",
+    "title_en": "Los demonios",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "kakeru": {
+    "url": "",
+    "title_en": "Kakeru",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "miss jobson": {
+    "url": "https://letterboxd.com/film/miss-jobson/",
+    "title_en": "Miss Jobson",
+    "director": "Amanda Sans Pantling",
+    "country": "Jamaica, Spain",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "Miss Jobson"
+  },
+  "sangre fácil|1984": {
+    "url": "https://letterboxd.com/film/blood-simple/",
+    "title_en": "Blood Simple",
+    "director": "Joel Coen",
+    "country": "USA",
+    "year": 1984,
+    "duration": 97,
+    "genre": "Thriller, Crimen",
+    "clase_titulo": "exacto",
+    "title_es": "Sangre fácil",
+    "original_title": "Blood Simple"
+  },
+  "vlad, el principe de la oscuridad|2000": {
+    "url": "https://letterboxd.com/film/dark-prince-the-true-story-of-dracula/",
+    "title_en": "Dark Prince: The True Story of Dracula",
+    "director": "Joe Chappelle",
+    "country": "USA",
+    "year": 2000,
+    "duration": 92,
+    "genre": "TV, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "Vlad, príncipe de la oscuridad",
+    "original_title": "Dark Prince: The True Story of Dracula"
+  },
+  "very bad things|1998": {
+    "url": "https://letterboxd.com/film/very-bad-things/",
+    "title_en": "Very Bad Things",
+    "director": "Peter Berg",
+    "country": "USA",
+    "year": 1998,
+    "duration": 100,
+    "genre": "Thriller, Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "Malos Pensamientos",
+    "original_title": "Very Bad Things"
+  },
+  "palestina 36 v.o.s.e. sesión teta|2025": {
+    "url": "",
+    "title_en": "PALESTINA 36 V.O.S.E. Sesión Teta",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la caída de la ballena": {
+    "url": "https://letterboxd.com/film/whalefall/",
+    "title_en": "Whalefall",
+    "director": "Brian Duffield",
+    "country": "USA",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "La caída de la ballena",
+    "original_title": "Whalefall",
+    "sin_hints": "título y duración"
+  },
+  "tiempos de ilusión": {
+    "url": "https://letterboxd.com/film/just-an-illusion-2026/",
+    "title_en": "Just an Illusion",
+    "director": "Olivier Nakache, Éric Toledano",
+    "country": "France",
+    "year": 2026,
+    "duration": 119,
+    "genre": "Comedia, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Tiempos de ilusión",
+    "original_title": "Juste une illusion",
+    "sin_hints": "título y duración"
+  },
+  "un día pina preguntó": {
+    "url": "",
+    "title_en": "Un día Pina preguntó",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "nene y las cosas": {
+    "url": "",
+    "title_en": "NENE Y LAS COSAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "autopista américa 2000": {
+    "url": "https://letterboxd.com/film/autopista-america-2000/",
+    "title_en": "Autopista América 2000",
+    "director": "Julieta Duchovny",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 86,
+    "genre": "",
+    "original_title": "Autopista América 2000"
+  },
+  "desobediente": {
+    "url": "",
+    "title_en": "DESOBEDIENTE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el camino contrario": {
+    "url": "https://letterboxd.com/film/el-camino-contrario/",
+    "title_en": "The Opposite Road",
+    "director": "Martín Wain, Daniel Flores",
+    "country": "",
+    "year": 2026,
+    "duration": 78,
+    "genre": "",
+    "original_title": "El camino contrario"
+  },
+  "la noche del demonio: están entre nosotros 2d+4d": {
+    "url": "https://letterboxd.com/film/insidious-out-of-the-further/",
+    "title_en": "Insidious: Out of the Further",
+    "director": "Jacob Chase",
+    "country": "USA",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Terror, Thriller",
+    "title_es": "Insidious: Fuera del más allá",
+    "original_title": "Insidious: Out of the Further"
   }
 }
