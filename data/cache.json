@@ -15133,15 +15133,15 @@
   },
   "la vida es así": {
     "url": "",
-    "title_en": "La vida es así",
+    "title_en": "LA VIDA ES ASÍ",
     "director": "",
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-14",
-    "con_duracion": false,
-    "desempate": ""
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-15",
+    "con_duracion": true,
+    "desempate": "nueva"
   },
   "el secuestro de arabella": {
     "url": "https://letterboxd.com/film/the-kidnapping-of-arabella/",
@@ -15955,16 +15955,14 @@
     "original_title": "El Nacional"
   },
   "frida, naturaleza viva": {
-    "url": "",
-    "title_en": "Frida, naturaleza viva",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "la única que se llama así es Frida Still Life (1985), y puede ser otra",
-    "fecha": "2026-10-03",
-    "con_duracion": false,
-    "desempate": ""
+    "url": "https://letterboxd.com/film/frida-naturaleza-viva/",
+    "title_en": "Frida Still Life",
+    "director": "Paul Leduc",
+    "country": "Mexico",
+    "year": 1985,
+    "duration": 108,
+    "genre": "Historia, Drama",
+    "original_title": "Frida, naturaleza viva"
   },
   "shrek: 25 aniversario": {
     "url": "",
@@ -20577,7 +20575,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: Apocalypse Now (1979, 147 min)",
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-15",
     "con_duracion": true,
     "desempate": ""
   },
@@ -21392,7 +21390,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Nadie inquietó más (2008)",
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-15",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22067,12 +22065,14 @@
     "duration": null
   },
   "hybe cheering party": {
-    "url": "",
+    "url": "https://letterboxd.com/film/hybe-cheering-party/",
     "title_en": "HYBE CHEERING PARTY",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Park Sang-geun, Kim Jin-eui",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 60,
+    "genre": "Música",
+    "original_title": "하이브 치어링 파티"
   },
   "seventeen world tour 'new_'": {
     "url": "",
@@ -23572,7 +23572,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Muchacho (1970), y puede ser otra",
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-15",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23584,7 +23584,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Siempre te amaré (1971), Journey to Italy (1954)",
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-15",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23596,7 +23596,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Destino de un capricho (1972), y puede ser otra",
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-15",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23608,7 +23608,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es El deseo de vivir (1973), y puede ser otra",
-    "fecha": "2026-10-11",
+    "fecha": "2026-10-15",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25166,5 +25166,136 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "cine para perdedores: the end of the tour": {
+    "url": "",
+    "title_en": "Cine para perdedores: The end of the tour",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "programa doble: la isla de la muerte + jack, el destripador (1944)|1967": {
+    "url": "",
+    "title_en": "PROGRAMA DOBLE: LA ISLA DE LA MUERTE + JACK, EL DESTRIPADOR (1944)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sección oficial cortos nacionales bloque 1": {
+    "url": "",
+    "title_en": "Sección Oficial Cortos Nacionales Bloque 1",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sección oficial cortos nacionales bloque 2": {
+    "url": "",
+    "title_en": "Sección Oficial Cortos Nacionales Bloque 2",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sección oficial cortos nacionales bloque 3": {
+    "url": "",
+    "title_en": "Sección Oficial Cortos Nacionales Bloque 3",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cortos ecam": {
+    "url": "",
+    "title_en": "Cortos ECAM",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "honor and obey / the bad and the beautiful / divided loyalties": {
+    "url": "",
+    "title_en": "Honor and Obey / The Bad and the Beautiful / Divided Loyalties",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the tenth legion / whiplash / noblesse oblige": {
+    "url": "",
+    "title_en": "The Tenth Legion / Whiplash / Noblesse Oblige",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "hall of mirrors / the tuxedo theatre / friendly witness": {
+    "url": "",
+    "title_en": "Hall of Mirrors / The Tuxedo Theatre / Friendly Witness",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "panorama fantástico": {
+    "url": "",
+    "title_en": "Panorama Fantástico",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "retrospectiva ram": {
+    "url": "",
+    "title_en": "Retrospectiva RAM",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Retrospective (2014), The Retrospective (2021), Back to the Lab: A Bones Retrospective (2017), Neil Breen 5 Feature Film Retrospective (2020)",
+    "fecha": "2026-10-15",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "cordobeses: la película": {
+    "url": "",
+    "title_en": "CORDOBESES: LA PELÍCULA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "r21 aka restoring solidarity": {
+    "url": "https://letterboxd.com/film/r-21-aka-restoring-solidarity/",
+    "title_en": "R 21 AKA Restoring Solidarity",
+    "director": "Mohanad Yaqubi",
+    "country": "Belgium, State of Palestine",
+    "year": 2022,
+    "duration": 71,
+    "genre": "Documental",
+    "original_title": "الفيلم رقم واحد وعشرون"
+  },
+  "cordobeces la película": {
+    "url": "https://letterboxd.com/film/cordobeces-la-pelicula/",
+    "title_en": "Cordobeces, la película",
+    "director": "Lucía Palacio",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 90,
+    "genre": "Documental, Comedia",
+    "original_title": "Cordobeces, la película"
+  },
+  "vengadores: doomsday": {
+    "url": "https://letterboxd.com/film/avengers-doomsday/",
+    "title_en": "Avengers: Doomsday",
+    "director": "Joe Russo, Anthony Russo",
+    "country": "USA",
+    "year": 2026,
+    "duration": 165,
+    "genre": "Acción, Aventura",
+    "title_es": "Vengadores: Doomsday",
+    "original_title": "Avengers: Doomsday"
   }
 }
