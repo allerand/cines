@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-15T01:49:20",
+  "updated": "2026-10-15T08:57:40",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 48,
@@ -38,8 +38,8 @@
       "publicadas": 105
     },
     "Golem Madrid": {
-      "scrapeadas": 99,
-      "publicadas": 99
+      "scrapeadas": 111,
+      "publicadas": 111
     },
     "Renoir Plaza de España": {
       "scrapeadas": 126,
@@ -2996,6 +2996,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-16",
+      "hora": "16:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100348&eventCode=115608",
+      "ciclo": ""
+    },
+    {
       "cine": "Artistic Metropol",
       "fecha": "2026-10-16",
       "hora": "16:15",
@@ -3665,6 +3681,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-ser-querido/20050/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-16",
+      "hora": "19:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100349&eventCode=115608",
       "ciclo": ""
     },
     {
@@ -5268,6 +5300,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-17",
+      "hora": "16:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100350&eventCode=115608",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-10-17",
       "hora": "16:30",
@@ -5889,6 +5937,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.pillalas.com/pase/1092033/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-17",
+      "hora": "19:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100351&eventCode=115608",
       "ciclo": ""
     },
     {
@@ -7526,6 +7590,22 @@
     {
       "cine": "Golem Madrid",
       "fecha": "2026-10-18",
+      "hora": "16:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100353&eventCode=115608",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-18",
       "hora": "16:30",
       "title_es": "Kakeru",
       "title_en": "Kakeru",
@@ -8129,6 +8209,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.pillalas.com/pase/1092037/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-18",
+      "hora": "19:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100352&eventCode=115608",
       "ciclo": ""
     },
     {
@@ -9590,6 +9686,22 @@
     {
       "cine": "Golem Madrid",
       "fecha": "2026-10-19",
+      "hora": "16:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100354&eventCode=115608",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-19",
       "hora": "16:30",
       "title_es": "Kakeru",
       "title_en": "Kakeru",
@@ -10161,6 +10273,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.pillalas.com/pase/1092757/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-19",
+      "hora": "19:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100355&eventCode=115608",
       "ciclo": ""
     },
     {
@@ -11574,6 +11702,22 @@
     {
       "cine": "Golem Madrid",
       "fecha": "2026-10-20",
+      "hora": "16:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100356&eventCode=115608",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-20",
       "hora": "16:30",
       "title_es": "Kakeru",
       "title_en": "Kakeru",
@@ -12145,6 +12289,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.pillalas.com/pase/1092834/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-20",
+      "hora": "19:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100357&eventCode=115608",
       "ciclo": ""
     },
     {
@@ -13638,6 +13798,22 @@
     {
       "cine": "Golem Madrid",
       "fecha": "2026-10-21",
+      "hora": "16:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100359&eventCode=115608",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-21",
       "hora": "16:30",
       "title_es": "Kakeru",
       "title_en": "Kakeru",
@@ -14241,6 +14417,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.pillalas.com/pase/1092848/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Golem Madrid",
+      "fecha": "2026-10-21",
+      "hora": "19:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100358&eventCode=115608",
       "ciclo": ""
     },
     {
