@@ -13145,7 +13145,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Queen: Live in Budapest (1986), y puede ser otra",
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -14956,11 +14956,13 @@
   },
   "lo que queda": {
     "url": "",
-    "title_en": "LO QUE QUEDA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "title_en": "Lo que queda",
+    "director": "Mariel Escobar",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 63,
+    "genre": "Drama",
+    "original_title": "Lo que queda"
   },
   "suite juárez": {
     "url": "https://letterboxd.com/film/suite-juarez/",
@@ -15139,7 +15141,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-15",
+    "fecha": "2026-10-16",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -20334,7 +20336,8 @@
     "duration": 120,
     "genre": "Bélica, Drama",
     "title_es": "Palestina 36",
-    "original_title": "Palestine 36"
+    "original_title": "Palestine 36",
+    "clase_titulo": "exacto"
   },
   "las culpables": {
     "url": "",
@@ -22082,21 +22085,21 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-16",
     "con_duracion": true,
     "desempate": ""
   },
   "tomorrow x together world tour 'act tomorrow": {
-    "url": "",
-    "title_en": "TOMORROW X TOGETHER WORLD TOUR 'ACT TOMORROW",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "se llama así pero no dura 97 min: TOMORROW X TOGETHER WORLD TOUR 'ACT:TOMORROW' (2025, 160 min)",
-    "fecha": "2026-10-12",
-    "con_duracion": true,
-    "desempate": ""
+    "url": "https://letterboxd.com/film/tomorrow-x-together-world-tour-act-tomorrow/",
+    "title_en": "TOMORROW X TOGETHER WORLD TOUR 'ACT : TOMORROW'",
+    "director": "Yum Tae-hwan",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Documental, Música",
+    "clase_titulo": "exacto",
+    "original_title": "투모로우바이투게더 월드 투어 ‘액트 : 투모로우'",
+    "sin_hints": "título y duración"
   },
   "enhypen world tour 'blood saga'": {
     "url": "https://letterboxd.com/film/enhypen-world-tour-blood-saga/",
@@ -22951,7 +22954,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Benoît Daffis, Jean-Christian Tassy",
+    "director": "Jean-Christian Tassy, Benoît Daffis",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -23890,7 +23893,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23902,7 +23905,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23939,8 +23942,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "varias se llaman así: Cars (2006), Cars 3 (2017), Cars on the Road (2022)",
-    "fecha": "2026-10-12",
+    "sin_ficha": "varias se llaman así: Cars (2006), Cars 3 (2017)",
+    "fecha": "2026-10-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24085,6 +24088,7 @@
     "year": 2026,
     "duration": 97,
     "genre": "Thriller, Drama",
+    "title_es": "Lo dejamos acá",
     "original_title": "Lo dejamos acá"
   },
   "la pelicula que quisieras ver": {
@@ -25071,10 +25075,13 @@
   "desobediente": {
     "url": "",
     "title_en": "DESOBEDIENTE",
-    "director": "",
+    "director": "Federico Coringrato",
     "country": "",
-    "year": null,
-    "duration": null
+    "year": 2026,
+    "duration": 108,
+    "genre": "Documental",
+    "title_es": "Desobediente",
+    "original_title": "Desobediente"
   },
   "el camino contrario": {
     "url": "https://letterboxd.com/film/el-camino-contrario/",
@@ -25324,5 +25331,281 @@
     "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
     "original_title": "The Hunger Games: Sunrise on the Reaping",
     "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "un monstruo amable|2026": {
+    "url": "https://letterboxd.com/film/gentle-monster/",
+    "title_en": "Gentle Monster",
+    "director": "Marie Kreutzer",
+    "country": "Austria, Germany",
+    "year": 2026,
+    "duration": 114,
+    "genre": "Drama",
+    "title_es": "Monstruo Gentil",
+    "original_title": "Gentle Monster"
+  },
+  "leones en invierno": {
+    "url": "https://letterboxd.com/film/winter-lions/",
+    "title_en": "Winter Lions",
+    "director": "Albert Pintó",
+    "country": "Spain, Uruguay",
+    "year": 2026,
+    "duration": null,
+    "genre": "Thriller, Acción",
+    "original_title": "Leones en invierno"
+  },
+  "arriba tutto": {
+    "url": "https://letterboxd.com/film/arriba-tutto/",
+    "title_en": "Arriba Tutto",
+    "director": "José Mota",
+    "country": "Spain, Italy",
+    "year": 2026,
+    "duration": null,
+    "genre": "Comedia, Drama",
+    "original_title": "Arriba Tutto"
+  },
+  "viejos de película": {
+    "url": "",
+    "title_en": "Viejos de película",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Far from Home: Venezuelan Exodus (2020), Venimos de muy lejos, la película (2013), The Language of Shadows: Friedrich Wilhelm Murnau and His Films:  The Early Works (2008)",
+    "fecha": "2026-10-16",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "sonidos, barro y piel|2025": {
+    "url": "https://letterboxd.com/film/sonidos-barro-y-piel/",
+    "title_en": "SONIDOS, BARRO Y PIEL",
+    "director": "Leopoldo Montero Ciancio",
+    "country": "Argentina",
+    "year": null,
+    "duration": 48,
+    "genre": "Documental",
+    "original_title": "SONIDOS, BARRO Y PIEL"
+  },
+  "perón: sinfonía del sentimiento|1999": {
+    "url": "https://letterboxd.com/film/peron-sinfonia-del-sentimiento/",
+    "title_en": "Perón, Symphony of Feeling",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 2000,
+    "duration": 340,
+    "genre": "Documental",
+    "original_title": "Perón. Sinfonía del Sentimiento"
+  },
+  "ts 2026 - carrie (1976)|1976": {
+    "url": "",
+    "title_en": "TS 2026 - CARRIE (1976)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ts 2026 - obsesión": {
+    "url": "",
+    "title_en": "TS 2026 - OBSESIÓN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-16",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "ts 2026 - scary movie terroríficamente inc": {
+    "url": "https://letterboxd.com/film/scary-movie-2026/",
+    "title_en": "Scary Movie",
+    "director": "Michael Tiddes",
+    "country": "USA",
+    "year": 2026,
+    "duration": 96,
+    "genre": "Comedia",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "ts 2026 - pinocho sin cuerdas": {
+    "url": "",
+    "title_en": "TS 2026 - PINOCHO SIN CUERDAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ts 2026 - la bruja (2015)|2015": {
+    "url": "",
+    "title_en": "TS 2026 - LA BRUJA (2015)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ts 2026 - backrooms: versión extendida": {
+    "url": "",
+    "title_en": "TS 2026 - BACKROOMS: VERSIÓN EXTENDIDA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-16",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "ts 2026 - la virgen de la tosquera": {
+    "url": "",
+    "title_en": "TS 2026 - LA VIRGEN DE LA TOSQUERA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ts 2026 - resident evil: noche cero": {
+    "url": "https://letterboxd.com/film/resident-evil-2026/",
+    "title_en": "Resident Evil",
+    "director": "Zach Cregger",
+    "country": "USA, Germany",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Terror, Aventura",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "ts 2026 - escuela de monstruos": {
+    "url": "https://letterboxd.com/film/monster-mia/",
+    "title_en": "Monster Mia",
+    "director": "Verena Fels",
+    "country": "Austria, Germany",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Animación, Fantasía",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "ts 2026 - mama (2013)|2013": {
+    "url": "",
+    "title_en": "TS 2026 - MAMA (2013)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ts 2026 - evil dead: en llamas": {
+    "url": "https://letterboxd.com/film/evil-dead-burn/",
+    "title_en": "Evil Dead Burn",
+    "director": "Sébastien Vaniček",
+    "country": "USA",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Terror",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "ts 2026 - estación zombie - 10° aniversario": {
+    "url": "",
+    "title_en": "TS 2026 - ESTACIÓN ZOMBIE - 10° ANIVERSARIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ts 2026 - madre siniestra": {
+    "url": "https://letterboxd.com/film/other-mommy/",
+    "title_en": "Other Mommy",
+    "director": "Rob Savage",
+    "country": "USA",
+    "year": 2026,
+    "duration": 93,
+    "genre": "Terror",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "ts 2026 - poltergeist (1982)|1982": {
+    "url": "",
+    "title_en": "TS 2026 - POLTERGEIST (1982)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ts 2026 - scream 7": {
+    "url": "https://letterboxd.com/film/scream-7/",
+    "title_en": "Scream 7",
+    "director": "Kevin Williamson",
+    "country": "USA",
+    "year": 2026,
+    "duration": 114,
+    "genre": "Terror, Crimen",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "ts 2026 - los otros 25° aniversario": {
+    "url": "",
+    "title_en": "TS 2026 - LOS OTROS 25° ANIVERSARIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "¿queres ser mi hijo?": {
+    "url": "https://letterboxd.com/film/queres-ser-mi-hijo/",
+    "title_en": "Will You Be My Son?",
+    "director": "Hernán Guerschuny",
+    "country": "Argentina, Uruguay",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Comedia, Romance",
+    "clase_titulo": "exacto",
+    "original_title": "¿Querés ser mi hijo?",
+    "sin_hints": "título"
+  },
+  "10 años del festival luz del desierto: el cine como territorio": {
+    "url": "",
+    "title_en": "10 AÑOS DEL FESTIVAL LUZ DEL DESIERTO: EL CINE COMO TERRITORIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el miedo del arquero al tiro penal|1971": {
+    "url": "",
+    "title_en": "EL MIEDO DEL ARQUERO AL TIRO PENAL",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "alicia en las ciudades|1973": {
+    "url": "https://letterboxd.com/film/alice-in-the-cities/",
+    "title_en": "Alice in the Cities",
+    "director": "Wim Wenders",
+    "country": "Germany",
+    "year": 1974,
+    "duration": 110,
+    "genre": "Drama",
+    "title_es": "Alicia en las ciudades",
+    "original_title": "Alice in den Städten"
+  },
+  "hasta el fin del mundo - versión del director|1991": {
+    "url": "",
+    "title_en": "HASTA EL FIN DEL MUNDO - VERSIÓN DEL DIRECTOR",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los juegos del hambre: en llamas": {
+    "url": "",
+    "title_en": "Los juegos del hambre: En llamas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es The Hunger Games: Catching Fire (2013), y puede ser otra",
+    "fecha": "2026-10-16",
+    "con_duracion": false,
+    "desempate": ""
   }
 }
