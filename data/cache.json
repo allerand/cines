@@ -12221,7 +12221,7 @@
     "country": "Argentina",
     "year": 2026,
     "duration": 225,
-    "genre": "",
+    "genre": "Documental",
     "original_title": "No matar"
   },
   "el puente|1951": {
@@ -12610,7 +12610,7 @@
   },
   "avengers: endgame (re estreno)": {
     "url": "",
-    "title_en": "Avengers: Endgame (re Estreno)",
+    "title_en": "AVENGERS: ENDGAME (RE ESTRENO)",
     "director": "",
     "country": "",
     "year": null,
@@ -22273,7 +22273,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: All Under the Moon (1993)",
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22285,7 +22285,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Escenas en el mar (2012), y puede ser otra",
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22308,7 +22308,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-12",
+    "fecha": "2026-10-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22954,7 +22954,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Jean-Christian Tassy, Benoît Daffis",
+    "director": "Benoît Daffis, Jean-Christian Tassy",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -24081,8 +24081,8 @@
     "original_title": "Crotos Libres"
   },
   "lo dejamos aca": {
-    "url": "",
-    "title_en": "LO DEJAMOS ACA",
+    "url": "https://letterboxd.com/film/therapy-done-right/",
+    "title_en": "Therapy Done Right",
     "director": "Hernán Goldfrid",
     "country": "Argentina",
     "year": 2026,
@@ -24839,17 +24839,16 @@
     "original_title": "Adiós a la memoria"
   },
   "duna: parte tres": {
-    "url": "https://letterboxd.com/film/dune-part-three/",
-    "title_en": "Dune: Part Three",
-    "director": "Denis Villeneuve",
-    "country": "USA, United Arab Emirates",
-    "year": 2026,
-    "duration": 140,
-    "genre": "Ciencia ficción, Aventura",
-    "clase_titulo": "exacto",
-    "title_es": "Dune: Parte tres",
-    "original_title": "Dune: Part Three",
-    "sin_hints": "título"
+    "url": "",
+    "title_en": "DUNA: PARTE TRES",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 150 min: Dune: Part Three (2026, 140 min)",
+    "fecha": "2026-10-16",
+    "con_duracion": true,
+    "desempate": ""
   },
   "avengers: doomsday": {
     "url": "https://letterboxd.com/film/avengers-doomsday/",
@@ -25073,8 +25072,8 @@
     "original_title": "Autopista América 2000"
   },
   "desobediente": {
-    "url": "",
-    "title_en": "DESOBEDIENTE",
+    "url": "https://letterboxd.com/film/desobediente/",
+    "title_en": "Desobediente",
     "director": "Federico Coringrato",
     "country": "",
     "year": 2026,
@@ -25090,7 +25089,7 @@
     "country": "",
     "year": 2026,
     "duration": 78,
-    "genre": "",
+    "genre": "Documental",
     "original_title": "El camino contrario"
   },
   "la noche del demonio: están entre nosotros 2d+4d": {

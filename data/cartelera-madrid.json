@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-16T01:40:41",
+  "updated": "2026-10-16T08:49:37",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 38,
@@ -30,8 +30,8 @@
       "publicadas": 66
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 90,
-      "publicadas": 91
+      "scrapeadas": 89,
+      "publicadas": 90
     },
     "Embajadores Glorieta": {
       "scrapeadas": 97,
@@ -9076,6 +9076,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-20",
+      "hora": "16:00",
+      "title_es": "Naza",
+      "title_en": "NAZA",
+      "original_title": "NAZA",
+      "director": "Yuval Abraham, Rachel Szor",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/naza/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/naza-vose/20085/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-20",
       "hora": "16:00",
@@ -9089,22 +9105,6 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/a-womans-life-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-vida-de-una-mujer-doblada-al-espanol/39099/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-10-20",
-      "hora": "16:00",
-      "title_es": "Mascotas al rescate",
-      "title_en": "Mascotas al rescate",
-      "original_title": "Falcon Express",
-      "director": "Benoît Daffis, Jean-Christian Tassy",
-      "country": "Francia, Estados Unidos",
-      "year": 2025,
-      "duration": 99,
-      "genre": "Animación, Comedia",
-      "letterboxd": "",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/mascotas-al-rescate-doblada-al-espanol/20085/",
       "ciclo": ""
     },
     {
@@ -14417,22 +14417,6 @@
       "genre": "Acción, Comedia",
       "letterboxd": "https://letterboxd.com/film/la-maleta/",
       "ticket_url": "https://www.pillalas.com/pase/1092780/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-10-22",
-      "hora": "20:10",
-      "title_es": "La maleta",
-      "title_en": "La maleta",
-      "original_title": "La maleta",
-      "director": "Carlos Therón",
-      "country": "España",
-      "year": 2026,
-      "duration": 107,
-      "genre": "Acción, Comedia",
-      "letterboxd": "https://letterboxd.com/film/la-maleta/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-maleta/20108/",
       "ciclo": ""
     },
     {
