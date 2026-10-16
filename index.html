@@ -1096,6 +1096,9 @@ const COMMERCIAL_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Sh
 // Salas con entrada libre y gratuita: no hay entradas que sacar, así que en
 // lugar del link va "Entrada gratis".
 const CINES_GRATIS = new Set(['Museo del Cine']);
+// Salas que venden sólo en la boletería (la sede de Fuera de Campo): no hay
+// link, va "Entradas en boletería".
+const CINES_BOLETERIA = new Set(['Teatro Enrique Carreras']);
 
 function isCommercial(cine) {
   return COMMERCIAL_PREFIXES.some(p => cine && cine.startsWith(p));
@@ -2471,6 +2474,7 @@ function renderTable() {
       ${ciclo.texto ? `<div class="film-ciclo-inline">${ciclo.href ? `<a href="${escapeHtml(ciclo.href)}">${escapeHtml(ciclo.texto)}</a>` : escapeHtml(ciclo.texto)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml(fichaCorta(s))}</div>
       ${CINES_GRATIS.has(s.cine) ? '<div class="film-meta-row"><span class="gratis">Entrada gratis</span></div>'
+        : CINES_BOLETERIA.has(s.cine) ? '<div class="film-meta-row"><span class="gratis">Entradas en boletería</span></div>'
         : s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
 
     return `<tr>
