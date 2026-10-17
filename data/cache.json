@@ -20497,13 +20497,13 @@
     "original_title": "左撇子女孩"
   },
   "chopin": {
-    "url": "",
-    "title_en": "Chopin",
+    "url": "https://letterboxd.com/film/chopin-a-sonata-in-paris/",
+    "title_en": "Chopin, a Sonata in Paris",
     "director": "Michał Kwieciński",
     "country": "Poland",
     "year": 2025,
     "duration": 114,
-    "genre": "Drama, Historia",
+    "genre": "Historia, Música",
     "title_es": "Chopin",
     "original_title": "Chopin, Chopin!"
   },
@@ -25638,5 +25638,24 @@
     "fecha": "2026-10-17",
     "con_duracion": false,
     "desempate": ""
+  },
+  "el coraz��n de la bestia": {
+    "url": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+    "title_en": "Heart of the Beast",
+    "director": "David Ayer",
+    "country": "USA",
+    "year": 2026,
+    "duration": 101,
+    "genre": "Aventura, Thriller",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "casa modelo bajo la arena": {
+    "url": "",
+    "title_en": "Casa modelo bajo la arena",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }

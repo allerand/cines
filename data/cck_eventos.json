@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-16T08:33:04",
+    "ts": "2026-10-17T08:05:03",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -85,14 +85,14 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-16T08:33:13",
+    "ts": "2026-10-17T08:05:13",
     "v": 2,
     "semanas": 9,
     "funciones": [
       {
         "cine": "CCK",
         "title": "Dormir con los ojos abiertos",
-        "fecha": "2026-10-17",
+        "fecha": "2026-10-24",
         "hora": "19:00",
         "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
         "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler",
@@ -118,13 +118,13 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-16T08:33:24",
+    "ts": "2026-10-17T08:05:20",
     "v": 2,
     "semanas": 9,
     "funciones": [
       {
         "cine": "CCK",
-        "title": "Todo bajo la luna",
+        "title": "Casa modelo bajo la arena",
         "fecha": "2026-10-18",
         "hora": "15:00",
         "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
@@ -177,7 +177,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-irlandes/": {
-    "ts": "2026-10-16T08:33:40",
+    "ts": "2026-10-17T08:05:35",
     "v": 2,
     "semanas": 9,
     "funciones": [
