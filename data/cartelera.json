@@ -126,6 +126,10 @@
       "scrapeadas": 309,
       "publicadas": 310
     },
+    "Museo Moderno": {
+      "scrapeadas": 2,
+      "publicadas": 2
+    },
     "Museo del Cine": {
       "scrapeadas": 1,
       "publicadas": 1
@@ -31841,6 +31845,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Museo Moderno",
+      "fecha": "2026-10-24",
+      "hora": "19:00",
+      "title_es": "Los cruces",
+      "title_en": "Intersections",
+      "original_title": "",
+      "director": "Julián Galay",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/intersections-2025/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/4bc7a911-cb06-4293-86ab-936310aa6e94",
+      "ciclo": "El cine es otra cosa"
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-10-24",
       "hora": "19:10",
@@ -33071,6 +33091,22 @@
       "letterboxd": "",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/encuentro-de-cine-europeo",
       "ciclo": ""
+    },
+    {
+      "cine": "Museo Moderno",
+      "fecha": "2026-10-25",
+      "hora": "18:00",
+      "title_es": "La orilla que se abisma",
+      "title_en": "The Shore That Falls",
+      "original_title": "",
+      "director": "Gustavo Fontán",
+      "country": "Argentina",
+      "year": 2008,
+      "duration": 64,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/la-orilla-que-se-abisma/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/4bc7a911-cb06-4293-86ab-936310aa6e94",
+      "ciclo": "El cine es otra cosa"
     },
     {
       "cine": "Cinépolis Houssay",
