@@ -32,6 +32,14 @@
       "logo": "data/logos/mubi-fest.png"
     },
     {
+      "slug": "bitbang",
+      "nombre": "Bitbang",
+      "bajada": "Festival Internacional de Animación",
+      "ciclo": "Festival Bitbang",
+      "alias": ["Bitbang"],
+      "web": "https://bitbangclub.com/"
+    },
+    {
       "slug": "fuera-de-campo",
       "nombre": "Fuera de Campo",
       "bajada": "Muestra de cine argentino",

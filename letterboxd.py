@@ -78,9 +78,15 @@ NON_FILMS = {
 }
 
 
+# Programas de festival con nombre de programa y no de película ("Cortos
+# Latinoamericanos III", "Retrospectiva Alberto Vázquez", del Festival Bitbang
+# en el Borges): son varias películas en una función, como "cortometrajes".
+NON_FILM_PREFIXES = ("cortos ", "retrospectiva ")
+
+
 def is_non_film(title: str) -> bool:
     t = title.lower()
-    return any(nf in t for nf in NON_FILMS)
+    return any(nf in t for nf in NON_FILMS) or t.startswith(NON_FILM_PREFIXES)
 
 
 def slugify(text: str) -> str:

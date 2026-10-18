@@ -5262,6 +5262,111 @@ def _borges_dates_from_rep(rep: str, display: str, sig_iso: str,
     return []
 
 
+# Un tramo de fechasRepeticiones con sus propios horarios: "Mie 28 oct - 19 y
+# 20 h", "Mie 1 / 8 / 15 jul - 19 h", "Sab 31 oct - 15, 16, 17 y 18 h".
+# Los festivales traen varios tramos, uno por renglón ("Mie 28 oct - 19 y 20 h
+# / Jue 29 oct - 18 y 19 h / Vie 30 oct - 19 y 20 h"), y cada uno vale sólo
+# para sus días. _borges_dates_from_rep y _borges_times_from_rep cortan en el
+# PRIMER guion: el Festival Bitbang (oct. 2026) salía con las seis funciones
+# el miércoles 28 a las 18, 19 y 20, y sin el jueves ni el viernes.
+_BORGES_DIA_TOK = r"(?:lun|mar|mi[eé]|jue|vie|s[aá]b|dom)[a-záéíóú]*\.?"
+_BORGES_TRAMO_RE = re.compile(
+    rf"(?P<dias>(?:{_BORGES_DIA_TOK}\s+)?\d{{1,2}}"
+    rf"(?:\s*(?:/|,|y)\s*(?:{_BORGES_DIA_TOK}\s+)?\d{{1,2}})*)"
+    r"\s+(?P<mes>ene|feb|mar|abr|may|jun|jul|ago|sep|oct|nov|dic)[a-z]*\.?"
+    r"(?:\s+(?P<anio>20\d{2}))?\s*[-–—]\s*"
+    r"(?P<horas>\d{1,2}(?:[:.]\d{2})?(?:\s*(?:,|y|/)\s*\d{1,2}(?:[:.]\d{2})?)*)\s*h",
+    re.IGNORECASE)
+
+
+def _borges_funciones_from_rep(rep: str, display: str, sig_iso: str, sig_hora: str,
+                               today: date, cutoff: date) -> list[tuple[date, str]]:
+    """(fecha, hora) de un evento. Cada tramo de fechasRepeticiones con sus
+    horarios; si no hay ninguno con día, mes y hora, lo de siempre: todas las
+    fechas por todos los horarios."""
+    out: list[tuple[date, str]] = []
+    tramos = list(_BORGES_TRAMO_RE.finditer(rep or ""))
+    for m in tramos:
+        mon = _BORGES_MONTHS.get(m.group("mes").lower()[:3])
+        ym = m.group("anio") or (re.search(r"(20\d{2})", display or "") or [None, None])[1]
+        yr = int(ym) if ym else today.year + (1 if mon < today.month else 0)
+        horas = [f"{int(hh):02d}:{mm or '00'}"
+                 for hh, mm in re.findall(r"(\d{1,2})(?:[:.](\d{2}))?", m.group("horas"))
+                 if 0 <= int(hh) <= 23]
+        dias = re.sub(_BORGES_DIA_TOK, " ", m.group("dias"), flags=re.IGNORECASE)
+        for dia in re.findall(r"\d{1,2}", dias):
+            try:
+                d = date(yr, mon, int(dia))
+            except ValueError:
+                continue
+            if today <= d <= cutoff:
+                out.extend((d, h) for h in horas)
+    if tramos:
+        return list(dict.fromkeys(out))
+    times = _borges_times_from_rep(rep, sig_hora) or ["19:00"]
+    dates = _borges_dates_from_rep(rep, display, sig_iso, today, cutoff)
+    return [(d, t) for d in dates for t in times]
+
+
+# "FESTIVAL BITBANG: PROYECCIÓN de Cortos Latinoamericanos": el Borges pone el
+# festival adelante del título. Va al ciclo, que es lo que la web agrupa en
+# Festivales (data/festivales.json), y el título queda con lo que se pasa.
+_BORGES_FESTIVAL_RE = re.compile(r"^(festival\s+[^:]{2,60}?)\s*:\s*(.{2,})$", re.IGNORECASE)
+
+
+def _borges_titulo_y_ciclo(titulo: str) -> tuple[str, str]:
+    m = _BORGES_FESTIVAL_RE.match(titulo or "")
+    if not m:
+        return titulo, ""
+    ciclo = m.group(1).strip()
+    if ciclo.isupper():
+        ciclo = " ".join(w.capitalize() for w in ciclo.lower().split())
+    resto = re.sub(r"^proyecci[oó]n\s+de\s+", "", m.group(2).strip(), flags=re.IGNORECASE)
+    # "(PROYECCIÓN + Q&A)" dice qué es la función, no cómo se llama la película.
+    resto = re.sub(r"\s*\((?:\s*(?:proyecci[oó]n|q\s*&\s*a|charla|debate|\+|y)\s*)+\)\s*$",
+                   "", resto, flags=re.IGNORECASE)
+    resto = resto[:1].upper() + resto[1:]
+    return (resto or titulo), ciclo
+
+
+# El programa de cada función, del texto del evento:
+#   MIÉRCOLES 28 DE OCTUBRE
+#   19 h: Cortos Latinoamericanos I
+#   20 h: Cortos Latinoamericanos II
+_BORGES_PROG_DIA_RE = re.compile(
+    r"^(?:lunes|martes|mi[eé]rcoles|jueves|viernes|s[aá]bado|domingo)\s+(\d{1,2})\s+de\s+"
+    r"([a-záéíóú]+)\b", re.IGNORECASE)
+_BORGES_PROG_HORA_RE = re.compile(
+    r"^(\d{1,2})(?:[:.](\d{2}))?\s*(?:h|hs|horas)\.?\s*[:\-–—]\s*(.{2,120})$", re.IGNORECASE)
+
+
+def _borges_programa(detalle: dict, today: date, cutoff: date) -> dict:
+    """{(fecha ISO, hora): nombre del programa} desde el texto del evento.
+
+    No se sabe en qué campo viene la descripción (la API no está documentada
+    y bloquea fuera de Argentina), así que se lee cualquier texto del detalle:
+    sólo cuentan los renglones con la forma exacta de día y de "19 h: …".
+    """
+    textos = []
+    for v in (detalle or {}).values():
+        if isinstance(v, str) and len(v) > 20:
+            textos.append(BeautifulSoup(v, "html.parser").get_text("\n"))
+    out: dict = {}
+    dia: Optional[date] = None
+    for linea in "\n".join(textos).split("\n"):
+        linea = re.sub(r"\s+", " ", linea).strip()
+        md = _BORGES_PROG_DIA_RE.match(linea)
+        if md:
+            mes = MESES_ES.get(md.group(2).lower())
+            dia = _fecha_en_ventana(int(md.group(1)), mes, today, cutoff) if mes else None
+            continue
+        mh = _BORGES_PROG_HORA_RE.match(linea)
+        if mh and dia:
+            out.setdefault((dia.isoformat(), f"{int(mh.group(1)):02d}:{mh.group(2) or '00'}"),
+                           mh.group(3).strip(" .:"))
+    return out
+
+
 async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
     """Scrapea centroculturalborges.gob.ar consumiendo sus endpoints JSON
     públicos (el HTML está detrás de un challenge anti-bots, pero la API no).
@@ -5316,29 +5421,34 @@ async def scrape_borges(page: Page, semanas: int = 3) -> list[Screening]:
         if not isinstance(duration, int) or duration <= 0:
             duration = None
 
-        times = _borges_times_from_rep(rep, ev.get("horarioSiguienteRepeticion") or "") or ["19:00"]
-        dates = _borges_dates_from_rep(
+        funciones = _borges_funciones_from_rep(
             rep, ev.get("fechaDisplay", "") or "",
-            ev.get("fechaSiguienteRepeticion") or "", today, cutoff)
-        if not dates:
+            ev.get("fechaSiguienteRepeticion") or "",
+            ev.get("horarioSiguienteRepeticion") or "", today, cutoff)
+        if not funciones:
             continue
 
+        titulo, ciclo = _borges_titulo_y_ciclo(title)
+        programa = _borges_programa(detail, today, cutoff)
         ticket_url = f"https://centroculturalborges.gob.ar/evento/{ev_id}"
-        for d in dates:
-            for t in times:
-                key = (title, d.isoformat(), t)
-                if key in seen:
-                    continue
-                seen.add(key)
-                result.append(Screening(
-                    cine="Centro Cultural Borges",
-                    title=title,
-                    fecha=d.isoformat(),
-                    hora=t,
-                    ticket_url=ticket_url,
-                    director=director,
-                    duration=duration,
-                ))
+        for d, t in funciones:
+            # Si el texto dice qué programa va en esta función ("Cortos
+            # Latinoamericanos III"), ése es el título y el evento, el ciclo.
+            nombre = programa.get((d.isoformat(), t))
+            key = (nombre or titulo, d.isoformat(), t)
+            if key in seen:
+                continue
+            seen.add(key)
+            result.append(Screening(
+                cine="Centro Cultural Borges",
+                title=nombre or titulo,
+                fecha=d.isoformat(),
+                hora=t,
+                ticket_url=ticket_url,
+                ciclo=ciclo or (titulo if nombre else ""),
+                director=director,
+                duration=duration,
+            ))
 
     if detail_missing:
         # Aviso tranquilo, NO error: el detalle sólo aporta fechas extra a
