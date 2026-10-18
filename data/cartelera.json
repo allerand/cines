@@ -35,8 +35,8 @@
       "publicadas": 2
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 17,
-      "publicadas": 17
+      "scrapeadas": 20,
+      "publicadas": 20
     },
     "Centro Cultural Munro": {
       "scrapeadas": 7,
@@ -35736,8 +35736,8 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-28",
       "hora": "18:00",
-      "title_es": "Festival Bitbang: la Huella de Oro (proyección + Q&a)",
-      "title_en": "FESTIVAL BITBANG: LA HUELLA DE ORO (PROYECCIÓN + Q&A)",
+      "title_es": "La Huella de Oro",
+      "title_en": "La Huella de Oro",
       "original_title": "",
       "director": "Daniel Duche, Soledad Yáñez",
       "country": "",
@@ -35746,23 +35746,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/615",
-      "ciclo": ""
-    },
-    {
-      "cine": "Centro Cultural Borges",
-      "fecha": "2026-10-28",
-      "hora": "18:00",
-      "title_es": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Latinoamericanos",
-      "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Latinoamericanos",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://centroculturalborges.gob.ar/evento/616",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Hoyts Abasto",
@@ -35848,17 +35832,17 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-28",
       "hora": "19:00",
-      "title_es": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Latinoamericanos",
-      "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Latinoamericanos",
+      "title_es": "Cortos Latinoamericanos I",
+      "title_en": "Cortos Latinoamericanos I",
       "original_title": "",
       "director": "",
       "country": "",
       "year": null,
-      "duration": null,
+      "duration": 60,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/616",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Hoyts Dot",
@@ -35992,17 +35976,17 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-28",
       "hora": "20:00",
-      "title_es": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Latinoamericanos",
-      "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Latinoamericanos",
+      "title_es": "Cortos Latinoamericanos II",
+      "title_en": "Cortos Latinoamericanos II",
       "original_title": "",
       "director": "",
       "country": "",
       "year": null,
-      "duration": null,
+      "duration": 60,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/616",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Cinemark Palermo",
@@ -36581,6 +36565,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-29",
+      "hora": "18:00",
+      "title_es": "Cortos Latinoamericanos III",
+      "title_en": "Cortos Latinoamericanos III",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/616",
+      "ciclo": "Festival Bitbang"
+    },
+    {
       "cine": "Biblioteca del Congreso",
       "fecha": "2026-10-29",
       "hora": "18:30",
@@ -36645,6 +36645,22 @@
       "ciclo": "Ciclo El Romerazo"
     },
     {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-29",
+      "hora": "19:00",
+      "title_es": "Cortos Latinoamericanos IV",
+      "title_en": "Cortos Latinoamericanos IV",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/616",
+      "ciclo": "Festival Bitbang"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-10-29",
       "hora": "20:00",
@@ -36680,8 +36696,8 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-29",
       "hora": "20:00",
-      "title_es": "FESTIVAL BITBANG: Retrospectiva Alberto Vázquez",
-      "title_en": "FESTIVAL BITBANG: Retrospectiva Alberto Vázquez",
+      "title_es": "Retrospectiva Alberto Vázquez",
+      "title_en": "Retrospectiva Alberto Vázquez",
       "original_title": "",
       "director": "",
       "country": "",
@@ -36690,7 +36706,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/619",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Hoyts Abasto",
@@ -37224,8 +37240,8 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-30",
       "hora": "18:00",
-      "title_es": "FESTIVAL BITBANG: Retrospectiva Frederic Siegel",
-      "title_en": "FESTIVAL BITBANG: Retrospectiva Frederic Siegel",
+      "title_es": "Retrospectiva Frederic Siegel",
+      "title_en": "Retrospectiva Frederic Siegel",
       "original_title": "",
       "director": "",
       "country": "",
@@ -37234,7 +37250,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/620",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Lumiton",
@@ -37267,6 +37283,22 @@
       "letterboxd": "https://letterboxd.com/film/las-sorpresas/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
       "ciclo": "Retrospectivas:Carlos Galettini"
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-30",
+      "hora": "19:00",
+      "title_es": "Cortos Latinoamericanos V",
+      "title_en": "Cortos Latinoamericanos V",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/616",
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Hoyts Abasto",
@@ -37363,6 +37395,22 @@
       "letterboxd": "https://letterboxd.com/film/december-2025-1/",
       "ticket_url": "https://www.alternativateatral.com/obra101975-diciembre",
       "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-10-30",
+      "hora": "20:00",
+      "title_es": "Cortos Latinoamericanos VI",
+      "title_en": "Cortos Latinoamericanos VI",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/616",
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Cine York",
@@ -37720,8 +37768,8 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-31",
       "hora": "15:00",
-      "title_es": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
-      "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
+      "title_es": "Cortos de Graduación Latinoamericanos",
+      "title_en": "Cortos de Graduación Latinoamericanos",
       "original_title": "",
       "director": "",
       "country": "",
@@ -37730,7 +37778,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/617",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Cinemark Palermo",
@@ -37816,8 +37864,8 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-31",
       "hora": "16:00",
-      "title_es": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
-      "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
+      "title_es": "Cortos de Graduación Latinoamericanos",
+      "title_en": "Cortos de Graduación Latinoamericanos",
       "original_title": "",
       "director": "",
       "country": "",
@@ -37826,7 +37874,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/617",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Bellas Artes",
@@ -37848,8 +37896,8 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-31",
       "hora": "17:00",
-      "title_es": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
-      "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
+      "title_es": "Cortos de Graduación Latinoamericanos",
+      "title_en": "Cortos de Graduación Latinoamericanos",
       "original_title": "",
       "director": "",
       "country": "",
@@ -37858,7 +37906,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/617",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Cinemark Caballito",
@@ -38008,8 +38056,8 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-31",
       "hora": "18:00",
-      "title_es": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
-      "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos de Graduación Latinoamericanos",
+      "title_es": "Cortos de Graduación Latinoamericanos",
+      "title_en": "Cortos de Graduación Latinoamericanos",
       "original_title": "",
       "director": "",
       "country": "",
@@ -38018,7 +38066,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/617",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "CCK",
@@ -38136,8 +38184,8 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-10-31",
       "hora": "19:00",
-      "title_es": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Internacionales",
-      "title_en": "FESTIVAL BITBANG: PROYECCIÓN de Cortos Internacionales",
+      "title_es": "Cortos Internacionales",
+      "title_en": "Cortos Internacionales",
       "original_title": "",
       "director": "",
       "country": "",
@@ -38146,7 +38194,7 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/618",
-      "ciclo": ""
+      "ciclo": "Festival Bitbang"
     },
     {
       "cine": "Cinemark Puerto Madero",
