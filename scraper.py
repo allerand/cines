@@ -9129,6 +9129,12 @@ def unificar_ciclos_festivales(screenings: list, festivales: Optional[list] = No
         ciclo = (getattr(s, "ciclo", None) if not isinstance(s, dict) else s.get("ciclo")) or ""
         if not ciclo:
             continue
+        # Ya tiene el nombre del registro, con o sin sección. Hace falta
+        # mirarlo antes: un nombre con guion ("Bitbang - Festival Internacional
+        # de Animación") se leería como festival + sección y en cada corrida
+        # sumaría otra vez la segunda mitad.
+        if any(ciclo == c or ciclo.startswith(c + " - ") for c, _ in reglas):
+            continue
         m = _SECCION_RE.match(ciclo)
         nuevo = None
         for canonico, claves in reglas:
