@@ -83,6 +83,11 @@ PROBES = {
     # Cuenta eventos, no funciones: una doble función es un evento con dos.
     "Cineclub Farus":           ("https://centralticket.net/search?q=farus",
                                  r"/event/[a-z0-9\-]*farus[a-z0-9\-]*"),
+    # La agenda filtrada por "Tipo de evento: Cine". Cuenta eventos vigentes,
+    # no funciones: un ciclo de tres días es una sola tarjeta.
+    "Museo Moderno":            ("https://museomoderno.org/agenda/?jsf=jet-engine:"
+                                 "aplicarbusqueda&meta=tipo-de-evento:Cine",
+                                 r"jet-listing-dynamic-post-(\d+)"),
     "Archivo General de la Nación": ("https://www.argentina.gob.ar/interior/"
                                      "archivo-general-de-la-nacion/"
                                      "cine-en-el-archivo-general-de-la-nacion",

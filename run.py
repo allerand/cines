@@ -57,6 +57,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_sala_lucida, scrape_manual, descartar_manual, aplicar_festivales,
         titulo_norm, misma_pelicula,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
+        scrape_moderno,
         scrape_dore, scrape_ideal, scrape_cineteca, scrape_renoir,
         scrape_embajadores, scrape_golem, scrape_metropol, scrape_cine_estudio,
         scrape_callao, CINES_MADRID, hoy_madrid,
@@ -299,6 +300,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     print("🎬 Scrapeando Cineclub Farus...", end=" ", flush=True)
     try:
         r = scrape_farus(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
+    print("🎬 Scrapeando Museo Moderno...", end=" ", flush=True)
+    try:
+        r = scrape_moderno(semanas)
         all_screenings.extend(r)
         print(f"{len(r)} funciones")
     except Exception as e:
@@ -761,7 +770,11 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     #      el caso 2, así que la sala perdió todo el ciclo de septiembre.
     #      Los dos de Madrid también: yelmocines.es está detrás de Cloudflare y
     #      desde el runner puede no abrir, y el Doré depende de dos sitios.
+    #      El Museo Moderno, por lo mismo que el Bellas Artes: una sola web
+    #      (la agenda del museo) y ciclos cortos de dos o tres funciones. Si
+    #      un día no contesta, sin caché se pierde el ciclo entero.
     CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1, 'Bellas Artes': 1,
+                       'Museo Moderno': 1,
                        'Cine Doré': 1, 'Cines Ideal': 1,
                        'Cineteca Madrid': 1, 'Cines Princesa': 1,
                        'Renoir Plaza de España': 1, 'Renoir Retiro': 1,

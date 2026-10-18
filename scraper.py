@@ -8414,6 +8414,381 @@ def scrape_bellasartes(semanas: int = 9) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
+# Museo Moderno: museomoderno.org/agenda (WordPress + JetEngine)
+# ---------------------------------------------------------------------------
+# El Moderno no tiene cartelera fija: proyecta en su Auditorio (Av. San Juan
+# 350) cuando arma un ciclo, como "El cine es otra cosa" (23 al 25/10/2026).
+# Todo sale de la agenda del museo, que mezcla cine con visitas guiadas,
+# talleres y música; cada tarjeta trae su "Tipo de evento" y "Cine" es el
+# criterio, igual que el badge del Bellas Artes.
+#
+# Qué sale de dónde:
+#   - La agenda (/agenda/) lista sólo lo vigente, de a 10 tarjetas. Las páginas
+#     siguientes se piden con ?jsf=jet-engine:aplicarbusqueda&pagenum=N (es el
+#     "Cargar más" de JetSmartFilters). Se recorre entera y se filtra por la
+#     etiqueta de la tarjeta, y además se pide la vista ya filtrada por "Cine":
+#     son dos caminos distintos, así que si el museo toca uno queda el otro.
+#   - La página del evento trae las fechas en un campo estructurado ("Fechas
+#     recurrentes: Viernes 23/10/26 19:00"). Es lo único con fecha Y hora que
+#     no está escrito a mano, así que manda.
+#   - El texto del evento, escrito a mano, dice qué se pasa cada día: un
+#     encabezado "Sábado 24 de octubre de 2026" y abajo la ficha ("–Los cruces",
+#     "2025", ..., "83 min", "Dirección: Julián Galay").
+#
+# Lo que no se puede leer con seguridad NO se publica. Una película es un
+# título con el año en la línea de abajo y, cerca, la duración o la dirección.
+# Un día sin película (la charla de Silvia Rivas del 23/10, que recorre sus
+# videoinstalaciones: tienen año pero no duración ni director) queda afuera, y
+# también varias películas en varias fechas sin decir cuál va cuándo. Todo eso
+# sale avisado en el log. Si el museo publica una función en otro formato, va
+# a data/manual_screenings.json.
+#
+# Antes de este ciclo el museo cargaba sus proyecciones como "Programas
+# públicos" y en prosa (Mirko Stopar en abril de 2026, Painlevé y Prouvost en
+# agosto), sin ficha ni etiqueta de cine: ésas no las levanta el scraper.
+
+MODERNO_CINE = "Museo Moderno"
+MODERNO_BASE = "https://museomoderno.org"
+MODERNO_AGENDA = f"{MODERNO_BASE}/agenda/"
+MODERNO_TIPO = "cine"
+_MODERNO_JSF = "jsf=jet-engine:aplicarbusqueda"
+_MODERNO_MAX_PAGINAS = 10
+
+# "Viernes 23/10/26 19:00", el campo "Fechas recurrentes" del evento.
+_MODERNO_FECHA_HORA_RE = re.compile(
+    r"(\d{1,2})/(\d{1,2})/(\d{4}|\d{2})\s+(\d{1,2})[:.](\d{2})")
+# Encabezado de un día en el texto: "Sábado 24 de octubre de 2026". Anclado a
+# la línea entera: "Viernes 23 y sábado 24 de octubre, 19 h" es el resumen
+# del copete, no el comienzo del programa de un día.
+_MODERNO_DIA_RE = re.compile(
+    r"^(?:(?:lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo),?\s+)?"
+    r"(\d{1,2})\s+de\s+([a-záéíóúñ]+)(?:,?\s+(?:de\s+)?(\d{4}))?\.?$", re.IGNORECASE)
+# La hora suelta abajo del encabezado: "19 h", "18.30 h", "19:00 hs".
+_MODERNO_HORA_RE = re.compile(
+    r"^(\d{1,2})(?:[:.](\d{2}))?\s*(?:h|hs|horas)\.?$", re.IGNORECASE)
+_MODERNO_ANIO_RE = re.compile(r"^((?:18|19|20)\d{2})\.?$")
+_MODERNO_DUR_RE = re.compile(r"\b(\d{1,3})\s*(?:min\b|minutos\b|['′’])", re.IGNORECASE)
+# "Dirección: Gustavo Fontán", "Dirección, textos y diseño sonoro: Julián Galay"
+_MODERNO_DIR_RE = re.compile(
+    r"^(?:Direcci[óo]n|Dirigida\s+por|Realizaci[óo]n)\b[^:]{0,60}:\s*(.+)$", re.IGNORECASE)
+# Líneas que son un rótulo de la ficha y no un título: "Presenta: Fulano",
+# "Sinopsis:", "Producción: …".
+_MODERNO_ROTULO_RE = re.compile(
+    r"^(?:presenta|sinopsis|introducci[óo]n|direcci[óo]n|producci[óo]n|guion|"
+    r"gui[óo]n|fotograf[íi]a|montaje|edici[óo]n|sonido|m[úu]sica|imagen|c[áa]mara|"
+    r"elenco|int[ée]rpretes|curadur[íi]a|entradas?)\b", re.IGNORECASE)
+_MODERNO_TICKET_RE = re.compile(
+    r"entradasba|entradas?\b|ticket|passline|eventbrite|alternativateatral",
+    re.IGNORECASE)
+
+
+def _moderno_agenda_url(pagina: int, solo_cine: bool) -> str:
+    params = []
+    if pagina > 1 or solo_cine:
+        params.append(_MODERNO_JSF)
+    if solo_cine:
+        params.append("meta=tipo-de-evento:Cine")
+    if pagina > 1:
+        params.append(f"pagenum={pagina}")
+    return MODERNO_AGENDA + ("?" + "&".join(params) if params else "")
+
+
+def _moderno_tarjetas(soup) -> tuple[list[dict], int]:
+    """Las tarjetas de una página de la agenda y cuántas páginas hay."""
+    grilla = soup.find(attrs={"data-pages": True})
+    try:
+        paginas = int(grilla["data-pages"]) if grilla else 1
+    except (TypeError, ValueError):
+        paginas = 1
+    out = []
+    for item in soup.select("div.jet-listing-grid__item[data-post-id]"):
+        etiqueta = item.select_one(".jet-listing-dynamic-field__content")
+        a = item.select_one("h2 a[href]") or item.find(
+            "a", href=re.compile(r"/agenda/[^/?#]+/?$"))
+        if not a:
+            continue
+        out.append({
+            "id": item["data-post-id"],
+            "tipo": etiqueta.get_text(" ", strip=True) if etiqueta else "",
+            "url": a["href"].split("?")[0].split("#")[0],
+            "titulo": a.get_text(" ", strip=True),
+        })
+    return out, paginas
+
+
+def _moderno_eventos_de_cine() -> Optional[list[str]]:
+    """URLs de los eventos vigentes de tipo Cine. None si la agenda no contesta."""
+    urls: list[str] = []
+    vistos: set = set()
+    contesto = False
+    for solo_cine in (False, True):
+        pagina, paginas = 1, 1
+        while pagina <= min(paginas, _MODERNO_MAX_PAGINAS):
+            try:
+                soup = fetch_html(_moderno_agenda_url(pagina, solo_cine))
+            except Exception:
+                break
+            tarjetas, paginas = _moderno_tarjetas(soup)
+            contesto = contesto or bool(tarjetas) or soup.find(
+                attrs={"data-pages": True}) is not None
+            for t in tarjetas:
+                if t["tipo"].strip().lower() != MODERNO_TIPO or t["id"] in vistos:
+                    continue
+                vistos.add(t["id"])
+                urls.append(t["url"])
+            pagina += 1
+    return urls if contesto else None
+
+
+def _moderno_lineas(el) -> list[str]:
+    """El texto de un bloque partido por sus <br>, una línea por renglón.
+
+    Se arma con get_text(""): el guion de la ficha viene en otro <span> pegado
+    al título ("–" + "Los cruces") y con un separador quedaría "– Los cruces"
+    en unas fichas y "–Los cruces" en otras. Los <br> se marcan antes de leer
+    y se desenvuelven sin borrarlos, porque html.parser a veces mete adentro
+    del <br> lo que sigue (<br><strong>Presenta…</strong></br>).
+    """
+    for br in el.find_all("br"):
+        br.insert_before("\n")
+        br.unwrap()
+    texto = el.get_text("").replace("\xa0", " ")
+    return [re.sub(r"\s+", " ", l).strip() for l in texto.split("\n") if l.strip()]
+
+
+_MODERNO_BLOQUES = ("h1", "h2", "h3", "h4", "h5", "h6", "p", "li")
+
+
+def _moderno_es_bloque(el) -> bool:
+    """Los pedazos del texto del evento, en orden: títulos, párrafos, ítems,
+    los botones de Elementor ("¡Conseguí tus entradas!", que van sueltos y no
+    adentro de un párrafo) y los cuadros de texto de Elementor sin <p>."""
+    if el.name in _MODERNO_BLOQUES:
+        return el.find_parent(["p", "li"]) is None
+    if el.name == "a":
+        return el.has_attr("href") and el.find_parent(list(_MODERNO_BLOQUES)) is None
+    if el.name == "div" and "elementor-widget-container" in (el.get("class") or []):
+        widget = el.parent
+        return (widget is not None
+                and "elementor-widget-text-editor" in (widget.get("class") or [])
+                and el.find(list(_MODERNO_BLOQUES)) is None)
+    return False
+
+
+def _moderno_dia(linea: str, hoy: date, fin: date) -> Optional[date]:
+    m = _MODERNO_DIA_RE.match(linea)
+    if not m:
+        return None
+    mes = MESES_ES.get(m.group(2).lower())
+    if not mes:
+        return None
+    if m.group(3):
+        try:
+            return date(int(m.group(3)), mes, int(m.group(1)))
+        except ValueError:
+            return None
+    return _fecha_en_ventana(int(m.group(1)), mes, hoy, fin)
+
+
+def _moderno_titulo_ficha(linea: str) -> str:
+    """'–Los cruces' → 'Los cruces'. Vacío si la línea no puede ser un título."""
+    t = re.sub(r"^[\s–—\-•·]+", "", linea).strip().rstrip(",;:").strip()
+    if not t or len(t) > 120 or linea.rstrip().endswith(":"):
+        return ""
+    if _MODERNO_ROTULO_RE.match(t) or _MODERNO_HORA_RE.match(t) or _MODERNO_ANIO_RE.match(t):
+        return ""
+    if _MODERNO_DIA_RE.match(t) or _MODERNO_DUR_RE.search(t):
+        return ""
+    return t
+
+
+def _moderno_fichas(lineas: list[str]) -> list[dict]:
+    """Las películas de un tramo de texto.
+
+    Una ficha empieza con el título y, en la línea de abajo, el año sólo
+    ("–La orilla que se abisma" / "2008"). Es película si además trae la
+    duración ("64 min") o la dirección: las videoinstalaciones de una charla
+    de artista también tienen título y año, y no son funciones.
+    """
+    inicios = [i for i in range(1, len(lineas))
+               if _MODERNO_ANIO_RE.match(lineas[i]) and _moderno_titulo_ficha(lineas[i - 1])]
+    fichas = []
+    for n, i in enumerate(inicios):
+        hasta = inicios[n + 1] - 1 if n + 1 < len(inicios) else len(lineas)
+        duracion: Optional[int] = None
+        director = ""
+        for j, l in enumerate(lineas[i + 1:hasta]):
+            md = _MODERNO_DUR_RE.search(l)
+            if md and duracion is None and j < 8 and 1 <= int(md.group(1)) <= 600:
+                duracion = int(md.group(1))
+            mdir = _MODERNO_DIR_RE.match(l)
+            if mdir and not director:
+                director = mdir.group(1).strip(" .")
+        if duracion is None and not director:
+            continue
+        fichas.append({"title": _moderno_titulo_ficha(lineas[i - 1]),
+                       "year": int(_MODERNO_ANIO_RE.match(lineas[i]).group(1)),
+                       "duration": duracion, "director": director})
+    return fichas
+
+
+def _moderno_programa(contenido, hoy: date, fin: date) -> tuple[list[dict], dict]:
+    """El texto del evento en tramos: lo de antes del primer día y uno por día.
+
+    Devuelve (fichas sin día, {fecha: {"hora", "fichas", "ticket"}}). Un
+    encabezado que no es un día ("El paisaje que piensa", "Créditos") cierra
+    el día en curso si es del mismo nivel o más grande, para que las fichas de
+    un apéndice no se le peguen al último día; uno más chico (un h5 con el
+    título de la película adentro de un día en h4) no lo cierra.
+    """
+    tramos: list[dict] = [{"fecha": None, "nivel": 0, "lineas": [], "ticket": ""}]
+    nivel_dia = 0
+    for el in contenido.find_all(_moderno_es_bloque):
+        anclas = [el] if el.name == "a" else el.find_all("a", href=True)
+        links = [a["href"] for a in anclas
+                 if _MODERNO_TICKET_RE.search(a.get_text(" ", strip=True) + " " + a["href"])]
+        if el.name == "a":
+            if links and not tramos[-1]["ticket"]:
+                tramos[-1]["ticket"] = links[0]
+            continue
+        lineas = _moderno_lineas(el)
+        es_titulo = el.name[0] == "h"
+        nivel = int(el.name[1]) if es_titulo else 0
+        d = _moderno_dia(lineas[0], hoy, fin) if len(lineas) == 1 else None
+        if d:
+            nivel_dia = nivel
+            tramos.append({"fecha": d, "nivel": nivel, "lineas": [], "ticket": ""})
+        elif es_titulo and tramos[-1]["fecha"] and nivel_dia and nivel <= nivel_dia:
+            tramos.append({"fecha": None, "nivel": nivel, "lineas": lineas, "ticket": ""})
+        else:
+            tramos[-1]["lineas"].extend(lineas)
+        if links and not tramos[-1]["ticket"]:
+            tramos[-1]["ticket"] = links[0]
+
+    sin_dia: list[dict] = []
+    dias: dict = {}
+    for t in tramos:
+        if t["fecha"] is None:
+            sin_dia.extend(_moderno_fichas(t["lineas"]))
+            continue
+        hora = ""
+        for l in t["lineas"][:3]:
+            mh = _MODERNO_HORA_RE.match(l)
+            if mh:
+                hora = f"{int(mh.group(1)):02d}:{mh.group(2) or '00'}"
+                break
+        dias[t["fecha"]] = {"hora": hora, "fichas": _moderno_fichas(t["lineas"]),
+                            "ticket": t["ticket"]}
+    return sin_dia, dias
+
+
+def _moderno_fechas(soup) -> list[tuple[date, str]]:
+    """Las fechas con hora del campo "Fechas recurrentes" de la página."""
+    out = []
+    for item in soup.select(".jet-listing-dynamic-repeater__item"):
+        m = _MODERNO_FECHA_HORA_RE.search(item.get_text(" ", strip=True))
+        if not m:
+            continue
+        dia, mes, anio, hh, mm = m.groups()
+        anio = int(anio) + (2000 if len(anio) == 2 else 0)
+        try:
+            out.append((date(anio, int(mes), int(dia)), f"{int(hh):02d}:{mm}"))
+        except ValueError:
+            continue
+    return sorted(set(out))
+
+
+def _moderno_ciclo(titulo: str) -> str:
+    """'El cine es otra cosa 2026' → 'El cine es otra cosa'."""
+    return re.sub(r"\s+(?:19|20)\d{2}$", "", re.sub(r"\s+", " ", titulo or "")).strip()
+
+
+def _moderno_ciclo_de(ciclo: str, pelicula: str) -> str:
+    """Sin ciclo cuando el evento es la película misma: "Zama" o "Proyección:
+    Zama" no son un ciclo."""
+    c, t = titulo_norm(ciclo), titulo_norm(pelicula)
+    return "" if t and (c == t or c.endswith(" " + t)) else ciclo
+
+
+def _parse_moderno_evento(soup, url: str, hoy: date, fin: date) -> list[Screening]:
+    h1 = soup.find("h1")
+    titulo = h1.get_text(" ", strip=True) if h1 else ""
+    ciclo = _moderno_ciclo(titulo)
+    contenido = soup.select_one(".elementor-widget-theme-post-content") or soup
+    sin_dia, dias = _moderno_programa(contenido, hoy, fin)
+    # El link de entradas de un día manda; si el día no tiene, el primero del
+    # evento (suele ser uno solo para todo el ciclo); si no hay, la página.
+    ticket_evento = next(
+        (a["href"] for a in contenido.find_all("a", href=True)
+         if _MODERNO_TICKET_RE.search(a.get_text(" ", strip=True) + " " + a["href"])), "")
+
+    # Fecha y hora: las del campo estructurado. Si el evento no lo tiene (los
+    # de rango, "De 18/7 a 2/8"), las de los encabezados con su "19 h".
+    fechas = _moderno_fechas(soup)
+    if not fechas:
+        fechas = sorted((d, p["hora"]) for d, p in dias.items() if p["hora"])
+
+    avisos = []
+    out: list[Screening] = []
+    for d, hora in fechas:
+        if not (hoy <= d <= fin):
+            continue
+        if dias:
+            programa = dias.get(d)
+            if programa is None:
+                avisos.append(f"{d.isoformat()} no aparece en el texto")
+                continue
+            fichas, ticket = programa["fichas"], programa["ticket"]
+            if not fichas:
+                avisos.append(f"{d.isoformat()} {hora} sin película (¿charla?)")
+                continue
+        else:
+            # Sin un programa por día, las películas del texto valen para todas
+            # las fechas sólo si no hay que adivinar: una película (que se
+            # repite) o un programa en una sola fecha.
+            fichas, ticket = sin_dia, ""
+            if not fichas:
+                avisos.append(f"{d.isoformat()} {hora} sin ficha de película")
+                continue
+            if len(fichas) > 1 and len(fechas) > 1:
+                avisos.append(f"{len(fichas)} películas en {len(fechas)} fechas "
+                              f"sin decir cuál va cuándo")
+                break
+        for f in fichas:
+            out.append(Screening(
+                cine=MODERNO_CINE, title=f["title"], fecha=d.isoformat(), hora=hora,
+                ticket_url=ticket or ticket_evento or url,
+                ciclo=_moderno_ciclo_de(ciclo, f["title"]),
+                director=f["director"], year=f["year"], duration=f["duration"]))
+    for a in avisos:
+        print(f"  · [Moderno] «{titulo}»: {a}, queda afuera", flush=True)
+    return out
+
+
+def scrape_moderno(semanas: int = 9) -> list[Screening]:
+    hoy = date.today()
+    fin = hoy + timedelta(weeks=semanas)
+    urls = _moderno_eventos_de_cine()
+    if urls is None:
+        marcar_fuente_caida(MODERNO_CINE, "la agenda no contesta")
+        return []
+    out: list[Screening] = []
+    vistas: set = set()
+    for u in urls[:20]:
+        try:
+            soup = fetch_html(u)
+        except Exception:
+            marcar_fuente_caida(MODERNO_CINE, f"no se pudo leer {u}")
+            continue
+        for s in _parse_moderno_evento(soup, u, hoy, fin):
+            key = (s.title.lower(), s.fecha, s.hora)
+            if key not in vistas:
+                vistas.add(key)
+                out.append(s)
+    return out
+
+
+# ---------------------------------------------------------------------------
 # Funciones manuales — data/manual_screenings.json
 # ---------------------------------------------------------------------------
 # Escape genérico para lo que ningún scraper puede sacar solo: festivales que
