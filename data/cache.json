@@ -15141,7 +15141,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-18",
+    "fecha": "2026-10-19",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -19855,7 +19855,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -20580,7 +20580,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: Apocalypse Now (1979, 147 min)",
-    "fecha": "2026-10-15",
+    "fecha": "2026-10-19",
     "con_duracion": true,
     "desempate": ""
   },
@@ -21395,7 +21395,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Nadie inquietó más (2008)",
-    "fecha": "2026-10-15",
+    "fecha": "2026-10-19",
     "con_duracion": false,
     "desempate": ""
   },
@@ -22077,7 +22077,9 @@
     "year": 2026,
     "duration": 60,
     "genre": "Música",
-    "original_title": "하이브 치어링 파티"
+    "clase_titulo": "exacto",
+    "original_title": "하이브 치어링 파티",
+    "sin_hints": "título y duración"
   },
   "seventeen world tour 'new_'": {
     "url": "",
@@ -22656,7 +22658,8 @@
     "duration": 105,
     "genre": "Música, Documental",
     "title_es": "Buena Vista Social Club",
-    "original_title": "Buena Vista Social Club"
+    "original_title": "Buena Vista Social Club",
+    "clase_titulo": "exacto"
   },
   "alicia en las ciudades|1974": {
     "url": "https://letterboxd.com/film/alice-in-the-cities/",
@@ -22734,7 +22737,9 @@
     "year": 2026,
     "duration": 125,
     "genre": "Fantasía, Acción",
-    "original_title": "Street Fighter"
+    "clase_titulo": "exacto",
+    "original_title": "Street Fighter",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "terror total: [rec]": {
     "url": "https://letterboxd.com/film/rec/",
@@ -23604,7 +23609,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Destino de un capricho (1972), y puede ser otra",
-    "fecha": "2026-10-15",
+    "fecha": "2026-10-19",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23616,7 +23621,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es El deseo de vivir (1973), y puede ser otra",
-    "fecha": "2026-10-15",
+    "fecha": "2026-10-19",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25702,5 +25707,35 @@
     "fecha": "2026-10-18",
     "con_duracion": false,
     "desempate": ""
+  },
+  "los cruces|2025": {
+    "url": "https://letterboxd.com/film/intersections-2025/",
+    "title_en": "Intersections",
+    "director": "Julián Galay",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 84,
+    "genre": "Documental",
+    "original_title": "Los cruces"
+  },
+  "la orilla que se abisma|2008": {
+    "url": "https://letterboxd.com/film/la-orilla-que-se-abisma/",
+    "title_en": "The Shore That Falls",
+    "director": "Gustavo Fontán",
+    "country": "Argentina",
+    "year": 2008,
+    "duration": 64,
+    "genre": "",
+    "original_title": "La orilla que se abisma"
+  },
+  "sunny point|1995": {
+    "url": "https://letterboxd.com/film/sunny-point/",
+    "title_en": "Sunny Point",
+    "director": "Wolf Vogel",
+    "country": "Germany",
+    "year": 1995,
+    "duration": 93,
+    "genre": "Comedia",
+    "original_title": "Sunny Point"
   }
 }
