@@ -23633,7 +23633,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Embrujo de amor (1971), y puede ser otra",
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-19",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25737,5 +25737,26 @@
     "duration": 93,
     "genre": "Comedia",
     "original_title": "Sunny Point"
+  },
+  "gitano": {
+    "url": "",
+    "title_en": "Gitano",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: Gitano (1970), Gipsy (2000)",
+    "fecha": "2026-10-19",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "la huella de oro": {
+    "url": "https://letterboxd.com/film/the-gold-trail/",
+    "title_en": "The Gold Trail",
+    "director": "Daniel Duche",
+    "country": "",
+    "year": 2026,
+    "duration": 32,
+    "genre": "Drama, Animación"
   }
 }

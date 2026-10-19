@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-19T01:31:13",
+  "updated": "2026-10-19T09:39:21",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 26,
@@ -18,9 +18,8 @@
       "publicadas": 28
     },
     "Cines Ideal": {
-      "scrapeadas": 0,
-      "publicadas": 62,
-      "fuente_caida": "yelmocines.es no devolvió la cartelera (¿Cloudflare?)"
+      "scrapeadas": 62,
+      "publicadas": 62
     },
     "Cines Princesa": {
       "scrapeadas": 164,

@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-18T08:22:46",
+    "ts": "2026-10-19T09:21:25",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -85,7 +85,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-18T08:22:59",
+    "ts": "2026-10-19T09:21:33",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -118,36 +118,10 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-18T08:23:12",
+    "ts": "2026-10-19T09:21:41",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Casa modelo bajo la arena",
-        "fecha": "2026-10-18",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-        "ciclo": "Cine japonés en 16 mm",
-        "director": "",
-        "country": "",
-        "year": null,
-        "duration": null,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Escenas en el mar",
-        "fecha": "2026-10-18",
-        "hora": "17:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-        "ciclo": "Cine japonés en 16 mm",
-        "director": "",
-        "country": "",
-        "year": null,
-        "duration": null,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Un verano con los extraños",
@@ -177,7 +151,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-irlandes/": {
-    "ts": "2026-10-18T08:23:20",
+    "ts": "2026-10-19T09:21:49",
     "v": 2,
     "semanas": 9,
     "funciones": [
