@@ -19857,7 +19857,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -22314,7 +22314,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-16",
+    "fecha": "2026-10-20",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25888,5 +25888,24 @@
     "year": 2026,
     "duration": 107,
     "genre": "Romance, Drama"
+  },
+  "el sétpmo sello": {
+    "url": "",
+    "title_en": "EL SÉTPMO SELLO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fanny y alexander": {
+    "url": "",
+    "title_en": "FANNY Y ALEXANDER",
+    "director": "Ingmar Bergman",
+    "country": "Sweden, Germany",
+    "year": 1982,
+    "duration": 188,
+    "genre": "Fantasía, Drama",
+    "title_es": "Fanny y Alexander",
+    "original_title": "Fanny och Alexander"
   }
 }
