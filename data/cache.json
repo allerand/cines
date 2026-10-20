@@ -13145,7 +13145,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Queen: Live in Budapest (1986), y puede ser otra",
-    "fecha": "2026-10-16",
+    "fecha": "2026-10-20",
     "con_duracion": false,
     "desempate": ""
   },
@@ -15141,7 +15141,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-19",
+    "fecha": "2026-10-20",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -15189,13 +15189,15 @@
     "original_title": "Per te"
   },
   "que dios perdona a todos": {
-    "url": "https://letterboxd.com/film/god-forgives-all/",
-    "title_en": "...God Forgives All",
+    "url": "https://letterboxd.com/film/god-forgives-everyone/",
+    "title_en": "God Forgives Everyone",
     "director": "Pif",
     "country": "Italy",
     "year": 2026,
     "duration": 113,
-    "genre": "Comedia"
+    "genre": "Comedia, Drama",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   },
   "una breve historia de amor": {
     "url": "https://letterboxd.com/film/a-brief-affair/",
@@ -22082,16 +22084,16 @@
     "sin_hints": "título y duración"
   },
   "seventeen world tour 'new_'": {
-    "url": "",
+    "url": "https://letterboxd.com/film/seventeen-world-tour-new_/",
     "title_en": "SEVENTEEN WORLD TOUR 'NEW_'",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-16",
-    "con_duracion": true,
-    "desempate": ""
+    "director": "Yum Tae-hwan",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Música, Documental",
+    "clase_titulo": "exacto",
+    "original_title": "SEVENTEEN WORLD TOUR [NEW_] ENCORE",
+    "sin_hints": "título y duración"
   },
   "tomorrow x together world tour 'act tomorrow": {
     "url": "https://letterboxd.com/film/tomorrow-x-together-world-tour-act-tomorrow/",
@@ -22136,15 +22138,12 @@
     "duration": null
   },
   "la casa": {
-    "url": "https://letterboxd.com/film/la-casa-2025/",
+    "url": "",
     "title_en": "La casa",
-    "director": "Gustavo Triviño",
-    "country": "Argentina",
-    "year": 2025,
-    "duration": 95,
-    "genre": "Drama",
-    "clase_titulo": "exacto",
-    "sin_hints": "el único estreno entre varias que se llaman así"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "ficuba": {
     "url": "",
@@ -22737,9 +22736,7 @@
     "year": 2026,
     "duration": 125,
     "genre": "Fantasía, Acción",
-    "clase_titulo": "exacto",
-    "original_title": "Street Fighter",
-    "sin_hints": "el único estreno entre varias que se llaman así"
+    "original_title": "Street Fighter"
   },
   "terror total: [rec]": {
     "url": "https://letterboxd.com/film/rec/",
@@ -23903,7 +23900,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
-    "fecha": "2026-10-16",
+    "fecha": "2026-10-20",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23915,7 +23912,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
-    "fecha": "2026-10-16",
+    "fecha": "2026-10-20",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23953,7 +23950,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Cars (2006), Cars 3 (2017)",
-    "fecha": "2026-10-16",
+    "fecha": "2026-10-20",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24786,16 +24783,12 @@
     "genre": "Drama"
   },
   "stray kids world tour <run it> live viewing": {
-    "url": "https://letterboxd.com/film/stray-kids-world-tour-run-it-live-viewing/",
-    "title_en": "Stray Kids World Tour 'RUN IT' LIVE VIEWING",
+    "url": "",
+    "title_en": "Stray Kids World Tour <RUN IT> LIVE VIEWING",
     "director": "",
     "country": "",
-    "year": 2026,
-    "duration": 195,
-    "genre": "",
-    "clase_titulo": "exacto",
-    "original_title": "Stray Kids World Tour 'RUN IT' LIVE VIEWING",
-    "sin_hints": "título y duración"
+    "year": null,
+    "duration": null
   },
   "dune: parte tres": {
     "url": "https://letterboxd.com/film/dune-part-three/",
@@ -25423,7 +25416,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-16",
+    "fecha": "2026-10-20",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25462,7 +25455,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-16",
+    "fecha": "2026-10-20",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25616,7 +25609,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es The Hunger Games: Catching Fire (2013), y puede ser otra",
-    "fecha": "2026-10-16",
+    "fecha": "2026-10-20",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25758,5 +25751,142 @@
     "year": 2026,
     "duration": 32,
     "genre": "Drama, Animación"
+  },
+  "nosferatu (cine con piano en directo)": {
+    "url": "",
+    "title_en": "Nosferatu (Cine con piano en directo)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "historia de lo oculto|2020": {
+    "url": "https://letterboxd.com/film/historia-de-lo-oculto/",
+    "title_en": "History of the Occult",
+    "director": "Cristian Ponce",
+    "country": "Argentina",
+    "year": 2020,
+    "duration": 82,
+    "genre": "Drama, Terror"
+  },
+  "terror en el amazonas": {
+    "url": "https://letterboxd.com/film/beware-boiuna/",
+    "title_en": "Beware Boiúna",
+    "director": "Mike P. Nelson",
+    "country": "USA, Germany",
+    "year": 2026,
+    "duration": 104,
+    "genre": "Terror, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Boiuna: La leyenda del Amazonas",
+    "original_title": "Beware Boiúna",
+    "sin_hints": "título y duración"
+  },
+  "el poder de la red": {
+    "url": "https://letterboxd.com/film/the-social-reckoning/",
+    "title_en": "The Social Reckoning",
+    "director": "Aaron Sorkin",
+    "country": "USA",
+    "year": 2026,
+    "duration": 113,
+    "genre": "Drama, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "El Precio de la Red",
+    "original_title": "The Social Reckoning",
+    "sin_hints": "título y duración"
+  },
+  "buenas vibraciones": {
+    "url": "https://letterboxd.com/film/good-vibes-only-2026/",
+    "title_en": "Good Vibes Only",
+    "director": "Reem Kherici",
+    "country": "France",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "El placer es mío",
+    "original_title": "Pour le plaisir",
+    "sin_hints": "título"
+  },
+  "heidi: el rescate del lince": {
+    "url": "https://letterboxd.com/film/heidi-rescue-of-the-lynx/",
+    "title_en": "Heidi: Rescue of the Lynx",
+    "director": "Toby Schwarz",
+    "country": "Belgium, France",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Aventura, Familiar",
+    "clase_titulo": "exacto",
+    "title_es": "Heidi. El rescate del lince",
+    "original_title": "Heidi - Die Legende vom Luchs",
+    "sin_hints": "título"
+  },
+  "los otros (re)": {
+    "url": "",
+    "title_en": "Los Otros (re)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es The Others (2001), y puede ser otra",
+    "fecha": "2026-10-20",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "susana rinaldi": {
+    "url": "",
+    "title_en": "SUSANA RINALDI",
+    "director": "Isabel Marcenaro Bouter",
+    "country": "Argentina, France",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Música, Documental",
+    "original_title": "Susana Rinaldi, libre"
+  },
+  "para hacer una pelicula hace falta un arma": {
+    "url": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
+    "title_en": "All You Need to Make a Movie Is a Gun",
+    "director": "Santiago Sein",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 159,
+    "genre": "Documental",
+    "original_title": "Para hacer una película solo hace falta un arma"
+  },
+  "adolecencia,sexo y muerte en campamento miasma": {
+    "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+    "title_en": "Teenage Sex and Death at Camp Miasma",
+    "director": "Jane Schoenbrun",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Terror, Comedia"
+  },
+  "bit bang": {
+    "url": "",
+    "title_en": "BIT BANG",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "museo de la subversión|2025": {
+    "url": "https://letterboxd.com/film/museo-de-la-subversion/",
+    "title_en": "Museo de la subversión",
+    "director": "Francisco D'Eufemia",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 70,
+    "genre": "",
+    "original_title": "Museo de la subversión"
+  },
+  "la invitación.": {
+    "url": "https://letterboxd.com/film/the-invite-2026/",
+    "title_en": "The Invite",
+    "director": "Olivia Wilde",
+    "country": "USA",
+    "year": 2026,
+    "duration": 107,
+    "genre": "Romance, Drama"
   }
 }
