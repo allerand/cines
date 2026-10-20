@@ -59,7 +59,21 @@
       "desde": "2026-11-05",
       "hasta": "2026-11-15",
       "archivo": "data/festival-mar-del-plata.json",
-      "logo": "data/logos/mar-del-plata.png"
+      "logo": "data/logos/mar-del-plata.png",
+      "sedes": {
+        "Aldrey 1": "Sarmiento 2685",
+        "Aldrey 2": "Sarmiento 2685",
+        "Aldrey 3": "Sarmiento 2685",
+        "Aldrey 4": "Sarmiento 2685",
+        "Aldrey 5": "Sarmiento 2685",
+        "Aldrey 6": "Sarmiento 2685",
+        "Ambassador 1": "Córdoba 1673",
+        "Ambassador 2": "Córdoba 1673",
+        "Auditorium": "Av. Peralta Ramos 2280",
+        "Colón": "Hipólito Yrigoyen 1665",
+        "Villa Victoria": "Matheu 1851"
+      },
+      "web": "https://mardelplatafilmfest.com/41/es/programas/"
     }
   ]
 }

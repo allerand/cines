@@ -1102,6 +1102,8 @@ const CINES_GRATIS = new Set(['Museo del Cine']);
 // Salas que venden sólo en la boletería (la sede de Fuera de Campo): no hay
 // link, va "Entradas en boletería".
 const CINES_BOLETERIA = new Set(['Teatro Enrique Carreras']);
+// Una función sin link también puede decir cómo se entra en su campo
+// `entrada` (los festivales de afuera: el Colón de Mar del Plata es gratis).
 
 function isCommercial(cine) {
   return COMMERCIAL_PREFIXES.some(p => cine && cine.startsWith(p));
@@ -2476,7 +2478,8 @@ function renderTable() {
     const filmCell = `<div class="film-title">${escapeHtml(displayTitle(s))}${alt ? `<span class="film-alt-title">«${escapeHtml(alt)}»</span>` : ''}</div>
       ${ciclo.texto ? `<div class="film-ciclo-inline">${ciclo.href ? `<a href="${escapeHtml(ciclo.href)}">${escapeHtml(ciclo.texto)}</a>` : escapeHtml(ciclo.texto)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml(fichaCorta(s))}</div>
-      ${CINES_GRATIS.has(s.cine) ? '<div class="film-meta-row"><span class="gratis">Entrada gratis</span></div>'
+      ${s.entrada && !s.ticket_url ? `<div class="film-meta-row"><span class="gratis">${escapeHtml(s.entrada)}</span></div>`
+        : CINES_GRATIS.has(s.cine) ? '<div class="film-meta-row"><span class="gratis">Entrada gratis</span></div>'
         : CINES_BOLETERIA.has(s.cine) ? '<div class="film-meta-row"><span class="gratis">Entradas en boletería</span></div>'
         : s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
 
