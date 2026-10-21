@@ -15141,7 +15141,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-20",
+    "fecha": "2026-10-21",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -19857,7 +19857,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -20310,7 +20310,8 @@
     "duration": 119,
     "genre": "Drama",
     "title_es": "Sus hijos",
-    "original_title": "& Sons"
+    "original_title": "& Sons",
+    "clase_titulo": "exacto"
   },
   "taller de análisis fílmico y metacine sobre wyler en roma [renoir]": {
     "url": "",
@@ -22961,7 +22962,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Jean-Christian Tassy, Benoît Daffis",
+    "director": "Benoît Daffis, Jean-Christian Tassy",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -25907,5 +25908,334 @@
     "genre": "Fantasía, Drama",
     "title_es": "Fanny y Alexander",
     "original_title": "Fanny och Alexander"
+  },
+  "¡ya verás!|1969": {
+    "url": "",
+    "title_en": "¡Ya verás!",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "200 vidas, paco rabal": {
+    "url": "https://letterboxd.com/film/200-vidas-paco-rabal/",
+    "title_en": "200 Lives, Paco Rabal",
+    "director": "Vanesa Benitez Zamora",
+    "country": "",
+    "year": null,
+    "duration": 95,
+    "genre": "",
+    "original_title": "200 vidas, Paco Rabal"
+  },
+  "sentido y sensibilidad": {
+    "url": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+    "title_en": "Sense and Sensibility",
+    "director": "Georgia Oakley",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 132,
+    "genre": "Drama, Romance",
+    "title_es": "Sentido y sensibilidad",
+    "original_title": "Sense and Sensibility"
+  },
+  "wildwood": {
+    "url": "https://letterboxd.com/film/wildwood-2026/",
+    "title_en": "Wildwood",
+    "director": "Travis Knight",
+    "country": "USA",
+    "year": 2026,
+    "duration": 132,
+    "genre": "Animación, Fantasía",
+    "title_es": "Wildwood: El Bosque Salvaje",
+    "original_title": "Wildwood"
+  },
+  "los paraguas de cherburgo": {
+    "url": "",
+    "title_en": "LOS PARAGUAS DE CHERBURGO",
+    "director": "Jacques Demy",
+    "country": "France, Germany",
+    "year": 1964,
+    "duration": 93,
+    "genre": "Drama, Romance",
+    "title_es": "Los paraguas de Cherburgo",
+    "original_title": "Les Parapluies de Cherbourg"
+  },
+  "superthings: la película": {
+    "url": "https://letterboxd.com/film/superthings-la-pelicula/",
+    "title_en": "Superthings: La película",
+    "director": "Víctor Monigote",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Animación, Familiar",
+    "original_title": "Superthings: La película"
+  },
+  "the florida project": {
+    "url": "https://letterboxd.com/film/the-florida-project/",
+    "title_en": "The Florida Project",
+    "director": "Sean Baker",
+    "country": "USA",
+    "year": 2017,
+    "duration": 112,
+    "genre": "Drama",
+    "title_es": "Proyecto Florida",
+    "original_title": "The Florida Project"
+  },
+  "alien, el octavo pasajero": {
+    "url": "",
+    "title_en": "Alien, el octavo pasajero",
+    "director": "Ridley Scott",
+    "country": "United States of America, United Kingdom",
+    "year": 1979,
+    "duration": 117,
+    "genre": "Terror, Ciencia ficción",
+    "title_es": "Alien: El octavo pasajero",
+    "original_title": "Alien"
+  },
+  "lawrence de arabia": {
+    "url": "",
+    "title_en": "Lawrence de Arabia",
+    "director": "David Lean",
+    "country": "United Kingdom",
+    "year": 1962,
+    "duration": 228,
+    "genre": "Aventura, Historia",
+    "title_es": "Lawrence de Arabia",
+    "original_title": "Lawrence of Arabia"
+  },
+  "esencia de mujer": {
+    "url": "",
+    "title_en": "Esencia de mujer",
+    "director": "Martin Brest",
+    "country": "United States of America",
+    "year": 1992,
+    "duration": 156,
+    "genre": "Drama",
+    "title_es": "Esencia de mujer",
+    "original_title": "Scent of a Woman"
+  },
+  "my fair lady": {
+    "url": "https://letterboxd.com/film/my-fair-lady/",
+    "title_en": "My Fair Lady",
+    "director": "George Cukor",
+    "country": "USA",
+    "year": 1964,
+    "duration": 173,
+    "genre": "Drama, Música",
+    "title_es": "My Fair Lady (Mi bella dama)",
+    "original_title": "My Fair Lady"
+  },
+  "muerte entre las flores": {
+    "url": "",
+    "title_en": "Muerte entre las flores",
+    "director": "Joel Coen",
+    "country": "United States of America",
+    "year": 1990,
+    "duration": 115,
+    "genre": "Drama, Thriller",
+    "title_es": "Muerte entre las flores",
+    "original_title": "Miller's Crossing"
+  },
+  "ladrón de bicicletas": {
+    "url": "",
+    "title_en": "Ladrón de bicicletas",
+    "director": "Vittorio De Sica",
+    "country": "Italy",
+    "year": 1948,
+    "duration": 89,
+    "genre": "Drama",
+    "title_es": "Ladrón de bicicletas",
+    "original_title": "Ladri di biciclette"
+  },
+  "salvar al soldado ryan": {
+    "url": "",
+    "title_en": "Salvar al soldado Ryan",
+    "director": "Steven Spielberg",
+    "country": "United States of America",
+    "year": 1998,
+    "duration": 169,
+    "genre": "Bélica, Drama",
+    "title_es": "Salvar al soldado Ryan",
+    "original_title": "Saving Private Ryan"
+  },
+  "bailar en la oscuridad": {
+    "url": "",
+    "title_en": "Bailar en la oscuridad",
+    "director": "Lars von Trier",
+    "country": "Denmark, Finland",
+    "year": 2000,
+    "duration": 140,
+    "genre": "Drama, Crimen",
+    "title_es": "Bailar en la oscuridad",
+    "original_title": "Dancer in the Dark"
+  },
+  "los niños están bien": {
+    "url": "https://letterboxd.com/film/les-enfants-vont-bien/",
+    "title_en": "Out of Love",
+    "director": "Nathan Ambrosioni",
+    "country": "France",
+    "year": 2025,
+    "duration": 111,
+    "genre": "Drama",
+    "original_title": "Les enfants vont bien"
+  },
+  "rose": {
+    "url": "https://letterboxd.com/film/rose-2026/",
+    "title_en": "Rose",
+    "director": "Markus Schleinzer",
+    "country": "Austria, Germany",
+    "year": 2026,
+    "duration": 94,
+    "genre": "Drama, Historia",
+    "original_title": "Rose"
+  },
+  "sus hijos|2025": {
+    "url": "https://letterboxd.com/film/sons-2025/",
+    "title_en": "& Sons",
+    "director": "Pablo Trapero",
+    "country": "Argentina, UK",
+    "year": 2025,
+    "duration": 119,
+    "genre": "Drama",
+    "title_es": "Sus hijos",
+    "original_title": "& Sons",
+    "clase_titulo": "exacto"
+  },
+  "renovación. después del amor|2025": {
+    "url": "https://letterboxd.com/film/renovation-2025/",
+    "title_en": "Renovation",
+    "director": "Gabrielė Urbonaitė",
+    "country": "Lithuania, Latvia",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Drama",
+    "clase_titulo": "distinto"
+  },
+  "xy9|2025": {
+    "url": "https://letterboxd.com/film/xy9/",
+    "title_en": "XY9",
+    "director": "David Huergo",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 65,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "original_title": "XY9"
+  },
+  "el chico muda con intertítulos en español|1921": {
+    "url": "",
+    "title_en": "EL CHICO Muda con intertítulos en español",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pánico en el hospital|1994": {
+    "url": "https://letterboxd.com/film/mortal-fear/",
+    "title_en": "Mortal Fear",
+    "director": "Larry Shaw",
+    "country": "USA",
+    "year": 1994,
+    "duration": 86,
+    "genre": "TV, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Pánico en el hospital",
+    "original_title": "Mortal Fear"
+  },
+  "formula for death|1995": {
+    "url": "https://letterboxd.com/film/virus-1995/",
+    "title_en": "Virus",
+    "director": "Armand Mastroianni",
+    "country": "USA",
+    "year": 1995,
+    "duration": 92,
+    "genre": "TV, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Virus",
+    "original_title": "Virus"
+  },
+  "sala 1: xy9|2025": {
+    "url": "",
+    "title_en": "SALA 1: XY9",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cold war": {
+    "url": "https://letterboxd.com/film/cold-war-2018/",
+    "title_en": "Cold War",
+    "director": "Paweł Pawlikowski",
+    "country": "Poland, UK",
+    "year": 2018,
+    "duration": 88,
+    "genre": "Romance, Música",
+    "title_es": "Cold War",
+    "original_title": "Zimna wojna"
+  },
+  "martyrs|2008": {
+    "url": "",
+    "title_en": "Martyrs",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "manuela|1976": {
+    "url": "https://letterboxd.com/film/manuela-1976/",
+    "title_en": "Manuela",
+    "director": "Gonzalo García-Pelayo",
+    "country": "Spain",
+    "year": 1976,
+    "duration": 105,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Manuela",
+    "original_title": "Manuela"
+  },
+  "los otros 25° aniversario": {
+    "url": "",
+    "title_en": "LOS OTROS 25° ANIVERSARIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-21",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "...que dios perdona a todos": {
+    "url": "https://letterboxd.com/film/god-forgives-everyone/",
+    "title_en": "God Forgives Everyone",
+    "director": "Pif",
+    "country": "Italy",
+    "year": 2026,
+    "duration": 113,
+    "genre": "Comedia, Drama",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "susana rinaldi, libre": {
+    "url": "https://letterboxd.com/film/susana-rinaldi-libre/",
+    "title_en": "Susana Rinaldi. Free",
+    "director": "Isabel Marcenaro Bouter",
+    "country": "Argentina, France",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Música, Documental",
+    "original_title": "Susana Rinaldi, libre"
+  },
+  "tiempo de pagar": {
+    "url": "https://letterboxd.com/film/paytime/",
+    "title_en": "Paytime",
+    "director": "Felipe Wein",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 63,
+    "genre": "Thriller, Crimen",
+    "clase_titulo": "exacto",
+    "original_title": "Tiempo de pagar",
+    "sin_hints": "título y duración"
   }
 }
