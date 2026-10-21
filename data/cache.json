@@ -25639,7 +25639,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: The Hunger Games: Mockingjay – Part 1 (2014), The Hunger Games: Mockingjay – Part 2 (2015)",
-    "fecha": "2026-10-17",
+    "fecha": "2026-10-21",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25902,7 +25902,7 @@
     "url": "",
     "title_en": "FANNY Y ALEXANDER",
     "director": "Ingmar Bergman",
-    "country": "Sweden, Germany",
+    "country": "Sweden, France",
     "year": 1982,
     "duration": 188,
     "genre": "Fantasía, Drama",
@@ -25950,13 +25950,13 @@
     "original_title": "Wildwood"
   },
   "los paraguas de cherburgo": {
-    "url": "",
-    "title_en": "LOS PARAGUAS DE CHERBURGO",
+    "url": "https://letterboxd.com/film/the-umbrellas-of-cherbourg/",
+    "title_en": "The Umbrellas of Cherbourg",
     "director": "Jacques Demy",
     "country": "France, Germany",
     "year": 1964,
     "duration": 93,
-    "genre": "Drama, Romance",
+    "genre": "Romance, Drama",
     "title_es": "Los paraguas de Cherburgo",
     "original_title": "Les Parapluies de Cherbourg"
   },
@@ -26237,5 +26237,24 @@
     "clase_titulo": "exacto",
     "original_title": "Tiempo de pagar",
     "sin_hints": "título y duración"
+  },
+  "sonidos ópticos": {
+    "url": "",
+    "title_en": "Sonidos ópticos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "chungking express": {
+    "url": "https://letterboxd.com/film/chungking-express/",
+    "title_en": "Chungking Express",
+    "director": "Wong Kar-Wai",
+    "country": "Hong Kong",
+    "year": 1994,
+    "duration": 102,
+    "genre": "Comedia, Drama",
+    "title_es": "Chungking Express",
+    "original_title": "重慶森林"
   }
 }
