@@ -22964,7 +22964,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Jean-Christian Tassy, Benoît Daffis",
+    "director": "Benoît Daffis, Jean-Christian Tassy",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -23673,8 +23673,10 @@
     "year": 2026,
     "duration": 135,
     "genre": "Acción, Terror",
+    "clase_titulo": "exacto",
     "title_es": "Godzilla Minus Zero",
-    "original_title": "ゴジラ-0.0"
+    "original_title": "ゴジラ-0.0",
+    "sin_hints": "título y duración"
   },
   "sus hijos|2026": {
     "url": "https://letterboxd.com/film/sons-2025/",
@@ -26331,5 +26333,137 @@
     "genre": "Comedia, Animación",
     "title_es": "Hotel Transilvania",
     "original_title": "Hotel Transylvania"
+  },
+  "esas imágenes en movimiento (ii)": {
+    "url": "",
+    "title_en": "Esas imágenes en movimiento (II)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mad men|2007": {
+    "url": "",
+    "title_en": "Mad Men",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "primetime|2026": {
+    "url": "https://letterboxd.com/film/primetime-2026/",
+    "title_en": "Primetime",
+    "director": "Lance Oppenheim",
+    "country": "USA",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Drama, Thriller",
+    "original_title": "Primetime"
+  },
+  "madame de…|1953": {
+    "url": "https://letterboxd.com/film/the-earrings-of-madame-de/",
+    "title_en": "The Earrings of Madame de...",
+    "director": "Max Ophüls",
+    "country": "France, Italy",
+    "year": 1953,
+    "duration": 105,
+    "genre": "Drama, Romance",
+    "title_es": "Madame de…",
+    "original_title": "Madame de…"
+  },
+  "disco peli disco: documental pappo + jam de blues": {
+    "url": "",
+    "title_en": "Disco Peli Disco: documental Pappo + jam de blues",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "all that heaven allows|1955": {
+    "url": "https://letterboxd.com/film/all-that-heaven-allows/",
+    "title_en": "All That Heaven Allows",
+    "director": "Douglas Sirk",
+    "country": "USA",
+    "year": 1955,
+    "duration": 89,
+    "title_es": "Sólo el cielo lo sabe",
+    "original_title": "All That Heaven Allows",
+    "genre": "Drama, Romance"
+  },
+  "the love witch|2016": {
+    "url": "https://letterboxd.com/film/the-love-witch/",
+    "title_en": "The Love Witch",
+    "director": "Anna Biller",
+    "country": "USA",
+    "year": 2016,
+    "duration": 121,
+    "genre": "Terror, Comedia",
+    "original_title": "The Love Witch"
+  },
+  "embrujada|1976": {
+    "url": "https://letterboxd.com/film/embrujada/",
+    "title_en": "Bewitched",
+    "director": "Armando Bó",
+    "country": "Argentina, Brazil",
+    "year": 1976,
+    "duration": 80,
+    "genre": "Terror, Drama",
+    "original_title": "Embrujada"
+  },
+  "taxi driver|1976": {
+    "url": "https://letterboxd.com/film/taxi-driver/",
+    "title_en": "Taxi Driver",
+    "director": "Martin Scorsese",
+    "country": "USA",
+    "year": 1976,
+    "duration": 114,
+    "genre": "Crimen, Drama"
+  },
+  "fear eats the soul|1974": {
+    "url": "https://letterboxd.com/film/ali-fear-eats-the-soul/",
+    "title_en": "Ali: Fear Eats the Soul",
+    "director": "Rainer Werner Fassbinder",
+    "country": "Germany",
+    "year": 1974,
+    "duration": 93,
+    "genre": "Drama, Romance",
+    "title_es": "Todos nos llamamos Alí",
+    "original_title": "Angst essen Seele auf"
+  },
+  "soñar, soñar|1976": {
+    "url": "https://letterboxd.com/film/sonar-sonar/",
+    "title_en": "Soñar, soñar",
+    "director": "Leonardo Favio",
+    "country": "Argentina",
+    "year": 1976,
+    "duration": 85,
+    "genre": "Drama, Comedia",
+    "original_title": "Soñar, soñar"
+  },
+  "el hombre y la cámara|1929": {
+    "url": "https://letterboxd.com/film/man-with-a-movie-camera/",
+    "title_en": "Man with a Movie Camera",
+    "director": "Dziga Vertov",
+    "country": "USSR",
+    "year": 1929,
+    "duration": 68,
+    "genre": "Documental"
+  },
+  "the love witch + embrujada|2016": {
+    "url": "https://letterboxd.com/film/the-love-witch/",
+    "title_en": "The Love Witch",
+    "director": "Anna Biller",
+    "country": "USA",
+    "year": 2016,
+    "duration": 121,
+    "genre": "Terror, Comedia"
+  },
+  "ensayo general": {
+    "url": "",
+    "title_en": "Ensayo general",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }

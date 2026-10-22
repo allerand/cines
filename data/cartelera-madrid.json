@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T01:48:33",
+  "updated": "2026-10-22T09:19:17",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 36,
@@ -14,8 +14,8 @@
       "publicadas": 27
     },
     "Cines Callao": {
-      "scrapeadas": 7,
-      "publicadas": 7
+      "scrapeadas": 47,
+      "publicadas": 48
     },
     "Cines Ideal": {
       "scrapeadas": 94,
@@ -26,8 +26,8 @@
       "publicadas": 274
     },
     "Cineteca Madrid": {
-      "scrapeadas": 52,
-      "publicadas": 52
+      "scrapeadas": 53,
+      "publicadas": 53
     },
     "Embajadores Ercilla": {
       "scrapeadas": 93,
@@ -3028,6 +3028,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-23",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-23",
+      "hora": "16:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-23",
       "hora": "16:10",
@@ -3492,6 +3524,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-23",
+      "hora": "18:10",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-23",
       "hora": "18:15",
@@ -3649,6 +3697,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100365&eventCode=105052",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-23",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -4084,6 +4148,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-23",
+      "hora": "20:20",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-23",
       "hora": "20:25",
@@ -4340,6 +4420,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-23",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-23",
       "hora": "22:10",
@@ -4545,6 +4641,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/20182/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-23",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -5092,6 +5204,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-24",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-24",
+      "hora": "16:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-24",
       "hora": "16:00",
@@ -5588,6 +5732,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-24",
+      "hora": "18:10",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-24",
       "hora": "18:15",
@@ -5729,6 +5889,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100381&eventCode=105052",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-24",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -6100,6 +6276,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-24",
+      "hora": "20:20",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-24",
       "hora": "20:25",
@@ -6436,6 +6628,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-24",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-24",
       "hora": "22:15",
@@ -6609,6 +6817,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/euforia-bloque-iii-erotica/39015/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-24",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -7172,6 +7396,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-25",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-25",
+      "hora": "16:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-25",
       "hora": "16:00",
@@ -7700,6 +7956,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-25",
+      "hora": "18:10",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-25",
       "hora": "18:15",
@@ -7841,6 +8113,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100397&eventCode=105052",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-25",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -8196,6 +8484,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-25",
+      "hora": "20:20",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-10-25",
       "hora": "20:25",
@@ -8548,6 +8852,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-25",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-25",
       "hora": "22:15",
@@ -8689,6 +9009,22 @@
       "genre": "Historia, Música",
       "letterboxd": "https://letterboxd.com/film/chopin-a-sonata-in-paris/",
       "ticket_url": "https://www.pillalas.com/pase/1093340/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-25",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -9140,6 +9476,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-26",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-26",
+      "hora": "16:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-26",
       "hora": "16:10",
@@ -9588,6 +9956,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-26",
+      "hora": "18:10",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-26",
       "hora": "18:15",
@@ -9729,6 +10113,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/rose-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100364&eventCode=116223",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-26",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -10052,6 +10452,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-26",
+      "hora": "20:20",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-26",
       "hora": "20:30",
@@ -10308,6 +10724,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-26",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-26",
       "hora": "22:15",
@@ -10465,6 +10897,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/the-devils/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/los-demonios-vose/39214/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-26",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -10945,6 +11393,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/viaje-al-pais-de-los-blancos/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-1-viaje-al-pais-de-los-blancos-2026-43/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-27",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -11521,6 +11985,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100434&eventCode=105052",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-27",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -12164,6 +12644,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-27",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-27",
       "hora": "22:15",
@@ -12772,6 +13268,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-28",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-28",
+      "hora": "16:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-28",
       "hora": "16:10",
@@ -13300,6 +13828,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-28",
+      "hora": "18:10",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-28",
       "hora": "18:15",
@@ -13473,6 +14017,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/blue-heron/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/blue-heron/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-28",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -13844,6 +14404,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-28",
+      "hora": "20:20",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-28",
       "hora": "20:30",
@@ -14180,6 +14756,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-28",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-28",
       "hora": "22:15",
@@ -14340,6 +14932,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-28",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-28",
       "hora": "22:35",
@@ -14497,6 +15105,22 @@
       "genre": "Drama, Thriller",
       "letterboxd": "https://letterboxd.com/film/ashes-2026-3/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-2-ceniza-en-la-boca-2026-14/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-29",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -14689,6 +15313,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/naza/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-29",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -14897,6 +15537,22 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/nightborn/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-1-nightborn-2026-v-o-s-e-4/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-10-29",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -15441,6 +16097,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/chicho-o-mientras-el-cuerpo-aguante-una-comedia/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/chicho-o-mientras-el-cuerpo-aguante-una-comedia-didactica/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-11-01",
+      "hora": "12:00",
+      "title_es": "Esas imágenes en movimiento (II)",
+      "title_en": "Esas imágenes en movimiento (II)",
+      "original_title": "",
+      "director": "Varios/as autores/as",
+      "country": "",
+      "year": null,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/esas-imagenes-en-movimiento-ii",
       "ciclo": ""
     },
     {
