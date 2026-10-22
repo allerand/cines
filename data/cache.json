@@ -3140,7 +3140,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The Hills Have Eyes Part 2 (1984), The Grim Adventures of Billy & Mandy: Meet the Reaper (2000), Filming Obstinately, Meeting Patricio Guzman (2014)",
-    "fecha": "2026-10-18",
+    "fecha": "2026-10-22",
     "con_duracion": false,
     "desempate": ""
   },
@@ -15141,7 +15141,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-21",
+    "fecha": "2026-10-22",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -20330,7 +20330,8 @@
     "duration": 105,
     "genre": "Drama",
     "title_es": "Cinco segundos",
-    "original_title": "Cinque secondi"
+    "original_title": "Cinque secondi",
+    "clase_titulo": "exacto"
   },
   "palestina 36|2025": {
     "url": "https://letterboxd.com/film/palestine-36/",
@@ -22681,7 +22682,8 @@
     "duration": 121,
     "genre": "Drama",
     "title_es": "El estado de las cosas",
-    "original_title": "Der Stand der Dinge"
+    "original_title": "Der Stand der Dinge",
+    "clase_titulo": "exacto"
   },
   "en el curso del tiempo|1976": {
     "url": "https://letterboxd.com/film/kings-of-the-road/",
@@ -22962,7 +22964,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Benoît Daffis, Jean-Christian Tassy",
+    "director": "Jean-Christian Tassy, Benoît Daffis",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -23125,7 +23127,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-18",
+    "fecha": "2026-10-22",
     "con_duracion": true,
     "desempate": ""
   },
@@ -23458,7 +23460,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-18",
+    "fecha": "2026-10-22",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24673,7 +24675,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así y duran lo mismo: A Nightmare on Elm Street (1984), A Nightmare on Elm Street (2010)",
-    "fecha": "2026-10-18",
+    "fecha": "2026-10-22",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25698,7 +25700,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: The Hunger Games: Mockingjay – Part 2 (2015), The Hunger Games: Mockingjay – Part 1 (2014)",
-    "fecha": "2026-10-18",
+    "fecha": "2026-10-22",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26256,5 +26258,78 @@
     "genre": "Comedia, Drama",
     "title_es": "Chungking Express",
     "original_title": "重慶森林"
+  },
+  "pavarotti, live in central park": {
+    "url": "",
+    "title_en": "Pavarotti, live in Central Park",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cinco segundos|2025": {
+    "url": "https://letterboxd.com/film/five-seconds-2025/",
+    "title_en": "Five Seconds",
+    "director": "Paolo Virzì",
+    "country": "Italy",
+    "year": 2025,
+    "duration": 105,
+    "genre": "Drama",
+    "title_es": "Cinco segundos",
+    "original_title": "Cinque secondi",
+    "clase_titulo": "exacto"
+  },
+  "queercinemad especial halloween: adolescencia, sexo y muerte en campamento miasma": {
+    "url": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+    "title_en": "Teenage Sex and Death at Camp Miasma",
+    "director": "Jane Schoenbrun",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Terror, Comedia"
+  },
+  "estacion zombie": {
+    "url": "",
+    "title_en": "Estacion Zombie",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Train to Busan (2016), y puede ser otra",
+    "fecha": "2026-10-22",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "backrooms sin salida (version extendida)": {
+    "url": "https://letterboxd.com/film/backrooms-2026/",
+    "title_en": "Backrooms",
+    "director": "Kane Parsons",
+    "country": "USA, Canada",
+    "year": 2026,
+    "duration": 111,
+    "genre": "Misterio, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "sin_hints": "título"
+  },
+  "charco": {
+    "url": "",
+    "title_en": "Charco",
+    "director": "Julián Chalde",
+    "country": "Argentina",
+    "year": 2017,
+    "duration": 80,
+    "genre": "Documental, Música",
+    "original_title": "Charco: Canciones del Río de la Plata"
+  },
+  "hotel transylvania|2012": {
+    "url": "https://letterboxd.com/film/hotel-transylvania/",
+    "title_en": "Hotel Transylvania",
+    "director": "Genndy Tartakovsky",
+    "country": "USA",
+    "year": 2012,
+    "duration": 91,
+    "genre": "Comedia, Animación",
+    "title_es": "Hotel Transilvania",
+    "original_title": "Hotel Transylvania"
   }
 }
