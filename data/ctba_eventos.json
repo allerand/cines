@@ -1,37 +1,42 @@
 {
   "https://complejoteatral.gob.ar/produccion/el-joven-frankenstein/": {
-    "ticket_url": "",
+    "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ad098735-2d3d-455d-86f3-01cf047b3b43",
     "titulo": "El joven Frankenstein",
-    "visto": "2026-10-22"
+    "visto": "2026-10-23"
   },
   "https://complejoteatral.gob.ar/produccion/en-las-rutas-de-wim-wenders/": {
     "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/d16d9962-1a8b-48f5-910e-bebb595dcd70",
     "titulo": "En las rutas de Wim Wenders",
-    "visto": "2026-10-22"
+    "visto": "2026-10-23"
   },
   "https://complejoteatral.gob.ar/produccion/frank-borzage-un-romantico-en-hollywood-parte-2/": {
     "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/afd31496-ede0-45ed-9b5f-1cb447089264",
     "titulo": "Frank Borzage, un romántico en Hollywood – Parte 2",
-    "visto": "2026-10-22"
+    "visto": "2026-10-23"
+  },
+  "https://complejoteatral.gob.ar/produccion/herzog-kinski-enemigo-mio/": {
+    "ticket_url": "",
+    "titulo": "Herzog-Kinski: enemigo mío",
+    "visto": "2026-10-23"
   },
   "https://complejoteatral.gob.ar/produccion/las-furias-y-lo-que-le-paso-a-reynoso/": {
-    "ticket_url": "",
+    "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/cfe2f749-76cb-4721-863a-883a4a5f929a",
     "titulo": "Las furias y Lo que le pasó a Reynoso",
-    "visto": "2026-10-22"
+    "visto": "2026-10-23"
   },
   "https://complejoteatral.gob.ar/produccion/museo-de-la-subversion/": {
     "ticket_url": "",
     "titulo": "Museo de la subversión",
-    "visto": "2026-10-22"
+    "visto": "2026-10-23"
   },
   "https://complejoteatral.gob.ar/produccion/seis-tardes-con-mae-west/": {
     "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/28a5874b-126d-47a5-9407-b040f04d90f6",
     "titulo": "Seis tardes con Mae West",
-    "visto": "2026-10-22"
+    "visto": "2026-10-23"
   },
   "https://complejoteatral.gob.ar/produccion/shohei-imamura-bis/": {
-    "ticket_url": "",
+    "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/f77a02e0-8a6c-4d87-b61e-e0d7722963f6",
     "titulo": "Shohei Imamura bis",
-    "visto": "2026-10-22"
+    "visto": "2026-10-23"
   }
 }
