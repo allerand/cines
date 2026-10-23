@@ -15,8 +15,9 @@ import csv
 from datetime import date
 from pathlib import Path
 
-from scraper import (_lorca_carteles, _lorca_es_titulo, _lorca_lectura_sana,
-                     _lorca_leer_tsv, _lorca_render, _lorca_titulo_conocido)
+from scraper import (_lorca_carteles, _lorca_dias, _lorca_es_titulo,
+                     _lorca_lectura_sana, _lorca_leer_partes, _lorca_leer_tsv,
+                     _lorca_render, _lorca_titulo_conocido)
 
 FIXTURES = Path(__file__).parent / "tests" / "fixtures"
 HOY = date(2026, 9, 28)      # el lunes de esa semana
@@ -117,5 +118,71 @@ url = _lorca_render(*carteles[0], 1490)
 assert url == ("https://static.wixstatic.com/media/29f330_41e4cf~mv2.jpg/v1/fill/"
                "w_1490,h_1045,al_c,q_90,enc_auto/cartel.jpg"), url
 print("✓ la imagen se pide grande y sin compresión ni enfoque, que es lo que confunde al OCR")
+
+
+# --- El cartel del 22 al 28/10/2026: títulos subrayados, días alternados -----
+# Ninguna lectura del lector de posiciones pasaba los controles (el subrayado
+# le tapa los títulos) y el Lorca salió de La Nación, que el jueves 22 daba
+# Digger donde el cartel decía Los otros. Los fixtures son la salida TSV real
+# de cada columna del cartel, ya sin rayas: una buena (1600 px, psm 6) y una a
+# la que se le escapó el título de Digger (1490 px, psm 11).
+def leer_columnas(nombre):
+    partes = []
+    for i in range(3):
+        with open(FIXTURES / f"lorca_columnas_{nombre}_{i}.tsv", encoding="utf-8") as fh:
+            partes.append(list(csv.DictReader(fh, delimiter="\t", quoting=csv.QUOTE_NONE)))
+    return _lorca_leer_partes(partes)
+
+
+JUEVES = date(2026, 10, 22)
+nuevo = leer_columnas("ok")
+assert nuevo["rango"] == (22, 10, 28, 10) and nuevo["huerfanas"] == 0
+assert nuevo["grilla"] == {
+    "LOS OTROS":                ["22:00"],
+    "LA VIDA ES ASI":           ["14:00", "19:50"],
+    "UNA QUINTA EN PORTUGAL":   ["13:55", "16:10"],
+    "DIGGER":                   ["22:00"],
+    "QUIERO TU SEXO":           ["22:10"],
+    "LA CASA":                  ["16:00"],
+    "TIEMPOS DE ILUSION":       ["20:00"],
+    "BUENAS VIBRACIONES":       ["18:15"],
+    "QUE DIOS PERDONA A TODOS": ["18:00"],
+}, nuevo["grilla"]
+# Los otros jueves, sábado, lunes y miércoles; Digger viernes, domingo y martes.
+assert nuevo["dias"] == {"LOS OTROS": (0, 2, 3, 5), "DIGGER": (1, 4, 6)}, nuevo["dias"]
+assert _lorca_lectura_sana(nuevo, JUEVES) == (date(2026, 10, 22), date(2026, 10, 28))
+print("✓ el cartel subrayado se lee por columnas: nueve películas y quién va qué día a las 22.00")
+
+perdido = leer_columnas("titulo_perdido")
+assert "DIGGER" not in perdido["grilla"]
+# El 22.00 y los días de Digger quedaron sin película, y no pasaron a la de
+# arriba: Una quinta en Portugal sigue con sus dos horarios y sin días.
+assert perdido["huerfanas"] == 2
+assert perdido["grilla"]["UNA OUINTA EN PORTUGAL"] == ["13:55", "16:10"]
+assert "UNA OUINTA EN PORTUGAL" not in perdido["dias"]
+assert _lorca_lectura_sana(perdido, JUEVES) is None
+print("✓ si se pierde un título, sus días y su horario no se le cuelgan a la película de arriba")
+
+# Sin las aclaraciones, Los otros y Digger chocan a las 22.00 en la sala 1.
+assert _lorca_lectura_sana({**nuevo, "dias": {}}, JUEVES) is None
+# El lector de posiciones no sabe a qué película va cada aclaración: si el
+# cartel trae alguna, su lectura no se publica.
+assert _lorca_lectura_sana({**ok, "dias_sin_asignar": True}, HOY) is None
+print("✓ dos películas a la misma hora en la misma sala no se publican")
+
+assert _lorca_dias("(jueves, sábado, lunes, miércoles)") == (0, 2, 3, 5)
+assert _lorca_dias("(viernes, Domingo, martes)") == (1, 4, 6)
+assert _lorca_dias("(LUNES, MARTES Y") is None                 # los precios del costado
+assert _lorca_dias("-JUEVES A DOMINGOS Y FERIADOS: $10.000") is None
+assert _lorca_dias('"LOS OTROS"') is None
+print("✓ las aclaraciones de días se leen, y los precios del costado no se confunden con ellas")
+
+# El OCR cambia una letra o pega una de más en la punta; nada más que eso.
+conocidos = ["Una quinta en Portugal", "La vida es así", "El agente secreto 2", "La caza"]
+assert _lorca_titulo_conocido("UNA OUINTA EN PORTUGAL", conocidos) == "Una quinta en Portugal"
+assert _lorca_titulo_conocido("NLA VIDA ES ASI", conocidos) == "La vida es así"
+assert _lorca_titulo_conocido("EL AGENTE SECRETO", conocidos) == "EL AGENTE SECRETO"
+assert _lorca_titulo_conocido("LA CASA", conocidos) == "LA CASA"
+print("✓ un título con una letra mal leída se reconoce; uno al que le falta algo o muy corto, no")
 
 print("\nTodo OK")

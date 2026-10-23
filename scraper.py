@@ -403,11 +403,16 @@ def fetch_malba_evento_meta(url: str) -> dict:
       Ciclos:       "...Películas → 2026 [Ciclo ]CICLO_NAME FILM De DIRECTOR DAY..."
                     "...Cineclub Nocturna FILM De DIRECTOR Sábado 16 de mayo..."
       Standalone:   "FILM De DIRECTOR Domingo a las 18:00 ..."
+
+    Si la página no existe más (404), devuelve {"borrado": True}: el museo
+    sacó esa función, aunque la agenda la siga listando.
     """
     if not url:
         return {}
     try:
         soup = fetch_html(url)
+    except urllib.error.HTTPError as e:
+        return {"borrado": True} if e.code in (404, 410) else {}
     except Exception:
         return {}
     text = re.sub(r"\s+", " ", soup.get_text(" ", strip=True))
@@ -565,11 +570,42 @@ _MALBA_DAY_HEAD_RE = re.compile(
 _MALBA_FILM_LINE_RE = re.compile(r"^(\d{1,2}):(\d{2})\s+(.+)$")
 
 
-def _parse_malba_evento(soup, url: str, today: date, cutoff: date) -> list[Screening]:
+def _malba_fecha_cercana(weekday: Optional[int], day: int, today: date) -> Optional[date]:
+    """(díasemana, díadelmes) → la fecha más cercana a hoy, para atrás o para
+    adelante y hasta medio año, que cae ese día. Sirve para saber si una
+    Programación ya pasó entera, cosa que _malba_resolve_date (sólo mira la
+    ventana que viene) no dice."""
+    if weekday is None:
+        return None
+    candidatas = []
+    for corrimiento in range(-6, 7):
+        m = today.month - 1 + corrimiento
+        try:
+            c = date(today.year + m // 12, m % 12 + 1, day)
+        except ValueError:
+            continue
+        if c.weekday() == weekday:
+            candidatas.append(c)
+    return min(candidatas, key=lambda c: abs((c - today).days), default=None)
+
+
+def _malba_ciclo_clave(nombre: str) -> str:
+    """Para comparar el ciclo que nombra la página de una película ("Ciclo El
+    Romerazo") con el de la página del ciclo ("El Romerazo")."""
+    return _norm_madrid(re.sub(r"^\s*ciclo\s+", "", nombre or "", flags=re.I))
+
+
+def _parse_malba_evento(soup, url: str, today: date, cutoff: date,
+                        ciclos: Optional[dict] = None) -> list[Screening]:
     """Parsea la página /evento/ de un ciclo de MALBA: nombre del ciclo + bloque
     'Programación'. La grilla lista por día una o VARIAS funciones; sólo la
     primera de cada día trae el encabezado "JUEVES 9", las siguientes son sólo
     "20:30 …", así que arrastramos el día actual entre líneas/párrafos.
+
+    Si se pasa `ciclos`, anota ahí cada ciclo que tiene su Programación
+    escrita, aunque ninguna función caiga en la ventana: su nombre, si le queda
+    alguna fecha de hoy en adelante ("vigente") y sus (fecha, hora) de la
+    ventana. Con eso scrape_malba contrasta la agenda.
     """
     text = soup.get_text(" ", strip=True)
     mc = re.search(r"Ciclo\s+(.+?)\s+(?:" + _MALBA_WD_RE + r")\s+a\s+las",
@@ -605,6 +641,8 @@ def _parse_malba_evento(soup, url: str, today: date, cutoff: date) -> list[Scree
 
     out: list[Screening] = []
     seen: set = set()
+    programadas = 0      # las funciones de la Programación, caigan o no en la ventana
+    vigente = False      # si alguna es de hoy en adelante
     cur: Optional[tuple[Optional[int], int]] = None  # (weekday, día del mes)
     for p in h3.find_all_next("p"):
         for br in p.find_all("br"):
@@ -628,6 +666,9 @@ def _parse_malba_evento(soup, url: str, today: date, cutoff: date) -> list[Scree
             fm = _MALBA_FILM_LINE_RE.match(ln)
             if not fm or cur is None:
                 continue
+            programadas += 1
+            cercana = _malba_fecha_cercana(cur[0], cur[1], today)
+            vigente = vigente or bool(cercana and cercana >= today)
             d = _malba_resolve_date(cur[0], cur[1], today, cutoff)
             if not d:
                 continue
@@ -645,10 +686,20 @@ def _parse_malba_evento(soup, url: str, today: date, cutoff: date) -> list[Scree
             out.append(Screening(cine="MALBA", title=title, fecha=d.isoformat(),
                                  hora=hora, ticket_url=url, ciclo=ciclo,
                                  director=director))
+    if ciclos is not None and programadas:
+        h1 = soup.find("h1")
+        for nombre in (ciclo, h1.get_text(strip=True) if h1 else ""):
+            if not _malba_ciclo_clave(nombre):
+                continue
+            info = ciclos.setdefault(_malba_ciclo_clave(nombre), {
+                "nombre": ciclo or nombre, "vigente": False, "funciones": set()})
+            info["vigente"] = info["vigente"] or vigente
+            info["funciones"] |= {(s.fecha, s.hora) for s in out}
     return out
 
 
-def scrape_malba_eventos(today: date, cutoff: date) -> list[Screening]:
+def scrape_malba_eventos(today: date, cutoff: date,
+                         ciclos: Optional[dict] = None) -> list[Screening]:
     """Recorre los ciclos linkeados en malba.org.ar/cine/ y parsea el bloque
     'Programación' de cada página /evento/."""
     try:
@@ -673,12 +724,12 @@ def scrape_malba_eventos(today: date, cutoff: date) -> list[Screening]:
             esoup = fetch_html(u)
         except Exception:
             continue
-        out.extend(_parse_malba_evento(esoup, u, today, cutoff))
+        out.extend(_parse_malba_evento(esoup, u, today, cutoff, ciclos))
     return out
 
 
-def scrape_malba(semanas: int = 2) -> list[Screening]:
-    today = date.today()
+def scrape_malba(semanas: int = 2, hoy: Optional[date] = None) -> list[Screening]:
+    today = hoy or date.today()
     end = today + timedelta(weeks=semanas)
     result: list[Screening] = []
     seen: set[tuple] = set()
@@ -692,8 +743,12 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
     def _mnorm(t: str) -> str:
         return re.sub(r"[^a-z0-9]+", " ", (t or "").lower()).strip()
 
+    # Los ciclos con Programación escrita (ver _parse_malba_evento), y qué
+    # funciones salieron de la agenda y no de una de esas Programaciones.
+    ciclos: dict = {}
+    de_agenda: set = set()
     try:
-        for s in scrape_malba_eventos(today, end):
+        for s in scrape_malba_eventos(today, end, ciclos):
             key = (s.title, s.fecha, s.hora)
             if key in seen:
                 continue
@@ -780,6 +835,7 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
                     ticket_url=ticket_url,
                     ciclo=ciclo,
                 ))
+                de_agenda.add(id(result[-1]))
 
         d += timedelta(days=1)
 
@@ -796,6 +852,42 @@ def scrape_malba(semanas: int = 2) -> list[Screening]:
             s.director = meta["director"]
         if meta.get("ciclo") and not s.ciclo:
             s.ciclo = meta["ciclo"]
+
+    # La agenda día por día no se entera cuando el museo cambia la
+    # programación de un ciclo. El Romerazo iba a seguir el 22, 23, 29 y 30 de
+    # octubre de 2026; a principios de mes el MALBA le dio esos días al
+    # festival Asterisco y cortó la Programación del ciclo el 16/10, pero dejó
+    # en la agenda sus nueve películas de esos días (Elvira Fernández,
+    # vendedora de tienda el 22 a las 23, entre funciones del festival en la
+    # misma sala) y se publicaron hasta que el 22 borró sus páginas. Una
+    # función de la agenda no se publica si:
+    #   · su página dice que es de un ciclo cuya Programación ya terminó: la
+    #     última fecha del Romerazo era el 16/10;
+    #   · ese ciclo ya da otra función a la misma hora ese día: es la misma con
+    #     otro título ("Retrospectiva RAM" a las 22 del 29/10 es la
+    #     "Retrospectiva Rafael Maino" del Asterisco);
+    #   · su página ya no existe: la sacó el museo.
+    # Lo que la agenda tiene de más en un ciclo que sigue se deja: en julio la
+    # Programación de Revista Caligari dejó de nombrar Family Portrait del
+    # 10/7 y la agenda la mantuvo, y no hay cómo saber cuál tenía razón.
+    sacadas = []
+    for s in result:
+        if id(s) not in de_agenda:
+            continue
+        meta = meta_cache.get(s.ticket_url) or {}
+        ciclo = ciclos.get(_malba_ciclo_clave(meta.get("ciclo", "")))
+        if meta.get("borrado"):
+            sacadas.append((s, "su página ya no existe"))
+        elif ciclo and not ciclo["vigente"]:
+            sacadas.append((s, f"{ciclo['nombre']} ya terminó según su programación"))
+        elif ciclo and (s.fecha, s.hora) in ciclo["funciones"]:
+            sacadas.append((s, f"{ciclo['nombre']} ya tiene otra función a esa hora"))
+    if sacadas:
+        fuera = {id(s) for s, _ in sacadas}
+        result = [s for s in result if id(s) not in fuera]
+        print(f"[malba: {len(sacadas)} funciones de la agenda descartadas — "
+              + "; ".join(f"{s.title} {s.fecha} {s.hora}: {motivo}" for s, motivo in sacadas)
+              + "]", end=" ", flush=True)
 
     return result
 
@@ -2987,7 +3079,10 @@ def scrape_lorca() -> list[Screening]:
     """
     Fallback manual cuando IMDb falla. Lee data/lorca_manual.json con shape:
       {"period_start": "...", "period_end": "...",
-       "films": [{"title": "...", "times": ["HH:MM", ...]}, ...]}
+       "films": [{"title": "...", "times": ["HH:MM", ...],
+                  "days": ["jueves", "sábado", ...]}, ...]}
+    "days" es opcional: va cuando el cartel aclara que la película se da sólo
+    algunos días (dos películas que se turnan el mismo horario y sala).
     """
     if not LORCA_MANUAL_PATH.exists():
         print("[Lorca] no existe data/lorca_manual.json", flush=True)
@@ -3013,12 +3108,22 @@ def scrape_lorca() -> list[Screening]:
         print(f"[Lorca] lorca_manual VENCIDO (period_end={end}, hoy={today}) — "
               f"actualizá la programación de la semana", flush=True)
         return []
+    dias_por_film: dict = {}
+    for i, film in enumerate(data.get("films", [])):
+        if film.get("days"):
+            dias = _lorca_dias("(" + ", ".join(film["days"]) + ")")
+            if not dias:
+                print(f"[Lorca] días ilegibles en lorca_manual.json para "
+                      f"{film.get('title')!r}: {film['days']} — no se publica", flush=True)
+            dias_por_film[i] = dias or ()
     result: list[Screening] = []
     d = max(start, today)
     while d <= end:
-        for film in data.get("films", []):
+        for i, film in enumerate(data.get("films", [])):
             title = film.get("title", "").strip()
             if not title:
+                continue
+            if i in dias_por_film and d.weekday() not in dias_por_film[i]:
                 continue
             for t in film.get("times", []):
                 m = re.match(r"^(\d{1,2}):(\d{2})$", t.strip())
@@ -10731,8 +10836,13 @@ LORCA_CARTEL_PAGINA = "https://cinelorca.wixsite.com/cine-lorca/current-producti
 # exacta y el resto perdía filas: se agregan 1400 y 1600. Más lecturas no
 # aflojan el control —siguen teniendo que coincidir dos—, sólo le dan más
 # chances a un cartel bien escrito.
+#
+# Con el cartel del 22 al 28/10/2026 (títulos subrayados, dos películas que se
+# turnan por día) el lector por columnas dio la grilla exacta y con buena
+# confianza a 1600 (psm 6, 4 y 3), 1650 y 1900 (psm 4); a 1490 y 1700 se le
+# escapaba algún título o un horario salía con poca confianza. Se suman esos.
 LORCA_CARTEL_LECTURAS = ((1490, 6), (1490, 11), (1700, 4), (1300, 6), (2000, 11),
-                         (1400, 6), (1600, 6))
+                         (1400, 6), (1600, 6), (1600, 4), (1650, 4), (1900, 4))
 LORCA_CARTEL_LECTURAS_IGUALES = 2
 # El modelo de idioma va en el repo (tessdata_fast, Apache 2.0) en vez de salir
 # del paquete del sistema: el `tesseract-ocr-spa` de Ubuntu trae otro modelo y
@@ -10755,8 +10865,38 @@ _LORCA_RANGO_RE = re.compile(
 # Lo que en el cartel está en mayúsculas pero no es una película.
 _LORCA_RUIDO_RE = re.compile(
     r"SALA|DURACI|PRECIO|ENTRADA|JUEVES|LUNES|MARTES|MI[EÉ]RCOLES|DOMINGO|"
-    r"FERIADO|PROGRAMACI|V[ÁA]LIDA|DESDE|CINE\s+LORCA|CORRIENTES|TEL|ABRE|"
+    r"FERIADO|PROGRAMACI|V[ÁA]LIDA|DESDE|CINE\s*LORCA|CORRIENTES|TEL|ABRE|"
     r"MIN\b|SUBT|^\s*AL\s*$|\d{2,}", re.I)
+# Cuando dos películas comparten horario y sala, el cartel aclara debajo del
+# título qué días va cada una. El del 22 al 28/10/2026 tenía Los otros
+# "(jueves, sábado, lunes, miércoles)" y Digger "(viernes, Domingo, martes)",
+# las dos a las 22.00 en la sala 1. Repetir los horarios todos los días, como
+# se hacía, publica las dos películas a la vez.
+_LORCA_DIA = {"lunes": 0, "martes": 1, "miercoles": 2, "jueves": 3,
+              "viernes": 4, "sabado": 5, "domingo": 6}
+
+
+def _lorca_dias(texto: str) -> Optional[tuple]:
+    """Los días (0 = lunes) de una aclaración como "(viernes, Domingo,
+    martes)", o None si la línea no es eso. Tiene que estar entre paréntesis y
+    no tener más que días: así no se confunde con los precios del costado
+    ("LUNES, MARTES Y MIERCOLES: $7000"), que el OCR a veces corta en
+    "(LUNES, MARTES Y"."""
+    if ("(" not in texto and ")" not in texto) or re.search(r"[\d$:]", texto):
+        return None
+    sin_acentos = unicodedata.normalize("NFD", texto.lower()).encode("ascii", "ignore").decode()
+    palabras = re.findall(r"[a-z]+", sin_acentos)
+    if not palabras or palabras[-1] == "y":
+        return None
+    dias = set()
+    for p in palabras:
+        if p == "y":
+            continue
+        dia = _LORCA_DIA.get(p, _LORCA_DIA.get(p[:-1]) if p.endswith("s") else None)
+        if dia is None:
+            return None
+        dias.add(dia)
+    return tuple(sorted(dias)) or None
 
 
 def _lorca_es_titulo(texto: str) -> bool:
@@ -10849,17 +10989,171 @@ def _lorca_leer_tsv(filas: list) -> Optional[dict]:
         "huerfanas": huerfanas,
         "conf_horas": min([h["conf"] for h in horas], default=0.0),
         "conf_titulos": min([t["conf"] for t in titulos], default=0.0),
+        # Este lector ubica cada horario por posición y no sabe a qué película
+        # va una aclaración de días: si el cartel trae alguna, la lectura no
+        # se publica (la de columnas, más abajo, sí las reparte).
+        "dias_sin_asignar": any(_lorca_dias(t) for t in texto_todo),
+        "horas_vistas": {h["hora"] for h in horas if h["conf"] >= LORCA_CONF_MIN_HORAS},
     }
 
 
-def _lorca_lectura_sana(lectura: Optional[dict], hoy: date) -> Optional[tuple]:
-    """Valida una lectura y devuelve (desde, hasta) si se puede publicar."""
-    if not lectura or not lectura["rango"] or not lectura["grilla"]:
+# El lector por columnas. Desde la semana del 15/10/2026 el cartel subraya los
+# títulos y la raya pegada a las letras hace que tesseract no los lea: ninguna
+# de las siete lecturas pasaba los controles y el Lorca salió dos semanas de La
+# Nación, que el jueves 22 todavía daba la grilla vieja (Digger en vez de Los
+# otros). Acá se borran las rayas —subrayados y bordes de la grilla— con
+# Pillow, se corta el cartel por los bordes verticales y cada columna se lee
+# como texto corrido, de arriba abajo: título, días si los hay, horarios.
+#
+# Una raya es un tramo oscuro de al menos 3,5% del ancho (unos 50 px a 1490):
+# el trazo más ancho de una letra no llega a 30. Un borde de columna es una
+# raya vertical que cubre al menos un cuarto del alto.
+LORCA_RAYA = 0.035
+LORCA_BORDE = 0.25
+# "o 22.00 hs.  SALA 1". El OCR a veces pega la viñeta al número ("018.15
+# hs."), y un horario suelto en medio de una frase ("abre sus puertas a las
+# 13:40hs") no es una función: tiene que abrir la línea.
+_LORCA_FUNCION_RE = re.compile(r"^[\W_]*(?:[o0°•]\s*)?(\d{1,2})[.:,](\d{2})\s*h", re.I)
+_LORCA_SALA_RE = re.compile(r"SALA\s*(\d)", re.I)
+
+
+def _lorca_columnas(imagen: bytes) -> Optional[list]:
+    """El cartel en grises, sin rayas y cortado en sus columnas (imágenes PNG).
+    None si no está Pillow."""
+    try:
+        from io import BytesIO
+        from PIL import Image, ImageDraw
+    except ImportError:
         return None
-    if lectura["huerfanas"]:
+    im = Image.open(BytesIO(imagen)).convert("L")
+    ancho, alto = im.size
+    oscuro = bytes(1 if i < 140 else 0 for i in range(256))
+    filas = im.tobytes().translate(oscuro)
+    columnas = im.transpose(Image.Transpose.TRANSPOSE).tobytes().translate(oscuro)
+    raya = re.compile(rb"\x01{%d,}" % max(int(ancho * LORCA_RAYA), 8))
+    dibujo = ImageDraw.Draw(im)
+    for y in range(alto):
+        for m in raya.finditer(filas, y * ancho, (y + 1) * ancho):
+            dibujo.line((m.start() - y * ancho, y, m.end() - y * ancho - 1, y), fill=255)
+    bordes: list[list[int]] = []
+    for x in range(ancho):
+        for m in raya.finditer(columnas, x * alto, (x + 1) * alto):
+            dibujo.line((x, m.start() - x * alto, x, m.end() - x * alto - 1), fill=255)
+            if m.end() - m.start() >= alto * LORCA_BORDE:
+                if bordes and x - bordes[-1][-1] <= 3:
+                    bordes[-1].append(x)
+                else:
+                    bordes.append([x])
+    cortes = [0] + [sum(b) // len(b) for b in bordes] + [ancho]
+    partes = []
+    for x0, x1 in zip(cortes, cortes[1:]):
+        if x1 - x0 >= ancho * 0.15:
+            salida = BytesIO()
+            im.crop((x0, 0, x1, alto)).save(salida, "PNG")
+            partes.append(salida.getvalue())
+    return partes
+
+
+def _lorca_leer_columnas(imagen: bytes, psm: int = 6) -> Optional[dict]:
+    """Lee el cartel columna por columna, en el orden en que está escrito."""
+    partes = _lorca_columnas(imagen)
+    if not partes:
         return None
-    if (lectura["conf_horas"] < LORCA_CONF_MIN_HORAS
-            or lectura["conf_titulos"] < LORCA_CONF_MIN_TITULOS):
+    return _lorca_leer_partes([_lorca_ocr(p, psm, "columna.png") for p in partes])
+
+
+def _lorca_leer_partes(ocr_por_columna: list) -> dict:
+    """De la salida TSV de tesseract de cada columna al cartel: rango, año,
+    película → horarios y los días de las que no van todos los días."""
+    peliculas: list[dict] = []
+    huerfanas = 0
+    texto_todo: list[str] = []
+    horas_vistas: set = set()
+    for ocr in ocr_por_columna:
+        filas = [f for f in ocr
+                 if (f.get("text") or "").strip() and float(f.get("conf", -1)) >= 30]
+        actual = None
+        for linea_id in dict.fromkeys((f["block_num"], f["par_num"], f["line_num"]) for f in filas):
+            palabras = [f for f in filas if (f["block_num"], f["par_num"], f["line_num"]) == linea_id]
+            texto = re.sub(r"[“”„‟＂'’`´]", '"', " ".join(f["text"] for f in palabras)).strip()
+            texto_todo.append(texto)
+            conf = min(float(f["conf"]) for f in palabras)
+            funcion = _LORCA_FUNCION_RE.match(texto)
+            dias = _lorca_dias(texto)
+            if re.search(r"DURACI", texto, re.I):
+                # "Duración: 129 MIN" cierra el recuadro de una película. Lo
+                # que venga después sin un título nuevo es de una película
+                # cuyo título no se leyó, y no se le cuelga a la de arriba
+                # (pasó probando el cartel del 22/10: Digger se perdía y sus
+                # 22.00 de viernes, domingo y martes quedaban de Una quinta en
+                # Portugal).
+                actual = None
+            elif funcion:
+                hh, mm = int(funcion.group(1)), funcion.group(2)
+                if not (10 <= hh <= 23 and int(mm) < 60):
+                    huerfanas += 1
+                    continue
+                hora = f"{hh:02d}:{mm}"
+                conf_hora = next((float(f["conf"]) for f in palabras
+                                  if re.search(r"\d[.:,]\d", f["text"])), conf)
+                if conf_hora >= LORCA_CONF_MIN_HORAS:
+                    horas_vistas.add(hora)
+                if actual is None:
+                    huerfanas += 1
+                    continue
+                sala = _LORCA_SALA_RE.search(texto)
+                actual["funciones"].append((hora, int(sala.group(1)) if sala else None, conf_hora))
+            elif dias:
+                # Los días van entre el título y los horarios; después de los
+                # horarios son de la película siguiente.
+                if actual is None or actual["dias"] or actual["funciones"]:
+                    huerfanas += 1
+                    continue
+                actual["dias"] = dias
+            elif _lorca_es_titulo(texto):
+                # Entre comillas, si están: lo de afuera es ruido de los bordes.
+                if texto.count('"') >= 2:
+                    texto = texto[texto.index('"') + 1:texto.rindex('"')]
+                elif texto.endswith('"'):
+                    texto = texto[:-1]
+                elif texto.startswith('"'):
+                    texto = texto[1:]
+                titulo = " ".join(re.sub(r"^[^\w¿¡]+|[^\w?!]+$", "", texto.replace('"', " ")).split())
+                # La confianza es la de las palabras: las comillas sueltas
+                # salen con nota baja aunque el título se lea perfecto.
+                conf = min((float(f["conf"]) for f in palabras
+                            if re.search(r"[^\W\d_]{2}", f["text"])), default=conf)
+                actual = {"titulo": titulo, "dias": None, "funciones": [], "conf": conf}
+                peliculas.append(actual)
+
+    grilla: dict[str, list[str]] = {}
+    dias_por_titulo: dict[str, tuple] = {}
+    for p in peliculas:
+        grilla.setdefault(p["titulo"], []).extend(h for h, _, _ in p["funciones"])
+        if p["dias"]:
+            if dias_por_titulo.get(p["titulo"], p["dias"]) != p["dias"]:
+                huerfanas += 1
+            dias_por_titulo[p["titulo"]] = p["dias"]
+    texto = " ".join(texto_todo)
+    rango = _LORCA_RANGO_RE.search(texto)
+    anio = re.search(r"\b(20\d{2})\b", texto)
+    return {
+        "rango": tuple(int(x) for x in rango.groups()) if rango else None,
+        "anio": int(anio.group(1)) if anio else None,
+        "grilla": {t: sorted(set(v)) for t, v in grilla.items()},
+        "dias": dias_por_titulo,
+        "funciones": [(p["titulo"], h, s) for p in peliculas for h, s, _ in p["funciones"]],
+        "huerfanas": huerfanas,
+        "conf_horas": min([c for p in peliculas for _, _, c in p["funciones"]], default=0.0),
+        "conf_titulos": min([p["conf"] for p in peliculas], default=0.0),
+        "dias_sin_asignar": False,
+        "horas_vistas": horas_vistas,
+    }
+
+
+def _lorca_semana(lectura: Optional[dict], hoy: date) -> Optional[tuple]:
+    """(desde, hasta) del rango que dice el cartel, si es una semana verosímil."""
+    if not lectura or not lectura["rango"]:
         return None
     d1, m1, d2, m2 = lectura["rango"]
     anio = lectura["anio"] or hoy.year
@@ -10868,10 +11162,26 @@ def _lorca_lectura_sana(lectura: Optional[dict], hoy: date) -> Optional[tuple]:
         hasta = date(anio + (1 if (m2, d2) < (m1, d1) else 0), m2, d2)
     except ValueError:
         return None
-    # Una semana verosímil, y que llegue hasta hoy o más adelante: si el cartel
-    # que está colgado es el de la semana pasada, no se publica nada.
     if not (1 <= (hasta - desde).days + 1 <= 8):
         return None
+    return desde, hasta
+
+
+def _lorca_lectura_sana(lectura: Optional[dict], hoy: date) -> Optional[tuple]:
+    """Valida una lectura y devuelve (desde, hasta) si se puede publicar."""
+    if not lectura or not lectura["rango"] or not lectura["grilla"]:
+        return None
+    if lectura["huerfanas"] or lectura.get("dias_sin_asignar"):
+        return None
+    if (lectura["conf_horas"] < LORCA_CONF_MIN_HORAS
+            or lectura["conf_titulos"] < LORCA_CONF_MIN_TITULOS):
+        return None
+    semana = _lorca_semana(lectura, hoy)
+    if not semana:
+        return None
+    desde, hasta = semana
+    # Que llegue hasta hoy o más adelante: si el cartel que está colgado es el
+    # de la semana pasada, no se publica nada.
     if hasta < hoy or desde > hoy + timedelta(days=10):
         return None
     grilla = lectura["grilla"]
@@ -10881,6 +11191,19 @@ def _lorca_lectura_sana(lectura: Optional[dict], hoy: date) -> Optional[tuple]:
         return None
     if sum(len(h) for h in grilla.values()) < 3:
         return None
+    dias = lectura.get("dias") or {}
+    if any(t not in grilla or not (1 <= len(d) <= 6) for t, d in dias.items()):
+        return None
+    # Una sala no da dos películas a la misma hora. Si pasa, es que se perdió
+    # la aclaración de días de alguna (o se leyó mal un horario).
+    for dia in range(7):
+        ocupadas = set()
+        for titulo, hora, sala in lectura.get("funciones", ()):
+            if sala is None or (titulo in dias and dia not in dias[titulo]):
+                continue
+            if (hora, sala) in ocupadas:
+                return None
+            ocupadas.add((hora, sala))
     return desde, hasta
 
 
@@ -10892,6 +11215,11 @@ def _lorca_titulo_conocido(titulo: str, conocidos: Optional[list]) -> str:
     if not conocidos:
         return titulo
     clave = _norm_madrid(titulo)
+    claves = {_norm_madrid(otro) for otro in conocidos if otro}
+    if clave not in claves:
+        parecidas = [c for c in claves if _lorca_mal_leido(clave, c)]
+        if len(parecidas) == 1:
+            clave = parecidas[0]
     cuenta: dict = {}
     for otro in conocidos:
         if otro and _norm_madrid(otro) == clave:
@@ -10911,10 +11239,39 @@ def _lorca_titulo_conocido(titulo: str, conocidos: Optional[list]) -> str:
     return max(cuenta, key=_puntaje)
 
 
-def _lorca_ocr(imagen: bytes, psm: int = 6) -> list:
+def _lorca_mal_leido(leido: str, real: str) -> bool:
+    """Si `leido` es `real` con el error típico del OCR en el cartel: una
+    letra cambiada ('UNA OUINTA EN PORTUGAL', dos en un título largo) o una de
+    más en una punta, pegada de la comilla o del borde ('NLA VIDA ES ASI').
+    Nada más: un título al que le falta algo puede ser otra película ('El
+    agente secreto' y 'El agente secreto 2'), y en uno corto una letra
+    cambiada también ('La casa' y 'La caza')."""
+    if len(leido) == len(real) >= 8:
+        distintas = sum(1 for a, b in zip(leido, real) if a != b)
+        return distintas <= (1 if len(real) < 16 else 2)
+    if len(leido) == len(real) + 1 and len(real) >= 6:
+        return leido[1:] == real or leido[:-1] == real
+    return False
+
+
+def _lorca_canon(lectura: Optional[dict], conocidos: Optional[list]) -> Optional[dict]:
+    """La lectura con cada título escrito como en el resto de la cartelera. Si
+    dos títulos leídos terminan siendo la misma película, algo se leyó mal."""
+    if not lectura:
+        return lectura
+    nombres = {t: _lorca_titulo_conocido(t, conocidos) for t in lectura["grilla"]}
+    if len(set(nombres.values())) != len(nombres):
+        return None
+    return {**lectura,
+            "grilla": {nombres[t]: h for t, h in lectura["grilla"].items()},
+            "dias": {nombres.get(t, t): d for t, d in (lectura.get("dias") or {}).items()},
+            "funciones": [(nombres.get(t, t), h, s) for t, h, s in lectura.get("funciones", ())]}
+
+
+def _lorca_ocr(imagen: bytes, psm: int = 6, nombre: str = "cartel.jpg") -> list:
     """Corre tesseract sobre la imagen y devuelve su salida TSV."""
     with tempfile.TemporaryDirectory() as tmp:
-        ruta = Path(tmp) / "cartel.jpg"
+        ruta = Path(tmp) / nombre
         ruta.write_bytes(imagen)
         salida = Path(tmp) / "out"
         propio = (LORCA_TESSDATA / "spa.traineddata").exists()
@@ -10967,10 +11324,18 @@ def _lorca_render(archivo: str, proporcion: float, ancho: int) -> str:
             f"w_{ancho},h_{round(ancho * proporcion)},al_c,q_90,enc_auto/cartel.jpg")
 
 
+# Lo que se alcanzó a leer del cartel cuando ninguna lectura pasó los
+# controles: la semana, los horarios que aparecieron en al menos dos lecturas y
+# si hay películas que van sólo algunos días. Con eso run.py contrasta a La
+# Nación, que queda de último recurso (ver contrastar_lorca_con_cartel).
+LORCA_CARTEL_VISTO: dict = {}
+
+
 def scrape_lorca_cartel(titulos_conocidos: Optional[list] = None,
                         hoy: Optional[date] = None) -> list[Screening]:
     """Las funciones de la semana leyendo el cartel que publica el cine."""
     hoy = hoy or date.today()
+    LORCA_CARTEL_VISTO.clear()
     if not shutil.which("tesseract"):
         print("[lorca: sin tesseract, no se lee el cartel]", end=" ", flush=True)
         return []
@@ -10982,45 +11347,114 @@ def scrape_lorca_cartel(titulos_conocidos: Optional[list] = None,
 
     for archivo, proporcion in _lorca_carteles(html):
         # Una lectura con horarios huérfanos o con el rango ilegible ya se
-        # descartó sola; de las que quedan, tienen que coincidir dos.
+        # descartó sola; de las que quedan, tienen que coincidir dos. Cada
+        # imagen la leen los dos lectores: el de columnas, que entiende los
+        # títulos subrayados y las aclaraciones de días, y el de posiciones,
+        # que es el que leía los carteles anteriores.
         sanas: dict = {}
         imagenes: dict = {}
         acuerdo = None
+        intentos = 0
+        horas_por_semana: dict = {}
+        alternados = False
         for ancho, psm in LORCA_CARTEL_LECTURAS:
             try:
                 if ancho not in imagenes:
                     imagenes[ancho] = fetch_bytes(_lorca_render(archivo, proporcion, ancho))
-                lectura = _lorca_leer_tsv(_lorca_ocr(imagenes[ancho], psm))
+                lecturas = (_lorca_leer_columnas(imagenes[ancho], psm),
+                            _lorca_leer_tsv(_lorca_ocr(imagenes[ancho], psm)))
             except Exception as e:
                 print(f"[lorca: el OCR falló — {e}]", end=" ", flush=True)
                 return []
-            fechas = _lorca_lectura_sana(lectura, hoy)
-            if not fechas:
-                continue
-            clave = (fechas, tuple(sorted((t, tuple(h)) for t, h in lectura["grilla"].items())))
-            sanas.setdefault(clave, []).append(lectura)
-            if len(sanas[clave]) >= LORCA_CARTEL_LECTURAS_IGUALES:
-                acuerdo = (clave, sanas[clave])
+            for lectura in lecturas:
+                if lectura is None:
+                    continue
+                intentos += 1
+                semana = _lorca_semana(lectura, hoy)
+                if semana:
+                    cuenta = horas_por_semana.setdefault(semana, {})
+                    for hora in lectura["horas_vistas"]:
+                        cuenta[hora] = cuenta.get(hora, 0) + 1
+                alternados = alternados or bool(lectura.get("dias") or lectura.get("dias_sin_asignar"))
+                lectura = _lorca_canon(lectura, titulos_conocidos)
+                fechas = _lorca_lectura_sana(lectura, hoy)
+                if not fechas:
+                    continue
+                clave = (fechas,
+                         tuple(sorted((t, tuple(h)) for t, h in lectura["grilla"].items())),
+                         tuple(sorted(lectura.get("dias", {}).items())))
+                sanas.setdefault(clave, []).append(lectura)
+                if len(sanas[clave]) >= LORCA_CARTEL_LECTURAS_IGUALES:
+                    acuerdo = (clave, sanas[clave])
+                    break
+            if acuerdo:
                 break
         if not acuerdo:
+            for (desde, hasta), cuenta in horas_por_semana.items():
+                if desde <= hoy <= hasta and not LORCA_CARTEL_VISTO:
+                    LORCA_CARTEL_VISTO.update(
+                        semana=(desde, hasta), alternados=alternados,
+                        horas={h for h, n in cuenta.items() if n >= 2})
             leidas = sum(len(v) for v in sanas.values())
             print(f"[lorca: el cartel no se leyó igual dos veces ({leidas}/"
-                  f"{len(LORCA_CARTEL_LECTURAS)} lecturas sanas)]", end=" ", flush=True)
+                  f"{intentos} lecturas sanas)]", end=" ", flush=True)
             continue
-        (fechas, _), lecturas = acuerdo
+        (fechas, _, _), coincidentes = acuerdo
         desde, hasta = fechas
+        grilla, dias = coincidentes[0]["grilla"], coincidentes[0].get("dias", {})
         result: list[Screening] = []
         dia = max(desde, hoy)
         while dia <= hasta:
-            for titulo, horas in lecturas[0]["grilla"].items():
+            for titulo, horas in grilla.items():
+                if titulo in dias and dia.weekday() not in dias[titulo]:
+                    continue
                 for hora in horas:
                     result.append(Screening(
-                        cine="Cine Lorca",
-                        title=_lorca_titulo_conocido(titulo, titulos_conocidos),
+                        cine="Cine Lorca", title=titulo,
                         fecha=dia.isoformat(), hora=hora,
                         ticket_url="https://cinelorca.wixsite.com/cine-lorca"))
             dia += timedelta(days=1)
         print(f"[lorca: cartel del {desde.isoformat()} al {hasta.isoformat()}, "
-              f"{len(lecturas[0]['grilla'])} películas]", end=" ", flush=True)
+              f"{len(grilla)} películas]", end=" ", flush=True)
         return result
     return []
+
+
+def contrastar_lorca_con_cartel(funciones: list[dict],
+                                hoy: Optional[date] = None) -> tuple[list[dict], int]:
+    """Cuando el Lorca sale de La Nación (el cartel no se pudo leer entero y no
+    hay archivo a mano vigente), se la contrasta con lo que sí se leyó del
+    cartel. Va sobre la cartelera final porque el merge revive las funciones de
+    hoy de la corrida anterior, que también salieron de La Nación.
+
+    El jueves 22/10/2026 La Nación todavía daba la semana anterior (Digger a
+    las 13:45 y a las 22:00) cuando el cartel nuevo ya estaba colgado, y esa
+    grilla se repitió hasta el miércoles. Ahora:
+      · si el cartel de esta semana se leyó aunque sea en parte y La Nación
+        tiene hoy un horario que no aparece en él, es otra semana: el Lorca
+        queda sin funciones antes que con las de otra grilla;
+      · la grilla de hoy se repite hasta el miércoles sólo si el cartel la
+        confirma y no hay películas que se turnan por día. Si no, sólo hoy.
+    Devuelve las funciones y cuántas del Lorca se sacaron."""
+    hoy = (hoy or date.today()).isoformat()
+    lorca = [s for s in funciones if s.get("cine") == "Cine Lorca"]
+    if not lorca:
+        return funciones, 0
+    semana = LORCA_CARTEL_VISTO.get("semana")
+    horas = LORCA_CARTEL_VISTO.get("horas") or set()
+    confirmada = bool(semana and horas and semana[0].isoformat() <= hoy <= semana[1].isoformat())
+    de_hoy = {s.get("hora") for s in lorca if s.get("fecha") == hoy}
+    if confirmada and de_hoy - horas:
+        print(f"  ↳ Lorca: La Nación da horarios que no están en el cartel de esta "
+              f"semana ({', '.join(sorted(de_hoy - horas))}); no se publica")
+        quedan = []
+    elif confirmada and not LORCA_CARTEL_VISTO.get("alternados"):
+        quedan = lorca
+    else:
+        quedan = [s for s in lorca if s.get("fecha", "") <= hoy]
+    fuera = len(lorca) - len(quedan)
+    if not fuera:
+        return funciones, 0
+    quedan_ids = {id(s) for s in quedan}
+    return [s for s in funciones
+            if s.get("cine") != "Cine Lorca" or id(s) in quedan_ids], fuera

@@ -1,41 +1,74 @@
 {
-  "_comment": "Cine Lorca publica su programación como imagen en Wix, e IMDb (la fuente automática) no responde a los runners de GitHub. Esta grilla es la que manda: es la que publica el cine. La Nación queda de red de seguridad para cuando el rango de acá vence (el 28/9/2026 el aggregador daba otra semana entera). Editá este archivo cada semana cuando salga la nueva programación — la semana del Lorca va de jueves a miércoles. Los horarios se aplican a todos los días del rango [period_start, period_end]. Si el rango vence, el scraper avisa en el log ('lorca_manual VENCIDO'). Datos tomados de la imagen que publica el cine en cinelorca.wixsite.com/cine-lorca/current-production.",
+  "_comment": "Cine Lorca publica su programación como imagen en Wix, e IMDb (la fuente automática) no responde a los runners de GitHub. Esta grilla es la que manda: es la que publica el cine. La Nación queda de red de seguridad para cuando el rango de acá vence (el 28/9/2026 el aggregador daba otra semana entera). Editá este archivo cada semana cuando salga la nueva programación — la semana del Lorca va de jueves a miércoles. Los horarios se aplican a todos los días del rango [period_start, period_end], salvo en las películas con \"days\": cuando el cartel aclara que una va sólo algunos días (dos que se turnan el mismo horario y sala), van ahí esos días. Si el rango vence, el scraper avisa en el log ('lorca_manual VENCIDO'). Datos tomados de la imagen que publica el cine en cinelorca.wixsite.com/cine-lorca/current-production.",
   "_titulos": "Los títulos van como los publica La Nación y no como los abrevia el cartel del cine ('CAMPAMENTO MIASMA'), para que las filas del fallback se vean iguales a las normales y matcheen igual contra TMDb y Letterboxd.",
-  "period_start": "2026-10-08",
-  "period_end": "2026-10-14",
+  "period_start": "2026-10-22",
+  "period_end": "2026-10-28",
   "films": [
     {
-      "title": "Hope",
+      "title": "Los otros",
       "times": [
-        "16:15",
-        "21:50"
-      ]
-    },
-    {
-      "title": "Una quinta en Portugal",
-      "times": [
-        "14:10",
-        "20:30"
-      ]
-    },
-    {
-      "title": "La vida es así",
-      "times": [
-        "16:20",
-        "18:25"
+        "22:00"
+      ],
+      "days": [
+        "jueves",
+        "sábado",
+        "lunes",
+        "miércoles"
       ]
     },
     {
       "title": "Digger",
       "times": [
-        "14:00",
-        "19:10"
+        "22:00"
+      ],
+      "days": [
+        "viernes",
+        "domingo",
+        "martes"
       ]
     },
     {
-      "title": "Verity: La sombra del engaño",
+      "title": "La vida es así",
       "times": [
-        "22:30"
+        "14:00",
+        "19:50"
+      ]
+    },
+    {
+      "title": "Una quinta en Portugal",
+      "times": [
+        "13:55",
+        "16:10"
+      ]
+    },
+    {
+      "title": "Quiero tu sexo",
+      "times": [
+        "22:10"
+      ]
+    },
+    {
+      "title": "La casa",
+      "times": [
+        "16:00"
+      ]
+    },
+    {
+      "title": "Tiempos de ilusión",
+      "times": [
+        "20:00"
+      ]
+    },
+    {
+      "title": "Buenas vibraciones",
+      "times": [
+        "18:15"
+      ]
+    },
+    {
+      "title": "Que Dios perdona a todos",
+      "times": [
+        "18:00"
       ]
     }
   ]

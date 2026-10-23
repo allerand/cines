@@ -66,6 +66,8 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
     # browser para IMDb). Inicializamos vacío y se llena más abajo.
     lorca_screenings: list = []
+    # Si el Lorca salió del cine (su cartel o el archivo a mano) y no de La Nación.
+    lorca_del_cine = False
     commercial_screenings: list = []
 
     print("🎬 Cine Lorca + Comerciales (IMDb primero, Lanación fallback)...")
@@ -374,6 +376,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             lorca_cartel = scrape_lorca_cartel(titulos_conocidos)
             lorca_manual = [] if lorca_cartel else scrape_lorca()
             lorca = lorca_cartel or lorca_manual
+            lorca_del_cine = bool(lorca)
             if lorca:
                 imdb_screenings = [s for s in imdb_screenings if s.cine != "Cine Lorca"]
             all_screenings.extend(imdb_screenings)
@@ -846,7 +849,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             frescas_titulo = {(s["cine"], s.get("title_es", ""), s.get("fecha", ""))
                               for s in screenings_out}
             restored_comm = restored_today = restored_cache = 0
-            descartadas_host = descartadas_horario = 0
+            descartadas_host = descartadas_horario = descartadas_lorca = 0
             for s in prev_data.get("screenings", []):
                 f = s.get("fecha", "")
                 hoy = _hoy(s)
@@ -862,6 +865,16 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                 hosts = hosts_hoy.get(s.get("cine", ""))
                 if hosts and _host(s) not in hosts:
                     descartadas_host += 1
+                    continue
+                # El Lorca, cuando sale de su cartel o del archivo a mano, trae
+                # la grilla entera del día, con las funciones que ya empezaron:
+                # lo que quedó de la corrida anterior es de La Nación o de la
+                # semana pasada. Como las dos fuentes dan el mismo link, el
+                # filtro de hosts no lo ve, y si el cartel del 22/10/2026 se
+                # hubiera leído, el Digger de la grilla vieja (13:45 y 22:00)
+                # habría vuelto igual por acá al lado de Los otros.
+                if lorca_del_cine and s.get("cine") == "Cine Lorca":
+                    descartadas_lorca += 1
                     continue
                 # Misma película, mismo día, otro horario: la de hoy manda.
                 # El 3/9/2026 el Lorca estrenó su semana nueva y La Nación
@@ -888,6 +901,9 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             if descartadas_horario:
                 print(f"  ↳ Merge: {descartadas_horario} horarios viejos descartados "
                       f"(el cine publicó otro horario para la misma función)")
+            if descartadas_lorca:
+                print(f"  ↳ Merge: {descartadas_lorca} funciones viejas del Lorca descartadas "
+                      f"(hoy salió de su cartel)")
             if restored_comm or restored_today or restored_cache:
                 screenings_out.sort(key=sort_key)
                 caidos = ", ".join(sorted(cache_caidos)) or "—"
@@ -896,6 +912,16 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                       f"+{restored_today} funciones de hoy preservadas")
         except Exception as e:
             print(f"  ↳ Merge omitido: {e}")
+
+    # Si el Lorca salió de La Nación, se contrasta con lo que sí se leyó de su
+    # cartel. Va sobre la lista final porque el merge revive las funciones de
+    # hoy de la corrida anterior, que también eran de La Nación.
+    if not lorca_del_cine:
+        from scraper import contrastar_lorca_con_cartel
+        screenings_out, n_lorca = contrastar_lorca_con_cartel(screenings_out)
+        if n_lorca:
+            print(f"  ↳ Lorca: {n_lorca} funciones de La Nación descartadas "
+                  f"(el cartel no las confirma)")
 
     # Un festival de Buenos Aires, en la web, es una búsqueda por el nombre
     # literal de su ciclo: acá las salas que lo escriben distinto pasan a

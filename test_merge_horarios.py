@@ -30,7 +30,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 
 
-def merge_de_run(screenings_out, previas, today_str, hoy_madrid=None):
+def merge_de_run(screenings_out, previas, today_str, hoy_madrid=None, lorca_del_cine=False):
     """Corre el bloque de merge de run.py sobre dos listas de funciones.
 
     Se extrae del fuente en vez de importar run.py porque importarlo arranca
@@ -52,6 +52,7 @@ def merge_de_run(screenings_out, previas, today_str, hoy_madrid=None):
         "CINES_CON_CACHE": {"Centro Cultural Borges": 3, "CCK": 1, "Bellas Artes": 1},
         "urlparse": __import__("urllib.parse", fromlist=["urlparse"]).urlparse,
         "sort_key": lambda x: (x.get("fecha", ""), x.get("hora", "")),
+        "lorca_del_cine": lorca_del_cine,
         "print": lambda *a, **k: None,
         "re": re,
     }
@@ -93,6 +94,26 @@ def main() -> int:
     chequear("las otras funciones del día siguen intactas",
              sorted(s["hora"] for s in out if s["title_es"] == "Pepita La Pistolera")
              == ["16:20", "22:30"])
+
+    print("\nEl Lorca sale de su cartel")
+    # Jueves 22/10/2026: la corrida anterior (La Nación, semana vieja) tenía
+    # Digger a las 13:45 y a las 22:00; el cartel nuevo dice Los otros a las 22.
+    # Digger no está hoy en la grilla fresca, así que la regla de "misma
+    # película, otro horario" no lo agarra: lo tiene que sacar que hoy el Lorca
+    # salió del cine.
+    jueves = "2026-10-22"
+    frescas = [f("Cine Lorca", "Los otros", jueves, "22:00"),
+               f("Cine Lorca", "Una quinta en Portugal", jueves, "13:55")]
+    previas = [f("Cine Lorca", "Digger", jueves, "13:45"),
+               f("Cine Lorca", "Digger", jueves, "22:00"),
+               f("Cine Lorca", "Una quinta en Portugal", jueves, "13:40")]
+    out = merge_de_run(list(frescas), previas, jueves, lorca_del_cine=True)
+    chequear("lo que quedó de La Nación no vuelve al lado del cartel",
+             sorted((s["hora"], s["title_es"]) for s in out)
+             == [("13:55", "Una quinta en Portugal"), ("22:00", "Los otros")], out)
+    out = merge_de_run(list(frescas), previas, jueves, lorca_del_cine=False)
+    chequear("si el Lorca salió de La Nación, el merge sigue como antes",
+             any(s["title_es"] == "Digger" for s in out), out)
 
     print("\nEl Lugones pierde un evento del listado")
     # El ciclo Portabella se cae del listado del CTBA; el resto del Lugones

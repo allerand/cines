@@ -115,7 +115,72 @@ with tempfile.TemporaryDirectory() as tmp:
         ruta.write_text(json.dumps(vencida), encoding="utf-8")
         assert scraper.scrape_lorca() == []
         print("✓ grilla vencida: no se publica nada, y queda La Nación")
+
+        # Dos películas que se turnan el mismo horario: cada una, sus días.
+        turnos = {**GRILLA, "films": [
+            {"title": "Los otros", "times": ["22:00"],
+             "days": ["jueves", "sábado", "lunes", "miércoles"]},
+            {"title": "Digger", "times": ["22:00"], "days": ["viernes", "Domingo", "martes"]},
+            {"title": "Una quinta en Portugal", "times": ["13:55"]},
+        ]}
+        ruta.write_text(json.dumps(turnos), encoding="utf-8")
+        funciones = scraper.scrape_lorca()
+        for s in funciones:
+            dia = date.fromisoformat(s.fecha).weekday()
+            if s.title == "Los otros":
+                assert dia in (0, 2, 3, 5), (s.fecha, s.title)
+            elif s.title == "Digger":
+                assert dia in (1, 4, 6), (s.fecha, s.title)
+        por_dia = {}
+        for s in funciones:
+            por_dia.setdefault(s.fecha, []).append(s.title)
+        assert all(sorted(t) in (["Digger", "Una quinta en Portugal"],
+                                 ["Los otros", "Una quinta en Portugal"])
+                   for t in por_dia.values()), por_dia
+        print("✓ grilla del cine con días: Los otros y Digger se turnan, nunca van juntas")
     finally:
         scraper.LORCA_MANUAL_PATH = original
+
+
+# --- La Nación, contrastada con el cartel --------------------------------------
+# El jueves 22/10/2026 el cartel nuevo ya estaba colgado, pero no se pudo leer
+# entero y el Lorca salió de La Nación, que todavía daba la semana anterior. Lo
+# que sí se leyó del cartel —la semana y los horarios— alcanza para notarlo.
+from scraper import LORCA_CARTEL_VISTO, contrastar_lorca_con_cartel
+
+
+def g(fecha, hora, title="Digger", cine="Cine Lorca"):
+    return {"cine": cine, "title_es": title, "fecha": fecha, "hora": hora}
+
+
+CARTEL = {"semana": (date(2026, 10, 22), date(2026, 10, 28)), "alternados": True,
+          "horas": {"13:55", "14:00", "16:00", "16:10", "18:00", "18:15", "19:50",
+                    "20:00", "22:00", "22:10"}}
+LORCA_CARTEL_VISTO.clear()
+LORCA_CARTEL_VISTO.update(CARTEL)
+otra_sala = g("2026-10-22", "13:45", "Hamnet", cine="Cinépolis Recoleta")
+vieja = [g("2026-10-22", "13:45"), g("2026-10-22", "22:00"),
+         g("2026-10-22", "13:40", "Una quinta en Portugal"),
+         g("2026-10-23", "22:00"), otra_sala]
+quedan, fuera = contrastar_lorca_con_cartel(vieja, date(2026, 10, 22))
+assert quedan == [otra_sala] and fuera == 4, quedan
+print("✓ La Nación con horarios que no están en el cartel de la semana: el Lorca queda vacío")
+
+# El viernes La Nación ya está al día: sus horarios están en el cartel. Pero
+# hay películas que se turnan, así que no se repite la grilla de hoy.
+al_dia = [g("2026-10-23", "22:00"), g("2026-10-23", "13:55", "Una quinta en Portugal"),
+          g("2026-10-24", "22:00"), g("2026-10-24", "13:55", "Una quinta en Portugal")]
+quedan, fuera = contrastar_lorca_con_cartel(al_dia, date(2026, 10, 23))
+assert [s["fecha"] for s in quedan] == ["2026-10-23", "2026-10-23"] and fuera == 2
+print("✓ con películas que se turnan por día, La Nación vale sólo para hoy")
+
+# Sin turnos y con el cartel confirmándola, la grilla de hoy se repite.
+LORCA_CARTEL_VISTO["alternados"] = False
+assert contrastar_lorca_con_cartel(al_dia, date(2026, 10, 23)) == (al_dia, 0)
+# Sin nada leído del cartel (la página no cargó), sólo hoy.
+LORCA_CARTEL_VISTO.clear()
+quedan, fuera = contrastar_lorca_con_cartel(al_dia, date(2026, 10, 23))
+assert {s["fecha"] for s in quedan} == {"2026-10-23"} and fuera == 2
+print("✓ la grilla de hoy se repite hasta el miércoles sólo si el cartel la confirma")
 
 print("\nTodo OK")
