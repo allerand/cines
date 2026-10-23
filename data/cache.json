@@ -19857,7 +19857,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -26574,5 +26574,39 @@
     "duration": 159,
     "genre": "Documental",
     "original_title": "Para hacer una película solo hace falta un arma"
+  },
+  "hable con ella|2002": {
+    "url": "https://letterboxd.com/film/talk-to-her/",
+    "title_en": "Talk to Her",
+    "director": "Pedro Almodóvar",
+    "country": "Spain",
+    "year": 2002,
+    "duration": 112,
+    "genre": "Romance, Drama",
+    "title_es": "Hable con ella",
+    "original_title": "Hable con ella"
+  },
+  "los otros": {
+    "url": "",
+    "title_en": "Los otros",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: Los Otros (2020), The Others (2001)",
+    "fecha": "2026-10-23",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "el séptimo sello": {
+    "url": "",
+    "title_en": "EL SÉPTIMO SELLO",
+    "director": "Ingmar Bergman",
+    "country": "Sweden",
+    "year": 1957,
+    "duration": 96,
+    "genre": "Fantasía, Drama",
+    "title_es": "El séptimo sello",
+    "original_title": "Det sjunde inseglet"
   }
 }

@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-22T09:00:16",
+    "ts": "2026-10-23T08:52:59",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -85,7 +85,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-22T09:00:37",
+    "ts": "2026-10-23T08:53:05",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -118,7 +118,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-22T09:00:43",
+    "ts": "2026-10-23T08:53:12",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -151,7 +151,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-irlandes/": {
-    "ts": "2026-10-22T09:00:49",
+    "ts": "2026-10-23T08:53:17",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -182,5 +182,11 @@
         "original_title": ""
       }
     ]
+  },
+  "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
+    "ts": "2026-10-23T08:53:28",
+    "v": 2,
+    "semanas": 9,
+    "funciones": []
   }
 }

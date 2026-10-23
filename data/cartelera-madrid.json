@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T01:46:10",
+  "updated": "2026-10-23T09:13:21",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 29,
@@ -39,8 +39,8 @@
       "publicadas": 93
     },
     "Golem Madrid": {
-      "scrapeadas": 107,
-      "publicadas": 107
+      "scrapeadas": 103,
+      "publicadas": 103
     },
     "Renoir Plaza de España": {
       "scrapeadas": 139,
@@ -12664,32 +12664,16 @@
       "cine": "Golem Madrid",
       "fecha": "2026-10-29",
       "hora": "16:10",
-      "title_es": "La voz quebrada",
-      "title_en": "The Broken Voice",
-      "original_title": "La voz quebrada",
-      "director": "Manuel Menchón",
-      "country": "España, Argentina",
-      "year": 2026,
-      "duration": 88,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100464&eventCode=115798",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-10-29",
-      "hora": "16:10",
-      "title_es": "Ceniza en la boca",
-      "title_en": "Ashes",
-      "original_title": "Ceniza en la Boca",
-      "director": "Diego Luna",
-      "country": "México, España",
+      "title_es": "La vida de una mujer",
+      "title_en": "A Woman's Life",
+      "original_title": "La vie d'une femme",
+      "director": "Charline Bourgeois-Tacquet",
+      "country": "Francia, Bélgica",
       "year": 2026,
       "duration": 98,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/ashes-2026-3/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100461&eventCode=113294",
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-womans-life-2026/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100462&eventCode=113783",
       "ciclo": ""
     },
     {
@@ -12737,7 +12721,7 @@
       "duration": 126,
       "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100457&eventCode=115072",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100471&eventCode=115072",
       "ciclo": ""
     },
     {
@@ -12786,22 +12770,6 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/blue-heron/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/blue-heron/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-10-29",
-      "hora": "17:15",
-      "title_es": "La bola negra",
-      "title_en": "La Bola Negra",
-      "original_title": "",
-      "director": "Javier Ambrossi, Javier Calvo",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 155,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100469&eventCode=112109",
       "ciclo": ""
     },
     {
@@ -13154,22 +13122,6 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/flies-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1093614/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-10-29",
-      "hora": "18:15",
-      "title_es": "La vida de una mujer",
-      "title_en": "A Woman's Life",
-      "original_title": "La vie d'une femme",
-      "director": "Charline Bourgeois-Tacquet",
-      "country": "Francia, Bélgica",
-      "year": 2026,
-      "duration": 98,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/a-womans-life-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100462&eventCode=113783",
       "ciclo": ""
     },
     {
@@ -13729,7 +13681,7 @@
       "duration": 155,
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100468&eventCode=112109",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100476&eventCode=112109",
       "ciclo": ""
     },
     {
@@ -14072,16 +14024,16 @@
       "cine": "Golem Madrid",
       "fecha": "2026-10-29",
       "hora": "22:15",
-      "title_es": "La voz quebrada",
-      "title_en": "The Broken Voice",
-      "original_title": "La voz quebrada",
-      "director": "Manuel Menchón",
-      "country": "España, Argentina",
+      "title_es": "Naza",
+      "title_en": "NAZA",
+      "original_title": "NAZA",
+      "director": "Yuval Abraham, Rachel Szor",
+      "country": "Estados Unidos, Reino Unido",
       "year": 2026,
-      "duration": 88,
+      "duration": 80,
       "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100466&eventCode=115798",
+      "letterboxd": "https://letterboxd.com/film/naza/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100460&eventCode=115052",
       "ciclo": ""
     },
     {
@@ -14146,22 +14098,6 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39231/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-10-29",
-      "hora": "22:30",
-      "title_es": "Naza",
-      "title_en": "NAZA",
-      "original_title": "NAZA",
-      "director": "Yuval Abraham, Rachel Szor",
-      "country": "Estados Unidos, Reino Unido",
-      "year": 2026,
-      "duration": 80,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/naza/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100460&eventCode=115052",
       "ciclo": ""
     },
     {
