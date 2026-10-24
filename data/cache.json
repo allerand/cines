@@ -15141,7 +15141,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-24",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -18438,7 +18438,7 @@
     "original_title": "Yellow Cake"
   },
   "vlasta, el recuerdo no es eterno": {
-    "url": "",
+    "url": "https://letterboxd.com/film/vlasta-el-recuerdo-no-es-eterno/",
     "title_en": "Vlasta, el recuerdo no es eterno",
     "director": "Candela Vey, Tino Pereira",
     "country": "Argentina",
@@ -18926,15 +18926,12 @@
     "genre": "Documental"
   },
   "the rocky horror picture show|1975": {
-    "url": "https://letterboxd.com/film/the-rocky-horror-picture-show/",
+    "url": "",
     "title_en": "The Rocky Horror Picture Show",
-    "director": "Jim Sharman",
-    "country": "UK, USA",
-    "year": 1975,
-    "duration": 100,
-    "genre": "Terror, Comedia",
-    "title_es": "El Show de Terror de Rocky",
-    "original_title": "The Rocky Horror Picture Show"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "la hora del espanto|1985": {
     "url": "https://letterboxd.com/film/fright-night/",
@@ -19857,7 +19854,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -22718,7 +22715,8 @@
     "duration": 92,
     "genre": "Documental",
     "title_es": "Tokio-Ga",
-    "original_title": "Tokyo-Ga"
+    "original_title": "Tokyo-Ga",
+    "clase_titulo": "exacto"
   },
   "hope el primer impacto": {
     "url": "https://letterboxd.com/film/hope-2026/",
@@ -22979,7 +22977,7 @@
   "mascotas al rescate": {
     "url": "",
     "title_en": "Mascotas al rescate",
-    "director": "Jean-Christian Tassy, Benoît Daffis",
+    "director": "Benoît Daffis, Jean-Christian Tassy",
     "country": "France, United States of America",
     "year": 2025,
     "duration": 86,
@@ -23970,7 +23968,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Cars (2006), Cars 3 (2017)",
-    "fecha": "2026-10-20",
+    "fecha": "2026-10-24",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25440,7 +25438,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-20",
+    "fecha": "2026-10-24",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25482,7 +25480,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-20",
+    "fecha": "2026-10-24",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25856,7 +25854,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es The Others (2001), y puede ser otra",
-    "fecha": "2026-10-20",
+    "fecha": "2026-10-24",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26608,5 +26606,48 @@
     "genre": "Fantasía, Drama",
     "title_es": "El séptimo sello",
     "original_title": "Det sjunde inseglet"
+  },
+  "la violinista": {
+    "url": "https://letterboxd.com/film/the-violinist-2026/",
+    "title_en": "The Violinist",
+    "director": "Ervin Han, Raúl García",
+    "country": "Singapore, Spain",
+    "year": 2026,
+    "duration": 114,
+    "genre": "Animación, Drama",
+    "title_es": "El Violinista",
+    "original_title": "The Violinist"
+  },
+  "por amor seguiremos": {
+    "url": "https://letterboxd.com/film/por-amor-seguiremos/",
+    "title_en": "For Love We Carry On",
+    "director": "Nahuel Ugazio",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 70,
+    "genre": "",
+    "original_title": "Por amor seguiremos"
+  },
+  "exo planet #6 - exhorizon [dot] in cinemas": {
+    "url": "https://letterboxd.com/film/exo-planet-6-exhorizon-dot-in-cinemas/",
+    "title_en": "EXO PLANET #6 - EXhOrizon [dot] in CINEMAS",
+    "director": "",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "",
+    "clase_titulo": "exacto",
+    "original_title": "EXO PLANET #6 - EXhOrizon [dot] in CINEMAS",
+    "sin_hints": "título"
+  },
+  "el crepúsculo de las especies": {
+    "url": "https://letterboxd.com/film/el-crepusculo-de-las-especies/",
+    "title_en": "The Dusk of Species",
+    "director": "Alberto Romero",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "El crepúsculo de las especies"
   }
 }
