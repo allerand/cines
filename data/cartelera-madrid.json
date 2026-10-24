@@ -1,13 +1,13 @@
 {
-  "updated": "2026-10-24T01:56:56",
+  "updated": "2026-10-24T08:45:43",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 28,
       "publicadas": 28
     },
     "Cine Doré": {
-      "scrapeadas": 19,
-      "publicadas": 19
+      "scrapeadas": 5,
+      "publicadas": 5
     },
     "Cine Estudio": {
       "scrapeadas": 23,
@@ -718,7 +718,7 @@
       "director": "Giuseppe Tornatore",
       "country": "",
       "year": null,
-      "duration": 124,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/cinema-pardiso/2026-10-24",
@@ -1230,7 +1230,7 @@
       "director": "Andrzej Wajda",
       "country": "",
       "year": null,
-      "duration": 156,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/el-hombre-de-hierro-1/2026-10-24",
@@ -2942,7 +2942,7 @@
       "director": "Roger Michell",
       "country": "",
       "year": null,
-      "duration": 95,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/el-duque/2026-10-25",
@@ -3630,7 +3630,7 @@
       "director": "Keisuke Kinoshita",
       "country": "",
       "year": null,
-      "duration": 103,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/carmen-s-pure-love/2026-10-25",
@@ -6821,22 +6821,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-27",
-      "hora": "17:30",
-      "title_es": "Afterimage (Powidoki,2016)",
-      "title_en": "Afterimage (Powidoki,2016)",
-      "original_title": "",
-      "director": "Andrzej Wajda",
-      "country": "",
-      "year": null,
-      "duration": 98,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/afterimage",
-      "ciclo": "Andrzej Wajda: entre el Mito y la Historia"
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-27",
       "hora": "17:35",
@@ -7459,22 +7443,6 @@
       "letterboxd": "https://letterboxd.com/film/palestine-36/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-2-palestina-36-2025-doblada-al-espanol-17/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-27",
-      "hora": "20:00",
-      "title_es": "Farewell to Spring (Sekishunchō,1959)",
-      "title_en": "Farewell to Spring (Sekishunchō,1959)",
-      "original_title": "",
-      "director": "Keisuke Kinoshita",
-      "country": "",
-      "year": null,
-      "duration": 102,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/farewell-to-spring-27-oct",
-      "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
     },
     {
       "cine": "Embajadores Glorieta",
@@ -8709,22 +8677,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-28",
-      "hora": "17:30",
-      "title_es": "Las señoritas de Wilko (Panny z Wilka,1979)",
-      "title_en": "Las señoritas de Wilko (Panny z Wilka,1979)",
-      "original_title": "",
-      "director": "Andrzej Wajda",
-      "country": "",
-      "year": null,
-      "duration": 118,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/las-señoritas-de-wilko-28-oct",
-      "ciclo": "Andrzej Wajda: entre el Mito y la Historia"
-    },
-    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-28",
       "hora": "17:40",
@@ -9285,22 +9237,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-28",
-      "hora": "19:00",
-      "title_es": "Carmen Comes Home (Karumen kokyō ni kaeru,1951)",
-      "title_en": "Carmen Comes Home (Karumen kokyō ni kaeru,1951)",
-      "original_title": "カルメン故郷に帰る",
-      "director": "Keisuke Kinoshita",
-      "country": "Japón",
-      "year": 1951,
-      "duration": 86,
-      "genre": "Comedia, Música",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/carmen-comes-home-28-oct",
-      "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
-    },
-    {
       "cine": "Golem Madrid",
       "fecha": "2026-10-28",
       "hora": "19:15",
@@ -9475,22 +9411,6 @@
       "letterboxd": "https://letterboxd.com/film/the-devils/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/los-demonios-vose/20222/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-28",
-      "hora": "20:00",
-      "title_es": "El último (Der letzte Mann,1924)",
-      "title_en": "El último (Der letzte Mann,1924)",
-      "original_title": "",
-      "director": "F.W. Murnau",
-      "country": "",
-      "year": null,
-      "duration": 91,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/el-ultimo",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
     },
     {
       "cine": "Embajadores Glorieta",
@@ -10805,22 +10725,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-29",
-      "hora": "17:30",
-      "title_es": "La madrastra",
-      "title_en": "La madrastra",
-      "original_title": "La madrastra",
-      "director": "Roberto Gavaldón",
-      "country": "México, España",
-      "year": 1974,
-      "duration": 82,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/la-madrastra/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-madrastra",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
-    },
-    {
       "cine": "Cines Princesa",
       "fecha": "2026-10-29",
       "hora": "17:40",
@@ -11221,22 +11125,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-29",
-      "hora": "19:00",
-      "title_es": "Torre Bela",
-      "title_en": "Torre Bela",
-      "original_title": "Torre Bela",
-      "director": "Thomas Harlan",
-      "country": "Italia, Portugal",
-      "year": 1975,
-      "duration": 105,
-      "genre": "Documental",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/torre-bela-29-oct",
-      "ciclo": "Fuera del Radar. Mes del Archivo. Cinemateca Lisboa"
-    },
-    {
       "cine": "Renoir Retiro",
       "fecha": "2026-10-29",
       "hora": "19:30",
@@ -11411,22 +11299,6 @@
       "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100363&eventCode=114112",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-29",
-      "hora": "20:00",
-      "title_es": "Los brujos inocentes (Niewinni czarodzieje,1960)",
-      "title_en": "Los brujos inocentes (Niewinni czarodzieje,1960)",
-      "original_title": "",
-      "director": "Andrzej Wajda",
-      "country": "",
-      "year": null,
-      "duration": 83,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/los-brujos-inocentes-1",
-      "ciclo": "Andrzej Wajda: entre el Mito y la Historia"
     },
     {
       "cine": "Cines Princesa",
@@ -12149,22 +12021,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-30",
-      "hora": "17:30",
-      "title_es": "Danton",
-      "title_en": "Danton",
-      "original_title": "Danton",
-      "director": "Andrzej Wajda",
-      "country": "Francia, Polonia",
-      "year": 1983,
-      "duration": 136,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/danton-1983/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/danton-30-oct",
-      "ciclo": "Andrzej Wajda: entre el Mito y la Historia"
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-30",
       "hora": "18:00",
@@ -12229,22 +12085,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-30",
-      "hora": "19:00",
-      "title_es": "Meseta",
-      "title_en": "Inland",
-      "original_title": "Meseta",
-      "director": "Juan Palacios",
-      "country": "España",
-      "year": 2019,
-      "duration": 90,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/meseta/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/meseta-30-oct",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-30",
       "hora": "20:00",
@@ -12275,22 +12115,6 @@
       "letterboxd": "https://letterboxd.com/film/adult-2024-1/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/adulto/19877/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-30",
-      "hora": "20:00",
-      "title_es": "Fuefuki River (Fuekukigawa,1960)",
-      "title_en": "Fuefuki River (Fuekukigawa,1960)",
-      "original_title": "",
-      "director": "Keisuke Kinoshita",
-      "country": "",
-      "year": null,
-      "duration": 117,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/fuefuki-river-30-oct",
-      "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
     },
     {
       "cine": "Cines Ideal",
@@ -12421,22 +12245,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-31",
-      "hora": "17:30",
-      "title_es": "La novia cadáver (Corpse Bride,2005)",
-      "title_en": "La novia cadáver (Corpse Bride,2005)",
-      "original_title": "",
-      "director": "Tim Burton",
-      "country": "",
-      "year": null,
-      "duration": 77,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-novia-cadaver-4",
-      "ciclo": "Halloween / Filmoteca Jr."
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-10-31",
       "hora": "18:00",
@@ -12485,22 +12293,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-31",
-      "hora": "19:00",
-      "title_es": "Angustia",
-      "title_en": "Anguish",
-      "original_title": "Angustia",
-      "director": "Bigas Luna",
-      "country": "España",
-      "year": 1987,
-      "duration": 86,
-      "genre": "Terror, Thriller",
-      "letterboxd": "https://letterboxd.com/film/anguish/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/angustia-31-oct",
-      "ciclo": "Halloween / Miradas Proyectadas. Salas y Espectadores: Encuentros a Oscuras"
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-31",
       "hora": "20:00",
@@ -12515,22 +12307,6 @@
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/humano-deseos-mayores-soy-tribulete-7/38977/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-10-31",
-      "hora": "20:00",
-      "title_es": "The Rocky Horror Picture Show",
-      "title_en": "The Rocky Horror Picture Show",
-      "original_title": "",
-      "director": "Jim Sharman",
-      "country": "",
-      "year": 1975,
-      "duration": 100,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/the-rocky-horror-picture-show",
-      "ciclo": "Halloween"
     },
     {
       "cine": "Cines Ideal",

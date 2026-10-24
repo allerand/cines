@@ -19854,7 +19854,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -22326,7 +22326,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-20",
+    "fecha": "2026-10-24",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24262,7 +24262,8 @@
     "duration": 106,
     "genre": "Comedia",
     "title_es": "El jovencito Frankenstein",
-    "original_title": "Young Frankenstein"
+    "original_title": "Young Frankenstein",
+    "clase_titulo": "exacto"
   },
   "el club del terror|1986": {
     "url": "https://letterboxd.com/film/vamp/",
@@ -26649,5 +26650,59 @@
     "duration": 80,
     "genre": "Documental",
     "original_title": "El crepúsculo de las especies"
+  },
+  "el ángel de buenos aires": {
+    "url": "",
+    "title_en": "El ángel de Buenos Aires",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "identidad": {
+    "url": "",
+    "title_en": "Identidad",
+    "director": "Florencia Santucho, Rodrigo Vázquez Salessi",
+    "country": "",
+    "year": 2025,
+    "duration": null,
+    "genre": "Documental",
+    "original_title": "Identidad"
+  },
+  "peter bartok jr.": {
+    "url": "https://letterboxd.com/film/peter-bartok-jr/",
+    "title_en": "Peter Bartok Jr.",
+    "director": "Andrés Andreani",
+    "country": "",
+    "year": 2017,
+    "duration": 70,
+    "genre": "",
+    "original_title": "Peter Bartok Jr."
+  },
+  "ingmar bergman: seis ensayos. el séptimo sello": {
+    "url": "",
+    "title_en": "Ingmar Bergman: seis ensayos. EL SÉPTIMO SELLO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ingmar bergman: seis ensayos. fanny y alexander": {
+    "url": "",
+    "title_en": "Ingmar Bergman: seis ensayos. FANNY Y ALEXANDER",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la virgen de la tosquera": {
+    "url": "https://letterboxd.com/film/la-virgen-de-la-tosquera/",
+    "title_en": "The Virgin of the Quarry Lake",
+    "director": "Laura Casabé",
+    "country": "Argentina, Spain",
+    "year": 2025,
+    "duration": 95,
+    "genre": "Thriller, Terror",
+    "original_title": "La virgen de la tosquera"
   }
 }

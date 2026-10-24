@@ -1,22 +1,9 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-23T08:52:59",
+    "ts": "2026-10-24T08:26:44",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Besos en la frente",
-        "fecha": "2026-10-23",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
-        "ciclo": "Retrospectivas:Carlos Galettini",
-        "director": "Carlos Galettini",
-        "country": "",
-        "year": 1996,
-        "duration": 95,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Convivencia",
@@ -85,7 +72,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-23T08:53:05",
+    "ts": "2026-10-24T08:26:49",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -118,7 +105,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-23T08:53:12",
+    "ts": "2026-10-24T08:26:57",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -151,7 +138,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-irlandes/": {
-    "ts": "2026-10-23T08:53:17",
+    "ts": "2026-10-24T08:27:06",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -184,7 +171,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
-    "ts": "2026-10-23T08:53:28",
+    "ts": "2026-10-24T08:27:16",
     "v": 2,
     "semanas": 9,
     "funciones": []
