@@ -19852,7 +19852,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -26754,5 +26754,33 @@
     "genre": "Documental",
     "title_es": "Foragers",
     "original_title": "اليد الخضراء"
+  },
+  "the dream": {
+    "url": "",
+    "title_en": "THE DREAM",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ingmar bergman: seis ensayos. persona": {
+    "url": "",
+    "title_en": "Ingmar Bergman: seis ensayos. PERSONA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Persona: The Film That Saved Ingmar Bergman (2018)",
+    "fecha": "2026-10-25",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "ingmar bergman: seis ensayos. cuando huye el día": {
+    "url": "",
+    "title_en": "Ingmar Bergman: seis ensayos. CUANDO HUYE EL DÍA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }

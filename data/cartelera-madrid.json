@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T01:27:30",
+  "updated": "2026-10-25T09:01:35",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 27,
@@ -133,22 +133,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-10-25",
-      "hora": "12:00",
-      "title_es": "Euforia: Retrospectiva Ian de la Rosa",
-      "title_en": "Euforia: Retrospectiva Ian de la Rosa",
-      "original_title": "",
-      "director": "Ian de la Rosa",
-      "country": "",
-      "year": null,
-      "duration": 120,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/euforia-retrospectiva-ian-de-la-rosa/20167/",
-      "ciclo": ""
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-25",
       "hora": "12:00",
@@ -163,6 +147,22 @@
       "letterboxd": "https://letterboxd.com/film/once-upon-a-time-in-america/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-erase-una-vez-en-america-vose/37895/",
       "ciclo": "Domingo de clásicos"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-10-25",
+      "hora": "12:00",
+      "title_es": "Euforia: Retrospectiva Ian de la Rosa",
+      "title_en": "Euforia: Retrospectiva Ian de la Rosa",
+      "original_title": "",
+      "director": "Ian de la Rosa",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/euforia-retrospectiva-ian-de-la-rosa/20167/",
+      "ciclo": ""
     },
     {
       "cine": "Renoir Retiro",

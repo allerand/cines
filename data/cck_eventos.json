@@ -1,35 +1,9 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-24T08:26:44",
+    "ts": "2026-10-25T08:45:36",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Convivencia",
-        "fecha": "2026-10-24",
-        "hora": "16:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
-        "ciclo": "Retrospectivas:Carlos Galettini",
-        "director": "Carlos Galettini",
-        "country": "",
-        "year": 1993,
-        "duration": 93,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Seré cualquier cosa pero te quiero",
-        "fecha": "2026-10-24",
-        "hora": "18:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
-        "ciclo": "Retrospectivas:Carlos Galettini",
-        "director": "Carlos Galettini",
-        "country": "",
-        "year": 1986,
-        "duration": 89,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "sorpresas",
@@ -72,23 +46,10 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-24T08:26:49",
+    "ts": "2026-10-25T08:45:41",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Dormir con los ojos abiertos",
-        "fecha": "2026-10-24",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
-        "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler",
-        "director": "Nele Wohlatz",
-        "country": "",
-        "year": 2024,
-        "duration": 100,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Las corrientes",
@@ -105,7 +66,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-24T08:26:57",
+    "ts": "2026-10-25T08:45:46",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -138,7 +99,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-irlandes/": {
-    "ts": "2026-10-24T08:27:06",
+    "ts": "2026-10-25T08:45:53",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -171,7 +132,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
-    "ts": "2026-10-24T08:27:16",
+    "ts": "2026-10-25T08:45:59",
     "v": 2,
     "semanas": 9,
     "funciones": []
