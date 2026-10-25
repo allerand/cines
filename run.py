@@ -60,7 +60,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_moderno,
         scrape_dore, scrape_ideal, scrape_cineteca, scrape_renoir,
         scrape_embajadores, scrape_golem, scrape_metropol, scrape_cine_estudio,
-        scrape_callao, scrape_reina_sofia, CINES_MADRID, hoy_madrid,
+        scrape_callao, scrape_reina_sofia, links_reina_sofia, CINES_MADRID, hoy_madrid,
         resumen_proxy,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
@@ -408,6 +408,16 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                 print(f"{len(r)} funciones")
             except Exception as e:
                 print(f"error — {e}")
+
+        # El Reina Sofía se scrapeó arriba sin navegador y con el link a la
+        # ficha del museo; la boletería, que tiene el link de compra de cada
+        # función, sólo se puede leer con uno. Si no carga, queda la ficha.
+        print("🎟️  Links de compra del Museo Reina Sofía...", end=" ", flush=True)
+        try:
+            linkeadas, total = await links_reina_sofia(page, all_screenings)
+            print(f"{linkeadas} de {total} funciones")
+        except Exception as e:
+            print(f"error: {e}")
 
         await browser.close()
 

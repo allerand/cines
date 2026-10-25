@@ -14,8 +14,9 @@ from scraper import (CINES_MADRID, DORE_PROYECCIONES, _callao_funciones,
                      _dore_combinar, _dore_programa, _dore_tarjetas,
                      _embajadores_funciones, _golem_ficha, _golem_funciones,
                      _ideal_funciones, _madrid_es_cine, _madrid_titulo_y_ciclo,
-                     _metropol_funciones, _reina_actividades, _reina_funciones,
-                     _reina_programa, _renoir_funciones)
+                     _metropol_funciones, _reina_actividades, _reina_ciclo_en_boleteria,
+                     _reina_funciones, _reina_links_de_compra, _reina_programa,
+                     _renoir_funciones)
 
 assert CINES_MADRID == {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
                         "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
@@ -563,5 +564,68 @@ assert _reina_actividades(BUSCADOR, date(2026, 10, 25), date(2026, 12, 27)) == [
     "/actividad/clarisa-navas-presente-escena-cine",
     "/actividad/albert-lamorisse-infancia-eterna-proyector-luna-10"]
 print("✓ reina sofía: del buscador, sólo las actividades con fechas por venir")
+
+
+# El link de compra. El botón ENTRADAS de la ficha de la sesión 12 apuntaba a
+# la función de Clarisa Navas (18371042): de ahí sale sólo el ciclo, y la
+# función se busca en la boletería por hora y nombre. Los eventos son los que
+# devolvía Clorian el 25/10/2026, recortados.
+FICHA_MARTEL = "https://www.museoreinasofia.es/actividad/lucrecia-martel-maria-alche-benjamin-naishtat-presente-escena-cine/"
+ciclo_martel = _reina_ciclo_en_boleteria({
+    "title": {"value": "<p>Lucrecia Martel. <em>Camarera de piso</em> y María Alché y Benjamin Naishtat. <em>Pedro en el país</em></p>"},
+    "tickets": [{"entity": {"url": {"url": {"path":
+        "https://entradas.museoreinasofia.es/es/143-web-individual/"
+        "14655-el-presente-en-escena-cine-argentino-del-siglo-xxi/18371042-clarisa-navas-las-mil-y-una"}}}}]})
+assert ciclo_martel == {"grupo": "143-web-individual", "producto": "14655",
+                        "slug": "el-presente-en-escena-cine-argentino-del-siglo-xxi",
+                        "titulo": "Lucrecia Martel. Camarera de piso y María Alché y Benjamin Naishtat. Pedro en el país"}
+EVENTOS = {"14655": [
+    {"eventId": 18371042, "startDatetime": "2026-12-11T19:00+01:00",
+     "name": "Clarisa Navas. Las mil y una    ", "slug": "clarisa-navas-las-mil-y-una"},
+    {"eventId": 18371047, "startDatetime": "2026-12-12T18:00+01:00",
+     "name": "Lucrecia Martel. Camarera de piso y Benjamin Naishatat y María Alche. Pedro en el País",
+     "slug": "lucrecia-martel-camarera-de-piso-y-benjamin-naishatat-y-maria-alche-pedro-en-el-pais"},
+    {"eventId": 18370572, "startDatetime": "2026-12-10T19:00+01:00",
+     "name": "Hernán Roselli. Algo viejo, algo nuevo, algo prestado ",
+     "slug": "hernan-roselli-algo-viejo-algo-nuevo-algo-prestado"},
+]}
+martel = _reina_funciones(reina_ficha([1797094800], [reina_item(
+    1797094800, "<p>PROGRAMA</p>",
+    "<p><strong>Lucrecia Martel. </strong><em><strong>Camarera de piso&nbsp;</strong></em><br>Argentina y México, 2022, AD, color, sonido, versión original en español, 12’&nbsp;</p>"
+    "<p><strong>María Alché y Benjamín Naishtat. </strong><em><strong>Pedro en el país&nbsp;</strong></em><br>Argentina, México y Noruega, 2026, DCP, color, sonido versión original en español, 61’</p>")]),
+    FICHA_MARTEL, date(2026, 10, 25), date(2026, 12, 27))
+assert [(s.fecha, s.hora) for s in martel] == [("2026-12-12", "18:00")] * 2, martel
+assert _reina_links_de_compra(martel, {FICHA_MARTEL: ciclo_martel}, EVENTOS) == 2
+assert {s.ticket_url for s in martel} == {
+    "https://entradas.museoreinasofia.es/es/143-web-individual/14655-el-presente-en-escena-cine-argentino-del-siglo-xxi/"
+    "18371047-lucrecia-martel-camarera-de-piso-y-benjamin-naishatat-y-maria-alche-pedro-en-el-pais"}
+print("✓ reina sofía: el link de compra es el de la función, no el que trae la ficha")
+
+# Lo dudoso queda en la ficha: a esa hora la boletería tiene otra película, o
+# dos funciones, o la boletería no cargó.
+def reina_sesion(titulo, fecha, hora):
+    from scraper import Screening
+    return Screening(cine="Museo Reina Sofía", title=titulo, fecha=fecha, hora=hora,
+                     ticket_url=FICHA_MARTEL)
+otra = [reina_sesion("Otra película", "2026-12-12", "18:00")]
+dos = [reina_sesion("Las mil y una", "2026-12-11", "19:00")]
+caida = [reina_sesion("Las mil y una", "2026-12-11", "19:00")]
+ciclo_sin_titulo = {**ciclo_martel, "titulo": ""}
+assert _reina_links_de_compra(otra, {FICHA_MARTEL: ciclo_sin_titulo}, EVENTOS) == 0
+assert _reina_links_de_compra(dos, {FICHA_MARTEL: ciclo_sin_titulo}, {"14655": EVENTOS["14655"] + [
+    {"eventId": 1, "startDatetime": "2026-12-11T19:00+01:00", "name": "Las mil y una", "slug": "x"}]}) == 0
+assert _reina_links_de_compra(caida, {FICHA_MARTEL: ciclo_sin_titulo}, {}) == 0
+assert {s.ticket_url for s in otra + dos + caida} == {FICHA_MARTEL}
+# Los cortos de Proyector de luna no se llaman como la función: coincide el
+# nombre de la actividad.
+corto = [reina_sesion("Beatles For Ever", "2026-10-25", "12:00")]
+assert _reina_links_de_compra(corto, {FICHA_MARTEL: {
+    "grupo": "143-web-individual", "producto": "14603", "slug": "proyector-de-luna",
+    "titulo": "¡Silencio, se rueda! La infancia dirige 2"}}, {"14603": [
+    {"eventId": 18269014, "startDatetime": "2026-10-25T12:00+01:00",
+     "name": "¡Silencio, se rueda! La infancia dirige 2. Proyector de luna #11",
+     "slug": "silencio-se-rueda-la-infancia-dirige-2-proyector-de-luna-11"}]}) == 1
+assert corto[0].ticket_url.endswith("/14603-proyector-de-luna/18269014-silencio-se-rueda-la-infancia-dirige-2-proyector-de-luna-11")
+print("✓ reina sofía: sin una sola función que coincida en hora y nombre, queda la ficha")
 
 print("\nTodo OK")

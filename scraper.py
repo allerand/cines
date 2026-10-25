@@ -10825,9 +10825,17 @@ def scrape_callao(semanas: int = 9) -> list[Screening]:
 # queda en el log: las presentaciones de proyectos de las residencias, o
 # sesiones como las de Eli Cortiñas, cuyo ítem decía sólo "Primer pase".
 #
-# El link de la entrada es la ficha del museo y no la boletería: el botón de
-# ENTRADAS de la ficha a veces apunta a otra sesión (el 25/10/2026 la sesión
-# 12 de El presente en escena llevaba a la entrada de Clarisa Navas).
+# El link de la entrada arranca siendo la ficha del museo, y después
+# links_reina_sofia lo cambia por el de compra de esa función en la boletería
+# (Clorian, entradas.museoreinasofia.es). No se usa el botón ENTRADAS de la
+# ficha: casi siempre lleva a la lista del ciclo y no a la función, y a veces
+# a otra sesión (el 25/10/2026 el de la sesión 12 de El presente en escena
+# abría la de Clarisa Navas). La boletería arma la lista de funciones en el
+# navegador, así que se abre con Playwright, como el Ideal, y se lee la
+# respuesta de events/views/available, que trae el id, la fecha y el nombre de
+# cada función. Una función se linkea sólo si hay una sola a esa hora en el
+# ciclo y su nombre coincide con la película o la actividad; si no, o si la
+# boletería no carga, queda la ficha.
 
 REINA_CINE = "Museo Reina Sofía"
 REINA_BASE = "https://www.museoreinasofia.es"
@@ -10837,6 +10845,13 @@ REINA_FICHA = REINA_BASE + "/page-data{ruta}/page-data.json"
 _REINA_ANIO_RE = re.compile(r"\b(1[89]\d{2}|20\d{2})\b")
 _REINA_DUR_RE = re.compile(r"(\d{1,3})\s*['’′´]")
 _REINA_TRADUCCION_RE = re.compile(r"^\s*\[([^\]]+)\]")
+REINA_ENTRADAS = "https://entradas.museoreinasofia.es"
+# /es/143-web-individual/14655-el-presente-en-escena.../(info | 18371042-...)
+_REINA_PRODUCTO_RE = re.compile(
+    r"entradas\.museoreinasofia\.es/(?:[a-z]{2}/)?(\d+-[^/?#]+)/(\d+)-([^/?#]+)")
+# Ficha del museo → su ciclo en la boletería y el nombre de la actividad. Lo
+# llena scrape_reina_sofia y lo usa links_reina_sofia.
+REINA_BOLETERIA: dict[str, dict] = {}
 
 
 def _reina_texto(nodo) -> str:
@@ -11014,9 +11029,13 @@ def scrape_reina_sofia(semanas: int = 9) -> list[Screening]:
         except Exception:
             caidas += 1
             continue
-        funciones = _reina_funciones(contenido, REINA_BASE + ruta + "/", hoy, cutoff)
+        ficha = REINA_BASE + ruta + "/"
+        funciones = _reina_funciones(contenido, ficha, hoy, cutoff)
         if not funciones:
             sin_programa.append(ruta.rsplit("/", 1)[-1])
+        ciclo = _reina_ciclo_en_boleteria(contenido)
+        if ciclo and funciones:
+            REINA_BOLETERIA[ficha] = ciclo
         result.extend(funciones)
     if caidas:
         print(f"[reina sofía: {caidas} fichas no cargaron]", end=" ", flush=True)
@@ -11025,6 +11044,70 @@ def scrape_reina_sofia(semanas: int = 9) -> list[Screening]:
         # formato nuevo de la ficha. Que se vea en el log.
         print(f"[reina sofía: sin programa: {', '.join(sin_programa)}]", end=" ", flush=True)
     return result
+
+
+def _reina_ciclo_en_boleteria(contenido: dict) -> Optional[dict]:
+    """El ciclo de la boletería al que apunta el botón ENTRADAS de la ficha
+    (sólo el ciclo: la función a la que apunta no siempre es la de la ficha)."""
+    for t in contenido.get("tickets") or []:
+        url = (((((t or {}).get("entity") or {}).get("url") or {}).get("url") or {})
+               .get("path") or "")
+        m = _REINA_PRODUCTO_RE.search(url)
+        if m:
+            titulo = BeautifulSoup((contenido.get("title") or {}).get("value") or "",
+                                   "html.parser")
+            return {"grupo": m.group(1), "producto": m.group(2), "slug": m.group(3),
+                    "titulo": _reina_texto(titulo)}
+    return None
+
+
+def _reina_links_de_compra(screenings: list, fichas: dict, eventos: dict) -> int:
+    """Cambia la ficha por el link de compra de cada función. `fichas` es
+    REINA_BOLETERIA y `eventos`, producto → lo que devolvió la boletería."""
+    cambiadas = 0
+    for s in screenings:
+        f = fichas.get(s.ticket_url) if s.cine == REINA_CINE else None
+        if not f:
+            continue
+        a_esa_hora = [e for e in eventos.get(f["producto"]) or []
+                      if isinstance(e, dict)
+                      and (e.get("startDatetime") or "")[:16] == f"{s.fecha}T{s.hora}"]
+        if len(a_esa_hora) != 1:
+            continue
+        ev = a_esa_hora[0]
+        # La boletería escribe los nombres a su manera ("Benjamin Naishatat",
+        # "Roselli"), pero el título de la película o el de la actividad están.
+        nombre = _norm_madrid(ev.get("name"))
+        claves = [_norm_madrid(x) for x in (s.title, s.original_title, f.get("titulo"))]
+        if not nombre or not any(k and (k in nombre or nombre in k) for k in claves):
+            continue
+        if not ev.get("eventId") or not ev.get("slug"):
+            continue
+        s.ticket_url = (f"{REINA_ENTRADAS}/es/{f['grupo']}/{f['producto']}-{f['slug']}/"
+                        f"{ev['eventId']}-{ev['slug']}")
+        cambiadas += 1
+    return cambiadas
+
+
+async def links_reina_sofia(page: Page, screenings: list) -> tuple[int, int]:
+    """Abre la boletería de cada ciclo y linkea cada función a su compra.
+    Devuelve (linkeadas, total del Reina Sofía)."""
+    del_museo = [s for s in screenings if s.cine == REINA_CINE]
+    fichas = {s.ticket_url: REINA_BOLETERIA[s.ticket_url]
+              for s in del_museo if s.ticket_url in REINA_BOLETERIA}
+    eventos: dict[str, list] = {}
+    for f in {f["producto"]: f for f in fichas.values()}.values():
+        url = f"{REINA_ENTRADAS}/es/{f['grupo']}/{f['producto']}-{f['slug']}/info"
+        try:
+            async with page.expect_response(
+                    lambda r: "events/views/available" in r.url, timeout=45000) as info:
+                await page.goto(url, wait_until="domcontentloaded", timeout=45000)
+            data = await (await info.value).json()
+            eventos[f["producto"]] = data if isinstance(data, list) else []
+        except Exception as e:
+            print(f"[reina sofía: la boletería del ciclo {f['producto']} no cargó: {e}]",
+                  end=" ", flush=True)
+    return _reina_links_de_compra(del_museo, fichas, eventos), len(del_museo)
 
 
 # ---------------------------------------------------------------------------
