@@ -11100,16 +11100,14 @@
     "duration": null
   },
   "los nadadores": {
-    "url": "https://letterboxd.com/film/the-swimmers-2026/",
-    "title_en": "The Swimmers",
+    "url": "",
+    "title_en": "Los nadadores",
     "director": "Sol Iglesias SK",
     "country": "Argentina, Mexico",
     "year": 2026,
     "duration": 76,
-    "genre": "Fantasía, Drama",
-    "clase_titulo": "exacto",
-    "original_title": "Los Nadadores",
-    "sin_hints": "título y duración"
+    "genre": "Drama, Fantasía",
+    "original_title": "Los Nadadores"
   },
   "la ópera de tres centavos (die dreigroschenoper)|1931": {
     "url": "",
@@ -15141,7 +15139,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-24",
+    "fecha": "2026-10-25",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -19854,7 +19852,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -26226,7 +26224,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-21",
+    "fecha": "2026-10-25",
     "con_duracion": true,
     "desempate": ""
   },
@@ -26496,12 +26494,13 @@
     "duration": null
   },
   "re-animator [obscura visión]": {
-    "url": "",
-    "title_en": "RE-ANIMATOR [OBSCURA VISIÓN]",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/re-animator/",
+    "title_en": "Re-Animator",
+    "director": "Stuart Gordon",
+    "country": "USA",
+    "year": 1985,
+    "duration": 86,
+    "genre": "Comedia, Terror"
   },
   "tiempos de ilusión [proyecto viridiana]": {
     "url": "",
@@ -26704,5 +26703,56 @@
     "duration": 95,
     "genre": "Thriller, Terror",
     "original_title": "La virgen de la tosquera"
+  },
+  "laca y palomitas: gorda y divina": {
+    "url": "",
+    "title_en": "Laca y Palomitas: Gorda y divina",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "¡qué bello es vivir!": {
+    "url": "",
+    "title_en": "¡Qué bello es vivir!",
+    "director": "Frank Capra",
+    "country": "United States of America",
+    "year": 1946,
+    "duration": 131,
+    "genre": "Drama, Familiar",
+    "title_es": "¡Qué bello es vivir!",
+    "original_title": "It's a Wonderful Life"
+  },
+  "en el resplandor de esta suerte|1990": {
+    "url": "https://letterboxd.com/film/im-glanze-dieses-gluckes/",
+    "title_en": "In the Splendour of Happiness",
+    "director": "Tamara Trampe, Johann Feindt, Jeanine Meerapfel",
+    "country": "Germany",
+    "year": 1990,
+    "duration": 83,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Im Glanze dieses Glückes"
+  },
+  "arabeks": {
+    "url": "https://letterboxd.com/film/arabeks/",
+    "title_en": "Arabeks",
+    "director": "Cem Kaya, Gökhan Bulut",
+    "country": "",
+    "year": 2010,
+    "duration": 58,
+    "genre": "Documental",
+    "original_title": "Arabeks – Vom Straßensound zum Massenpop"
+  },
+  "foragers": {
+    "url": "https://letterboxd.com/film/foragers/",
+    "title_en": "Foragers",
+    "director": "Jumana Manna",
+    "country": "State of Palestine",
+    "year": 2022,
+    "duration": 65,
+    "genre": "Documental",
+    "title_es": "Foragers",
+    "original_title": "اليد الخضراء"
   }
 }
