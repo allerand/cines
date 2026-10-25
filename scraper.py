@@ -4012,14 +4012,17 @@ def _cosmos_programacion(det, today: date, end: date) -> list[tuple[date, str, s
 
 
 def scrape_cosmos(semanas: int = 2) -> list[Screening]:
-    """Scrapea la cartelera de cosmos.uba.ar desde las cards de la home."""
+    """Scrapea la cartelera de cosmos.uba.ar desde las cards de la home.
+
+    Si la web no da ninguna función, la semana sale del post de cartelera de
+    Instagram (scrape_cosmos_instagram)."""
     # El sitio se mudó: www.cinecosmos.uba.ar redirige 301 a cosmos.uba.ar.
     # Se apunta al dominio nuevo para que los ticket_url no salgan redirigidos.
     BASE = "https://cosmos.uba.ar"
     try:
         home = fetch_html(f"{BASE}/")
-    except Exception:
-        return []
+    except Exception as e:
+        return _cosmos_por_instagram(semanas, f"cosmos.uba.ar no contesta ({e})")
 
     today = date.today()
     # La cartelera de Cosmos va Jueves → Miércoles y se actualiza cada Jueves.
@@ -4139,7 +4142,330 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
         print(f"[cosmos: {ciclos} ciclo(s) leídos del detalle]", end=" ")
     elif proximamente:
         print(f"[cosmos: {proximamente} anunciadas sin horario]", end=" ")
+    if not deduped:
+        return _cosmos_por_instagram(semanas, "cosmos.uba.ar no trae funciones")
     return deduped
+
+
+# ---------------------------------------------------------------------------
+# Cine Cosmos por Instagram (@cinecosmos.uba), cuando la web no da nada
+# ---------------------------------------------------------------------------
+# Desde el 22/10/2026 cosmos.uba.ar contesta 503 "Sitio en mantenimiento" y el
+# Cosmos quedó en cero. El cine sigue publicando cada semana un post con la
+# cartelera entera en la caption:
+#
+#     🗓️ ¡Agendá la nueva #CarteleraCosmosUBA! Semana del 22 al 28 de septiembre
+#
+#     🎬 HANGAR ROJO
+#     🇨🇱 Chile, 2023 | 🎥 82 min (R-13)
+#     Dir. Juan Pablo Sallato
+#     🕒 15:25 | Sala 1
+#     🕒 20:55 | Sala 2
+#
+# Se lee con la Business Discovery API de Meta y el mismo IG_ACCESS_TOKEN que
+# postea las stories (el Page token de "Si te digo cine"). instagram.com no:
+# pide login, va contra sus términos y pone en riesgo esa cuenta.
+#
+# Lo que no se puede creer al pie de la letra:
+# - El mes del encabezado. Ese post es del 21/10 y dice "septiembre" (la imagen
+#   dice octubre). El mes sale de la fecha del post, que se publica la víspera
+#   de la semana; el del texto sólo se compara.
+# - Los días. Un horario sin aclaración vale para toda la semana: así coinciden
+#   el post y la web en todas las semanas que se pudieron comparar, de julio a
+#   octubre de 2026. Cuando no, el renglón lo aclara ("20:55 |
+#   Sala 2 — Jue, Vie, Sáb, Dom y Lun", "— Funciones especiales: lunes 12 y
+#   martes 13"); si la aclaración no se entiende, ese horario no sale, en vez
+#   de repartirlo por toda la semana.
+# - Las aclaraciones. La semana del 8/10 ponía El amor que permanece el "Lun" y
+#   Una canción para mi tierra el "lunes 12", las dos a las 20:55 en la Sala 2
+#   (según la web, El amor que permanece iba el miércoles). Una sala no da dos
+#   películas a la vez: gana la aclaración más precisa (la fecha con número) y,
+#   si empatan, ese día no sale ninguna.
+# ---------------------------------------------------------------------------
+
+COSMOS_IG_USUARIO = "cinecosmos.uba"
+# Quién consulta: el IG de "Si te digo cine", dueño del token (secret IG_USER_ID).
+COSMOS_IG_CONSULTA = "17841418915611224"
+GRAPH_API = "https://graph.facebook.com/v21.0"
+
+_COSMOS_IG_SEMANA_RE = re.compile(
+    r"Semana\s+del\s+(\d{1,2})(?:\s+de\s+([a-záéíóú]+))?\s+al\s+(\d{1,2})\s+de\s+([a-záéíóú]+)",
+    re.IGNORECASE)
+# "🇺🇸 Estados Unidos, 2026 | 🎥 108 min (R-17)"
+_COSMOS_IG_FICHA_RE = re.compile(r"^(.*?)[,\s]+(\d{4})\s*\|\D*?(\d{2,3})\s*min", re.IGNORECASE)
+_COSMOS_IG_DIR_RE = re.compile(r"^(?:Dir\.|Direcci[óo]n:|Directora?:|Dirigida por)\s*(.+)$",
+                               re.IGNORECASE)
+# "🕒 20:55 | Sala 2 — Jue, Vie, Sáb, Dom y Lun": lo que sigue a la sala es la
+# aclaración de los días.
+_COSMOS_IG_HORA_RE = re.compile(
+    r"^\W*?(\d{1,2})[:.](\d{2})\s*(?:hs?\.?)?\s*(?:\|\s*Sala\s*(\d+))?(.*)$", re.IGNORECASE)
+_COSMOS_IG_DIAS = {**COSMOS_DAY_ABBREV, **DIAS_ES}
+_COSMOS_IG_CONECTORES = {"y", "e", "a", "al", "de", "del", "el", "los", "las"}
+# Un aviso que saca días de la semana: "⚠️ El martes 29 el cine permanecerá cerrado."
+_COSMOS_IG_AVISO_RE = re.compile(
+    r"⚠|cerrad|suspend|sin funciones|no hay funciones|no habr[áa] funci", re.IGNORECASE)
+_COSMOS_IG_DIA_AVISO_RE = re.compile(
+    r"\b(lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bados?|domingos?)\b(?:\s+(\d{1,2})\b)?",
+    re.IGNORECASE)
+
+
+def _cosmos_ig_dias(aclaracion: str, semana: list[date]) -> list[date] | None:
+    """Los días de un renglón de horario. Sin aclaración, toda la semana; None
+    si la aclaración no se entiende (y entonces ese horario no se publica)."""
+    texto = re.sub(r"funci[óo]n(?:es)?\s+especial(?:es)?|s[óo]lo|[úu]nicamente", " ",
+                   aclaracion.lower())
+    if re.fullmatch(r"\W*(?:todos\s+los\s+d[íi]as)?\W*", texto):
+        return list(semana)
+    tokens = re.findall(r"[a-záéíóúü]+|\d{1,2}", texto)
+    if not tokens or any(not t.isdigit() and t not in _COSMOS_IG_DIAS
+                         and t not in _COSMOS_IG_CONECTORES for t in tokens):
+        return None
+
+    if any(t.isdigit() for t in tokens):
+        # "lunes 12 y martes 13": cada número es una fecha de la semana, y el
+        # día que lo acompaña tiene que coincidir. Un día suelto entre fechas
+        # con número no se sabe a cuál se refiere.
+        fechas = []
+        for i, t in enumerate(tokens):
+            siguiente = tokens[i + 1] if i + 1 < len(tokens) else ""
+            if t in _COSMOS_IG_DIAS and not siguiente.isdigit():
+                return None
+            if not t.isdigit():
+                continue
+            cand = [d for d in semana if d.day == int(t)]
+            previo = tokens[i - 1] if i else ""
+            if len(cand) != 1 or (previo in _COSMOS_IG_DIAS
+                                  and _COSMOS_IG_DIAS[previo] != cand[0].weekday()):
+                return None
+            fechas.append(cand[0])
+        return sorted(set(fechas))
+
+    dias = {_COSMOS_IG_DIAS[t] for t in tokens if t in _COSMOS_IG_DIAS}
+    if not dias:
+        return None
+    # "de jueves a domingo"
+    for i in range(1, len(tokens) - 1):
+        if tokens[i] in ("a", "al") and tokens[i - 1] in _COSMOS_IG_DIAS \
+                and tokens[i + 1] in _COSMOS_IG_DIAS:
+            d, hasta = _COSMOS_IG_DIAS[tokens[i - 1]], _COSMOS_IG_DIAS[tokens[i + 1]]
+            while d != hasta:
+                dias.add(d)
+                d = (d + 1) % 7
+    return [d for d in semana if d.weekday() in dias]
+
+
+def _cosmos_ig_parse(caption: str, publicado: date, url: str = ""
+                     ) -> tuple[date, date, list[Screening]] | None:
+    """(inicio, fin, funciones) de un post de cartelera semanal del Cosmos, o
+    None si el post no es una cartelera o no se le entiende la semana.
+
+    `publicado` es la fecha del post en Buenos Aires: de ahí sale el mes.
+    Devuelve la semana entera, sin mirar qué día es hoy.
+    """
+    m = _COSMOS_IG_SEMANA_RE.search(caption or "")
+    if not m:
+        return None
+    d1, mes1, d2, mes2 = int(m.group(1)), m.group(2), int(m.group(3)), m.group(4)
+
+    # El inicio es el día d1 pegado a la fecha del post, que sale la víspera de
+    # la semana (o el mismo jueves). Con un mes de diferencia no hay dos.
+    candidatos = []
+    for delta in (-1, 0, 1):
+        anio, mes = publicado.year, publicado.month + delta
+        anio, mes = (anio - 1, 12) if mes < 1 else (anio + 1, 1) if mes > 12 else (anio, mes)
+        try:
+            c = date(anio, mes, d1)
+        except ValueError:
+            continue
+        if -3 <= (c - publicado).days <= 7:
+            candidatos.append(c)
+    if len(candidatos) != 1:
+        return None
+    inicio = candidatos[0]
+    fin = next((inicio + timedelta(days=i) for i in range(14)
+                if (inicio + timedelta(days=i)).day == d2), None)
+    if fin is None:
+        return None
+    if (MESES_ES.get(mes2.lower()) != fin.month
+            or (mes1 and MESES_ES.get(mes1.lower()) != inicio.month)):
+        print(f"  ⚠️ [Cosmos IG] el post del {publicado:%d/%m} dice «{m.group(0)}»: "
+              f"por la fecha del post es del {inicio:%d/%m} al {fin:%d/%m}", flush=True)
+
+    semana = [inicio + timedelta(days=i) for i in range((fin - inicio).days + 1)]
+    lineas = [l.strip() for l in caption.split("\n")]
+
+    cerrados: set[date] = set()
+    for linea in lineas:
+        if _COSMOS_IG_AVISO_RE.search(linea):
+            for md in _COSMOS_IG_DIA_AVISO_RE.finditer(linea):
+                wd, n = DIAS_ES[md.group(1).lower()], md.group(2)
+                cerrados |= {d for d in semana if d.weekday() == wd and (not n or d.day == int(n))}
+
+    peliculas: list[dict] = []
+    actual = None
+    for linea in lineas:
+        if linea.startswith("🎬"):
+            actual = {"title": linea.lstrip("🎬").strip(" ️\"'“”"), "director": "",
+                      "country": "", "year": None, "duration": None, "horarios": []}
+            peliculas.append(actual)
+            continue
+        if not linea:
+            actual = None
+            continue
+        if actual is None:
+            continue
+        mh = _COSMOS_IG_HORA_RE.match(linea)
+        if mh and int(mh.group(1)) < 24 and int(mh.group(2)) < 60:
+            hora = f"{int(mh.group(1)):02d}:{mh.group(2)}"
+            aclaracion = mh.group(4).strip(" —–-|:,.")
+            fechas = _cosmos_ig_dias(aclaracion, semana)
+            if fechas is None:
+                print(f"  ⚠️ [Cosmos IG] {actual['title']} {hora}: no se entiende "
+                      f"«{aclaracion}»; ese horario queda afuera", flush=True)
+                continue
+            precision = 2 if re.search(r"\d", aclaracion) else 1 if aclaracion else 0
+            actual["horarios"].append((hora, mh.group(3), fechas, precision))
+            continue
+        mf = _COSMOS_IG_FICHA_RE.match(linea)
+        if mf and not actual["year"]:
+            actual["country"] = re.sub(r"\s+", " ", re.sub(
+                r"[\U0001F1E6-\U0001F1FF️‍]", "", mf.group(1))).strip(" ,|/")
+            actual["year"], actual["duration"] = int(mf.group(2)), int(mf.group(3))
+            continue
+        md = _COSMOS_IG_DIR_RE.match(linea)
+        if md and not actual["director"]:
+            actual["director"] = md.group(1).strip(" .")
+
+    # Quién da cada función: (fecha, hora, sala) → [(precisión, película)].
+    reclamos: dict[tuple, list] = {}
+    for p in peliculas:
+        for hora, sala, fechas, precision in p["horarios"]:
+            for f in fechas:
+                if f not in cerrados:
+                    clave = (f, hora, sala or f"?{id(p)}")
+                    reclamos.setdefault(clave, []).append((precision, p))
+
+    funciones: list[Screening] = []
+    vistas: set[tuple] = set()
+    for (f, hora, _), quienes in reclamos.items():
+        mejor = max(q for q, _ in quienes)
+        ganadoras = {p["title"]: p for q, p in quienes if q == mejor}
+        if len({p["title"] for _, p in quienes}) > 1:
+            titulos = " / ".join(sorted({p["title"] for _, p in quienes}))
+            if len(ganadoras) > 1:
+                print(f"  ⚠️ [Cosmos IG] {f:%d/%m} {hora}: {titulos} en la misma sala; "
+                      f"ese día no sale ninguna", flush=True)
+                continue
+            print(f"  ⚠️ [Cosmos IG] {f:%d/%m} {hora}: {titulos} en la misma sala; "
+                  f"va {next(iter(ganadoras))}, la de la aclaración más precisa", flush=True)
+        p = next(iter(ganadoras.values()))
+        if (p["title"], f, hora) in vistas:
+            continue
+        vistas.add((p["title"], f, hora))
+        funciones.append(Screening(
+            cine="Cine Cosmos",
+            title=p["title"],
+            fecha=f.isoformat(),
+            hora=hora,
+            ticket_url=url,
+            director=p["director"],
+            country=p["country"],
+            year=p["year"],
+            duration=p["duration"],
+        ))
+    funciones.sort(key=lambda s: (s.fecha, s.hora, s.title))
+    return inicio, fin, funciones
+
+
+def _graph_get(path: str, params: dict, timeout: int = 30) -> dict:
+    """GET a la Graph API de Meta. Si falla, la excepción trae el error de Meta
+    (mensaje y código) y nunca la URL, que lleva el token."""
+    url = f"{GRAPH_API}/{path}?{urllib.parse.urlencode(params)}"
+    for intento in range(2):
+        try:
+            with urllib.request.urlopen(url, timeout=timeout) as r:
+                return json.loads(r.read().decode("utf-8"))
+        except urllib.error.HTTPError as e:
+            try:
+                err = json.loads(e.read().decode("utf-8")).get("error", {})
+            except Exception:
+                err = {}
+            raise RuntimeError(f"Graph API {e.code}: {err.get('message', '')} "
+                               f"(code {err.get('code')})") from None
+        except urllib.error.URLError as e:
+            # Los runners de Actions a veces resuelven graph.facebook.com a IPv6
+            # sin salida IPv6 (scripts/post_to_instagram.py): se reintenta una
+            # vez por IPv4.
+            if intento or "unreachable" not in str(e.reason).lower():
+                raise RuntimeError(f"Graph API no contesta: {e.reason}") from None
+            import socket
+            orig = socket.getaddrinfo
+            socket.getaddrinfo = lambda h, p, f=0, t=0, pr=0, fl=0: orig(h, p, socket.AF_INET, t, pr, fl)
+            try:
+                with urllib.request.urlopen(url, timeout=timeout) as r:
+                    return json.loads(r.read().decode("utf-8"))
+            finally:
+                socket.getaddrinfo = orig
+    raise RuntimeError("Graph API no contesta")
+
+
+def scrape_cosmos_instagram(semanas: int = 2, today: date | None = None) -> list[Screening]:
+    """La cartelera del Cosmos desde sus posts de Instagram (Business Discovery).
+
+    Cada día sale del post más nuevo que lo cubre: el miércoles, el post de la
+    semana que arranca el jueves no pisa al de la semana en curso.
+    """
+    token = os.environ.get("IG_ACCESS_TOKEN", "").strip()
+    if not token:
+        raise RuntimeError("falta IG_ACCESS_TOKEN")
+    consulta = os.environ.get("IG_USER_ID", "").strip() or COSMOS_IG_CONSULTA
+    campos = (f"business_discovery.username({COSMOS_IG_USUARIO})"
+              "{media.limit(12){caption,timestamp,permalink}}")
+    data = _graph_get(consulta, {"fields": campos, "access_token": token})
+    posts = data.get("business_discovery", {}).get("media", {}).get("data", [])
+
+    today = today or date.today()
+    hasta = today + timedelta(days=7 * semanas)
+    cubiertas: set[date] = set()
+    result: list[Screening] = []
+    for p in sorted(posts, key=lambda p: p.get("timestamp", ""), reverse=True):
+        try:
+            publicado = datetime.strptime(p["timestamp"], "%Y-%m-%dT%H:%M:%S%z").astimezone(_ART).date()
+        except (KeyError, ValueError):
+            continue
+        semana = _cosmos_ig_parse(p.get("caption") or "", publicado, p.get("permalink", ""))
+        if not semana:
+            continue
+        inicio, fin, funciones = semana
+        nuevas = {inicio + timedelta(days=i) for i in range((fin - inicio).days + 1)} - cubiertas
+        cubiertas |= nuevas
+        result += [s for s in funciones
+                   if date.fromisoformat(s.fecha) in nuevas
+                   and today <= date.fromisoformat(s.fecha) <= hasta]
+        if fin < today:
+            break       # de acá para atrás son semanas que ya pasaron
+    return result
+
+
+def _cosmos_por_instagram(semanas: int, motivo_web: str) -> list[Screening]:
+    """El plan B de scrape_cosmos. La fuente queda marcada como caída igual:
+    la web es la que manda, y así la auditoría ve que se está viviendo del
+    post de Instagram."""
+    try:
+        funciones = scrape_cosmos_instagram(semanas)
+    except Exception as e:
+        marcar_fuente_caida("Cine Cosmos", f"{motivo_web}; Instagram tampoco: {e}")
+        print(f"[cosmos: {motivo_web}; Instagram tampoco: {e}]", end=" ")
+        return []
+    if not funciones:
+        marcar_fuente_caida("Cine Cosmos", f"{motivo_web}; en Instagram no hay "
+                                           f"cartelera de esta semana")
+        print(f"[cosmos: {motivo_web}; en Instagram no hay cartelera de esta semana]", end=" ")
+        return []
+    marcar_fuente_caida("Cine Cosmos", f"{motivo_web}; la cartelera sale de "
+                                       f"Instagram (@{COSMOS_IG_USUARIO})")
+    print(f"[cosmos: {motivo_web}; {len(funciones)} desde Instagram]", end=" ")
+    return funciones
 
 
 # ---------------------------------------------------------------------------

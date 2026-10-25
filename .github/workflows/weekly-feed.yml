@@ -85,6 +85,11 @@ jobs:
         env:
           TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
           TMDB_READ_ACCESS_TOKEN: ${{ secrets.TMDB_READ_ACCESS_TOKEN }}
+          # Plan B del Cine Cosmos cuando cosmos.uba.ar no contesta: la
+          # cartelera sale del post semanal de @cinecosmos.uba, leído con la
+          # Business Discovery API y el mismo token que postea las stories.
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
         run: python3 run.py
 
       - name: Skip scrape notice
