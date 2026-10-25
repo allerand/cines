@@ -7334,11 +7334,25 @@ def scrape_ccd(meses: int = 3) -> list[Screening]:
 # Casa Nacional del Bicentenario  (casadelbicentenario.cultura.gob.ar)
 # ---------------------------------------------------------------------------
 # Las actividades de cine están taggeadas con badge "Cine" en /actividades/.
-# Cada actividad es un ciclo cuyo cuerpo lista una función por fecha, p. ej.:
-#   "Domingo 7. 19HS Muña Muña (2025) Dur. 67 min. Guion y dirección: ..."
-#   "Domingo 5 de julio, 19HS Cinéfilos (2024) Dir. Arnaud Desplechin. 88 min"
+# El cuerpo de cada una se lee renglón por renglón (un párrafo o un <br>) y
+# conviven tres formatos:
+#
+#   - La película en el renglón de la fecha (los ciclos de 2026 hasta agosto):
+#       "Domingo 7. 19HS Muña Muña (2025) Dur. 67 min. Guion y dirección: ..."
+#       "Domingo 5 de julio, 19HS Cinéfilos (2024) Dir. Arnaud Desplechin. 88 min"
+#   - La fecha como encabezado y abajo varias películas, cada una en renglones
+#     "Director: / Año: / País: / Duración:" (OFFNI CINE FEST, octubre de 2026),
+#     o "Director · País · 2026 · 30 min". Un encabezado vale hasta el próximo.
+#   - Prosa, con el título en <em>: "El sábado 7 de noviembre a las 18.30,
+#     proyectamos el documental <em>Noche adentro</em>, de Francisco Olivero."
+#
 # El mes/año se toma del bloque "Cuándo" (rango de fechas) y la hora del
 # bloque "Horario" si la línea de función no la trae.
+#
+# Desde septiembre de 2026 el sitio pone a todo lo que no es un navegador un
+# desafío de Cloudflare (403 con cf-mitigated: challenge), desde GitHub y
+# desde una IP común. No se intenta pasarlo: lo que se publica sale de
+# data/cb_manual.json, que se carga a mano con lo que publica la Casa.
 
 CB_BASE = "https://casadelbicentenario.cultura.gob.ar"
 CB_LISTING = CB_BASE + "/actividades/"
@@ -7369,7 +7383,7 @@ _CB_DOW = r"lunes|martes|mi[eé]rcoles|jueves|viernes|s[áa]bado|domingo"
 _CB_FUNC_RE = re.compile(
     r"(?:^|\b)(?:" + _CB_DOW + r")\s+(\d{1,2})"
     r"(?:\s*/\s*(\d{1,2})|\s+de\s+(" + _CB_MES_RE + r"))?"
-    r"[.,:]?\s*(?:(\d{1,2})(?::(\d{2}))?\s*HS\b)?",
+    r"[.,:]?\s*(?:(\d{1,2})(?::(\d{2}))?\s*HS\b|a\s+las\s+(\d{1,2})(?:[.:](\d{2}))?)?",
     re.IGNORECASE)
 _CB_RANGE_RE = re.compile(
     r"(\d{1,2})\s+(" + _CB_MES_RE + r")\s+(\d{4})", re.IGNORECASE)
@@ -7469,6 +7483,81 @@ def _cb_parse_film(rest: str) -> "tuple[str, Optional[int], str, Optional[int], 
     return title, year, director, duration, original
 
 
+# Renglones de una película del formato nuevo ("Director: Chedey Reyes").
+_CB_CAMPO_RE = re.compile(
+    r"^(Director(?:a|es|as)?|Direcci[óo]n|A[ñn]o|Pa[íi]s(?:es)?|Duraci[óo]n)\s*:\s*(.+)$",
+    re.IGNORECASE)
+# La ficha en un solo renglón: "Jonathan Rodríguez · Argentina · 2026 · 30 min".
+_CB_FICHA_PUNTOS_RE = re.compile(
+    r"^([^·]+?)\s*·\s*([^·]+?)\s*·\s*((?:19|20)\d{2})\s*·\s*(.+)$")
+# Lo que distingue una película en prosa de cualquier otra frase con fecha
+# ("El sábado 8 de agosto a las 19, la Casa recibe al Festival <em>X</em>").
+_CB_PROSA_RE = re.compile(
+    r"\b(?:proyect\w*|exhib\w*|pel[íi]cula|documental|film\w*|largometraje|cortometraje)\b",
+    re.IGNORECASE)
+# Una película en el renglón de la fecha trae su metadata entre paréntesis o
+# con Dir./Dur. ("Cinéfilos (2024) Dir. Arnaud Desplechin. 88 min").
+_CB_EN_LINEA_RE = re.compile(r"\(|\b(?:Dir|Direcci|Guion|Dur)\b", re.IGNORECASE)
+
+
+def _cb_duracion(texto: str) -> "Optional[int]":
+    """'1 h 23 min', '4 min 36 s', '2 h 4 min 55 s', '30 min' → minutos."""
+    h = re.search(r"(\d{1,2})\s*h\b", texto, re.IGNORECASE)
+    m = re.search(r"(\d{1,3})\s*min", texto, re.IGNORECASE)
+    if not h and not m:
+        return None
+    return (int(h.group(1)) * 60 if h else 0) + (int(m.group(1)) if m else 0)
+
+
+def _cb_renglones(art) -> list:
+    """El cuerpo partido en renglones (un párrafo o un <br>), cada uno con su
+    texto y su HTML, que hace falta para ver el título en <em> de la prosa."""
+    out = []
+    for el in art.find_all(["p", "li"]):
+        if el.find(["p", "li"]):        # un contenedor: sus hijos ya se recorren
+            continue
+        for pedazo in re.split(r"<br\s*/?>", el.decode_contents()):
+            frag = BeautifulSoup(pedazo, "html.parser")
+            texto = re.sub(r"\s+", " ", frag.get_text(" ").replace("\xa0", " ")).strip()
+            if texto:
+                out.append((texto, frag))
+    return out
+
+
+def _cb_fecha_hora(m, start: "Optional[date]", end: "Optional[date]",
+                   hora_default: str) -> "Optional[tuple[date, str]]":
+    """La fecha y la hora de un renglón que matcheó _CB_FUNC_RE."""
+    day = int(m.group(1))
+    if m.group(2):                                    # "2/8"
+        month = int(m.group(2))
+    elif m.group(3):                                  # "2 de agosto"
+        month = _cb_mes_num(m.group(3))
+    else:                                             # sólo el día
+        month = start.month if start else None
+    if not month or not 1 <= month <= 12:
+        return None
+    hh, mm = (m.group(4), m.group(5)) if m.group(4) else (m.group(6), m.group(7))
+    if hh and int(hh) <= 23:                          # "19HS", "a las 18.30"
+        hora = f"{int(hh):02d}:{int(mm or 0):02d}"
+    else:
+        hora = hora_default
+    d = _cb_resolve_date(day, month, start, end)
+    return (d, hora) if d else None
+
+
+def _cb_en_prosa(texto: str, frag) -> "Optional[tuple[str, str]]":
+    """(título, director) de "proyectamos el documental <em>X</em>, de Y"."""
+    for em in frag.find_all("em"):
+        titulo = re.sub(r"\s+", " ", em.get_text(" ")).strip(" .,:;")
+        pos = texto.find(titulo) if titulo else -1
+        if pos < 0 or not _CB_PROSA_RE.search(texto[:pos]):
+            continue
+        dm = re.match(r"^\s*,?\s*(?:de|dirigid[oa] por)\s+([A-ZÁÉÍÓÚÑ][^,.;()]{2,60})",
+                      texto[pos + len(titulo):])
+        return titulo, (dm.group(1).strip() if dm else "")
+    return None
+
+
 def _cb_parse_detail(soup, url: str) -> list[Screening]:
     h1 = soup.find(["h1", "h2"])
     title_full = h1.get_text(" ", strip=True) if h1 else ""
@@ -7477,85 +7566,99 @@ def _cb_parse_detail(soup, url: str) -> list[Screening]:
     hora_default = _cb_horario(soup)
     art = soup.find("div", class_="article") or soup
 
-    blocks: list[str] = []
-    for p in art.find_all(["p", "li"]):
-        t = re.sub(r"\s+", " ", p.get_text(" ", strip=True)).strip()
-        if t:
-            blocks.append(t)
-
     out: list[Screening] = []
     seen: set[tuple] = set()
-    for i, raw in enumerate(blocks):
-        t = _CB_PREFIX_RE.sub("", raw)
-        # La fecha puede no estar al principio del bloque (rótulos, negritas
-        # partidas); exigimos que aparezca cerca del inicio para no capturar
-        # fechas sueltas dentro de una sinopsis.
-        m = _CB_FUNC_RE.search(t)
-        if not m or m.start() > 40:
-            continue
-        day = int(m.group(1))
-        if m.group(2):                                    # "2/8"
-            month = int(m.group(2))
-        elif m.group(3):                                  # "2 de agosto"
-            month = _cb_mes_num(m.group(3))
-        else:                                             # sólo el día
-            month = start.month if start else None
-        if not month or not 1 <= month <= 12:
-            continue
-        hora = (f"{int(m.group(4)):02d}:{int(m.group(5) or 0):02d}"
-                if m.group(4) else hora_default)
-        rest = t[m.end():].strip()
-        # Cuando la fecha viene sola en su párrafo, la película está en el
-        # bloque siguiente.
-        if len(rest) < 3 and i + 1 < len(blocks):
-            rest = blocks[i + 1]
-        if _CB_CANCEL_RE.search(rest):
-            continue
-        title, year, director, duration, original = _cb_parse_film(rest)
-        if not title or len(title) < 2:
-            continue
-        # Las fichas también traen fechas dentro del párrafo introductorio
-        # ("El sábado 8 de agosto a las 19, la Casa recibe al Festival…"), y
-        # de ahí salían títulos que en realidad son prosa. Una función real
-        # siempre declara al menos año, dirección o duración.
-        if not (year or director or duration):
-            continue
-        # Algunas fichas describen el programa en prosa bajo una fecha real
-        # ("Jueves 21 de mayo. 19HS Los filmes que componen este programa…").
-        # Ningún título de película llega a esa extensión.
-        if len(title) > 55:
-            continue
-        d = _cb_resolve_date(day, month, start, end)
-        if not d:
-            continue
-        key = (title, d.isoformat(), hora)
+
+    def agregar(cuando: tuple, titulo: str, director: str = "", year=None,
+                duration=None, original: str = "", country: str = "") -> None:
+        titulo = titulo.strip(" .,:;–-")
+        # Ningún título de película llega a esa extensión: es prosa.
+        if not titulo or len(titulo) > 80 or _CB_CANCEL_RE.search(titulo):
+            return
+        d, hora = cuando
+        key = (titulo, d.isoformat(), hora)
         if key in seen:
-            continue
+            return
         seen.add(key)
         out.append(Screening(
-            cine="Casa del Bicentenario",
-            title=title,
-            fecha=d.isoformat(),
-            hora=hora,
-            ticket_url=url,
-            ciclo=ciclo,
-            director=director,
-            year=year,
-            duration=duration,
+            cine="Casa del Bicentenario", title=titulo, fecha=d.isoformat(),
+            hora=hora, ticket_url=url,
+            # "CINE | Noche adentro": la actividad es la película, no un ciclo.
+            ciclo="" if titulo_norm(ciclo) == titulo_norm(titulo) else ciclo,
+            director=director, country=country, year=year, duration=duration,
             original_title=original,
         ))
 
-    # Fallback: actividad de cine sin líneas de función parseables → 1 función
-    # en la fecha de inicio, con el título del ciclo.
-    if not out and start:
-        out.append(Screening(
-            cine="Casa del Bicentenario",
-            title=ciclo,
-            fecha=start.isoformat(),
-            hora=hora_default,
-            ticket_url=url,
-            ciclo="",
-        ))
+    dia = None      # (fecha, hora) del último encabezado de día
+    peli = None     # la película del formato nuevo que se está armando
+
+    def cerrar() -> None:
+        nonlocal peli
+        # Un título sin director ni año no es una película publicable: puede
+        # ser una "Proyección oculta" o la bajada de un día especial.
+        if peli and dia and (peli.get("director") or peli.get("year")):
+            agregar(dia, peli["titulo"], peli.get("director", ""), peli.get("year"),
+                    peli.get("duration"), country=peli.get("country", ""))
+        peli = None
+
+    for texto, frag in _cb_renglones(art):
+        t = _CB_PREFIX_RE.sub("", texto)
+        # La fecha tiene que estar cerca del inicio del renglón para no tomar
+        # fechas sueltas dentro de una sinopsis.
+        m = _CB_FUNC_RE.search(t)
+        cuando = _cb_fecha_hora(m, start, end, hora_default) if m and m.start() <= 40 else None
+        if cuando:
+            cerrar()
+            dia = cuando
+            rest = t[m.end():].strip()
+            prosa = _cb_en_prosa(t, frag)
+            if rest and _CB_EN_LINEA_RE.search(rest) and not _CB_CANCEL_RE.search(rest):
+                title, year, director, duration, original = _cb_parse_film(rest)
+                # Una función real declara al menos año, dirección o duración.
+                if year or director or duration:
+                    agregar(cuando, title, director, year, duration, original)
+            elif prosa:
+                agregar(cuando, prosa[0], prosa[1])
+            # Si no, es el encabezado del día y las películas vienen abajo.
+            continue
+        if not dia:
+            continue
+        campo = _CB_CAMPO_RE.match(t)
+        if campo:
+            if peli:
+                nombre, valor = _sin_acentos(campo.group(1)).lower(), campo.group(2).strip()
+                if nombre.startswith("direc"):
+                    peli["director"] = valor
+                elif nombre == "ano" and re.fullmatch(r"(?:19|20)\d{2}", valor):
+                    peli["year"] = int(valor)
+                elif nombre.startswith("pais"):
+                    peli["country"] = valor
+                elif nombre.startswith("durac"):
+                    peli["duration"] = _cb_duracion(valor)
+            continue
+        puntos = _CB_FICHA_PUNTOS_RE.match(t)
+        if puntos and peli and len(peli) == 1:
+            peli.update(director=puntos.group(1), country=puntos.group(2),
+                        year=int(puntos.group(3)), duration=_cb_duracion(puntos.group(4)))
+            continue
+        if _CB_EN_LINEA_RE.search(t) and not _CB_CANCEL_RE.search(t):
+            # Formato viejo con la fecha sola en su párrafo y la película abajo.
+            cerrar()
+            title, year, director, duration, original = _cb_parse_film(t)
+            if (year or director or duration) and len(title) <= 55:
+                agregar(dia, title, director, year, duration, original)
+            continue
+        cerrar()
+        peli = {"titulo": t}
+    cerrar()
+
+    # Una actividad de un solo día sin película legible es la película misma
+    # ("CINE | Noche adentro"). En un ciclo de varias fechas, el nombre del
+    # ciclo en su primera fecha sería una función inventada: mejor nada.
+    if not out and start and (end is None or end == start):
+        agregar((start, hora_default), ciclo)
+    elif not out:
+        print(f"[CB] {url}: ninguna función legible", flush=True)
     return out
 
 
@@ -7627,8 +7730,9 @@ def _cb_manual(today: date) -> list[Screening]:
             cine="Casa del Bicentenario", title=title,
             fecha=s["fecha"], hora=s.get("hora", "19:00"),
             ticket_url=s.get("ticket_url", CB_LISTING), ciclo=s.get("ciclo", ""),
-            director=s.get("director", ""), year=s.get("year"),
-            duration=s.get("duration"), original_title=s.get("original_title", ""),
+            director=s.get("director", ""), country=s.get("country", ""),
+            year=s.get("year"), duration=s.get("duration"),
+            original_title=s.get("original_title", ""),
         ))
     return out
 

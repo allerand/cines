@@ -1,10 +1,178 @@
 {
-  "_comment": "Override MANUAL de la Casa Nacional del Bicentenario. Se mergea con lo que trae scrape_cb (dedup por título+fecha+hora) y se filtra desde hoy, así que las funciones pasadas se caen solas. Existe porque el sitio (casadelbicentenario.cultura.gob.ar) responde el listado vacío a los runners de GitHub Actions aunque desde una IP local devuelve las actividades: sin esto, el scrape publica 0 funciones sin error. Cuando el ciclo termine, vaciá 'screenings' o actualizá con la programación nueva.",
+  "_comment": "Override MANUAL de la Casa Nacional del Bicentenario. Se mergea con lo que trae scrape_cb (dedup por título+fecha+hora) y se filtra desde hoy, así que las funciones pasadas se caen solas. Desde septiembre de 2026 casadelbicentenario.cultura.gob.ar le pone un desafío de Cloudflare (403, cf-mitigated: challenge) a todo lo que no es un navegador, desde GitHub y desde una IP común, así que lo que publica la Casa sale de acá. Se carga con lo que dice cada ficha de /actividades/ con badge Cine; los títulos van como los escribe la Casa (run.py los pasa a minúscula). Cargado el 25/10/2026: OFFNI CINE FEST (hasta el 1/11) y Noche adentro (7/11).",
   "screenings": [
-    {"title": "Escenas en el mar", "fecha": "2026-08-02", "hora": "19:00", "director": "Takeshi Kitano", "year": 1991, "duration": 101, "original_title": "あの夏、いちばん静かな海。", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"},
-    {"title": "La tumba de las luciérnagas", "fecha": "2026-08-09", "hora": "19:00", "director": "Isao Takahata", "year": 1988, "duration": 88, "original_title": "火垂るの墓", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"},
-    {"title": "Una vez en Osaka", "fecha": "2026-08-16", "hora": "19:00", "director": "Jun Ichikawa", "year": 1999, "duration": 119, "original_title": "大阪物語", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"},
-    {"title": "Ah, la primavera", "fecha": "2026-08-23", "hora": "19:00", "director": "Shinji Sōmai", "year": 1998, "duration": 100, "original_title": "あ、春", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"},
-    {"title": "Ataduras", "fecha": "2026-08-30", "hora": "19:00", "director": "Kichitaro Negishi", "year": 1998, "duration": 124, "original_title": "絆", "ciclo": "Miradas de Japón", "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-miradas-de-japon/"}
+    {
+      "title": "LIMBO ALUCINANTE",
+      "fecha": "2026-10-25",
+      "hora": "18:00",
+      "director": "Tetsuo Lumiere",
+      "country": "Argentina",
+      "year": 2023,
+      "duration": 80,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "EL ARDID",
+      "fecha": "2026-10-25",
+      "hora": "18:00",
+      "director": "Octavio Reyes",
+      "country": "México",
+      "year": 2025,
+      "duration": 80,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "PIMPLE",
+      "fecha": "2026-10-30",
+      "hora": "19:00",
+      "director": "Fernando Alle",
+      "country": "Portugal",
+      "year": 2025,
+      "duration": 4,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "A NIGHTMARE ON 34TH STREET",
+      "fecha": "2026-10-30",
+      "hora": "19:00",
+      "director": "Kevin McGuiness",
+      "country": "Canadá",
+      "year": 2025,
+      "duration": 5,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "STARWARS: GORETECH",
+      "fecha": "2026-10-30",
+      "hora": "19:00",
+      "director": "German Magariños",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 90,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "TRICK OR TREAT: A HALLOWEEN STORY",
+      "fecha": "2026-10-31",
+      "hora": "18:00",
+      "director": "Gaby Smiths",
+      "country": "Argentina / Francia",
+      "year": 2025,
+      "duration": 6,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "SANGRE VURDALAK",
+      "fecha": "2026-10-31",
+      "hora": "18:00",
+      "director": "Santiago Fernández Calvete",
+      "country": "Argentina",
+      "year": 2021,
+      "duration": 90,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "LA FRECUENCIA KIRLIAN",
+      "fecha": "2026-10-31",
+      "hora": "18:00",
+      "director": "Cristian Ponce",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 94,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "HOME MOVIE LEGEND TRIP: THE BEAST OF BRAY ROAD",
+      "fecha": "2026-11-01",
+      "hora": "18:00",
+      "director": "Dean Bertram y Samantha Krause",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 5,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "TIERRA",
+      "fecha": "2026-11-01",
+      "hora": "18:00",
+      "director": "Andrés Perugini",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 10,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "THE MIST FROM BELOW",
+      "fecha": "2026-11-01",
+      "hora": "18:00",
+      "director": "Justin Kesser Carrasco",
+      "country": "Chile",
+      "year": 2026,
+      "duration": 4,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "IMPENETRABLE",
+      "fecha": "2026-11-01",
+      "hora": "18:00",
+      "director": "Benjamín Such",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 9,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "ÑASAINDY",
+      "fecha": "2026-11-01",
+      "hora": "18:00",
+      "director": "Ignacio de la Sota",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 13,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "WHAT LIES BETWEEN",
+      "fecha": "2026-11-01",
+      "hora": "18:00",
+      "director": "Ryan Sarmiento Orduña",
+      "country": "Filipinas",
+      "year": 2026,
+      "duration": 16,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "SASYQ",
+      "fecha": "2026-11-01",
+      "hora": "18:00",
+      "director": "Yerden Telemissov",
+      "country": "Kazajistán",
+      "year": 2025,
+      "duration": 96,
+      "ciclo": "OFFNI CINE FEST",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/kino-cnb-offni-cine-fest-1/"
+    },
+    {
+      "title": "Noche adentro",
+      "fecha": "2026-11-07",
+      "hora": "18:30",
+      "director": "Francisco Olivero",
+      "ciclo": "",
+      "ticket_url": "https://casadelbicentenario.cultura.gob.ar/actividad/cine-noche-adentro/"
+    }
   ]
 }
