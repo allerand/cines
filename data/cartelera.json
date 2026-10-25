@@ -50,6 +50,11 @@
       "scrapeadas": 4,
       "publicadas": 4
     },
+    "Cine Cosmos": {
+      "scrapeadas": 32,
+      "publicadas": 32,
+      "fuente_caida": "cosmos.uba.ar no contesta (HTTP Error 503: Service Temporarily Unavailable); la cartelera sale de Instagram (@cinecosmos.uba)"
+    },
     "Cine Gaumont": {
       "scrapeadas": 52,
       "publicadas": 52
@@ -1905,6 +1910,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-25",
+      "hora": "14:50",
+      "title_es": "Los domingos",
+      "title_en": "Sundays",
+      "original_title": "Los domingos",
+      "director": "Alauda Ruiz de Azúa",
+      "country": "España",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/los-domingos/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-10-25",
       "hora": "14:55",
@@ -2430,6 +2451,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-25",
+      "hora": "15:25",
+      "title_es": "Hangar rojo",
+      "title_en": "Hangar rojo",
+      "original_title": "",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile",
+      "year": 2023,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -3601,6 +3638,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-25",
+      "hora": "16:55",
+      "title_es": "Stop making sense",
+      "title_en": "Stop Making Sense",
+      "original_title": "",
+      "director": "Jonathan Demme",
+      "country": "Estados Unidos",
+      "year": 1984,
+      "duration": 88,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/stop-making-sense/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinépolis Houssay",
       "fecha": "2026-10-25",
       "hora": "17:00",
@@ -3710,6 +3763,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/el-principe-de-nanawa/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/518",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-25",
+      "hora": "17:00",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -4961,6 +5030,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-25",
+      "hora": "18:35",
+      "title_es": "El gran falsificador",
+      "title_en": "The Money Maker",
+      "original_title": "",
+      "director": "Jean-Paul Salomé",
+      "country": "Francia",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Crimen, Historia",
+      "letterboxd": "https://letterboxd.com/film/the-money-maker-2025/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-25",
       "hora": "18:40",
@@ -5278,6 +5363,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/2e4c2437c8e6254a6daacaabe5a629ef",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-25",
+      "hora": "19:10",
+      "title_es": "La negociación",
+      "title_en": "La negociación",
+      "original_title": "",
+      "director": "Gus Van Sant",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 105,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -6609,6 +6710,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-25",
+      "hora": "20:55",
+      "title_es": "Hangar rojo",
+      "title_en": "Hangar rojo",
+      "original_title": "",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile",
+      "year": 2023,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-25",
       "hora": "21:00",
@@ -6718,6 +6835,22 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-25",
+      "hora": "21:05",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -9809,6 +9942,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-26",
+      "hora": "14:50",
+      "title_es": "Los domingos",
+      "title_en": "Sundays",
+      "original_title": "Los domingos",
+      "director": "Alauda Ruiz de Azúa",
+      "country": "España",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/los-domingos/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-26",
       "hora": "15:00",
@@ -10158,6 +10307,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-26",
+      "hora": "15:25",
+      "title_es": "Hangar rojo",
+      "title_en": "Hangar rojo",
+      "original_title": "",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile",
+      "year": 2023,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -11025,6 +11190,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-26",
+      "hora": "16:55",
+      "title_es": "Stop making sense",
+      "title_en": "Stop Making Sense",
+      "original_title": "",
+      "director": "Jonathan Demme",
+      "country": "Estados Unidos",
+      "year": 1984,
+      "duration": 88,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/stop-making-sense/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-26",
       "hora": "17:00",
@@ -11102,6 +11283,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/clayface/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-26",
+      "hora": "17:00",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -12161,6 +12358,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-26",
+      "hora": "18:35",
+      "title_es": "El gran falsificador",
+      "title_en": "The Money Maker",
+      "original_title": "",
+      "director": "Jean-Paul Salomé",
+      "country": "Francia",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Crimen, Historia",
+      "letterboxd": "https://letterboxd.com/film/the-money-maker-2025/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-26",
       "hora": "18:40",
@@ -12414,6 +12627,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-26",
+      "hora": "19:10",
+      "title_es": "La negociación",
+      "title_en": "La negociación",
+      "original_title": "",
+      "director": "Gus Van Sant",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 105,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -13585,6 +13814,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-26",
+      "hora": "20:55",
+      "title_es": "Hangar rojo",
+      "title_en": "Hangar rojo",
+      "original_title": "",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile",
+      "year": 2023,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-26",
       "hora": "21:00",
@@ -13662,6 +13907,22 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-26",
+      "hora": "21:05",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -16401,6 +16662,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-27",
+      "hora": "14:50",
+      "title_es": "Los domingos",
+      "title_en": "Sundays",
+      "original_title": "Los domingos",
+      "director": "Alauda Ruiz de Azúa",
+      "country": "España",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/los-domingos/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-27",
       "hora": "15:00",
@@ -16750,6 +17027,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-27",
+      "hora": "15:25",
+      "title_es": "Hangar rojo",
+      "title_en": "Hangar rojo",
+      "original_title": "",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile",
+      "year": 2023,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -17649,6 +17942,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-27",
+      "hora": "16:55",
+      "title_es": "Stop making sense",
+      "title_en": "Stop Making Sense",
+      "original_title": "",
+      "director": "Jonathan Demme",
+      "country": "Estados Unidos",
+      "year": 1984,
+      "duration": 88,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/stop-making-sense/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-27",
       "hora": "17:00",
@@ -17726,6 +18035,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/clayface/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-27",
+      "hora": "17:00",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -18801,6 +19126,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-27",
+      "hora": "18:35",
+      "title_es": "El gran falsificador",
+      "title_en": "The Money Maker",
+      "original_title": "",
+      "director": "Jean-Paul Salomé",
+      "country": "Francia",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Crimen, Historia",
+      "letterboxd": "https://letterboxd.com/film/the-money-maker-2025/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-27",
       "hora": "18:40",
@@ -19054,6 +19395,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/2e4c2437c8e6254a6daacaabe5a629ef",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-27",
+      "hora": "19:10",
+      "title_es": "La negociación",
+      "title_en": "La negociación",
+      "original_title": "",
+      "director": "Gus Van Sant",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 105,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -20177,6 +20534,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-27",
+      "hora": "20:55",
+      "title_es": "Hangar rojo",
+      "title_en": "Hangar rojo",
+      "original_title": "",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile",
+      "year": 2023,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-27",
       "hora": "21:00",
@@ -20286,6 +20659,22 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-27",
+      "hora": "21:05",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -23089,6 +23478,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-28",
+      "hora": "14:50",
+      "title_es": "Los domingos",
+      "title_en": "Sundays",
+      "original_title": "Los domingos",
+      "director": "Alauda Ruiz de Azúa",
+      "country": "España",
+      "year": 2025,
+      "duration": 116,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/los-domingos/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-28",
       "hora": "15:00",
@@ -23422,6 +23827,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-28",
+      "hora": "15:25",
+      "title_es": "Hangar rojo",
+      "title_en": "Hangar rojo",
+      "original_title": "",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile",
+      "year": 2023,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -24385,6 +24806,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-28",
+      "hora": "16:55",
+      "title_es": "Stop making sense",
+      "title_en": "Stop Making Sense",
+      "original_title": "",
+      "director": "Jonathan Demme",
+      "country": "Estados Unidos",
+      "year": 1984,
+      "duration": 88,
+      "genre": "Música, Documental",
+      "letterboxd": "https://letterboxd.com/film/stop-making-sense/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-10-28",
       "hora": "17:00",
@@ -24446,6 +24883,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/clayface/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-28",
+      "hora": "17:00",
+      "title_es": "Tres adioses",
+      "title_en": "Three Goodbyes",
+      "original_title": "Tre ciotole",
+      "director": "Isabel Coixet",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 122,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/three-goodbyes/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -25521,6 +25974,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-28",
+      "hora": "18:35",
+      "title_es": "El gran falsificador",
+      "title_en": "The Money Maker",
+      "original_title": "",
+      "director": "Jean-Paul Salomé",
+      "country": "Francia",
+      "year": 2025,
+      "duration": 128,
+      "genre": "Crimen, Historia",
+      "letterboxd": "https://letterboxd.com/film/the-money-maker-2025/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-10-28",
       "hora": "18:40",
@@ -25790,6 +26259,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/2e4c2437c8e6254a6daacaabe5a629ef",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-28",
+      "hora": "19:10",
+      "title_es": "La negociación",
+      "title_en": "La negociación",
+      "original_title": "",
+      "director": "Gus Van Sant",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 105,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
@@ -27009,6 +27494,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-28",
+      "hora": "20:55",
+      "title_es": "Hangar rojo",
+      "title_en": "Hangar rojo",
+      "original_title": "",
+      "director": "Juan Pablo Sallato",
+      "country": "Chile",
+      "year": 2023,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-10-28",
       "hora": "21:00",
@@ -27118,6 +27619,22 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Cosmos",
+      "fecha": "2026-10-28",
+      "hora": "21:05",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.instagram.com/p/Dexbjv5CWmc/",
       "ciclo": ""
     },
     {
