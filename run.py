@@ -60,7 +60,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_moderno,
         scrape_dore, scrape_ideal, scrape_cineteca, scrape_renoir,
         scrape_embajadores, scrape_golem, scrape_metropol, scrape_cine_estudio,
-        scrape_callao, CINES_MADRID, hoy_madrid,
+        scrape_callao, scrape_reina_sofia, CINES_MADRID, hoy_madrid,
         resumen_proxy,
     )
     # IMDb+Lanación se scrapea dentro del bloque async_playwright (necesita
@@ -175,7 +175,8 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                        ("Golem Madrid", scrape_golem),
                        ("Artistic Metropol", scrape_metropol),
                        ("Cine Estudio (CBA)", scrape_cine_estudio),
-                       ("Cines Callao", scrape_callao)):
+                       ("Cines Callao", scrape_callao),
+                       ("Museo Reina Sofía", scrape_reina_sofia)):
         print(f"🎬 Scrapeando {nombre} (Madrid)...", end=" ", flush=True)
         try:
             r = fn(semanas)
@@ -783,7 +784,8 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                        'Renoir Plaza de España': 1, 'Renoir Retiro': 1,
                        'Golem Madrid': 1, 'Embajadores Glorieta': 1,
                        'Embajadores Ercilla': 1, 'Artistic Metropol': 1,
-                       'Cine Estudio': 1, 'Cines Callao': 1}   # cine → mínimo sano
+                       'Cine Estudio': 1, 'Cines Callao': 1,
+                       'Museo Reina Sofía': 1}   # cine → mínimo sano
 
     # Cuánto trajo cada cine ANTES del merge, o sea de la fuente, hoy. Después
     # del merge no se puede distinguir: un cine que no se pudo scrapear y quedó

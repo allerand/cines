@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Test local de los scrapers de Madrid (Cine Doré y Cines Ideal), sin red:
+Test local de los scrapers de Madrid, sin red:
 
     python3 test_madrid.py
 
@@ -14,12 +14,14 @@ from scraper import (CINES_MADRID, DORE_PROYECCIONES, _callao_funciones,
                      _dore_combinar, _dore_programa, _dore_tarjetas,
                      _embajadores_funciones, _golem_ficha, _golem_funciones,
                      _ideal_funciones, _madrid_es_cine, _madrid_titulo_y_ciclo,
-                     _metropol_funciones, _renoir_funciones)
+                     _metropol_funciones, _reina_actividades, _reina_funciones,
+                     _reina_programa, _renoir_funciones)
 
 assert CINES_MADRID == {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
                         "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
                         "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla",
-                        "Artistic Metropol", "Cine Estudio", "Cines Callao"}
+                        "Artistic Metropol", "Cine Estudio", "Cines Callao",
+                        "Museo Reina Sofía"}
 
 # --- Programa del mes (texto de pypdf) ---------------------------------------
 PROGRAMA = """\
@@ -461,5 +463,105 @@ assert [(s.fecha, s.hora) for s in callao] == [
 assert callao[0].title == "Spider-Man: Brand New Day"
 assert callao[0].ticket_url.endswith("/callao/spiderman/")
 print("✓ callao: los tres horarios del día, el día pasado y el '---' afuera")
+
+
+# --- Museo Reina Sofía ---------------------------------------------------------
+# El 'content' del page-data.json de las fichas reales (octubre de 2026),
+# recortado a lo que usa el scraper. Las fechas son epoch: 1797012000 es el
+# 11/12/2026 a las 19:00 de Madrid.
+def reina_item(ts, titulo, descripcion):
+    return {"entity": {"date": ts, "titleHtml": {"value": titulo},
+                       "descriptionHtml": {"value": descripcion}}}
+
+
+def reina_ficha(fechas, items, ciclo="<p>El presente en escena. Cine argentino del siglo XXI</p>"):
+    return {"parent": {"entity": {"title": {"value": ciclo}}},
+            "events": [{"entity": {"dates": [{"entity": {"date": ts}} for ts in fechas]}}],
+            "schedule": items}
+
+
+# Una sola película: director y título en el título del ítem, la ficha técnica
+# en la descripción, y abajo la presentación, que no es una película.
+CLARISA = reina_ficha([1797012000], [reina_item(
+    1797012000, "<p>Clarisa Navas.<em> Las mil y una</em></p>",
+    "<p>Argentina y Alemania, 2020, DCP, color, versión original en español, 120’&nbsp;</p>\n"
+    "<p>—Con presentación en vídeo de Roger Koza, cocomisario del ciclo</p>\n")])
+URL_CLARISA = "https://www.museoreinasofia.es/actividad/clarisa-navas-presente-escena-cine/"
+clarisa = _reina_funciones(CLARISA, URL_CLARISA, date(2026, 10, 25), date(2026, 12, 27))
+assert [(s.fecha, s.hora, s.title, s.director, s.year, s.duration) for s in clarisa] == [
+    ("2026-12-11", "19:00", "Las mil y una", "Clarisa Navas", 2020, 120)], clarisa
+assert clarisa[0].country == "Argentina y Alemania" and clarisa[0].cine == "Museo Reina Sofía"
+assert clarisa[0].ciclo == "El presente en escena. Cine argentino del siglo XXI"
+assert clarisa[0].ticket_url == URL_CLARISA
+print("✓ reina sofía: una película, con su ficha técnica y sin la presentación")
+
+# Programa doble de Portabella: la traducción entre corchetes es el título en
+# español y el de <em> queda como original.
+PORTABELLA = """<p>Programa</p>
+<p><strong>Pere Portabella. </strong><em><strong>Mudanza</strong></em><br>España, 2008, DCP, color, sonido, versión original sin diálogos, 20’</p>
+<p><strong>Pere Portabella.</strong> <em><strong>Die Stille vor Bach</strong></em> <strong>[El silencio antes de Bach]</strong><br>España, 2007, DCP, color, sonido, versión original en alemán, castellano, francés e italiano con subtítulos en español, 102’</p>"""
+pelis = _reina_programa(PORTABELLA)
+assert [(p["titulo"], p["traduccion"], p["director"], p["year"], p["duration"]) for p in pelis] == [
+    ("Mudanza", "", "Pere Portabella", 2008, 20),
+    ("Die Stille vor Bach", "El silencio antes de Bach", "Pere Portabella", 2007, 102)], pelis
+portabella = _reina_funciones(reina_ficha([1792861200], [reina_item(1792861200, "<p>Programa</p>",
+                                                                  PORTABELLA)]),
+                              "u", date(2026, 10, 1), date(2026, 12, 1))
+assert [(s.title, s.original_title) for s in portabella] == [
+    ("Mudanza", ""), ("El silencio antes de Bach", "Die Stille vor Bach")], portabella
+assert {(s.fecha, s.hora) for s in portabella} == {("2026-10-24", "19:00")}
+print("✓ reina sofía: programa doble en dos filas; la traducción va de título")
+
+# El punto pegado al título adentro del <em>, la ficha técnica en el párrafo
+# de abajo y la sinopsis de los cortos de Proyector de luna.
+VARIOS = """<p>—Con la presentación de Parastoo Anoushahpour</p>
+<p><strong>Parastoo Anoushahpour, Faraz Anoushahpour y Ryan Ferko</strong><em><strong>. Lovers' Wind</strong></em><br>Canadá, Irán, Túnez, 2024, DCP, color, sonido, versión original en iraní e inglés con subtítulos en español e inglés, 36’</p>
+<p><strong>Bette Gordon. </strong><em><strong>An Algorithm</strong></em><strong>&nbsp;</strong>&nbsp;</p>
+<p>Estados Unidos, 1977, AD, color, sonido, versión original en inglés, 9'&nbsp;</p>
+<p><strong>Lucio Álvarez.</strong> <em><strong>Reduce, reutiliza y recicla</strong></em><br>Argentina, 2022, AD, color, sonido, versión original en español, 2'44''</p>
+<p>En la escuela se trabaja mucho con las consignas de las 3R, reducir, reutilizar y, sobre todo, reciclar. En 2022 grabaron 3' de canción.</p>
+<p><strong>Jean-Luc Godard y Anne-Marie Miéville.</strong><em><strong> The Old Place</strong></em><strong>.&nbsp;</strong><em><strong>Small Notes Regarding the Arts at Fall of 20th Century</strong></em><br>Francia y Estados Unidos, 1999, AD, color, versión original en francés subtitulada en español, 49´. Copia remasterizada</p>"""
+assert [(p["director"], p["titulo"], p["country"], p["year"], p["duration"])
+        for p in _reina_programa(VARIOS)] == [
+    ("Parastoo Anoushahpour, Faraz Anoushahpour y Ryan Ferko", "Lovers' Wind", "Canadá, Irán, Túnez", 2024, 36),
+    ("Bette Gordon", "An Algorithm", "Estados Unidos", 1977, 9),
+    ("Lucio Álvarez", "Reduce, reutiliza y recicla", "Argentina", 2022, 2),
+    ("Jean-Luc Godard y Anne-Marie Miéville",
+     "The Old Place. Small Notes Regarding the Arts at Fall of 20th Century",
+     "Francia y Estados Unidos", 1999, 49),
+]
+print("✓ reina sofía: el punto del <em>, la ficha en otro párrafo y la sinopsis afuera")
+
+# Sin películas en la agenda (los pases de Eli Cortiñas decían sólo "Primer
+# pase"): no se inventa nada.
+assert _reina_funciones(reina_ficha([1790269200, 1790874000], [
+    reina_item(1790269200, "<p>Primer pase</p>", "<p>—Con la presentación de Eli Cortiñas&nbsp;</p>"),
+    reina_item(1790874000, "<p>Segundo pase</p>", "")]), "u", date(2026, 9, 1), date(2026, 12, 1)) == []
+
+# La misma película en dos fechas (el ítem de la agenda trae sólo la primera),
+# y la primera ya pasó.
+REPITE = reina_ficha([1790269200, 1790874000], [reina_item(
+    1790269200, "<p>Jacques Deray<em>.</em> <em>La piscine</em> [La piscina]</p>",
+    "<p>Francia, 1969, AD, color, sonido, versión original en francés con subtítulos en español, 120’. Copia restaurada en 4K</p>")])
+repite = _reina_funciones(REPITE, "u", date(2026, 9, 30), date(2026, 12, 1))
+assert [(s.fecha, s.hora, s.title, s.original_title, s.duration) for s in repite] == [
+    ("2026-10-01", "19:00", "La piscina", "La piscine", 120)], repite
+print("✓ reina sofía: sin programa no hay filas; un programa repetido va en cada fecha")
+
+# El buscador: entra lo que tiene alguna fecha en la ventana.
+BUSCADOR = [
+    {"url": {"path": "/actividad/clarisa-navas-presente-escena-cine"},
+     "processedDates": [{"value": "2026-12-11T19:00:00"}]},
+    {"url": {"path": "/actividad/cine-pere-portabella-sesion-6"},
+     "processedDates": [{"value": "2026-10-22T19:00:00"}]},
+    {"url": {"path": "/actividad/albert-lamorisse-infancia-eterna-proyector-luna-10"},
+     "processedDates": [{"value": "2026-10-18T12:00:00"}, {"value": "2026-10-25T12:00:00"}]},
+    {"url": {"path": "/actividad/oculta"}, "hidden": True,
+     "processedDates": [{"value": "2026-11-01T19:00:00"}]},
+]
+assert _reina_actividades(BUSCADOR, date(2026, 10, 25), date(2026, 12, 27)) == [
+    "/actividad/clarisa-navas-presente-escena-cine",
+    "/actividad/albert-lamorisse-infancia-eterna-proyector-luna-10"]
+print("✓ reina sofía: del buscador, sólo las actividades con fechas por venir")
 
 print("\nTodo OK")

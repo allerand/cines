@@ -9717,7 +9717,8 @@ def scrape_farus(semanas: int = 9) -> list[Screening]:
 CINES_MADRID = {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
                 "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
                 "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla",
-                "Artistic Metropol", "Cine Estudio", "Cines Callao"}
+                "Artistic Metropol", "Cine Estudio", "Cines Callao",
+                "Museo Reina Sofía"}
 
 _MADRID = ZoneInfo("Europe/Madrid")
 
@@ -10795,6 +10796,235 @@ def scrape_callao(semanas: int = 9) -> list[Screening]:
         marcar_fuente_caida(CALLAO_CINE, "la cartelera no contesta")
         return []
     return _callao_funciones(html, hoy, hoy + timedelta(weeks=semanas))
+
+
+# ---------------------------------------------------------------------------
+# Museo Reina Sofía (Madrid)
+# ---------------------------------------------------------------------------
+# El museo proyecta en el cine del Edificio Sabatini (y en verano en el jardín)
+# por ciclos: "El presente en escena. Cine argentino del siglo XXI", las
+# Residencias Joaquim Jordà, Proyector de luna para chicos. Cada sesión es una
+# "actividad" de la categoría Cine y vídeo, y las dos fuentes son JSON:
+#
+#   - El buscador de la web (buscador.museoreinasofia.es/api/search) filtrado
+#     por esa categoría y por año. Es lo que pinta /busqueda/?categories=31 en
+#     el navegador; trae la ruta de cada actividad y sus fechas.
+#   - La ficha de cada actividad, que la web arma con Gatsby y sirve también
+#     como page-data.json. Ahí está la agenda: las fechas exactas (events) y el
+#     programa (schedule), una película por párrafo:
+#
+#         <p><strong>Pere Portabella.</strong> <em>Die Stille vor Bach</em>
+#            <strong>[El silencio antes de Bach]</strong><br>
+#            España, 2007, DCP, color, sonido, versión original..., 102’</p>
+#
+#     A veces el renglón técnico va en el párrafo siguiente, y en las sesiones
+#     de una sola película el director y el título van en el título del ítem.
+#
+# Un programa de varias películas sale como una fila por película, como en el
+# CCK o en los cortos de Lumiton. Lo que no tiene programa no se publica y
+# queda en el log: las presentaciones de proyectos de las residencias, o
+# sesiones como las de Eli Cortiñas, cuyo ítem decía sólo "Primer pase".
+#
+# El link de la entrada es la ficha del museo y no la boletería: el botón de
+# ENTRADAS de la ficha a veces apunta a otra sesión (el 25/10/2026 la sesión
+# 12 de El presente en escena llevaba a la entrada de Clarisa Navas).
+
+REINA_CINE = "Museo Reina Sofía"
+REINA_BASE = "https://www.museoreinasofia.es"
+REINA_BUSCADOR = ("https://buscador.museoreinasofia.es/api/search?q=&bundle=activity"
+                  "&categories=31&langcode=es&year={anio}&pageSize=50&page={page}")
+REINA_FICHA = REINA_BASE + "/page-data{ruta}/page-data.json"
+_REINA_ANIO_RE = re.compile(r"\b(1[89]\d{2}|20\d{2})\b")
+_REINA_DUR_RE = re.compile(r"(\d{1,3})\s*['’′´]")
+_REINA_TRADUCCION_RE = re.compile(r"^\s*\[([^\]]+)\]")
+
+
+def _reina_texto(nodo) -> str:
+    """El texto de un pedazo de HTML del CMS, con los &nbsp; como espacios.
+    Sin separador entre etiquetas: el museo corta los nombres en varios
+    <strong> y <em> y el espacio, si va, ya está escrito."""
+    texto = nodo.get_text("") if hasattr(nodo, "get_text") else str(nodo or "")
+    return re.sub(r"\s+", " ", texto.replace("\xa0", " ")).strip()
+
+
+def _reina_ficha_tecnica(texto: str) -> Optional[dict]:
+    """'Argentina y Alemania, 2020, DCP, color, ..., 120’' → país, año y
+    duración. Tiene que arrancar por el país y traer año y duración: así no
+    se confunde con la sinopsis que a veces va abajo."""
+    m = _REINA_ANIO_RE.search(texto)
+    dur = _REINA_DUR_RE.search(texto[m.end():]) if m else None
+    if not m or not dur or m.start() > 80:
+        return None
+    pais = texto[:m.start()].strip(" ,.;")
+    if not pais or re.search(r"\d", pais):
+        return None
+    return {"country": pais, "year": int(m.group(1)), "duration": int(dur.group(1))}
+
+
+def _reina_cabecera(renglon) -> Optional[dict]:
+    """'Clarisa Navas. <em>Las mil y una</em>' → director y título. El título
+    es lo que va en <em> (la traducción, si hay, viene después entre
+    corchetes)."""
+    texto = _reina_texto(renglon)
+    ems = [re.sub(r"^[\s.:,]+|[\s.:,]+$", "", _reina_texto(em))
+           for em in renglon.find_all("em")]
+    ems = [e for e in ems if re.search(r"\w", e)]
+    if not ems:
+        return None
+    inicio = texto.find(ems[0])
+    fin = texto.rfind(ems[-1])
+    if inicio < 0 or fin < inicio:
+        return None
+    fin += len(ems[-1])
+    titulo = texto[inicio:fin].strip(" .")
+    resto = texto[fin:].strip(" .")
+    traduccion = ""
+    t = _REINA_TRADUCCION_RE.match(resto)
+    if t and not re.search(r"\d|versi[óo]n|restaurad|fragmento", t.group(1), re.I):
+        traduccion = t.group(1).strip()
+    if t:
+        resto = resto[t.end():].strip(" .,")
+    return {"director": texto[:inicio].strip(" .:,"), "titulo": titulo,
+            "traduccion": traduccion, "resto": resto}
+
+
+def _reina_programa(html: str) -> list[dict]:
+    """Las películas de un ítem de la agenda, en orden. Cada una es una
+    cabecera (director y título) seguida de su ficha técnica, en el mismo
+    renglón, en el de abajo (después de un <br>) o en el párrafo siguiente."""
+    soup = BeautifulSoup(html or "", "html.parser")
+    renglones = []
+    for p in soup.find_all("p") or [soup]:
+        for pedazo in re.split(r"<br\s*/?>", p.decode_contents()):
+            renglon = BeautifulSoup(pedazo, "html.parser")
+            if _reina_texto(renglon):
+                renglones.append(renglon)
+    pelis: list[dict] = []
+    pendiente = None
+    for renglon in renglones:
+        cabecera = _reina_cabecera(renglon)
+        tecnica = None if cabecera else _reina_ficha_tecnica(_reina_texto(renglon))
+        if cabecera:
+            pendiente = None
+            junta = _reina_ficha_tecnica(cabecera["resto"]) if cabecera["resto"] else None
+            if junta:
+                pelis.append({**cabecera, **junta})
+            else:
+                pendiente = cabecera
+        elif tecnica and pendiente:
+            pelis.append({**pendiente, **tecnica})
+            pendiente = None
+        else:
+            pendiente = None
+    return pelis
+
+
+def _reina_funciones(contenido: dict, url: str, hoy: date, cutoff: date) -> list[Screening]:
+    """Las funciones de una actividad, a partir del 'content' de su page-data."""
+    padre = ((contenido.get("parent") or {}).get("entity") or {})
+    ciclo = _reina_texto(BeautifulSoup((padre.get("title") or {}).get("value") or "",
+                                       "html.parser"))
+    # Las fechas de la sesión. Si hay varias y el programa no cambia, la misma
+    # película va en todas (los ciclos que se repiten una semana después).
+    fechas: list[int] = []
+    for ev in contenido.get("events") or []:
+        for d in ((ev or {}).get("entity") or {}).get("dates") or []:
+            ts = ((d or {}).get("entity") or {}).get("date")
+            if isinstance(ts, int) and ts not in fechas:
+                fechas.append(ts)
+    grupos: list[tuple] = []
+    for item in contenido.get("schedule") or []:
+        item = (item or {}).get("entity") or {}
+        html = ((item.get("titleHtml") or {}).get("value") or "") + \
+            ((item.get("descriptionHtml") or {}).get("value") or "")
+        pelis = _reina_programa(html)
+        if pelis:
+            grupos.append((item.get("date"), pelis))
+    if not grupos:
+        return []
+    horas_items = {ts for ts, _ in grupos if isinstance(ts, int)}
+    if len(grupos) > 1 and len(horas_items) == len(grupos):
+        # Cada ítem con su hora: una maratón o pases con películas distintas.
+        pases = grupos
+    else:
+        todas: list[dict] = []
+        for _, pelis in grupos:
+            todas.extend(p for p in pelis if p["titulo"] not in {t["titulo"] for t in todas})
+        pases = [(ts, todas) for ts in (fechas or sorted(horas_items))]
+    result: list[Screening] = []
+    for ts, pelis in pases:
+        if not isinstance(ts, int):
+            continue
+        cuando = datetime.fromtimestamp(ts, _MADRID)
+        if not (hoy <= cuando.date() <= cutoff) or (cuando.hour, cuando.minute) == (0, 0):
+            continue
+        for p in pelis:
+            result.append(Screening(
+                cine=REINA_CINE, title=p["traduccion"] or p["titulo"],
+                fecha=cuando.date().isoformat(), hora=cuando.strftime("%H:%M"),
+                ticket_url=url, ciclo=ciclo, director=p["director"],
+                country=p["country"], year=p["year"], duration=p["duration"],
+                original_title=p["titulo"] if p["traduccion"] else "",
+            ))
+    return result
+
+
+def _reina_actividades(resultados: list, hoy: date, cutoff: date) -> list[str]:
+    """Las rutas de las actividades del buscador con alguna fecha en la ventana."""
+    rutas: list[str] = []
+    for r in resultados:
+        if not isinstance(r, dict) or r.get("hidden"):
+            continue
+        ruta = ((r.get("url") or {}).get("path") or "").rstrip("/")
+        dias = []
+        for d in r.get("processedDates") or []:
+            try:
+                dias.append(date.fromisoformat(((d or {}).get("value") or "")[:10]))
+            except ValueError:
+                continue
+        if ruta and ruta not in rutas and any(hoy <= d <= cutoff for d in dias):
+            rutas.append(ruta)
+    return rutas
+
+
+def scrape_reina_sofia(semanas: int = 9) -> list[Screening]:
+    hoy = hoy_madrid()
+    cutoff = hoy + timedelta(weeks=semanas)
+    resultados: list = []
+    for anio in sorted({hoy.year, cutoff.year}):
+        for page in range(1, 10):
+            try:
+                data = json.loads(fetch_bytes(REINA_BUSCADOR.format(anio=anio, page=page))
+                                  .decode("utf-8", errors="replace"))
+            except Exception as e:
+                print(f"[reina sofía: el buscador no contesta ({anio}, página {page}): {e}]",
+                      end=" ", flush=True)
+                marcar_fuente_caida(REINA_CINE, "el buscador de actividades no contesta")
+                return []
+            resultados.extend(data.get("results") or [])
+            if page >= ((data.get("metadata") or {}).get("totalPages") or 1):
+                break
+    result: list[Screening] = []
+    caidas, sin_programa = 0, []
+    for ruta in _reina_actividades(resultados, hoy, cutoff):
+        try:
+            contenido = json.loads(fetch_bytes(REINA_FICHA.format(ruta=ruta))
+                                   .decode("utf-8", errors="replace"))
+            contenido = contenido["result"]["pageContext"]["node"]["data"]["content"]
+        except Exception:
+            caidas += 1
+            continue
+        funciones = _reina_funciones(contenido, REINA_BASE + ruta + "/", hoy, cutoff)
+        if not funciones:
+            sin_programa.append(ruta.rsplit("/", 1)[-1])
+        result.extend(funciones)
+    if caidas:
+        print(f"[reina sofía: {caidas} fichas no cargaron]", end=" ", flush=True)
+    if sin_programa:
+        # Lo que no trae películas en la agenda: charlas, presentaciones, o un
+        # formato nuevo de la ficha. Que se vea en el log.
+        print(f"[reina sofía: sin programa: {', '.join(sin_programa)}]", end=" ", flush=True)
+    return result
 
 
 # ---------------------------------------------------------------------------
