@@ -1,35 +1,44 @@
-# Auditoría de la cartelera — lunes 19 de octubre
+# Auditoría de la cartelera — lunes 26 de octubre
 
-## 🔴 Hay 4 cosas para mirar en 4 cines
+## 🔴 Hay 2 cosas para mirar en 2 cines
 
-Datos de hace 9 h · 34 cines · 3135 funciones publicadas.
+Datos de hace 9 h · 35 cines · 3807 funciones publicadas.
 
 ## Para mirar esta semana
 
-- **Biblioteca Nacional** — lleva 14 días sin ninguna función, pero la fuente publica 1 ítems en la listing. El scraper se rompió.
-- **Casa del Bicentenario** — lleva 14 días sin ninguna función, y la fuente tampoco nos deja sondearla (HTTP 403). No es el parser: es acceso al sitio — revisá que el proxy de scraping siga vivo.
-- **FADU** — lleva 12 días sin ninguna función (traía ~2 por día). Revisá su scraper.
-- **Sala Lugones** — hay horarios que no se pudieron parsear (×2). Ejemplo: Cinema Kabuki: '??'
+- **Museo del Cine** — lleva 8 días sin ninguna función (traía ~1 por día). Revisá su scraper.
+- **CEA** — lleva 9 días sin ninguna función (traía ~2 por día). Revisá su scraper.
 
 ## Qué cambió desde la semana pasada
 
-- **Centro Cultural de la Cooperación** desapareció: 3 → 0 funciones.
-- **Museo del Cine** desapareció: 2 → 0 funciones.
-- **Museo Moderno** volvió a la cartelera: 0 → 2 funciones.
-- **Hoyts Abasto** subió bastante: 232 → 470 funciones.
+- **Cinépolis Houssay** desapareció: 65 → 0 funciones.
+- **Museo Moderno** desapareció: 2 → 0 funciones.
+- **MALBA** bajó bastante: 41 → 18 funciones.
+- **CCK** bajó bastante: 12 → 4 funciones.
+- **Centro Cultural Recoleta** bajó bastante: 11 → 4 funciones.
+- **Casa del Bicentenario** volvió a la cartelera: 0 → 14 funciones.
+- **Centro Cultural de la Cooperación** volvió a la cartelera: 0 → 4 funciones.
+- **Biblioteca Nacional** volvió a la cartelera: 0 → 2 funciones.
+
+## Cines por debajo de lo habitual
+
+| Cine | Funciones | Títulos | Habitual |
+|---|---:|---:|---:|
+| CCK | 4 | 4 | ~12 |
+| Centro Cultural Recoleta | 4 | 4 | ~11 |
+
+Los otros 33 cines están en su rango normal.
 
 ## Pendientes de siempre
 
 Cosas que no rompen la web pero degradan la ficha. Están acá para que no se olviden, no para arreglarlas hoy.
 
-- **CEA** lleva 2 días sin ninguna función (traía ~2 por día); entra y sale del cero seguido, puede que no haya programado.
-- **Museo del Cine** lleva 1 día sin ninguna función (traía ~1 por día); entra y sale del cero seguido, puede que no haya programado.
-- **Centro Cultural de la Cooperación** lleva 2 días sin ninguna función (traía ~3 por día); entra y sale del cero seguido, puede que no haya programado.
-- **Sala Lugones**: ticket_url inválido ×6.
-- **MALBA**: dos títulos en el mismo horario ×2.
+- **Sala Lugones**: ticket_url inválido ×7.
+- **Centro Cultural Borges**: dos títulos en el mismo horario ×5.
+- **Cine Cosmos**: dos títulos en el mismo horario ×1.
 - **Sala Lugones**: dos títulos en el mismo horario ×1.
-- 22 funciones sin director: Centro Cultural Borges (13/20), Filo Cine (7/10), Lumiton (2/2).
-- 26 funciones sin link de Letterboxd: Amorina (4/6), Centro Cultural Borges (14/20), Hasta Trilce (6/6), Lumiton (2/2).
+- 22 funciones sin director: Centro Cultural Borges (21/34), Lumiton (1/1).
+- 35 funciones sin link de Letterboxd: Centro Cultural 25 de Mayo (1/1), Centro Cultural Borges (24/34), Centro Cultural de la Cooperación (3/4), Hasta Trilce (6/6), Lumiton (1/1).
 
 ---
 
