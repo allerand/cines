@@ -27225,5 +27225,60 @@
     "title_es": "Prime Crime: A True Story",
     "original_title": "Dead Man's Wire",
     "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "la caja del demonio": {
+    "url": "https://letterboxd.com/film/lockbox-2026/",
+    "title_en": "Lockbox",
+    "director": "Daniel Stamm",
+    "country": "USA, Canada",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Terror",
+    "clase_titulo": "exacto",
+    "title_es": "La Caja Del Demonio",
+    "original_title": "Lockbox",
+    "sin_hints": "título"
+  },
+  "pinocho sin cuerdas": {
+    "url": "https://letterboxd.com/film/pinocchio-unstrung/",
+    "title_en": "Pinocchio: Unstrung",
+    "director": "Rhys Frake-Waterfield",
+    "country": "UK",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Misterio, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "Pinocho: Desatado",
+    "original_title": "Pinocchio: Unstrung",
+    "sin_hints": "título"
+  },
+  "wildwood: el bosque salvaje": {
+    "url": "https://letterboxd.com/film/wildwood-2026/",
+    "title_en": "Wildwood",
+    "director": "Travis Knight",
+    "country": "USA",
+    "year": 2026,
+    "duration": 132,
+    "genre": "Animación, Fantasía",
+    "clase_titulo": "exacto",
+    "title_es": "Wildwood: El Bosque Salvaje",
+    "original_title": "Wildwood",
+    "sin_hints": "título"
+  },
+  "ingmar bergman: seis ensayos. sonata de otoño": {
+    "url": "",
+    "title_en": "Ingmar Bergman: seis ensayos. SONATA DE OTOÑO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ingmar bergman: seis ensayos. un verano con mónica": {
+    "url": "",
+    "title_en": "Ingmar Bergman: seis ensayos. UN VERANO CON MÓNICA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }

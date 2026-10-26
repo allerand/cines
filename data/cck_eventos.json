@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-25T08:45:36",
+    "ts": "2026-10-26T09:24:12",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -46,7 +46,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-25T08:45:41",
+    "ts": "2026-10-26T09:24:20",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -65,74 +65,8 @@
       }
     ]
   },
-  "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/": {
-    "ts": "2026-10-25T08:45:46",
-    "v": 2,
-    "semanas": 9,
-    "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Un verano con los extraños",
-        "fecha": "2026-10-25",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-        "ciclo": "Cine japonés en 16 mm",
-        "director": "",
-        "country": "",
-        "year": null,
-        "duration": null,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Las gafas",
-        "fecha": "2026-10-25",
-        "hora": "17:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-japones-en-16-mm-4/",
-        "ciclo": "Cine japonés en 16 mm",
-        "director": "",
-        "country": "",
-        "year": null,
-        "duration": null,
-        "original_title": ""
-      }
-    ]
-  },
-  "https://palaciolibertad.gob.ar/events/cine-irlandes/": {
-    "ts": "2026-10-25T08:45:53",
-    "v": 2,
-    "semanas": 9,
-    "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Róise & Frank",
-        "fecha": "2026-10-25",
-        "hora": "15:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
-        "ciclo": "Cine irlandés",
-        "director": "Rachael Moriarty y Peter Murphy",
-        "country": "",
-        "year": 2022,
-        "duration": 84,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Arracht",
-        "fecha": "2026-10-25",
-        "hora": "18:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-irlandes/",
-        "ciclo": "Cine irlandés",
-        "director": "Tom Sullivan",
-        "country": "",
-        "year": 2019,
-        "duration": 86,
-        "original_title": ""
-      }
-    ]
-  },
   "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
-    "ts": "2026-10-25T08:45:59",
+    "ts": "2026-10-26T09:24:26",
     "v": 2,
     "semanas": 9,
     "funciones": []
