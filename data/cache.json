@@ -11100,14 +11100,16 @@
     "duration": null
   },
   "los nadadores": {
-    "url": "",
-    "title_en": "Los nadadores",
+    "url": "https://letterboxd.com/film/the-swimmers-2026/",
+    "title_en": "The Swimmers",
     "director": "Sol Iglesias SK",
     "country": "Argentina, Mexico",
     "year": 2026,
     "duration": 76,
-    "genre": "Drama, Fantasía",
-    "original_title": "Los Nadadores"
+    "genre": "Fantasía, Drama",
+    "clase_titulo": "exacto",
+    "original_title": "Los Nadadores",
+    "sin_hints": "título y duración"
   },
   "la ópera de tres centavos (die dreigroschenoper)|1931": {
     "url": "",
@@ -15139,7 +15141,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-25",
+    "fecha": "2026-10-26",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -19852,7 +19854,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -23138,7 +23140,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-22",
+    "fecha": "2026-10-26",
     "con_duracion": true,
     "desempate": ""
   },
@@ -23471,7 +23473,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-22",
+    "fecha": "2026-10-26",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26317,7 +26319,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Train to Busan (2016), y puede ser otra",
-    "fecha": "2026-10-22",
+    "fecha": "2026-10-26",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26782,5 +26784,446 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "la invitación|2026": {
+    "url": "https://letterboxd.com/film/the-invite-2026/",
+    "title_en": "The Invite",
+    "director": "Olivia Wilde",
+    "country": "USA",
+    "year": 2026,
+    "duration": 107,
+    "genre": "Romance, Drama",
+    "clase_titulo": "exacto",
+    "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "drácula, de bram stoker": {
+    "url": "",
+    "title_en": "DRÁCULA, DE BRAM STOKER",
+    "director": "Francis Ford Coppola",
+    "country": "United States of America",
+    "year": 1992,
+    "duration": 128,
+    "genre": "Romance, Terror",
+    "title_es": "Drácula de Bram Stoker",
+    "original_title": "Bram Stoker's Dracula"
+  },
+  "camarera de piso|2022": {
+    "url": "https://letterboxd.com/film/camarera-de-piso/",
+    "title_en": "Maid",
+    "director": "Lucrecia Martel",
+    "country": "Argentina, Mexico",
+    "year": 2022,
+    "duration": 12,
+    "genre": "Thriller",
+    "original_title": "Camarera de Piso"
+  },
+  "pedro en el país|2026": {
+    "url": "https://letterboxd.com/film/pedro-en-el-pais/",
+    "title_en": "Pedro en el país",
+    "director": "María Alché, Benjamín Naishtat",
+    "country": "Argentina, Mexico",
+    "year": 2026,
+    "duration": 61,
+    "genre": "Documental",
+    "original_title": "Pedro en el país"
+  },
+  "las mil y una|2020": {
+    "url": "https://letterboxd.com/film/las-mil-y-una/",
+    "title_en": "One in a Thousand",
+    "director": "Clarisa Navas",
+    "country": "Argentina, Germany",
+    "year": 2020,
+    "duration": 120,
+    "genre": "Drama, Romance",
+    "original_title": "Las mil y una"
+  },
+  "legítima defensa|1980": {
+    "url": "",
+    "title_en": "Legítima defensa",
+    "director": "Marie Louise Alemann",
+    "country": "Argentina",
+    "year": 1980,
+    "duration": 8,
+    "original_title": "Legitima defensa"
+  },
+  "lluvia de jaulas|2018": {
+    "url": "https://letterboxd.com/film/lluvia-de-jaulas/",
+    "title_en": "Lluvia de jaulas",
+    "director": "César González",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 82,
+    "genre": "Documental",
+    "original_title": "Lluvia de jaulas"
+  },
+  "los delincuentes|2023": {
+    "url": "https://letterboxd.com/film/los-delincuentes/",
+    "title_en": "The Delinquents",
+    "director": "Rodrigo Moreno",
+    "country": "Argentina, Brazil",
+    "year": 2023,
+    "duration": 190,
+    "genre": "Comedia, Crimen",
+    "original_title": "Los delincuentes"
+  },
+  "sean eternxs|2022": {
+    "url": "https://letterboxd.com/film/sean-eternxs/",
+    "title_en": "Sean eternxs",
+    "director": "Raúl Perrone",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": 95,
+    "genre": "Drama",
+    "original_title": "Sean eternxs"
+  },
+  "las fuerzas|2018": {
+    "url": "https://letterboxd.com/film/las-fuerzas/",
+    "title_en": "The forces",
+    "director": "Paola Buontempo",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 18,
+    "genre": "Documental",
+    "original_title": "Las fuerzas"
+  },
+  "cuerpo de letra|2015": {
+    "url": "https://letterboxd.com/film/cuerpo-de-letra/",
+    "title_en": "Cuerpo de letra",
+    "director": "Julián D'Angiolillo",
+    "country": "",
+    "year": 2015,
+    "duration": null,
+    "genre": "Drama, Documental",
+    "original_title": "Cuerpo de letra"
+  },
+  "materia vibrante|2024": {
+    "url": "https://letterboxd.com/film/materia-vibrante/",
+    "title_en": "Vibrant Matter",
+    "director": "Pablo Marín",
+    "country": "Argentina, Spain",
+    "year": 2024,
+    "duration": 7,
+    "genre": "Documental",
+    "original_title": "Materia vibrante"
+  },
+  "popular tradición de esta tierra|2024": {
+    "url": "https://letterboxd.com/film/popular-tradicion-de-esta-tierra/",
+    "title_en": "Popular tradición de esta tierra",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 98,
+    "genre": "Música, Documental",
+    "original_title": "Popular tradición de esta tierra"
+  },
+  "merodeo|2016": {
+    "url": "https://letterboxd.com/film/merodeo/",
+    "title_en": "Merodeo",
+    "director": "Fernando Restelli",
+    "country": "Argentina",
+    "year": 2015,
+    "duration": 14,
+    "genre": "",
+    "original_title": "Merodeo"
+  },
+  "todo documento de civilización|2024": {
+    "url": "https://letterboxd.com/film/todo-documento-de-civilizacion/",
+    "title_en": "Every Document of Civilization",
+    "director": "Tatiana Mazú",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "Todo documento de civilización"
+  },
+  "nocturno|2025": {
+    "url": "",
+    "title_en": "Nocturno",
+    "director": "Ana Apontes, Sol Muñoz",
+    "country": "Argentina",
+    "year": null,
+    "duration": 14,
+    "genre": "Drama",
+    "original_title": "Nocturno"
+  },
+  "a veces me entra tristeza, otras veces rebelión|2026": {
+    "url": "https://letterboxd.com/film/sometimes-sadness-sometimes-rebellion/",
+    "title_en": "Sometimes Sadness, Sometimes Rebellion",
+    "director": "María Aparicio",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 96,
+    "genre": "Romance, Drama",
+    "original_title": "A veces me entra tristeza, otras veces rebelión"
+  },
+  "la noche está marchándose ya|2026": {
+    "url": "https://letterboxd.com/film/the-night-is-fading-away/",
+    "title_en": "The Night Is Fading Away",
+    "director": "Ramiro Sonzini, Ezequiel Salinas",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 104,
+    "genre": "Drama"
+  },
+  "la libertad doble|2026": {
+    "url": "https://letterboxd.com/film/la-libertad-doble/",
+    "title_en": "Double Freedom",
+    "director": "Lisandro Alonso",
+    "country": "Chile, Argentina",
+    "year": 2026,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "La libertad doble"
+  },
+  "fausto|2018": {
+    "url": "https://letterboxd.com/film/fausto-2018/",
+    "title_en": "Fausto",
+    "director": "Andrea Bussmann",
+    "country": "Canada, Mexico",
+    "year": 2018,
+    "duration": 70,
+    "genre": "Terror, Fantasía",
+    "original_title": "Fausto"
+  },
+  "lovers' wind|2024": {
+    "url": "https://letterboxd.com/film/lovers-wind/",
+    "title_en": "Lovers' Wind",
+    "director": "Faraz Anoushahpour, Parastoo Anoushahpour, Ryan Ferko",
+    "country": "Canada",
+    "year": 2024,
+    "duration": null,
+    "genre": "Documental",
+    "original_title": "Lovers' Wind"
+  },
+  "chooka|2018": {
+    "url": "https://letterboxd.com/film/chooka/",
+    "title_en": "Chooka",
+    "director": "Faraz Anoushahpour, Parastoo Anoushahpour, Ryan Ferko",
+    "country": "Canada",
+    "year": 2018,
+    "duration": 20,
+    "genre": "",
+    "original_title": "Chooka"
+  },
+  "pimple|2025": {
+    "url": "https://letterboxd.com/film/pimple/",
+    "title_en": "Pimple",
+    "director": "Fernando Alle",
+    "country": "Portugal",
+    "year": 2025,
+    "duration": 4,
+    "genre": "Terror, Comedia",
+    "title_es": "Grano",
+    "original_title": "Borbulha"
+  },
+  "a nightmare on 34th street|2025": {
+    "url": "https://letterboxd.com/film/a-nightmare-on-34th-street/",
+    "title_en": "A Nightmare on 34th Street",
+    "director": "Kevin McGuiness",
+    "country": "",
+    "year": 2024,
+    "duration": 6,
+    "genre": "",
+    "original_title": "A Nightmare on 34th Street"
+  },
+  "starwars: goretech|2018": {
+    "url": "https://letterboxd.com/film/starwars-goretech/",
+    "title_en": "Starwars: Goretech",
+    "director": "Germán Magariños",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 90,
+    "genre": "Comedia, Ciencia ficción",
+    "original_title": "Starwars: Goretech"
+  },
+  "trick or treat: a halloween story|2025": {
+    "url": "",
+    "title_en": "TRICK OR TREAT: A HALLOWEEN STORY",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sangre vurdalak|2021": {
+    "url": "https://letterboxd.com/film/sangre-vurdalak/",
+    "title_en": "A Taste of Blood",
+    "director": "Santiago Fernández Calvete",
+    "country": "Argentina, Mexico",
+    "year": 2020,
+    "duration": 90,
+    "genre": "Terror",
+    "original_title": "Sangre Vurdalak"
+  },
+  "la frecuencia kirlian|2025": {
+    "url": "https://letterboxd.com/film/la-frecuencia-kirlian/",
+    "title_en": "The Kirlian Frequency",
+    "director": "Cristian Ponce",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 94,
+    "genre": "Terror, Ciencia ficción"
+  },
+  "home movie legend trip: the beast of bray road|2026": {
+    "url": "",
+    "title_en": "HOME MOVIE LEGEND TRIP: THE BEAST OF BRAY ROAD",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tierra|2026": {
+    "url": "",
+    "title_en": "TIERRA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the mist from below|2026": {
+    "url": "",
+    "title_en": "THE MIST FROM BELOW",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "impenetrable|2026": {
+    "url": "",
+    "title_en": "IMPENETRABLE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ñasaindy|2024": {
+    "url": "",
+    "title_en": "ÑASAINDY",
+    "director": "Ignacio de la Sota",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Fantasía",
+    "original_title": "Ñasaindy"
+  },
+  "what lies between|2026": {
+    "url": "",
+    "title_en": "WHAT LIES BETWEEN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sasyq|2025": {
+    "url": "https://letterboxd.com/film/sasyq/",
+    "title_en": "Stinker",
+    "director": "Yerden Telemisov",
+    "country": "Kazakhstan",
+    "year": 2025,
+    "duration": 95,
+    "genre": "Ciencia ficción, Drama",
+    "original_title": "Sasyq"
+  },
+  "noche adentro": {
+    "url": "",
+    "title_en": "Noche adentro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "susana rinaldi libre": {
+    "url": "https://letterboxd.com/film/susana-rinaldi-libre/",
+    "title_en": "Susana Rinaldi. Free",
+    "director": "Isabel Marcenaro Bouter",
+    "country": "Argentina, France",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Música, Documental",
+    "original_title": "Susana Rinaldi, libre"
+  },
+  "cuando acecha la maldad": {
+    "url": "https://letterboxd.com/film/cuando-acecha-la-maldad/",
+    "title_en": "When Evil Lurks",
+    "director": "Demián Rugna",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 100,
+    "genre": "Terror, Thriller",
+    "original_title": "Cuando acecha la maldad"
+  },
+  "with hasan in gaza": {
+    "url": "https://letterboxd.com/film/with-hasan-in-gaza/",
+    "title_en": "With Hasan in Gaza",
+    "director": "Kamal Aljafari",
+    "country": "Germany",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Bélica, Documental",
+    "title_es": "Con Hasan en Gaza",
+    "original_title": "Mit Hasan in Gaza"
+  },
+  "los domingos|2025": {
+    "url": "https://letterboxd.com/film/los-domingos/",
+    "title_en": "Sundays",
+    "director": "Alauda Ruiz de Azúa",
+    "country": "Spain, France",
+    "year": 2025,
+    "duration": 112,
+    "genre": "Drama",
+    "original_title": "Los domingos"
+  },
+  "hangar rojo|2023": {
+    "url": "",
+    "title_en": "HANGAR ROJO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "stop making sense|1984": {
+    "url": "https://letterboxd.com/film/stop-making-sense/",
+    "title_en": "Stop Making Sense",
+    "director": "Jonathan Demme",
+    "country": "USA",
+    "year": 1984,
+    "duration": 88,
+    "genre": "Música, Documental"
+  },
+  "tres adioses|2025": {
+    "url": "https://letterboxd.com/film/three-goodbyes/",
+    "title_en": "Three Goodbyes",
+    "director": "Isabel Coixet",
+    "country": "Italy, Spain",
+    "year": 2025,
+    "duration": 122,
+    "genre": "Romance, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Tres adioses",
+    "original_title": "Tre ciotole",
+    "sin_hints": "título y duración"
+  },
+  "el gran falsificador|2025": {
+    "url": "https://letterboxd.com/film/the-money-maker-2025/",
+    "title_en": "The Money Maker",
+    "director": "Jean-Paul Salomé",
+    "country": "France, Belgium",
+    "year": 2025,
+    "duration": 128,
+    "genre": "Crimen, Historia",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "la negociación|2025": {
+    "url": "https://letterboxd.com/film/dead-mans-wire/",
+    "title_en": "Dead Man's Wire",
+    "director": "Gus Van Sant",
+    "country": "USA, Israel",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Crimen, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Prime Crime: A True Story",
+    "original_title": "Dead Man's Wire",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   }
 }
