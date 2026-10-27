@@ -5410,14 +5410,16 @@
     "original_title": "Belén"
   },
   "la cena": {
-    "url": "https://letterboxd.com/film/the-dinner/",
+    "url": "https://letterboxd.com/film/the-dinner-2025/",
     "title_en": "The Dinner",
-    "director": "Ettore Scola",
-    "country": "France, Italy",
-    "year": 1998,
-    "duration": 126,
-    "genre": "Comedia, Drama",
-    "original_title": "La cena"
+    "director": "Manuel Gómez Pereira",
+    "country": "Spain, France",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Drama, Comedia",
+    "clase_titulo": "exacto",
+    "original_title": "La cena",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "héroes (mundial 86)": {
     "url": "",
@@ -15141,7 +15143,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-27",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -19854,7 +19856,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -20581,7 +20583,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: Apocalypse Now (1979, 147 min)",
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-27",
     "con_duracion": true,
     "desempate": ""
   },
@@ -21396,7 +21398,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Nadie inquietó más (2008)",
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-27",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23646,7 +23648,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Embrujo de amor (1971), y puede ser otra",
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-27",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25765,7 +25767,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Gitano (1970), Gipsy (2000)",
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-27",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26594,7 +26596,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Los Otros (2020), The Others (2001)",
-    "fecha": "2026-10-23",
+    "fecha": "2026-10-27",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26704,7 +26706,9 @@
     "year": 2025,
     "duration": 95,
     "genre": "Thriller, Terror",
-    "original_title": "La virgen de la tosquera"
+    "clase_titulo": "exacto",
+    "original_title": "La virgen de la tosquera",
+    "sin_hints": "título"
   },
   "laca y palomitas: gorda y divina": {
     "url": "",
@@ -27280,5 +27284,98 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "cineclub masacre halloween": {
+    "url": "",
+    "title_en": "CINECLUB MASACRE HALLOWEEN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the beast|2026": {
+    "url": "https://letterboxd.com/film/the-beast-2026/",
+    "title_en": "The Beast",
+    "director": "Renny Harlin",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 99,
+    "genre": "Acción, Thriller",
+    "clase_titulo": "exacto",
+    "original_title": "The Beast"
+  },
+  "sensatez y sentimiento": {
+    "url": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+    "title_en": "Sense and Sensibility",
+    "director": "Georgia Oakley",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 132,
+    "genre": "Drama, Romance",
+    "clase_titulo": "exacto",
+    "title_es": "Sentido y sensibilidad",
+    "original_title": "Sense and Sensibility",
+    "sin_hints": "título"
+  },
+  "tierra de mi padre": {
+    "url": "https://letterboxd.com/film/fatherland-2026/",
+    "title_en": "Fatherland",
+    "director": "Paweł Pawlikowski",
+    "country": "Poland, Germany",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Drama, Historia",
+    "clase_titulo": "exacto",
+    "title_es": "Tierra de Mi Padre",
+    "original_title": "Ojczyzna",
+    "sin_hints": "título"
+  },
+  "the flowers stand silently witnessing": {
+    "url": "https://letterboxd.com/film/the-flowers-stand-silently-witnessing/",
+    "title_en": "The Flowers Stand Silently, Witnessing",
+    "director": "Theo Panagopoulos",
+    "country": "UK, State of Palestine",
+    "year": 2024,
+    "duration": 17,
+    "genre": "Documental",
+    "original_title": "The Flowers Stand Silently, Witnessing"
+  },
+  "la vida es un tango|1939": {
+    "url": "https://letterboxd.com/film/la-vida-es-un-tango/",
+    "title_en": "La vida es un tango",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1939,
+    "duration": 79,
+    "genre": "Música, Comedia",
+    "original_title": "La vida es un tango"
+  },
+  "carnaval de antaño|1940": {
+    "url": "https://letterboxd.com/film/carnaval-de-antano/",
+    "title_en": "Carnaval de antaño",
+    "director": "Manuel Romero",
+    "country": "Argentina",
+    "year": 1940,
+    "duration": 79,
+    "genre": "Música, Comedia",
+    "original_title": "Carnaval de antaño"
+  },
+  "lo queer en el cine de oro argentino": {
+    "url": "",
+    "title_en": "LO QUEER EN EL CINE DE ORO ARGENTINO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "4 historias increibles": {
+    "url": "https://letterboxd.com/film/4-historias-increibles/",
+    "title_en": "4 historias increíbles",
+    "director": "Enrique Rottenberg",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 81,
+    "genre": "Comedia, Romance",
+    "original_title": "4 historias increíbles"
   }
 }
