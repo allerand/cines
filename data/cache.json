@@ -15143,7 +15143,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-27",
+    "fecha": "2026-10-28",
     "con_duracion": true,
     "desempate": "nueva"
   },
@@ -23970,7 +23970,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Cars (2006), Cars 3 (2017)",
-    "fecha": "2026-10-24",
+    "fecha": "2026-10-28",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25441,7 +25441,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-24",
+    "fecha": "2026-10-28",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25483,7 +25483,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-24",
+    "fecha": "2026-10-28",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25857,7 +25857,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es The Others (2001), y puede ser otra",
-    "fecha": "2026-10-24",
+    "fecha": "2026-10-28",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26055,7 +26055,7 @@
   "muerte entre las flores": {
     "url": "",
     "title_en": "Muerte entre las flores",
-    "director": "Joel Coen",
+    "director": "Joel Coen, Ethan Coen",
     "country": "United States of America",
     "year": 1990,
     "duration": 115,
@@ -27377,5 +27377,665 @@
     "duration": 81,
     "genre": "Comedia, Romance",
     "original_title": "4 historias increíbles"
+  },
+  "cobijo|2026": {
+    "url": "https://letterboxd.com/film/cobijo/",
+    "title_en": "Shelter",
+    "director": "Adrián Silvestre",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Documental",
+    "original_title": "Cobijo"
+  },
+  "les matins merveilleux|2026": {
+    "url": "https://letterboxd.com/film/les-matins-merveilleux/",
+    "title_en": "Marvelous Mornings",
+    "director": "Avril Besson",
+    "country": "France",
+    "year": 2026,
+    "duration": 87,
+    "genre": "Comedia, Romance",
+    "original_title": "Les matins merveilleux"
+  },
+  "la carn|2025": {
+    "url": "https://letterboxd.com/film/la-carn/",
+    "title_en": "La Carn",
+    "director": "Joan Porcel",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 83,
+    "genre": "Documental, Drama",
+    "original_title": "La Carn"
+  },
+  "two mothers|2007": {
+    "url": "https://letterboxd.com/film/two-mothers-2007/",
+    "title_en": "Two Mothers",
+    "director": "Rosa von Praunheim",
+    "country": "Germany, Latvia",
+    "year": 2007,
+    "duration": 87,
+    "genre": "Documental",
+    "original_title": "Meine Mütter - Spurensuche in Riga"
+  },
+  "sesión de cine y vih": {
+    "url": "",
+    "title_en": "Sesión de cine y VIH",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "uchronia|2026": {
+    "url": "https://letterboxd.com/film/uchronia-2026/",
+    "title_en": "Uchronia",
+    "director": "Fil Ieropoulos",
+    "country": "Greece, Netherlands",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Fantasía, Documental",
+    "original_title": "Uchronia"
+  },
+  "barbara forever|2026": {
+    "url": "https://letterboxd.com/film/barbara-forever/",
+    "title_en": "Barbara Forever",
+    "director": "Brydie O'Connor",
+    "country": "USA",
+    "year": 2026,
+    "duration": 102,
+    "genre": "Documental",
+    "title_es": "Por siempre Barbara",
+    "original_title": "Barbara Forever"
+  },
+  "überleben in new york|1989": {
+    "url": "https://letterboxd.com/film/uberleben-in-new-york/",
+    "title_en": "Survival in New York",
+    "director": "Rosa von Praunheim",
+    "country": "Germany",
+    "year": 1989,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "Überleben in New York"
+  },
+  "los días posibles + la moto|2026": {
+    "url": "",
+    "title_en": "Los días posibles + La moto",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "corren las liebres|2026": {
+    "url": "https://letterboxd.com/film/corren-las-liebres/",
+    "title_en": "Corren las liebres",
+    "director": "Lorena Ros",
+    "country": "",
+    "year": 2025,
+    "duration": 70,
+    "genre": "",
+    "original_title": "Corren las liebres"
+  },
+  "lo que hacíamos en las sombras|2026": {
+    "url": "https://letterboxd.com/film/lo-que-haciamos-en-las-sombras/",
+    "title_en": "What We Did in the Shadows",
+    "director": "Sara Moralo",
+    "country": "",
+    "year": null,
+    "duration": 93,
+    "genre": "",
+    "original_title": "Lo que hacíamos en las sombras"
+  },
+  "elles|2026": {
+    "url": "",
+    "title_en": "Elles",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "a paixão segundo g.h.b. + a cúpula dos prazeres|2026": {
+    "url": "",
+    "title_en": "A Paixão Segundo G.H.B. + A Cúpula dos Prazeres",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "härte|2015": {
+    "url": "https://letterboxd.com/film/harte/",
+    "title_en": "Tough Love",
+    "director": "Rosa von Praunheim",
+    "country": "Germany",
+    "year": 2015,
+    "duration": 89,
+    "genre": "Drama, Documental",
+    "original_title": "Härte"
+  },
+  "cinemanía|2026": {
+    "url": "https://letterboxd.com/film/cinemania-2026/",
+    "title_en": "Cinemanía",
+    "director": "Marc Ferrer",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 109,
+    "genre": "Comedia",
+    "original_title": "Cinemanía"
+  },
+  "a song without home|2026": {
+    "url": "https://letterboxd.com/film/a-song-without-home/",
+    "title_en": "A Song Without Home",
+    "director": "Rati Tsiteladze",
+    "country": "Georgia, USA",
+    "year": 2026,
+    "duration": 75,
+    "genre": "Documental",
+    "original_title": "სიმღერა სახლის გარეშე"
+  },
+  "esta soledad": {
+    "url": "https://letterboxd.com/film/esta-soledad/",
+    "title_en": "This Solitude",
+    "director": "Javier Giner",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Drama",
+    "original_title": "Esta soledad"
+  },
+  "karateka": {
+    "url": "https://letterboxd.com/film/karateka-2026/",
+    "title_en": "Karateka",
+    "director": "Aritz Moreno",
+    "country": "Belgium, Spain",
+    "year": 2026,
+    "duration": null,
+    "genre": "Drama",
+    "original_title": "Karateka"
+  },
+  "leviticus": {
+    "url": "https://letterboxd.com/film/leviticus-2026/",
+    "title_en": "Leviticus",
+    "director": "Adrian Chiarella",
+    "country": "Australia, USA",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Terror, Romance",
+    "title_es": "Leviticus: Ritual de sangre",
+    "original_title": "Leviticus"
+  },
+  "wicker": {
+    "url": "https://letterboxd.com/film/wicker/",
+    "title_en": "Wicker",
+    "director": "Eleanor Wilson, Alex Huston Fischer",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Fantasía, Comedia",
+    "original_title": "Wicker"
+  },
+  "la ley del silencio": {
+    "url": "",
+    "title_en": "LA LEY DEL SILENCIO",
+    "director": "Elia Kazan",
+    "country": "United States of America",
+    "year": 1954,
+    "duration": 108,
+    "genre": "Crimen, Drama",
+    "title_es": "La ley del silencio",
+    "original_title": "On the Waterfront"
+  },
+  "la oveja shaun: misión calabaza": {
+    "url": "https://letterboxd.com/film/shaun-the-sheep-the-beast-of-mossy-bottom/",
+    "title_en": "Shaun the Sheep: The Beast of Mossy Bottom",
+    "director": "Steve Cox, Matthew Walker",
+    "country": "UK, France",
+    "year": 2026,
+    "duration": 81,
+    "genre": "Comedia, Animación",
+    "title_es": "La Oveja Shaun: Misión Calabaza",
+    "original_title": "Shaun the Sheep: The Beast of Mossy Bottom"
+  },
+  "una historia verdadera": {
+    "url": "",
+    "title_en": "Una historia verdadera",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "inocencia interrumpida": {
+    "url": "",
+    "title_en": "Inocencia interrumpida",
+    "director": "James Mangold",
+    "country": "United States of America",
+    "year": 1999,
+    "duration": 127,
+    "genre": "Drama",
+    "title_es": "Inocencia interrumpida",
+    "original_title": "Girl, Interrupted"
+  },
+  "espacio queer: llueve sobre babel": {
+    "url": "https://letterboxd.com/film/rains-over-babel/",
+    "title_en": "Rains Over Babel",
+    "director": "Gala del Sol",
+    "country": "Colombia, USA",
+    "year": 2025,
+    "duration": 113,
+    "genre": "Fantasía, Comedia"
+  },
+  "jaleos": {
+    "url": "https://letterboxd.com/film/jaleos/",
+    "title_en": "Jaleos",
+    "director": "Isaki Lacuesta",
+    "country": "",
+    "year": null,
+    "duration": 78,
+    "genre": "",
+    "original_title": "Jaleos"
+  },
+  "estudios de cine noviembre 2026 con alejandro mucientes": {
+    "url": "",
+    "title_en": "ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "4 historias increíbles": {
+    "url": "https://letterboxd.com/film/4-historias-increibles/",
+    "title_en": "4 historias increíbles",
+    "director": "Enrique Rottenberg",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 81,
+    "genre": "Comedia, Romance",
+    "clase_titulo": "exacto",
+    "original_title": "4 historias increíbles",
+    "sin_hints": "título y duración"
+  },
+  "everest: la otra cara": {
+    "url": "https://letterboxd.com/film/everest-the-other-side/",
+    "title_en": "Everest: The Other Side",
+    "director": "Jimmy Chin, Elizabeth Chai Vasarhelyi",
+    "country": "USA, China",
+    "year": 2026,
+    "duration": 115,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "title_es": "Everest: La Otra Cara",
+    "original_title": "Everest: The Other Side",
+    "sin_hints": "título y duración"
+  },
+  "bajo tus pies|2025": {
+    "url": "https://letterboxd.com/film/bajo-tus-pies/",
+    "title_en": "Under Your Feet",
+    "director": "Cristian Bernard",
+    "country": "Argentina, Spain",
+    "year": 2025,
+    "duration": 93,
+    "genre": "Terror",
+    "clase_titulo": "exacto",
+    "original_title": "Bajo tus pies",
+    "sin_hints": "título y duración"
+  },
+  "ese manto de misericordia|2026": {
+    "url": "",
+    "title_en": "ESE MANTO DE MISERICORDIA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mary oliver: saved by the beauty of the world|2026": {
+    "url": "https://letterboxd.com/film/mary-oliver-saved-by-the-beauty-of-the-world/",
+    "title_en": "Mary Oliver: Saved by the Beauty of the World",
+    "director": "Sasha Waters",
+    "country": "USA",
+    "year": 2026,
+    "duration": 91,
+    "genre": "Documental",
+    "original_title": "Mary Oliver: Saved by the Beauty of the World"
+  },
+  "mi pobre angelito|1990": {
+    "url": "https://letterboxd.com/film/mi-pobre-angelito/",
+    "title_en": "Home Alone",
+    "director": "Chris Columbus",
+    "country": "USA",
+    "year": 1990,
+    "duration": 103,
+    "genre": "Familiar, Comedia",
+    "title_es": "Solo en casa",
+    "original_title": "Home Alone"
+  },
+  "tove|2020": {
+    "url": "https://letterboxd.com/film/tove/",
+    "title_en": "Tove",
+    "director": "Zaida Bergroth",
+    "country": "Finland, Sweden",
+    "year": 2020,
+    "duration": 103,
+    "genre": "Drama",
+    "title_es": "La vida de Tove Jansson",
+    "original_title": "Tove"
+  },
+  "mi pobre angelito 2: perdido en nueva york|1992": {
+    "url": "https://letterboxd.com/film/home-alone-2-lost-in-new-york/",
+    "title_en": "Home Alone 2: Lost in New York",
+    "director": "Chris Columbus",
+    "country": "USA",
+    "year": 1992,
+    "duration": 120,
+    "genre": "Familiar, Comedia",
+    "title_es": "Solo en casa 2: Perdido en Nueva York",
+    "original_title": "Home Alone 2: Lost in New York"
+  },
+  "el junco|2009": {
+    "url": "https://letterboxd.com/film/sweet-rush/",
+    "title_en": "Sweet Rush",
+    "director": "Andrzej Wajda",
+    "country": "Poland",
+    "year": 2009,
+    "duration": 85,
+    "genre": "Drama",
+    "title_es": "El junco",
+    "original_title": "Tatarak"
+  },
+  "escuela de rock|2003": {
+    "url": "https://letterboxd.com/film/school-of-rock/",
+    "title_en": "School of Rock",
+    "director": "Richard Linklater",
+    "country": "USA",
+    "year": 2003,
+    "duration": 110,
+    "genre": "Música, Familiar",
+    "title_es": "Escuela de rock",
+    "original_title": "The School of Rock"
+  },
+  "bardi el muralista secreto|2026": {
+    "url": "",
+    "title_en": "BARDI EL MURALISTA SECRETO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "walesa, la esperanza de un pueblo|2013": {
+    "url": "",
+    "title_en": "WALESA, LA ESPERANZA DE UN PUEBLO",
+    "director": "Andrzej Wajda",
+    "country": "Poland",
+    "year": 2013,
+    "duration": 127,
+    "genre": "Drama, Historia",
+    "title_es": "Walesa, la esperanza de un pueblo",
+    "original_title": "Wałęsa. Człowiek z nadziei"
+  },
+  "la falta|2025": {
+    "url": "https://letterboxd.com/film/la-falta/",
+    "title_en": "The Absence",
+    "director": "Carmela Sandberg",
+    "country": "Argentina, Uruguay",
+    "year": 2025,
+    "duration": 8,
+    "genre": "Drama",
+    "original_title": "La falta"
+  },
+  "señalética expandida|2025": {
+    "url": "",
+    "title_en": "Señalética Expandida",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "las olas que vendrán|2025": {
+    "url": "",
+    "title_en": "Las olas que vendrán",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la isla de basura|2025": {
+    "url": "",
+    "title_en": "La Isla de Basura",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "móvil|2025": {
+    "url": "",
+    "title_en": "MÓVIL",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "todos los nombres empiezan con m|2022": {
+    "url": "",
+    "title_en": "Todos los nombres empiezan con M",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "del otro lado|2026": {
+    "url": "",
+    "title_en": "Del otro lado",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cabeza de novia|2026": {
+    "url": "https://letterboxd.com/film/cabeza-de-novia/",
+    "title_en": "Bride's Head",
+    "director": "Verónica Vargas",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 20,
+    "genre": "",
+    "original_title": "Cabeza de novia"
+  },
+  "vladimir en buenos aires en 35 mm|2002": {
+    "url": "https://letterboxd.com/film/vladimir-in-buenos-aires/",
+    "title_en": "Vladimir in Buenos Aires",
+    "director": "Diego Gachassin",
+    "country": "Argentina",
+    "year": 2003,
+    "duration": 100,
+    "genre": "Drama"
+  },
+  "el borde de las cosas|2025": {
+    "url": "",
+    "title_en": "El Borde de las Cosas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "patricio bisso|2025": {
+    "url": "https://letterboxd.com/film/patricio-bisso/",
+    "title_en": "Patricio Bisso",
+    "director": "Raúl Emiliano González",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 9,
+    "genre": "Documental",
+    "original_title": "Patricio Bisso"
+  },
+  "tierras de loberia|2026": {
+    "url": "",
+    "title_en": "Tierras de Loberia",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "versos para un perrito perdido|2025": {
+    "url": "",
+    "title_en": "Versos para un perrito perdido",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "dos o tres cosas que me quedé de ella|2026": {
+    "url": "https://letterboxd.com/film/dos-o-tres-cosas-que-me-quede-de-ella/",
+    "title_en": "Two or three things I still have of hers",
+    "director": "Bruno Pacho",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 18,
+    "genre": "Drama",
+    "original_title": "Dos o tres cosas que me quedé de ella"
+  },
+  "mara, el viaje de la elefanta|2023": {
+    "url": "",
+    "title_en": "Mara, el viaje de la elefanta",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los mentirosos|2026": {
+    "url": "https://letterboxd.com/film/the-liars-2026/",
+    "title_en": "The Liars",
+    "director": "Eduardo Braun Costa",
+    "country": "Argentina, Brazil",
+    "year": 2026,
+    "duration": 19,
+    "genre": "Comedia, Drama",
+    "original_title": "Los Mentirosos"
+  },
+  "hellbender|2021": {
+    "url": "https://letterboxd.com/film/hellbender/",
+    "title_en": "Hellbender",
+    "director": "Zelda Adams, Toby Poser, John Adams",
+    "country": "USA",
+    "year": 2021,
+    "duration": 83,
+    "genre": "Terror",
+    "original_title": "Hellbender"
+  },
+  "olivia|2025": {
+    "url": "https://letterboxd.com/film/olivia-2025/",
+    "title_en": "Olivia",
+    "director": "Sofía Petersen",
+    "country": "Argentina, UK",
+    "year": 2025,
+    "duration": 127,
+    "genre": "Drama"
+  },
+  "algo ha cambiado: un viaje quijotesco al pappo's blues|2026": {
+    "url": "",
+    "title_en": "ALGO HA CAMBIADO: UN VIAJE QUIJOTESCO AL PAPPO'S BLUES",
+    "director": "Sergio Bonacci Lapalma",
+    "country": "Argentina, United States of America",
+    "year": 2025,
+    "duration": 130,
+    "genre": "Documental",
+    "original_title": "Algo ha cambiado: Un viaje quijotesco al blues local"
+  },
+  "coyote vs. acme|2026": {
+    "url": "https://letterboxd.com/film/coyote-vs-acme/",
+    "title_en": "Coyote vs. Acme",
+    "director": "Dave Green",
+    "country": "USA",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Aventura, Familiar",
+    "clase_titulo": "exacto",
+    "title_es": "Coyote vs. Acme",
+    "original_title": "Coyote vs. Acme",
+    "sin_hints": "título"
+  },
+  "la vida es bella|1997": {
+    "url": "https://letterboxd.com/film/life-is-beautiful/",
+    "title_en": "Life Is Beautiful",
+    "director": "Roberto Benigni",
+    "country": "Italy",
+    "year": 1997,
+    "duration": 116,
+    "genre": "Comedia, Drama",
+    "title_es": "La vida es bella",
+    "original_title": "La vita è bella"
+  },
+  "subí que te llevo|1990": {
+    "url": "",
+    "title_en": "SUBÍ QUE TE LLEVO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "intersex/el circulo violeta": {
+    "url": "",
+    "title_en": "INTERSEX/EL CIRCULO VIOLETA",
+    "director": "Teresa Martino",
+    "country": "",
+    "year": 2025,
+    "duration": 93,
+    "genre": "Documental",
+    "original_title": "Intersex: El círculo violeta"
+  },
+  "pertenencias": {
+    "url": "",
+    "title_en": "PERTENENCIAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el resplandor": {
+    "url": "",
+    "title_en": "EL RESPLANDOR",
+    "director": "Stanley Kubrick",
+    "country": "United Kingdom, United States of America",
+    "year": 1980,
+    "duration": 144,
+    "genre": "Terror, Thriller",
+    "title_es": "El resplandor",
+    "original_title": "The Shining"
+  },
+  "la yegua de troya": {
+    "url": "",
+    "title_en": "LA YEGUA DE TROYA",
+    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
+    "country": "",
+    "year": 2022,
+    "duration": 19,
+    "original_title": "La Yegua de Troya"
+  },
+  "abuelo gaucho": {
+    "url": "",
+    "title_en": "ABUELO GAUCHO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "resident evil:noche cero": {
+    "url": "https://letterboxd.com/film/resident-evil-2026/",
+    "title_en": "Resident Evil",
+    "director": "Zach Cregger",
+    "country": "USA, Germany",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Terror, Aventura",
+    "title_es": "Resident Evil: Noche cero",
+    "original_title": "Resident Evil"
+  },
+  "yo dormí con un zombie": {
+    "url": "",
+    "title_en": "Yo dormí con un zombie",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: I Walked with a Zombie (1943), I Slept With a Ghost (1949)",
+    "fecha": "2026-10-28",
+    "con_duracion": false,
+    "desempate": ""
   }
 }
