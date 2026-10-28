@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-27T09:23:23",
+    "ts": "2026-10-28T10:05:39",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -46,7 +46,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-27T09:23:32",
+    "ts": "2026-10-28T10:05:50",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -66,9 +66,153 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
-    "ts": "2026-10-27T09:23:44",
+    "ts": "2026-10-28T10:07:05",
     "v": 2,
     "semanas": 9,
     "funciones": []
+  },
+  "https://palaciolibertad.gob.ar/events/cine-frances/": {
+    "ts": "2026-10-28T10:06:17",
+    "v": 2,
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "Maman Déchire",
+        "fecha": "2026-11-01",
+        "hora": "15:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
+        "ciclo": "Cine francés",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Nino",
+        "fecha": "2026-11-01",
+        "hora": "17:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
+        "ciclo": "Cine francés",
+        "director": "Pauline Loquès",
+        "country": "",
+        "year": 2025,
+        "duration": 97,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "El acusado",
+        "fecha": "2026-11-22",
+        "hora": "15:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
+        "ciclo": "Cine francés",
+        "director": "Daniel Auteuil",
+        "country": "",
+        "year": 2024,
+        "duration": 115,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Maman Déchire",
+        "fecha": "2026-11-22",
+        "hora": "17:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
+        "ciclo": "Cine francés",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Nino",
+        "fecha": "2026-11-29",
+        "hora": "15:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
+        "ciclo": "Cine francés",
+        "director": "Pauline Loquès",
+        "country": "",
+        "year": 2025,
+        "duration": 97,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "El acusado",
+        "fecha": "2026-11-29",
+        "hora": "17:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
+        "ciclo": "Cine francés",
+        "director": "Daniel Auteuil",
+        "country": "",
+        "year": 2024,
+        "duration": 115,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/cine-coreano/": {
+    "ts": "2026-10-28T10:06:51",
+    "v": 2,
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "Luck-Key",
+        "fecha": "2026-11-01",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+        "ciclo": "Cine coreano",
+        "director": "Lee Gae-byeok",
+        "country": "",
+        "year": 2016,
+        "duration": 108,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "The Host",
+        "fecha": "2026-11-15",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+        "ciclo": "Cine coreano",
+        "director": "Bong Joon-ho",
+        "country": "",
+        "year": 2006,
+        "duration": 120,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Luck-Key",
+        "fecha": "2026-11-22",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+        "ciclo": "Cine coreano",
+        "director": "Lee Gae-byeok",
+        "country": "",
+        "year": 2016,
+        "duration": 108,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "The Host",
+        "fecha": "2026-11-29",
+        "hora": "18:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+        "ciclo": "Cine coreano",
+        "director": "Bong Joon-ho",
+        "country": "",
+        "year": 2006,
+        "duration": 120,
+        "original_title": ""
+      }
+    ]
   }
 }

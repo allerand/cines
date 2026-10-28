@@ -21506,7 +21506,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Young Frankenstein (1974), y puede ser otra",
-    "fecha": "2026-10-07",
+    "fecha": "2026-10-28",
     "con_duracion": false,
     "desempate": ""
   },
@@ -24872,12 +24872,12 @@
     "director": "Denis Villeneuve",
     "country": "USA, United Arab Emirates",
     "year": 2026,
-    "duration": 140,
+    "duration": 150,
     "genre": "Ciencia ficción, Aventura",
     "clase_titulo": "exacto",
     "title_es": "Dune: Parte tres",
     "original_title": "Dune: Part Three",
-    "sin_hints": "título"
+    "sin_hints": "título y duración"
   },
   "avengers: doomsday": {
     "url": "https://letterboxd.com/film/avengers-doomsday/",
@@ -25905,7 +25905,7 @@
     "country": "Argentina",
     "year": 2025,
     "duration": 70,
-    "genre": "",
+    "genre": "Documental",
     "original_title": "Museo de la subversión"
   },
   "la invitación.": {
@@ -26507,12 +26507,13 @@
     "genre": "Comedia, Terror"
   },
   "tiempos de ilusión [proyecto viridiana]": {
-    "url": "",
-    "title_en": "TIEMPOS DE ILUSIÓN [PROYECTO VIRIDIANA]",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/just-an-illusion-2026/",
+    "title_en": "Just an Illusion",
+    "director": "Olivier Nakache, Éric Toledano",
+    "country": "France",
+    "year": 2026,
+    "duration": 119,
+    "genre": "Comedia, Drama"
   },
   "nosferatu con música en directo": {
     "url": "",
@@ -26801,13 +26802,13 @@
     "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "drácula, de bram stoker": {
-    "url": "",
-    "title_en": "DRÁCULA, DE BRAM STOKER",
+    "url": "https://letterboxd.com/film/bram-stokers-dracula/",
+    "title_en": "Bram Stoker's Dracula",
     "director": "Francis Ford Coppola",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1992,
     "duration": 128,
-    "genre": "Romance, Terror",
+    "genre": "Terror, Romance",
     "title_es": "Drácula de Bram Stoker",
     "original_title": "Bram Stoker's Dracula"
   },
@@ -28037,5 +28038,147 @@
     "fecha": "2026-10-28",
     "con_duracion": false,
     "desempate": ""
+  },
+  "programa doble: halloween + halloween ii (2009)|2007": {
+    "url": "https://letterboxd.com/film/halloween-ii/",
+    "title_en": "Halloween II",
+    "director": "Rob Zombie",
+    "country": "USA",
+    "year": 2009,
+    "duration": 105,
+    "genre": "Terror",
+    "clase_titulo": "distinto"
+  },
+  "halloween|2007": {
+    "url": "https://letterboxd.com/film/halloween/",
+    "title_en": "Halloween",
+    "director": "Rob Zombie",
+    "country": "USA",
+    "year": 2007,
+    "duration": 110,
+    "genre": "Terror",
+    "clase_titulo": "exacto",
+    "title_es": "Halloween: El Origen",
+    "original_title": "Halloween"
+  },
+  "halloween ii|2009": {
+    "url": "https://letterboxd.com/film/halloween-ii-2009/",
+    "title_en": "Halloween II",
+    "director": "Rob Zombie",
+    "country": "USA",
+    "year": 2009,
+    "duration": 105,
+    "genre": "Terror",
+    "clase_titulo": "exacto",
+    "title_es": "Halloween II",
+    "original_title": "Halloween II"
+  },
+  "la maldición|2005": {
+    "url": "https://letterboxd.com/film/cursed/",
+    "title_en": "Cursed",
+    "director": "Wes Craven",
+    "country": "Germany, USA",
+    "year": 2005,
+    "duration": 97,
+    "genre": "Terror",
+    "clase_titulo": "exacto",
+    "title_es": "La maldición (Cursed)",
+    "original_title": "Cursed"
+  },
+  "el fantasma de la ópera muda con intertitulos en español|1925": {
+    "url": "",
+    "title_en": "EL FANTASMA DE LA ÓPERA Muda con intertitulos en español",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la noche de los muertos vivientes|1968": {
+    "url": "https://letterboxd.com/film/night-of-the-living-dead/",
+    "title_en": "Night of the Living Dead",
+    "director": "George A. Romero",
+    "country": "USA",
+    "year": 1968,
+    "duration": 96,
+    "genre": "Terror, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "title_es": "La noche de los muertos vivientes",
+    "original_title": "Night of the Living Dead"
+  },
+  "piscina por la tarde": {
+    "url": "",
+    "title_en": "Piscina por la tarde",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "isla indómita": {
+    "url": "",
+    "title_en": "Isla indómita",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el rayo verde: la noche del cazador": {
+    "url": "",
+    "title_en": "El rayo verde: La noche del cazador",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "maman déchire": {
+    "url": "https://letterboxd.com/film/maman-dechire/",
+    "title_en": "Keeping Mum",
+    "director": "Émilie Brisavoine",
+    "country": "France",
+    "year": 2023,
+    "duration": 80,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Maman déchire",
+    "sin_hints": "título"
+  },
+  "nino|2025": {
+    "url": "https://letterboxd.com/film/nino-2025/",
+    "title_en": "Nino",
+    "director": "Pauline Loquès",
+    "country": "France",
+    "year": 2025,
+    "duration": 96,
+    "genre": "Drama",
+    "original_title": "Nino"
+  },
+  "el acusado|2024": {
+    "url": "",
+    "title_en": "El acusado",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "luck-key|2016": {
+    "url": "https://letterboxd.com/film/luck-key/",
+    "title_en": "Luck-Key",
+    "director": "Lee Kae-byeok",
+    "country": "South Korea",
+    "year": 2016,
+    "duration": 112,
+    "genre": "Acción, Crimen",
+    "title_es": "Luck-Key",
+    "original_title": "럭키"
+  },
+  "the host|2006": {
+    "url": "https://letterboxd.com/film/the-host/",
+    "title_en": "The Host",
+    "director": "Bong Joon Ho",
+    "country": "South Korea",
+    "year": 2006,
+    "duration": 120,
+    "genre": "Drama, Ciencia ficción",
+    "title_es": "The Host",
+    "original_title": "괴물"
   }
 }
