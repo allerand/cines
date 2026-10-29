@@ -1898,6 +1898,940 @@
       "cine": "Centro Cultural Borges", "title": "Inmarcesible", "fecha": "2026-10-15", "hora": "19:00",
       "director": "Juan Sebastián Parra Posso", "country": "Colombia",
       "ciclo": "Festival de Cine Experimental de Bogotá - Obras destacadas Colombia", "ticket_url": "https://centroculturalborges.gob.ar/evento/592"
+    },
+
+    {
+      "_ciclo": "Bitbang 12, del 27 al 31/10/2026: los programas de proyección del catálogo del festival (BITBANG12_Catalogo.pdf), corto por corto. El Borges publica cada programa como una sola función y no tiene las del Gaumont, Club Lucero y la Escuela Da Vinci. Infancias II a las 16:45, como la grilla día por día y la web del festival (la página del programa dice 16:30); Infancias IV a las 18:10, como la página del programa y la corrección de la web (la grilla dice 18:00). Afuera: el corto sin título de Infancias IV, la presentación de Río y las charlas, workshops y fiestas. La web del festival da el sábado 31 a las 19 Cortos Internacionales XIII en Club Lucero; el catálogo y el Borges, Cortos Internacionales en el Borges: va el catálogo.",
+      "cine": "Cine Gaumont", "title": "Paper Trail", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Don Hertzfeldt", "year": 2026, "country": "Estados Unidos", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Dillom – Cocodrilo", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Rocío Gastaldi, Andrés Capasso", "year": 2026, "country": "Argentina", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Animaciones buenísimas", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Ayar Blasco", "year": 2026, "country": "Argentina", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "El Cuerpo de Cristo", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Bea Lema", "year": 2025, "country": "España", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Honour", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Frédéric Siegel", "year": 2018, "country": "Suiza", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Carne", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Camila Kater", "year": 2019, "country": "Brasil", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Juana Molina – Desinhumano", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Dante Zaballa", "year": 2025, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Decorado", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Alberto Vázquez", "year": 2016, "country": "España", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Macho", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Alexis Moyano", "year": 2026, "country": "Argentina", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Acid City", "fecha": "2026-10-27", "hora": "19:30",
+      "director": "Jack Wedge, Will Freudenheim", "year": 2026, "country": "Estados Unidos", "duration": 13,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Inauguración", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "La Huella del Oro", "fecha": "2026-10-28", "hora": "18:00",
+      "director": "Daniel Duche", "year": 2026, "country": "Argentina", "duration": 35,
+      "ciclo": "Bitbang - Festival Internacional de Animación", "ticket_url": "https://centroculturalborges.gob.ar/evento/615"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "A ti, ¿quien te espera?", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "YUCA", "year": 2025, "country": "México", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Eclosion", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "Luis Morillo", "year": 2026, "country": "República Dominicana", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Edu’s Fear", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "Bruno Mazzilli, Tiago Judas", "year": 2026, "country": "Brasil", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Cuna De Lobas", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "Emilia Schettino", "year": 2026, "country": "México", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Vagón de Medianoche", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "Fátima Montserrat Castillo G., Eduardo Arandia", "year": 2026, "country": "México", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Club Lucero", "title": "With Tapes and Toasts in the Car", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "Kiana Naghshineh", "year": 2025, "country": "Alemania", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "If Only", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "Ada Güvenir", "year": 2026, "country": "Bélgica", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Dog Ear", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "Péter Vácz", "year": 2025, "country": "Hungría", "duration": 20,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Lethe", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "Liang-Hsin Huang", "year": 2025, "country": "Francia, Taiwán", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Big Peque", "fecha": "2026-10-28", "hora": "19:00",
+      "director": "David Maruchniak", "year": 2026, "country": "Argentina", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Apart", "fecha": "2026-10-28", "hora": "19:30",
+      "director": "Pola Maneli", "year": 2026, "country": "Estados Unidos, Sudáfrica", "duration": 19,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Día Internacional de la Animación", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6372"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Because Today is Saturday", "fecha": "2026-10-28", "hora": "19:30",
+      "director": "Alice Eça Guimarães", "year": 2025, "country": "Portugal", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Día Internacional de la Animación", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6372"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Yellow orange green blue red cut", "fecha": "2026-10-28", "hora": "19:30",
+      "director": "Peter Millard", "year": 2025, "country": "Reino Unido", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Día Internacional de la Animación", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6372"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "The End", "fecha": "2026-10-28", "hora": "19:30",
+      "director": "Niki Lindroth von Bahr", "year": 2026, "country": "Dinamarca, Francia, Suecia", "duration": 16,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Día Internacional de la Animación", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6372"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Calesita", "fecha": "2026-10-28", "hora": "19:30",
+      "director": "Sike", "year": 2026, "country": "Argentina", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Día Internacional de la Animación", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6372"
+    },
+    {
+      "cine": "Cine Gaumont", "title": "Electro Andes Ep. 1", "fecha": "2026-10-28", "hora": "19:30",
+      "director": "Nacho Malter, Damian Fernandez Gomez", "year": 2026, "country": "Argentina", "duration": 28,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Día Internacional de la Animación", "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6372"
+    },
+    {
+      "cine": "Club Lucero", "title": "Klonter", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Levi Stoops", "year": 2025, "country": "Bélgica", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "This Is Your Captain Speaking", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Nienke Deutz, Digna van der Put", "year": 2026, "country": "Bélgica, Países Bajos", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "A Pint of Bitter", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Conor Kehelly", "year": 2025, "country": "Irlanda", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Hotel Oblique", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Merlin Fluegel", "year": 2026, "country": "Alemania", "duration": 8,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "HUGS", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Nicolas Fong", "year": 2025, "country": "Bélgica", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Medo de Cachorro", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Italo Tapajos", "year": 2025, "country": "Brasil", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Lake Messejana", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Diego Maia", "year": 2026, "country": "Brasil", "duration": 10,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Entelequia", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Marcos Sánchez", "year": 2025, "country": "Chile", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Trabajo Hecho", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Jaime Freire", "year": 2026, "country": "Chile", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Decaer", "fecha": "2026-10-28", "hora": "20:00",
+      "director": "Juan Camilo González", "year": 2026, "country": "Colombia", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Club Lucero", "title": "Babyface", "fecha": "2026-10-28", "hora": "21:00",
+      "director": "Sacha Beeley", "year": 2026, "country": "Reino Unido", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Trading Cards", "fecha": "2026-10-28", "hora": "21:00",
+      "director": "Radheya Jang", "year": 2026, "country": "Australia, Reino Unido", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Little boarlet", "fecha": "2026-10-28", "hora": "21:00",
+      "director": "Atsushi Wada", "year": 2026, "country": "Japón", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "In the beginning", "fecha": "2026-10-28", "hora": "21:00",
+      "director": "Ala Nunu", "year": 2026, "country": "Polonia, Portugal, España", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Play Fight!", "fecha": "2026-10-28", "hora": "21:00",
+      "director": "Katrina Cecilia Larner", "year": 2025, "country": "Estados Unidos", "duration": 8,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "The Bird Lives On", "fecha": "2026-10-28", "hora": "21:00",
+      "director": "Yukyung Noh", "year": 2026, "country": "Corea del Sur", "duration": 10,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Cortos Verticales", "fecha": "2026-10-28", "hora": "22:15",
+      "ciclo": "Bitbang - Festival Internacional de Animación", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Cortos Vergonzosos", "fecha": "2026-10-28", "hora": "23:00",
+      "ciclo": "Bitbang - Festival Internacional de Animación", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Washed out", "fecha": "2026-10-28", "hora": "23:00",
+      "director": "Hannes Oberparleiter", "year": 2026, "country": "Austria, Italia", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Voideden", "fecha": "2026-10-28", "hora": "23:00",
+      "director": "Alan Holly", "year": 2026, "country": "Irlanda", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Strange Teen Spirit", "fecha": "2026-10-28", "hora": "23:00",
+      "director": "Frank Ternier", "year": 2025, "country": "Francia", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Tears", "fecha": "2026-10-28", "hora": "23:00",
+      "director": "Paulina Ziółkowska", "year": 2025, "country": "Polonia", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "The Toast Trip", "fecha": "2026-10-28", "hora": "23:00",
+      "director": "George Maestri", "year": 2026, "country": "Estados Unidos", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Ciclo Animé Nani", "fecha": "2026-10-29", "hora": "00:00",
+      "ciclo": "Bitbang - Festival Internacional de Animación", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "El hombre que te odia", "fecha": "2026-10-29", "hora": "18:00",
+      "director": "Sergio Falleti, Marcelo Iglesias", "year": 2026, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Leamos Juntos", "fecha": "2026-10-29", "hora": "18:00",
+      "director": "José Joaquín Garin", "year": 2026, "country": "Argentina", "duration": 13,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Pixel Trip", "fecha": "2026-10-29", "hora": "18:00",
+      "director": "Julian Manzelli", "year": 2026, "country": "Argentina", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Once in a body", "fecha": "2026-10-29", "hora": "18:00",
+      "director": "Maria Cristina", "year": 2025, "country": "Colombia", "duration": 10,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Pre(face)", "fecha": "2026-10-29", "hora": "18:00",
+      "director": "Valentina Rodríguez Morales, Sule Damaris Suárez", "year": 2025, "country": "Austria, Colombia", "duration": 2,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "O Jardim Mágico", "fecha": "2026-10-29", "hora": "18:00",
+      "director": "Carlon Hardt, Naira Carneiro", "year": 2025, "country": "Brasil", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Tokiori", "fecha": "2026-10-29", "hora": "18:00",
+      "director": "Nino Vispo", "year": 2026, "country": "Argentina", "duration": 2,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Casa Fech", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Santiago Riquelme", "year": 2026, "country": "Chile", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "La luz que frenó el universo", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Javier de Azkue", "year": 2026, "country": "Argentina", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Máquinas Deseantes", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Rodrigo Bascolo, Benjamin Martínez", "year": 2025, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Requiescat", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Juan Camardella", "year": 2026, "country": "Argentina", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "El río", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Rodrigo Luciano Zorzano", "year": 2026, "country": "Argentina", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Unlearning Motherhood", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Juliana Erazo Gómez", "year": 2025, "country": "Colombia", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Un Acto de Rebelión Contra el Olvido", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Mariana Marin", "year": 2025, "country": "Argentina", "duration": 2,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "El Zeco – Distópico en la playa", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Santiago González Gallo", "year": 2026, "country": "Argentina", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Club Lucero", "title": "Outcast", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Harry Bhalerao", "year": 2026, "country": "Reino Unido", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales V", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Pushing up daisies", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Chloé Farr", "year": 2026, "country": "Francia", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales V", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Driftwood", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Christian Komaromi", "year": 2026, "country": "Alemania", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales V", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "I, Shadow", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Cheuk Ting Cheung", "year": 2026, "country": "China", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales V", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "The Pool or Death of a Goldfish", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Daria Kopiec", "year": 2025, "country": "Polonia", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales V", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Five Orphans", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Sarina Nihei", "year": 2026, "country": "Francia", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales V", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Thank you for your love", "fecha": "2026-10-29", "hora": "19:00",
+      "director": "Jin (Sonnyé Lim)", "year": 2025, "country": "Corea del Sur, Estados Unidos", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales V", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Sangre de Unicornio", "fecha": "2026-10-29", "hora": "20:00",
+      "director": "Alberto Vázquez", "year": 2013, "country": "España", "duration": 8,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Alberto Vázquez", "ticket_url": "https://centroculturalborges.gob.ar/evento/619"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Homeless Home", "fecha": "2026-10-29", "hora": "20:00",
+      "director": "Alberto Vázquez", "year": 2020, "country": "España", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Alberto Vázquez", "ticket_url": "https://centroculturalborges.gob.ar/evento/619"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Decorado", "fecha": "2026-10-29", "hora": "20:00",
+      "director": "Alberto Vázquez", "year": 2016, "country": "España", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Alberto Vázquez", "ticket_url": "https://centroculturalborges.gob.ar/evento/619"
+    },
+    {
+      "cine": "Club Lucero", "title": "My name is Lilith", "fecha": "2026-10-29", "hora": "20:00",
+      "director": "LeoLuna Robert-Tourneur", "year": 2025, "country": "Bélgica, Francia", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Larval", "fecha": "2026-10-29", "hora": "20:00",
+      "director": "Alice Bloomfield", "year": 2025, "country": "Reino Unido", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "The Pleasure-Dome", "fecha": "2026-10-29", "hora": "20:00",
+      "director": "Marcie LaCerte", "year": 2026, "country": "Estados Unidos", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Dog Alone", "fecha": "2026-10-29", "hora": "20:00",
+      "director": "Marta Reis Andrade", "year": 2025, "country": "Francia, Portugal", "duration": 13,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Living with a Visionary", "fecha": "2026-10-29", "hora": "21:00",
+      "director": "Stephen P. Neary", "year": 2026, "country": "Estados Unidos", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Carla and her legs", "fecha": "2026-10-29", "hora": "21:00",
+      "director": "Christoph Büttner", "year": 2026, "country": "Alemania", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Won’t be Here", "fecha": "2026-10-29", "hora": "21:00",
+      "director": "Jiali Tan, Haoyuan Zhu", "year": 2025, "country": "China", "duration": 17,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Esplin", "fecha": "2026-10-29", "hora": "21:00",
+      "director": "Julita Conde, Magality", "year": 2025, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Find me", "fecha": "2026-10-29", "hora": "22:00",
+      "director": "Akari Maru", "year": 2025, "country": "Japón", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VIII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Pajarito", "fecha": "2026-10-29", "hora": "22:00",
+      "director": "Pilar Garcia-Fernandezsesma", "year": 2026, "country": "España, Estados Unidos", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VIII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Le Jardin Rossini", "fecha": "2026-10-29", "hora": "22:00",
+      "director": "William Burger, Siméon Jacob, Odelia Laine, Garance Mondamert, Tara Rewal, Mathilde Vergereau, Arthur Wong", "year": 2025, "country": "Francia", "duration": 10,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VIII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Winter in March", "fecha": "2026-10-29", "hora": "22:00",
+      "director": "Natalia Mirzoyan", "year": 2025, "country": "Armenia, Bélgica, Estonia, Francia", "duration": 16,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales VIII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Ivar", "fecha": "2026-10-29", "hora": "23:00",
+      "director": "Markus Tangre", "year": 2025, "country": "Noruega", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IX", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Mind Your Step", "fecha": "2026-10-29", "hora": "23:00",
+      "director": "Alina Milkina", "year": 2026, "country": "Países Bajos", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IX", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "So Many Different Things", "fecha": "2026-10-29", "hora": "23:00",
+      "director": "Sakshi Jain", "year": 2025, "country": "India, Estados Unidos", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IX", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Each, All and Every", "fecha": "2026-10-29", "hora": "23:00",
+      "director": "Nikoletta Veress", "year": 2026, "country": "Hungría", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IX", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Algo en la casa", "fecha": "2026-10-29", "hora": "23:00",
+      "director": "Carla Pereira Docampo", "year": 2026, "country": "España", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IX", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Traffic Lights – Flea feat. Thom Yorke", "fecha": "2026-10-29", "hora": "23:00",
+      "director": "Nespy Film 5euro", "year": 2026, "country": "Italia", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales IX", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Ruben Leaves", "fecha": "2026-10-30", "hora": "18:00",
+      "director": "Frédéric Siegel", "year": 2015, "country": "Suiza", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Frédéric Siegel", "ticket_url": "https://centroculturalborges.gob.ar/evento/620"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Honour", "fecha": "2026-10-30", "hora": "18:00",
+      "director": "Frédéric Siegel", "year": 2018, "country": "Suiza", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Frédéric Siegel", "ticket_url": "https://centroculturalborges.gob.ar/evento/620"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "The Lonely Orbit", "fecha": "2026-10-30", "hora": "18:00",
+      "director": "Frédéric Siegel", "year": 2019, "country": "Suiza", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Frédéric Siegel", "ticket_url": "https://centroculturalborges.gob.ar/evento/620"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Sit Down, Don’t Touch Anything", "fecha": "2026-10-30", "hora": "18:00",
+      "director": "Frédéric Siegel", "year": 2022, "country": "Suiza", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Frédéric Siegel", "ticket_url": "https://centroculturalborges.gob.ar/evento/620"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "TV", "fecha": "2026-10-30", "hora": "18:00",
+      "director": "Frédéric Siegel", "year": 2005, "country": "Suiza", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Frédéric Siegel", "ticket_url": "https://centroculturalborges.gob.ar/evento/620"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Mind Invaders", "fecha": "2026-10-30", "hora": "18:00",
+      "director": "Frédéric Siegel", "year": 2018, "country": "Suiza", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Frédéric Siegel", "ticket_url": "https://centroculturalborges.gob.ar/evento/620"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "FREITAG", "fecha": "2026-10-30", "hora": "18:00",
+      "director": "Frédéric Siegel", "year": 2017, "country": "Suiza", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Frédéric Siegel", "ticket_url": "https://centroculturalborges.gob.ar/evento/620"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Annecy Festival Partners Trailer", "fecha": "2026-10-30", "hora": "18:00",
+      "director": "Frédéric Siegel", "year": 2022, "country": "Suiza", "duration": 2,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Retrospectiva Frédéric Siegel", "ticket_url": "https://centroculturalborges.gob.ar/evento/620"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Manjubeira", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Nat Grego", "year": 2026, "country": "Brasil", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos V", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Normalidade", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Lico Cardoso", "year": 2025, "country": "Brasil", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos V", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Addicted to it", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Nigel Tierney, Federico Heller", "year": 2026, "country": "Argentina, Irlanda, Estados Unidos", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos V", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Cocoon", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Inés Sedán", "year": 2026, "country": "Francia, Argentina", "duration": 13,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos V", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "En el cuarto de Nico", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Julita Conde, Magality", "year": 2025, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos V", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Club Lucero", "title": "La vie avec un idiot", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Theodor Ushev", "year": 2025, "country": "Francia", "duration": 18,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales X", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Daughters of the Late Colonel", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Elizabeth Hobbs", "year": 2026, "country": "Reino Unido", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales X", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "The Flesh Dress", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Joachim Hérissé", "year": 2026, "country": "Francia", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales X", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Duck&Sauerkraut", "fecha": "2026-10-30", "hora": "19:00",
+      "director": "Eloi Henriod", "year": 2025, "country": "Suiza", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales X", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "The devil room", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Duban Pinzon", "year": 2025, "country": "Colombia", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos VI", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Una parvada de estruendo", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Mariana Mendivil", "year": 2025, "country": "México", "duration": 10,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos VI", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Peixe Seco e Defumado", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Denis Souza", "year": 2026, "country": "Brasil", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos VI", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Raidinalha", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Marco Arruda", "year": 2026, "country": "Brasil", "duration": 19,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos VI", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "El rancho del Bichito", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Nolwe Azul Tamis", "year": 2026, "country": "Argentina", "duration": 1,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Latinoamericanos VI", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Club Lucero", "title": "La veritat et rebutja, Cornelius", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Khris Cembe, Marc Torices", "year": 2026, "country": "España", "duration": 17,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Crossing The Road Guide", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Barney Abrahams", "year": 2026, "country": "Reino Unido", "duration": 2,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Mon Chat est mort", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Sabah Machy", "year": 2026, "country": "Francia", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Down The Hatch", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Alexandra Lukina", "year": 2025, "country": "Estados Unidos", "duration": 8,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Pickled", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Fanny Capu", "year": 2026, "country": "Reino Unido", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Trees and Other Birds", "fecha": "2026-10-30", "hora": "20:00",
+      "director": "Emma Claire Sardoni", "year": 2025, "country": "Bélgica", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XI", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Wish You Were Ear", "fecha": "2026-10-30", "hora": "21:00",
+      "director": "Mirjana Balogh", "year": 2025, "country": "Hungría", "duration": 10,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Symbionts", "fecha": "2026-10-30", "hora": "21:00",
+      "director": "Quirijn Dees", "year": 2025, "country": "Suiza", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Because Today is Saturday", "fecha": "2026-10-30", "hora": "21:00",
+      "director": "Alice Eça Guimarães", "year": 2025, "country": "Portugal", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Hermit Falls", "fecha": "2026-10-30", "hora": "21:00",
+      "director": "Pablo K Lorenzana", "year": 2026, "country": "Estados Unidos", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Club Lucero", "title": "Acid City", "fecha": "2026-10-30", "hora": "21:00",
+      "director": "Jack Wedge, Will Freudenheim", "year": 2026, "country": "Estados Unidos", "duration": 13,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales XII", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Porridge Monster", "fecha": "2026-10-31", "hora": "14:00",
+      "director": "Izabela Plucińska", "year": 2026, "country": "Azerbaiyán, Alemania, Polonia", "duration": 10,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Dance Film", "fecha": "2026-10-31", "hora": "14:00",
+      "director": "Kelly Gallagher", "year": 2025, "country": "Estados Unidos", "duration": 1,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Expanded Unity", "fecha": "2026-10-31", "hora": "14:00",
+      "director": "Lucila Toscano", "year": 2026, "country": "Argentina", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Juana y la Chacarera de la Vinchuca", "fecha": "2026-10-31", "hora": "14:00",
+      "director": "Juan Manuel Costa, Agustín Touriño", "year": 2025, "country": "Argentina", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Mantís del espacio – Mariposa del Chagual", "fecha": "2026-10-31", "hora": "14:00",
+      "director": "Daniel Liebner", "year": 2025, "country": "Chile", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias I", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Cubic Island", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Agustin Martinez Ludueña, Gonzalo Martin Sibert", "year": 2026, "country": "Argentina", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "El Canto del Jaguar", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Antonia Silva Alvarado", "year": 2026, "country": "México", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "The color out of the sea", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Candela Mendoza", "year": 2025, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Tierras de Lobeira", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Carla Barrionuevo, Waira Conrady Vega, Lucia Xuric Lopez Farias, Valentina Spinelli", "year": 2026, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "El Taller", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Franco Agustin Maggioli", "year": 2025, "country": "Argentina", "duration": 8,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Clo", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Delfina Isla, Melina Isla, Rocío Moya", "year": 2026, "country": "Argentina", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Pumarsis", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Noelia Muñoz", "year": 2026, "country": "Chile", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Bloom", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Rocio Belen Casal", "year": 2026, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Piscina", "fecha": "2026-10-31", "hora": "15:00",
+      "director": "Abril Martina Pereda", "year": 2026, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos I", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "El Niño, el Balón y el Mundo", "fecha": "2026-10-31", "hora": "16:00",
+      "director": "Sebastián Alcántara García", "year": 2026, "country": "México", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Patas Arriba", "fecha": "2026-10-31", "hora": "16:00",
+      "director": "Paulina Jensen, Vanesa Martin", "year": 2025, "country": "Argentina", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Ir hacia adentro", "fecha": "2026-10-31", "hora": "16:00",
+      "director": "Laura Alejandra Jiménez Ruiz", "year": 2025, "country": "Colombia", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Esperpento", "fecha": "2026-10-31", "hora": "16:00",
+      "director": "Valeria Blanco Ortiz, Mariana Sánchez Rodríguez", "year": 2025, "country": "México", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "La voz del deseo", "fecha": "2026-10-31", "hora": "16:00",
+      "director": "Erika Welz", "year": 2025, "country": "Argentina", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Orugas Presentes", "fecha": "2026-10-31", "hora": "16:00",
+      "director": "Sofía Migliavacca, Julieta Rossi", "year": 2025, "country": "Argentina", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Como Chispitas", "fecha": "2026-10-31", "hora": "16:00",
+      "director": "Amparo Chaparro", "year": 2026, "country": "Argentina, Chile", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos II", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Sandbox", "fecha": "2026-10-31", "hora": "16:45",
+      "director": "Kateřina Čupová", "year": 2026, "country": "República Checa", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "There once was a tiger", "fecha": "2026-10-31", "hora": "16:45",
+      "director": "Marina Verik, Dmitry Mosyagin", "year": 2025, "country": "Rusia", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "What Glitters", "fecha": "2026-10-31", "hora": "16:45",
+      "director": "Anna Lena Spring, Lara Perren", "year": 2026, "country": "Suiza", "duration": 10,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Duna", "fecha": "2026-10-31", "hora": "16:45",
+      "director": "Gabriela Barbalho, Paula Vanina", "year": 2026, "country": "Brasil", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Epic Yarn", "fecha": "2026-10-31", "hora": "16:45",
+      "director": "Andrew Gordon", "year": 2026, "country": "Estados Unidos", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias II", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Princess night", "fecha": "2026-10-31", "hora": "17:00",
+      "director": "Arantes Pinto", "year": 2026, "country": "Brasil", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "De Ayer A Luego", "fecha": "2026-10-31", "hora": "17:00",
+      "director": "Diego Solano Flores", "year": 2025, "country": "México", "duration": 8,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Afterblue", "fecha": "2026-10-31", "hora": "17:00",
+      "director": "Yanser Ramirez", "year": 2026, "country": "República Dominicana", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "The dance of Chaos", "fecha": "2026-10-31", "hora": "17:00",
+      "director": "Valeria Preciado Romaña", "year": 2025, "country": "Colombia", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Casa 27-F", "fecha": "2026-10-31", "hora": "17:00",
+      "director": "Valentina Vezga", "year": 2025, "country": "Costa Rica", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Marimba is happening", "fecha": "2026-10-31", "hora": "17:00",
+      "director": "Maryn Marynho", "year": 2026, "country": "Brasil", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "VivaCity", "fecha": "2026-10-31", "hora": "17:00",
+      "director": "Fernanda Giulia Bulgarelli Santos, Brenno Bertolaccini Machado", "year": 2026, "country": "Brasil", "duration": 15,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos III", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Birds of Paradise", "fecha": "2026-10-31", "hora": "17:30",
+      "director": "Tomek Ducki", "year": 2025, "country": "Polonia", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Eeny, Meeny, Miny, Moe!", "fecha": "2026-10-31", "hora": "17:30",
+      "director": "Andrea Szelesová", "year": 2025, "country": "Eslovaquia", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Mundoscópico: Figusitosis", "fecha": "2026-10-31", "hora": "17:30",
+      "director": "Ana Martin", "year": 2025, "country": "Argentina", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "See the sea", "fecha": "2026-10-31", "hora": "17:30",
+      "director": "Kristine Zvirbule", "year": 2026, "country": "Letonia", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "El Taller", "fecha": "2026-10-31", "hora": "17:30",
+      "director": "Franco Agustin Maggioli", "year": 2025, "country": "Argentina", "duration": 8,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias III", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Janaina and the Seashell", "fecha": "2026-10-31", "hora": "18:00",
+      "director": "Malu de Meneses, Igor Conrado, Júlia Norões", "year": 2025, "country": "Brasil", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "La Gran Fakie", "fecha": "2026-10-31", "hora": "18:00",
+      "director": "M Rodriguez, Sofia Rivero", "year": 2026, "country": "Uruguay", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Inmersa", "fecha": "2026-10-31", "hora": "18:00",
+      "director": "Martín Hernández", "year": 2025, "country": "Chile", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Cuarto para las Ocho", "fecha": "2026-10-31", "hora": "18:00",
+      "director": "Axel Rodriguez", "year": 2026, "country": "México", "duration": 1,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "ANAYAWARI Ecos del mar", "fecha": "2026-10-31", "hora": "18:00",
+      "director": "Ximena Orozco, David Morales, Lian Sebastián Quezada", "year": 2026, "country": "México", "duration": 6,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "El Niño de Orejas Rojas", "fecha": "2026-10-31", "hora": "18:00",
+      "director": "María Lucía Suárez Barbery", "year": 2025, "country": "Bolivia, España", "duration": 13,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Quisiera más tiempo", "fecha": "2026-10-31", "hora": "18:00",
+      "director": "Yael Martínez", "year": 2026, "country": "México", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "La pena no duerme de noche", "fecha": "2026-10-31", "hora": "18:00",
+      "director": "Josefina Montino, Martín André", "year": 2025, "country": "Chile", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos de Graduación Latinoamericanos IV", "ticket_url": "https://centroculturalborges.gob.ar/evento/616"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "La Légende du colibri", "fecha": "2026-10-31", "hora": "18:10",
+      "director": "Morgan Devos", "year": 2025, "country": "Francia", "duration": 9,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Cara De Rana", "fecha": "2026-10-31", "hora": "18:10",
+      "director": "Sebastián Sigal, Lionel Alejandro Skliar", "year": 2026, "country": "Argentina", "duration": 2,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "El Din", "fecha": "2026-10-31", "hora": "18:10",
+      "director": "Julien Regnard, Pascal Giraud", "year": 2026, "country": "Bélgica, Francia", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Bolero", "fecha": "2026-10-31", "hora": "18:10",
+      "director": "Maribel Suárez", "year": 2026, "country": "México", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Escuela Da Vinci", "title": "Bats & Bugs", "fecha": "2026-10-31", "hora": "18:10",
+      "director": "Lena von Döhren", "year": 2026, "country": "Suiza", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Animación para Infancias IV", "ticket_url": "https://bitbangclub.com/es/programacion-bitbang12/"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Because Today is Saturday", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Alice Eça Guimarães", "year": 2025, "country": "Portugal", "duration": 12,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Outcast", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Harry Bhalerao", "year": 2026, "country": "Reino Unido", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Pushing up daisies", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Chloé Farr", "year": 2026, "country": "Francia", "duration": 4,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Driftwood", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Christian Komaromi", "year": 2026, "country": "Alemania", "duration": 7,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "I, Shadow", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Cheuk Ting Cheung", "year": 2026, "country": "China", "duration": 5,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "The Pool or Death of a Goldfish", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Daria Kopiec", "year": 2025, "country": "Polonia", "duration": 14,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Five Orphans", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Sarina Nihei", "year": 2026, "country": "Francia", "duration": 11,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "Thank you for your love", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Jin (Sonnyé Lim)", "year": 2025, "country": "Corea del Sur, Estados Unidos", "duration": 3,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "cine": "Centro Cultural Borges", "title": "The End", "fecha": "2026-10-31", "hora": "19:00",
+      "director": "Niki Lindroth von Bahr", "year": 2026, "country": "Dinamarca, Francia, Suecia", "duration": 16,
+      "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
     }
   ],
 
@@ -1966,6 +2900,35 @@
     {
       "_por_que": "FIC.UBA: el banner del festival (\"FICUBA | del 30/9 al 7/10\") entra al listado de Filo Cine como si fuera una película.",
       "cine": "Filo Cine", "fecha": "2026-09-30", "title_contiene": "FICUBA |"
+    },
+    {
+      "_por_que": "Bitbang: el Borges publica cada programa como una sola función, sin número en los de Graduación. Se reemplazan por los cortos de arriba. No va como `festivales`: el Borges tiene otra sala y a la misma hora da Piazzolla, los años del tiburón.",
+      "cine": "Centro Cultural Borges", "fecha": "2026-10-28", "title_contiene": "La Huella de Oro"
+    },
+    {
+      "cine": "Centro Cultural Borges", "fecha": "2026-10-28", "title_contiene": "Cortos Latinoamericanos"
+    },
+    {
+      "cine": "Centro Cultural Borges", "fecha": "2026-10-29", "title_contiene": "Cortos Latinoamericanos"
+    },
+    {
+      "cine": "Centro Cultural Borges", "fecha": "2026-10-29", "title_contiene": "Retrospectiva Alberto Vázquez"
+    },
+    {
+      "cine": "Centro Cultural Borges", "fecha": "2026-10-30", "title_contiene": "Retrospectiva Frederic Siegel"
+    },
+    {
+      "cine": "Centro Cultural Borges", "fecha": "2026-10-30", "title_contiene": "Cortos Latinoamericanos"
+    },
+    {
+      "cine": "Centro Cultural Borges", "fecha": "2026-10-31", "title_contiene": "Cortos de Graduación Latinoamericanos"
+    },
+    {
+      "cine": "Centro Cultural Borges", "fecha": "2026-10-31", "title_contiene": "Cortos Internacionales"
+    },
+    {
+      "_por_que": "Bitbang: el Gaumont tiene la función del Día Internacional de la Animación como \"Bit Bang\". Va arriba con sus cortos.",
+      "cine": "Cine Gaumont", "fecha": "2026-10-28", "hora": "19:30", "title_contiene": "Bit Bang"
     }
   ],
 
