@@ -1,6 +1,6 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-28T10:05:39",
+    "ts": "2026-10-29T10:28:24",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -46,7 +46,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-28T10:05:50",
+    "ts": "2026-10-29T10:28:30",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -66,13 +66,13 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
-    "ts": "2026-10-28T10:07:05",
+    "ts": "2026-10-29T10:29:01",
     "v": 2,
     "semanas": 9,
     "funciones": []
   },
   "https://palaciolibertad.gob.ar/events/cine-frances/": {
-    "ts": "2026-10-28T10:06:17",
+    "ts": "2026-10-29T10:28:36",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -157,7 +157,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-coreano/": {
-    "ts": "2026-10-28T10:06:51",
+    "ts": "2026-10-29T10:28:52",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -211,6 +211,150 @@
         "country": "",
         "year": 2006,
         "duration": 120,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/": {
+    "ts": "2026-10-29T10:29:08",
+    "v": 2,
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "Do bairro",
+        "fecha": "2026-11-14",
+        "hora": "17:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
+        "ciclo": "Cine en La Noche de los Museos",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Cortometrajes +13",
+        "fecha": "2026-11-14",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
+        "ciclo": "Cine en La Noche de los Museos",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "La novia del monstruo",
+        "fecha": "2026-11-14",
+        "hora": "20:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
+        "ciclo": "Cine en La Noche de los Museos",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Cortometrajes +16",
+        "fecha": "2026-11-14",
+        "hora": "20:15",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
+        "ciclo": "Cine en La Noche de los Museos",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "El jockey",
+        "fecha": "2026-11-14",
+        "hora": "21:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
+        "ciclo": "Cine en La Noche de los Museos",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Plan 9 del espacio exterior",
+        "fecha": "2026-11-14",
+        "hora": "22:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
+        "ciclo": "Cine en La Noche de los Museos",
+        "director": "",
+        "country": "",
+        "year": null,
+        "duration": null,
+        "original_title": ""
+      }
+    ]
+  },
+  "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/": {
+    "ts": "2026-10-29T10:29:15",
+    "v": 2,
+    "semanas": 9,
+    "funciones": [
+      {
+        "cine": "CCK",
+        "title": "El jockey",
+        "fecha": "2026-11-14",
+        "hora": "21:30",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/",
+        "ciclo": "Miradas contemporáneas:Luis Ortega / Federico Luis",
+        "director": "Luis Ortega",
+        "country": "",
+        "year": 2024,
+        "duration": 96,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Simón de la montaña",
+        "fecha": "2026-11-21",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/",
+        "ciclo": "Miradas contemporáneas:Luis Ortega / Federico Luis",
+        "director": "Federico Luis",
+        "country": "",
+        "year": 2024,
+        "duration": 96,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "Simón de la montaña",
+        "fecha": "2026-11-28",
+        "hora": "17:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/",
+        "ciclo": "Miradas contemporáneas:Luis Ortega / Federico Luis",
+        "director": "Federico Luis",
+        "country": "",
+        "year": 2024,
+        "duration": 96,
+        "original_title": ""
+      },
+      {
+        "cine": "CCK",
+        "title": "El jockey",
+        "fecha": "2026-11-28",
+        "hora": "19:00",
+        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/",
+        "ciclo": "Miradas contemporáneas:Luis Ortega / Federico Luis",
+        "director": "Luis Ortega",
+        "country": "",
+        "year": 2024,
+        "duration": 96,
         "original_title": ""
       }
     ]

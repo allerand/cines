@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-29T02:47:31",
+  "updated": "2026-10-29T11:01:21",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 38,
@@ -35,8 +35,8 @@
       "publicadas": 94
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 98,
-      "publicadas": 98
+      "scrapeadas": 100,
+      "publicadas": 100
     },
     "Golem Madrid": {
       "scrapeadas": 103,
@@ -4059,7 +4059,39 @@
     {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-10-31",
+      "hora": "11:45",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39410/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-31",
       "hora": "11:50",
+      "title_es": "Superthings: La película",
+      "title_en": "Superthings: La película",
+      "original_title": "Superthings: La película",
+      "director": "Víctor Monigote",
+      "country": "España",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Animación, Familiar",
+      "letterboxd": "https://letterboxd.com/film/superthings-la-pelicula/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/superthings-la-pelicula/39412/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-10-31",
+      "hora": "12:00",
       "title_es": "La oveja Shaun: Misión calabaza",
       "title_en": "Shaun the Sheep: The Beast of Mossy Bottom",
       "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
@@ -4069,7 +4101,7 @@
       "duration": 80,
       "genre": "Comedia, Animación",
       "letterboxd": "https://letterboxd.com/film/shaun-the-sheep-the-beast-of-mossy-bottom/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-oveja-shaun-mision-calabaza-doblada-al-espanol/39385/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-oveja-shaun-mision-calabaza-doblada-al-espanol/39411/",
       "ciclo": ""
     },
     {

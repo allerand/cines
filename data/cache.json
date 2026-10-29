@@ -5575,15 +5575,16 @@
     "original_title": "Vingt Dieux"
   },
   "plan 9 del espacio exterior": {
-    "url": "https://letterboxd.com/film/the-unknown-from-outer-space/",
-    "title_en": "The Unknown From Outer Space",
-    "director": "Juan Sainz de Rozas González",
-    "country": "Spain",
-    "year": 2025,
-    "duration": 11,
-    "genre": "Comedia, Ciencia ficción",
-    "title_es": "Plan 9 del espacio exterior",
-    "original_title": "Plan 9 from Outer Space"
+    "url": "",
+    "title_en": "Plan 9 del espacio exterior",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Plan 9 from Outer Space (1957), y puede ser otra",
+    "fecha": "2026-10-29",
+    "con_duracion": false,
+    "desempate": ""
   },
   "el cerebro que no deseaba morir": {
     "url": "",
@@ -5625,13 +5626,14 @@
   "la novia del monstruo": {
     "url": "",
     "title_en": "La novia del monstruo",
-    "director": "Edward D. Wood Jr.",
-    "country": "United States of America",
-    "year": 1955,
-    "duration": 70,
-    "title_es": "La novia del monstruo",
-    "original_title": "Bride of the Monster",
-    "genre": "Terror, Ciencia ficción"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Bride of the Monster (1955), y puede ser otra",
+    "fecha": "2026-10-29",
+    "con_duracion": false,
+    "desempate": ""
   },
   "the rocketeer": {
     "url": "https://letterboxd.com/film/the-return-of-the-rocketeer/",
@@ -26780,7 +26782,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Persona: The Film That Saved Ingmar Bergman (2018)",
-    "fecha": "2026-10-25",
+    "fecha": "2026-10-29",
     "con_duracion": false,
     "desempate": ""
   },
@@ -28007,7 +28009,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
+    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -28333,6 +28335,1238 @@
   "metrópolis|2001": {
     "url": "",
     "title_en": "Metrópolis",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el hombre que te odia|2026": {
+    "url": "",
+    "title_en": "El hombre que te odia",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "leamos juntos|2026": {
+    "url": "https://letterboxd.com/film/leamos-juntos/",
+    "title_en": "Leamos juntos",
+    "director": "Juaco Garin",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 13,
+    "genre": "Animación",
+    "original_title": "Leamos juntos"
+  },
+  "pixel trip|2026": {
+    "url": "",
+    "title_en": "Pixel Trip",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "once in a body|2025": {
+    "url": "https://letterboxd.com/film/once-in-a-body/",
+    "title_en": "Once in a Body",
+    "director": "María Cristina Pérez González",
+    "country": "Colombia, USA",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Animación",
+    "original_title": "Una vez en un cuerpo"
+  },
+  "pre(face)|2025": {
+    "url": "",
+    "title_en": "Pre(face)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "o jardim mágico|2025": {
+    "url": "https://letterboxd.com/film/o-jardim-magico/",
+    "title_en": "The Magic Garden",
+    "director": "Naira Carneiro, Carlon Hardt",
+    "country": "Brazil",
+    "year": 2025,
+    "duration": 6,
+    "genre": "Animación",
+    "title_es": "El jardín mágico",
+    "original_title": "O Jardim Mágico"
+  },
+  "tokiori|2026": {
+    "url": "",
+    "title_en": "Tokiori",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "casa fech|2026": {
+    "url": "",
+    "title_en": "Casa Fech",
+    "director": "Santiago Riquelme",
+    "country": "Chile",
+    "year": 2026,
+    "duration": null,
+    "genre": "Documental, Animación",
+    "original_title": "Casa Fech, Sitio de Memoria"
+  },
+  "la luz que frenó el universo|2026": {
+    "url": "https://letterboxd.com/film/la-luz-que-freno-el-universo/",
+    "title_en": "The Light That Stopped the Universe",
+    "director": "Javier de Azkue",
+    "country": "",
+    "year": 2026,
+    "duration": 3,
+    "genre": "",
+    "original_title": "La luz que frenó el universo"
+  },
+  "máquinas deseantes|2025": {
+    "url": "",
+    "title_en": "Máquinas Deseantes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "requiescat|2026": {
+    "url": "",
+    "title_en": "Requiescat",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el río|2026": {
+    "url": "",
+    "title_en": "El río",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "unlearning motherhood|2025": {
+    "url": "https://letterboxd.com/film/unlearning-motherhood/",
+    "title_en": "Unlearning Motherhood",
+    "director": "Juliana Erazo Gómez",
+    "country": "Netherlands",
+    "year": 2025,
+    "duration": 11,
+    "genre": "Animación, Documental",
+    "original_title": "Unlearning Motherhood"
+  },
+  "un acto de rebelión contra el olvido|2025": {
+    "url": "",
+    "title_en": "Un Acto de Rebelión Contra el Olvido",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el zeco – distópico en la playa|2026": {
+    "url": "",
+    "title_en": "El Zeco – Distópico en la playa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "outcast|2026": {
+    "url": "https://letterboxd.com/film/outcast-2026/",
+    "title_en": "Outcast",
+    "director": "Harry Bhalerao",
+    "country": "",
+    "year": 2026,
+    "duration": 3,
+    "genre": "",
+    "original_title": "Outcast"
+  },
+  "pushing up daisies|2026": {
+    "url": "",
+    "title_en": "Pushing up daisies",
+    "director": "Chloé Farr",
+    "country": "France",
+    "year": 2024,
+    "duration": 4,
+    "genre": "Animación",
+    "original_title": "Les Pissenlits par la racine"
+  },
+  "driftwood|2026": {
+    "url": "",
+    "title_en": "Driftwood",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "i, shadow|2026": {
+    "url": "",
+    "title_en": "I, Shadow",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the pool or death of a goldfish|2025": {
+    "url": "https://letterboxd.com/film/the-pool-or-death-of-a-goldfish/",
+    "title_en": "The Pool or Death of a Goldfish",
+    "director": "Daria Kopiec",
+    "country": "Poland",
+    "year": 2025,
+    "duration": 13,
+    "genre": "Animación",
+    "original_title": "Basen albo śmierć złotej rybki"
+  },
+  "five orphans|2026": {
+    "url": "https://letterboxd.com/film/five-orphans/",
+    "title_en": "Five Orphans",
+    "director": "Sarina Nihei",
+    "country": "France, Japan",
+    "year": 2026,
+    "duration": 11,
+    "genre": "Animación",
+    "original_title": "Five Orphans"
+  },
+  "thank you for your love|2025": {
+    "url": "",
+    "title_en": "Thank you for your love",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sangre de unicornio|2013": {
+    "url": "https://letterboxd.com/film/unicorn-blood/",
+    "title_en": "Unicorn Blood",
+    "director": "Alberto Vázquez",
+    "country": "Spain",
+    "year": 2013,
+    "duration": 9,
+    "genre": "Fantasía, Animación",
+    "title_es": "Sangre de Unicornio",
+    "original_title": "Sangre de Unicornio"
+  },
+  "homeless home|2020": {
+    "url": "https://letterboxd.com/film/homeless-home/",
+    "title_en": "Homeless Home",
+    "director": "Alberto Vázquez",
+    "country": "France, Spain",
+    "year": 2020,
+    "duration": 15,
+    "genre": "Animación",
+    "original_title": "Homeless Home"
+  },
+  "decorado|2016": {
+    "url": "https://letterboxd.com/film/scenery-2016/",
+    "title_en": "Scenery",
+    "director": "Alberto Vázquez",
+    "country": "France, Spain",
+    "year": 2016,
+    "duration": 11,
+    "genre": "Terror, Comedia",
+    "original_title": "Decorado"
+  },
+  "my name is lilith|2025": {
+    "url": "",
+    "title_en": "My name is Lilith",
+    "director": "Leo Luna Robert-Tourneur",
+    "country": "Belgium, France",
+    "year": 2025,
+    "duration": 14,
+    "genre": "Animación",
+    "original_title": "Mon nom est Lilith"
+  },
+  "larval|2025": {
+    "url": "https://letterboxd.com/film/larval/",
+    "title_en": "Larval",
+    "director": "Alice Bloomfield",
+    "country": "UK",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Animación",
+    "title_es": "Larva",
+    "original_title": "Larval"
+  },
+  "the pleasure-dome|2026": {
+    "url": "https://letterboxd.com/film/the-pleasure-dome-2026/",
+    "title_en": "The Pleasure-Dome",
+    "director": "Marcie LaCerte",
+    "country": "",
+    "year": 2026,
+    "duration": 9,
+    "genre": "Animación, Drama",
+    "original_title": "The Pleasure-Dome"
+  },
+  "dog alone|2025": {
+    "url": "https://letterboxd.com/film/dog-alone/",
+    "title_en": "Dog Alone",
+    "director": "Marta Reis Andrade",
+    "country": "Portugal, France",
+    "year": 2025,
+    "duration": 13,
+    "genre": "Animación",
+    "title_es": "Perro solitario",
+    "original_title": "Cão Sozinho"
+  },
+  "living with a visionary|2026": {
+    "url": "https://letterboxd.com/film/living-with-a-visionary/",
+    "title_en": "Living with a Visionary",
+    "director": "Stephen P. Neary",
+    "country": "USA",
+    "year": 2026,
+    "duration": 15,
+    "genre": "Animación",
+    "title_es": "Vivir con una visionaria",
+    "original_title": "Living with a Visionary"
+  },
+  "carla and her legs|2026": {
+    "url": "https://letterboxd.com/film/carla-and-her-legs/",
+    "title_en": "Carla and Her Legs",
+    "director": "Christoph Büttner",
+    "country": "",
+    "year": 2026,
+    "duration": 14,
+    "genre": "Animación, Drama",
+    "original_title": "Carla und ihre Beine"
+  },
+  "won’t be here|2025": {
+    "url": "https://letterboxd.com/film/wont-be-here/",
+    "title_en": "Won't be here",
+    "director": "Jiali Tan, Haoyuan Zhu",
+    "country": "China",
+    "year": 2025,
+    "duration": 17,
+    "genre": "Drama",
+    "original_title": "我不在的明天"
+  },
+  "esplin|2025": {
+    "url": "",
+    "title_en": "Esplin",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "find me|2025": {
+    "url": "https://letterboxd.com/film/find-me-2025/",
+    "title_en": "find me",
+    "director": "Akari Maru",
+    "country": "Japan",
+    "year": 2025,
+    "duration": 9,
+    "genre": "Documental, Animación",
+    "original_title": "私を見つけて"
+  },
+  "pajarito|2026": {
+    "url": "https://letterboxd.com/film/pajarito-2026/",
+    "title_en": "Pajarito",
+    "director": "Pilar Garcia-Fernandezsesma",
+    "country": "USA, Spain",
+    "year": 2026,
+    "duration": 15,
+    "genre": "Drama, Animación",
+    "original_title": "Pajarito"
+  },
+  "le jardin rossini|2025": {
+    "url": "https://letterboxd.com/film/le-jardin-rossini/",
+    "title_en": "Le Jardin Rossini",
+    "director": "William Burger, Siméon Jacob, Odelia Lainé",
+    "country": "France",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Fantasía, Drama",
+    "original_title": "Le Jardin Rossini"
+  },
+  "winter in march|2025": {
+    "url": "https://letterboxd.com/film/winter-in-march/",
+    "title_en": "Winter in March",
+    "director": "Natalia Mirzoyan",
+    "country": "Estonia, Armenia",
+    "year": 2025,
+    "duration": 16,
+    "genre": "Documental, Animación",
+    "title_es": "Invierno en marzo",
+    "original_title": "Lumi saadab meid"
+  },
+  "ivar|2025": {
+    "url": "",
+    "title_en": "Ivar",
+    "director": "Markus Tangre",
+    "country": "Norway",
+    "year": 2026,
+    "duration": 4,
+    "genre": "Comedia, Drama",
+    "original_title": "Ivar"
+  },
+  "mind your step|2026": {
+    "url": "https://letterboxd.com/film/mind-your-step/",
+    "title_en": "Mind Your Step",
+    "director": "Alina Milkina",
+    "country": "Netherlands",
+    "year": 2026,
+    "duration": 6,
+    "genre": "Animación",
+    "original_title": "Mind Your Step"
+  },
+  "so many different things|2025": {
+    "url": "https://letterboxd.com/film/so-many-different-things/",
+    "title_en": "So Many Different Things",
+    "director": "Sakshi Jain",
+    "country": "",
+    "year": 2026,
+    "duration": 3,
+    "genre": "Animación",
+    "original_title": "So Many Different Things"
+  },
+  "each, all and every|2026": {
+    "url": "https://letterboxd.com/film/each-all-and-every/",
+    "title_en": "Each, All and Every",
+    "director": "Nikoletta Veress",
+    "country": "Hungary",
+    "year": 2026,
+    "duration": 11,
+    "genre": "Animación",
+    "original_title": "Each, All and Every"
+  },
+  "algo en la casa|2026": {
+    "url": "https://letterboxd.com/film/algo-en-la-casa/",
+    "title_en": "Algo en la casa",
+    "director": "Carla Pereira",
+    "country": "",
+    "year": 2026,
+    "duration": 12,
+    "genre": "",
+    "original_title": "Algo en la casa"
+  },
+  "traffic lights – flea feat. thom yorke|2026": {
+    "url": "",
+    "title_en": "Traffic Lights – Flea feat. Thom Yorke",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ruben leaves|2015": {
+    "url": "https://letterboxd.com/film/ruben-leaves/",
+    "title_en": "Ruben Leaves",
+    "director": "Frederic Siegel",
+    "country": "Switzerland",
+    "year": 2015,
+    "duration": 5,
+    "genre": "Animación",
+    "original_title": "Ruben Leaves"
+  },
+  "honour|2018": {
+    "url": "https://letterboxd.com/film/honour-2018/",
+    "title_en": "Honour",
+    "director": "Frederic Siegel",
+    "country": "Switzerland",
+    "year": 2018,
+    "duration": 5,
+    "genre": "Drama, Animación",
+    "original_title": "Honour"
+  },
+  "the lonely orbit|2019": {
+    "url": "https://letterboxd.com/film/the-lonely-orbit/",
+    "title_en": "The Lonely Orbit",
+    "director": "Frederic Siegel, Benjamin Morard",
+    "country": "Switzerland",
+    "year": 2019,
+    "duration": 10,
+    "genre": "Animación",
+    "original_title": "The Lonely Orbit"
+  },
+  "sit down, don’t touch anything|2022": {
+    "url": "https://letterboxd.com/film/sit-down-dont-touch-anything/",
+    "title_en": "Sit Down, Don't Touch Anything",
+    "director": "Frederic Siegel",
+    "country": "Switzerland",
+    "year": 2022,
+    "duration": 5,
+    "genre": "Animación",
+    "original_title": "Sit Down, Don't Touch Anything"
+  },
+  "tv|2005": {
+    "url": "",
+    "title_en": "TV",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mind invaders|2018": {
+    "url": "",
+    "title_en": "Mind Invaders",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "freitag|2017": {
+    "url": "",
+    "title_en": "FREITAG",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "annecy festival partners trailer|2022": {
+    "url": "",
+    "title_en": "Annecy Festival Partners Trailer",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "manjubeira|2026": {
+    "url": "https://letterboxd.com/film/manjubeira/",
+    "title_en": "Manjubeira",
+    "director": "Nat Grego",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "Fantasía, Animación",
+    "original_title": "Manjubeira"
+  },
+  "normalidade|2025": {
+    "url": "",
+    "title_en": "Normalidade",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "addicted to it|2026": {
+    "url": "https://letterboxd.com/film/addicted-to-it/",
+    "title_en": "Addicted to It",
+    "director": "Nigel Tierney, Federico Heller",
+    "country": "USA",
+    "year": 2026,
+    "duration": 6,
+    "genre": "Animación, Música",
+    "original_title": "Addicted to It"
+  },
+  "cocoon|2026": {
+    "url": "",
+    "title_en": "Cocoon",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "en el cuarto de nico|2025": {
+    "url": "",
+    "title_en": "En el cuarto de Nico",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la vie avec un idiot|2025": {
+    "url": "https://letterboxd.com/film/la-vie-avec-un-idiot/",
+    "title_en": "Life with an Idiot",
+    "director": "Theodore Ushev",
+    "country": "France",
+    "year": 2025,
+    "duration": 18,
+    "genre": "Animación",
+    "original_title": "La vie avec un idiot"
+  },
+  "daughters of the late colonel|2026": {
+    "url": "https://letterboxd.com/film/daughters-of-the-late-colonel/",
+    "title_en": "Daughters of the Late Colonel",
+    "director": "Elizabeth Hobbs",
+    "country": "UK, Germany",
+    "year": 2026,
+    "duration": 9,
+    "genre": "Animación, Comedia",
+    "original_title": "Daughters of the Late Colonel"
+  },
+  "the flesh dress|2026": {
+    "url": "https://letterboxd.com/film/the-flesh-dress/",
+    "title_en": "The Flesh Dress",
+    "director": "Joachim Hérissé",
+    "country": "France",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Terror, Animación",
+    "original_title": "La Robe Peau"
+  },
+  "duck&sauerkraut|2025": {
+    "url": "",
+    "title_en": "Duck&Sauerkraut",
+    "director": "Eloi Henriod",
+    "country": "Switzerland",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Animación",
+    "original_title": "Canard & Choucroute"
+  },
+  "the devil room|2025": {
+    "url": "https://letterboxd.com/film/the-devil-room/",
+    "title_en": "The Devil Room",
+    "director": "Duban Pinzón",
+    "country": "Colombia",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Terror, Animación",
+    "original_title": "La Habitación del Macho Cabrío"
+  },
+  "una parvada de estruendo|2025": {
+    "url": "https://letterboxd.com/film/una-parvada-de-estruendo/",
+    "title_en": "A Flock of Thunder",
+    "director": "Mariana Mendivil",
+    "country": "Mexico",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Animación",
+    "original_title": "Una parvada de estruendo"
+  },
+  "peixe seco e defumado|2026": {
+    "url": "https://letterboxd.com/film/peixe-seco-e-defumado/",
+    "title_en": "Dried and Smoked Fish",
+    "director": "Denis Souza",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 4,
+    "genre": "Animación, Documental",
+    "original_title": "Peixe Seco e Defumado"
+  },
+  "raidinalha|2026": {
+    "url": "https://letterboxd.com/film/raidinalha/",
+    "title_en": "Raidinalha",
+    "director": "Marco Arruda",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 19,
+    "genre": "Animación",
+    "original_title": "Raidinalha"
+  },
+  "el rancho del bichito|2026": {
+    "url": "",
+    "title_en": "El rancho del Bichito",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la veritat et rebutja, cornelius|2026": {
+    "url": "https://letterboxd.com/film/the-truth-rejects-you-cornelius/",
+    "title_en": "The Truth Rejects You, Cornelius",
+    "director": "Khris Cembe, Marc Torices",
+    "country": "",
+    "year": 2026,
+    "duration": 17,
+    "genre": "Animación",
+    "original_title": "La veritat et rebutja, Cornelius"
+  },
+  "crossing the road guide|2026": {
+    "url": "",
+    "title_en": "Crossing The Road Guide",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mon chat est mort|2026": {
+    "url": "",
+    "title_en": "Mon Chat est mort",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "down the hatch|2025": {
+    "url": "",
+    "title_en": "Down The Hatch",
+    "director": "Alexandra Lukina",
+    "country": "Russia",
+    "year": 2026,
+    "duration": 8,
+    "genre": "Animación",
+    "original_title": "До дна"
+  },
+  "pickled|2026": {
+    "url": "https://letterboxd.com/film/pickled-2026/",
+    "title_en": "Pickled",
+    "director": "Fanny Capu",
+    "country": "UK",
+    "year": 2026,
+    "duration": 8,
+    "genre": "Animación",
+    "original_title": "Pickled"
+  },
+  "trees and other birds|2025": {
+    "url": "https://letterboxd.com/film/trees-and-other-birds/",
+    "title_en": "Trees and Other Birds",
+    "director": "Emma-Claire Sardoni",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "",
+    "original_title": "Trees and Other Birds"
+  },
+  "wish you were ear|2025": {
+    "url": "https://letterboxd.com/film/wish-you-were-ear/",
+    "title_en": "Wish You Were Ear",
+    "director": "Mirjana Balogh",
+    "country": "Hungary",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Animación",
+    "original_title": "Wish You Were Ear"
+  },
+  "symbionts|2025": {
+    "url": "https://letterboxd.com/film/symbionts/",
+    "title_en": "Symbionts",
+    "director": "Quirijn Dees",
+    "country": "Switzerland",
+    "year": 2025,
+    "duration": 9,
+    "genre": "Animación",
+    "original_title": "Symbionts"
+  },
+  "because today is saturday|2025": {
+    "url": "https://letterboxd.com/film/because-today-is-saturday/",
+    "title_en": "Because Today is Saturday",
+    "director": "Alice Guimarães",
+    "country": "Spain, Portugal",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Drama, Animación",
+    "title_es": "Porque hoy es sábado",
+    "original_title": "Porque Hoje é Sábado"
+  },
+  "hermit falls|2026": {
+    "url": "",
+    "title_en": "Hermit Falls",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "acid city|2026": {
+    "url": "https://letterboxd.com/film/acid-city/",
+    "title_en": "Acid City",
+    "director": "Jack Wedge, Will Freudenheim",
+    "country": "USA",
+    "year": 2026,
+    "duration": 12,
+    "genre": "Ciencia ficción, Animación",
+    "original_title": "Acid City"
+  },
+  "porridge monster|2026": {
+    "url": "https://letterboxd.com/film/porridge-monster/",
+    "title_en": "Porridge Monster",
+    "director": "Izabela Plucińska",
+    "country": "Poland, Germany",
+    "year": 2026,
+    "duration": 10,
+    "genre": "Familiar, Animación",
+    "original_title": "Owsiankowy potwór"
+  },
+  "dance film|2025": {
+    "url": "https://letterboxd.com/film/dance-film/",
+    "title_en": "Dance Film",
+    "director": "Kelly Gallagher",
+    "country": "USA",
+    "year": 2026,
+    "duration": 1,
+    "genre": "Animación",
+    "original_title": "Dance Film"
+  },
+  "expanded unity|2026": {
+    "url": "",
+    "title_en": "Expanded Unity",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "juana y la chacarera de la vinchuca|2025": {
+    "url": "",
+    "title_en": "Juana y la Chacarera de la Vinchuca",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mantís del espacio – mariposa del chagual|2025": {
+    "url": "",
+    "title_en": "Mantís del espacio – Mariposa del Chagual",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cubic island|2026": {
+    "url": "",
+    "title_en": "Cubic Island",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el canto del jaguar|2026": {
+    "url": "",
+    "title_en": "El Canto del Jaguar",
+    "director": "Antonia Silva Alvarado",
+    "country": "Mexico",
+    "year": 2026,
+    "duration": 6,
+    "genre": "Animación, Fantasía",
+    "original_title": "El canto del jaguar"
+  },
+  "the color out of the sea|2025": {
+    "url": "",
+    "title_en": "The color out of the sea",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tierras de lobeira|2026": {
+    "url": "",
+    "title_en": "Tierras de Lobeira",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el taller|2025": {
+    "url": "",
+    "title_en": "El Taller",
+    "director": "Franco Agustín Maggioli",
+    "country": "Argentina",
+    "year": null,
+    "duration": 8,
+    "genre": "Drama",
+    "original_title": "El taller"
+  },
+  "clo|2026": {
+    "url": "",
+    "title_en": "Clo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pumarsis|2026": {
+    "url": "",
+    "title_en": "Pumarsis",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "bloom|2026": {
+    "url": "",
+    "title_en": "Bloom",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "piscina|2026": {
+    "url": "https://letterboxd.com/film/piscina-2026/",
+    "title_en": "Piscina",
+    "director": "Abril Martina Pereda",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 5,
+    "genre": "Animación",
+    "original_title": "Piscina"
+  },
+  "el niño, el balón y el mundo|2026": {
+    "url": "",
+    "title_en": "El Niño, el Balón y el Mundo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "patas arriba|2025": {
+    "url": "https://letterboxd.com/film/patas-arriba/",
+    "title_en": "Upside Down",
+    "director": "Paulina Jensen, Vanesa Martin",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 13,
+    "genre": "Animación",
+    "original_title": "Patas arriba"
+  },
+  "ir hacia adentro|2025": {
+    "url": "",
+    "title_en": "Ir hacia adentro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "esperpento|2025": {
+    "url": "https://letterboxd.com/film/esperpento/",
+    "title_en": "ESPERPENTO",
+    "director": "Valeria Blanco Ortiz, Mariana Sánchez Rodríguez",
+    "country": "Mexico",
+    "year": 2025,
+    "duration": 4,
+    "genre": "Animación, Thriller",
+    "original_title": "ESPERPENTO"
+  },
+  "la voz del deseo|2025": {
+    "url": "https://letterboxd.com/film/la-voz-del-deseo/",
+    "title_en": "The Voice of desire",
+    "director": "Erika Welz",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 17,
+    "genre": "Animación, Documental",
+    "original_title": "La voz del deseo"
+  },
+  "orugas presentes|2025": {
+    "url": "https://letterboxd.com/film/orugas-presentes/",
+    "title_en": "Orugas Presentes",
+    "director": "Sofia Migliavacca, Julieta Rossi",
+    "country": "",
+    "year": null,
+    "duration": 2,
+    "genre": "",
+    "original_title": "Orugas Presentes"
+  },
+  "como chispitas|2026": {
+    "url": "",
+    "title_en": "Como Chispitas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sandbox|2026": {
+    "url": "https://letterboxd.com/film/sandbox-2026/",
+    "title_en": "Sandbox",
+    "director": "Kateřina Čupová",
+    "country": "Czechia",
+    "year": 2026,
+    "duration": 3,
+    "genre": "Animación",
+    "original_title": "Sandbox"
+  },
+  "there once was a tiger|2025": {
+    "url": "https://letterboxd.com/film/there-once-was-a-tiger/",
+    "title_en": "There Once Was a Tiger",
+    "director": "Marina Verik, Dmitry Mosyagin",
+    "country": "Russia",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Animación",
+    "title_es": "There Once Was a Tiger",
+    "original_title": "Жил-был тигр"
+  },
+  "what glitters|2026": {
+    "url": "",
+    "title_en": "What Glitters",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "duna|2026": {
+    "url": "",
+    "title_en": "Duna",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "epic yarn|2026": {
+    "url": "https://letterboxd.com/film/epic-yarn/",
+    "title_en": "Epic Yarn",
+    "director": "Andrew Gordon",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "",
+    "original_title": "Epic Yarn"
+  },
+  "princess night|2026": {
+    "url": "",
+    "title_en": "Princess night",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "de ayer a luego|2025": {
+    "url": "https://letterboxd.com/film/de-ayer-a-luego/",
+    "title_en": "De Ayer a Luego",
+    "director": "Diego Solano Flores",
+    "country": "Mexico, Argentina",
+    "year": 2025,
+    "duration": 7,
+    "genre": "Animación",
+    "original_title": "De Ayer a Luego"
+  },
+  "afterblue|2026": {
+    "url": "https://letterboxd.com/film/afterblue/",
+    "title_en": "Afterblue",
+    "director": "Yanser Ramirez",
+    "country": "Dominican Republic",
+    "year": 2026,
+    "duration": 3,
+    "genre": "Animación",
+    "original_title": "Afterblue"
+  },
+  "the dance of chaos|2025": {
+    "url": "https://letterboxd.com/film/the-dance-of-chaos/",
+    "title_en": "The Dance of Chaos",
+    "director": "Valeria Preciado Romaña",
+    "country": "",
+    "year": 2025,
+    "duration": 6,
+    "genre": "Animación",
+    "original_title": "La Danza del Caos"
+  },
+  "casa 27-f|2025": {
+    "url": "https://letterboxd.com/film/casa-27-f/",
+    "title_en": "CASA 27-F",
+    "director": "Valentina Vezga",
+    "country": "Costa Rica",
+    "year": 2025,
+    "duration": 4,
+    "genre": "Familiar, Animación",
+    "original_title": "CASA 27-F"
+  },
+  "marimba is happening|2026": {
+    "url": "https://letterboxd.com/film/marimba-is-happening/",
+    "title_en": "Marimbã Is Happening",
+    "director": "Maryn Marynho",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 14,
+    "genre": "Animación",
+    "original_title": "Marimbã Está Acontecendo"
+  },
+  "vivacity|2026": {
+    "url": "https://letterboxd.com/film/vivacity/",
+    "title_en": "VivaCity",
+    "director": "Fernanda Giulia Bulgarelli Santos, Brenno Bertolaccini Machado",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 15,
+    "genre": "Drama, Animación",
+    "original_title": "VivaCidade"
+  },
+  "birds of paradise|2025": {
+    "url": "https://letterboxd.com/film/birds-of-paradise-2025/",
+    "title_en": "Birds of Paradise",
+    "director": "Tomek Ducki",
+    "country": "Poland, France",
+    "year": 2025,
+    "duration": 8,
+    "genre": "Familiar, Animación",
+    "original_title": "Rajskie ptaki"
+  },
+  "eeny, meeny, miny, moe!|2025": {
+    "url": "https://letterboxd.com/film/eeny-meeny-miny-moe-2026/",
+    "title_en": "Eeny, Meeny, Miny, Moe!",
+    "director": "Andrea Szelesová",
+    "country": "Czechia, Slovakia",
+    "year": 2026,
+    "duration": 13,
+    "genre": "Fantasía, Animación",
+    "title_es": "¡Pito, pito, gorgorito!",
+    "original_title": "En, ten, týky!"
+  },
+  "mundoscópico: figusitosis|2025": {
+    "url": "",
+    "title_en": "Mundoscópico: Figusitosis",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "see the sea|2026": {
+    "url": "https://letterboxd.com/film/see-the-sea-2026/",
+    "title_en": "See the Sea",
+    "director": "Kristīne Zvirbule",
+    "country": "Latvia",
+    "year": 2026,
+    "duration": 6,
+    "genre": "Familiar, Animación",
+    "original_title": "Skapsēdis un kaija"
+  },
+  "janaina and the seashell|2025": {
+    "url": "",
+    "title_en": "Janaina and the Seashell",
+    "director": "Malu Meneses",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "Animación",
+    "original_title": "Janaína e a Concha"
+  },
+  "la gran fakie|2026": {
+    "url": "",
+    "title_en": "La Gran Fakie",
+    "director": "M. Rodriguez, Sofia Rivero",
+    "country": "",
+    "year": 2026,
+    "duration": 5,
+    "genre": "Animación, Ciencia ficción",
+    "original_title": "La Gran Fakie"
+  },
+  "inmersa|2025": {
+    "url": "",
+    "title_en": "Inmersa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cuarto para las ocho|2026": {
+    "url": "",
+    "title_en": "Cuarto para las Ocho",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "anayawari ecos del mar|2026": {
+    "url": "",
+    "title_en": "ANAYAWARI Ecos del mar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el niño de orejas rojas|2025": {
+    "url": "",
+    "title_en": "El Niño de Orejas Rojas",
+    "director": "María Lucía Suárez Barbery",
+    "country": "",
+    "year": 2025,
+    "duration": null,
+    "genre": "Animación, Drama",
+    "original_title": "El niño de orejas rojas"
+  },
+  "quisiera más tiempo|2026": {
+    "url": "",
+    "title_en": "Quisiera más tiempo",
+    "director": "Yael Martinez Arenas",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "Drama",
+    "original_title": "Quisiera Más Tiempo"
+  },
+  "la pena no duerme de noche|2025": {
+    "url": "https://letterboxd.com/film/sorrow-doesnt-sleep-at-night/",
+    "title_en": "Sorrow Doesn't Sleep At Night",
+    "director": "Martín André, Josefina Montino Cabrera",
+    "country": "Chile",
+    "year": 2025,
+    "duration": 8,
+    "genre": "Animación, Fantasía",
+    "original_title": "La pena no duerme de noche"
+  },
+  "la légende du colibri|2025": {
+    "url": "https://letterboxd.com/film/la-legende-du-colibri/",
+    "title_en": "The Legend of the Hummingbird",
+    "director": "Morgan Devos",
+    "country": "France",
+    "year": 2025,
+    "duration": 9,
+    "genre": "Familiar, Animación",
+    "title_es": "La leyenda del colibrí",
+    "original_title": "La Légende du colibri"
+  },
+  "cara de rana|2026": {
+    "url": "",
+    "title_en": "Cara De Rana",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el din|2026": {
+    "url": "https://letterboxd.com/film/el-din/",
+    "title_en": "El Din",
+    "director": "Julien Regnard, Pascal Giraud",
+    "country": "",
+    "year": null,
+    "duration": 5,
+    "genre": "Animación",
+    "original_title": "El Din"
+  },
+  "bolero|2026": {
+    "url": "https://letterboxd.com/film/bolero-2026/",
+    "title_en": "Bolero",
+    "director": "Maribel Suárez",
+    "country": "",
+    "year": 2026,
+    "duration": 5,
+    "genre": "Animación, Familiar",
+    "original_title": "Bolero"
+  },
+  "bats & bugs|2026": {
+    "url": "https://letterboxd.com/film/bats-bugs/",
+    "title_en": "Bats & Bugs",
+    "director": "Lena von Döhren",
+    "country": "Switzerland",
+    "year": 2026,
+    "duration": 11,
+    "genre": "Animación",
+    "original_title": "Nachtschwärmer"
+  },
+  "the end|2026": {
+    "url": "https://letterboxd.com/film/the-end-2026-4/",
+    "title_en": "The End",
+    "director": "Niki Lindroth von Bahr",
+    "country": "Sweden, France",
+    "year": 2026,
+    "duration": 16,
+    "genre": "Animación, Drama",
+    "original_title": "The End"
+  },
+  "rocky 50° aniversario": {
+    "url": "",
+    "title_en": "ROCKY 50° ANIVERSARIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-10-29",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "do bairro": {
+    "url": "https://letterboxd.com/film/from-the-neighbourhood/",
+    "title_en": "From the Neighbourhood",
+    "director": "Diogo Varela Silva",
+    "country": "Portugal",
+    "year": 2021,
+    "duration": 75,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Do Bairro",
+    "sin_hints": "título"
+  },
+  "el jockey|2024": {
+    "url": "https://letterboxd.com/film/el-jockey/",
+    "title_en": "Kill the Jockey",
+    "director": "Luis Ortega",
+    "country": "Argentina, Spain",
+    "year": 2024,
+    "duration": 96,
+    "genre": "Comedia, Crimen",
+    "original_title": "El jockey"
+  },
+  "aliento - 10 años del programa de cine utdt": {
+    "url": "",
+    "title_en": "ALIENTO - 10 años del Programa de Cine UTDT",
     "director": "",
     "country": "",
     "year": null,
