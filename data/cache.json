@@ -15137,15 +15137,15 @@
   },
   "la vida es así": {
     "url": "",
-    "title_en": "LA VIDA ES ASÍ",
+    "title_en": "La vida es así",
     "director": "",
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-28",
-    "con_duracion": true,
-    "desempate": "nueva"
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
+    "fecha": "2026-10-29",
+    "con_duracion": false,
+    "desempate": ""
   },
   "el secuestro de arabella": {
     "url": "https://letterboxd.com/film/the-kidnapping-of-arabella/",
@@ -22766,12 +22766,13 @@
     "genre": "Misterio, Terror"
   },
   "terror total: it follows": {
-    "url": "",
-    "title_en": "Terror Total: It follows",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/it-follows/",
+    "title_en": "It Follows",
+    "director": "David Robert Mitchell",
+    "country": "USA",
+    "year": 2014,
+    "duration": 101,
+    "genre": "Terror, Misterio"
   },
   "terror total: hereditary": {
     "url": "https://letterboxd.com/film/hereditary/",
@@ -26516,12 +26517,13 @@
     "genre": "Comedia, Drama"
   },
   "nosferatu con música en directo": {
-    "url": "",
-    "title_en": "NOSFERATU CON MÚSICA EN DIRECTO",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/nosferatu/",
+    "title_en": "Nosferatu",
+    "director": "F. W. Murnau",
+    "country": "Germany",
+    "year": 1922,
+    "duration": 94,
+    "genre": "Terror, Fantasía"
   },
   "isla del sur": {
     "url": "",
@@ -27487,12 +27489,14 @@
     "original_title": "Lo que hacíamos en las sombras"
   },
   "elles|2026": {
-    "url": "",
-    "title_en": "Elles",
-    "director": "",
+    "url": "https://letterboxd.com/film/elles-1/",
+    "title_en": "ELLES",
+    "director": "Natalia González Martín",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 72,
+    "genre": "Comedia, Drama",
+    "original_title": "ELLES"
   },
   "a paixão segundo g.h.b. + a cúpula dos prazeres|2026": {
     "url": "",
@@ -27596,18 +27600,19 @@
     "original_title": "Shaun the Sheep: The Beast of Mossy Bottom"
   },
   "una historia verdadera": {
-    "url": "",
-    "title_en": "Una historia verdadera",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-straight-story/",
+    "title_en": "The Straight Story",
+    "director": "David Lynch",
+    "country": "USA, UK",
+    "year": 1999,
+    "duration": 112,
+    "genre": "Drama"
   },
   "inocencia interrumpida": {
-    "url": "",
-    "title_en": "Inocencia interrumpida",
+    "url": "https://letterboxd.com/film/girl-interrupted/",
+    "title_en": "Girl, Interrupted",
     "director": "James Mangold",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1999,
     "duration": 127,
     "genre": "Drama",
@@ -28002,7 +28007,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
+    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -28180,5 +28185,157 @@
     "genre": "Drama, Ciencia ficción",
     "title_es": "The Host",
     "original_title": "괴물"
+  },
+  "hijo mayor|2026": {
+    "url": "https://letterboxd.com/film/hijo-mayor/",
+    "title_en": "Elder Son",
+    "director": "Cecilia Kang",
+    "country": "Argentina, South Korea",
+    "year": 2025,
+    "duration": 118,
+    "genre": "Drama"
+  },
+  "los cangrejos": {
+    "url": "https://letterboxd.com/film/los-cangrejos/",
+    "title_en": "Los Cangrejos",
+    "director": "Rubén Seca",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 64,
+    "genre": "Documental",
+    "original_title": "Los Cangrejos"
+  },
+  "inside gaza": {
+    "url": "",
+    "title_en": "Inside Gaza",
+    "director": "Hélène Lam Trong",
+    "country": "France, Belgium",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Documental, Historia",
+    "original_title": "Inside Gaza"
+  },
+  "los que quedaron|2019": {
+    "url": "https://letterboxd.com/film/those-who-remained/",
+    "title_en": "Those Who Remained",
+    "director": "Barnabás Tóth",
+    "country": "Hungary",
+    "year": 2019,
+    "duration": 83,
+    "genre": "Drama",
+    "clase_titulo": "distinto"
+  },
+  "hasta donde yo sé|2020": {
+    "url": "",
+    "title_en": "Hasta donde yo sé",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "malos poemas (rossz versek)|2018": {
+    "url": "",
+    "title_en": "Malos poemas (Rossz versek)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "rabiola + portuñol|2020": {
+    "url": "",
+    "title_en": "Rabiola + Portuñol",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "1945|2017": {
+    "url": "https://letterboxd.com/film/1945-2017/",
+    "title_en": "1945",
+    "director": "Ferenc Török",
+    "country": "Hungary",
+    "year": 2017,
+    "duration": 91,
+    "genre": "Drama",
+    "original_title": "1945"
+  },
+  "retazos de historia obrera": {
+    "url": "",
+    "title_en": "Retazos de Historia Obrera",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival 7sif|2026": {
+    "url": "",
+    "title_en": "FESTIVAL 7SIF",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "réquiem extraordinario|2026": {
+    "url": "https://letterboxd.com/film/requiem-extraordinario/",
+    "title_en": "Requiem extraordinario",
+    "director": "Jimena Repetto",
+    "country": "",
+    "year": null,
+    "duration": 68,
+    "genre": "",
+    "original_title": "Requiem extraordinario"
+  },
+  "las vidas de un vestido|2024": {
+    "url": "",
+    "title_en": "LAS VIDAS DE UN VESTIDO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "buenas vibraciones|2026": {
+    "url": "https://letterboxd.com/film/good-vibes-only-2026/",
+    "title_en": "Good Vibes Only",
+    "director": "Reem Kherici",
+    "country": "France",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "El placer es mío",
+    "original_title": "Pour le plaisir",
+    "sin_hints": "título"
+  },
+  "quiero tu sexo|2026": {
+    "url": "https://letterboxd.com/film/i-want-your-sex/",
+    "title_en": "I Want Your Sex",
+    "director": "Gregg Araki",
+    "country": "USA",
+    "year": 2026,
+    "duration": 90,
+    "genre": "Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "Quiero Tu Sexo",
+    "original_title": "I Want Your Sex",
+    "sin_hints": "título"
+  },
+  "cowboy bebop - la película|2001": {
+    "url": "https://letterboxd.com/film/cowboy-bebop-the-movie/",
+    "title_en": "Cowboy Bebop: The Movie",
+    "director": "Shinichiro Watanabe",
+    "country": "Japan",
+    "year": 2001,
+    "duration": 115,
+    "genre": "Acción, Animación",
+    "title_es": "Cowboy Bebop, la película: Llamando a las puertas del cielo",
+    "original_title": "カウボーイビバップ 天国の扉"
+  },
+  "metrópolis|2001": {
+    "url": "",
+    "title_en": "Metrópolis",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
