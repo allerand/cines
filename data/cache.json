@@ -23145,7 +23145,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-30",
     "con_duracion": true,
     "desempate": ""
   },
@@ -23478,7 +23478,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-30",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23716,7 +23716,8 @@
     "year": 2026,
     "duration": 98,
     "genre": "Drama, Thriller",
-    "original_title": "Ceniza en la Boca"
+    "original_title": "Ceniza en la Boca",
+    "clase_titulo": "exacto"
   },
   "cinco segundos|2026": {
     "url": "https://letterboxd.com/film/five-seconds-2025/",
@@ -26324,7 +26325,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Train to Busan (2016), y puede ser otra",
-    "fecha": "2026-10-26",
+    "fecha": "2026-10-30",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26724,13 +26725,13 @@
     "duration": null
   },
   "¡qué bello es vivir!": {
-    "url": "",
-    "title_en": "¡Qué bello es vivir!",
+    "url": "https://letterboxd.com/film/its-a-wonderful-life/",
+    "title_en": "It's a Wonderful Life",
     "director": "Frank Capra",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1946,
-    "duration": 131,
-    "genre": "Drama, Familiar",
+    "duration": 130,
+    "genre": "Familiar, Fantasía",
     "title_es": "¡Qué bello es vivir!",
     "original_title": "It's a Wonderful Life"
   },
@@ -29275,10 +29276,12 @@
   "duna|2026": {
     "url": "",
     "title_en": "Duna",
-    "director": "",
-    "country": "",
+    "director": "Gabriela Barbalho, Paula Vanina Cencig",
+    "country": "Brazil",
     "year": null,
-    "duration": null
+    "duration": null,
+    "genre": "Animación",
+    "original_title": "Duna"
   },
   "epic yarn|2026": {
     "url": "https://letterboxd.com/film/epic-yarn/",
@@ -29571,5 +29574,293 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "réquiem por un sueño": {
+    "url": "",
+    "title_en": "RÉQUIEM POR UN SUEÑO",
+    "director": "Darren Aronofsky",
+    "country": "United States of America",
+    "year": 2000,
+    "duration": 102,
+    "genre": "Drama",
+    "title_es": "Réquiem por un sueño",
+    "original_title": "Requiem for a Dream"
+  },
+  "ruega por nosotras [proyecto viridiana]": {
+    "url": "",
+    "title_en": "RUEGA POR NOSOTRAS [PROYECTO VIRIDIANA]",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "lady supercop": {
+    "url": "https://letterboxd.com/film/lady-supercop/",
+    "title_en": "Lady Supercop",
+    "director": "Billy Chung Siu-hung",
+    "country": "Hong Kong",
+    "year": 1993,
+    "duration": 85,
+    "genre": "Acción, Crimen",
+    "original_title": "女兒當自強"
+  },
+  "lady dracula": {
+    "url": "https://letterboxd.com/film/lady-dracula/",
+    "title_en": "Lady Dracula",
+    "director": "Franz Josef Gottlieb",
+    "country": "Germany",
+    "year": 1977,
+    "duration": 79,
+    "genre": "Terror, Comedia",
+    "original_title": "Lady Dracula"
+  },
+  "kill me again": {
+    "url": "https://letterboxd.com/film/kill-me-again/",
+    "title_en": "Kill Me Again",
+    "director": "John Dahl",
+    "country": "USA",
+    "year": 1989,
+    "duration": 94,
+    "genre": "Thriller, Crimen",
+    "title_es": "La muerte golpea dos veces",
+    "original_title": "Kill Me Again"
+  },
+  "amor a dos puntas": {
+    "url": "",
+    "title_en": "Amor a dos puntas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "lunes tormentoso": {
+    "url": "",
+    "title_en": "Lunes tormentoso",
+    "director": "Mike Figgis",
+    "country": "United Kingdom, United States of America",
+    "year": 1988,
+    "duration": 93,
+    "genre": "Thriller",
+    "title_es": "Lunes tormentoso",
+    "original_title": "Stormy Monday"
+  },
+  "los que ofenden al sexo": {
+    "url": "",
+    "title_en": "Los que ofenden al sexo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "su nombre es ¡mujer!": {
+    "url": "https://letterboxd.com/film/su-nombre-es-mujer/",
+    "title_en": "Su nombre es mujer",
+    "director": "Julio Irigoyen",
+    "country": "Argentina",
+    "year": 1940,
+    "duration": 66,
+    "genre": "",
+    "original_title": "Su nombre es mujer"
+  },
+  "dillinger": {
+    "url": "",
+    "title_en": "Dillinger",
+    "director": "John Milius",
+    "country": "United States of America",
+    "year": 1973,
+    "duration": 107,
+    "genre": "Crimen, Drama",
+    "original_title": "Dillinger"
+  },
+  "toda una noche": {
+    "url": "",
+    "title_en": "Toda una noche",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cliente muerto no paga": {
+    "url": "",
+    "title_en": "Cliente muerto no paga",
+    "director": "Carl Reiner",
+    "country": "United States of America",
+    "year": 1982,
+    "duration": 89,
+    "genre": "Comedia, Misterio",
+    "title_es": "Cliente muerto no paga",
+    "original_title": "Dead Men Don't Wear Plaid"
+  },
+  "la prisionera": {
+    "url": "",
+    "title_en": "La prisionera",
+    "director": "Henri-Georges Clouzot",
+    "country": "France, Italy",
+    "year": 1968,
+    "duration": 106,
+    "genre": "Drama, Romance",
+    "title_es": "La prisionera",
+    "original_title": "La Prisonnière"
+  },
+  "el amor nunca muere": {
+    "url": "",
+    "title_en": "El amor nunca muere",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "verano bizarro": {
+    "url": "",
+    "title_en": "Verano bizarro",
+    "director": "Robert Lee King",
+    "country": "Australia, United States of America",
+    "year": 2000,
+    "duration": 97,
+    "genre": "Comedia, Terror",
+    "original_title": "Psycho Beach Party"
+  },
+  "la serpiente verde": {
+    "url": "",
+    "title_en": "La serpiente verde",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "orar orbil & viceversa": {
+    "url": "",
+    "title_en": "Orar Orbil & viceversa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fahrenheit 451": {
+    "url": "https://letterboxd.com/film/fahrenheit-451/",
+    "title_en": "Fahrenheit 451",
+    "director": "François Truffaut",
+    "country": "UK",
+    "year": 1966,
+    "duration": 113,
+    "genre": "Ciencia ficción, Drama",
+    "original_title": "Fahrenheit 451"
+  },
+  "el hombre del jardín": {
+    "url": "",
+    "title_en": "El hombre del jardín",
+    "director": "Brett Leonard",
+    "country": "United States of America",
+    "year": 1992,
+    "duration": 108,
+    "genre": "Ciencia ficción, Terror",
+    "title_es": "El cortador de césped",
+    "original_title": "The Lawnmower Man"
+  },
+  "déjala morir adentro": {
+    "url": "",
+    "title_en": "Déjala morir adentro",
+    "director": "Paul Nicholas",
+    "country": "Germany, Canada",
+    "year": 1983,
+    "duration": 90,
+    "genre": "Drama, Terror",
+    "title_es": "Déjala morir adentro",
+    "original_title": "Julie Darling"
+  },
+  "el fantasma": {
+    "url": "https://letterboxd.com/film/the-phantom-2026-1/",
+    "title_en": "The Phantom",
+    "director": "David Lamelas, Ignacio Masllorens",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 96,
+    "genre": "",
+    "original_title": "El Fantasma"
+  },
+  "biografía de jorge luis borges": {
+    "url": "https://letterboxd.com/film/biografia-de-jorge-luis-borges/",
+    "title_en": "Life of Jorge Luis Borges",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 330,
+    "genre": "Documental",
+    "original_title": "Biografía de Jorge Luis Borges"
+  },
+  "perfume": {
+    "url": "",
+    "title_en": "Perfume",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "varias se llaman así: Perfume (2001), Perfume: The Story of a Murderer (2006), Perfume (2018)",
+    "fecha": "2026-10-30",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "tu me abrasas|2024": {
+    "url": "https://letterboxd.com/film/you-burn-me/",
+    "title_en": "You Burn Me",
+    "director": "Matías Piñeiro",
+    "country": "Argentina, Spain",
+    "year": 2024,
+    "duration": 64,
+    "genre": "Drama, Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Tú me abrasas"
+  },
+  "semana de los festivales de cine de málaga y san sebastián en buenos aires  – mass 2026|2026": {
+    "url": "",
+    "title_en": "SEMANA DE LOS FESTIVALES DE CINE DE MÁLAGA Y SAN SEBASTIÁN EN BUENOS AIRES  – MASS 2026",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ayahuasca now": {
+    "url": "https://letterboxd.com/film/ayahuasca-now/",
+    "title_en": "Ayahuasca Now",
+    "director": "Carlos B. Cejas",
+    "country": "Argentina, USA",
+    "year": 2024,
+    "duration": 90,
+    "genre": "Documental",
+    "original_title": "Ayahuasca Now"
+  },
+  "altas sierras|1941": {
+    "url": "https://letterboxd.com/film/high-sierra/",
+    "title_en": "High Sierra",
+    "director": "Raoul Walsh",
+    "country": "USA",
+    "year": 1941,
+    "duration": 100,
+    "genre": "Acción, Thriller",
+    "title_es": "El último refugio",
+    "original_title": "High Sierra"
+  },
+  "birmania|1945": {
+    "url": "https://letterboxd.com/film/objective-burma/",
+    "title_en": "Objective, Burma!",
+    "director": "Raoul Walsh",
+    "country": "USA",
+    "year": 1945,
+    "duration": 142,
+    "genre": "Aventura, Acción",
+    "title_es": "Objetivo: Birmania",
+    "original_title": "Objective, Burma!"
+  },
+  "estación zombie: tren a busan": {
+    "url": "",
+    "title_en": "Estación Zombie: Tren a Busan",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Train to Busan (2016), y puede ser otra",
+    "fecha": "2026-10-30",
+    "con_duracion": false,
+    "desempate": ""
   }
 }
