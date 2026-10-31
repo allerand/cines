@@ -18930,12 +18930,15 @@
     "genre": "Documental"
   },
   "the rocky horror picture show|1975": {
-    "url": "",
+    "url": "https://letterboxd.com/film/the-rocky-horror-picture-show/",
     "title_en": "The Rocky Horror Picture Show",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Jim Sharman",
+    "country": "UK, USA",
+    "year": 1975,
+    "duration": 100,
+    "genre": "Terror, Comedia",
+    "title_es": "El Show de Terror de Rocky",
+    "original_title": "The Rocky Horror Picture Show"
   },
   "la hora del espanto|1985": {
     "url": "https://letterboxd.com/film/fright-night/",
@@ -19858,7 +19861,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -20585,7 +20588,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: Apocalypse Now (1979, 147 min)",
-    "fecha": "2026-10-27",
+    "fecha": "2026-10-31",
     "con_duracion": true,
     "desempate": ""
   },
@@ -22752,11 +22755,11 @@
     "director": "Kitao Sakurai",
     "country": "Japan, USA",
     "year": 2026,
-    "duration": 125,
+    "duration": 120,
     "genre": "Fantasía, Acción",
     "clase_titulo": "exacto",
     "original_title": "Street Fighter",
-    "sin_hints": "el único estreno entre varias que se llaman así"
+    "sin_hints": "título y duración"
   },
   "terror total: [rec]": {
     "url": "https://letterboxd.com/film/rec/",
@@ -29576,10 +29579,10 @@
     "duration": null
   },
   "réquiem por un sueño": {
-    "url": "",
-    "title_en": "RÉQUIEM POR UN SUEÑO",
+    "url": "https://letterboxd.com/film/requiem-for-a-dream/",
+    "title_en": "Requiem for a Dream",
     "director": "Darren Aronofsky",
-    "country": "United States of America",
+    "country": "USA",
     "year": 2000,
     "duration": 102,
     "genre": "Drama",
@@ -29904,8 +29907,8 @@
     "original_title": "Los días libres"
   },
   "hermanas|2026": {
-    "url": "",
-    "title_en": "Hermanas",
+    "url": "https://letterboxd.com/film/hermanas-2026-1/",
+    "title_en": "Sisters",
     "director": "Ione Hernández",
     "country": "Spain",
     "year": 2026,
@@ -29955,10 +29958,11 @@
   "hoxe e o resto do mundo|2026": {
     "url": "",
     "title_en": "Hoxe e o resto do mundo",
-    "director": "",
+    "director": "Cecilia Díaz Betz",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": null,
+    "original_title": "Hoxe e o resto do mundo"
   },
   "yastay|2026": {
     "url": "https://letterboxd.com/film/yastay/",
@@ -30214,7 +30218,7 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "EL AMOR SOLFEANDO",
-    "director": "Armand Guerra, Florián Rey, Robert Florey",
+    "director": "Robert Florey, Armand Guerra, Florián Rey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -30388,5 +30392,125 @@
     "genre": "Acción, Crimen",
     "title_es": "Soy el ángel de la muerte (Pusher III)",
     "original_title": "Pusher 3"
+  },
+  "cima conversa: fuera de campo, edadismo y género en el audiovisual": {
+    "url": "",
+    "title_en": "CIMA Conversa: Fuera de campo, Edadismo y género en el audiovisual",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "atardecer en américa + a través de la tierra|2024": {
+    "url": "",
+    "title_en": "Atardecer en América + A través de la tierra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la virgen de la tosquera|2025": {
+    "url": "https://letterboxd.com/film/la-virgen-de-la-tosquera/",
+    "title_en": "The Virgin of the Quarry Lake",
+    "director": "Laura Casabé",
+    "country": "Argentina, Spain",
+    "year": 2025,
+    "duration": 95,
+    "genre": "Thriller, Terror",
+    "clase_titulo": "exacto",
+    "original_title": "La virgen de la tosquera",
+    "sin_hints": "título"
+  },
+  "retratos fantasmas|2023": {
+    "url": "https://letterboxd.com/film/pictures-of-ghosts/",
+    "title_en": "Pictures of Ghosts",
+    "director": "Kleber Mendonça Filho",
+    "country": "Brazil",
+    "year": 2023,
+    "duration": 93,
+    "genre": "Documental",
+    "title_es": "Retratos fantasma",
+    "original_title": "Retratos Fantasmas"
+  },
+  "vizontele|2001": {
+    "url": "https://letterboxd.com/film/vizontele/",
+    "title_en": "Vizontele",
+    "director": "Yılmaz Erdoğan, Ömer Faruk Sorak",
+    "country": "Turkey",
+    "year": 2001,
+    "duration": 110,
+    "genre": "Comedia, Drama",
+    "title_es": "Vizontele",
+    "original_title": "Vizontele"
+  },
+  "tierra adentro|2018": {
+    "url": "https://letterboxd.com/film/inland-2019-2/",
+    "title_en": "Inland",
+    "director": "Mauro Colombo",
+    "country": "Panama",
+    "year": 2019,
+    "duration": 70,
+    "genre": "Documental",
+    "original_title": "Tierra adentro"
+  },
+  "bir zamanlar anadolu'da|2011": {
+    "url": "https://letterboxd.com/film/once-upon-a-time-in-anatolia/",
+    "title_en": "Once Upon a Time in Anatolia",
+    "director": "Nuri Bilge Ceylan",
+    "country": "Bosnia and Herzegovina, Turkey",
+    "year": 2011,
+    "duration": 163,
+    "genre": "Crimen, Drama",
+    "title_es": "Érase una vez en Anatolia",
+    "original_title": "Bir Zamanlar Anadolu'da"
+  },
+  "el abrazo de la serpiente|2015": {
+    "url": "https://letterboxd.com/film/embrace-of-the-serpent/",
+    "title_en": "Embrace of the Serpent",
+    "director": "Ciro Guerra",
+    "country": "Argentina, Colombia",
+    "year": 2015,
+    "duration": 125,
+    "genre": "Drama, Aventura",
+    "title_es": "El abrazo de la serpiente",
+    "original_title": "El abrazo de la serpiente"
+  },
+  "7siff – festival de cine|2026": {
+    "url": "",
+    "title_en": "7SIFF – Festival de cine",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el príncipe de nanawa de clarisa navas|2025": {
+    "url": "",
+    "title_en": "El príncipe de Nanawa de Clarisa Navas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el puto inolvidable": {
+    "url": "",
+    "title_en": "El puto inolvidable",
+    "director": "Lucas Santa Ana",
+    "country": "Argentina",
+    "year": 2016,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "El puto inolvidable: Vida de Carlos Jáuregui"
+  },
+  "bts world tour 'arirang' in são paulo live viewing": {
+    "url": "https://letterboxd.com/film/bts-world-tour-arirang-in-sao-paulo/",
+    "title_en": "BTS WORLD TOUR [ARIRANG] in São Paulo",
+    "director": "Ha Jung-jae",
+    "country": "",
+    "year": 2026,
+    "duration": 195,
+    "genre": "Música",
+    "clase_titulo": "exacto",
+    "original_title": "BTS WORLD TOUR [ARIRANG] in São Paulo",
+    "sin_hints": "título"
   }
 }
