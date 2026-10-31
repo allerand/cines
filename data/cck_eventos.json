@@ -1,22 +1,9 @@
 {
   "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-30T10:31:03",
+    "ts": "2026-10-31T10:00:26",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "sorpresas",
-        "fecha": "2026-10-30",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
-        "ciclo": "Retrospectivas:Carlos Galettini",
-        "director": "Alberto Fischerman, Carlos Galettini, Luis Puenzo",
-        "country": "",
-        "year": 1974,
-        "duration": 93,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "Besos en la frente",
@@ -46,7 +33,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-30T10:31:10",
+    "ts": "2026-10-31T10:00:37",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -66,13 +53,13 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
-    "ts": "2026-10-30T10:31:30",
+    "ts": "2026-10-31T10:01:01",
     "v": 2,
     "semanas": 9,
     "funciones": []
   },
   "https://palaciolibertad.gob.ar/events/cine-frances/": {
-    "ts": "2026-10-30T10:31:17",
+    "ts": "2026-10-31T10:00:43",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -157,7 +144,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-coreano/": {
-    "ts": "2026-10-30T10:31:23",
+    "ts": "2026-10-31T10:00:49",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -216,7 +203,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/": {
-    "ts": "2026-10-30T10:31:37",
+    "ts": "2026-10-31T10:01:07",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -301,7 +288,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/": {
-    "ts": "2026-10-30T10:31:44",
+    "ts": "2026-10-31T10:01:13",
     "v": 2,
     "semanas": 9,
     "funciones": [

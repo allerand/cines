@@ -19861,7 +19861,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Jerónimo de los Santos, Paco Cabezas",
+    "director": "Paco Cabezas, Jerónimo de los Santos",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -23551,12 +23551,13 @@
     "duration": null
   },
   "humano: aminetu": {
-    "url": "",
-    "title_en": "Humano: Aminetu",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/aminetu/",
+    "title_en": "AMINETU",
+    "director": "Lucía Muñoz Lucena",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Documental"
   },
   "humano: my name is hope + buscando a lisette": {
     "url": "",
@@ -25788,12 +25789,13 @@
     "genre": "Drama, Animación"
   },
   "nosferatu (cine con piano en directo)": {
-    "url": "",
-    "title_en": "Nosferatu (Cine con piano en directo)",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/nosferatu/",
+    "title_en": "Nosferatu",
+    "director": "F. W. Murnau",
+    "country": "Germany",
+    "year": 1922,
+    "duration": 94,
+    "genre": "Terror, Fantasía"
   },
   "historia de lo oculto|2020": {
     "url": "https://letterboxd.com/film/historia-de-lo-oculto/",
@@ -26550,12 +26552,14 @@
     "original_title": "Ruega por nosotras"
   },
   "el mundo es ansí": {
-    "url": "",
+    "url": "https://letterboxd.com/film/el-mundo-es-ansi/",
     "title_en": "El mundo es ansí",
-    "director": "",
+    "director": "Miguel Ángel Calvo Buttini",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": null,
+    "genre": "",
+    "original_title": "El mundo es ansí"
   },
   "la la land + swing|2016": {
     "url": "",
@@ -28117,20 +28121,23 @@
     "original_title": "Night of the Living Dead"
   },
   "piscina por la tarde": {
-    "url": "",
+    "url": "https://letterboxd.com/film/piscina-por-la-tarde/",
     "title_en": "Piscina por la tarde",
-    "director": "",
+    "director": "Pablo Llorca",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 82,
+    "genre": "",
+    "original_title": "Piscina por la tarde"
   },
   "isla indómita": {
-    "url": "",
+    "url": "https://letterboxd.com/film/isla-indomita/",
     "title_en": "Isla indómita",
-    "director": "",
+    "director": "Pablo García Sanz",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 83,
+    "genre": ""
   },
   "el rayo verde: la noche del cazador": {
     "url": "",
@@ -29590,12 +29597,13 @@
     "original_title": "Requiem for a Dream"
   },
   "ruega por nosotras [proyecto viridiana]": {
-    "url": "",
-    "title_en": "RUEGA POR NOSOTRAS [PROYECTO VIRIDIANA]",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/pray-for-us-2026/",
+    "title_en": "Pray for Us",
+    "director": "Daniel Monzón",
+    "country": "Spain, France",
+    "year": 2026,
+    "duration": null,
+    "genre": "Drama"
   },
   "lady supercop": {
     "url": "https://letterboxd.com/film/lady-supercop/",
@@ -29928,12 +29936,14 @@
     "original_title": "A Árvore do Conhecimento"
   },
   "calada|2025": {
-    "url": "",
+    "url": "https://letterboxd.com/film/calada/",
     "title_en": "Calada",
-    "director": "",
+    "director": "Adán Aliaga",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 94,
+    "genre": "",
+    "original_title": "Calada"
   },
   "filipiñana|2026": {
     "url": "https://letterboxd.com/film/filipinana-2026/",
@@ -29956,12 +29966,13 @@
     "original_title": "Las Mantises"
   },
   "hoxe e o resto do mundo|2026": {
-    "url": "",
+    "url": "https://letterboxd.com/film/hoxe-e-o-resto-do-mundo/",
     "title_en": "Hoxe e o resto do mundo",
     "director": "Cecilia Díaz Betz",
     "country": "",
     "year": null,
-    "duration": null,
+    "duration": 93,
+    "genre": "",
     "original_title": "Hoxe e o resto do mundo"
   },
   "yastay|2026": {
@@ -30218,7 +30229,7 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "EL AMOR SOLFEANDO",
-    "director": "Robert Florey, Armand Guerra, Florián Rey",
+    "director": "Armand Guerra, Robert Florey, Florián Rey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -30512,5 +30523,13 @@
     "clase_titulo": "exacto",
     "original_title": "BTS WORLD TOUR [ARIRANG] in São Paulo",
     "sin_hints": "título"
+  },
+  "festival cartón 2026": {
+    "url": "",
+    "title_en": "Festival Cartón 2026",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
