@@ -53,6 +53,10 @@
     "Renoir Retiro": {
       "scrapeadas": 82,
       "publicadas": 82
+    },
+    "Sala Equis": {
+      "scrapeadas": 63,
+      "publicadas": 63
     }
   },
   "screenings": [
@@ -665,6 +669,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-10-31",
+      "hora": "17:00",
+      "title_es": "Lionel",
+      "title_en": "Lionel",
+      "original_title": "",
+      "director": "Carlos Saiz",
+      "country": "España",
+      "year": 2025,
+      "duration": 95,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2960&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-10-31",
       "hora": "17:15",
@@ -1239,6 +1259,22 @@
       "letterboxd": "https://letterboxd.com/film/anguish/",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/angustia-31-oct",
       "ciclo": "Halloween / Miradas Proyectadas. Salas y Espectadores: Encuentros a Oscuras"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-10-31",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo y Javier Ambrossi",
+      "country": "España",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
+      "ciclo": ""
     },
     {
       "cine": "Renoir Plaza de España",
@@ -1926,6 +1962,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-10-31",
+      "hora": "22:00",
+      "title_es": "Bad Apples",
+      "title_en": "Bad Apples",
+      "original_title": "",
+      "director": "Jonatan Etzler",
+      "country": "Reino Unido",
+      "year": 2025,
+      "duration": 99,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2968&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -2793,6 +2845,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-01",
+      "hora": "17:30",
+      "title_es": "Verano 1993",
+      "title_en": "Verano 1993",
+      "original_title": "",
+      "director": "Carla Simón",
+      "country": "",
+      "year": 2017,
+      "duration": 97,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1617&cine=EQUIS",
+      "ciclo": "Cine Por Mujeres"
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-01",
       "hora": "17:40",
@@ -3351,6 +3419,22 @@
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39345/",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-01",
+      "hora": "19:30",
+      "title_es": "Retrato de una Mujer en Llamas",
+      "title_en": "Retrato de una Mujer en Llamas",
+      "original_title": "",
+      "director": "Céline Sciamma",
+      "country": "",
+      "year": 2019,
+      "duration": 122,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=1932&cine=EQUIS",
+      "ciclo": "Cine Por Mujeres"
     },
     {
       "cine": "Cines Princesa",
@@ -4038,6 +4122,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-01",
+      "hora": "22:00",
+      "title_es": "Bad Apples",
+      "title_en": "Bad Apples",
+      "original_title": "",
+      "director": "Jonatan Etzler",
+      "country": "Reino Unido",
+      "year": 2025,
+      "duration": 99,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2968&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -5465,6 +5565,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-02",
+      "hora": "19:30",
+      "title_es": "Cinco Lobitos",
+      "title_en": "Cinco Lobitos",
+      "original_title": "",
+      "director": "Alauda Ruiz de Azúa",
+      "country": "España",
+      "year": 2022,
+      "duration": 104,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2393&cine=EQUIS",
+      "ciclo": "Cine Por Mujeres"
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-02",
       "hora": "19:50",
@@ -6039,6 +6155,22 @@
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-02",
+      "hora": "22:00",
+      "title_es": "Aftersun",
+      "title_en": "Aftersun",
+      "original_title": "",
+      "director": "Charlotte Wells",
+      "country": "Estados Unidos",
+      "year": 2022,
+      "duration": 102,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2494&cine=EQUIS",
+      "ciclo": "Cine Por Mujeres"
     },
     {
       "cine": "Cines Princesa",
@@ -7414,6 +7546,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-03",
+      "hora": "19:15",
+      "title_es": "Jim Queen",
+      "title_en": "Jim Queen",
+      "original_title": "",
+      "director": "Marco Nguyen, Nicolas Athane",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 83,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2961&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -9449,6 +9597,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-04",
+      "hora": "19:30",
+      "title_es": "La Playa de los Enchaquirados",
+      "title_en": "La Playa de los Enchaquirados",
+      "original_title": "",
+      "director": "Iván Mora Manzano",
+      "country": "Ecuador",
+      "year": 2021,
+      "duration": 86,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2980&cine=EQUIS",
+      "ciclo": "Madlatin"
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-04",
       "hora": "19:50",
@@ -10086,6 +10250,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-04",
+      "hora": "22:00",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorrogoyen",
+      "country": "España",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2967&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -11385,6 +11565,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-05",
+      "hora": "19:30",
+      "title_es": "Vidas Pasadas",
+      "title_en": "Vidas Pasadas",
+      "original_title": "",
+      "director": "Celine Song",
+      "country": "",
+      "year": 2023,
+      "duration": 106,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2579&cine=EQUIS",
+      "ciclo": "Cine Por Mujeres"
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-05",
       "hora": "19:50",
@@ -11798,6 +11994,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.pillalas.com/pase/1094597/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-05",
+      "hora": "21:45",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo y Javier Ambrossi",
+      "country": "España",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -12297,6 +12509,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-06",
+      "hora": "19:00",
+      "title_es": "Orgullo y Prejuicio",
+      "title_en": "Orgullo y Prejuicio",
+      "original_title": "",
+      "director": "Matías Szulanski",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 93,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2973&cine=EQUIS",
+      "ciclo": "Festival Anfibia"
+    },
+    {
       "cine": "Museo Reina Sofía",
       "fecha": "2026-11-06",
       "hora": "19:30",
@@ -12423,6 +12651,22 @@
       "letterboxd": "https://letterboxd.com/film/e-piccerella/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-06",
+      "hora": "21:00",
+      "title_es": "Tangles",
+      "title_en": "Tangles",
+      "original_title": "Tangles",
+      "director": "Leah Nelson",
+      "country": "Canadá",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Animación, Drama",
+      "letterboxd": "https://letterboxd.com/film/tangles/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2974&cine=EQUIS",
+      "ciclo": "Festival Anfibia"
     },
     {
       "cine": "Cine Estudio",
@@ -12601,6 +12845,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-07",
+      "hora": "19:00",
+      "title_es": "Sucia",
+      "title_en": "Sucia",
+      "original_title": "",
+      "director": "Bàrbara Mestanza, Marc Pujolar",
+      "country": "España",
+      "year": 2026,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2975&cine=EQUIS",
+      "ciclo": "Festival Anfibia"
+    },
+    {
       "cine": "Cine Estudio",
       "fecha": "2026-11-07",
       "hora": "20:00",
@@ -12663,6 +12923,22 @@
       "letterboxd": "https://letterboxd.com/film/sheer-madness/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-07",
+      "hora": "21:00",
+      "title_es": "Sesión de Cortos: el Cuerpo de Cristo, Delincuente, Rouge y Calm",
+      "title_en": "Sesión de Cortos: el Cuerpo de Cristo, Delincuente, Rouge y Calm",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": "Festival Anfibia"
     },
     {
       "cine": "Cine Estudio",
@@ -12777,6 +13053,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-08",
+      "hora": "19:00",
+      "title_es": "La Perra",
+      "title_en": "La Perra",
+      "original_title": "",
+      "director": "Dominga Sotomayor",
+      "country": "Chile-Brasil",
+      "year": 2026,
+      "duration": 112,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2976&cine=EQUIS",
+      "ciclo": "Festival Anfibia"
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-11-08",
       "hora": "20:00",
@@ -12807,6 +13099,22 @@
       "letterboxd": "https://letterboxd.com/film/when-fall-is-coming/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-08",
+      "hora": "21:00",
+      "title_es": "Peleliu",
+      "title_en": "Peleliu",
+      "original_title": "",
+      "director": "Gorō Kuji",
+      "country": "Japón",
+      "year": 2025,
+      "duration": 106,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2984&cine=EQUIS",
+      "ciclo": "Festival Anfibia"
     },
     {
       "cine": "Cine Estudio",
@@ -12873,6 +13181,22 @@
       "ciclo": "31 Queercinemad"
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-10",
+      "hora": "19:30",
+      "title_es": "Bad Apples",
+      "title_en": "Bad Apples",
+      "original_title": "",
+      "director": "Jonatan Etzler",
+      "country": "Reino Unido",
+      "year": 2025,
+      "duration": 99,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2968&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-10",
       "hora": "20:00",
@@ -12921,6 +13245,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-10",
+      "hora": "21:45",
+      "title_es": "Blue Heron",
+      "title_en": "Blue Heron",
+      "original_title": "",
+      "director": "Sophy Romvari",
+      "country": "Canadá",
+      "year": 2025,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/blue-heron/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2992&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-11",
       "hora": "19:00",
@@ -12951,6 +13291,22 @@
       "letterboxd": "https://letterboxd.com/film/two-mothers-2007/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/two-mothers",
       "ciclo": "31 Queercinemad"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-11",
+      "hora": "19:30",
+      "title_es": "Blue Heron",
+      "title_en": "Blue Heron",
+      "original_title": "",
+      "director": "Sophy Romvari",
+      "country": "Canadá",
+      "year": 2025,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/blue-heron/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2992&cine=EQUIS",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -12998,6 +13354,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/army-1944/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-11",
+      "hora": "21:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo y Javier Ambrossi",
+      "country": "España",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -13113,6 +13485,22 @@
       "ciclo": "31 Queercinemad"
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-12",
+      "hora": "19:30",
+      "title_es": "Fromzero Shorts #7",
+      "title_en": "Fromzero Shorts #7",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-12",
       "hora": "20:00",
@@ -13175,6 +13563,22 @@
       "letterboxd": "https://letterboxd.com/film/barbara-forever/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/barbara-forever",
       "ciclo": "31 Queercinemad"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-12",
+      "hora": "21:45",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorrogoyen",
+      "country": "España",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2967&cine=EQUIS",
+      "ciclo": ""
     },
     {
       "cine": "Museo Reina Sofía",
@@ -13289,6 +13693,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-13",
+      "hora": "19:15",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo y Javier Ambrossi",
+      "country": "España",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-13",
       "hora": "19:30",
@@ -13350,6 +13770,38 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-woman-and-the-puppet/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-13",
+      "hora": "22:00",
+      "title_es": "Esta soledad",
+      "title_en": "This Solitude",
+      "original_title": "Esta soledad",
+      "director": "Javier Giner",
+      "country": "España",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/esta-soledad/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2993&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-14",
+      "hora": "17:30",
+      "title_es": "Naza",
+      "title_en": "NAZA",
+      "original_title": "NAZA",
+      "director": "Yuval Abraham, Rachel Szor",
+      "country": "Reino Unido",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/naza/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2991&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -13417,6 +13869,22 @@
       "ciclo": "31 Queercinemad"
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-14",
+      "hora": "19:30",
+      "title_es": "Esta soledad",
+      "title_en": "This Solitude",
+      "original_title": "Esta soledad",
+      "director": "Javier Giner",
+      "country": "España",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/esta-soledad/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2993&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-14",
       "hora": "20:00",
@@ -13465,6 +13933,22 @@
       "ciclo": "31 Queercinemad"
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-14",
+      "hora": "22:00",
+      "title_es": "Blood Feast",
+      "title_en": "Blood Feast",
+      "original_title": "",
+      "director": "Herschell Gordon Lewis",
+      "country": "Estados Unidos",
+      "year": 1963,
+      "duration": 90,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2754&cine=EQUIS",
+      "ciclo": "Aeterna"
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-15",
       "hora": "12:00",
@@ -13479,6 +13963,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-esencia-de-mujer-vose/39239/",
       "ciclo": "Domingo de clásicos"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-15",
+      "hora": "17:30",
+      "title_es": "Jim Queen",
+      "title_en": "Jim Queen",
+      "original_title": "",
+      "director": "Marco Nguyen, Nicolas Athane",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 83,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2961&cine=EQUIS",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -13511,6 +14011,22 @@
       "letterboxd": "https://letterboxd.com/film/harte/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/harte",
       "ciclo": "31 Queercinemad"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-15",
+      "hora": "19:30",
+      "title_es": "Bad Apples",
+      "title_en": "Bad Apples",
+      "original_title": "",
+      "director": "Jonatan Etzler",
+      "country": "Reino Unido",
+      "year": 2025,
+      "duration": 99,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2968&cine=EQUIS",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -13561,6 +14077,70 @@
       "ciclo": "31 Queercinemad"
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-15",
+      "hora": "21:45",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo y Javier Ambrossi",
+      "country": "España",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-16",
+      "hora": "17:00",
+      "title_es": "A Paixâo Segundo G.h.b",
+      "title_en": "A Paixâo Segundo G.h.b",
+      "original_title": "",
+      "director": "Gustavo Vinagre, Vinícius Couto",
+      "country": "Brasil",
+      "year": 2026,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2985&cine=EQUIS",
+      "ciclo": "Queercinemad"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-16",
+      "hora": "19:30",
+      "title_es": "Eva",
+      "title_en": "Eva",
+      "original_title": "",
+      "director": "William Reyes",
+      "country": "Honduras, Colombia",
+      "year": 2026,
+      "duration": 90,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2986&cine=EQUIS",
+      "ciclo": "Queercinemad"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-16",
+      "hora": "22:00",
+      "title_es": "Cinemanía",
+      "title_en": "Cinemanía",
+      "original_title": "Cinemanía",
+      "director": "Marc Ferrer",
+      "country": "España",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/cinemania-2026/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2987&cine=EQUIS",
+      "ciclo": "Queercinemad"
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-17",
       "hora": "19:30",
@@ -13575,6 +14155,22 @@
       "letterboxd": "https://letterboxd.com/film/oca/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/oca",
       "ciclo": "Rizoma 2026 - Plastic Dreams"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-17",
+      "hora": "19:30",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -13622,6 +14218,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/love-songs/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-17",
+      "hora": "22:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
       "ciclo": ""
     },
     {
@@ -13702,6 +14314,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/sorry-angel/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-18",
+      "hora": "22:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
       "ciclo": ""
     },
     {
@@ -13849,6 +14477,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-19",
+      "hora": "22:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-20",
+      "hora": "17:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-20",
       "hora": "17:30",
@@ -13894,6 +14554,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sheer-madness/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-20",
+      "hora": "19:30",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
       "ciclo": ""
     },
     {
@@ -13961,6 +14637,22 @@
       "ciclo": "Rizoma 2026 - Plastic Dreams"
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-20",
+      "hora": "22:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-21",
       "hora": "12:00",
@@ -13974,6 +14666,38 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/jaleos/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/jaleos/39323/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-21",
+      "hora": "13:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-21",
+      "hora": "17:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
       "ciclo": ""
     },
     {
@@ -14041,6 +14765,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-21",
+      "hora": "19:30",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-21",
       "hora": "20:30",
@@ -14073,6 +14813,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-21",
+      "hora": "22:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-22",
       "hora": "12:00",
@@ -14087,6 +14843,38 @@
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-alien-el-octavo-pasajero-vose/39293/",
       "ciclo": "Domingo de clásicos"
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-22",
+      "hora": "13:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-22",
+      "hora": "17:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -14169,6 +14957,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-22",
+      "hora": "19:30",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-22",
       "hora": "20:30",
@@ -14182,6 +14986,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/little-boy-2025/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-22",
+      "hora": "22:00",
+      "title_es": "Festival Rizoma",
+      "title_en": "Festival Rizoma",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://salaequis.es/taquilla/",
       "ciclo": ""
     },
     {
@@ -14217,6 +15037,22 @@
       "ciclo": "Proyecciones Festival Eñe"
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-24",
+      "hora": "19:30",
+      "title_es": "Esta soledad",
+      "title_en": "This Solitude",
+      "original_title": "Esta soledad",
+      "director": "Javier Giner",
+      "country": "España",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/esta-soledad/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2993&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-24",
       "hora": "20:30",
@@ -14230,6 +15066,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/nouvelle-vague/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-24",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo y Javier Ambrossi",
+      "country": "España",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -14247,6 +15099,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-25",
+      "hora": "19:30",
+      "title_es": "Vespertine-björk",
+      "title_en": "Vespertine-björk",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2990&cine=EQUIS",
+      "ciclo": "Pausa"
     },
     {
       "cine": "Cineteca Madrid",
@@ -14278,6 +15146,22 @@
       "genre": "Comedia, Música",
       "letterboxd": "https://letterboxd.com/film/polvo-seran/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-25",
+      "hora": "21:30",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorrogoyen",
+      "country": "España",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2967&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -14329,6 +15213,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-26",
+      "hora": "19:30",
+      "title_es": "La Carn",
+      "title_en": "La Carn",
+      "original_title": "La Carn",
+      "director": "Joan Porcel",
+      "country": "España",
+      "year": 2025,
+      "duration": 83,
+      "genre": "Documental, Drama",
+      "letterboxd": "https://letterboxd.com/film/la-carn/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2989&cine=EQUIS",
+      "ciclo": "Ciclo LGBTIQ(X)"
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-26",
       "hora": "20:30",
@@ -14342,6 +15242,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/carne-de-fieras/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-26",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo y Javier Ambrossi",
+      "country": "España",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -14393,6 +15309,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-28",
+      "hora": "17:30",
+      "title_es": "Jim Queen",
+      "title_en": "Jim Queen",
+      "original_title": "",
+      "director": "Marco Nguyen, Nicolas Athane",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 83,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2961&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-28",
       "hora": "19:00",
@@ -14409,6 +15341,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-28",
+      "hora": "19:30",
+      "title_es": "Mudras",
+      "title_en": "Mudras",
+      "original_title": "",
+      "director": "María Salgado Gispert",
+      "country": "España",
+      "year": 2025,
+      "duration": 78,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2988&cine=EQUIS",
+      "ciclo": "Pase Especial"
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-28",
       "hora": "20:30",
@@ -14422,6 +15370,22 @@
       "genre": "Drama, Acción",
       "letterboxd": "https://letterboxd.com/film/pusher-ii/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-28",
+      "hora": "22:00",
+      "title_es": "Esta soledad",
+      "title_en": "This Solitude",
+      "original_title": "Esta soledad",
+      "director": "Javier Giner",
+      "country": "España",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/esta-soledad/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2993&cine=EQUIS",
       "ciclo": ""
     },
     {
@@ -14441,6 +15405,38 @@
       "ciclo": "Domingo de clásicos"
     },
     {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-29",
+      "hora": "17:30",
+      "title_es": "Naza",
+      "title_en": "NAZA",
+      "original_title": "NAZA",
+      "director": "Yuval Abraham, Rachel Szor",
+      "country": "Reino Unido",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/naza/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2991&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-29",
+      "hora": "19:30",
+      "title_es": "Esta soledad",
+      "title_en": "This Solitude",
+      "original_title": "Esta soledad",
+      "director": "Javier Giner",
+      "country": "España",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/esta-soledad/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2993&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-29",
       "hora": "21:00",
@@ -14454,6 +15450,22 @@
       "genre": "Acción, Crimen",
       "letterboxd": "https://letterboxd.com/film/pusher-iii/",
       "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Equis",
+      "fecha": "2026-11-29",
+      "hora": "21:45",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Calvo y Javier Ambrossi",
+      "country": "España",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
       "ciclo": ""
     },
     {

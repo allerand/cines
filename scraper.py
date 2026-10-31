@@ -10148,7 +10148,7 @@ CINES_MADRID = {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
                 "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
                 "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla",
                 "Artistic Metropol", "Cine Estudio", "Cines Callao",
-                "Museo Reina Sofía"}
+                "Museo Reina Sofía", "Sala Equis"}
 
 _MADRID = ZoneInfo("Europe/Madrid")
 
@@ -11538,6 +11538,301 @@ async def links_reina_sofia(page: Page, screenings: list) -> tuple[int, int]:
             print(f"[reina sofía: la boletería del ciclo {f['producto']} no cargó: {e}]",
                   end=" ", flush=True)
     return _reina_links_de_compra(del_museo, fichas, eventos), len(del_museo)
+
+
+# ---------------------------------------------------------------------------
+# Sala Equis (Madrid)
+# ---------------------------------------------------------------------------
+# La sala publica la programación de cada mes en un PDF que sube a su
+# WordPress ("PROGRAMACIÓN-NOV-OK.pdf") y linkea desde la home: el del mes en
+# el menú y, a fin de mes, también el que viene en el banner. El nombre del
+# archivo cambia todos los meses, así que no se arma: se buscan en la home
+# todos los PDF de /wp-content/uploads/ y de cada uno se lee el mes que dice
+# adentro ("11/2026"), no el del nombre ni el de la carpeta (el de noviembre
+# se subió a 2026/10).
+#
+# El texto que da pypdf es limpio, un día por bloque:
+#
+#     05 JUEVES
+#     19:30h: CINE POR MUJERES: VIDAS
+#     PASADAS
+#     Celine Song, 2023 - VOSE- 106’
+#     21:45h: LA BOLA NEGRA
+#     Javier Calvo y Javier Ambrossi, 2026 - VO-
+#     155’
+#
+# La ficha es la primera línea con minúsculas y un año después de una coma;
+# lo de arriba es el título, que puede ocupar dos líneas y cortar palabras con
+# guion ("SEGUN-" / "DO G.H.B"). Antes de los dos puntos puede ir un ciclo o
+# festival, pero no siempre: "BACKROOMS: LIQUIDACIÓN TOTAL" es la película.
+# Para separar se usa la taquilla de la web, que lista cada película con su
+# ficha: si lo de después de los dos puntos está ahí, lo de antes es el
+# ciclo.
+#
+# Se chequea que el día de la semana del PDF coincida con la fecha: si el mes
+# leído estuviera mal, no coincidiría ninguno y el PDF no se publica.
+#
+# El link de compra es el de Kinetike que tiene la ficha de cada película (las
+# fechas de esa película, con las horas detrás de un postback de ASP.NET, por
+# eso las horas salen del PDF). Sin ficha, la taquilla.
+
+EQUIS_CINE = "Sala Equis"
+EQUIS_HOME = "https://salaequis.es/"
+EQUIS_TAQUILLA = "https://salaequis.es/taquilla/"
+
+_EQUIS_PDF_RE = re.compile(r'href="(https?://salaequis\.es/wp-content/uploads/[^"]+?\.pdf)"', re.I)
+_EQUIS_MES_RE = re.compile(r"^(0?[1-9]|1[0-2])/(20\d{2})$")
+_EQUIS_SEMANA = ("LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO", "DOMINGO")
+_EQUIS_DIA_RE = re.compile(
+    r"^(\d{1,2})\s+(LUNES|MARTES|MI[EÉ]RCOLES|JUEVES|VIERNES|S[AÁ]BADO|DOMINGO)\b")
+# "19:30h: …", "19.15h: …", "22h: …"
+_EQUIS_HORA_RE = re.compile(r"^(\d{1,2})(?:[:.](\d{2}))?\s*h\s*:\s*(.*)$", re.I)
+# "Carla Simón, 2017- VOSE- 97´", "Juan Cavestany, 2024 - VO, 93’"
+_EQUIS_FICHA_RE = re.compile(
+    r"^(?P<dir>.+?)\s*,\s*(?P<anio>(?:18|19|20)\d{2})\b(?P<resto>.*)$")
+_EQUIS_DURACION_RE = re.compile(r"(\d{1,3})\s*[´’'`]")
+# Lo que, antes de los dos puntos, es un ciclo aunque la película no esté en
+# la taquilla ("MUJERES DE CINE: SESIÓN SORPRESA").
+_EQUIS_CICLO_RE = re.compile(r"\b(?:FESTIVAL|CICLO|CINE|PASE|PAUSA|PRESENTA|SESI[ÓO]N)\b", re.I)
+
+
+def _equis_mes(texto: str) -> Optional[tuple[int, int]]:
+    """El mes del programa, del "11/2026" que el PDF repite en la portada."""
+    vistos: dict[tuple[int, int], int] = {}
+    for linea in texto.splitlines():
+        m = _EQUIS_MES_RE.match(linea.strip())
+        if m:
+            k = (int(m.group(2)), int(m.group(1)))
+            vistos[k] = vistos.get(k, 0) + 1
+    return max(vistos, key=vistos.get) if vistos else None
+
+
+def _equis_unir(lineas: list[str]) -> str:
+    """Junta las líneas de un título o una ficha; "COR-" + "TOS" es "CORTOS"."""
+    out = ""
+    for linea in lineas:
+        linea = re.sub(r"\s+", " ", linea).strip()
+        if not linea:
+            continue
+        if re.search(r"[^\W\d_]-$", out) and linea[:1].isalpha():
+            out = out[:-1] + linea
+        else:
+            out = f"{out} {linea}".strip()
+    return out
+
+
+def _equis_programa(texto: str, anio: int, mes: int) -> list[dict]:
+    """Las sesiones del PDF del mes. Un día cuyo día de la semana no coincide
+    con la fecha no entra; si no coincide la mayoría, el mes está mal leído y
+    no entra ninguno."""
+    dias: list[tuple[int, str, list[str]]] = []
+    for linea in texto.splitlines():
+        s = linea.strip()
+        m = _EQUIS_DIA_RE.match(s)
+        if m:
+            dias.append((int(m.group(1)), m.group(2), []))
+        elif re.match(r"^(?:PROGRAMACI|CICLOS)", s):
+            dias.append((0, "", []))       # fin de la grilla: lo que sigue no es de ningún día
+        elif dias and s:
+            dias[-1][2].append(s)
+
+    sesiones: list[dict] = []
+    buenos, malos = 0, []
+    for dia, nombre, lineas in dias:
+        if not nombre:
+            continue
+        try:
+            fecha = date(anio, mes, dia)
+        except ValueError:
+            malos.append(f"{dia:02d} {nombre}")
+            continue
+        if _EQUIS_SEMANA[fecha.weekday()] != _norm_madrid(nombre).upper():
+            malos.append(f"{dia:02d} {nombre}")
+            continue
+        buenos += 1
+        bloques: list[tuple[str, list[str]]] = []
+        for s in lineas:
+            m = _EQUIS_HORA_RE.match(s)
+            if m:
+                bloques.append((f"{int(m.group(1)):02d}:{m.group(2) or '00'}", [m.group(3)]))
+            elif bloques:
+                bloques[-1][1].append(s)
+        for hora, bloque in bloques:
+            titulo, ficha = [], []
+            for s in bloque:
+                if s.startswith("*"):
+                    break                  # "*Proyección con presentación y coloquio"
+                es_ficha = (re.search(r"[a-zà-ÿ]", s)
+                            and re.search(r",\s*(?:18|19|20)\d{2}\b", s))
+                (ficha if ficha or es_ficha else titulo).append(s)
+            texto_titulo = _equis_unir(titulo)
+            if not texto_titulo:
+                continue
+            f = _EQUIS_FICHA_RE.match(_equis_unir(ficha))
+            dur = _EQUIS_DURACION_RE.search(f.group("resto")) if f else None
+            sesiones.append({
+                "fecha": fecha.isoformat(),
+                "hora": hora,
+                "titulo": texto_titulo,
+                "director": f.group("dir").strip() if f else "",
+                "anio": int(f.group("anio")) if f else None,
+                "duracion": int(dur.group(1)) if dur else None,
+            })
+    if len(malos) > buenos:
+        print(f"[sala equis: {len(malos)} días del programa {anio}-{mes:02d} no coinciden "
+              f"con el calendario, no se publica]", end=" ", flush=True)
+        return []
+    if malos:
+        print(f"[sala equis: en el programa {anio}-{mes:02d} no existen "
+              f"{', '.join(malos)}; esos días no entran]", end=" ", flush=True)
+    return sesiones
+
+
+def _equis_taquilla(html: str) -> dict[str, str]:
+    """Las películas de la taquilla: título normalizado → su ficha."""
+    soup = BeautifulSoup(html, "html.parser")
+    out: dict[str, str] = {}
+    for a in soup.select(".row .title a[href]"):
+        # "AETERNA EQUIS: BLOOD FEAST (1963)": el año no es parte del título.
+        t = re.sub(r"\s*\(\s*(?:18|19|20)\d{2}\s*\)\s*$", "", a.get_text(" ", strip=True))
+        if _norm_madrid(t):
+            out[_norm_madrid(t)] = a["href"].strip()
+    return out
+
+
+def _equis_en_taquilla(titulo: str, taquilla: dict[str, str], exacto: bool = False) -> str:
+    """La ficha de la película, si está en la taquilla. Además del título
+    exacto vale que uno complete al otro: "BLOOD FEAST" es "AETERNA EQUIS:
+    BLOOD FEAST", "MUDRAS" es "MUDRAS, BAILANDO HILOS INVISIBLES" y
+    "BACKROOMS: LIQUIDACIÓN TOTAL" es "BACKROOMS". Un título corto ("EVA")
+    sólo vale exacto."""
+    t = _norm_madrid(titulo)
+    if not t:
+        return ""
+    if t in taquilla:
+        return taquilla[t]
+    if exacto:
+        return ""
+    for k, url in taquilla.items():
+        if (len(t) >= 5 and (k.endswith(t) or k.startswith(t))) or (len(k) >= 5 and t.startswith(k)):
+            return url
+    return ""
+
+
+def _equis_ciclo(texto: str) -> str:
+    """"CINE POR MUJERES" → "Cine Por Mujeres"; lo que lleva paréntesis
+    ("LGBTIQ(X)") es una sigla y queda como está."""
+    if not texto.isupper():
+        return texto
+    lindo = _title_case_ciclo(texto).split()
+    return " ".join(o if "(" in o else w for o, w in zip(texto.split(), lindo))
+
+
+def _equis_titulo_y_ciclo(texto: str, taquilla: dict[str, str]) -> tuple[str, str]:
+    if ":" not in texto:
+        return texto, ""
+    antes, despues = (p.strip() for p in texto.split(":", 1))
+    if not antes or not despues:
+        return texto, ""
+    if _equis_en_taquilla(despues, taquilla) or (
+            _EQUIS_CICLO_RE.search(antes)
+            and not _equis_en_taquilla(texto, taquilla, exacto=True)
+            and not _equis_en_taquilla(antes, taquilla, exacto=True)):
+        return despues, _equis_ciclo(antes)
+    return texto, ""
+
+
+def _equis_ficha(html: str) -> dict:
+    """De la ficha de una película: el link de compra (Kinetike) y el país,
+    de "Javier Calvo y Javier Ambrossi / España / 2026"."""
+    soup = BeautifulSoup(html, "html.parser")
+    out: dict = {}
+    for a in soup.select(".woocommerce-product-details__short-description a[href]"):
+        if "kinetike" in a["href"]:
+            out["compra"] = a["href"].strip()
+            break
+    p = soup.select_one(".shortDescription p")
+    partes = [x.strip() for x in (p.get_text(" ", strip=True) if p else "").split("/")]
+    if len(partes) >= 3 and re.fullmatch(r"(?:18|19|20)\d{2}", partes[-1]):
+        out["country"] = ", ".join(x for x in partes[1:-1] if x)
+    return out
+
+
+def _equis_url(url: str) -> str:
+    # Los nombres de los PDF llevan tildes ("PROGRAMACIÓN") y urllib no
+    # manda una URL que no sea ASCII.
+    return urllib.parse.quote(url, safe=":/%?=&")
+
+
+def scrape_sala_equis(semanas: int = 9) -> list[Screening]:
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        print("[sala equis: falta pypdf]", end=" ", flush=True)
+        return []
+    import io
+    hoy = hoy_madrid()
+    cutoff = hoy + timedelta(weeks=semanas)
+    try:
+        home = fetch_bytes(EQUIS_HOME).decode("utf-8", errors="replace")
+    except Exception as e:
+        marcar_fuente_caida(EQUIS_CINE, f"la home no carga: {e}")
+        return []
+
+    # Si dos PDF dicen el mismo mes (una versión corregida), vale el último
+    # que se subió.
+    por_mes: dict[tuple[int, int], list[dict]] = {}
+    for url in sorted(dict.fromkeys(_EQUIS_PDF_RE.findall(home))):
+        try:
+            pdf = PdfReader(io.BytesIO(fetch_bytes(_equis_url(url), timeout=60)))
+            texto = "\n".join(p.extract_text() or "" for p in pdf.pages)
+        except Exception as e:
+            print(f"[sala equis: {url.rsplit('/', 1)[-1]} no se pudo leer: {e}]",
+                  end=" ", flush=True)
+            continue
+        mes = _equis_mes(texto)
+        if not mes:
+            continue                       # otro PDF (una hoja de sala, un dossier)
+        sesiones = _equis_programa(texto, *mes)
+        if sesiones:
+            por_mes[mes] = sesiones
+    if not por_mes:
+        marcar_fuente_caida(EQUIS_CINE, "la home no linkea ningún programa que se pueda leer")
+        return []
+
+    try:
+        taquilla = _equis_taquilla(fetch_bytes(EQUIS_TAQUILLA).decode("utf-8", errors="replace"))
+    except Exception as e:
+        print(f"[sala equis: la taquilla no carga: {e}]", end=" ", flush=True)
+        taquilla = {}
+
+    fichas: dict[str, dict] = {}
+    result: list[Screening] = []
+    vistas: set[tuple] = set()
+    for sesiones in por_mes.values():
+        for s in sesiones:
+            if not (hoy <= date.fromisoformat(s["fecha"]) <= cutoff):
+                continue
+            titulo, ciclo = _equis_titulo_y_ciclo(s["titulo"], taquilla)
+            k = (titulo, s["fecha"], s["hora"])
+            if k in vistas:
+                continue
+            vistas.add(k)
+            pagina = _equis_en_taquilla(titulo, taquilla)
+            if pagina and pagina not in fichas:
+                try:
+                    fichas[pagina] = _equis_ficha(fetch_bytes(pagina).decode("utf-8", errors="replace"))
+                except Exception:
+                    fichas[pagina] = {}
+            ficha = fichas.get(pagina, {})
+            result.append(Screening(
+                cine=EQUIS_CINE, title=titulo, fecha=s["fecha"], hora=s["hora"],
+                ticket_url=ficha.get("compra") or pagina or EQUIS_TAQUILLA,
+                ciclo=ciclo, director=s["director"], year=s["anio"],
+                duration=s["duracion"],
+                country=ficha.get("country", "") if s["director"] else "",
+            ))
+    return result
 
 
 # ---------------------------------------------------------------------------

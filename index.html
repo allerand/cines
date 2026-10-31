@@ -686,6 +686,7 @@
     .cine-cbaest   { border-color: #24333a; color: #78c2cf; }
     .cine-reina    { border-color: #3a3a14; color: #e6e66a; }
     .cine-callao   { border-color: #333a1f; color: #bcd16a; }
+    .cine-equis    { border-color: #3a2a1f; color: #e0a070; }
     /* Sede de Fuera de Campo (Mar del Plata): el verde de la web. */
     .cine-carreras { border-color: #0e4a2a; color: var(--accent); }
     /* Comerciales — paleta gris/azulada para diferenciarlos visualmente */
@@ -1010,6 +1011,7 @@
   <button class="filter-btn otra-ciudad" data-cine="Cine Estudio" data-ciudad="madrid">Cine Estudio</button>
   <button class="filter-btn otra-ciudad" data-cine="Museo Reina Sofía" data-ciudad="madrid">Reina Sofía</button>
   <button class="filter-btn otra-ciudad" data-cine="Cines Callao" data-ciudad="madrid">Callao</button>
+  <button class="filter-btn otra-ciudad" data-cine="Sala Equis" data-ciudad="madrid">Sala Equis</button>
   <button class="filter-btn commercial-chip" data-cine="Cinemark" hidden>Cinemark</button>
   <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
@@ -1086,6 +1088,7 @@ const CINE_ADDRESSES = {
   'Cine Estudio':             'Alcalá 42',
   'Museo Reina Sofía':        'Santa Isabel 52',
   'Cines Callao':             'Plaza del Callao 3',
+  'Sala Equis':               'Duque de Alba 4',
   // Comerciales — una entrada por sucursal
   'Cinemark Caballito':       'Av. La Plata 96',
   'Cinemark Palermo':         'Beruti 3399',
@@ -2296,7 +2299,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Club Lucero':'cine-lucero', 'Escuela Da Vinci':'cine-davinci', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Museo Moderno':'cine-moderno', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Museo Reina Sofía':'cine-reina', 'Cines Callao':'cine-callao', 'Teatro Enrique Carreras':'cine-carreras' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Club Lucero':'cine-lucero', 'Escuela Da Vinci':'cine-davinci', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Museo Moderno':'cine-moderno', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Museo Reina Sofía':'cine-reina', 'Cines Callao':'cine-callao', 'Sala Equis':'cine-equis', 'Teatro Enrique Carreras':'cine-carreras' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';

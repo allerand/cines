@@ -16,13 +16,14 @@ from scraper import (CINES_MADRID, DORE_PROYECCIONES, _callao_funciones,
                      _ideal_funciones, _madrid_es_cine, _madrid_titulo_y_ciclo,
                      _metropol_funciones, _reina_actividades, _reina_ciclo_en_boleteria,
                      _reina_funciones, _reina_links_de_compra, _reina_programa,
-                     _renoir_funciones)
+                     _renoir_funciones, _equis_mes, _equis_programa,
+                     _equis_titulo_y_ciclo, _equis_en_taquilla, _equis_ficha)
 
 assert CINES_MADRID == {"Cine Doré", "Cines Ideal", "Cineteca Madrid",
                         "Cines Princesa", "Renoir Plaza de España", "Renoir Retiro",
                         "Golem Madrid", "Embajadores Glorieta", "Embajadores Ercilla",
                         "Artistic Metropol", "Cine Estudio", "Cines Callao",
-                        "Museo Reina Sofía"}
+                        "Museo Reina Sofía", "Sala Equis"}
 
 # --- Programa del mes (texto de pypdf) ---------------------------------------
 PROGRAMA = """\
@@ -627,5 +628,88 @@ assert _reina_links_de_compra(corto, {FICHA_MARTEL: {
      "slug": "silencio-se-rueda-la-infancia-dirige-2-proyector-de-luna-11"}]}) == 1
 assert corto[0].ticket_url.endswith("/14603-proyector-de-luna/18269014-silencio-se-rueda-la-infancia-dirige-2-proyector-de-luna-11")
 print("✓ reina sofía: sin una sola función que coincida en hora y nombre, queda la ficha")
+
+# --- Sala Equis: el PDF del mes (texto real de pypdf, noviembre de 2026) ------
+EQUIS_PDF = """\
+01 DOMINGO
+17:30h: CINE POR MUJERES: VERANO 
+1993
+Carla Simón, 2017- VOSE- 97´
+22h: BAD APPLES
+Jonatan Etzler, 2025 - VOSE- 99’
+03 MARTES
+19.15h: JIM QUEEN
+Marco Nguyen, Nicolas Athane, 2026 - 
+VOSE- 83’
+04 MIÉRCOLES
+19.30h: MADLATIN: LA PLAYA DE LOS 
+ENCHAQUIRADOS
+Iván Mora Manzano, 2021 - VO- 86’
+*Proyección con presentación y coloquio
+07 SÁBADO
+21h: FESTIVAL ANFIBIA: SESIÓN DE COR-
+TOS: EL CUERPO DE CRISTO, DELINCUEN-
+TE,  ROUGE Y CALM
+09 LUNES
+NO HAY SESIONES
+16  LUNES
+17h:  QUEERCINEMAD: A PAIXÂO SEGUN-
+DO G.H.B
+Gustavo Vinagre, Vinícius Couto, 2026 - 
+VOSE- 92’
+*Proyección con presentación
+17  MARTES
+19:30h: FESTIVAL RIZOMA
+PROGRAMACIÓN    PROGRAMACIÓN    PROGRAMACIÓN    PROGRAMACIÓN
+C/Duque de Alba, 4
+11/2026
+11/2026 
+11/2026
+"""
+assert _equis_mes(EQUIS_PDF) == (2026, 11)
+eq = _equis_programa(EQUIS_PDF, 2026, 11)
+assert [(s["fecha"], s["hora"]) for s in eq] == [
+    ("2026-11-01", "17:30"), ("2026-11-01", "22:00"), ("2026-11-03", "19:15"),
+    ("2026-11-04", "19:30"), ("2026-11-07", "21:00"), ("2026-11-16", "17:00"),
+    ("2026-11-17", "19:30")], eq
+assert eq[0] == {"fecha": "2026-11-01", "hora": "17:30", "titulo": "CINE POR MUJERES: VERANO 1993",
+                 "director": "Carla Simón", "anio": 2017, "duracion": 97}
+assert (eq[2]["director"], eq[2]["duracion"]) == ("Marco Nguyen, Nicolas Athane", 83)
+assert eq[4]["titulo"] == "FESTIVAL ANFIBIA: SESIÓN DE CORTOS: EL CUERPO DE CRISTO, DELINCUENTE, ROUGE Y CALM"
+assert eq[5]["titulo"] == "QUEERCINEMAD: A PAIXÂO SEGUNDO G.H.B"
+assert (eq[6]["titulo"], eq[6]["director"], eq[6]["anio"]) == ("FESTIVAL RIZOMA", "", None)
+print("✓ sala equis: el PDF da día, hora, título de dos líneas y ficha")
+
+# Con el mes equivocado no coincide ningún día de la semana y no entra nada.
+assert _equis_programa(EQUIS_PDF, 2026, 10) == []
+print("✓ sala equis: un PDF con el mes mal leído no se publica")
+
+TAQUILLA = {"backrooms": "/backrooms/", "verano1993": "/verano-1993/",
+            "aeternaequisbloodfeast": "/aeterna/", "eva": "/eva/",
+            "pausavespertinebjork": "/pausa-bjork/",
+            "pausainthecourtofthecrimsonking": "/pausa-crimson/",
+            "laplayadelosenchaquirados": "/playa/"}
+assert _equis_titulo_y_ciclo("CINE POR MUJERES: VERANO 1993", TAQUILLA) == ("VERANO 1993", "Cine Por Mujeres")
+assert _equis_titulo_y_ciclo("MADLATIN: LA PLAYA DE LOS ENCHAQUIRADOS", TAQUILLA) == (
+    "LA PLAYA DE LOS ENCHAQUIRADOS", "Madlatin")
+assert _equis_titulo_y_ciclo("AETERNA: BLOOD FEAST", TAQUILLA) == ("BLOOD FEAST", "Aeterna")
+assert _equis_titulo_y_ciclo("BACKROOMS: LIQUIDACIÓN TOTAL", TAQUILLA) == ("BACKROOMS: LIQUIDACIÓN TOTAL", "")
+assert _equis_titulo_y_ciclo("MUJERES DE CINE: SESIÓN SORPRESA", TAQUILLA) == ("SESIÓN SORPRESA", "Mujeres de Cine")
+assert _equis_titulo_y_ciclo("PAUSA: IN THE COURT OF CRIMSON KING (King Crimson)", TAQUILLA)[1] == "Pausa"
+assert _equis_titulo_y_ciclo("CICLO LGBTIQ(X): LA CARN", TAQUILLA) == ("LA CARN", "Ciclo LGBTIQ(X)")
+assert _equis_titulo_y_ciclo("FESTIVAL RIZOMA", TAQUILLA) == ("FESTIVAL RIZOMA", "")
+assert _equis_en_taquilla("BACKROOMS: LIQUIDACIÓN TOTAL", TAQUILLA) == "/backrooms/"
+assert _equis_en_taquilla("EVA", TAQUILLA) == "/eva/"
+assert _equis_en_taquilla("EVANGELIO", TAQUILLA) == ""
+print("✓ sala equis: el ciclo se separa sólo si lo de después de los dos puntos es la película")
+
+FICHA_EQUIS = """<div class="woocommerce-product-details__short-description">
+<a href="https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS" class="submit">Comprar</a>
+<div class="shortDescription"><p class="p1">Javier Calvo y Javier Ambrossi / España / 2026</p>
+<p class="p1">VO – 155 min</p></div></div>"""
+assert _equis_ficha(FICHA_EQUIS) == {
+    "compra": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
+    "country": "España"}
+print("✓ sala equis: de la ficha salen la compra y el país")
 
 print("\nTodo OK")
