@@ -2832,6 +2832,250 @@
       "cine": "Centro Cultural Borges", "title": "The End", "fecha": "2026-10-31", "hora": "19:00",
       "director": "Niki Lindroth von Bahr", "year": 2026, "country": "Dinamarca, Francia, Suecia", "duration": 16,
       "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
+    },
+    {
+      "_ciclo": "FESTIHUR, 7.º Festival de Cine de Hurlingham (6 al 8/11/2026), en el Centro Cultural Leopoldo Marechal. Grilla de la nota de Diario Anticipos del 27/10/2026 (diarioanticipos.com/2026/10/27/festihur-2026-la-programacion-completa-del-festival-de-cine-de-hurlingham); la página del Municipio (hurlingham.gob.ar/festi-hur) seguía con la edición 2025. Sólo las proyecciones: la clínica de guion, la charla, la orquesta, la premiación y el show quedan afuera. Los cortos locales que acompañan a los largos de la competencia van como 'FESTIHUR - Corto local'. Los videominutos no tienen autor en la grilla. Entrada libre y gratuita (CINES_GRATIS en index.html).",
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "El frío camina con Celia", "fecha": "2026-11-06", "hora": "18:00",
+      "director": "Felipe Wein", "year": 2026, "country": "Argentina", "duration": 14,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Castme", "fecha": "2026-11-06", "hora": "18:00",
+      "director": "Aranzazu Larrinaga",
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Donde se parte el camino", "fecha": "2026-11-06", "hora": "18:00",
+      "director": "Facundo Calabrese", "year": 2026, "country": "Argentina", "duration": 9,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "El derrumbe", "fecha": "2026-11-06", "hora": "18:00",
+      "director": "Iván Djeredjian", "duration": 9,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Para mi muerte", "fecha": "2026-11-06", "hora": "18:00",
+      "director": "Isabella Vizetta",
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "La virgen de la tosquera", "fecha": "2026-11-06", "hora": "20:00",
+      "director": "Laura Casabé", "year": 2025, "country": "Argentina, España", "duration": 95,
+      "ciclo": "FESTIHUR - Apertura"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Maleza", "fecha": "2026-11-06", "hora": "20:00",
+      "director": "Tomás Lazarowski",
+      "ciclo": "FESTIHUR - Apertura"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Emi", "fecha": "2026-11-07", "hora": "12:00",
+      "director": "Ezequiel Erriquez Mena", "year": 2025, "country": "Argentina, Uruguay", "duration": 93,
+      "ciclo": "FESTIHUR - Hecho en Hurlingham"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Insomnio", "fecha": "2026-11-07", "hora": "12:00",
+      "director": "Federico Monserrat",
+      "ciclo": "FESTIHUR - Hecho en Hurlingham"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Limbus", "fecha": "2026-11-07", "hora": "14:00",
+      "director": "Manuel Rodríguez, Simon Federlein, Young Jean Maeng", "year": 2026, "country": "Alemania", "duration": 8,
+      "ciclo": "FESTIHUR - Muestra Internacional de Cortometrajes"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "George", "fecha": "2026-11-07", "hora": "14:00",
+      "director": "Maurício Borges de Medeiros", "country": "Brasil",
+      "ciclo": "FESTIHUR - Muestra Internacional de Cortometrajes"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "El desvío", "fecha": "2026-11-07", "hora": "14:00",
+      "director": "Claudia Benlloch", "country": "España",
+      "ciclo": "FESTIHUR - Muestra Internacional de Cortometrajes"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Lo que fue nuestro hogar", "fecha": "2026-11-07", "hora": "14:00",
+      "director": "Angelo Lobos", "year": 2025, "country": "Chile", "duration": 15,
+      "ciclo": "FESTIHUR - Muestra Internacional de Cortometrajes"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Las gallinas", "fecha": "2026-11-07", "hora": "14:00",
+      "director": "Constanza Contreras", "country": "Colombia",
+      "ciclo": "FESTIHUR - Muestra Internacional de Cortometrajes"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Oeste", "fecha": "2026-11-07", "hora": "15:00",
+      "director": "Emiliano Grieco",
+      "ciclo": "FESTIHUR"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Lona", "fecha": "2026-11-07", "hora": "16:00",
+      "director": "Malena Martínez", "year": 2025, "country": "Argentina", "duration": 2,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "El amigo de Cleopatra", "fecha": "2026-11-07", "hora": "16:00",
+      "director": "Federico Edelstein", "year": 2025, "duration": 14,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Hálito de arena", "fecha": "2026-11-07", "hora": "16:00",
+      "director": "Lucas Gingles, Muriel Sago", "year": 2024, "country": "Argentina", "duration": 12,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "La chica de la frontera", "fecha": "2026-11-07", "hora": "16:00",
+      "director": "Francisco Novick, Natalio Pagés", "year": 2026, "country": "Argentina", "duration": 20,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Las manos de la abuela", "fecha": "2026-11-07", "hora": "16:00",
+      "director": "Camila Migliore",
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Para decir adiós", "fecha": "2026-11-07", "hora": "17:00",
+      "director": "Matías Quiroga",
+      "ciclo": "FESTIHUR - Competencia Panorama Local"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Maldigo en voz baja", "fecha": "2026-11-07", "hora": "17:00",
+      "director": "Gerónimo Pérez", "country": "Argentina", "duration": 14,
+      "ciclo": "FESTIHUR - Competencia Panorama Local"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Ser, no ser, ser muchas", "fecha": "2026-11-07", "hora": "17:00",
+      "director": "Silbando Bembas",
+      "ciclo": "FESTIHUR - Competencia Panorama Local"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Un buen vecino", "fecha": "2026-11-07", "hora": "17:00",
+      "director": "Joel Cortina Suárez",
+      "ciclo": "FESTIHUR - Competencia Panorama Local"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "La hora negra", "fecha": "2026-11-07", "hora": "17:00",
+      "director": "Esteban Galeano",
+      "ciclo": "FESTIHUR - Competencia Panorama Local"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "La ciénaga", "fecha": "2026-11-07", "hora": "18:00",
+      "director": "Lucrecia Martel", "year": 2001, "country": "Argentina, Francia", "duration": 101, "original_title": "La Ciénaga",
+      "ciclo": "FESTIHUR - Retrospectiva Lucrecia Martel"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Un cabo suelto", "fecha": "2026-11-07", "hora": "20:00",
+      "director": "Daniel Hendler", "year": 2025, "country": "Argentina, Uruguay", "duration": 95,
+      "ciclo": "FESTIHUR - Competencia de Largometrajes"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Una partida más", "fecha": "2026-11-07", "hora": "20:00",
+      "director": "Celeste Luna",
+      "ciclo": "FESTIHUR - Corto local"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "El susurro", "fecha": "2026-11-07", "hora": "22:00",
+      "director": "Gustavo Hernández", "year": 2025, "country": "Argentina, Uruguay", "duration": 101,
+      "ciclo": "FESTIHUR - Competencia de Largometrajes"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "El ruido del silencio", "fecha": "2026-11-07", "hora": "22:00",
+      "director": "Franco Aguirre", "year": 2026, "country": "Argentina", "duration": 17,
+      "ciclo": "FESTIHUR - Corto local"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Hijo mayor", "fecha": "2026-11-08", "hora": "14:00",
+      "director": "Cecilia Kang", "year": 2025, "country": "Argentina, Corea del Sur", "duration": 118,
+      "ciclo": "FESTIHUR - Competencia de Largometrajes"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Al calor de las brasas", "fecha": "2026-11-08", "hora": "14:00",
+      "director": "Joaquín Chávez",
+      "ciclo": "FESTIHUR - Corto local"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Nuestra tierra", "fecha": "2026-11-08", "hora": "16:30",
+      "director": "Lucrecia Martel", "year": 2025, "country": "Argentina, Dinamarca", "duration": 119,
+      "ciclo": "FESTIHUR - Retrospectiva Lucrecia Martel"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Memorias de un alma olvidada", "fecha": "2026-11-08", "hora": "16:30",
+      "director": "Taller Municipal de Hurlingham",
+      "ciclo": "FESTIHUR - Retrospectiva Lucrecia Martel"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Bordado en la memoria", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Fierté", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "La ventana es política", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Dueño de tu memoria", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Quién quiero ser", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Ausente", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Innhospita", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Hamburguesa soñada", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Incondicional", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Una parte nuestra", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Cuando fuimos naranja", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "La isla de la basura", "fecha": "2026-11-08", "hora": "18:30",
+      "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Mirala", "fecha": "2026-11-08", "hora": "19:00",
+      "director": "Carlos Trioni Bellone",
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "El complejo de la calle Quintana", "fecha": "2026-11-08", "hora": "19:00",
+      "director": "Federico Ortiz", "duration": 8,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Cable", "fecha": "2026-11-08", "hora": "19:00",
+      "director": "Malena Aranda", "country": "Argentina", "duration": 14,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Sibilancias", "fecha": "2026-11-08", "hora": "19:00",
+      "director": "Alejandro Giorlando", "year": 2025, "country": "Argentina", "duration": 12,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "cine": "Centro Cultural Leopoldo Marechal", "title": "Un cacho de deseo", "fecha": "2026-11-08", "hora": "19:00",
+      "director": "Carla Morgana Brugna", "country": "Argentina", "duration": 8,
+      "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
     }
   ],
 
