@@ -1,65 +1,12 @@
 {
-  "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/": {
-    "ts": "2026-10-31T10:00:26",
-    "v": 2,
-    "semanas": 9,
-    "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Besos en la frente",
-        "fecha": "2026-10-31",
-        "hora": "16:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
-        "ciclo": "Retrospectivas:Carlos Galettini",
-        "director": "Carlos Galettini",
-        "country": "",
-        "year": 1996,
-        "duration": 95,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Juan que reía",
-        "fecha": "2026-10-31",
-        "hora": "18:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/retrospectivas-carlos-galettini/",
-        "ciclo": "Retrospectivas:Carlos Galettini",
-        "director": "Carlos Galettini",
-        "country": "",
-        "year": 1976,
-        "duration": 100,
-        "original_title": ""
-      }
-    ]
-  },
-  "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/": {
-    "ts": "2026-10-31T10:00:37",
-    "v": 2,
-    "semanas": 9,
-    "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Las corrientes",
-        "fecha": "2026-10-31",
-        "hora": "19:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-nele-wohlatz-milagros-mumenthaler/",
-        "ciclo": "Miradas contemporáneas:Nele Wohlatz / Milagros Mumenthaler",
-        "director": "Milagros Mumenthaler",
-        "country": "",
-        "year": 2025,
-        "duration": 105,
-        "original_title": ""
-      }
-    ]
-  },
   "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
-    "ts": "2026-10-31T10:01:01",
+    "ts": "2026-11-01T10:50:43",
     "v": 2,
     "semanas": 9,
     "funciones": []
   },
   "https://palaciolibertad.gob.ar/events/cine-frances/": {
-    "ts": "2026-10-31T10:00:43",
+    "ts": "2026-11-01T10:50:25",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -144,7 +91,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-coreano/": {
-    "ts": "2026-10-31T10:00:49",
+    "ts": "2026-11-01T10:50:31",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -203,7 +150,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/": {
-    "ts": "2026-10-31T10:01:07",
+    "ts": "2026-11-01T10:50:37",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -288,7 +235,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/": {
-    "ts": "2026-10-31T10:01:13",
+    "ts": "2026-11-01T10:50:50",
     "v": 2,
     "semanas": 9,
     "funciones": [

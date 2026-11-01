@@ -19861,7 +19861,7 @@
   "invasión travesti|2000": {
     "url": "",
     "title_en": "Invasión Travesti",
-    "director": "Paco Cabezas, Jerónimo de los Santos",
+    "director": "Jerónimo de los Santos, Paco Cabezas",
     "country": "Spain",
     "year": 2000,
     "duration": 50,
@@ -26029,13 +26029,13 @@
     "original_title": "Alien"
   },
   "lawrence de arabia": {
-    "url": "",
-    "title_en": "Lawrence de Arabia",
+    "url": "https://letterboxd.com/film/lawrence-of-arabia/",
+    "title_en": "Lawrence of Arabia",
     "director": "David Lean",
-    "country": "United Kingdom",
+    "country": "UK",
     "year": 1962,
     "duration": 228,
-    "genre": "Aventura, Historia",
+    "genre": "Aventura, Bélica",
     "title_es": "Lawrence de Arabia",
     "original_title": "Lawrence of Arabia"
   },
@@ -30034,12 +30034,13 @@
     "duration": null
   },
   "cristina y los otros mundos|2026": {
-    "url": "",
-    "title_en": "Cristina y Los otros mundos",
+    "url": "https://letterboxd.com/film/cristina-y-los-otros-mundos/",
+    "title_en": "Cristina y los otros mundos",
     "director": "Cristina Andreu",
     "country": "",
     "year": null,
     "duration": 45,
+    "genre": "",
     "original_title": "Cristina y los otros mundos"
   },
   "càntics a la penombra|2026": {
@@ -30230,7 +30231,7 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "El amor solfeando",
-    "director": "Armand Guerra, Florián Rey, Robert Florey",
+    "director": "Robert Florey, Armand Guerra, Florián Rey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -31170,5 +31171,126 @@
     "genre": "Drama, Terror",
     "title_es": "Nosferatu. Vampiro de la noche",
     "original_title": "Nosferatu – Phantom der Nacht"
+  },
+  "festival rizomade brisa y de sol|2026": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMADE BRISA Y DE SOL",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizomamuchedumbre|2026": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMAMUCHEDUMBRE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizomacherri|2025": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMACHERRI",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizomaun hombre en un puente|2026": {
+    "url": "https://letterboxd.com/film/a-man-on-a-bridge/",
+    "title_en": "A Man on a Bridge",
+    "director": "David Martín de los Santos",
+    "country": "Spain, Peru",
+    "year": 2026,
+    "duration": 116,
+    "genre": "Drama"
+  },
+  "festival rizomasiemprevivas|2026": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMASIEMPREVIVAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizomacalada|2025": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMACALADA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizomaperò abans d’això hi haurà set|2026": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMAPERÒ ABANS D’AIXÒ HI HAURÀ SET",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-océano titánico|2026": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-OCÉANO TITÁNICO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ffestival rizoma-filipiñana|2026": {
+    "url": "",
+    "title_en": "FFESTIVAL RIZOMA-FILIPIÑANA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ffestival rizoma-las mantis|2026": {
+    "url": "",
+    "title_en": "FFESTIVAL RIZOMA-LAS MANTIS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ffestival rizoma-casi todo bien andrés salmoyraghi; rafael lópez saubidet 2025 -vo- 87’": {
+    "url": "",
+    "title_en": "FFESTIVAL RIZOMA-CASI TODO BIEN Andrés Salmoyraghi; Rafael López Saubidet 2025 -VO- 87’",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-la muerte de drácula|2026": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-LA MUERTE DE DRÁCULA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ffestival rizoma-simulacro|2026": {
+    "url": "",
+    "title_en": "FFESTIVAL RIZOMA-SIMULACRO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ffestival rizoma-rose|2026": {
+    "url": "",
+    "title_en": "FFESTIVAL RIZOMA-ROSE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ffestival rizoma-la gran fiesta del cine toni agustí y maría s. torregrosa-2026 -vo- 82’": {
+    "url": "",
+    "title_en": "FFESTIVAL RIZOMA-LA GRAN FIESTA DEL CINE Toni Agustí y María S. Torregrosa-2026 -VO- 82’",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
