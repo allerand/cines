@@ -2834,7 +2834,7 @@
       "ciclo": "Bitbang - Festival Internacional de Animación - Cortos Internacionales (función especial)", "ticket_url": "https://centroculturalborges.gob.ar/evento/618"
     },
     {
-      "_ciclo": "FESTIHUR, 7.º Festival de Cine de Hurlingham (6 al 8/11/2026), en el Centro Cultural Leopoldo Marechal. Grilla de la nota de Diario Anticipos del 27/10/2026 (diarioanticipos.com/2026/10/27/festihur-2026-la-programacion-completa-del-festival-de-cine-de-hurlingham); la página del Municipio (hurlingham.gob.ar/festi-hur) seguía con la edición 2025. Sólo las proyecciones: la clínica de guion, la charla, la orquesta, la premiación y el show quedan afuera. Los cortos locales que acompañan a los largos de la competencia van como 'FESTIHUR - Corto local'. Los videominutos no tienen autor en la grilla. Entrada libre y gratuita (CINES_GRATIS en index.html).",
+      "_ciclo": "FESTIHUR, 7.º Festival de Cine de Hurlingham (6 al 8/11/2026), en el Centro Cultural Leopoldo Marechal. Grilla de la página del Municipio (hurlingham.gob.ar/festi-hur-7mo-festival-de-cine), igual a la de la nota de Diario Anticipos del 27/10/2026 pero con los autores de los videominutos. Sólo las proyecciones: la clínica de guion, la charla, la orquesta, la premiación y el show quedan afuera. Los cortos locales que acompañan a los largos de la competencia van como 'FESTIHUR - Corto local'. Entrada libre y gratuita (CINES_GRATIS en index.html).",
       "cine": "Centro Cultural Leopoldo Marechal", "title": "El frío camina con Celia", "fecha": "2026-11-06", "hora": "18:00",
       "director": "Felipe Wein", "year": 2026, "country": "Argentina", "duration": 14,
       "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
@@ -2946,7 +2946,7 @@
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Ser, no ser, ser muchas", "fecha": "2026-11-07", "hora": "17:00",
-      "director": "Silbando Bembas",
+      "director": "Colectivo Silbando Bembas",
       "ciclo": "FESTIHUR - Competencia Panorama Local"
     },
     {
@@ -3001,55 +3001,67 @@
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Memorias de un alma olvidada", "fecha": "2026-11-08", "hora": "16:30",
-      "director": "Taller Municipal de Hurlingham",
+      "director": "Alumnos del Taller Municipal de Hurlingham",
       "ciclo": "FESTIHUR - Retrospectiva Lucrecia Martel"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Bordado en la memoria", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Agustina Lasagani",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Fierté", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Camila Scaglia",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "La ventana es política", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Laura Martínez",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Dueño de tu memoria", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Emanuel Besada",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Quién quiero ser", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Rocioo Muller, Martina Correa, Nicole Carbajal, Julieta Almaraz y Celeste Quiroz",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Ausente", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Morena Rodríguez, Iván Rodríguez, Agustín Cabrera, Candela Viva y Zoe González",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Innhospita", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Julieta Andrada, M. Arias, Marlene Moroviic y Lucas Grasso",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Hamburguesa soñada", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Ainara Carrazan y Yasmin Quelca Nina",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Incondicional", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Brenda Torres, Avril Maidana, Zoe Ortiz, Agostina Cosceri y Francisco Prado",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Una parte nuestra", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Brisa Acosta, Zoe Alegre, Bruno Valdez, Kyara Martínez y Thiago Ocampos",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Cuando fuimos naranja", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Martina Luongo, Morella Machuca, Lucas Roldán, Gabriel Ruiz Díaz, Laureano Tekavec y Gael López",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
       "cine": "Centro Cultural Leopoldo Marechal", "title": "La isla de la basura", "fecha": "2026-11-08", "hora": "18:30",
+      "director": "Carolina Feyti",
       "ciclo": "FESTIHUR - Competencia de Videominutos de Escuelas Secundarias"
     },
     {
