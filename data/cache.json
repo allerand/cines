@@ -23978,7 +23978,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Cars (2006), Cars 3 (2017)",
-    "fecha": "2026-10-28",
+    "fecha": "2026-11-01",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25409,7 +25409,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Far from Home: Venezuelan Exodus (2020), Venimos de muy lejos, la película (2013), The Language of Shadows: Friedrich Wilhelm Murnau and His Films:  The Early Works (2008)",
-    "fecha": "2026-10-16",
+    "fecha": "2026-11-01",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25449,7 +25449,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-28",
+    "fecha": "2026-11-01",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25491,7 +25491,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-28",
+    "fecha": "2026-11-01",
     "con_duracion": true,
     "desempate": ""
   },
@@ -25866,7 +25866,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es The Others (2001), y puede ser otra",
-    "fecha": "2026-10-28",
+    "fecha": "2026-11-01",
     "con_duracion": false,
     "desempate": ""
   },
@@ -28050,7 +28050,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: I Walked with a Zombie (1943), I Slept With a Ghost (1949)",
-    "fecha": "2026-10-28",
+    "fecha": "2026-11-01",
     "con_duracion": false,
     "desempate": ""
   },
@@ -30036,10 +30036,11 @@
   "cristina y los otros mundos|2026": {
     "url": "",
     "title_en": "Cristina y Los otros mundos",
-    "director": "",
+    "director": "Cristina Andreu",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 45,
+    "original_title": "Cristina y los otros mundos"
   },
   "càntics a la penombra|2026": {
     "url": "",
@@ -30089,7 +30090,7 @@
   },
   "fantasia ‘e surdate|1927": {
     "url": "",
-    "title_en": "FANTASIA ‘E SURDATE",
+    "title_en": "Fantasia ‘e surdate",
     "director": "Elvira Notari",
     "country": "Italy",
     "year": 1927,
@@ -30109,7 +30110,7 @@
   },
   "melodía de arrabal|1933": {
     "url": "",
-    "title_en": "MELODÍA DE ARRABAL",
+    "title_en": "Melodía de arrabal",
     "director": "Louis J. Gasnier",
     "country": "France",
     "year": 1933,
@@ -30179,7 +30180,7 @@
   },
   "5 es el número perfecto|2019": {
     "url": "",
-    "title_en": "5 ES EL NÚMERO PERFECTO",
+    "title_en": "5 es el número perfecto",
     "director": "",
     "country": "",
     "year": null,
@@ -30228,8 +30229,8 @@
   },
   "el amor solfeando|1930": {
     "url": "",
-    "title_en": "EL AMOR SOLFEANDO",
-    "director": "Armand Guerra, Robert Florey, Florián Rey",
+    "title_en": "El amor solfeando",
+    "director": "Armand Guerra, Florián Rey, Robert Florey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -30247,7 +30248,7 @@
   },
   "césar|1936": {
     "url": "",
-    "title_en": "CÉSAR",
+    "title_en": "César",
     "director": "Marcel Pagnol",
     "country": "France",
     "year": 1936,
@@ -30531,5 +30532,643 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "el ser querido|2026": {
+    "url": "https://letterboxd.com/film/the-beloved-2026/",
+    "title_en": "The Beloved",
+    "director": "Rodrigo Sorogoyen",
+    "country": "Spain, France",
+    "year": 2026,
+    "duration": 135,
+    "genre": "Drama"
+  },
+  "esta soledad|2026": {
+    "url": "https://letterboxd.com/film/esta-soledad/",
+    "title_en": "This Solitude",
+    "director": "Javier Giner",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 110,
+    "genre": "Drama",
+    "original_title": "Esta soledad"
+  },
+  "la bola negra|2026": {
+    "url": "https://letterboxd.com/film/la-bola-negra/",
+    "title_en": "La Bola Negra",
+    "director": "Javier Ambrossi, Javier Calvo",
+    "country": "Spain, France",
+    "year": 2026,
+    "duration": 155,
+    "genre": "Drama, Bélica"
+  },
+  "blue heron|2025": {
+    "url": "https://letterboxd.com/film/blue-heron/",
+    "title_en": "Blue Heron",
+    "director": "Sophy Romvari",
+    "country": "Canada, Hungary",
+    "year": 2025,
+    "duration": 91,
+    "genre": "Drama"
+  },
+  "naza|2026": {
+    "url": "https://letterboxd.com/film/naza/",
+    "title_en": "NAZA",
+    "director": "Yuval Abraham, Rachel Szor",
+    "country": "USA, UK",
+    "year": 2026,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "NAZA"
+  },
+  "verano 1993|2017": {
+    "url": "https://letterboxd.com/film/verano-1993/",
+    "title_en": "Summer 1993",
+    "director": "Carla Simón",
+    "country": "Spain",
+    "year": 2017,
+    "duration": 98,
+    "genre": "Drama",
+    "title_es": "Verano 1993",
+    "original_title": "Estiu 1993"
+  },
+  "retrato de una mujer en llamas|2019": {
+    "url": "https://letterboxd.com/film/portrait-of-a-lady-on-fire/",
+    "title_en": "Portrait of a Lady on Fire",
+    "director": "Céline Sciamma",
+    "country": "France",
+    "year": 2019,
+    "duration": 121,
+    "genre": "Drama, Romance",
+    "title_es": "Retrato de una mujer en llamas",
+    "original_title": "Portrait de la jeune fille en feu"
+  },
+  "bad apples|2025": {
+    "url": "https://letterboxd.com/film/bad-apples-2025/",
+    "title_en": "Bad Apples",
+    "director": "Jonatan Etzler",
+    "country": "UK, USA",
+    "year": 2025,
+    "duration": 100,
+    "genre": "Thriller, Comedia"
+  },
+  "cinco lobitos|2022": {
+    "url": "https://letterboxd.com/film/lullaby-2022-1/",
+    "title_en": "Lullaby",
+    "director": "Alauda Ruiz de Azúa",
+    "country": "Spain",
+    "year": 2022,
+    "duration": 104,
+    "genre": "Drama",
+    "original_title": "Cinco lobitos"
+  },
+  "aftersun|2022": {
+    "url": "https://letterboxd.com/film/aftersun/",
+    "title_en": "Aftersun",
+    "director": "Charlotte Wells",
+    "country": "UK, USA",
+    "year": 2022,
+    "duration": 101,
+    "genre": "Drama",
+    "original_title": "Aftersun"
+  },
+  "jim queen|2026": {
+    "url": "https://letterboxd.com/film/jim-queen/",
+    "title_en": "Jim Queen",
+    "director": "Marco Nguyen, Nicolas Athané",
+    "country": "France, Belgium",
+    "year": 2026,
+    "duration": 85,
+    "genre": "Comedia, Animación"
+  },
+  "la playa de los enchaquirados|2021": {
+    "url": "https://letterboxd.com/film/la-playa-de-los-enchaquirados/",
+    "title_en": "The Beach of Enchaquirados",
+    "director": "Iván Mora Manzano",
+    "country": "Ecuador",
+    "year": 2021,
+    "duration": 86,
+    "genre": "Documental",
+    "original_title": "La Playa de los Enchaquirados"
+  },
+  "vidas pasadas|2023": {
+    "url": "https://letterboxd.com/film/past-lives/",
+    "title_en": "Past Lives",
+    "director": "Celine Song",
+    "country": "USA, South Korea",
+    "year": 2023,
+    "duration": 106,
+    "genre": "Drama, Romance",
+    "title_es": "Vidas pasadas",
+    "original_title": "Past Lives"
+  },
+  "orgullo y prejuicio|2026": {
+    "url": "https://letterboxd.com/film/orgullo-y-prejuicio-2026/",
+    "title_en": "Orgullo y Prejuicio",
+    "director": "Matías Szulanski",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 93,
+    "genre": "",
+    "original_title": "Orgullo y Prejuicio"
+  },
+  "sucia|2026": {
+    "url": "https://letterboxd.com/film/sucia/",
+    "title_en": "Filthy",
+    "director": "Marc Pujolar, Bàrbara Mestanza",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Documental",
+    "title_es": "Sucia. ¿Por qué no hiciste nada?",
+    "original_title": "Sucia. Per què no vas fer res?"
+  },
+  "sesión de cortos: el cuerpo de cristo, delincuente, rouge y calm": {
+    "url": "",
+    "title_en": "SESIÓN DE CORTOS: EL CUERPO DE CRISTO, DELINCUENTE, ROUGE Y CALM",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "peleliu|2025": {
+    "url": "https://letterboxd.com/film/peleliu-guernica-of-paradise/",
+    "title_en": "Peleliu: Guernica of Paradise",
+    "director": "Goro Kuji",
+    "country": "Japan",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Drama, Animación",
+    "title_es": "Peleliu: Rakuen no Guernica",
+    "original_title": "ペリリュー －楽園のゲルニカ－"
+  },
+  "fromzero shorts #7": {
+    "url": "",
+    "title_en": "FROMZERO SHORTS #7",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "blood feast|1963": {
+    "url": "",
+    "title_en": "BLOOD FEAST",
+    "director": "Herschell Gordon Lewis",
+    "country": "United States of America",
+    "year": 1963,
+    "duration": 67,
+    "genre": "Terror",
+    "original_title": "Blood Feast"
+  },
+  "a paixâo segundo g.h.b|2026": {
+    "url": "",
+    "title_en": "A PAIXÂO SEGUNDO G.H.B",
+    "director": "Gustavo Vinagre, Vinicius Couto",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 75,
+    "genre": "Drama",
+    "original_title": "A Paixão Segundo G.H.B."
+  },
+  "eva|2026": {
+    "url": "",
+    "title_en": "EVA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "vespertine-björk": {
+    "url": "",
+    "title_en": "VESPERTINE-BJÖRK",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-01",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "mudras|2025": {
+    "url": "https://letterboxd.com/film/mudras-bailando-hilos-invisibles/",
+    "title_en": "Mudras. Bailando hilos invisibles",
+    "director": "Maria Salgado Gispert, Bobby Bedi",
+    "country": "Spain, India",
+    "year": 2026,
+    "duration": 77,
+    "genre": "Documental",
+    "title_es": "Mudras. Dancing Invisible Threads",
+    "original_title": "Mudras. Bailando hilos invisibles"
+  },
+  "7 minutos|2026": {
+    "url": "",
+    "title_en": "7 minutos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el eco|2026": {
+    "url": "",
+    "title_en": "El eco",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "gordo muerte|2026": {
+    "url": "",
+    "title_en": "Gordo Muerte",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "identidad verificada|2026": {
+    "url": "",
+    "title_en": "Identidad verificada",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la audiencia|2026": {
+    "url": "",
+    "title_en": "La audiencia",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la muerte vino a visitarme|2025": {
+    "url": "",
+    "title_en": "La muerte vino a visitarme",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sean jóvenes|2026": {
+    "url": "",
+    "title_en": "Sean jóvenes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "melodía de arrabal (passed,1933)": {
+    "url": "",
+    "title_en": "Melodía de arrabal (Passed,1933)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "'a santanotte|1922": {
+    "url": "https://letterboxd.com/film/a-santanotte/",
+    "title_en": "'A Santanotte",
+    "director": "Elvira Notari",
+    "country": "Italy",
+    "year": 1922,
+    "duration": 61,
+    "genre": "Drama, Romance",
+    "original_title": "'A Santanotte"
+  },
+  "la balada de narayama|1958": {
+    "url": "https://letterboxd.com/film/the-ballad-of-narayama-1958/",
+    "title_en": "The Ballad of Narayama",
+    "director": "Keisuke Kinoshita",
+    "country": "Japan",
+    "year": 1958,
+    "duration": 98,
+    "genre": "Drama",
+    "title_es": "La balada de Narayama",
+    "original_title": "楢山節考"
+  },
+  "è piccerella|1922": {
+    "url": "https://letterboxd.com/film/e-piccerella/",
+    "title_en": "È piccerella",
+    "director": "Elvira Notari",
+    "country": "Italy",
+    "year": 1922,
+    "duration": 62,
+    "genre": "Romance, Drama",
+    "original_title": "È piccerella"
+  },
+  "shorts for future": {
+    "url": "",
+    "title_en": "Shorts for Future",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mburucuyá, cuadros de la naturaleza|1992": {
+    "url": "",
+    "title_en": "Mburucuyá, cuadros de la naturaleza",
+    "director": "Jorge Acha",
+    "country": "Argentina",
+    "year": 1991,
+    "duration": 95,
+    "original_title": "Mburucuyá (cuadros de la naturaleza)"
+  },
+  "crazy stop motion": {
+    "url": "",
+    "title_en": "Crazy Stop Motion",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los goonies|1985": {
+    "url": "https://letterboxd.com/film/the-goonies/",
+    "title_en": "The Goonies",
+    "director": "Richard Donner",
+    "country": "USA",
+    "year": 1985,
+    "duration": 114,
+    "genre": "Aventura, Familiar",
+    "title_es": "Los Goonies",
+    "original_title": "The Goonies"
+  },
+  "no quiero volver a casa|2000": {
+    "url": "",
+    "title_en": "No quiero volver a casa",
+    "director": "Albertina Carri",
+    "country": "Argentina, Netherlands",
+    "year": 2001,
+    "duration": 78,
+    "genre": "Drama",
+    "original_title": "No quiero volver a casa"
+  },
+  "les chansons d’amour|2007": {
+    "url": "https://letterboxd.com/film/love-songs/",
+    "title_en": "Love Songs",
+    "director": "Christophe Honoré",
+    "country": "France",
+    "year": 2007,
+    "duration": 90,
+    "genre": "Romance, Drama",
+    "title_es": "Canciones de amor",
+    "original_title": "Les Chansons d'amour"
+  },
+  "apenas un delincuente|1949": {
+    "url": "",
+    "title_en": "Apenas un delincuente",
+    "director": "Hugo Fregonese",
+    "country": "Argentina",
+    "year": 1949,
+    "duration": 88,
+    "genre": "Crimen, Drama",
+    "original_title": "Apenas un delincuente"
+  },
+  "la deuda|2019": {
+    "url": "",
+    "title_en": "La deuda",
+    "director": "Gustavo Fontán",
+    "country": "Argentina, Spain",
+    "year": 2019,
+    "duration": 74,
+    "genre": "Drama",
+    "original_title": "La deuda"
+  },
+  "zulueta / aguirre. tentativa y obra": {
+    "url": "",
+    "title_en": "Zulueta / Aguirre. Tentativa y obra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mientras dure la guerra|2019": {
+    "url": "https://letterboxd.com/film/mientras-dure-la-guerra/",
+    "title_en": "While at War",
+    "director": "Alejandro Amenábar",
+    "country": "Argentina, Spain",
+    "year": 2019,
+    "duration": 108,
+    "genre": "Drama, Historia",
+    "original_title": "Mientras dure la guerra"
+  },
+  "libertarias|1996": {
+    "url": "https://letterboxd.com/film/libertarias/",
+    "title_en": "Freedomfighters",
+    "director": "Vicente Aranda",
+    "country": "Belgium, Italy",
+    "year": 1996,
+    "duration": 125,
+    "genre": "Drama, Bélica",
+    "original_title": "Libertarias"
+  },
+  "esta, nuestra vida|1942": {
+    "url": "https://letterboxd.com/film/in-this-our-life/",
+    "title_en": "In This Our Life",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1942,
+    "duration": 97,
+    "genre": "Drama, Romance",
+    "title_es": "Como ella sola",
+    "original_title": "In This Our Life"
+  },
+  "la reina africana|1951": {
+    "url": "https://letterboxd.com/film/the-african-queen/",
+    "title_en": "The African Queen",
+    "director": "John Huston",
+    "country": "UK, USA",
+    "year": 1951,
+    "duration": 105,
+    "genre": "Romance, Bélica",
+    "title_es": "La reina de África",
+    "original_title": "The African Queen"
+  },
+  "el halcón maltés|1941": {
+    "url": "https://letterboxd.com/film/the-maltese-falcon-1941/",
+    "title_en": "The Maltese Falcon",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1941,
+    "duration": 100,
+    "genre": "Misterio, Thriller",
+    "title_es": "El halcón maltés",
+    "original_title": "The Maltese Falcon"
+  },
+  "huracán de pasiones|1948": {
+    "url": "https://letterboxd.com/film/key-largo/",
+    "title_en": "Key Largo",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1948,
+    "duration": 100,
+    "genre": "Thriller, Crimen",
+    "title_es": "Cayo Largo",
+    "original_title": "Key Largo"
+  },
+  "la burla del diablo|1953": {
+    "url": "https://letterboxd.com/film/beat-the-devil/",
+    "title_en": "Beat the Devil",
+    "director": "John Huston",
+    "country": "Italy, UK",
+    "year": 1953,
+    "duration": 95,
+    "genre": "Aventura, Crimen",
+    "title_es": "La burla del diablo",
+    "original_title": "Beat the Devil"
+  },
+  "el tesoro de la sierra madre|1948": {
+    "url": "https://letterboxd.com/film/the-treasure-of-the-sierra-madre/",
+    "title_en": "The Treasure of the Sierra Madre",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1948,
+    "duration": 126,
+    "genre": "Drama, Western",
+    "title_es": "El tesoro de Sierra Madre",
+    "original_title": "The Treasure of the Sierra Madre"
+  },
+  "ciudad dorada|1972": {
+    "url": "https://letterboxd.com/film/fat-city/",
+    "title_en": "Fat City",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1972,
+    "duration": 97,
+    "genre": "Drama",
+    "title_es": "Fat City, ciudad dorada",
+    "original_title": "Fat City"
+  },
+  "mientras la ciudad duerme|1950": {
+    "url": "https://letterboxd.com/film/the-asphalt-jungle/",
+    "title_en": "The Asphalt Jungle",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1950,
+    "duration": 113,
+    "genre": "Crimen, Drama"
+  },
+  "los inadaptados|1961": {
+    "url": "https://letterboxd.com/film/the-misfits/",
+    "title_en": "The Misfits",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1961,
+    "duration": 124,
+    "genre": "Western, Romance"
+  },
+  "el juez del patíbulo|1972": {
+    "url": "",
+    "title_en": "El juez del patíbulo",
+    "director": "John Huston",
+    "country": "United States of America",
+    "year": 1972,
+    "duration": 120,
+    "genre": "Western, Comedia",
+    "title_es": "El juez de la horca",
+    "original_title": "The Life and Times of Judge Roy Bean"
+  },
+  "la noche de la iguana|1964": {
+    "url": "https://letterboxd.com/film/the-night-of-the-iguana/",
+    "title_en": "The Night of the Iguana",
+    "director": "John Huston",
+    "country": "USA",
+    "year": 1964,
+    "duration": 118,
+    "genre": "Romance, Drama",
+    "title_es": "La noche de la iguana",
+    "original_title": "The Night of the Iguana"
+  },
+  "freud, pasión secreta|1962": {
+    "url": "https://letterboxd.com/film/freud-the-secret-passion/",
+    "title_en": "Freud: The Secret Passion",
+    "director": "John Huston, John Huston’s",
+    "country": "USA",
+    "year": 1962,
+    "duration": 140,
+    "genre": "Drama",
+    "title_es": "Freud, pasión secreta",
+    "original_title": "Freud: The Secret Passion"
+  },
+  "desde ahora y para siempre|1987": {
+    "url": "https://letterboxd.com/film/the-dead/",
+    "title_en": "The Dead",
+    "director": "John Huston",
+    "country": "Germany, Ireland",
+    "year": 1987,
+    "duration": 83,
+    "genre": "Drama",
+    "title_es": "Dublineses",
+    "original_title": "The Dead"
+  },
+  "aguirre, la ira de dios|1972": {
+    "url": "https://letterboxd.com/film/aguirre-the-wrath-of-god/",
+    "title_en": "Aguirre, the Wrath of God",
+    "director": "Werner Herzog",
+    "country": "Germany, Mexico",
+    "year": 1972,
+    "duration": 95,
+    "genre": "Historia, Drama",
+    "title_es": "Aguirre, la cólera de Dios",
+    "original_title": "Aguirre, der Zorn Gottes"
+  },
+  "cobra verde|1987": {
+    "url": "https://letterboxd.com/film/cobra-verde/",
+    "title_en": "Cobra Verde",
+    "director": "Werner Herzog",
+    "country": "Germany, Ghana",
+    "year": 1987,
+    "duration": 111,
+    "genre": "Drama, Aventura",
+    "title_es": "Cobra verde",
+    "original_title": "Cobra Verde"
+  },
+  "woyzeck|1979": {
+    "url": "https://letterboxd.com/film/woyzeck/",
+    "title_en": "Woyzeck",
+    "director": "Werner Herzog",
+    "country": "Germany",
+    "year": 1979,
+    "duration": 82,
+    "genre": "Drama",
+    "original_title": "Woyzeck"
+  },
+  "fitzcarraldo|1982": {
+    "url": "https://letterboxd.com/film/fitzcarraldo/",
+    "title_en": "Fitzcarraldo",
+    "director": "Werner Herzog",
+    "country": "Germany, Peru",
+    "year": 1982,
+    "duration": 157,
+    "genre": "Aventura, Drama",
+    "original_title": "Fitzcarraldo"
+  },
+  "mi mejor enemigo|1999": {
+    "url": "https://letterboxd.com/film/my-best-fiend/",
+    "title_en": "My Best Fiend",
+    "director": "Werner Herzog",
+    "country": "Germany, UK",
+    "year": 1999,
+    "duration": 99,
+    "genre": "Documental",
+    "title_es": "Mi enemigo íntimo",
+    "original_title": "Mein liebster Feind"
+  },
+  "nosferatu, el vampiro|1978": {
+    "url": "https://letterboxd.com/film/nosferatu-phantom-der-nacht/",
+    "title_en": "Nosferatu the Vampyre",
+    "director": "Werner Herzog",
+    "country": "Germany, France",
+    "year": 1979,
+    "duration": 107,
+    "genre": "Drama, Terror",
+    "title_es": "Nosferatu. Vampiro de la noche",
+    "original_title": "Nosferatu – Phantom der Nacht"
   }
 }
