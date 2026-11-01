@@ -76,6 +76,17 @@
         "Villa Victoria": "Matheu 1851"
       },
       "web": "https://mardelplatafilmfest.com/41/es/programas/"
+    },
+    {
+      "slug": "hurlingham",
+      "nombre": "Festival de Cine de Hurlingham",
+      "bajada": "FESTIHUR, 7.ª edición",
+      "lugar": "Hurlingham",
+      "desde": "2026-11-06",
+      "hasta": "2026-11-08",
+      "archivo": "data/festival-hurlingham.json",
+      "sedes": {"C. C. Leopoldo Marechal": "Av. Vergara 2396"},
+      "web": "https://www.hurlingham.gob.ar/festi-hur"
     }
   ]
 }
