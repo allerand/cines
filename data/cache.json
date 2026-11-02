@@ -15144,8 +15144,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-29",
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Thus is Life (1930), Así es la vida (1939)",
+    "fecha": "2026-11-02",
     "con_duracion": false,
     "desempate": ""
   },
@@ -25526,12 +25526,14 @@
     "sin_hints": "título local de un estreno"
   },
   "ts 2026 - mama (2013)|2013": {
-    "url": "",
-    "title_en": "TS 2026 - MAMA (2013)",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/tales-of-halloween/",
+    "title_en": "Tales of Halloween",
+    "director": "Paul Solet, Ryan Schifrin, Axelle Carolyn",
+    "country": "USA",
+    "year": 2015,
+    "duration": 97,
+    "genre": "Aventura, Fantasía",
+    "clase_titulo": "distinto"
   },
   "ts 2026 - evil dead: en llamas": {
     "url": "https://letterboxd.com/film/evil-dead-burn/",
@@ -26040,10 +26042,10 @@
     "original_title": "Lawrence of Arabia"
   },
   "esencia de mujer": {
-    "url": "",
-    "title_en": "Esencia de mujer",
+    "url": "https://letterboxd.com/film/scent-of-a-woman/",
+    "title_en": "Scent of a Woman",
     "director": "Martin Brest",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1992,
     "duration": 156,
     "genre": "Drama",
@@ -29551,7 +29553,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-29",
+    "fecha": "2026-11-02",
     "con_duracion": true,
     "desempate": ""
   },
@@ -31288,6 +31290,426 @@
   "ffestival rizoma-la gran fiesta del cine toni agustí y maría s. torregrosa-2026 -vo- 82’": {
     "url": "",
     "title_en": "FFESTIVAL RIZOMA-LA GRAN FIESTA DEL CINE Toni Agustí y María S. Torregrosa-2026 -VO- 82’",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the beast v.o.s.e. sesión teta|2026": {
+    "url": "",
+    "title_en": "THE BEAST V.O.S.E. Sesión Teta",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "castme": {
+    "url": "",
+    "title_en": "Castme",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el derrumbe": {
+    "url": "https://letterboxd.com/film/el-derrumbe/",
+    "title_en": "El derrumbe",
+    "director": "Ivan Djeredjian",
+    "country": "",
+    "year": null,
+    "duration": 9,
+    "genre": "",
+    "original_title": "El derrumbe"
+  },
+  "para mi muerte": {
+    "url": "",
+    "title_en": "Para mi muerte",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "maleza": {
+    "url": "",
+    "title_en": "Maleza",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "insomnio": {
+    "url": "",
+    "title_en": "Insomnio",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "limbus|2026": {
+    "url": "https://letterboxd.com/film/limbus-2026/",
+    "title_en": "Limbus",
+    "director": "Manuel Rodriguez, Simon Federlein, Young-Jean Meang",
+    "country": "Germany",
+    "year": 2026,
+    "duration": 8,
+    "genre": "Misterio, Terror",
+    "original_title": "Limbus"
+  },
+  "george": {
+    "url": "",
+    "title_en": "George",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el desvío": {
+    "url": "",
+    "title_en": "El desvío",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "lo que fue nuestro hogar|2025": {
+    "url": "https://letterboxd.com/film/lo-que-fue-nuestro-hogar/",
+    "title_en": "Lo que fue nuestro hogar",
+    "director": "Angelo Lobos",
+    "country": "Chile",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Drama",
+    "original_title": "Lo que fue nuestro hogar"
+  },
+  "las gallinas": {
+    "url": "",
+    "title_en": "Las gallinas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "oeste": {
+    "url": "",
+    "title_en": "Oeste",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "lona|2025": {
+    "url": "https://letterboxd.com/film/lona/",
+    "title_en": "Lona",
+    "director": "Malena Martínez",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 2,
+    "genre": "Drama, Animación",
+    "original_title": "Lona"
+  },
+  "el amigo de cleopatra|2025": {
+    "url": "https://letterboxd.com/film/el-amigo-de-cleopatra/",
+    "title_en": "El amigo de Cleopatra",
+    "director": "Federico Edelstein",
+    "country": "",
+    "year": 2025,
+    "duration": 14,
+    "genre": "Comedia",
+    "original_title": "El amigo de Cleopatra"
+  },
+  "hálito de arena|2024": {
+    "url": "https://letterboxd.com/film/halito-de-arena/",
+    "title_en": "Hálito de arena",
+    "director": "Lucas Gingles, Muriel Sago",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 12,
+    "genre": "Terror",
+    "original_title": "Hálito de arena"
+  },
+  "la chica de la frontera|2026": {
+    "url": "https://letterboxd.com/film/la-chica-de-la-frontera/",
+    "title_en": "The Girl at the Frontier",
+    "director": "Francisco Novick, Natalio Pagés",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 20,
+    "genre": "Western, Thriller",
+    "original_title": "La chica de la frontera"
+  },
+  "las manos de la abuela": {
+    "url": "",
+    "title_en": "Las manos de la abuela",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "para decir adiós": {
+    "url": "",
+    "title_en": "Para decir adiós",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "maldigo en voz baja": {
+    "url": "https://letterboxd.com/film/maldigo-en-voz-baja/",
+    "title_en": "Maldigo en voz baja",
+    "director": "Gerónimo Pérez",
+    "country": "Argentina",
+    "year": null,
+    "duration": 14,
+    "genre": "Drama",
+    "original_title": "Maldigo en voz baja"
+  },
+  "ser, no ser, ser muchas": {
+    "url": "",
+    "title_en": "Ser, no ser, ser muchas",
+    "director": "Colectivo Silbando Bembas",
+    "country": "",
+    "year": null,
+    "duration": 12,
+    "original_title": "Ser, no ser, ser muchas"
+  },
+  "un buen vecino": {
+    "url": "",
+    "title_en": "Un buen vecino",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la hora negra": {
+    "url": "",
+    "title_en": "La hora negra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la ciénaga|2001": {
+    "url": "https://letterboxd.com/film/la-cienaga/",
+    "title_en": "La Ciénaga",
+    "director": "Lucrecia Martel",
+    "country": "Argentina, France",
+    "year": 2001,
+    "duration": 101,
+    "genre": "Drama",
+    "title_es": "La ciénaga",
+    "original_title": "La Ciénaga"
+  },
+  "un cabo suelto|2025": {
+    "url": "https://letterboxd.com/film/un-cabo-suelto/",
+    "title_en": "A Loose End",
+    "director": "Daniel Hendler",
+    "country": "Argentina, Uruguay",
+    "year": 2025,
+    "duration": 95,
+    "genre": "Drama",
+    "original_title": "Un cabo suelto"
+  },
+  "una partida más": {
+    "url": "",
+    "title_en": "Una partida más",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el susurro|2025": {
+    "url": "https://letterboxd.com/film/the-whisper-2025/",
+    "title_en": "The Whisper",
+    "director": "Gustavo Hernández",
+    "country": "Argentina, Uruguay",
+    "year": 2025,
+    "duration": 101,
+    "genre": "Terror",
+    "original_title": "El susurro"
+  },
+  "el ruido del silencio|2026": {
+    "url": "https://letterboxd.com/film/el-ruido-del-silencio/",
+    "title_en": "El Ruido del Silencio",
+    "director": "Franco Tadeo Aguirre",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 17,
+    "genre": "Drama, Bélica",
+    "original_title": "El Ruido del Silencio"
+  },
+  "al calor de las brasas": {
+    "url": "",
+    "title_en": "Al calor de las brasas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "memorias de un alma olvidada": {
+    "url": "",
+    "title_en": "Memorias de un alma olvidada",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fierté": {
+    "url": "",
+    "title_en": "Fierté",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la ventana es política": {
+    "url": "",
+    "title_en": "La ventana es política",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "dueño de tu memoria": {
+    "url": "",
+    "title_en": "Dueño de tu memoria",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "quién quiero ser": {
+    "url": "",
+    "title_en": "Quién quiero ser",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ausente": {
+    "url": "",
+    "title_en": "Ausente",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "innhospita": {
+    "url": "",
+    "title_en": "Innhospita",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "hamburguesa soñada": {
+    "url": "",
+    "title_en": "Hamburguesa soñada",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "incondicional": {
+    "url": "",
+    "title_en": "Incondicional",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "una parte nuestra": {
+    "url": "",
+    "title_en": "Una parte nuestra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cuando fuimos naranja": {
+    "url": "",
+    "title_en": "Cuando fuimos naranja",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la isla de la basura": {
+    "url": "",
+    "title_en": "La isla de la basura",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mirala": {
+    "url": "",
+    "title_en": "Mirala",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el complejo de la calle quintana": {
+    "url": "https://letterboxd.com/film/el-complejo-de-la-calle-quintana/",
+    "title_en": "El Complejo De La Calle Quintana",
+    "director": "Federico Ortiz",
+    "country": "",
+    "year": null,
+    "duration": 8,
+    "genre": "Comedia, Documental",
+    "original_title": "El Complejo De La Calle Quintana"
+  },
+  "cable": {
+    "url": "https://letterboxd.com/film/cable/",
+    "title_en": "CABLE",
+    "director": "Malena Aranda",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 14,
+    "genre": "Drama",
+    "original_title": "Cable Circle"
+  },
+  "sibilancias|2025": {
+    "url": "https://letterboxd.com/film/sibilancias/",
+    "title_en": "Sibilancias",
+    "director": "Alejandro Giorlando",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 12,
+    "genre": "Thriller",
+    "original_title": "Sibilancias"
+  },
+  "un cacho de deseo": {
+    "url": "https://letterboxd.com/film/un-cacho-de-deseo/",
+    "title_en": "Un Cacho de Deseo",
+    "director": "Carla Morgana Brugna",
+    "country": "Argentina",
+    "year": null,
+    "duration": 8,
+    "genre": "Animación, Comedia",
+    "original_title": "Un Cacho de Deseo"
+  },
+  "el sueño de pocha": {
+    "url": "",
+    "title_en": "El sueño de Pocha",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ilse fuskova": {
+    "url": "https://letterboxd.com/film/ilse-fuskova/",
+    "title_en": "Ilse Fuskova",
+    "director": "Liliana Furió, Lucas Santa Ana",
+    "country": "Argentina, Spain",
+    "year": 2021,
+    "duration": 89,
+    "genre": "",
+    "original_title": "Ilse Fuskova"
+  },
+  "explorando la odisea con abadi": {
+    "url": "",
+    "title_en": "EXPLORANDO LA ODISEA CON ABADI",
     "director": "",
     "country": "",
     "year": null,
