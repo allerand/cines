@@ -5582,7 +5582,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Plan 9 from Outer Space (1957), y puede ser otra",
-    "fecha": "2026-10-29",
+    "fecha": "2026-11-02",
     "con_duracion": false,
     "desempate": ""
   },
@@ -5631,7 +5631,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Bride of the Monster (1955), y puede ser otra",
-    "fecha": "2026-10-29",
+    "fecha": "2026-11-02",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26792,7 +26792,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Persona: The Film That Saved Ingmar Bergman (2018)",
-    "fecha": "2026-10-29",
+    "fecha": "2026-11-02",
     "con_duracion": false,
     "desempate": ""
   },
@@ -31464,12 +31464,13 @@
     "original_title": "Maldigo en voz baja"
   },
   "ser, no ser, ser muchas": {
-    "url": "",
+    "url": "https://letterboxd.com/film/ser-no-ser-ser-muchas/",
     "title_en": "Ser, no ser, ser muchas",
     "director": "Colectivo Silbando Bembas",
     "country": "",
     "year": null,
     "duration": 12,
+    "genre": "",
     "original_title": "Ser, no ser, ser muchas"
   },
   "un buen vecino": {

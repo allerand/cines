@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-02T02:50:57",
+  "updated": "2026-11-02T12:05:04",
   "fuentes": {
     "Artistic Metropol": {
-      "scrapeadas": 25,
-      "publicadas": 25
+      "scrapeadas": 32,
+      "publicadas": 31
     },
     "Cine Doré": {
       "scrapeadas": 64,
@@ -8029,6 +8029,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-06",
+      "hora": "12:00",
+      "title_es": "The Beast",
+      "title_en": "The Beast",
+      "original_title": "The Beast",
+      "director": "Renny Harlin",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-9/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-06",
+      "hora": "16:00",
+      "title_es": "The Beast",
+      "title_en": "The Beast",
+      "original_title": "The Beast",
+      "director": "Renny Harlin",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-10/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Estudio",
       "fecha": "2026-11-06",
       "hora": "17:00",
@@ -8333,6 +8365,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-07",
+      "hora": "12:00",
+      "title_es": "The Beast",
+      "title_en": "The Beast",
+      "original_title": "The Beast",
+      "director": "Renny Harlin",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-15/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-11-07",
       "hora": "13:00",
@@ -8346,6 +8394,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=37130",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-07",
+      "hora": "16:00",
+      "title_es": "The Beast",
+      "title_en": "The Beast",
+      "original_title": "The Beast",
+      "director": "Renny Harlin",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-11/",
       "ciclo": ""
     },
     {
@@ -8619,6 +8683,38 @@
       "letterboxd": "https://letterboxd.com/film/lawrence-of-arabia/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-lawrence-de-arabia-vose/39238/",
       "ciclo": "Domingo de clásicos"
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-08",
+      "hora": "12:00",
+      "title_es": "The Beast",
+      "title_en": "The Beast",
+      "original_title": "The Beast",
+      "director": "Renny Harlin",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-12/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-08",
+      "hora": "16:00",
+      "title_es": "The Beast",
+      "title_en": "The Beast",
+      "original_title": "The Beast",
+      "director": "Renny Harlin",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 99,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-13/",
+      "ciclo": ""
     },
     {
       "cine": "Cine Estudio",

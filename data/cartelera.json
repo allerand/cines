@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-02T02:50:57",
+  "updated": "2026-11-02T12:05:04",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 22,
@@ -22,7 +22,7 @@
       "publicadas": 6
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 16,
       "publicadas": 16
     },
     "Cacodelphia": {
@@ -39,7 +39,7 @@
       "publicadas": 5
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
+      "scrapeadas": 27,
       "publicadas": 27
     },
     "Centro Cultural Leopoldo Marechal": {
@@ -92,8 +92,8 @@
       "publicadas": 17
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 44,
-      "publicadas": 44
+      "scrapeadas": 47,
+      "publicadas": 47
     },
     "Filo Cine": {
       "scrapeadas": 8,
@@ -124,12 +124,12 @@
       "publicadas": 277
     },
     "Multiplex Canning": {
-      "scrapeadas": 289,
-      "publicadas": 304
+      "scrapeadas": 294,
+      "publicadas": 309
     },
     "Multiplex Lavalle": {
-      "scrapeadas": 307,
-      "publicadas": 307
+      "scrapeadas": 301,
+      "publicadas": 301
     },
     "Multiplex Pilar": {
       "scrapeadas": 325,
@@ -168,6 +168,22 @@
     {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-02",
+      "hora": "00:45",
+      "title_es": "Clayface",
+      "title_en": "Clayface",
+      "original_title": "Clayface",
+      "director": "James Watkins",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/clayface/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-02",
       "hora": "00:50",
       "title_es": "Sentido y sensibilidad",
       "title_en": "Sense and Sensibility",
@@ -194,6 +210,22 @@
       "duration": 117,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-02",
+      "hora": "01:10",
+      "title_es": "Madre siniestra",
+      "title_en": "Other Mommy",
+      "original_title": "Other Mommy",
+      "director": "Rob Savage",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/other-mommy/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -2694,22 +2726,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-02",
-      "hora": "15:40",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-02",
       "hora": "15:40",
@@ -2723,6 +2739,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-02",
+      "hora": "15:40",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
       "ciclo": ""
     },
     {
@@ -6441,6 +6473,22 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-02",
       "hora": "20:30",
+      "title_es": "Clayface",
+      "title_en": "Clayface",
+      "original_title": "Clayface",
+      "director": "James Watkins",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/clayface/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-02",
+      "hora": "20:30",
       "title_es": "El poder de la red",
       "title_en": "The Social Reckoning",
       "original_title": "The Social Reckoning",
@@ -7529,22 +7577,6 @@
       "cine": "Multiplex Canning",
       "fecha": "2026-11-02",
       "hora": "22:30",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-02",
-      "hora": "22:30",
       "title_es": "Resident Evil: Noche cero",
       "title_en": "Resident Evil",
       "original_title": "Resident Evil",
@@ -7555,6 +7587,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-02",
+      "hora": "22:30",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
       "ciclo": ""
     },
     {
@@ -8950,38 +8998,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-03",
-      "hora": "13:00",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Pilar",
-      "fecha": "2026-11-03",
-      "hora": "13:00",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-03",
       "hora": "13:00",
@@ -9027,6 +9043,38 @@
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/monster-mia/",
       "ticket_url": "https://multiplex.com.ar/peliculas/escuela-de-monstruos/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Lavalle",
+      "fecha": "2026-11-03",
+      "hora": "13:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-11-03",
+      "hora": "13:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
       "ciclo": ""
     },
     {
@@ -10486,22 +10534,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-03",
-      "hora": "15:40",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-03",
       "hora": "15:40",
@@ -10515,6 +10547,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-03",
+      "hora": "15:40",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
       "ciclo": ""
     },
     {
@@ -11062,6 +11110,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-03",
+      "hora": "16:50",
+      "title_es": "Escuela de monstruos",
+      "title_en": "Monster Mia",
+      "original_title": "",
+      "director": "Verena Fels",
+      "country": "Austria, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Animación, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/monster-mia/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/escuela-de-monstruos/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-03",
       "hora": "16:50",
@@ -11091,22 +11155,6 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025/",
       "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-11-03",
-      "hora": "16:50",
-      "title_es": "Escuela de monstruos",
-      "title_en": "Monster Mia",
-      "original_title": "",
-      "director": "Verena Fels",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 82,
-      "genre": "Animación, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/monster-mia/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/escuela-de-monstruos/",
       "ciclo": ""
     },
     {
@@ -14297,22 +14345,6 @@
       "cine": "Multiplex Canning",
       "fecha": "2026-11-03",
       "hora": "22:30",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-03",
-      "hora": "22:30",
       "title_es": "Resident Evil: Noche cero",
       "title_en": "Resident Evil",
       "original_title": "Resident Evil",
@@ -14323,6 +14355,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-03",
+      "hora": "22:30",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
       "ciclo": ""
     },
     {
@@ -15510,38 +15558,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-04",
-      "hora": "13:00",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Pilar",
-      "fecha": "2026-11-04",
-      "hora": "13:00",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-04",
       "hora": "13:00",
@@ -15587,6 +15603,38 @@
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/monster-mia/",
       "ticket_url": "https://multiplex.com.ar/peliculas/escuela-de-monstruos/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Lavalle",
+      "fecha": "2026-11-04",
+      "hora": "13:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-11-04",
+      "hora": "13:00",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
       "ciclo": ""
     },
     {
@@ -17142,22 +17190,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-04",
-      "hora": "15:40",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-04",
       "hora": "15:40",
@@ -17171,6 +17203,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-04",
+      "hora": "15:40",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
       "ciclo": ""
     },
     {
@@ -17734,6 +17782,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-04",
+      "hora": "16:50",
+      "title_es": "Escuela de monstruos",
+      "title_en": "Monster Mia",
+      "original_title": "",
+      "director": "Verena Fels",
+      "country": "Austria, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Animación, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/monster-mia/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/escuela-de-monstruos/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-04",
       "hora": "16:50",
@@ -17763,22 +17827,6 @@
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/obsession-2025/",
       "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Belgrano",
-      "fecha": "2026-11-04",
-      "hora": "16:50",
-      "title_es": "Escuela de monstruos",
-      "title_en": "Monster Mia",
-      "original_title": "",
-      "director": "Verena Fels",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 82,
-      "genre": "Animación, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/monster-mia/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/escuela-de-monstruos/",
       "ciclo": ""
     },
     {
@@ -21113,22 +21161,6 @@
       "cine": "Multiplex Canning",
       "fecha": "2026-11-04",
       "hora": "22:30",
-      "title_es": "Obsesión",
-      "title_en": "Obsession",
-      "original_title": "Obsession",
-      "director": "Curry Barker",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 109,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-04",
-      "hora": "22:30",
       "title_es": "Resident Evil: Noche cero",
       "title_en": "Resident Evil",
       "original_title": "Resident Evil",
@@ -21139,6 +21171,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://multiplex.com.ar/peliculas/resident-evil-noche-cero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-04",
+      "hora": "22:30",
+      "title_es": "Obsesión",
+      "title_en": "Obsession",
+      "original_title": "Obsession",
+      "director": "Curry Barker",
+      "country": "Estados Unidos",
+      "year": 2025,
+      "duration": 109,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/obsession-2025/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/obsesion/",
       "ciclo": ""
     },
     {
@@ -22006,22 +22054,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-05",
-      "hora": "14:50",
-      "title_es": "Godzilla Minus Zero",
-      "title_en": "Godzilla Minus Zero",
-      "original_title": "ゴジラ-0.0",
-      "director": "Takashi Yamazaki",
-      "country": "Japón",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Acción, Terror",
-      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
-      "ciclo": ""
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-11-05",
       "hora": "15:00",
@@ -22440,7 +22472,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-05",
-      "hora": "19:35",
+      "hora": "19:40",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -22664,7 +22696,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-05",
-      "hora": "22:10",
+      "hora": "22:15",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -22899,22 +22931,6 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-06",
-      "hora": "14:50",
-      "title_es": "Godzilla Minus Zero",
-      "title_en": "Godzilla Minus Zero",
-      "original_title": "ゴジラ-0.0",
-      "director": "Takashi Yamazaki",
-      "country": "Japón",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Acción, Terror",
-      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
       "ciclo": ""
     },
     {
@@ -23400,7 +23416,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-06",
-      "hora": "19:35",
+      "hora": "19:40",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -23670,22 +23686,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-06",
-      "hora": "22:10",
-      "title_es": "Godzilla Minus Zero",
-      "title_en": "Godzilla Minus Zero",
-      "original_title": "ゴジラ-0.0",
-      "director": "Takashi Yamazaki",
-      "country": "Japón",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Acción, Terror",
-      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
-      "ciclo": ""
-    },
-    {
       "cine": "MALBA",
       "fecha": "2026-11-06",
       "hora": "22:15",
@@ -23700,6 +23700,22 @@
       "letterboxd": "",
       "ticket_url": "https://malba.org.ar/evento/bazofi-2026",
       "ciclo": "Bazofi"
+    },
+    {
+      "cine": "Multiplex Lavalle",
+      "fecha": "2026-11-06",
+      "hora": "22:15",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
+      "ciclo": ""
     },
     {
       "cine": "Hoyts Dot",
@@ -24070,22 +24086,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-07",
-      "hora": "14:50",
-      "title_es": "Godzilla Minus Zero",
-      "title_en": "Godzilla Minus Zero",
-      "original_title": "ゴジラ-0.0",
-      "director": "Takashi Yamazaki",
-      "country": "Japón",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Acción, Terror",
-      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
-      "ciclo": ""
-    },
-    {
       "cine": "Centro Cultural Leopoldo Marechal",
       "fecha": "2026-11-07",
       "hora": "15:00",
@@ -24401,7 +24401,7 @@
       "year": null,
       "duration": 12,
       "genre": "",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/ser-no-ser-ser-muchas/",
       "ticket_url": "",
       "ciclo": "FESTIHUR - Competencia Panorama Local"
     },
@@ -24872,7 +24872,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-07",
-      "hora": "19:35",
+      "hora": "19:40",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -25112,7 +25112,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-07",
-      "hora": "22:10",
+      "hora": "22:15",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -25395,22 +25395,6 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-08",
-      "hora": "14:50",
-      "title_es": "Godzilla Minus Zero",
-      "title_en": "Godzilla Minus Zero",
-      "original_title": "ゴジラ-0.0",
-      "director": "Takashi Yamazaki",
-      "country": "Japón",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Acción, Terror",
-      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
       "ciclo": ""
     },
     {
@@ -26152,7 +26136,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-08",
-      "hora": "19:35",
+      "hora": "19:40",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -26344,7 +26328,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-08",
-      "hora": "22:10",
+      "hora": "22:15",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -26563,22 +26547,6 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://www.cinemark.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-09",
-      "hora": "14:50",
-      "title_es": "Godzilla Minus Zero",
-      "title_en": "Godzilla Minus Zero",
-      "original_title": "ゴジラ-0.0",
-      "director": "Takashi Yamazaki",
-      "country": "Japón",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Acción, Terror",
-      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
       "ciclo": ""
     },
     {
@@ -26824,7 +26792,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-09",
-      "hora": "19:35",
+      "hora": "19:40",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -26968,7 +26936,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-09",
-      "hora": "22:10",
+      "hora": "22:15",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -27190,22 +27158,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Lavalle",
-      "fecha": "2026-11-10",
-      "hora": "14:50",
-      "title_es": "Godzilla Minus Zero",
-      "title_en": "Godzilla Minus Zero",
-      "original_title": "ゴジラ-0.0",
-      "director": "Takashi Yamazaki",
-      "country": "Japón",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Acción, Terror",
-      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
-      "ciclo": ""
-    },
-    {
       "cine": "Hoyts Dot",
       "fecha": "2026-11-10",
       "hora": "15:00",
@@ -27334,6 +27286,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-10",
+      "hora": "17:30",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-11-10",
       "hora": "18:20",
@@ -27448,7 +27416,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-10",
-      "hora": "19:35",
+      "hora": "19:40",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -27475,6 +27443,22 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-10",
+      "hora": "20:00",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
       "ciclo": ""
     },
     {
@@ -27507,6 +27491,22 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-10",
+      "hora": "20:15",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
       "ciclo": ""
     },
     {
@@ -27576,7 +27576,7 @@
     {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-10",
-      "hora": "22:10",
+      "hora": "22:15",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -27657,6 +27657,38 @@
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-10",
       "hora": "22:35",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-10",
+      "hora": "22:40",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-10",
+      "hora": "22:50",
       "title_es": "Godzilla Minus Zero",
       "title_en": "Godzilla Minus Zero",
       "original_title": "ゴジラ-0.0",
@@ -29014,22 +29046,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-14",
-      "hora": "20:00",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-14",
       "hora": "20:00",
@@ -29044,6 +29060,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
       "ciclo": "Cine en La Noche de los Museos"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-14",
+      "hora": "20:00",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "CCK",
@@ -29190,6 +29222,22 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-15",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-15",
       "hora": "18:00",
@@ -29220,22 +29268,6 @@
       "letterboxd": "https://letterboxd.com/film/my-best-fiend/",
       "ticket_url": "",
       "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-15",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Cine York",
@@ -30166,22 +30198,6 @@
       "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "15:00",
-      "title_es": "La burla del diablo",
-      "title_en": "Beat the Devil",
-      "original_title": "Beat the Devil",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido/Italia",
-      "year": 1953,
-      "duration": 95,
-      "genre": "Aventura, Crimen",
-      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "15:00",
@@ -30196,6 +30212,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "15:00",
+      "title_es": "La burla del diablo",
+      "title_en": "Beat the Devil",
+      "original_title": "Beat the Devil",
+      "director": "John Huston",
+      "country": "EE.UU/Reino Unido/Italia",
+      "year": 1953,
+      "duration": 95,
+      "genre": "Aventura, Crimen",
+      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "MALBA",
@@ -30214,22 +30246,6 @@
       "ciclo": "Continúa"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "17:30",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "17:30",
@@ -30244,6 +30260,22 @@
       "letterboxd": "https://letterboxd.com/film/maman-dechire/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "17:30",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "MALBA",
@@ -31126,22 +31158,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "15:00",
-      "title_es": "La noche de la iguana",
-      "title_en": "The Night of the Iguana",
-      "original_title": "The Night of the Iguana",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1964,
-      "duration": 118,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-29",
       "hora": "15:00",
@@ -31156,6 +31172,22 @@
       "letterboxd": "https://letterboxd.com/film/nino-2025/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-29",
+      "hora": "15:00",
+      "title_es": "La noche de la iguana",
+      "title_en": "The Night of the Iguana",
+      "original_title": "The Night of the Iguana",
+      "director": "John Huston",
+      "country": "Estados Unidos",
+      "year": 1964,
+      "duration": 118,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "MALBA",
@@ -31238,6 +31270,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-29",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-29",
       "hora": "18:00",
@@ -31284,22 +31332,6 @@
       "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
       "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-29",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Centro Cultural Munro",

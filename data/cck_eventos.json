@@ -1,41 +1,15 @@
 {
   "https://palaciolibertad.gob.ar/events/do-bairro-de-diogo-varela-silva/": {
-    "ts": "2026-11-01T10:50:43",
+    "ts": "2026-11-02T11:43:53",
     "v": 2,
     "semanas": 9,
     "funciones": []
   },
   "https://palaciolibertad.gob.ar/events/cine-frances/": {
-    "ts": "2026-11-01T10:50:25",
+    "ts": "2026-11-02T11:43:33",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Maman Déchire",
-        "fecha": "2026-11-01",
-        "hora": "15:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
-        "ciclo": "Cine francés",
-        "director": "",
-        "country": "",
-        "year": null,
-        "duration": null,
-        "original_title": ""
-      },
-      {
-        "cine": "CCK",
-        "title": "Nino",
-        "fecha": "2026-11-01",
-        "hora": "17:30",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
-        "ciclo": "Cine francés",
-        "director": "Pauline Loquès",
-        "country": "",
-        "year": 2025,
-        "duration": 97,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "El acusado",
@@ -91,23 +65,10 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-coreano/": {
-    "ts": "2026-11-01T10:50:31",
+    "ts": "2026-11-02T11:43:46",
     "v": 2,
     "semanas": 9,
     "funciones": [
-      {
-        "cine": "CCK",
-        "title": "Luck-Key",
-        "fecha": "2026-11-01",
-        "hora": "18:00",
-        "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-        "ciclo": "Cine coreano",
-        "director": "Lee Gae-byeok",
-        "country": "",
-        "year": 2016,
-        "duration": 108,
-        "original_title": ""
-      },
       {
         "cine": "CCK",
         "title": "The Host",
@@ -150,7 +111,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/": {
-    "ts": "2026-11-01T10:50:37",
+    "ts": "2026-11-02T11:43:59",
     "v": 2,
     "semanas": 9,
     "funciones": [
@@ -235,7 +196,7 @@
     ]
   },
   "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/": {
-    "ts": "2026-11-01T10:50:50",
+    "ts": "2026-11-02T11:44:06",
     "v": 2,
     "semanas": 9,
     "funciones": [
