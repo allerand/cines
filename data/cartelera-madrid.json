@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-03T04:22:36",
+  "updated": "2026-11-03T11:50:25",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 28,
       "publicadas": 27
     },
     "Cine Doré": {
-      "scrapeadas": 64,
-      "publicadas": 64
+      "scrapeadas": 8,
+      "publicadas": 8
     },
     "Cine Estudio": {
       "scrapeadas": 18,
@@ -27,16 +27,16 @@
       "publicadas": 112
     },
     "Cineteca Madrid": {
-      "scrapeadas": 66,
-      "publicadas": 66
+      "scrapeadas": 67,
+      "publicadas": 67
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 39,
-      "publicadas": 39
+      "scrapeadas": 40,
+      "publicadas": 40
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 41,
-      "publicadas": 41
+      "scrapeadas": 43,
+      "publicadas": 43
     },
     "Golem Madrid": {
       "scrapeadas": 44,
@@ -47,8 +47,8 @@
       "publicadas": 18
     },
     "Renoir Plaza de España": {
-      "scrapeadas": 57,
-      "publicadas": 57
+      "scrapeadas": 56,
+      "publicadas": 56
     },
     "Renoir Retiro": {
       "scrapeadas": 40,
@@ -662,7 +662,7 @@
       "director": "Keisuke Kinoshita",
       "country": "",
       "year": null,
-      "duration": 103,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/carmen-s-pure-love-03-nov/2026-11-03",
@@ -1002,22 +1002,6 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1094290/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-03",
-      "hora": "18:15",
-      "title_es": "Karateka",
-      "title_en": "Karateka",
-      "original_title": "Karateka",
-      "director": "Aritz Moreno",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/karateka-2026/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/karateka/20377/",
       "ciclo": ""
     },
     {
@@ -1606,7 +1590,7 @@
       "director": "Louis Gasnier",
       "country": "",
       "year": null,
-      "duration": 82,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/melodia-de-arrabal-03-nov/2026-11-03",
@@ -2694,7 +2678,7 @@
       "director": "Maximilian Schell",
       "country": "Alemania",
       "year": 1984,
-      "duration": 90,
+      "duration": 94,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/marlene/",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/marlene-04-nov/2026-11-04",
@@ -3190,7 +3174,7 @@
       "director": "Keisuke Kinoshita",
       "country": "",
       "year": null,
-      "duration": 103,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/un-amor-inmortal-4-nov/2026-11-04",
@@ -3514,22 +3498,6 @@
       "genre": "Thriller, Acción",
       "letterboxd": "https://letterboxd.com/film/winter-lions/",
       "ticket_url": "https://www.pillalas.com/pase/1094388/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-04",
-      "hora": "20:25",
-      "title_es": "Karateka",
-      "title_en": "Karateka",
-      "original_title": "Karateka",
-      "director": "Aritz Moreno",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/karateka-2026/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/karateka/20378/",
       "ciclo": ""
     },
     {
@@ -5126,7 +5094,7 @@
       "director": "Alexander Korda",
       "country": "Francia",
       "year": 1931,
-      "duration": 127,
+      "duration": 128,
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/marius/",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/marius-05-nov/2026-11-05",
@@ -5341,22 +5309,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-05",
-      "hora": "20:00",
-      "title_es": "Karateka",
-      "title_en": "Karateka",
-      "original_title": "Karateka",
-      "director": "Aritz Moreno",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/karateka-2026/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/karateka/20379/",
-      "ciclo": ""
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-05",
       "hora": "20:00",
@@ -5434,22 +5386,6 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100578&eventCode=115798",
-      "ciclo": ""
-    },
-    {
-      "cine": "Renoir Plaza de España",
-      "fecha": "2026-11-05",
-      "hora": "20:20",
-      "title_es": "Tiempos de ilusión",
-      "title_en": "Just an Illusion",
-      "original_title": "Juste une illusion",
-      "director": "Éric Toledano",
-      "country": "Francia",
-      "year": 2026,
-      "duration": 119,
-      "genre": "Comedia, Drama",
-      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
-      "ticket_url": "https://www.pillalas.com/pase/1094694/",
       "ciclo": ""
     },
     {
@@ -5569,14 +5505,14 @@
       "fecha": "2026-11-05",
       "hora": "20:30",
       "title_es": "Fantasia ‘e surdate",
-      "title_en": "Fantasia ‘e surdate",
+      "title_en": "Soldier's Fantasy",
       "original_title": "Fantasia 'e surdato",
       "director": "Elvira Notari",
       "country": "Italia",
       "year": 1927,
-      "duration": 35,
+      "duration": 28,
       "genre": "",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/soldiers-fantasy/",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/fantasia-e-surdate-05-nov/2026-11-05",
       "ciclo": "Festival Cine por Mujeres Madrid. Pioneras: Elvira Notari"
     },
@@ -6093,22 +6029,6 @@
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-06",
-      "hora": "17:30",
-      "title_es": "La balada de Narayama",
-      "title_en": "The Ballad of Narayama",
-      "original_title": "楢山節考",
-      "director": "Keisuke Kinoshita",
-      "country": "Japón",
-      "year": 1958,
-      "duration": 98,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-ballad-of-narayama-1958/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-balada-de-narayama-06-nov",
-      "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-06",
       "hora": "18:30",
@@ -6173,34 +6093,18 @@
       "ciclo": "Festival Anfibia"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-06",
-      "hora": "19:00",
-      "title_es": "El duque",
-      "title_en": "The Duke",
-      "original_title": "The Duke",
-      "director": "Roger Michell",
-      "country": "Francia, Reino Unido",
-      "year": 2020,
-      "duration": 95,
-      "genre": "Comedia, Historia",
-      "letterboxd": "https://letterboxd.com/film/the-duke-2020/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/el-duque-06-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
-    },
-    {
       "cine": "Museo Reina Sofía",
       "fecha": "2026-11-06",
       "hora": "19:30",
       "title_es": "Nocturno",
-      "title_en": "Nocturno",
+      "title_en": "Nocturne",
       "original_title": "Nocturno",
       "director": "Ana Apontes y Sol Muñoz",
       "country": "Argentina",
       "year": 2025,
       "duration": 14,
       "genre": "Drama",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/nocturne-2025-2/",
       "ticket_url": "https://entradas.museoreinasofia.es/es/143-web-individual/14655-the-present-on-stage-argentine-cinema-of-the-21st-century/18356918-ana-apontes-y-sol-munoz-nocturno-y-maria-aparicio-a-veces-me-entra-tristeza-otras-veces-rebelion",
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
     },
@@ -6299,22 +6203,6 @@
       "letterboxd": "https://letterboxd.com/film/jimpa/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/jimpa",
       "ciclo": "Cine por Mujeres Madrid 2026"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-06",
-      "hora": "20:30",
-      "title_es": "È Piccerella",
-      "title_en": "È piccerella",
-      "original_title": "È piccerella",
-      "director": "Elvira Notari",
-      "country": "Italia",
-      "year": 1922,
-      "duration": 63,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/e-piccerella/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/e-piccerella-06-nov",
-      "ciclo": "Festival Cine por Mujeres Madrid. Pioneras: Elvira Notari"
     },
     {
       "cine": "Sala Equis",
@@ -6445,22 +6333,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-07",
-      "hora": "17:30",
-      "title_es": "Shorts for Future",
-      "title_en": "Shorts for Future",
-      "original_title": "",
-      "director": "Un mundo mejor. 2017-2025",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/shorts-for-future-un-mundo-mejor-07-nov",
-      "ciclo": "Mi Primer Festival / Filmoteca Jr."
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-07",
       "hora": "18:00",
@@ -6557,34 +6429,18 @@
       "ciclo": "Festival Anfibia"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-07",
-      "hora": "19:00",
-      "title_es": "Twenty-Four Eyes",
-      "title_en": "Twenty-Four Eyes",
-      "original_title": "二十四の瞳",
-      "director": "Keisuke Kinoshita",
-      "country": "Japón",
-      "year": 1954,
-      "duration": 156,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/twenty-four-eyes/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/twenty-four-eyes-07-nov",
-      "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
-    },
-    {
       "cine": "Cine Estudio",
       "fecha": "2026-11-07",
       "hora": "20:00",
       "title_es": "El rayo verde: La noche del cazador",
-      "title_en": "El rayo verde: La noche del cazador",
+      "title_en": "The Night of the Hunter",
       "original_title": "",
       "director": "Charles Laughton",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
+      "country": "Estados Unidos",
+      "year": 1955,
+      "duration": 93,
+      "genre": "Drama, Crimen",
+      "letterboxd": "https://letterboxd.com/film/the-night-of-the-hunter/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/el-rayo-verde-la-noche-del-cazador/",
       "ciclo": ""
     },
@@ -6619,22 +6475,6 @@
       "letterboxd": "https://letterboxd.com/film/woman-unknown/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/woman-unknown",
       "ciclo": "Cine por Mujeres Madrid 2026"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-07",
-      "hora": "20:30",
-      "title_es": "Locura de mujer",
-      "title_en": "Sheer Madness",
-      "original_title": "Heller Wahn",
-      "director": "Margarethe von Trotta",
-      "country": "Francia, Alemania",
-      "year": 1983,
-      "duration": 105,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/sheer-madness/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/locura-de-mujer-07-nov",
-      "ciclo": "Festival Cine por Mujeres. Instituto Goethe"
     },
     {
       "cine": "Sala Equis",
@@ -6749,22 +6589,6 @@
       "ciclo": "Cine por Mujeres Madrid 2026"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-08",
-      "hora": "17:30",
-      "title_es": "Honey",
-      "title_en": "Honey",
-      "original_title": "Honey",
-      "director": "Natasha Arthy",
-      "country": "Dinamarca",
-      "year": 2025,
-      "duration": 97,
-      "genre": "Familiar, Comedia",
-      "letterboxd": "https://letterboxd.com/film/honey-2025/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/honey-08-nov",
-      "ciclo": "Mi Primer Festival / Filmoteca Jr."
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-08",
       "hora": "18:00",
@@ -6829,22 +6653,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-08",
-      "hora": "20:30",
-      "title_es": "Cuando cae el otoño",
-      "title_en": "When Fall Is Coming",
-      "original_title": "Quand vient l'automne",
-      "director": "François Ozon",
-      "country": "Francia",
-      "year": 2024,
-      "duration": 104,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/when-fall-is-coming/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/cuando-cae-el-otoño-08-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-08",
       "hora": "21:00",
@@ -6877,6 +6685,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-09",
+      "hora": "12:00",
+      "title_es": "Cecilia. Una luz de mañana",
+      "title_en": "Cecilia,  una luz de mañana",
+      "original_title": "Cecilia,  una luz de mañana",
+      "director": "Chema de la Peña",
+      "country": "",
+      "year": 2026,
+      "duration": 87,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cecilia-una-luz-de-manana/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/cecilia-una-luz-de-manana/39454/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Estudio",
       "fecha": "2026-11-09",
       "hora": "19:00",
@@ -6896,9 +6720,9 @@
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-09",
       "hora": "19:30",
-      "title_es": "Espacio Queer: Llueve sobre Babel",
+      "title_es": "Llueve sobre Babel",
       "title_en": "Rains Over Babel",
-      "original_title": "",
+      "original_title": "Llueve sobre Babel",
       "director": "Gala del Sol",
       "country": "Colombia, Estados Unidos",
       "year": 2025,
@@ -6907,22 +6731,6 @@
       "letterboxd": "https://letterboxd.com/film/rains-over-babel/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/espacio-queer-llueve-sobre-babel/20415/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-10",
-      "hora": "17:30",
-      "title_es": "Para hacer una película solo hace falta un arma",
-      "title_en": "All You Need to Make a Movie Is a Gun",
-      "original_title": "Para hacer una película solo hace falta un arma",
-      "director": "Santiago Sein",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 146,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/all-you-need-to-make-a-movie-is-a-gun/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/para-hacer-una-pelicula-solo-hace-falta-un-arma-10-nov",
-      "ciclo": "El Presente en Escena. el Cine Argentino del Siglo Xxi"
     },
     {
       "cine": "Cineteca Madrid",
@@ -7005,22 +6813,6 @@
       "ciclo": "31 Queercinemad"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-10",
-      "hora": "21:00",
-      "title_es": "5 es el número perfecto",
-      "title_en": "5 es el número perfecto",
-      "original_title": "",
-      "director": "Igor Tuveri",
-      "country": "",
-      "year": 2019,
-      "duration": 107,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/5-es-el-numero-perfecto-10-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-10",
       "hora": "21:45",
@@ -7035,38 +6827,6 @@
       "letterboxd": "https://letterboxd.com/film/blue-heron/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2992&cine=EQUIS",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-11",
-      "hora": "17:30",
-      "title_es": "Mburucuyá, cuadros de la naturaleza",
-      "title_en": "Mburucuyá, cuadros de la naturaleza",
-      "original_title": "Mburucuyá (cuadros de la naturaleza)",
-      "director": "Jorge Acha",
-      "country": "Argentina",
-      "year": 1992,
-      "duration": 10,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/mburucuya-cuadros-de-la-naturaleza-11-nov",
-      "ciclo": "El Presente en Escena. el Cine Argentino del Siglo Xxi"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-11",
-      "hora": "19:00",
-      "title_es": "La madrastra",
-      "title_en": "La madrastra",
-      "original_title": "La madrastra",
-      "director": "Roberto Gavaldón",
-      "country": "México, España",
-      "year": 1974,
-      "duration": 82,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/la-madrastra/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-madrastra-11-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
     },
     {
       "cine": "Cineteca Madrid",
@@ -7133,22 +6893,6 @@
       "ciclo": "31 Queercinemad"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-11",
-      "hora": "20:30",
-      "title_es": "El adiós de un hijo",
-      "title_en": "Army",
-      "original_title": "陸軍",
-      "director": "Keisuke Kinoshita",
-      "country": "Japón",
-      "year": 1944,
-      "duration": 90,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/army-1944/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/el-adios-de-un-hijo-11-nov",
-      "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-11",
       "hora": "21:30",
@@ -7178,22 +6922,6 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-2-estudios-de-cine-noviembre-2026-con-alejandro-mucientes-5/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-12",
-      "hora": "17:30",
-      "title_es": "La Belle Marinière",
-      "title_en": "LA BELLE MARINIÈRE",
-      "original_title": "La Belle Marinière",
-      "director": "Harry Lachman",
-      "country": "Francia",
-      "year": 1932,
-      "duration": 53,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -7261,22 +6989,6 @@
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-12",
-      "hora": "19:00",
-      "title_es": "La balada de Narayama",
-      "title_en": "The Ballad of Narayama",
-      "original_title": "楢山節考",
-      "director": "Keisuke Kinoshita",
-      "country": "Japón",
-      "year": 1958,
-      "duration": 98,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-ballad-of-narayama-1958/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-balada-de-narayama-12-nov",
-      "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-12",
       "hora": "19:30",
@@ -7339,22 +7051,6 @@
       "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/adolescencia-sexo-y-muerte-en-campamento-miasma-vose/19871/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-12",
-      "hora": "20:30",
-      "title_es": "Polvo serán",
-      "title_en": "They Will Be Dust",
-      "original_title": "Polvo serán",
-      "director": "Carlos Marqués Marcet",
-      "country": "Italia, España",
-      "year": 2024,
-      "duration": 106,
-      "genre": "Comedia, Música",
-      "letterboxd": "https://letterboxd.com/film/polvo-seran/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/polvo-seran-12-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
     },
     {
       "cine": "Cineteca Madrid",
@@ -7437,22 +7133,6 @@
       "ciclo": "31 Queercinemad"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-13",
-      "hora": "17:30",
-      "title_es": "Fin de jornada",
-      "title_en": "The End of the Day",
-      "original_title": "",
-      "director": "Julie Duvivier",
-      "country": "Francia",
-      "year": 1939,
-      "duration": 99,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-end-of-the-day/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/fin-de-jornada-13-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-13",
       "hora": "18:00",
@@ -7483,22 +7163,6 @@
       "letterboxd": "https://letterboxd.com/film/sean-eternxs/",
       "ticket_url": "https://entradas.museoreinasofia.es/es/143-web-individual/14655-the-present-on-stage-argentine-cinema-of-the-21st-century/18368042-raul-perrone-sean-eternxs",
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-13",
-      "hora": "19:00",
-      "title_es": "El amor solfeando",
-      "title_en": "El amor solfeando",
-      "original_title": "El amor solfeando",
-      "director": "Robert Florey",
-      "country": "Francia, Alemania",
-      "year": 1930,
-      "duration": 67,
-      "genre": "Comedia",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/el-amor-solfeando-13-nov",
-      "ciclo": "¡al Hollywood Parisino! Multiversiones en la Ii República"
     },
     {
       "cine": "Sala Equis",
@@ -7565,22 +7229,6 @@
       "ciclo": "31 Queercinemad"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-13",
-      "hora": "20:30",
-      "title_es": "La mujer y el pelele",
-      "title_en": "The Woman and the Puppet",
-      "original_title": "",
-      "director": "Jacques de Baroncelli",
-      "country": "Francia",
-      "year": 1929,
-      "duration": 110,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-woman-and-the-puppet/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-mujer-y-el-pelele-13-nov",
-      "ciclo": "Lyceum Club Femenino. Centenario"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-13",
       "hora": "22:00",
@@ -7613,22 +7261,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-14",
-      "hora": "17:30",
-      "title_es": "Crazy Stop Motion",
-      "title_en": "Crazy Stop Motion",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/crazy-stop-motion-14-nov",
-      "ciclo": "Mi Primer Festival / Filmoteca Jr."
-    },
-    {
       "cine": "Museo Reina Sofía",
       "fecha": "2026-11-14",
       "hora": "18:00",
@@ -7659,22 +7291,6 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/cortos-internacionales-i-5",
       "ciclo": "31 Queercinemad"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-14",
-      "hora": "19:00",
-      "title_es": "Nouvelle vague",
-      "title_en": "Nouvelle Vague",
-      "original_title": "Nouvelle Vague",
-      "director": "Jean-Luc Godard",
-      "country": "Suiza, Francia",
-      "year": 1990,
-      "duration": 90,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/nouvelle-vague/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/nouvelle-vague-14-nov",
-      "ciclo": "Universo Godard"
     },
     {
       "cine": "Cineteca Madrid",
@@ -7725,22 +7341,6 @@
       "ciclo": "31 Queercinemad"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-14",
-      "hora": "20:30",
-      "title_es": "Dialogando con la vida",
-      "title_en": "Winter Boy",
-      "original_title": "Le Lycéen",
-      "director": "Christophe Honoré",
-      "country": "Francia",
-      "year": 2022,
-      "duration": 122,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/winter-boy/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/dialogando-con-la-vida-14-nov",
-      "ciclo": "Queercinemad. Christophe Honoré"
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-14",
       "hora": "21:00",
@@ -7773,6 +7373,22 @@
       "ciclo": "Aeterna"
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-15",
+      "hora": "12:00",
+      "title_es": "Bahía de Sangre",
+      "title_en": "A Bay of Blood",
+      "original_title": "Ecologia del delitto",
+      "director": "Mario Bava",
+      "country": "Italia",
+      "year": 1971,
+      "duration": 84,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/a-bay-of-blood/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/bahia-de-sangre-vose/20446/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-15",
       "hora": "12:00",
@@ -7803,22 +7419,6 @@
       "letterboxd": "https://letterboxd.com/film/jim-queen/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2961&cine=EQUIS",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-15",
-      "hora": "17:30",
-      "title_es": "Los Goonies",
-      "title_en": "The Goonies",
-      "original_title": "The Goonies",
-      "director": "Richard Donner",
-      "country": "Estados Unidos",
-      "year": 1985,
-      "duration": 113,
-      "genre": "Aventura, Familiar",
-      "letterboxd": "https://letterboxd.com/film/the-goonies/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/los-goonies-15-nov",
-      "ciclo": "Mi Primer Festival / Filmoteca Jr."
     },
     {
       "cine": "Cineteca Madrid",
@@ -7885,22 +7485,6 @@
       "ciclo": "31 Queercinemad"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-15",
-      "hora": "20:30",
-      "title_es": "César",
-      "title_en": "César",
-      "original_title": "César",
-      "director": "Marcel Pagnol",
-      "country": "Francia",
-      "year": 1936,
-      "duration": 168,
-      "genre": "Comedia, Drama",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/cesar-15-nov",
-      "ciclo": "Fuera del Radar / Trilogía Marsellesa"
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-15",
       "hora": "21:00",
@@ -7953,16 +7537,32 @@
       "fecha": "2026-11-16",
       "hora": "19:30",
       "title_es": "EVA",
-      "title_en": "EVA",
+      "title_en": "Eva",
       "original_title": "",
       "director": "William Reyes",
       "country": "Honduras, Colombia",
       "year": 2026,
       "duration": 90,
-      "genre": "",
-      "letterboxd": "",
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/eva-2025/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2986&cine=EQUIS",
       "ciclo": "Queercinemad"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-16",
+      "hora": "20:00",
+      "title_es": "Llueve sobre Babel",
+      "title_en": "Rains Over Babel",
+      "original_title": "Llueve sobre Babel",
+      "director": "Gala del Sol",
+      "country": "Colombia, Estados Unidos",
+      "year": 2025,
+      "duration": 111,
+      "genre": "Fantasía, Comedia",
+      "letterboxd": "https://letterboxd.com/film/rains-over-babel/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/llueve-sobre-babel/20447/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -7979,22 +7579,6 @@
       "letterboxd": "https://letterboxd.com/film/cinemania-2026/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2987&cine=EQUIS",
       "ciclo": "Queercinemad"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-17",
-      "hora": "17:30",
-      "title_es": "No quiero volver a casa",
-      "title_en": "No quiero volver a casa",
-      "original_title": "No quiero volver a casa",
-      "director": "Albertina Carri",
-      "country": "Argentina, Países Bajos",
-      "year": 2000,
-      "duration": 106,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/no-quiero-volver-a-casa-17-nov",
-      "ciclo": "El Presente en Escena. el Cine Argentino del Siglo Xxi"
     },
     {
       "cine": "Sala Equis",
@@ -8061,22 +7645,6 @@
       "ciclo": "Rizoma 2026 - Plastic Dreams"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-17",
-      "hora": "20:30",
-      "title_es": "Les chansons d’amour",
-      "title_en": "Love Songs",
-      "original_title": "Les Chansons d'amour",
-      "director": "Christophe Honoré",
-      "country": "Francia",
-      "year": 2007,
-      "duration": 91,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/love-songs/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/les-chansons-d-amour-17-nov",
-      "ciclo": "Queercinemad. Christophe Honoré"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-17",
       "hora": "21:00",
@@ -8091,38 +7659,6 @@
       "letterboxd": "",
       "ticket_url": "https://salaequis.es/taquilla/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-18",
-      "hora": "17:30",
-      "title_es": "Bosque arriba en la montaña",
-      "title_en": "Forest up in the Mountain",
-      "original_title": "Bosque arriba en la montaña",
-      "director": "Sofía Bordenave",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 101,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/forest-up-in-the-mountain/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/bosque-arriba-en-la-montaña-18-nov",
-      "ciclo": "El Presente en Escena. el Cine Argentino del Siglo Xxi"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-18",
-      "hora": "19:00",
-      "title_es": "5 es el número perfecto",
-      "title_en": "5 es el número perfecto",
-      "original_title": "",
-      "director": "Igor Tuveri",
-      "country": "",
-      "year": 2019,
-      "duration": 107,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/5-es-el-numero-perfecto-18-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
     },
     {
       "cine": "Cineteca Madrid",
@@ -8173,22 +7709,6 @@
       "ciclo": "Rizoma 2026 - Plastic Dreams"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-18",
-      "hora": "20:30",
-      "title_es": "Vivir deprisa, amar despacio",
-      "title_en": "Sorry Angel",
-      "original_title": "Plaire, aimer et courir vite",
-      "director": "Christophe Honoré",
-      "country": "Francia",
-      "year": 2018,
-      "duration": 132,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/sorry-angel/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/vivir-deprisa-amar-despacio-18-nov",
-      "ciclo": "Queercinemad. Christophe Honoré"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-18",
       "hora": "22:00",
@@ -8203,22 +7723,6 @@
       "letterboxd": "",
       "ticket_url": "https://salaequis.es/taquilla/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-19",
-      "hora": "17:30",
-      "title_es": "La dolorosa",
-      "title_en": "La Dolorosa",
-      "original_title": "La dolorosa",
-      "director": "Jean Grámillon",
-      "country": "España",
-      "year": 1934,
-      "duration": 85,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/la-dolorosa/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-dolorosa-19-nov",
-      "ciclo": "¡al Hollywood Parisino! Multiversiones en la Ii República"
     },
     {
       "cine": "Embajadores Ercilla",
@@ -8241,14 +7745,14 @@
       "fecha": "2026-11-19",
       "hora": "19:00",
       "title_es": "Legítima defensa",
-      "title_en": "Legítima defensa",
+      "title_en": "Self-Defense",
       "original_title": "Legitima defensa",
       "director": "Marie Louise Alemann",
       "country": "Argentina",
       "year": 1980,
       "duration": 8,
       "genre": "",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/self-defense-1980/",
       "ticket_url": "https://entradas.museoreinasofia.es/es/143-web-individual/14655-the-present-on-stage-argentine-cinema-of-the-21st-century/18370571-marie-louise-alemann-legitima-defensa-y-cesar-gonzalez-lluvia-de-jaulas",
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
     },
@@ -8269,22 +7773,6 @@
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-19",
-      "hora": "19:00",
-      "title_es": "El adiós de un hijo",
-      "title_en": "Army",
-      "original_title": "陸軍",
-      "director": "Keisuke Kinoshita",
-      "country": "Japón",
-      "year": 1944,
-      "duration": 90,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/army-1944/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/el-adios-de-un-hijo-19-nov",
-      "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-19",
       "hora": "19:30",
@@ -8299,6 +7787,22 @@
       "letterboxd": "https://letterboxd.com/film/a-arvore-do-conhecimento/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/tree-knowledge",
       "ciclo": "Rizoma 2026 - Plastic Dreams"
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-19",
+      "hora": "19:45",
+      "title_es": "Cecilia Bartolomé: Tan lejos, tan cerca",
+      "title_en": "Cecilia Bartolomé: Tan lejos, tan cerca",
+      "original_title": "",
+      "director": "Giovanna Ribes",
+      "country": "",
+      "year": null,
+      "duration": 97,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/cecilia-bartolome-tan-lejos-tan-cerca/39453/",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -8333,22 +7837,6 @@
       "ciclo": "Rizoma 2026 - Plastic Dreams"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-19",
-      "hora": "20:30",
-      "title_es": "Marcello mio",
-      "title_en": "Marcello Mio",
-      "original_title": "Marcello Mio",
-      "director": "Christophe Honoré",
-      "country": "Francia, Italia",
-      "year": 2024,
-      "duration": 120,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/marcello-mio/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/marcello-mio-19-nov",
-      "ciclo": "Queercinemad. Christophe Honoré"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-19",
       "hora": "22:00",
@@ -8363,22 +7851,6 @@
       "letterboxd": "https://letterboxd.com/film/a-man-on-a-bridge/",
       "ticket_url": "https://salaequis.es/taquilla/",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-20",
-      "hora": "17:30",
-      "title_es": "Marius",
-      "title_en": "Marius",
-      "original_title": "Marius",
-      "director": "Alexander Korda",
-      "country": "Francia",
-      "year": 1931,
-      "duration": 127,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/marius/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/marius-20-nov",
-      "ciclo": "¡al Hollywood Parisino! Multiversiones en la Ii República / Trilogía Marsellesa"
     },
     {
       "cine": "Sala Equis",
@@ -8411,22 +7883,6 @@
       "letterboxd": "https://letterboxd.com/film/the-mantises/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/las-mantis",
       "ciclo": "Rizoma 2026 - Plastic Dreams"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-20",
-      "hora": "19:00",
-      "title_es": "Locura de mujer",
-      "title_en": "Sheer Madness",
-      "original_title": "Heller Wahn",
-      "director": "Margarethe von Trotta",
-      "country": "Francia, Alemania",
-      "year": 1983,
-      "duration": 105,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/sheer-madness/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/locura-de-mujer-20-nov",
-      "ciclo": "Festival Cine por Mujeres. Instituto Goethe"
     },
     {
       "cine": "Cineteca Madrid",
@@ -8475,22 +7931,6 @@
       "letterboxd": "https://letterboxd.com/film/yastay/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/yastay",
       "ciclo": "Rizoma 2026 - Plastic Dreams"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-20",
-      "hora": "20:30",
-      "title_es": "El último",
-      "title_en": "The Last Laugh",
-      "original_title": "Der letzte Mann",
-      "director": "F.W. Murnau",
-      "country": "Alemania",
-      "year": 1924,
-      "duration": 91,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-last-laugh/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/el-ultimo-20-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
     },
     {
       "cine": "Cineteca Madrid",
@@ -8573,22 +8013,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-21",
-      "hora": "17:30",
-      "title_es": "Cortos latinos: Raíces, aromas y color",
-      "title_en": "Cortos latinos: Raíces, aromas y color",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/cortos-latinos-raices-aromas-y-color-21-nov",
-      "ciclo": "Mi Primer Festival / Filmoteca Jr."
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-21",
       "hora": "18:30",
@@ -8637,22 +8061,6 @@
       "ciclo": "Rizoma 2026 - Plastic Dreams"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-21",
-      "hora": "19:00",
-      "title_es": "Eight Bridges",
-      "title_en": "Eight Bridges",
-      "original_title": "Eight Bridges",
-      "director": "James Benning",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 80,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/eight-bridges/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/eight-bridges-21-nov",
-      "ciclo": "James Benning"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-21",
       "hora": "19:30",
@@ -8685,22 +8093,6 @@
       "ciclo": "Rizoma 2026 - Plastic Dreams"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-21",
-      "hora": "20:30",
-      "title_es": "Orange Flavor Wedding",
-      "title_en": "Orange-Flavoured Wedding",
-      "original_title": "",
-      "director": "Christophe Honoré",
-      "country": "Francia",
-      "year": 2026,
-      "duration": 115,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/orange-flavoured-wedding/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/orange-flavor-wedding-21-nov",
-      "ciclo": "Queercinemad. Christophe Honoré"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-21",
       "hora": "22:00",
@@ -8721,14 +8113,14 @@
       "fecha": "2026-11-22",
       "hora": "12:00",
       "title_es": "Alien, el octavo pasajero",
-      "title_en": "Alien, el octavo pasajero",
+      "title_en": "Alien",
       "original_title": "Alien",
       "director": "Ridley Scott",
       "country": "Estados Unidos, Reino Unido",
       "year": 1979,
       "duration": 116,
       "genre": "Terror, Ciencia ficción",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/alien/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-alien-el-octavo-pasajero-vose/39293/",
       "ciclo": "Domingo de clásicos"
     },
@@ -8763,22 +8155,6 @@
       "letterboxd": "https://letterboxd.com/film/cristina-y-los-otros-mundos/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/cristina-y-los-otros-mundos",
       "ciclo": "Rizoma 2026 - Plastic Dreams"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-22",
-      "hora": "17:30",
-      "title_es": "Fanny",
-      "title_en": "Fanny",
-      "original_title": "Fanny",
-      "director": "Marc Allégret",
-      "country": "Francia",
-      "year": 1932,
-      "duration": 140,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/fanny/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/fanny-22-nov",
-      "ciclo": "Trilogía Marsellesa"
     },
     {
       "cine": "Cineteca Madrid",
@@ -8861,22 +8237,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-22",
-      "hora": "20:30",
-      "title_es": "Little Boy",
-      "title_en": "Little Boy",
-      "original_title": "Little Boy",
-      "director": "James Benning",
-      "country": "Estados Unidos",
-      "year": 2025,
-      "duration": 75,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/little-boy-2025/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/little-boy-22-nov",
-      "ciclo": "James Benning"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-22",
       "hora": "22:00",
@@ -8893,20 +8253,20 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
+      "cine": "Embajadores Ercilla",
       "fecha": "2026-11-24",
-      "hora": "17:30",
-      "title_es": "Apenas un delincuente",
-      "title_en": "Apenas un delincuente",
-      "original_title": "Apenas un delincuente",
-      "director": "Hugo Fregonese",
-      "country": "Argentina",
-      "year": 1949,
-      "duration": 15,
-      "genre": "Crimen, Drama",
+      "hora": "10:00",
+      "title_es": "La Profecía",
+      "title_en": "La Profecía",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 300,
+      "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/apenas-un-delincuente-24-nov",
-      "ciclo": "El Presente en Escena. el Cine Argentino del Siglo Xxi"
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/clasicos-al-detalle-la-profecia/20448/",
+      "ciclo": "Clásicos al detalle"
     },
     {
       "cine": "Cine Estudio",
@@ -8941,22 +8301,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-24",
-      "hora": "20:30",
-      "title_es": "Nouvelle vague",
-      "title_en": "Nouvelle Vague",
-      "original_title": "Nouvelle Vague",
-      "director": "Jean-Luc Godard",
-      "country": "Suiza, Francia",
-      "year": 1990,
-      "duration": 90,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/nouvelle-vague/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/nouvelle-vague-24-nov",
-      "ciclo": "Universo Godard"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-24",
       "hora": "22:00",
@@ -8971,38 +8315,6 @@
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-25",
-      "hora": "17:30",
-      "title_es": "La deuda",
-      "title_en": "La deuda",
-      "original_title": "La deuda",
-      "director": "Gustavo Fontán",
-      "country": "Argentina, España",
-      "year": 2019,
-      "duration": 84,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-deuda-25-nov",
-      "ciclo": "El Presente en Escena. el Cine Argentino del Siglo Xxi"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-25",
-      "hora": "19:00",
-      "title_es": "La belle marinière",
-      "title_en": "La belle marinière",
-      "original_title": "La Belle Marinière",
-      "director": "Harry Lachman",
-      "country": "Francia",
-      "year": 1932,
-      "duration": 53,
-      "genre": "Drama",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/la-belle-mariniere-25-nov",
-      "ciclo": "¡al Hollywood Parisino! Multiversiones en la Ii República"
     },
     {
       "cine": "Sala Equis",
@@ -9037,22 +8349,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-25",
-      "hora": "20:30",
-      "title_es": "Polvo serán",
-      "title_en": "They Will Be Dust",
-      "original_title": "Polvo serán",
-      "director": "Carlos Marqués Marcet",
-      "country": "Italia, España",
-      "year": 2024,
-      "duration": 106,
-      "genre": "Comedia, Música",
-      "letterboxd": "https://letterboxd.com/film/polvo-seran/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/polvo-seran-25-nov",
-      "ciclo": "Diálogos Intergeneracionales. Envejecer en la Pantalla"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-25",
       "hora": "21:30",
@@ -9085,38 +8381,6 @@
       "ciclo": "Proyecciones Festival Eñe"
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-26",
-      "hora": "17:30",
-      "title_es": "Fanny",
-      "title_en": "Fanny",
-      "original_title": "Fanny",
-      "director": "Marc Allégret",
-      "country": "Francia",
-      "year": 1932,
-      "duration": 140,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/fanny/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/fanny-26-nov",
-      "ciclo": "Trilogía Marsellesa"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-26",
-      "hora": "19:00",
-      "title_es": "Zulueta / Aguirre. Tentativa y obra",
-      "title_en": "Zulueta / Aguirre. Tentativa y obra",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": 56,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/zulueta-aguirre-tentativa-y-obra-26-nov",
-      "ciclo": "Archivo Inquieto. Memoria en Movimiento"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-26",
       "hora": "19:30",
@@ -9131,22 +8395,6 @@
       "letterboxd": "https://letterboxd.com/film/la-carn/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2989&cine=EQUIS",
       "ciclo": "Ciclo LGBTIQ(X)"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-26",
-      "hora": "20:30",
-      "title_es": "Carne de fieras",
-      "title_en": "Flesh of the Beast",
-      "original_title": "Carne de fieras",
-      "director": "Armand Guerra",
-      "country": "España",
-      "year": 1936,
-      "duration": 71,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/carne-de-fieras/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/carne-de-fieras-26-nov",
-      "ciclo": "Lyceum Club Femenino / Guerra Civil. 90 Años"
     },
     {
       "cine": "Sala Equis",
@@ -9165,52 +8413,20 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-27",
-      "hora": "17:30",
-      "title_es": "No soy yo",
-      "title_en": "It's Not Me",
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-28",
+      "hora": "10:00",
+      "title_es": "La Profecía",
+      "title_en": "La Profecía",
       "original_title": "",
-      "director": "Leos Carax",
-      "country": "Francia",
-      "year": 2024,
-      "duration": 41,
-      "genre": "Drama, Documental",
-      "letterboxd": "https://letterboxd.com/film/its-not-me-2024/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/no-soy-yo-27-nov",
-      "ciclo": "Festival Márgenes"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-27",
-      "hora": "19:00",
-      "title_es": "César",
-      "title_en": "César",
-      "original_title": "César",
-      "director": "Marcel Pagnol",
-      "country": "Francia",
-      "year": 1936,
-      "duration": 168,
-      "genre": "Comedia, Drama",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 300,
+      "genre": "",
       "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/cesar-27-nov",
-      "ciclo": "Fuera del Radar / Trilogía Marsellesa"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-27",
-      "hora": "20:30",
-      "title_es": "Pusher: Un paseo por el abismo",
-      "title_en": "Pusher",
-      "original_title": "Pusher",
-      "director": "Nicolas Winding Refn",
-      "country": "Dinamarca",
-      "year": 1996,
-      "duration": 110,
-      "genre": "Acción, Crimen",
-      "letterboxd": "https://letterboxd.com/film/pusher/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/pusher-un-paseo-por-el-abismo-27-nov",
-      "ciclo": "Trilogía Pusher"
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/clasicos-al-detalle-la-profecia/20449/",
+      "ciclo": "Clásicos al detalle"
     },
     {
       "cine": "Sala Equis",
@@ -9229,38 +8445,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-28",
-      "hora": "17:30",
-      "title_es": "Mientras dure la guerra",
-      "title_en": "While at War",
-      "original_title": "Mientras dure la guerra",
-      "director": "Alejandro Amenábar",
-      "country": "Argentina, España",
-      "year": 2019,
-      "duration": 107,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/mientras-dure-la-guerra/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/mientras-dure-la-guerra-28-nov",
-      "ciclo": "Guerra Civil. 90 Años"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-28",
-      "hora": "19:00",
-      "title_es": "Melodía de arrabal",
-      "title_en": "Melodía de arrabal",
-      "original_title": "Melodía de Arrabal",
-      "director": "Louis Gasnier",
-      "country": "Francia",
-      "year": 1933,
-      "duration": 82,
-      "genre": "Romance, Música",
-      "letterboxd": "",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/melodia-de-arrabal-28-nov",
-      "ciclo": "¡al Hollywood Parisino! Multiversiones en la Ii República"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-28",
       "hora": "19:30",
@@ -9275,22 +8459,6 @@
       "letterboxd": "https://letterboxd.com/film/mudras-bailando-hilos-invisibles/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2988&cine=EQUIS",
       "ciclo": "Pase Especial"
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-28",
-      "hora": "20:30",
-      "title_es": "Pusher II: Con las manos ensangrentadas",
-      "title_en": "Pusher II",
-      "original_title": "Pusher II",
-      "director": "Nicolas Winding Refn",
-      "country": "Dinamarca, Reino Unido",
-      "year": 2004,
-      "duration": 100,
-      "genre": "Drama, Acción",
-      "letterboxd": "https://letterboxd.com/film/pusher-ii/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/pusher-ii-con-las-manos-ensangrentadas-28-nov",
-      "ciclo": "Trilogía Pusher"
     },
     {
       "cine": "Sala Equis",
@@ -9313,14 +8481,14 @@
       "fecha": "2026-11-29",
       "hora": "12:00",
       "title_es": "Muerte entre las flores",
-      "title_en": "Muerte entre las flores",
+      "title_en": "Miller's Crossing",
       "original_title": "Miller's Crossing",
       "director": "Joel Coen",
       "country": "Estados Unidos",
       "year": 1990,
       "duration": 115,
       "genre": "Drama, Thriller",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/millers-crossing/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-muerte-entre-las-flores-vose/39241/",
       "ciclo": "Domingo de clásicos"
     },
@@ -9341,22 +8509,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-29",
-      "hora": "17:30",
-      "title_es": "Libertarias",
-      "title_en": "Freedomfighters",
-      "original_title": "Libertarias",
-      "director": "Vicente Aranda",
-      "country": "Bélgica, Italia",
-      "year": 1996,
-      "duration": 125,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/libertarias/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/libertarias-29-nov",
-      "ciclo": "Guerra Civil. 90 Años"
-    },
-    {
       "cine": "Sala Equis",
       "fecha": "2026-11-29",
       "hora": "19:30",
@@ -9371,22 +8523,6 @@
       "letterboxd": "https://letterboxd.com/film/esta-soledad/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2993&cine=EQUIS",
       "ciclo": ""
-    },
-    {
-      "cine": "Cine Doré",
-      "fecha": "2026-11-29",
-      "hora": "21:00",
-      "title_es": "Pusher III: Soy el ángel de la muerte",
-      "title_en": "Pusher III",
-      "original_title": "Pusher 3",
-      "director": "Nicolas Winding Refn",
-      "country": "Dinamarca",
-      "year": 2005,
-      "duration": 108,
-      "genre": "Acción, Crimen",
-      "letterboxd": "https://letterboxd.com/film/pusher-iii/",
-      "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/pusher-iii-soy-el-angel-de-la-muerte-29-nov",
-      "ciclo": "Trilogía Pusher"
     },
     {
       "cine": "Sala Equis",
@@ -9457,14 +8593,14 @@
       "fecha": "2026-12-06",
       "hora": "12:00",
       "title_es": "Ladrón de bicicletas",
-      "title_en": "Ladrón de bicicletas",
+      "title_en": "Bicycle Thieves",
       "original_title": "Ladri di biciclette",
       "director": "Vittorio De Sica",
       "country": "Italia",
       "year": 1948,
       "duration": 93,
       "genre": "Drama",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/bicycle-thieves/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-ladron-de-bicicletas-vose/39242/",
       "ciclo": "Domingo de clásicos"
     },
@@ -9482,6 +8618,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/ya-veras",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-09",
+      "hora": "19:00",
+      "title_es": "Colores primarios",
+      "title_en": "Colores primarios",
+      "original_title": "",
+      "director": "Varios autores",
+      "country": "",
+      "year": null,
+      "duration": 47,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/colores-primarios",
       "ciclo": ""
     },
     {
@@ -9553,14 +8705,14 @@
       "fecha": "2026-12-13",
       "hora": "12:00",
       "title_es": "Salvar al soldado Ryan",
-      "title_en": "Salvar al soldado Ryan",
+      "title_en": "Saving Private Ryan",
       "original_title": "Saving Private Ryan",
       "director": "Steven Spielberg",
       "country": "Estados Unidos",
       "year": 1998,
       "duration": 170,
-      "genre": "Bélica, Drama",
-      "letterboxd": "",
+      "genre": "Historia, Drama",
+      "letterboxd": "https://letterboxd.com/film/saving-private-ryan/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-salvar-al-soldado-ryan-vose/39243/",
       "ciclo": "Domingo de clásicos"
     },
@@ -9953,14 +9105,14 @@
       "fecha": "2026-12-20",
       "hora": "12:00",
       "title_es": "Bailar en la oscuridad",
-      "title_en": "Bailar en la oscuridad",
+      "title_en": "Dancer in the Dark",
       "original_title": "Dancer in the Dark",
       "director": "Lars Von Trier",
       "country": "Dinamarca, Finlandia",
       "year": 2000,
       "duration": 140,
       "genre": "Drama, Crimen",
-      "letterboxd": "",
+      "letterboxd": "https://letterboxd.com/film/dancer-in-the-dark/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-bailar-en-la-oscuridad-vose/39244/",
       "ciclo": "Domingo de clásicos"
     },

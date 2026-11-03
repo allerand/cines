@@ -26020,10 +26020,10 @@
     "original_title": "The Florida Project"
   },
   "alien, el octavo pasajero": {
-    "url": "",
-    "title_en": "Alien, el octavo pasajero",
+    "url": "https://letterboxd.com/film/alien/",
+    "title_en": "Alien",
     "director": "Ridley Scott",
-    "country": "United States of America, United Kingdom",
+    "country": "USA, UK",
     "year": 1979,
     "duration": 117,
     "genre": "Terror, Ciencia ficción",
@@ -26064,10 +26064,10 @@
     "original_title": "My Fair Lady"
   },
   "muerte entre las flores": {
-    "url": "",
-    "title_en": "Muerte entre las flores",
-    "director": "Joel Coen, Ethan Coen",
-    "country": "United States of America",
+    "url": "https://letterboxd.com/film/millers-crossing/",
+    "title_en": "Miller's Crossing",
+    "director": "Joel Coen",
+    "country": "USA",
     "year": 1990,
     "duration": 115,
     "genre": "Drama, Thriller",
@@ -26075,8 +26075,8 @@
     "original_title": "Miller's Crossing"
   },
   "ladrón de bicicletas": {
-    "url": "",
-    "title_en": "Ladrón de bicicletas",
+    "url": "https://letterboxd.com/film/bicycle-thieves/",
+    "title_en": "Bicycle Thieves",
     "director": "Vittorio De Sica",
     "country": "Italy",
     "year": 1948,
@@ -26086,19 +26086,19 @@
     "original_title": "Ladri di biciclette"
   },
   "salvar al soldado ryan": {
-    "url": "",
-    "title_en": "Salvar al soldado Ryan",
+    "url": "https://letterboxd.com/film/saving-private-ryan/",
+    "title_en": "Saving Private Ryan",
     "director": "Steven Spielberg",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1998,
     "duration": 169,
-    "genre": "Bélica, Drama",
+    "genre": "Historia, Drama",
     "title_es": "Salvar al soldado Ryan",
     "original_title": "Saving Private Ryan"
   },
   "bailar en la oscuridad": {
-    "url": "",
-    "title_en": "Bailar en la oscuridad",
+    "url": "https://letterboxd.com/film/dancer-in-the-dark/",
+    "title_en": "Dancer in the Dark",
     "director": "Lars von Trier",
     "country": "Denmark, Finland",
     "year": 2000,
@@ -26857,12 +26857,13 @@
     "original_title": "Las mil y una"
   },
   "legítima defensa|1980": {
-    "url": "",
-    "title_en": "Legítima defensa",
+    "url": "https://letterboxd.com/film/self-defense-1980/",
+    "title_en": "Self-Defense",
     "director": "Marie Louise Alemann",
     "country": "Argentina",
     "year": 1980,
     "duration": 8,
+    "genre": "",
     "original_title": "Legitima defensa"
   },
   "lluvia de jaulas|2018": {
@@ -26956,11 +26957,11 @@
     "original_title": "Todo documento de civilización"
   },
   "nocturno|2025": {
-    "url": "",
-    "title_en": "Nocturno",
+    "url": "https://letterboxd.com/film/nocturne-2025-2/",
+    "title_en": "Nocturne",
     "director": "Ana Apontes, Sol Muñoz",
     "country": "Argentina",
-    "year": null,
+    "year": 2025,
     "duration": 14,
     "genre": "Drama",
     "original_title": "Nocturno"
@@ -28019,7 +28020,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
+    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -28142,12 +28143,13 @@
     "genre": ""
   },
   "el rayo verde: la noche del cazador": {
-    "url": "",
-    "title_en": "El rayo verde: La noche del cazador",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-night-of-the-hunter/",
+    "title_en": "The Night of the Hunter",
+    "director": "Charles Laughton",
+    "country": "USA",
+    "year": 1955,
+    "duration": 93,
+    "genre": "Drama, Crimen"
   },
   "maman déchire": {
     "url": "https://letterboxd.com/film/maman-dechire/",
@@ -30092,12 +30094,13 @@
     "original_title": "Marius"
   },
   "fantasia ‘e surdate|1927": {
-    "url": "",
-    "title_en": "Fantasia ‘e surdate",
+    "url": "https://letterboxd.com/film/soldiers-fantasy/",
+    "title_en": "Soldier's Fantasy",
     "director": "Elvira Notari",
     "country": "Italy",
     "year": 1927,
     "duration": 28,
+    "genre": "",
     "original_title": "Fantasia 'e surdato"
   },
   "locura de mujer|1983": {
@@ -30733,12 +30736,13 @@
     "original_title": "A Paixão Segundo G.H.B."
   },
   "eva|2026": {
-    "url": "",
-    "title_en": "EVA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/eva-2025/",
+    "title_en": "Eva",
+    "director": "William Reyes",
+    "country": "Honduras, Colombia",
+    "year": 2025,
+    "duration": 90,
+    "genre": "Drama"
   },
   "festival rizoma": {
     "url": "",
@@ -31885,5 +31889,64 @@
     "year": 1952,
     "duration": 104,
     "genre": "Aventura, Romance"
+  },
+  "colores primarios": {
+    "url": "",
+    "title_en": "Colores primarios",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cecilia. una luz de mañana": {
+    "url": "https://letterboxd.com/film/cecilia-una-luz-de-manana/",
+    "title_en": "Cecilia,  una luz de mañana",
+    "director": "Chema de la Peña",
+    "country": "",
+    "year": 2026,
+    "duration": 90,
+    "genre": "",
+    "original_title": "Cecilia,  una luz de mañana"
+  },
+  "bahía de sangre": {
+    "url": "https://letterboxd.com/film/a-bay-of-blood/",
+    "title_en": "A Bay of Blood",
+    "director": "Mario Bava",
+    "country": "Italy",
+    "year": 1971,
+    "duration": 85,
+    "genre": "Thriller, Terror",
+    "title_es": "Bahía de sangre",
+    "original_title": "Ecologia del delitto"
+  },
+  "llueve sobre babel": {
+    "url": "https://letterboxd.com/film/rains-over-babel/",
+    "title_en": "Rains Over Babel",
+    "director": "Gala del Sol",
+    "country": "Colombia, USA",
+    "year": 2025,
+    "duration": 113,
+    "genre": "Fantasía, Comedia",
+    "original_title": "Llueve sobre Babel"
+  },
+  "cecilia bartolomé: tan lejos, tan cerca": {
+    "url": "",
+    "title_en": "Cecilia Bartolomé: Tan lejos, tan cerca",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la profecía": {
+    "url": "",
+    "title_en": "La Profecía",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 300 min: The Omen (1976, 111 min)",
+    "fecha": "2026-11-03",
+    "con_duracion": true,
+    "desempate": ""
   }
 }

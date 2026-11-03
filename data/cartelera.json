@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-03T04:22:36",
+  "updated": "2026-11-03T11:50:25",
   "fuentes": {
     "Amorina": {
-      "scrapeadas": 26,
-      "publicadas": 25
+      "scrapeadas": 27,
+      "publicadas": 26
     },
     "Arthaus": {
       "scrapeadas": 2,
@@ -22,7 +22,7 @@
       "publicadas": 6
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 16,
       "publicadas": 16
     },
     "Cacodelphia": {
@@ -39,8 +39,8 @@
       "publicadas": 5
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
-      "publicadas": 27
+      "scrapeadas": 28,
+      "publicadas": 28
     },
     "Centro Cultural Leopoldo Marechal": {
       "scrapeadas": 51,
@@ -92,8 +92,8 @@
       "publicadas": 17
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 43,
-      "publicadas": 43
+      "scrapeadas": 42,
+      "publicadas": 42
     },
     "Filo Cine": {
       "scrapeadas": 9,
@@ -149,22 +149,6 @@
     }
   },
   "screenings": [
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-03",
-      "hora": "01:10",
-      "title_es": "Madre siniestra",
-      "title_en": "Other Mommy",
-      "original_title": "Other Mommy",
-      "director": "Rob Savage",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/other-mommy/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
     {
       "cine": "Hoyts Dot",
       "fecha": "2026-11-03",
@@ -12468,6 +12452,22 @@
       "letterboxd": "https://letterboxd.com/film/clayface/",
       "ticket_url": "https://multiplex.com.ar/peliculas/clayface/",
       "ciclo": ""
+    },
+    {
+      "cine": "Amorina",
+      "fecha": "2026-11-04",
+      "hora": "19:20",
+      "title_es": "Primetime",
+      "title_en": "Primetime",
+      "original_title": "Primetime",
+      "director": "Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/primetime-2026/",
+      "ticket_url": "https://www.amorina.club/peliculas",
+      "ciclo": "Cine"
     },
     {
       "cine": "Hoyts Dot",
@@ -36425,6 +36425,22 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-11-11",
       "hora": "19:00",
+      "title_es": "Piazzolla, los años del tiburón",
+      "title_en": "Piazzolla: The Years of the Shark",
+      "original_title": "Piazzolla: los años del tiburón",
+      "director": "Daniel Rosenfeld",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 90,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/524",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-11-11",
+      "hora": "19:00",
       "title_es": "Festival Cartón 2026",
       "title_en": "Festival Cartón 2026",
       "original_title": "",
@@ -38422,22 +38438,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-14",
-      "hora": "20:00",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-14",
       "hora": "20:00",
@@ -38452,6 +38452,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
       "ciclo": "Cine en La Noche de los Museos"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-14",
+      "hora": "20:00",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "CCK",
@@ -38598,6 +38614,22 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-15",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-15",
       "hora": "18:00",
@@ -38628,22 +38660,6 @@
       "letterboxd": "https://letterboxd.com/film/my-best-fiend/",
       "ticket_url": "",
       "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-15",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Cine York",
@@ -39638,22 +39654,6 @@
       "ciclo": "Continúa"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "15:00",
-      "title_es": "La burla del diablo",
-      "title_en": "Beat the Devil",
-      "original_title": "Beat the Devil",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido/Italia",
-      "year": 1953,
-      "duration": 95,
-      "genre": "Aventura, Crimen",
-      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "15:00",
@@ -39668,6 +39668,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "15:00",
+      "title_es": "La burla del diablo",
+      "title_en": "Beat the Devil",
+      "original_title": "Beat the Devil",
+      "director": "John Huston",
+      "country": "EE.UU/Reino Unido/Italia",
+      "year": 1953,
+      "duration": 95,
+      "genre": "Aventura, Crimen",
+      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "MALBA",
@@ -39686,22 +39702,6 @@
       "ciclo": "Continúa"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "17:30",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "17:30",
@@ -39716,6 +39716,22 @@
       "letterboxd": "https://letterboxd.com/film/maman-dechire/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "17:30",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "MALBA",
@@ -40694,22 +40710,6 @@
       "ciclo": "Cine"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "15:00",
-      "title_es": "La noche de la iguana",
-      "title_en": "The Night of the Iguana",
-      "original_title": "The Night of the Iguana",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1964,
-      "duration": 118,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-29",
       "hora": "15:00",
@@ -40724,6 +40724,22 @@
       "letterboxd": "https://letterboxd.com/film/nino-2025/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-29",
+      "hora": "15:00",
+      "title_es": "La noche de la iguana",
+      "title_en": "The Night of the Iguana",
+      "original_title": "The Night of the Iguana",
+      "director": "John Huston",
+      "country": "Estados Unidos",
+      "year": 1964,
+      "duration": 118,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "MALBA",
@@ -40806,6 +40822,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-29",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-29",
       "hora": "18:00",
@@ -40852,22 +40884,6 @@
       "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
       "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-29",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Centro Cultural Munro",
