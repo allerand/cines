@@ -15145,7 +15145,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-11-02",
+    "fecha": "2026-11-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23148,7 +23148,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-10-30",
+    "fecha": "2026-11-03",
     "con_duracion": true,
     "desempate": ""
   },
@@ -23480,8 +23480,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-10-30",
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Thus is Life (1930), Así es la vida (1939)",
+    "fecha": "2026-11-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26332,7 +26332,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Train to Busan (2016), y puede ser otra",
-    "fecha": "2026-10-30",
+    "fecha": "2026-11-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -29809,7 +29809,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Perfume (2001), Perfume: The Story of a Murderer (2006), Perfume (2018)",
-    "fecha": "2026-10-30",
+    "fecha": "2026-11-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -29872,7 +29872,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Train to Busan (2016), y puede ser otra",
-    "fecha": "2026-10-30",
+    "fecha": "2026-11-03",
     "con_duracion": false,
     "desempate": ""
   },
@@ -30233,7 +30233,7 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "El amor solfeando",
-    "director": "Robert Florey, Armand Guerra, Florián Rey",
+    "director": "Armand Guerra, Robert Florey, Florián Rey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -31715,5 +31715,175 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "los muchachos de antes no usaban arsénico + sunset boulevard|1976": {
+    "url": "https://letterboxd.com/film/yesterdays-guys-used-no-arsenic/",
+    "title_en": "Yesterday's Guys Used No Arsenic",
+    "director": "José A. Martínez Suárez",
+    "country": "Argentina",
+    "year": 1976,
+    "duration": 102,
+    "genre": "Comedia",
+    "original_title": "Los muchachos de antes no usaban arsénico"
+  },
+  "embrujada + the love witch|1976": {
+    "url": "",
+    "title_en": "Embrujada + The Love Witch",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "network|1976": {
+    "url": "https://letterboxd.com/film/network/",
+    "title_en": "Network",
+    "director": "Sidney Lumet",
+    "country": "USA",
+    "year": 1976,
+    "duration": 122,
+    "genre": "Drama",
+    "title_es": "Network, un mundo implacable",
+    "original_title": "Network"
+  },
+  "the power of the dog|2021": {
+    "url": "https://letterboxd.com/film/the-power-of-the-dog/",
+    "title_en": "The Power of the Dog",
+    "director": "Jane Campion",
+    "country": "Australia, Canada",
+    "year": 2021,
+    "duration": 127,
+    "genre": "Western, Drama",
+    "title_es": "El poder del perro",
+    "original_title": "The Power of the Dog"
+  },
+  "carol|2015": {
+    "url": "https://letterboxd.com/film/carol-2015/",
+    "title_en": "Carol",
+    "director": "Todd Haynes",
+    "country": "UK, USA",
+    "year": 2015,
+    "duration": 118,
+    "genre": "Drama, Romance",
+    "title_es": "Carol",
+    "original_title": "Carol"
+  },
+  "las ruinas nuevas|2024": {
+    "url": "",
+    "title_en": "Las ruinas nuevas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "bajo sospecha: zokunentu|2022": {
+    "url": "https://letterboxd.com/film/bajo-sospecha-zokunentu/",
+    "title_en": "Bajo sospecha: Zokunentu",
+    "director": "Daniel Díaz Oyarzún",
+    "country": "Chile",
+    "year": 2022,
+    "duration": 67,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Bajo sospecha: Zokunentu"
+  },
+  "el gato con sombrero": {
+    "url": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+    "title_en": "The Cat in the Hat",
+    "director": "Erica Rivinoja, Alessandro Carloni",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 108,
+    "genre": "Fantasía, Aventura",
+    "clase_titulo": "exacto",
+    "title_es": "El gato con sombrero",
+    "original_title": "The Cat in the Hat",
+    "sin_hints": "título"
+  },
+  "entrega al límite": {
+    "url": "https://letterboxd.com/film/runner-2026/",
+    "title_en": "Runner",
+    "director": "Scott Waugh",
+    "country": "USA, Australia",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Comedia, Acción",
+    "clase_titulo": "exacto",
+    "title_es": "Entrega al límite",
+    "original_title": "Runner",
+    "sin_hints": "título y duración"
+  },
+  "entrega al limite": {
+    "url": "https://letterboxd.com/film/runner-2026/",
+    "title_en": "Runner",
+    "director": "Scott Waugh",
+    "country": "USA, Australia",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Comedia, Acción",
+    "clase_titulo": "exacto",
+    "title_es": "Entrega al límite",
+    "original_title": "Runner",
+    "sin_hints": "título"
+  },
+  "sacrificio: los elegidos": {
+    "url": "https://letterboxd.com/film/sacrifice-2025/",
+    "title_en": "Sacrifice",
+    "director": "Romain Gavras",
+    "country": "France, Greece",
+    "year": 2025,
+    "duration": 100,
+    "genre": "Comedia, Acción",
+    "clase_titulo": "exacto",
+    "title_es": "Sacrificio",
+    "original_title": "Sacrifice",
+    "sin_hints": "título"
+  },
+  "el baño del papa": {
+    "url": "https://letterboxd.com/film/el-bano-del-papa/",
+    "title_en": "The Pope's Toilet",
+    "director": "César Charlone, Enrique Fernández",
+    "country": "Brazil, France",
+    "year": 2007,
+    "duration": 90,
+    "genre": "Comedia, Drama",
+    "original_title": "El baño del Papa"
+  },
+  "hospital britanico": {
+    "url": "https://letterboxd.com/film/hospital-britanico/",
+    "title_en": "Hospital Británico",
+    "director": "Gustavo Fontán, Gloria Peirano",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 68,
+    "genre": "Documental",
+    "original_title": "Hospital Británico"
+  },
+  "festival caligari noviembre 2026 - la conversacion": {
+    "url": "",
+    "title_en": "FESTIVAL CALIGARI NOVIEMBRE 2026 - LA CONVERSACION",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "objetivo: birmania|1945": {
+    "url": "https://letterboxd.com/film/objective-burma/",
+    "title_en": "Objective, Burma!",
+    "director": "Raoul Walsh",
+    "country": "USA",
+    "year": 1945,
+    "duration": 142,
+    "genre": "Aventura, Acción",
+    "title_es": "Objetivo: Birmania",
+    "original_title": "Objective, Burma!"
+  },
+  "el mundo en sus brazos|1952": {
+    "url": "https://letterboxd.com/film/the-world-in-his-arms/",
+    "title_en": "The World in His Arms",
+    "director": "Raoul Walsh",
+    "country": "USA",
+    "year": 1952,
+    "duration": 104,
+    "genre": "Aventura, Romance"
   }
 }
