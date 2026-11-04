@@ -8970,14 +8970,14 @@
   },
   "happy together": {
     "url": "",
-    "title_en": "HAPPY TOGETHER",
-    "director": "Wong Kar-Wai",
+    "title_en": "Happy together",
+    "director": "Wong Kar-wai",
     "country": "Hong Kong, South Korea",
     "year": 1997,
     "duration": 96,
+    "genre": "Drama, Romance",
     "title_es": "Happy Together",
-    "original_title": "春光乍洩",
-    "genre": "Drama, Romance"
+    "original_title": "春光乍洩"
   },
   "tangalanga contraataca en busca del ojete de crist": {
     "url": "",
@@ -32189,5 +32189,35 @@
     "title_es": "Wildwood: El Bosque Salvaje",
     "original_title": "Wildwood",
     "sin_hints": "título y duración"
+  },
+  "atmósfera cero": {
+    "url": "",
+    "title_en": "Atmósfera cero",
+    "director": "Peter Hyams",
+    "country": "United Kingdom, United States of America",
+    "year": 1981,
+    "duration": 110,
+    "genre": "Ciencia ficción, Acción",
+    "title_es": "Atmósfera cero",
+    "original_title": "Outland"
+  },
+  "¿qué clase de joven le abre la puerta a un vampiro?, de boom boom kid y zurita": {
+    "url": "",
+    "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?, de Boom Boom Kid y Zurita",
+    "director": "Boom Boom Kid, Green Martino",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 115,
+    "original_title": "¿Qué clase de joven le abre la puerta a un vampiro?",
+    "sin_hints": "título local de un estreno"
+  },
+  "¿qué clase de joven le abre la puerta a un vampiro?": {
+    "url": "",
+    "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?",
+    "director": "Boom Boom Kid, Green Martino",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 115,
+    "original_title": "¿Qué clase de joven le abre la puerta a un vampiro?"
   }
 }

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T03:26:54",
+  "updated": "2026-11-04T12:03:40",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 27,
@@ -22,7 +22,7 @@
       "publicadas": 6
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 16,
       "publicadas": 16
     },
     "Cacodelphia": {
@@ -39,8 +39,8 @@
       "publicadas": 5
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
-      "publicadas": 28
+      "scrapeadas": 29,
+      "publicadas": 29
     },
     "Centro Cultural Leopoldo Marechal": {
       "scrapeadas": 51,
@@ -64,9 +64,9 @@
       "fuente_caida": "cosmos.uba.ar no contesta (HTTP Error 503: Service Temporarily Unavailable); la cartelera sale de Instagram (@cinecosmos.uba)"
     },
     "Cine Gaumont": {
-      "scrapeadas": 77,
-      "publicadas": 77,
-      "fuente_caida": "la API no contestó el 10/11"
+      "scrapeadas": 88,
+      "publicadas": 88,
+      "fuente_caida": "la API no contestó el 13/11"
     },
     "Cine Lorca": {
       "scrapeadas": 10,
@@ -93,8 +93,8 @@
       "publicadas": 15
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 42,
-      "publicadas": 42
+      "scrapeadas": 45,
+      "publicadas": 45
     },
     "Filo Cine": {
       "scrapeadas": 8,
@@ -117,8 +117,8 @@
       "publicadas": 3
     },
     "MALBA": {
-      "scrapeadas": 47,
-      "publicadas": 47
+      "scrapeadas": 52,
+      "publicadas": 52
     },
     "Multiplex Belgrano": {
       "scrapeadas": 525,
@@ -1364,6 +1364,22 @@
       "genre": "Música, Documental",
       "letterboxd": "https://letterboxd.com/film/susana-rinaldi-libre/",
       "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6376",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-04",
+      "hora": "14:00",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -5671,6 +5687,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-04",
+      "hora": "19:45",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-04",
       "hora": "19:45",
@@ -8004,6 +8036,22 @@
       "genre": "Thriller",
       "letterboxd": "https://letterboxd.com/film/whalefall/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-caida-de-la-ballena/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-04",
+      "hora": "22:40",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -27351,6 +27399,22 @@
       "ciclo": ""
     },
     {
+      "cine": "MALBA",
+      "fecha": "2026-11-07",
+      "hora": "24:00",
+      "title_es": "Atmósfera cero",
+      "title_en": "Atmósfera cero",
+      "original_title": "Outland",
+      "director": "Peter Hyams",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 1981,
+      "duration": 110,
+      "genre": "Ciencia ficción, Acción",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
+      "ciclo": "Cineclub Nocturna"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-08",
       "hora": "12:10",
@@ -40695,6 +40759,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "14:00",
+      "title_es": "¿Querés ser mi hijo?",
+      "title_en": "Will You Be My Son?",
+      "original_title": "¿Querés ser mi hijo?",
+      "director": "Hernán Guerschuny",
+      "country": "Argentina, Uruguay",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/queres-ser-mi-hijo/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6374",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-10",
       "hora": "14:05",
@@ -40804,6 +40884,22 @@
       "genre": "Fantasía, Acción",
       "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "14:15",
+      "title_es": "Lo dejamos acá",
+      "title_en": "Therapy Done Right",
+      "original_title": "Lo dejamos acá",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/therapy-done-right/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
       "ciclo": ""
     },
     {
@@ -41415,6 +41511,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "15:30",
+      "title_es": "El Baño del Papa",
+      "title_en": "The Pope's Toilet",
+      "original_title": "El baño del Papa",
+      "director": "Enrique Fernández y César Charlone",
+      "country": "Uruguay",
+      "year": 2007,
+      "duration": 100,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/el-bano-del-papa/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6404",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-11-10",
       "hora": "15:40",
@@ -41668,6 +41780,22 @@
       "genre": "Fantasía, Acción",
       "letterboxd": "https://letterboxd.com/film/street-fighter-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/street-fighter/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "Pertenencias",
+      "title_en": "PERTENENCIAS",
+      "original_title": "",
+      "director": "Gabriela González",
+      "country": "Argentina",
+      "year": null,
+      "duration": 82,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6390",
       "ciclo": ""
     },
     {
@@ -42487,6 +42615,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "17:30",
+      "title_es": "Lo dejamos acá",
+      "title_en": "Therapy Done Right",
+      "original_title": "Lo dejamos acá",
+      "director": "Hernan Goldfrind",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/therapy-done-right/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6344",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-10",
       "hora": "17:35",
@@ -42724,6 +42868,22 @@
       "genre": "Comedia, Acción",
       "letterboxd": "https://letterboxd.com/film/runner-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/entrega-al-limite/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "18:00",
+      "title_es": "4 Historias Increíbles",
+      "title_en": "4 historias increíbles",
+      "original_title": "4 historias increíbles",
+      "director": "Enrique Rottenberg",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/4-historias-increibles/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6381",
       "ciclo": ""
     },
     {
@@ -43543,6 +43703,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "19:45",
+      "title_es": "Hospital Britanico",
+      "title_en": "Hospital Británico",
+      "original_title": "Hospital Británico",
+      "director": "Gloria Peirano, Gustavo Fontán.",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 70,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/hospital-britanico/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6405",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-10",
       "hora": "19:50",
@@ -43764,6 +43940,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-colores-del-tiempo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "20:00",
+      "title_es": "XUL",
+      "title_en": "Xul",
+      "original_title": "Xul",
+      "director": "Cristián Costantini",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 104,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/xul/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6363",
       "ciclo": ""
     },
     {
@@ -44423,6 +44615,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "21:30",
+      "title_es": "El Baño del Papa",
+      "title_en": "The Pope's Toilet",
+      "original_title": "El baño del Papa",
+      "director": "Enrique Fernández y César Charlone",
+      "country": "Uruguay",
+      "year": 2007,
+      "duration": 100,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/el-bano-del-papa/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6404",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-10",
       "hora": "21:35",
@@ -44580,6 +44788,22 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "22:00",
+      "title_es": "Su propio infierno",
+      "title_en": "Her Private Hell",
+      "original_title": "Her Private Hell",
+      "director": "Nicolas Winding Refn",
+      "country": "Dinamarca",
+      "year": 2026,
+      "duration": 110,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/her-private-hell-2026/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6402",
       "ciclo": ""
     },
     {
@@ -44756,6 +44980,22 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Gaumont",
+      "fecha": "2026-11-10",
+      "hora": "22:15",
+      "title_es": "Pepita la pistolera",
+      "title_en": "Pepita the Gunslinger",
+      "original_title": "Pepita la pistolera",
+      "director": "Lucía Puenzo",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 103,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/pepita-the-gunslinger/",
+      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/500",
       "ciclo": ""
     },
     {
@@ -51770,6 +52010,22 @@
       "cine": "Centro Cultural Borges",
       "fecha": "2026-11-12",
       "hora": "19:00",
+      "title_es": "Piazzolla, los años del tiburón",
+      "title_en": "Piazzolla: The Years of the Shark",
+      "original_title": "Piazzolla: los años del tiburón",
+      "director": "Daniel Rosenfeld",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 90,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/524",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-11-12",
+      "hora": "19:00",
       "title_es": "Festival Cartón 2026",
       "title_en": "Festival Cartón 2026",
       "original_title": "",
@@ -52439,22 +52695,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-14",
-      "hora": "20:00",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-14",
       "hora": "20:00",
@@ -52469,6 +52709,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
       "ciclo": "Cine en La Noche de los Museos"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-14",
+      "hora": "20:00",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "CCK",
@@ -52615,6 +52871,22 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-15",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-15",
       "hora": "18:00",
@@ -52645,22 +52917,6 @@
       "letterboxd": "https://letterboxd.com/film/my-best-fiend/",
       "ticket_url": "",
       "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-15",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Cine York",
@@ -53831,20 +54087,20 @@
       "ciclo": "Continúa"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "15:00",
-      "title_es": "La burla del diablo",
-      "title_en": "Beat the Devil",
-      "original_title": "Beat the Devil",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido/Italia",
-      "year": 1953,
-      "duration": 95,
-      "genre": "Aventura, Crimen",
-      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
+      "cine": "MALBA",
+      "fecha": "2026-11-21",
+      "hora": "24:00",
+      "title_es": "¡Película sorpresa!",
+      "title_en": "¡Película sorpresa!",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
+      "ciclo": "Cineclub Nocturna"
     },
     {
       "cine": "CCK",
@@ -53863,6 +54119,22 @@
       "ciclo": "Cine francés"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "15:00",
+      "title_es": "La burla del diablo",
+      "title_en": "Beat the Devil",
+      "original_title": "Beat the Devil",
+      "director": "John Huston",
+      "country": "EE.UU/Reino Unido/Italia",
+      "year": 1953,
+      "duration": 95,
+      "genre": "Aventura, Crimen",
+      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-11-22",
       "hora": "16:00",
@@ -53879,22 +54151,6 @@
       "ciclo": "Continúa"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "17:30",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "17:30",
@@ -53909,6 +54165,22 @@
       "letterboxd": "https://letterboxd.com/film/maman-dechire/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "17:30",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "MALBA",
@@ -54666,6 +54938,22 @@
       "cine": "MALBA",
       "fecha": "2026-11-27",
       "hora": "20:30",
+      "title_es": "Orar Orbil & viceversa",
+      "title_en": "Orar Orbil & viceversa",
+      "original_title": "",
+      "director": "Diego Trerotola",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/orar-orbil-viceversa/",
+      "ciclo": "Bazofi"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-11-27",
+      "hora": "20:30",
       "title_es": "Machado",
       "title_en": "Machado",
       "original_title": "Machado",
@@ -54693,22 +54981,6 @@
       "letterboxd": "https://letterboxd.com/film/olivia-2025/",
       "ticket_url": "https://lumiton.ar/evento/olivia/",
       "ciclo": ""
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-11-27",
-      "hora": "22:00",
-      "title_es": "Perfume",
-      "title_en": "Perfume",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/perfume/",
-      "ciclo": "Estreno"
     },
     {
       "cine": "Sala Lugones",
@@ -54919,20 +55191,36 @@
       "ciclo": "Cine"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "15:00",
-      "title_es": "La noche de la iguana",
-      "title_en": "The Night of the Iguana",
-      "original_title": "The Night of the Iguana",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1964,
-      "duration": 118,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
+      "cine": "MALBA",
+      "fecha": "2026-11-28",
+      "hora": "23:50",
+      "title_es": "¿Qué clase de joven le abre la puerta a un vampiro?",
+      "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?",
+      "original_title": "¿Qué clase de joven le abre la puerta a un vampiro?",
+      "director": "Boom Boom Kid y Zurita",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 115,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/que-clase-de-joven-le-abre-la-puerta-a-un-vampiro/",
+      "ciclo": "Cineclub Nocturna"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-11-28",
+      "hora": "24:00",
+      "title_es": "¿Qué clase de joven le abre la puerta a un vampiro?, de Boom Boom Kid y Zurita",
+      "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?, de Boom Boom Kid y Zurita",
+      "original_title": "¿Qué clase de joven le abre la puerta a un vampiro?",
+      "director": "Boom Boom Kid, Green Martino",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 115,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
+      "ciclo": "Cineclub Nocturna"
     },
     {
       "cine": "CCK",
@@ -54949,6 +55237,22 @@
       "letterboxd": "https://letterboxd.com/film/nino-2025/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-29",
+      "hora": "15:00",
+      "title_es": "La noche de la iguana",
+      "title_en": "The Night of the Iguana",
+      "original_title": "The Night of the Iguana",
+      "director": "John Huston",
+      "country": "Estados Unidos",
+      "year": 1964,
+      "duration": 118,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "MALBA",
@@ -55031,6 +55335,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-29",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-29",
       "hora": "18:00",
@@ -55077,22 +55397,6 @@
       "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
       "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-29",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -55349,6 +55653,22 @@
       "letterboxd": "https://letterboxd.com/film/the-african-queen/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
       "ciclo": "Homenaje a John Huston"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-12-04",
+      "hora": "22:00",
+      "title_es": "Perfume",
+      "title_en": "Perfume",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/perfume/",
+      "ciclo": "Estreno"
     },
     {
       "cine": "Amorina",

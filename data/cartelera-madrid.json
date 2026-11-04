@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-04T03:26:54",
+  "updated": "2026-11-04T12:03:40",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 29,
@@ -14,8 +14,8 @@
       "publicadas": 18
     },
     "Cines Callao": {
-      "scrapeadas": 3,
-      "publicadas": 3
+      "scrapeadas": 38,
+      "publicadas": 38
     },
     "Cines Ideal": {
       "scrapeadas": 0,
@@ -31,12 +31,12 @@
       "publicadas": 65
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 101,
-      "publicadas": 101
+      "scrapeadas": 105,
+      "publicadas": 104
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 85,
-      "publicadas": 85
+      "scrapeadas": 98,
+      "publicadas": 98
     },
     "Golem Madrid": {
       "scrapeadas": 109,
@@ -47,12 +47,12 @@
       "publicadas": 18
     },
     "Renoir Plaza de España": {
-      "scrapeadas": 130,
-      "publicadas": 130
+      "scrapeadas": 131,
+      "publicadas": 131
     },
     "Renoir Retiro": {
-      "scrapeadas": 26,
-      "publicadas": 26
+      "scrapeadas": 89,
+      "publicadas": 89
     },
     "Sala Equis": {
       "scrapeadas": 54,
@@ -1498,22 +1498,6 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-invitacion-vose/20364/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-04",
-      "hora": "20:25",
-      "title_es": "Karateka",
-      "title_en": "Karateka",
-      "original_title": "Karateka",
-      "director": "Aritz Moreno",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/karateka-2026/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/karateka/20378/",
       "ciclo": ""
     },
     {
@@ -3376,22 +3360,6 @@
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-05",
       "hora": "20:00",
-      "title_es": "Karateka",
-      "title_en": "Karateka",
-      "original_title": "Karateka",
-      "director": "Aritz Moreno",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/karateka-2026/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/karateka/20379/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-05",
-      "hora": "20:00",
       "title_es": "Música en la oscuridad: A moon shaped pool",
       "title_en": "Música en la oscuridad: A moon shaped pool",
       "original_title": "",
@@ -4045,6 +4013,54 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "15:45",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095653/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "15:45",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095654/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "15:45",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095623/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-06",
       "hora": "15:50",
@@ -4221,6 +4237,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-06",
+      "hora": "15:50",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-06",
       "hora": "16:00",
@@ -4269,6 +4301,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095624/",
+      "ciclo": ""
+    },
+    {
       "cine": "Artistic Metropol",
       "fecha": "2026-11-06",
       "hora": "16:00",
@@ -4282,6 +4330,22 @@
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-10/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-06",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -4477,6 +4541,22 @@
       "ciclo": "Keisuke Kinoshita. la Emoción de lo Cotidiano"
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "17:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095655/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-06",
       "hora": "17:50",
@@ -4621,6 +4701,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095625/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-06",
       "hora": "18:00",
@@ -4633,7 +4729,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20460/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20460/",
       "ciclo": ""
     },
     {
@@ -4685,6 +4781,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-06",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-06",
       "hora": "18:05",
@@ -4714,6 +4826,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095427/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "18:15",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095683/",
       "ciclo": ""
     },
     {
@@ -4845,6 +4973,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095626/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-06",
       "hora": "19:00",
@@ -4890,6 +5034,22 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/piscina-por-la-tarde/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/piscina-por-la-tarde/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-06",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -5053,6 +5213,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "20:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095627/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-06",
       "hora": "20:00",
@@ -5066,22 +5242,6 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/laca-y-palomitas-gorda-y-divina/20265/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-06",
-      "hora": "20:00",
-      "title_es": "Hijo mayor",
-      "title_en": "Elder Son",
-      "original_title": "",
-      "director": "Cecilia Kang",
-      "country": "Argentina, Corea del Sur",
-      "year": 2025,
-      "duration": 118,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/hijo-mayor/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hijo-mayor/20144/",
       "ciclo": ""
     },
     {
@@ -5129,7 +5289,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20461/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20461/",
       "ciclo": ""
     },
     {
@@ -5210,6 +5370,38 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095353/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-06",
+      "hora": "20:10",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "20:15",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095656/",
       "ciclo": ""
     },
     {
@@ -5323,6 +5515,22 @@
       "letterboxd": "https://letterboxd.com/film/jimpa/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/jimpa",
       "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "20:30",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095657/",
+      "ciclo": ""
     },
     {
       "cine": "Golem Madrid",
@@ -5488,22 +5696,6 @@
       "cine": "Cines Princesa",
       "fecha": "2026-11-06",
       "hora": "22:00",
-      "title_es": "Digger",
-      "title_en": "Digger",
-      "original_title": "Digger",
-      "director": "Alejandro Iñárritu",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 128,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/digger-2026/",
-      "ticket_url": "https://www.pillalas.com/pase/1095431/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cines Princesa",
-      "fecha": "2026-11-06",
-      "hora": "22:00",
       "title_es": "Leones en Invierno",
       "title_en": "Winter Lions",
       "original_title": "Leones en invierno",
@@ -5533,6 +5725,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095628/",
+      "ciclo": ""
+    },
+    {
       "cine": "Artistic Metropol",
       "fecha": "2026-11-06",
       "hora": "22:00",
@@ -5546,6 +5754,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-2-el-jorobado-de-notre-dame-1923-muda-con-intertitulos-en-espanol-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-06",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -5610,6 +5834,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095354/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-06",
+      "hora": "22:15",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095658/",
       "ciclo": ""
     },
     {
@@ -5709,6 +5949,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Princesa",
+      "fecha": "2026-11-06",
+      "hora": "22:30",
+      "title_es": "Digger",
+      "title_en": "Digger",
+      "original_title": "Digger",
+      "director": "Alejandro Iñárritu",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 128,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/digger-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095792/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-06",
       "hora": "22:30",
@@ -5721,7 +5977,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20459/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20459/",
       "ciclo": ""
     },
     {
@@ -5773,6 +6029,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-06",
+      "hora": "22:35",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-06",
       "hora": "22:40",
@@ -5789,6 +6061,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-07",
+      "hora": "11:45",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Alessandro Carloni, Erica Rivinoja",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/el-gato-con-sombrero-doblada-al-espanol/39526/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-07",
       "hora": "11:45",
@@ -5802,6 +6090,38 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/20464/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-07",
+      "hora": "11:50",
+      "title_es": "La oveja Shaun: Misión calabaza",
+      "title_en": "Shaun the Sheep: The Beast of Mossy Bottom",
+      "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
+      "director": "Matthew Walker, Steve Cox",
+      "country": "Reino Unido, Francia",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Comedia, Animación",
+      "letterboxd": "https://letterboxd.com/film/shaun-the-sheep-the-beast-of-mossy-bottom/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-oveja-shaun-mision-calabaza-doblada-al-espanol/39527/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-07",
+      "hora": "12:00",
+      "title_es": "Sacamantecas",
+      "title_en": "The Harvester",
+      "original_title": "Sacamantecas",
+      "director": "David Pérez Sañudo",
+      "country": "Bélgica, España",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/sacamantecas/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/sacamantecas-vose/39514/",
       "ciclo": ""
     },
     {
@@ -5882,6 +6202,54 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=37130",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "15:45",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095660/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "15:45",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095659/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "15:45",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095629/",
       "ciclo": ""
     },
     {
@@ -6061,6 +6429,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-07",
+      "hora": "15:50",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-07",
       "hora": "16:00",
@@ -6106,6 +6490,22 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/arriba-tutto/",
       "ticket_url": "https://www.pillalas.com/pase/1095251/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095630/",
       "ciclo": ""
     },
     {
@@ -6218,6 +6618,22 @@
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-11/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-07",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -6381,6 +6797,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "17:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095661/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-07",
       "hora": "17:45",
@@ -6457,7 +6889,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20472/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20472/",
       "ciclo": ""
     },
     {
@@ -6557,6 +6989,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095631/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-07",
       "hora": "18:00",
@@ -6570,6 +7018,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/a-womans-life-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100602&eventCode=113783",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-07",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -6650,6 +7114,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095438/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "18:15",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095684/",
       "ciclo": ""
     },
     {
@@ -6813,6 +7293,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095632/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-07",
       "hora": "19:00",
@@ -6842,6 +7338,22 @@
       "genre": "Drama, Thriller",
       "letterboxd": "https://letterboxd.com/film/ashes-2026-3/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100609&eventCode=113294",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-07",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -6922,6 +7434,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
       "ticket_url": "https://www.pillalas.com/pase/1095440/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "20:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095633/",
       "ciclo": ""
     },
     {
@@ -7053,6 +7581,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-07",
+      "hora": "20:10",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "20:15",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095662/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-07",
       "hora": "20:15",
@@ -7129,7 +7689,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20470/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20470/",
       "ciclo": ""
     },
     {
@@ -7179,6 +7739,22 @@
       "letterboxd": "https://letterboxd.com/film/woman-unknown/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/woman-unknown",
       "ciclo": "Cine por Mujeres Madrid 2026"
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "20:30",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095663/",
+      "ciclo": ""
     },
     {
       "cine": "Embajadores Glorieta",
@@ -7389,6 +7965,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095634/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Estudio",
       "fecha": "2026-11-07",
       "hora": "22:00",
@@ -7402,6 +7994,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/la-noche-esta-marchandose-ya/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-07",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -7434,6 +8042,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095356/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-07",
+      "hora": "22:15",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095664/",
       "ciclo": ""
     },
     {
@@ -7561,7 +8185,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20471/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20471/",
       "ciclo": ""
     },
     {
@@ -7610,6 +8234,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-invitacion-vose/39475/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-07",
+      "hora": "22:35",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
       "ciclo": ""
     },
     {
@@ -7712,22 +8352,6 @@
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-08",
       "hora": "12:00",
-      "title_es": "La oveja Shaun: Misión calabaza",
-      "title_en": "Shaun the Sheep: The Beast of Mossy Bottom",
-      "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
-      "director": "Matthew Walker, Steve Cox",
-      "country": "Reino Unido, Francia",
-      "year": 2026,
-      "duration": 80,
-      "genre": "Comedia, Animación",
-      "letterboxd": "https://letterboxd.com/film/shaun-the-sheep-the-beast-of-mossy-bottom/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-oveja-shaun-mision-calabaza-doblada-al-espanol/39481/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-11-08",
-      "hora": "12:00",
       "title_es": "Lawrence de Arabia",
       "title_en": "Lawrence of Arabia",
       "original_title": "Lawrence of Arabia",
@@ -7754,6 +8378,54 @@
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-12/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "15:45",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095665/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "15:45",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095666/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "15:45",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095635/",
       "ciclo": ""
     },
     {
@@ -7933,6 +8605,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-08",
+      "hora": "15:50",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-08",
       "hora": "16:00",
@@ -7978,6 +8666,22 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/arriba-tutto/",
       "ticket_url": "https://www.pillalas.com/pase/1095265/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095636/",
       "ciclo": ""
     },
     {
@@ -8090,6 +8794,22 @@
       "genre": "Acción, Thriller",
       "letterboxd": "https://letterboxd.com/film/the-beast-2026/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-1-the-beast-2026-v-o-s-e-13/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-08",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -8253,6 +8973,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "17:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095667/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-08",
       "hora": "17:45",
@@ -8329,7 +9065,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20484/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-doblada-al-espanol/20484/",
       "ciclo": ""
     },
     {
@@ -8429,6 +9165,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095637/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-08",
       "hora": "18:00",
@@ -8442,6 +9194,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/a-womans-life-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100618&eventCode=113783",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-08",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -8490,6 +9258,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095449/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "18:15",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095685/",
       "ciclo": ""
     },
     {
@@ -8621,6 +9405,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095638/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-08",
       "hora": "19:00",
@@ -8666,6 +9466,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/the-night-is-fading-away/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/la-noche-esta-marchandose-ya/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-08",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -8746,6 +9562,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
       "ticket_url": "https://www.pillalas.com/pase/1095450/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "20:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095639/",
       "ciclo": ""
     },
     {
@@ -8861,6 +9693,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-08",
+      "hora": "20:10",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "20:15",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095668/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-08",
       "hora": "20:15",
@@ -8937,7 +9801,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20483/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20483/",
       "ciclo": ""
     },
     {
@@ -8970,6 +9834,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://www.pillalas.com/pase/1095273/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "20:30",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095669/",
       "ciclo": ""
     },
     {
@@ -9197,6 +10077,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095640/",
+      "ciclo": ""
+    },
+    {
       "cine": "Artistic Metropol",
       "fecha": "2026-11-08",
       "hora": "22:00",
@@ -9210,6 +10106,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/halloween-iii-season-of-the-witch/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-2-halloween-iii-1982-v-o-s-e-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-08",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -9242,6 +10154,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095358/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-08",
+      "hora": "22:15",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095670/",
       "ciclo": ""
     },
     {
@@ -9369,7 +10297,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20477/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20477/",
       "ciclo": ""
     },
     {
@@ -9418,6 +10346,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-invitacion-vose/39483/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-08",
+      "hora": "22:35",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
       "ciclo": ""
     },
     {
@@ -9485,22 +10429,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-09",
-      "hora": "12:00",
-      "title_es": "Ruega por nosotras",
-      "title_en": "Pray for Us",
-      "original_title": "Ruega por nosotras",
-      "director": "Daniel Monzón",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 136,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/ruega-por-nosotras/20490/",
-      "ciclo": ""
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-09",
       "hora": "12:00",
@@ -9530,6 +10458,54 @@
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/cecilia-una-luz-de-manana/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/cecilia-una-luz-de-manana/39454/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "15:45",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095672/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "15:45",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095671/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "15:45",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095641/",
       "ciclo": ""
     },
     {
@@ -9709,6 +10685,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-09",
+      "hora": "15:50",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-09",
       "hora": "16:00",
@@ -9757,6 +10749,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095642/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-09",
       "hora": "16:00",
@@ -9769,7 +10777,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20489/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-doblada-al-espanol/20489/",
       "ciclo": ""
     },
     {
@@ -9834,6 +10842,22 @@
       "genre": "Animación, Familiar",
       "letterboxd": "https://letterboxd.com/film/superthings-la-pelicula/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/superthings-la-pelicula/20491/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-09",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -9997,6 +11021,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "17:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095673/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-09",
       "hora": "17:50",
@@ -10141,6 +11181,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095643/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-09",
       "hora": "18:00",
@@ -10154,6 +11210,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/a-womans-life-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100634&eventCode=113783",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-09",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -10185,7 +11257,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20492/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20492/",
       "ciclo": ""
     },
     {
@@ -10218,6 +11290,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095460/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "18:15",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095686/",
       "ciclo": ""
     },
     {
@@ -10317,6 +11405,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095644/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-09",
       "hora": "19:00",
@@ -10365,10 +11469,26 @@
       "ciclo": "Proyecciones Festival Eñe"
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-09",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-09",
       "hora": "19:30",
-      "title_es": "Llueve sobre Babel",
+      "title_es": "Espacio Queer: Llueve sobre Babel",
       "title_en": "Rains Over Babel",
       "original_title": "Llueve sobre Babel",
       "director": "Gala del Sol",
@@ -10426,6 +11546,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
       "ticket_url": "https://www.pillalas.com/pase/1095462/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "20:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095645/",
       "ciclo": ""
     },
     {
@@ -10557,6 +11693,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-09",
+      "hora": "20:10",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "20:15",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095674/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-09",
       "hora": "20:15",
@@ -10666,6 +11834,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/20495/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "20:30",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095675/",
       "ciclo": ""
     },
     {
@@ -10861,6 +12045,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095646/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-09",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-09",
       "hora": "22:15",
@@ -10890,6 +12106,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095360/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-09",
+      "hora": "22:15",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095676/",
       "ciclo": ""
     },
     {
@@ -10989,6 +12221,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-09",
+      "hora": "22:35",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-09",
       "hora": "22:40",
@@ -11002,6 +12250,54 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://www.pillalas.com/pase/1095290/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "15:45",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095700/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "15:45",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095701/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "15:45",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095687/",
       "ciclo": ""
     },
     {
@@ -11229,6 +12525,118 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095688/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "Sacamantecas",
+      "title_en": "The Harvester",
+      "original_title": "Sacamantecas",
+      "director": "David Pérez Sañudo",
+      "country": "Bélgica, España",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/sacamantecas/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20531/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "La voz quebrada",
+      "title_en": "The Broken Voice",
+      "original_title": "La voz quebrada",
+      "director": "Manuel Menchón",
+      "country": "España, Argentina",
+      "year": 2026,
+      "duration": 88,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-voz-quebrada/20534/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39523/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "Naza",
+      "title_en": "NAZA",
+      "original_title": "NAZA",
+      "director": "Yuval Abraham, Rachel Szor",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/naza/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/naza-vose/39519/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "Arriba Tutto",
+      "title_en": "Arriba Tutto",
+      "original_title": "Arriba Tutto",
+      "director": "José Mota",
+      "country": "España, Italia",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/arriba-tutto/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/arriba-tutto/20528/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "Cecilia. Una luz de mañana",
+      "title_en": "Cecilia,  una luz de mañana",
+      "original_title": "Cecilia,  una luz de mañana",
+      "director": "Chema de la Peña",
+      "country": "",
+      "year": 2026,
+      "duration": 87,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/cecilia-una-luz-de-manana/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/cecilia-una-luz-de-manana/39515/",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-10",
       "hora": "16:10",
@@ -11341,6 +12749,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "17:35",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39520/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "17:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.pillalas.com/pase/1095702/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-10",
       "hora": "17:50",
@@ -11386,6 +12826,38 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
       "ticket_url": "https://www.pillalas.com/pase/1095295/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-10",
+      "hora": "17:50",
+      "title_es": "Sacamantecas",
+      "title_en": "The Harvester",
+      "original_title": "Sacamantecas",
+      "director": "David Pérez Sañudo",
+      "country": "Bélgica, España",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/sacamantecas/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-doblada-al-espanol/20535/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "17:50",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/ruega-por-nosotras/39516/",
       "ciclo": ""
     },
     {
@@ -11469,6 +12941,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095689/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-10",
+      "hora": "18:00",
+      "title_es": "Arriba Tutto",
+      "title_en": "Arriba Tutto",
+      "original_title": "Arriba Tutto",
+      "director": "José Mota",
+      "country": "España, Italia",
+      "year": 2026,
+      "duration": 102,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/arriba-tutto/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/arriba-tutto/20529/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-10",
       "hora": "18:00",
@@ -11501,6 +13005,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-10",
+      "hora": "18:05",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/tiempos-de-ilusion-doblada-al-espanol/20532/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-10",
       "hora": "18:15",
@@ -11514,6 +13034,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095471/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "18:15",
+      "title_es": "Tiempos de ilusión",
+      "title_en": "Just an Illusion",
+      "original_title": "Juste une illusion",
+      "director": "Éric Toledano",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 119,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095711/",
       "ciclo": ""
     },
     {
@@ -11610,6 +13146,38 @@
       "genre": "Historia, Drama",
       "letterboxd": "https://letterboxd.com/film/les-miserables-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095402/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095690/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "19:00",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/ruega-por-nosotras/39524/",
       "ciclo": ""
     },
     {
@@ -11723,6 +13291,38 @@
       "letterboxd": "",
       "ticket_url": "https://www.pillalas.com/pase/1093922/",
       "ciclo": "Wilder cinema"
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "20:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095691/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-10",
+      "hora": "20:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/20530/",
+      "ciclo": ""
     },
     {
       "cine": "Artistic Metropol",
@@ -11901,6 +13501,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "20:25",
+      "title_es": "Sacamantecas",
+      "title_en": "The Harvester",
+      "original_title": "Sacamantecas",
+      "director": "David Pérez Sañudo",
+      "country": "Bélgica, España",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/sacamantecas/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/sacamantecas-doblada-al-espanol/39517/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-10",
+      "hora": "20:25",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-invitacion-doblada-al-espanol/20533/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-10",
       "hora": "20:30",
@@ -11915,6 +13547,54 @@
       "letterboxd": "https://letterboxd.com/film/la-carn/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/la-carn-0",
       "ciclo": "31 Queercinemad"
+    },
+    {
+      "cine": "Renoir Plaza de España",
+      "fecha": "2026-11-10",
+      "hora": "20:30",
+      "title_es": "Jaleos",
+      "title_en": "Jaleos",
+      "original_title": "Jaleos",
+      "director": "Isaki Lacuesta",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/jaleos/",
+      "ticket_url": "https://www.pillalas.com/pase/1095713/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "20:30",
+      "title_es": "Sentido y sensibilidad",
+      "title_en": "Sense and Sensibility",
+      "original_title": "Sense and Sensibility",
+      "director": "Georgia Oakley",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/1095704/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "20:30",
+      "title_es": "Wicker",
+      "title_en": "Wicker",
+      "original_title": "Wicker",
+      "director": "Alex Huston Fischer, Eleanor Wilson",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 105,
+      "genre": "Fantasía, Comedia",
+      "letterboxd": "https://letterboxd.com/film/wicker/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/wicker-doblada-al-espanol/39521/",
+      "ciclo": ""
     },
     {
       "cine": "Golem Madrid",
@@ -11994,6 +13674,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/hope-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095404/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "21:35",
+      "title_es": "Carretera perdida",
+      "title_en": "Lost Highway",
+      "original_title": "Lost Highway",
+      "director": "David Lynch",
+      "country": "Francia, Estados Unidos",
+      "year": 1997,
+      "duration": 134,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/lost-highway/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/carretera-perdida-vose/39525/",
       "ciclo": ""
     },
     {
@@ -12090,6 +13786,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
       "ticket_url": "https://www.pillalas.com/pase/1095301/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-10",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.pillalas.com/pase/1095692/",
       "ciclo": ""
     },
     {
@@ -12221,6 +13933,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "22:30",
+      "title_es": "Happy together",
+      "title_en": "Happy together",
+      "original_title": "春光乍洩",
+      "director": "Wong Kar-Wai",
+      "country": "Hong Kong, Corea del Sur",
+      "year": 1997,
+      "duration": 98,
+      "genre": "Drama, Romance",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/happy-together-vose/39518/",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-10",
       "hora": "22:35",
@@ -12234,6 +13962,22 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
       "ticket_url": "https://www.pillalas.com/pase/1095302/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "22:35",
+      "title_es": "Los demonios",
+      "title_en": "The Devils",
+      "original_title": "",
+      "director": "Ken Russell",
+      "country": "Reino Unido",
+      "year": 1971,
+      "duration": 103,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/the-devils/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/los-demonios-vose/39522/",
       "ciclo": ""
     },
     {
@@ -12253,6 +13997,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-11",
+      "hora": "15:50",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-11",
       "hora": "16:00",
@@ -12265,7 +14025,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20503/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-doblada-al-espanol/20503/",
       "ciclo": ""
     },
     {
@@ -12282,6 +14042,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/naza-vose/20496/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-11",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -12317,6 +14093,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-11",
+      "hora": "18:00",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-11",
       "hora": "18:05",
@@ -12330,6 +14122,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-invitacion-vose/20505/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-11",
+      "hora": "19:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -12381,22 +14189,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-11",
-      "hora": "19:35",
-      "title_es": "La bola negra",
-      "title_en": "La Bola Negra",
-      "original_title": "",
-      "director": "Javier Ambrossi, Javier Calvo",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 155,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-bola-negra/20501/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-11",
       "hora": "20:00",
@@ -12425,7 +14217,23 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20504/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20504/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-11",
+      "hora": "20:10",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
       "ciclo": ""
     },
     {
@@ -12458,6 +14266,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2969&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-11",
+      "hora": "22:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -12522,6 +14346,22 @@
       "genre": "Fantasía, Comedia",
       "letterboxd": "https://letterboxd.com/film/wicker/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/wicker-vose/20502/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-11",
+      "hora": "22:35",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/cine/madrid/callao/",
       "ciclo": ""
     },
     {
@@ -12617,7 +14457,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20507/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-doblada-al-espanol/20507/",
       "ciclo": ""
     },
     {
@@ -12857,7 +14697,7 @@
       "duration": 105,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas/20509/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20509/",
       "ciclo": ""
     },
     {
@@ -13408,7 +15248,7 @@
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-16",
       "hora": "20:00",
-      "title_es": "Llueve sobre Babel",
+      "title_es": "Espacio Queer: Llueve sobre Babel",
       "title_en": "Rains Over Babel",
       "original_title": "Llueve sobre Babel",
       "director": "Gala del Sol",
@@ -13417,7 +15257,7 @@
       "duration": 111,
       "genre": "Fantasía, Comedia",
       "letterboxd": "https://letterboxd.com/film/rains-over-babel/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/llueve-sobre-babel/20447/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/espacio-queer-llueve-sobre-babel/20447/",
       "ciclo": ""
     },
     {
@@ -13830,7 +15670,7 @@
       "director": "Isaki Lacuesta",
       "country": "",
       "year": null,
-      "duration": 78,
+      "duration": 80,
       "genre": "",
       "letterboxd": "https://letterboxd.com/film/jaleos/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/jaleos/39323/",
@@ -13965,6 +15805,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-22",
+      "hora": "12:00",
+      "title_es": "Alien, el octavo pasajero",
+      "title_en": "Alien",
+      "original_title": "Alien",
+      "director": "Ridley Scott",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 1979,
+      "duration": 116,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alien/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-alien-el-octavo-pasajero-vose/39293/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-22",
       "hora": "12:00",
@@ -13979,22 +15835,6 @@
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/queercinemad-gugus-world/20452/",
       "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-11-22",
-      "hora": "12:00",
-      "title_es": "Alien, el octavo pasajero",
-      "title_en": "Alien",
-      "original_title": "Alien",
-      "director": "Ridley Scott",
-      "country": "Estados Unidos, Reino Unido",
-      "year": 1979,
-      "duration": 116,
-      "genre": "Terror, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/alien/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-alien-el-octavo-pasajero-vose/39293/",
-      "ciclo": "Domingo de clásicos"
     },
     {
       "cine": "Sala Equis",
