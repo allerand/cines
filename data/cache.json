@@ -28020,7 +28020,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
+    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -32601,5 +32601,43 @@
     "genre": "Drama",
     "clase_titulo": "distinto",
     "sin_hints": "título local de un estreno"
+  },
+  "cuelgamuros: una historia inexplicable": {
+    "url": "",
+    "title_en": "Cuelgamuros: Una historia inexplicable",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sucia": {
+    "url": "https://letterboxd.com/film/sucia/",
+    "title_en": "Filthy",
+    "director": "Marc Pujolar, Bàrbara Mestanza",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Documental"
+  },
+  "deuses de pedra": {
+    "url": "https://letterboxd.com/film/deuses-de-pedra/",
+    "title_en": "Gods of Stone",
+    "director": "Iván Castiñeiras",
+    "country": "Spain, France",
+    "year": 2025,
+    "duration": 85,
+    "genre": "Documental",
+    "title_es": "Gods of Stone",
+    "original_title": "Deuses de pedra"
+  },
+  "something you should know about me": {
+    "url": "https://letterboxd.com/film/something-you-should-know-about-me/",
+    "title_en": "Something You Should Know About Me",
+    "director": "Andy Rose Fidoten",
+    "country": "USA",
+    "year": 2026,
+    "duration": 84,
+    "genre": "Animación, Romance",
+    "original_title": "Something You Should Know About Me"
   }
 }

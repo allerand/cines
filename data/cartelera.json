@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T03:53:33",
+  "updated": "2026-11-05T11:55:11",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 25,
@@ -18,11 +18,11 @@
       "publicadas": 1
     },
     "Biblioteca del Congreso": {
-      "scrapeadas": 0,
-      "publicadas": 1
+      "scrapeadas": 6,
+      "publicadas": 6
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 16,
       "publicadas": 16
     },
     "Cacodelphia": {
@@ -39,8 +39,8 @@
       "publicadas": 5
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
-      "publicadas": 27
+      "scrapeadas": 28,
+      "publicadas": 28
     },
     "Centro Cultural Leopoldo Marechal": {
       "scrapeadas": 51,
@@ -76,8 +76,8 @@
       "publicadas": 46
     },
     "Cinemark Caballito": {
-      "scrapeadas": 333,
-      "publicadas": 345
+      "scrapeadas": 337,
+      "publicadas": 349
     },
     "Cinemark Palermo": {
       "scrapeadas": 598,
@@ -88,12 +88,12 @@
       "publicadas": 492
     },
     "Cinépolis Houssay": {
-      "scrapeadas": 17,
+      "scrapeadas": 16,
       "publicadas": 17
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 43,
-      "publicadas": 43
+      "scrapeadas": 36,
+      "publicadas": 36
     },
     "Filo Cine": {
       "scrapeadas": 8,
@@ -108,8 +108,8 @@
       "publicadas": 739
     },
     "Hoyts Dot": {
-      "scrapeadas": 433,
-      "publicadas": 474
+      "scrapeadas": 521,
+      "publicadas": 562
     },
     "Lumiton": {
       "scrapeadas": 2,
@@ -144,7 +144,7 @@
       "publicadas": 11
     },
     "Showcase Belgrano": {
-      "scrapeadas": 41,
+      "scrapeadas": 35,
       "publicadas": 41
     }
   },
@@ -162,22 +162,6 @@
       "duration": 132,
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/wildwood-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "11:30",
-      "title_es": "Cars",
-      "title_en": "Cars",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -227,38 +211,6 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "12:10",
-      "title_es": "El poder de la red",
-      "title_en": "The Social Reckoning",
-      "original_title": "The Social Reckoning",
-      "director": "Aaron Sorkin",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 113,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-social-reckoning/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "12:20",
-      "title_es": "El corazón de la bestia",
-      "title_en": "Heart of the Beast",
-      "original_title": "Heart of the Beast",
-      "director": "David Ayer",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 101,
-      "genre": "Aventura, Thriller",
-      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -323,6 +275,22 @@
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/monster-mia/",
       "ticket_url": "https://multiplex.com.ar/peliculas/escuela-de-monstruos/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-05",
+      "hora": "12:40",
+      "title_es": "Cars",
+      "title_en": "Cars",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -1398,22 +1366,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Showcase Belgrano",
-      "fecha": "2026-11-05",
-      "hora": "14:10",
-      "title_es": "Madre siniestra",
-      "title_en": "Other Mommy",
-      "original_title": "Other Mommy",
-      "director": "Rob Savage",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/other-mommy/",
-      "ticket_url": "https://www.todoshowcase.com/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cine Lorca",
       "fecha": "2026-11-05",
       "hora": "14:10",
@@ -1427,6 +1379,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
       "ticket_url": "https://cinelorca.wixsite.com/cine-lorca",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-11-05",
+      "hora": "14:10",
+      "title_es": "Madre siniestra",
+      "title_en": "Other Mommy",
+      "original_title": "Other Mommy",
+      "director": "Rob Savage",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/other-mommy/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -1494,22 +1462,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "14:15",
-      "title_es": "Cars",
-      "title_en": "Cars",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-05",
       "hora": "14:15",
@@ -1570,22 +1522,6 @@
       "duration": 117,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "14:20",
-      "title_es": "El poder de la red",
-      "title_en": "The Social Reckoning",
-      "original_title": "The Social Reckoning",
-      "director": "Aaron Sorkin",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 113,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-social-reckoning/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -2211,6 +2147,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
       "ticket_url": "https://multiplex.com.ar/peliculas/la-cena/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-05",
+      "hora": "15:20",
+      "title_es": "El poder de la red",
+      "title_en": "The Social Reckoning",
+      "original_title": "The Social Reckoning",
+      "director": "Aaron Sorkin",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 113,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-social-reckoning/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3142,22 +3094,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "16:45",
-      "title_es": "El poder de la red",
-      "title_en": "The Social Reckoning",
-      "original_title": "The Social Reckoning",
-      "director": "Aaron Sorkin",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 113,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-social-reckoning/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-05",
       "hora": "16:45",
@@ -3410,22 +3346,6 @@
       "duration": 132,
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/wildwood-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "17:00",
-      "title_es": "Cars",
-      "title_en": "Cars",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -4374,6 +4294,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-11-05",
+      "hora": "18:30",
+      "title_es": "La virgen de la tosquera",
+      "title_en": "The Virgin of the Quarry Lake",
+      "original_title": "La virgen de la tosquera",
+      "director": "Laura Casabé",
+      "country": "Argentina, España",
+      "year": 2025,
+      "duration": 95,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/la-virgen-de-la-tosquera/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/la-virgen-de-la-tosquera-tickets-2004128755056?aff=oddtdtcreator&keep_tld=true",
+      "ciclo": "Cine en el Auditorio Leonardo Favio"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-05",
       "hora": "18:30",
@@ -4500,22 +4436,6 @@
       "letterboxd": "https://letterboxd.com/film/wildwood-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/f3e7d2d633e2b02cf7e0a6881ebddf67",
       "ciclo": ""
-    },
-    {
-      "cine": "Biblioteca del Congreso",
-      "fecha": "2026-11-05",
-      "hora": "18:30",
-      "title_es": "La virgen de la tosquera",
-      "title_en": "The Virgin of the Quarry Lake",
-      "original_title": "La virgen de la tosquera",
-      "director": "Laura Casabé",
-      "country": "Argentina, España",
-      "year": 2025,
-      "duration": 95,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/la-virgen-de-la-tosquera/",
-      "ticket_url": "https://www.eventbrite.com.ar/e/la-virgen-de-la-tosquera-tickets-2004128755056?aff=oddtdtcreator&keep_tld=true",
-      "ciclo": "Cine en el Auditorio Leonardo Favio"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -4934,22 +4854,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-05",
-      "hora": "19:15",
-      "title_es": "El poder de la red",
-      "title_en": "The Social Reckoning",
-      "original_title": "The Social Reckoning",
-      "director": "Aaron Sorkin",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 113,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-social-reckoning/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-05",
       "hora": "19:15",
@@ -4963,6 +4867,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-05",
+      "hora": "19:15",
+      "title_es": "El poder de la red",
+      "title_en": "The Social Reckoning",
+      "original_title": "The Social Reckoning",
+      "director": "Aaron Sorkin",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 113,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-social-reckoning/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -6233,22 +6153,6 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-05",
       "hora": "20:30",
-      "title_es": "El poder de la red",
-      "title_en": "The Social Reckoning",
-      "original_title": "The Social Reckoning",
-      "director": "Aaron Sorkin",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 113,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-social-reckoning/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "20:30",
       "title_es": "Clayface",
       "title_en": "Clayface",
       "original_title": "Clayface",
@@ -7126,22 +7030,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "22:15",
-      "title_es": "El corazón de la bestia",
-      "title_en": "Heart of the Beast",
-      "original_title": "Heart of the Beast",
-      "director": "David Ayer",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 101,
-      "genre": "Aventura, Thriller",
-      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-05",
       "hora": "22:15",
@@ -7766,6 +7654,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-05",
+      "hora": "22:40",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-05",
       "hora": "22:40",
@@ -7955,22 +7859,6 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/clayface/",
       "ticket_url": "https://multiplex.com.ar/peliculas/clayface/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "22:50",
-      "title_es": "El poder de la red",
-      "title_en": "The Social Reckoning",
-      "original_title": "The Social Reckoning",
-      "director": "Aaron Sorkin",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 113,
-      "genre": "Drama, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-social-reckoning/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8214,6 +8102,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-05",
+      "hora": "23:10",
+      "title_es": "Madre siniestra",
+      "title_en": "Other Mommy",
+      "original_title": "Other Mommy",
+      "director": "Rob Savage",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 93,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/other-mommy/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-05",
       "hora": "23:15",
@@ -8242,22 +8146,6 @@
       "duration": 117,
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-05",
-      "hora": "23:15",
-      "title_es": "Madre siniestra",
-      "title_en": "Other Mommy",
-      "original_title": "Other Mommy",
-      "director": "Rob Savage",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Terror",
-      "letterboxd": "https://letterboxd.com/film/other-mommy/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -21097,22 +20985,6 @@
       "cine": "Hoyts Dot",
       "fecha": "2026-11-07",
       "hora": "23:00",
-      "title_es": "Resident Evil: Noche cero",
-      "title_en": "Resident Evil",
-      "original_title": "Resident Evil",
-      "director": "Zach Cregger",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 94,
-      "genre": "Thriller, Terror",
-      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
-      "ticket_url": "https://www.hoyts.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Hoyts Dot",
-      "fecha": "2026-11-07",
-      "hora": "23:00",
       "title_es": "Clayface",
       "title_en": "Clayface",
       "original_title": "Clayface",
@@ -21138,6 +21010,22 @@
       "duration": 93,
       "genre": "Terror",
       "letterboxd": "https://letterboxd.com/film/other-mommy/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-07",
+      "hora": "23:00",
+      "title_es": "Resident Evil: Noche cero",
+      "title_en": "Resident Evil",
+      "original_title": "Resident Evil",
+      "director": "Zach Cregger",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 94,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.hoyts.com.ar/",
       "ciclo": ""
     },
@@ -46854,6 +46742,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-11-12",
+      "hora": "18:30",
+      "title_es": "Retratos fantasmas",
+      "title_en": "Pictures of Ghosts",
+      "original_title": "Retratos Fantasmas",
+      "director": "Proyección documental de Kleber Mendonça Filho",
+      "country": "Brasil",
+      "year": 2023,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/pictures-of-ghosts/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/retratos-fantasmas-tickets-2004134750990?aff=oddtdtcreator&keep_tld=true",
+      "ciclo": "Documentales latinoamericanos"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-11-12",
       "hora": "18:30",
@@ -47171,6 +47075,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/los-vencedores/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/fbe69112df73b95ce11bac8dc6240fb7",
+      "ciclo": ""
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-11-13",
+      "hora": "19:00",
+      "title_es": "Piazzolla, los años del tiburón",
+      "title_en": "Piazzolla: The Years of the Shark",
+      "original_title": "Piazzolla: los años del tiburón",
+      "director": "Daniel Rosenfeld",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 90,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/524",
       "ciclo": ""
     },
     {
@@ -47590,22 +47510,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-14",
-      "hora": "20:00",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-14",
       "hora": "20:00",
@@ -47620,6 +47524,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
       "ciclo": "Cine en La Noche de los Museos"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-14",
+      "hora": "20:00",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "CCK",
@@ -47766,6 +47686,22 @@
       "ciclo": "Estreno"
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-15",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-15",
       "hora": "18:00",
@@ -47796,22 +47732,6 @@
       "letterboxd": "https://letterboxd.com/film/my-best-fiend/",
       "ticket_url": "",
       "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-15",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Cine York",
@@ -48070,6 +47990,22 @@
       "ciclo": "Homenaje a John Huston"
     },
     {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-11-17",
+      "hora": "18:30",
+      "title_es": "Vizontele",
+      "title_en": "Vizontele",
+      "original_title": "Vizontele",
+      "director": "Yılmaz Erdoğan",
+      "country": "Turquía",
+      "year": 2001,
+      "duration": 110,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/vizontele/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/vizontele-tickets-2004129480225?aff=oddtdtcreator",
+      "ciclo": "Érase una vez en Anatolia, dos grandes películas turcas"
+    },
+    {
       "cine": "Hasta Trilce",
       "fecha": "2026-11-17",
       "hora": "19:00",
@@ -48278,6 +48214,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-18",
+      "hora": "19:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-18",
       "hora": "19:00",
@@ -48295,6 +48247,22 @@
     },
     {
       "cine": "Cinemark Palermo",
+      "fecha": "2026-11-18",
+      "hora": "19:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Caballito",
       "fecha": "2026-11-18",
       "hora": "19:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -48342,6 +48310,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-18",
+      "hora": "19:15",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-18",
       "hora": "19:15",
@@ -48374,6 +48358,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-18",
+      "hora": "19:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-18",
       "hora": "19:30",
@@ -48391,6 +48391,22 @@
     },
     {
       "cine": "Cinemark Palermo",
+      "fecha": "2026-11-18",
+      "hora": "19:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinemark Caballito",
       "fecha": "2026-11-18",
       "hora": "19:30",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -48550,6 +48566,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-18",
+      "hora": "22:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-18",
       "hora": "22:20",
@@ -48582,7 +48614,39 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Caballito",
+      "fecha": "2026-11-18",
+      "hora": "22:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-18",
+      "hora": "22:35",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-18",
       "hora": "22:35",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -48630,6 +48694,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-18",
+      "hora": "22:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-18",
       "hora": "22:50",
@@ -48662,7 +48742,39 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinemark Caballito",
+      "fecha": "2026-11-18",
+      "hora": "22:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-19",
+      "hora": "12:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-19",
       "hora": "12:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -48695,6 +48807,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-19",
+      "hora": "12:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-19",
       "hora": "12:30",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -48806,6 +48934,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-19",
+      "hora": "15:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-19",
       "hora": "15:20",
@@ -48870,6 +49014,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-19",
+      "hora": "15:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-19",
       "hora": "15:50",
@@ -48903,6 +49063,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-19",
+      "hora": "16:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-19",
       "hora": "16:20",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -48998,6 +49174,22 @@
       "ciclo": "Homenaje a John Huston"
     },
     {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-11-19",
+      "hora": "18:30",
+      "title_es": "Tierra adentro",
+      "title_en": "Inland",
+      "original_title": "Tierra adentro",
+      "director": "Proyección documental de Mauro Colombo",
+      "country": "Panama",
+      "year": 2018,
+      "duration": 70,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/inland-2019-2/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/tierra-adentro-tickets-2004135292610?aff=oddtdtcreator&keep_tld=true",
+      "ciclo": "Documentales latinoamericanos"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-11-19",
       "hora": "18:30",
@@ -49015,6 +49207,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-19",
+      "hora": "18:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-19",
       "hora": "18:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -49110,6 +49318,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-19",
+      "hora": "19:10",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-19",
       "hora": "19:10",
@@ -49143,6 +49367,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-19",
+      "hora": "19:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-19",
       "hora": "19:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -49302,6 +49542,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-19",
+      "hora": "22:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-19",
       "hora": "22:00",
@@ -49351,6 +49607,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-19",
+      "hora": "22:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-19",
       "hora": "22:30",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -49414,6 +49686,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-19",
+      "hora": "23:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-19",
       "hora": "23:00",
@@ -49478,6 +49766,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-20",
+      "hora": "12:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-20",
       "hora": "12:00",
@@ -49510,6 +49814,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-20",
+      "hora": "12:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-20",
       "hora": "12:30",
@@ -49527,6 +49847,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-20",
+      "hora": "13:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-20",
       "hora": "13:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -49606,6 +49942,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-20",
+      "hora": "15:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-20",
       "hora": "15:20",
@@ -49670,6 +50022,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-20",
+      "hora": "15:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-20",
       "hora": "15:50",
@@ -49687,6 +50055,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-20",
+      "hora": "16:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-20",
       "hora": "16:20",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -49814,6 +50198,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-20",
+      "hora": "18:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-20",
       "hora": "18:40",
@@ -49910,6 +50310,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-20",
+      "hora": "19:10",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-20",
       "hora": "19:10",
@@ -49927,6 +50343,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-20",
+      "hora": "19:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-20",
       "hora": "19:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -50054,6 +50486,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-20",
+      "hora": "22:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-20",
       "hora": "22:00",
@@ -50118,6 +50566,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-20",
+      "hora": "22:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-20",
       "hora": "22:30",
@@ -50135,6 +50599,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-20",
+      "hora": "23:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-20",
       "hora": "23:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -50230,6 +50710,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-21",
+      "hora": "12:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-21",
       "hora": "12:00",
@@ -50278,6 +50774,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-21",
+      "hora": "12:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-21",
       "hora": "12:30",
@@ -50295,6 +50807,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-21",
+      "hora": "13:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-21",
       "hora": "13:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -50374,6 +50902,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-21",
+      "hora": "15:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-21",
       "hora": "15:20",
@@ -50423,6 +50967,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-21",
+      "hora": "15:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-21",
       "hora": "15:50",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -50519,6 +51079,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-21",
+      "hora": "16:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-21",
       "hora": "16:20",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -50694,6 +51270,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-21",
+      "hora": "18:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-21",
       "hora": "18:40",
@@ -50790,6 +51382,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-21",
+      "hora": "19:10",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-21",
       "hora": "19:10",
@@ -50807,6 +51415,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-21",
+      "hora": "19:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-21",
       "hora": "19:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -51030,6 +51654,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-21",
+      "hora": "22:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-21",
       "hora": "22:00",
@@ -51094,6 +51734,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-21",
+      "hora": "22:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-21",
       "hora": "22:30",
@@ -51111,6 +51767,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-21",
+      "hora": "23:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-21",
       "hora": "23:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -51206,6 +51878,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-22",
+      "hora": "12:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-22",
       "hora": "12:00",
@@ -51254,6 +51942,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-22",
+      "hora": "12:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-22",
       "hora": "12:30",
@@ -51271,6 +51975,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-22",
+      "hora": "13:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-22",
       "hora": "13:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -51316,22 +52036,6 @@
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "15:00",
-      "title_es": "La burla del diablo",
-      "title_en": "Beat the Devil",
-      "original_title": "Beat the Devil",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido/Italia",
-      "year": 1953,
-      "duration": 95,
-      "genre": "Aventura, Crimen",
-      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "CCK",
@@ -51350,7 +52054,39 @@
       "ciclo": "Cine francés"
     },
     {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "15:00",
+      "title_es": "La burla del diablo",
+      "title_en": "Beat the Devil",
+      "original_title": "Beat the Devil",
+      "director": "John Huston",
+      "country": "EE.UU/Reino Unido/Italia",
+      "year": 1953,
+      "duration": 95,
+      "genre": "Aventura, Crimen",
+      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
+    },
+    {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-22",
+      "hora": "15:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-22",
       "hora": "15:20",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -51415,6 +52151,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-22",
+      "hora": "15:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-22",
       "hora": "15:50",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -51494,6 +52246,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-22",
+      "hora": "16:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-22",
       "hora": "16:20",
@@ -51558,22 +52326,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "17:30",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "17:30",
@@ -51588,6 +52340,22 @@
       "letterboxd": "https://letterboxd.com/film/maman-dechire/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "17:30",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "MALBA",
@@ -51655,6 +52423,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-22",
+      "hora": "18:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-22",
       "hora": "18:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -51750,6 +52534,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-22",
+      "hora": "19:10",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-22",
       "hora": "19:10",
@@ -51767,6 +52567,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-22",
+      "hora": "19:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-22",
       "hora": "19:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -51894,6 +52710,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-22",
+      "hora": "22:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-22",
       "hora": "22:00",
@@ -51958,6 +52790,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-22",
+      "hora": "22:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-22",
       "hora": "22:30",
@@ -51975,6 +52823,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-22",
+      "hora": "23:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-22",
       "hora": "23:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -52054,6 +52918,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-23",
+      "hora": "12:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-23",
       "hora": "12:00",
@@ -52086,6 +52966,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-23",
+      "hora": "12:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-23",
       "hora": "12:30",
@@ -52103,6 +52999,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-23",
+      "hora": "13:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-23",
       "hora": "13:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -52151,6 +53063,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-23",
+      "hora": "15:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-23",
       "hora": "15:20",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -52230,6 +53158,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-23",
+      "hora": "15:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-23",
       "hora": "15:50",
@@ -52262,6 +53206,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-23",
+      "hora": "16:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-23",
       "hora": "16:20",
@@ -52311,6 +53271,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-23",
+      "hora": "18:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-23",
       "hora": "18:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -52390,6 +53366,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-23",
+      "hora": "19:10",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-23",
       "hora": "19:10",
@@ -52422,6 +53414,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-23",
+      "hora": "19:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-23",
       "hora": "19:40",
@@ -52471,6 +53479,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-23",
+      "hora": "22:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-23",
       "hora": "22:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -52550,6 +53574,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-23",
+      "hora": "22:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-23",
       "hora": "22:30",
@@ -52567,6 +53607,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-23",
+      "hora": "23:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-23",
       "hora": "23:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -52646,6 +53702,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-24",
+      "hora": "12:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-24",
       "hora": "12:00",
@@ -52678,6 +53750,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-24",
+      "hora": "12:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-24",
       "hora": "12:30",
@@ -52695,6 +53783,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-24",
+      "hora": "13:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-24",
       "hora": "13:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -52774,6 +53878,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-24",
+      "hora": "15:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-24",
       "hora": "15:20",
@@ -52838,6 +53958,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-24",
+      "hora": "15:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-24",
       "hora": "15:50",
@@ -52855,6 +53991,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-24",
+      "hora": "16:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-24",
       "hora": "16:20",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -52950,7 +54102,39 @@
       "ciclo": "La Nave de los Sueños"
     },
     {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-11-24",
+      "hora": "18:30",
+      "title_es": "Bir Zamanlar Anadolu'da",
+      "title_en": "Once Upon a Time in Anatolia",
+      "original_title": "Bir Zamanlar Anadolu'da",
+      "director": "Nuri Bilge Ceylan",
+      "country": "Bosnia and Herzegovina, Turquía",
+      "year": 2011,
+      "duration": 157,
+      "genre": "Crimen, Drama",
+      "letterboxd": "https://letterboxd.com/film/once-upon-a-time-in-anatolia/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/bir-zamanlar-anadoluda-erase-una-vez-en-anatolia-tickets-2004130098073?aff=oddtdtcreator&keep_tld=true",
+      "ciclo": "Érase una vez en Anatolia, dos grandes películas turcas"
+    },
+    {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-24",
+      "hora": "18:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-24",
       "hora": "18:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -53031,6 +54215,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-24",
+      "hora": "19:10",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-24",
       "hora": "19:10",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -53190,6 +54390,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-24",
+      "hora": "22:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-24",
       "hora": "22:00",
@@ -53270,6 +54486,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-24",
+      "hora": "22:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-24",
       "hora": "22:30",
@@ -53287,6 +54519,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-24",
+      "hora": "23:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-24",
       "hora": "23:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -53366,6 +54614,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-25",
+      "hora": "12:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-25",
       "hora": "12:00",
@@ -53398,6 +54662,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-25",
+      "hora": "12:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-25",
       "hora": "12:30",
@@ -53415,6 +54695,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-25",
+      "hora": "13:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-25",
       "hora": "13:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -53494,6 +54790,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-25",
+      "hora": "15:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-25",
       "hora": "15:20",
@@ -53558,6 +54870,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-25",
+      "hora": "15:50",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-25",
       "hora": "15:50",
@@ -53575,6 +54903,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-25",
+      "hora": "16:20",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-25",
       "hora": "16:20",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -53798,6 +55142,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-25",
+      "hora": "18:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-25",
       "hora": "18:40",
@@ -53894,6 +55254,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-25",
+      "hora": "19:10",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-25",
       "hora": "19:10",
@@ -53911,6 +55287,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-25",
+      "hora": "19:40",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-25",
       "hora": "19:40",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -54038,6 +55430,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-25",
+      "hora": "22:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-25",
       "hora": "22:00",
@@ -54102,6 +55510,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Hoyts Dot",
+      "fecha": "2026-11-25",
+      "hora": "22:30",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-25",
       "hora": "22:30",
@@ -54119,6 +55543,22 @@
     },
     {
       "cine": "Hoyts Abasto",
+      "fecha": "2026-11-25",
+      "hora": "23:00",
+      "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Hoyts Dot",
       "fecha": "2026-11-25",
       "hora": "23:00",
       "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
@@ -54308,6 +55748,22 @@
       "letterboxd": "https://letterboxd.com/film/the-liars-2026/",
       "ticket_url": "https://lumiton.ar/evento/convocatoria-de-cortos-programa-vi/",
       "ciclo": "Convocatoria de Cortos: Programa VI"
+    },
+    {
+      "cine": "Biblioteca del Congreso",
+      "fecha": "2026-11-26",
+      "hora": "18:30",
+      "title_es": "El abrazo de la serpiente",
+      "title_en": "Embrace of the Serpent",
+      "original_title": "El abrazo de la serpiente",
+      "director": "Proyección documental de Ciro Guerra",
+      "country": "Argentina, Colombia",
+      "year": 2015,
+      "duration": 125,
+      "genre": "Drama, Aventura",
+      "letterboxd": "https://letterboxd.com/film/embrace-of-the-serpent/",
+      "ticket_url": "https://www.eventbrite.com.ar/e/el-abrazo-de-la-serpiente-tickets-2004135756999?aff=oddtdtcreator&keep_tld=true",
+      "ciclo": "Documentales latinoamericanos"
     },
     {
       "cine": "Centro Cultural Munro",
@@ -54790,22 +56246,6 @@
       "ciclo": "Cineclub Nocturna"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "15:00",
-      "title_es": "La noche de la iguana",
-      "title_en": "The Night of the Iguana",
-      "original_title": "The Night of the Iguana",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1964,
-      "duration": 118,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-29",
       "hora": "15:00",
@@ -54820,6 +56260,22 @@
       "letterboxd": "https://letterboxd.com/film/nino-2025/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-29",
+      "hora": "15:00",
+      "title_es": "La noche de la iguana",
+      "title_en": "The Night of the Iguana",
+      "original_title": "The Night of the Iguana",
+      "director": "John Huston",
+      "country": "Estados Unidos",
+      "year": 1964,
+      "duration": 118,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "MALBA",
@@ -54902,6 +56358,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-29",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-29",
       "hora": "18:00",
@@ -54948,22 +56420,6 @@
       "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
       "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-29",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Centro Cultural Munro",

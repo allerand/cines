@@ -1,17 +1,17 @@
 {
-  "updated": "2026-11-05T03:53:33",
+  "updated": "2026-11-05T11:55:11",
   "fuentes": {
     "Artistic Metropol": {
-      "scrapeadas": 24,
-      "publicadas": 23
+      "scrapeadas": 50,
+      "publicadas": 48
     },
     "Cine Doré": {
       "scrapeadas": 9,
       "publicadas": 9
     },
     "Cine Estudio": {
-      "scrapeadas": 36,
-      "publicadas": 36
+      "scrapeadas": 42,
+      "publicadas": 42
     },
     "Cines Callao": {
       "scrapeadas": 35,
@@ -35,8 +35,8 @@
       "publicadas": 97
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 95,
-      "publicadas": 95
+      "scrapeadas": 96,
+      "publicadas": 96
     },
     "Golem Madrid": {
       "scrapeadas": 110,
@@ -1274,22 +1274,6 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-invitacion-vose/39374/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-05",
-      "hora": "20:00",
-      "title_es": "Karateka",
-      "title_en": "Karateka",
-      "original_title": "Karateka",
-      "director": "Aritz Moreno",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 110,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/karateka-2026/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/karateka/20379/",
       "ciclo": ""
     },
     {
@@ -2797,6 +2781,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-06",
+      "hora": "18:15",
+      "title_es": "Ceniza en la boca",
+      "title_en": "Ashes",
+      "original_title": "Ceniza en la Boca",
+      "director": "Diego Luna",
+      "country": "México, España",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/ashes-2026-3/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-ceniza-en-la-boca-2026-14/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-06",
       "hora": "18:20",
@@ -3178,6 +3178,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/laca-y-palomitas-gorda-y-divina/20265/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-06",
+      "hora": "20:00",
+      "title_es": "Palestina 36",
+      "title_en": "Palestine 36",
+      "original_title": "Palestine 36",
+      "director": "Annemarie Jacir",
+      "country": "State of Palestine, Reino Unido",
+      "year": 2025,
+      "duration": 120,
+      "genre": "Bélica, Drama",
+      "letterboxd": "https://letterboxd.com/film/palestine-36/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-palestina-36-2025-doblada-al-espanol-23/",
       "ciclo": ""
     },
     {
@@ -3579,6 +3595,22 @@
       "letterboxd": "https://letterboxd.com/film/tangles/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2974&cine=EQUIS",
       "ciclo": "Festival Anfibia"
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-06",
+      "hora": "21:15",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026/",
+      "ciclo": ""
     },
     {
       "cine": "Cines Princesa",
@@ -5997,6 +6029,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-07",
+      "hora": "22:00",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Estudio",
       "fecha": "2026-11-07",
       "hora": "22:00",
@@ -8061,6 +8109,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-08",
+      "hora": "21:45",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026-3/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-08",
       "hora": "22:00",
@@ -9005,6 +9069,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-09",
+      "hora": "17:00",
+      "title_es": "El misterio de Lucy Lost",
+      "title_en": "Lucy Lost",
+      "original_title": "",
+      "director": "Olivier Clert",
+      "country": "Francia",
+      "year": 2026,
+      "duration": 85,
+      "genre": "Bélica, Familiar",
+      "letterboxd": "https://letterboxd.com/film/lucy-lost/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/el-misterio-de-lucy-lost/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-09",
       "hora": "17:15",
@@ -9242,6 +9322,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/a-womans-life-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100634&eventCode=113783",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-09",
+      "hora": "18:00",
+      "title_es": "Palestina 36",
+      "title_en": "Palestine 36",
+      "original_title": "Palestine 36",
+      "director": "Annemarie Jacir",
+      "country": "State of Palestine, Reino Unido",
+      "year": 2025,
+      "duration": 120,
+      "genre": "Bélica, Drama",
+      "letterboxd": "https://letterboxd.com/film/palestine-36/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-palestina-36-2025-doblada-al-espanol-24/",
       "ciclo": ""
     },
     {
@@ -9610,6 +9706,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-2-la-casa-del-horror-1927-muda-con-intertitulos-en-espanol/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-09",
+      "hora": "20:00",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026-4/",
       "ciclo": ""
     },
     {
@@ -10013,6 +10125,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-09",
+      "hora": "21:30",
+      "title_es": "Naza",
+      "title_en": "NAZA",
+      "original_title": "NAZA",
+      "director": "Yuval Abraham, Rachel Szor",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/naza/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/naza/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-09",
       "hora": "21:40",
@@ -10202,6 +10330,22 @@
       "genre": "Drama, Thriller",
       "letterboxd": "https://letterboxd.com/film/ashes-2026-3/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100636&eventCode=113294",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-09",
+      "hora": "22:15",
+      "title_es": "Ceniza en la boca",
+      "title_en": "Ashes",
+      "original_title": "Ceniza en la Boca",
+      "director": "Diego Luna",
+      "country": "México, España",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/ashes-2026-3/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-ceniza-en-la-boca-2026-12/",
       "ciclo": ""
     },
     {
@@ -10685,6 +10829,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "Cinco segundos",
+      "title_en": "Five Seconds",
+      "original_title": "Cinque secondi",
+      "director": "Paolo Virzì",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/five-seconds-2025/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-cinco-segundos-2025-doblada-al-espanol/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "Palestina 36",
+      "title_en": "Palestine 36",
+      "original_title": "Palestine 36",
+      "director": "Annemarie Jacir",
+      "country": "State of Palestine, Reino Unido",
+      "year": 2025,
+      "duration": 120,
+      "genre": "Bélica, Drama",
+      "letterboxd": "https://letterboxd.com/film/palestine-36/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-palestina-36-2025-doblada-al-espanol-25/",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-10",
       "hora": "16:10",
@@ -10797,6 +10973,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-10",
+      "hora": "17:00",
+      "title_es": "Deuses de pedra",
+      "title_en": "Gods of Stone",
+      "original_title": "Deuses de pedra",
+      "director": "Iván Castiñeiras",
+      "country": "España, Francia",
+      "year": 2025,
+      "duration": 85,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/deuses-de-pedra/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/deuses-de-pedra/",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-10",
       "hora": "17:15",
@@ -10842,6 +11034,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
       "ticket_url": "https://www.pillalas.com/pase/1095702/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-10",
+      "hora": "17:45",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026-5/",
       "ciclo": ""
     },
     {
@@ -11917,6 +12125,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-10",
+      "hora": "22:00",
+      "title_es": "Engendro",
+      "title_en": "Nightborn",
+      "original_title": "Yön lapsi",
+      "director": "Hanna Bergholm",
+      "country": "Finlandia, Lithuania",
+      "year": 2026,
+      "duration": 92,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/nightborn/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-nightborn-2026-v-o-s-e-7/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-10",
       "hora": "22:15",
@@ -12429,6 +12653,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-11",
+      "hora": "16:00",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026-6/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Callao",
       "fecha": "2026-11-11",
       "hora": "16:00",
@@ -12522,6 +12762,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/digger-2026/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100674&eventCode=105052",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-11",
+      "hora": "16:15",
+      "title_es": "Ceniza en la boca",
+      "title_en": "Ashes",
+      "original_title": "Ceniza en la Boca",
+      "director": "Diego Luna",
+      "country": "México, España",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/ashes-2026-3/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-ceniza-en-la-boca-2026-17/",
       "ciclo": ""
     },
     {
@@ -12765,6 +13021,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-11",
+      "hora": "18:00",
+      "title_es": "Palestina 36",
+      "title_en": "Palestine 36",
+      "original_title": "Palestine 36",
+      "director": "Annemarie Jacir",
+      "country": "State of Palestine, Reino Unido",
+      "year": 2025,
+      "duration": 120,
+      "genre": "Bélica, Drama",
+      "letterboxd": "https://letterboxd.com/film/palestine-36/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-palestina-36-2025-doblada-al-espanol-26/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Callao",
       "fecha": "2026-11-11",
       "hora": "18:00",
@@ -12858,6 +13130,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100677&eventCode=116768",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-11",
+      "hora": "18:15",
+      "title_es": "Cinco segundos",
+      "title_en": "Five Seconds",
+      "original_title": "Cinque secondi",
+      "director": "Paolo Virzì",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/five-seconds-2025/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-cinco-segundos-2025-v-o-s-e-3/",
       "ciclo": ""
     },
     {
@@ -13114,6 +13402,38 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.pillalas.com/pase/1095651/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-11",
+      "hora": "20:00",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026-7/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-11",
+      "hora": "20:00",
+      "title_es": "Akira",
+      "title_en": "Akira",
+      "original_title": "AKIRA",
+      "director": "Katsuhiro Otomo",
+      "country": "Japón",
+      "year": 1988,
+      "duration": 124,
+      "genre": "Acción, Animación",
+      "letterboxd": "https://letterboxd.com/film/akira/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-akira-1988-doblada-al-espanol-19/",
       "ciclo": ""
     },
     {
@@ -13693,6 +14013,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-11",
+      "hora": "22:15",
+      "title_es": "Engendro",
+      "title_en": "Nightborn",
+      "original_title": "Yön lapsi",
+      "director": "Hanna Bergholm",
+      "country": "Finlandia, Lithuania",
+      "year": 2026,
+      "duration": 92,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/nightborn/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-nightborn-2026-v-o-s-e-8/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-11",
       "hora": "22:20",
@@ -13837,6 +14173,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-12",
+      "hora": "16:00",
+      "title_es": "Cinco segundos",
+      "title_en": "Five Seconds",
+      "original_title": "Cinque secondi",
+      "director": "Paolo Virzì",
+      "country": "Italia",
+      "year": 2025,
+      "duration": 105,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/five-seconds-2025/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-cinco-segundos-2025-doblada-al-espanol-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-12",
+      "hora": "16:15",
+      "title_es": "Ceniza en la boca",
+      "title_en": "Ashes",
+      "original_title": "Ceniza en la Boca",
+      "director": "Diego Luna",
+      "country": "México, España",
+      "year": 2026,
+      "duration": 98,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/ashes-2026-3/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-ceniza-en-la-boca-2026-18/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-12",
       "hora": "16:30",
@@ -13869,6 +14237,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-12",
+      "hora": "17:00",
+      "title_es": "Chicho o mientras el cuerpo aguante (una comedia didáctica)",
+      "title_en": "Chicho o Mientras el cuerpo aguante (una comedia didáctica)",
+      "original_title": "Chicho o Mientras el cuerpo aguante (una comedia didáctica)",
+      "director": "Fernando Trueba",
+      "country": "España",
+      "year": 1982,
+      "duration": 89,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/chicho-o-mientras-el-cuerpo-aguante-una-comedia/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/chicho-o-mientras-el-cuerpo-aguante-una-comedia-didactica/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-12",
       "hora": "17:25",
@@ -13898,6 +14282,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-voz-quebrada/39505/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-12",
+      "hora": "17:45",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026-8/",
       "ciclo": ""
     },
     {
@@ -13946,6 +14346,22 @@
       "genre": "Fantasía, Comedia",
       "letterboxd": "https://letterboxd.com/film/wicker/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/wicker-vose/39502/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-12",
+      "hora": "18:00",
+      "title_es": "Palestina 36",
+      "title_en": "Palestine 36",
+      "original_title": "Palestine 36",
+      "director": "Annemarie Jacir",
+      "country": "State of Palestine, Reino Unido",
+      "year": 2025,
+      "duration": 120,
+      "genre": "Bélica, Drama",
+      "letterboxd": "https://letterboxd.com/film/palestine-36/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-palestina-36-2025-doblada-al-espanol-27/",
       "ciclo": ""
     },
     {
@@ -14109,6 +14525,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-12",
+      "hora": "20:00",
+      "title_es": "Renovación. Después del Amor",
+      "title_en": "Renovation",
+      "original_title": "",
+      "director": "Gabrielė Urbonaitė",
+      "country": "Lithuania, Latvia",
+      "year": 2025,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/renovation-2025/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-renovacion-despues-del-amor-2025-v-o-s-e-4/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-12",
       "hora": "20:05",
@@ -14139,6 +14571,22 @@
       "letterboxd": "https://letterboxd.com/film/barbara-forever/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/barbara-forever",
       "ciclo": "31 Queercinemad"
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-12",
+      "hora": "21:45",
+      "title_es": "El ser querido",
+      "title_en": "The Beloved",
+      "original_title": "",
+      "director": "Rodrigo Sorogoyen",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-el-ser-querido-2026-9/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -14186,22 +14634,6 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-man-i-love-2026/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/the-man-i-love/",
-      "ciclo": "31 QueerCineMad. Festival Internacional de Cine LGBTIAQ+ de Madrid"
-    },
-    {
-      "cine": "Cine Estudio",
-      "fecha": "2026-11-12",
-      "hora": "22:00",
-      "title_es": "Terror Total: Adolescencia, sexo y muerte en Campamento Miasma",
-      "title_en": "Teenage Sex and Death at Camp Miasma",
-      "original_title": "Teenage Sex and Death at Camp Miasma",
-      "director": "Jane Schoenbrun",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 112,
-      "genre": "Terror, Comedia",
-      "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
-      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/queercinemad-especial-halloween-adolescencia-sexo-y-muerte-en-campamento-miasma/",
       "ciclo": "31 QueerCineMad. Festival Internacional de Cine LGBTIAQ+ de Madrid"
     },
     {
@@ -14256,16 +14688,16 @@
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-12",
       "hora": "22:15",
-      "title_es": "Perfect Blue",
-      "title_en": "Perfect Blue",
-      "original_title": "PERFECT BLUE",
-      "director": "Satoshi Kon",
-      "country": "Japón",
-      "year": 1997,
-      "duration": 81,
-      "genre": "Thriller, Animación",
-      "letterboxd": "https://letterboxd.com/film/perfect-blue/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/perfect-blue-vose/20508/",
+      "title_es": "El hombre elefante",
+      "title_en": "The Elephant Man",
+      "original_title": "The Elephant Man",
+      "director": "David Lynch",
+      "country": "Estados Unidos",
+      "year": 1980,
+      "duration": 125,
+      "genre": "Historia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-elephant-man/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-hombre-elefante-vose/20546/",
       "ciclo": ""
     },
     {
@@ -14459,6 +14891,22 @@
       "letterboxd": "https://letterboxd.com/film/corren-las-liebres/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/corren-las-liebres",
       "ciclo": "31 Queercinemad"
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-13",
+      "hora": "22:00",
+      "title_es": "Terror Total: Adolescencia, sexo y muerte en Campamento Miasma",
+      "title_en": "Teenage Sex and Death at Camp Miasma",
+      "original_title": "Teenage Sex and Death at Camp Miasma",
+      "director": "Jane Schoenbrun",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 112,
+      "genre": "Terror, Comedia",
+      "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/queercinemad-especial-halloween-adolescencia-sexo-y-muerte-en-campamento-miasma/",
+      "ciclo": "31 QueerCineMad. Festival Internacional de Cine LGBTIAQ+ de Madrid"
     },
     {
       "cine": "Sala Equis",
@@ -15037,6 +15485,22 @@
       "ciclo": "Rizoma 2026 - Plastic Dreams"
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-18",
+      "hora": "19:30",
+      "title_es": "A professora de francès",
+      "title_en": "The French Teacher",
+      "original_title": "A Professora de Francês",
+      "director": "Ricardo Alves Jr.",
+      "country": "Brasil, Francia",
+      "year": 2026,
+      "duration": 96,
+      "genre": "Misterio, Terror",
+      "letterboxd": "https://letterboxd.com/film/a-professora-de-frances/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/a-professora-de-frances/",
+      "ciclo": "31 QueerCineMad. Festival Internacional de Cine LGBTIAQ+ de Madrid"
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-18",
       "hora": "20:00",
@@ -15067,6 +15531,22 @@
       "letterboxd": "https://letterboxd.com/film/hermanas-2026-1/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/hermanas",
       "ciclo": "Rizoma 2026 - Plastic Dreams"
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-18",
+      "hora": "22:00",
+      "title_es": "Something you should know about Me",
+      "title_en": "Something You Should Know About Me",
+      "original_title": "Something You Should Know About Me",
+      "director": "Andy Fidoten",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 84,
+      "genre": "Animación, Romance",
+      "letterboxd": "https://letterboxd.com/film/something-you-should-know-about-me/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/something-you-should-know-about-me/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -15613,22 +16093,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-11-22",
-      "hora": "12:00",
-      "title_es": "Alien, el octavo pasajero",
-      "title_en": "Alien",
-      "original_title": "Alien",
-      "director": "Ridley Scott",
-      "country": "Estados Unidos, Reino Unido",
-      "year": 1979,
-      "duration": 116,
-      "genre": "Terror, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/alien/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-alien-el-octavo-pasajero-vose/39293/",
-      "ciclo": ""
-    },
-    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-22",
       "hora": "12:00",
@@ -15642,6 +16106,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/queercinemad-gugus-world/20452/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-22",
+      "hora": "12:00",
+      "title_es": "Alien, el octavo pasajero",
+      "title_en": "Alien",
+      "original_title": "Alien",
+      "director": "Ridley Scott",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 1979,
+      "duration": 116,
+      "genre": "Terror, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/alien/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-alien-el-octavo-pasajero-vose/39293/",
       "ciclo": ""
     },
     {
@@ -15949,6 +16429,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-27",
+      "hora": "19:45",
+      "title_es": "Cuelgamuros: Una historia inexplicable",
+      "title_en": "Cuelgamuros: Una historia inexplicable",
+      "original_title": "",
+      "director": "Pepe Galán",
+      "country": "",
+      "year": null,
+      "duration": 101,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/cuelgamuros-una-historia-inexplicable/39542/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-28",
       "hora": "10:00",
@@ -15963,6 +16459,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/clasicos-al-detalle-la-profecia/20449/",
       "ciclo": "Clásicos al detalle"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-28",
+      "hora": "12:00",
+      "title_es": "Sucia. ¿Por qué no hiciste nada?",
+      "title_en": "Filthy",
+      "original_title": "Sucia. Per què no vas fer res?",
+      "director": "Bàrbara Mestanza, Marc Pujolar",
+      "country": "España",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/sucia/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sucia-vose/20545/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
