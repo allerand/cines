@@ -15145,7 +15145,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Thus is Life (1930), That's life (1977)",
-    "fecha": "2026-11-05",
+    "fecha": "2026-11-06",
     "con_duracion": false,
     "desempate": ""
   },
@@ -27247,17 +27247,16 @@
     "sin_hints": "el único estreno entre varias que se llaman así"
   },
   "la caja del demonio": {
-    "url": "https://letterboxd.com/film/lockbox-2026/",
-    "title_en": "Lockbox",
-    "director": "Daniel Stamm",
-    "country": "USA, Canada",
-    "year": 2026,
-    "duration": 105,
-    "genre": "Terror",
-    "clase_titulo": "exacto",
-    "title_es": "La Caja Del Demonio",
-    "original_title": "Lockbox",
-    "sin_hints": "título"
+    "url": "",
+    "title_en": "LA CAJA DEL DEMONIO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "hay películas que se llaman así: Lockbox (2026); The House of the Devil (2009) sólo se le parece",
+    "fecha": "2026-11-06",
+    "con_duracion": true,
+    "desempate": ""
   },
   "pinocho sin cuerdas": {
     "url": "https://letterboxd.com/film/pinocchio-unstrung/",
@@ -28020,7 +28019,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
+    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -29555,7 +29554,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-02",
+    "fecha": "2026-11-06",
     "con_duracion": true,
     "desempate": ""
   },
@@ -32639,5 +32638,253 @@
     "duration": 84,
     "genre": "Animación, Romance",
     "original_title": "Something You Should Know About Me"
+  },
+  "capítulo xxxvi: carta blanca a maría castro y álvaro cáceres": {
+    "url": "",
+    "title_en": "Capítulo XXXVI: Carta blanca a María Castro y Álvaro Cáceres",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "todo sobre mi madre": {
+    "url": "",
+    "title_en": "TODO SOBRE MI MADRE",
+    "director": "Pedro Almodóvar",
+    "country": "Spain, France",
+    "year": 1999,
+    "duration": 101,
+    "genre": "Comedia, Drama",
+    "title_es": "Todo sobre mi madre",
+    "original_title": "Todo sobre mi madre"
+  },
+  "numakage public pool [docs barcelona]": {
+    "url": "https://letterboxd.com/film/numakage-public-pool/",
+    "title_en": "Numakage Public Pool",
+    "director": "Shingo Ota",
+    "country": "Japan",
+    "year": 2025,
+    "duration": 84,
+    "genre": "Documental"
+  },
+  "el hombre mosca con música en directo": {
+    "url": "",
+    "title_en": "EL HOMBRE MOSCA CON MÚSICA EN DIRECTO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "laca y palomitas: burlesque": {
+    "url": "",
+    "title_en": "Laca y Palomitas: Burlesque",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-de brisa y de sol": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-DE BRISA Y DE SOL",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-muchedumbre": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-MUCHEDUMBRE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-cherri|2025": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-CHERRI",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-casi todo bien": {
+    "url": "https://letterboxd.com/film/cool-books/",
+    "title_en": "Cool Books",
+    "director": "Andrés Salmoyraghi, Rafael López Saubidet",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 87,
+    "genre": "Drama, Comedia",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "festival rizomalos días libres": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMALOS DÍAS LIBRES",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-siemprevivas": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-SIEMPREVIVAS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-calada": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-CALADA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizomaperò abans d’això hi haurà set": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMAPERÒ ABANS D’AIXÒ HI HAURÀ SET",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-océano titánico": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-OCÉANO TITÁNICO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ffestival rizoma-las mantis": {
+    "url": "",
+    "title_en": "FFESTIVAL RIZOMA-LAS MANTIS",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizomaun hombre en un puente": {
+    "url": "https://letterboxd.com/film/a-man-on-a-bridge/",
+    "title_en": "A Man on a Bridge",
+    "director": "David Martín de los Santos",
+    "country": "Spain, Peru",
+    "year": 2026,
+    "duration": 116,
+    "genre": "Drama",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "festival rizoma-la muerte de drácula": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-LA MUERTE DE DRÁCULA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ffestival rizoma-simulacro": {
+    "url": "",
+    "title_en": "FFESTIVAL RIZOMA-SIMULACRO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-rose|2026": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-ROSE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "festival rizoma-la gran fiesta del cine": {
+    "url": "",
+    "title_en": "FESTIVAL RIZOMA-LA GRAN FIESTA DEL CINE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-06",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "maelström 2001": {
+    "url": "https://letterboxd.com/film/maelstrom-2001/",
+    "title_en": "Maelström 2001",
+    "director": "Juan Ignacio Pollio",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": 120,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Maelström 2001",
+    "sin_hints": "título y duración"
+  },
+  "pizza, birra, faso|1997": {
+    "url": "https://letterboxd.com/film/pizza-beer-and-cigarettes/",
+    "title_en": "Pizza, Beer, and Cigarettes",
+    "director": "Bruno Stagnaro, Adrián Caetano",
+    "country": "Argentina",
+    "year": 1997,
+    "duration": 92,
+    "genre": "Drama, Crimen",
+    "clase_titulo": "exacto",
+    "original_title": "Pizza, birra, faso"
+  },
+  "los juegos del hambre: amanecer en la cosecha": {
+    "url": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+    "title_en": "The Hunger Games: Sunrise on the Reaping",
+    "director": "Francis Lawrence",
+    "country": "USA, Germany",
+    "year": 2026,
+    "duration": 159,
+    "genre": "Acción, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "title_es": "Los Juegos del Hambre: Amanecer en la cosecha",
+    "original_title": "The Hunger Games: Sunrise on the Reaping",
+    "sin_hints": "título"
+  },
+  "encuentro con un buda (meeting the buddha) de marta györgy-kessler|2025": {
+    "url": "",
+    "title_en": "Encuentro con un Buda (Meeting the Buddha) de Marta György-Kessler",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "azul y no tan rosa|2012": {
+    "url": "https://letterboxd.com/film/azul-y-no-tan-rosa/",
+    "title_en": "My Straight Son",
+    "director": "Miguel Ferrari",
+    "country": "Spain, Venezuela",
+    "year": 2012,
+    "duration": 114,
+    "genre": "Drama",
+    "original_title": "Azul y no tan rosa"
+  },
+  "marylin": {
+    "url": "",
+    "title_en": "Marylin",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "escritor": {
+    "url": "https://letterboxd.com/film/escritor/",
+    "title_en": "Writer",
+    "director": "Paula de Luque",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 94,
+    "genre": "",
+    "clase_titulo": "exacto",
+    "original_title": "Escritor",
+    "sin_hints": "título y duración"
   }
 }
