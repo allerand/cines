@@ -6417,7 +6417,8 @@
     "year": 2025,
     "duration": 105,
     "genre": "Documental",
-    "original_title": "Diciembre"
+    "original_title": "Diciembre",
+    "clase_titulo": "exacto"
   },
   "el extraño": {
     "url": "https://letterboxd.com/film/the-stranger/",
@@ -8969,9 +8970,9 @@
     "original_title": "The General"
   },
   "happy together": {
-    "url": "",
-    "title_en": "Happy together",
-    "director": "Wong Kar-wai",
+    "url": "https://letterboxd.com/film/happy-together-1997/",
+    "title_en": "Happy Together",
+    "director": "Wong Kar-Wai",
     "country": "Hong Kong, South Korea",
     "year": 1997,
     "duration": 96,
@@ -15145,7 +15146,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Thus is Life (1930), That's life (1977)",
-    "fecha": "2026-11-06",
+    "fecha": "2026-11-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -23148,7 +23149,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-03",
+    "fecha": "2026-11-07",
     "con_duracion": true,
     "desempate": ""
   },
@@ -23480,8 +23481,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Thus is Life (1930), Así es la vida (1939)",
-    "fecha": "2026-11-03",
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Thus is Life (1930), That's life (1977)",
+    "fecha": "2026-11-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -29800,7 +29801,9 @@
     "year": 2026,
     "duration": 330,
     "genre": "Documental",
-    "original_title": "Biografía de Jorge Luis Borges"
+    "clase_titulo": "exacto",
+    "original_title": "Biografía de Jorge Luis Borges",
+    "sin_hints": "la más nueva que se llama así"
   },
   "perfume": {
     "url": "",
@@ -29810,7 +29813,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Perfume (2001), Perfume: The Story of a Murderer (2006), Perfume (2018)",
-    "fecha": "2026-11-03",
+    "fecha": "2026-11-07",
     "con_duracion": false,
     "desempate": ""
   },
@@ -31771,12 +31774,14 @@
     "original_title": "Carol"
   },
   "las ruinas nuevas|2024": {
-    "url": "",
-    "title_en": "Las ruinas nuevas",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/buenas-noches-2024/",
+    "title_en": "Buenas noches",
+    "director": "Matías Szulanski",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 91,
+    "genre": "Comedia",
+    "clase_titulo": "distinto"
   },
   "bajo sospecha: zokunentu|2022": {
     "url": "https://letterboxd.com/film/bajo-sospecha-zokunentu/",
@@ -31944,7 +31949,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: The Omen (1976, 111 min)",
-    "fecha": "2026-11-03",
+    "fecha": "2026-11-07",
     "con_duracion": true,
     "desempate": ""
   },
@@ -31988,12 +31993,13 @@
     "original_title": "Sacamantecas"
   },
   "sospecha": {
-    "url": "",
-    "title_en": "SOSPECHA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/suspicion/",
+    "title_en": "Suspicion",
+    "director": "Alfred Hitchcock",
+    "country": "USA",
+    "year": 1941,
+    "duration": 99,
+    "genre": "Misterio, Thriller"
   },
   "el misterio de lucy lost": {
     "url": "https://letterboxd.com/film/lucy-lost/",
@@ -32017,12 +32023,13 @@
     "desempate": ""
   },
   "queercinemad: el espejo": {
-    "url": "",
-    "title_en": "QueerCineMad: El espejo",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/the-mirror-2026/",
+    "title_en": "The Mirror",
+    "director": "Marco Berger",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 102,
+    "genre": ""
   },
   "queercinemad: i rarely wake up dreaming": {
     "url": "https://letterboxd.com/film/i-rarely-wake-up-dreaming/",
@@ -32283,11 +32290,11 @@
     "original_title": "A Professora de Francês"
   },
   "camp": {
-    "url": "",
-    "title_en": "Camp",
+    "url": "https://letterboxd.com/film/camp-2025/",
+    "title_en": "CAMP",
     "director": "Avalon Fast",
-    "country": "Canada, United States of America",
-    "year": 2026,
+    "country": "Canada, USA",
+    "year": 2025,
     "duration": 111,
     "genre": "Drama, Terror",
     "original_title": "CAMP"
@@ -32648,8 +32655,8 @@
     "duration": null
   },
   "todo sobre mi madre": {
-    "url": "",
-    "title_en": "TODO SOBRE MI MADRE",
+    "url": "https://letterboxd.com/film/all-about-my-mother/",
+    "title_en": "All About My Mother",
     "director": "Pedro Almodóvar",
     "country": "Spain, France",
     "year": 1999,
@@ -32668,12 +32675,13 @@
     "genre": "Documental"
   },
   "el hombre mosca con música en directo": {
-    "url": "",
-    "title_en": "EL HOMBRE MOSCA CON MÚSICA EN DIRECTO",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/safety-last/",
+    "title_en": "Safety Last!",
+    "director": "Fred C. Newmeyer, Sam Taylor",
+    "country": "USA",
+    "year": 1923,
+    "duration": 73,
+    "genre": "Romance, Thriller"
   },
   "laca y palomitas: burlesque": {
     "url": "",
@@ -32886,5 +32894,117 @@
     "clase_titulo": "exacto",
     "original_title": "Escritor",
     "sin_hints": "título y duración"
+  },
+  "club kid": {
+    "url": "https://letterboxd.com/film/club-kid/",
+    "title_en": "Club Kid",
+    "director": "Jordan Firstman",
+    "country": "USA",
+    "year": 2026,
+    "duration": 121,
+    "genre": "Comedia, Drama",
+    "original_title": "Club Kid"
+  },
+  "hadoota": {
+    "url": "https://letterboxd.com/film/hadota/",
+    "title_en": "Hadota",
+    "director": "Mazen Ashraf",
+    "country": "Egypt",
+    "year": 2026,
+    "duration": 120,
+    "genre": "Drama, Comedia",
+    "original_title": "حدوتة"
+  },
+  "palestina en pantalla: con hasan en gaza": {
+    "url": "https://letterboxd.com/film/with-hasan-in-gaza/",
+    "title_en": "With Hasan in Gaza",
+    "director": "Kamal Aljafari",
+    "country": "Germany",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Bélica, Documental"
+  },
+  "palestina en pantalla: todo lo que fuimos": {
+    "url": "",
+    "title_en": "Palestina en pantalla: Todo lo que fuimos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "palestina en pantalla: pon tu alma en la mano y anda": {
+    "url": "",
+    "title_en": "Palestina en pantalla: Pon tu alma en la mano y anda",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "palestina en pantalla: vals con bashir": {
+    "url": "",
+    "title_en": "Palestina en pantalla: Vals con Bashir",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "palestina en pantalla: no other land": {
+    "url": "",
+    "title_en": "Palestina en pantalla: No Other Land",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "muguruzafm 40 tour": {
+    "url": "https://letterboxd.com/film/muguruza-fm-40-tour/",
+    "title_en": "Muguruza FM 40 Tour",
+    "director": "Ander Merino Etxebeste, Fermin Muguruza",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Documental",
+    "original_title": "Muguruza FM 40 Tour"
+  },
+  "aquel último tiburón|2025": {
+    "url": "https://letterboxd.com/film/aquel-ultimo-tiburon/",
+    "title_en": "Aquel último tiburón",
+    "director": "Víctor Matellano, Ángel Sala",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 73,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Aquel último tiburón"
+  },
+  "presentación del libro `los ojos verdes´, de marguerite duras": {
+    "url": "",
+    "title_en": "Presentación del libro `Los ojos verdes´, de Marguerite Duras",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "diciembre|2025": {
+    "url": "https://letterboxd.com/film/december-2025-1/",
+    "title_en": "December",
+    "director": "Lucas Gallo",
+    "country": "Argentina, Uruguay",
+    "year": 2025,
+    "duration": 105,
+    "genre": "Documental",
+    "original_title": "Diciembre",
+    "clase_titulo": "exacto"
+  },
+  "la noche de los museos": {
+    "url": "https://letterboxd.com/film/museum-of-the-night/",
+    "title_en": "Museum of the Night",
+    "director": "Fermín Eloy Acosta",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 88,
+    "genre": "Documental",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
   }
 }
