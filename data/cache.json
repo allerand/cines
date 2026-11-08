@@ -15146,7 +15146,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Thus is Life (1930), That's life (1977)",
-    "fecha": "2026-11-07",
+    "fecha": "2026-11-08",
     "con_duracion": false,
     "desempate": ""
   },
@@ -32684,12 +32684,13 @@
     "genre": "Romance, Thriller"
   },
   "laca y palomitas: burlesque": {
-    "url": "",
-    "title_en": "Laca y Palomitas: Burlesque",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/burlesque/",
+    "title_en": "Burlesque",
+    "director": "Steve Antin",
+    "country": "USA",
+    "year": 2010,
+    "duration": 119,
+    "genre": "Drama, Romance"
   },
   "festival rizoma-de brisa y de sol": {
     "url": "",
@@ -33006,5 +33007,26 @@
     "genre": "Documental",
     "clase_titulo": "distinto",
     "sin_hints": "título local de un estreno"
+  },
+  "tangles": {
+    "url": "https://letterboxd.com/film/tangles/",
+    "title_en": "Tangles",
+    "director": "Leah Nelson",
+    "country": "USA, Canada",
+    "year": 2026,
+    "duration": 102,
+    "genre": "Animación, Drama",
+    "title_es": "Enredos",
+    "original_title": "Tangles"
+  },
+  "yo nena yo princesa": {
+    "url": "https://letterboxd.com/film/yo-nena-yo-princesa/",
+    "title_en": "I'm a Girl, I'm a Princess",
+    "director": "Federico Palazzo",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 120,
+    "genre": "Drama",
+    "original_title": "Yo nena, yo princesa"
   }
 }
