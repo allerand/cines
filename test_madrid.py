@@ -12,6 +12,7 @@ from datetime import date
 from scraper import (CINES_MADRID, DORE_PROYECCIONES, _callao_funciones,
                      _cba_funciones, _cineteca_ficha, _dore_arreglar_kerning,
                      _dore_combinar, _dore_programa, _dore_tarjetas,
+                     _dore_mes_del_programa, _DORE_PDF_RE,
                      _embajadores_funciones, _golem_ficha, _golem_funciones,
                      _ideal_funciones, _madrid_es_cine, _madrid_titulo_y_ciclo,
                      _metropol_funciones, _reina_actividades, _reina_ciclo_en_boleteria,
@@ -104,6 +105,24 @@ assert _dore_arreglar_kerning("V ARIETY") == "VARIETY"
 assert _dore_arreglar_kerning("MIRAGES DE PARIS") == "MIRAGES DE PARIS"
 assert _dore_arreglar_kerning("WOLF AT THE DOOR") == "WOLF AT THE DOOR"
 print("✓ kerning: 'F ANTASMA' → 'FANTASMA'; los títulos de verdad quedan igual")
+
+# Desde noviembre de 2026 el PDF se llama "programa-noviembre.pdf" (sin año) y
+# el scraper lo salteaba: el Doré quedó con lo que ya estaba a la venta.
+hoy = date(2026, 11, 8)
+assert _dore_mes_del_programa("fe202609-programa.pdf", "", hoy) == (2026, 9)
+assert _dore_mes_del_programa("programa-noviembre.pdf", "", hoy) == (2026, 11)
+assert _dore_mes_del_programa("programa.pdf", "PROGRAMA\nDICIEMBRE 2026\n", hoy) == (2026, 12)
+assert _dore_mes_del_programa("programa-enero.pdf", "", date(2026, 12, 20)) == (2027, 1)
+assert _dore_mes_del_programa("programa-diciembre.pdf", "", date(2027, 1, 3)) == (2026, 12)
+assert _dore_mes_del_programa("programa.pdf", "sin fecha", hoy) is None
+print("✓ el mes del programa: del archivo con números, del texto o del nombre del mes")
+
+assert _DORE_PDF_RE.findall(
+    '<a href="/dam/jcr:d7176f1a-82ca-4c47-a5df-f08fe2021827/programa-noviembre.pdf">'
+    '<a href="/en/dam/jcr:aa/programa-diciembre.pdf"><a href="/dam/jcr:bb/fe202609-programa.pdf">'
+) == ["/dam/jcr:d7176f1a-82ca-4c47-a5df-f08fe2021827/programa-noviembre.pdf",
+      "/en/dam/jcr:aa/programa-diciembre.pdf", "/dam/jcr:bb/fe202609-programa.pdf"]
+print("✓ los links al programa, con nombre nuevo o viejo y desde la página en inglés")
 
 
 # --- Boletería ---------------------------------------------------------------

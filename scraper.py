@@ -10250,7 +10250,22 @@ DORE_PROYECCIONES = ("https://www.cultura.gob.es/cultura/areas/cine/mc/fe/"
                      "programacion-actividades/proyecciones.html")
 DORE_BOLETERIA = "https://entradasfilmoteca.sacatuentrada.es/es/busqueda?&pagina={n}"
 
-_DORE_PDF_RE = re.compile(r'href="(/dam/jcr:[^"]*?programa[^"]*?\.pdf)"', re.I)
+# "/dam/jcr:…/fe202609-programa.pdf", y desde noviembre de 2026
+# "/dam/jcr:…/programa-noviembre.pdf"; la página en inglés los linkea con /en
+# adelante y alguno puede venir con el dominio.
+_DORE_PDF_RE = re.compile(
+    r'href="((?:https?://www\.cultura\.gob\.es)?(?:/[a-z]{2})?/dam/jcr:[^"]*?programa[^"]*?\.pdf)"',
+    re.I)
+_DORE_MESES = {
+    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
+    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
+    "noviembre": 11, "diciembre": 12,
+    "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
+    "july": 7, "august": 8, "september": 9, "october": 10, "november": 11,
+    "december": 12,
+}
+_DORE_MES_ANIO_RE = re.compile(
+    r"\b(" + "|".join(_DORE_MESES) + r")\s+(?:de\s+)?(20\d{2})\b", re.I)
 _DORE_DIA_RE = re.compile(
     r"^(?:LUNES|MARTES|MI[EÉ]RCOLES|JUEVES|VIERNES|S[AÁ]BADO|DOMINGO)\s+(\d{1,2})$")
 # "17:30 H · SALA 1 · 127’", " 17:30 H             ·SALA 1 · 127", "19:00 H · SALA2 · 80’"
@@ -10453,25 +10468,60 @@ def _dore_programas() -> tuple[list[dict], set[tuple[int, int]]]:
         return [], set()
     sesiones: list[dict] = []
     meses: set[tuple[int, int]] = set()
-    for ruta in dict.fromkeys(_DORE_PDF_RE.findall(html)):
-        # "fe202609-programa.pdf" → septiembre de 2026
-        m = re.search(r"(20\d{2})(0[1-9]|1[0-2])", ruta.rsplit("/", 1)[-1])
-        if not m:
-            continue
-        anio, mes = int(m.group(1)), int(m.group(2))
+    rutas = list(dict.fromkeys(_DORE_PDF_RE.findall(html)))
+    if not rutas:
+        print("[doré: la página de proyecciones no linkea ningún programa en PDF]",
+              end=" ", flush=True)
+    for ruta in rutas:
+        archivo = ruta.rsplit("/", 1)[-1]
+        url = ruta if ruta.startswith("http") else "https://www.cultura.gob.es" + ruta
         try:
-            pdf = PdfReader(io.BytesIO(fetch_bytes(
-                "https://www.cultura.gob.es" + ruta, timeout=60)))
+            pdf = PdfReader(io.BytesIO(fetch_bytes(url, timeout=60)))
             texto = "\n".join(p.extract_text() or "" for p in pdf.pages)
         except Exception as e:
-            print(f"[doré: el programa {anio}-{mes:02d} no se pudo leer — {e}]",
+            print(f"[doré: el programa {archivo} no se pudo leer — {e}]",
                   end=" ", flush=True)
             continue
+        cuando = _dore_mes_del_programa(archivo, texto, hoy_madrid())
+        if not cuando:
+            print(f"[doré: no se sabe de qué mes es {archivo}]", end=" ", flush=True)
+            continue
+        anio, mes = cuando
         del_mes = _dore_programa(texto, anio, mes)
         if del_mes:
             sesiones.extend(del_mes)
             meses.add((anio, mes))
+        else:
+            print(f"[doré: el programa {archivo} ({anio}-{mes:02d}) no trajo sesiones]",
+                  end=" ", flush=True)
     return sesiones, meses
+
+
+def _dore_mes_del_programa(archivo: str, texto: str, hoy: date) -> Optional[tuple[int, int]]:
+    """De qué mes es un programa en PDF.
+
+    Hasta octubre de 2026 el archivo lo decía con números ("fe202609-programa.pdf");
+    desde noviembre se llama "programa-noviembre.pdf", sin año, y el scraper
+    lo salteaba: el Doré quedó publicando sólo lo que ya estaba a la venta.
+    Primero los números del archivo; después "NOVIEMBRE 2026" en el texto; por
+    último el nombre del mes en el archivo, con el año que lo deja más cerca de
+    hoy (el programa de enero se publica en diciembre)."""
+    m = re.search(r"(20\d{2})(0[1-9]|1[0-2])", archivo)
+    if m:
+        return int(m.group(1)), int(m.group(2))
+    m = _DORE_MES_ANIO_RE.search(texto[:3000])
+    if m:
+        return int(m.group(2)), _DORE_MESES[m.group(1).lower()]
+    nombre = unicodedata.normalize("NFD", archivo).encode("ascii", "ignore").decode().lower()
+    for palabra, mes in _DORE_MESES.items():
+        if re.search(rf"(?<![a-z]){palabra}(?![a-z])", nombre):
+            anio = hoy.year
+            if mes - hoy.month > 6:
+                anio -= 1
+            elif hoy.month - mes > 6:
+                anio += 1
+            return anio, mes
+    return None
 
 
 def scrape_dore(semanas: int = 9) -> list[Screening]:
