@@ -93,8 +93,8 @@ def helpers_de_run():
     playwright; lo que se está probando es el código de verdad, no una copia.
     """
     src = (Path(__file__).parent / "run.py").read_text(encoding="utf-8")
-    ini = src.index("    SPANISH_STOPWORDS = {")
-    fin = src.index("    def _fix_country_caps(s: str) -> str:")
+    ini = src.index("# Stopwords del español")
+    fin = src.index("async def run_scraper(")
     ns = {"re": re}
     exec(textwrap.dedent(src[ini:fin]), ns)
     return ns["_title_case_es"], ns["_fix_caps"]

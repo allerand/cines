@@ -41,6 +41,70 @@ UA = (
 )
 
 
+# Stopwords del español (palabras que NO se capitalizan en sentence case)
+SPANISH_STOPWORDS = {
+    "de", "del", "la", "el", "los", "las", "y", "a", "al", "en",
+    "un", "una", "unos", "unas", "por", "con", "para", "sin",
+    "lo", "se", "su", "sus", "es", "que", "o", "u", "ni", "mi",
+    "ante", "sobre", "tras", "entre", "hacia", "hasta", "desde",
+}
+
+# Números romanos de hasta XXXIX: "PUSHER II", "SIGLO XXI", "LA II REPÚBLICA".
+_ROMANO_RE = re.compile(r"^X{0,3}(?:IX|IV|V?I{0,3})$")
+
+
+def _title_case_es(s: str) -> str:
+    """'HOMBRE DE LA ATLÁNTIDA' → 'Hombre de la Atlántida'.
+
+    Los ciclos del Doré llegan gritados y con varias frases: "EL PRESENTE EN
+    ESCENA. EL CINE ARGENTINO DEL SIGLO XXI" salía "El Presente en Escena. el
+    Cine Argentino del Siglo Xxi". Después de un punto, "!", "?", ":" o "/"
+    la palabra va con mayúscula aunque sea un conector, los romanos quedan en
+    mayúsculas, y "¡AL" es "¡Al" (se capitaliza la primera letra, no el signo).
+    """
+    if not s:
+        return s
+    out_words: list[str] = []
+    inicio = True
+    for w in s.split():
+        wl = w.lower()
+        letras = re.sub(r"[^\w]", "", w)
+        if letras and _ROMANO_RE.match(letras) and letras.isupper() and wl not in SPANISH_STOPWORDS:
+            out_words.append(w)
+        elif inicio or wl.strip("¡¿\"'(«") not in SPANISH_STOPWORDS:
+            # Capitalize preservando acentos (str.capitalize hace lower al resto)
+            m = re.search(r"[^\W\d_]", wl)
+            out_words.append(wl[:m.start()] + wl[m.start()].upper() + wl[m.start() + 1:] if m else wl)
+        else:
+            out_words.append(wl)
+        inicio = w == "/" or w[-1:] in ".!?:/"
+    return " ".join(out_words)
+
+
+def _fix_caps(s: str) -> str:
+    """Normaliza nombres que vienen TODO EN MAYÚSCULAS (p.ej. directores de
+    CEA, donde el innerText hereda un text-transform: uppercase).
+
+    `isupper()` sola no alcanza: un nombre escrito a los gritos igual trae
+    minúsculas en los conectores, y con una sola "y" en el medio Python
+    contesta que no está en mayúsculas. Sala Lúcida firma un corto como
+    "VIOLETA VIEYTES VIVARES y DAMIÁN SATO" y así salía a la web, que no
+    muestra un solo título ni un solo nombre gritado. Se miran las palabras
+    que no son conectores: si TODAS están en mayúsculas, el nombre está
+    gritado. Se aplica también a los ciclos: Mateo no quiere ninguno en
+    mayúsculas en la web, nunca. Si una fila se rehace a mano (sin run.py),
+    el ciclo, el director y el título tienen que pasar por acá.
+    """
+    if not s:
+        return s
+    palabras = [w for w in re.split(r"[\s,]+", s)
+                if w and any(c.isalpha() for c in w)
+                and w.lower() not in SPANISH_STOPWORDS]
+    if palabras and all(w.isupper() for w in palabras):
+        return _title_case_es(s)
+    return s
+
+
 async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     """`sin_proxy` saltea los cines que sólo se bajan por el proxy pago (CCK y
     Borges). Lo usa el pase de la tarde: los dos publican con semanas de
@@ -489,49 +553,6 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
             for t, cual in POR_DESEMPATE.items():
                 print(f"     · {t}: {cual}")
         await lb_browser.close()
-
-    # Stopwords del español (palabras que NO se capitalizan en sentence case)
-    SPANISH_STOPWORDS = {
-        "de", "del", "la", "el", "los", "las", "y", "a", "al", "en",
-        "un", "una", "unos", "unas", "por", "con", "para", "sin",
-        "lo", "se", "su", "sus", "es", "que", "o", "u", "ni", "mi",
-        "ante", "sobre", "tras", "entre", "hacia", "hasta", "desde",
-    }
-
-    def _title_case_es(s: str) -> str:
-        """'HOMBRE DE LA ATLÁNTIDA' → 'Hombre de la Atlántida'."""
-        if not s:
-            return s
-        out_words: list[str] = []
-        for i, w in enumerate(s.split()):
-            wl = w.lower()
-            if i == 0 or wl not in SPANISH_STOPWORDS:
-                # Capitalize preservando acentos (str.capitalize hace lower al resto)
-                out_words.append(wl[:1].upper() + wl[1:])
-            else:
-                out_words.append(wl)
-        return " ".join(out_words)
-
-    def _fix_caps(s: str) -> str:
-        """Normaliza nombres que vienen TODO EN MAYÚSCULAS (p.ej. directores de
-        CEA, donde el innerText hereda un text-transform: uppercase).
-
-        `isupper()` sola no alcanza: un nombre escrito a los gritos igual trae
-        minúsculas en los conectores, y con una sola "y" en el medio Python
-        contesta que no está en mayúsculas. Sala Lúcida firma un corto como
-        "VIOLETA VIEYTES VIVARES y DAMIÁN SATO" y así salía a la web, que no
-        muestra un solo título ni un solo nombre gritado. Se miran las palabras
-        que no son conectores: si TODAS están en mayúsculas, el nombre está
-        gritado.
-        """
-        if not s:
-            return s
-        palabras = [w for w in re.split(r"[\s,]+", s)
-                    if w and any(c.isalpha() for c in w)
-                    and w.lower() not in SPANISH_STOPWORDS]
-        if palabras and all(w.isupper() for w in palabras):
-            return _title_case_es(s)
-        return s
 
     def _fix_country_caps(s: str) -> str:
         """Como _fix_caps pero preserva las siglas de países (UK, USA, EEUU,
