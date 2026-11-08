@@ -45,7 +45,7 @@ def dedupe_de_run(screenings_out):
     """Corre el bloque de dedupe de run.py. Se extrae del fuente en vez de
     importar run.py porque importarlo arranca playwright y pide red."""
     src = (ROOT / "run.py").read_text(encoding="utf-8")
-    ini = src.index("    vistas: dict[tuple, list[str]] = {}")
+    ini = src.index("    from scraper import DORE_PROYECCIONES")
     fin = src.index("    if len(unicas) != len(screenings_out):")
     ns = {"screenings_out": screenings_out, "re": re,
           "titulo_norm": titulo_norm, "misma_pelicula": misma_pelicula}
@@ -88,6 +88,25 @@ ok("misma película en otro horario, otra sala u otro día: no es duplicado",
                   f("Sala Lugones", "La perra"), f("Cacodelphia", "La perra", fecha="2026-10-03")]),
    [("Cacodelphia", "La perra", "13:45"), ("Cacodelphia", "La perra", "21:00"),
     ("Sala Lugones", "La perra", "21:00"), ("Cacodelphia", "La perra", "21:00")])
+
+# El Doré: la sesión cargada a mano con la página de proyecciones, antes de que
+# la boletería abriera la venta. Cuando la boletería la trae, la manual queda
+# (con su ficha) pero toma el link de compra, en las dos películas del programa.
+from scraper import DORE_PROYECCIONES
+COMPRA = "https://entradasfilmoteca.sacatuentrada.es/es/entradas/mburucuya-11-nov/2026-11-11"
+doble = [dict(f("Cine Doré", "Ceniza verde", hora="17:30"), ticket_url=DORE_PROYECCIONES),
+         dict(f("Cine Doré", "Mburucuyá (cuadros de la naturaleza)", hora="17:30"),
+              ticket_url=DORE_PROYECCIONES),
+         dict(f("Cine Doré", "Mburucuyá", hora="17:30"), ticket_url=COMPRA)]
+ok("la boletería del Doré le pasa el link de compra a la manual",
+   (dedupe_de_run(doble), [s["ticket_url"] for s in doble[:2]]),
+   ([("Cine Doré", "Ceniza verde", "17:30"),
+     ("Cine Doré", "Mburucuyá (cuadros de la naturaleza)", "17:30")], [COMPRA, COMPRA]))
+
+propio = [dict(f("Cine Doré", "Mburucuyá", hora="17:30"), ticket_url="https://otro/link"),
+          dict(f("Cine Doré", "Mburucuyá", hora="17:30"), ticket_url=COMPRA)]
+dedupe_de_run(propio)
+ok("un link que no es genérico no se pisa", propio[0]["ticket_url"], "https://otro/link")
 
 
 # --- aplicar_festivales (scraper.py) ------------------------------------------

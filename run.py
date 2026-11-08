@@ -966,15 +966,27 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     # El título se compara normalizado y alcanza con que uno contenga al otro
     # (scraper.misma_pelicula): "La perra" de la guía de FIC.UBA contra
     # "La Perra" del CTBA.
-    vistas: dict[tuple, list[str]] = {}
+    #
+    # La manual gana en la ficha, pero si sólo tenía un link genérico (la
+    # página de proyecciones del Doré, cargada a mano antes de que abriera la
+    # venta) y la repetida trae el de compra, se lo pasa a todas las de esa
+    # sesión: en un programa doble es la misma entrada.
+    from scraper import DORE_PROYECCIONES
+    links_genericos = {"", DORE_PROYECCIONES}
+    vistas: dict[tuple, list[tuple[str, dict]]] = {}
     unicas = []
     for s in screenings_out:
         slot = (s["cine"], s.get("fecha", ""), s.get("hora", ""))
         titulo = titulo_norm(s.get("title_es", ""))
         previas = vistas.setdefault(slot, [])
-        if any(misma_pelicula(titulo, p) for p in previas):
+        if any(misma_pelicula(titulo, p) for p, _ in previas):
+            link = s.get("ticket_url") or ""
+            if link not in links_genericos:
+                for _, kept in previas:
+                    if (kept.get("ticket_url") or "") in links_genericos:
+                        kept["ticket_url"] = link
             continue
-        previas.append(titulo)
+        previas.append((titulo, s))
         unicas.append(s)
     if len(unicas) != len(screenings_out):
         print(f"  ↳ {len(screenings_out) - len(unicas)} funciones duplicadas descartadas")

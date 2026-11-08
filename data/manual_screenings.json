@@ -3088,6 +3088,117 @@
       "cine": "Centro Cultural Leopoldo Marechal", "title": "Un cacho de deseo", "fecha": "2026-11-08", "hora": "19:00",
       "director": "Carla Morgana Brugna", "country": "Argentina", "duration": 8,
       "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
+    },
+    {
+      "_ciclo": "El presente en escena. Cine argentino del siglo XXI (Reina Sofía + Filmoteca, 5/11–16/12/2026), sesiones del Cine Doré. Grilla del folleto impreso del ciclo. Las del Reina Sofía las trae su scraper; las del Doré no: la boletería carga cada sesión recién cuando abre la venta, y la del 10/11 vino con otro director (Santiago Sein, el de Merodeo) y 159'. Una fila por película en los programas dobles, como en el Reina Sofía. El link es la página de proyecciones hasta que la boletería tenga la sesión: ahí run.py le pasa el de compra al deduplicar.",
+      "cine": "Cine Doré", "title": "Todo documento de civilización", "fecha": "2026-11-10", "hora": "17:30",
+      "director": "Fernando Restelli", "year": 2016, "country": "Argentina", "duration": 14,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/para-hacer-una-pelicula-solo-hace-falta-un-arma-10-nov/2026-11-10"
+    },
+    {
+      "cine": "Cine Doré", "title": "Para hacer una película solo hace falta un arma", "fecha": "2026-11-10", "hora": "17:30",
+      "director": "Colectivo Antes Muerto Cine y Tatiana Mazú", "year": 2024, "country": "Argentina", "duration": 90,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/para-hacer-una-pelicula-solo-hace-falta-un-arma-10-nov/2026-11-10"
+    },
+    {
+      "cine": "Cine Doré", "title": "Ceniza verde", "fecha": "2026-11-11", "hora": "17:30",
+      "director": "Pablo Mazzolo", "year": 2018, "country": "Argentina", "duration": 10,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Mburucuyá (cuadros de la naturaleza)", "fecha": "2026-11-11", "hora": "17:30",
+      "director": "Jorge Acha", "year": 1992, "country": "Argentina", "duration": 95,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "La hora del lobo", "fecha": "2026-11-17", "hora": "17:30",
+      "director": "Natalia Ferreyra", "year": 2014, "country": "Argentina", "duration": 32,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "No quiero volver a casa", "fecha": "2026-11-17", "hora": "17:30",
+      "director": "Albertina Carri", "year": 2000, "country": "Argentina", "duration": 74,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Hablan las aves", "fecha": "2026-11-18", "hora": "17:30",
+      "director": "Rodrigo Montani", "year": 2026, "country": "Argentina", "duration": 10,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Bosque arriba en la montaña", "fecha": "2026-11-18", "hora": "17:30",
+      "director": "Sofía Bordenave", "year": 2026, "country": "Argentina", "duration": 91,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Engomado", "fecha": "2026-11-24", "hora": "17:30",
+      "director": "Toia Bonino y Marcos Joubert", "year": 2021, "country": "Argentina", "duration": 15,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Apenas un delincuente", "fecha": "2026-11-24", "hora": "17:30",
+      "director": "Hugo Fregonese", "year": 1949, "country": "Argentina", "duration": 88,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "El brazo del Whatsapp", "fecha": "2026-11-25", "hora": "17:30",
+      "director": "Martín Farina", "year": 2019, "country": "Argentina", "duration": 10,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "La deuda", "fecha": "2026-11-25", "hora": "17:30",
+      "director": "Gustavo Fontán", "year": 2019, "country": "Argentina", "duration": 74,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Carta a una señorita en París", "fecha": "2026-12-01", "hora": "17:30",
+      "director": "Nicolás Prividera", "year": 2024, "country": "Argentina", "duration": 35,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Parapalos", "fecha": "2026-12-01", "hora": "17:30",
+      "director": "Ana Poliak", "year": 2004, "country": "Argentina", "duration": 90,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Marabunta", "fecha": "2026-12-02", "hora": "17:30",
+      "director": "Narcisa Hirsch", "year": 1967, "country": "Argentina", "duration": 8,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Aleph", "fecha": "2026-12-02", "hora": "17:30",
+      "director": "Narcisa Hirsch", "year": 2005, "country": "Argentina", "duration": 1,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Los de la mesa 10", "fecha": "2026-12-02", "hora": "17:30",
+      "director": "Simón Feldman", "year": 1960, "country": "Argentina", "duration": 83,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "J'ai oublié", "fecha": "2026-12-09", "hora": "17:30",
+      "director": "Teddy Williams y Nahuel Pérez Biscayart", "year": 2014, "duration": 28,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "El hombre robado", "fecha": "2026-12-09", "hora": "17:30",
+      "director": "Matías Piñeiro", "year": 2007, "country": "Argentina", "duration": 91,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "Fragmentos desde el exilio", "fecha": "2026-12-15", "hora": "21:00",
+      "director": "Pablo Martín Weber", "year": 2018, "country": "Argentina", "duration": 24,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "El perro que no calla", "fecha": "2026-12-15", "hora": "21:00",
+      "director": "Ana Katz", "year": 2021, "country": "Argentina", "duration": 73,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "cine": "Cine Doré", "title": "La libertad", "fecha": "2026-12-16", "hora": "17:30",
+      "director": "Lisandro Alonso", "year": 2001, "country": "Argentina", "duration": 73,
+      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
     }
   ],
 
