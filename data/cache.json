@@ -30119,12 +30119,10 @@
   "melodía de arrabal|1933": {
     "url": "",
     "title_en": "Melodía de arrabal",
-    "director": "Louis J. Gasnier",
-    "country": "France",
-    "year": 1933,
-    "duration": 94,
-    "genre": "Romance, Música",
-    "original_title": "Melodía de Arrabal"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "la balada de nara y ama|1958": {
     "url": "",
@@ -30217,13 +30215,11 @@
   },
   "la belle marinière|1932": {
     "url": "",
-    "title_en": "LA BELLE MARINIÈRE",
-    "director": "Harry Lachman",
-    "country": "France",
-    "year": 1932,
-    "duration": 80,
-    "genre": "Drama",
-    "original_title": "La Belle Marinière"
+    "title_en": "La belle marinière",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "polvo serán|2024": {
     "url": "https://letterboxd.com/film/polvo-seran/",
@@ -30238,12 +30234,10 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "El amor solfeando",
-    "director": "Armand Guerra, Robert Florey, Florián Rey",
-    "country": "France, Germany",
-    "year": 1930,
-    "duration": 85,
-    "genre": "Comedia",
-    "original_title": "El amor solfeando"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "la mujer y el pelele|1929": {
     "url": "https://letterboxd.com/film/the-woman-and-the-puppet/",
@@ -30257,12 +30251,10 @@
   "césar|1936": {
     "url": "",
     "title_en": "César",
-    "director": "Marcel Pagnol",
-    "country": "France",
-    "year": 1936,
-    "duration": 141,
-    "genre": "Comedia, Drama",
-    "original_title": "César"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "les chansons d’ amour|2007": {
     "url": "https://letterboxd.com/film/love-songs/",
@@ -30909,14 +30901,13 @@
     "original_title": "The Goonies"
   },
   "no quiero volver a casa|2000": {
-    "url": "",
-    "title_en": "No quiero volver a casa",
+    "url": "https://letterboxd.com/film/no-quiero-volver-a-casa/",
+    "title_en": "I Won't Go Back Home",
     "director": "Albertina Carri",
     "country": "Argentina, Netherlands",
     "year": 2001,
     "duration": 78,
-    "genre": "Drama",
-    "original_title": "No quiero volver a casa"
+    "genre": "Drama"
   },
   "les chansons d’amour|2007": {
     "url": "https://letterboxd.com/film/love-songs/",
@@ -30930,24 +30921,23 @@
     "original_title": "Les Chansons d'amour"
   },
   "apenas un delincuente|1949": {
-    "url": "",
-    "title_en": "Apenas un delincuente",
+    "url": "https://letterboxd.com/film/hardly-a-criminal/",
+    "title_en": "Hardly a Criminal",
     "director": "Hugo Fregonese",
     "country": "Argentina",
     "year": 1949,
     "duration": 88,
-    "genre": "Crimen, Drama",
-    "original_title": "Apenas un delincuente"
+    "genre": "Drama, Crimen"
   },
   "la deuda|2019": {
-    "url": "",
-    "title_en": "La deuda",
+    "url": "https://letterboxd.com/film/the-debt-2019/",
+    "title_en": "The Debt",
     "director": "Gustavo Fontán",
     "country": "Argentina, Spain",
     "year": 2019,
     "duration": 74,
     "genre": "Drama",
-    "original_title": "La deuda"
+    "original_title": "La Deuda"
   },
   "zulueta / aguirre. tentativa y obra": {
     "url": "",
@@ -33028,5 +33018,123 @@
     "duration": 120,
     "genre": "Drama",
     "original_title": "Yo nena, yo princesa"
+  },
+  "ceniza verde|2018": {
+    "url": "https://letterboxd.com/film/ceniza-verde/",
+    "title_en": "Green Ash",
+    "director": "Pablo Mazzolo",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 10,
+    "genre": "Documental"
+  },
+  "mburucuyá (cuadros de la naturaleza)|1992": {
+    "url": "https://letterboxd.com/film/mburucuya-cuadros-de-la-naturaleza/",
+    "title_en": "Mburucuyá: Portraits of Nature",
+    "director": "Jorge Acha",
+    "country": "Argentina",
+    "year": 1991,
+    "duration": 95,
+    "genre": ""
+  },
+  "la hora del lobo|2015": {
+    "url": "https://letterboxd.com/film/la-hora-del-lobo/",
+    "title_en": "La hora del lobo",
+    "director": "Natalia Ferreyra",
+    "country": "Argentina",
+    "year": 2015,
+    "duration": 29,
+    "genre": "Documental"
+  },
+  "engomado|2021": {
+    "url": "https://letterboxd.com/film/stuck-2021/",
+    "title_en": "Stuck",
+    "director": "Toia Bonino, Marcos Joubert",
+    "country": "",
+    "year": 2021,
+    "duration": 15,
+    "genre": ""
+  },
+  "el brazo del whatsapp|2019": {
+    "url": "https://letterboxd.com/film/the-whatsapp-troupe/",
+    "title_en": "The Whatsapp Troupe",
+    "director": "Martín Farina",
+    "country": "Argentina",
+    "year": 2019,
+    "duration": 11,
+    "genre": "Documental"
+  },
+  "carta a una señorita en parís|2024": {
+    "url": "https://letterboxd.com/film/carta-a-una-senorita-en-paris/",
+    "title_en": "Carta a una señorita en París",
+    "director": "Nicolás Prividera",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 35,
+    "genre": "Documental"
+  },
+  "parapalos|2004": {
+    "url": "https://letterboxd.com/film/parapalos/",
+    "title_en": "Pin Boy",
+    "director": "Ana Poliak",
+    "country": "Argentina, Belgium",
+    "year": 2004,
+    "duration": 90,
+    "genre": "Drama"
+  },
+  "marabunta|1967": {
+    "url": "https://letterboxd.com/film/marabunta/",
+    "title_en": "Marabunta",
+    "director": "Narcisa Hirsch",
+    "country": "Argentina",
+    "year": 1967,
+    "duration": 8,
+    "genre": "Documental"
+  },
+  "aleph|2005": {
+    "url": "https://letterboxd.com/film/el-aleph/",
+    "title_en": "El Aleph",
+    "director": "Narcisa Hirsch",
+    "country": "Argentina",
+    "year": 2005,
+    "duration": 1,
+    "genre": "Fantasía"
+  },
+  "los de la mesa 10|1960": {
+    "url": "https://letterboxd.com/film/los-de-la-mesa-10/",
+    "title_en": "Los de la mesa 10",
+    "director": "Simón Feldman",
+    "country": "Argentina",
+    "year": 1960,
+    "duration": 83,
+    "genre": "Drama",
+    "original_title": "Los de la mesa 10"
+  },
+  "j'ai oublié|2014": {
+    "url": "https://letterboxd.com/film/i-forgot/",
+    "title_en": "I Forgot!",
+    "director": "Eduardo Williams",
+    "country": "France",
+    "year": 2014,
+    "duration": 28,
+    "genre": "Documental"
+  },
+  "fragmentos desde el exilio|2018": {
+    "url": "https://letterboxd.com/film/fragmentos-desde-el-exilio/",
+    "title_en": "Fragmentos desde el exilio",
+    "director": "Pablo Martín Weber",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 24,
+    "genre": ""
+  },
+  "el perro que no calla|2021": {
+    "url": "https://letterboxd.com/film/el-perro-que-no-calla/",
+    "title_en": "The Dog Who Wouldn't Be Quiet",
+    "director": "Ana Katz",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 73,
+    "genre": "Drama"
   }
 }

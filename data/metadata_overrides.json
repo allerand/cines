@@ -1590,6 +1590,44 @@
       "duration": 148,
       "genre": "Ciencia ficción, Aventura",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-catching-fire/"
+    },
+    {
+      "_comment": "Cine Doré, noviembre de 2026: el enrichment no las encontró (8/11). Slugs verificados en letterboxd.com, director y año contra la boletería. El amor solfeando: la boletería dice Robert Florey y Letterboxd lo tiene entre sus tres directores."
+    },
+    {
+      "title": "5 es el número perfecto",
+      "cine": "Cine Doré",
+      "letterboxd": "https://letterboxd.com/film/5-is-the-perfect-number/",
+      "title_en": "5 Is the Perfect Number",
+      "genre": "Thriller, Drama"
+    },
+    {
+      "title": "La belle marinière",
+      "cine": "Cine Doré",
+      "letterboxd": "https://letterboxd.com/film/la-belle-mariniere/",
+      "title_en": "The Beautiful Sailor",
+      "genre": "Drama"
+    },
+    {
+      "title": "El amor solfeando",
+      "cine": "Cine Doré",
+      "letterboxd": "https://letterboxd.com/film/el-amor-solfeando/",
+      "title_en": "El amor solfeando",
+      "genre": "Comedia"
+    },
+    {
+      "title": "César",
+      "cine": "Cine Doré",
+      "letterboxd": "https://letterboxd.com/film/cesar/",
+      "title_en": "César",
+      "genre": "Drama, Comedia"
+    },
+    {
+      "title": "Melodía de arrabal",
+      "cine": "Cine Doré",
+      "letterboxd": "https://letterboxd.com/film/melodia-de-arrabal/",
+      "title_en": "Suburban Melody",
+      "genre": "Romance, Música"
     }
   ]
 }
