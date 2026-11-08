@@ -3090,14 +3090,9 @@
       "ciclo": "FESTIHUR - Competencia de Cortometrajes Argentinos"
     },
     {
-      "_ciclo": "El presente en escena. Cine argentino del siglo XXI (Reina Sofía + Filmoteca, 5/11–16/12/2026), sesiones del Cine Doré. Grilla del folleto impreso del ciclo. Las del Reina Sofía las trae su scraper; las del Doré no: la boletería carga cada sesión recién cuando abre la venta, y la del 10/11 vino con otro director (Santiago Sein, el de Merodeo) y 159'. Una fila por película en los programas dobles, como en el Reina Sofía. El link es la página de proyecciones hasta que la boletería tenga la sesión: ahí run.py le pasa el de compra al deduplicar.",
-      "cine": "Cine Doré", "title": "Todo documento de civilización", "fecha": "2026-11-10", "hora": "17:30",
-      "director": "Fernando Restelli", "year": 2016, "country": "Argentina", "duration": 14,
-      "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/para-hacer-una-pelicula-solo-hace-falta-un-arma-10-nov/2026-11-10"
-    },
-    {
+      "_ciclo": "El presente en escena. Cine argentino del siglo XXI (Reina Sofía y Filmoteca, 5/11 al 16/12/2026), sesiones del Cine Doré. Grilla del folleto impreso del ciclo, contrastada con la hoja de ciclo y el programa del mes de la Filmoteca y con Letterboxd. Las del Reina Sofía las trae su scraper; las del Doré no: la boletería carga cada sesión recién cuando abre la venta y pone una sola película por programa doble (sin el corto y con la duración sumada). Una fila por película, como en el Reina Sofía. El 10/11 es una sola película, de Santiago Sein (2026, 146'): el 8/11 se había cargado acá Todo documento de civilización (es del 7/11 en el Reina Sofía) y la ficha de esa película en Para hacer una película, por leer corrida una fila del folleto. Años donde el folleto y la Filmoteca no coinciden, según Letterboxd: Engomado 2021, La hora del lobo 2015. El link es la página de proyecciones hasta que la boletería tenga la sesión: ahí run.py le pasa el de compra al deduplicar.",
       "cine": "Cine Doré", "title": "Para hacer una película solo hace falta un arma", "fecha": "2026-11-10", "hora": "17:30",
-      "director": "Colectivo Antes Muerto Cine y Tatiana Mazú", "year": 2024, "country": "Argentina", "duration": 90,
+      "director": "Santiago Sein", "year": 2026, "country": "Argentina", "duration": 146,
       "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/entradas/para-hacer-una-pelicula-solo-hace-falta-un-arma-10-nov/2026-11-10"
     },
     {
@@ -3112,7 +3107,7 @@
     },
     {
       "cine": "Cine Doré", "title": "La hora del lobo", "fecha": "2026-11-17", "hora": "17:30",
-      "director": "Natalia Ferreyra", "year": 2014, "country": "Argentina", "duration": 32,
+      "director": "Natalia Ferreyra", "year": 2015, "country": "Argentina", "duration": 32,
       "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
     },
     {
