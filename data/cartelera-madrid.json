@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T02:45:43",
+  "updated": "2026-11-08T11:07:21",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 36,
@@ -4525,22 +4525,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-11-10",
-      "hora": "16:00",
-      "title_es": "La bola negra",
-      "title_en": "La Bola Negra",
-      "original_title": "",
-      "director": "Javier Ambrossi, Javier Calvo",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 155,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39523/",
-      "ciclo": ""
-    },
-    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-10",
       "hora": "16:00",
@@ -4554,6 +4538,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-voz-quebrada/20534/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-10",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39523/",
       "ciclo": ""
     },
     {
