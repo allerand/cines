@@ -1,9 +1,9 @@
 {
-  "updated": "2026-11-09T02:57:54",
+  "updated": "2026-11-09T12:28:28",
   "fuentes": {
     "Artistic Metropol": {
-      "scrapeadas": 31,
-      "publicadas": 32
+      "scrapeadas": 40,
+      "publicadas": 41
     },
     "Cine Doré": {
       "scrapeadas": 69,
@@ -397,6 +397,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-09",
+      "hora": "15:50",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Alessandro Carloni, Erica Rivinoja",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-gato-con-sombrero-doblada-al-espanol/20596/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Callao",
       "fecha": "2026-11-09",
       "hora": "15:50",
@@ -538,22 +554,6 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/naza-vose/39494/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-09",
-      "hora": "16:00",
-      "title_es": "Superthings: La película",
-      "title_en": "Superthings: La película",
-      "original_title": "Superthings: La película",
-      "director": "Víctor Monigote",
-      "country": "España",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Animación, Familiar",
-      "letterboxd": "https://letterboxd.com/film/superthings-la-pelicula/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/superthings-la-pelicula/20491/",
       "ciclo": ""
     },
     {
@@ -7376,17 +7376,17 @@
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-12",
       "hora": "20:30",
-      "title_es": "Numakage Public Pool [Docs Barcelona]",
+      "title_es": "Numakage Piscina Pública",
       "title_en": "Numakage Public Pool",
-      "original_title": "",
+      "original_title": "沼影市民プール",
       "director": "Shingo Ota",
       "country": "Japón",
       "year": 2025,
       "duration": 80,
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/numakage-public-pool/",
-      "ticket_url": "https://www.pillalas.com/pase/1095039/",
-      "ciclo": ""
+      "ticket_url": "https://www.pillalas.com/pase/1095983/",
+      "ciclo": "Docs del mes"
     },
     {
       "cine": "Golem Madrid",
@@ -8173,6 +8173,22 @@
       "ciclo": "Lyceum Club Femenino. Centenario"
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-13",
+      "hora": "22:00",
+      "title_es": "A Nadie Le Importas",
+      "title_en": "A nadie le importas",
+      "original_title": "A nadie le importas",
+      "director": "David Suárez, Cristina Galán",
+      "country": "España",
+      "year": 2026,
+      "duration": 83,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-nadie-le-importas/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-a-nadie-le-importas-2026/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Estudio",
       "fecha": "2026-11-13",
       "hora": "22:00",
@@ -8445,6 +8461,22 @@
       "ciclo": "Aeterna"
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-14",
+      "hora": "22:15",
+      "title_es": "A Nadie Le Importas",
+      "title_en": "A nadie le importas",
+      "original_title": "A nadie le importas",
+      "director": "David Suárez, Cristina Galán",
+      "country": "España",
+      "year": 2026,
+      "duration": 83,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-nadie-le-importas/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-a-nadie-le-importas-2026-2/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-15",
       "hora": "12:00",
@@ -8637,6 +8669,22 @@
       "ciclo": "31 Queercinemad"
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-15",
+      "hora": "20:00",
+      "title_es": "A Nadie Le Importas",
+      "title_en": "A nadie le importas",
+      "original_title": "A nadie le importas",
+      "director": "David Suárez, Cristina Galán",
+      "country": "España",
+      "year": 2026,
+      "duration": 83,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-nadie-le-importas/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-a-nadie-le-importas-2026-3/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Doré",
       "fecha": "2026-11-15",
       "hora": "20:30",
@@ -8715,6 +8763,22 @@
       "letterboxd": "",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2985&cine=EQUIS",
       "ciclo": "Queercinemad"
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-16",
+      "hora": "18:00",
+      "title_es": "A Nadie Le Importas",
+      "title_en": "A nadie le importas",
+      "original_title": "A nadie le importas",
+      "director": "David Suárez, Cristina Galán",
+      "country": "España",
+      "year": 2026,
+      "duration": 83,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-nadie-le-importas/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-a-nadie-le-importas-2026-4/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -8845,6 +8909,38 @@
       "ciclo": "Rizoma 2026 - Plastic Dreams"
     },
     {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-17",
+      "hora": "20:00",
+      "title_es": "A Nadie Le Importas",
+      "title_en": "A nadie le importas",
+      "original_title": "A nadie le importas",
+      "director": "David Suárez, Cristina Galán",
+      "country": "España",
+      "year": 2026,
+      "duration": 83,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-nadie-le-importas/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-a-nadie-le-importas-2026-5/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-17",
+      "hora": "20:00",
+      "title_es": "ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes",
+      "title_en": "ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-estudios-de-cine-noviembre-2026-con-alejandro-mucientes-6/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-17",
       "hora": "20:30",
@@ -8939,6 +9035,22 @@
       "letterboxd": "https://letterboxd.com/film/forest-up-in-the-mountain/",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/bosque-arriba-en-la-montaña-18-nov",
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-18",
+      "hora": "18:00",
+      "title_es": "A Nadie Le Importas",
+      "title_en": "A nadie le importas",
+      "original_title": "A nadie le importas",
+      "director": "David Suárez, Cristina Galán",
+      "country": "España",
+      "year": 2026,
+      "duration": 83,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-nadie-le-importas/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-a-nadie-le-importas-2026-6/",
+      "ciclo": ""
     },
     {
       "cine": "Cine Doré",
@@ -9066,6 +9178,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/cool-books/",
       "ticket_url": "https://salaequis.es/taquilla/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-19",
+      "hora": "11:00",
+      "title_es": "ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes",
+      "title_en": "ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-2-estudios-de-cine-noviembre-2026-con-alejandro-mucientes-7/",
       "ciclo": ""
     },
     {
@@ -9226,6 +9354,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/en-la-trastienda-de-la-musica-prince-sign-o-the-times/20514/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Artistic Metropol",
+      "fecha": "2026-11-19",
+      "hora": "20:00",
+      "title_es": "A Nadie Le Importas",
+      "title_en": "A nadie le importas",
+      "original_title": "A nadie le importas",
+      "director": "David Suárez, Cristina Galán",
+      "country": "España",
+      "year": 2026,
+      "duration": 83,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/a-nadie-le-importas/",
+      "ticket_url": "https://artisticmetropol.es/sesion/sala-1-a-nadie-le-importas-2026-7/",
       "ciclo": ""
     },
     {
