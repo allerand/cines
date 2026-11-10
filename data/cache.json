@@ -59,7 +59,8 @@
     "country": "Argentina, Paraguay",
     "year": 2025,
     "genre": "Documental",
-    "duration": 212
+    "duration": 212,
+    "clase_titulo": "exacto"
   },
   "the souffleur": {
     "url": "https://letterboxd.com/film/the-souffleur/",
@@ -33303,5 +33304,51 @@
     "year": 2017,
     "duration": 78,
     "genre": "Documental"
+  },
+  "cima proyecta: 25-n cortos contra las violencias": {
+    "url": "",
+    "title_en": "CIMA Proyecta: 25-N Cortos contra las violencias",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "más que una casa|2026": {
+    "url": "https://letterboxd.com/film/mas-que-una-casa/",
+    "title_en": "More Than A House",
+    "director": "Amaia Aldamiz-Echevarria",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "",
+    "original_title": "Más que una casa"
+  },
+  "el mal padre": {
+    "url": "https://letterboxd.com/film/el-mal-padre/",
+    "title_en": "El mal padre",
+    "director": "Roberto Bueso",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 120,
+    "genre": "Comedia, Drama",
+    "original_title": "El mal padre"
+  },
+  "16º festival márgenes: biografía de jorge luis borges": {
+    "url": "",
+    "title_en": "16º Festival Márgenes: Biografía de Jorge Luis Borges",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el príncipe de nanawa|2025": {
+    "url": "https://letterboxd.com/film/el-principe-de-nanawa/",
+    "title_en": "The Prince of Nanawa",
+    "director": "Clarisa Navas",
+    "country": "Argentina, Paraguay",
+    "year": 2025,
+    "genre": "Documental",
+    "duration": 212,
+    "clase_titulo": "exacto"
   }
 }
