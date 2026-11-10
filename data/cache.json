@@ -27254,8 +27254,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "hay películas que se llaman así: Lockbox (2026); The House of the Devil (2009) sólo se le parece",
-    "fecha": "2026-11-06",
+    "sin_ficha": "hay películas que se llaman así: Lockbox (2026); The Haunting of Julia (1977) sólo se le parece",
+    "fecha": "2026-11-10",
     "con_duracion": true,
     "desempate": ""
   },
@@ -29555,7 +29555,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-06",
+    "fecha": "2026-11-10",
     "con_duracion": true,
     "desempate": ""
   },
@@ -32816,7 +32816,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-06",
+    "fecha": "2026-11-10",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33209,5 +33209,99 @@
     "genre": "Comedia",
     "clase_titulo": "exacto",
     "original_title": "A nadie le importas"
+  },
+  "aniquilacion": {
+    "url": "https://letterboxd.com/film/onslaught-2026/",
+    "title_en": "Onslaught",
+    "director": "Adam Wingard",
+    "country": "USA",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Acción, Thriller",
+    "clase_titulo": "exacto",
+    "title_es": "Aniquilación",
+    "original_title": "Onslaught",
+    "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "caballo salvaje nueve": {
+    "url": "https://letterboxd.com/film/wild-horse-nine/",
+    "title_en": "Wild Horse Nine",
+    "director": "Martin McDonagh",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 117,
+    "genre": "Comedia, Crimen",
+    "clase_titulo": "exacto",
+    "title_es": "Caballo salvaje nueve",
+    "original_title": "Wild Horse Nine",
+    "sin_hints": "título"
+  },
+  "como robar un banco": {
+    "url": "https://letterboxd.com/film/how-to-rob-a-bank-2026/",
+    "title_en": "How to Rob a Bank",
+    "director": "David Leitch",
+    "country": "USA",
+    "year": 2026,
+    "duration": 122,
+    "genre": "Thriller, Acción",
+    "clase_titulo": "exacto",
+    "title_es": "Como robar un banco",
+    "original_title": "How to Rob a Bank",
+    "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "ebenezer: los fantasmas de navidad": {
+    "url": "https://letterboxd.com/film/ebenezer-2026/",
+    "title_en": "Ebenezer",
+    "director": "Ti West",
+    "country": "USA, UK",
+    "year": 2026,
+    "duration": 115,
+    "genre": "Comedia, Fantasía",
+    "clase_titulo": "exacto",
+    "title_es": "Scrooge y los fantasmas de la Navidad",
+    "original_title": "Ebenezer",
+    "sin_hints": "título"
+  },
+  "ju-on: el grito (re)": {
+    "url": "",
+    "title_en": "Ju-on: El Grito (re)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Grudge 2 (2003), The Grudge (2004)",
+    "fecha": "2026-11-10",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "plumas: operacion rescate": {
+    "url": "https://letterboxd.com/film/out-of-the-nest/",
+    "title_en": "Out of the Nest",
+    "director": "Arturo Hernandez",
+    "country": "China, Thailand",
+    "year": 2024,
+    "duration": 85,
+    "genre": "Familiar, Animación",
+    "clase_titulo": "exacto",
+    "title_es": "Plumas operación rescate",
+    "original_title": "องครักษ์พิทักษ์เจี๊ยบ",
+    "sin_hints": "título"
+  },
+  "eika katapa": {
+    "url": "",
+    "title_en": "EIKA KATAPA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "stitching palestine - خيوط ال رد س": {
+    "url": "https://letterboxd.com/film/stitching-palestine/",
+    "title_en": "Stitching Palestine",
+    "director": "Carol Mansour",
+    "country": "Lebanon",
+    "year": 2017,
+    "duration": 78,
+    "genre": "Documental"
   }
 }
