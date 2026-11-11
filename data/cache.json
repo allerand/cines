@@ -5583,7 +5583,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Plan 9 from Outer Space (1957), y puede ser otra",
-    "fecha": "2026-11-07",
+    "fecha": "2026-11-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -5632,7 +5632,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Bride of the Monster (1955), y puede ser otra",
-    "fecha": "2026-11-07",
+    "fecha": "2026-11-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -11882,8 +11882,8 @@
     "original_title": "Harry Potter and the Philosopher's Stone"
   },
   "mi vecino totoro": {
-    "url": "",
-    "title_en": "Mi vecino Totoro",
+    "url": "https://letterboxd.com/film/my-neighbor-totoro/",
+    "title_en": "My Neighbor Totoro",
     "director": "Hayao Miyazaki",
     "country": "Japan",
     "year": 1988,
@@ -26680,12 +26680,12 @@
     "duration": null
   },
   "identidad": {
-    "url": "",
+    "url": "https://letterboxd.com/film/identidad-2025/",
     "title_en": "Identidad",
     "director": "Florencia Santucho, Rodrigo Vázquez Salessi",
     "country": "",
     "year": 2025,
-    "duration": null,
+    "duration": 86,
     "genre": "Documental",
     "original_title": "Identidad"
   },
@@ -26794,7 +26794,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Persona: The Film That Saved Ingmar Bergman (2018)",
-    "fecha": "2026-11-07",
+    "fecha": "2026-11-11",
     "con_duracion": false,
     "desempate": ""
   },
@@ -28175,12 +28175,13 @@
     "original_title": "Nino"
   },
   "el acusado|2024": {
-    "url": "",
-    "title_en": "El acusado",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/an-ordinary-case/",
+    "title_en": "An Ordinary Case",
+    "director": "Daniel Auteuil",
+    "country": "France",
+    "year": 2024,
+    "duration": 115,
+    "genre": "Crimen, Drama"
   },
   "luck-key|2016": {
     "url": "https://letterboxd.com/film/luck-key/",
@@ -29679,42 +29680,43 @@
     "original_title": "Su nombre es mujer"
   },
   "dillinger": {
-    "url": "",
+    "url": "https://letterboxd.com/film/dillinger-1973/",
     "title_en": "Dillinger",
     "director": "John Milius",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1973,
     "duration": 107,
-    "genre": "Crimen, Drama",
+    "genre": "Drama, Crimen",
     "original_title": "Dillinger"
   },
   "toda una noche": {
-    "url": "",
-    "title_en": "Toda una noche",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/all-night-long/",
+    "title_en": "All Night Long",
+    "director": "Basil Dearden",
+    "country": "UK",
+    "year": 1962,
+    "duration": 91,
+    "genre": "Drama, Música"
   },
   "cliente muerto no paga": {
-    "url": "",
-    "title_en": "Cliente muerto no paga",
+    "url": "https://letterboxd.com/film/dead-men-dont-wear-plaid/",
+    "title_en": "Dead Men Don't Wear Plaid",
     "director": "Carl Reiner",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1982,
     "duration": 89,
-    "genre": "Comedia, Misterio",
+    "genre": "Misterio, Crimen",
     "title_es": "Cliente muerto no paga",
     "original_title": "Dead Men Don't Wear Plaid"
   },
   "la prisionera": {
-    "url": "",
-    "title_en": "La prisionera",
+    "url": "https://letterboxd.com/film/woman-in-chains/",
+    "title_en": "Woman in Chains",
     "director": "Henri-Georges Clouzot",
     "country": "France, Italy",
     "year": 1968,
     "duration": 106,
-    "genre": "Drama, Romance",
+    "genre": "Romance, Thriller",
     "title_es": "La prisionera",
     "original_title": "La Prisonnière"
   },
@@ -29727,22 +29729,23 @@
     "duration": null
   },
   "verano bizarro": {
-    "url": "",
-    "title_en": "Verano bizarro",
+    "url": "https://letterboxd.com/film/psycho-beach-party/",
+    "title_en": "Psycho Beach Party",
     "director": "Robert Lee King",
-    "country": "Australia, United States of America",
+    "country": "Australia, USA",
     "year": 2000,
     "duration": 97,
-    "genre": "Comedia, Terror",
+    "genre": "Terror, Comedia",
     "original_title": "Psycho Beach Party"
   },
   "la serpiente verde": {
-    "url": "",
-    "title_en": "La serpiente verde",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/green-snake/",
+    "title_en": "Green Snake",
+    "director": "Tsui Hark",
+    "country": "Hong Kong",
+    "year": 1993,
+    "duration": 99,
+    "genre": "Fantasía, Romance"
   },
   "orar orbil & viceversa": {
     "url": "",
@@ -30239,7 +30242,7 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "El amor solfeando",
-    "director": "Robert Florey, Armand Guerra, Florián Rey",
+    "director": "Armand Guerra, Robert Florey, Florián Rey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -32040,12 +32043,13 @@
     "genre": "Drama"
   },
   "queercinemad: gugu’s world": {
-    "url": "",
-    "title_en": "QueerCineMad: Gugu’s world",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/gugus-world/",
+    "title_en": "Gugu's World",
+    "director": "Allan Deberton",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 93,
+    "genre": "Drama"
   },
   "el jorobado de notre dame muda con intertitulos en español|1923": {
     "url": "",
@@ -32217,12 +32221,13 @@
     "sin_hints": "título local de un estreno"
   },
   "¿qué clase de joven le abre la puerta a un vampiro?": {
-    "url": "",
-    "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?",
+    "url": "https://letterboxd.com/film/what-kind-of-kid-opens-the-door-to-a-vampire/",
+    "title_en": "What Kind of Kid Opens the Door to a Vampire?",
     "director": "Boom Boom Kid, Green Martino",
     "country": "Argentina",
     "year": 2026,
     "duration": 115,
+    "genre": "",
     "original_title": "¿Qué clase de joven le abre la puerta a un vampiro?"
   },
   "tiempos de ilusión|2026": {
@@ -32449,12 +32454,13 @@
     "original_title": "Recen por mí: la historia de Francisco"
   },
   "atahualpa yupanqui. un trashumante + juanito el cantor (solo set)": {
-    "url": "",
-    "title_en": "Atahualpa Yupanqui. Un trashumante + Juanito El Cantor (solo set)",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/atahualpa-yupanqui-un-trashumante/",
+    "title_en": "Atahualpa Yupanqui, un trashumante",
+    "director": "Federico Randazzo Abad",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 92,
+    "genre": "Documental"
   },
   "cleo de 5 a 7|1962": {
     "url": "https://letterboxd.com/film/cleo-from-5-to-7/",
@@ -32608,12 +32614,13 @@
     "sin_hints": "título local de un estreno"
   },
   "cuelgamuros: una historia inexplicable": {
-    "url": "",
-    "title_en": "Cuelgamuros: Una historia inexplicable",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/unknown-origins/",
+    "title_en": "Unknown Origins",
+    "director": "David Galán Galindo",
+    "country": "Argentina, Spain",
+    "year": 2020,
+    "duration": 97,
+    "genre": "Thriller, Drama"
   },
   "sucia": {
     "url": "https://letterboxd.com/film/sucia/",
@@ -32708,12 +32715,13 @@
     "duration": null
   },
   "festival rizoma-cherri|2025": {
-    "url": "",
-    "title_en": "FESTIVAL RIZOMA-CHERRI",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/cherri/",
+    "title_en": "Cherri",
+    "director": "Fabián Suárez",
+    "country": "Cuba",
+    "year": 2025,
+    "duration": 77,
+    "genre": ""
   },
   "festival rizoma-casi todo bien": {
     "url": "https://letterboxd.com/film/cool-books/",
@@ -32802,12 +32810,13 @@
     "duration": null
   },
   "festival rizoma-rose|2026": {
-    "url": "",
-    "title_en": "FESTIVAL RIZOMA-ROSE",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/rose-2026/",
+    "title_en": "Rose",
+    "director": "Markus Schleinzer",
+    "country": "Austria, Germany",
+    "year": 2026,
+    "duration": 94,
+    "genre": "Drama, Historia"
   },
   "festival rizoma-la gran fiesta del cine": {
     "url": "",
@@ -32925,36 +32934,40 @@
     "genre": "Bélica, Documental"
   },
   "palestina en pantalla: todo lo que fuimos": {
-    "url": "",
-    "title_en": "Palestina en pantalla: Todo lo que fuimos",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/all-thats-left-of-you/",
+    "title_en": "All That's Left of You",
+    "director": "Cherien Dabis",
+    "country": "Germany, Cyprus",
+    "year": 2025,
+    "duration": 146,
+    "genre": "Drama"
   },
   "palestina en pantalla: pon tu alma en la mano y anda": {
-    "url": "",
-    "title_en": "Palestina en pantalla: Pon tu alma en la mano y anda",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/put-your-soul-on-your-hand-and-walk/",
+    "title_en": "Put Your Soul on Your Hand and Walk",
+    "director": "Sepideh Farsi",
+    "country": "France",
+    "year": 2025,
+    "duration": 113,
+    "genre": "Documental"
   },
   "palestina en pantalla: vals con bashir": {
-    "url": "",
-    "title_en": "Palestina en pantalla: Vals con Bashir",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/waltz-with-bashir/",
+    "title_en": "Waltz with Bashir",
+    "director": "Ari Folman",
+    "country": "Australia, Belgium",
+    "year": 2008,
+    "duration": 90,
+    "genre": "Animación, Documental"
   },
   "palestina en pantalla: no other land": {
-    "url": "",
-    "title_en": "Palestina en pantalla: No Other Land",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/no-other-land/",
+    "title_en": "No Other Land",
+    "director": "Rachel Szor, Hamdan Ballal, Yuval Abraham",
+    "country": "Norway, State of Palestine",
+    "year": 2024,
+    "duration": 96,
+    "genre": "Documental"
   },
   "muguruzafm 40 tour": {
     "url": "https://letterboxd.com/film/muguruza-fm-40-tour/",
@@ -33289,12 +33302,13 @@
     "sin_hints": "título"
   },
   "eika katapa": {
-    "url": "",
-    "title_en": "EIKA KATAPA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/eika-katappa/",
+    "title_en": "Eika Katappa",
+    "director": "Werner Schroeter",
+    "country": "Germany",
+    "year": 1969,
+    "duration": 144,
+    "genre": "Drama"
   },
   "stitching palestine - خيوط ال رد س": {
     "url": "https://letterboxd.com/film/stitching-palestine/",
@@ -33334,12 +33348,13 @@
     "original_title": "El mal padre"
   },
   "16º festival márgenes: biografía de jorge luis borges": {
-    "url": "",
-    "title_en": "16º Festival Márgenes: Biografía de Jorge Luis Borges",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/life-of-jorge-luis-borges/",
+    "title_en": "Life of Jorge Luis Borges",
+    "director": "Mariano Llinás",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 330,
+    "genre": "Documental"
   },
   "el príncipe de nanawa|2025": {
     "url": "https://letterboxd.com/film/el-principe-de-nanawa/",
@@ -33393,13 +33408,13 @@
     "original_title": "Wild Horse Nine"
   },
   "terciopelo azul": {
-    "url": "",
-    "title_en": "Terciopelo azul",
+    "url": "https://letterboxd.com/film/blue-velvet/",
+    "title_en": "Blue Velvet",
     "director": "David Lynch",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1986,
     "duration": 120,
-    "genre": "Misterio, Thriller",
+    "genre": "Crimen, Misterio",
     "title_es": "Terciopelo azul",
     "original_title": "Blue Velvet"
   },
@@ -33425,28 +33440,31 @@
     "original_title": "Le Corset"
   },
   "universo villenueve: incendies": {
-    "url": "",
-    "title_en": "Universo Villenueve: Incendies",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/incendies/",
+    "title_en": "Incendies",
+    "director": "Denis Villeneuve",
+    "country": "Canada, France",
+    "year": 2010,
+    "duration": 131,
+    "genre": "Misterio, Drama"
   },
   "universo villenueve: la llegada": {
-    "url": "",
-    "title_en": "Universo Villenueve: La llegada",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/arrival-2016/",
+    "title_en": "Arrival",
+    "director": "Denis Villeneuve",
+    "country": "USA",
+    "year": 2016,
+    "duration": 116,
+    "genre": "Misterio, Ciencia ficción"
   },
   "universo villenueve: prisioneros": {
-    "url": "",
-    "title_en": "Universo Villenueve: Prisioneros",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/prisoners/",
+    "title_en": "Prisoners",
+    "director": "Denis Villeneuve",
+    "country": "USA",
+    "year": 2013,
+    "duration": 153,
+    "genre": "Thriller, Crimen"
   },
   "queercinemad: test": {
     "url": "https://letterboxd.com/film/test-2026/",
@@ -33630,12 +33648,13 @@
     "sin_hints": "título"
   },
   "marilyn": {
-    "url": "",
+    "url": "https://letterboxd.com/film/marilyn-2018/",
     "title_en": "Marilyn",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Martín Rodríguez Redondo",
+    "country": "Argentina, Chile",
+    "year": 2018,
+    "duration": 80,
+    "genre": "Drama"
   },
   "el llanto del perro": {
     "url": "https://letterboxd.com/film/el-llanto-del-perro/",
@@ -33648,8 +33667,8 @@
     "original_title": "El llanto del perro"
   },
   "desentierros,los libros que no heredamos": {
-    "url": "",
-    "title_en": "DESENTIERROS,LOS LIBROS QUE NO HEREDAMOS",
+    "url": "https://letterboxd.com/film/unearthing-the-books-we-didnt-inherit/",
+    "title_en": "Unearthing. The Books We Didn't Inherit",
     "director": "María Julia Blanco",
     "country": "Argentina",
     "year": 2024,
@@ -33697,5 +33716,36 @@
     "title_es": "Scrooge y los fantasmas de la Navidad",
     "original_title": "Ebenezer",
     "sin_hints": "título y duración"
+  },
+  "nowhere": {
+    "url": "https://letterboxd.com/film/nowhere/",
+    "title_en": "Nowhere",
+    "director": "Gregg Araki",
+    "country": "USA, France",
+    "year": 1997,
+    "duration": 83,
+    "genre": "Comedia, Drama",
+    "original_title": "Nowhere"
+  },
+  "je’vida|2023": {
+    "url": "https://letterboxd.com/film/jevida/",
+    "title_en": "Je'vida",
+    "director": "Katja Gauriloff",
+    "country": "Finland",
+    "year": 2023,
+    "duration": 99,
+    "genre": "Drama",
+    "original_title": "Je'vida"
+  },
+  "orenda|2025": {
+    "url": "https://letterboxd.com/film/orenda/",
+    "title_en": "Orenda",
+    "director": "Pirjo Honkasalo",
+    "country": "Estonia, Finland",
+    "year": 2025,
+    "duration": 117,
+    "genre": "Drama",
+    "title_es": "Orenda",
+    "original_title": "Orenda"
   }
 }
