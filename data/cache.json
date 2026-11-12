@@ -22156,15 +22156,16 @@
     "duration": null
   },
   "la casa": {
-    "url": "https://letterboxd.com/film/la-casa-2025/",
+    "url": "",
     "title_en": "La casa",
-    "director": "Gustavo Triviño",
-    "country": "Argentina",
-    "year": 2025,
-    "duration": 95,
-    "genre": "Drama",
-    "clase_titulo": "exacto",
-    "sin_hints": "el único estreno entre varias que se llaman así"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es La casa (2012), y puede ser otra",
+    "fecha": "2026-11-12",
+    "con_duracion": false,
+    "desempate": ""
   },
   "ficuba": {
     "url": "",
@@ -30242,7 +30243,7 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "El amor solfeando",
-    "director": "Armand Guerra, Robert Florey, Florián Rey",
+    "director": "Armand Guerra, Florián Rey, Robert Florey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -33747,5 +33748,158 @@
     "genre": "Drama",
     "title_es": "Orenda",
     "original_title": "Orenda"
+  },
+  "silvia + criatura": {
+    "url": "",
+    "title_en": "Silvia + Criatura",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mailin + the spiral": {
+    "url": "",
+    "title_en": "Mailin + The Spiral",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ovnis: avistamientos extraños en madrid|2026": {
+    "url": "https://letterboxd.com/film/ovnis-avistamientos-extranos-en-madrid/",
+    "title_en": "Ovnis: Avistamientos Extraños en Madrid",
+    "director": "Alberto Carpintero",
+    "country": "",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Ovnis: Avistamientos Extraños en Madrid"
+  },
+  "smyrna (σμυρνη μου αγαπημενη)|2022": {
+    "url": "https://letterboxd.com/film/smyrna-2022/",
+    "title_en": "Smyrna",
+    "director": "Grigoris Karantinakis",
+    "country": "Greece",
+    "year": 2021,
+    "duration": 138,
+    "genre": "Historia, Drama"
+  },
+  "dignity (με αξιοπρεπεια)|2022": {
+    "url": "https://letterboxd.com/film/dignity-2022/",
+    "title_en": "Dignity",
+    "director": "Dimitris Katsimiris",
+    "country": "Greece",
+    "year": 2022,
+    "duration": 75,
+    "genre": "Drama"
+  },
+  "yo soy rocky": {
+    "url": "https://letterboxd.com/film/i-play-rocky/",
+    "title_en": "I Play Rocky",
+    "director": "Peter Farrelly",
+    "country": "USA, Australia",
+    "year": 2026,
+    "duration": 128,
+    "genre": "Drama, Historia",
+    "clase_titulo": "exacto",
+    "title_es": "Yo soy Rocky",
+    "original_title": "I Play Rocky",
+    "sin_hints": "título y duración"
+  },
+  "puedes verlo todo": {
+    "url": "https://letterboxd.com/film/you-can-see-everything/",
+    "title_en": "You Can See Everything",
+    "director": "Nathan Fielder, Lance Oppenheim",
+    "country": "USA",
+    "year": 2026,
+    "duration": 174,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "title_es": "Puedes verlo todo",
+    "original_title": "You Can See Everything",
+    "sin_hints": "título y duración"
+  },
+  "nmixx 1st world tour episode 1": {
+    "url": "",
+    "title_en": "NMIXX 1ST WORLD TOUR EPISODE 1",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "🇪🇸 el bosco, el jardín de los sueños|2016": {
+    "url": "https://letterboxd.com/film/el-bosco-el-jardin-de-los-suenos/",
+    "title_en": "Bosch: The Garden of Dreams",
+    "director": "José Luis López-Linares",
+    "country": "France, Spain",
+    "year": 2016,
+    "duration": 90,
+    "genre": "Documental"
+  },
+  "🇮🇹 after dive, una vida sincronizada|2023": {
+    "url": "",
+    "title_en": "🇮🇹 AFTER DIVE, UNA VIDA SINCRONIZADA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "🇷🇴 kontinental '25|2025": {
+    "url": "https://letterboxd.com/film/kontinental-25/",
+    "title_en": "Kontinental '25",
+    "director": "Radu Jude",
+    "country": "Romania, Brazil",
+    "year": 2025,
+    "duration": 109,
+    "genre": "Drama, Comedia"
+  },
+  "🇫🇷 tiempos de ilusión|2026": {
+    "url": "https://letterboxd.com/film/just-an-illusion-2026/",
+    "title_en": "Just an Illusion",
+    "director": "Olivier Nakache, Éric Toledano",
+    "country": "France",
+    "year": 2026,
+    "duration": 119,
+    "genre": "Comedia, Drama"
+  },
+  "🇦🇷 la casa|2025": {
+    "url": "",
+    "title_en": "🇦🇷 LA CASA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "🇪🇸 una quinta en portugal|2025": {
+    "url": "https://letterboxd.com/film/the-portuguese-house/",
+    "title_en": "The Portuguese House",
+    "director": "Avelina Prat",
+    "country": "Spain, Portugal",
+    "year": 2025,
+    "duration": 114,
+    "genre": "Drama"
+  },
+  "🇮🇹 tres adioses|2025": {
+    "url": "https://letterboxd.com/film/three-goodbyes/",
+    "title_en": "Three Goodbyes",
+    "director": "Isabel Coixet",
+    "country": "Italy, Spain",
+    "year": 2025,
+    "duration": 122,
+    "genre": "Romance, Drama"
+  },
+  "ebenezer": {
+    "url": "https://letterboxd.com/film/ebenezer-2026/",
+    "title_en": "Ebenezer",
+    "director": "Ti West",
+    "country": "USA, UK",
+    "year": 2026,
+    "duration": 115,
+    "genre": "Comedia, Fantasía",
+    "clase_titulo": "exacto",
+    "title_es": "Scrooge y los fantasmas de la Navidad",
+    "original_title": "Ebenezer",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   }
 }
