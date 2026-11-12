@@ -33828,7 +33828,7 @@
     "year": null,
     "duration": null
   },
-  "🇪🇸 el bosco, el jardín de los sueños|2016": {
+  "el bosco, el jardín de los sueños|2016": {
     "url": "https://letterboxd.com/film/el-bosco-el-jardin-de-los-suenos/",
     "title_en": "Bosch: The Garden of Dreams",
     "director": "José Luis López-Linares",
@@ -33836,58 +33836,6 @@
     "year": 2016,
     "duration": 90,
     "genre": "Documental"
-  },
-  "🇮🇹 after dive, una vida sincronizada|2023": {
-    "url": "",
-    "title_en": "🇮🇹 AFTER DIVE, UNA VIDA SINCRONIZADA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
-  },
-  "🇷🇴 kontinental '25|2025": {
-    "url": "https://letterboxd.com/film/kontinental-25/",
-    "title_en": "Kontinental '25",
-    "director": "Radu Jude",
-    "country": "Romania, Brazil",
-    "year": 2025,
-    "duration": 109,
-    "genre": "Drama, Comedia"
-  },
-  "🇫🇷 tiempos de ilusión|2026": {
-    "url": "https://letterboxd.com/film/just-an-illusion-2026/",
-    "title_en": "Just an Illusion",
-    "director": "Olivier Nakache, Éric Toledano",
-    "country": "France",
-    "year": 2026,
-    "duration": 119,
-    "genre": "Comedia, Drama"
-  },
-  "🇦🇷 la casa|2025": {
-    "url": "",
-    "title_en": "🇦🇷 LA CASA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
-  },
-  "🇪🇸 una quinta en portugal|2025": {
-    "url": "https://letterboxd.com/film/the-portuguese-house/",
-    "title_en": "The Portuguese House",
-    "director": "Avelina Prat",
-    "country": "Spain, Portugal",
-    "year": 2025,
-    "duration": 114,
-    "genre": "Drama"
-  },
-  "🇮🇹 tres adioses|2025": {
-    "url": "https://letterboxd.com/film/three-goodbyes/",
-    "title_en": "Three Goodbyes",
-    "director": "Isabel Coixet",
-    "country": "Italy, Spain",
-    "year": 2025,
-    "duration": 122,
-    "genre": "Romance, Drama"
   },
   "ebenezer": {
     "url": "https://letterboxd.com/film/ebenezer-2026/",
@@ -33911,5 +33859,13 @@
     "duration": 106,
     "genre": "Drama",
     "original_title": "Pioneras: solo querían jugar"
+  },
+  "after dive, una vida sincronizada|2023": {
+    "url": "",
+    "title_en": "AFTER DIVE, UNA VIDA SINCRONIZADA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
