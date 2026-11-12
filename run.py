@@ -119,7 +119,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_filo, scrape_bn, scrape_cc25, scrape_ccd, scrape_cb,
         scrape_borges, scrape_bcn, scrape_agn, scrape_bellasartes, scrape_lorca_cartel,
         scrape_sala_lucida, scrape_manual, descartar_manual, aplicar_festivales,
-        titulo_norm, misma_pelicula,
+        titulo_norm, misma_pelicula, limpiar_banderas,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
         scrape_moderno,
         scrape_dore, scrape_ideal, scrape_cineteca, scrape_renoir,
@@ -490,6 +490,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         lb_browser = await pw.chromium.launch(headless=True)
         lb_ctx = await lb_browser.new_context(user_agent=UA)
         lb_page = await lb_ctx.new_page()
+
+        # Ninguna bandera en los títulos, venga del cine que venga
+        # (scraper.sin_banderas). Antes de todo lo que mira el título: los
+        # descartes manuales, la búsqueda en TMDb y Letterboxd, y el casing,
+        # que con la bandera de primera palabra dejaba "🇦🇷 la Casa".
+        n_banderas = sum(limpiar_banderas(s) for s in all_screenings)
+        if n_banderas:
+            print(f"  ↳ {n_banderas} funciones traían banderas en el título (se sacaron)")
 
         # Descartes manuales ANTES del enrichment: las funciones mal scrapeadas
         # (p.ej. un programa doble en un solo título) no tienen match posible en
@@ -946,6 +954,12 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
                       f"+{restored_today} funciones de hoy preservadas")
         except Exception as e:
             print(f"  ↳ Merge omitido: {e}")
+
+    # Y las banderas otra vez, sobre la lista final: también las reciben las
+    # funciones que el merge revivió de la corrida anterior y lo que haya
+    # escrito un override a mano. Antes del dedupe, que compara títulos.
+    for s in screenings_out:
+        limpiar_banderas(s)
 
     # Si el Lorca salió de La Nación, se contrasta con lo que sí se leyó de su
     # cartel. Va sobre la lista final porque el merge revive las funciones de

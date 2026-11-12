@@ -4181,6 +4181,9 @@ def scrape_cosmos(semanas: int = 2) -> list[Screening]:
 #   (según la web, El amor que permanece iba el miércoles). Una sala no da dos
 #   películas a la vez: gana la aclaración más precisa (la fecha con número) y,
 #   si empatan, ese día no sale ninguna.
+# - El renglón del título. Desde el post de la semana del 12/11/2026 la bandera
+#   del país va también al lado del nombre ("🎬 🇷🇴 KONTINENTAL '25"), y salió
+#   así a la web y a las stories. Se saca con sin_banderas, como en run.py.
 # ---------------------------------------------------------------------------
 
 COSMOS_IG_USUARIO = "cinecosmos.uba"
@@ -4305,7 +4308,7 @@ def _cosmos_ig_parse(caption: str, publicado: date, url: str = ""
     actual = None
     for linea in lineas:
         if linea.startswith("🎬"):
-            actual = {"title": linea.lstrip("🎬").strip(" ️\"'“”"), "director": "",
+            actual = {"title": sin_banderas(linea.lstrip("🎬")).strip(" ️\"'“”"), "director": "",
                       "country": "", "year": None, "duration": None, "horarios": []}
             peliculas.append(actual)
             continue
@@ -9552,6 +9555,54 @@ def misma_pelicula(a: str, b: str) -> bool:
         return True
     corto, largo = sorted((a, b), key=len)
     return len(corto) >= 8 and f" {corto} " in f" {largo} "
+
+
+# Ninguna bandera en la web, venga del cine que venga: Mateo nunca las pidió
+# ("sacar las banderas siempre que haya", 12/11/2026). El post del Cosmos de la
+# semana del 12/11 se las pegó a los títulos ("🎬 🇷🇴 KONTINENTAL '25") y
+# salieron a la web y a las stories. Además, como la bandera quedaba de primera
+# palabra, el artículo que seguía salía en minúscula ("🇦🇷 la Casa") y la
+# búsqueda en TMDb y Letterboxd se hacía con la bandera adentro.
+_BANDERAS_RE = re.compile(
+    "\U0001F3F4[\U000E0020-\U000E007F]+"                   # 🏴 con letras de etiqueta: Escocia, Gales, Inglaterra
+    "|[\U0001F1E6-\U0001F1FF]\uFE0F?"                      # 🇦🇷: dos letras regionales
+    "|[\U0001F3F3\U0001F3F4]\uFE0F?(?:\u200D[\u2620\u26A7\U0001F308]\uFE0F?)?"  # 🏳️ 🏴 🏳️‍🌈 🏳️‍⚧️ 🏴‍☠️
+    "|[\U0001F3C1\U0001F6A9\U0001F38C]\uFE0F?"             # 🏁 🚩 🎌
+)
+# Los campos de texto que se publican, de un Screening o de una fila de
+# cartelera.json.
+_CAMPOS_SIN_BANDERAS = ("title", "title_es", "title_en", "original_title",
+                        "director", "country", "ciclo")
+
+
+def sin_banderas(texto: str) -> str:
+    """Saca las banderas: "🇷🇴 KONTINENTAL '25" → "KONTINENTAL '25".
+
+    Sin banderas devuelve el texto tal cual. Con, se lleva también lo que
+    quedó colgando en las puntas (el espacio, un "|" o un guion que la
+    separaba del título) y un paréntesis que quedó vacío. Otros emojis no son
+    banderas y no se tocan."""
+    if not texto or not _BANDERAS_RE.search(texto):
+        return texto
+    limpio = re.sub(r"\(\s*\)|\[\s*\]", " ", _BANDERAS_RE.sub(" ", texto))
+    return re.sub(r"\s+", " ", limpio).strip(" |·,/-–—")
+
+
+def limpiar_banderas(funcion) -> bool:
+    """Le saca las banderas a los campos de texto de una función, sea un
+    Screening o una fila de cartelera.json. Devuelve si cambió algo."""
+    cambio = False
+    for campo in _CAMPOS_SIN_BANDERAS:
+        es_fila = isinstance(funcion, dict)
+        valor = funcion.get(campo) if es_fila else getattr(funcion, campo, None)
+        if not isinstance(valor, str) or sin_banderas(valor) == valor:
+            continue
+        if es_fila:
+            funcion[campo] = sin_banderas(valor)
+        else:
+            setattr(funcion, campo, sin_banderas(valor))
+        cambio = True
+    return cambio
 
 
 def aplicar_festivales(screenings: list, data: Optional[dict] = None) -> tuple[list, int]:

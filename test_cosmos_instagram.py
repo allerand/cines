@@ -137,6 +137,18 @@ _, _, f = _cosmos_ig_parse(cerrado, date(2026, 10, 21))
 assert len(f) == 8 * 6 and not [s for s in f if s.fecha == "2026-10-26"]
 print("✓ aclaración ilegible y aviso de cierre: sólo se pierde lo que tocan")
 
+# Desde el post de la semana del 12/11/2026 la bandera también va en el renglón
+# del título ("🎬 🇷🇴 KONTINENTAL '25") y salía pegada al nombre. Pegada, con
+# espacio o al final: la película es la misma de siempre.
+con_banderas = (POSTS["Dexbjv5CWmc"]["caption"]
+                .replace("🎬 LA INVITACIÓN", "🎬 🇺🇸 LA INVITACIÓN")
+                .replace("🎬 TRES ADIOSES", "🎬🇮🇹 TRES ADIOSES")
+                .replace("🎬 HANGAR ROJO", "🎬 HANGAR ROJO 🇨🇱"))
+_, _, f = _cosmos_ig_parse(con_banderas, date(2026, 10, 21))
+assert por_pelicula(f) == por_pelicula(oct22), por_pelicula(f)
+assert next(s for s in f if s.title == "HANGAR ROJO").country == "Chile"
+print("✓ 12/11: la bandera al lado del título no se publica")
+
 
 # --- scrape_cosmos_instagram, con la respuesta de la API -----------------------
 pedidos = []
