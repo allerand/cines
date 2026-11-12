@@ -28022,7 +28022,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
+    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -29677,7 +29677,7 @@
     "country": "Argentina",
     "year": 1940,
     "duration": 66,
-    "genre": "",
+    "genre": "Drama",
     "original_title": "Su nombre es mujer"
   },
   "dillinger": {
@@ -30243,7 +30243,7 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "El amor solfeando",
-    "director": "Armand Guerra, Florián Rey, Robert Florey",
+    "director": "Robert Florey, Armand Guerra, Florián Rey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -33901,5 +33901,15 @@
     "title_es": "Scrooge y los fantasmas de la Navidad",
     "original_title": "Ebenezer",
     "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "pioneras: solo querían jugar": {
+    "url": "https://letterboxd.com/film/pioneras-solo-querian-jugar/",
+    "title_en": "Another League",
+    "director": "Marta Díaz de Lope Díaz",
+    "country": "Spain, Portugal",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Drama",
+    "original_title": "Pioneras: solo querían jugar"
   }
 }
