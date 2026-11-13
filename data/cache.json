@@ -15147,7 +15147,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930)",
-    "fecha": "2026-11-09",
+    "fecha": "2026-11-13",
     "con_duracion": false,
     "desempate": ""
   },
@@ -28022,7 +28022,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
+    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -28055,7 +28055,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: I Slept With a Ghost (1949), I Walked with a Zombie (1943)",
-    "fecha": "2026-11-09",
+    "fecha": "2026-11-13",
     "con_duracion": false,
     "desempate": ""
   },
@@ -30222,7 +30222,7 @@
   },
   "la belle marinière|1932": {
     "url": "",
-    "title_en": "LA BELLE MARINIÈRE",
+    "title_en": "La belle marinière",
     "director": "Harry Lachman",
     "country": "France",
     "year": 1932,
@@ -30243,7 +30243,7 @@
   "el amor solfeando|1930": {
     "url": "",
     "title_en": "El amor solfeando",
-    "director": "Robert Florey, Armand Guerra, Florián Rey",
+    "director": "Armand Guerra, Robert Florey, Florián Rey",
     "country": "France, Germany",
     "year": 1930,
     "duration": 85,
@@ -30767,7 +30767,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-09",
+    "fecha": "2026-11-13",
     "con_duracion": false,
     "desempate": ""
   },
@@ -31249,12 +31249,13 @@
     "duration": null
   },
   "ffestival rizoma-filipiñana|2026": {
-    "url": "",
-    "title_en": "FFESTIVAL RIZOMA-FILIPIÑANA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/filipinana-2026/",
+    "title_en": "Filipiñana",
+    "director": "Rafael Manuel",
+    "country": "Philippines, Singapore",
+    "year": 2026,
+    "duration": 101,
+    "genre": "Misterio, Drama"
   },
   "ffestival rizoma-las mantis|2026": {
     "url": "",
@@ -32260,7 +32261,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: The Apartment (2023), The Apartment (1960)",
-    "fecha": "2026-11-09",
+    "fecha": "2026-11-13",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33626,14 +33627,14 @@
   },
   "ju-on: el grito": {
     "url": "",
-    "title_en": "JU-ON: EL GRITO",
+    "title_en": "Ju-on: El grito",
     "director": "",
     "country": "",
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Beginning of the End (2014)",
-    "fecha": "2026-11-11",
-    "con_duracion": true,
+    "fecha": "2026-11-13",
+    "con_duracion": false,
     "desempate": ""
   },
   "por el bien de adam": {
@@ -33823,10 +33824,13 @@
   "nmixx 1st world tour episode 1": {
     "url": "",
     "title_en": "NMIXX 1ST WORLD TOUR EPISODE 1",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Yoon Dong Oh",
+    "country": "South Korea",
+    "year": 2026,
+    "duration": 210,
+    "genre": "Música",
+    "original_title": "NMIXX 1ST WORLD TOUR 〈EPISODE 1: ZERO FRONTIER〉 FINALE IN INCHEON LIVE VIEWING",
+    "sin_hints": "título y duración"
   },
   "el bosco, el jardín de los sueños|2016": {
     "url": "https://letterboxd.com/film/el-bosco-el-jardin-de-los-suenos/",
@@ -33867,5 +33871,68 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "movimiento|2025": {
+    "url": "https://letterboxd.com/film/movimiento/",
+    "title_en": "Movimiento",
+    "director": "Federico Barrios",
+    "country": "",
+    "year": null,
+    "duration": 93,
+    "genre": "",
+    "clase_titulo": "exacto",
+    "original_title": "Movimiento"
+  },
+  "eika katappa": {
+    "url": "https://letterboxd.com/film/eika-katappa/",
+    "title_en": "Eika Katappa",
+    "director": "Werner Schroeter",
+    "country": "Germany",
+    "year": 1969,
+    "duration": 144,
+    "genre": "Drama",
+    "original_title": "Eika Katappa"
+  },
+  "ricky espinosa: el documental": {
+    "url": "https://letterboxd.com/film/ricky-espinosa-el-documental/",
+    "title_en": "Ricky Espinosa: El Documental",
+    "director": "Juan Pablo Duarte",
+    "country": "Argentina",
+    "year": 2015,
+    "duration": 83,
+    "genre": "Música, Documental",
+    "original_title": "Ricky Espinosa: El Documental"
+  },
+  "nuestra juventud": {
+    "url": "https://letterboxd.com/film/unsere-kinder/",
+    "title_en": "Our Children",
+    "director": "Roland Steiner",
+    "country": "East Germany",
+    "year": 1989,
+    "duration": 88,
+    "genre": "Documental",
+    "original_title": "Unsere Kinder"
+  },
+  "the chosen|2026": {
+    "url": "https://letterboxd.com/film/the-chosen-resurrection/",
+    "title_en": "The Chosen: Resurrection",
+    "director": "Dallas Jenkins",
+    "country": "USA",
+    "year": 2028,
+    "duration": 52,
+    "genre": "Historia, Drama",
+    "original_title": "The Chosen: Season 6 Premiere"
+  },
+  "your name": {
+    "url": "",
+    "title_en": "Your Name",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Your Name. (2016), y puede ser otra",
+    "fecha": "2026-11-13",
+    "con_duracion": false,
+    "desempate": ""
   }
 }

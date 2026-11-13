@@ -1,32 +1,42 @@
 {
+  "https://complejoteatral.gob.ar/produccion/andrzej-wajda-bis/": {
+    "ticket_url": "",
+    "titulo": "Andrzej Wajda bis",
+    "visto": "2026-11-13"
+  },
   "https://complejoteatral.gob.ar/produccion/cinco-tardes-con-ernst-lubitsch/": {
     "ticket_url": "",
     "titulo": "Cinco tardes con Ernst Lubitsch",
-    "visto": "2026-11-12"
+    "visto": "2026-11-13"
   },
   "https://complejoteatral.gob.ar/produccion/desde-finlandia-con-amor-3/": {
     "ticket_url": "",
     "titulo": "Desde Finlandia con amor",
-    "visto": "2026-11-12"
+    "visto": "2026-11-13"
   },
   "https://complejoteatral.gob.ar/produccion/el-tren-fluvial-2/": {
-    "ticket_url": "",
+    "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/2d4ff5e7-a693-4a59-b8c2-3a2065b12e1c",
     "titulo": "El tren fluvial",
-    "visto": "2026-11-12"
+    "visto": "2026-11-13"
+  },
+  "https://complejoteatral.gob.ar/produccion/grandes-actrices-de-la-epoca-dorada-del-cine-japones/": {
+    "ticket_url": "",
+    "titulo": "Grandes actrices de la época dorada del cine japonés",
+    "visto": "2026-11-13"
   },
   "https://complejoteatral.gob.ar/produccion/herzog-kinski-enemigo-mio/": {
     "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
     "titulo": "Herzog-Kinski: enemigo mío",
-    "visto": "2026-11-12"
+    "visto": "2026-11-13"
   },
   "https://complejoteatral.gob.ar/produccion/homenaje-a-john-huston/": {
     "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
     "titulo": "Homenaje a John Huston",
-    "visto": "2026-11-12"
+    "visto": "2026-11-13"
   },
   "https://complejoteatral.gob.ar/produccion/museo-de-la-subversion/": {
     "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/be6db56b-f728-4acb-b4e2-0f6374a0fe11",
     "titulo": "Museo de la subversión",
-    "visto": "2026-11-12"
+    "visto": "2026-11-13"
   }
 }
