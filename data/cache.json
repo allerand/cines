@@ -28022,7 +28022,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
+    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -33934,5 +33934,115 @@
     "fecha": "2026-11-13",
     "con_duracion": false,
     "desempate": ""
+  },
+  "cristal oscuro|1982": {
+    "url": "https://letterboxd.com/film/the-dark-crystal/",
+    "title_en": "The Dark Crystal",
+    "director": "Jim Henson, Frank Oz",
+    "country": "UK, USA",
+    "year": 1982,
+    "duration": 93,
+    "genre": "Fantasía, Aventura",
+    "title_es": "Cristal oscuro",
+    "original_title": "The Dark Crystal"
+  },
+  "pesadilla antes de navidad|1993": {
+    "url": "https://letterboxd.com/film/the-nightmare-before-christmas/",
+    "title_en": "The Nightmare Before Christmas",
+    "director": "Henry Selick",
+    "country": "USA",
+    "year": 1993,
+    "duration": 76,
+    "genre": "Familiar, Animación",
+    "clase_titulo": "exacto",
+    "title_es": "Pesadilla antes de Navidad",
+    "original_title": "The Nightmare Before Christmas",
+    "sin_hints": "título y duración"
+  },
+  "los teleñecos conquistan manhattan|1984": {
+    "url": "https://letterboxd.com/film/the-muppets-take-manhattan/",
+    "title_en": "The Muppets Take Manhattan",
+    "director": "Frank Oz",
+    "country": "USA",
+    "year": 1984,
+    "duration": 94,
+    "genre": "Familiar, Comedia",
+    "title_es": "Los Teleñecos conquistan Manhattan",
+    "original_title": "The Muppets Take Manhattan"
+  },
+  "dentro del laberinto|1986": {
+    "url": "https://letterboxd.com/film/labyrinth/",
+    "title_en": "Labyrinth",
+    "director": "Jim Henson",
+    "country": "UK, USA",
+    "year": 1986,
+    "duration": 101,
+    "genre": "Aventura, Familiar",
+    "title_es": "Dentro del laberinto",
+    "original_title": "Labyrinth"
+  },
+  "los teleñecos en cuento de navidad|1992": {
+    "url": "https://letterboxd.com/film/the-muppet-christmas-carol/",
+    "title_en": "The Muppet Christmas Carol",
+    "director": "Brian Henson",
+    "country": "USA",
+    "year": 1992,
+    "duration": 86,
+    "genre": "Drama, Familiar",
+    "title_es": "Los Teleñecos en Cuento de Navidad",
+    "original_title": "The Muppet Christmas Carol"
+  },
+  "los teleñecos en la isla del tesoro|1996": {
+    "url": "https://letterboxd.com/film/muppet-treasure-island/",
+    "title_en": "Muppet Treasure Island",
+    "director": "Brian Henson",
+    "country": "USA",
+    "year": 1996,
+    "duration": 100,
+    "genre": "Familiar, Comedia",
+    "title_es": "Los teleñecos en la Isla del Tesoro",
+    "original_title": "Muppet Treasure Island"
+  },
+  "los muppets|2011": {
+    "url": "https://letterboxd.com/film/the-muppets/",
+    "title_en": "The Muppets",
+    "director": "James Bobin",
+    "country": "USA",
+    "year": 2011,
+    "duration": 103,
+    "genre": "Familiar, Comedia",
+    "title_es": "Los Muppets",
+    "original_title": "The Muppets"
+  },
+  "el tour de los muppets|2014": {
+    "url": "https://letterboxd.com/film/muppets-most-wanted/",
+    "title_en": "Muppets Most Wanted",
+    "director": "James Bobin",
+    "country": "USA",
+    "year": 2014,
+    "duration": 107,
+    "genre": "Aventura, Familiar",
+    "title_es": "El tour de los Muppets",
+    "original_title": "Muppets Most Wanted"
+  },
+  "the rocky horror picture show": {
+    "url": "https://letterboxd.com/film/the-rocky-horror-picture-show/",
+    "title_en": "The Rocky Horror Picture Show",
+    "director": "Jim Sharman",
+    "country": "UK, USA",
+    "year": 1975,
+    "duration": 100,
+    "genre": "Terror, Comedia",
+    "title_es": "El Show de Terror de Rocky",
+    "original_title": "The Rocky Horror Picture Show"
+  },
+  "queercinemad: taiga": {
+    "url": "https://letterboxd.com/film/tiger-2025-2/",
+    "title_en": "Tiger",
+    "director": "Anshul Chauhan",
+    "country": "Japan",
+    "year": 2025,
+    "duration": 127,
+    "genre": "Drama"
   }
 }

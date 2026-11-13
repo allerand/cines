@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T03:43:34",
+  "updated": "2026-11-13T11:54:11",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 20,
@@ -22,7 +22,7 @@
       "publicadas": 4
     },
     "CCK": {
-      "scrapeadas": 0,
+      "scrapeadas": 16,
       "publicadas": 16
     },
     "Cacodelphia": {
@@ -39,8 +39,8 @@
       "publicadas": 4
     },
     "Centro Cultural Borges": {
-      "scrapeadas": 0,
-      "publicadas": 20
+      "scrapeadas": 21,
+      "publicadas": 21
     },
     "Centro Cultural Munro": {
       "scrapeadas": 11,
@@ -89,7 +89,7 @@
     },
     "Cinépolis Recoleta": {
       "scrapeadas": 45,
-      "publicadas": 45
+      "publicadas": 46
     },
     "Filo Cine": {
       "scrapeadas": 9,
@@ -116,8 +116,8 @@
       "publicadas": 36
     },
     "Multiplex Belgrano": {
-      "scrapeadas": 496,
-      "publicadas": 496
+      "scrapeadas": 501,
+      "publicadas": 501
     },
     "Multiplex Canning": {
       "scrapeadas": 414,
@@ -140,8 +140,8 @@
       "publicadas": 12
     },
     "Showcase Belgrano": {
-      "scrapeadas": 41,
-      "publicadas": 41
+      "scrapeadas": 40,
+      "publicadas": 44
     }
   },
   "screenings": [
@@ -1810,6 +1810,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-11-13",
+      "hora": "14:40",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-11-13",
       "hora": "14:45",
@@ -3426,22 +3442,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Showcase Belgrano",
-      "fecha": "2026-11-13",
-      "hora": "17:00",
-      "title_es": "Verity. La sombra de un engaño",
-      "title_en": "Verity",
-      "original_title": "Verity",
-      "director": "Michael Showalter",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 114,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/verity-2026/",
-      "ticket_url": "https://www.todoshowcase.com/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cacodelphia",
       "fecha": "2026-11-13",
       "hora": "17:00",
@@ -3455,6 +3455,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b373bf0da3553450e714b6bd76bfd757",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-11-13",
+      "hora": "17:00",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -5124,6 +5140,22 @@
     {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-13",
+      "hora": "19:20",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-11-13",
       "hora": "19:25",
       "title_es": "El gato con sombrero",
       "title_en": "The Cat in the Hat",
@@ -5743,6 +5775,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/proyecto-faim/",
       "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6414",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-13",
+      "hora": "20:00",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -6911,6 +6959,22 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Showcase Belgrano",
+      "fecha": "2026-11-13",
+      "hora": "22:00",
+      "title_es": "Verity. La sombra de un engaño",
+      "title_en": "Verity",
+      "original_title": "Verity",
+      "director": "Michael Showalter",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 114,
+      "genre": "Misterio, Thriller",
+      "letterboxd": "https://letterboxd.com/film/verity-2026/",
+      "ticket_url": "https://www.todoshowcase.com/",
       "ciclo": ""
     },
     {
@@ -10898,22 +10962,6 @@
       "ciclo": "Ciclo de Cine solidario: Todos con Venezuela"
     },
     {
-      "cine": "Cacodelphia",
-      "fecha": "2026-11-14",
-      "hora": "17:00",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereira",
-      "country": "España, Francia",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b373bf0da3553450e714b6bd76bfd757",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-14",
       "hora": "17:00",
@@ -10928,6 +10976,22 @@
       "letterboxd": "https://letterboxd.com/film/from-the-neighbourhood/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
       "ciclo": "Cine en La Noche de los Museos"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-11-14",
+      "hora": "17:00",
+      "title_es": "La cena",
+      "title_en": "The Dinner",
+      "original_title": "La cena",
+      "director": "Manuel Gómez Pereira",
+      "country": "España, Francia",
+      "year": 2025,
+      "duration": 106,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b373bf0da3553450e714b6bd76bfd757",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Borges",
@@ -12162,22 +12226,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cacodelphia",
-      "fecha": "2026-11-14",
-      "hora": "19:00",
-      "title_es": "Tierra de mi padre",
-      "title_en": "Fatherland",
-      "original_title": "Ojczyzna",
-      "director": "Paweł Pawlikowski",
-      "country": "Polonia, Alemania",
-      "year": 2026,
-      "duration": 82,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
-      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/8a44ff667e318be8b9408246796fbfdf",
-      "ciclo": ""
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-14",
       "hora": "19:00",
@@ -12192,6 +12240,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
       "ciclo": "Cine en La Noche de los Museos"
+    },
+    {
+      "cine": "Cacodelphia",
+      "fecha": "2026-11-14",
+      "hora": "19:00",
+      "title_es": "Tierra de mi padre",
+      "title_en": "Fatherland",
+      "original_title": "Ojczyzna",
+      "director": "Paweł Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/8a44ff667e318be8b9408246796fbfdf",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Borges",
@@ -12866,22 +12930,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-14",
-      "hora": "20:00",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-14",
       "hora": "20:00",
@@ -12896,6 +12944,22 @@
       "letterboxd": "",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-en-la-noche-de-los-museos/",
       "ciclo": "Cine en La Noche de los Museos"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-14",
+      "hora": "20:00",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "Hoyts Abasto",
@@ -18306,6 +18370,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-15",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-15",
       "hora": "18:00",
@@ -18336,22 +18416,6 @@
       "letterboxd": "https://letterboxd.com/film/my-best-fiend/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
       "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-15",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -44994,6 +45058,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-21",
+      "hora": "13:00",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-21",
       "hora": "13:00",
@@ -45231,6 +45311,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-21",
+      "hora": "15:25",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
       "ciclo": ""
     },
     {
@@ -45650,6 +45746,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-21",
+      "hora": "17:50",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-21",
       "hora": "17:50",
@@ -45952,6 +46064,22 @@
       "letterboxd": "https://letterboxd.com/film/simon-de-la-montana/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/miradas-contemporaneas-luis-ortega-federico-luis/",
       "ciclo": "Miradas contemporáneas:Luis Ortega / Federico Luis"
+    },
+    {
+      "cine": "Centro Cultural Borges",
+      "fecha": "2026-11-21",
+      "hora": "19:00",
+      "title_es": "Piazzolla, los años del tiburón",
+      "title_en": "Piazzolla: The Years of the Shark",
+      "original_title": "Piazzolla: los años del tiburón",
+      "director": "Daniel Rosenfeld",
+      "country": "Argentina",
+      "year": 2018,
+      "duration": 90,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/piazzolla-los-anos-del-tiburon/",
+      "ticket_url": "https://centroculturalborges.gob.ar/evento/524",
+      "ciclo": ""
     },
     {
       "cine": "Centro Cultural Borges",
@@ -46319,6 +46447,22 @@
       "genre": "Música",
       "letterboxd": "https://letterboxd.com/film/bts-world-tour-arirang-in-buenos-aires/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-21",
+      "hora": "20:15",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
       "ciclo": ""
     },
     {
@@ -46767,6 +46911,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-21",
+      "hora": "22:40",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
       "ciclo": ""
     },
     {
@@ -47298,22 +47458,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "15:00",
-      "title_es": "La burla del diablo",
-      "title_en": "Beat the Devil",
-      "original_title": "Beat the Devil",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido/Italia",
-      "year": 1953,
-      "duration": 95,
-      "genre": "Aventura, Crimen",
-      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "15:00",
@@ -47328,6 +47472,22 @@
       "letterboxd": "https://letterboxd.com/film/an-ordinary-case/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "15:00",
+      "title_es": "La burla del diablo",
+      "title_en": "Beat the Devil",
+      "original_title": "Beat the Devil",
+      "director": "John Huston",
+      "country": "EE.UU/Reino Unido/Italia",
+      "year": 1953,
+      "duration": 95,
+      "genre": "Aventura, Crimen",
+      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Hoyts Abasto",
@@ -47794,22 +47954,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "17:30",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
-      "ciclo": "Herzog-Kinski: enemigo mío"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "17:30",
@@ -47824,6 +47968,22 @@
       "letterboxd": "https://letterboxd.com/film/maman-dechire/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-22",
+      "hora": "17:30",
+      "title_es": "Fitzcarraldo",
+      "title_en": "Fitzcarraldo",
+      "original_title": "Fitzcarraldo",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/Perú",
+      "year": 1982,
+      "duration": 157,
+      "genre": "Aventura, Drama",
+      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -55666,22 +55826,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "15:00",
-      "title_es": "La noche de la iguana",
-      "title_en": "The Night of the Iguana",
-      "original_title": "The Night of the Iguana",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1964,
-      "duration": 118,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-29",
       "hora": "15:00",
@@ -55696,6 +55840,22 @@
       "letterboxd": "https://letterboxd.com/film/nino-2025/",
       "ticket_url": "https://palaciolibertad.gob.ar/events/cine-frances/",
       "ciclo": "Cine francés"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-29",
+      "hora": "15:00",
+      "title_es": "La noche de la iguana",
+      "title_en": "The Night of the Iguana",
+      "original_title": "The Night of the Iguana",
+      "director": "John Huston",
+      "country": "Estados Unidos",
+      "year": 1964,
+      "duration": 118,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "MALBA",
@@ -55778,6 +55938,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CCK",
+      "fecha": "2026-11-29",
+      "hora": "18:00",
+      "title_es": "The Host",
+      "title_en": "The Host",
+      "original_title": "괴물",
+      "director": "Bong Joon-ho",
+      "country": "Corea del Sur",
+      "year": 2006,
+      "duration": 120,
+      "genre": "Drama, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-host/",
+      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
+      "ciclo": "Cine coreano"
+    },
+    {
       "cine": "Centro Cultural Recoleta",
       "fecha": "2026-11-29",
       "hora": "18:00",
@@ -55824,22 +56000,6 @@
       "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
       "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "CCK",
-      "fecha": "2026-11-29",
-      "hora": "18:00",
-      "title_es": "The Host",
-      "title_en": "The Host",
-      "original_title": "괴물",
-      "director": "Bong Joon-ho",
-      "country": "Corea del Sur",
-      "year": 2006,
-      "duration": 120,
-      "genre": "Drama, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-host/",
-      "ticket_url": "https://palaciolibertad.gob.ar/events/cine-coreano/",
-      "ciclo": "Cine coreano"
     },
     {
       "cine": "Centro Cultural Munro",
