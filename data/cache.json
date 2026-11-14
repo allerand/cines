@@ -114,7 +114,11 @@
     "country": "Argentina, France",
     "year": 2008,
     "duration": 87,
-    "genre": "Misterio, Drama"
+    "genre": "Misterio, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "La mujer rubia",
+    "original_title": "La mujer sin cabeza",
+    "sin_hints": "la más nueva que se llama así"
   },
   "peões": {
     "url": "https://letterboxd.com/film/peoes/",
@@ -372,7 +376,8 @@
     "country": "",
     "year": 2025,
     "duration": 77,
-    "genre": "Documental"
+    "genre": "Documental",
+    "clase_titulo": "exacto"
   },
   "los excéntricos tenenbaums": {
     "url": "https://letterboxd.com/film/the-royal-tenenbaums/",
@@ -28022,7 +28027,7 @@
   "la yegua de troya": {
     "url": "",
     "title_en": "LA YEGUA DE TROYA",
-    "director": "Abril Fernández Ferrez, Santiago Sarmiento",
+    "director": "Santiago Sarmiento, Abril Fernández Ferrez",
     "country": "",
     "year": 2022,
     "duration": 19,
@@ -29558,7 +29563,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-10",
+    "fecha": "2026-11-14",
     "con_duracion": true,
     "desempate": ""
   },
@@ -32828,7 +32833,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-10",
+    "fecha": "2026-11-14",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33286,7 +33291,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Grudge 2 (2003), The Grudge (2004)",
-    "fecha": "2026-11-10",
+    "fecha": "2026-11-14",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33633,7 +33638,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Beginning of the End (2014)",
-    "fecha": "2026-11-13",
+    "fecha": "2026-11-14",
     "con_duracion": false,
     "desempate": ""
   },
@@ -34044,5 +34049,81 @@
     "year": 2025,
     "duration": 127,
     "genre": "Drama"
+  },
+  "hechizo: bienvenidos a hexe": {
+    "url": "",
+    "title_en": "Hechizo: Bienvenidos a Hexe",
+    "director": "Jason Hand, Fawn Veerasunthorn",
+    "country": "United States of America",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Aventura, Animación",
+    "title_es": "Hechizo: Bienvenidos a Hexe",
+    "original_title": "Hexed"
+  },
+  "queercinemad: camp": {
+    "url": "https://letterboxd.com/film/camp-2025/",
+    "title_en": "CAMP",
+    "director": "Avalon Fast",
+    "country": "Canada, USA",
+    "year": 2025,
+    "duration": 111,
+    "genre": "Drama, Terror"
+  },
+  "amantes en el cielo|2025": {
+    "url": "https://letterboxd.com/film/lovers-in-the-sky/",
+    "title_en": "Lovers in the Sky",
+    "director": "Fermin de la Serna",
+    "country": "",
+    "year": 2025,
+    "duration": 77,
+    "genre": "Documental",
+    "clase_titulo": "exacto"
+  },
+  "recen por mi, la historia de francisco": {
+    "url": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
+    "title_en": "Pray for me: Pope Francis' story",
+    "director": "Facundo Bartucci",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 110,
+    "genre": "Documental",
+    "original_title": "Recen por mí: la historia de Francisco"
+  },
+  "las mil y una": {
+    "url": "https://letterboxd.com/film/las-mil-y-una/",
+    "title_en": "One in a Thousand",
+    "director": "Clarisa Navas",
+    "country": "Argentina, Germany",
+    "year": 2020,
+    "duration": 120,
+    "genre": "Drama, Romance",
+    "clase_titulo": "exacto",
+    "original_title": "Las mil y una",
+    "sin_hints": "título y duración"
+  },
+  "plata quemada": {
+    "url": "https://letterboxd.com/film/plata-quemada/",
+    "title_en": "Burnt Money",
+    "director": "Marcelo Piñeyro",
+    "country": "Argentina, Spain",
+    "year": 2000,
+    "duration": 125,
+    "genre": "Crimen, Romance",
+    "clase_titulo": "exacto",
+    "original_title": "Plata quemada",
+    "sin_hints": "título y duración"
+  },
+  "yo la peor de todas": {
+    "url": "https://letterboxd.com/film/i-the-worst-of-all/",
+    "title_en": "I, the Worst of All",
+    "director": "María Luisa Bemberg",
+    "country": "Argentina",
+    "year": 1990,
+    "duration": 105,
+    "genre": "Romance, Historia",
+    "clase_titulo": "exacto",
+    "original_title": "Yo, la peor de todas",
+    "sin_hints": "título y duración"
   }
 }
