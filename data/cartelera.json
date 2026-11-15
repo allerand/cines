@@ -67,6 +67,10 @@
       "scrapeadas": 34,
       "publicadas": 34
     },
+    "Cineclub Farus": {
+      "scrapeadas": 5,
+      "publicadas": 5
+    },
     "Cinemark Caballito": {
       "scrapeadas": 265,
       "publicadas": 278
@@ -35454,6 +35458,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-11-22",
+      "hora": "20:00",
+      "title_es": "Le bonheur",
+      "title_en": "Le bonheur",
+      "original_title": "",
+      "director": "Agnès Varda",
+      "country": "Francia",
+      "year": 1965,
+      "duration": 80,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/happiness-1965/",
+      "ticket_url": "https://centralticket.net/event/11190",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-22",
       "hora": "20:15",
@@ -41182,6 +41202,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-11-25",
+      "hora": "20:00",
+      "title_es": "Lawrence of Arabia",
+      "title_en": "Lawrence of Arabia",
+      "original_title": "",
+      "director": "David Lean",
+      "country": "Reino Unido",
+      "year": 1962,
+      "duration": 228,
+      "genre": "Aventura, Bélica",
+      "letterboxd": "https://letterboxd.com/film/lawrence-of-arabia/",
+      "ticket_url": "https://centralticket.net/event/11191",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-25",
       "hora": "20:20",
@@ -42318,6 +42354,22 @@
       "ciclo": "Soy"
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-11-27",
+      "hora": "19:00",
+      "title_es": "Blood and Black Lace",
+      "title_en": "Blood and Black Lace",
+      "original_title": "",
+      "director": "Mario Bava",
+      "country": "",
+      "year": 1964,
+      "duration": 88,
+      "genre": "Terror, Crimen",
+      "letterboxd": "https://letterboxd.com/film/blood-and-black-lace/",
+      "ticket_url": "https://centralticket.net/event/11199",
+      "ciclo": "Ciclo Giallo"
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-27",
       "hora": "19:30",
@@ -42398,6 +42450,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-11-27",
+      "hora": "20:45",
+      "title_es": "Don't Torture a Duckling",
+      "title_en": "Don't Torture a Duckling",
+      "original_title": "",
+      "director": "Lucio Fulci",
+      "country": "Italia",
+      "year": 1972,
+      "duration": 105,
+      "genre": "Terror",
+      "letterboxd": "https://letterboxd.com/film/dont-torture-a-duckling/",
+      "ticket_url": "https://centralticket.net/event/11199",
+      "ciclo": "Ciclo Giallo"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-11-27",
       "hora": "21:00",
@@ -42460,6 +42528,22 @@
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-11-27",
+      "hora": "22:40",
+      "title_es": "Deep Red",
+      "title_en": "Deep Red",
+      "original_title": "",
+      "director": "Dario Argento",
+      "country": "Italia",
+      "year": 1975,
+      "duration": 126,
+      "genre": "Misterio, Terror",
+      "letterboxd": "https://letterboxd.com/film/deep-red/",
+      "ticket_url": "https://centralticket.net/event/11199",
+      "ciclo": "Ciclo Giallo"
     },
     {
       "cine": "Sala Lugones",
