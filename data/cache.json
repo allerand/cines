@@ -29823,7 +29823,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: Perfume (2001), Perfume: The Story of a Murderer (2006), Perfume (2018)",
-    "fecha": "2026-11-11",
+    "fecha": "2026-11-15",
     "con_duracion": false,
     "desempate": ""
   },
@@ -31958,7 +31958,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: The Omen (1976, 111 min)",
-    "fecha": "2026-11-11",
+    "fecha": "2026-11-15",
     "con_duracion": true,
     "desempate": ""
   },
@@ -33638,7 +33638,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Beginning of the End (2014)",
-    "fecha": "2026-11-14",
+    "fecha": "2026-11-15",
     "con_duracion": false,
     "desempate": ""
   },
@@ -34125,5 +34125,79 @@
     "clase_titulo": "exacto",
     "original_title": "Yo, la peor de todas",
     "sin_hints": "título y duración"
+  },
+  "queercinemad: seis meses en el edificio rosa con azul": {
+    "url": "https://letterboxd.com/film/six-months-in-a-pink-and-blue-building/",
+    "title_en": "Six Months in a Pink and Blue Building",
+    "director": "Bruno Santamaría Razo",
+    "country": "Mexico, Brazil",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Drama",
+    "original_title": "Seis meses en el edificio rosa con azul"
+  },
+  "queercinemad: something you should know about me": {
+    "url": "https://letterboxd.com/film/something-you-should-know-about-me/",
+    "title_en": "Something You Should Know About Me",
+    "director": "Andy Rose Fidoten",
+    "country": "USA",
+    "year": 2026,
+    "duration": 84,
+    "genre": "Animación, Romance",
+    "original_title": "Something You Should Know About Me"
+  },
+  "todo va mal": {
+    "url": "https://letterboxd.com/film/all-goes-wrong/",
+    "title_en": "All Goes Wrong",
+    "director": "Federico Fernández",
+    "country": "",
+    "year": 2026,
+    "duration": 70,
+    "genre": "Romance, Ciencia ficción",
+    "original_title": "Todo va mal"
+  },
+  "cagüeyro": {
+    "url": "https://letterboxd.com/film/cagueyro/",
+    "title_en": "Cagüeyro",
+    "director": "Manu Rosa",
+    "country": "",
+    "year": 2026,
+    "duration": 13,
+    "genre": "Documental",
+    "original_title": "Cagüeyro"
+  },
+  "hecho en china": {
+    "url": "",
+    "title_en": "Hecho en China",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "firewood / leña": {
+    "url": "",
+    "title_en": "Firewood / Leña",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "versos mudos: stanka pencheva, la amante del cine": {
+    "url": "",
+    "title_en": "Versos mudos: Stanka Pencheva, la amante del cine",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "na passagem do trópico": {
+    "url": "https://letterboxd.com/film/na-passagem-do-tropico/",
+    "title_en": "Na Passagem do Trópico",
+    "director": "Francisco Miguez",
+    "country": "Brazil",
+    "year": 2025,
+    "duration": 86,
+    "genre": "Documental",
+    "original_title": "Na Passagem do Trópico"
   }
 }
