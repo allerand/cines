@@ -673,6 +673,10 @@
     .cine-fadu     { border-color: #3a1f30; color: #e07ab8; }
     .cine-lucero   { border-color: #3a3418; color: #d8c060; }
     .cine-davinci  { border-color: #1f3a2c; color: #6fd0a0; }
+    .cine-fuc      { border-color: #26331a; color: #9ccc5a; }
+    .cine-tomada   { border-color: #3a221f; color: #e88a7a; }
+    .cine-avalon   { border-color: #163240; color: #4fb6cf; }
+    .cine-laba     { border-color: #33213a; color: #c27ad9; }
     /* Madrid */
     .cine-dore     { border-color: #3a1f1c; color: #e0705e; }
     .cine-ideal    { border-color: #1c2e3a; color: #5aa8e0; }
@@ -999,6 +1003,10 @@
   <button class="filter-btn" data-cine="Hasta Trilce">Hasta Trilce</button>
   <button class="filter-btn" data-cine="Cineclub Farus">Cineclub Farus</button>
   <button class="filter-btn" data-cine="Centro Cultural Leopoldo Marechal">Marechal</button>
+  <button class="filter-btn" data-cine="Universidad del Cine">Universidad del Cine</button>
+  <button class="filter-btn" data-cine="La Tomada">La Tomada</button>
+  <button class="filter-btn" data-cine="Avalon">Avalon</button>
+  <button class="filter-btn" data-cine="LABA">LABA</button>
   <!-- Madrid: data-ciudad marca de qué ciudad es cada sala (sin él, Buenos Aires) -->
   <button class="filter-btn otra-ciudad" data-cine="Cine Doré" data-ciudad="madrid">Doré</button>
   <button class="filter-btn otra-ciudad" data-cine="Cines Ideal" data-ciudad="madrid">Ideal</button>
@@ -1077,6 +1085,10 @@ const CINE_ADDRESSES = {
   'Sala Lúcida':              'Av. Cabildo 4740',
   'Cineclub Farus':           'Venezuela 932',
   'Centro Cultural Leopoldo Marechal': 'Av. Vergara 2396, Hurlingham',
+  'Universidad del Cine':     'Pasaje Giuffra 330',
+  'La Tomada':                'Fraga 119',
+  'Avalon':                   'Humahuaca 4027 (Ítaca)',
+  'LABA':                     'Fraga 648',
   // Madrid
   'Cine Doré':                'Santa Isabel 3',
   'Cines Ideal':              'Doctor Cortezo 6',
@@ -1113,7 +1125,8 @@ const CINE_ADDRESSES = {
 const COMMERCIAL_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'];
 // Salas con entrada libre y gratuita: no hay entradas que sacar, así que en
 // lugar del link va "Entrada gratis".
-const CINES_GRATIS = new Set(['Museo del Cine', 'Centro Cultural Leopoldo Marechal']);
+const CINES_GRATIS = new Set(['Museo del Cine', 'Centro Cultural Leopoldo Marechal',
+                              'Universidad del Cine', 'La Tomada']);
 // Salas que venden sólo en la boletería (la sede de Fuera de Campo): no hay
 // link, va "Entradas en boletería".
 const CINES_BOLETERIA = new Set(['Teatro Enrique Carreras']);
@@ -2302,7 +2315,7 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Club Lucero':'cine-lucero', 'Escuela Da Vinci':'cine-davinci', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Museo Moderno':'cine-moderno', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Centro Cultural Leopoldo Marechal':'cine-marechal', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Museo Reina Sofía':'cine-reina', 'Cines Callao':'cine-callao', 'Sala Equis':'cine-equis', 'Teatro Enrique Carreras':'cine-carreras' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Club Lucero':'cine-lucero', 'Escuela Da Vinci':'cine-davinci', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Museo Moderno':'cine-moderno', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Centro Cultural Leopoldo Marechal':'cine-marechal', 'Universidad del Cine':'cine-fuc', 'La Tomada':'cine-tomada', 'Avalon':'cine-avalon', 'LABA':'cine-laba', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Museo Reina Sofía':'cine-reina', 'Cines Callao':'cine-callao', 'Sala Equis':'cine-equis', 'Teatro Enrique Carreras':'cine-carreras' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';

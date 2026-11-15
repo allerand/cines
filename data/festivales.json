@@ -86,6 +86,26 @@
       "alias": ["FESTIHUR"],
       "logo": "data/logos/festihur.png",
       "web": "https://www.hurlingham.gob.ar/festi-hur-7mo-festival-de-cine/"
+    },
+    {
+      "slug": "fidba",
+      "nombre": "FIDBA",
+      "bajada": "Festival Internacional de Cine Documental de Buenos Aires, 15.ª edición",
+      "ciclo": "Festival FIDBA",
+      "alias": ["FIDBA", "Festival Internacional de Cine Documental de Buenos Aires"],
+      "desde": "2026-11-17",
+      "hasta": "2026-11-22",
+      "web": "https://fidba.org/2026/programacion/"
+    },
+    {
+      "slug": "infinito-super-8",
+      "nombre": "Infinito Super 8",
+      "bajada": "Festival Internacional de Super 8, 3.ª edición",
+      "ciclo": "Infinito Super 8",
+      "alias": ["Infinito Super 8", "Infinito Super8"],
+      "desde": "2026-11-22",
+      "hasta": "2026-11-29",
+      "web": "https://www.infinitosuper8.com.ar/"
     }
   ]
 }

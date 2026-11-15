@@ -3205,6 +3205,443 @@
       "cine": "Cineclub Farus", "title": "Deep Red", "fecha": "2026-11-27", "hora": "22:40",
       "director": "Dario Argento", "year": 1975, "duration": 126,
       "ciclo": "Ciclo Giallo", "ticket_url": "https://centralticket.net/event/11199"
+    },
+    {
+      "_ciclo": "FIDBA, 15.ª edición del Festival Internacional de Cine Documental de Buenos Aires (17 al 22/11/2026). Grilla de fidba.org/2026/programacion, con año, duración y título original de la ficha de cada película; Avalon es la sala del festival en Ítaca Complejo Teatral (Humahuaca 4027, según las entradas de Alternativa Teatral). La Sala Lúcida va con los horarios de su boletería, adonde el FIDBA manda a sacar las entradas: el 21 El Perú es un lugar para morir es a las 19 con Squel, y el 22 los cortos son a las 16 y Hombres perdidos a las 17:30 (la grilla del FIDBA dice 17 y 19). Afuera: Mandatos (Teatro Documental, 21/11 en LABA), que es una performance con actrices y no una proyección.",
+      "cine": "LABA", "title": "Save the Dance", "fecha": "2026-11-17", "hora": "20:00",
+      "director": "Ygor Gama", "country": "Brasil", "duration": 45,
+      "ciclo": "Festival FIDBA - Apertura", "ticket_url": "https://www.alternativateatral.com/obra104041-apertura-fidba-2026-save-the-dance"
+    },
+    {
+      "cine": "Centro Cultural Recoleta", "title": "El Apocalipsis según Baby", "fecha": "2026-11-18", "hora": "18:00",
+      "director": "Rafael Saar", "original_title": "Apopcalipse segundo Baby", "year": 2023, "duration": 109,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "http://www.centroculturalrecoleta.org/agenda/fidba-festival-internacional-de-cine-documental-de-buenos-aires"
+    },
+    {
+      "cine": "Centro Cultural Recoleta", "title": "Nueve Auras", "fecha": "2026-11-19", "hora": "18:00",
+      "director": "Mariano Frigerio", "year": 2026, "duration": 87,
+      "ciclo": "Festival FIDBA - Función especial", "ticket_url": "http://www.centroculturalrecoleta.org/agenda/fidba-festival-internacional-de-cine-documental-de-buenos-aires"
+    },
+    {
+      "cine": "Avalon", "title": "La pasión según Agnieszka", "fecha": "2026-11-20", "hora": "15:00",
+      "director": "Wojciech Staroń", "original_title": "Pasja wedlug Agnieszki", "year": 2026, "duration": 50,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://publico.alternativateatral.com/entradas104070-passion-according-to-agnieszka"
+    },
+    {
+      "cine": "Avalon", "title": "Más grandes que Israel", "fecha": "2026-11-20", "hora": "17:00",
+      "director": "Cristian Pirovano y Ismael Al Bes", "original_title": "Older that Israel", "year": 2026, "duration": 62,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://publico.alternativateatral.com/entradas103861-mas-grandes-que-israel"
+    },
+    {
+      "cine": "Centro Cultural Recoleta", "title": "Chelis", "fecha": "2026-11-20", "hora": "18:00",
+      "director": "Mariana Tames Vargas", "year": 2026, "duration": 15,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "http://www.centroculturalrecoleta.org/agenda/fidba-festival-internacional-de-cine-documental-de-buenos-aires"
+    },
+    {
+      "cine": "Centro Cultural Recoleta", "title": "El suelo bajo nuestros pies", "fecha": "2026-11-20", "hora": "18:00",
+      "director": "Yrsa Roca Fannberg", "original_title": "The Ground Beneath Our Feet", "year": 2026, "duration": 82,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "http://www.centroculturalrecoleta.org/agenda/fidba-festival-internacional-de-cine-documental-de-buenos-aires"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Cagüeyro", "fecha": "2026-11-20", "hora": "19:00",
+      "director": "Manu Rosa", "year": 2026, "country": "Cuba, Uruguay", "duration": 13,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e345"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Hecho en China", "fecha": "2026-11-20", "hora": "19:00",
+      "director": "Ida Kammerloch", "original_title": "Made in china", "year": 2026, "country": "Austria", "duration": 18,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e345"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Leña", "fecha": "2026-11-20", "hora": "19:00",
+      "director": "Manel Raga Raga", "original_title": "Llenya", "year": 2026, "country": "Portugal, España", "duration": 17,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e345"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Versos mudos: Stanka Pencheva, la amante del cine", "fecha": "2026-11-20", "hora": "19:00",
+      "director": "Neda Milanova", "original_title": "Silent Verses: Stanka Pencheva, the Cinema Lover", "year": 2025, "country": "Bulgaria", "duration": 20,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e345"
+    },
+    {
+      "cine": "Arthaus", "title": "Nox", "fecha": "2026-11-20", "hora": "20:00",
+      "director": "Susana Parejas", "year": 2026, "duration": 5,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://www.alternativateatral.com/obra103855-fidba-dia-1-nox-c-la-ley-del-lobizon"
+    },
+    {
+      "cine": "Arthaus", "title": "La ley del Lobizón", "fecha": "2026-11-20", "hora": "20:00",
+      "director": "Gabriel Muro", "year": 2026, "duration": 80,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://www.alternativateatral.com/obra103855-fidba-dia-1-nox-c-la-ley-del-lobizon"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Al paso del trópico", "fecha": "2026-11-20", "hora": "21:00",
+      "director": "Francisco Miguez", "original_title": "Na Passagem do Trópico", "year": 2026, "country": "Brasil", "duration": 87,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e347"
+    },
+    {
+      "cine": "Avalon", "title": "Elton", "fecha": "2026-11-21", "hora": "15:00",
+      "director": "José Pablo Siroti, Walter Aquiles Carnevale", "year": 2026, "duration": 72,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://publico.alternativateatral.com/entradas104072-elton"
+    },
+    {
+      "cine": "Avalon", "title": "Hijos del Ring", "fecha": "2026-11-21", "hora": "17:00",
+      "director": "Valentina Chacón", "year": 2026, "duration": 27,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://publico.alternativateatral.com/entradas104074-hijos-del-ring-whattsapp"
+    },
+    {
+      "cine": "Avalon", "title": "WhattsApp", "fecha": "2026-11-21", "hora": "17:00",
+      "director": "Pablo Pintor", "year": 2026, "duration": 46,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://publico.alternativateatral.com/entradas104074-hijos-del-ring-whattsapp"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Cartas desde casa", "fecha": "2026-11-21", "hora": "17:00",
+      "director": "Maryam Zuhuri", "original_title": "Letters from home", "year": 2022, "country": "Austria", "duration": 7,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e348"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Viajero Inmóvil", "fecha": "2026-11-21", "hora": "17:00",
+      "director": "Fernando Lavanderos y Sebastián Pereira", "year": 2026, "country": "Chile", "duration": 84,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e348"
+    },
+    {
+      "cine": "Centro Cultural Recoleta", "title": "El hombre del oeste", "fecha": "2026-11-21", "hora": "18:00",
+      "director": "JD Alcazar", "year": 2025, "duration": 20,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "http://www.centroculturalrecoleta.org/agenda/fidba-festival-internacional-de-cine-documental-de-buenos-aires"
+    },
+    {
+      "cine": "Centro Cultural Recoleta", "title": "Alicia bajo la higuera", "fecha": "2026-11-21", "hora": "18:00",
+      "director": "Manuela Thayer Requena", "year": 2026, "duration": 74,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "http://www.centroculturalrecoleta.org/agenda/fidba-festival-internacional-de-cine-documental-de-buenos-aires"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "El Perú es un lugar para morir", "fecha": "2026-11-21", "hora": "19:00",
+      "director": "Víctor Augusto Mendívil", "year": 2026, "country": "Perú", "duration": 13,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e349"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Squel: Una reina del carnaval", "fecha": "2026-11-21", "hora": "19:00",
+      "director": "Celina Torrealba, Zeca Brito", "original_title": "Squel Confissões de uma porta-bandeira", "year": 2026, "country": "Brasil", "duration": 86,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e349"
+    },
+    {
+      "cine": "Arthaus", "title": "Mbaraka Poty", "fecha": "2026-11-21", "hora": "20:00",
+      "director": "Marcial Moreira y Bernardo Teodorico", "year": 2026, "duration": 25,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://www.alternativateatral.com/obra103858-fidba-dia-2-mbaraka-poty-c-la-reina-rebelde-c-mas-grandes-que-israel-m"
+    },
+    {
+      "cine": "Arthaus", "title": "La reina rebelde", "fecha": "2026-11-21", "hora": "20:00",
+      "director": "Alma Holovatuck y Catalina Maradona", "year": 2026, "duration": 16,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://www.alternativateatral.com/obra103858-fidba-dia-2-mbaraka-poty-c-la-reina-rebelde-c-mas-grandes-que-israel-m"
+    },
+    {
+      "cine": "Arthaus", "title": "Más grandes que Israel", "fecha": "2026-11-21", "hora": "20:00",
+      "director": "Cristian Pirovano y Ismael Al Bes", "original_title": "Older that Israel", "year": 2026, "duration": 62,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://www.alternativateatral.com/obra103858-fidba-dia-2-mbaraka-poty-c-la-reina-rebelde-c-mas-grandes-que-israel-m"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Champ de Mars", "fecha": "2026-11-22", "hora": "16:00",
+      "director": "Sergei Loznitsa", "year": 2026, "country": "Países Bajos", "duration": 12,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e351"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "¡Que vivan!", "fecha": "2026-11-22", "hora": "16:00",
+      "director": "Carlos Lima", "original_title": "P'ra Que Vivam", "year": 2026, "country": "Portugal", "duration": 24,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e351"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Aún jugando", "fecha": "2026-11-22", "hora": "16:00",
+      "director": "Mohamed Mesbah", "original_title": "Still Playing", "year": 2026, "country": "Francia", "duration": 37,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e351"
+    },
+    {
+      "cine": "Sala Lúcida", "title": "Hombres perdidos", "fecha": "2026-11-22", "hora": "17:30",
+      "director": "Andrés Madrigal Alvarado", "year": 2026, "country": "Costa Rica, Guatemala", "duration": 84,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://portal.salalucida.org/eventos/festival-internacional-de-cine-documental-de-buenos-aires-e350"
+    },
+    {
+      "cine": "Centro Cultural Recoleta", "title": "Partes de mí", "fecha": "2026-11-22", "hora": "18:00",
+      "director": "Wendy Saldaña Conejo", "year": 2026, "duration": 25,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "http://www.centroculturalrecoleta.org/agenda/fidba-festival-internacional-de-cine-documental-de-buenos-aires"
+    },
+    {
+      "cine": "Centro Cultural Recoleta", "title": "Amilcar", "fecha": "2026-11-22", "hora": "18:00",
+      "director": "Miguel Eek", "year": 2026, "duration": 87,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "http://www.centroculturalrecoleta.org/agenda/fidba-festival-internacional-de-cine-documental-de-buenos-aires"
+    },
+    {
+      "cine": "Arthaus", "title": "Luzazul", "fecha": "2026-11-22", "hora": "20:00",
+      "director": "Jimena Anganuzzi y Marcos Martínez", "year": 2026, "duration": 20,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://www.alternativateatral.com/obra103862-fidba-dia-3-luzazul-c-cuerpo-criminal"
+    },
+    {
+      "cine": "Arthaus", "title": "Cuerpo criminal", "fecha": "2026-11-22", "hora": "20:00",
+      "director": "Martín Boulocq", "year": 2026, "duration": 75,
+      "ciclo": "Festival FIDBA - Órbita", "ticket_url": "https://www.alternativateatral.com/obra103862-fidba-dia-3-luzazul-c-cuerpo-criminal"
+    },
+    {
+      "_ciclo": "Infinito Super 8, 3.ª edición del Festival Internacional de Super 8 (22 al 29/11/2026), entrada libre y gratuita. Grilla del programa en PDF que mandó Mateo (Programa_2026_INFINITO_SUPER_8_INVITADOS.pdf, página 2, sin capa de texto: leída de la imagen) y películas de infinitosuper8.com.ar (Competencia Argentina, Panorama Argentino, Foco Honik / Caldini, Especial Torquato Neto). La Tomada / Fraga Cultural queda en Fraga 119 (el PDF). Las sesiones que el festival todavía no detalla (Competencia y Panorama Internacional, Rescates, focos de Julio Fermepin y Moira Lacowicz, Curta 8, Del más allá y la muestra de los talleres) van como una fila con el nombre del programa; metadata_overrides.json les vacía la ficha para que el enrichment no les pegue un homónimo. Afuera: los dos talleres (inscripción previa), la inauguración de la muestra (Nuevas) Derivas (instalaciones) y los cortos de Arco Iris Toma Única, que abren funciones sin decir cuáles.",
+      "cine": "Casa del Bicentenario", "title": "La mirada errante", "fecha": "2026-11-22", "hora": "19:30",
+      "director": "Jorge Honik",
+      "ciclo": "Infinito Super 8 - Función de apertura", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Casa del Bicentenario", "title": "4:3 (Cromoterapia)", "fecha": "2026-11-22", "hora": "19:30",
+      "director": "Claudio Caldini",
+      "ciclo": "Infinito Super 8 - Función de apertura", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "La Tomada", "title": "Aflicción de volver", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Eugenia Volpini", "country": "Argentina", "duration": 2,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Catangos", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Gabriel González Carreño", "country": "Argentina", "duration": 3,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Mirar puede ser todo", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Dave Maruchniak", "country": "Argentina", "duration": 20,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Zoocántico I", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Enrico Alchimim", "country": "Argentina", "duration": 3,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Por la noche, la mañana", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Napo Martino y Federica Cafferata", "country": "Argentina", "duration": 7,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Señalética expandida", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "melon_manga", "country": "Argentina", "duration": 3,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Los bailes de la vida", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Gabriel Patrono", "country": "Argentina", "duration": 12,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Un dios local", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Benjamín Naishtat", "country": "Argentina", "duration": 7,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Como una paloma o un caballo que no saben que tienen ojos", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Romiel Sommer", "country": "Argentina", "duration": 3,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Una figura sobre un fondo es el dato sensible más simple", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Dana Fanego", "country": "Argentina", "duration": 6,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "El pulso del tiempo", "fecha": "2026-11-23", "hora": "17:30",
+      "director": "Rocío Tenaglia", "country": "Argentina", "duration": 5,
+      "ciclo": "Infinito Super 8 - Panorama Argentino", "ticket_url": "https://www.infinitosuper8.com.ar/panorama-argentino3/"
+    },
+    {
+      "cine": "La Tomada", "title": "Rescates: sesión 1", "fecha": "2026-11-23", "hora": "19:30",
+      "duration": 80,
+      "ciclo": "Infinito Super 8 - Rescates", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "La Tomada", "title": "Nosferato no Brasil", "fecha": "2026-11-23", "hora": "21:30",
+      "director": "Ivan Cardoso", "year": 1971, "country": "Brasil", "duration": 27,
+      "ciclo": "Infinito Super 8 - Especial Torquato Neto", "ticket_url": "https://www.infinitosuper8.com.ar/torquato-neto/"
+    },
+    {
+      "cine": "La Tomada", "title": "O Terror da Vermelha", "fecha": "2026-11-23", "hora": "21:30",
+      "director": "Torquato Neto", "year": 1972, "country": "Brasil", "duration": 35,
+      "ciclo": "Infinito Super 8 - Especial Torquato Neto", "ticket_url": "https://www.infinitosuper8.com.ar/torquato-neto/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Competencia Internacional", "fecha": "2026-11-24", "hora": "18:30",
+      "duration": 86,
+      "ciclo": "Infinito Super 8 - Competencia Internacional", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Foco Julio Fermepin", "fecha": "2026-11-24", "hora": "20:30",
+      "director": "Julio Fermepin", "duration": 90,
+      "ciclo": "Infinito Super 8 - Foco Julio Fermepin", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Mar", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "Paula Pellejero", "year": 2026, "country": "Argentina", "duration": 6,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Espectro", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "Sergio Subero", "year": 2010, "country": "Argentina", "duration": 9,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Un mundo desplegar su drama simultáneamente en varios cuadros", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "Juan Carvajal", "year": 2026, "country": "Argentina", "duration": 6,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Celulosa", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "Marisol Bellusci", "year": 2019, "country": "Argentina", "duration": 6,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Tríptico", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "Alfonso Aseguinolaza", "country": "Argentina", "duration": 8,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Corral de Tigres", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "Juan Ignacio Slobayen", "year": 2025, "country": "Argentina", "duration": 11,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "En un cielo pleno azul", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "María Sticotti", "year": 2026, "country": "Argentina", "duration": 15,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Síntesis de lo privado y lo aparente", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "Luanne Iorii", "year": 2026, "country": "Argentina", "duration": 5,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Peirano Propiedades", "fecha": "2026-11-25", "hora": "18:30",
+      "director": "Marco Ernesto Rossi", "year": 2026, "country": "Argentina", "duration": 4,
+      "ciclo": "Infinito Super 8 - Competencia Argentina", "ticket_url": "https://www.infinitosuper8.com.ar/competencia-argentina3/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Passacaglia y Fuga", "fecha": "2026-11-25", "hora": "20:30",
+      "director": "Jorge Honik y Laura Abel", "year": 1975, "country": "Argentina", "duration": 18,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Aspiraciones", "fecha": "2026-11-25", "hora": "20:30",
+      "director": "Claudio Caldini", "year": 1976, "country": "Argentina", "duration": 7,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Vadi-Samvadi", "fecha": "2026-11-25", "hora": "20:30",
+      "director": "Claudio Caldini", "country": "Argentina", "duration": 7,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Ofrenda", "fecha": "2026-11-25", "hora": "20:30",
+      "director": "Claudio Caldini", "year": 1978, "country": "Argentina", "duration": 2,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "El Inmortal: un cuento de Borges", "fecha": "2026-11-25", "hora": "20:30",
+      "director": "Jorge Honik", "year": 1969, "country": "Argentina", "duration": 7,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Panorama Internacional", "fecha": "2026-11-26", "hora": "18:00",
+      "duration": 85,
+      "ciclo": "Infinito Super 8 - Panorama Internacional", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Casa del Bicentenario", "title": "Ojos en llamas", "fecha": "2026-11-26", "hora": "20:20",
+      "director": "Magdalena Jitrik",
+      "ciclo": "Infinito Super 8 - Magdalena Jitrik / Elena Pardo", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Casa del Bicentenario", "title": "Por Dentro Somos Color", "fecha": "2026-11-26", "hora": "20:20",
+      "director": "Elena Pardo",
+      "ciclo": "Infinito Super 8 - Magdalena Jitrik / Elena Pardo", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Muestra invitada Curta 8", "fecha": "2026-11-27", "hora": "18:00",
+      "duration": 70,
+      "ciclo": "Infinito Super 8 - Muestras invitadas", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Gaudí asesinado por un tranvía", "fecha": "2026-11-27", "hora": "19:30",
+      "director": "Jorge Honik", "year": 1968, "country": "Argentina", "duration": 2,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Film-Gaudí", "fecha": "2026-11-27", "hora": "19:30",
+      "director": "Claudio Caldini", "year": 1975, "country": "Argentina", "duration": 4,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Komik", "fecha": "2026-11-27", "hora": "19:30",
+      "director": "Jorge Honik", "year": 1969, "country": "Argentina", "duration": 2,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Ventana", "fecha": "2026-11-27", "hora": "19:30",
+      "director": "Claudio Caldini", "year": 1975, "country": "Argentina", "duration": 4,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Un paseo", "fecha": "2026-11-27", "hora": "19:30",
+      "director": "Jorge Honik y Laura Abel", "year": 1969, "country": "Argentina", "duration": 3,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "S/T", "fecha": "2026-11-27", "hora": "19:30",
+      "director": "Claudio Caldini", "year": 2007, "country": "Argentina", "duration": 3,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "India-Nepal (diario de viaje)", "fecha": "2026-11-27", "hora": "19:30",
+      "director": "Jorge Honik y Laura Abel", "country": "Argentina", "duration": 31,
+      "ciclo": "Infinito Super 8 - Foco Jorge Honik / Claudio Caldini", "ticket_url": "https://www.infinitosuper8.com.ar/foco-honik-caldini/"
+    },
+    {
+      "cine": "Universidad del Cine", "title": "Foco Moira Lacowicz", "fecha": "2026-11-27", "hora": "21:00",
+      "director": "Moira Lacowicz", "duration": 80,
+      "ciclo": "Infinito Super 8 - Foco Moira Lacowicz", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "La Tomada", "title": "Muestra de talleres: Cine Oculta y Moira Lacowicz", "fecha": "2026-11-28", "hora": "18:00",
+      "duration": 60,
+      "ciclo": "Infinito Super 8 - Talleres", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "La Tomada", "title": "Rescates: sesión 2", "fecha": "2026-11-28", "hora": "19:00",
+      "duration": 70,
+      "ciclo": "Infinito Super 8 - Rescates", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "La Tomada", "title": "Del más allá: cine de terror argentino filmado en Super 8", "fecha": "2026-11-28", "hora": "21:00",
+      "duration": 80,
+      "ciclo": "Infinito Super 8 - Del más allá", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Museo del Cine", "title": "Rescates: sesión 3", "fecha": "2026-11-29", "hora": "16:00",
+      "duration": 65,
+      "ciclo": "Infinito Super 8 - Rescates", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Casa del Bicentenario", "title": "Juguemos en el bosque mientras el lobo no está", "fecha": "2026-11-29", "hora": "19:00",
+      "director": "Horacio Vallereggio", "year": 1975,
+      "ciclo": "Infinito Super 8 - Función de clausura", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Casa del Bicentenario", "title": "Sonrisa del más acá", "fecha": "2026-11-29", "hora": "19:00",
+      "director": "Horacio Vallereggio", "year": 1975,
+      "ciclo": "Infinito Super 8 - Función de clausura", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Casa del Bicentenario", "title": "La película migrante", "fecha": "2026-11-29", "hora": "19:00",
+      "director": "Ana Bravo-Pérez",
+      "ciclo": "Infinito Super 8 - Función de clausura", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Casa del Bicentenario", "title": "Mi segundo entierro", "fecha": "2026-11-29", "hora": "19:00",
+      "director": "Ana Bravo-Pérez",
+      "ciclo": "Infinito Super 8 - Función de clausura", "ticket_url": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "cine": "Casa del Bicentenario", "title": "Cuando el disparo", "fecha": "2026-11-29", "hora": "19:00",
+      "director": "Ana Bravo-Pérez", "year": 2021,
+      "ciclo": "Infinito Super 8 - Función de clausura", "ticket_url": "https://www.infinitosuper8.com.ar/"
     }
   ],
 
@@ -3319,6 +3756,18 @@
       "ciclo": "FICUBA",
       "desde": "2026-09-30", "hasta": "2026-10-07",
       "cines": ["Cine Cosmos", "Cacodelphia", "Sala Lugones", "Filo Cine", "FADU"]
+    },
+    {
+      "_por_que": "FIDBA: en sus cinco salas y durante el festival manda la grilla de arriba (ciclo \"Festival FIDBA - …\"). La Sala Lúcida ya publicaba el 20/11 sus dos programas con los títulos de su boletería (\"Firewood / Leña\", \"Na Passagem do Trópico\"), y el Arthaus vende cada día como una sola función en Alternativa Teatral (\"FIDBA Día 1: Nox [C] + La Ley del Lobizón\"). Lo que cada sala programa por fuera del festival, en otro horario y con otra película, queda.",
+      "ciclo": "Festival FIDBA",
+      "desde": "2026-11-17", "hasta": "2026-11-22",
+      "cines": ["Sala Lúcida", "Centro Cultural Recoleta", "Arthaus", "Avalon", "LABA"]
+    },
+    {
+      "_por_que": "Infinito Super 8: en sus salas y durante el festival manda la grilla de arriba, por si el Museo del Cine o la Casa del Bicentenario (cb_manual.json) publican las mismas funciones a su manera.",
+      "ciclo": "Infinito Super 8",
+      "desde": "2026-11-22", "hasta": "2026-11-29",
+      "cines": ["Universidad del Cine", "La Tomada", "Casa del Bicentenario", "Museo del Cine"]
     }
   ]
 }

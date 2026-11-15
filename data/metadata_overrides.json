@@ -1628,6 +1628,161 @@
       "letterboxd": "https://letterboxd.com/film/melodia-de-arrabal/",
       "title_en": "Suburban Melody",
       "genre": "Romance, Música"
+    },
+    {
+      "_comment": "Infinito Super 8, noviembre de 2026: sesiones que el festival todavía no detalla y van como una fila con el nombre del programa. Son varias películas, así que ninguna ficha es la suya: se vacía lo que el enrichment encuentre, para que no les pegue la de un homónimo (en el MALBA a \"Cortos 3\" le puso una película de Robert M. Young). Si el festival publica las películas, se cargan una por una en manual_screenings.json y estas entradas se sacan."
+    },
+    {
+      "title": "Rescates: sesión 1",
+      "cine": "La Tomada",
+      "director": "",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Rescates: sesión 1",
+      "letterboxd": ""
+    },
+    {
+      "title": "Rescates: sesión 2",
+      "cine": "La Tomada",
+      "director": "",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Rescates: sesión 2",
+      "letterboxd": ""
+    },
+    {
+      "title": "Rescates: sesión 3",
+      "cine": "Museo del Cine",
+      "director": "",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Rescates: sesión 3",
+      "letterboxd": ""
+    },
+    {
+      "title": "Competencia Internacional",
+      "cine": "Universidad del Cine",
+      "director": "",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Competencia Internacional",
+      "letterboxd": ""
+    },
+    {
+      "title": "Panorama Internacional",
+      "cine": "Universidad del Cine",
+      "director": "",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Panorama Internacional",
+      "letterboxd": ""
+    },
+    {
+      "title": "Foco Julio Fermepin",
+      "cine": "Universidad del Cine",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Foco Julio Fermepin",
+      "letterboxd": ""
+    },
+    {
+      "title": "Foco Moira Lacowicz",
+      "cine": "Universidad del Cine",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Foco Moira Lacowicz",
+      "letterboxd": ""
+    },
+    {
+      "title": "Muestra invitada Curta 8",
+      "cine": "Universidad del Cine",
+      "director": "",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Muestra invitada Curta 8",
+      "letterboxd": ""
+    },
+    {
+      "title": "Muestra de talleres: Cine Oculta y Moira Lacowicz",
+      "cine": "La Tomada",
+      "director": "",
+      "country": "",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Muestra de talleres: Cine Oculta y Moira Lacowicz",
+      "letterboxd": ""
+    },
+    {
+      "title": "Del más allá: cine de terror argentino filmado en Super 8",
+      "cine": "La Tomada",
+      "director": "",
+      "country": "Argentina",
+      "year": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Del más allá: cine de terror argentino filmado en Super 8",
+      "letterboxd": ""
+    },
+    {
+      "_comment": "Infinito Super 8, noviembre de 2026: el enrichment les encontró otra película del mismo director (Espectro de Sergio Subero cayó en La sombra del vuelo; Ojos en llamas de Magdalena Jitrik, en Linterna internacional; Mi segundo entierro de Ana Bravo-Pérez, en Mother Earth's Inner Organs). Ninguna de esas fichas nombra la película del festival: se vacía, y queda lo que publica el festival. 4:3 (Cromoterapia), la performance de proyección múltiple de Claudio Caldini en la apertura, cayó en su corto 4:3 de 2010 (3 minutos): puede ser la misma obra, pero nada lo confirma."
+    },
+    {
+      "title": "Espectro",
+      "cine": "Universidad del Cine",
+      "genre": "",
+      "original_title": "",
+      "title_en": "Espectro",
+      "letterboxd": ""
+    },
+    {
+      "title": "Ojos en llamas",
+      "cine": "Casa del Bicentenario",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Ojos en llamas",
+      "letterboxd": ""
+    },
+    {
+      "title": "Mi segundo entierro",
+      "cine": "Casa del Bicentenario",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "Mi segundo entierro",
+      "letterboxd": ""
+    },
+    {
+      "title": "4:3 (Cromoterapia)",
+      "cine": "Casa del Bicentenario",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "original_title": "",
+      "title_en": "4:3 (Cromoterapia)",
+      "letterboxd": ""
     }
   ]
 }
