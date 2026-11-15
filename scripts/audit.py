@@ -872,8 +872,9 @@ def main() -> int:
     if args.out:
         args.out.write_text(informe + "\n", encoding="utf-8")
     if args.html:
-        # Asunto y fecha van en comentarios HTML para que el Apps Script que
-        # manda el mail no tenga que re-parsear el informe.
+        # Asunto y fecha van en comentarios HTML para que
+        # scripts/mandar_auditoria.py no tenga que re-parsear el informe; la
+        # fecha además le dice si el informe es de hoy.
         args.html.write_text(
             f"<!-- asunto: {rep.asunto(today)} -->\n"
             f"<!-- fecha: {today.isoformat()} -->\n"

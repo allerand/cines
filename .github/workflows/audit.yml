@@ -1,26 +1,42 @@
 name: Auditoría semanal
 
-# Corre scripts/audit.py y deja el informe en data/audit.md + data/audit.html.
-# Existe porque los scrapers fallan en silencio: cada uno atrapa su excepción y
-# devuelve [], así que un cine puede desaparecer de la web durante semanas sin
-# que nada avise. Esto convierte ese silencio en un informe.
+# Corre scripts/audit.py, deja el informe en data/audit.md + data/audit.html y
+# lo manda por mail. Existe porque los scrapers fallan en silencio: cada uno
+# atrapa su excepción y devuelve [], así que un cine puede desaparecer de la web
+# durante semanas sin que nada avise. Esto convierte ese silencio en un informe.
 #
 # Cómo llega el informe:
-#   · mail semanal — scripts/audit_mail.gs (Apps Script, proyecto APARTE del
-#     newsletter) lee el data/audit.html commiteado acá y lo manda. Sin secrets:
-#     corre con la cuenta de Google del dueño y no le escribe a nadie más.
+#   · mail — scripts/mandar_auditoria.py, acá mismo, con la casilla y la
+#     contraseña de aplicación de GMAIL_USER (los secrets con los que el scrape
+#     lee el newsletter de Cacodelphia). Antes lo mandaba un Apps Script aparte
+#     que nunca se dio de alta: hasta el 15/11/2026 no llegó ninguno, y el
+#     Cineclub Farus estuvo dos semanas fuera de la web sin que nadie se enterara.
 #   · issue — sólo si hay ERRORes, para tener dónde seguir el arreglo.
-# Por eso el informe se commitea SIEMPRE, aunque salga limpio: el mail necesita
-# leer el de esta semana.
+# El informe se commitea siempre, aunque salga limpio: es la marca de que el de
+# hoy ya salió (ver "¿Ya salió el de hoy?").
 
 on:
   schedule:
     - cron: '30 12 * * 1'   # lunes 09:30 ART, después del scrape diario
+    # Respaldo: con carga alta GitHub puede saltear una corrida programada. Si
+    # la de la mañana ya mandó el informe, ésta no hace nada.
+    - cron: '30 20 * * 1'   # lunes 17:30 ART
   workflow_dispatch:
+  # Un cambio en el mail se prueba solo: al pushearlo sale el informe de hoy.
+  push:
+    branches: [main]
+    paths:
+      - scripts/mandar_auditoria.py
+      - .github/workflows/audit.yml
 
 permissions:
   contents: write
   issues: write
+
+# Que las dos del lunes no manden dos mails si GitHub las larga juntas.
+concurrency:
+  group: auditoria
+  cancel-in-progress: false
 
 jobs:
   audit:
@@ -34,29 +50,57 @@ jobs:
           # defecto no hay línea de base y se pierde la mitad del valor.
           fetch-depth: 0
 
+      # La corrida de respaldo sigue sólo si la de la mañana no commiteó el
+      # informe de hoy. Se mira origin/main y no el checkout: si las dos
+      # quedaron en cola juntas, el checkout de la segunda es de antes del
+      # commit de la primera.
+      - name: ¿Ya salió el de hoy?
+        id: ya
+        if: github.event_name == 'schedule'
+        run: |
+          git fetch -q origin main
+          if git show origin/main:data/audit.html 2>/dev/null | grep -q "<!-- fecha: $(date -u +%F) -->"; then
+            echo "salio=1" >> "$GITHUB_OUTPUT"
+            echo "El informe de hoy ya salió en una corrida anterior."
+          fi
+
       - uses: actions/setup-python@v5
+        if: steps.ya.outputs.salio != '1'
         with:
           python-version: '3.11'
 
       - name: Correr auditoría
         id: audit
+        if: steps.ya.outputs.salio != '1'
         run: |
           set +e
           python3 scripts/audit.py --out data/audit.md --html data/audit.html
           echo "exit_code=$?" >> "$GITHUB_OUTPUT"
 
       - name: Commitear el informe
+        if: steps.ya.outputs.salio != '1'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/audit.md data/audit.html
           git diff --staged --quiet || git commit -m "audit: informe $(date -u +%Y-%m-%d)"
+          # El scrape pushea seguido: si main se movió, el informe va arriba.
+          git pull -q --rebase origin main
           git push
 
-      # Sólo se abre issue si hubo ERRORes (exit 1). Un informe limpio ya viaja
-      # por mail y no necesita ruido extra.
+      # Aunque el commit haya fallado: el mail es lo que se lee. Si no se puede
+      # mandar, el paso falla y GitHub avisa por mail que la corrida falló.
+      - name: Mandar el informe por mail
+        if: ${{ !cancelled() && steps.ya.outputs.salio != '1' }}
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python3 scripts/mandar_auditoria.py
+
+      # Sólo se abre issue si hubo ERRORes (exit 1), y no en las corridas por
+      # push, que son pruebas del mail.
       - name: Abrir issue si hay hallazgos
-        if: steps.audit.outputs.exit_code == '1'
+        if: ${{ !cancelled() && steps.audit.outputs.exit_code == '1' && github.event_name != 'push' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
