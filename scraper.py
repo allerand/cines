@@ -1312,6 +1312,26 @@ def _ctba_eventos_pendientes(events: list[dict], recordados: dict,
 CTBA_HOME = "https://complejoteatral.gob.ar/"
 
 
+def _ctba_anio_del_mes(mes: int, hoy: date) -> int:
+    """El año del mes con que arranca un ciclo, cuando el programa no lo dice:
+    el que deja ese mes a menos de medio año de hoy, para atrás o para adelante.
+
+    Para atrás, porque un ciclo que empezó hace poco sigue (Borzage, del 11 de
+    septiembre al 14 de octubre, leído en octubre); para adelante, porque hay
+    programación adelantada (enero, leído en diciembre). Hasta el 15/11/2026 la
+    cuenta era (hoy.month - mes) % 12 > 6, y el módulo convertía "el mes que
+    viene" en "hace once meses": un ciclo de diciembre leído en noviembre se
+    iba a 2027, fuera de la cartelera, hasta que arrancaba diciembre. Así
+    faltaban Lubitsch, Wajda bis y las actrices japonesas del 4 al 13/12.
+    """
+    atras = hoy.month - mes
+    if atras > 6:
+        return hoy.year + 1     # enero, leído en diciembre
+    if atras < -6:
+        return hoy.year - 1     # diciembre, leído en enero
+    return hoy.year
+
+
 def _ctba_partir_por_mes(texto: str) -> list[str]:
     """Corta el programa de un ciclo donde el número de día baja (empieza otro
     mes). Cada parte arranca en el encabezado de su primer día."""
@@ -1509,10 +1529,12 @@ async def scrape_lugones(page: Page) -> list[Screening]:
             )
             cycle_month: Optional[int] = None
             cycle_year: int = today.year
+            anio_resuelto = False   # el programa dice el año, o salió del día de la semana
             if anchor:
                 cycle_month = MESES_ES.get(anchor.group(1).lower())
                 if anchor.group(2):
                     cycle_year = int(anchor.group(2))
+                    anio_resuelto = True
             # Sin "Del <día> de <mes>" (funciones sueltas: "Miércoles 28"),
             # el mes sale del día de la semana: el primer mes, desde el
             # pasado, en que ese número cae ese día. Buscar cualquier mes
@@ -1536,6 +1558,7 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                             continue
                         if cand.weekday() == dia_sem and cand >= today - timedelta(days=31):
                             cycle_month, cycle_year = mes, anio
+                            anio_resuelto = True
                             break
             # Último recurso: cualquier mención de mes.
             if not cycle_month:
@@ -1545,16 +1568,8 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                         break
 
             if cycle_month:
-                # Un mes inicial que "ya pasó" puede ser de un ciclo que empezó
-                # hace poco y sigue (Borzage, del 11 de septiembre al 14 de
-                # octubre, leído en octubre) o de programación adelantada del
-                # año que viene (enero, leído en diciembre). Antes se pasaba
-                # al año siguiente siempre, y el ciclo de Borzage desaparecía
-                # entero en su última semana. Sólo es del año que viene si el
-                # mes quedó más de medio año atrás.
-                if (cycle_year == today.year
-                        and (today.month - cycle_month) % 12 > 6):
-                    cycle_year += 1
+                if not anio_resuelto:
+                    cycle_year = _ctba_anio_del_mes(cycle_month, today)
 
                 # El programa se lee por mes: parse_ctba_program_text indexa
                 # por (día, hora), y en un ciclo de más de un mes el 13 de

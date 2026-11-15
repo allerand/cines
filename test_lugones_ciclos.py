@@ -197,7 +197,32 @@ fs, _ = correr()
 assert "Sala Lugones" not in scraper.FUENTES_CAIDAS, scraper.FUENTES_CAIDAS
 print("✓ un ciclo viejo que ya no carga no cuenta como fuente caída")
 
-# 8. El texto legible tiene que nombrar el evento.
+# 8. El año de un ciclo cuyo programa no lo dice. El de diciembre leído en
+#    noviembre se iba a 2027 (y afuera de la cartelera) hasta el 1/12.
+D = scraper.date
+assert scraper._ctba_anio_del_mes(12, D(2026, 11, 15)) == 2026     # Lubitsch, 4 al 13/12
+assert scraper._ctba_anio_del_mes(11, D(2026, 10, 20)) == 2026     # el mes que viene
+assert scraper._ctba_anio_del_mes(9, D(2026, 10, 3)) == 2026       # Borzage, ya empezado
+assert scraper._ctba_anio_del_mes(1, D(2026, 12, 10)) == 2027      # enero, leído en diciembre
+assert scraper._ctba_anio_del_mes(12, D(2027, 1, 5)) == 2026       # diciembre, leído en enero
+print("✓ el año del ciclo: el mes que viene es de este año, enero leído en diciembre del próximo")
+
+TEXTOS[LUBITSCH] = f"""Cinco tardes con Ernst Lubitsch – Complejo Teatral de Buenos Aires
+Cinco tardes con Ernst Lubitsch
+Del viernes 4 al domingo 13 de diciembre se llevará a cabo un ciclo denominado Cinco tardes con Ernst Lubitsch.
+{RELLENO}
+Viernes 4
+A las 15 horas
+El pecado de Cluny Brown
+(Cluny Brown; Estados Unidos, 1946)
+Dirección: Ernst Lubitsch.
+(100′; DCP).
+"""
+fs, _ = correr()
+assert ("2026-12-04", "15:00", "El pecado de Cluny Brown") in {(s.fecha, s.hora, s.title) for s in fs}, fs
+print("✓ un ciclo de diciembre leído en noviembre sale en diciembre de este año")
+
+# 9. El texto legible tiene que nombrar el evento.
 assert not scraper._ctba_legible(None, "X")
 assert not scraper._ctba_legible("Just a moment...", "Homenaje a John Huston")
 assert scraper._ctba_legible(TEXTO_FINLANDIA, "Desde Finlandia con amor")
