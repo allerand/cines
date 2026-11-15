@@ -80,9 +80,9 @@ PROBES = {
     # si da 0, el que se rompió es el scraper o la fuente, no la programación.
     "Sala Lúcida":              ("https://portal.salalucida.org/",
                                  r"/eventos/[a-z0-9\-]+"),
-    # Cuenta eventos, no funciones: una doble función es un evento con dos.
-    "Cineclub Farus":           ("https://centralticket.net/search?q=farus",
-                                 r"/event/[a-z0-9\-]*farus[a-z0-9\-]*"),
+    # Cuenta eventos por venir, no funciones: una doble función es un evento
+    # con dos. Ver probe(): "@farus".
+    "Cineclub Farus":           ("https://centralticket.net/search?q=farus", "@farus"),
     # La agenda filtrada por "Tipo de evento: Cine". Cuenta eventos vigentes,
     # no funciones: un ciclo de tres días es una sola tarjeta.
     "Museo Moderno":            ("https://museomoderno.org/agenda/?jsf=jet-engine:"
@@ -422,6 +422,33 @@ def probe(cine: str, url: str, pattern: str) -> tuple[str, int | None, str]:
         n = len(re.findall(r'data-field="titulo"', limpio)) or len(re.findall(r'class="[^"]*film-col', limpio))
         return cine, n, "funciones anunciadas en la home"
 
+    if pattern == "@farus":
+        # Los eventos de Farus por venir, del catálogo que la búsqueda de
+        # Central Ticket trae embebido: {id:"11190",
+        # eventURL:"2211CineclubFarus", title:"Cineclub Farus", …,
+        # dateEndKey:"2026-11-22"}. Antes se contaban los links
+        # /event/<slug> que dijeran "farus" en minúsculas, y los de noviembre
+        # de 2026 vienen con mayúsculas: la sonda contó 0, el informe leyó "no
+        # programó" y Farus estuvo dos semanas fuera de la web sin que ningún
+        # informe lo nombrara. Si la página deja de traer el catálogo, la
+        # sonda dice que no pudo medir en vez de contestar 0.
+        hoy = date.today().isoformat()
+        marcas = list(re.finditer(r'\{id:"(\d+)",', body))
+        eventos, con_fecha = set(), 0
+        for i, m in enumerate(marcas):
+            fin = marcas[i + 1].start() if i + 1 < len(marcas) else len(body)
+            trozo = body[m.end():min(fin, m.end() + 3000)]
+            fecha = (re.search(r'dateEndKey:"(\d{4}-\d{2}-\d{2})"', trozo)
+                     or re.search(r'dateStartKey:"(\d{4}-\d{2}-\d{2})"', trozo))
+            if not fecha:
+                continue
+            con_fecha += 1
+            if fecha.group(1) >= hoy and re.search(r"farus", trozo, re.IGNORECASE):
+                eventos.add(m.group(1))
+        if not con_fecha:
+            return cine, None, "la búsqueda de Central Ticket cambió de formato"
+        return cine, len(eventos), "eventos por venir en Central Ticket"
+
     return cine, len(set(re.findall(pattern, body))), "ítems en la listing"
 
 
@@ -510,6 +537,7 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
     # ventana, así que "oscila" y el aviso se degrada. Le pasó al CCK.
     ALTA_FRECUENCIA = 5      # funciones/día a partir de las cuales un cero es raro
     RACHA_CHICA = 3          # días en cero que hacen mirar hasta a una sala chica
+    RACHA_LARGA = 7          # días en cero que se nombran aunque la sonda diga 0
     dias = sorted(snaps, reverse=True)
     habitual, racha_cero = {}, {}
     for c in universo:
@@ -547,6 +575,12 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
                                f"ninguna en la última corrida: {motivo}. Lo que "
                                f"se ve es lo último bueno, y se vacía solo a "
                                f"medida que pasan las fechas.")
+        elif n and proc.get("scrapeadas") and proc.get("fuente_caida"):
+            # Scrapeó, pero el scraper sabe que algo le faltó: un evento de
+            # Farus que no dice qué películas da, o el Cosmos viviendo de
+            # Instagram con su web caída. La grilla tiene algo, así que no grita.
+            rep.cronicar(f"**{cine}** publica {n} función(es), pero su scraper "
+                         f"avisa: {proc['fuente_caida']}.")
 
         if n == 0:
             racha, hab = racha_cero.get(cine, 0), habitual.get(cine, 0)
@@ -566,10 +600,23 @@ def check_cobertura(rep: Report, screenings: list[dict], today: date,
             elif probe_n:
                 rep.accionar(cine, f"{desde}{venia}, pero la fuente publica "
                                    f"{probe_n} {probe_detail}. El scraper se rompió.")
+            elif proc.get("fuente_caida"):
+                # El scraper mismo dice por qué no trajo nada. Antes esto se
+                # perdía si la sonda medía 0 o el cine traía poco.
+                rep.accionar(cine, f"{desde}{venia}, y su scraper avisa: "
+                                   f"{proc['fuente_caida']}.")
             elif probe_n == 0:
                 # Medimos la fuente y no publica nada: el cine no programó. Es
-                # la realidad, no un hallazgo.
-                pass
+                # la realidad, no un hallazgo… salvo que la sonda esté ciega.
+                # La de Farus contó 0 del 29/10 al 15/11/2026 porque cambió el
+                # formato de los links, y el informe leyó "no programó" dos
+                # semanas seguidas. Con una racha larga en un cine que venía
+                # programando se nombra igual, sin gritar.
+                if hab and racha >= RACHA_LARGA:
+                    rep.cronicar(f"**{cine}** {desde}{venia} y su sonda tampoco "
+                                 f"ve nada publicado. Si el cine sigue "
+                                 f"programando, cambió dónde publica: hay que "
+                                 f"mirar la sonda y el scraper.")
             elif not hab:
                 # Nunca trajo nada en la ventana: no hay con qué comparar.
                 pass

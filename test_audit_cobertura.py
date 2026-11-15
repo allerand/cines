@@ -160,6 +160,82 @@ def main() -> int:
     acc, _ = _correr({"Hoyts Abasto": [0] + [180] * 12})
     chequear("una sala con API propia en cero sí avisa", "Hoyts Abasto" in acc, str(acc))
 
+    # 16. Farus, del 29/10 al 15/11/2026: doce días en cero, y la sonda contaba
+    #     0 porque los links de noviembre venían con mayúsculas. El informe leía
+    #     "no programó". Con la sonda ciega igual se nombra, sin gritar.
+    acc, cron = _correr({"Cineclub Farus": [0] * 12 + [2, 2]},
+                        probes={"Cineclub Farus": (0, "ítems en la listing")})
+    chequear("racha larga con la sonda en 0 se nombra igual",
+             "Cineclub Farus" not in acc and "Cineclub Farus" in cron
+             and "sonda tampoco" in cron, f"{acc} | {cron}")
+
+    # 17. Si el scraper sabe por qué no trajo nada, eso manda: aunque la sonda
+    #     mida 0 o el cine traiga poco.
+    acc, _ = _correr({"Cineclub Farus": [0, 0] + [2] * 10},
+                     probes={"Cineclub Farus": (0, "eventos por venir en Central Ticket")},
+                     fuentes={"Cineclub Farus": {
+                         "scrapeadas": 0, "publicadas": 0,
+                         "fuente_caida": "no contestó ninguna de sus fuentes"}})
+    msg = acc.get("Cineclub Farus", "")
+    chequear("un cero con motivo del scraper avisa con ese motivo",
+             "no contestó ninguna de sus fuentes" in msg, msg or "sin aviso")
+
+    # 18. ...pero un 403 en la sonda sigue diciendo que es acceso, no parser
+    #     (la Casa del Bicentenario vive así desde septiembre).
+    acc, _ = _correr({"Casa del Bicentenario": [0, 0] + [8] * 10},
+                     probes={"Casa del Bicentenario": (None, f"{audit._RECHAZO}HTTP 403")},
+                     fuentes={"Casa del Bicentenario": {
+                         "scrapeadas": 0, "publicadas": 0,
+                         "fuente_caida": "el listado no contesta (HTTP Error 403)"}})
+    msg = acc.get("Casa del Bicentenario", "")
+    chequear("con la sonda rechazada el mensaje sigue siendo de acceso",
+             "No es el parser" in msg, msg or "sin aviso")
+
+    # 19. Scrapeó, pero un evento por venir no dice qué películas da: se
+    #     nombra en el informe aunque el resto de la cartelera esté bien.
+    acc, cron = _correr({"Cineclub Farus": [2] * 12},
+                        screenings=_funcs("Cineclub Farus", 2),
+                        fuentes={"Cineclub Farus": {
+                            "scrapeadas": 2, "publicadas": 2,
+                            "fuente_caida": "el evento 11199 no dice qué películas da"}})
+    chequear("un aviso del scraper con funciones publicadas va a la crónica",
+             "Cineclub Farus" not in acc and "11199" in cron, f"{acc} | {cron}")
+
+    # 20. La sonda de Farus: el catálogo embebido en la búsqueda, con slugs en
+    #     mayúsculas, cuenta sólo lo de Farus que no pasó.
+    class _Resp:
+        def __init__(self, body):
+            self.body = body.encode()
+
+        def read(self):
+            return self.body
+
+        def __enter__(self):
+            return self
+
+        def __exit__(self, *a):
+            return False
+
+    pagina = ('<a href="/event/2211CineclubFarus" id="search-card-11190">'
+              '{id:"10983",eventURL:"oasis",title:"OASIS",dateStartKey:"2099-11-07",dateEndKey:"2099-11-07"},'
+              '{id:"11190",eventURL:"2211CineclubFarus",title:"Cineclub Farus",artists:["Farus"],'
+              'dateParts:{day:"22"},dateStartKey:"2099-11-22",dateEndKey:"2099-11-22"},'
+              '{id:"11199",eventURL:"2711TFCineclubFarus",title:"Cineclub Farus - Triple Función",'
+              'dateStartKey:"2099-11-27",dateEndKey:"2099-11-28"},'
+              '{id:"10743",eventURL:"10743",title:"Cineclub Farus",dateStartKey:"2000-10-28"}')
+    urlopen_real = audit.urllib.request.urlopen
+    try:
+        audit.urllib.request.urlopen = lambda req, timeout=30: _Resp(pagina)
+        _, n, detalle = audit.probe("Cineclub Farus", *audit.PROBES["Cineclub Farus"])
+        chequear("la sonda de Farus cuenta los eventos por venir del catálogo",
+                 n == 2, f"{n} {detalle}")
+        audit.urllib.request.urlopen = lambda req, timeout=30: _Resp("<html>otra cosa</html>")
+        _, n, detalle = audit.probe("Cineclub Farus", *audit.PROBES["Cineclub Farus"])
+        chequear("sin catálogo, la sonda no inventa un 0",
+                 n is None and "formato" in detalle, f"{n} {detalle}")
+    finally:
+        audit.urllib.request.urlopen = urlopen_real
+
     # --- Calidad: un título que son varias películas -------------------------
     # El detector que faltaba. El CCK publicó cuatro funciones así durante
     # días —«A + B + charlas con Fulano», sin director, sin año, sin

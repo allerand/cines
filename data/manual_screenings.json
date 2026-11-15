@@ -3194,6 +3194,17 @@
       "cine": "Cine Doré", "title": "La libertad", "fecha": "2026-12-16", "hora": "17:30",
       "director": "Lisandro Alonso", "year": 2001, "country": "Argentina", "duration": 73,
       "ciclo": "El presente en escena. Cine argentino del siglo XXI", "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html"
+    },
+    {
+      "_ciclo": "Cineclub Farus, triple del Ciclo Giallo (viernes 27/11/2026). Las películas están en la descripción del evento de Central Ticket, que dice 19, 20.40 y 22.45; el taplink dice 20, 22 y 00, y el flyer del evento (el mismo del Instagram) 19, 20:45 y 22:40, con año y duración. Manda el flyer: estas dos van con su hora y las de la descripción se descartan abajo. Blood and Black Lace (19 h) coincide y sale del scraper.",
+      "cine": "Cineclub Farus", "title": "Don't Torture a Duckling", "fecha": "2026-11-27", "hora": "20:45",
+      "director": "Lucio Fulci", "year": 1972, "duration": 105,
+      "ciclo": "Ciclo Giallo", "ticket_url": "https://centralticket.net/event/11199"
+    },
+    {
+      "cine": "Cineclub Farus", "title": "Deep Red", "fecha": "2026-11-27", "hora": "22:40",
+      "director": "Dario Argento", "year": 1975, "duration": 126,
+      "ciclo": "Ciclo Giallo", "ticket_url": "https://centralticket.net/event/11199"
     }
   ],
 
@@ -3291,6 +3302,14 @@
     {
       "_por_que": "Bitbang: el Gaumont tiene la función del Día Internacional de la Animación como \"Bit Bang\". Va arriba con sus cortos.",
       "cine": "Cine Gaumont", "fecha": "2026-10-28", "hora": "19:30", "title_contiene": "Bit Bang"
+    },
+    {
+      "_por_que": "Cineclub Farus, Ciclo Giallo: la descripción del evento dice 20.40 y el flyer 20:45. Va arriba con la hora del flyer.",
+      "cine": "Cineclub Farus", "fecha": "2026-11-27", "hora": "20:40", "title_contiene": "Torture a Duckling"
+    },
+    {
+      "_por_que": "Cineclub Farus, Ciclo Giallo: la descripción del evento dice 22.45 y el flyer 22:40. Va arriba con la hora del flyer.",
+      "cine": "Cineclub Farus", "fecha": "2026-11-27", "hora": "22:45", "title_contiene": "Deep Red"
     }
   ],
 
