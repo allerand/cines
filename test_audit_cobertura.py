@@ -260,6 +260,29 @@ def main() -> int:
     chequear("un título normal sin director tampoco",
              not marcado("Deuses de pedra"))
 
+    # --- Calidad: un título que es el nombre de un ciclo ---------------------
+    # La Sala Lugones del 15/11/2026: el scraper no pudo leer el programa y
+    # publicó "Homenaje a John Huston" (ciclo "Estreno") al lado de las
+    # películas del homenaje.
+    def _fila(titulo, ciclo, hora="15:00", cine="Sala Lugones"):
+        return {"cine": cine, "fecha": HOY.isoformat(), "hora": hora, "title_es": titulo,
+                "director": "", "ciclo": ciclo, "year": 2025, "ticket_url": "https://x/"}
+
+    rep = audit.Report()
+    audit.check_calidad(rep, [_fila("Homenaje a John Huston", "Estreno"),
+                              _fila("El tesoro de la Sierra Madre", "Homenaje a John Huston", "18:00"),
+                              _fila("La reina africana", "Homenaje a John Huston", "21:00")], HOY)
+    msg = " ".join(m for _, m in rep.accion)
+    chequear("un título que es el nombre de un ciclo de su sala es ERROR",
+             "nombre de un ciclo" in msg, msg or "sin aviso")
+
+    rep = audit.Report()
+    audit.check_calidad(rep, [_fila("Nueve Auras", "Nueve Auras"),
+                              _fila("Homenaje a John Huston", "Estreno", cine="Otra sala"),
+                              _fila("El tesoro de la Sierra Madre", "Homenaje a John Huston", "18:00")], HOY)
+    chequear("...pero no un ciclo de una sola película ni el ciclo de otra sala",
+             not any("nombre de un ciclo" in m for _, m in rep.accion), str(rep.accion))
+
     print(f"\n{'TODO OK' if not fallos else f'{fallos} casos fallando'}")
     return 1 if fallos else 0
 

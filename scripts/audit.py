@@ -31,6 +31,7 @@ import argparse
 import json
 import re
 import subprocess
+import unicodedata
 import sys
 import urllib.error
 import urllib.request
@@ -706,6 +707,12 @@ _DIR_FRASE = re.compile(r"\b(será|sera|proyecc|festival|presenta|con la|marco d
                         r"ciclo|entrada|función|funcion)\b", re.IGNORECASE)
 
 
+def _norm_titulo(t: str) -> str:
+    """Para comparar títulos: sin tildes, caja ni puntuación."""
+    t = unicodedata.normalize("NFKD", t or "").encode("ascii", "ignore").decode("ascii")
+    return " ".join(re.sub(r"[^a-z0-9]+", " ", t.lower()).split())
+
+
 def check_calidad(rep: Report, screenings: list[dict], today: date) -> None:
     hoy = today.isoformat()
     anio_max = today.year + 2
@@ -718,6 +725,19 @@ def check_calidad(rep: Report, screenings: list[dict], today: date) -> None:
         if len(ejemplos[(regla, cine)]) < 3:
             ejemplos[(regla, cine)].append(detalle)
 
+    # Los ciclos de cada sala, con los títulos que tiene cada uno. Una función
+    # que se llama como un ciclo de su misma sala que tiene OTRAS películas no
+    # es una película: es el scraper que no pudo leer el programa y publicó el
+    # nombre del ciclo. Pasó con la Sala Lugones el 15/11/2026 ("Homenaje a
+    # John Huston", ciclo "Estreno", al lado de las películas del homenaje). Un
+    # ciclo de una sola película que se llama como ella no salta.
+    ciclos: dict[tuple[str, str], set[str]] = defaultdict(set)
+    for s in screenings:
+        base = (s.get("ciclo") or "").split(" - ")[0].strip()
+        if base and s.get("fecha", "") >= hoy:
+            ciclos[(s.get("cine", "?"), _norm_titulo(base))].add(
+                _norm_titulo(s.get("title_es") or ""))
+
     for s in screenings:
         cine = s.get("cine", "?")
         titulo = (s.get("title_es") or "").strip()
@@ -726,6 +746,10 @@ def check_calidad(rep: Report, screenings: list[dict], today: date) -> None:
 
         if fecha < hoy:
             continue    # las pasadas ya no se muestran; no vale la pena auditarlas
+
+        t = _norm_titulo(titulo)
+        if t and ciclos.get((cine, t), set()) - {t}:
+            flag("título que es el nombre de un ciclo", cine, f"{fecha} {hora}: {titulo!r}")
 
         # Director repetido: "X De X De X" (MALBA repite el crédito en el HTML).
         if re.search(r"^(.+?)\s+[Dd]e\s+\1\b", director):
@@ -790,6 +814,10 @@ def check_calidad(rep: Report, screenings: list[dict], today: date) -> None:
     # Reglas que rompen la ficha publicada → acción. El resto se resume abajo:
     # son cosas que vienen arrastrándose y que ver una vez alcanza.
     QUE_HACER = {
+        "título que es el nombre de un ciclo": "hay funciones que dicen el nombre "
+                                               "de un ciclo en vez de la película: "
+                                               "el scraper no pudo leer el programa "
+                                               "del ciclo",
         "título vacío": "hay funciones sin título",
         "hora inválida": "hay horarios que no se pudieron parsear",
         "director duplicado": "el crédito viene repetido desde la fuente",

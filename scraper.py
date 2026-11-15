@@ -896,32 +896,46 @@ def scrape_malba(semanas: int = 2, hoy: Optional[date] = None) -> list[Screening
 # Sala Lugones  (complejoteatral.gob.ar → entradasba.buenosaires.gob.ar)
 # ---------------------------------------------------------------------------
 
-def fetch_ctba_ver_page_sync(ver_url: str) -> Optional[str]:
-    """Carga la página /ver/ vía HTTP (no playwright) y devuelve texto plano.
-
-    Usamos urllib porque playwright headless se viene quedando sin contenido en
-    los runners de GH Actions (devuelve ~299B en vez de 90KB — bot-detection
-    o render incompleto). El HTML servido por el server tiene todo el contenido
-    estático, así que un fetch directo es más rápido y más confiable.
-
-    Las URLs de complejoteatral.gob.ar suelen tener ñ/ó/í/:/espacios en el path —
-    hace falta percent-encoding manual antes de pegar a urllib.
-    """
-    # Percent-encode el path (preservando : / - , ya válidos en URLs)
+def _ctba_url(ver_url: str) -> str:
+    """Las URLs de complejoteatral.gob.ar suelen tener ñ/ó/í/:/espacios en el
+    path: hace falta percent-encoding antes de pedirlas."""
     parts = urllib.parse.urlsplit(ver_url)
-    safe_path = urllib.parse.quote(parts.path, safe="/-:,")
-    encoded = urllib.parse.urlunsplit((parts.scheme, parts.netloc, safe_path, parts.query, parts.fragment))
-    try:
-        req = urllib.request.Request(encoded, headers={"User-Agent": UA})
-        with urllib.request.urlopen(req, timeout=20) as r:
-            html = r.read().decode("utf-8", errors="replace")
-    except Exception:
-        return None
+    safe_path = urllib.parse.quote(parts.path, safe="/-:,%")
+    return urllib.parse.urlunsplit((parts.scheme, parts.netloc, safe_path, parts.query, parts.fragment))
+
+
+def _ctba_texto(html: str) -> str:
+    """El texto plano de una página del CTBA, un renglón por bloque."""
     soup = BeautifulSoup(html, "html.parser")
     # get_text con "\n" preserva la estructura por bloque/párrafo, que es lo
     # que parse_ctba_program_text espera.
     raw = soup.get_text("\n")
     return "\n".join(re.sub(r"\s+", " ", ln).strip() for ln in raw.splitlines() if ln.strip())
+
+
+def _ctba_legible(texto: Optional[str], titulo: str) -> bool:
+    """Que lo que se bajó sea la página del evento y no un error, un desafío
+    anti-bots o una página a medio cargar: tiene que nombrar el evento."""
+    if not texto or len(texto) < 300:
+        return False
+    return not titulo or titulo_norm(titulo) in titulo_norm(texto)
+
+
+def fetch_ctba_ver_page_sync(ver_url: str) -> Optional[str]:
+    """Carga la página del evento (/produccion/, antes /ver/) por HTTP y
+    devuelve texto plano, o None si no se pudo.
+
+    Va por urllib porque playwright headless se venía quedando sin contenido en
+    los runners de GH Actions (~299B en vez de 90KB). Con reintentos: el
+    15/11/2026 el runner no pudo leer ninguna página de ciclo, y como esto
+    no reintentaba, el scraper publicó el nombre de cada ciclo como si fuera
+    una película (ver scrape_lugones).
+    """
+    try:
+        html = fetch_bytes(_ctba_url(ver_url), timeout=20, intentos=3)
+    except Exception:
+        return None
+    return _ctba_texto(html.decode("utf-8", errors="replace"))
 def is_ctba_estreno_page(text: str) -> bool:
     return bool(re.search(r"\bEstreno\s+exclusivo\b", text, re.IGNORECASE))
 
@@ -1317,10 +1331,19 @@ def _ctba_partir_por_mes(texto: str) -> list[str]:
 async def scrape_lugones(page: Page) -> list[Screening]:
     """
     1. Lista los eventos de cine de la Sala Lugones en la home del CTBA.
-    2. Para cada evento, scrapea la página de entradasba para obtener
-       fechas y horarios exactos.
-    3. Para eventos con ciclos (múltiples películas), parsea la página del
-       ciclo (/produccion/) para extraer información de cada película.
+    2. Para cada evento, lee su página (/produccion/): si es un ciclo, de ahí
+       salen las películas con su día y hora.
+    3. Si es un estreno (una sola película), las fechas salen de la página o
+       de entradasba.
+
+    Nunca se publica el nombre de un ciclo como película. El 15/11/2026 el
+    runner no pudo leer ninguna página de ciclo, y los respaldos de entonces
+    publicaron cada fecha de entradasba con el título del evento ("Homenaje a
+    John Huston", "Herzog-Kinski: enemigo mío") y ciclo "Estreno". Ahora, si
+    la página no se puede leer (ni por HTTP ni con el navegador) o tiene forma
+    de ciclo y el parser no la entiende, ese evento no sale y la fuente queda
+    marcada como caída: con menos funciones que su mínimo, run.py publica las
+    de la corrida anterior (CINES_CON_CACHE) y la auditoría lo avisa.
     """
     soup = None
     try:
@@ -1376,12 +1399,16 @@ async def scrape_lugones(page: Page) -> list[Screening]:
     events += pendientes
     solo_recordados = {e["ver_url"] for e in pendientes}
     rindieron: set[str] = set()
+    # Lo que no se pudo leer en esta corrida, para FUENTES_CAIDAS: los eventos
+    # del listado de hoy cuyo programa no se entendió.
+    problemas: list[str] = []
 
     for ev in events:
         cycle_name = ev["title"]
         ticket_url = ev["ticket_url"]
         ver_url = ev["ver_url"]
         n_antes = len(result)
+        del_listado = ver_url not in solo_recordados
 
         # Fetch /ver/ page ONCE; try cycle-format parse, fallback to estreno parse
         program: dict[tuple[int, str], dict] = {}
@@ -1393,17 +1420,32 @@ async def scrape_lugones(page: Page) -> list[Screening]:
         n_hour_blocks = 0
         if ver_url:
             ver_text = fetch_ctba_ver_page_sync(ver_url)
+            if not _ctba_legible(ver_text, cycle_name):
+                # Segundo intento con el navegador, como la home.
+                try:
+                    await page.goto(_ctba_url(ver_url), wait_until="domcontentloaded",
+                                    timeout=30000)
+                    await page.wait_for_timeout(1500)
+                    ver_text = _ctba_texto(await page.content())
+                except Exception:
+                    ver_text = None
+            if not _ctba_legible(ver_text, cycle_name):
+                ver_text = None
             if ver_text:
                 ver_text_len = len(ver_text)
-                # Detectar estructura de ciclo: ≥2 bloques "A las X horas".
-                # Si la página tiene forma de ciclo nunca debemos usar
-                # cycle_name como título de la peli aunque el parser falle.
                 hour_blocks = re.findall(
                     r"A las \d{1,2}(?:\s+y\s+\d{1,2})?\s+horas?",
                     ver_text, re.IGNORECASE,
                 )
                 n_hour_blocks = len(hour_blocks)
-                looks_like_cycle = n_hour_blocks >= 2
+                # Si la página es de un ciclo, nunca se usa el nombre del
+                # evento como título aunque el parser falle. Contar bloques
+                # "A las X horas" no sirve para saberlo: el 15/11/2026 el
+                # estreno El tren fluvial tenía dos y los ciclos de Lubitsch y
+                # de Wajda uno solo. Lo que sí separa es que la página de un
+                # ciclo se presenta como tal ("un ciclo denominado…", "El
+                # ciclo está integrado por…"), y la de un estreno no.
+                looks_like_cycle = bool(re.search(r"\bciclo\b", ver_text, re.IGNORECASE))
                 # "Estreno exclusivo" aparece tanto en estrenos genuinos como
                 # en ciclos que acompañan a un estreno (ej Teresa Villaverde →
                 # Justa). Heurística confiable: intentar parser de ciclo
@@ -1425,6 +1467,19 @@ async def scrape_lugones(page: Page) -> list[Screening]:
             f"ciclo_visible={looks_like_cycle}",
             flush=True,
         )
+
+        # Sin la página del evento no se sabe si es un ciclo o un estreno, y
+        # sin el programa de un ciclo no se sabe qué película va cada día: en
+        # los dos casos lo único que habría para publicar es el nombre del
+        # evento, que en un ciclo no es una película. No sale nada.
+        if not ver_text or (looks_like_cycle and not program):
+            if del_listado:
+                motivo = ("no se pudo leer" if not ver_text
+                          else "tiene forma de ciclo y el parser no entendió el programa de")
+                problemas.append(f"{motivo} «{cycle_name}» ({ver_url or 'sin página'})")
+                print(f"  · ⚠️  [Lugones] «{cycle_name}» queda afuera: {motivo} su página",
+                      flush=True)
+            continue
 
         # Para ciclos (múltiples películas): construir fechas directamente desde el
         # programa, sin depender del entradasba ticket URL (que sólo cubre 1 film).
@@ -1568,11 +1623,12 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                     ))
                 continue
 
+        # Acá sólo llegan estrenos (una película, la del título del evento):
+        # los ciclos ya salieron por su programa o quedaron afuera arriba.
         if not ticket_url or "entradasba" not in ticket_url:
-            result.append(Screening(
-                cine="Sala Lugones", title=cycle_name,
-                fecha="Sin fecha", hora="??", ticket_url=ticket_url,
-            ))
+            # Anunciado sin días ni entradas todavía. Antes salía como una
+            # fila "Sin fecha", que la web no muestra.
+            print(f"  · [Lugones] «{cycle_name}»: todavía sin fechas ni entradas", flush=True)
             continue
 
         try:
@@ -1605,52 +1661,31 @@ async def scrape_lugones(page: Page) -> list[Screening]:
                     if d > cutoff:
                         continue
 
-                    if is_estreno:
-                        # Película individual (estreno) — toda la metadata viene
-                        # del /ver/ y el ciclo es "Estreno"
-                        result.append(Screening(
-                            cine="Sala Lugones",
-                            title=cycle_name,  # acá title==film_name
-                            fecha=d.isoformat(), hora=hora,
-                            ticket_url=ticket_url,
-                            ciclo="Estreno",
-                            director=estreno_meta.get("director", ""),
-                            country=estreno_meta.get("country", ""),
-                            year=estreno_meta.get("year"),
-                            duration=estreno_meta.get("duration"),
-                        ))
-                    elif looks_like_cycle:
-                        # Página parece ciclo pero el parser falló — peli
-                        # desconocida. Marcamos visible con ciclo "⚠️ parser
-                        # falló" para que se note en la web y no se confunda
-                        # con un estreno legítimo.
-                        result.append(Screening(
-                            cine="Sala Lugones", title=cycle_name,
-                            fecha=d.isoformat(), hora=hora,
-                            ticket_url=ticket_url,
-                            ciclo=f"⚠️ parser falló · {cycle_name}",
-                        ))
-                    else:
-                        # Ni ciclo ni estreno parseable → preservar título del card
-                        result.append(Screening(
-                            cine="Sala Lugones", title=cycle_name,
-                            fecha=d.isoformat(), hora=hora,
-                            ticket_url=ticket_url,
-                            ciclo="Estreno",
-                        ))
+                    # Película individual (estreno): la metadata viene de su
+                    # página y el ciclo es "Estreno".
+                    result.append(Screening(
+                        cine="Sala Lugones",
+                        title=cycle_name,  # acá title==film_name
+                        fecha=d.isoformat(), hora=hora,
+                        ticket_url=ticket_url,
+                        ciclo="Estreno",
+                        director=estreno_meta.get("director", ""),
+                        country=estreno_meta.get("country", ""),
+                        year=estreno_meta.get("year"),
+                        duration=estreno_meta.get("duration"),
+                    ))
                 except ValueError:
                     pass
 
-        except Exception:
-            result.append(Screening(
-                cine="Sala Lugones", title=cycle_name,
-                fecha="Sin fecha", hora="??", ticket_url=ticket_url,
-            ))
+        except Exception as e:
+            if del_listado:
+                problemas.append(f"entradasba no cargó las fechas de «{cycle_name}» ({e})")
 
-        # "Sin fecha" no cuenta: es el parser avisando que no entendió la
-        # página, no un ciclo con funciones por delante.
-        if ver_url and any(s.fecha != "Sin fecha" for s in result[n_antes:]):
+        if ver_url and len(result) > n_antes:
             rindieron.add(ver_url)
+
+    if problemas:
+        marcar_fuente_caida("Sala Lugones", "; ".join(problemas))
 
     # Un evento que ya no está en el listado y que tampoco dio funciones se
     # olvida acá mismo: el ciclo terminó y no hay nada que releer mañana.

@@ -817,8 +817,13 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     #      El Museo Moderno, por lo mismo que el Bellas Artes: una sola web
     #      (la agenda del museo) y ciclos cortos de dos o tres funciones. Si
     #      un día no contesta, sin caché se pierde el ciclo entero.
+    #      La Sala Lugones: el 15/11/2026 el runner no pudo leer ninguna página
+    #      de ciclo del CTBA. Ahora su scraper no publica nada de un ciclo que
+    #      no pudo leer (antes publicaba el nombre del ciclo como película), así
+    #      que un día así trae dos o tres estrenos contra las ~50 funciones de
+    #      siempre: con menos de 10, se mantienen las de la corrida anterior.
     CINES_CON_CACHE = {'Centro Cultural Borges': 3, 'CCK': 1, 'Bellas Artes': 1,
-                       'Museo Moderno': 1,
+                       'Museo Moderno': 1, 'Sala Lugones': 10,
                        'Cine Doré': 1, 'Cines Ideal': 1,
                        'Cineteca Madrid': 1, 'Cines Princesa': 1,
                        'Renoir Plaza de España': 1, 'Renoir Retiro': 1,
