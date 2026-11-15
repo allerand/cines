@@ -34199,5 +34199,134 @@
     "duration": 86,
     "genre": "Documental",
     "original_title": "Na Passagem do Trópico"
+  },
+  "don't torture a duckling|1972": {
+    "url": "https://letterboxd.com/film/dont-torture-a-duckling/",
+    "title_en": "Don't Torture a Duckling",
+    "director": "Lucio Fulci",
+    "country": "Italy",
+    "year": 1972,
+    "duration": 105,
+    "genre": "Terror",
+    "title_es": "Angustia de silencio",
+    "original_title": "Non si sevizia un paperino"
+  },
+  "deep red|1975": {
+    "url": "https://letterboxd.com/film/deep-red/",
+    "title_en": "Deep Red",
+    "director": "Dario Argento",
+    "country": "Italy",
+    "year": 1975,
+    "duration": 127,
+    "genre": "Misterio, Terror",
+    "title_es": "Rojo oscuro",
+    "original_title": "Profondo rosso"
+  },
+  "le bonheur": {
+    "url": "https://letterboxd.com/film/happiness-1965/",
+    "title_en": "Le Bonheur",
+    "director": "Agnès Varda",
+    "country": "France",
+    "year": 1965,
+    "duration": 80,
+    "genre": "Drama, Romance",
+    "clase_titulo": "exacto",
+    "title_es": "La felicidad",
+    "original_title": "Le Bonheur",
+    "sin_hints": "la más popular que se llama así"
+  },
+  "lawrence of arabia": {
+    "url": "https://letterboxd.com/film/lawrence-of-arabia/",
+    "title_en": "Lawrence of Arabia",
+    "director": "David Lean",
+    "country": "UK",
+    "year": 1962,
+    "duration": 228,
+    "genre": "Aventura, Bélica",
+    "clase_titulo": "exacto",
+    "title_es": "Lawrence de Arabia",
+    "original_title": "Lawrence of Arabia",
+    "sin_hints": "la más popular que se llama así"
+  },
+  "blood and black lace": {
+    "url": "https://letterboxd.com/film/blood-and-black-lace/",
+    "title_en": "Blood and Black Lace",
+    "director": "Mario Bava",
+    "country": "Germany, France",
+    "year": 1964,
+    "duration": 88,
+    "genre": "Terror, Crimen",
+    "clase_titulo": "exacto",
+    "title_es": "Seis mujeres para el asesino",
+    "original_title": "Sei donne per l'assassino",
+    "sin_hints": "la más popular que se llama así"
+  },
+  "andrzej wajda bis": {
+    "url": "",
+    "title_en": "Andrzej Wajda bis",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Andrzej Wajda ogląda \"Popiół i diament\" (2008), Andrzej Wajda: My Inspirations (2017)",
+    "fecha": "2026-11-15",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "cinco tardes con ernst lubitsch": {
+    "url": "",
+    "title_en": "Cinco tardes con Ernst Lubitsch",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "desde finlandia con amor": {
+    "url": "",
+    "title_en": "Desde Finlandia con amor",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: From Russia with Love (1963), From Paris with Love (2010), Raphael: desde Rusia con amor (2021)",
+    "fecha": "2026-11-15",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "grandes actrices de la época dorada del cine japonés": {
+    "url": "",
+    "title_en": "Grandes actrices de la época dorada del cine japonés",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "herzog-kinski: enemigo mío": {
+    "url": "",
+    "title_en": "Herzog-Kinski: enemigo mío",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "homenaje a john huston": {
+    "url": "",
+    "title_en": "Homenaje a John Huston",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "museo de la subversión": {
+    "url": "https://letterboxd.com/film/museo-de-la-subversion/",
+    "title_en": "Museo de la subversión",
+    "director": "Francisco D'Eufemia",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 70,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Museo de la subversión",
+    "sin_hints": "título"
   }
 }

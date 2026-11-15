@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-15T02:55:41",
+  "updated": "2026-11-15T11:48:00",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 19,
@@ -10,7 +10,7 @@
       "publicadas": 3
     },
     "Bellas Artes": {
-      "scrapeadas": 3,
+      "scrapeadas": 0,
       "publicadas": 3
     },
     "Biblioteca Nacional": {
@@ -23,7 +23,8 @@
     },
     "CCK": {
       "scrapeadas": 0,
-      "publicadas": 10
+      "publicadas": 10,
+      "fuente_caida": "no se pudo leer palaciolibertad.gob.ar/cine/"
     },
     "Cacodelphia": {
       "scrapeadas": 43,
@@ -34,13 +35,10 @@
       "publicadas": 0,
       "fuente_caida": "el listado no contesta (HTTP Error 403: Forbidden); sólo queda lo que haya en data/cb_manual.json"
     },
-    "Centro Cultural 25 de Mayo": {
-      "scrapeadas": 4,
-      "publicadas": 4
-    },
     "Centro Cultural Borges": {
       "scrapeadas": 0,
-      "publicadas": 16
+      "publicadas": 16,
+      "fuente_caida": "la API no contesta; se publica el caché de la última corrida buena"
     },
     "Centro Cultural Munro": {
       "scrapeadas": 11,
@@ -116,8 +114,8 @@
       "publicadas": 30
     },
     "Multiplex Belgrano": {
-      "scrapeadas": 406,
-      "publicadas": 406
+      "scrapeadas": 411,
+      "publicadas": 411
     },
     "Multiplex Canning": {
       "scrapeadas": 352,
@@ -132,8 +130,8 @@
       "publicadas": 473
     },
     "Sala Lugones": {
-      "scrapeadas": 49,
-      "publicadas": 49
+      "scrapeadas": 15,
+      "publicadas": 18
     },
     "Sala Lúcida": {
       "scrapeadas": 15,
@@ -2005,17 +2003,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-11-15",
       "hora": "15:00",
-      "title_es": "El tesoro de la Sierra Madre",
-      "title_en": "The Treasure of the Sierra Madre",
-      "original_title": "The Treasure of the Sierra Madre",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1948,
-      "duration": 126,
-      "genre": "Drama, Western",
-      "letterboxd": "https://letterboxd.com/film/the-treasure-of-the-sierra-madre/",
+      "title_es": "Homenaje a John Huston",
+      "title_en": "Homenaje a John Huston",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cacodelphia",
@@ -2032,6 +2030,22 @@
       "letterboxd": "https://letterboxd.com/film/babystar/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/abd9cd268a487dd426f0156244a574b6",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-15",
+      "hora": "15:00",
+      "title_es": "El tesoro de la Sierra Madre",
+      "title_en": "The Treasure of the Sierra Madre",
+      "original_title": "The Treasure of the Sierra Madre",
+      "director": "John Huston",
+      "country": "Estados Unidos",
+      "year": 1948,
+      "duration": 126,
+      "genre": "Drama, Western",
+      "letterboxd": "https://letterboxd.com/film/the-treasure-of-the-sierra-madre/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -4405,6 +4419,22 @@
       "cine": "Sala Lugones",
       "fecha": "2026-11-15",
       "hora": "18:00",
+      "title_es": "Herzog-Kinski: enemigo mío",
+      "title_en": "Herzog-Kinski: enemigo mío",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-15",
+      "hora": "18:00",
       "title_es": "Mi mejor enemigo",
       "title_en": "My Best Fiend",
       "original_title": "Mein liebster Feind",
@@ -4466,22 +4496,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
-      "fecha": "2026-11-15",
-      "hora": "18:10",
-      "title_es": "Caballo salvaje nueve",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-15",
       "hora": "18:10",
@@ -4511,6 +4525,22 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-11-15",
+      "hora": "18:10",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
       "ciclo": ""
     },
     {
@@ -6389,22 +6419,6 @@
       "cine": "Multiplex Canning",
       "fecha": "2026-11-15",
       "hora": "20:30",
-      "title_es": "Caballo salvaje nueve",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-15",
-      "hora": "20:30",
       "title_es": "Scrooge y los fantasmas de la Navidad",
       "title_en": "Ebenezer",
       "original_title": "Ebenezer",
@@ -6431,6 +6445,22 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-15",
+      "hora": "20:30",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
       "ciclo": ""
     },
     {
@@ -6645,17 +6675,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-11-15",
       "hora": "21:00",
-      "title_es": "Nosferatu, el vampiro",
-      "title_en": "Nosferatu the Vampyre",
-      "original_title": "Nosferatu – Phantom der Nacht",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/ Francia",
-      "year": 1978,
-      "duration": 107,
-      "genre": "Drama, Terror",
-      "letterboxd": "https://letterboxd.com/film/nosferatu-phantom-der-nacht/",
+      "title_es": "Herzog-Kinski: enemigo mío",
+      "title_en": "Herzog-Kinski: enemigo mío",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
-      "ciclo": "Herzog-Kinski: enemigo mío"
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cacodelphia",
@@ -6672,6 +6702,22 @@
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/f5c3d6e4e929baed75d8e893c38be0ec",
       "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "2026-11-15",
+      "hora": "21:00",
+      "title_es": "Nosferatu, el vampiro",
+      "title_en": "Nosferatu the Vampyre",
+      "original_title": "Nosferatu – Phantom der Nacht",
+      "director": "Werner Herzog",
+      "country": "República Federal de Alemania/ Francia",
+      "year": 1978,
+      "duration": 107,
+      "genre": "Drama, Terror",
+      "letterboxd": "https://letterboxd.com/film/nosferatu-phantom-der-nacht/",
+      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
+      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -11586,22 +11632,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
-      "fecha": "2026-11-16",
-      "hora": "18:10",
-      "title_es": "Caballo salvaje nueve",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-16",
       "hora": "18:10",
@@ -11631,6 +11661,22 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-11-16",
+      "hora": "18:10",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
       "ciclo": ""
     },
     {
@@ -12997,22 +13043,6 @@
       "cine": "Multiplex Canning",
       "fecha": "2026-11-16",
       "hora": "20:30",
-      "title_es": "Caballo salvaje nueve",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-16",
-      "hora": "20:30",
       "title_es": "Scrooge y los fantasmas de la Navidad",
       "title_en": "Ebenezer",
       "original_title": "Ebenezer",
@@ -13039,6 +13069,22 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-16",
+      "hora": "20:30",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
       "ciclo": ""
     },
     {
@@ -15941,17 +15987,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-11-17",
       "hora": "15:00",
-      "title_es": "Esta, nuestra vida",
-      "title_en": "In This Our Life",
-      "original_title": "In This Our Life",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1942,
-      "duration": 97,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/in-this-our-life/",
+      "title_es": "Homenaje a John Huston",
+      "title_en": "Homenaje a John Huston",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
+      "ciclo": "Estreno"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -17749,17 +17795,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-11-17",
       "hora": "18:00",
-      "title_es": "Huracán de pasiones",
-      "title_en": "Key Largo",
-      "original_title": "Key Largo",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1948,
-      "duration": 100,
-      "genre": "Thriller, Crimen",
-      "letterboxd": "https://letterboxd.com/film/key-largo/",
+      "title_es": "Homenaje a John Huston",
+      "title_en": "Homenaje a John Huston",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
+      "ciclo": "Estreno"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -17794,22 +17840,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
-      "fecha": "2026-11-17",
-      "hora": "18:10",
-      "title_es": "Caballo salvaje nueve",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-17",
       "hora": "18:10",
@@ -17839,6 +17869,22 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-11-17",
+      "hora": "18:10",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
       "ciclo": ""
     },
     {
@@ -19285,22 +19331,6 @@
       "cine": "Multiplex Canning",
       "fecha": "2026-11-17",
       "hora": "20:30",
-      "title_es": "Caballo salvaje nueve",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-17",
-      "hora": "20:30",
       "title_es": "Scrooge y los fantasmas de la Navidad",
       "title_en": "Ebenezer",
       "original_title": "Ebenezer",
@@ -19327,6 +19357,22 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-17",
+      "hora": "20:30",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
       "ciclo": ""
     },
     {
@@ -22357,17 +22403,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-11-18",
       "hora": "15:00",
-      "title_es": "Huracán de pasiones",
-      "title_en": "Key Largo",
-      "original_title": "Key Largo",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1948,
-      "duration": 100,
-      "genre": "Thriller, Crimen",
-      "letterboxd": "https://letterboxd.com/film/key-largo/",
+      "title_es": "Homenaje a John Huston",
+      "title_en": "Homenaje a John Huston",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
+      "ciclo": "Estreno"
     },
     {
       "cine": "Hoyts Abasto",
@@ -24114,22 +24160,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-18",
-      "hora": "18:00",
-      "title_es": "Ciudad dorada",
-      "title_en": "Fat City",
-      "original_title": "Fat City",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1972,
-      "duration": 97,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/fat-city/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-18",
       "hora": "18:10",
@@ -25685,22 +25715,6 @@
       "cine": "Multiplex Canning",
       "fecha": "2026-11-18",
       "hora": "20:30",
-      "title_es": "Caballo salvaje nueve",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Multiplex Canning",
-      "fecha": "2026-11-18",
-      "hora": "20:30",
       "title_es": "Scrooge y los fantasmas de la Navidad",
       "title_en": "Ebenezer",
       "original_title": "Ebenezer",
@@ -25711,6 +25725,22 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Canning",
+      "fecha": "2026-11-18",
+      "hora": "20:30",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
       "ciclo": ""
     },
     {
@@ -25872,22 +25902,6 @@
       "letterboxd": "https://letterboxd.com/film/runner-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/entrega-al-limite/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-18",
-      "hora": "21:00",
-      "title_es": "El halcón maltés",
-      "title_en": "The Maltese Falcon",
-      "original_title": "The Maltese Falcon",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1941,
-      "duration": 100,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-maltese-falcon-1941/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Multiplex Belgrano",
@@ -27682,22 +27696,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-19",
-      "hora": "15:00",
-      "title_es": "Mientras la ciudad duerme",
-      "title_en": "The Asphalt Jungle",
-      "original_title": "",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1950,
-      "duration": 113,
-      "genre": "Crimen, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-19",
       "hora": "15:20",
@@ -28240,22 +28238,6 @@
       "letterboxd": "https://letterboxd.com/film/cleo-from-5-to-7/",
       "ticket_url": "https://lumiton.ar/evento/cleo-de-5-a-7-7/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-19",
-      "hora": "18:00",
-      "title_es": "La reina africana",
-      "title_en": "The African Queen",
-      "original_title": "The African Queen",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido",
-      "year": 1951,
-      "duration": 105,
-      "genre": "Romance, Bélica",
-      "letterboxd": "https://letterboxd.com/film/the-african-queen/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Cacodelphia",
@@ -28818,22 +28800,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural 25 de Mayo",
-      "fecha": "2026-11-19",
-      "hora": "20:00",
-      "title_es": "Réquiem extraordinario",
-      "title_en": "Requiem extraordinario",
-      "original_title": "Requiem extraordinario",
-      "director": "Jimena Repetto",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 69,
-      "genre": "",
-      "letterboxd": "https://letterboxd.com/film/requiem-extraordinario/",
-      "ticket_url": "https://cc25.org/eventos/requiem-extraordinario/",
-      "ciclo": ""
-    },
-    {
       "cine": "Sala Lúcida",
       "fecha": "2026-11-19",
       "hora": "20:00",
@@ -28949,17 +28915,17 @@
       "cine": "Sala Lugones",
       "fecha": "2026-11-19",
       "hora": "21:00",
-      "title_es": "Cobra verde",
-      "title_en": "Cobra Verde",
-      "original_title": "Cobra Verde",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Ghana",
-      "year": 1987,
-      "duration": 111,
-      "genre": "Drama, Aventura",
-      "letterboxd": "https://letterboxd.com/film/cobra-verde/",
+      "title_es": "Herzog-Kinski: enemigo mío",
+      "title_en": "Herzog-Kinski: enemigo mío",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
-      "ciclo": "Herzog-Kinski: enemigo mío"
+      "ciclo": "Estreno"
     },
     {
       "cine": "Cacodelphia",
@@ -29874,22 +29840,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-20",
-      "hora": "15:00",
-      "title_es": "Los inadaptados",
-      "title_en": "The Misfits",
-      "original_title": "",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1961,
-      "duration": 124,
-      "genre": "Western, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-misfits/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-20",
       "hora": "15:20",
@@ -30432,22 +30382,6 @@
       "letterboxd": "https://letterboxd.com/film/rosaura-a-las-10/",
       "ticket_url": "https://lumiton.ar/evento/rosaura-a-las-10/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-20",
-      "hora": "18:00",
-      "title_es": "El juez del patíbulo",
-      "title_en": "El juez del patíbulo",
-      "original_title": "The Life and Times of Judge Roy Bean",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1972,
-      "duration": 100,
-      "genre": "Western, Comedia",
-      "letterboxd": "",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Multiplex Pilar",
@@ -32098,22 +32032,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-21",
-      "hora": "15:00",
-      "title_es": "El juez del patíbulo",
-      "title_en": "El juez del patíbulo",
-      "original_title": "The Life and Times of Judge Roy Bean",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1972,
-      "duration": 120,
-      "genre": "Western, Comedia",
-      "letterboxd": "",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-21",
       "hora": "15:20",
@@ -32674,22 +32592,6 @@
       "ciclo": "Estreno"
     },
     {
-      "cine": "Bellas Artes",
-      "fecha": "2026-11-21",
-      "hora": "18:00",
-      "title_es": "Smyrna (ΣΜΥΡΝΗ ΜΟΥ ΑΓΑΠΗΜΕΝΗ)",
-      "title_en": "Smyrna",
-      "original_title": "",
-      "director": "Grigoris Karantinakis",
-      "country": "Grecia",
-      "year": 2022,
-      "duration": 144,
-      "genre": "Historia, Drama",
-      "letterboxd": "https://letterboxd.com/film/smyrna-2022/",
-      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/smyrna-%cf%83%ce%bc%cf%85%cf%81%ce%bd%ce%b7-%ce%bc%ce%bf%cf%85-%ce%b1%ce%b3%ce%b1%cf%80%ce%b7%ce%bc%ce%b5%ce%bd%ce%b7/",
-      "ciclo": "Panorama del Cine Griego"
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-21",
       "hora": "18:00",
@@ -32741,17 +32643,33 @@
       "cine": "Sala Lugones",
       "fecha": "2026-11-21",
       "hora": "18:00",
-      "title_es": "Woyzeck",
-      "title_en": "Woyzeck",
-      "original_title": "Woyzeck",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania",
-      "year": 1979,
-      "duration": 82,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/woyzeck/",
+      "title_es": "Herzog-Kinski: enemigo mío",
+      "title_en": "Herzog-Kinski: enemigo mío",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
-      "ciclo": "Herzog-Kinski: enemigo mío"
+      "ciclo": "Estreno"
+    },
+    {
+      "cine": "Bellas Artes",
+      "fecha": "2026-11-21",
+      "hora": "18:00",
+      "title_es": "Smyrna (ΣΜΥΡΝΗ ΜΟΥ ΑΓΑΠΗΜΕΝΗ)",
+      "title_en": "Smyrna",
+      "original_title": "",
+      "director": "Grigoris Karantinakis",
+      "country": "Grecia",
+      "year": 2022,
+      "duration": 144,
+      "genre": "Historia, Drama",
+      "letterboxd": "https://letterboxd.com/film/smyrna-2022/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/smyrna-%cf%83%ce%bc%cf%85%cf%81%ce%bd%ce%b7-%ce%bc%ce%bf%cf%85-%ce%b1%ce%b3%ce%b1%cf%80%ce%b7%ce%bc%ce%b5%ce%bd%ce%b7/",
+      "ciclo": "Panorama del Cine Griego"
     },
     {
       "cine": "Multiplex Pilar",
@@ -33408,22 +33326,6 @@
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-21",
-      "hora": "21:00",
-      "title_es": "Nosferatu, el vampiro",
-      "title_en": "Nosferatu the Vampyre",
-      "original_title": "Nosferatu – Phantom der Nacht",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/ Francia",
-      "year": 1978,
-      "duration": 107,
-      "genre": "Drama, Terror",
-      "letterboxd": "https://letterboxd.com/film/nosferatu-phantom-der-nacht/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
-      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "Cacodelphia",
@@ -34354,22 +34256,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "15:00",
-      "title_es": "La burla del diablo",
-      "title_en": "Beat the Devil",
-      "original_title": "Beat the Devil",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido/Italia",
-      "year": 1953,
-      "duration": 95,
-      "genre": "Aventura, Crimen",
-      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-22",
       "hora": "15:00",
@@ -34864,22 +34750,6 @@
       "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
       "ticket_url": "https://www.cinemark.com.ar/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-22",
-      "hora": "17:30",
-      "title_es": "Fitzcarraldo",
-      "title_en": "Fitzcarraldo",
-      "original_title": "Fitzcarraldo",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania/Perú",
-      "year": 1982,
-      "duration": 157,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/fitzcarraldo/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
-      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "CCK",
@@ -35462,8 +35332,8 @@
       "fecha": "2026-11-22",
       "hora": "20:00",
       "title_es": "Le bonheur",
-      "title_en": "Le bonheur",
-      "original_title": "",
+      "title_en": "Le Bonheur",
+      "original_title": "Le Bonheur",
       "director": "Agnès Varda",
       "country": "Francia",
       "year": 1965,
@@ -36306,6 +36176,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-23",
+      "hora": "13:00",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-23",
       "hora": "13:00",
@@ -36527,6 +36413,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-23",
+      "hora": "15:25",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
       "ciclo": ""
     },
     {
@@ -36863,6 +36765,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-23",
+      "hora": "17:50",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
       "ciclo": ""
     },
     {
@@ -37330,6 +37248,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-23",
+      "hora": "20:15",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-23",
       "hora": "20:20",
@@ -37711,6 +37645,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-23",
+      "hora": "22:40",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/yo-soy-rocky/",
       "ciclo": ""
     },
     {
@@ -38210,22 +38160,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-24",
-      "hora": "15:00",
-      "title_es": "El juez del patíbulo",
-      "title_en": "El juez del patíbulo",
-      "original_title": "The Life and Times of Judge Roy Bean",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1972,
-      "duration": 120,
-      "genre": "Western, Comedia",
-      "letterboxd": "",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-24",
       "hora": "15:20",
@@ -38688,22 +38622,6 @@
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-24",
-      "hora": "18:00",
-      "title_es": "La burla del diablo",
-      "title_en": "Beat the Devil",
-      "original_title": "Beat the Devil",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido/Italia",
-      "year": 1953,
-      "duration": 95,
-      "genre": "Aventura, Crimen",
-      "letterboxd": "https://letterboxd.com/film/beat-the-devil/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Biblioteca Nacional",
@@ -39232,22 +39150,6 @@
       "letterboxd": "",
       "ticket_url": "https://publico.alternativateatral.com/entradas75124-pena-sin-cadenas?o=14",
       "ciclo": "Peña sin cadenas"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-24",
-      "hora": "21:00",
-      "title_es": "Ciudad dorada",
-      "title_en": "Fat City",
-      "original_title": "Fat City",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1972,
-      "duration": 97,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/fat-city/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Cacodelphia",
@@ -40112,22 +40014,6 @@
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-25",
-      "hora": "15:00",
-      "title_es": "El tesoro de la Sierra Madre",
-      "title_en": "The Treasure of the Sierra Madre",
-      "original_title": "The Treasure of the Sierra Madre",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1948,
-      "duration": 126,
-      "genre": "Drama, Western",
-      "letterboxd": "https://letterboxd.com/film/the-treasure-of-the-sierra-madre/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Hoyts Abasto",
@@ -40722,22 +40608,6 @@
       "ciclo": "Convocatoria de Cortos: Programa V"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-25",
-      "hora": "18:00",
-      "title_es": "Los inadaptados",
-      "title_en": "The Misfits",
-      "original_title": "",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1961,
-      "duration": 124,
-      "genre": "Western, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-misfits/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-25",
       "hora": "18:30",
@@ -41207,7 +41077,7 @@
       "hora": "20:00",
       "title_es": "Lawrence of Arabia",
       "title_en": "Lawrence of Arabia",
-      "original_title": "",
+      "original_title": "Lawrence of Arabia",
       "director": "David Lean",
       "country": "Reino Unido",
       "year": 1962,
@@ -41280,22 +41150,6 @@
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-25",
-      "hora": "21:00",
-      "title_es": "Mi mejor enemigo",
-      "title_en": "My Best Fiend",
-      "original_title": "Mein liebster Feind",
-      "director": "Werner Herzog",
-      "country": "República Federal de Alemania",
-      "year": 1999,
-      "duration": 99,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/my-best-fiend/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/c0cd25cc-eadd-4e71-acf9-2b91884a8c6f",
-      "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
       "cine": "Cacodelphia",
@@ -41778,22 +41632,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-26",
-      "hora": "15:00",
-      "title_es": "Mientras la ciudad duerme",
-      "title_en": "The Asphalt Jungle",
-      "original_title": "",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1950,
-      "duration": 113,
-      "genre": "Crimen, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Filo Cine",
       "fecha": "2026-11-26",
       "hora": "18:00",
@@ -41920,22 +41758,6 @@
       "letterboxd": "https://letterboxd.com/film/the-liars-2026/",
       "ticket_url": "https://lumiton.ar/evento/convocatoria-de-cortos-programa-vi/",
       "ciclo": "Convocatoria de Cortos: Programa VI"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-26",
-      "hora": "18:00",
-      "title_es": "Je’vida",
-      "title_en": "Je'vida",
-      "original_title": "Je'vida",
-      "director": "Katja Gauriloff",
-      "country": "Finlandia",
-      "year": 2023,
-      "duration": 99,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/jevida/",
-      "ticket_url": "",
-      "ciclo": "Desde Finlandia con amor"
     },
     {
       "cine": "Cacodelphia",
@@ -42066,22 +41888,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural 25 de Mayo",
-      "fecha": "2026-11-26",
-      "hora": "20:00",
-      "title_es": "Semana de los Festivales de Cine de Málaga y San Sebastián en Buenos Aires – Mass 2026",
-      "title_en": "SEMANA DE LOS FESTIVALES DE CINE DE MÁLAGA Y SAN SEBASTIÁN EN BUENOS AIRES  – MASS 2026",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": 2026,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://cc25.org/eventos/mass-2026/",
-      "ciclo": ""
-    },
-    {
       "cine": "MALBA",
       "fecha": "2026-11-26",
       "hora": "20:30",
@@ -42112,22 +41918,6 @@
       "letterboxd": "https://letterboxd.com/film/tokyo-ga/",
       "ticket_url": "https://lumiton.ar/evento/tokyo-ga/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-26",
-      "hora": "20:30",
-      "title_es": "Orenda",
-      "title_en": "Orenda",
-      "original_title": "Orenda",
-      "director": "Pirjo Honkasalo",
-      "country": "Finlandia/Estonia/Suecia",
-      "year": 2025,
-      "duration": 117,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/orenda/",
-      "ticket_url": "",
-      "ciclo": "Desde Finlandia con amor"
     },
     {
       "cine": "MALBA",
@@ -42210,22 +42000,6 @@
       "ciclo": "Bazofi"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-27",
-      "hora": "15:00",
-      "title_es": "El halcón maltés",
-      "title_en": "The Maltese Falcon",
-      "original_title": "The Maltese Falcon",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1941,
-      "duration": 100,
-      "genre": "Misterio, Thriller",
-      "letterboxd": "https://letterboxd.com/film/the-maltese-falcon-1941/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Filo Cine",
       "fecha": "2026-11-27",
       "hora": "18:00",
@@ -42240,22 +42014,6 @@
       "letterboxd": "https://letterboxd.com/film/lovers-in-the-sky/",
       "ticket_url": "https://www.filo.uba.ar/amantes-en-el-cielo",
       "ciclo": "Documental"
-    },
-    {
-      "cine": "Bellas Artes",
-      "fecha": "2026-11-27",
-      "hora": "18:00",
-      "title_es": "Dignity (ΜΕ ΑΞΙΟΠΡΕΠΕΙΑ)",
-      "title_en": "Dignity",
-      "original_title": "",
-      "director": "Dimitris Katsimiris",
-      "country": "Grecia",
-      "year": 2022,
-      "duration": 75,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/dignity-2022/",
-      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/dignity-%ce%bc%ce%b5-%ce%b1%ce%be%ce%b9%ce%bf%cf%80%cf%81%ce%b5%cf%80%ce%b5%ce%b9%ce%b1/",
-      "ciclo": "Panorama del Cine Griego"
     },
     {
       "cine": "Cine York",
@@ -42290,20 +42048,20 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
+      "cine": "Bellas Artes",
       "fecha": "2026-11-27",
       "hora": "18:00",
-      "title_es": "Orenda",
-      "title_en": "Orenda",
-      "original_title": "Orenda",
-      "director": "Pirjo Honkasalo",
-      "country": "Finlandia/Estonia/Suecia",
-      "year": 2025,
-      "duration": 117,
+      "title_es": "Dignity (ΜΕ ΑΞΙΟΠΡΕΠΕΙΑ)",
+      "title_en": "Dignity",
+      "original_title": "",
+      "director": "Dimitris Katsimiris",
+      "country": "Grecia",
+      "year": 2022,
+      "duration": 75,
       "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/orenda/",
-      "ticket_url": "",
-      "ciclo": "Desde Finlandia con amor"
+      "letterboxd": "https://letterboxd.com/film/dignity-2022/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/dignity-%ce%bc%ce%b5-%ce%b1%ce%be%ce%b9%ce%bf%cf%80%cf%81%ce%b5%cf%80%ce%b5%ce%b9%ce%b1/",
+      "ciclo": "Panorama del Cine Griego"
     },
     {
       "cine": "MALBA",
@@ -42338,6 +42096,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineclub Farus",
+      "fecha": "2026-11-27",
+      "hora": "19:00",
+      "title_es": "Blood and Black Lace",
+      "title_en": "Blood and Black Lace",
+      "original_title": "Sei donne per l'assassino",
+      "director": "Mario Bava",
+      "country": "Alemania, Francia",
+      "year": 1964,
+      "duration": 88,
+      "genre": "Terror, Crimen",
+      "letterboxd": "https://letterboxd.com/film/blood-and-black-lace/",
+      "ticket_url": "https://centralticket.net/event/11199",
+      "ciclo": "Ciclo Giallo"
+    },
+    {
       "cine": "Cacodelphia",
       "fecha": "2026-11-27",
       "hora": "19:00",
@@ -42352,22 +42126,6 @@
       "letterboxd": "https://letterboxd.com/film/i-the-worst-of-all/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/5f1a26e0fcf54697cfcdb0447b1f98d5",
       "ciclo": "Soy"
-    },
-    {
-      "cine": "Cineclub Farus",
-      "fecha": "2026-11-27",
-      "hora": "19:00",
-      "title_es": "Blood and Black Lace",
-      "title_en": "Blood and Black Lace",
-      "original_title": "",
-      "director": "Mario Bava",
-      "country": "",
-      "year": 1964,
-      "duration": 88,
-      "genre": "Terror, Crimen",
-      "letterboxd": "https://letterboxd.com/film/blood-and-black-lace/",
-      "ticket_url": "https://centralticket.net/event/11199",
-      "ciclo": "Ciclo Giallo"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -42455,7 +42213,7 @@
       "hora": "20:45",
       "title_es": "Don't Torture a Duckling",
       "title_en": "Don't Torture a Duckling",
-      "original_title": "",
+      "original_title": "Non si sevizia un paperino",
       "director": "Lucio Fulci",
       "country": "Italia",
       "year": 1972,
@@ -42464,22 +42222,6 @@
       "letterboxd": "https://letterboxd.com/film/dont-torture-a-duckling/",
       "ticket_url": "https://centralticket.net/event/11199",
       "ciclo": "Ciclo Giallo"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-27",
-      "hora": "21:00",
-      "title_es": "Je’vida",
-      "title_en": "Je'vida",
-      "original_title": "Je'vida",
-      "director": "Katja Gauriloff",
-      "country": "Finlandia",
-      "year": 2023,
-      "duration": 99,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/jevida/",
-      "ticket_url": "",
-      "ciclo": "Desde Finlandia con amor"
     },
     {
       "cine": "Hoyts Abasto",
@@ -42535,7 +42277,7 @@
       "hora": "22:40",
       "title_es": "Deep Red",
       "title_en": "Deep Red",
-      "original_title": "",
+      "original_title": "Profondo rosso",
       "director": "Dario Argento",
       "country": "Italia",
       "year": 1975,
@@ -42544,22 +42286,6 @@
       "letterboxd": "https://letterboxd.com/film/deep-red/",
       "ticket_url": "https://centralticket.net/event/11199",
       "ciclo": "Ciclo Giallo"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-28",
-      "hora": "15:00",
-      "title_es": "Esta, nuestra vida",
-      "title_en": "In This Our Life",
-      "original_title": "In This Our Life",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1942,
-      "duration": 97,
-      "genre": "Drama, Romance",
-      "letterboxd": "https://letterboxd.com/film/in-this-our-life/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "CCK",
@@ -42626,22 +42352,6 @@
       "ciclo": "Estreno"
     },
     {
-      "cine": "Bellas Artes",
-      "fecha": "2026-11-28",
-      "hora": "18:00",
-      "title_es": "Stelios",
-      "title_en": "Stelios",
-      "original_title": "Υπάρχω",
-      "director": "Yorgos Tsemberopoulos",
-      "country": "Grecia",
-      "year": 2024,
-      "duration": 132,
-      "genre": "Drama, Música",
-      "letterboxd": "https://letterboxd.com/film/stelios/",
-      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/stelios/",
-      "ciclo": "Panorama del Cine Griego"
-    },
-    {
       "cine": "Cine York",
       "fecha": "2026-11-28",
       "hora": "18:00",
@@ -42674,20 +42384,20 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
+      "cine": "Bellas Artes",
       "fecha": "2026-11-28",
       "hora": "18:00",
-      "title_es": "Je’vida",
-      "title_en": "Je'vida",
-      "original_title": "Je'vida",
-      "director": "Katja Gauriloff",
-      "country": "Finlandia",
-      "year": 2023,
-      "duration": 99,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/jevida/",
-      "ticket_url": "",
-      "ciclo": "Desde Finlandia con amor"
+      "title_es": "Stelios",
+      "title_en": "Stelios",
+      "original_title": "Υπάρχω",
+      "director": "Yorgos Tsemberopoulos",
+      "country": "Grecia",
+      "year": 2024,
+      "duration": 132,
+      "genre": "Drama, Música",
+      "letterboxd": "https://letterboxd.com/film/stelios/",
+      "ticket_url": "https://amigosdelbellasartes.org.ar/producto/stelios/",
+      "ciclo": "Panorama del Cine Griego"
     },
     {
       "cine": "Cinemark Palermo",
@@ -42818,22 +42528,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-28",
-      "hora": "21:00",
-      "title_es": "Orenda",
-      "title_en": "Orenda",
-      "original_title": "Orenda",
-      "director": "Pirjo Honkasalo",
-      "country": "Finlandia/Estonia/Suecia",
-      "year": 2025,
-      "duration": 117,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/orenda/",
-      "ticket_url": "",
-      "ciclo": "Desde Finlandia con amor"
-    },
-    {
       "cine": "MALBA",
       "fecha": "2026-11-28",
       "hora": "22:00",
@@ -42962,22 +42656,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "15:00",
-      "title_es": "La noche de la iguana",
-      "title_en": "The Night of the Iguana",
-      "original_title": "The Night of the Iguana",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1964,
-      "duration": 118,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "CCK",
       "fecha": "2026-11-29",
       "hora": "15:00",
@@ -43088,38 +42766,6 @@
       "letterboxd": "https://letterboxd.com/film/objective-burma/",
       "ticket_url": "http://centroculturalrecoleta.org/agenda/ciclos/las-aventuras-de-raoul-walsh",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "18:00",
-      "title_es": "Ciudad dorada",
-      "title_en": "Fat City",
-      "original_title": "Fat City",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1972,
-      "duration": 97,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/fat-city/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "18:00",
-      "title_es": "Mientras la ciudad duerme",
-      "title_en": "The Asphalt Jungle",
-      "original_title": "",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1950,
-      "duration": 113,
-      "genre": "Crimen, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-asphalt-jungle/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "CCK",
@@ -43248,38 +42894,6 @@
       "letterboxd": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
       "ticket_url": "https://www.alternativateatral.com/obra103692-recen-por-mi-la-historia-de-francisco",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "20:30",
-      "title_es": "Freud, pasión secreta",
-      "title_en": "Freud: The Secret Passion",
-      "original_title": "Freud: The Secret Passion",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1962,
-      "duration": 140,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/freud-the-secret-passion/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-11-29",
-      "hora": "21:00",
-      "title_es": "La noche de la iguana",
-      "title_en": "The Night of the Iguana",
-      "original_title": "The Night of the Iguana",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1964,
-      "duration": 118,
-      "genre": "Romance, Drama",
-      "letterboxd": "https://letterboxd.com/film/the-night-of-the-iguana/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Amorina",
@@ -43442,22 +43056,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Centro Cultural 25 de Mayo",
-      "fecha": "2026-12-01",
-      "hora": "18:00",
-      "title_es": "El príncipe de Nanawa de Clarisa Navas",
-      "title_en": "El príncipe de Nanawa de Clarisa Navas",
-      "original_title": "",
-      "director": "",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 212,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://cc25.org/eventos/el-principe-de-nanawa/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-12-01",
       "hora": "19:00",
@@ -43570,38 +43168,6 @@
       "ciclo": "Cine"
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-12-02",
-      "hora": "15:00",
-      "title_es": "Desde ahora y para siempre",
-      "title_en": "The Dead",
-      "original_title": "The Dead",
-      "director": "John Huston",
-      "country": "Reino Unido/EE:UU",
-      "year": 1987,
-      "duration": 83,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-dead/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-12-02",
-      "hora": "18:00",
-      "title_es": "Los inadaptados",
-      "title_en": "The Misfits",
-      "original_title": "",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1961,
-      "duration": 124,
-      "genre": "Western, Romance",
-      "letterboxd": "https://letterboxd.com/film/the-misfits/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-12-02",
       "hora": "19:00",
@@ -43648,22 +43214,6 @@
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
       "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-12-02",
-      "hora": "21:00",
-      "title_es": "Desde ahora y para siempre",
-      "title_en": "The Dead",
-      "original_title": "The Dead",
-      "director": "John Huston",
-      "country": "Reino Unido/EE:UU",
-      "year": 1987,
-      "duration": 83,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-dead/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "Hoyts Abasto",
@@ -43714,86 +43264,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Sala Lugones",
-      "fecha": "2026-12-03",
-      "hora": "14:30",
-      "title_es": "Freud, pasión secreta",
-      "title_en": "Freud: The Secret Passion",
-      "original_title": "Freud: The Secret Passion",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1962,
-      "duration": 140,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/freud-the-secret-passion/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-12-03",
-      "hora": "18:00",
-      "title_es": "Desde ahora y para siempre",
-      "title_en": "The Dead",
-      "original_title": "The Dead",
-      "director": "John Huston",
-      "country": "Reino Unido/EE:UU",
-      "year": 1987,
-      "duration": 83,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-dead/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "Centro Cultural 25 de Mayo",
-      "fecha": "2026-12-03",
-      "hora": "19:00",
-      "title_es": "Encuentro con un Buda (Meeting the Buddha) de Marta György-Kessler",
-      "title_en": "Encuentro con un Buda (Meeting the Buddha) de Marta György-Kessler",
-      "original_title": "",
-      "director": "",
-      "country": "Unido",
-      "year": 2025,
-      "duration": 144,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://cc25.org/eventos/encuentro-con-un-buda/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-12-03",
-      "hora": "20:30",
-      "title_es": "Freud, pasión secreta",
-      "title_en": "Freud: The Secret Passion",
-      "original_title": "Freud: The Secret Passion",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1962,
-      "duration": 140,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/freud-the-secret-passion/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-12-04",
-      "hora": "18:00",
-      "title_es": "El tesoro de la Sierra Madre",
-      "title_en": "The Treasure of the Sierra Madre",
-      "original_title": "The Treasure of the Sierra Madre",
-      "director": "John Huston",
-      "country": "Estados Unidos",
-      "year": 1948,
-      "duration": 126,
-      "genre": "Drama, Western",
-      "letterboxd": "https://letterboxd.com/film/the-treasure-of-the-sierra-madre/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
-    },
-    {
       "cine": "MALBA",
       "fecha": "2026-12-04",
       "hora": "20:00",
@@ -43808,22 +43278,6 @@
       "letterboxd": "https://letterboxd.com/film/frida-still-life/",
       "ticket_url": "https://malba.org.ar/evento/frida-naturaleza-viva/",
       "ciclo": "Funciones especiales"
-    },
-    {
-      "cine": "Sala Lugones",
-      "fecha": "2026-12-04",
-      "hora": "21:00",
-      "title_es": "La reina africana",
-      "title_en": "The African Queen",
-      "original_title": "The African Queen",
-      "director": "John Huston",
-      "country": "EE.UU/Reino Unido",
-      "year": 1951,
-      "duration": 105,
-      "genre": "Romance, Bélica",
-      "letterboxd": "https://letterboxd.com/film/the-african-queen/",
-      "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
-      "ciclo": "Homenaje a John Huston"
     },
     {
       "cine": "MALBA",
@@ -70959,6 +70413,70 @@
       "genre": "Música",
       "letterboxd": "https://letterboxd.com/film/bts-world-tour-arirang-in-buenos-aires/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "Sin fecha",
+      "hora": "??",
+      "title_es": "Andrzej Wajda bis",
+      "title_en": "Andrzej Wajda bis",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "Sin fecha",
+      "hora": "??",
+      "title_es": "Cinco tardes con Ernst Lubitsch",
+      "title_en": "Cinco tardes con Ernst Lubitsch",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "Sin fecha",
+      "hora": "??",
+      "title_es": "Desde Finlandia con amor",
+      "title_en": "Desde Finlandia con amor",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "",
+      "ciclo": ""
+    },
+    {
+      "cine": "Sala Lugones",
+      "fecha": "Sin fecha",
+      "hora": "??",
+      "title_es": "Grandes actrices de la época dorada del cine japonés",
+      "title_en": "Grandes actrices de la época dorada del cine japonés",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "",
       "ciclo": ""
     }
   ]
