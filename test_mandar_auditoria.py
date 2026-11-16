@@ -107,4 +107,33 @@ assert correr() == 1 and not enviados
 falla_login = False
 print("✓ sin credenciales o rechazadas, falla en voz alta y no manda nada")
 
+# 6. El aviso del centinela: sale sólo si hay un archivo, y sólo si es de hoy.
+alerta = tmp / "alerta.html"
+ALERTA = (f"<!-- asunto: 🔴 Nuevo en la cartelera: Sala Lugones -->\n<!-- fecha: {HOY.isoformat()} -->\n"
+          "<div><h2>Centinela de la cartelera</h2><ul><li><strong>Sala Lugones</strong> (categorías): "
+          "hay funciones que dicen el nombre de un ciclo en vez de la película</li></ul></div>\n")
+
+
+def centinela(contenido):
+    enviados.clear()
+    alerta.unlink(missing_ok=True)
+    if contenido is not None:
+        alerta.write_text(contenido, encoding="utf-8")
+    os.environ["GMAIL_USER"], os.environ["GMAIL_APP_PASSWORD"] = "alguien@gmail.com", "abcd"
+    os.environ["AUDIT_MAIL_TO"] = ""
+    return ma.main(["--alerta", str(alerta)])
+
+
+assert centinela(None) == 0 and not enviados
+assert centinela(ALERTA.replace(HOY.isoformat(), "2026-11-09")) == 0 and not enviados
+assert centinela(ALERTA) == 0
+(msg,) = enviados
+assert msg["Subject"] == "🔴 Nuevo en la cartelera: Sala Lugones", msg["Subject"]
+assert msg["To"] == "alguien+cartelera@gmail.com", msg["To"]
+assert msg["From"] == "Centinela cartelera <alguien@gmail.com>", msg["From"]
+plano = msg.get_body(("plain",)).get_content()
+assert "Sala Lugones" in plano and "<" not in plano and "asunto:" not in plano, plano
+assert "nombre de un ciclo" in msg.get_body(("html",)).get_content()
+print("✓ el centinela manda su aviso sólo cuando hay uno de hoy, y si no, no manda nada")
+
 print("\nTodo OK")

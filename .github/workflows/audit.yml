@@ -5,15 +5,28 @@ name: Auditoría semanal
 # atrapa su excepción y devuelve [], así que un cine puede desaparecer de la web
 # durante semanas sin que nada avise. Esto convierte ese silencio en un informe.
 #
-# Cómo llega el informe:
-#   · mail — scripts/mandar_auditoria.py, acá mismo, con la casilla y la
+# Dos modos:
+#   - informe (los lunes, un push a este archivo o al del mail, o a mano): el
+#     informe completo de los cinco agentes (frescura, fuentes, categorías,
+#     festivales y fichas), para Buenos Aires y Madrid.
+#   - centinela (todos los días): la misma revisión, pero sólo avisa si
+#     apareció un ERROR que ayer no estaba. La mayoría de los días no manda
+#     nada. Existe porque el 15/11/2026 la Sala Lugones publicó nombres de
+#     ciclos como películas un domingo, y con un informe por semana eso puede
+#     estar seis días en la web antes de que alguien se entere.
+#
+# Cómo llega:
+#   - mail: scripts/mandar_auditoria.py, acá mismo, con la casilla y la
 #     contraseña de aplicación de GMAIL_USER (los secrets con los que el scrape
 #     lee el newsletter de Cacodelphia). Antes lo mandaba un Apps Script aparte
 #     que nunca se dio de alta: hasta el 15/11/2026 no llegó ninguno, y el
 #     Cineclub Farus estuvo dos semanas fuera de la web sin que nadie se enterara.
-#   · issue — sólo si hay ERRORes, para tener dónde seguir el arreglo.
+#   - issue: sólo el informe y sólo si hay ERRORes, para tener dónde seguir
+#     el arreglo.
 # El informe se commitea siempre, aunque salga limpio: es la marca de que el de
-# hoy ya salió (ver "¿Ya salió el de hoy?").
+# hoy ya salió (ver "¿Ya salió el de hoy?"). Con él va data/audit.json, que es
+# la memoria: qué hallazgos están abiertos y desde cuándo. De ahí sale qué es
+# nuevo, qué sigue abierto y qué se resolvió, y es lo que el centinela compara.
 
 on:
   schedule:
@@ -21,7 +34,16 @@ on:
     # Respaldo: con carga alta GitHub puede saltear una corrida programada. Si
     # la de la mañana ya mandó el informe, ésta no hace nada.
     - cron: '30 20 * * 1'   # lunes 17:30 ART
+    # El centinela. Si cambia este horario, cambiarlo también en el paso
+    # "¿Informe o centinela?", que lo reconoce por el texto del cron.
+    - cron: '15 15 * * *'   # todos los días 12:15 ART, con el scrape de la mañana ya hecho
   workflow_dispatch:
+    inputs:
+      modo:
+        description: 'informe (completo, por mail) o centinela (sólo lo nuevo)'
+        type: choice
+        options: [informe, centinela]
+        default: informe
   # Un cambio en el mail se prueba solo: al pushearlo sale el informe de hoy.
   push:
     branches: [main]
@@ -32,8 +54,10 @@ on:
 permissions:
   contents: write
   issues: write
+  actions: read     # el agente de frescura mira si algún workflow viene fallando
 
-# Que las dos del lunes no manden dos mails si GitHub las larga juntas.
+# Que las dos del lunes no manden dos mails si GitHub las larga juntas, y que
+# el centinela y el informe no escriban la memoria al mismo tiempo.
 concurrency:
   group: auditoria
   cancel-in-progress: false
@@ -50,13 +74,26 @@ jobs:
           # defecto no hay línea de base y se pierde la mitad del valor.
           fetch-depth: 0
 
+      - name: ¿Informe o centinela?
+        id: modo
+        run: |
+          modo=informe
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "${{ github.event.schedule }}" = "15 15 * * *" ]; then
+            modo=centinela
+          fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            modo="${{ inputs.modo || 'informe' }}"
+          fi
+          echo "modo=$modo" >> "$GITHUB_OUTPUT"
+          echo "Modo: $modo"
+
       # La corrida de respaldo sigue sólo si la de la mañana no commiteó el
       # informe de hoy. Se mira origin/main y no el checkout: si las dos
       # quedaron en cola juntas, el checkout de la segunda es de antes del
       # commit de la primera.
       - name: ¿Ya salió el de hoy?
         id: ya
-        if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule' && steps.modo.outputs.modo == 'informe'
         run: |
           git fetch -q origin main
           if git show origin/main:data/audit.html 2>/dev/null | grep -q "<!-- fecha: $(date -u +%F) -->"; then
@@ -69,20 +106,23 @@ jobs:
         with:
           python-version: '3.11'
 
+      # ── Informe ──────────────────────────────────────────────────────────
       - name: Correr auditoría
         id: audit
-        if: steps.ya.outputs.salio != '1'
+        if: steps.modo.outputs.modo == 'informe' && steps.ya.outputs.salio != '1'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           set +e
-          python3 scripts/audit.py --out data/audit.md --html data/audit.html
+          python3 scripts/audit.py --out data/audit.md --html data/audit.html --json data/audit.json
           echo "exit_code=$?" >> "$GITHUB_OUTPUT"
 
       - name: Commitear el informe
-        if: steps.ya.outputs.salio != '1'
+        if: steps.modo.outputs.modo == 'informe' && steps.ya.outputs.salio != '1'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/audit.md data/audit.html
+          git add data/audit.md data/audit.html data/audit.json data/festivales_web.json
           git diff --staged --quiet || git commit -m "audit: informe $(date -u +%Y-%m-%d)"
           # El scrape pushea seguido: si main se movió, el informe va arriba.
           git pull -q --rebase origin main
@@ -91,7 +131,7 @@ jobs:
       # Aunque el commit haya fallado: el mail es lo que se lee. Si no se puede
       # mandar, el paso falla y GitHub avisa por mail que la corrida falló.
       - name: Mandar el informe por mail
-        if: ${{ !cancelled() && steps.ya.outputs.salio != '1' }}
+        if: ${{ !cancelled() && steps.modo.outputs.modo == 'informe' && steps.ya.outputs.salio != '1' }}
         env:
           GMAIL_USER: ${{ secrets.GMAIL_USER }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
@@ -100,7 +140,7 @@ jobs:
       # Sólo se abre issue si hubo ERRORes (exit 1), y no en las corridas por
       # push, que son pruebas del mail.
       - name: Abrir issue si hay hallazgos
-        if: ${{ !cancelled() && steps.audit.outputs.exit_code == '1' && github.event_name != 'push' }}
+        if: ${{ !cancelled() && steps.modo.outputs.modo == 'informe' && steps.audit.outputs.exit_code == '1' && github.event_name != 'push' }}
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
@@ -111,3 +151,38 @@ jobs:
           gh issue create \
             --title "Auditoría de cartelera — $(date -u +%Y-%m-%d)" \
             --body-file data/audit.md
+
+      # ── Centinela ────────────────────────────────────────────────────────
+      # Deja el aviso en un archivo sólo si hay algo nuevo. Si el script se
+      # cae, el paso falla y GitHub avisa: un centinela dormido también es
+      # una novedad.
+      - name: Centinela
+        if: steps.modo.outputs.modo == 'centinela'
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+        run: python3 scripts/audit.py --centinela --json data/audit.json --alerta "$RUNNER_TEMP/alerta.html"
+
+      # Primero el mail y después la memoria: si el mail no sale, la memoria no
+      # se guarda y el aviso vuelve a intentarse mañana. Al revés se perdería.
+      - name: Mandar el aviso del centinela
+        if: steps.modo.outputs.modo == 'centinela'
+        env:
+          GMAIL_USER: ${{ secrets.GMAIL_USER }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python3 scripts/mandar_auditoria.py --alerta "$RUNNER_TEMP/alerta.html"
+
+      # La memoria sólo cambia cuando un hallazgo se abre o se cierra, así que
+      # la mayoría de los días no hay nada que commitear.
+      - name: Guardar la memoria del centinela
+        if: steps.modo.outputs.modo == 'centinela'
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/audit.json data/festivales_web.json
+          if git diff --staged --quiet; then
+            echo "Sin cambios en la memoria."
+            exit 0
+          fi
+          git commit -m "audit: centinela $(date -u +%Y-%m-%d)"
+          git pull -q --rebase origin main
+          git push
