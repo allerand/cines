@@ -1040,6 +1040,40 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         print(f"  ↳ {len(screenings_out) - len(unicas)} funciones duplicadas descartadas")
         screenings_out = unicas
 
+    # El portero: lo que es seguro que no es una película no se publica. El
+    # 15/11/2026 la Sala Lugones salió a la web con "Homenaje a John Huston"
+    # como película, al lado de las películas del homenaje: el scraper no pudo
+    # leer el programa y puso el nombre del ciclo donde va el título. Eso se
+    # arregló en su scraper, pero la misma falla le puede pasar a cualquier
+    # otra sala, y de acá sale también lo que se postea en las stories. Mejor
+    # una fila menos que un ciclo en el lugar de una película.
+    #
+    # Frena sólo dos cosas, las dos seguras: un título que es el nombre de un
+    # ciclo que esa sala tiene (o tenía en la corrida anterior) con otras
+    # películas, y un título que es el nombre de un festival del registro. Lo
+    # cargado a mano no se toca. Las reglas están en categorias.py, que es el
+    # mismo reglamento que usa la auditoría; lo retenido va al JSON (clave
+    # `retenidas`) para que la auditoría lo cuente y alguien mire el scraper.
+    retenidas: list = []
+    portero_dice = ""
+    try:
+        from categorias import portero, clave_a_mano
+        from scraper import _load_manual, _cargar_festivales
+        previas: list = []
+        for anterior in (CARTELERA_JSON, CARTELERA_MADRID_JSON):
+            if anterior.exists():
+                previas.extend(json.loads(anterior.read_text(encoding="utf-8")).get("screenings", []))
+        screenings_out, retenidas = portero(
+            screenings_out, previas, _cargar_festivales(),
+            a_mano={clave_a_mano(m) for m in _load_manual().get("screenings", [])},
+            sin_registro=CINES_MADRID)
+        for r in retenidas:
+            print(f"  ↳ Portero: no se publica {r['cine']}, {r.get('fecha')} {r.get('hora')}: {r['motivo']}")
+    except Exception as e:
+        # Sin portero se publica como siempre; la auditoría avisa que no corrió.
+        portero_dice = f"{type(e).__name__}: {e}"
+        print(f"  ↳ Portero omitido: {portero_dice}")
+
     # Procedencia por cine: cuántas salieron de la fuente hoy contra cuántas se
     # publican. Si un cine publica 15 y scrapeó 0, está viviendo del caché o de
     # un override y su fuente está caída, aunque la grilla se vea llena.
@@ -1067,8 +1101,13 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         output = {
             "updated": updated,
             "fuentes": {c: f for c, f in fuentes.items() if (c in CINES_MADRID) == de_madrid},
+            # Lo que el portero no dejó publicar (no lo lee la web, lo lee la
+            # auditoría). `portero` sólo aparece si no pudo correr.
+            "retenidas": [r for r in retenidas if (r["cine"] in CINES_MADRID) == de_madrid],
             "screenings": [s for s in screenings_out if (s["cine"] in CINES_MADRID) == de_madrid],
         }
+        if portero_dice:
+            output["portero"] = portero_dice
         destino.write_text(
             json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8"
         )
