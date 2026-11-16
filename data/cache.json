@@ -22162,13 +22162,13 @@
   },
   "la casa": {
     "url": "",
-    "title_en": "La casa",
+    "title_en": "La Casa",
     "director": "",
     "country": "",
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es La casa (2012), y puede ser otra",
-    "fecha": "2026-11-12",
+    "fecha": "2026-11-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -31175,7 +31175,8 @@
     "duration": 99,
     "genre": "Documental",
     "title_es": "Mi enemigo íntimo",
-    "original_title": "Mein liebster Feind"
+    "original_title": "Mein liebster Feind",
+    "clase_titulo": "exacto"
   },
   "nosferatu, el vampiro|1978": {
     "url": "https://letterboxd.com/film/nosferatu-phantom-der-nacht/",
@@ -33638,7 +33639,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Beginning of the End (2014)",
-    "fecha": "2026-11-15",
+    "fecha": "2026-11-16",
     "con_duracion": false,
     "desempate": ""
   },
@@ -34328,5 +34329,909 @@
     "clase_titulo": "exacto",
     "original_title": "Museo de la subversión",
     "sin_hints": "título"
+  },
+  "queercinemad: ephemera": {
+    "url": "https://letterboxd.com/film/ephemera-2026/",
+    "title_en": "Ephemera",
+    "director": "Shan Jiang",
+    "country": "USA, Singapore",
+    "year": 2026,
+    "duration": 83,
+    "genre": "Romance, Drama",
+    "original_title": "浮浮游游"
+  },
+  "save the dance": {
+    "url": "",
+    "title_en": "Save the Dance",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el apocalipsis según baby|2023": {
+    "url": "",
+    "title_en": "El Apocalipsis según Baby",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "nueve auras|2026": {
+    "url": "https://letterboxd.com/film/nueve-auras/",
+    "title_en": "Nine Auras",
+    "director": "Mariano Frigerio",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "Nueve auras"
+  },
+  "la pasión según agnieszka|2026": {
+    "url": "https://letterboxd.com/film/pasja-wedlug-agnieszki/",
+    "title_en": "Passion According to Agnieszka",
+    "director": "Wojciech Staroń",
+    "country": "Poland",
+    "year": 2025,
+    "duration": 50,
+    "genre": "Documental"
+  },
+  "más grandes que israel|2026": {
+    "url": "",
+    "title_en": "Más grandes que Israel",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "chelis|2026": {
+    "url": "",
+    "title_en": "Chelis",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el suelo bajo nuestros pies|2026": {
+    "url": "https://letterboxd.com/film/the-ground-beneath-our-feet/",
+    "title_en": "The Ground Beneath Our Feet",
+    "director": "Yrsa Roca Fannberg",
+    "country": "Iceland, Poland",
+    "year": 2025,
+    "duration": 82,
+    "genre": "Documental",
+    "original_title": "Jörðin undir fótum okkar"
+  },
+  "cagüeyro|2026": {
+    "url": "https://letterboxd.com/film/cagueyro/",
+    "title_en": "Cagüeyro",
+    "director": "Manu Rosa",
+    "country": "",
+    "year": 2026,
+    "duration": 13,
+    "genre": "Documental",
+    "original_title": "Cagüeyro"
+  },
+  "hecho en china|2026": {
+    "url": "",
+    "title_en": "Hecho en China",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "leña|2026": {
+    "url": "https://letterboxd.com/film/llenya/",
+    "title_en": "Firewood",
+    "director": "Manel Raga Raga",
+    "country": "",
+    "year": 2025,
+    "duration": 16,
+    "genre": ""
+  },
+  "versos mudos: stanka pencheva, la amante del cine|2025": {
+    "url": "",
+    "title_en": "Versos mudos: Stanka Pencheva, la amante del cine",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "nox|2026": {
+    "url": "",
+    "title_en": "Nox",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la ley del lobizón|2026": {
+    "url": "",
+    "title_en": "La ley del Lobizón",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "al paso del trópico|2026": {
+    "url": "https://letterboxd.com/film/na-passagem-do-tropico/",
+    "title_en": "Na Passagem do Trópico",
+    "director": "Francisco Miguez",
+    "country": "Brazil",
+    "year": 2025,
+    "duration": 86,
+    "genre": "Documental"
+  },
+  "elton|2026": {
+    "url": "",
+    "title_en": "Elton",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "hijos del ring|2026": {
+    "url": "https://letterboxd.com/film/children-of-the-ring/",
+    "title_en": "Children of the Ring",
+    "director": "Valentina Chacon",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 27,
+    "genre": "Familiar, Comedia",
+    "original_title": "Hijos del Ring"
+  },
+  "whattsapp|2026": {
+    "url": "",
+    "title_en": "WhattsApp",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cartas desde casa|2022": {
+    "url": "",
+    "title_en": "Cartas desde casa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "viajero inmóvil|2026": {
+    "url": "https://letterboxd.com/film/viajero-inmovil/",
+    "title_en": "The Stationary Traveler",
+    "director": "Fernando Lavanderos, Sebastián Pereira",
+    "country": "",
+    "year": 2026,
+    "duration": 84,
+    "genre": "Documental",
+    "title_es": "Viajero Inmóvil",
+    "original_title": "Viajero Inmóvil"
+  },
+  "el hombre del oeste|2025": {
+    "url": "",
+    "title_en": "El hombre del oeste",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "alicia bajo la higuera|2026": {
+    "url": "https://letterboxd.com/film/alicia-bajo-la-higuera/",
+    "title_en": "Alicia bajo la higuera",
+    "director": "Manuela Thayer",
+    "country": "Chile",
+    "year": 2025,
+    "duration": 75,
+    "genre": "Documental",
+    "original_title": "Alicia bajo la higuera"
+  },
+  "el perú es un lugar para morir|2026": {
+    "url": "https://letterboxd.com/film/el-peru-es-un-lugar-para-morir/",
+    "title_en": "Peru is a place to die",
+    "director": "Víctor Augusto Mendívil",
+    "country": "Peru",
+    "year": 2026,
+    "duration": 13,
+    "genre": "Documental",
+    "original_title": "El Perú es un lugar para morir"
+  },
+  "squel: una reina del carnaval|2026": {
+    "url": "https://letterboxd.com/film/squel-confessions-of-the-carnival-queen/",
+    "title_en": "Squel, Confessions of the Carnival Queen",
+    "director": "Celina Torrealba, Zeca Brito",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "Squel – Confissões de uma porta-bandeira"
+  },
+  "mbaraka poty|2026": {
+    "url": "",
+    "title_en": "Mbaraka Poty",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la reina rebelde|2026": {
+    "url": "",
+    "title_en": "La reina rebelde",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "champ de mars|2026": {
+    "url": "https://letterboxd.com/film/champ-de-mars-2026/",
+    "title_en": "Champ de Mars",
+    "director": "Sergei Loznitsa",
+    "country": "Netherlands",
+    "year": 2026,
+    "duration": 12,
+    "genre": "Documental",
+    "original_title": "Champ de Mars"
+  },
+  "¡que vivan!|2026": {
+    "url": "https://letterboxd.com/film/pra-que-vivam/",
+    "title_en": "P’ra Que Vivam",
+    "director": "Carlos Lima",
+    "country": "",
+    "year": 2026,
+    "duration": 24,
+    "genre": "",
+    "original_title": "P’ra Que Vivam"
+  },
+  "aún jugando|2026": {
+    "url": "https://letterboxd.com/film/still-playing/",
+    "title_en": "Still Playing",
+    "director": "Mohamed Mesbah",
+    "country": "France",
+    "year": 2025,
+    "duration": 37,
+    "genre": "Documental"
+  },
+  "hombres perdidos|2026": {
+    "url": "https://letterboxd.com/film/lost-men/",
+    "title_en": "Lost Men",
+    "director": "Andrés Madrigal Alvarado",
+    "country": "Costa Rica",
+    "year": 2026,
+    "duration": 84,
+    "genre": "Documental",
+    "original_title": "Hombres Perdidos"
+  },
+  "partes de mí|2026": {
+    "url": "",
+    "title_en": "Partes de mí",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "amilcar|2026": {
+    "url": "https://letterboxd.com/film/amilcar/",
+    "title_en": "Amílcar",
+    "director": "Miguel Eek",
+    "country": "Spain, Portugal",
+    "year": 2025,
+    "duration": 87,
+    "genre": "Documental",
+    "title_es": "Amílcar",
+    "original_title": "Amílcar"
+  },
+  "luzazul|2026": {
+    "url": "",
+    "title_en": "Luzazul",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cuerpo criminal|2026": {
+    "url": "",
+    "title_en": "Cuerpo criminal",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la mirada errante": {
+    "url": "https://letterboxd.com/film/la-mirada-errante/",
+    "title_en": "La Mirada Errante",
+    "director": "Jorge Honik",
+    "country": "",
+    "year": 1970,
+    "duration": 22,
+    "genre": "",
+    "original_title": "La Mirada Errante"
+  },
+  "4:3 (cromoterapia)": {
+    "url": "",
+    "title_en": "4:3 (Cromoterapia)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "aflicción de volver": {
+    "url": "",
+    "title_en": "Aflicción de volver",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "catangos": {
+    "url": "",
+    "title_en": "Catangos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mirar puede ser todo": {
+    "url": "",
+    "title_en": "Mirar puede ser todo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "zoocántico i": {
+    "url": "",
+    "title_en": "Zoocántico I",
+    "director": "Enrico Alchimim",
+    "country": "Brazil, Argentina",
+    "year": 2026,
+    "duration": 3,
+    "original_title": "Zoocântico I"
+  },
+  "por la noche, la mañana": {
+    "url": "https://letterboxd.com/film/por-la-noche-la-manana/",
+    "title_en": "By night, the morning",
+    "director": "Federica Cafferata, Napo Martino",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 7,
+    "genre": "",
+    "original_title": "Por la noche, la mañana"
+  },
+  "señalética expandida": {
+    "url": "",
+    "title_en": "Señalética expandida",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los bailes de la vida": {
+    "url": "",
+    "title_en": "Los bailes de la vida",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "un dios local": {
+    "url": "https://letterboxd.com/film/un-dios-local/",
+    "title_en": "A Local Kind Of God",
+    "director": "Benjamín Naishtat",
+    "country": "Argentina",
+    "year": 2018,
+    "duration": 7,
+    "genre": "Drama",
+    "original_title": "Un Dios local"
+  },
+  "como una paloma o un caballo que no saben que tienen ojos": {
+    "url": "",
+    "title_en": "Como una paloma o un caballo que no saben que tienen ojos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "una figura sobre un fondo es el dato sensible más simple": {
+    "url": "",
+    "title_en": "Una figura sobre un fondo es el dato sensible más simple",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el pulso del tiempo": {
+    "url": "",
+    "title_en": "El pulso del tiempo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "rescates: sesión 1": {
+    "url": "",
+    "title_en": "Rescates: sesión 1",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-16",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "nosferato no brasil|1971": {
+    "url": "https://letterboxd.com/film/nosferato-no-brasil/",
+    "title_en": "Nosferato in Brazil",
+    "director": "Ivan Cardoso",
+    "country": "Brazil",
+    "year": 1970,
+    "duration": 27,
+    "genre": "Terror, Comedia",
+    "original_title": "Nosferato no Brasil"
+  },
+  "o terror da vermelha|1972": {
+    "url": "https://letterboxd.com/film/o-terror-da-vermelha/",
+    "title_en": "O Terror da Vermelha",
+    "director": "Torquato Neto",
+    "country": "Brazil",
+    "year": 1972,
+    "duration": 35,
+    "genre": "Terror",
+    "original_title": "O Terror da Vermelha"
+  },
+  "competencia internacional": {
+    "url": "",
+    "title_en": "Competencia Internacional",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "foco julio fermepin": {
+    "url": "",
+    "title_en": "Foco Julio Fermepin",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mar|2026": {
+    "url": "",
+    "title_en": "Mar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "espectro|2010": {
+    "url": "",
+    "title_en": "Espectro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "un mundo desplegar su drama simultáneamente en varios cuadros|2026": {
+    "url": "",
+    "title_en": "Un mundo desplegar su drama simultáneamente en varios cuadros",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "celulosa|2019": {
+    "url": "",
+    "title_en": "Celulosa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tríptico": {
+    "url": "",
+    "title_en": "Tríptico",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "corral de tigres|2025": {
+    "url": "",
+    "title_en": "Corral de Tigres",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "en un cielo pleno azul|2026": {
+    "url": "",
+    "title_en": "En un cielo pleno azul",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "síntesis de lo privado y lo aparente|2026": {
+    "url": "",
+    "title_en": "Síntesis de lo privado y lo aparente",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "peirano propiedades|2026": {
+    "url": "https://letterboxd.com/film/peirano-propiedades/",
+    "title_en": "Peirano Propiedades",
+    "director": "Marco Rossi",
+    "country": "Argentina",
+    "year": null,
+    "duration": 3,
+    "genre": "",
+    "original_title": "Peirano Propiedades"
+  },
+  "passacaglia y fuga|1975": {
+    "url": "https://letterboxd.com/film/passacaglia-y-fuga/",
+    "title_en": "Passacaglia and Fugue",
+    "director": "Laura Abel, Jorge Honik",
+    "country": "Argentina",
+    "year": 1975,
+    "duration": 19,
+    "genre": "",
+    "original_title": "Passacaglia y Fuga"
+  },
+  "aspiraciones|1976": {
+    "url": "https://letterboxd.com/film/aspiraciones/",
+    "title_en": "Aspiraciones",
+    "director": "Claudio Caldini",
+    "country": "Argentina",
+    "year": 1976,
+    "duration": 6,
+    "genre": "",
+    "original_title": "Aspiraciones"
+  },
+  "vadi-samvadi": {
+    "url": "https://letterboxd.com/film/vadi-samvadi/",
+    "title_en": "Vadi-Samvadi",
+    "director": "Claudio Caldini",
+    "country": "Argentina",
+    "year": 1981,
+    "duration": 7,
+    "genre": "",
+    "original_title": "Vadi-Samvadi"
+  },
+  "ofrenda|1978": {
+    "url": "https://letterboxd.com/film/offering/",
+    "title_en": "Offering",
+    "director": "Claudio Caldini",
+    "country": "Argentina",
+    "year": 1978,
+    "duration": 3,
+    "genre": "Documental",
+    "original_title": "Ofrenda"
+  },
+  "el inmortal: un cuento de borges|1969": {
+    "url": "",
+    "title_en": "El Inmortal: un cuento de Borges",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "panorama internacional": {
+    "url": "",
+    "title_en": "Panorama Internacional",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-16",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "ojos en llamas": {
+    "url": "",
+    "title_en": "Ojos en llamas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "por dentro somos color": {
+    "url": "https://letterboxd.com/film/por-dentro-somos-color/",
+    "title_en": "On the inside we are color",
+    "director": "Elena Pardo",
+    "country": "Mexico",
+    "year": 2024,
+    "duration": 13,
+    "genre": "",
+    "original_title": "Por dentro somos color"
+  },
+  "muestra invitada curta 8": {
+    "url": "",
+    "title_en": "Muestra invitada Curta 8",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "gaudí asesinado por un tranvía|1968": {
+    "url": "https://letterboxd.com/film/gaudi-asesinado-por-un-tranvia/",
+    "title_en": "Gaudi Killed by a Tram",
+    "director": "Jorge Honik",
+    "country": "Argentina",
+    "year": 1968,
+    "duration": 3,
+    "genre": "Documental",
+    "original_title": "Gaudí asesinado por un tranvía"
+  },
+  "film-gaudí|1975": {
+    "url": "https://letterboxd.com/film/film-gaudi/",
+    "title_en": "Film Gaudí",
+    "director": "Claudio Caldini",
+    "country": "",
+    "year": 1975,
+    "duration": 5,
+    "genre": "",
+    "original_title": "Film-Gaudi"
+  },
+  "komik|1969": {
+    "url": "https://letterboxd.com/film/komik/",
+    "title_en": "Komik",
+    "director": "Jorge Honik",
+    "country": "Argentina",
+    "year": 1969,
+    "duration": 2,
+    "genre": "Animación",
+    "original_title": "Komik"
+  },
+  "ventana|1975": {
+    "url": "https://letterboxd.com/film/ventana/",
+    "title_en": "Ventana",
+    "director": "Claudio Caldini",
+    "country": "",
+    "year": 1975,
+    "duration": 4,
+    "genre": "",
+    "original_title": "Ventana"
+  },
+  "un paseo|1969": {
+    "url": "https://letterboxd.com/film/un-paseo/",
+    "title_en": "A Walk",
+    "director": "Jorge Honik",
+    "country": "Argentina",
+    "year": 1969,
+    "duration": 3,
+    "genre": "Drama",
+    "original_title": "Un paseo"
+  },
+  "s/t|2007": {
+    "url": "https://letterboxd.com/film/s-t/",
+    "title_en": "S/T",
+    "director": "Claudio Caldini",
+    "country": "Argentina",
+    "year": 2007,
+    "duration": 3,
+    "genre": "",
+    "original_title": "S/T"
+  },
+  "india-nepal (diario de viaje)": {
+    "url": "",
+    "title_en": "India-Nepal (diario de viaje)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "foco moira lacowicz": {
+    "url": "",
+    "title_en": "Foco Moira Lacowicz",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "muestra de talleres: cine oculta y moira lacowicz": {
+    "url": "",
+    "title_en": "Muestra de talleres: Cine Oculta y Moira Lacowicz",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "rescates: sesión 2": {
+    "url": "",
+    "title_en": "Rescates: sesión 2",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-16",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "del más allá: cine de terror argentino filmado en super 8": {
+    "url": "",
+    "title_en": "Del más allá: cine de terror argentino filmado en Super 8",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "rescates: sesión 3": {
+    "url": "",
+    "title_en": "Rescates: sesión 3",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "juguemos en el bosque mientras el lobo no está|1975": {
+    "url": "",
+    "title_en": "Juguemos en el bosque mientras el lobo no está",
+    "director": "Horacio Vallereggio",
+    "country": "Argentina",
+    "year": 1975,
+    "duration": null,
+    "genre": "Documental",
+    "original_title": "Juguemos en el bosque mientras el lobo no está"
+  },
+  "sonrisa del más acá|1975": {
+    "url": "",
+    "title_en": "Sonrisa del más acá",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la película migrante": {
+    "url": "",
+    "title_en": "La película migrante",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mi segundo entierro": {
+    "url": "",
+    "title_en": "Mi segundo entierro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cuando el disparo|2021": {
+    "url": "",
+    "title_en": "Cuando el disparo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "c��mo robar un banco": {
+    "url": "https://letterboxd.com/film/how-to-rob-a-bank-2026/",
+    "title_en": "How to Rob a Bank",
+    "director": "David Leitch",
+    "country": "USA",
+    "year": 2026,
+    "duration": 122,
+    "genre": "Thriller, Acción",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "los ojos de america": {
+    "url": "https://letterboxd.com/film/los-ojos-de-america/",
+    "title_en": "Los ojos de América",
+    "director": "Daiana Rosenfeld, Aníbal Garisto",
+    "country": "Argentina",
+    "year": 2014,
+    "duration": 62,
+    "genre": "Documental",
+    "original_title": "Los ojos de América"
+  },
+  "el villano": {
+    "url": "https://letterboxd.com/film/el-villano/",
+    "title_en": "El villano",
+    "director": "Luis Ziembrowski, Gabriel Reches",
+    "country": "Argentina",
+    "year": 2023,
+    "duration": 75,
+    "genre": "Documental",
+    "original_title": "El villano"
+  },
+  "el pecado de cluny brown|1946": {
+    "url": "https://letterboxd.com/film/cluny-brown/",
+    "title_en": "Cluny Brown",
+    "director": "Ernst Lubitsch",
+    "country": "USA",
+    "year": 1946,
+    "duration": 100,
+    "genre": "Comedia, Romance",
+    "title_es": "El pecado de Cluny Brown",
+    "original_title": "Cluny Brown"
+  },
+  "ser o no ser|1942": {
+    "url": "https://letterboxd.com/film/to-be-or-not-to-be/",
+    "title_en": "To Be or Not to Be",
+    "director": "Ernst Lubitsch",
+    "country": "USA",
+    "year": 1942,
+    "duration": 99,
+    "genre": "Comedia, Bélica",
+    "title_es": "Ser o no ser",
+    "original_title": "To Be or Not to Be"
+  },
+  "la viuda alegre|1934": {
+    "url": "https://letterboxd.com/film/the-merry-widow-1934/",
+    "title_en": "The Merry Widow",
+    "director": "Ernst Lubitsch",
+    "country": "USA",
+    "year": 1934,
+    "duration": 99,
+    "genre": "Comedia, Romance",
+    "title_es": "La viuda alegre",
+    "original_title": "The Merry Widow"
+  },
+  "el bazar de las sorpresas|1940": {
+    "url": "https://letterboxd.com/film/the-shop-around-the-corner/",
+    "title_en": "The Shop Around the Corner",
+    "director": "Ernst Lubitsch",
+    "country": "USA",
+    "year": 1940,
+    "duration": 99,
+    "genre": "Romance, Drama",
+    "title_es": "El bazar de las sorpresas",
+    "original_title": "The Shop Around the Corner"
+  },
+  "la octava esposa de barbazul|1938": {
+    "url": "https://letterboxd.com/film/bluebeards-eighth-wife/",
+    "title_en": "Bluebeard's 8th Wife",
+    "director": "Ernst Lubitsch",
+    "country": "USA",
+    "year": 1938,
+    "duration": 85,
+    "genre": "Romance, Comedia",
+    "title_es": "La octava mujer de Barba Azul",
+    "original_title": "Bluebeard's 8th Wife"
+  },
+  "carmen vuelve a casa|1951": {
+    "url": "https://letterboxd.com/film/carmen-comes-home/",
+    "title_en": "Carmen Comes Home",
+    "director": "Keisuke Kinoshita",
+    "country": "Japan",
+    "year": 1951,
+    "duration": 86,
+    "genre": "Música, Comedia",
+    "title_es": "Carmen vuelve a casa",
+    "original_title": "カルメン故郷に帰る"
+  },
+  "una historia de tokio|1953": {
+    "url": "https://letterboxd.com/film/tokyo-story/",
+    "title_en": "Tokyo Story",
+    "director": "Yasujirō Ozu",
+    "country": "Japan",
+    "year": 1953,
+    "duration": 137,
+    "genre": "Drama",
+    "title_es": "Cuentos de Tokio",
+    "original_title": "東京物語"
+  },
+  "historia de chikamatsu / los amantes crucificados|1954": {
+    "url": "",
+    "title_en": "Historia de Chikamatsu / Los amantes crucificados",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "vida de oharu, mujer galante|1952": {
+    "url": "https://letterboxd.com/film/the-life-of-oharu/",
+    "title_en": "The Life of Oharu",
+    "director": "Kenji Mizoguchi",
+    "country": "Japan",
+    "year": 1952,
+    "duration": 136,
+    "genre": "Drama",
+    "title_es": "La vida de Oharu, mujer galante",
+    "original_title": "西鶴一代女"
   }
 }
