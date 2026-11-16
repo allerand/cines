@@ -382,10 +382,15 @@ class Report:
         return f"- **{h.cine}** ({quien}): {h.msg}" if h.cine else f"- ({quien}) {h.msg}"
 
     def _por_ciudad(self, hallazgos: list, linea) -> list[str]:
-        """Las líneas agrupadas por ciudad; sin subtítulos si es todo de una."""
-        grupos = [("Buenos Aires", [h for h in hallazgos if h.ciudad == "ba"]),
-                  ("Madrid", [h for h in hallazgos if h.ciudad == "madrid"]),
-                  ("Festivales y funcionamiento", [h for h in hallazgos if h.ciudad not in ("ba", "madrid")])]
+        """Las líneas agrupadas por ciudad; sin subtítulos si es todo de una.
+
+        Primero lo que no es de una sala: que el scrape no corra o que un
+        festival empiece en tres días sin estar cargado tiene fecha, y una
+        sala con el ciclo pegado al título puede esperar al final de la lista.
+        """
+        grupos = [("Festivales y funcionamiento", [h for h in hallazgos if h.ciudad not in ("ba", "madrid")]),
+                  ("Buenos Aires", [h for h in hallazgos if h.ciudad == "ba"]),
+                  ("Madrid", [h for h in hallazgos if h.ciudad == "madrid"])]
         grupos = [(t, hs) for t, hs in grupos if hs]
         out: list[str] = []
         for titulo, hs in grupos:
