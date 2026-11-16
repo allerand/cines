@@ -3125,6 +3125,113 @@ def scrape_multiplex(semanas: int = 2) -> list[Screening]:
     return result
 
 
+# ───── Cines Pixel (Adrogué) ──────────────────────────────────────────
+#
+# Un solo complejo, en Francisco Seguí 677, Adrogué. La web es una boletería
+# .NET: /cartelera/cartelera lista las películas (cartelera y preventas) como
+# links /Peliculas?codPelicula=N, y los horarios los trae la ficha por JS de
+# dos endpoints JSON:
+#   GetFechasDisponibles?codComplejo=331&codPelicula=N → ["2026-11-16T00:00:00", …]
+#   GetCacheFuncionesComplejoPeliculaFecha?complejoId=331&codPelicula=N&fecha=AAAA-MM-DD
+#     → [{tecnologiaNombre, funciones: [{horaComienzoOriginal, doblada, subtitulada, …}]}]
+# La grilla es semanal (jueves a miércoles): las fechas no pasan del miércoles.
+#
+# Va como comercial (detrás de "+ Comerciales", fuera de IG): es un multicine
+# de estrenos. El director de la ficha no se usa: Clayface figuraba con
+# "Christopher Nolan, James Watkins", y mejor vacía que equivocada.
+PIXEL_BASE = "https://www.cinespixel.com.ar"
+PIXEL_COMPLEJO = "331"
+PIXEL_CINE = "Cines Pixel"
+
+
+def _pixel_json(path: str):
+    return json.loads(fetch_bytes(PIXEL_BASE + path, timeout=20).decode("utf-8"))
+
+
+def _pixel_peliculas(soup) -> dict[str, dict]:
+    """codPelicula → {title, duration} desde las tarjetas de la cartelera."""
+    pelis: dict[str, dict] = {}
+    for card in soup.select("div.movie"):
+        a = card.find("a", href=re.compile(r"codPelicula=\d+"))
+        if not a:
+            continue
+        cod = re.search(r"codPelicula=(\d+)", a["href"]).group(1)
+        nombre = card.select_one(".movie-name")
+        img = card.find("img")
+        titulo = (nombre.get_text(" ", strip=True) if nombre else "") or \
+                 (img.get("alt", "").strip() if img else "")
+        if not titulo:
+            continue
+        dur = None
+        m = re.search(r"(\d{2,3})\s*min", card.get_text(" ", strip=True))
+        if m:
+            dur = int(m.group(1))
+        pelis.setdefault(cod, {"title": titulo, "duration": dur})
+    return pelis
+
+
+def scrape_pixel(semanas: int = 2) -> list[Screening]:
+    """Cartelera de Cines Pixel (Adrogué) por los endpoints JSON de la ficha."""
+    hoy = date.today()
+    hoy_str = hoy.isoformat()
+    cutoff = (hoy + timedelta(weeks=semanas)).isoformat()
+
+    try:
+        soup = fetch_html(PIXEL_BASE + "/cartelera/cartelera")
+    except Exception as e:
+        marcar_fuente_caida(PIXEL_CINE, f"la cartelera no carga: {e}")
+        print(f"[pixel: no carga — {e}]", end=" ")
+        return []
+
+    pelis = _pixel_peliculas(soup)
+    if not pelis:
+        marcar_fuente_caida(PIXEL_CINE, "0 tarjetas div.movie: cambió el markup")
+        print("[pixel: 0 películas en la cartelera — cambió el markup]", end=" ")
+        return []
+
+    result: list[Screening] = []
+    seen: set[tuple] = set()
+    errores = 0
+    for cod, p in pelis.items():
+        try:
+            fechas = _pixel_json(f"/Peliculas/GetFechasDisponibles"
+                                 f"?codComplejo={PIXEL_COMPLEJO}&codPelicula={cod}")
+        except Exception:
+            errores += 1
+            continue
+        for f in fechas or []:
+            fecha = str(f)[:10]
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", fecha) or not (hoy_str <= fecha <= cutoff):
+                continue
+            try:
+                grupos = _pixel_json(f"/Peliculas/GetCacheFuncionesComplejoPeliculaFecha"
+                                     f"?complejoId={PIXEL_COMPLEJO}&codPelicula={cod}&fecha={fecha}")
+            except Exception:
+                errores += 1
+                continue
+            for g in grupos or []:
+                for fn in g.get("funciones") or []:
+                    hora = str(fn.get("horaComienzoOriginal") or "").strip()
+                    if not re.fullmatch(r"\d{1,2}:\d{2}", hora):
+                        continue
+                    hora = f"{int(hora.split(':')[0]):02d}:{hora.split(':')[1]}"
+                    k = (p["title"], fecha, hora)
+                    if k in seen:
+                        continue          # la misma función doblada y subtitulada
+                    seen.add(k)
+                    result.append(Screening(
+                        cine=PIXEL_CINE,
+                        title=p["title"],
+                        fecha=fecha,
+                        hora=hora,
+                        ticket_url=f"{PIXEL_BASE}/Peliculas?codPelicula={cod}",
+                        duration=p["duration"],
+                    ))
+    if errores:
+        print(f"[pixel: {errores} pedidos fallaron]", end=" ")
+    return result
+
+
 def scrape_lorca() -> list[Screening]:
     """
     Fallback manual cuando IMDb falla. Lee data/lorca_manual.json con shape:

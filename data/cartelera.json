@@ -87,6 +87,10 @@
       "scrapeadas": 344,
       "publicadas": 383
     },
+    "Cines Pixel": {
+      "scrapeadas": 49,
+      "publicadas": 49
+    },
     "Cinépolis Houssay": {
       "scrapeadas": 18,
       "publicadas": 18
@@ -1734,6 +1738,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "14:30",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=36",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-16",
       "hora": "14:35",
@@ -1926,6 +1946,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "14:50",
+      "title_es": "Por el bien de Adam",
+      "title_en": "Adam's Sake",
+      "original_title": "L'Intérêt d'Adam",
+      "director": "Laura Wandel",
+      "country": "Bélgica, Francia",
+      "year": 2025,
+      "duration": 78,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/adams-sake/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=47",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-16",
       "hora": "15:00",
@@ -2035,6 +2071,38 @@
       "genre": "Fantasía, Aventura",
       "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "15:00",
+      "title_es": "Rocky",
+      "title_en": "Rocky",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=45",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "15:00",
+      "title_es": "Sensatez y Sentimiento",
+      "title_en": "Sensatez y Sentimiento",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 131,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=35",
       "ciclo": ""
     },
     {
@@ -3014,6 +3082,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "16:30",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-11-16",
       "hora": "16:35",
@@ -3430,6 +3514,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "17:00",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=36",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-16",
       "hora": "17:05",
@@ -3843,6 +3943,38 @@
       "genre": "Fantasía, Aventura",
       "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "17:30",
+      "title_es": "Tierra de mi padre",
+      "title_en": "Fatherland",
+      "original_title": "Ojczyzna",
+      "director": "Paweł Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=29",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "17:30",
+      "title_es": "Clayface",
+      "title_en": "Clayface",
+      "original_title": "Clayface",
+      "director": "James Watkins",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/clayface/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=25",
       "ciclo": ""
     },
     {
@@ -4774,6 +4906,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "19:10",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-16",
       "hora": "19:15",
@@ -4918,6 +5066,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "19:20",
+      "title_es": "Ebenezer",
+      "title_en": "Ebenezer",
+      "original_title": "Ebenezer",
+      "director": "Ti West",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 115,
+      "genre": "Comedia, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=42",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-16",
       "hora": "19:25",
@@ -5043,6 +5207,22 @@
       "genre": "Thriller, Acción",
       "letterboxd": "https://letterboxd.com/film/how-to-rob-a-bank-2026/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "19:30",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=40",
       "ciclo": ""
     },
     {
@@ -5203,6 +5383,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/sense-and-sensibility-2026/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "19:45",
+      "title_es": "Cómo robar un banco",
+      "title_en": "How to Rob a Bank",
+      "original_title": "How to Rob a Bank",
+      "director": "David Leitch",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 122,
+      "genre": "Thriller, Acción",
+      "letterboxd": "https://letterboxd.com/film/how-to-rob-a-bank-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=41",
       "ciclo": ""
     },
     {
@@ -6358,6 +6554,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "21:45",
+      "title_es": "Rocky",
+      "title_en": "Rocky",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=45",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "21:45",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-16",
       "hora": "21:50",
@@ -6598,6 +6826,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "22:00",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=40",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-16",
       "hora": "22:05",
@@ -6755,6 +6999,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/clayface/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-16",
+      "hora": "22:10",
+      "title_es": "Aniquilación",
+      "title_en": "Onslaught",
+      "original_title": "Onslaught",
+      "director": "Adam Wingard",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 92,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/onslaught-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=39",
       "ciclo": ""
     },
     {
@@ -9110,6 +9370,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "14:30",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=36",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-17",
       "hora": "14:40",
@@ -9270,6 +9546,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "14:50",
+      "title_es": "Por el bien de Adam",
+      "title_en": "Adam's Sake",
+      "original_title": "L'Intérêt d'Adam",
+      "director": "Laura Wandel",
+      "country": "Bélgica, Francia",
+      "year": 2025,
+      "duration": 78,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/adams-sake/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=47",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-17",
       "hora": "15:00",
@@ -9364,6 +9656,38 @@
       "letterboxd": "https://letterboxd.com/film/in-this-our-life/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
       "ciclo": "Homenaje a John Huston"
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "15:00",
+      "title_es": "Rocky",
+      "title_en": "Rocky",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=45",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "15:00",
+      "title_es": "Sensatez y Sentimiento",
+      "title_en": "Sensatez y Sentimiento",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 131,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=35",
+      "ciclo": ""
     },
     {
       "cine": "Multiplex Belgrano",
@@ -10214,6 +10538,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "16:30",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-11-17",
       "hora": "16:35",
@@ -10499,6 +10839,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b373bf0da3553450e714b6bd76bfd757",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "17:00",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=36",
       "ciclo": ""
     },
     {
@@ -10819,6 +11175,38 @@
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/wildwood-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/wildwood-el-bosque-salvaje/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "17:30",
+      "title_es": "Tierra de mi padre",
+      "title_en": "Fatherland",
+      "original_title": "Ojczyzna",
+      "director": "Paweł Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=29",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "17:30",
+      "title_es": "Clayface",
+      "title_en": "Clayface",
+      "original_title": "Clayface",
+      "director": "James Watkins",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/clayface/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=25",
       "ciclo": ""
     },
     {
@@ -11782,6 +12170,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "19:10",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-17",
       "hora": "19:15",
@@ -11878,6 +12282,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "19:20",
+      "title_es": "Ebenezer",
+      "title_en": "Ebenezer",
+      "original_title": "Ebenezer",
+      "director": "Ti West",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 115,
+      "genre": "Comedia, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=42",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-17",
       "hora": "19:30",
@@ -11924,6 +12344,22 @@
       "letterboxd": "https://letterboxd.com/film/stitching-palestine/",
       "ticket_url": "https://portal.salalucida.org/eventos/stitching-palestine-bordando-palestina-e367",
       "ciclo": "La Tierra Permanece"
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "19:30",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=40",
+      "ciclo": ""
     },
     {
       "cine": "Cinemark Puerto Madero",
@@ -12003,6 +12439,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/annemarie/",
       "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6419",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "19:45",
+      "title_es": "Cómo robar un banco",
+      "title_en": "How to Rob a Bank",
+      "original_title": "How to Rob a Bank",
+      "director": "David Leitch",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 122,
+      "genre": "Thriller, Acción",
+      "letterboxd": "https://letterboxd.com/film/how-to-rob-a-bank-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=41",
       "ciclo": ""
     },
     {
@@ -13094,6 +13546,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "21:45",
+      "title_es": "Rocky",
+      "title_en": "Rocky",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=45",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "21:45",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-17",
       "hora": "21:50",
@@ -13270,6 +13754,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "22:00",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=40",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-17",
       "hora": "22:10",
@@ -13363,6 +13863,22 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-17",
+      "hora": "22:10",
+      "title_es": "Aniquilación",
+      "title_en": "Onslaught",
+      "original_title": "Onslaught",
+      "director": "Adam Wingard",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 92,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/onslaught-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=39",
       "ciclo": ""
     },
     {
@@ -15542,6 +16058,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "14:30",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=36",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-18",
       "hora": "14:40",
@@ -15686,6 +16218,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "14:50",
+      "title_es": "Por el bien de Adam",
+      "title_en": "Adam's Sake",
+      "original_title": "L'Intérêt d'Adam",
+      "director": "Laura Wandel",
+      "country": "Bélgica, Francia",
+      "year": 2025,
+      "duration": 78,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/adams-sake/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=47",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-18",
       "hora": "14:55",
@@ -15811,6 +16359,38 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/untitled-resident-evil-reboot/",
       "ticket_url": "https://www.hoyts.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "15:00",
+      "title_es": "Rocky",
+      "title_en": "Rocky",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=45",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "15:00",
+      "title_es": "Sensatez y Sentimiento",
+      "title_en": "Sensatez y Sentimiento",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 131,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=35",
       "ciclo": ""
     },
     {
@@ -16646,6 +17226,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "16:30",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Cosmos",
       "fecha": "2026-11-18",
       "hora": "16:35",
@@ -16947,6 +17543,22 @@
       "genre": "Drama, Comedia",
       "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/b373bf0da3553450e714b6bd76bfd757",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "17:00",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=36",
       "ciclo": ""
     },
     {
@@ -17267,6 +17879,38 @@
       "genre": "Misterio, Thriller",
       "letterboxd": "https://letterboxd.com/film/verity-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/verityla-sombra-de-un-engano/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "17:30",
+      "title_es": "Tierra de mi padre",
+      "title_en": "Fatherland",
+      "original_title": "Ojczyzna",
+      "director": "Paweł Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=29",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "17:30",
+      "title_es": "Clayface",
+      "title_en": "Clayface",
+      "original_title": "Clayface",
+      "director": "James Watkins",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Thriller, Terror",
+      "letterboxd": "https://letterboxd.com/film/clayface/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=25",
       "ciclo": ""
     },
     {
@@ -18262,6 +18906,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "19:10",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-18",
       "hora": "19:15",
@@ -18371,6 +19031,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "19:20",
+      "title_es": "Ebenezer",
+      "title_en": "Ebenezer",
+      "original_title": "Ebenezer",
+      "director": "Ti West",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 115,
+      "genre": "Comedia, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=42",
       "ciclo": ""
     },
     {
@@ -18502,6 +19178,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "19:30",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=40",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-18",
       "hora": "19:35",
@@ -18579,6 +19271,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/annemarie/",
       "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6419",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "19:45",
+      "title_es": "Cómo robar un banco",
+      "title_en": "How to Rob a Bank",
+      "original_title": "How to Rob a Bank",
+      "director": "David Leitch",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 122,
+      "genre": "Thriller, Acción",
+      "letterboxd": "https://letterboxd.com/film/how-to-rob-a-bank-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=41",
       "ciclo": ""
     },
     {
@@ -19478,6 +20186,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "21:45",
+      "title_es": "Rocky",
+      "title_en": "Rocky",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 120,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=45",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "21:45",
+      "title_es": "Godzilla Minus Zero",
+      "title_en": "Godzilla Minus Zero",
+      "original_title": "ゴジラ-0.0",
+      "director": "Takashi Yamazaki",
+      "country": "Japón",
+      "year": 2026,
+      "duration": 135,
+      "genre": "Acción, Terror",
+      "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-18",
       "hora": "21:50",
@@ -19654,6 +20394,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "22:00",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=40",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Canning",
       "fecha": "2026-11-18",
       "hora": "22:05",
@@ -19763,6 +20519,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-18",
+      "hora": "22:10",
+      "title_es": "Aniquilación",
+      "title_en": "Onslaught",
+      "original_title": "Onslaught",
+      "director": "Adam Wingard",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 92,
+      "genre": "Acción, Thriller",
+      "letterboxd": "https://letterboxd.com/film/onslaught-2026/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=39",
       "ciclo": ""
     },
     {
@@ -28467,6 +29239,22 @@
       "genre": "Aventura, Familiar",
       "letterboxd": "https://letterboxd.com/film/labyrinth/",
       "ticket_url": "https://lumiton.ar/evento/laberinto-2-2/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-22",
+      "hora": "16:00",
+      "title_es": "Biografía de Jorge Luis Borges",
+      "title_en": "Biografía de Jorge Luis Borges",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": 323,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=46",
       "ciclo": ""
     },
     {

@@ -478,7 +478,7 @@ let weekStart = null;  // YYYY-MM-DD si modo semanal, sino null
 // feed). Matcheamos por PREFIJO porque cada sucursal viene como
 // "Cinemark Caballito", "Hoyts Abasto", etc. — todas las del mismo grupo
 // se descartan. Override con ?include=commercial en la URL.
-const IG_EXCLUDE_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'];
+const IG_EXCLUDE_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex', 'Cines Pixel'];
 function isCommercial(cine) {
   return IG_EXCLUDE_PREFIXES.some(p => cine && cine.startsWith(p));
 }

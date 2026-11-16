@@ -51,7 +51,7 @@ UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
 # corridas, así que un scraper roto no los baja a cero — los deja rancios, con
 # cada vez menos títulos. Por eso se los mide por CANTIDAD DE TÍTULOS y no por
 # cantidad de funciones.
-COMMERCIAL_PREFIXES = ("Cinemark", "Hoyts", "Cinépolis", "Cinepolis", "Showcase", "Multiplex")
+COMMERCIAL_PREFIXES = ("Cinemark", "Hoyts", "Cinépolis", "Cinepolis", "Showcase", "Multiplex", "Cines Pixel")
 # Una sala de cadena en cartelera nunca tiene menos de esto. Con 1-2 títulos lo
 # que estamos publicando es el resto de un scrape viejo. El umbral va bajo a
 # propósito: en una semana floja las cadenas comparten 5 estrenos y de nada

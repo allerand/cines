@@ -700,6 +700,7 @@
     .cine-cinepolis{ border-color: #2a2a2a; color: #aaa; }
     .cine-showcase { border-color: #2a2a2a; color: #aaa; }
     .cine-multiplex{ border-color: #2a2a2a; color: #aaa; }
+    .cine-pixel    { border-color: #2a2a2a; color: #aaa; }
 
     .film-title { font-weight: 500; color: var(--text); }
     /* Título alternativo (criterio Letterboxd): el otro idioma en «guillemets»,
@@ -1027,6 +1028,7 @@
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
   <button class="filter-btn commercial-chip" data-cine="Showcase" hidden>Showcase</button>
   <button class="filter-btn commercial-chip" data-cine="Multiplex" hidden>Multiplex</button>
+  <button class="filter-btn commercial-chip" data-cine="Cines Pixel" hidden>Pixel</button>
   <button id="toggle-commercial" class="filter-toggle" type="button" aria-pressed="false">
     + Comerciales
   </button>
@@ -1117,12 +1119,13 @@ const CINE_ADDRESSES = {
   'Multiplex Lavalle':        'Lavalle 780',
   'Multiplex Canning':        'Formosa 653, Ezeiza',
   'Multiplex Pilar':          'Las Magnolias 754, Pilar',
+  'Cines Pixel':              'Francisco Seguí 677, Adrogué',
 };
 
 // Cadenas comerciales. Cada peli viene como "Cinemark Caballito",
 // "Hoyts Abasto", etc. — matcheamos por PREFIJO así una sola entrada
 // cubre todas las sucursales de la cadena.
-const COMMERCIAL_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex'];
+const COMMERCIAL_PREFIXES = ['Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex', 'Cines Pixel'];
 // Salas con entrada libre y gratuita: no hay entradas que sacar, así que en
 // lugar del link va "Entrada gratis".
 const CINES_GRATIS = new Set(['Museo del Cine', 'Centro Cultural Leopoldo Marechal',
@@ -2323,6 +2326,7 @@ function cineCssClass(cine) {
   if (cine && (cine.startsWith('Cinépolis') || cine.startsWith('Cinepolis'))) return 'cine-cinepolis';
   if (cine && cine.startsWith('Showcase'))  return 'cine-showcase';
   if (cine && cine.startsWith('Multiplex')) return 'cine-multiplex';
+  if (cine && cine.startsWith('Cines Pixel')) return 'cine-pixel';
   return '';
 }
 

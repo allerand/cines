@@ -120,7 +120,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_borges, scrape_bcn, scrape_agn, scrape_bellasartes, scrape_lorca_cartel,
         scrape_sala_lucida, scrape_manual, descartar_manual, aplicar_festivales,
         titulo_norm, misma_pelicula, limpiar_banderas,
-        scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_farus,
+        scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_pixel, scrape_farus,
         scrape_moderno,
         scrape_dore, scrape_ideal, scrape_cineteca, scrape_renoir,
         scrape_embajadores, scrape_golem, scrape_metropol, scrape_cine_estudio,
@@ -354,6 +354,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         all_screenings.extend(r)
         from collections import Counter as _C
         print(", ".join(f"{c}: {n}" for c, n in _C(x.cine for x in r).items()) or "0")
+    except Exception as e:
+        print(f"error — {e}")
+
+    print("🎬 Scrapeando Cines Pixel (Adrogué)...", end=" ", flush=True)
+    try:
+        r = scrape_pixel(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
     except Exception as e:
         print(f"error — {e}")
 
@@ -807,7 +815,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     #      publicando. Umbral 1 —y no 3 como el Borges— porque el CCK sano puede
     #      tener pocas funciones a la vista (proyecta viernes a domingo): sólo el
     #      cero es inequívocamente una falla.
-    COMMERCIAL_PREFIXES = ('Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex')
+    COMMERCIAL_PREFIXES = ('Cinemark', 'Hoyts', 'Cinépolis', 'Cinepolis', 'Showcase', 'Multiplex', 'Cines Pixel')
     #      Bellas Artes entra en la misma red: el museo y Amigos están los dos
     #      detrás de Cloudflare y el 28/8/2026 el scrape del runner volvió con
     #      CERO funciones (desde casa, 11) — sólo sobrevivieron las de HOY por
