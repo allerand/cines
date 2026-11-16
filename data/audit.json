@@ -1810,12 +1810,6 @@
     "titulo": "Directores de relleno («Desconocido», «Varios») (1 caso, 8 funciones) en Hasta Trilce. Mejor vacío. Por…",
     "efimero": false
    },
-   "categorias/ba/titulo-con-ciclo/Centro Cultural Borges": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Centro Cultural Borges: el título trae el ciclo pegado adelante (5 casos, 6 funciones). El scraper tiene que partirlo: el ciclo a…",
-    "efimero": false
-   },
    "categorias/ba/titulo-con-director/Centro Cultural 25 de Mayo": {
     "desde": "2026-11-16",
     "sev": "ERROR",
@@ -1844,12 +1838,6 @@
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Amorina: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por…",
-    "efimero": false
-   },
-   "categorias/ba/titulo-parece-ciclo/Centro Cultural 25 de Mayo": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Centro Cultural 25 de Mayo: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso). Confirmar…",
     "efimero": false
    },
    "categorias/madrid/director-con-de/-": {
@@ -1924,16 +1912,22 @@
     "titulo": "Sala Equis: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (4 casos). Confirmar…",
     "efimero": false
    },
-   "festivales/-/radar-inminente/Buenos Aires Rojo Sangre": {
+   "festivales/-/registro-incompleto/Buenos Aires Rojo Sangre": {
     "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Buenos Aires Rojo Sangre: empieza en 3 días (19 al 29 nov, en Atlas Caballito, Av. Rivadavia 5071) y no está cargado. Fuente:…",
+    "sev": "AVISO",
+    "titulo": "Buenos Aires Rojo Sangre: en el registro le falta el logo",
     "efimero": false
    },
-   "festivales/-/radar-inminente/MASS, Semana de los Festivales de Cine de Málaga y San Sebastián": {
+   "festivales/-/registro-incompleto/MASS": {
     "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "MASS, Semana de los Festivales de Cine de Málaga y San Sebastián: empieza en 10 días (26 al 28 nov, en Centro Cultural 25 de Mayo) y no está cargado. Fuente:…",
+    "sev": "AVISO",
+    "titulo": "MASS: en el registro le falta el logo",
+    "efimero": false
+   },
+   "festivales/-/sin-lista/Buenos Aires Rojo Sangre": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Buenos Aires Rojo Sangre: 7 programas sin lista de películas («Fin de semana sangriento: bloque 1», «Fin…",
     "efimero": false
    },
    "festivales/-/sin-lista/Infinito Super 8": {
@@ -1941,6 +1935,18 @@
     "sev": "AVISO",
     "titulo": "Infinito Super 8: 8 programas sin lista de películas («Rescates: sesión 1», «Competencia Internacional»,…",
     "efimero": false
+   },
+   "festivales/-/web-cambio/FIDBA": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "FIDBA: su web cambió desde el 16/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Older than Israel».…",
+    "efimero": true
+   },
+   "festivales/-/web-cambio/Infinito Super 8": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Infinito Super 8: su web cambió desde el 16/11: 1 línea nueva. Lo nuevo: «Foco JULIO FERMEPÍN». Revisar la…",
+    "efimero": true
    },
    "fichas/ba/dos-titulos-en-el-mismo-horario/-": {
     "desde": "2026-11-16",
@@ -1976,6 +1982,12 @@
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Filo Cine: hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean…",
+    "efimero": false
+   },
+   "fichas/ba/titulo-todo-en-mayusculas/-": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Título todo en mayúsculas: Atlas Caballito ×2. Ejemplo (Atlas Caballito): 'C.Y.N.D.'",
     "efimero": false
    },
    "fichas/madrid/dos-titulos-en-el-mismo-horario/-": {
@@ -2057,6 +2069,35 @@
     "efimero": false
    }
   },
-  "cerrados": {}
+  "cerrados": {
+   "categorias/ba/titulo-con-ciclo/Centro Cultural Borges": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Centro Cultural Borges: el título trae el ciclo pegado adelante (5 casos, 6 funciones). El scraper tiene que partirlo: el ciclo a…",
+    "efimero": false,
+    "cerrado": "2026-11-16"
+   },
+   "categorias/ba/titulo-parece-ciclo/Centro Cultural 25 de Mayo": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Centro Cultural 25 de Mayo: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso). Confirmar…",
+    "efimero": false,
+    "cerrado": "2026-11-16"
+   },
+   "festivales/-/radar-inminente/Buenos Aires Rojo Sangre": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Buenos Aires Rojo Sangre: empieza en 3 días (19 al 29 nov, en Atlas Caballito, Av. Rivadavia 5071) y no está cargado. Fuente:…",
+    "efimero": false,
+    "cerrado": "2026-11-16"
+   },
+   "festivales/-/radar-inminente/MASS, Semana de los Festivales de Cine de Málaga y San Sebastián": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "MASS, Semana de los Festivales de Cine de Málaga y San Sebastián: empieza en 10 días (26 al 28 nov, en Centro Cultural 25 de Mayo) y no está cargado. Fuente:…",
+    "efimero": false,
+    "cerrado": "2026-11-16"
+   }
+  }
  }
 }
