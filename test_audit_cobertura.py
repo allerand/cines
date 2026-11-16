@@ -268,20 +268,25 @@ def main() -> int:
         return {"cine": cine, "fecha": HOY.isoformat(), "hora": hora, "title_es": titulo,
                 "director": "", "ciclo": ciclo, "year": 2025, "ticket_url": "https://x/"}
 
+    # Desde el 16/11/2026 la regla vive en categorias.py (la usa también el
+    # portero de run.py) y la auditoría la corre con check_categorias; el
+    # resto de sus casos está en test_categorias.py.
     rep = audit.Report()
-    audit.check_calidad(rep, [_fila("Homenaje a John Huston", "Estreno"),
-                              _fila("El tesoro de la Sierra Madre", "Homenaje a John Huston", "18:00"),
-                              _fila("La reina africana", "Homenaje a John Huston", "21:00")], HOY)
+    audit.check_categorias(rep, [_fila("Homenaje a John Huston", "Estreno"),
+                                 _fila("El tesoro de la Sierra Madre", "Homenaje a John Huston", "18:00"),
+                                 _fila("La reina africana", "Homenaje a John Huston", "21:00")], HOY)
     msg = " ".join(m for _, m in rep.accion)
     chequear("un título que es el nombre de un ciclo de su sala es ERROR",
              "nombre de un ciclo" in msg, msg or "sin aviso")
 
     rep = audit.Report()
-    audit.check_calidad(rep, [_fila("Nueve Auras", "Nueve Auras"),
-                              _fila("Homenaje a John Huston", "Estreno", cine="Otra sala"),
-                              _fila("El tesoro de la Sierra Madre", "Homenaje a John Huston", "18:00")], HOY)
+    audit.check_categorias(rep, [_fila("Nueve Auras", "Nueve Auras"),
+                                 _fila("Homenaje a John Huston", "Estreno", cine="Otra sala"),
+                                 _fila("El tesoro de la Sierra Madre", "Homenaje a John Huston", "18:00")], HOY)
+    # "Homenaje a John Huston" en otra sala, sin ficha, igual sale: ahora como
+    # un título que PARECE un ciclo, que es otra regla y pide confirmarlo.
     chequear("...pero no un ciclo de una sola película ni el ciclo de otra sala",
-             not any("nombre de un ciclo" in m for _, m in rep.accion), str(rep.accion))
+             not any("dicen el nombre de un ciclo" in m for _, m in rep.accion), str(rep.accion))
 
     print(f"\n{'TODO OK' if not fallos else f'{fallos} casos fallando'}")
     return 1 if fallos else 0

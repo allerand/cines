@@ -1,0 +1,190 @@
+{
+  "_comment": "El radar del monitor de festivales (scripts/audit_festivales.py): los festivales de cine de Buenos Aires y alrededores que vuelven todos los años. La auditoría lo cruza con data/festivales.json: si se acerca el mes de uno (`meses`, desde 45 días antes) y el registro no tiene su edición de este año, avisa para ir a buscarla. Campos: `nombre`; `alias` (como lo puede nombrar el registro o un ciclo); `meses` (en qué mes suele ser, 1 a 12); `lugar`; `web`; `ultima` ({desde, hasta} de la última edición que se confirmó: mientras tenga menos de ocho meses no se avisa, porque la de este año ya fue); `proxima` ({desde, hasta, fuente, visto} cuando ya anunció fechas: con eso el aviso deja de decir 'suele ser en' y cuenta los días); `ignorar_hasta` (YYYY-MM-DD: se decidió no cargarlo esta vez); `nota`. Lo mantiene el agente monitor-festivales (.claude/agents/monitor-festivales.md): cada semana confirma en la web las fechas de los que están en ventana, completa `proxima` con la fuente, y suma los festivales nuevos que encuentre. Regla de la casa: acá sólo van fechas confirmadas en una fuente que se pueda abrir; lo que no se pudo confirmar va en `nota` y dice que no está confirmado.",
+  "festivales": [
+    {
+      "nombre": "Buenos Aires Rojo Sangre",
+      "alias": ["BARS", "Rojo Sangre"],
+      "meses": [11],
+      "lugar": "Atlas Caballito, Av. Rivadavia 5071",
+      "web": "https://www.festivalrojosangre.com.ar/",
+      "proxima": {
+        "desde": "2026-11-19",
+        "hasta": "2026-11-29",
+        "fuente": "https://www.festivalrojosangre.com.ar/",
+        "visto": "2026-11-16"
+      },
+      "nota": "27.ª edición. Festival de cine de terror, fantástico y bizarro. La grilla de su web se arma con JavaScript: no se lee con un GET, hace falta el navegador. Otros Cines y Escribiendo Cine publicaron la programación completa el 5/11/2026."
+    },
+    {
+      "nombre": "MASS, Semana de los Festivales de Cine de Málaga y San Sebastián",
+      "alias": ["MASS", "Málaga y San Sebastián"],
+      "meses": [11],
+      "lugar": "Centro Cultural 25 de Mayo",
+      "web": "https://cc25.org/eventos/mass-2026/",
+      "proxima": {
+        "desde": "2026-11-26",
+        "hasta": "2026-11-28",
+        "fuente": "https://cc25.org/eventos/mass-2026/",
+        "visto": "2026-11-16"
+      },
+      "nota": "Seis películas españolas, dos por día (18 y 21 h), gratis con reserva. El 16/11/2026 la web la tenía como una sola función con el nombre de la muestra en el lugar del título."
+    },
+    {
+      "nombre": "FIDBA",
+      "alias": ["FIDBA", "Festival Internacional de Cine Documental de Buenos Aires"],
+      "meses": [11],
+      "web": "https://fidba.org/",
+      "ultima": {"desde": "2026-11-17", "hasta": "2026-11-22"},
+      "nota": "15.ª edición en 2026. Otros años fue entre julio y septiembre: confirmar el mes cada año."
+    },
+    {
+      "nombre": "Infinito Super 8",
+      "alias": ["Infinito Super 8", "Infinito Super8"],
+      "meses": [11],
+      "web": "https://www.infinitosuper8.com.ar/",
+      "ultima": {"desde": "2026-11-22", "hasta": "2026-11-29"}
+    },
+    {
+      "nombre": "Festival Internacional de Cine de Mar del Plata",
+      "alias": ["Mar del Plata"],
+      "meses": [11],
+      "lugar": "Mar del Plata",
+      "web": "https://mardelplatafilmfest.com/",
+      "ultima": {"desde": "2026-11-05", "hasta": "2026-11-15"},
+      "nota": "De afuera: va en su propio archivo, nunca en cartelera.json."
+    },
+    {
+      "nombre": "Fuera de Campo",
+      "alias": ["Fuera de Campo"],
+      "meses": [11],
+      "lugar": "Mar del Plata",
+      "web": "https://fueradecampocine.com/",
+      "ultima": {"desde": "2026-11-05", "hasta": "2026-11-10"},
+      "nota": "De afuera: va en su propio archivo, nunca en cartelera.json."
+    },
+    {
+      "nombre": "FESTIHUR, Festival de Cine de Hurlingham",
+      "alias": ["FESTIHUR", "Festival de Cine de Hurlingham"],
+      "meses": [11],
+      "lugar": "Hurlingham",
+      "web": "https://www.hurlingham.gob.ar/",
+      "ultima": {"desde": "2026-11-06", "hasta": "2026-11-08"}
+    },
+    {
+      "nombre": "Asterisco",
+      "alias": ["Asterisco"],
+      "meses": [10],
+      "ultima": {"desde": "2026-10-22", "hasta": "2026-11-01"},
+      "nota": "13.ª edición en 2026 (MALBA, Museo del Cine, PROA, Universidad del Cine y Hasta Trilce). En 2025 fue del 16 al 25/10 y en 2024 del 17 al 27/10."
+    },
+    {
+      "nombre": "Bitbang",
+      "alias": ["Bitbang"],
+      "meses": [10],
+      "web": "https://bitbangclub.com/",
+      "ultima": {"desde": "2026-10-27", "hasta": "2026-10-31"}
+    },
+    {
+      "nombre": "MUBI Fest Buenos Aires",
+      "alias": ["MUBI Fest"],
+      "meses": [10],
+      "lugar": "Cinépolis Houssay",
+      "ultima": {"desde": "2026-10-22", "hasta": "2026-10-25"}
+    },
+    {
+      "nombre": "Festival de Cine Experimental de Bogotá en Buenos Aires",
+      "alias": ["Festival de Cine Experimental de Bogotá", "CineAutopsia"],
+      "meses": [10],
+      "lugar": "Centro Cultural Borges",
+      "ultima": {"desde": "2026-10-15", "hasta": "2026-10-15"}
+    },
+    {
+      "nombre": "Festival de Cine Inusual de Buenos Aires",
+      "alias": ["Festival de Cine Inusual", "Cine Inusual"],
+      "meses": [10],
+      "ultima": {"desde": "2026-10-09", "hasta": "2026-10-18"},
+      "nota": "21.ª edición en 2026 (Gaumont y Museo del Cine)."
+    },
+    {
+      "nombre": "FIC.UBA, Festival Internacional de Cine de la UBA",
+      "alias": ["FICUBA", "FIC UBA", "Festival Internacional de Cine de la UBA"],
+      "meses": [9, 10],
+      "ultima": {"desde": "2026-09-30", "hasta": "2026-10-07"},
+      "nota": "En 2026 se cargó a mano desde la guía (Cosmos, Cacodelphia, Lugones, Filo y FADU) y no entró a data/festivales.json: su ciclo no dice «festival», así que no apareció en la pestaña Festivales."
+    },
+    {
+      "nombre": "Festival de Cine Alemán",
+      "alias": ["Festival de Cine Alemán"],
+      "meses": [9],
+      "lugar": "Cinépolis Recoleta",
+      "nota": "En 2025 fue del 18 al 23/9. En 2026 fue en septiembre (nota de Otros Cines del 15/9), con las fechas exactas sin confirmar."
+    },
+    {
+      "nombre": "Han Cine, Festival de Cine Coreano",
+      "alias": ["Han Cine", "HanCine", "Festival de Cine Coreano"],
+      "meses": [9],
+      "nota": "Mes sin confirmar para 2026: las ediciones anteriores fueron en septiembre. Lo organiza el Centro Cultural Coreano."
+    },
+    {
+      "nombre": "DocBuenosAires",
+      "alias": ["DocBuenosAires", "Doc Buenos Aires", "Doc Bsas"],
+      "meses": [8],
+      "ultima": {"desde": "2026-08-19", "hasta": "2026-08-23"},
+      "nota": "26.ª edición en 2026 (Sala Lugones y Sala DAC). Otros años fue en octubre: confirmar el mes cada año."
+    },
+    {
+      "nombre": "La Mujer y el Cine",
+      "alias": ["La Mujer y el Cine"],
+      "meses": [8],
+      "lugar": "MALBA",
+      "ultima": {"desde": "2026-08-27", "hasta": "2026-08-30"}
+    },
+    {
+      "nombre": "Bendita Tú",
+      "alias": ["Bendita Tú"],
+      "meses": [8],
+      "ultima": {"desde": "2026-08-06", "hasta": "2026-08-08"},
+      "nota": "En 2026, en el Recoleta y la Casa del Bicentenario."
+    },
+    {
+      "nombre": "FINCA, Festival Internacional de Cine Ambiental",
+      "alias": ["FINCA", "Festival Internacional de Cine Ambiental"],
+      "meses": [8],
+      "nota": "8.ª edición a principios de agosto de 2026. Fechas exactas sin confirmar."
+    },
+    {
+      "nombre": "Festival Internacional de Cine de Derechos Humanos",
+      "alias": ["FICDH", "Cine de Derechos Humanos"],
+      "meses": [6],
+      "nota": "La 21.ª edición fue del 11 al 18/6/2025. Puede que en Buenos Aires sea cada dos años: sin confirmar para 2027."
+    },
+    {
+      "nombre": "BAFICI",
+      "alias": ["BAFICI", "Buenos Aires Festival Internacional de Cine Independiente"],
+      "meses": [4],
+      "web": "https://bafici.org/",
+      "ultima": {"desde": "2026-04-15", "hasta": "2026-04-26"},
+      "nota": "27.ª edición en 2026. Es el más grande del año: más de 300 películas en muchas sedes. Decidir con tiempo cómo se carga."
+    },
+    {
+      "nombre": "Festival de Cine Francés",
+      "alias": ["Festival de Cine Francés", "Les Avant-Premières", "Avant-Premières"],
+      "meses": [4],
+      "lugar": "Cinépolis Recoleta",
+      "ultima": {"desde": "2026-04-09", "hasta": "2026-04-15"},
+      "nota": "Antes se llamaba Les Avant-Premières."
+    },
+    {
+      "nombre": "FICJA, Festival Internacional de Cine Judío en la Argentina",
+      "alias": ["FICJA", "Festival Internacional de Cine Judío"],
+      "meses": [3],
+      "nota": "Mes sin confirmar: la última edición que se pudo verificar fue del 14 al 20/3/2024, en Cinemark Palermo."
+    },
+    {
+      "nombre": "Festival Lumière en Buenos Aires",
+      "alias": ["Festival Lumière", "Lumière"],
+      "meses": [2],
+      "nota": "Otros Cines anunció que llega a Buenos Aires en febrero de 2027. Al 16/11/2026, sin fechas ni sedes confirmadas."
+    }
+  ]
+}

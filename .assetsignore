@@ -26,6 +26,12 @@ data/test_cache.json
 data/lorca_manual.json
 data/cron.log
 
+# La memoria de la auditoría y el monitor de festivales: no son para la web
+data/audit.json
+data/audit_excepciones.json
+data/festivales_radar.json
+data/festivales_web.json
+
 # Las stories y el feed de Instagram: Meta las baja de raw.githubusercontent.com
 # (PUBLIC_BASE_URL en post-ig.yml y weekly-feed.yml) y la web no las usa. Son
 # casi todo el peso del repo: con ellas el sitio pasa los 400 MB, y GitHub
