@@ -35233,5 +35233,110 @@
     "genre": "Drama",
     "title_es": "La vida de Oharu, mujer galante",
     "original_title": "西鶴一代女"
+  },
+  "you can see everything (puedes verlo todo)": {
+    "url": "https://letterboxd.com/film/you-can-see-everything/",
+    "title_en": "You Can See Everything",
+    "director": "Nathan Fielder, Lance Oppenheim",
+    "country": "USA",
+    "year": 2026,
+    "duration": 175,
+    "genre": "Documental",
+    "title_es": "Puedes verlo todo",
+    "original_title": "You Can See Everything"
+  },
+  "sweetgrass|2009": {
+    "url": "https://letterboxd.com/film/sweetgrass/",
+    "title_en": "Sweetgrass",
+    "director": "Lucien Castaing-Taylor, Ilisa Barbash",
+    "country": "USA",
+    "year": 2009,
+    "duration": 101,
+    "genre": "Documental",
+    "original_title": "Sweetgrass"
+  },
+  "the a-team|2021": {
+    "url": "https://letterboxd.com/film/the-a-team-2021/",
+    "title_en": "The A-Team",
+    "director": "Nnenna Onuoha",
+    "country": "",
+    "year": 2021,
+    "duration": 17,
+    "genre": "",
+    "original_title": "The A-Team"
+  },
+  "expedition content|2020": {
+    "url": "https://letterboxd.com/film/expedition-content/",
+    "title_en": "Expedition Content",
+    "director": "Veronika Kusumaryati, Ernst Karel",
+    "country": "USA",
+    "year": 2020,
+    "duration": 78,
+    "genre": "Documental",
+    "original_title": "Expedition Content"
+  },
+  "manakamana|2013": {
+    "url": "https://letterboxd.com/film/manakamana/",
+    "title_en": "Manakamana",
+    "director": "Stephanie Spray, Pacho Velez",
+    "country": "Nepal, USA",
+    "year": 2013,
+    "duration": 118,
+    "genre": "Documental",
+    "original_title": "Manakamana"
+  },
+  "caniba|2017": {
+    "url": "https://letterboxd.com/film/caniba/",
+    "title_en": "Caniba",
+    "director": "Véréna Paravel, Lucien Castaing-Taylor",
+    "country": "France, UK",
+    "year": 2017,
+    "duration": 96,
+    "genre": "Documental",
+    "original_title": "Caniba"
+  },
+  "leviathan|2012": {
+    "url": "https://letterboxd.com/film/leviathan-2012/",
+    "title_en": "Leviathan",
+    "director": "Lucien Castaing-Taylor, Véréna Paravel",
+    "country": "France, UK",
+    "year": 2012,
+    "duration": 87,
+    "genre": "Documental",
+    "title_es": "Leviatán",
+    "original_title": "Leviathan"
+  },
+  "de humani corporis fabrica|2022": {
+    "url": "https://letterboxd.com/film/de-humani-corporis-fabrica/",
+    "title_en": "De Humani Corporis Fabrica",
+    "director": "Véréna Paravel, Lucien Castaing-Taylor",
+    "country": "France, Switzerland",
+    "year": 2022,
+    "duration": 118,
+    "genre": "Documental",
+    "title_es": "De humani corporis fabrica",
+    "original_title": "De humani corporis fabrica"
+  },
+  "somniloquies|2017": {
+    "url": "https://letterboxd.com/film/somniloquies/",
+    "title_en": "Somniloquies",
+    "director": "Lucien Castaing-Taylor, Véréna Paravel",
+    "country": "France, UK",
+    "year": 2017,
+    "duration": 73,
+    "genre": "Documental",
+    "original_title": "Somniloquies"
+  },
+  "rocky": {
+    "url": "https://letterboxd.com/film/rocky/",
+    "title_en": "Rocky",
+    "director": "John G. Avildsen",
+    "country": "USA",
+    "year": 1976,
+    "duration": 119,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "original_title": "Rocky",
+    "sin_hints": "título y duración"
   }
 }
