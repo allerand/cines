@@ -5905,10 +5905,32 @@ def _borges_funciones_from_rep(rep: str, display: str, sig_iso: str, sig_hora: s
 _BORGES_FESTIVAL_RE = re.compile(r"^(festival\s+[^:]{2,60}?)\s*:\s*(.{2,})$", re.IGNORECASE)
 
 
+# Los ciclos también vienen pegados adelante del título, de dos maneras
+# (noviembre de 2026):
+#   "Ciclo Cuadro a Cuadro: Ánima Buenos Aires"  → "Ciclo …" y dos puntos o punto
+#   "Ingmar Bergman: seis ensayos. PERSONA"      → el título, en mayúsculas,
+#                                                   después del último punto
+# El segundo caso exige que lo de después del punto esté entero en mayúsculas y
+# lo de antes no: así "Dr. Strangelove" o una sinopsis con puntos no se parten.
+_BORGES_CICLO_RE = re.compile(r"^(ciclo\s+[^:.]{2,60}?)\s*[:.]\s+(.{2,})$", re.IGNORECASE)
+_BORGES_CICLO_PUNTO_RE = re.compile(r"^(.{4,80})\.\s+([^.]{2,})$")
+
+
+def _borges_ciclo_pegado(titulo: str) -> Optional[tuple[str, str]]:
+    m = _BORGES_CICLO_RE.match(titulo)
+    if m:
+        return m.group(2).strip(), m.group(1).strip()
+    m = _BORGES_CICLO_PUNTO_RE.match(titulo)
+    if m and m.group(2).isupper() and not m.group(1).isupper() and " " in m.group(1):
+        return m.group(2).strip(), m.group(1).strip()
+    return None
+
+
 def _borges_titulo_y_ciclo(titulo: str) -> tuple[str, str]:
     m = _BORGES_FESTIVAL_RE.match(titulo or "")
     if not m:
-        return titulo, ""
+        partido = _borges_ciclo_pegado((titulo or "").strip())
+        return partido if partido else (titulo, "")
     ciclo = m.group(1).strip()
     if ciclo.isupper():
         ciclo = " ".join(w.capitalize() for w in ciclo.lower().split())

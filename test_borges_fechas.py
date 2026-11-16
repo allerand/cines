@@ -65,10 +65,23 @@ assert _borges_titulo_y_ciclo("FESTIVAL BITBANG: LA HUELLA DE ORO (PROYECCIÓN +
 assert _borges_titulo_y_ciclo("FESTIVAL BITBANG: Retrospectiva Alberto Vázquez") == (
     "Retrospectiva Alberto Vázquez", "Festival Bitbang")
 assert _borges_titulo_y_ciclo("El príncipe de Nanawa") == ("El príncipe de Nanawa", "")
-assert _borges_titulo_y_ciclo("Ciclo Cuadro a Cuadro. La otra forma") == (
-    "Ciclo Cuadro a Cuadro. La otra forma", "")
 print("✓ 'FESTIVAL BITBANG: …' → ciclo 'Festival Bitbang' y el título sin 'Proyección de' "
       "ni '(proyección + Q&A)'")
+
+# --- El ciclo pegado adelante del título (noviembre de 2026) -----------------
+assert _borges_titulo_y_ciclo("Ciclo Cuadro a Cuadro: Ánima Buenos Aires") == (
+    "Ánima Buenos Aires", "Ciclo Cuadro a Cuadro")
+assert _borges_titulo_y_ciclo("Ciclo Cuadro a Cuadro. La otra forma") == (
+    "La otra forma", "Ciclo Cuadro a Cuadro")
+assert _borges_titulo_y_ciclo("Ingmar Bergman: seis ensayos. PERSONA") == (
+    "PERSONA", "Ingmar Bergman: seis ensayos")
+assert _borges_titulo_y_ciclo("Ingmar Bergman: seis ensayos. CUANDO HUYE EL DÍA") == (
+    "CUANDO HUYE EL DÍA", "Ingmar Bergman: seis ensayos")
+# Lo que no es un ciclo pegado queda como está.
+for t in ("Piazzolla, los años del tiburón", "Dr. Strangelove", "EMI",
+          "ALIENTO - 10 años del Programa de Cine UTDT", "La Virgen de la Tosquera"):
+    assert _borges_titulo_y_ciclo(t) == (t, ""), t
+print("✓ 'Ciclo X: Título' y 'Ciclo. TÍTULO' → el ciclo a su columna y el título solo")
 
 
 # --- El programa de cada función, del texto del evento ------------------------
