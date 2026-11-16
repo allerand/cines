@@ -108,6 +108,26 @@
       "desde": "2026-11-22",
       "hasta": "2026-11-29",
       "web": "https://www.infinitosuper8.com.ar/"
+    },
+    {
+      "slug": "rojo-sangre",
+      "nombre": "Buenos Aires Rojo Sangre",
+      "bajada": "Festival Internacional de Cine de terror, fantástico y bizarro, 27.ª edición",
+      "ciclo": "Buenos Aires Rojo Sangre",
+      "alias": ["Buenos Aires Rojo Sangre", "Rojo Sangre"],
+      "desde": "2026-11-19",
+      "hasta": "2026-11-29",
+      "web": "https://www.festivalrojosangre.com.ar/programacion"
+    },
+    {
+      "slug": "mass",
+      "nombre": "MASS",
+      "bajada": "Semana de los Festivales de Cine de Málaga y San Sebastián",
+      "ciclo": "Semana MASS",
+      "alias": ["MASS 2026", "Semana MASS", "Semana de los Festivales de Cine de Málaga y San Sebastián"],
+      "desde": "2026-11-26",
+      "hasta": "2026-11-28",
+      "web": "https://cc25.org/eventos/mass-2026/"
     }
   ]
 }
