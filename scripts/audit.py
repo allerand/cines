@@ -1864,6 +1864,29 @@ def auditar(args, today: date) -> tuple[Report, dict]:
     return rep, web_nuevo[0]
 
 
+def _fila_json(r: dict) -> dict:
+    """Una sala del tablero, en lo que hace falta para leerla. El archivo lo
+    leen los agentes de Claude: con la serie de cada día y las cuentas
+    internas pesaba el triple sin decir nada más que la barrita."""
+    viva = r.get("viva")
+    return {
+        "sala": r["sala"],
+        "funciones": r["n"],
+        "titulos": r["titulos"],
+        "hasta": r["hasta"],
+        "hace_7_dias": r["hace7"],
+        "scrapeadas": r["scrapeadas"],
+        "publicadas": r["publicadas"],
+        "a_mano": r["a_mano"],
+        "fuente_viva": f"{viva[0]} de {viva[1]} días" if viva else "",
+        # Sin dato de procedencia en la última corrida no se sabe: null, no 0.
+        "dias_sin_contestar": r["racha_caida"] if r["scrapeadas"] is not None else None,
+        "motivo": r["motivo"],
+        "ultima_vez_con_funciones": r["ultimo"],
+        "cuatro_semanas": chispa(r["serie"]),
+    }
+
+
 def _a_json(rep: Report, today: date, estado: dict) -> dict:
     """El informe en datos, para los agentes de Claude y para la memoria."""
     return {
@@ -1879,7 +1902,8 @@ def _a_json(rep: Report, today: date, estado: dict) -> dict:
         "festivales": rep.festivales,
         "partes": {a: {"reviso": rep.partes.get(a, []), "caido": rep.caidos.get(a, "")}
                    for a in AGENTES},
-        "tablero": rep.tableros,
+        "tablero": {ciudad: [_fila_json(r) for r in filas]
+                    for ciudad, filas in rep.tableros.items()},
         "estado": estado,
     }
 
