@@ -575,7 +575,8 @@
        el título, vive en su propia columna estrecha. */
     .add-btn {
       background: transparent;
-      border: 1px solid var(--border);
+      /* Punteado verde suave: que el + se vea sin competir con la fila. */
+      border: 1px dotted rgba(0, 208, 96, 0.45);
       color: var(--muted);
       font-size: 0.78rem;
       cursor: pointer;
@@ -594,6 +595,7 @@
       background: rgba(0, 208, 96, 0.08);
       color: var(--accent);
       border-color: var(--accent);
+      border-style: solid;
     }
     .add-btn .add-icon { font-weight: 700; }
     .add-btn .add-count { font-size: 0.7rem; opacity: 0.85; }
