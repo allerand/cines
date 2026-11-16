@@ -1,45 +1,177 @@
-<!-- asunto: 🔴 Hay 7 cosas para mirar en 7 cines — cartelera al 15/11 -->
-<!-- fecha: 2026-11-15 -->
-<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;max-width:680px;color:#1a1a1a;line-height:1.5"><h2 style="margin:0 0 6px;font-size:20px">Auditoría de la cartelera — domingo 15 de noviembre</h2>
-<h3 style="color:#1a1a1a;margin:22px 0 8px;font-size:16px">🔴 Hay 7 cosas para mirar en 7 cines</h3>
-<p style="margin:0 0 10px;font-size:14px">Datos de hace 1 h · 33 cines · 4396 funciones publicadas.</p>
+<!-- asunto: 🔴 Hay 27 cosas para mirar (cartelera al 16/11) -->
+<!-- fecha: 2026-11-16 -->
+<div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;max-width:760px;color:#1a1a1a;line-height:1.5"><h2 style="margin:0 0 6px;font-size:20px">Auditoría de la cartelera, lunes 16 de noviembre</h2>
+<h3 style="color:#d93025;margin:22px 0 8px;font-size:16px">🔴 Hay 27 cosas para mirar</h3>
+<p style="margin:0 0 10px;font-size:14px">Datos de hace 1 h. Buenos Aires: 41 salas y 4.181 funciones. Madrid: 11 salas y 420 funciones.</p>
 <h3 style="color:#1a1a1a;margin:22px 0 8px;font-size:16px">Para mirar esta semana</h3>
+<h4 style="margin:14px 0 6px;font-size:14px;color:#555">Festivales y funcionamiento</h4>
 <ul style="margin:0 0 4px;padding-left:18px;font-size:14px">
-<li style='margin-bottom:4px'><strong>Centro Cultural Borges</strong> — publica 16 función(es) pero no scrapeó ninguna en la última corrida: la API no contesta; se publica el caché de la última corrida buena. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.</li>
-<li style='margin-bottom:4px'><strong>CCK</strong> — publica 10 función(es) pero no scrapeó ninguna en la última corrida: no se pudo leer palaciolibertad.gob.ar/cine/. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.</li>
-<li style='margin-bottom:4px'><strong>Bellas Artes</strong> — publica 3 función(es) pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.</li>
-<li style='margin-bottom:4px'><strong>Centro Cultural Leopoldo Marechal</strong> — lleva 7 días sin ninguna función (traía ~51 por día). Revisá su scraper.</li>
-<li style='margin-bottom:4px'><strong>Casa del Bicentenario</strong> — lleva 8 días sin ninguna función (traía ~1 por día), y la fuente tampoco nos deja sondearla (HTTP 403). No es el parser: es acceso al sitio — revisá que el proxy de scraping siga vivo.</li>
-<li style='margin-bottom:4px'><strong>Sala Lugones</strong> — hay horarios que no se pudieron parsear (×4). Ejemplo: Andrzej Wajda bis: '??'</li>
-<li style='margin-bottom:4px'><strong>Filo Cine</strong> — hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean contra la fuente ni contra Letterboxd y quedan sin director, año ni link — hay que desagregarlas en una fila por película. Ejemplo: 'La pasarela + El invisible sustento de la frontera'</li>
+<li style='margin-bottom:4px'><strong>Buenos Aires Rojo Sangre</strong> (festivales): empieza en 3 días (19 al 29 nov, en Atlas Caballito, Av. Rivadavia 5071) y no está cargado. Fuente: https://www.festivalrojosangre.com.ar/</li>
+<li style='margin-bottom:4px'><strong>MASS, Semana de los Festivales de Cine de Málaga y San Sebastián</strong> (festivales): empieza en 10 días (26 al 28 nov, en Centro Cultural 25 de Mayo) y no está cargado. Fuente: https://cc25.org/eventos/mass-2026/</li>
+</ul>
+<h4 style="margin:14px 0 6px;font-size:14px;color:#555">Buenos Aires</h4>
+<ul style="margin:0 0 4px;padding-left:18px;font-size:14px">
+<li style='margin-bottom:4px'><strong>Centro Cultural Borges</strong> (fuentes): publica 14 funciones pero su fuente no contesta hace 3 días: la API no contesta; se publica el caché de la última corrida buena. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.</li>
+<li style='margin-bottom:4px'><strong>CCK</strong> (fuentes): publica 9 funciones pero su fuente no contesta hace 3 días: no se pudo leer palaciolibertad.gob.ar/cine/. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.</li>
+<li style='margin-bottom:4px'><strong>CEA</strong> (fuentes): lleva 30 días sin ninguna función (traía ~2 por día). Revisá su scraper.</li>
+<li style='margin-bottom:4px'><strong>Centro Cultural de la Cooperación</strong> (fuentes): lleva 3 días sin ninguna función (traía ~2 por día). Revisá su scraper.</li>
+<li style='margin-bottom:4px'><strong>Centro Cultural Borges</strong> (categorías): el título trae el ciclo pegado adelante (5 casos, 6 funciones). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 18/11 19:00: «Ciclo Cuadro a Cuadro: Ánima Buenos Aires»; 22/11 19:00: «Ingmar Bergman: seis ensayos. PERSONA»; 29/11 19:00: «Ingmar Bergman: seis ensayos. CUANDO HUYE EL DÍA»</li>
+<li style='margin-bottom:4px'><strong>Centro Cultural 25 de Mayo</strong> (categorías): hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso). Confirmar contra la fuente si es una película; si es un ciclo, cargar sus películas una por una. Por ejemplo: 26/11 20:00: «Semana de los Festivales de Cine de Málaga y San Sebastián en Buenos Aires – Mass 2026»</li>
+<li style='margin-bottom:4px'><strong>Centro Cultural 25 de Mayo</strong> (categorías): el título trae al director pegado (2 casos). El scraper tiene que partirlo: sin eso no encuentra la ficha. Por ejemplo: 01/12 18:00: «El príncipe de Nanawa de Clarisa Navas»; 03/12 19:00: «Encuentro con un Buda (Meeting the Buddha) de Marta György-Kessler»</li>
+<li style='margin-bottom:4px'><strong>MALBA</strong> (categorías): el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha. Por ejemplo: 28/11 24:00: «¿Qué clase de joven le abre la puerta a un vampiro?, de Boom Boom Kid y Zurita»</li>
+<li style='margin-bottom:4px'><strong>Amorina</strong> (categorías): hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por ejemplo: 20/11 20:00: «Torneo de ajedrez»</li>
+<li style='margin-bottom:4px'><strong>Filo Cine</strong> (categorías): la columna Ciclo trae el género de la película (2 casos, 10 funciones). El género no es un ciclo: va vacío o con el ciclo de verdad. Por ejemplo: «Documental» («Bajo sospecha: Zokunentu»); «Ficción» («Pizza, birra, faso»)</li>
+<li style='margin-bottom:4px'><strong>Amorina</strong> (categorías): la columna Ciclo trae el tipo de actividad («Cine») (1 caso, 10 funciones). No es un ciclo: va vacío. Por ejemplo: «Cine» («Twin Peaks»)</li>
+<li style='margin-bottom:4px'><strong>Sala Lúcida</strong> (categorías): hay ciclos con palabras en mayúsculas (1 caso). Ningún ciclo va gritado: pasarlo por run._fix_caps. Por ejemplo: «CINE en 16mm»</li>
+<li style='margin-bottom:4px'><strong>Filo Cine</strong> (fichas): hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean contra la fuente ni contra Letterboxd y quedan sin director, año ni link. Hay que desagregarlas en una fila por película. Ejemplo: 'La pasarela + El invisible sustento de la frontera'</li>
+</ul>
+<h4 style="margin:14px 0 6px;font-size:14px;color:#555">Madrid</h4>
+<ul style="margin:0 0 4px;padding-left:18px;font-size:14px">
+<li style='margin-bottom:4px'><strong>Cines Ideal</strong> (fuentes): publica 30 funciones pero su fuente no contesta hace 25 días: yelmocines.es no devolvió la cartelera (¿Cloudflare?). Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.</li>
+<li style='margin-bottom:4px'><strong>Cines Princesa</strong> (fuentes): lleva 4 días sin ninguna función (traía ~164 por día). Revisá su scraper.</li>
+<li style='margin-bottom:4px'><strong>Renoir Plaza de España</strong> (fuentes): lleva 4 días sin ninguna función (traía ~86 por día). Revisá su scraper.</li>
+<li style='margin-bottom:4px'><strong>Renoir Retiro</strong> (fuentes): lleva 4 días sin ninguna función (traía ~58 por día). Revisá su scraper.</li>
+<li style='margin-bottom:4px'><strong>Cine Estudio</strong> (categorías): el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 23/11 18:30: «16º Festival Márgenes: Biografía de Jorge Luis Borges»</li>
+<li style='margin-bottom:4px'><strong>Embajadores Ercilla</strong> (categorías): el título trae el ciclo pegado adelante (3 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 24/11 20:15: «Universo Villenueve: Incendies»; 01/12 20:15: «Universo Villenueve: La llegada»; 08/12 20:15: «Universo Villenueve: Prisioneros»</li>
+<li style='margin-bottom:4px'><strong>Embajadores Glorieta</strong> (categorías): el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 23/11 17:45: «Ciclo de Cine Peruano: Vino la noche»; 23/11 19:30: «Palestina en pantalla: Con Hasan en Gaza»; 24/11 17:45: «Ciclo de Cine Peruano: Reinas»</li>
+<li style='margin-bottom:4px'><strong>Golem Madrid</strong> (categorías): el título trae el ciclo pegado adelante (7 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 17/11 22:00: «QueerCineMad: Test»; 19/11 19:00: «XXVII Ciclo de cine foro: Ellas en la ciudad»; 19/11 22:00: «QueerCineMad: Taiga»</li>
+<li style='margin-bottom:4px'><strong>Sala Equis</strong> (categorías): el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 17/11 19:00: «Festival Rizoma-de Brisa y de Sol»; 17/11 21:00: «Festival Rizoma-muchedumbre»; 18/11 17:30: «Festival Rizoma-cherri»</li>
+<li style='margin-bottom:4px'><strong>Sala Equis</strong> (categorías): hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (4 casos). Confirmar contra la fuente si es una película; si es un ciclo, cargar sus películas una por una. Por ejemplo: 19/11 22:00: «Festival Rizomalos Días Libres»; 20/11 22:00: «Festival Rizomaperò Abans D’això Hi Haurà Set»; 21/11 19:30: «Ffestival Rizoma-las Mantis»</li>
+<li style='margin-bottom:4px'><strong>Cines Ideal</strong> (categorías): hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por ejemplo: 01/12 20:15: «El Cascanueces- Ballet Live Roh 26-27»</li>
+<li style='margin-bottom:4px'><strong>Cineteca Madrid</strong> (categorías): hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por ejemplo: 21/11 20:30: «Entrega de premios + Live A/V: JayDee y Josephine’ Soundscapes»</li>
 </ul>
 <h3 style="color:#1a1a1a;margin:22px 0 8px;font-size:16px">Qué cambió desde la semana pasada</h3>
 <ul style="margin:0 0 4px;padding-left:18px;font-size:14px">
-<li style='margin-bottom:4px'><strong>Centro Cultural Leopoldo Marechal</strong> desapareció: 21 → 0 funciones.</li>
-<li style='margin-bottom:4px'><strong>Centro Cultural 25 de Mayo</strong> desapareció: 5 → 0 funciones.</li>
 <li style='margin-bottom:4px'><strong>Centro Cultural de la Cooperación</strong> desapareció: 2 → 0 funciones.</li>
-<li style='margin-bottom:4px'><strong>Sala Lugones</strong> bajó bastante: 54 → 18 funciones.</li>
+<li style='margin-bottom:4px'><strong>Cines Pixel</strong> volvió a la cartelera: 0 → 52 funciones.</li>
+<li style='margin-bottom:4px'><strong>Universidad del Cine</strong> volvió a la cartelera: 0 → 26 funciones.</li>
+<li style='margin-bottom:4px'><strong>La Tomada</strong> volvió a la cartelera: 0 → 17 funciones.</li>
+<li style='margin-bottom:4px'><strong>Casa del Bicentenario</strong> volvió a la cartelera: 0 → 9 funciones.</li>
+<li style='margin-bottom:4px'><strong>Avalon</strong> volvió a la cartelera: 0 → 5 funciones.</li>
 <li style='margin-bottom:4px'><strong>Cineclub Farus</strong> volvió a la cartelera: 0 → 5 funciones.</li>
 <li style='margin-bottom:4px'><strong>Bellas Artes</strong> volvió a la cartelera: 0 → 3 funciones.</li>
+<li style='margin-bottom:4px'>…y 3 cines más con cambios de tamaño parecido (corré <code style="font-family:Menlo,Consolas,monospace;font-size:12px">python3 scripts/audit.py</code> para verlos).</li>
+<li style='margin-bottom:4px'><strong>Cines Princesa</strong> (Madrid) desapareció: 146 → 0 funciones.</li>
+<li style='margin-bottom:4px'><strong>Renoir Plaza de España</strong> (Madrid) desapareció: 76 → 0 funciones.</li>
+<li style='margin-bottom:4px'><strong>Renoir Retiro</strong> (Madrid) desapareció: 52 → 0 funciones.</li>
 </ul>
-<h3 style="color:#1a1a1a;margin:22px 0 8px;font-size:16px">Cines por debajo de lo habitual</h3>
-<table style="border-collapse:collapse;font-size:13px;margin:8px 0">
-<tr><th style="text-align:left;padding:3px 10px 3px 0;border-bottom:1px solid #ddd">Cine</th><th style="text-align:left;padding:3px 10px 3px 0;border-bottom:1px solid #ddd">Funciones</th><th style="text-align:left;padding:3px 10px 3px 0;border-bottom:1px solid #ddd">Títulos</th><th style="text-align:left;padding:3px 10px 3px 0;border-bottom:1px solid #ddd">Habitual</th></tr>
-<tr><td style="padding:2px 10px 2px 0;border-bottom:1px solid #f0f0f0">Sala Lugones</td><td style="padding:2px 10px 2px 0;border-bottom:1px solid #f0f0f0">18</td><td style="padding:2px 10px 2px 0;border-bottom:1px solid #f0f0f0">11</td><td style="padding:2px 10px 2px 0;border-bottom:1px solid #f0f0f0">~57</td></tr>
+<h3 style="color:#1a1a1a;margin:22px 0 8px;font-size:16px">Festivales</h3>
+<ul style="margin:0 0 4px;padding-left:18px;font-size:14px">
+<li style='margin-bottom:4px'><strong>FIDBA</strong> (17 al 22 nov, empieza mañana): 34 funciones por delante en 5 salas.</li>
+<li style='margin-bottom:4px'><strong>Infinito Super 8</strong> (22 al 29 nov, empieza en 6 días): 53 funciones por delante en 4 salas. Tiene 1 cosa para mirar.</li>
+<li style='margin-bottom:4px'>En el radar y sin cargar: <strong>Buenos Aires Rojo Sangre</strong> (19 al 29 nov, empieza en 3 días), <strong>MASS, Semana de los Festivales de Cine de Málaga y San Sebastián</strong> (26 al 28 nov, empieza en 10 días).</li>
+<li style='margin-bottom:4px'>Terminaron hace poco: Fuera de Campo (el 10/11), Festival Internacional de Cine de Mar del Plata (el 15/11).</li>
+</ul>
+<h3 style="color:#1a1a1a;margin:22px 0 8px;font-size:16px">Parte de los agentes</h3>
+<p style="margin:0 0 10px;font-size:14px">Cada uno tiene una sola cosa a cargo y entrega su parte aunque no tenga nada que decir.</p>
+<table cellpadding="3" cellspacing="0" style="border-collapse:collapse;font-size:13px;margin:8px 0;text-align:left">
+<tr style="border-bottom:1px solid #ccc"><th>Agente</th><th>Qué cuida</th><th>Qué revisó</th><th>Resultado</th></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>Frescura</td><td>que el scrape corra todos los días y las stories salgan</td><td>2 carteleras; las stories de 7 días; 58 corridas de 5 workflows en la semana</td><td>✅ sin novedades</td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>Fuentes</td><td>que ninguna sala se caiga, se quede corta o viva de caché</td><td>50 salas de Buenos Aires con 13 sondas y 120 días de historial; 14 salas de Madrid y 56 días de historial</td><td>🔴 8 para mirar y 🟡 3 pendientes</td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>Categorías</td><td>que cada dato esté en su casillero: película, ciclo, director, sala</td><td>4.181 funciones de Buenos Aires contra 25 reglas; 420 funciones de Madrid contra 25 reglas; el padrón de index.html (51 salas)</td><td>🔴 16 para mirar y 🟡 11 pendientes</td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>Festivales</td><td>que ninguno se pase y que los cargados sigan al día</td><td>10 festivales del registro (2 vigentes), 24 del radar y 2 webs</td><td>🔴 2 para mirar y 🟡 1 pendiente</td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>Fichas</td><td>que cada función tenga sus datos y estén bien escritos</td><td>4.181 funciones de Buenos Aires; 420 funciones de Madrid</td><td>🔴 1 para mirar y 🟡 7 pendientes</td></tr>
 </table>
-<p style="margin:0 0 10px;font-size:14px">Los otros 32 cines están en su rango normal.</p>
 <h3 style="color:#1a1a1a;margin:22px 0 8px;font-size:16px">Pendientes de siempre</h3>
 <p style="margin:0 0 10px;font-size:14px">Cosas que no rompen la web pero degradan la ficha. Están acá para que no se olviden, no para arreglarlas hoy.</p>
+<h4 style="margin:14px 0 6px;font-size:14px;color:#555">Festivales y funcionamiento</h4>
 <ul style="margin:0 0 4px;padding-left:18px;font-size:14px">
-<li style='margin-bottom:4px'><strong>Cine Cosmos</strong> publica 32 función(es), pero su scraper avisa: cosmos.uba.ar no contesta (HTTP Error 503: Service Temporarily Unavailable); la cartelera sale de Instagram (@cinecosmos.uba).</li>
-<li style='margin-bottom:4px'><strong>Centro Cultural de la Cooperación</strong> lleva 2 días sin ninguna función (traía ~2 por día); entra y sale del cero seguido, puede que no haya programado.</li>
-<li style='margin-bottom:4px'><strong>Sala Lugones</strong>: dos títulos en el mismo horario ×6.</li>
-<li style='margin-bottom:4px'><strong>Sala Lugones</strong>: ticket_url inválido ×4.</li>
-<li style='margin-bottom:4px'><strong>Centro Cultural Borges</strong>: dos títulos en el mismo horario ×3.</li>
-<li style='margin-bottom:4px'><strong>Sala Lúcida</strong>: director que no es un nombre ×1.</li>
-<li style='margin-bottom:4px'><strong>Cacodelphia</strong>: dos títulos en el mismo horario ×1.</li>
-<li style='margin-bottom:4px'>12 funciones sin director: Sala Lugones (12/18).</li>
-<li style='margin-bottom:4px'>18 funciones sin link de Letterboxd: Hasta Trilce (6/6), Sala Lugones (12/18).</li>
+<li style='margin-bottom:4px'><strong>Infinito Super 8</strong>: 8 programas sin lista de películas («Rescates: sesión 1», «Competencia Internacional», «Panorama Internacional», «Muestra invitada Curta 8»…): mirar si el festival ya la publicó para cargarlas una por una</li>
 </ul>
-<p style="margin:0 0 10px;font-size:14px">---</p>
-<p style="margin:0 0 10px;font-size:14px">Generado por <code>scripts/audit.py</code>. Para correrlo a mano: <code>cd ~/cines &amp;&amp; python3 scripts/audit.py</code></p></div>
+<h4 style="margin:14px 0 6px;font-size:14px;color:#555">Buenos Aires</h4>
+<ul style="margin:0 0 4px;padding-left:18px;font-size:14px">
+<li style='margin-bottom:4px'><strong>Cine Cosmos</strong> publica 24 funciones, pero su scraper avisa: cosmos.uba.ar no contesta (HTTP Error 503: Service Temporarily Unavailable); la cartelera sale de Instagram (@cinecosmos.uba).</li>
+<li style='margin-bottom:4px'><strong>Casa del Bicentenario</strong> publica 9 funciones, pero su scraper avisa: el listado no contesta (HTTP Error 403: Forbidden); sólo queda lo que haya en data/cb_manual.json.</li>
+<li style='margin-bottom:4px'><strong>Casa del Bicentenario</strong>: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.</li>
+<li style='margin-bottom:4px'>Títulos con la versión o el tipo de sesión pegados (VOSE, 35 mm) (1 caso) en Cine York. Limpiar en el scraper. Por ejemplo: 25/11 20:30: «Vladimir en Buenos Aires en 35 Mm»</li>
+<li style='margin-bottom:4px'>Títulos con un tramo en mayúsculas (7 casos, 8 funciones) en Arthaus, Bellas Artes (2), Centro Cultural Borges (3), Sala Lúcida. Pasarlos por run._fix_caps. Por ejemplo: 19/11 18:00: «RECEN POR MÍ: La historia de Francisco»; 21/11 18:00: «Smyrna (ΣΜΥΡΝΗ ΜΟΥ ΑΓΑΠΗΜΕΝΗ)»</li>
+<li style='margin-bottom:4px'>Funciones cuyo ciclo es el mismo título (1 caso) en Amorina. El ciclo va vacío. Por ejemplo: 20/11 20:00: «Torneo de ajedrez»</li>
+<li style='margin-bottom:4px'>Un mismo ciclo escrito de dos maneras (1 caso) en Sala Lúcida. La búsqueda por ciclo los separa: unificar la escritura. Por ejemplo: «Ruido y Furia . 50 Años de Punk» y «Ruido y Furia. 50 Años de Punk»</li>
+<li style='margin-bottom:4px'>Ciclos con la puntuación rota (2 casos, 4 funciones) en CCK, Sala Lúcida. Arreglar la escritura en el scraper. Por ejemplo: «Ruido y Furia . 50 Años de Punk»; «Miradas contemporáneas:Luis Ortega / Federico Luis»</li>
+<li style='margin-bottom:4px'>Directores de relleno («Desconocido», «Varios») (1 caso, 8 funciones) en Hasta Trilce. Mejor vacío. Por ejemplo: «Película sorpresa»: «Desconocido»</li>
+<li style='margin-bottom:4px'>Directores con años o duraciones adentro (2 casos) en Sala Lúcida (2). El scraper leyó la ficha entera. Por ejemplo: «Ricky Espinosa: El Documental»: «Juan Pablo Duarte. Argentina. 2015. 83 min»; «Nuestra Juventud»: «Roland Steiner. RDA. 1989. 88 min»</li>
+<li style='margin-bottom:4px'>Dos títulos en el mismo horario: Centro Cultural Borges ×3, Cacodelphia ×1. Ejemplo (Centro Cultural Borges): 2026-11-18 19:00: 'Piazzolla, los años del tiburón' vs 'Ciclo Cuadro a Cuadro: Ánima Buenos Aires'</li>
+<li style='margin-bottom:4px'>Sin link de entradas: Sala Lugones ×25. Ejemplo (Sala Lugones): Je’vida</li>
+<li style='margin-bottom:4px'>4 funciones sin director: Centro Cultural 25 de Mayo (3/4), Museo del Cine (1/1).</li>
+<li style='margin-bottom:4px'>40 funciones sin link de Letterboxd: Arthaus (7/9), Casa del Bicentenario (7/9), Centro Cultural 25 de Mayo (3/4), Hasta Trilce (8/8), LABA (1/1), La Tomada (13/17), Museo del Cine (1/1).</li>
+<li style='margin-bottom:4px'>10 títulos sin ningún dato (ni director, ni año, ni duración, ni Letterboxd): puede que no sean películas. Centro Cultural Borges: «Ingmar Bergman: seis ensayos. PERSONA», «ALIENTO - 10 años del Programa de Cine UTDT» y 3 más; MALBA: «Perfume», «¡Película sorpresa!»; Amorina: «Torneo de ajedrez»; Filo Cine: «Proyección de cortometrajes del colectivo Antes Muerto Cine»; Lumiton: «Lo Queer en el Cine de Oro Argentino».</li>
+</ul>
+<h4 style="margin:14px 0 6px;font-size:14px;color:#555">Madrid</h4>
+<ul style="margin:0 0 4px;padding-left:18px;font-size:14px">
+<li style='margin-bottom:4px'>Títulos con la versión o el tipo de sesión pegados (VOSE, 35 mm) (2 casos) en Artistic Metropol (2). Limpiar en el scraper. Por ejemplo: 18/11 12:00: «CINCO SEGUNDOS V.O.S.E. Sesión Teta»; 19/11 12:00: «EL SER QUERIDO Sesión Teta»</li>
+<li style='margin-bottom:4px'>Títulos con un tramo en mayúsculas (3 casos, 6 funciones) en Artistic Metropol (3). Pasarlos por run._fix_caps. Por ejemplo: 17/11 20:00: «ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes»; 18/11 12:00: «CINCO SEGUNDOS V.O.S.E. Sesión Teta»</li>
+<li style='margin-bottom:4px'>Directores de relleno («Desconocido», «Varios») (2 casos) en Cineteca Madrid (2). Mejor vacío. Por ejemplo: «CIMA Proyecta: 25-N Cortos contra las violencias»: «Varias autoras»; «Colores primarios»: «Varios autores»</li>
+<li style='margin-bottom:4px'>Directores que empiezan con «de» (1 caso) en Embajadores Glorieta. Limpiar en el scraper. Por ejemplo: «Ciclo de Cine Peruano: Reinas»: «de Klaudia Reynicke, Diego Vega»</li>
+<li style='margin-bottom:4px'>Dos títulos en el mismo horario: Golem Madrid ×20, Artistic Metropol ×10, Embajadores Ercilla ×9, Embajadores Glorieta ×5, Cineteca Madrid ×2. Ejemplo (Golem Madrid): 2026-11-16 16:10: 'El tren fluvial' vs 'La voz quebrada'</li>
+<li style='margin-bottom:4px'>18 títulos sin ningún dato (ni director, ni año, ni duración, ni Letterboxd): puede que no sean películas. Sala Equis: «Festival Rizoma-de Brisa y de Sol», «Festival Rizoma-muchedumbre» y 10 más; Artistic Metropol: «ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes», «Cineclub Garabato»; Cine Estudio: «Película sorpresa»; Cine Doré: «Cortos latinos: Raíces, aromas y color»; Cineteca Madrid: «Capítulo XXXVI: Carta blanca a María Castro y Álvaro Cáceres»; Embajadores Ercilla: «El Apartamento».</li>
+</ul>
+<h3 style="color:#1a1a1a;margin:22px 0 8px;font-size:16px">Tablero de fuentes</h3>
+<p style="margin:0 0 10px;font-size:14px">Cómo viene cada sala: funciones publicadas, hasta qué día llega su programación, cuántas tenía hace una semana, cuántos de los últimos días contestó su fuente, y una barrita por día de las últimas cuatro semanas.</p>
+<h4 style="margin:14px 0 6px;font-size:14px;color:#555">Buenos Aires</h4>
+<table cellpadding="3" cellspacing="0" style="border-collapse:collapse;font-size:13px;margin:8px 0;text-align:left">
+<tr style="border-bottom:1px solid #ccc"><th>Sala</th><th>Func.</th><th>Títulos</th><th>Hasta</th><th>Hace 7 días</th><th>Fuente</th><th>Cuatro semanas</th></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Sala Lugones</td><td>65</td><td>33</td><td>13/12</td><td>51</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▆▅▅▅▅▄▄▄▄▄▃▃████▇▇▇▆▆▆▇▇▇▆▆█</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cine Gaumont</td><td>37</td><td>14</td><td>18/11</td><td>36</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">█▇▇▆▅▄▃▇▇▆▅▅▄▃▇▆▅▅▄▄▃▂▆▆▅▅▄▃</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cine Lorca</td><td>33</td><td>6</td><td>18/11</td><td>30</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▃▂▇▆▆▅▄▃▂▇▆▆▅▄▃▂▇▆▆▅▄▃▂█▇▆▅▄</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cacodelphia</td><td>31</td><td>15</td><td>29/11</td><td>41</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▃▇▆▅▅▄▄▃▇▆▆▅▄▃▂██▇▇▆▅▄▇▇▆▆▅▄</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cine York</td><td>31</td><td>31</td><td>29/11</td><td>37</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅▅▅▅▄▄▄▄███▇▇▇▇▇██▇▇▇▇▇▇▇▆▆▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 MALBA</td><td>28</td><td>20</td><td>5/12</td><td>39</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇▆▆▅▄▃▃▃▄▄▇▇▆▆▇███▇▇▆▆▆▆▆▅▅▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Universidad del Cine</td><td>26</td><td>26</td><td>27/11</td><td>0</td><td>a mano</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">__________________________██</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟡 Cine Cosmos</td><td>24</td><td>7</td><td>18/11</td><td>8</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▃▂___▅▄▃▂█▇▆▅▄▃▂▆▅▄▃▂▂▂█▇▆▅▄</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Sala Lúcida</td><td>23</td><td>22</td><td>22/11</td><td>12</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄▄▄▄▃▄▄▄▄▄▄▄▄▄▄▄▄▄▄▅▅▅▅▅▅▅██</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Amorina</td><td>17</td><td>13</td><td>19/12</td><td>22</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▃▃▇██▇▇▇▇▇▇▇▇▆██▇▇▇▇▇▆▆▆▆▆▆▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 La Tomada</td><td>17</td><td>17</td><td>28/11</td><td>0</td><td>a mano</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">__________________________██</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🔴 Centro Cultural Borges</td><td>14</td><td>10</td><td>13/12</td><td>25</td><td>caída hace 3 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▃▃▃▃▃▃▃▃▃█▇▆▃▃▃▃▃▃▃▃▃▃▃▃▂▂▂▂</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Centro Cultural Recoleta</td><td>11</td><td>11</td><td>29/11</td><td>6</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇▇▇▆▅▅▃▃▅▆▇▇▆▅▅▅▅▅▆▆▅▅▅▅▅▄█▇</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Filo Cine</td><td>10</td><td>10</td><td>27/11</td><td>9</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">█▇▇▇▅▅▅▅▄▇▇▇▇▇▇▇▇▇▇▇▇██▇▇███</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Arthaus</td><td>9</td><td>9</td><td>29/11</td><td>4</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄▄▄▄▃▂▂▂▂▂▂▂▂▂▂▂▄▄▄▄▄▄▄▄▄▃█▇</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🔴 CCK</td><td>9</td><td>7</td><td>29/11</td><td>16</td><td>caída hace 3 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅▅▅▅▄▃▂▂▅███▇▆▆▆▆▆▆▆▆▆▆▆▆▆▄▄</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟡 Casa del Bicentenario</td><td>9</td><td>9</td><td>29/11</td><td>0</td><td>a mano</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">_____█▇▇▇▇▇▆▅▁▁▁▁▁▁_______▅▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Centro Cultural Munro</td><td>9</td><td>9</td><td>6/12</td><td>12</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▃▃▃▃▃▃▂▂▇▇▇▇▇▆▆▆████▇▇▆▆▆▆▆▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Hasta Trilce</td><td>8</td><td>1</td><td>8/12</td><td>6</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▆▅▅▆▆▆▆▆▆▆▆▆▆▆▆▅▆▆▆▆▆█▆▆▆▆▆█</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Avalon</td><td>5</td><td>5</td><td>21/11</td><td>0</td><td>a mano</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">__________________________██</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cineclub Farus</td><td>5</td><td>5</td><td>27/11</td><td>0</td><td>2 de 2 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇▇▄▄▄▄▄▄▄_________________██</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Biblioteca del Congreso</td><td>4</td><td>4</td><td>26/11</td><td>5</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▆▅▅▃▃_▃▃▂▂_██████▇▇▇▇▇▇▇▆▆▆▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Centro Cultural 25 de Mayo</td><td>4</td><td>4</td><td>3/12</td><td>5</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄▄▄▂_▂▂▂▂▇▇█████████████▇▇_▇</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Bellas Artes</td><td>3</td><td>3</td><td>28/11</td><td>0</td><td>5 de 5 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">████▇▆▆▆▆▆▆▅▃▃▃▃▃▃▃____▅▅▄▃▃</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Lumiton</td><td>2</td><td>2</td><td>25/11</td><td>3</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅▅▅▃▃▃▃████▆▆▆▆▆▅▅▆▆▆▆▆▆▆▆▅▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Biblioteca Nacional</td><td>1</td><td>1</td><td>24/11</td><td>1</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">____███████████▅▅▅▅▅▅▅▅▅▅▅▅▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 LABA</td><td>1</td><td>1</td><td>17/11</td><td>0</td><td>a mano</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">__________________________██</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Museo del Cine</td><td>1</td><td>1</td><td>29/11</td><td>0</td><td>a mano</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">__________________________██</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🔴 CEA</td><td>0</td><td>0</td><td></td><td>0</td><td></td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">____________________________</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🔴 Centro Cultural de la Cooperación</td><td>0</td><td>0</td><td></td><td>2</td><td>5 de 5 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅▅▃▃█████_▆▆▆▆▆▆▅▅▅▅▅▅▅▃▃___</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Hoyts Abasto</td><td>556</td><td>23</td><td>29/12</td><td>540</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅▇▇▇▆▆▆▅█▇▇▆▆▆▅▇█▇▇▆▆▅██▇▇▆▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cinemark Palermo</td><td>496</td><td>18</td><td>23/12</td><td>470</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅▇▇▇▆▆▅▅█▇▇▆▆▅▅▇█▇▇▆▆▆███▇▇▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Hoyts Dot</td><td>432</td><td>18</td><td>29/12</td><td>409</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅▇█▇▇▆▆▅█▇▇▇▆▅▅▇▇▇▆▆▆▅▅█▇▇▆▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Multiplex Pilar</td><td>425</td><td>18</td><td>23/12</td><td>408</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇▇▇▇▆▆▅▇▇▆▆▅▅▄▄▇▆▇▆▆▅██▇▇▆▆▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cinemark Puerto Madero</td><td>383</td><td>18</td><td>29/12</td><td>366</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇▇▇▇▆▆▅▅██▇▇▆▆███▇▇▆▆▆███▇▇▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Multiplex Belgrano</td><td>366</td><td>19</td><td>23/12</td><td>341</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇▇▆▆▆▅▄█▇▇▆▆▅▄█▇▇▇▆▆▅▄██▇▆▆▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Multiplex Lavalle</td><td>351</td><td>18</td><td>23/12</td><td>309</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇▇█▇▇▆▇█▇▇▆▆▆▅▇▇▆▇▆▆▅███▇▇▆▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Multiplex Canning</td><td>322</td><td>15</td><td>23/12</td><td>314</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇▇█▇▇▆▆▆█▇▇▇▆▆█▇▇▇▇▆▆███▇▇▆▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cinemark Caballito</td><td>254</td><td>14</td><td>29/12</td><td>256</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅▇█▇▇▆▆▅█▇▇▆▆▅▅▇█▇▇▆▆▅██▇▇▆▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cines Pixel</td><td>52</td><td>13</td><td>22/11</td><td>0</td><td>1 de 1 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">___________________________█</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cinépolis Recoleta</td><td>49</td><td>16</td><td>16/11</td><td>31</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▇█▇██▇█▇▇▇▇▇▇█▇▇▆▅▅▅▅▅▅▆██▇█</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Showcase Belgrano</td><td>40</td><td>15</td><td>16/11</td><td>39</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">████▇▇▇▇▇▇███████▇▇▇▇▇▇▇█▇▇▇</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cinépolis Houssay</td><td>18</td><td>8</td><td>16/11</td><td>17</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">███▆▄▂_▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃</code></td></tr>
+</table>
+<p style="margin:0 0 10px;font-size:14px">Sin funciones y sin nada que marcar (salas de festival o que programan cada tanto): Centro Cultural Leopoldo Marechal (desde el 8/11), Club Lucero (desde el 30/10), Escuela Da Vinci (desde el 31/10), FADU (desde el 7/10), Museo Moderno (desde el 25/10), Sala Mario Soffici (desde el 21/8).</p>
+<h4 style="margin:14px 0 6px;font-size:14px;color:#555">Madrid</h4>
+<table cellpadding="3" cellspacing="0" style="border-collapse:collapse;font-size:13px;margin:8px 0;text-align:left">
+<tr style="border-bottom:1px solid #ccc"><th>Sala</th><th>Func.</th><th>Títulos</th><th>Hasta</th><th>Hace 7 días</th><th>Fuente</th><th>Cuatro semanas</th></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Golem Madrid</td><td>70</td><td>17</td><td>22/11</td><td>64</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄██▇▆▅▄▄▇▇▇▆▆▅▄███▇▆▅▃▇▇█▇▆▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Embajadores Glorieta</td><td>64</td><td>36</td><td>27/12</td><td>56</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄█▇▇▆▅▅▄█▇▇▆▅▄▄▇▇▆▆▅▄▄▇▇▇▇▆▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Embajadores Ercilla</td><td>58</td><td>33</td><td>15/12</td><td>57</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▅█▇▇▆▅▄▄█▇▇▆▅▄▄██▇▇▆▅▄█▇▇▆▆▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cineteca Madrid</td><td>47</td><td>41</td><td>3/1</td><td>47</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▆▆▆▆▅▅▅▅▇▆███▇▇▇▇▆▆▆▅▆▆▆▇▆▆▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cine Doré</td><td>46</td><td>45</td><td>16/12</td><td>63</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄▄▄▃▂▃▃▃▂▂▇▇██▂▂▂▂▂████▇▇▆▆▆</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Sala Equis</td><td>31</td><td>27</td><td>29/11</td><td>45</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">___________██▇▇▇▇▇▆▆▆▆▆▆▅▅▅▄</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Artistic Metropol</td><td>30</td><td>18</td><td>26/11</td><td>41</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄▇▆▅▅▅▄▅▅▆▅▅▅▅▅▅▇▇▆▅▆▅█▇▆▅▅▅</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🔴 Cines Ideal</td><td>30</td><td>3</td><td>20/12</td><td>30</td><td>caída hace 25 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">█▇▅▄▄▃▃▃▃▃▃▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cine Estudio</td><td>17</td><td>17</td><td>25/11</td><td>30</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄▄▆▅▅▅▄▄▅▆▆▅▅▄▄▄██▇▇▆▆▆▆▅▅▄▄</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Museo Reina Sofía</td><td>14</td><td>14</td><td>12/12</td><td>12</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">_____█▅▅▅▅▅▅▅▅▅▅▅▅▄▄▄▄▄▄▃▂▂▄</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🟢 Cines Callao</td><td>13</td><td>3</td><td>19/11</td><td>14</td><td>7 de 7 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄▃█▇▆▅▄▃▇▆▆▅▅▃▂▇▆▆▅▄▃▂▇▆▆▅▄▃</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🔴 Cines Princesa</td><td>0</td><td>0</td><td></td><td>146</td><td>0 de 3 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄███▇▆▅▄███▇▆▅▄███▇▆▅▄▃▂____</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🔴 Renoir Plaza de España</td><td>0</td><td>0</td><td></td><td>76</td><td>0 de 3 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄███▇▆▅▄███▇▆▅▄███▇▆▅▄▃▂____</code></td></tr>
+<tr valign="top" style="border-bottom:1px solid #eee"><td>🔴 Renoir Retiro</td><td>0</td><td>0</td><td></td><td>52</td><td>0 de 3 días</td><td><code style="font-family:Menlo,Consolas,monospace;font-size:12px">▄███▇▆▅▄███▇▆▅▄▇▇█▇▆▅▄▃▂____</code></td></tr>
+</table>
+<hr style="border:0;border-top:1px solid #ddd;margin:22px 0 10px">
+<p style="margin:0 0 10px;font-size:14px">Generado por <code style="font-family:Menlo,Consolas,monospace;font-size:12px">scripts/audit.py</code>. Para correrlo a mano: <code style="font-family:Menlo,Consolas,monospace;font-size:12px">cd ~/cines &amp;&amp; python3 scripts/audit.py</code>. Para que los agentes revisen y arreglen lo que encontró: <code style="font-family:Menlo,Consolas,monospace;font-size:12px">/auditoria</code> en Claude.</p></div>
