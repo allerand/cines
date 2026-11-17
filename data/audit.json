@@ -1987,16 +1987,10 @@
     "titulo": "Infinito Super 8: 8 programas sin lista de películas («Rescates: sesión 1», «Competencia Internacional»,…",
     "efimero": false
    },
-   "festivales/-/web-cambio/FIDBA": {
-    "desde": "2026-11-16",
+   "festivales/-/web-cambio/MASS": {
+    "desde": "2026-11-17",
     "sev": "AVISO",
-    "titulo": "FIDBA: su web cambió desde el 16/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Older than Israel».…",
-    "efimero": true
-   },
-   "festivales/-/web-cambio/Infinito Super 8": {
-    "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "Infinito Super 8: su web cambió desde el 16/11: 1 línea nueva. Lo nuevo: «Foco JULIO FERMEPÍN». Revisar la…",
+    "titulo": "MASS: su web cambió desde el 16/11: 99 líneas nuevas y 1 que ya no está. Lo nuevo: «Lo mejor de los…",
     "efimero": true
    },
    "fichas/ba/dos-titulos-en-el-mismo-horario/-": {
@@ -2035,12 +2029,6 @@
     "titulo": "Filo Cine: hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean…",
     "efimero": false
    },
-   "fichas/ba/titulo-todo-en-mayusculas/-": {
-    "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "Título todo en mayúsculas: Atlas Caballito ×2. Ejemplo (Atlas Caballito): 'C.Y.N.D.'",
-    "efimero": false
-   },
    "fichas/madrid/dos-titulos-en-el-mismo-horario/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -2063,12 +2051,6 @@
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Centro Cultural Borges: publica 14 funciones pero su fuente no contesta hace 3 días: la API no contesta; se publica el caché de la…",
-    "efimero": false
-   },
-   "fuentes/ba/floja/Cine Gaumont": {
-    "desde": "2026-11-17",
-    "sev": "AVISO",
-    "titulo": "Cine Gaumont está por debajo de lo habitual: 24 funciones de 13 películas, contra ~62 de siempre.",
     "efimero": false
    },
    "fuentes/ba/fuente-inestable/Casa del Bicentenario": {
@@ -2099,12 +2081,6 @@
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "CEA: lleva 30 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
-    "efimero": false
-   },
-   "fuentes/ba/sin-funciones/Centro Cultural de la Cooperación": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Centro Cultural de la Cooperación: lleva 3 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
     "efimero": false
    },
    "fuentes/madrid/de-cache/Cines Ideal": {
@@ -2173,6 +2149,41 @@
     "titulo": "MASS, Semana de los Festivales de Cine de Málaga y San Sebastián: empieza en 10 días (26 al 28 nov, en Centro Cultural 25 de Mayo) y no está cargado. Fuente:…",
     "efimero": false,
     "cerrado": "2026-11-16"
+   },
+   "festivales/-/web-cambio/FIDBA": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "FIDBA: su web cambió desde el 16/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Older than Israel».…",
+    "efimero": true,
+    "cerrado": "2026-11-17"
+   },
+   "festivales/-/web-cambio/Infinito Super 8": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Infinito Super 8: su web cambió desde el 16/11: 1 línea nueva. Lo nuevo: «Foco JULIO FERMEPÍN». Revisar la…",
+    "efimero": true,
+    "cerrado": "2026-11-17"
+   },
+   "fichas/ba/titulo-todo-en-mayusculas/-": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Título todo en mayúsculas: Atlas Caballito ×2. Ejemplo (Atlas Caballito): 'C.Y.N.D.'",
+    "efimero": false,
+    "cerrado": "2026-11-17"
+   },
+   "fuentes/ba/floja/Cine Gaumont": {
+    "desde": "2026-11-17",
+    "sev": "AVISO",
+    "titulo": "Cine Gaumont está por debajo de lo habitual: 24 funciones de 13 películas, contra ~62 de siempre.",
+    "efimero": false,
+    "cerrado": "2026-11-17"
+   },
+   "fuentes/ba/sin-funciones/Centro Cultural de la Cooperación": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Centro Cultural de la Cooperación: lleva 3 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
+    "efimero": false,
+    "cerrado": "2026-11-17"
    }
   }
  }
