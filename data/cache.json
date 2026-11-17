@@ -15151,8 +15151,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Thus is Life (1930)",
-    "fecha": "2026-11-13",
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Así es la vida (1939), Thus is Life (1930), That's life (1977)",
+    "fecha": "2026-11-17",
     "con_duracion": false,
     "desempate": ""
   },
@@ -26443,13 +26443,13 @@
     "original_title": "The Love Witch"
   },
   "embrujada|1976": {
-    "url": "https://letterboxd.com/film/embrujada/",
-    "title_en": "Bewitched",
+    "url": "",
+    "title_en": "Embrujada",
     "director": "Armando Bó",
     "country": "Argentina, Brazil",
     "year": 1976,
     "duration": 80,
-    "genre": "Terror, Drama",
+    "genre": "Drama, Terror",
     "original_title": "Embrujada"
   },
   "taxi driver|1976": {
@@ -26613,15 +26613,11 @@
   },
   "los otros": {
     "url": "",
-    "title_en": "Los otros",
+    "title_en": "LOS OTROS",
     "director": "",
     "country": "",
     "year": null,
-    "duration": null,
-    "sin_ficha": "varias se llaman así: Los Otros (2020), The Others (2001)",
-    "fecha": "2026-10-27",
-    "con_duracion": false,
-    "desempate": ""
+    "duration": null
   },
   "el séptimo sello": {
     "url": "",
@@ -27117,7 +27113,7 @@
   },
   "impenetrable|2026": {
     "url": "",
-    "title_en": "IMPENETRABLE",
+    "title_en": "Impenetrable",
     "director": "",
     "country": "",
     "year": null,
@@ -27901,10 +27897,12 @@
   "versos para un perrito perdido|2025": {
     "url": "",
     "title_en": "Versos para un perrito perdido",
-    "director": "",
+    "director": "Nathaniel Pacheco, Julieta Rodríguez",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 17,
+    "genre": "Drama",
+    "original_title": "Versos para un perrito perdido"
   },
   "dos o tres cosas que me quedé de ella|2026": {
     "url": "https://letterboxd.com/film/dos-o-tres-cosas-que-me-quede-de-ella/",
@@ -30772,7 +30770,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-13",
+    "fecha": "2026-11-17",
     "con_duracion": false,
     "desempate": ""
   },
@@ -32267,7 +32265,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: The Apartment (2023), The Apartment (1960)",
-    "fecha": "2026-11-13",
+    "fecha": "2026-11-17",
     "con_duracion": false,
     "desempate": ""
   },
@@ -32459,7 +32457,9 @@
     "year": 2025,
     "duration": 110,
     "genre": "Documental",
-    "original_title": "Recen por mí: la historia de Francisco"
+    "clase_titulo": "exacto",
+    "original_title": "Recen por mí: la historia de Francisco",
+    "sin_hints": "título y duración"
   },
   "atahualpa yupanqui. un trashumante + juanito el cantor (solo set)": {
     "url": "https://letterboxd.com/film/atahualpa-yupanqui-un-trashumante/",
@@ -33639,7 +33639,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Beginning of the End (2014)",
-    "fecha": "2026-11-16",
+    "fecha": "2026-11-17",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33937,7 +33937,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Your Name. (2016), y puede ser otra",
-    "fecha": "2026-11-13",
+    "fecha": "2026-11-17",
     "con_duracion": false,
     "desempate": ""
   },
@@ -34645,12 +34645,13 @@
     "original_title": "La Mirada Errante"
   },
   "4:3 (cromoterapia)": {
-    "url": "",
-    "title_en": "4:3 (Cromoterapia)",
-    "director": "",
+    "url": "https://letterboxd.com/film/4-3-2010/",
+    "title_en": "4:3",
+    "director": "Claudio Caldini",
     "country": "",
-    "year": null,
-    "duration": null
+    "year": 2010,
+    "duration": 3,
+    "genre": "Documental"
   },
   "aflicción de volver": {
     "url": "",
@@ -34677,12 +34678,13 @@
     "duration": null
   },
   "zoocántico i": {
-    "url": "",
-    "title_en": "Zoocántico I",
+    "url": "https://letterboxd.com/film/zoochant-i/",
+    "title_en": "Zoochant I",
     "director": "Enrico Alchimim",
     "country": "Brazil, Argentina",
     "year": 2026,
     "duration": 3,
+    "genre": "",
     "original_title": "Zoocântico I"
   },
   "por la noche, la mañana": {
@@ -35338,5 +35340,1912 @@
     "clase_titulo": "exacto",
     "original_title": "Rocky",
     "sin_hints": "título y duración"
+  },
+  "yo primero|2026": {
+    "url": "https://letterboxd.com/film/yo-primero/",
+    "title_en": "Yo Primero",
+    "director": "Pedro Gusmão",
+    "country": "",
+    "year": null,
+    "duration": 17,
+    "genre": "",
+    "original_title": "Yo Primero"
+  },
+  "historia de un chico triste|2026": {
+    "url": "https://letterboxd.com/film/historia-de-un-chico-triste/",
+    "title_en": "Story of a Sad Boy",
+    "director": "Carlos Blázquez Rámila",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 5,
+    "genre": "Fantasía, Animación",
+    "original_title": "Historia de un chico triste"
+  },
+  "no me gustan los sustos|2026": {
+    "url": "",
+    "title_en": "No me gustan los sustos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "súper z|2025": {
+    "url": "https://letterboxd.com/film/super-z-2025/",
+    "title_en": "Súper Z",
+    "director": "Marc Dalmau, Dani Giménez",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 13,
+    "genre": "Comedia, Fantasía",
+    "original_title": "Súper Z"
+  },
+  "feliz suicidio|2025": {
+    "url": "https://letterboxd.com/film/feliz-suicidio/",
+    "title_en": "Feliz Suicidio",
+    "director": "Chesco Murillo",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Comedia, Fantasía",
+    "original_title": "Feliz Suicidio"
+  },
+  "pactum|2026": {
+    "url": "https://letterboxd.com/film/pactum/",
+    "title_en": "Pactum",
+    "director": "Pablo Otero",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "",
+    "original_title": "Pactum"
+  },
+  "l’exterminador van pelsing|2026": {
+    "url": "https://letterboxd.com/film/lexterminador-van-pelsing/",
+    "title_en": "L'exterminador Van Pelsing",
+    "director": "Esteve Gómez Peña",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 9,
+    "genre": "Acción, Comedia",
+    "original_title": "L'exterminador Van Pelsing"
+  },
+  "open mic|2025": {
+    "url": "",
+    "title_en": "Open Mic",
+    "director": "Jano Pita",
+    "country": "Spain",
+    "year": 2025,
+    "duration": null,
+    "genre": "Terror, Comedia",
+    "original_title": "Open Mic"
+  },
+  "el país de los juguetes|2026": {
+    "url": "",
+    "title_en": "El país de los juguetes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "manifesto|2026": {
+    "url": "",
+    "title_en": "Manifesto",
+    "director": "Steven Young",
+    "country": "",
+    "year": 2026,
+    "duration": 120,
+    "genre": "Ciencia ficción",
+    "original_title": "Manifesto"
+  },
+  "isa|2025": {
+    "url": "",
+    "title_en": "Isa",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la máquina de cortes|2026": {
+    "url": "",
+    "title_en": "La máquina de cortes",
+    "director": "Hipólito Infante del Castaño",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "Ciencia ficción",
+    "title_es": "La Máquina de Cortes",
+    "original_title": "The Cutting Machine"
+  },
+  "en los valles|2026": {
+    "url": "https://letterboxd.com/film/en-los-valles/",
+    "title_en": "In the Valleys",
+    "director": "Emanuel Alejandro Figueroa",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 9,
+    "genre": "",
+    "original_title": "En los  valles"
+  },
+  "nexo 26|2026": {
+    "url": "",
+    "title_en": "Nexo 26",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "una energía invisible me devora sin descanso|2026": {
+    "url": "",
+    "title_en": "Una energía invisible me devora sin descanso",
+    "director": "Ludmila Fontana",
+    "country": "",
+    "year": null,
+    "duration": 18,
+    "genre": "Terror, Ciencia ficción",
+    "original_title": "Una energía invisible me devora sin descanso"
+  },
+  "ico|2026": {
+    "url": "",
+    "title_en": "Ico",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ayer ya es tarde|2026": {
+    "url": "",
+    "title_en": "Ayer ya es tarde",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el condenado|2026": {
+    "url": "https://letterboxd.com/film/el-condenado/",
+    "title_en": "El Condenado",
+    "director": "Santiago Rey Salazar",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 17,
+    "genre": "Terror, Thriller",
+    "original_title": "El Condenado"
+  },
+  "watukuy|2025": {
+    "url": "",
+    "title_en": "Watukuy",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "en blanco|2025": {
+    "url": "",
+    "title_en": "En blanco",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "lick me|2026": {
+    "url": "https://letterboxd.com/film/lick-me/",
+    "title_en": "Lick Me",
+    "director": "Elizabeth E. Schuch",
+    "country": "",
+    "year": 2026,
+    "duration": 12,
+    "genre": "Fantasía, Terror",
+    "original_title": "Lick Me"
+  },
+  "un niño no puede cuidar un monstruo|2026": {
+    "url": "",
+    "title_en": "Un niño no puede cuidar un monstruo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el encierro|2026": {
+    "url": "",
+    "title_en": "El encierro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el amparo|2026": {
+    "url": "https://letterboxd.com/film/el-amparo-2026/",
+    "title_en": "El amparo",
+    "director": "Belén Angel Hernández Puig",
+    "country": "",
+    "year": 2026,
+    "duration": 10,
+    "genre": "Fantasía, Drama",
+    "original_title": "El amparo"
+  },
+  "fin de semana sangriento: bloque 1": {
+    "url": "",
+    "title_en": "Fin de semana sangriento: bloque 1",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Long Weekend (1978), The House by the Lake (1976)",
+    "fecha": "2026-11-17",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "los vampires|2026": {
+    "url": "https://letterboxd.com/film/los-vampires/",
+    "title_en": "Los Vampires",
+    "director": "Craig Mitchell",
+    "country": "USA",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Thriller, Misterio",
+    "original_title": "Los Vampires"
+  },
+  "la noche que nunca termina|2026": {
+    "url": "https://letterboxd.com/film/la-noche-que-nunca-termina-2026/",
+    "title_en": "La Noche Que Nunca Termina",
+    "director": "Fran Sanaz",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 85,
+    "genre": "Drama, Terror",
+    "original_title": "La Noche Que Nunca Termina"
+  },
+  "vampiros|1998": {
+    "url": "https://letterboxd.com/film/vampires/",
+    "title_en": "Vampires",
+    "director": "John Carpenter",
+    "country": "USA",
+    "year": 1998,
+    "duration": 108,
+    "genre": "Fantasía, Acción"
+  },
+  "the shug|2026": {
+    "url": "https://letterboxd.com/film/the-shug/",
+    "title_en": "The Shug",
+    "director": "Martin J Pickering",
+    "country": "UK",
+    "year": null,
+    "duration": null,
+    "genre": "Terror",
+    "original_title": "The Shug"
+  },
+  "la casa de los monstruos|2026": {
+    "url": "",
+    "title_en": "La casa de los monstruos",
+    "director": "David Hebrero",
+    "country": "Spain",
+    "year": 2026,
+    "duration": null,
+    "genre": "Drama, Terror",
+    "original_title": "La casa de los monstruos"
+  },
+  "kaiju heaven|2026": {
+    "url": "https://letterboxd.com/film/kaiju-heaven/",
+    "title_en": "Kaiju Heaven",
+    "director": "Minoru Kawasaki",
+    "country": "Japan",
+    "year": 2026,
+    "duration": 71,
+    "genre": "Comedia, Ciencia ficción",
+    "original_title": "怪獣天国"
+  },
+  "dark christmas|2026": {
+    "url": "https://letterboxd.com/film/dark-christmas-2026/",
+    "title_en": "Dark Christmas",
+    "director": "Keke Soikkeli",
+    "country": "Finland",
+    "year": 2026,
+    "duration": 94,
+    "genre": "Terror",
+    "original_title": "Musta joulu"
+  },
+  "los que vienen|2026": {
+    "url": "",
+    "title_en": "Los que vienen",
+    "director": "Victor Català",
+    "country": "",
+    "year": 2026,
+    "duration": 81,
+    "genre": "Terror, Drama",
+    "title_es": "Los que vienen",
+    "original_title": "Los Que Vienen"
+  },
+  "gladio: monster battles in the alternate dimension|2026": {
+    "url": "https://letterboxd.com/film/gladio-monster-battles-in-the-alternate-dimension/",
+    "title_en": "GLADIO: Monster Battles in the Alternate Dimension",
+    "director": "Yoshikazu Ishii",
+    "country": "Japan",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Ciencia ficción, Acción",
+    "original_title": "GLADIO: Monster Battles in the Alternate Dimension"
+  },
+  "inferis ostium|2026": {
+    "url": "https://letterboxd.com/film/inferis-ostium/",
+    "title_en": "Inferis Ostium",
+    "director": "Charli Sangar",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Thriller, Animación",
+    "original_title": "Inferis Ostium"
+  },
+  "el ahorcado|2026": {
+    "url": "",
+    "title_en": "El ahorcado",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "no molestes a los muertos|2026": {
+    "url": "",
+    "title_en": "No molestes a los muertos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "altar|2026": {
+    "url": "",
+    "title_en": "Altar",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "perros|2026": {
+    "url": "https://letterboxd.com/film/perros-2026/",
+    "title_en": "Perros",
+    "director": "Ezequiel Rossi, Facundo Salomón",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 10,
+    "genre": "Terror, Fantasía",
+    "original_title": "Perros"
+  },
+  "ruido blanco|2025": {
+    "url": "",
+    "title_en": "Ruido blanco",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la memoria de los espejos|2026": {
+    "url": "",
+    "title_en": "La memoria de los espejos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "algo entre nosotros|2026": {
+    "url": "https://letterboxd.com/film/algo-entre-nosotros/",
+    "title_en": "Algo entre Nosotros",
+    "director": "Lautaro Schurjin",
+    "country": "Argentina, Spain",
+    "year": 2026,
+    "duration": 7,
+    "genre": "Terror, Thriller",
+    "original_title": "Algo entre Nosotros"
+  },
+  "uroboros|2025": {
+    "url": "",
+    "title_en": "Uroboros",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "trick or treat: a halloween story|2026": {
+    "url": "",
+    "title_en": "Trick or Treat: A Halloween Story",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fin de semana sangriento: bloque 2": {
+    "url": "",
+    "title_en": "Fin de semana sangriento: bloque 2",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Long Weekend (1978), The House by the Lake (1976), Mother's Day (1980)",
+    "fecha": "2026-11-17",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "still standing, still stuffed|2026": {
+    "url": "https://letterboxd.com/film/still-standing-still-stuffed/",
+    "title_en": "Still Standing, Still Stuffed",
+    "director": "Andrej Kolenčík, Juro Šlauka",
+    "country": "Slovakia",
+    "year": 2026,
+    "duration": 70,
+    "genre": "Fantasía, Terror",
+    "original_title": "Kuko, Drobček & Raťafák znovu zasahujú"
+  },
+  "gummy|2026": {
+    "url": "https://letterboxd.com/film/gummy-2026/",
+    "title_en": "Gummy",
+    "director": "J. Prada",
+    "country": "",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Terror",
+    "original_title": "Gummy"
+  },
+  "el vuelo del moscardón|2026": {
+    "url": "",
+    "title_en": "El vuelo del moscardón",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "familia teme enfrentar una nueva noche de terror|2026": {
+    "url": "https://letterboxd.com/film/family-fears-another-night-of-terror/",
+    "title_en": "Family Fears Another Night of Terror",
+    "director": "Cristian Ponce",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 83,
+    "genre": "Terror",
+    "original_title": "Familia teme enfrentar una nueva noche de terror"
+  },
+  "dust bunny|2025": {
+    "url": "https://letterboxd.com/film/dust-bunny/",
+    "title_en": "Dust Bunny",
+    "director": "Bryan Fuller",
+    "country": "USA, Canada",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Terror, Fantasía",
+    "title_es": "Atrapando a un monstruo",
+    "original_title": "Dust Bunny"
+  },
+  "juego maldito|2026": {
+    "url": "https://letterboxd.com/film/juego-maldito/",
+    "title_en": "Game Over",
+    "director": "Carlos Marín",
+    "country": "Mexico",
+    "year": 2026,
+    "duration": 85,
+    "genre": "",
+    "original_title": "Juego maldito"
+  },
+  "coyotes|2025": {
+    "url": "https://letterboxd.com/film/coyotes-2025/",
+    "title_en": "Coyotes",
+    "director": "Colin Minihan",
+    "country": "USA, UK",
+    "year": 2025,
+    "duration": 91,
+    "genre": "Comedia, Terror",
+    "original_title": "Coyotes"
+  },
+  "meat kills|2025": {
+    "url": "https://letterboxd.com/film/meat-kills/",
+    "title_en": "Meat Kills",
+    "director": "Martijn Smits",
+    "country": "Netherlands",
+    "year": 2025,
+    "duration": 85,
+    "genre": "Terror",
+    "title_es": "Instinto animal",
+    "original_title": "Vleesdag"
+  },
+  "c.y.n.d.|2025": {
+    "url": "",
+    "title_en": "C.Y.N.D.",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la noche de las bestias|2025": {
+    "url": "",
+    "title_en": "La noche de las bestias",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la hora del mosco|2025": {
+    "url": "",
+    "title_en": "La hora del mosco",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "99 fantasmas|2025": {
+    "url": "https://letterboxd.com/film/99-fantasmas/",
+    "title_en": "99 Ghosts",
+    "director": "Gonzalo Torrens",
+    "country": "Uruguay",
+    "year": 2025,
+    "duration": 28,
+    "genre": "Comedia, Terror",
+    "original_title": "99 Fantasmas"
+  },
+  "compendium maleficarum: o filho pródigo|2025": {
+    "url": "",
+    "title_en": "Compendium Maleficarum: O filho pródigo",
+    "director": "João Vitor Rodrigues",
+    "country": "Brazil",
+    "year": 2025,
+    "duration": 14,
+    "genre": "Terror, Comedia",
+    "original_title": "Compendium Maleficarum: O Filho Pródigo"
+  },
+  "amarré|2026": {
+    "url": "",
+    "title_en": "Amarré",
+    "director": "Candela Saletros",
+    "country": "Uruguay",
+    "year": 2026,
+    "duration": 5,
+    "genre": "Terror",
+    "original_title": "Amarre"
+  },
+  "bowels of hell|2026": {
+    "url": "https://letterboxd.com/film/privadas-de-suas-vidas/",
+    "title_en": "Bowels of Hell",
+    "director": "Gustavo Vinagre, Gurcius Gewdner",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 111,
+    "genre": "Terror",
+    "original_title": "Privadas de Suas Vidas"
+  },
+  "las manos del general|2026": {
+    "url": "",
+    "title_en": "Las manos del general",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la clínica del dr. bogdanov|2026": {
+    "url": "",
+    "title_en": "La clínica del dr. Bogdanov",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la caca|2026": {
+    "url": "https://letterboxd.com/film/la-caca/",
+    "title_en": "La Caca",
+    "director": "Pedro Thedy Navarro",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 15,
+    "genre": "Ciencia ficción",
+    "original_title": "La Caca"
+  },
+  "una partida más|2025": {
+    "url": "",
+    "title_en": "Una partida más",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "agente w: misión desmantelar secta|2026": {
+    "url": "",
+    "title_en": "Agente W: Misión desmantelar secta",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el último domingo de la última semana del año|2024": {
+    "url": "",
+    "title_en": "El último domingo de la última semana del año",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "the gold diggers|2026": {
+    "url": "",
+    "title_en": "The Gold Diggers",
+    "director": "Tomas Molezzi",
+    "country": "Argentina",
+    "year": null,
+    "duration": null,
+    "genre": "Aventura, Comedia",
+    "original_title": "The gold diggers"
+  },
+  "fin de semana sangriento: bloque 3": {
+    "url": "",
+    "title_en": "Fin de semana sangriento: bloque 3",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Long Weekend (1978)",
+    "fecha": "2026-11-17",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "rubberhead: the life and monsters of steve johnson|2026": {
+    "url": "https://letterboxd.com/film/rubberhead-the-life-monsters-of-steve-johnson/",
+    "title_en": "Rubberhead: The Life & Monsters of Steve Johnson",
+    "director": "Nick Taylor",
+    "country": "USA",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Documental"
+  },
+  "no rest for the wicked|2026": {
+    "url": "",
+    "title_en": "No Rest for the Wicked",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la leyenda del jinete sin cabeza|1999": {
+    "url": "https://letterboxd.com/film/sleepy-hollow/",
+    "title_en": "Sleepy Hollow",
+    "director": "Tim Burton",
+    "country": "USA",
+    "year": 1999,
+    "duration": 105,
+    "genre": "Terror, Misterio",
+    "title_es": "La Leyenda del Jinete Sin Cabeza",
+    "original_title": "Sleepy Hollow"
+  },
+  "olivera y corman: hollywood en argentina|2026": {
+    "url": "",
+    "title_en": "Olivera y Corman: Hollywood en Argentina",
+    "director": "José Tripodero, Martìn Cataldi",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "Documental",
+    "original_title": "Olivera & Corman: Hollywood en Argentina"
+  },
+  "no duermas sola|2026": {
+    "url": "https://letterboxd.com/film/dont-sleep-alone-2026/",
+    "title_en": "Don't Sleep Alone",
+    "director": "Talo Silveyra",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "Terror, Thriller",
+    "original_title": "Don't Sleep Alone"
+  },
+  "el extraño caso del hombre y la bestia|1951": {
+    "url": "https://letterboxd.com/film/el-extrano-caso-del-hombre-y-la-bestia/",
+    "title_en": "The Strange Case of the Man and the Beast",
+    "director": "Mario Soffici",
+    "country": "Argentina",
+    "year": 1951,
+    "duration": 80,
+    "genre": "Terror",
+    "original_title": "El extraño caso del hombre y la bestia"
+  },
+  "el monstruo y el sheriff|2025": {
+    "url": "https://letterboxd.com/film/el-monstruo-y-el-sheriff/",
+    "title_en": "El monstruo y el sheriff",
+    "director": "Diego Lumerman",
+    "country": "",
+    "year": null,
+    "duration": 67,
+    "genre": "",
+    "original_title": "El monstruo y el sheriff"
+  },
+  "al final de la soga|2025": {
+    "url": "https://letterboxd.com/film/al-final-de-la-soga/",
+    "title_en": "At the end of the rope",
+    "director": "Tomás Martinese",
+    "country": "",
+    "year": 2025,
+    "duration": 16,
+    "genre": "Misterio, Terror",
+    "original_title": "Al final de la soga"
+  },
+  "rosas y champagne|2025": {
+    "url": "",
+    "title_en": "Rosas y Champagne",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tiempo distante en una tarde desarticulada|2025": {
+    "url": "https://letterboxd.com/film/distant-time-in-a-disjointed-afternoon/",
+    "title_en": "Distant Time in a Disjointed Afternoon",
+    "director": "Chiara Espinosa",
+    "country": "Argentina",
+    "year": null,
+    "duration": 14,
+    "genre": "Misterio, Fantasía"
+  },
+  "luz en el limbo|2026": {
+    "url": "",
+    "title_en": "Luz en el limbo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "delta|2026": {
+    "url": "https://letterboxd.com/film/delta-2026/",
+    "title_en": "Delta",
+    "director": "Tadeo Pestaña Caro, Eugenia Gonzalia",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 12,
+    "genre": "Thriller, Fantasía",
+    "original_title": "Delta"
+  },
+  "cuando el fuego se apague|2026": {
+    "url": "",
+    "title_en": "Cuando el fuego se apague",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "no solo los perros lamen|2025": {
+    "url": "",
+    "title_en": "No solo los perros lamen",
+    "director": "Martín Francinella",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 10,
+    "genre": "Terror, Thriller",
+    "original_title": "No Sólo Los Perros Lamen"
+  },
+  "no silbes|2026": {
+    "url": "",
+    "title_en": "No silbes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "amiga yo te escucho|2025": {
+    "url": "",
+    "title_en": "Amiga yo te escucho",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pixel muerto|2026": {
+    "url": "https://letterboxd.com/film/pixel-muerto/",
+    "title_en": "Dead Pixel",
+    "director": "Damián Cabrio",
+    "country": "",
+    "year": 2026,
+    "duration": 2,
+    "genre": "Terror",
+    "original_title": "Píxel Muerto"
+  },
+  "fin de semana sangriento: bloque 4": {
+    "url": "",
+    "title_en": "Fin de semana sangriento: bloque 4",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The House by the Lake (1976)",
+    "fecha": "2026-11-17",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "cuántica rave|2025": {
+    "url": "https://letterboxd.com/film/cuantica-rave/",
+    "title_en": "Quantum Rave",
+    "director": "Paco Campano",
+    "country": "",
+    "year": 2026,
+    "duration": 90,
+    "genre": "Ciencia ficción, Terror",
+    "original_title": "Cuántica Rave"
+  },
+  "crawlers|2026": {
+    "url": "https://letterboxd.com/film/crawlers-2026/",
+    "title_en": "Crawlers",
+    "director": "Ángel Gómez Hernández",
+    "country": "USA",
+    "year": 2026,
+    "duration": 80,
+    "genre": "Terror, Thriller",
+    "title_es": "Crawlers (Arácnidos)",
+    "original_title": "Crawlers"
+  },
+  "animalia|2025": {
+    "url": "https://letterboxd.com/film/animalia-2025/",
+    "title_en": "Animalia",
+    "director": "Marius Rolfsvåg",
+    "country": "Norway",
+    "year": 2025,
+    "duration": 25,
+    "genre": "Ciencia ficción",
+    "original_title": "Animalia"
+  },
+  "the belly|2026": {
+    "url": "https://letterboxd.com/film/the-belly/",
+    "title_en": "The Belly",
+    "director": "Jamie Hooper",
+    "country": "UK",
+    "year": 2027,
+    "duration": 7,
+    "genre": "Comedia, Terror",
+    "original_title": "The Belly"
+  },
+  "calm, el último cuento de horacio quiroga|2026": {
+    "url": "https://letterboxd.com/film/calm-the-last-tale-of-horacio-quiroga/",
+    "title_en": "CALM, the Last Tale of Horacio Quiroga",
+    "director": "María Ruisánchez, Álvaro León",
+    "country": "Spain, Argentina",
+    "year": 2026,
+    "duration": 9,
+    "genre": "Terror, Animación",
+    "original_title": "CALM, el Último Cuento de Horacio Quiroga"
+  },
+  "el diente negro|2026": {
+    "url": "https://letterboxd.com/film/el-diente-negro/",
+    "title_en": "El Diente Negro",
+    "director": "Anita Serrano",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 20,
+    "genre": "Terror, Thriller"
+  },
+  "hace mucho que no llueve|2025": {
+    "url": "",
+    "title_en": "Hace mucho que no llueve",
+    "director": "Lucila Mingrone",
+    "country": "",
+    "year": 2026,
+    "duration": 14,
+    "genre": "Fantasía, Familiar",
+    "original_title": "Hace mucho que no llueve"
+  },
+  "eso que asusta|2026": {
+    "url": "",
+    "title_en": "Eso que asusta",
+    "director": "Jeff Zorrilla",
+    "country": "",
+    "year": 2026,
+    "duration": 24,
+    "genre": "Terror",
+    "original_title": "Eso que asusta"
+  },
+  "carne sobre carne|2007": {
+    "url": "https://letterboxd.com/film/carne-sobre-carne/",
+    "title_en": "Flesh on Flesh",
+    "director": "Diego Curubeto",
+    "country": "Argentina",
+    "year": 2008,
+    "duration": 95,
+    "genre": "Documental",
+    "original_title": "Carne sobre carne"
+  },
+  "binding eva|2026": {
+    "url": "https://letterboxd.com/film/binding-eva/",
+    "title_en": "Binding Eva",
+    "director": "Conscian Morgan",
+    "country": "",
+    "year": 2026,
+    "duration": 76,
+    "genre": "Thriller, Terror",
+    "original_title": "Binding Eva"
+  },
+  "el enigma de franca farmín|2026": {
+    "url": "https://letterboxd.com/film/el-enigma-de-franca-farmin/",
+    "title_en": "The Enigma of Franca Farmín",
+    "director": "Octavio Revol Molina",
+    "country": "Argentina, Colombia",
+    "year": 2026,
+    "duration": 73,
+    "genre": "Misterio",
+    "original_title": "El enigma de Franca Farmín"
+  },
+  "mitra, apaga la luz para poder ver|2025": {
+    "url": "https://letterboxd.com/film/mitra-apaga-la-luz-para-poder-ver/",
+    "title_en": "Mitra, Turn off the light to see",
+    "director": "Diego Bellocchio",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 81,
+    "genre": "",
+    "original_title": "Mitra, apaga la luz para poder ver"
+  },
+  "terrifier 3|2024": {
+    "url": "https://letterboxd.com/film/terrifier-3/",
+    "title_en": "Terrifier 3",
+    "director": "Damien Leone",
+    "country": "USA",
+    "year": 2024,
+    "duration": 125,
+    "genre": "Terror",
+    "title_es": "Terrifier 3: Payaso siniestro",
+    "original_title": "Terrifier 3"
+  },
+  "la fábrica|2026": {
+    "url": "https://letterboxd.com/film/la-fabrica-2026/",
+    "title_en": "La Fábrica",
+    "director": "Ramsés Tuzzio",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 73,
+    "genre": "Terror",
+    "title_es": "The Factory",
+    "original_title": "La Fábrica"
+  },
+  "bajo la piel|2025": {
+    "url": "https://letterboxd.com/film/bajo-la-piel/",
+    "title_en": "Bajo la piel",
+    "director": "Angelina Guerrero Cettour",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Thriller, Terror",
+    "original_title": "Bajo la piel"
+  },
+  "transmigracion de almas|2026": {
+    "url": "",
+    "title_en": "Transmigracion de almas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mi nuevo vecino|2017": {
+    "url": "",
+    "title_en": "Mi nuevo vecino",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el progreso llegó para quedarse|2026": {
+    "url": "",
+    "title_en": "El progreso llegó para quedarse",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "lapsus|2025": {
+    "url": "",
+    "title_en": "Lapsus",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tre|2026": {
+    "url": "",
+    "title_en": "Tre",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la abuela|2026": {
+    "url": "",
+    "title_en": "La abuela",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fin de semana sangriento: bloque 5": {
+    "url": "",
+    "title_en": "Fin de semana sangriento: bloque 5",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The House by the Lake (1976)",
+    "fecha": "2026-11-17",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "black sheeps|2026": {
+    "url": "https://letterboxd.com/film/black-sheeps/",
+    "title_en": "Black Sheeps",
+    "director": "Jonathan King",
+    "country": "New Zealand, France",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Comedia, Terror",
+    "original_title": "Black Sheeps"
+  },
+  "amygdala|2026": {
+    "url": "https://letterboxd.com/film/amygdala-2026/",
+    "title_en": "AMYGDALA",
+    "director": "William Frankenstein",
+    "country": "USA",
+    "year": 2026,
+    "duration": 10,
+    "genre": "Terror, Acción",
+    "original_title": "AMYGDALA"
+  },
+  "contrafrente|2026": {
+    "url": "https://letterboxd.com/film/contrafrente/",
+    "title_en": "The Neighbors",
+    "director": "Sean Daniel Quinn",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Terror",
+    "original_title": "Contrafrente"
+  },
+  "hijos|2025": {
+    "url": "",
+    "title_en": "Hijos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "pagano|2026": {
+    "url": "",
+    "title_en": "Pagano",
+    "director": "Tomás Freijeiro",
+    "country": "",
+    "year": 2026,
+    "duration": 20,
+    "original_title": "Paganos"
+  },
+  "robbery cassette: season of the witch|2026": {
+    "url": "",
+    "title_en": "Robbery Cassette: Season of the Witch",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "señuelo|2025": {
+    "url": "https://letterboxd.com/film/senuelo/",
+    "title_en": "Bait",
+    "director": "Martha G. Ayerbe",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 17,
+    "genre": "Fantasía, Thriller",
+    "original_title": "Señuelo"
+  },
+  "carne|1968": {
+    "url": "https://letterboxd.com/film/carne-1968/",
+    "title_en": "Carne",
+    "director": "Armando Bó",
+    "country": "Argentina",
+    "year": 1968,
+    "duration": 90,
+    "genre": "Drama",
+    "original_title": "Carne"
+  },
+  "pacífico|2026": {
+    "url": "",
+    "title_en": "Pacífico",
+    "director": "Gonzalo Gutiérrez",
+    "country": "Argentina, Colombia",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Terror, Ciencia ficción",
+    "original_title": "Pacífico"
+  },
+  "jingle hell|2026": {
+    "url": "",
+    "title_en": "Jingle Hell",
+    "director": "Gaby Smiths",
+    "country": "Argentina, United Kingdom",
+    "year": 2026,
+    "duration": null,
+    "genre": "Terror",
+    "original_title": "Jingle Hell"
+  },
+  "¿qué clase de joven le abre la puerta a un vampiro?|2025": {
+    "url": "",
+    "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "yumemonogatari: the living dragon|2026": {
+    "url": "",
+    "title_en": "Yumemonogatari: The living Dragon",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "desolación|2025": {
+    "url": "",
+    "title_en": "Desolación",
+    "director": "Juan Ever Ortiz",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 15,
+    "genre": "Terror, Drama",
+    "original_title": "Desolación"
+  },
+  "the silence of the dead|2026": {
+    "url": "",
+    "title_en": "The Silence of the Dead",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "las bestias se aproximan|2026": {
+    "url": "",
+    "title_en": "Las bestias se aproximan",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "las fuerzas extrañas|2026": {
+    "url": "https://letterboxd.com/film/las-fuerzas-extranas/",
+    "title_en": "The Strange Forces",
+    "director": "Santiago Charriere",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 18,
+    "genre": "",
+    "original_title": "Las fuerzas extrañas"
+  },
+  "après le feu|2026": {
+    "url": "",
+    "title_en": "Après le feu",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fin de semana sangriento: bloque 6": {
+    "url": "",
+    "title_en": "Fin de semana sangriento: bloque 6",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Long Weekend (1978)",
+    "fecha": "2026-11-17",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "jinx|2026": {
+    "url": "https://letterboxd.com/film/jinx-2026-1/",
+    "title_en": "JINX",
+    "director": "Richard Oakes",
+    "country": "",
+    "year": 2026,
+    "duration": 90,
+    "genre": "Familiar, Terror",
+    "original_title": "JINX"
+  },
+  "sender|2026": {
+    "url": "https://letterboxd.com/film/sender-2026/",
+    "title_en": "Sender",
+    "director": "Russell Goldman",
+    "country": "USA",
+    "year": 2026,
+    "duration": 94,
+    "genre": "Misterio, Thriller",
+    "original_title": "Sender"
+  },
+  "almuerzo de cuervos|2025": {
+    "url": "https://letterboxd.com/film/almuerzo-de-cuervos/",
+    "title_en": "Almuerzo de cuervos",
+    "director": "Lucas Delgado",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": "",
+    "original_title": "Almuerzo de cuervos"
+  },
+  "altera partem|2026": {
+    "url": "https://letterboxd.com/film/altera-partem/",
+    "title_en": "Altera Partem",
+    "director": "Simon Doutreleau",
+    "country": "France",
+    "year": 2026,
+    "duration": 25,
+    "genre": "Terror, Misterio",
+    "original_title": "Altera Partem"
+  },
+  "audition after dark|2026": {
+    "url": "",
+    "title_en": "Audition After Dark",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tormentas|2026": {
+    "url": "",
+    "title_en": "Tormentas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "un tipo en el parque|2026": {
+    "url": "",
+    "title_en": "Un tipo en el parque",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "yo te amo|2026": {
+    "url": "",
+    "title_en": "Yo te amo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "oddities|2026": {
+    "url": "https://letterboxd.com/film/oddities-2026/",
+    "title_en": "Oddities",
+    "director": "Tyler Savage",
+    "country": "USA, Canada",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Thriller, Terror",
+    "original_title": "Oddities"
+  },
+  "o|2026": {
+    "url": "",
+    "title_en": "O",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "hoarder|2026": {
+    "url": "https://letterboxd.com/film/the-hoarder-2026/",
+    "title_en": "The Hoarder",
+    "director": "James Owen",
+    "country": "UK",
+    "year": 2026,
+    "duration": 90,
+    "genre": "Terror",
+    "original_title": "The Hoarder"
+  },
+  "of men and monsters|2026": {
+    "url": "https://letterboxd.com/film/of-men-and-monsters/",
+    "title_en": "Of Men and Monsters",
+    "director": "Bautista Caillet-Bois",
+    "country": "",
+    "year": 2026,
+    "duration": 20,
+    "genre": "Western, Drama",
+    "original_title": "Of Men and Monsters"
+  },
+  "la nena|2026": {
+    "url": "",
+    "title_en": "La nena",
+    "director": "Josefina Lens",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 14,
+    "original_title": "La Nena"
+  },
+  "los que se van|2026": {
+    "url": "",
+    "title_en": "Los que se van",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "huasi|2025": {
+    "url": "https://letterboxd.com/film/huasi/",
+    "title_en": "Huasi",
+    "director": "Juan Sebastian Torales",
+    "country": "",
+    "year": 2025,
+    "duration": 16,
+    "genre": "",
+    "original_title": "Huasi"
+  },
+  "sueño hondo|2025": {
+    "url": "",
+    "title_en": "Sueño hondo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "gran hotel prado|2025": {
+    "url": "",
+    "title_en": "Gran Hotel Prado",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el esquilador|2026": {
+    "url": "https://letterboxd.com/film/el-esquilador/",
+    "title_en": "The Shearer",
+    "director": "Paloma Zaremba, Martín López Abad",
+    "country": "",
+    "year": 2026,
+    "duration": 5,
+    "genre": "",
+    "original_title": "El esquilador"
+  },
+  "ithaqua|2026": {
+    "url": "https://letterboxd.com/film/ithaqua/",
+    "title_en": "Ithaqua",
+    "director": "Casey Walker",
+    "country": "UK, Canada",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Acción, Historia",
+    "original_title": "Ithaqua"
+  },
+  "compost|2026": {
+    "url": "https://letterboxd.com/film/compost-2026/",
+    "title_en": "Compost",
+    "director": "Jennifer Lumbroso",
+    "country": "",
+    "year": 2026,
+    "duration": 18,
+    "genre": "Misterio, Terror",
+    "original_title": "Compost"
+  },
+  "gimme|2026": {
+    "url": "https://letterboxd.com/film/gimme-2025/",
+    "title_en": "Gimme",
+    "director": "Steven Schloss",
+    "country": "",
+    "year": 2025,
+    "duration": 14,
+    "genre": "Fantasía, Terror",
+    "original_title": "Gimme"
+  },
+  "lo que nos une|2026": {
+    "url": "",
+    "title_en": "Lo que nos une",
+    "director": "Juliana Savioli",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 25,
+    "original_title": "Lo que nos une"
+  },
+  "las ratas|2025": {
+    "url": "https://letterboxd.com/film/las-ratas/",
+    "title_en": "Las Ratas",
+    "director": "Christian Peyrano",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 17,
+    "genre": "Terror, Drama",
+    "original_title": "The Rats"
+  },
+  "utemecatla|2026": {
+    "url": "",
+    "title_en": "Utemecatla",
+    "director": "Izrael Moreno",
+    "country": "Mexico",
+    "year": 2026,
+    "duration": null,
+    "original_title": "Utemecatla"
+  },
+  "terrifier 2|2022": {
+    "url": "https://letterboxd.com/film/terrifier-2/",
+    "title_en": "Terrifier 2",
+    "director": "Damien Leone",
+    "country": "USA",
+    "year": 2022,
+    "duration": 138,
+    "genre": "Terror",
+    "title_es": "Terrifier 2: El Payaso Siniestro",
+    "original_title": "Terrifier 2"
+  },
+  "gorgonia|2026": {
+    "url": "https://letterboxd.com/film/gorgonia/",
+    "title_en": "Gorgonia",
+    "director": "Ramón Poveda Arriati",
+    "country": "Chile, Argentina",
+    "year": 2026,
+    "duration": 80,
+    "genre": "",
+    "original_title": "Gorgonia"
+  },
+  "el confesor del crimen|2026": {
+    "url": "https://letterboxd.com/film/el-confesor-del-crimen/",
+    "title_en": "El confesor del crimen",
+    "director": "Lucas Perez Pernich",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 66,
+    "genre": "Comedia, Crimen",
+    "original_title": "El confesor del crimen"
+  },
+  "no way down|2026": {
+    "url": "https://letterboxd.com/film/kraken-2026-1/",
+    "title_en": "Kraken",
+    "director": "Théo Jourdain Rhodes, Mohamed Chabane",
+    "country": "France",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Terror",
+    "original_title": "Kraken"
+  },
+  "seek ii. the unsung scar|2026": {
+    "url": "https://letterboxd.com/film/seek-ii/",
+    "title_en": "SEEK II",
+    "director": "Shane Kosugi",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "genre": ""
+  },
+  "explosión|2025": {
+    "url": "",
+    "title_en": "Explosión",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "apestor|2026": {
+    "url": "https://letterboxd.com/film/apestor/",
+    "title_en": "APESTOR",
+    "director": "Facundo Schlegel",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 16,
+    "genre": "Terror",
+    "original_title": "APESTOR"
+  },
+  "inspiración|2026": {
+    "url": "",
+    "title_en": "Inspiración",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "persecuta|2025": {
+    "url": "",
+    "title_en": "Persecuta",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "doble filo|2025": {
+    "url": "",
+    "title_en": "Doble filo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el acechador nocturno|2025": {
+    "url": "https://letterboxd.com/film/el-acechador-nocturno/",
+    "title_en": "The Night Stalker",
+    "director": "Luciano Paladino",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 10,
+    "genre": "Terror",
+    "original_title": "El Acechador Nocturno"
+  },
+  "mata al 9009|2026": {
+    "url": "https://letterboxd.com/film/mata-al-9009/",
+    "title_en": "MATÁ al 9009",
+    "director": "Joaquín Calvo",
+    "country": "",
+    "year": 2026,
+    "duration": 8,
+    "genre": "Thriller",
+    "original_title": "MATÁ al 9009"
+  },
+  "juana|2026": {
+    "url": "",
+    "title_en": "Juana",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "amor post mortem|2026": {
+    "url": "https://letterboxd.com/film/amor-post-mortem/",
+    "title_en": "Amor Post Mortem",
+    "director": "Lucas Tortoriello",
+    "country": "",
+    "year": 2026,
+    "duration": 5,
+    "genre": "",
+    "original_title": "Amor Post Mortem"
+  },
+  "sin invitación|2026": {
+    "url": "https://letterboxd.com/film/sin-invitacion/",
+    "title_en": "Sin Invitación",
+    "director": "Mariano Mosquera",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 2,
+    "genre": "Comedia, Terror",
+    "original_title": "Sin Invitación"
+  },
+  "bruleferum|2026": {
+    "url": "https://letterboxd.com/film/bruleferum/",
+    "title_en": "Bruleferum",
+    "director": "Martín De La Cruz",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 115,
+    "genre": "Terror",
+    "original_title": "Bruleferum"
+  },
+  "el criadero|2026": {
+    "url": "https://letterboxd.com/film/breeder-2026-1/",
+    "title_en": "Breeder",
+    "director": "Alex Goyette",
+    "country": "USA",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Thriller, Terror",
+    "original_title": "Breeder"
+  },
+  "el vampiro negro|1953": {
+    "url": "https://letterboxd.com/film/the-black-vampire/",
+    "title_en": "The Black Vampire",
+    "director": "Román Viñoly Barreto",
+    "country": "Argentina",
+    "year": 1953,
+    "duration": 90,
+    "genre": "Thriller, Drama",
+    "original_title": "El vampiro negro"
+  },
+  "11|2026": {
+    "url": "https://letterboxd.com/film/11-2026-3/",
+    "title_en": "11",
+    "director": "Paula Serra, Clàudia Serra",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 89,
+    "genre": "Terror, Thriller",
+    "original_title": "11"
+  },
+  "el incidente alfa|1978": {
+    "url": "https://letterboxd.com/film/the-alpha-incident/",
+    "title_en": "The Alpha Incident",
+    "director": "Bill Rebane",
+    "country": "USA",
+    "year": 1978,
+    "duration": 95,
+    "genre": "Terror, Ciencia ficción"
+  },
+  "la tranquera|2026": {
+    "url": "https://letterboxd.com/film/la-tranquera/",
+    "title_en": "La Tranquera",
+    "director": "Segundo Chorén",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 21,
+    "genre": "Comedia, Terror",
+    "original_title": "La Tranquera"
+  },
+  "la solapa|2025": {
+    "url": "",
+    "title_en": "La solapa",
+    "director": "Abril Ansaldi",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": null,
+    "original_title": "La solapa"
+  },
+  "luz mala|2026": {
+    "url": "",
+    "title_en": "Luz mala",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "no todo lo que brilla|2025": {
+    "url": "https://letterboxd.com/film/no-todo-lo-que-brilla/",
+    "title_en": "No Todo lo que Brilla",
+    "director": "Santiago Bárcena",
+    "country": "",
+    "year": 2026,
+    "duration": 18,
+    "genre": "Fantasía",
+    "original_title": "No Todo lo que Brilla"
+  },
+  "moviedreams|2026": {
+    "url": "https://letterboxd.com/film/moviedreams/",
+    "title_en": "Moviedreams",
+    "director": "Horacio Maldonado, Axel Maldonado",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Acción, Ciencia ficción",
+    "original_title": "MOVIEDREAMS"
+  },
+  "hermanos de sangre|2012": {
+    "url": "https://letterboxd.com/film/blood-brothers-2013/",
+    "title_en": "Blood Brothers",
+    "director": "Daniel de la Vega",
+    "country": "Argentina",
+    "year": 2013,
+    "duration": 83,
+    "genre": "Thriller, Drama",
+    "original_title": "Hermanos de sangre"
+  },
+  "el terror de los otros|2026": {
+    "url": "https://letterboxd.com/film/imposters/",
+    "title_en": "Imposters",
+    "director": "Caleb J. Phillips",
+    "country": "USA",
+    "year": 2026,
+    "duration": 102,
+    "genre": "Drama, Terror",
+    "original_title": "Imposters"
+  },
+  "2 locos en la mansión del terror|2026": {
+    "url": "https://letterboxd.com/film/2-locos-en-la-mansion-del-terror/",
+    "title_en": "2 locos en la mansión del terror",
+    "director": "Pablo Marini, Matías Lojo",
+    "country": "",
+    "year": null,
+    "duration": 85,
+    "genre": "",
+    "original_title": "2 locos en la mansión del terror"
+  },
+  "bonded|2026": {
+    "url": "https://letterboxd.com/film/bonded-2026/",
+    "title_en": "Bonded",
+    "director": "John Mathis",
+    "country": "",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Terror, Thriller",
+    "original_title": "Bonded"
+  },
+  "muestra federal de cine de terror": {
+    "url": "",
+    "title_en": "Muestra Federal de Cine de Terror",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "torkins: el templo|2026": {
+    "url": "",
+    "title_en": "Torkins: El templo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "synodos-reunión|2026": {
+    "url": "",
+    "title_en": "Synodos-reunión",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "duelo|2025": {
+    "url": "https://letterboxd.com/film/duelo-2025/",
+    "title_en": "Duelo",
+    "director": "Sebastián Barnes",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 11,
+    "genre": "Animación, Ciencia ficción",
+    "original_title": "Duelo"
+  },
+  "hatker|2025": {
+    "url": "https://letterboxd.com/film/hatker/",
+    "title_en": "Hatker",
+    "director": "Alejandro Ariel Martin",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 8,
+    "genre": "Animación",
+    "original_title": "Hatker"
+  },
+  "canal 2: tanda magnolia|2026": {
+    "url": "",
+    "title_en": "Canal 2: Tanda Magnolia",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "a pique|2026": {
+    "url": "https://letterboxd.com/film/a-pique/",
+    "title_en": "A pique",
+    "director": "Milagros Rocha, Natán Silvestre",
+    "country": "Argentina",
+    "year": null,
+    "duration": 6,
+    "genre": "Animación, Fantasía",
+    "original_title": "A pique"
+  },
+  "oaz-i|2026": {
+    "url": "",
+    "title_en": "OAZ-I",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "criaturas del paraná|2025": {
+    "url": "",
+    "title_en": "Criaturas del Paraná",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "no dejes de leer|2025": {
+    "url": "https://letterboxd.com/film/no-dejes-de-leer/",
+    "title_en": "No dejes de leer",
+    "director": "Leo Rodríguez",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 83,
+    "genre": "Terror",
+    "original_title": "No dejes de leer"
+  },
+  "venganza sangrienta|2026": {
+    "url": "https://letterboxd.com/film/ghost-in-the-cell/",
+    "title_en": "Ghost in the Cell",
+    "director": "Joko Anwar",
+    "country": "Indonesia, South Korea",
+    "year": 2026,
+    "duration": 106,
+    "genre": "Terror, Comedia",
+    "title_es": "Ghost in the Cell",
+    "original_title": "Ghost in the Cell"
+  },
+  "muere, monstruo, muere|1965": {
+    "url": "https://letterboxd.com/film/die-monster-die/",
+    "title_en": "Die, Monster, Die!",
+    "director": "Daniel Haller",
+    "country": "UK, USA",
+    "year": 1965,
+    "duration": 80,
+    "genre": "Ciencia ficción, Terror",
+    "title_es": "El monstruo del terror",
+    "original_title": "Die, Monster, Die!"
+  },
+  "upiro|2026": {
+    "url": "https://letterboxd.com/film/upiro/",
+    "title_en": "Upiro",
+    "director": "Oscar Martín",
+    "country": "Spain, Belgium",
+    "year": 2026,
+    "duration": null,
+    "genre": "Terror, Thriller",
+    "original_title": "Upiro"
+  },
+  "victorian psycho|2026": {
+    "url": "https://letterboxd.com/film/victorian-psycho/",
+    "title_en": "Victorian Psycho",
+    "director": "Zachary Wigon",
+    "country": "USA, UK",
+    "year": 2026,
+    "duration": 102,
+    "genre": "Terror, Thriller",
+    "title_es": "La Psicópata",
+    "original_title": "Victorian Psycho"
+  },
+  "la tierra que el tiempo olvidó|1975": {
+    "url": "https://letterboxd.com/film/the-people-that-time-forgot/",
+    "title_en": "The People That Time Forgot",
+    "director": "Kevin Connor",
+    "country": "UK, USA",
+    "year": 1977,
+    "duration": 90,
+    "genre": "Aventura, Ciencia ficción"
+  },
+  "yo no moriré de amor": {
+    "url": "https://letterboxd.com/film/yo-no-morire-de-amor/",
+    "title_en": "I Won't Die for Love",
+    "director": "Marta Matute",
+    "country": "Spain, Belgium",
+    "year": 2026,
+    "duration": 94,
+    "genre": "Drama",
+    "original_title": "Yo no moriré de amor"
+  },
+  "5 minutos más": {
+    "url": "https://letterboxd.com/film/5-more-minutes-2026/",
+    "title_en": "5 More Minutes",
+    "director": "Javier Ruiz Caldera",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Fantasía, Comedia",
+    "original_title": "Cinco minutos más"
+  },
+  "iván & hadoum": {
+    "url": "https://letterboxd.com/film/ivan-hadoum/",
+    "title_en": "Iván & Hadoum",
+    "director": "Ian de la Rosa",
+    "country": "Spain, Germany",
+    "year": 2026,
+    "duration": 100,
+    "genre": "Drama, Romance",
+    "original_title": "Iván & Hadoum"
+  },
+  "la asistente de la morgue": {
+    "url": "https://letterboxd.com/film/the-mortuary-assistant/",
+    "title_en": "The Mortuary Assistant",
+    "director": "Jeremiah Kipp",
+    "country": "USA, UK",
+    "year": 2026,
+    "duration": 91,
+    "genre": "Misterio, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "La asistente de la morgue",
+    "original_title": "The Mortuary Assistant",
+    "sin_hints": "título"
+  },
+  "minotauro": {
+    "url": "https://letterboxd.com/film/minotaur-2026/",
+    "title_en": "Minotaur",
+    "director": "Andrey Zvyagintsev",
+    "country": "France, Latvia",
+    "year": 2026,
+    "duration": 142,
+    "genre": "Crimen, Thriller",
+    "clase_titulo": "exacto",
+    "sin_hints": "título y duración"
+  },
+  "recen por mi: la historia de francisco": {
+    "url": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
+    "title_en": "Pray for me: Pope Francis' story",
+    "director": "Facundo Bartucci",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 110,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Recen por mí: la historia de Francisco",
+    "sin_hints": "título"
+  },
+  "ceremonia de apertura + proyección 'el dependiente'|1969": {
+    "url": "",
+    "title_en": "CEREMONIA DE APERTURA + PROYECCIÓN 'EL DEPENDIENTE'",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "drácula|1931": {
+    "url": "https://letterboxd.com/film/dracula/",
+    "title_en": "Dracula",
+    "director": "Tod Browning",
+    "country": "USA",
+    "year": 1931,
+    "duration": 74,
+    "genre": "Terror",
+    "title_es": "Drácula",
+    "original_title": "Dracula"
   }
 }
