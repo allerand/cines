@@ -15,3 +15,6 @@ data/cron.log
 .idea/
 *.swp
 _site/
+
+# Salida intermedia del generador de piezas (lleva rutas de la máquina)
+posts/piezas/**/pieza.html

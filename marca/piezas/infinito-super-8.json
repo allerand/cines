@@ -1,0 +1,13 @@
+{
+  "formato": ["story", "feed"],
+  "festival": "infinito-super-8",
+  "slides": [
+    {"tipo": "centrada",
+     "mini": "nuevos festivales en la web",
+     "antetitulo": "ya está la cartelera del",
+     "titular": "infinito super 8",
+     "lineas": ["del 22 al 29 de noviembre",
+                "universidad del cine, la tomada, casa del bicentenario y museo del cine",
+                "entrada gratis"]}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "formato": ["story", "feed"],
+  "fecha": "2026-11-20",
+  "rotulo": "si te digo",
+  "bajada": "cartelera de cines",
+  "slides": [
+    {"tipo": "frase",
+     "texto": "todas las funciones de *hoy* en buenos aires, en una sola página",
+     "nota": "de las salas comerciales a los cineclubes"}
+  ]
+}

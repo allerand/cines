@@ -432,6 +432,64 @@ def post_stories(date_str: str, user_id: str, token: str, base: str,
 
 
 # ---------------------------------------------------------------------------
+# Piezas sueltas (anuncios hechos con scripts/pieza.py)
+# ---------------------------------------------------------------------------
+
+def post_pedido(pedido_path: str, user_id: str, token: str, base: str,
+                dry_run: bool = False) -> Resultado:
+    """Publica como stories las PNG que lista un pedido de posts/piezas/pedidos/.
+
+        {"stories": ["posts/piezas/rojo-sangre/story/slide-1.png", ...]}
+
+    Acá no hay chequeo contra la Graph API —no hay forma de saber si una story
+    viva es esta pieza—: lo que evita el duplicado es el lock por pedido que
+    toma post-pieza.yml antes de llamar, y la marca `.posteado` que deja después.
+    """
+    pedido = json.loads(Path(pedido_path).read_text(encoding="utf-8"))
+    rutas = pedido.get("stories") or []
+    if not rutas:
+        print(f"  ✗ pedido sin stories: {pedido_path}", file=sys.stderr)
+        return Resultado()
+    for r in rutas:
+        p = (HERE / r).resolve()
+        dentro = (HERE / "posts" / "piezas").resolve() in p.parents
+        if not (dentro and p.suffix == ".png" and p.is_file()):
+            # Antes de publicar nada: un pedido con una ruta mala no sale a medias.
+            raise RuntimeError(f"pedido: {r!r} no es una PNG de posts/piezas/")
+    if len(rutas) > MAX_STORIES_PER_RUN:
+        raise RuntimeError(f"pedido: {len(rutas)} stories, el tope es {MAX_STORIES_PER_RUN}")
+
+    print(f"\n=== PIEZAS ({len(rutas)} stories) — {pedido_path} ===")
+    if dry_run:
+        for r in rutas:
+            print(f"  - {base}/{r}")
+        return Resultado()
+
+    import random
+    publicadas = 0
+    fallidas = 0
+    for i, r in enumerate(rutas):
+        print(f"  → story {r}")
+        try:
+            pub_id = _publish_story(user_id, token, f"{base}/{r}")
+            publicadas += 1
+            print(f"    ✓ id {pub_id}")
+        except Exception as e:
+            fallidas += 1
+            print(f"    ✗ falló {r}: {e}", file=sys.stderr)
+            if "2207006" in str(e):
+                fallidas += len(rutas) - i - 1
+                break
+        if i < len(rutas) - 1:
+            wait_s = random.randint(45, 75)
+            print(f"    ⏳ {wait_s}s hasta la próxima")
+            time.sleep(wait_s)
+    print(f"  ✅ {publicadas}/{len(rutas)} stories posteadas"
+          + (f" ({fallidas} fallaron)" if fallidas else ""))
+    return Resultado(publicados=publicadas, fallidos=fallidas)
+
+
+# ---------------------------------------------------------------------------
 # CLI
 # ---------------------------------------------------------------------------
 
@@ -461,6 +519,9 @@ def main():
     parser.add_argument("--stories-only", action="store_true")
     parser.add_argument("--dry-run", action="store_true",
                         help="No postea — solo loguea")
+    parser.add_argument("--pedido", default="",
+                        help="posts/piezas/pedidos/<nombre>.json — publica SOLO "
+                             "las stories de ese pedido (piezas de scripts/pieza.py)")
     parser.add_argument("--force", action="store_true",
                         help="Postea aunque Instagram ya tenga publicado lo del "
                              "día. Es el único modo de duplicar a propósito.")
@@ -479,6 +540,14 @@ def main():
         if missing:
             print(f"⚠️  faltan env vars: {', '.join(missing)}", file=sys.stderr)
             sys.exit(2)
+
+    if args.pedido:
+        try:
+            total = post_pedido(args.pedido, user_id, token, base, dry_run=args.dry_run)
+        except Exception as e:
+            print(f"\n❌ error: {e}", file=sys.stderr)
+            sys.exit(_codigo_de_salida(Resultado(), [e], args.dry_run))
+        sys.exit(_codigo_de_salida(total, [], args.dry_run))
 
     # Modo semanal: posteo SOLO feed carousel desde posts/<fecha>_week/portrait/
     if args.week_start:

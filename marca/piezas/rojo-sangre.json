@@ -1,0 +1,11 @@
+{
+  "formato": ["story", "feed"],
+  "festival": "rojo-sangre",
+  "slides": [
+    {"tipo": "centrada",
+     "mini": "nuevos festivales en la web",
+     "antetitulo": "ya está la cartelera del",
+     "titular": "buenos aires rojo sangre",
+     "lineas": ["del 19 al 29 de noviembre", "atlas caballito"]}
+  ]
+}

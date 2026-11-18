@@ -1,0 +1,14 @@
+{
+  "formato": ["story", "feed"],
+  "fecha": "2026-11-21",
+  "rotulo": "esta semana",
+  "bajada": "cinco salas nuevas",
+  "slides": [
+    {"tipo": "lista", "items": [
+      {"clave": "01", "etiqueta": "Club Lucero", "titulo": "club lucero", "secundario": "colegiales", "nota": "cineclub, jueves a domingo"},
+      {"clave": "02", "etiqueta": "Helios", "titulo": "cineclub helios", "secundario": "palomar", "nota": "programación mensual"},
+      {"clave": "03", "etiqueta": "Cinema Club", "titulo": "cinema club", "secundario": "villa crespo", "nota": "funciones con entrada anticipada"},
+      {"clave": "04", "etiqueta": "CEA", "sala": "cea", "titulo": "centro de estudios audiovisuales", "secundario": "san telmo", "nota": "entrada con reserva"}
+    ]}
+  ]
+}

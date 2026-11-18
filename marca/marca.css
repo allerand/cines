@@ -1,0 +1,217 @@
+/* Si te digo: sistema de piezas para Instagram.
+   Fuente de verdad de medidas, tipos y colores. El manual (MANUAL.md) explica
+   las reglas; acá están los números. Los valores de la cartelera diaria
+   (instagram.html) son los mismos: si se toca uno, se toca el otro.
+
+   Todo está en px sobre un lienzo de 1080 de ancho. Cada medida tiene dos
+   valores: story (1080x1920) y feed (1080x1350). No hay otros formatos. */
+
+@font-face { font-family: "Sitedigo"; font-weight: 400; font-style: normal;
+  src: url("fonts/DejaVuSans.ttf") format("truetype"), local("DejaVu Sans"), local("Verdana"); }
+@font-face { font-family: "Sitedigo"; font-weight: 700; font-style: normal;
+  src: url("fonts/DejaVuSans-Bold.ttf") format("truetype"), local("DejaVu Sans Bold"), local("Verdana Bold"); }
+@font-face { font-family: "Sitedigo"; font-weight: 400; font-style: italic;
+  src: url("fonts/DejaVuSans-Oblique.ttf") format("truetype"), local("DejaVu Sans Oblique"), local("Verdana Italic"); }
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Neutros: los de la web */
+  --bg:     #0a0a0a;
+  --border: #2a2a2a;
+  --text:   #e0e0e0;
+  --muted:  #666;
+  /* Acento: el del día de publicación. Lo pone el generador. */
+  --accent: #b79a58;
+  --font: "Sitedigo", "DejaVu Sans", Verdana, sans-serif;
+}
+
+html, body { background: var(--bg); }
+
+/* ── Lienzo ─────────────────────────────────────────────── */
+.pieza {
+  width: 1080px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.pieza.story {
+  height: 1920px; padding: 130px 90px 100px;
+  --rotulo: 64px;  --bajada: 56px;
+  --frase: 80px;   --titular: 56px;  --cuerpo: 40px;
+  --secundario: 28px; --nota: 22px;  --etiqueta: 18px; --pie: 20px;
+  --clave: 52px;   --clave-col: 160px; --clave-gap: 32px; --clave-baja: 30px;
+  --cab-abajo: 36px; --cab-margen: 34px;
+  --bloque: 40px;  --fila: 30px;  --interno: 10px;
+  --pie-arriba: 22px;
+  --etq-pad: 4px 11px;
+}
+.pieza.feed {
+  height: 1350px; padding: 80px 70px 70px;
+  --rotulo: 56px;  --bajada: 48px;
+  --frase: 72px;   --titular: 48px;  --cuerpo: 32px;
+  --secundario: 22px; --nota: 16px;  --etiqueta: 14px; --pie: 16px;
+  --clave: 44px;   --clave-col: 130px; --clave-gap: 22px; --clave-baja: 28px;
+  --cab-abajo: 32px; --cab-margen: 24px;
+  --bloque: 32px;  --fila: 20px;  --interno: 8px;
+  --pie-arriba: 18px;
+  --etq-pad: 3px 9px;
+}
+
+/* ── Cabecera: rótulo en mayúsculas, bajada en el acento, raya ── */
+.cab {
+  display: flex; flex-direction: column; gap: 8px;
+  padding-bottom: var(--cab-abajo);
+  border-bottom: 2px solid var(--accent);
+  margin-bottom: var(--cab-margen);
+}
+.rotulo {
+  font-size: var(--rotulo); font-weight: 700; line-height: 1;
+  letter-spacing: -0.02em; text-transform: uppercase;
+}
+.bajada {
+  font-size: var(--bajada); font-weight: 700; line-height: 1.05;
+  letter-spacing: -0.01em; color: var(--accent);
+  text-transform: lowercase; margin-top: 6px;
+}
+
+/* ── Cuerpo: siempre arriba y a la izquierda; el aire queda abajo ── */
+.cuerpo {
+  flex: 1; min-height: 0; overflow: hidden;
+  display: flex; flex-direction: column;
+  padding-top: var(--fila);
+  gap: var(--bloque);
+  text-transform: lowercase;
+}
+.frase {
+  font-size: var(--frase); font-weight: 700; line-height: 1.08;
+  letter-spacing: -0.02em; text-wrap: balance;
+}
+.titular {
+  font-size: var(--titular); font-weight: 700; line-height: 1.1;
+  letter-spacing: -0.01em; text-wrap: balance;
+}
+.parrafo {
+  font-size: var(--cuerpo); font-weight: 400; line-height: 1.3;
+  letter-spacing: -0.005em; text-wrap: pretty;
+}
+.secundario {
+  font-size: var(--secundario); line-height: 1.3; opacity: 0.85;
+}
+.nota {
+  font-size: var(--nota); line-height: 1.4; color: var(--muted);
+}
+.frase em, .titular em, .parrafo em { font-style: normal; color: var(--accent); }
+
+/* ── Lista: la misma fila que la cartelera ── */
+.cuerpo.lista { gap: 0; padding-top: 0; }
+.fila {
+  display: grid;
+  grid-template-columns: var(--clave-col) 1fr;
+  gap: var(--clave-gap);
+  padding: var(--fila) 0;
+  border-bottom: 1px solid var(--border);
+  align-items: start;
+}
+.fila:last-child { border-bottom: none; }
+.fila.sin-clave { grid-template-columns: 1fr; }
+.clave {
+  font-size: var(--clave); font-weight: 700; line-height: 1;
+  font-variant-numeric: tabular-nums;
+  padding-top: var(--clave-baja);
+}
+.fila.sin-etiqueta .clave { padding-top: 0; }
+.fila-cuerpo { display: flex; flex-direction: column; gap: var(--interno); min-width: 0; }
+.fila-titulo { font-size: var(--cuerpo); font-weight: 500; line-height: 1.1; letter-spacing: -0.005em; }
+
+.etiqueta {
+  display: inline-block; width: fit-content;
+  font-size: var(--etiqueta); padding: var(--etq-pad);
+  border: 1px solid var(--border); border-radius: 3px;
+  color: var(--muted); font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.06em;
+}
+/* Colores de sala: espejo de index.html (la web manda). */
+.cine-malba    { border-color: #2a3a4a; color: #6aaecc; }
+.cine-lugones  { border-color: #3a2a1a; color: #cc8844; }
+.cine-soffici  { border-color: #1c2740; color: #5f8fe0; }
+.cine-cacode   { border-color: #1a2a1a; color: #66bb66; }
+.cine-lorca    { border-color: #1a1a30; color: #7a88cc; }
+.cine-york     { border-color: #2a2a1a; color: #bbbb44; }
+.cine-munro    { border-color: #1a3a3a; color: #66bbbb; }
+.cine-lumiton  { border-color: #3a1a1a; color: #cc6666; }
+.cine-cosmos   { border-color: #3a3a1a; color: #ccbb44; }
+.cine-gaumont  { border-color: #2e1a20; color: #cc5580; }
+.cine-cck      { border-color: #2a2a3a; color: #8888cc; }
+.cine-arthaus  { border-color: #1f3a2f; color: #66cc99; }
+.cine-museo    { border-color: #3a2a1f; color: #d9a066; }
+.cine-ccr      { border-color: #2a1f2f; color: #b07acc; }
+.cine-amorina  { border-color: #3a1f2a; color: #cc6688; }
+.cine-cea      { border-color: #1f3a3a; color: #5fd0c0; }
+.cine-filo     { border-color: #2f2a3a; color: #9988cc; }
+.cine-bn       { border-color: #30331f; color: #b3c46a; }
+.cine-cc25     { border-color: #2d2640; color: #a585e0; }
+.cine-ccd      { border-color: #33231f; color: #d98a66; }
+.cine-cb       { border-color: #3a2433; color: #d976b0; }
+.cine-bcn      { border-color: #153331; color: #3fbfae; }
+.cine-borges   { border-color: #1f3340; color: #5fb0d0; }
+.cine-agn      { border-color: #3a2019; color: #e2764a; }
+.cine-lucida   { border-color: #2b2340; color: #9d8ae8; }
+.cine-moderno  { border-color: #3d1a17; color: #ee5a4f; }
+.cine-fadu     { border-color: #3a1f30; color: #e07ab8; }
+
+/* ── Pie: lugar a la izquierda, número y dirección a la derecha ── */
+.pie {
+  display: flex; justify-content: space-between; align-items: center;
+  padding-top: var(--pie-arriba); margin-top: var(--pie-arriba);
+  border-top: 1px solid var(--border);
+  color: var(--muted); font-size: var(--pie); letter-spacing: 0.02em;
+  text-transform: lowercase;
+}
+.pie .num { color: var(--text); font-weight: 500; font-variant-numeric: tabular-nums; }
+.pie .url { color: var(--accent); font-weight: 600; }
+
+/* ── Centrada: anuncios. Sin cabecera, sin rayas y sin color del día.
+      El logo va en el centro exacto del lienzo, el anuncio arriba y los
+      datos abajo. El único color es el del logo. ── */
+.pieza.story.centrada { --logo: 600px; --aire: 36px; --ante: 40px; --nombre: 72px; --dato: 40px; --dato2: 28px; --firma: 28px; }
+.pieza.feed.centrada  { --logo: 460px; --aire: 24px; --ante: 36px; --nombre: 64px; --dato: 36px; --dato2: 24px; --firma: 24px; }
+.pieza.centrada { position: relative; }
+.cuerpo.centro {
+  display: grid; grid-template-rows: 1fr auto 1fr; gap: var(--aire);
+  padding-top: 0; text-align: center; justify-items: center;
+}
+.centro .arriba { align-self: end; display: flex; flex-direction: column; gap: var(--interno); align-items: center; }
+.centro .abajo  { align-self: start; display: flex; flex-direction: column; gap: var(--interno); align-items: center; }
+.centro .logo { height: var(--logo); width: auto; display: block; mix-blend-mode: screen; }
+.centro .ante { font-size: var(--ante); line-height: 1.2; }
+.centro .nombre { font-size: var(--nombre); font-weight: 700; line-height: 1.05; letter-spacing: -0.02em; text-wrap: balance; }
+.centro .dato { font-size: var(--dato); line-height: 1.25; text-wrap: balance; }
+.centro .dato2 { font-size: var(--dato2); line-height: 1.3; color: var(--muted); text-wrap: balance; }
+.pieza.centrada .firma {
+  text-align: center; font-size: var(--firma); font-weight: 600;
+  letter-spacing: 0.02em; color: var(--text); text-transform: lowercase;
+}
+.pieza.centrada .firma .num { color: var(--muted); font-weight: 400; margin-right: 0.6em; font-variant-numeric: tabular-nums; }
+
+/* Logo de festival: el de data/festivales.json, en círculo como en la web. */
+.pieza.story.centrada { --logo-fest: 380px; --aire-fest: 70px; }
+.pieza.feed.centrada  { --logo-fest: 320px; --aire-fest: 50px; }
+.centro.con-fest { gap: var(--aire-fest); }
+.centro .logo.fest {
+  height: var(--logo-fest); width: var(--logo-fest);
+  border-radius: 50%; mix-blend-mode: normal;
+  box-shadow: 0 0 0 2px var(--border);
+}
+
+/* Mini título de la centrada: arriba de todo, espejo de sitedigo.com abajo.
+   Siempre ocupa su lugar (aunque esté vacío) para que el logo quede en el
+   centro exacto del lienzo. */
+.pieza.centrada .mini, .pieza.centrada .firma { line-height: 1.2; min-height: 1.2em; }
+.pieza.centrada .mini {
+  text-align: center; font-size: var(--firma); font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.08em; color: var(--text);
+}

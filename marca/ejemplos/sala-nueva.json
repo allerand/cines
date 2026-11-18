@@ -1,0 +1,13 @@
+{
+  "formato": ["story", "feed"],
+  "fecha": "2026-11-19",
+  "rotulo": "sala nueva",
+  "bajada": "club lucero",
+  "slides": [
+    {"tipo": "texto",
+     "titular": "desde hoy el club lucero está en la cartelera",
+     "parrafos": ["funciones de cineclub en colegiales, de jueves a domingo.",
+                  "los horarios se actualizan todos los días, igual que el resto de las salas."],
+     "nota": "buscalo en sitedigo.com con el grupo cineclubes prendido"}
+  ]
+}

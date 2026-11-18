@@ -1,0 +1,124 @@
+name: Post pieza to Instagram
+
+# Publica como stories las piezas sueltas (anuncios hechos con scripts/pieza.py
+# según marca/MANUAL.md). No es el posteo diario: eso es post-ig.yml.
+#
+# Se dispara solo al pushear un pedido a posts/piezas/pedidos/<nombre>.json:
+#
+#     {"stories": ["posts/piezas/<pieza>/story/slide-1.png", ...]}
+#
+# y publica cada pedido UNA vez. Dos candados, los dos fallando cerrado:
+#   1. El lock atómico en el tag `ig-posted/pieza/<nombre>`, tomado justo antes
+#      de publicar (mismo mecanismo que post-ig.yml).
+#   2. La marca `posts/piezas/pedidos/<nombre>.posteado`, que se commitea
+#      después. Un pedido con marca no se vuelve a mirar.
+# Para repetir una pieza a propósito se hace un pedido con otro nombre.
+#
+# NO publica si la cartelera de hoy todavía no salió. post_to_instagram.py, antes
+# del posteo diario, le pregunta a Instagram si la cuenta ya tiene stories de
+# hoy: una pieza publicada antes haría que la cartelera del día no saliera. Por
+# eso también corre cuando termina post-ig.yml: el pedido que quedó esperando
+# sale apenas sale la cartelera.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'posts/piezas/pedidos/*.json'
+  workflow_run:
+    workflows: ["Post to Instagram"]
+    types: [completed]
+  workflow_dispatch:
+
+concurrency:
+  group: post-pieza
+  cancel-in-progress: false
+
+permissions:
+  contents: write   # el tag del lock y la marca de cada pedido
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Publicar los pedidos pendientes
+        env:
+          IG_USER_ID:      ${{ secrets.IG_USER_ID }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          PUBLIC_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
+        run: |
+          shopt -s nullglob
+          pendientes=()
+          for f in posts/piezas/pedidos/*.json; do
+            [ -f "${f%.json}.posteado" ] || pendientes+=("$f")
+          done
+          if [ ${#pendientes[@]} -eq 0 ]; then
+            echo "✓ no hay pedidos pendientes"
+            exit 0
+          fi
+
+          hoy="$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
+          if [ ! -f "posts/$hoy/.posteado-stories-only" ]; then
+            echo "::warning::la cartelera de $hoy todavía no salió: ${#pendientes[@]} pedido(s) esperan a que termine post-ig.yml"
+            exit 0
+          fi
+
+          if [ -z "$IG_USER_ID" ] || [ -z "$IG_ACCESS_TOKEN" ]; then
+            echo "::error::faltan los secrets IG_USER_ID / IG_ACCESS_TOKEN"
+            exit 1
+          fi
+
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          falla=0
+          for f in "${pendientes[@]}"; do
+            nombre="$(basename "${f%.json}")"
+            if ! [[ "$nombre" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
+              echo "::error::pedido con nombre raro, no lo toco: $f"
+              falla=1
+              continue
+            fi
+            ref="refs/tags/ig-posted/pieza/$nombre"
+            claim=$(git commit-tree 'HEAD^{tree}' -p HEAD \
+                    -m "ig lock pieza $nombre — run ${{ github.run_id }}.${{ github.run_attempt }}")
+            if ! git push origin "$claim:$ref"; then
+              echo "⏭  $nombre: el lock ya está tomado (o no pude tomarlo) — no publico"
+              continue
+            fi
+            echo "🔒 lock tomado: $ref"
+
+            set +e
+            python3 scripts/post_to_instagram.py --pedido "$f"
+            rc=$?
+            set -e
+            case "$rc" in
+              0)
+                date -u +"%Y-%m-%dT%H:%M:%SZ" > "${f%.json}.posteado"
+                git add -f "${f%.json}.posteado"
+                git commit -m "posts: pieza $nombre posteada a Instagram"
+                git pull --rebase -X theirs origin main
+                git push origin main
+                echo "✅ $nombre publicado"
+                ;;
+              3)
+                echo "::warning::$nombre: no se publicó nada — suelto el lock"
+                git push origin ":$ref"
+                falla=1
+                ;;
+              *)
+                echo "::error::$nombre: falló DESPUÉS de publicar algo — el lock queda tomado, reintentar duplicaría"
+                falla=1
+                ;;
+            esac
+          done
+          exit $falla
