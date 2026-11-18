@@ -1663,8 +1663,27 @@ async function fetchStarCounts() {
     const res = await fetch(STAR_ENDPOINT + '?action=counts', { cache: 'no-store' });
     if (!res.ok) return;
     const data = await res.json();
-    starCounts = data.counts || {};
+    // Lo que se agendó mientras esto bajaba ya está sumado en pantalla: no se pisa.
+    starCounts = Object.assign(data.counts || {}, conteosDeEstaVisita);
   } catch (_) {}
+}
+
+// Los contadores vienen de un Apps Script que tarda entre 2 y 8 segundos. La
+// página no lo espera: muestra la cartelera apenas baja y, cuando llegan, los
+// pinta sobre la tabla que ya está en pantalla, sin volver a armarla.
+let filasEnPantalla = [];
+const conteosDeEstaVisita = {};
+function pintarConteos() {
+  document.querySelectorAll('#main .add-btn[data-row]').forEach(btn => {
+    const s = filasEnPantalla[parseInt(btn.dataset.row, 10)];
+    if (!s) return;
+    const count = starCounts[filmKey(s)] || 0;
+    const viejo = btn.querySelector('.add-count');
+    if (count > 0) {
+      if (viejo) viejo.textContent = count;
+      else btn.insertAdjacentHTML('beforeend', `<span class="add-count">${count}</span>`);
+    } else if (viejo) viejo.remove();
+  });
 }
 
 function setStarred(key, on) {
@@ -1914,7 +1933,9 @@ async function loadData() {
     if (hashEsDeFestivales()) {
       const guardada = ciudadGuardada();
       if (guardada) ciudad = guardada;
-      await Promise.all([fetchStarCounts(), registro]);
+      // El listado de festivales no muestra contadores: no hay nada que esperar.
+      fetchStarCounts().then(pintarConteos);
+      await registro;
       await mostrarFestivales();
       return;
     }
@@ -1922,9 +1943,10 @@ async function loadData() {
     // a bajar en paralelo con los contadores.
     let c = ciudadDelHash() || ciudadGuardada();
     if (c) cargarCartelera(c).catch(() => {});
-    // 1. Traer primero los contadores globales del backend de Google Sheets
-    // (con la detección de la ciudad, si hace falta, en paralelo).
-    const [, detectada] = await Promise.all([fetchStarCounts(), c ? null : detectarCiudad(), registro]);
+    // 1. Los contadores del backend de Google Sheets se piden ya, pero no se
+    // esperan: llegan después y se pintan sobre la tabla (pintarConteos).
+    fetchStarCounts().then(pintarConteos);
+    const [detectada] = await Promise.all([c ? null : detectarCiudad(), registro]);
     c = c || detectada;
     if (!c) {
       c = await preguntarCiudad();
@@ -2014,7 +2036,7 @@ function mostrarTabla(desdeHash) {
   // Ocultar el loader de la pantalla
   loading.classList.add('hidden');
 
-  // 3. Renderizar la tabla (ahora sí, con starCounts ya cargado en memoria)
+  // 3. Renderizar la tabla (los contadores, si todavía no llegaron, se pintan después)
   renderTable();
   updateHash();
   listo = true;
@@ -2691,6 +2713,7 @@ function renderTable() {
   if (searching) rows = rows.filter(s => coincideBusqueda(s, searchQuery));
 
   rows = searching ? sortByDateTime(rows) : sortRows(rows);
+  filasEnPantalla = rows;
 
   // Con una búsqueda puesta (escrita o por haber tocado un festival) arriba
   // de los resultados dice qué se busca y cómo salir: si no, la tabla
@@ -2821,6 +2844,7 @@ function renderTable() {
       setStarred(k, nowStarred);
       // Bump optimista del contador local — el server lo confirma al próximo load
       starCounts[k] = Math.max(0, (starCounts[k] || 0) + (nowStarred ? 1 : -1));
+      conteosDeEstaVisita[k] = starCounts[k];
       btn.classList.toggle('starred', nowStarred);
       const count = starCounts[k] || 0;
       const countHtml = count > 0 ? `<span class="add-count">${count}</span>` : '';
