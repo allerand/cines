@@ -75,6 +75,9 @@ function doPost(e) {
     if (action === "cine") {
       return _handleCine(params);
     }
+    if (action === "newsletter") {
+      return _handleNewsletter(params);
+    }
     return _handleSubscribe(params, e);
   } catch (err) {
     return _json({ ok: false, error: String(err) });
@@ -95,6 +98,44 @@ function _handleSubscribe(params, e) {
   const emails = new Set(data.slice(1).map(r => String(r[0] || "").trim().toLowerCase()));
   if (!emails.has(email)) {
     sheet.appendRow([email, new Date()]);
+  }
+  return _json({ ok: true });
+}
+
+// Los mails que se anotan en sitedigo.com/newsletter van a la hoja
+// "newsletter" (se crea sola la primera vez): timestamp, email, uid. Un mail
+// que ya está no se repite.
+const NEWSLETTER_HEADERS = ["timestamp", "email", "uid"];
+
+function _handleNewsletter(params) {
+  const email = String(params.email || "").trim().toLowerCase().slice(0, 200);
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    return _json({ ok: false, error: "invalid_email" });
+  }
+
+  // Dos altas a la vez no se pisan ni duplican el mail.
+  const lock = LockService.getScriptLock();
+  lock.waitLock(10000);
+  try {
+    const ss = SpreadsheetApp.getActiveSpreadsheet();
+    let sheet = ss.getSheetByName("newsletter");
+    if (!sheet) {
+      sheet = ss.insertSheet("newsletter");
+      sheet.appendRow(NEWSLETTER_HEADERS);
+      sheet.getRange(1, 1, 1, NEWSLETTER_HEADERS.length).setFontWeight("bold");
+      sheet.setFrozenRows(1);
+    }
+    const ultima = sheet.getLastRow();
+    const yaEstan = ultima > 1
+      ? sheet.getRange(2, 2, ultima - 1, 1).getValues().map(function (r) {
+          return String(r[0] || "").trim().toLowerCase();
+        })
+      : [];
+    if (yaEstan.indexOf(email) < 0) {
+      sheet.appendRow([new Date(), email, String(params.uid || "anon")]);
+    }
+  } finally {
+    lock.releaseLock();
   }
   return _json({ ok: true });
 }
@@ -247,6 +288,76 @@ function resumenBusquedas() {
   out.getRange(1, 1, 1, headers.length).setFontWeight("bold");
   out.setFrozenRows(1);
   Logger.log("Resumen actualizado: " + filas.length + " términos distintos.");
+}
+
+/**
+ * Arma la hoja "audiencia · resumen": cuántas personas distintas usaron la
+ * web cada semana, juntando las tres hojas que guardan el identificador
+ * anónimo (stars, busquedas y cines). Se corre a mano (elegir
+ * resumenAudiencia arriba y Ejecutar) o con un activador semanal.
+ *
+ * "Persona" es un navegador: alguien con celular y computadora cuenta dos
+ * veces, y quien borra los datos del sitio vuelve como nuevo. Sirve para
+ * comparar una semana con otra, no como cifra exacta. Sólo entra quien agendó,
+ * buscó o tocó una sala; el que miró y se fue no deja rastro.
+ */
+function resumenAudiencia() {
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  const tz = ss.getSpreadsheetTimeZone();
+  const FUENTES = [["stars", "agendaron"], ["busquedas", "buscaron"], ["cines", "tocaron una sala"]];
+  const semanas = {};   // lunes ISO → { todas: {uid}, por hoja: {uid}, acciones }
+
+  FUENTES.forEach(function (f) {
+    const hoja = ss.getSheetByName(f[0]);
+    if (!hoja || hoja.getLastRow() < 2) return;
+    const data = hoja.getDataRange().getValues();
+    const header = data[0].map(function (h) { return String(h).trim().toLowerCase(); });
+    const iTs = header.indexOf("timestamp");
+    const iUid = header.indexOf("uid");
+    if (iTs < 0 || iUid < 0) return;
+    for (let i = 1; i < data.length; i++) {
+      const ts = data[i][iTs];
+      const uid = String(data[i][iUid] || "").trim();
+      // Sin fecha, sin identificador o de prueba no cuenta como persona.
+      if (!(ts instanceof Date) || !uid || uid === "anon" || uid.indexOf("test") === 0) continue;
+      const lunes = _lunesDe(ts, tz);
+      if (!semanas[lunes]) semanas[lunes] = { todas: {}, acciones: 0 };
+      const sem = semanas[lunes];
+      if (!sem[f[0]]) sem[f[0]] = {};
+      sem.todas[uid] = 1;
+      sem[f[0]][uid] = 1;
+      sem.acciones++;
+    }
+  });
+
+  const headers = ["semana (lunes)", "personas"]
+    .concat(FUENTES.map(function (f) { return f[1]; }))
+    .concat(["acciones", "acciones por persona"]);
+  const filas = Object.keys(semanas).sort().reverse().map(function (lunes) {
+    const sem = semanas[lunes];
+    const personas = Object.keys(sem.todas).length;
+    return [lunes, personas]
+      .concat(FUENTES.map(function (f) { return Object.keys(sem[f[0]] || {}).length; }))
+      .concat([sem.acciones, Math.round(sem.acciones / personas * 10) / 10]);
+  });
+
+  let out = ss.getSheetByName("audiencia · resumen");
+  if (!out) out = ss.insertSheet("audiencia · resumen");
+  out.clear();
+  out.appendRow(headers);
+  if (filas.length) out.getRange(2, 1, filas.length, headers.length).setValues(filas);
+  out.getRange(1, 1, 1, headers.length).setFontWeight("bold");
+  out.setFrozenRows(1);
+  Logger.log("Audiencia actualizada: " + filas.length + " semanas.");
+}
+
+// El lunes de la semana de una fecha, como "2026-11-16", en la zona horaria
+// de la planilla.
+function _lunesDe(fecha, tz) {
+  const partes = Utilities.formatDate(fecha, tz, "yyyy-MM-dd").split("-");
+  const d = new Date(Date.UTC(Number(partes[0]), Number(partes[1]) - 1, Number(partes[2])));
+  d.setUTCDate(d.getUTCDate() - ((d.getUTCDay() + 6) % 7));
+  return d.toISOString().slice(0, 10);
 }
 
 function doGet(e) {
