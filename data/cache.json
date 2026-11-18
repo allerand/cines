@@ -29823,16 +29823,15 @@
     "sin_hints": "la más nueva que se llama así"
   },
   "perfume": {
-    "url": "",
+    "url": "https://letterboxd.com/film/perfume-2018/",
     "title_en": "Perfume",
-    "director": "",
-    "country": "",
-    "year": null,
+    "director": "Philipp Kadelbach",
+    "country": "Germany",
+    "year": 2018,
     "duration": null,
-    "sin_ficha": "varias se llaman así: Perfume (2001), Perfume: The Story of a Murderer (2006), Perfume (2018)",
-    "fecha": "2026-11-15",
-    "con_duracion": false,
-    "desempate": ""
+    "genre": "Crimen",
+    "clase_titulo": "exacto",
+    "sin_hints": "título"
   },
   "tu me abrasas|2024": {
     "url": "https://letterboxd.com/film/you-burn-me/",
@@ -38183,5 +38182,33 @@
     "clase_titulo": "exacto",
     "original_title": "Recen por mí: la historia de Francisco",
     "sin_hints": "título y duración"
+  },
+  "recuerdo tu nombre": {
+    "url": "https://letterboxd.com/film/recuerdo-tu-nombre/",
+    "title_en": "Recuerdo tu nombre",
+    "director": "Silvia Venegas Venegas",
+    "country": "",
+    "year": null,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "Recuerdo tu nombre"
+  },
+  "virginia woolfs, noche y dia|2026": {
+    "url": "",
+    "title_en": "VIRGINIA WOOLFS, NOCHE Y DIA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "virginia woolf: noche y día|2026": {
+    "url": "https://letterboxd.com/film/virginia-woolfs-night-day/",
+    "title_en": "Virginia Woolf's Night & Day",
+    "director": "Tina Gharavi",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Drama, Romance",
+    "clase_titulo": "distinto"
   }
 }

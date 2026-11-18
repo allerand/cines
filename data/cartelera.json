@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18T05:11:57",
+  "updated": "2026-11-18T13:12:47",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 18,
@@ -31,7 +31,8 @@
     },
     "CCK": {
       "scrapeadas": 0,
-      "publicadas": 9
+      "publicadas": 9,
+      "fuente_caida": "no se pudo leer palaciolibertad.gob.ar/cine/"
     },
     "CEA": {
       "scrapeadas": 3,
@@ -52,7 +53,8 @@
     },
     "Centro Cultural Borges": {
       "scrapeadas": 0,
-      "publicadas": 14
+      "publicadas": 14,
+      "fuente_caida": "la API no contesta; se publica el caché de la última corrida buena"
     },
     "Centro Cultural Munro": {
       "scrapeadas": 9,
@@ -120,16 +122,16 @@
       "publicadas": 420
     },
     "Cines Pixel": {
-      "scrapeadas": 120,
-      "publicadas": 120
+      "scrapeadas": 126,
+      "publicadas": 126
     },
     "Cinépolis Houssay": {
       "scrapeadas": 18,
       "publicadas": 18
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 45,
-      "publicadas": 45
+      "scrapeadas": 46,
+      "publicadas": 46
     },
     "Club Lucero": {
       "scrapeadas": 12,
@@ -168,8 +170,8 @@
       "publicadas": 28
     },
     "Multiplex Belgrano": {
-      "scrapeadas": 495,
-      "publicadas": 495
+      "scrapeadas": 499,
+      "publicadas": 499
     },
     "Multiplex Canning": {
       "scrapeadas": 378,
@@ -8335,6 +8337,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-18",
+      "hora": "22:45",
+      "title_es": "El corazón de la bestia",
+      "title_en": "Heart of the Beast",
+      "original_title": "Heart of the Beast",
+      "director": "David Ayer",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Aventura, Thriller",
+      "letterboxd": "https://letterboxd.com/film/heart-of-the-beast-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-18",
       "hora": "22:50",
@@ -10012,6 +10030,22 @@
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://multiplex.com.ar/peliculas/caballo-salvaje-nueve/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-19",
+      "hora": "15:00",
+      "title_es": "Perfume",
+      "title_en": "Perfume",
+      "original_title": "",
+      "director": "Philipp Kadelbach",
+      "country": "Alemania",
+      "year": 2018,
+      "duration": 95,
+      "genre": "Crimen",
+      "letterboxd": "https://letterboxd.com/film/perfume-2018/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=44",
       "ciclo": ""
     },
     {
@@ -12969,7 +13003,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -14553,7 +14587,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -16639,6 +16673,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-20",
+      "hora": "15:00",
+      "title_es": "Perfume",
+      "title_en": "Perfume",
+      "original_title": "",
+      "director": "Philipp Kadelbach",
+      "country": "Alemania",
+      "year": 2018,
+      "duration": 95,
+      "genre": "Crimen",
+      "letterboxd": "https://letterboxd.com/film/perfume-2018/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=44",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-11-20",
       "hora": "15:00",
@@ -17353,7 +17403,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/9c4179165d882c836339694f6438d5dd",
       "ciclo": ""
@@ -19465,7 +19515,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -21065,7 +21115,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -23215,6 +23265,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-21",
+      "hora": "15:00",
+      "title_es": "Perfume",
+      "title_en": "Perfume",
+      "original_title": "",
+      "director": "Philipp Kadelbach",
+      "country": "Alemania",
+      "year": 2018,
+      "duration": 95,
+      "genre": "Crimen",
+      "letterboxd": "https://letterboxd.com/film/perfume-2018/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=44",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-11-21",
       "hora": "15:00",
@@ -24041,7 +24107,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/9c4179165d882c836339694f6438d5dd",
       "ciclo": ""
@@ -26089,7 +26155,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -27641,7 +27707,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -30521,7 +30587,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/9c4179165d882c836339694f6438d5dd",
       "ciclo": ""
@@ -32585,7 +32651,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -34265,7 +34331,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -36335,6 +36401,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-23",
+      "hora": "15:00",
+      "title_es": "Perfume",
+      "title_en": "Perfume",
+      "original_title": "",
+      "director": "Philipp Kadelbach",
+      "country": "Alemania",
+      "year": 2018,
+      "duration": 95,
+      "genre": "Crimen",
+      "letterboxd": "https://letterboxd.com/film/perfume-2018/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=44",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-23",
       "hora": "15:10",
@@ -37017,7 +37099,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/9c4179165d882c836339694f6438d5dd",
       "ciclo": ""
@@ -39049,7 +39131,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -40585,7 +40667,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -42607,6 +42689,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-24",
+      "hora": "15:00",
+      "title_es": "Perfume",
+      "title_en": "Perfume",
+      "original_title": "",
+      "director": "Philipp Kadelbach",
+      "country": "Alemania",
+      "year": 2018,
+      "duration": 95,
+      "genre": "Crimen",
+      "letterboxd": "https://letterboxd.com/film/perfume-2018/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=44",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-11-24",
       "hora": "15:00",
@@ -43305,7 +43403,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/9c4179165d882c836339694f6438d5dd",
       "ciclo": ""
@@ -45177,7 +45275,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -46761,7 +46859,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -48751,6 +48849,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Pixel",
+      "fecha": "2026-11-25",
+      "hora": "15:00",
+      "title_es": "Perfume",
+      "title_en": "Perfume",
+      "original_title": "",
+      "director": "Philipp Kadelbach",
+      "country": "Alemania",
+      "year": 2018,
+      "duration": 95,
+      "genre": "Crimen",
+      "letterboxd": "https://letterboxd.com/film/perfume-2018/",
+      "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=44",
+      "ciclo": ""
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-11-25",
       "hora": "15:00",
@@ -49449,7 +49563,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/9c4179165d882c836339694f6438d5dd",
       "ciclo": ""
@@ -51561,7 +51675,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -53289,7 +53403,7 @@
       "country": "Alemania",
       "year": 2025,
       "duration": 148,
-      "genre": "Drama, Bélica",
+      "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
       "ticket_url": "https://multiplex.com.ar/peliculas/el-sonido-al-caer/",
       "ciclo": ""
@@ -54015,6 +54129,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-26",
+      "hora": "13:00",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-11-26",
       "hora": "15:00",
@@ -54061,6 +54191,22 @@
       "letterboxd": "https://letterboxd.com/film/kraken-1/",
       "ticket_url": "https://www.atlascines.com/pelicula/bars-no-way-down",
       "ciclo": "Buenos Aires Rojo Sangre - Novedades"
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-26",
+      "hora": "16:15",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
+      "ciclo": ""
     },
     {
       "cine": "Atlas Caballito",
@@ -54559,6 +54705,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-26",
+      "hora": "19:30",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-26",
       "hora": "19:30",
@@ -54924,6 +55086,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-26",
+      "hora": "22:00",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
       "ciclo": ""
     },
     {
