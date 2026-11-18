@@ -101,7 +101,8 @@
     {
       "slug": "infinito-super-8",
       "nombre": "Infinito Super 8",
-      "bajada": "Festival Internacional de Super 8, 3.ª edición",
+      "bajada": "Festival Internacional de Super 8, 3.ª edición. Entrada libre y gratuita",
+      "gratis": true,
       "ciclo": "Infinito Super 8",
       "alias": ["Infinito Super 8", "Infinito Super8"],
       "logo": "data/logos/infinito-super-8.png",
@@ -123,7 +124,7 @@
     {
       "slug": "mass",
       "nombre": "MASS",
-      "bajada": "Semana de los Festivales de Cine de Málaga y San Sebastián",
+      "bajada": "Semana de los Festivales de Cine de Málaga y San Sebastián. Entrada gratis con reserva",
       "ciclo": "Semana MASS",
       "alias": ["MASS 2026", "Semana MASS", "Semana de los Festivales de Cine de Málaga y San Sebastián"],
       "desde": "2026-11-26",
