@@ -94,6 +94,11 @@ tamaño ni de peso por ningún motivo, y no hay pieza que no lo lleve.
 
   El logo es opcional: con `"logo": false` en el slide no va ninguna imagen y el anuncio
   y los datos quedan juntos en el centro (así salió la story del newsletter).
+
+  **Íconos.** Arriba del titular puede ir un dibujo de línea, en el color del texto:
+  `"icono": "mail"` pone un sobre (150 de ancho en story, 120 en post). Son dibujos del
+  generador (`ICONOS` en `scripts/pieza.py`), nunca emojis: un emoji cambia de dibujo
+  según el aparato y trae colores que no son de la marca. Uno por pieza como mucho.
   | Primer dato | 40 | 36 |
   | Datos en gris | 28 | 24 |
   | Mini título (500, +0.08em) y sitedigo.com (600) | 28 | 24 |

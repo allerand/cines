@@ -220,3 +220,10 @@ html, body { background: var(--bg); }
 
 /* Centrada sin logo: el anuncio y los datos juntos, en el centro del lienzo. */
 .cuerpo.centro.sin-logo { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: var(--aire-fest); }
+
+/* Ícono de la centrada: dibujo de línea en el color del texto, arriba del
+   titular. Nunca un emoji: cambian de dibujo según el aparato. */
+.pieza.story.centrada { --icono: 150px; --icono-abajo: 44px; }
+.pieza.feed.centrada  { --icono: 120px; --icono-abajo: 34px; }
+.centro .icono { width: var(--icono); height: auto; display: block; margin-bottom: var(--icono-abajo); color: var(--text); }
+.cuerpo.centro.sin-logo .arriba, .cuerpo.centro.sin-logo .abajo { align-self: center; }

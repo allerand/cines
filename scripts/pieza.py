@@ -19,7 +19,8 @@ La ficha:
       "festival": "rojo-sangre",        # slug de data/festivales.json: la centrada usa su logo
       "slides": [
         {"tipo": "centrada", "mini": "...", "antetitulo": "...", "titular": "...", "lineas": ["...", "..."]},
-        #   + "festival": "<slug>" usa el logo del festival; "logo": false no pone ninguno
+        #   + "festival": "<slug>" usa el logo del festival; "logo": false no pone ninguno;
+        #     "icono": "mail" dibuja un sobre arriba del titular
         {"tipo": "frase", "texto": "...", "nota": "..."},
         {"tipo": "texto", "titular": "...", "parrafos": ["...", "..."], "nota": "..."},
         {"tipo": "lista", "items": [
@@ -57,6 +58,16 @@ PROHIBIDOS = {
 EMOJI = re.compile("[\U0001F000-\U0001FAFF\U0001F1E6-\U0001F1FF☀-➿️]")
 
 LIMITES = {"rotulo": 20, "bajada": 26, "etiqueta": 24, "clave": 5, "mini": 34}
+
+
+# Íconos de la centrada: dibujos de línea, en el color del texto. No son emojis
+# (un emoji cambia de dibujo en cada aparato). Para sumar uno se dibuja acá.
+ICONOS = {
+    "mail": ('<svg class="icono" viewBox="0 0 48 34" fill="none" stroke="currentColor" '
+             'stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">'
+             '<rect x="2" y="2" width="44" height="30" rx="3"/>'
+             '<path d="M3.5 4.5 24 20 44.5 4.5"/></svg>'),
+}
 
 
 class FichaMala(Exception):
@@ -148,7 +159,12 @@ def cuerpo_slide(s: dict, i: int, festival: str = "") -> str:
             raise FichaMala(f"{d}: debajo del logo van tres líneas como máximo.")
         abajo = "".join(
             f'<p class="{"dato" if n == 0 else "dato2"}">{t(l, d + " línea")}</p>' for n, l in enumerate(lineas))
-        arriba = (f'<div class="arriba">{ante}'
+        icono = ""
+        if s.get("icono"):
+            if s["icono"] not in ICONOS:
+                raise FichaMala(f"{d}: ícono {s['icono']!r} no existe. Hay: {', '.join(ICONOS)}")
+            icono = ICONOS[s["icono"]]
+        arriba = (f'<div class="arriba">{icono}{ante}'
                   f'<p class="nombre">{t(s.get("titular"), d + " titular")}</p></div>')
         if s.get("logo") is False:
             return f'<div class="cuerpo centro sin-logo">{arriba}<div class="abajo">{abajo}</div></div>'
