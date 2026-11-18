@@ -72,6 +72,9 @@ function doPost(e) {
     if (action === "buscar") {
       return _handleBusqueda(params);
     }
+    if (action === "cine") {
+      return _handleCine(params);
+    }
     return _handleSubscribe(params, e);
   } catch (err) {
     return _json({ ok: false, error: String(err) });
@@ -115,6 +118,36 @@ function _handleStar(params) {
     String(params.title || ""),
     String(params.fecha || ""),
     String(params.hora || ""),
+  ]);
+  return _json({ ok: true });
+}
+
+// ───── Salas que toca la gente ─────────────────────────────────────────
+// Una fila cada vez que alguien elige una sala en la barra de la web. La
+// hoja "cines" se crea sola con sus encabezados la primera vez. El uid es el
+// mismo de las estrellas y las búsquedas: sirve para contar personas, no
+// toques.
+const CINES_HEADERS = ["timestamp", "cine", "ciudad", "fecha_vista", "canal", "uid"];
+
+function _handleCine(params) {
+  const cine = String(params.cine || "").trim().slice(0, 80);
+  if (!cine) return _json({ ok: false, error: "sin_cine" });
+
+  const ss = SpreadsheetApp.getActiveSpreadsheet();
+  let sheet = ss.getSheetByName("cines");
+  if (!sheet) {
+    sheet = ss.insertSheet("cines");
+    sheet.appendRow(CINES_HEADERS);
+    sheet.getRange(1, 1, 1, CINES_HEADERS.length).setFontWeight("bold");
+    sheet.setFrozenRows(1);
+  }
+  sheet.appendRow([
+    new Date(),
+    cine,
+    String(params.ciudad || ""),
+    String(params.fecha || ""),
+    String(params.canal || ""),
+    String(params.uid || "anon"),
   ]);
   return _json({ ok: true });
 }

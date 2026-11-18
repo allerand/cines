@@ -3357,6 +3357,32 @@ def _gaumont_paises(texto: str) -> str:
                      if x.islower() else x for x in partes)
 
 
+# "CICLO CALIGARI NOVIEMBRE 2026 - JEANNE DIELMAN,23,QUAI DU COMMERCE,1080
+# BRUXELLES": el Gaumont carga las películas de un ciclo con el ciclo adelante
+# (a veces lo llama festival) y el mes atrás. Así salía todo como título, sin
+# ciclo y sin ficha: "Ciclo Caligari Noviembre 2026 - la Conversacion" el 11/11.
+_GAUMONT_CICLO_RE = re.compile(
+    r"^((?:ciclo|festival|muestra|semana|retrospectiva|foco)\b[^-–—]{2,60}?)\s+[-–—]\s+(\S.*)$",
+    re.IGNORECASE)
+_GAUMONT_MES_RE = re.compile(
+    r"\s+(?:de\s+)?(?:enero|febrero|marzo|abril|mayo|junio|julio|agosto|sep?tiembre|octubre|"
+    r"noviembre|diciembre)(?:\s+(?:de\s+)?20\d{2})?\s*$", re.IGNORECASE)
+
+
+def _gaumont_titulo_y_ciclo(nombre: str) -> tuple[str, str]:
+    """(título, ciclo). Además le pone el espacio a las comas pegadas
+    ("RETRATO,ELOGIO AL DUELO"), salvo entre dos números ("10,5")."""
+    t = re.sub(r"\s+", " ", nombre or "").strip()
+    ciclo = ""
+    m = _GAUMONT_CICLO_RE.match(t)
+    if m:
+        ciclo = _GAUMONT_MES_RE.sub("", m.group(1)).strip()
+        ciclo = _title_case_ciclo(ciclo) if ciclo.isupper() else ciclo
+        t = m.group(2).strip()
+    t = re.sub(r",(?=\S)(?!(?<=\d,)\d)", ", ", t)
+    return t, ciclo
+
+
 def _gaumont_json(url: str, intentos: int = 3) -> Optional[dict]:
     # La API a veces tarda más de 20 s en contestar un día y al siguiente
     # intento contesta enseguida.
@@ -3420,7 +3446,7 @@ def scrape_gaumont(semanas: int = 2) -> list[Screening]:
         p = pelis.get(cod)
         if not p:
             continue
-        titulo = re.sub(r"\s+", " ", (p.get("peliculas_nombre") or "")).strip()
+        titulo, ciclo = _gaumont_titulo_y_ciclo(p.get("peliculas_nombre") or "")
         if not titulo:
             continue
         dur = str(p.get("peliculas_duracion") or "").strip()
@@ -3433,6 +3459,7 @@ def scrape_gaumont(semanas: int = 2) -> list[Screening]:
             director=re.sub(r"\s+", " ", (p.get("director") or "")).strip(),
             country=paises.get(cod, ""),
             duration=int(dur) if dur.isdigit() and int(dur) > 0 else None,
+            ciclo=ciclo,
         ))
     return result
 
@@ -11180,6 +11207,106 @@ def scrape_turdera(semanas: int = 9) -> list[Screening]:
                                           f"con el formato de siempre")
     today = date.today()
     cutoff = today + timedelta(weeks=semanas)
+    return [s for s in funciones if today <= date.fromisoformat(s.fecha) <= cutoff]
+
+
+# ---------------------------------------------------------------------------
+# La Mula Club de Cine — su sitio en Passline
+# ---------------------------------------------------------------------------
+# La Mula vende por Passline y su página lista lo que viene, una tarjeta por
+# evento. La arma el servidor: no hay API ni pedido aparte que traiga los
+# datos (los únicos pedidos de la página son de medición).
+#
+#   <div class="masonry-item">
+#     <a href="https://www.passline.com/sitio-evento/cortos-en-la-mula-2211-a-las-1830hs">…</a>
+#     <div class="descripcion-evento">
+#       <span class="h4" title="Cortos en La Mula - 22/11 a las 18.30hs">…</span>
+#       <li class="fecha-site">22 de Noviembre 2026 a las 18:30</li>
+#       <li class="lugar-site"><div>Metauro Espacio Cultural</div></li>
+#
+# OJO: no está dada de alta en run.py ni en la web. Passline está detrás de
+# Cloudflare y le contesta 403 con el control anti-bots ("Just a moment…") a
+# todo pedido que no venga de un navegador, desde la Mac y desde el runner:
+# scrape_mula() hoy devuelve cero y dice por qué. El parser sí está probado,
+# contra la página que Mateo guardó desde su Chrome el 18/11/2026
+# (test_mula.py). Pasar ese control es saltear una detección de bots; quedó
+# como decisión de Mateo, igual que con la Casa del Bicentenario.
+
+MULA_CINE = "La Mula Club de Cine"
+MULA_URL = "https://www.passline.com/sitio/la-mula-club-de-cine-849412648"
+# "22 de Noviembre 2026 a las 18:30"
+_MULA_FECHA_RE = re.compile(
+    r"(\d{1,2})\s+de\s+([a-záéíóú]+)\s+(?:de\s+)?(\d{4})\s+a\s+las\s+(\d{1,2})[:.](\d{2})",
+    re.IGNORECASE)
+# El nombre del evento trae el día y la hora atrás: " - 22/11 a las 18.30hs".
+_MULA_COLA_RE = re.compile(
+    r"\s*[-–—]\s*\d{1,2}/\d{1,2}(?:/\d{2,4})?"
+    r"(?:\s+a\s+las\s+\d{1,2}(?:[.:]\d{2})?\s*(?:hs?\.?)?)?\s*$", re.IGNORECASE)
+# Lo que una sala de cine también vende por la ticketera y no es una función.
+_MULA_NO_CINE_RE = re.compile(r"\b(taller(?:es)?|cursos?|seminarios?|clases?|charlas?)\b",
+                              re.IGNORECASE)
+
+
+def _mula_funciones(html: str) -> list[Screening]:
+    """Las funciones de la página de La Mula en Passline, sin filtrar por fecha."""
+    soup = BeautifulSoup(html, "html.parser")
+    result: list[Screening] = []
+    vistas: set[tuple] = set()
+    for desc in soup.select(".descripcion-evento"):
+        tarjeta = desc.find_parent(class_="masonry-item") or desc.parent
+        h = desc.select_one(".h4") or desc.find(["h3", "h4"])
+        nombre = re.sub(r"\s+", " ", (h.get("title") or h.get_text(" ", strip=True))
+                        if h else "").strip()
+        cuando = desc.select_one(".fecha-site")
+        m = _MULA_FECHA_RE.search(re.sub(r"\s+", " ", cuando.get_text(" ", strip=True))
+                                  if cuando else "")
+        if not nombre or not m:
+            continue           # sin nombre o sin una fecha sola no hay función
+        mes = MESES_ES.get(_sin_acentos(m.group(2)).lower())
+        try:
+            dia = date(int(m.group(3)), mes or 0, int(m.group(1)))
+        except ValueError:
+            continue
+        hh, mm = int(m.group(4)), m.group(5)
+        if hh > 23 or int(mm) > 59:
+            continue
+        titulo = _MULA_COLA_RE.sub("", nombre).strip() or nombre
+        if _MULA_NO_CINE_RE.search(titulo):
+            continue
+        a = tarjeta.select_one('a[href*="sitio-evento/"]') if tarjeta is not None else None
+        clave = (titulo.lower(), dia, hh, mm)
+        if clave in vistas:
+            continue
+        vistas.add(clave)
+        result.append(Screening(
+            cine=MULA_CINE, title=titulo, fecha=dia.isoformat(), hora=f"{hh:02d}:{mm}",
+            ticket_url=urllib.parse.urljoin(MULA_URL, a["href"]) if a else MULA_URL,
+        ))
+    return result
+
+
+def scrape_mula(semanas: int = 9) -> list[Screening]:
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    try:
+        # Un solo intento: si Passline dice que no, insistir no cambia nada.
+        html = fetch_bytes(MULA_URL, intentos=1).decode("utf-8", errors="replace")
+    except urllib.error.HTTPError as e:
+        marcar_fuente_caida(MULA_CINE, f"Passline rechazó el pedido (HTTP {e.code}): su página "
+                                       f"pide el control anti-bots de Cloudflare")
+        return []
+    except Exception as e:
+        marcar_fuente_caida(MULA_CINE, f"Passline no contestó ({type(e).__name__})")
+        return []
+    if _CF_CHALLENGE_RE.search(html[:4000]):
+        marcar_fuente_caida(MULA_CINE, "Passline contestó con el control anti-bots de "
+                                       "Cloudflare en vez de la página")
+        return []
+    funciones = _mula_funciones(html)
+    if not funciones and "mt-eventos-home" not in html and "descripcion-evento" not in html:
+        # Sin eventos la página trae igual el bloque vacío; si no está, cambió.
+        marcar_fuente_caida(MULA_CINE, "la página de La Mula en Passline cambió de armado")
+        return []
     return [s for s in funciones if today <= date.fromisoformat(s.fecha) <= cutoff]
 
 

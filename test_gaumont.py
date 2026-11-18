@@ -36,3 +36,20 @@ if fallas:
     print(f"❌ {fallas} fallas")
     sys.exit(1)
 print("✅ todo bien")
+
+# --- Ciclo pegado adelante del título y comas sin espacio --------------------
+# El 18/11/2026 Jeanne Dielman figuraba en la API como "CICLO CALIGARI
+# NOVIEMBRE 2026 - JEANNE DIELMAN,23,QUAI DU COMMERCE,1080 BRUXELLES" y salía
+# todo eso como título, sin ciclo y sin ficha.
+from scraper import _gaumont_titulo_y_ciclo
+assert _gaumont_titulo_y_ciclo(
+    "CICLO CALIGARI NOVIEMBRE 2026 - JEANNE DIELMAN,23,QUAI DU COMMERCE,1080 BRUXELLES") == (
+    "JEANNE DIELMAN, 23, QUAI DU COMMERCE, 1080 BRUXELLES", "Ciclo Caligari")
+assert _gaumont_titulo_y_ciclo("Festival Caligari Noviembre 2026 - LA CONVERSACION") == (
+    "LA CONVERSACION", "Festival Caligari")
+assert _gaumont_titulo_y_ciclo("RETRATO,ELOGIO AL DUELO") == ("RETRATO, ELOGIO AL DUELO", "")
+assert _gaumont_titulo_y_ciclo("10,5 GRADOS") == ("10,5 GRADOS", "")
+assert _gaumont_titulo_y_ciclo("SPIDER-MAN - EL REGRESO") == ("SPIDER-MAN - EL REGRESO", "")
+assert _gaumont_titulo_y_ciclo("RECEN POR MI: LA HISTORIA DE FRANCISCO") == (
+    "RECEN POR MI: LA HISTORIA DE FRANCISCO", "")
+print("✓ gaumont: el ciclo de adelante va a su columna (sin el mes) y las comas llevan espacio")

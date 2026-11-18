@@ -1637,6 +1637,23 @@ function pingStar(s, on) {
   } catch (_) {}
 }
 
+// Cada sala que alguien elige en la barra va a la hoja "cines" de la planilla
+// (además del evento filtrar_cine de GA4). Sólo cuando se elige una: volver a
+// "Todos" o sacar la que estaba no cuenta.
+function pingCine(cine) {
+  try {
+    const body = new URLSearchParams({
+      action: 'cine',
+      cine: cine,
+      ciudad: ciudad,
+      fecha: activeDay || '',
+      canal: CANAL_ORIGEN,
+      uid: deviceId(),
+    });
+    fetch(STAR_ENDPOINT, { method: 'POST', mode: 'no-cors', body });
+  } catch (_) {}
+}
+
 // Cada búsqueda va también a la hoja de cálculo, además de GA4. No es
 // duplicado al pedo: GA4 sirve para tendencias, pero agrupa la cola larga en
 // "(other)", retiene 14 meses y no muestra nada anterior al alta de la
@@ -2290,6 +2307,7 @@ document.getElementById('filters').addEventListener('click', e => {
     ciudad: ciudad,
     canal: CANAL_ORIGEN,
   });
+  if (activeCines.size) pingCine(cine);
   resetSort();
   syncCineButtons();
   highlightCineDays();
