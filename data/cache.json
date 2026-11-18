@@ -358,7 +358,8 @@
     "country": "USA, Germany",
     "year": 2014,
     "genre": "Comedia, Drama",
-    "duration": 100
+    "duration": 100,
+    "clase_titulo": "exacto"
   },
   "almas desesperadas": {
     "url": "https://letterboxd.com/film/dont-bother-to-knock/",
@@ -2262,7 +2263,8 @@
     "duration": 120,
     "title_es": "Terciopelo azul",
     "original_title": "Blue Velvet",
-    "genre": "Crimen, Misterio"
+    "genre": "Crimen, Misterio",
+    "clase_titulo": "exacto"
   },
   "scary movie": {
     "url": "https://letterboxd.com/film/scary-movie-2026/",
@@ -8824,16 +8826,18 @@
     "duration": 101,
     "genre": "Aventura, Familiar",
     "title_es": "Dentro del laberinto",
-    "original_title": "Labyrinth"
+    "original_title": "Labyrinth",
+    "clase_titulo": "exacto"
   },
   "la historia sin fin|1984": {
-    "url": "",
-    "title_en": "LA HISTORIA SIN FIN",
+    "url": "https://letterboxd.com/film/the-neverending-story/",
+    "title_en": "The NeverEnding Story",
     "director": "Wolfgang Petersen",
     "country": "Germany",
     "year": 1984,
     "duration": 101,
-    "genre": "Aventura, Fantasía",
+    "genre": "Fantasía, Familiar",
+    "clase_titulo": "exacto",
     "title_es": "La historia interminable",
     "original_title": "Die unendliche Geschichte"
   },
@@ -13596,7 +13600,8 @@
     "duration": 92,
     "genre": "Fantasía, Comedia",
     "title_es": "Bitelchús",
-    "original_title": "Beetlejuice"
+    "original_title": "Beetlejuice",
+    "clase_titulo": "exacto"
   },
   "más corazón que odio|1956": {
     "url": "",
@@ -16787,9 +16792,11 @@
     "country": "Germany",
     "year": 2025,
     "duration": 148,
-    "genre": "Drama, Bélica",
-    "clase_titulo": "distinto",
-    "sin_hints": "título local de un estreno"
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "title_es": "El sonido de la caída",
+    "original_title": "In die Sonne schauen",
+    "sin_hints": "la más nueva que se llama así"
   },
   "nct 127 5th tour ‘neo city : seoul - the redline’ in cinemas": {
     "url": "https://letterboxd.com/film/nct-127-5th-tour-neo-city-seoul-the-redline/",
@@ -18978,7 +18985,8 @@
     "duration": 76,
     "genre": "Familiar, Animación",
     "title_es": "Pesadilla antes de Navidad",
-    "original_title": "The Nightmare Before Christmas"
+    "original_title": "The Nightmare Before Christmas",
+    "clase_titulo": "exacto"
   },
   "vampiros en 35 mm|1998": {
     "url": "https://letterboxd.com/film/vampires/",
@@ -20457,7 +20465,8 @@
     "duration": 114,
     "genre": "Drama, Fantasía",
     "title_es": "Donnie Darko",
-    "original_title": "Donnie Darko"
+    "original_title": "Donnie Darko",
+    "clase_titulo": "exacto"
   },
   "deseando amar": {
     "url": "https://letterboxd.com/film/in-the-mood-for-love/",
@@ -27895,7 +27904,7 @@
     "duration": null
   },
   "versos para un perrito perdido|2025": {
-    "url": "",
+    "url": "https://letterboxd.com/film/versos-para-un-perrito-perdido/",
     "title_en": "Versos para un perrito perdido",
     "director": "Nathaniel Pacheco, Julieta Rodríguez",
     "country": "",
@@ -29561,7 +29570,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-14",
+    "fecha": "2026-11-18",
     "con_duracion": true,
     "desempate": ""
   },
@@ -32440,11 +32449,11 @@
     "sin_hints": "título local de un estreno"
   },
   "la casa|2025": {
-    "url": "",
-    "title_en": "LA CASA",
+    "url": "https://letterboxd.com/film/la-casa-2025/",
+    "title_en": "La casa",
     "director": "Gustavo Triviño",
     "country": "Argentina",
-    "year": 2026,
+    "year": 2025,
     "duration": 95,
     "genre": "Drama",
     "original_title": "La casa"
@@ -32834,7 +32843,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-14",
+    "fecha": "2026-11-18",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33291,8 +33300,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Grudge 2 (2003), The Grudge (2004)",
-    "fecha": "2026-11-14",
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), The Grudge (2004), Ju-on: The Grudge 2 (2003)",
+    "fecha": "2026-11-18",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33639,7 +33648,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Ju-on: The Grudge (2002), Ju-on: The Beginning of the End (2014)",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-18",
     "con_duracion": false,
     "desempate": ""
   },
@@ -35780,7 +35789,8 @@
     "year": 2026,
     "duration": 82,
     "genre": "Terror",
-    "original_title": "Gummy"
+    "original_title": "Gummy",
+    "clase_titulo": "exacto"
   },
   "el vuelo del moscardón|2026": {
     "url": "",
@@ -36952,7 +36962,7 @@
     "director": "Abril Ansaldi",
     "country": "Argentina",
     "year": 2026,
-    "duration": null,
+    "duration": 15,
     "original_title": "La solapa"
   },
   "luz mala|2026": {
@@ -37247,5 +37257,931 @@
     "genre": "Terror",
     "title_es": "Drácula",
     "original_title": "Dracula"
+  },
+  "mrgente 1": {
+    "url": "",
+    "title_en": "MRGente 1",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "providence and the guitar|2026": {
+    "url": "https://letterboxd.com/film/a-providencia-e-a-guitarra/",
+    "title_en": "Providence and the Guitar",
+    "director": "João Nicolau",
+    "country": "Portugal",
+    "year": 2026,
+    "duration": 125,
+    "genre": "Música, Drama",
+    "original_title": "A Providência e a Guitarra"
+  },
+  "mrgente 2|2026": {
+    "url": "",
+    "title_en": "MRGente 2",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "a day in the life of jo: chapter phaedra + normal planet|2026": {
+    "url": "",
+    "title_en": "A Day in the Life of Jo: Chapter Phaedra + Normal Planet",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "todo es cárcel|2026": {
+    "url": "https://letterboxd.com/film/letters-from-an-inner-exile/",
+    "title_en": "Letters from an Inner Exile",
+    "director": "Eloy Enciso",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 109,
+    "genre": "Documental",
+    "original_title": "Todo es cárcel"
+  },
+  "mrgente 3|2026": {
+    "url": "",
+    "title_en": "MRGente 3",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "como todo mortal|2026": {
+    "url": "https://letterboxd.com/film/como-todo-mortal/",
+    "title_en": "Like Any Other Mortal",
+    "director": "María Molina Peiró",
+    "country": "Netherlands, Spain",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Documental",
+    "original_title": "Como todo mortal"
+  },
+  "el hombre más solitario de la ciudad + the blessing|2026": {
+    "url": "",
+    "title_en": "El hombre más solitario de la ciudad + The Blessing",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "las islas afortunadas + crónica del cansancio|2026": {
+    "url": "",
+    "title_en": "Las islas afortunadas + Crónica del cansancio",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "diario de una camarera|2026": {
+    "url": "https://letterboxd.com/film/the-diary-of-a-chambermaid-2026/",
+    "title_en": "The Diary of a Chambermaid",
+    "director": "Radu Jude",
+    "country": "France, Romania",
+    "year": 2026,
+    "duration": 94,
+    "genre": "Comedia, Drama",
+    "title_es": "Diario de una camarera",
+    "original_title": "Le Journal d'une femme de chambre"
+  },
+  "adiós, ríos|2026": {
+    "url": "https://letterboxd.com/film/adios-rios/",
+    "title_en": "Farewell, Rivers",
+    "director": "Sebastián Uría",
+    "country": "",
+    "year": 2026,
+    "duration": 80,
+    "genre": "Drama",
+    "original_title": "Adiós, ríos"
+  },
+  "the dreamed adventure|2026": {
+    "url": "https://letterboxd.com/film/das-getraumte-abenteuer/",
+    "title_en": "The Dreamed Adventure",
+    "director": "Valeska Grisebach",
+    "country": "Germany, France",
+    "year": 2026,
+    "duration": 167,
+    "genre": "Crimen, Drama",
+    "original_title": "Das geträumte Abenteuer"
+  },
+  "un arbre és un arbre|2026": {
+    "url": "https://letterboxd.com/film/un-arbre-es-un-arbre/",
+    "title_en": "A tree is a tree",
+    "director": "Carlos Marques-Marcet, Aleix Plademunt",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 87,
+    "genre": "Documental",
+    "original_title": "Un arbre és un arbre"
+  },
+  "le vertige + unidentified nonflying objects (uno)|2026": {
+    "url": "",
+    "title_en": "Le vertige + Unidentified Nonflying Objects (UNO)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "seize moments de ma vie + ghazal-e sorkh|2026": {
+    "url": "",
+    "title_en": "Seize moments de ma vie + Ghazal-e Sorkh",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "heil jupiter!|2026": {
+    "url": "https://letterboxd.com/film/heil-jupiter-2026/",
+    "title_en": "Heil Jupiter!",
+    "director": "Carlos Reygadas",
+    "country": "Mexico, Poland",
+    "year": 2026,
+    "duration": 158,
+    "genre": "Fantasía, Drama",
+    "original_title": "Estela de sombra"
+  },
+  "the end of it|2026": {
+    "url": "https://letterboxd.com/film/the-end-of-it/",
+    "title_en": "The End of It",
+    "director": "Maria Martinez Bayona",
+    "country": "UK, Norway",
+    "year": 2026,
+    "duration": 102,
+    "genre": "Ciencia ficción",
+    "original_title": "The End of It"
+  },
+  "presentación de las residencias de cine 2026 (cra/cineteca)": {
+    "url": "",
+    "title_en": "Presentación de las Residencias de Cine 2026 (CRA/Cineteca)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "relatos de los relatos. historias y genealogías de las músicas experimentales y el arte sonoro en españa": {
+    "url": "",
+    "title_en": "Relatos de los relatos. Historias y genealogías de las músicas experimentales y el arte sonoro en España",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sostener el ruido. estrategias para el apoyo y la difusión del arte sonoro y las músicas experimentales en españa": {
+    "url": "",
+    "title_en": "Sostener el ruido. Estrategias para el apoyo y la difusión del arte sonoro y las músicas experimentales en España",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la historia por venir. la escucha del archivo en la creación y la investigación artística": {
+    "url": "",
+    "title_en": "La historia por venir. La escucha del archivo en la creación y la investigación artística",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "taller de análisis fílmico y metacine sobre profecía [renoir]": {
+    "url": "",
+    "title_en": "TALLER DE ANÁLISIS FÍLMICO Y METACINE SOBRE PROFECÍA [RENOIR]",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "victorian psycho": {
+    "url": "https://letterboxd.com/film/victorian-psycho/",
+    "title_en": "Victorian Psycho",
+    "director": "Zachary Wigon",
+    "country": "USA, UK",
+    "year": 2026,
+    "duration": 102,
+    "genre": "Terror, Thriller",
+    "title_es": "La Psicópata",
+    "original_title": "Victorian Psycho"
+  },
+  "érase una vez en... hollywood": {
+    "url": "https://letterboxd.com/film/once-upon-a-time-in-hollywood/",
+    "title_en": "Once Upon a Time... in Hollywood",
+    "director": "Quentin Tarantino",
+    "country": "China, UK",
+    "year": 2019,
+    "duration": 162,
+    "genre": "Thriller, Drama",
+    "title_es": "Érase una vez en… Hollywood",
+    "original_title": "Once Upon a Time in... Hollywood"
+  },
+  "bailar la muerte": {
+    "url": "https://letterboxd.com/film/bailar-la-muerte/",
+    "title_en": "Bailar la muerte",
+    "director": "Luis E. Parés",
+    "country": "",
+    "year": 2026,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "Bailar la muerte"
+  },
+  "el director": {
+    "url": "https://letterboxd.com/film/el-director-2026/",
+    "title_en": "El Director",
+    "director": "Dani de la Orden",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 113,
+    "genre": "Drama",
+    "original_title": "El Director"
+  },
+  "viva": {
+    "url": "https://letterboxd.com/film/viva-2026/",
+    "title_en": "Viva",
+    "director": "Aina Clotet",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 113,
+    "genre": "Drama, Romance",
+    "title_es": "Viva",
+    "original_title": "Viva"
+  },
+  "¿teléfono rojo? volamos hacia moscú": {
+    "url": "",
+    "title_en": "¿TELÉFONO ROJO? VOLAMOS HACIA MOSCÚ",
+    "director": "Stanley Kubrick",
+    "country": "United Kingdom, United States of America",
+    "year": 1964,
+    "duration": 95,
+    "genre": "Comedia, Bélica",
+    "title_es": "¿Teléfono rojo? Volamos hacia Moscú",
+    "original_title": "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb"
+  },
+  "hermanas [proyecto viridiana]": {
+    "url": "",
+    "title_en": "HERMANAS [PROYECTO VIRIDIANA]",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sauna": {
+    "url": "https://letterboxd.com/film/smoke-sauna-sisterhood/",
+    "title_en": "Smoke Sauna Sisterhood",
+    "director": "Anna Hints",
+    "country": "Estonia, France",
+    "year": 2023,
+    "duration": 89,
+    "genre": "Documental"
+  },
+  "ponyo en el acantilado": {
+    "url": "",
+    "title_en": "Ponyo en el acantilado",
+    "director": "Hayao Miyazaki",
+    "country": "Japan",
+    "year": 2008,
+    "duration": 100,
+    "genre": "Animación, Fantasía",
+    "title_es": "Ponyo en el acantilado",
+    "original_title": "崖の上のポニョ"
+  },
+  "paris, texas": {
+    "url": "https://letterboxd.com/film/paris-texas/",
+    "title_en": "Paris, Texas",
+    "director": "Wim Wenders",
+    "country": "UK, Germany",
+    "year": 1984,
+    "duration": 145,
+    "genre": "Drama",
+    "title_es": "París, Texas",
+    "original_title": "Paris, Texas"
+  },
+  "the ambassador to bern (a berni követ)": {
+    "url": "",
+    "title_en": "The Ambassador to Bern (A berni követ)",
+    "director": "Attila Szász",
+    "country": "Hungary",
+    "year": 2014,
+    "duration": 76,
+    "genre": "Drama, Historia",
+    "original_title": "A berni követ"
+  },
+  "¡qué cojones es un hombre?": {
+    "url": "",
+    "title_en": "¡Qué cojones es un hombre?",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "dune|1984": {
+    "url": "https://letterboxd.com/film/dune/",
+    "title_en": "Dune",
+    "director": "David Lynch",
+    "country": "USA",
+    "year": 1984,
+    "duration": 136,
+    "genre": "Aventura, Ciencia ficción",
+    "clase_titulo": "exacto",
+    "title_es": "Dunas",
+    "original_title": "Dune"
+  },
+  "memotest|2026": {
+    "url": "https://letterboxd.com/film/memotest/",
+    "title_en": "Memotest",
+    "director": "Catalina Cortinez Tripodi",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 85,
+    "genre": "Romance, Comedia",
+    "clase_titulo": "exacto",
+    "original_title": "Memotest"
+  },
+  "erase una vez el diablo|1985": {
+    "url": "https://letterboxd.com/film/devil-story/",
+    "title_en": "Devil Story",
+    "director": "Bernard Launois",
+    "country": "France",
+    "year": 1986,
+    "duration": 76,
+    "genre": "Terror, Fantasía",
+    "clase_titulo": "exacto",
+    "title_es": "Erase una vez el diablo",
+    "original_title": "Il était une fois le Diable"
+  },
+  "blood tracks|1985": {
+    "url": "https://letterboxd.com/film/blood-tracks/",
+    "title_en": "Blood Tracks",
+    "director": "Mats Helge",
+    "country": "Sweden, UK",
+    "year": 1985,
+    "duration": 89,
+    "genre": "Terror",
+    "clase_titulo": "exacto",
+    "title_es": "Huellas de sangre",
+    "original_title": "Blood Tracks"
+  },
+  "el ático|1986": {
+    "url": "https://letterboxd.com/film/crawlspace/",
+    "title_en": "Crawlspace",
+    "director": "David Schmoeller",
+    "country": "USA",
+    "year": 1986,
+    "duration": 80,
+    "genre": "Thriller, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "El ático",
+    "original_title": "Crawlspace"
+  },
+  "it's a wonderful life|1946": {
+    "url": "https://letterboxd.com/film/its-a-wonderful-life/",
+    "title_en": "It's a Wonderful Life",
+    "director": "Frank Capra",
+    "country": "USA",
+    "year": 1946,
+    "duration": 130,
+    "genre": "Familiar, Fantasía",
+    "title_es": "¡Qué bello es vivir!",
+    "original_title": "It's a Wonderful Life"
+  },
+  "fantasmas en la patagonia|1996": {
+    "url": "https://letterboxd.com/film/fantasmas-en-la-patagonia/",
+    "title_en": "Fantasmas en la Patagonia",
+    "director": "Claudio Remedi",
+    "country": "Argentina",
+    "year": 1997,
+    "duration": 84,
+    "genre": "Documental",
+    "original_title": "Fantasmas en la Patagonia"
+  },
+  "un cuento chino|2011": {
+    "url": "https://letterboxd.com/film/chinese-take-away/",
+    "title_en": "Chinese Take-Away",
+    "director": "Sebastián Borensztein",
+    "country": "Argentina, Spain",
+    "year": 2011,
+    "duration": 93,
+    "genre": "Comedia",
+    "title_es": "Un cuento chino",
+    "original_title": "Un cuento chino"
+  },
+  "la strada|1954": {
+    "url": "https://letterboxd.com/film/la-strada/",
+    "title_en": "La Strada",
+    "director": "Federico Fellini",
+    "country": "Italy",
+    "year": 1954,
+    "duration": 115,
+    "genre": "Drama",
+    "original_title": "La strada"
+  },
+  "los juegos del hambre: amanece": {
+    "url": "",
+    "title_en": "LOS JUEGOS DEL HAMBRE: AMANECE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-18",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "happy together|1997": {
+    "url": "https://letterboxd.com/film/happy-together-1997/",
+    "title_en": "Happy Together",
+    "director": "Wong Kar-Wai",
+    "country": "Hong Kong, South Korea",
+    "year": 1997,
+    "duration": 96,
+    "genre": "Drama, Romance",
+    "title_es": "Happy Together",
+    "original_title": "春光乍洩"
+  },
+  "¿quién es esa chica?|1987": {
+    "url": "https://letterboxd.com/film/whos-that-girl/",
+    "title_en": "Who's That Girl",
+    "director": "James Foley",
+    "country": "USA",
+    "year": 1987,
+    "duration": 93,
+    "genre": "Romance, Comedia",
+    "title_es": "¿Quién es esa chica?",
+    "original_title": "Who's That Girl"
+  },
+  "doukyuusei (classmates)|2016": {
+    "url": "https://letterboxd.com/film/dou-kyu-sei-classmates/",
+    "title_en": "Dou kyu sei – Classmates",
+    "director": "Shoko Nakamura",
+    "country": "Japan",
+    "year": 2016,
+    "duration": 61,
+    "genre": "Romance, Animación",
+    "title_es": "En la misma clase",
+    "original_title": "同級生"
+  },
+  "blow job": {
+    "url": "https://letterboxd.com/film/blow-job/",
+    "title_en": "Blow Job",
+    "director": "Andy Warhol",
+    "country": "USA",
+    "year": 1964,
+    "duration": 35,
+    "genre": "Documental",
+    "original_title": "Blow Job"
+  },
+  "pink narcissus": {
+    "url": "https://letterboxd.com/film/pink-narcissus/",
+    "title_en": "Pink Narcissus",
+    "director": "James Bidgood",
+    "country": "USA",
+    "year": 1971,
+    "duration": 65,
+    "genre": "Fantasía, Drama",
+    "original_title": "Pink Narcissus"
+  },
+  "bound|1996": {
+    "url": "https://letterboxd.com/film/bound/",
+    "title_en": "Bound",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "country": "USA",
+    "year": 1996,
+    "duration": 105,
+    "genre": "Crimen, Thriller",
+    "title_es": "Lazos ardientes",
+    "original_title": "Bound"
+  },
+  "¿quién le teme a virginia woolf?|1966": {
+    "url": "https://letterboxd.com/film/whos-afraid-of-virginia-woolf/",
+    "title_en": "Who's Afraid of Virginia Woolf?",
+    "director": "Mike Nichols",
+    "country": "USA",
+    "year": 1966,
+    "duration": 131,
+    "genre": "Drama",
+    "title_es": "¿Quién teme a Virginia Woolf?",
+    "original_title": "Who's Afraid of Virginia Woolf?"
+  },
+  "mamma mia!|2008": {
+    "url": "https://letterboxd.com/film/mamma-mia-2008/",
+    "title_en": "Mamma Mia!",
+    "director": "Phyllida Lloyd",
+    "country": "Germany, UK",
+    "year": 2008,
+    "duration": 108,
+    "genre": "Comedia, Romance",
+    "title_es": "Mamma Mia! La película",
+    "original_title": "Mamma Mia!"
+  },
+  "liz y el pájaro azul|2018": {
+    "url": "",
+    "title_en": "Liz y el pájaro azul",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "querelle|1982": {
+    "url": "https://letterboxd.com/film/querelle/",
+    "title_en": "Querelle",
+    "director": "Rainer Werner Fassbinder",
+    "country": "Germany, France",
+    "year": 1982,
+    "duration": 109,
+    "genre": "Romance, Crimen",
+    "title_es": "Querelle",
+    "original_title": "Querelle"
+  },
+  "las amargas lágrimas de petra von kant|1972": {
+    "url": "https://letterboxd.com/film/the-bitter-tears-of-petra-von-kant/",
+    "title_en": "The Bitter Tears of Petra von Kant",
+    "director": "Rainer Werner Fassbinder",
+    "country": "Germany",
+    "year": 1972,
+    "duration": 124,
+    "genre": "Romance, Drama",
+    "title_es": "Las amargas lágrimas de Petra von Kant",
+    "original_title": "Die bitteren Tränen der Petra von Kant"
+  },
+  "inuyasha: el castillo de los sueños en el espejo|2002": {
+    "url": "https://letterboxd.com/film/inuyasha-the-movie-2-the-castle-beyond-the-looking-glass/",
+    "title_en": "Inuyasha the Movie 2: The Castle Beyond the Looking Glass",
+    "director": "Toshiya Shinohara",
+    "country": "Japan",
+    "year": 2002,
+    "duration": 100,
+    "genre": "Fantasía, Aventura",
+    "title_es": "Inuyasha, la película 2: El castillo de los sueños en el interior del espejo",
+    "original_title": "犬夜叉 鏡の中の夢幻城"
+  },
+  "i wanna hold your hand|1978": {
+    "url": "https://letterboxd.com/film/i-wanna-hold-your-hand/",
+    "title_en": "I Wanna Hold Your Hand",
+    "director": "Robert Zemeckis",
+    "country": "USA",
+    "year": 1978,
+    "duration": 99,
+    "genre": "Comedia, Música",
+    "title_es": "Locos por ellos",
+    "original_title": "I Wanna Hold Your Hand"
+  },
+  "intersex: el círculo violeta": {
+    "url": "https://letterboxd.com/film/intersex-el-circulo-violeta/",
+    "title_en": "Intersex: El círculo violeta",
+    "director": "Teresa Martino",
+    "country": "",
+    "year": 2025,
+    "duration": 93,
+    "genre": "Documental",
+    "original_title": "Intersex: El círculo violeta"
+  },
+  "el cadaver de la novia|2005": {
+    "url": "https://letterboxd.com/film/corpse-bride/",
+    "title_en": "Corpse Bride",
+    "director": "Mike Johnson, Tim Burton",
+    "country": "UK, USA",
+    "year": 2005,
+    "duration": 77,
+    "genre": "Fantasía, Animación",
+    "clase_titulo": "exacto",
+    "title_es": "La novia cadáver",
+    "original_title": "Corpse Bride"
+  },
+  "little miss sunshine|2006": {
+    "url": "https://letterboxd.com/film/little-miss-sunshine/",
+    "title_en": "Little Miss Sunshine",
+    "director": "Valerie Faris, Jonathan Dayton",
+    "country": "USA",
+    "year": 2006,
+    "duration": 102,
+    "genre": "Drama, Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "Pequeña Miss Sunshine",
+    "original_title": "Little Miss Sunshine"
+  },
+  "donnie darko|2001": {
+    "url": "https://letterboxd.com/film/donnie-darko/",
+    "title_en": "Donnie Darko",
+    "director": "Richard Kelly",
+    "country": "USA",
+    "year": 2001,
+    "duration": 114,
+    "genre": "Drama, Fantasía",
+    "title_es": "Donnie Darko",
+    "original_title": "Donnie Darko",
+    "clase_titulo": "exacto"
+  },
+  "romeo + juliet|1996": {
+    "url": "https://letterboxd.com/film/romeo-juliet-1996/",
+    "title_en": "Romeo + Juliet",
+    "director": "Baz Luhrmann",
+    "country": "Australia, USA",
+    "year": 1996,
+    "duration": 120,
+    "genre": "Romance, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Romeo + Julieta de William Shakespeare",
+    "original_title": "Romeo + Juliet"
+  },
+  "thelma & louise|1991": {
+    "url": "https://letterboxd.com/film/thelma-louise/",
+    "title_en": "Thelma & Louise",
+    "director": "Ridley Scott",
+    "country": "UK, USA",
+    "year": 1991,
+    "duration": 130,
+    "genre": "Drama, Aventura",
+    "clase_titulo": "exacto",
+    "title_es": "Thelma y Louise",
+    "original_title": "Thelma & Louise"
+  },
+  "el gran hotel budapest|2014": {
+    "url": "https://letterboxd.com/film/the-grand-budapest-hotel/",
+    "title_en": "EL GRAN HOTEL BUDAPEST",
+    "director": "Wes Anderson",
+    "country": "USA, Germany",
+    "year": 2014,
+    "genre": "Comedia, Drama",
+    "duration": 100,
+    "clase_titulo": "exacto"
+  },
+  "whiplash|2014": {
+    "url": "https://letterboxd.com/film/whiplash-2014/",
+    "title_en": "Whiplash",
+    "director": "Damien Chazelle",
+    "country": "USA",
+    "year": 2014,
+    "duration": 107,
+    "genre": "Drama, Música",
+    "clase_titulo": "exacto",
+    "title_es": "Whiplash: Música y Obsesión",
+    "original_title": "Whiplash"
+  },
+  "eterno resplandor de una mente|2004": {
+    "url": "https://letterboxd.com/film/eternal-sunshine-of-the-spotless-mind/",
+    "title_en": "Eternal Sunshine of the Spotless Mind",
+    "director": "Michel Gondry",
+    "country": "USA",
+    "year": 2004,
+    "duration": 108,
+    "genre": "Ciencia ficción, Romance",
+    "clase_titulo": "distinto",
+    "title_es": "¡Olvídate de mí!",
+    "original_title": "Eternal Sunshine of the Spotless Mind"
+  },
+  "before sunrise|1995": {
+    "url": "https://letterboxd.com/film/before-sunrise/",
+    "title_en": "Before Sunrise",
+    "director": "Richard Linklater",
+    "country": "Austria, USA",
+    "year": 1995,
+    "duration": 101,
+    "genre": "Romance, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Antes de amanecer",
+    "original_title": "Before Sunrise"
+  },
+  "drive|2011": {
+    "url": "https://letterboxd.com/film/drive-2011/",
+    "title_en": "Drive",
+    "director": "Nicolas Winding Refn",
+    "country": "USA",
+    "year": 2011,
+    "duration": 100,
+    "genre": "Thriller, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Drive: El escape",
+    "original_title": "Drive"
+  },
+  "pride & prejudice|2005": {
+    "url": "https://letterboxd.com/film/pride-prejudice/",
+    "title_en": "Pride & Prejudice",
+    "director": "Joe Wright",
+    "country": "France, UK",
+    "year": 2005,
+    "duration": 128,
+    "genre": "Drama, Romance",
+    "clase_titulo": "exacto",
+    "title_es": "Orgullo y prejuicio",
+    "original_title": "Pride & Prejudice"
+  },
+  "la la land|2016": {
+    "url": "https://letterboxd.com/film/la-la-land/",
+    "title_en": "La La Land",
+    "director": "Damien Chazelle",
+    "country": "USA",
+    "year": 2016,
+    "duration": 129,
+    "genre": "Drama, Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "La ciudad de las estrellas (La La Land)",
+    "original_title": "La La Land"
+  },
+  "blue velvet|1986": {
+    "url": "https://letterboxd.com/film/blue-velvet/",
+    "title_en": "Blue Velvet",
+    "director": "David Lynch",
+    "country": "USA",
+    "year": 1986,
+    "duration": 120,
+    "title_es": "Terciopelo azul",
+    "original_title": "Blue Velvet",
+    "genre": "Crimen, Misterio",
+    "clase_titulo": "exacto"
+  },
+  "legalmente rubia|2001": {
+    "url": "https://letterboxd.com/film/legally-blonde/",
+    "title_en": "Legally Blonde",
+    "director": "Robert Luketic",
+    "country": "USA",
+    "year": 2001,
+    "duration": 96,
+    "genre": "Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "Una rubia muy legal",
+    "original_title": "Legally Blonde"
+  },
+  "meet joe black|1998": {
+    "url": "https://letterboxd.com/film/meet-joe-black/",
+    "title_en": "Meet Joe Black",
+    "director": "Martin Brest",
+    "country": "USA",
+    "year": 1998,
+    "duration": 178,
+    "genre": "Drama, Romance",
+    "clase_titulo": "exacto",
+    "title_es": "¿Conoces a Joe Black?",
+    "original_title": "Meet Joe Black"
+  },
+  "crazy, stupid, love|2011": {
+    "url": "https://letterboxd.com/film/crazy-stupid-love/",
+    "title_en": "Crazy, Stupid, Love.",
+    "director": "Glenn Ficarra, John Requa",
+    "country": "USA",
+    "year": 2011,
+    "duration": 118,
+    "genre": "Comedia, Romance",
+    "clase_titulo": "exacto",
+    "title_es": "Loco y estúpido amor",
+    "original_title": "Crazy, Stupid, Love."
+  },
+  "notting hill|1999": {
+    "url": "https://letterboxd.com/film/notting-hill/",
+    "title_en": "Notting Hill",
+    "director": "Roger Michell",
+    "country": "UK, USA",
+    "year": 1999,
+    "duration": 124,
+    "genre": "Comedia, Romance",
+    "clase_titulo": "exacto",
+    "title_es": "Un lugar llamado Notting Hill",
+    "original_title": "Notting Hill"
+  },
+  "la casa|2026": {
+    "url": "",
+    "title_en": "La casa",
+    "director": "Gustavo Triviño",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Drama",
+    "original_title": "La casa"
+  },
+  "autopista américa 2000|2026": {
+    "url": "https://letterboxd.com/film/autopista-america-2000/",
+    "title_en": "Autopista América 2000",
+    "director": "Julieta Duchovny",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 86,
+    "genre": "",
+    "original_title": "Autopista América 2000"
+  },
+  "militante|2025": {
+    "url": "",
+    "title_en": "Militante",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "indómita luz": {
+    "url": "https://letterboxd.com/film/untamed-light/",
+    "title_en": "Untamed Light",
+    "director": "Luis Sampieri",
+    "country": "Argentina, Spain",
+    "year": 2026,
+    "duration": 78,
+    "genre": "Documental",
+    "original_title": "Indómita luz"
+  },
+  "neyen mapu, el llamado del lanin": {
+    "url": "",
+    "title_en": "Neyen Mapu, el llamado del Lanin",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "natacha, la película|2017": {
+    "url": "https://letterboxd.com/film/natacha-the-movie/",
+    "title_en": "Natacha, The Movie",
+    "director": "Eduardo Pinto, Fernanda Ribeiz",
+    "country": "Argentina",
+    "year": 2017,
+    "duration": 75,
+    "genre": "Familiar, Comedia",
+    "title_es": "Natacha, la película",
+    "original_title": "Natacha, la película"
+  },
+  "retazos de memoria|2026": {
+    "url": "",
+    "title_en": "Retazos de memoria",
+    "director": "Juan Pablo Tobal",
+    "country": "Argentina, Colombia",
+    "year": 2026,
+    "duration": 76,
+    "genre": "Documental, Drama",
+    "original_title": "Retazos de la memoria"
+  },
+  "stéphane|2023": {
+    "url": "https://letterboxd.com/film/stephane/",
+    "title_en": "Stéphane",
+    "director": "Lucas Pastor, Timothée Hochet",
+    "country": "France",
+    "year": 2023,
+    "duration": 84,
+    "genre": "Thriller, Comedia",
+    "original_title": "Stéphane"
+  },
+  "el dentista|1996": {
+    "url": "https://letterboxd.com/film/the-dentist-1996/",
+    "title_en": "The Dentist",
+    "director": "Brian Yuzna",
+    "country": "USA",
+    "year": 1996,
+    "duration": 92,
+    "genre": "Terror, Thriller",
+    "title_es": "El Dentista",
+    "original_title": "The Dentist"
+  },
+  "desentierros, los libros que no heredamos": {
+    "url": "https://letterboxd.com/film/desentierros-los-libros-que-no-heredamos/",
+    "title_en": "Unearthing. The Books We Didn't Inherit",
+    "director": "María Julia Blanco",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "Desentierros. Los libros que no heredamos"
+  },
+  "carne": {
+    "url": "https://letterboxd.com/film/meat-2026-1/",
+    "title_en": "MEAT",
+    "director": "Tomás Marichal Urbán",
+    "country": "Uruguay",
+    "year": 2026,
+    "duration": 115,
+    "genre": "Terror, Drama",
+    "original_title": "CARNE"
+  },
+  "indomita luz": {
+    "url": "https://letterboxd.com/film/untamed-light/",
+    "title_en": "Untamed Light",
+    "director": "Luis Sampieri",
+    "country": "Argentina, Spain",
+    "year": 2026,
+    "duration": 78,
+    "genre": "Documental",
+    "original_title": "Indómita luz"
+  },
+  "retrato, elogio al duelo": {
+    "url": "",
+    "title_en": "RETRATO, ELOGIO AL DUELO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "jeanne dielman, 23, quai du commerce, 1080 bruxelles": {
+    "url": "https://letterboxd.com/film/jeanne-dielman-23-quai-du-commerce-1080-bruxelles/",
+    "title_en": "Jeanne Dielman, 23, quai du Commerce, 1080 Bruxelles",
+    "director": "Chantal Akerman",
+    "country": "Belgium, France",
+    "year": 1975,
+    "duration": 202,
+    "genre": "Drama"
+  },
+  "recen por mí la historia de francisco": {
+    "url": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
+    "title_en": "Pray for me: Pope Francis' story",
+    "director": "Facundo Bartucci",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 110,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Recen por mí: la historia de Francisco",
+    "sin_hints": "título y duración"
   }
 }
