@@ -14,6 +14,11 @@ name: Post pieza to Instagram
 #      después. Un pedido con marca no se vuelve a mirar.
 # Para repetir una pieza a propósito se hace un pedido con otro nombre.
 #
+# Además publica las DIARIAS: las stories que lista posts/piezas/diarias.json
+# salen todos los días, una vez, después de la cartelera (lock en el tag
+# `ig-posted/<fecha>/diarias`, marca `posts/<fecha>/.posteado-diarias`). Hoy es
+# la invitación al newsletter. Para apagarlas se deja la lista vacía.
+#
 # NO publica si la cartelera de hoy todavía no salió. post_to_instagram.py, antes
 # del posteo diario, le pregunta a Instagram si la cuenta ya tiene stories de
 # hoy: una pieza publicada antes haría que la cartelera del día no saliera. Por
@@ -57,18 +62,33 @@ jobs:
           PUBLIC_BASE_URL: "https://raw.githubusercontent.com/${{ github.repository }}/main"
         run: |
           shopt -s nullglob
-          pendientes=()
+          hoy="$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
+
+          # Qué hay para publicar. Cada tarea es "nombre|pedido|marca|lock".
+          tareas=()
           for f in posts/piezas/pedidos/*.json; do
-            [ -f "${f%.json}.posteado" ] || pendientes+=("$f")
+            nombre="$(basename "${f%.json}")"
+            if ! [[ "$nombre" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
+              echo "::error::pedido con nombre raro, no lo toco: $f"
+              continue
+            fi
+            [ -f "${f%.json}.posteado" ] || tareas+=("$nombre|$f|${f%.json}.posteado|refs/tags/ig-posted/pieza/$nombre")
           done
-          if [ ${#pendientes[@]} -eq 0 ]; then
-            echo "✓ no hay pedidos pendientes"
+          # Las diarias: una vez por día, después de la cartelera. Se apagan
+          # dejando la lista de posts/piezas/diarias.json vacía.
+          diarias="posts/piezas/diarias.json"
+          if [ -f "$diarias" ] && [ ! -f "posts/$hoy/.posteado-diarias" ] \
+             && python3 -c "import json,sys; sys.exit(0 if json.load(open('$diarias')).get('stories') else 1)"; then
+            tareas+=("diarias de $hoy|$diarias|posts/$hoy/.posteado-diarias|refs/tags/ig-posted/$hoy/diarias")
+          fi
+
+          if [ ${#tareas[@]} -eq 0 ]; then
+            echo "✓ no hay nada pendiente"
             exit 0
           fi
 
-          hoy="$(TZ='America/Argentina/Buenos_Aires' date +%Y-%m-%d)"
           if [ ! -f "posts/$hoy/.posteado-stories-only" ]; then
-            echo "::warning::la cartelera de $hoy todavía no salió: ${#pendientes[@]} pedido(s) esperan a que termine post-ig.yml"
+            echo "::warning::la cartelera de $hoy todavía no salió: ${#tareas[@]} tarea(s) esperan a que termine post-ig.yml"
             exit 0
           fi
 
@@ -81,14 +101,8 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           falla=0
-          for f in "${pendientes[@]}"; do
-            nombre="$(basename "${f%.json}")"
-            if ! [[ "$nombre" =~ ^[a-z0-9][a-z0-9-]*$ ]]; then
-              echo "::error::pedido con nombre raro, no lo toco: $f"
-              falla=1
-              continue
-            fi
-            ref="refs/tags/ig-posted/pieza/$nombre"
+          for t in "${tareas[@]}"; do
+            IFS='|' read -r nombre f marca ref <<< "$t"
             claim=$(git commit-tree 'HEAD^{tree}' -p HEAD \
                     -m "ig lock pieza $nombre — run ${{ github.run_id }}.${{ github.run_attempt }}")
             if ! git push origin "$claim:$ref"; then
@@ -103,8 +117,9 @@ jobs:
             set -e
             case "$rc" in
               0)
-                date -u +"%Y-%m-%dT%H:%M:%SZ" > "${f%.json}.posteado"
-                git add -f "${f%.json}.posteado"
+                mkdir -p "$(dirname "$marca")"
+                date -u +"%Y-%m-%dT%H:%M:%SZ" > "$marca"
+                git add -f "$marca"
                 git commit -m "posts: pieza $nombre posteada a Instagram"
                 git pull --rebase -X theirs origin main
                 git push origin main

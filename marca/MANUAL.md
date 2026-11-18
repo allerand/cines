@@ -217,6 +217,11 @@ Si la cartelera del día todavía no salió, el pedido espera y sale cuando term
 posteo diario: una pieza publicada antes haría que la cartelera de ese día no saliera.
 Los posts del feed todavía se suben a mano.
 
+**Stories diarias.** Lo que lista `posts/piezas/diarias.json` sale todos los días, una
+vez, apenas termina la cartelera (desde el 19/11/2026: la invitación al newsletter).
+Para cambiar la pieza se regenera la PNG en la misma ruta; para dejar de publicarla se
+deja la lista vacía (`{"stories": []}`).
+
 ## Cómo pedirlo
 
 Con decir qué se quiere comunicar alcanza. Por ejemplo:
