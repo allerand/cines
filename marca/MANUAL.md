@@ -95,10 +95,14 @@ tamaño ni de peso por ningún motivo, y no hay pieza que no lo lleve.
   El logo es opcional: con `"logo": false` en el slide no va ninguna imagen y el anuncio
   y los datos quedan juntos en el centro (así salió la story del newsletter).
 
-  **Íconos.** Arriba del titular puede ir un dibujo de línea, en el color del texto:
+  **Íconos.** Arriba del titular puede ir un dibujo de línea, en el verde de la web:
   `"icono": "mail"` pone un sobre (150 de ancho en story, 120 en post). Son dibujos del
   generador (`ICONOS` en `scripts/pieza.py`), nunca emojis: un emoji cambia de dibujo
   según el aparato y trae colores que no son de la marca. Uno por pieza como mucho.
+
+  **Verde de la web.** En la centrada, el ícono y el link al que se invita a entrar van en
+  el verde de sitedigo (`#00d060`): en la ficha el link se marca `*sitedigo.com/newsletter*`.
+  Nada más va en verde, y la firma de abajo no cambia nunca de color.
   | Primer dato | 40 | 36 |
   | Datos en gris | 28 | 24 |
   | Mini título (500, +0.08em) y sitedigo.com (600) | 28 | 24 |
@@ -166,7 +170,7 @@ texto y lista; la centrada no lleva acento.
 
 El acento va en tres lugares y en ninguno más: la bajada, la raya de la cabecera y, como
 mucho, una palabra resaltada por slide (`*así*` en la ficha). La firma no lleva acento.
-El verde `#00d060` es de la web y no se usa en Instagram.
+El verde `#00d060` de la web se usa sólo en la centrada, para el ícono y un link.
 
 Las etiquetas de sala llevan el color que esa sala tiene en la web. Una etiqueta que
 no es una sala va en gris.

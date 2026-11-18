@@ -23,6 +23,9 @@
   --muted:  #666;
   /* Acento: el del día de publicación. Lo pone el generador. */
   --accent: #b79a58;
+  /* Verde de la web (--accent de index.html). En Instagram sólo en la centrada:
+     el ícono y un link resaltado. */
+  --verde: #00d060;
   --font: "Sitedigo", "DejaVu Sans", Verdana, sans-serif;
 }
 
@@ -225,5 +228,6 @@ html, body { background: var(--bg); }
    titular. Nunca un emoji: cambian de dibujo según el aparato. */
 .pieza.story.centrada { --icono: 150px; --icono-abajo: 44px; }
 .pieza.feed.centrada  { --icono: 120px; --icono-abajo: 34px; }
-.centro .icono { width: var(--icono); height: auto; display: block; margin-bottom: var(--icono-abajo); color: var(--text); }
+.centro .icono { width: var(--icono); height: auto; display: block; margin-bottom: var(--icono-abajo); color: var(--verde); }
+.centro em { font-style: normal; color: var(--verde); }
 .cuerpo.centro.sin-logo .arriba, .cuerpo.centro.sin-logo .abajo { align-self: center; }
