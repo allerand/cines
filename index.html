@@ -2191,6 +2191,8 @@ function mostrarContadorFestivales(n) {
   const el = document.getElementById('festivales-n');
   el.textContent = n;
   el.hidden = !n;
+  // newsletter.html muestra el mismo número sin bajar la cartelera entera.
+  try { localStorage.setItem('sd:fest-n', JSON.stringify({ n, dia: hoyISO() })); } catch (_) {}
 }
 
 // Cuántos hay en curso, para la pestaña: los de la cartelera de Buenos Aires

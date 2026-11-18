@@ -82,53 +82,86 @@
     .seccion-link:focus { outline: none; }
     .seccion-link:focus-visible { outline: 1px dotted var(--muted); outline-offset: 3px; }
     .seccion-link.activa { color: var(--text); border-bottom-color: var(--text); }
+    .seccion-n {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0 0.35rem;
+      border-radius: 2px;
+      background: var(--accent);
+      color: #000;
+      font-size: 0.65rem;
+      letter-spacing: 0;
+      vertical-align: 1px;
+    }
 
-    main { padding: 2.4rem 2rem; max-width: 34rem; }
-    main h2 { font-size: 1.15rem; font-weight: 600; line-height: 1.3; }
-    main p { margin-top: 0.6rem; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
-    .nl-form { display: flex; gap: 0.5rem; margin-top: 1.4rem; }
+    /* El formulario habla el idioma del tablero de días de la portada:
+       casilleros cuadrados pegados, letra monoespaciada, y el verde como
+       borde y letras (el día elegido), no como botón relleno. */
+    main { padding: 2.6rem 2rem; max-width: 46rem; }
+    main h2 { font-size: 1.7rem; font-weight: 600; line-height: 1.25; letter-spacing: 0.01em; }
+    main p { margin-top: 0.7rem; color: #999; font-size: 1.15rem; line-height: 1.5; }
+    .nl-form {
+      display: flex;
+      margin-top: 1.5rem;
+      max-width: 34rem;
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+    }
+    .nl-input, .nl-btn {
+      height: 58px;
+      border: 1px solid var(--border);
+      border-radius: 0;
+      font-family: inherit;
+      transition: color 0.15s, border-color 0.15s, background 0.15s;
+    }
     .nl-input {
+      position: relative;
       flex: 1 1 auto;
       min-width: 0;
-      background: var(--bg3);
-      border: 1px solid var(--border);
+      background: transparent;
       color: var(--text);
-      padding: 0.6rem 0.8rem;
-      border-radius: 3px;
-      /* 16px: con menos, el iPhone hace zoom al tocar el recuadro. */
-      font-size: 16px;
-      font-family: inherit;
-      transition: border-color 0.12s;
+      padding: 0 1rem;
+      /* 16px como mínimo: con menos, el iPhone hace zoom al tocar el recuadro. */
+      font-size: 1.2rem;
+      -webkit-appearance: none;
+      appearance: none;
     }
     .nl-input::placeholder { color: var(--muted); }
-    .nl-input:focus { outline: none; border-color: var(--accent); }
+    .nl-input:hover { border-color: #555; z-index: 1; }
+    .nl-input:focus { outline: none; border-color: var(--accent); z-index: 2; }
     .nl-btn {
+      position: relative;
       flex: 0 0 auto;
-      background: var(--accent);
-      border: 1px solid var(--accent);
-      color: #000;
-      padding: 0.6rem 1.1rem;
-      border-radius: 3px;
-      font-size: 0.9rem;
-      font-weight: 600;
-      font-family: inherit;
+      margin-left: -1px;
+      background: var(--bg3);
+      color: var(--text);
+      padding: 0 1.4rem;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
       cursor: pointer;
     }
-    .nl-btn:disabled { opacity: 0.5; cursor: default; }
-    .nl-btn:focus-visible { outline: 1px dotted var(--text); outline-offset: 3px; }
+    .nl-btn:hover, .nl-btn:focus-visible {
+      outline: none;
+      border-color: var(--accent);
+      color: var(--accent);
+      z-index: 2;
+    }
+    .nl-btn:disabled { color: var(--muted); border-color: var(--border); cursor: default; }
     /* Para los bots que llenan todo lo que encuentran: una persona no lo ve. */
     .nl-web { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
-    main p.nl-msg { min-height: 1.4rem; margin-top: 0.9rem; font-size: 0.9rem; }
+    main p.nl-msg { min-height: 1.6rem; margin-top: 1rem; font-size: 1.05rem; }
     main p.nl-msg.ok { color: var(--accent); }
     main p.nl-msg.error { color: #e06060; }
 
     @media (max-width: 768px) {
       header { padding: 0.6rem 1rem; }
       .secciones { padding: 0 1rem; }
-      main { padding: 1.6rem 1rem; }
-    }
-    @media (max-width: 480px) {
-      .nl-form { flex-direction: column; }
+      main { padding: 1.8rem 1rem; }
+      main h2 { font-size: 1.45rem; }
+      main p { font-size: 1.05rem; }
+      .nl-input, .nl-btn { height: 50px; }
+      .nl-input { font-size: 16px; padding: 0 0.8rem; }
+      .nl-btn { padding: 0 1rem; font-size: 0.85rem; }
     }
   </style>
 </head>
@@ -150,13 +183,13 @@
 
 <nav class="secciones" aria-label="Secciones">
   <a class="seccion-link" href="./#buenos-aires">Cartelera</a>
-  <a class="seccion-link" href="./#festivales">Festivales</a>
+  <a class="seccion-link" href="./#festivales">Festivales<span class="seccion-n" id="festivales-n" hidden></span></a>
   <a class="seccion-link activa" href="newsletter" aria-current="page">Newsletter</a>
 </nav>
 
 <main>
   <h2>¿Querés recibir el newsletter de Si te digo?</h2>
-  <p>Dejá tu mail para recibirlo.</p>
+  <p>Dejá tu mail para recibirlo:</p>
   <form class="nl-form" id="nl-form" novalidate>
     <input type="email" id="nl-email" class="nl-input" name="email" placeholder="tu mail" autocomplete="email" inputmode="email" aria-label="Tu mail" required>
     <input type="text" id="nl-web" class="nl-web" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
@@ -183,6 +216,64 @@ function deviceId() {
     return id;
   } catch (_) { return 'anon'; }
 }
+
+// ── El número de festivales en curso, en la pestaña ────────────────────
+// La portada lo deja anotado cada vez que lo calcula (sd:fest-n). Si la nota
+// es de hoy se usa esa; si no (entraron directo acá, o es de otro día) se
+// hace la misma cuenta que actualizarContadorFestivales en index.html: los
+// de Buenos Aires por sus funciones en la cartelera, los de afuera por las
+// fechas del registro. Si cambia la cuenta allá, cambiarla acá.
+function hoyISO() {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, '0')}-${String(n.getDate()).padStart(2, '0')}`;
+}
+
+function mostrarContadorFestivales(n) {
+  const el = document.getElementById('festivales-n');
+  el.textContent = n;
+  el.hidden = !n;
+}
+
+async function contarFestivales() {
+  const baja = url => fetch(url + '?t=' + Date.now()).then(r => (r.ok ? r.json() : {}));
+  const [reg, cart] = await Promise.all([baja('data/festivales.json'), baja('data/cartelera.json')]);
+  const registro = (reg.festivales || []).filter(f => f.slug && f.nombre);
+  const funciones = cart.screenings || [];
+  const busquedaDe = f => (f.ciclo || '').trim().toLowerCase();
+  const coincide = (s, q) => [s.title_es, s.title_en, s.original_title, s.director, s.ciclo]
+    .join(' ').toLowerCase().includes(q);
+
+  // Los del registro, más los ciclos que dicen "Festival" y no están en él.
+  const lista = registro.slice();
+  const sueltos = new Set();
+  for (const s of funciones) {
+    if (!s.ciclo) continue;
+    const ciclo = s.ciclo.toLowerCase();
+    if (registro.some(f => !f.archivo && busquedaDe(f) && ciclo.includes(busquedaDe(f)))) continue;
+    if (/\bfestival\b/i.test(s.ciclo) && !sueltos.has(ciclo)) {
+      sueltos.add(ciclo);
+      lista.push({ ciclo: s.ciclo });
+    }
+  }
+
+  const hoy = hoyISO();
+  return lista.filter(f => {
+    const q = busquedaDe(f);
+    const fechas = f.archivo || !q ? []
+      : funciones.filter(s => coincide(s, q)).map(s => s.fecha).filter(Boolean).sort();
+    const desde = f.desde || fechas[0] || '';
+    const hasta = f.hasta || fechas[fechas.length - 1] || '';
+    return !(hasta && hasta < hoy) && !!desde && desde <= hoy;
+  }).length;
+}
+
+(async () => {
+  try {
+    const nota = JSON.parse(localStorage.getItem('sd:fest-n') || 'null');
+    if (nota && nota.dia === hoyISO()) { mostrarContadorFestivales(nota.n); return; }
+  } catch (_) {}
+  try { mostrarContadorFestivales(await contarFestivales()); } catch (_) {}
+})();
 
 const form = document.getElementById('nl-form');
 const input = document.getElementById('nl-email');
