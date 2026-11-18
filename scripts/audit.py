@@ -687,6 +687,8 @@ def leer_padron(root: Path = ROOT) -> tuple[dict, list, set]:
         clases, cine, resto = m.groups()
         if "filter-btn" not in clases or "commercial-chip" in clases:
             continue
+        if "otras-chip" in clases:      # agrupa salas de paso, no es una sala
+            continue
         if cine == "all" or "$" in cine:
             continue
         salas[cine] = "madrid" if 'data-ciudad="madrid"' in resto else "ba"

@@ -732,6 +732,7 @@
     .cine-helios   { border-color: #14323d; color: #4fc3e8; }
     .cine-cclub    { border-color: #3d1c12; color: #e8734a; }
     .cine-moron    { border-color: #1c2f3d; color: #7ab8e0; }
+    .cine-otras    { border-color: #33302a; color: #c9b98f; }
     .cine-turdera  { border-color: #3a2d14; color: #e0a84a; }
     .cine-avalon   { border-color: #163240; color: #4fb6cf; }
     .cine-laba     { border-color: #33213a; color: #c27ad9; }
@@ -1065,6 +1066,8 @@
   <button class="filter-btn" data-cine="Atlas Caballito">Atlas Caballito</button>
   <button class="filter-btn" data-cine="Cine Helios">Helios</button>
   <button class="filter-btn" data-cine="Espacio INCAA Morón">INCAA Morón</button>
+  <!-- Un solo chip para las salas de paso (SALAS_OTRAS), las que sólo usa algún festival -->
+  <button class="filter-btn otras-chip" data-cine="Otras">Otras</button>
   <!-- Madrid: data-ciudad marca de qué ciudad es cada sala (sin él, Buenos Aires) -->
   <button class="filter-btn otra-ciudad" data-cine="Cine Doré" data-ciudad="madrid">Doré</button>
   <button class="filter-btn otra-ciudad" data-cine="Cines Ideal" data-ciudad="madrid">Ideal</button>
@@ -1165,6 +1168,9 @@ const CINE_ADDRESSES = {
   'La Tomada':                'Fraga 119',
   'Cine Helios':              'Bvd. San Martín 3076, Ciudad Jardín, El Palomar',
   'Espacio INCAA Morón':      'Almirante Brown 980, Morón (Teatro Gregorio de Laferrere)',
+  'Casa de la Provincia de Buenos Aires': 'Av. Callao 237',
+  'Sala Norita Cortiñas':     'Moreno 2654 (Espacio INCAA ATE Cultura)',
+  'Territorio de Memoria Tres Ombúes': 'Ruta 4 y Río Matanza, Ciudad Evita, La Matanza',
   'Cineclub Turdera':         'San Luis 369, Turdera (Rotary Club)',
   // The Cinema Club Company: una sala por bar
   'Cinema Club Palermo':      'Honduras 4999 (Pani Feroz)',
@@ -1232,6 +1238,14 @@ function isCineclub(cine) {
   return CINECLUBES.has(cine);
 }
 
+// Salas de paso: las que sólo aparecen por un festival no llevan chip propio,
+// así la barra no se llena. Van todas juntas en el chip "Otras". Para sumar una:
+// el nombre acá y la dirección en CINE_ADDRESSES (y en FUERA_DE_CABA si es del
+// conurbano).
+const CHIP_OTRAS = 'Otras';
+const SALAS_OTRAS = new Set(['Casa de la Provincia de Buenos Aires', 'Sala Norita Cortiñas',
+                             'Territorio de Memoria Tres Ombúes']);
+
 // Las salas de Buenos Aires que NO están en la Ciudad (Gran Buenos Aires):
 // son las que saca "Solo CABA". Va por nombre exacto de sala, así de una
 // cadena quedan las sucursales porteñas ("Multiplex Belgrano") y se van las
@@ -1249,6 +1263,7 @@ const FUERA_DE_CABA = new Set([
   'Multiplex Canning',                  // Ezeiza
   'Multiplex Pilar',
   'Cines Pixel',                        // Adrogué
+  'Territorio de Memoria Tres Ombúes',  // La Matanza
 ]);
 function fueraDeCaba(cine) {
   return FUERA_DE_CABA.has(cine);
@@ -1373,6 +1388,7 @@ let searchQuery = '';
 function matchesCine(s) {
   if (!activeCines.size) return true;
   for (const c of activeCines) {
+    if (c === CHIP_OTRAS) { if (SALAS_OTRAS.has(s.cine)) return true; continue; }
     if (isCommercial(c) ? (s.cine && s.cine.startsWith(c)) : s.cine === c) return true;
   }
   return false;
@@ -2159,6 +2175,12 @@ function cicloDeFila(s) {
   return { texto: s.ciclo || '', href: f ? hrefFestival(f) : '' };
 }
 
+// Un festival de entrada libre (`gratis` en festivales.json) lo es en todas sus sedes.
+function funcionGratis(s) {
+  const f = s.ciclo ? festivalDeFuncion(s) : null;
+  return !!(f && f.gratis);
+}
+
 function direccionSala(cine) {
   return CINE_ADDRESSES[cine] || (festivalActivo && festivalActivo.sedes && festivalActivo.sedes[cine]) || '';
 }
@@ -2507,7 +2529,7 @@ document.getElementById('toggle-caba').addEventListener('click', () => {
 });
 
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Club Lucero':'cine-lucero', 'Escuela Da Vinci':'cine-davinci', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Museo Moderno':'cine-moderno', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Centro Cultural Leopoldo Marechal':'cine-marechal', 'Universidad del Cine':'cine-fuc', 'La Tomada':'cine-tomada', 'Cine Helios':'cine-helios', 'Cineclub Turdera':'cine-turdera', 'Espacio INCAA Morón':'cine-moron', 'Cinema Club Palermo':'cine-cclub', 'Cinema Club Recoleta':'cine-cclub', 'Cinema Club Lomas de Zamora':'cine-cclub', 'Avalon':'cine-avalon', 'LABA':'cine-laba', 'Atlas Caballito':'cine-atlas', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Museo Reina Sofía':'cine-reina', 'Cines Callao':'cine-callao', 'Sala Equis':'cine-equis', 'Teatro Enrique Carreras':'cine-carreras' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Club Lucero':'cine-lucero', 'Escuela Da Vinci':'cine-davinci', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Museo Moderno':'cine-moderno', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Centro Cultural Leopoldo Marechal':'cine-marechal', 'Universidad del Cine':'cine-fuc', 'La Tomada':'cine-tomada', 'Cine Helios':'cine-helios', 'Cineclub Turdera':'cine-turdera', 'Espacio INCAA Morón':'cine-moron', 'Casa de la Provincia de Buenos Aires':'cine-otras', 'Sala Norita Cortiñas':'cine-otras', 'Territorio de Memoria Tres Ombúes':'cine-otras', 'Cinema Club Palermo':'cine-cclub', 'Cinema Club Recoleta':'cine-cclub', 'Cinema Club Lomas de Zamora':'cine-cclub', 'Avalon':'cine-avalon', 'LABA':'cine-laba', 'Atlas Caballito':'cine-atlas', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Museo Reina Sofía':'cine-reina', 'Cines Callao':'cine-callao', 'Sala Equis':'cine-equis', 'Teatro Enrique Carreras':'cine-carreras' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';
@@ -2634,7 +2656,8 @@ function marcarSalasSinFunciones() {
   document.querySelectorAll('#filters .filter-btn[data-cine]').forEach(b => {
     const c = b.dataset.cine;
     if (c === 'all') return;
-    const hay = isCommercial(c) ? [...cines].some(x => x && x.startsWith(c)) : cines.has(c);
+    const hay = c === CHIP_OTRAS ? [...cines].some(x => SALAS_OTRAS.has(x))
+      : isCommercial(c) ? [...cines].some(x => x && x.startsWith(c)) : cines.has(c);
     b.disabled = !hay && !activeCines.has(c);
   });
 }
@@ -2700,7 +2723,7 @@ function renderTable() {
       ${ciclo.texto ? `<div class="film-ciclo-inline">${ciclo.href ? `<a href="${escapeHtml(ciclo.href)}">${escapeHtml(ciclo.texto)}</a>` : escapeHtml(ciclo.texto)}</div>` : ''}
       <div class="film-meta-inline">${escapeHtml(fichaCorta(s))}</div>
       ${s.entrada && !s.ticket_url ? `<div class="film-meta-row"><span class="gratis">${escapeHtml(s.entrada)}</span></div>`
-        : CINES_GRATIS.has(s.cine) ? '<div class="film-meta-row"><span class="gratis">Entrada gratis</span></div>'
+        : CINES_GRATIS.has(s.cine) || funcionGratis(s) ? '<div class="film-meta-row"><span class="gratis">Entrada gratis</span></div>'
         : CINES_BOLETERIA.has(s.cine) ? '<div class="film-meta-row"><span class="gratis">Entradas en boletería</span></div>'
         : s.ticket_url ? `<div class="film-meta-row"><a class="ticket-link" data-row="${i}" href="${escapeHtml(ticketUrl(s))}" target="_blank" rel="noopener">Entradas →</a></div>` : ''}`;
 
