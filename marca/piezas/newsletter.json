@@ -1,0 +1,9 @@
+{
+  "formato": "story",
+  "slides": [
+    {"tipo": "centrada", "logo": false,
+     "mini": "newsletter",
+     "titular": "¿querés recibir el newsletter de si te digo?",
+     "lineas": ["dejá tu mail en sitedigo.com/newsletter"]}
+  ]
+}

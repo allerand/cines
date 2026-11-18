@@ -122,9 +122,8 @@
   }
 
   .post.story .post-footer {
-    padding-top: 22px;
-    margin-top: 22px;
-    font-size: 20px;
+    margin-top: 40px;
+    font-size: 28px;
   }
   .post-header {
     display: flex; flex-direction: column; gap: 8px;
@@ -232,13 +231,20 @@
   .film-meta { font-size: 16px; color: var(--muted); line-height: 1.4; }
   .film-ciclo { font-size: 14px; color: var(--muted); font-style: italic; margin-top: 2px; text-transform: lowercase; }
 
+  /* El pie es el mismo en todas las piezas de la marca (marca/marca.css,
+     .firma): sitedigo.com centrado, siempre con el mismo tamaño y peso, y el
+     contador a la derecha sin moverlo de lugar. Sin raya ni color del día. */
   .post-footer {
-    display: flex; justify-content: space-between; align-items: center;
-    padding-top: 18px; border-top: 1px solid var(--border); margin-top: 16px;
-    color: var(--muted); font-size: 16px; letter-spacing: 0.02em;
+    display: grid; grid-template-columns: 1fr auto 1fr; align-items: baseline;
+    margin-top: 32px;
+    font-size: 24px; line-height: 1.2; min-height: 1.2em;
+    letter-spacing: 0.02em;
   }
-  .post-footer .url { color: var(--accent); font-weight: 600; }
-  .post-footer .slide-num { color: var(--text); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .post-footer .url { grid-column: 2; color: var(--text); font-weight: 600; }
+  .post-footer .slide-num {
+    grid-column: 3; justify-self: end;
+    color: var(--muted); font-weight: 400; font-variant-numeric: tabular-nums;
+  }
 
   .empty { padding: 60px 0; text-align: center; color: var(--muted); font-size: 24px; }
 
@@ -343,8 +349,8 @@
     </div>
     <div class="post-films" id="post-films"></div>
     <div class="post-footer">
-      <span>cines · buenos aires</span>
-      <span><span class="slide-num" id="post-slide-num"></span> <span class="url">sitedigo.com</span></span>
+      <span class="url">sitedigo.com</span>
+      <span class="slide-num" id="post-slide-num"></span>
     </div>
   </div>
 </div>
@@ -599,7 +605,7 @@ function renderSlide(slideNum) {
     filmsEl.innerHTML = slideFilms.map(s => {
       const horaClass = (s.hora === '??' || !s.hora) ? 'film-time unknown' : 'film-time';
       const horaText = (s.hora === '??' || !s.hora) ? 'S/H' : s.hora;
-      const yearDur = [s.year, s.duration ? s.duration + ' min' : ''].filter(Boolean).join(' · ');
+      const yearDur = [s.year, s.duration ? s.duration + ' min' : ''].filter(Boolean).join(', ');
       return `<div class="film">
         <div class="${horaClass}">${horaText}</div>
         <div class="film-body">
@@ -614,7 +620,7 @@ function renderSlide(slideNum) {
   }
 
   // Indicadores de slide
-  const slideText = totalSlides > 1 ? `${currentSlide} / ${totalSlides}` : '';
+  const slideText = totalSlides > 1 ? `${currentSlide}/${totalSlides}` : '';
   document.getElementById('slide-indicator').textContent = totalSlides > 1 ? `Slide ${currentSlide} / ${totalSlides}` : '1 / 1';
   document.getElementById('post-slide-num').textContent = slideText;
   document.getElementById('prev-slide').disabled = currentSlide <= 1;
@@ -675,7 +681,7 @@ function renderWeekSlide(slideNum) {
   }
 
   document.getElementById('slide-indicator').textContent = `Día ${currentSlide} / 7`;
-  document.getElementById('post-slide-num').textContent = `${currentSlide} / 7`;
+  document.getElementById('post-slide-num').textContent = `${currentSlide}/7`;
   document.getElementById('prev-slide').disabled = currentSlide <= 1;
   document.getElementById('next-slide').disabled = currentSlide >= totalSlides;
 

@@ -16,10 +16,10 @@ La ficha:
       "fecha":   "2026-11-19",          # día en que se publica: define el acento
       "rotulo":  "sala nueva",          # cabecera, va en mayúsculas
       "bajada":  "club lucero",         # cabecera, va en el color del día
-      "pie":     "cines de buenos aires",
       "festival": "rojo-sangre",        # slug de data/festivales.json: la centrada usa su logo
       "slides": [
         {"tipo": "centrada", "mini": "...", "antetitulo": "...", "titular": "...", "lineas": ["...", "..."]},
+        #   + "festival": "<slug>" usa el logo del festival; "logo": false no pone ninguno
         {"tipo": "frase", "texto": "...", "nota": "..."},
         {"tipo": "texto", "titular": "...", "parrafos": ["...", "..."], "nota": "..."},
         {"tipo": "lista", "items": [
@@ -56,7 +56,7 @@ PROHIBIDOS = {
 }
 EMOJI = re.compile("[\U0001F000-\U0001FAFF\U0001F1E6-\U0001F1FF☀-➿️]")
 
-LIMITES = {"rotulo": 20, "bajada": 26, "pie": 34, "etiqueta": 24, "clave": 5, "mini": 34}
+LIMITES = {"rotulo": 20, "bajada": 26, "etiqueta": 24, "clave": 5, "mini": 34}
 
 
 class FichaMala(Exception):
@@ -148,10 +148,13 @@ def cuerpo_slide(s: dict, i: int, festival: str = "") -> str:
             raise FichaMala(f"{d}: debajo del logo van tres líneas como máximo.")
         abajo = "".join(
             f'<p class="{"dato" if n == 0 else "dato2"}">{t(l, d + " línea")}</p>' for n, l in enumerate(lineas))
+        arriba = (f'<div class="arriba">{ante}'
+                  f'<p class="nombre">{t(s.get("titular"), d + " titular")}</p></div>')
+        if s.get("logo") is False:
+            return f'<div class="cuerpo centro sin-logo">{arriba}<div class="abajo">{abajo}</div></div>'
         fest = s.get("festival") or festival
         logo = logo_festival(fest) if fest else RAIZ / "logo.png"
-        return (f'<div class="cuerpo centro{" con-fest" if fest else ""}"><div class="arriba">{ante}'
-                f'<p class="nombre">{t(s.get("titular"), d + " titular")}</p></div>'
+        return (f'<div class="cuerpo centro{" con-fest" if fest else ""}">{arriba}'
                 f'<img class="logo{" fest" if fest else ""}" src="{logo.as_uri()}" alt="">'
                 f'<div class="abajo">{abajo}</div></div>')
     raise FichaMala(f"{d}: tipo {tipo!r} no existe. Hay cuatro: centrada, frase, texto, lista.")
@@ -172,22 +175,22 @@ def armar_html(ficha: dict, formato: str) -> str:
     if con_cab:
         cab = (f'<div class="cab"><div class="rotulo">{t(ficha.get("rotulo"), "rótulo", "rotulo")}</div>'
                f'<div class="bajada">{t(ficha.get("bajada"), "bajada", "bajada")}</div></div>')
-    pie_txt = t(ficha.get("pie", "cines de buenos aires"), "pie", "pie")
     total = len(slides)
     piezas = []
     for i, s in enumerate(slides, 1):
-        num = f'<span class="num">{i} / {total}</span> ' if total > 1 else ""
+        num = f'<span class="num">{i}/{total}</span>' if total > 1 else ""
+        firma = f'<div class="firma"><span class="url">sitedigo.com</span>{num}</div>'
         if s.get("tipo") == "centrada":
             mini = s.get("mini") or ficha.get("mini") or ""
             mini = t(mini, f"slide {i} mini título", "mini") if mini else ""
             piezas.append(
                 f'<div class="pieza {formato} centrada" id="slide-{i}"><div class="mini">{mini}</div>'
                 f'{cuerpo_slide(s, i, ficha.get("festival", ""))}'
-                f'<div class="firma">{num}sitedigo.com</div></div>')
+                f'{firma}</div>')
             continue
         piezas.append(
             f'<div class="pieza {formato}" id="slide-{i}">{cab}{cuerpo_slide(s, i)}'
-            f'<div class="pie"><span>{pie_txt}</span><span>{num}<span class="url">sitedigo.com</span></span></div></div>'
+            f'{firma}</div>'
         )
     return (
         '<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8">'
@@ -213,7 +216,7 @@ async def sacar_png(html_path: Path, out_dir: Path, total: int) -> list:
             [...document.querySelectorAll('.pieza')].map((p, i) => {
               const c = p.querySelector('.cuerpo');
               const alto = c.scrollHeight - c.clientHeight;
-              const ancho = [...p.querySelectorAll('.rotulo,.bajada,.pie,.etiqueta,.clave')]
+              const ancho = [...p.querySelectorAll('.rotulo,.bajada,.etiqueta,.clave')]
                 .some(e => e.scrollWidth > e.clientWidth + 1);
               const cab2 = [...p.querySelectorAll('.rotulo,.bajada,.mini')]
                 .some(e => e.getBoundingClientRect().height > parseFloat(getComputedStyle(e).fontSize) * 1.3);

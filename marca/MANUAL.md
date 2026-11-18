@@ -40,7 +40,7 @@ la letra, se aprietan márgenes ni se agrega un tamaño nuevo.
 | Ancho de columna | 900 | 940 |
 
 No hay formato cuadrado ni apaisado. Un carrusel son varios posts de 1080 x 1350
-con la misma cabecera y el mismo pie; el pie lleva `2 / 5`. Máximo 10.
+con la misma cabecera y la misma firma; el contador (`2/5`) va a la derecha. Máximo 10.
 
 ## Estructura fija
 
@@ -51,8 +51,29 @@ Toda pieza tiene tres partes, siempre en este orden:
    color de acento (de qué se trata), hasta 26. Una línea cada una. Debajo, raya de
    2 px del color de acento.
 2. **Cuerpo.** Una de las tres plantillas.
-3. **Pie.** Raya de 1 px gris. A la izquierda `cines de buenos aires`; a la derecha
-   el número de slide si hay más de uno y `sitedigo.com` en el acento.
+3. **Firma.** La misma en todas las piezas, sin excepción, también en la cartelera
+   diaria. Ver abajo.
+
+## La firma (el pie)
+
+`sitedigo.com` cierra todas las piezas y es siempre idéntico. No se cambia de lugar, de
+tamaño ni de peso por ningún motivo, y no hay pieza que no lo lleve.
+
+| | Story | Post |
+|---|---|---|
+| Posición | centrado, borde de abajo del texto a 100 del borde del lienzo | centrado, a 70 |
+| Tamaño | 28 | 24 |
+| Peso | 600 | 600 |
+| Color | texto `#e0e0e0` | texto `#e0e0e0` |
+| Interletra | 0.02em | 0.02em |
+| Aire mínimo arriba | 40 | 32 |
+
+- Sin raya encima, sin color del día, sin texto a la izquierda.
+- **Contador**: cuando hay más de un slide va `2/12` a la derecha, en la misma línea,
+  mismo tamaño, peso 400, gris. Como va en su propia columna, no corre a `sitedigo.com`
+  del centro.
+- Los valores viven en `.firma` de `marca/marca.css` y, repetidos, en `.post-footer` de
+  `instagram.html` (la cartelera diaria). Si se toca uno se toca el otro.
 
 ## Plantillas
 
@@ -61,7 +82,7 @@ Toda pieza tiene tres partes, siempre en este orden:
   opcional en mayúsculas chicas (`NUEVOS FESTIVALES EN LA WEB`, hasta 34 letras, del
   mismo tamaño que `sitedigo.com`), después un antetítulo y el
   nombre en grande, el logo en el medio, abajo hasta tres líneas de datos (la primera
-  más grande, las otras en gris) y `sitedigo.com` al pie. Es la plantilla por defecto
+  más grande, las otras en gris) y la firma. Es la plantilla por defecto
   para cualquier comunicación que no sea programación.
 
   | | Story | Post |
@@ -70,6 +91,9 @@ Toda pieza tiene tres partes, siempre en este orden:
   | Nombre (bold) | 72 | 64 |
   | Logo de festival, diámetro | 380 | 320 |
   | Logo de Si te digo, alto | 600 | 460 |
+
+  El logo es opcional: con `"logo": false` en el slide no va ninguna imagen y el anuncio
+  y los datos quedan juntos en el centro (así salió la story del newsletter).
   | Primer dato | 40 | 36 |
   | Datos en gris | 28 | 24 |
   | Mini título (500, +0.08em) y sitedigo.com (600) | 28 | 24 |
@@ -98,7 +122,8 @@ en regular y bold. Sin cursivas salvo el título alternativo de una película.
 | Clave (hora, número) | 52 | 44 | 700 | cifras tabulares | texto |
 | Secundario | 28 | 22 | 400 | minúsculas | texto al 85 % |
 | Nota | 22 | 16 | 400 | minúsculas | gris |
-| Pie | 20 | 16 | 400 | minúsculas | gris |
+| Firma (`sitedigo.com`) | 28 | 24 | 600 | minúsculas | texto |
+| Contador | 28 | 24 | 400 | cifras tabulares | gris |
 | Etiqueta | 18 | 14 | 500 | MAYÚSCULAS, +0.06em | gris o color de sala |
 
 Interlineado: 1 a 1.1 en lo grande, 1.3 en párrafos, 1.4 en notas.
@@ -116,7 +141,7 @@ Sólo existen estos valores (story / post):
 | Filas de una lista | 30 / 20 arriba y abajo, raya de 1 px entre filas |
 | Columna de la clave y su separación | 160 + 32 / 130 + 22 |
 | Líneas dentro de una fila | 10 / 8 |
-| Pie y su raya | 22 / 18 |
+| Cuerpo y firma, como mínimo | 40 / 32 |
 
 ## Color
 
@@ -124,7 +149,7 @@ Sólo existen estos valores (story / post):
 |---|---|
 | Fondo | `#0a0a0a` |
 | Texto | `#e0e0e0` |
-| Gris (notas, pie) | `#666666` |
+| Gris (notas, contador) | `#666666` |
 | Rayas finas | `#2a2a2a` |
 
 **Acento: el del día en que se publica**, igual que la cartelera diaria. Sólo en frase,
@@ -134,8 +159,8 @@ texto y lista; la centrada no lleva acento.
 |---|---|---|---|---|---|---|
 | `#b86b52` | `#5f7fa6` | `#b79a58` | `#8b74a8` | `#5f9b7f` | `#b06d86` | `#5f9c96` |
 
-El acento va en cuatro lugares y en ninguno más: la bajada, la raya de la cabecera,
-`sitedigo.com` y, como mucho, una palabra resaltada por slide (`*así*` en la ficha).
+El acento va en tres lugares y en ninguno más: la bajada, la raya de la cabecera y, como
+mucho, una palabra resaltada por slide (`*así*` en la ficha). La firma no lleva acento.
 El verde `#00d060` es de la web y no se usa en Instagram.
 
 Las etiquetas de sala llevan el color que esa sala tiene en la web. Una etiqueta que
@@ -194,7 +219,5 @@ generador, muestra los PNG y espera el visto bueno.
 
 ## Pendientes conocidos
 
-- La cartelera diaria (`instagram.html`) todavía usa el punto medio en `2026 · 118 min`
-  y en `cines · buenos aires`. Hay que pasarla a coma y a `cines de buenos aires`.
 - En la Mac las piezas salen en Verdana porque DejaVu Sans no está instalada. Son casi
   iguales pero no idénticas. Se arregla copiando los TTF a `marca/fonts/`.
