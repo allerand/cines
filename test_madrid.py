@@ -334,6 +334,16 @@ assert (renoir[0].director, renoir[0].duration) == ("Jonatan Etzler", 100)
 assert renoir[0].cine == "Cines Princesa"
 print("✓ renoir: cada pase una sola vez (el id manda), con su butaca, director y duración")
 
+# Desde noviembre de 2026 el link a la butaca trae la ciudad, el cine y la
+# película antes del id. Con el patrón viejo no salía ninguna función.
+_largo = _renoir_bloque().replace(
+    "/pase/1089142/", "/pase/madrid/cines-princesa/bad-apples/1096521/").replace(
+    "/pase/1089144/", "/pase/madrid/cines-princesa/bad-apples/1096523/")
+renoir = _renoir_funciones(_largo + _largo, "Cines Princesa", "2026-11-18")
+assert [(s.hora, s.title) for s in renoir] == [("16:00", "BAD APPLES"), ("18:00", "BAD APPLES")]
+assert renoir[1].ticket_url == "https://www.pillalas.com/pase/madrid/cines-princesa/bad-apples/1096523/"
+print("✓ renoir: el link largo de pillalas (ciudad, cine y película antes del id)")
+
 
 # --- Cines Embajadores -------------------------------------------------------
 def _emb_pase(direccion, dia, hora, id_):

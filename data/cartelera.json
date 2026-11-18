@@ -33,6 +33,10 @@
       "scrapeadas": 0,
       "publicadas": 9
     },
+    "CEA": {
+      "scrapeadas": 3,
+      "publicadas": 3
+    },
     "Cacodelphia": {
       "scrapeadas": 31,
       "publicadas": 31
@@ -71,6 +75,10 @@
       "scrapeadas": 54,
       "publicadas": 54
     },
+    "Cine Helios": {
+      "scrapeadas": 3,
+      "publicadas": 3
+    },
     "Cine Lorca": {
       "scrapeadas": 22,
       "publicadas": 22
@@ -82,6 +90,22 @@
     "Cineclub Farus": {
       "scrapeadas": 5,
       "publicadas": 5
+    },
+    "Cineclub Turdera": {
+      "scrapeadas": 2,
+      "publicadas": 2
+    },
+    "Cinema Club Lomas de Zamora": {
+      "scrapeadas": 12,
+      "publicadas": 12
+    },
+    "Cinema Club Palermo": {
+      "scrapeadas": 10,
+      "publicadas": 10
+    },
+    "Cinema Club Recoleta": {
+      "scrapeadas": 12,
+      "publicadas": 12
     },
     "Cinemark Caballito": {
       "scrapeadas": 201,
@@ -106,6 +130,14 @@
     "Cinépolis Recoleta": {
       "scrapeadas": 45,
       "publicadas": 45
+    },
+    "Club Lucero": {
+      "scrapeadas": 12,
+      "publicadas": 12
+    },
+    "Espacio INCAA Morón": {
+      "scrapeadas": 10,
+      "publicadas": 10
     },
     "Filo Cine": {
       "scrapeadas": 10,
@@ -12019,6 +12051,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Helios",
+      "fecha": "2026-11-18",
+      "hora": "18:30",
+      "title_es": "Intersex: El Círculo Violeta",
+      "title_en": "Intersex: El círculo violeta",
+      "original_title": "",
+      "director": "Teresa Martino",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 93,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/intersex-el-circulo-violeta/",
+      "ticket_url": "https://cinehelios.adro.studio/pelicula/45/3748271722172658c0260c6cb9117b72",
+      "ciclo": "Cine INCAA"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-18",
       "hora": "18:40",
@@ -12915,6 +12963,54 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-18",
+      "hora": "19:45",
+      "title_es": "Beetlejuice",
+      "title_en": "Beetlejuice",
+      "original_title": "Beetlejuice",
+      "director": "Tim Burton",
+      "country": "Estados Unidos",
+      "year": 1988,
+      "duration": 92,
+      "genre": "Fantasía, Comedia",
+      "letterboxd": "https://letterboxd.com/film/beetlejuice-1988/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/183984-beetlejuice-1988-miercoles-1811-1945hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-18",
+      "hora": "19:45",
+      "title_es": "El Cadaver de la Novia",
+      "title_en": "Corpse Bride",
+      "original_title": "",
+      "director": "Mike Johnson, Tim Burton",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2005,
+      "duration": 77,
+      "genre": "Fantasía, Animación",
+      "letterboxd": "https://letterboxd.com/film/corpse-bride/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184043-el-cadaver-de-la-novia-2005-miercoles-1811-1945hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-18",
+      "hora": "19:45",
+      "title_es": "Little Miss Sunshine",
+      "title_en": "Little Miss Sunshine",
+      "original_title": "",
+      "director": "Valerie Faris, Jonathan Dayton",
+      "country": "Estados Unidos",
+      "year": 2006,
+      "duration": 102,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/little-miss-sunshine/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184030-little-miss-sunshine-2006-miercoles-1811-1945hs",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Dot",
       "fecha": "2026-11-18",
       "hora": "19:50",
@@ -13136,6 +13232,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/olivia-2025/",
       "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6386",
+      "ciclo": ""
+    },
+    {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-18",
+      "hora": "20:00",
+      "title_es": "La casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 108,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
       "ciclo": ""
     },
     {
@@ -13683,6 +13795,38 @@
       "ciclo": "Homenaje a John Huston"
     },
     {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-18",
+      "hora": "21:00",
+      "title_es": "Happy Together",
+      "title_en": "Happy Together",
+      "original_title": "春光乍洩",
+      "director": "Wong Kar-wai",
+      "country": "Hong Kong",
+      "year": 1997,
+      "duration": 96,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/happy-together-1997/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=happy-together",
+      "ciclo": "Video Láser"
+    },
+    {
+      "cine": "Cine Helios",
+      "fecha": "2026-11-18",
+      "hora": "21:00",
+      "title_es": "La Casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 95,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
+      "ticket_url": "https://cinehelios.adro.studio/pelicula/45/d8a3023829561158584b71bc53efe2d2",
+      "ciclo": "Cine INCAA"
+    },
+    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-18",
       "hora": "21:10",
@@ -13856,6 +14000,54 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=38",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-18",
+      "hora": "21:45",
+      "title_es": "Donnie Darko",
+      "title_en": "Donnie Darko",
+      "original_title": "Donnie Darko",
+      "director": "Richard Kelly",
+      "country": "Estados Unidos",
+      "year": 2001,
+      "duration": 114,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/donnie-darko/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184023-donnie-darko-2001-miercoles-1811-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-18",
+      "hora": "21:45",
+      "title_es": "Thelma & Louise",
+      "title_en": "Thelma & Louise",
+      "original_title": "",
+      "director": "Ridley Scott",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 1991,
+      "duration": 130,
+      "genre": "Drama, Aventura",
+      "letterboxd": "https://letterboxd.com/film/thelma-louise/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184038-thelma-louise-1991-miercoles-1811-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-18",
+      "hora": "21:45",
+      "title_es": "Romeo + Juliet",
+      "title_en": "Romeo + Juliet",
+      "original_title": "",
+      "director": "Baz Luhrmann",
+      "country": "Australia, Estados Unidos",
+      "year": 1996,
+      "duration": 120,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/romeo-juliet-1996/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184050-romeo-juliet-1996-miercoles-1811-2145hs",
       "ciclo": ""
     },
     {
@@ -15089,6 +15281,22 @@
       "letterboxd": "https://letterboxd.com/film/clayface/",
       "ticket_url": "https://multiplex.com.ar/peliculas/clayface/",
       "ciclo": ""
+    },
+    {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-18",
+      "hora": "23:00",
+      "title_es": "¿Quién es esa chica?",
+      "title_en": "Who's That Girl",
+      "original_title": "",
+      "director": "James Foley",
+      "country": "Estados Unidos",
+      "year": 1987,
+      "duration": 93,
+      "genre": "Romance, Comedia",
+      "letterboxd": "https://letterboxd.com/film/whos-that-girl/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=quien-es-esa-chica",
+      "ciclo": "Pride de medianoche"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -17779,6 +17987,22 @@
       "ciclo": ""
     },
     {
+      "cine": "CEA",
+      "fecha": "2026-11-19",
+      "hora": "18:00",
+      "title_es": "Fantasmas en la Patagonia",
+      "title_en": "Fantasmas en la Patagonia",
+      "original_title": "",
+      "director": "Claudio Remedi",
+      "country": "Argentina",
+      "year": 1996,
+      "duration": 84,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/fantasmas-en-la-patagonia/",
+      "ticket_url": "https://cea.mda.gob.ar/funcion/5",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-19",
       "hora": "18:05",
@@ -18195,6 +18419,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-19",
+      "hora": "19:00",
+      "title_es": "Doukyuusei (Classmates)",
+      "title_en": "Dou kyu sei – Classmates",
+      "original_title": "",
+      "director": "Shoko Nakamura",
+      "country": "Japón",
+      "year": 2016,
+      "duration": 61,
+      "genre": "Romance, Animación",
+      "letterboxd": "https://letterboxd.com/film/dou-kyu-sei-classmates/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=doukyuusei-classmates",
+      "ciclo": "Anime queer"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-19",
       "hora": "19:10",
@@ -18531,6 +18771,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-19",
+      "hora": "19:45",
+      "title_es": "The Grand Budapest Hotel",
+      "title_en": "The Grand Budapest Hotel",
+      "original_title": "",
+      "director": "Wes Anderson",
+      "country": "Estados Unidos, Alemania",
+      "year": 2014,
+      "duration": 100,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-grand-budapest-hotel-2014/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184044-the-grand-budapest-hotel-2014-jueves-1911-1945hs",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-19",
       "hora": "19:50",
@@ -18705,6 +18961,22 @@
       "letterboxd": "https://letterboxd.com/film/ricky-espinosa-el-documental/",
       "ticket_url": "https://portal.salalucida.org/eventos/ricky-espinosa-el-documental-e344",
       "ciclo": "Ruido y Furia . 50 Años de Punk"
+    },
+    {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-19",
+      "hora": "20:00",
+      "title_es": "Militante",
+      "title_en": "Militante",
+      "original_title": "",
+      "director": "Federico Sosa",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 61,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
+      "ciclo": "Mirada documental"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -19091,6 +19363,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-19",
+      "hora": "21:00",
+      "title_es": "Blow Job",
+      "title_en": "Blow Job",
+      "original_title": "",
+      "director": "Andy Warhol",
+      "country": "Estados Unidos",
+      "year": 1964,
+      "duration": 35,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/blow-job/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=programa-doble-blow-job-pink-narcissus",
+      "ciclo": "La ley del deseo"
+    },
+    {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-19",
+      "hora": "21:00",
+      "title_es": "Pink Narcissus",
+      "title_en": "Pink Narcissus",
+      "original_title": "",
+      "director": "James Bidgood",
+      "country": "Estados Unidos",
+      "year": 1971,
+      "duration": 65,
+      "genre": "Fantasía, Drama",
+      "letterboxd": "https://letterboxd.com/film/pink-narcissus/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=programa-doble-blow-job-pink-narcissus",
+      "ciclo": "La ley del deseo"
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-19",
       "hora": "21:20",
@@ -19200,6 +19504,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-19",
+      "hora": "21:45",
+      "title_es": "Whiplash",
+      "title_en": "Whiplash",
+      "original_title": "",
+      "director": "Damien Chazelle",
+      "country": "Estados Unidos",
+      "year": 2014,
+      "duration": 107,
+      "genre": "Drama, Música",
+      "letterboxd": "https://letterboxd.com/film/whiplash-2014/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184051-whiplash-2014-jueves-1911-2145hs",
       "ciclo": ""
     },
     {
@@ -20033,6 +20353,22 @@
       "letterboxd": "https://letterboxd.com/film/how-to-rob-a-bank-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/como-robar-un-banco/",
       "ciclo": ""
+    },
+    {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-19",
+      "hora": "23:00",
+      "title_es": "Bound",
+      "title_en": "Bound",
+      "original_title": "",
+      "director": "Lana y Lilly Wachowski",
+      "country": "Estados Unidos",
+      "year": 1996,
+      "duration": 105,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/bound/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=bound",
+      "ciclo": "Trasnoche sáfica"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -22531,6 +22867,22 @@
       "ciclo": "Homenaje a John Huston"
     },
     {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-20",
+      "hora": "18:00",
+      "title_es": "Autopista américa 2000",
+      "title_en": "Autopista América 2000",
+      "original_title": "Autopista América 2000",
+      "director": "Julieta Duchovny",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 81,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/autopista-america-2000/",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-20",
       "hora": "18:05",
@@ -23523,6 +23875,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-20",
+      "hora": "20:00",
+      "title_es": "La casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 108,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-20",
       "hora": "20:05",
@@ -24272,6 +24640,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/tierra-de-mi-padre/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Turdera",
+      "fecha": "2026-11-20",
+      "hora": "22:00",
+      "title_es": "Stéphane",
+      "title_en": "Stéphane",
+      "original_title": "",
+      "director": "Timothée Hochet y Lucas Pastor",
+      "country": "Francia",
+      "year": 2023,
+      "duration": 78,
+      "genre": "Thriller, Comedia",
+      "letterboxd": "https://letterboxd.com/film/stephane/",
+      "ticket_url": "https://www.instagram.com/p/Df2Aig_kWPD/",
       "ciclo": ""
     },
     {
@@ -27603,6 +27987,22 @@
       "ciclo": "Herzog-Kinski: enemigo mío"
     },
     {
+      "cine": "CEA",
+      "fecha": "2026-11-21",
+      "hora": "18:00",
+      "title_es": "Un Cuento Chino",
+      "title_en": "Chinese Take-Away",
+      "original_title": "",
+      "director": "Sebastián Borensztein",
+      "country": "Argentina, España",
+      "year": 2011,
+      "duration": 93,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/chinese-take-away/",
+      "ticket_url": "https://cea.mda.gob.ar/funcion/8",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-21",
       "hora": "18:05",
@@ -28352,6 +28752,22 @@
       "genre": "Crimen, Thriller",
       "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/minotauro/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-21",
+      "hora": "19:45",
+      "title_es": "Eterno Resplandor de una Mente",
+      "title_en": "Eternal Sunshine of the Spotless Mind",
+      "original_title": "",
+      "director": "Michel Gondry",
+      "country": "Estados Unidos",
+      "year": 2004,
+      "duration": 108,
+      "genre": "Ciencia ficción, Romance",
+      "letterboxd": "https://letterboxd.com/film/eternal-sunshine-of-the-spotless-mind/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/182500-eterno-resplandor-de-una-mente-sabado-0711-1945hs",
       "ciclo": ""
     },
     {
@@ -31603,6 +32019,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-22",
+      "hora": "16:00",
+      "title_es": "Natacha, la película",
+      "title_en": "Natacha, The Movie",
+      "original_title": "",
+      "director": "Eduardo Pinto, Fernanda Ribeiz",
+      "country": "Argentina",
+      "year": 2017,
+      "duration": 75,
+      "genre": "Familiar, Comedia",
+      "letterboxd": "https://letterboxd.com/film/natacha-the-movie/",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
+      "ciclo": "Pequeños grandes mundos"
+    },
+    {
       "cine": "Cinemark Palermo",
       "fecha": "2026-11-22",
       "hora": "16:10",
@@ -32579,6 +33011,22 @@
       "ciclo": "Cine coreano"
     },
     {
+      "cine": "CEA",
+      "fecha": "2026-11-22",
+      "hora": "18:00",
+      "title_es": "La strada",
+      "title_en": "La Strada",
+      "original_title": "",
+      "director": "Federico Fellini",
+      "country": "Italia",
+      "year": 1954,
+      "duration": 108,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-strada/",
+      "ticket_url": "https://cea.mda.gob.ar/funcion/7",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-22",
       "hora": "18:05",
@@ -33296,6 +33744,54 @@
       "genre": "Crimen, Thriller",
       "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/minotauro/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-22",
+      "hora": "19:45",
+      "title_es": "Before Sunrise",
+      "title_en": "Before Sunrise",
+      "original_title": "",
+      "director": "Richard Linklater",
+      "country": "Austria, Estados Unidos",
+      "year": 1995,
+      "duration": 101,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/before-sunrise/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184046-before-sunrise-1995-domingo-2211-1945hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-22",
+      "hora": "19:45",
+      "title_es": "Drive",
+      "title_en": "Drive",
+      "original_title": "",
+      "director": "Nicolas Winding Refn",
+      "country": "Estados Unidos",
+      "year": 2011,
+      "duration": 100,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/drive-2011/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/183985-drive-2011-domingo-2211-1945hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-22",
+      "hora": "19:45",
+      "title_es": "El Extraño Mundo de Jack",
+      "title_en": "The Nightmare Before Christmas",
+      "original_title": "The Nightmare Before Christmas",
+      "director": "Henry Selick",
+      "country": "Estados Unidos",
+      "year": 1993,
+      "duration": 76,
+      "genre": "Familiar, Animación",
+      "letterboxd": "https://letterboxd.com/film/the-nightmare-before-christmas/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184032-the-nightmare-before-christmas-1993-domingo-2211-1945hs",
       "ciclo": ""
     },
     {
@@ -34048,6 +34544,54 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-22",
+      "hora": "21:45",
+      "title_es": "Pride & Prejudice",
+      "title_en": "Pride & Prejudice",
+      "original_title": "",
+      "director": "Joe Wright",
+      "country": "Francia, Reino Unido",
+      "year": 2005,
+      "duration": 128,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/pride-prejudice/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184024-pride-prejudice-2005-domingo-2211-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-22",
+      "hora": "21:45",
+      "title_es": "Eterno Resplandor de una Mente",
+      "title_en": "Eternal Sunshine of the Spotless Mind",
+      "original_title": "",
+      "director": "Michel Gondry",
+      "country": "Estados Unidos",
+      "year": 2004,
+      "duration": 108,
+      "genre": "Ciencia ficción, Romance",
+      "letterboxd": "https://letterboxd.com/film/eternal-sunshine-of-the-spotless-mind/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184053-eterno-resplandor-de-una-mente-2004-domingo-2211-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-22",
+      "hora": "21:45",
+      "title_es": "La La Land",
+      "title_en": "La La Land",
+      "original_title": "",
+      "director": "Damien Chazelle",
+      "country": "Estados Unidos",
+      "year": 2016,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-la-land/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184039-la-la-land-2016-domingo-2211-2145hs",
       "ciclo": ""
     },
     {
@@ -38035,6 +38579,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-23",
+      "hora": "19:45",
+      "title_es": "Little Miss Sunshine",
+      "title_en": "Little Miss Sunshine",
+      "original_title": "",
+      "director": "Valerie Faris, Jonathan Dayton",
+      "country": "Estados Unidos",
+      "year": 2006,
+      "duration": 102,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/little-miss-sunshine/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184016-little-miss-sunshine-2006-lunes-2311-1945hs",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-23",
       "hora": "19:50",
@@ -38720,6 +39280,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-23",
+      "hora": "21:45",
+      "title_es": "Blue Velvet",
+      "title_en": "Blue Velvet",
+      "original_title": "Blue Velvet",
+      "director": "David Lynch",
+      "country": "Estados Unidos",
+      "year": 1986,
+      "duration": 120,
+      "genre": "Crimen, Misterio",
+      "letterboxd": "https://letterboxd.com/film/blue-velvet/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184025-blue-velvet-1986-lunes-2311-2145hs",
       "ciclo": ""
     },
     {
@@ -43009,6 +43585,22 @@
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Helios",
+      "fecha": "2026-11-24",
+      "hora": "20:30",
+      "title_es": "I Wanna Hold Your Hand",
+      "title_en": "I Wanna Hold Your Hand",
+      "original_title": "",
+      "director": "Robert Zemeckis",
+      "country": "Estados Unidos",
+      "year": 1978,
+      "duration": 104,
+      "genre": "Comedia, Música",
+      "letterboxd": "https://letterboxd.com/film/i-wanna-hold-your-hand/",
+      "ticket_url": "https://cinehelios.adro.studio/pelicula/45/dac59fceb9066d3cfa39656696c75238",
+      "ciclo": "Cineclub Helios"
     },
     {
       "cine": "Atlas Caballito",
@@ -47443,6 +48035,54 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-25",
+      "hora": "19:45",
+      "title_es": "La Historia sin Fin",
+      "title_en": "The NeverEnding Story",
+      "original_title": "",
+      "director": "Wolfgang Petersen",
+      "country": "Alemania",
+      "year": 1984,
+      "duration": 101,
+      "genre": "Fantasía, Familiar",
+      "letterboxd": "https://letterboxd.com/film/the-neverending-story/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184033-la-historia-sin-fin-1984-miercoles-2511-1945hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-25",
+      "hora": "19:45",
+      "title_es": "Legally Blonde",
+      "title_en": "Legally Blonde",
+      "original_title": "",
+      "director": "Robert Luketic",
+      "country": "Estados Unidos",
+      "year": 2001,
+      "duration": 96,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/legally-blonde/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184047-legally-blonde-2001-miercoles-2511-1945hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-25",
+      "hora": "19:45",
+      "title_es": "El Extraño Mundo de Jack",
+      "title_en": "The Nightmare Before Christmas",
+      "original_title": "The Nightmare Before Christmas",
+      "director": "Henry Selick",
+      "country": "Estados Unidos",
+      "year": 1993,
+      "duration": 76,
+      "genre": "Familiar, Animación",
+      "letterboxd": "https://letterboxd.com/film/the-nightmare-before-christmas/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/181508-el-extrano-mundo-de-jack-1993-miercoles-411-1945hs",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-25",
       "hora": "19:50",
@@ -47664,6 +48304,22 @@
       "genre": "Aventura, Bélica",
       "letterboxd": "https://letterboxd.com/film/lawrence-of-arabia/",
       "ticket_url": "https://centralticket.net/event/11191",
+      "ciclo": ""
+    },
+    {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-25",
+      "hora": "20:00",
+      "title_es": "La casa",
+      "title_en": "La casa",
+      "original_title": "",
+      "director": "Gustavo Triviño",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 108,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
       "ciclo": ""
     },
     {
@@ -48115,6 +48771,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-25",
+      "hora": "21:00",
+      "title_es": "¿Quién le teme a Virginia Woolf?",
+      "title_en": "Who's Afraid of Virginia Woolf?",
+      "original_title": "",
+      "director": "Mike Nichols",
+      "country": "Estados Unidos",
+      "year": 1966,
+      "duration": 131,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/whos-afraid-of-virginia-woolf/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=quien-le-teme-a-virginia-woolf",
+      "ciclo": "Clásicos de culto queer"
+    },
+    {
       "cine": "Cine Gaumont",
       "fecha": "2026-11-25",
       "hora": "21:15",
@@ -48224,6 +48896,54 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://multiplex.com.ar/peliculas/los-juegos-del-hambre-amanecer-en-la-cosecha/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-25",
+      "hora": "21:45",
+      "title_es": "El Cadaver de la Novia",
+      "title_en": "Corpse Bride",
+      "original_title": "",
+      "director": "Mike Johnson, Tim Burton",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2005,
+      "duration": 77,
+      "genre": "Fantasía, Animación",
+      "letterboxd": "https://letterboxd.com/film/corpse-bride/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/181541-el-cadaver-de-la-novia-2005-miercoles-411-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-25",
+      "hora": "21:45",
+      "title_es": "Meet Joe Black",
+      "title_en": "Meet Joe Black",
+      "original_title": "",
+      "director": "Martin Brest",
+      "country": "Estados Unidos",
+      "year": 1998,
+      "duration": 178,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/meet-joe-black/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184040-meet-joe-black-1998-miercoles-2511-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-25",
+      "hora": "21:45",
+      "title_es": "Mamma Mia!",
+      "title_en": "Mamma Mia!",
+      "original_title": "",
+      "director": "Phyllida Lloyd",
+      "country": "Alemania, Reino Unido",
+      "year": 2008,
+      "duration": 108,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/mamma-mia-2008/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/188508-mamma-mia-2008-miercoles-2511-1945hs",
       "ciclo": ""
     },
     {
@@ -49043,6 +49763,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-25",
+      "hora": "23:00",
+      "title_es": "Mamma Mia!",
+      "title_en": "Mamma Mia!",
+      "original_title": "",
+      "director": "Phyllida Lloyd",
+      "country": "Reino Unido",
+      "year": 2008,
+      "duration": 108,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/mamma-mia-2008/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=mamma-mia",
+      "ciclo": "Pride de medianoche"
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-25",
       "hora": "23:05",
@@ -49619,6 +50355,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-26",
+      "hora": "19:00",
+      "title_es": "Liz y el pájaro azul",
+      "title_en": "Liz and the Blue Bird",
+      "original_title": "",
+      "director": "Naoko Yamada",
+      "country": "Japón",
+      "year": 2018,
+      "duration": 91,
+      "genre": "Animación, Drama",
+      "letterboxd": "https://letterboxd.com/film/liz-and-the-blue-bird/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=liz-y-el-pajaro-azul",
+      "ciclo": "Anime queer"
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-26",
       "hora": "19:30",
@@ -49632,6 +50384,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-26",
+      "hora": "19:45",
+      "title_es": "Beetlejuice",
+      "title_en": "Beetlejuice",
+      "original_title": "Beetlejuice",
+      "director": "Tim Burton",
+      "country": "Estados Unidos",
+      "year": 1988,
+      "duration": 92,
+      "genre": "Fantasía, Comedia",
+      "letterboxd": "https://letterboxd.com/film/beetlejuice-1988/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184048-beetlejuice-1988-jueves-2611-1945hs",
       "ciclo": ""
     },
     {
@@ -49681,6 +50449,22 @@
       "letterboxd": "https://letterboxd.com/film/inferis-ostium/",
       "ticket_url": "https://www.atlascines.com/pelicula/bars-inferis-ostium",
       "ciclo": "Buenos Aires Rojo Sangre - Panorama Bizarro"
+    },
+    {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-26",
+      "hora": "20:00",
+      "title_es": "Indómita luz",
+      "title_en": "Untamed Light",
+      "original_title": "",
+      "director": "Luis Sampieri",
+      "country": "Argentina, España",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/untamed-light/",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
+      "ciclo": "Mirada documental"
     },
     {
       "cine": "Casa del Bicentenario",
@@ -49827,6 +50611,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-26",
+      "hora": "21:00",
+      "title_es": "Querelle",
+      "title_en": "Querelle",
+      "original_title": "",
+      "director": "R. W. Fassbinder",
+      "country": "Alemania",
+      "year": 1982,
+      "duration": 109,
+      "genre": "Romance, Crimen",
+      "letterboxd": "https://letterboxd.com/film/querelle/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=querelle",
+      "ciclo": "La ley del deseo"
+    },
+    {
       "cine": "MALBA",
       "fecha": "2026-11-26",
       "hora": "21:30",
@@ -49841,6 +50641,22 @@
       "letterboxd": "https://letterboxd.com/film/fahrenheit-451/",
       "ticket_url": "https://malba.org.ar/evento/bazofi-2026",
       "ciclo": "Bazofi"
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-26",
+      "hora": "21:45",
+      "title_es": "Little Miss Sunshine",
+      "title_en": "Little Miss Sunshine",
+      "original_title": "",
+      "director": "Valerie Faris, Jonathan Dayton",
+      "country": "Estados Unidos",
+      "year": 2006,
+      "duration": 102,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/little-miss-sunshine/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184055-little-miss-sunshine-2006-jueves-2611-2145hs",
+      "ciclo": ""
     },
     {
       "cine": "Atlas Caballito",
@@ -49953,6 +50769,22 @@
       "letterboxd": "https://letterboxd.com/film/the-lawnmower-man/",
       "ticket_url": "https://malba.org.ar/evento/bazofi-2026",
       "ciclo": "Bazofi"
+    },
+    {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-26",
+      "hora": "23:00",
+      "title_es": "Las amargas lágrimas de Petra von Kant",
+      "title_en": "The Bitter Tears of Petra von Kant",
+      "original_title": "",
+      "director": "R. W. Fassbinder",
+      "country": "Alemania",
+      "year": 1972,
+      "duration": 124,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-bitter-tears-of-petra-von-kant/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=las-amargas-lagrimas-de-petra-von-kant",
+      "ciclo": "Trasnoche sáfica"
     },
     {
       "cine": "Sala Lugones",
@@ -50307,6 +51139,22 @@
       "ciclo": "Soy"
     },
     {
+      "cine": "Club Lucero",
+      "fecha": "2026-11-27",
+      "hora": "19:00",
+      "title_es": "Inuyasha: El castillo de los sueños en el espejo",
+      "title_en": "Inuyasha the Movie 2: The Castle Beyond the Looking Glass",
+      "original_title": "",
+      "director": "Toshiya Shinohara",
+      "country": "Japón",
+      "year": 2002,
+      "duration": 100,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/inuyasha-the-movie-2-the-castle-beyond-the-looking-glass/",
+      "ticket_url": "https://www.clublucero.com/entradas.html?slug=vhs-anime-inuyasha-el-castillo-de-los-suenos-en-el-espejo",
+      "ciclo": "VHS Animé"
+    },
+    {
       "cine": "Universidad del Cine",
       "fecha": "2026-11-27",
       "hora": "19:30",
@@ -50481,6 +51329,38 @@
       "letterboxd": "https://letterboxd.com/film/blood-brothers-2013/",
       "ticket_url": "https://www.atlascines.com/pelicula/bars-hermanos-de-sangre",
       "ciclo": "Buenos Aires Rojo Sangre - Clásicos del nuevo fantástico argentino"
+    },
+    {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-27",
+      "hora": "20:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro, Lucas Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 76,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-27",
+      "hora": "20:00",
+      "title_es": "Neyen Mapu, el llamado del Lanin",
+      "title_en": "Neyen Mapu, el llamado del Lanin",
+      "original_title": "",
+      "director": "Mara Rocío Collinao",
+      "country": "",
+      "year": null,
+      "duration": 56,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
+      "ciclo": "Mirada documental"
     },
     {
       "cine": "Atlas Caballito",
@@ -50720,6 +51600,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineclub Turdera",
+      "fecha": "2026-11-27",
+      "hora": "22:00",
+      "title_es": "El Dentista",
+      "title_en": "The Dentist",
+      "original_title": "",
+      "director": "Brian Yuzna",
+      "country": "Estados Unidos",
+      "year": 1996,
+      "duration": 92,
+      "genre": "Terror, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-dentist-1996/",
+      "ticket_url": "https://www.instagram.com/p/DfQ75isDZhN/",
       "ciclo": ""
     },
     {
@@ -51264,6 +52160,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-28",
+      "hora": "19:45",
+      "title_es": "Crazy, Stupid, Love.",
+      "title_en": "Crazy, Stupid, Love.",
+      "original_title": "",
+      "director": "Glenn Ficarra, John Requa",
+      "country": "Estados Unidos",
+      "year": 2011,
+      "duration": 118,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/crazy-stupid-love/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184034-crazy-stupid-love-2011-sabado-2811-1945hs",
       "ciclo": ""
     },
     {
@@ -51891,6 +52803,22 @@
       "ciclo": "Cine coreano"
     },
     {
+      "cine": "Espacio INCAA Morón",
+      "fecha": "2026-11-29",
+      "hora": "18:00",
+      "title_es": "Retazos de memoria",
+      "title_en": "Remnants of memory",
+      "original_title": "",
+      "director": "Juan Pablo Tobal",
+      "country": "Argentina, Colombia",
+      "year": 2026,
+      "duration": 76,
+      "genre": "Drama, Documental",
+      "letterboxd": "https://letterboxd.com/film/remnants-of-memory/",
+      "ticket_url": "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/",
+      "ciclo": "Cierre del 4to Festival de Cine Indígena BAIn 2026"
+    },
+    {
       "cine": "Centro Cultural Munro",
       "fecha": "2026-11-29",
       "hora": "18:30",
@@ -52067,6 +52995,54 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-29",
+      "hora": "19:45",
+      "title_es": "Laberinto",
+      "title_en": "Labyrinth",
+      "original_title": "Labyrinth",
+      "director": "Jim Henson",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 1986,
+      "duration": 101,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/labyrinth/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/182498-labyrinth-1986-jueves-0511-1945hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-29",
+      "hora": "19:45",
+      "title_es": "Legally Blonde",
+      "title_en": "Legally Blonde",
+      "original_title": "",
+      "director": "Robert Luketic",
+      "country": "Estados Unidos",
+      "year": 2001,
+      "duration": 96,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/legally-blonde/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184019-legally-blonde-2001-domingo-2911-1945hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-29",
+      "hora": "19:45",
+      "title_es": "Laberinto",
+      "title_en": "Labyrinth",
+      "original_title": "Labyrinth",
+      "director": "Jim Henson",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 1986,
+      "duration": 101,
+      "genre": "Aventura, Familiar",
+      "letterboxd": "https://letterboxd.com/film/labyrinth/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184049-laberinto-1986-domingo-2911-1945hs",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-29",
       "hora": "19:50",
@@ -52227,6 +53203,54 @@
       "ciclo": "Homenaje a John Huston"
     },
     {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-29",
+      "hora": "21:45",
+      "title_es": "Notting Hill",
+      "title_en": "Notting Hill",
+      "original_title": "",
+      "director": "Roger Michell",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 1999,
+      "duration": 124,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/notting-hill/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184027-notting-hill-1999-domingo-2911-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Palermo",
+      "fecha": "2026-11-29",
+      "hora": "21:45",
+      "title_es": "The Grand Budapest Hotel",
+      "title_en": "The Grand Budapest Hotel",
+      "original_title": "",
+      "director": "Wes Anderson",
+      "country": "Estados Unidos, Alemania",
+      "year": 2014,
+      "duration": 100,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-grand-budapest-hotel-2014/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184041-the-grand-budapest-hotel-2014-domingo-2911-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Lomas de Zamora",
+      "fecha": "2026-11-29",
+      "hora": "21:45",
+      "title_es": "Pride & Prejudice",
+      "title_en": "Pride & Prejudice",
+      "original_title": "",
+      "director": "Joe Wright",
+      "country": "Francia, Reino Unido",
+      "year": 2005,
+      "duration": 128,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/pride-prejudice/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184056-pride-prejudice-2005-domingo-2911-2145hs",
+      "ciclo": ""
+    },
+    {
       "cine": "Atlas Caballito",
       "fecha": "2026-11-29",
       "hora": "22:00",
@@ -52371,6 +53395,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-30",
+      "hora": "19:45",
+      "title_es": "The Grand Budapest Hotel",
+      "title_en": "The Grand Budapest Hotel",
+      "original_title": "",
+      "director": "Wes Anderson",
+      "country": "Estados Unidos, Alemania",
+      "year": 2014,
+      "duration": 100,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-grand-budapest-hotel-2014/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184020-the-grand-budapest-hotel-2014-lunes-3011-1945hs",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Pilar",
       "fecha": "2026-11-30",
       "hora": "19:50",
@@ -52400,6 +53440,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://www.cinespixel.com.ar/Peliculas?codPelicula=52",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-30",
+      "hora": "21:45",
+      "title_es": "La La Land",
+      "title_en": "La La Land",
+      "original_title": "",
+      "director": "Damien Chazelle",
+      "country": "Estados Unidos",
+      "year": 2016,
+      "duration": 129,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/la-la-land/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/184028-la-la-land-2016-lunes-3011-2145hs",
       "ciclo": ""
     },
     {

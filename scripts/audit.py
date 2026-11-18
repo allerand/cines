@@ -130,7 +130,7 @@ PROBES = {
     "Casa del Bicentenario":    ("https://casadelbicentenario.cultura.gob.ar/actividades/",
                                  r"/actividad/[a-z0-9\-]+"),
     "Amorina":                  ("https://www.amorina.club/schedule.json", "@amorina"),
-    "CEA":                      ("https://cea.mda.gob.ar/", "@cea"),
+    "CEA":                      ("https://cea.mda.gob.ar/api/screenings", "@cea"),
     # La home de la ticketera lista TODO lo que programa la sala, no sólo cine
     # (hay ciclos de charlas y música), así que el número es una cota superior
     # de las funciones que nos corresponden. Sirve igual para lo que importa:
@@ -140,6 +140,20 @@ PROBES = {
     # Cuenta eventos por venir, no funciones: una doble función es un evento
     # con dos. Ver probe(): "@farus".
     "Cineclub Farus":           ("https://centralticket.net/search?q=farus", "@farus"),
+    # La agenda que trae la portada, sin los DJ ni los cursos. Cuenta entradas
+    # por venir, no funciones: un programa doble es una sola, y las charlas de
+    # cine también tienen entrada. Ver probe(): "@lucero".
+    "Club Lucero":              ("https://www.clublucero.com/", "@lucero"),
+    # La nota del mes: cada película es un párrafo con sus días resaltados. Cuenta
+    # películas del mes entero, las que ya pasaron incluidas.
+    "Espacio INCAA Morón":      ("https://ellaferrere.com.ar/2024/08/16/"
+                                 "agenda-espacio-incaa-moron-programacion/",
+                                 r"<mark[^>]*>\s*(?:<[^>]+>\s*)*((?:Lunes|Martes|Mi[ée]rcoles|Jueves|"
+                                 r"Viernes|S[áa]bado|Domingo)\s+\d{1,2}[^<]{0,60})"),
+    # La cartelera de la boletería (adro.studio). Cuenta películas en cartel, no
+    # funciones, y arrastra alguna que ya dio su última: es una cota superior.
+    "Cine Helios":              ("https://apiv2.gaf.adro.studio/nowPlaying/45",
+                                 r'"pref"\s*:\s*"([0-9a-f]{32})"'),
     # La agenda filtrada por "Tipo de evento: Cine". Cuenta eventos vigentes,
     # no funciones: un ciclo de tres días es una sola tarjeta.
     "Museo Moderno":            ("https://museomoderno.org/agenda/?jsf=jet-engine:"
@@ -840,15 +854,20 @@ def probe(cine: str, url: str, pattern: str) -> tuple[str, int | None, str]:
         return cine, n, "funciones futuras en la landing"
 
     if pattern == "@cea":
-        # Cada función del CEA es una card con data-field="titulo". Se
-        # descuentan las que cuelgan de un bloque .hidden-temp: la home
-        # arrastra secciones viejas con display:none —el cronograma de julio,
-        # sin ir más lejos— y contarlas daría funciones que la página no
-        # muestra. Es la misma regla que aplica el scraper.
-        limpio = re.sub(r'<[^>]*class="[^"]*hidden-temp[^"]*"[^>]*>.*?</div>', " ",
-                        body, flags=re.DOTALL | re.IGNORECASE)
-        n = len(re.findall(r'data-field="titulo"', limpio)) or len(re.findall(r'class="[^"]*film-col', limpio))
-        return cine, n, "funciones anunciadas en la home"
+        # La API del sitio de reservas del CEA: una lista con una entrada por
+        # función. Se cuentan las que no pasaron. Hasta noviembre de 2026 la
+        # sonda contaba las cards de la home, que desde el rediseño es un
+        # cascarón vacío: daba 0 y el informe leía "no programó".
+        try:
+            items = json.loads(body)
+        except Exception:
+            return cine, None, "JSON inválido"
+        if not isinstance(items, list):
+            return cine, None, "la API del CEA cambió de formato"
+        hoy = date.today().isoformat()
+        n = sum(1 for it in items if isinstance(it, dict) and not it.get("isPast")
+                and str(it.get("startsAt") or "")[:10] >= hoy)
+        return cine, n, "funciones por venir en la API de reservas"
 
     if pattern == "@farus":
         # Los eventos de Farus por venir, del catálogo que la búsqueda de
@@ -876,6 +895,24 @@ def probe(cine: str, url: str, pattern: str) -> tuple[str, int | None, str]:
         if not con_fecha:
             return cine, None, "la búsqueda de Central Ticket cambió de formato"
         return cine, len(eventos), "eventos por venir en Central Ticket"
+
+    if pattern == "@lucero":
+        # La portada trae la agenda entera en un arreglo de JavaScript, con las
+        # noches que ya pasaron: se cuentan las de hoy en adelante que llevan a
+        # la página de entradas (los DJ y los cursos van a la de ciclos). Si el
+        # arreglo no está, la sonda dice que no pudo medir en vez de contestar 0.
+        m = re.search(r'\[\s*\{\s*"iso"\s*:', body)
+        try:
+            agenda, _ = json.JSONDecoder().raw_decode(body, m.start()) if m else (None, 0)
+        except ValueError:
+            agenda = None
+        if not isinstance(agenda, list):
+            return cine, None, "la portada de clublucero.com ya no trae la agenda"
+        hoy = date.today().isoformat()
+        n = sum(1 for e in agenda if isinstance(e, dict)
+                and str(e.get("iso") or "") >= hoy
+                and str(e.get("link") or "").startswith("entradas.html?slug="))
+        return cine, n, "entradas por venir en la agenda de la portada"
 
     return cine, len(set(re.findall(pattern, body))), "ítems en la listing"
 

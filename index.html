@@ -677,6 +677,10 @@
     .cine-davinci  { border-color: #1f3a2c; color: #6fd0a0; }
     .cine-fuc      { border-color: #26331a; color: #9ccc5a; }
     .cine-tomada   { border-color: #3a221f; color: #e88a7a; }
+    .cine-helios   { border-color: #14323d; color: #4fc3e8; }
+    .cine-cclub    { border-color: #3d1c12; color: #e8734a; }
+    .cine-moron    { border-color: #1c2f3d; color: #7ab8e0; }
+    .cine-turdera  { border-color: #3a2d14; color: #e0a84a; }
     .cine-avalon   { border-color: #163240; color: #4fb6cf; }
     .cine-laba     { border-color: #33213a; color: #c27ad9; }
     .cine-atlas    { border-color: #3a1616; color: #e0524a; }
@@ -988,11 +992,9 @@
   <button class="filter-btn" data-cine="Arthaus">Arthaus</button>
   <button class="filter-btn" data-cine="Museo del Cine">Museo del Cine</button>
   <button class="filter-btn" data-cine="Centro Cultural Recoleta">El Recoleta</button>
-  <button class="filter-btn" data-cine="Amorina">Amorina</button>
   <button class="filter-btn" data-cine="CEA">CEA</button>
   <button class="filter-btn" data-cine="Filo Cine">Filo Cine</button>
   <button class="filter-btn" data-cine="FADU">FADU</button>
-  <button class="filter-btn" data-cine="Club Lucero">Club Lucero</button>
   <button class="filter-btn" data-cine="Escuela Da Vinci">Da Vinci</button>
   <button class="filter-btn" data-cine="Biblioteca Nacional">Biblioteca Nacional</button>
   <button class="filter-btn" data-cine="Centro Cultural 25 de Mayo">CC 25 de Mayo</button>
@@ -1004,14 +1006,13 @@
   <button class="filter-btn" data-cine="Bellas Artes">Bellas Artes</button>
   <button class="filter-btn" data-cine="Museo Moderno">Museo Moderno</button>
   <button class="filter-btn" data-cine="Sala Lúcida">Sala Lúcida</button>
-  <button class="filter-btn" data-cine="Hasta Trilce">Hasta Trilce</button>
-  <button class="filter-btn" data-cine="Cineclub Farus">Cineclub Farus</button>
   <button class="filter-btn" data-cine="Centro Cultural Leopoldo Marechal">Marechal</button>
   <button class="filter-btn" data-cine="Universidad del Cine">Universidad del Cine</button>
-  <button class="filter-btn" data-cine="La Tomada">La Tomada</button>
   <button class="filter-btn" data-cine="Avalon">Avalon</button>
   <button class="filter-btn" data-cine="LABA">LABA</button>
   <button class="filter-btn" data-cine="Atlas Caballito">Atlas Caballito</button>
+  <button class="filter-btn" data-cine="Cine Helios">Helios</button>
+  <button class="filter-btn" data-cine="Espacio INCAA Morón">INCAA Morón</button>
   <!-- Madrid: data-ciudad marca de qué ciudad es cada sala (sin él, Buenos Aires) -->
   <button class="filter-btn otra-ciudad" data-cine="Cine Doré" data-ciudad="madrid">Doré</button>
   <button class="filter-btn otra-ciudad" data-cine="Cines Ideal" data-ciudad="madrid">Ideal</button>
@@ -1027,6 +1028,19 @@
   <button class="filter-btn otra-ciudad" data-cine="Museo Reina Sofía" data-ciudad="madrid">Reina Sofía</button>
   <button class="filter-btn otra-ciudad" data-cine="Cines Callao" data-ciudad="madrid">Callao</button>
   <button class="filter-btn otra-ciudad" data-cine="Sala Equis" data-ciudad="madrid">Sala Equis</button>
+  <!-- Cineclubes: prendidos por defecto; "− Cineclubes" los saca de la grilla -->
+  <button class="filter-btn cineclub-chip" data-cine="Club Lucero">Club Lucero</button>
+  <button class="filter-btn cineclub-chip" data-cine="Hasta Trilce">Hasta Trilce</button>
+  <button class="filter-btn cineclub-chip" data-cine="Cineclub Farus">Cineclub Farus</button>
+  <button class="filter-btn cineclub-chip" data-cine="La Tomada">La Tomada</button>
+  <button class="filter-btn cineclub-chip" data-cine="Amorina">Amorina</button>
+  <button class="filter-btn cineclub-chip" data-cine="Cineclub Turdera">Cineclub Turdera</button>
+  <button class="filter-btn cineclub-chip" data-cine="Cinema Club Palermo">Cinema Club Palermo</button>
+  <button class="filter-btn cineclub-chip" data-cine="Cinema Club Recoleta">Cinema Club Recoleta</button>
+  <button class="filter-btn cineclub-chip" data-cine="Cinema Club Lomas de Zamora">Cinema Club Lomas</button>
+  <button id="toggle-cineclubes" class="filter-toggle" type="button" aria-pressed="true">
+    − Cineclubes
+  </button>
   <button class="filter-btn commercial-chip" data-cine="Cinemark" hidden>Cinemark</button>
   <button class="filter-btn commercial-chip" data-cine="Hoyts" hidden>Hoyts</button>
   <button class="filter-btn commercial-chip" data-cine="Cinépolis" hidden>Cinépolis</button>
@@ -1093,6 +1107,13 @@ const CINE_ADDRESSES = {
   'Centro Cultural Leopoldo Marechal': 'Av. Vergara 2396, Hurlingham',
   'Universidad del Cine':     'Pasaje Giuffra 330',
   'La Tomada':                'Fraga 119',
+  'Cine Helios':              'Bvd. San Martín 3076, Ciudad Jardín, El Palomar',
+  'Espacio INCAA Morón':      'Almirante Brown 980, Morón (Teatro Gregorio de Laferrere)',
+  'Cineclub Turdera':         'San Luis 369, Turdera (Rotary Club)',
+  // The Cinema Club Company: una sala por bar
+  'Cinema Club Palermo':      'Honduras 4999 (Pani Feroz)',
+  'Cinema Club Recoleta':     'Vicente López 2176 (Aura Sky Bar)',
+  'Cinema Club Lomas de Zamora': 'Av. Italia 459, Lomas de Zamora (La Panera Rosa)',
   'Avalon':                   'Humahuaca 4027 (Ítaca)',
   'LABA':                     'Fraga 648',
   'Atlas Caballito':          'Av. Rivadavia 5071',
@@ -1143,6 +1164,16 @@ const CINES_BOLETERIA = new Set(['Teatro Enrique Carreras']);
 
 function isCommercial(cine) {
   return COMMERCIAL_PREFIXES.some(p => cine && cine.startsWith(p));
+}
+
+// Cineclubes: se prenden y se apagan juntos con "+ Cineclubes", igual que las
+// cadenas con "+ Comerciales", pero arrancan prendidos. Es la misma lista que
+// los chips .cineclub-chip de la barra.
+const CINECLUBES = new Set(['Club Lucero', 'Hasta Trilce', 'Cineclub Farus', 'La Tomada', 'Amorina',
+                            'Cineclub Turdera',
+                            'Cinema Club Palermo', 'Cinema Club Recoleta', 'Cinema Club Lomas de Zamora']);
+function isCineclub(cine) {
+  return CINECLUBES.has(cine);
 }
 
 // ── Ciudades ───────────────────────────────────────────────────────────
@@ -1246,6 +1277,7 @@ function applyCiudad() {
     if (b.dataset.cine !== 'all') b.classList.toggle('otra-ciudad', (b.dataset.ciudad || 'ba') !== ciudad);
   });
   document.getElementById('toggle-commercial').classList.toggle('otra-ciudad', ciudad !== 'ba');
+  document.getElementById('toggle-cineclubes').classList.toggle('otra-ciudad', ciudad !== 'ba');
 }
 
 let allScreenings = [];
@@ -1399,6 +1431,7 @@ function applyHashState() {
       // Un link a un cine comercial tiene que mostrarlo aunque el toggle
       // esté apagado en este dispositivo.
       if (isCommercial(cine)) showCommercial = true;
+      if (isCineclub(cine)) showCineclubes = true;
     }
   }
   syncCineButtons();
@@ -1685,14 +1718,22 @@ let showCommercial = (() => {
   catch (_) { return false; }
 })();
 
+// Los cineclubes arrancan prendidos: sólo quedan afuera si alguien los apagó.
+let showCineclubes = (() => {
+  try { return localStorage.getItem('sd:showCineclubes') !== '0'; }
+  catch (_) { return true; }
+})();
+
 function visibleScreenings() {
   // Aplica el filtro global del toggle comerciales. Usado por todo el
   // resto de la UI (tabs por día, conteos, render, etc.). Un festival se
   // muestra entero, pase donde pase.
   // Con una búsqueda (la del buscador o la de un festival) entran también las
   // cadenas comerciales: quien busca una película la quiere encontrar donde sea.
-  if (showCommercial || seccion === 'festivales' || searchQuery) return allScreenings;
-  return allScreenings.filter(s => !isCommercial(s.cine));
+  // Lo mismo vale para los cineclubes cuando están apagados.
+  if ((showCommercial && showCineclubes) || seccion === 'festivales' || searchQuery) return allScreenings;
+  return allScreenings.filter(s => (showCommercial || !isCommercial(s.cine))
+                                   && (showCineclubes || !isCineclub(s.cine)));
 }
 
 function applyCommercialToggle() {
@@ -1705,15 +1746,24 @@ function applyCommercialToggle() {
     tgl.setAttribute('aria-pressed', showCommercial ? 'true' : 'false');
     tgl.textContent = showCommercial ? '− Comerciales' : '+ Comerciales';
   }
-  // Si había comerciales elegidos y se ocultaron, los sacamos de la selección
-  // (las salas no comerciales que estuvieran elegidas se mantienen).
-  if (!showCommercial) {
-    let saco = false;
-    for (const c of [...activeCines]) {
-      if (isCommercial(c)) { activeCines.delete(c); saco = true; }
-    }
-    if (saco) syncCineButtons();
+  // Lo mismo con los cineclubes y su toggle.
+  document.querySelectorAll('.cineclub-chip').forEach(el => {
+    el.hidden = !showCineclubes;
+  });
+  const tglClubes = document.getElementById('toggle-cineclubes');
+  if (tglClubes) {
+    tglClubes.setAttribute('aria-pressed', showCineclubes ? 'true' : 'false');
+    tglClubes.textContent = showCineclubes ? '− Cineclubes' : '+ Cineclubes';
   }
+  // Si había comerciales o cineclubes elegidos y se ocultaron, los sacamos de
+  // la selección (las demás salas que estuvieran elegidas se mantienen).
+  let saco = false;
+  for (const c of [...activeCines]) {
+    if ((!showCommercial && isCommercial(c)) || (!showCineclubes && isCineclub(c))) {
+      activeCines.delete(c); saco = true;
+    }
+  }
+  if (saco) syncCineButtons();
   // Re-buildeamos los tabs (cambian los conteos por día) y re-renderizamos
   if (allScreenings.length) {
     buildDayTabs();
@@ -2322,8 +2372,16 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
   applyCommercialToggle();
 });
 
+// Toggle "− Cineclubes" — el mismo mecanismo, con los cineclubes.
+document.getElementById('toggle-cineclubes').addEventListener('click', () => {
+  showCineclubes = !showCineclubes;
+  try { localStorage.setItem('sd:showCineclubes', showCineclubes ? '1' : '0'); } catch (_) {}
+  resetSort();
+  applyCommercialToggle();
+});
+
 function cineCssClass(cine) {
-  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Club Lucero':'cine-lucero', 'Escuela Da Vinci':'cine-davinci', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Museo Moderno':'cine-moderno', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Centro Cultural Leopoldo Marechal':'cine-marechal', 'Universidad del Cine':'cine-fuc', 'La Tomada':'cine-tomada', 'Avalon':'cine-avalon', 'LABA':'cine-laba', 'Atlas Caballito':'cine-atlas', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Museo Reina Sofía':'cine-reina', 'Cines Callao':'cine-callao', 'Sala Equis':'cine-equis', 'Teatro Enrique Carreras':'cine-carreras' };
+  const map = { 'MALBA':'cine-malba', 'Sala Lugones':'cine-lugones', 'Sala Mario Soffici':'cine-soffici', 'Cacodelphia':'cine-cacode', 'Cine Lorca':'cine-lorca', 'Cine York':'cine-york', 'Centro Cultural Munro':'cine-munro', 'Lumiton':'cine-lumiton', 'Cine Cosmos':'cine-cosmos', 'Cine Gaumont':'cine-gaumont', 'CCK':'cine-cck', 'Arthaus':'cine-arthaus', 'Museo del Cine':'cine-museo', 'Centro Cultural Recoleta':'cine-ccr', 'Amorina':'cine-amorina', 'CEA':'cine-cea', 'Filo Cine':'cine-filo', 'FADU':'cine-fadu', 'Club Lucero':'cine-lucero', 'Escuela Da Vinci':'cine-davinci', 'Biblioteca Nacional':'cine-bn', 'Centro Cultural 25 de Mayo':'cine-cc25', 'Centro Cultural de la Cooperación':'cine-ccd', 'Casa del Bicentenario':'cine-cb', 'Centro Cultural Borges':'cine-borges', 'Biblioteca del Congreso':'cine-bcn', 'Hasta Trilce':'cine-trilce', 'Archivo General de la Nación':'cine-agn', 'Bellas Artes':'cine-mnba', 'Museo Moderno':'cine-moderno', 'Sala Lúcida':'cine-lucida', 'Cineclub Farus':'cine-farus', 'Centro Cultural Leopoldo Marechal':'cine-marechal', 'Universidad del Cine':'cine-fuc', 'La Tomada':'cine-tomada', 'Cine Helios':'cine-helios', 'Cineclub Turdera':'cine-turdera', 'Espacio INCAA Morón':'cine-moron', 'Cinema Club Palermo':'cine-cclub', 'Cinema Club Recoleta':'cine-cclub', 'Cinema Club Lomas de Zamora':'cine-cclub', 'Avalon':'cine-avalon', 'LABA':'cine-laba', 'Atlas Caballito':'cine-atlas', 'Cine Doré':'cine-dore', 'Cines Ideal':'cine-ideal', 'Cineteca Madrid':'cine-cineteca', 'Cines Princesa':'cine-princesa', 'Renoir Plaza de España':'cine-renoirpe', 'Renoir Retiro':'cine-renoirre', 'Golem Madrid':'cine-golem', 'Embajadores Glorieta':'cine-embglo', 'Embajadores Ercilla':'cine-emberc', 'Artistic Metropol':'cine-metropol', 'Cine Estudio':'cine-cbaest', 'Museo Reina Sofía':'cine-reina', 'Cines Callao':'cine-callao', 'Sala Equis':'cine-equis', 'Teatro Enrique Carreras':'cine-carreras' };
   if (map[cine]) return map[cine];
   // Comerciales: matchear por prefijo (ej. "Cinemark Caballito" → cine-cinemark)
   if (cine && cine.startsWith('Cinemark'))  return 'cine-cinemark';

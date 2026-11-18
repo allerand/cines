@@ -7065,234 +7065,109 @@ def scrape_amorina() -> list[Screening]:
 # ---------------------------------------------------------------------------
 # CEA — Centro de Experimentación Audiovisual (Avellaneda)
 # ---------------------------------------------------------------------------
-# cea.mda.gob.ar sirve la programación en el HTML, sin JS: cada función es una
-# card con TODO adentro —día, mes, hora, ciclo, título, director, año y el link
-# al formulario de reserva— y los campos vienen marcados con `data-field`:
+# cea.mda.gob.ar es, desde octubre de 2026, una aplicación de reservas: la
+# portada es un cascarón de 1 KB y la programación la pide por JavaScript a su
+# propia API, sin token:
 #
-#   <div class="film-col">
-#     <div class="fc-date-badge">27</div>
-#     <div class="fc-weekday">Jueves Agosto · 19hs</div>
-#     <div class="fc-cycle">CICLO SANDRO · Ídolo popular argentino</div>
-#     <div class="fc-title" data-field="titulo">Tú me<br>enloqueces</div>
-#     <div class="fc-dir"   data-field="dirAnio">Sandro · 1976 · Español</div>
-#     <a class="fc-cta"     data-field="formUrl" href="https://forms.gle/…">
+#   GET /api/screenings →
+#   [{"id": 5, "startsAt": "2026-11-19T21:00:00.000Z", "room": "Sala de Cine CEA",
+#     "capacity": 110, "taken": 12, "isOpen": true, "closedManually": false,
+#     "movie": {"title": "Fantasmas en la Patagonia", "director": "Claudio Remedi",
+#               "year": 1996, "duration": 84, "format": "35mm", …}}, …]
 #
-# Hasta agosto de 2026 esto se bajaba con playwright, esperando a que
-# "hidratara" el SPA, scrolleando ocho veces y parseando el innerText a fuerza
-# de regex. De ahí salieron ocho arreglos en tres meses: en el runner la
-# hidratación tarda más que en casa, el innerText volvía vacío, el parser no
-# encontraba nada y el cine desaparecía de la cartelera sin que fallara ninguna
-# corrida. Nada de eso hacía falta: la página nunca necesitó un navegador.
+# Antes la programación venía en el HTML de la home, en cards marcadas con
+# `data-field`, y antes de eso se bajaba con playwright. El scraper del HTML
+# dejó de encontrar cards el 17/10/2026 y la sala estuvo un mes en cero: la
+# página cargaba bien, sólo que ya no traía nada adentro.
 #
-# Se lee por `data-field` antes que por clase, que es lo que el sitio renombra
-# cuando lo rediseñan (van dos veces desde mayo). Y se ignora todo lo que
-# cuelgue de un bloque oculto: la home arrastra ocho `.hidden-temp` con
-# `display:none`, uno de ellos el cronograma de julio entero. Un parser que
-# mire el HTML sin filtrar eso publica la programación del mes pasado —el
-# innerText no lo veía, y por eso el bug nunca apareció antes.
-# ---------------------------------------------------------------------------
+# La hora viene en UTC y se pasa a la de Buenos Aires. El link de cada función
+# es su página de reserva, /funcion/<id>.
 
-_CEA_MONTHS = {
-    "enero": 1, "febrero": 2, "marzo": 3, "abril": 4, "mayo": 5, "junio": 6,
-    "julio": 7, "agosto": 8, "septiembre": 9, "setiembre": 9, "octubre": 10,
-    "noviembre": 11, "diciembre": 12,
-}
-_CEA_ACCENTS = str.maketrans("áéíóúü", "aeiouu")
-_CEA_WD_FULL = r"lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo"
-_CEA_DIR_YEAR_RE = re.compile(r"^(.+?)\s+·\s+((?:19|20)\d{2})\b")
-
-
-def _cea_norm(s: str) -> str:
-    return re.sub(r"[^a-z0-9]+", " ", (s or "").translate(_CEA_ACCENTS).lower()).strip()
-
-
-def _parse_cea_form_blob(blob: str) -> dict:
-    """Extrae {day, month, hora} del título/descr de un Google Form de reserva
-    del CEA (ej. 'Reserva — … · Viernes 12 Junio · 19:00hs')."""
-    out: dict = {}
-    tm = re.search(r"(\d{1,2}):(\d{2})\s*hs", blob)
-    if tm:
-        out["hora"] = f"{int(tm.group(1)):02d}:{tm.group(2)}"
-    dm = re.search(r"(\d{1,2})\s+(?:de\s+)?(" + "|".join(_CEA_MONTHS) + r")\b", blob, re.IGNORECASE)
-    if dm:
-        out["day"] = int(dm.group(1))
-        out["month"] = _CEA_MONTHS[dm.group(2).lower()]
-    return out
-
-
-def _cea_form_meta(url: str) -> dict:
-    """Lee el título/descr de un Google Form de reserva del CEA para sacar la
-    fecha y el horario exactos de la función. Best-effort (urllib)."""
-    try:
-        soup = fetch_html(url)
-    except Exception:
-        return {}
-    chunks: list[str] = []
-    if soup.title:
-        chunks.append(soup.title.get_text(" ", strip=True))
-    for prop in ("og:title", "og:description"):
-        m = soup.find("meta", attrs={"property": prop})
-        if m and m.get("content"):
-            chunks.append(m["content"])
-    return _parse_cea_form_blob(" · ".join(chunks))
-
-
+CEA_CINE = "CEA"
 CEA_URL = "https://cea.mda.gob.ar/"
-
-# La fecha no tiene `data-field`: se arma con el número grande de la card y el
-# renglón de abajo ("Jueves Agosto · 19hs"), que trae mes y hora.
-_CEA_CUANDO_RE = re.compile(
-    rf"({_CEA_WD_FULL})\s+(" + "|".join(_CEA_MONTHS) + r")"
-    r"(?:\s*·\s*(\d{1,2})(?::(\d{2}))?\s*h)?",
-    re.IGNORECASE)
+CEA_API = CEA_URL + "api/screenings"
+CEA_FUNCION = CEA_URL + "funcion/{id}"
+_CEA_TZ = ZoneInfo("America/Argentina/Buenos_Aires")
 
 
-def _cea_oculto(nodo) -> bool:
-    """True si el nodo cuelga de un bloque que la página no muestra.
-
-    La home arrastra secciones viejas con `.hidden-temp`
-    (`display:none !important`), entre ellas el cronograma de julio completo.
-    """
-    for n in [nodo, *nodo.parents]:
-        clases = n.get("class") or [] if hasattr(n, "get") else []
-        if "hidden-temp" in clases:
-            return True
-        if hasattr(n, "has_attr") and n.has_attr("hidden"):
-            return True
-        estilo = (n.get("style") or "").replace(" ", "").lower() if hasattr(n, "get") else ""
-        if "display:none" in estilo or "visibility:hidden" in estilo:
-            return True
-    return False
-
-
-def _cea_campo(card, campo: str, clase: str) -> str:
-    """Texto de un campo de la card: primero por `data-field`, que es lo que
-    sobrevive a los rediseños, y si no está, por la clase."""
-    el = card.select_one(f'[data-field="{campo}"]') or card.select_one(clase)
-    return re.sub(r"\s+", " ", el.get_text(" ", strip=True)) if el else ""
-
-
-def scrape_cea(semanas: int = 9) -> list[Screening]:
-    """Scrapea las funciones del CEA desde el HTML de la home (sin navegador)."""
+def _cea_inicio(valor) -> Optional[datetime]:
+    """"2026-11-19T21:00:00.000Z" → el 19/11 a las 18:00 de Buenos Aires."""
     try:
-        soup = fetch_html(CEA_URL)
-    except Exception as e:
-        print(f"[cea: no se pudo bajar la home — {e}]", end=" ", flush=True)
-        return []
+        dt = datetime.fromisoformat(str(valor).strip().replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    if dt.tzinfo is None:
+        dt = dt.replace(tzinfo=timezone.utc)
+    return dt.astimezone(_CEA_TZ)
 
-    # El ancla es el campo del título, no la clase del contenedor: si mañana
-    # `.film-col` pasa a llamarse otra cosa, esto sigue encontrando las cards.
-    cards = []
-    for t in soup.select('[data-field="titulo"]'):
-        card = t.find_parent(class_="film-col") or t.parent.parent
-        if card is not None and card not in cards:
-            cards.append(card)
-    if not cards:
-        cards = soup.select(".film-col")
-    visibles = [c for c in cards if not _cea_oculto(c)]
 
-    today = date.today()
-    cutoff = today + timedelta(weeks=semanas)
+def _cea_entero(valor) -> Optional[int]:
+    try:
+        n = int(valor)
+    except (TypeError, ValueError):
+        return None
+    return n if n > 0 else None
+
+
+def _cea_funciones(items: list) -> list[Screening]:
+    """Las funciones de la respuesta de /api/screenings, sin filtrar por fecha."""
+    validas = []
+    for it in items:
+        if not isinstance(it, dict):
+            continue
+        inicio = _cea_inicio(it.get("startsAt"))
+        movie = it.get("movie") if isinstance(it.get("movie"), dict) else {}
+        titulo = re.sub(r"\s+", " ", str(movie.get("title") or "")).strip()
+        if inicio and titulo:
+            validas.append((it, inicio, movie, titulo))
+
+    # Una función que cerraron a mano sin una sola reserva, en la misma sala y
+    # a la misma hora que otra que sí está abierta, es la que reemplazaron: el
+    # 21/11/2026 figuraban juntas "El exilio de Gardel" (cerrada, 0 reservas) y
+    # "Un cuento chino" (abierta). Cerrada sola no se saca: puede estar llena.
+    abiertas = {(it.get("room"), inicio) for it, inicio, _, _ in validas if it.get("isOpen")}
+
     result: list[Screening] = []
     vistas: set[tuple] = set()
-
-    for card in visibles:
-        texto = re.sub(r"\s+", " ", card.get_text(" ", strip=True))
-        m = _CEA_CUANDO_RE.search(texto)
-        if not m:
-            continue
-        month = _CEA_MONTHS[m.group(2).lower()]
-
-        badge = card.select_one(".fc-date-badge")
-        dia = badge.get_text(strip=True) if badge else ""
-        if not dia.isdigit():
-            # Sin el número grande: el primer 1-2 dígitos suelto de la card,
-            # que es el mismo que muestra el badge.
-            dm = re.search(r"\b(\d{1,2})\b", texto)
-            if not dm:
-                continue
-            dia = dm.group(1)
-
-        # El año no está en ningún lado: es el que deja la fecha cerca de hoy
-        # (en diciembre, "enero" es del año que viene).
-        try:
-            d = date(today.year, month, int(dia))
-        except ValueError:
-            continue
-        if d < today - timedelta(days=45):
-            try:
-                d = date(today.year + 1, month, int(dia))
-            except ValueError:
-                continue
-        if not (today <= d <= cutoff):
-            continue
-
-        titulo = _cea_campo(card, "titulo", ".fc-title")
-        if not titulo:
-            continue
-
-        hora = f"{int(m.group(3)):02d}:{int(m.group(4) or 0):02d}" if m.group(3) else ""
-
-        a = card.select_one('a[data-field="formUrl"][href]') or card.select_one("a.fc-cta[href]")
-        form_url = a["href"] if a else ""
-
-        if not hora and form_url:
-            # Sin hora en la card, la busca el formulario de reserva, que la
-            # tiene en el título ("… jueves 27/8 19hs").
-            hora = (_cea_form_meta(form_url) or {}).get("hora") or ""
-        if not hora:
-            # Publicar una función sin horario es peor que no publicarla: se
-            # ordena mal en la grilla y manda a la gente a una hora inventada.
-            print(f"[cea: '{titulo[:30]}' sin horario — salteada]", end=" ", flush=True)
-            continue
-
-        director = year = ""
-        dm = _CEA_DIR_YEAR_RE.match(_cea_campo(card, "dirAnio", ".fc-dir"))
-        if dm:
-            director, year = dm.group(1).strip(), int(dm.group(2))
-
-        # El ciclo es el chip ("Que CEA Rock"); lo que sigue en el renglón es
-        # una bajada que cambia de función en función ("Documental · El
-        # templo del rock argentino", "★ Con la presencia del director ★"), y
-        # pegada al ciclo partía uno solo en tres. De la bajada sólo se guarda
-        # lo que va entre estrellas, que es un aviso de esa función, como
-        # sección: "Que CEA Rock - Con la presencia del director".
-        renglon = card.select_one('[data-field="ciclo"]') or card.select_one(".fc-cycle")
-        chip = renglon.select_one(".chip") if renglon else None
-        if chip:
-            ciclo = re.sub(r"\s+", " ", chip.get_text(" ", strip=True))
-            aviso = re.search(r"★\s*([^★]+?)\s*★", renglon.get_text(" ", strip=True))
-            if aviso:
-                ciclo = f"{ciclo} - {aviso.group(1)}"
-        else:
-            ciclo = _cea_campo(card, "ciclo", ".fc-cycle").split("·")[0].strip()
-        if ciclo.isupper():
-            ciclo = ciclo.title()      # "CICLO SANDRO" → "Ciclo Sandro"
-
-        dur_m = re.search(r"(\d{2,3})\s*min", _cea_campo(card, "dur", ".fc-dur"))
-
-        clave = (d.isoformat(), _cea_norm(titulo))
-        if clave in vistas:
+    for it, inicio, movie, titulo in validas:
+        reemplazada = (it.get("closedManually") and not it.get("isOpen")
+                       and not _cea_entero(it.get("taken"))
+                       and (it.get("room"), inicio) in abiertas)
+        clave = (inicio, titulo.lower())
+        if reemplazada or clave in vistas:
             continue
         vistas.add(clave)
         result.append(Screening(
-            cine="CEA",
-            title=titulo,
-            fecha=d.isoformat(),
-            hora=hora,
-            ticket_url=form_url or CEA_URL,
-            director=director,
-            year=year or None,
-            duration=int(dur_m.group(1)) if dur_m else None,
-            ciclo=ciclo,
+            cine=CEA_CINE, title=titulo,
+            fecha=inicio.date().isoformat(), hora=inicio.strftime("%H:%M"),
+            ticket_url=CEA_FUNCION.format(id=it["id"]) if it.get("id") is not None else CEA_URL,
+            director=re.sub(r"\s+", " ", str(movie.get("director") or "")).strip(),
+            year=_cea_entero(movie.get("year")),
+            duration=_cea_entero(movie.get("duration")),
         ))
+    return result
 
-    if visibles and not result:
-        # El caso que hacía desaparecer al cine sin ruido: la página carga pero
-        # el markup cambió. Que quede en el log del scrape, no sólo en la
-        # auditoría del día siguiente.
-        print(f"[cea: {len(visibles)} cards en la home pero 0 funciones — revisar el markup]",
-              end=" ", flush=True)
+
+def scrape_cea(semanas: int = 9) -> list[Screening]:
+    """Las funciones del CEA, de la API de su sitio de reservas."""
+    try:
+        items = json.loads(fetch_bytes(CEA_API).decode("utf-8", errors="replace"))
+    except Exception as e:
+        print(f"[cea: la API no contestó — {e}]", end=" ", flush=True)
+        marcar_fuente_caida(CEA_CINE, f"la API de cea.mda.gob.ar no contestó ({type(e).__name__})")
+        return []
+    if not isinstance(items, list):
+        marcar_fuente_caida(CEA_CINE, "la API de cea.mda.gob.ar ya no devuelve la lista de funciones")
+        return []
+
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    result = [s for s in _cea_funciones(items)
+              if today <= date.fromisoformat(s.fecha) <= cutoff]
+    if items and not _cea_funciones(items):
+        # La API contesta pero con otra forma: que quede dicho, no un cero mudo.
+        marcar_fuente_caida(CEA_CINE, f"la API de cea.mda.gob.ar devolvió {len(items)} "
+                                      f"funciones que el scraper no supo leer")
     return result
 
 
@@ -10556,6 +10431,759 @@ def scrape_farus(semanas: int = 9) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
+# Club Lucero (clublucero.com)
+# ---------------------------------------------------------------------------
+# El bar de Nicaragua 6048 tiene una sala de cine en el primer piso, el "Cine
+# Club Lucero", de miércoles a viernes, y cada tanto proyecta en el patio.
+# Hasta el 18/11/2026 la sala no tenía scraper: había entrado a mano una sola
+# vez, con las funciones del Bitbang, y desde el 30/10 figuraba en cero con un
+# mes entero de ciclos publicado en su sitio.
+#
+# La portada trae toda la agenda en un arreglo de JavaScript, una entrada por
+# función o por noche:
+#
+#   {"iso":"2026-11-18","cycle":"Video Láser · Mes del Orgullo",
+#    "title":"Happy Together",
+#    "meta":"21h · Wong Kar-wai, Hong Kong, 1997 · Filmada en Buenos Aires ·
+#            Sala del primer piso · Gratis con reserva",
+#    "link":"entradas.html?slug=happy-together"}
+#
+# Es un GET pelado y trae director, país y año. La página de entradas arma la
+# misma lista con la API de eventos de Wix, que pide un token de visitante y
+# no trae la ficha: no se usa.
+#
+# En el mismo arreglo vienen los DJ de viernes y sábado, un curso de impro y
+# charlas de cine. Una función se reconoce por la hora: la que dice "21h" es
+# una película, la que dice "22 a 03h" o "19 a 21h" es otra cosa.
+
+LUCERO_CINE = "Club Lucero"
+LUCERO_URL = "https://www.clublucero.com/"
+
+# "21h", "22:15h", "19 hs": una hora sola, con lo que venga atrás ("21h
+# Videodrome (Cronenberg, 1983)"). "22 a 03h" no entra: es un rango.
+_LUCERO_HORA_RE = re.compile(r"^(\d{1,2})(?:[:.](\d{2}))?\s*hs?\b\.?\s*(.*)$", re.IGNORECASE)
+# Lo que no es una función aunque tenga una hora sola. Se mira en el ciclo y en
+# el título, no en la bajada: "Charla con el equipo después" acompaña a una
+# película.
+_LUCERO_NO_CINE_RE = re.compile(
+    r"\b(djs?|charlas?|cursos?|taller(?:es)?|clases?|impro|stand\s*up|karaoke|bingo|"
+    r"trivia|recital|en\s+vivo|fiesta|feria)\b", re.IGNORECASE)
+# Dónde proyecta. Sirve para dejar pasar una función que no trae ficha ("El
+# lado oscuro de Oz": El mago de Oz con el disco de Pink Floyd).
+_LUCERO_SALA_RE = re.compile(r"sala del primer piso|proyecci[oó]n|\bVHS\b|\b(?:16|35)\s*mm\b",
+                             re.IGNORECASE)
+# "Sidney Lumet, Estados Unidos, 1975" / "de Toshiya Shinohara, Japón, 2002"
+_LUCERO_FICHA_RE = re.compile(
+    r"^(?:de\s+)?(?P<director>[^,]+),\s*(?P<pais>[^,]+),\s*(?P<anio>(?:18|19|20)\d{2})$",
+    re.IGNORECASE)
+# "Videodrome (Cronenberg, 1983)"
+_LUCERO_PARENTESIS_RE = re.compile(
+    r"^(?P<titulo>.+?)\s*\((?P<director>[^()]*?),?\s*(?P<anio>(?:18|19|20)\d{2})\)$")
+
+
+def _lucero_agenda(html: str) -> Optional[list]:
+    """El arreglo de la agenda, o None si la portada ya no lo trae."""
+    m = re.search(r'\[\s*\{\s*"iso"\s*:', html)
+    if not m:
+        return None
+    try:
+        agenda, _ = json.JSONDecoder().raw_decode(html, m.start())
+    except ValueError:
+        return None
+    return agenda if isinstance(agenda, list) else None
+
+
+def _lucero_ciclo(cycle: str) -> str:
+    """"Video Láser · Mes del Orgullo" → "Video Láser". Lo que sigue al punto
+    medio es el paraguas del mes o quién presenta ("con Peliculero").
+
+    Un ciclo gritado se baja: "VHS ANIMÉ" → "VHS Animé". Las siglas de hasta
+    tres letras quedan como están."""
+    ciclo = re.split(r"\s+·\s+", (cycle or "").strip(), maxsplit=1)[0].strip()
+    if ciclo.isupper():
+        ciclo = " ".join(w if len(w) <= 3 else w[0] + w[1:].lower() for w in ciclo.split())
+    return ciclo
+
+
+def _lucero_funciones(e: dict) -> list[Screening]:
+    """Las funciones de una entrada de la agenda. Lista vacía si no es cine."""
+    iso = str(e.get("iso") or "")
+    title = re.sub(r"\s+", " ", str(e.get("title") or "")).strip()
+    cycle = str(e.get("cycle") or "")
+    try:
+        dia = date.fromisoformat(iso)
+    except ValueError:
+        return []
+    if not title or _LUCERO_NO_CINE_RE.search(f"{cycle} {title}"):
+        return []
+    # Los festivales publican la noche entera en una entrada ("19h
+    # Internacionales I · 20h II · 21h III"): se cargan de su catálogo, película
+    # por película (ver Bitbang en manual_screenings.json).
+    if re.match(r"\s*festival\b", cycle, re.IGNORECASE):
+        return []
+
+    partes = [p.strip() for p in str(e.get("meta") or "").split("·") if p.strip()]
+    link = str(e.get("link") or "")
+    url = urllib.parse.urljoin(LUCERO_URL, link) if link else LUCERO_URL
+    ciclo = _lucero_ciclo(cycle)
+
+    def funcion(titulo: str, hh: str, mm: Optional[str], **ficha) -> Screening:
+        fecha = dia
+        # Las trasnoches van al día siguiente, como en el resto de la cartelera.
+        if int(hh) < 6:
+            fecha += timedelta(days=1)
+        return Screening(cine=LUCERO_CINE, title=titulo, fecha=fecha.isoformat(),
+                         hora=f"{int(hh):02d}:{mm or '00'}", ticket_url=url,
+                         ciclo=ciclo, **ficha)
+
+    # Varias películas en una noche: cada tramo trae su hora y su título.
+    # "21h Videodrome (Cronenberg, 1983) · 23h Onibaba (Shindō, 1964)"
+    varias = [m for m in map(_LUCERO_HORA_RE.match, partes) if m and m.group(3)]
+    if varias:
+        out = []
+        for m in varias:
+            mp = _LUCERO_PARENTESIS_RE.match(m.group(3))
+            if mp:
+                out.append(funcion(mp.group("titulo").strip(), m.group(1), m.group(2),
+                                   director=mp.group("director").strip(),
+                                   year=int(mp.group("anio"))))
+            else:
+                out.append(funcion(m.group(3).strip(), m.group(1), m.group(2)))
+        return out
+
+    # Una película: la hora sola y, atrás, la ficha.
+    mh = _LUCERO_HORA_RE.match(partes[0]) if partes else None
+    if not mh:
+        return []
+    ficha_txt = partes[1] if len(partes) > 1 else ""
+    ficha: dict = {}
+    mf = _LUCERO_FICHA_RE.match(ficha_txt)
+    if mf:
+        ficha = {"director": mf.group("director").strip(),
+                 "country": mf.group("pais").strip(), "year": int(mf.group("anio"))}
+    elif re.match(r"de\s+\S", ficha_txt):
+        # "de Laura Casabé, basada en cuentos de Mariana Enríquez"
+        ficha = {"director": re.sub(r"^de\s+", "", ficha_txt).split(",")[0].strip()}
+
+    # "Programa doble: Blow Job + Pink Narcissus" con "Andy Warhol + James
+    # Bidgood": una función por película, a la misma hora.
+    md = re.match(r"programa\s+doble\s*:\s*(.+)$", title, re.IGNORECASE)
+    if md:
+        titulos = [t.strip() for t in re.split(r"\s+\+\s+", md.group(1)) if t.strip()]
+        directores = [d.strip() for d in re.split(r"\s+\+\s+", ficha_txt)]
+        if len(titulos) > 1:
+            con_director = len(directores) == len(titulos) and not ficha
+            return [funcion(t, mh.group(1), mh.group(2),
+                            **({"director": directores[i]} if con_director else {}))
+                    for i, t in enumerate(titulos)]
+
+    if not ficha and not _LUCERO_SALA_RE.search(" ".join(partes[1:])):
+        return []
+    return [funcion(title, mh.group(1), mh.group(2), **ficha)]
+
+
+def scrape_lucero(semanas: int = 9) -> list[Screening]:
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    try:
+        html = fetch_bytes(LUCERO_URL).decode("utf-8", errors="replace")
+    except Exception as e:
+        marcar_fuente_caida(LUCERO_CINE, f"clublucero.com no contestó ({type(e).__name__})")
+        return []
+    agenda = _lucero_agenda(html)
+    if agenda is None:
+        marcar_fuente_caida(LUCERO_CINE, "la portada de clublucero.com ya no trae la agenda")
+        return []
+
+    result: list[Screening] = []
+    vistas: set[tuple] = set()
+    for e in agenda:
+        if not isinstance(e, dict):
+            continue
+        for s in _lucero_funciones(e):
+            clave = (s.title.lower(), s.fecha, s.hora)
+            if clave in vistas or not (today <= date.fromisoformat(s.fecha) <= cutoff):
+                continue
+            vistas.add(clave)
+            result.append(s)
+    return result
+
+
+# ---------------------------------------------------------------------------
+# Cine Helios (El Palomar) — cinehelios.adro.studio
+# ---------------------------------------------------------------------------
+# El Cine Teatro Helios de Ciudad Jardín vende por la boletería de adro.studio
+# ("gaf-webapp"): la página es un cascarón y todo sale de su API, sin token.
+#
+#   GET /nowPlaying/45        → las películas en cartel (nombre y `pref`)
+#   GET /movie/45/<pref>      → la ficha y sus funciones:
+#       "movie": {"nombre": "I Wanna Hold Your Hand de Robert Zemeckis",
+#                 "descripcion": "…", "Duracion": "104", …},
+#       "showtimes": [{"fechaHora": {"date": "2026-11-24 20:30:00.000000", …},
+#                      "mostrar": "1", "expired": false, "theaterPlay": 0}]
+#
+# La hora dice "timezone: UTC" pero es la de acá: el afiche de esa función
+# dice "martes 24/11 20.30hs".
+#
+# La sala tiene dos programaciones, y cuál es cuál sólo lo dice el afiche
+# ("CINECLUB" / "CINE INCAA"). En los datos se distinguen por cómo cargan cada
+# una:
+#   - El cineclub pone al director en el nombre ("Yellow Submarine de George
+#     Dunning") y repite en la descripción "Yellow Submarine, de George Dunning
+#     (1968)". De ahí salen título, director y año.
+#   - Lo demás es el Espacio INCAA, con su ficha en la descripción ("Origen:
+#     Argentina", "Dirección: Teresa Martino") y el título en mayúsculas y sin
+#     tildes; el bien escrito es el primer renglón de la descripción.
+# Pedido de Mateo (18/11/2026): el ciclo es "Cineclub Helios" o, si no, "Cine
+# INCAA".
+
+HELIOS_CINE = "Cine Helios"
+HELIOS_ID = 45
+HELIOS_API = "https://apiv2.gaf.adro.studio"
+HELIOS_PELICULA = "https://cinehelios.adro.studio/pelicula/{id}/{pref}"
+HELIOS_CINECLUB = "Cineclub Helios"
+HELIOS_INCAA = "Cine INCAA"
+
+_HELIOS_FICHA_RE = {
+    "director": re.compile(r"^\s*Direcci[óo]n\s*:\s*(.+?)\s*$", re.IGNORECASE | re.MULTILINE),
+    "country": re.compile(r"^\s*Origen\s*:\s*(.+?)\s*$", re.IGNORECASE | re.MULTILINE),
+}
+
+
+def _helios_ficha(movie: dict) -> dict:
+    """{title, director, year, country, duration, ciclo} de una película."""
+    nombre = re.sub(r"\s+", " ", str(movie.get("nombre") or "")).strip()
+    desc = str(movie.get("descripcion") or "").replace("\r", "")
+    try:
+        duracion = int(movie.get("Duracion")) or None
+    except (TypeError, ValueError):
+        duracion = None
+    out = {"title": nombre, "director": "", "year": None, "country": "",
+           "duration": duracion, "ciclo": HELIOS_INCAA}
+
+    # Cineclub: "Título de Director" en el nombre y "Título, de Director (año)"
+    # en la descripción. Sin esa segunda línea no se parte nada: "El secreto de
+    # sus ojos" también tiene un " de " en el medio.
+    for m in re.finditer(r"\s+de\s+", nombre):
+        titulo, director = nombre[:m.start()].strip(), nombre[m.end():].strip()
+        if not titulo or not director:
+            continue
+        linea = re.search(rf"^\s*{re.escape(titulo)}\s*,\s*de\s+{re.escape(director)}"
+                          rf"\s*\(((?:18|19|20)\d{{2}})\)", desc, re.IGNORECASE | re.MULTILINE)
+        if linea:
+            out.update(title=titulo, director=director, year=int(linea.group(1)),
+                       ciclo=HELIOS_CINECLUB)
+            return out
+
+    # Espacio INCAA: la ficha, y el título como lo escribe la descripción.
+    for campo, patron in _HELIOS_FICHA_RE.items():
+        m = patron.search(desc)
+        if m:
+            out[campo] = m.group(1).strip().rstrip(".")
+    primera = next((l.strip() for l in desc.split("\n") if l.strip()), "")
+    if primera and titulo_norm(primera) == titulo_norm(nombre):
+        out["title"] = primera
+    return out
+
+
+def _helios_funciones(data: dict, pref: str) -> list[Screening]:
+    """Las funciones de la respuesta de /movie/<cine>/<pref>, sin filtrar por fecha."""
+    movie = data.get("movie") if isinstance(data.get("movie"), dict) else {}
+    ficha = _helios_ficha(movie)
+    if not ficha["title"]:
+        return []
+    out: list[Screening] = []
+    vistas: set[tuple] = set()
+    for st in data.get("showtimes") or []:
+        if not isinstance(st, dict) or st.get("theaterPlay") or str(st.get("mostrar", "1")) == "0":
+            continue
+        cuando = (st.get("fechaHora") or {}).get("date") if isinstance(st.get("fechaHora"), dict) else ""
+        m = re.match(r"(\d{4}-\d{2}-\d{2})[ T](\d{2}):(\d{2})", str(cuando or ""))
+        if not m or (m.group(1), m.group(2), m.group(3)) in vistas:
+            continue
+        vistas.add((m.group(1), m.group(2), m.group(3)))
+        out.append(Screening(
+            cine=HELIOS_CINE, title=ficha["title"], fecha=m.group(1),
+            hora=f"{m.group(2)}:{m.group(3)}",
+            ticket_url=HELIOS_PELICULA.format(id=HELIOS_ID, pref=pref),
+            ciclo=ficha["ciclo"], director=ficha["director"], country=ficha["country"],
+            year=ficha["year"], duration=ficha["duration"],
+        ))
+    return out
+
+
+def scrape_helios(semanas: int = 9) -> list[Screening]:
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+
+    def pedir(ruta: str):
+        d = json.loads(fetch_bytes(HELIOS_API + ruta).decode("utf-8", errors="replace"))
+        return d.get("data") if isinstance(d, dict) and d.get("status") == "ok" else None
+
+    try:
+        cartel = pedir(f"/nowPlaying/{HELIOS_ID}")
+    except Exception as e:
+        marcar_fuente_caida(HELIOS_CINE, f"la boletería (adro.studio) no contestó ({type(e).__name__})")
+        return []
+    if not isinstance(cartel, list):
+        marcar_fuente_caida(HELIOS_CINE, "la boletería (adro.studio) ya no devuelve la cartelera")
+        return []
+
+    result: list[Screening] = []
+    sin_leer: list[str] = []
+    for item in cartel:
+        if not isinstance(item, dict) or item.get("theaterPlay") or not item.get("pref"):
+            continue          # teatro: no es una función de cine
+        pref = str(item["pref"])
+        try:
+            data = pedir(f"/movie/{HELIOS_ID}/{pref}")
+        except Exception:
+            data = None
+        if not isinstance(data, dict):
+            sin_leer.append(str(item.get("nombre") or pref))
+            continue
+        result.extend(s for s in _helios_funciones(data, pref)
+                      if today <= date.fromisoformat(s.fecha) <= cutoff)
+    if sin_leer:
+        marcar_fuente_caida(HELIOS_CINE, "la boletería no devolvió las funciones de: "
+                                         + ", ".join(sin_leer))
+    return result
+
+
+# ---------------------------------------------------------------------------
+# The Cinema Club Company — Palermo, Recoleta y Lomas de Zamora
+# ---------------------------------------------------------------------------
+# Proyecta en tres bares, cada uno con su grilla. cinemaclubcompany.com es una
+# marca blanca de la ticketera Fanz: la portada trae las primeras 12 funciones
+# y el botón "Load more" pide el resto a la API pública de Fanz, sin token:
+#
+#   GET backend.fanz.com.ar/public/events?offset=0&limit=12&hostname=www.cinemaclubcompany.com
+#   → {"count": 34, "events": [
+#        {"id": 183984, "slug": "183984-beetlejuice-1988-miercoles-1811-1945hs",
+#         "title": "BEETLEJUICE (1988) - MIERCOLES  18/11 - 19:45hs",
+#         "Dates": [{"start": "2026-11-18T22:45:00.000Z", …}],
+#         "Location": {"locationName": "AURA SKY BAR - RECOLETA"}, …}]}
+#
+# Cada sede es una sala de la cartelera, como las dos de Renoir: así cada
+# función sale con la dirección del bar donde se da. El título trae el año
+# entre paréntesis y, atrás, el día y la hora, que se descartan: la fecha
+# buena es la de `Dates`, en UTC.
+
+CCC_API = "https://backend.fanz.com.ar/public/events"
+CCC_HOST = "www.cinemaclubcompany.com"
+CCC_EVENTO = "https://www.cinemaclubcompany.com/event/{slug}"
+# Por la palabra del barrio que trae el nombre del lugar.
+CCC_SEDES = {
+    "palermo": "Cinema Club Palermo",
+    "recoleta": "Cinema Club Recoleta",
+    "lomas": "Cinema Club Lomas de Zamora",
+}
+CCC_PAGINA = 12
+_CCC_TZ = ZoneInfo("America/Argentina/Buenos_Aires")
+# " - MIERCOLES  18/11 - 19:45hs": la cola del título.
+_CCC_COLA_RE = re.compile(
+    r"\s+-\s+(?:lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\b.*$", re.IGNORECASE)
+_CCC_ANIO_RE = re.compile(r"\s*\(((?:18|19|20)\d{2})\)\s*$")
+
+
+def _ccc_sede(evento: dict) -> str:
+    lugar = " ".join(str((evento.get(k) or {}).get(c) or "")
+                     for k, c in (("Location", "locationName"), ("Category", "name")))
+    lugar = _sin_acentos(lugar).lower()
+    for clave, cine in CCC_SEDES.items():
+        if clave in lugar:
+            return cine
+    return ""
+
+
+_CCC_CHICAS = {"y", "de", "del", "la", "el", "los", "las", "en", "a", "con", "sin", "un", "una",
+               "que", "al", "por", "para", "of", "the", "and"}
+
+
+def _ccc_caja(t: str) -> str:
+    """El título viene gritado y es el que usa la sala ("EL EXTRAÑO MUNDO DE
+    JACK"): se baja acá, palabra por palabra, para que run.py lo respete. Si
+    llegara en mayúsculas, run.py lo cambiaría por el de TMDb, que es el de
+    España ("Pesadilla antes de Navidad"). Un conector repetido no se achica:
+    "LA LA LAND" es "La La Land"."""
+    if not t.isupper():
+        return t
+    out: list[str] = []
+    for w in t.lower().split():
+        if out and w in _CCC_CHICAS and out[-1].lower() != w:
+            out.append(w)
+        else:
+            m = re.search(r"[^\W\d_]", w)
+            out.append(w[:m.start()] + w[m.start()].upper() + w[m.start() + 1:] if m else w)
+    return " ".join(out)
+
+
+def _ccc_titulo(title: str) -> tuple[str, Optional[int]]:
+    """"BEETLEJUICE (1988) - MIERCOLES  18/11 - 19:45hs" → ("Beetlejuice", 1988).
+    Un título cortado ("ETERNO RESPLANDOR DE UNA MENTE..") pierde los puntos."""
+    t = _CCC_COLA_RE.sub("", re.sub(r"\s+", " ", title or "")).strip()
+    anio = None
+    m = _CCC_ANIO_RE.search(t)
+    if m:
+        anio, t = int(m.group(1)), t[:m.start()]
+    return _ccc_caja(re.sub(r"\s*(?:\.{2,}|…)$", "", t).strip()), anio
+
+
+def _ccc_funciones(eventos: list) -> tuple[list[Screening], list[str]]:
+    """(funciones, lugares que no se reconocieron), sin filtrar por fecha."""
+    crudas = []
+    sin_sede: list[str] = []
+    for ev in eventos:
+        if not isinstance(ev, dict) or ev.get("isExternal"):
+            continue
+        titulo, anio = _ccc_titulo(str(ev.get("title") or ""))
+        if not titulo:
+            continue
+        cine = _ccc_sede(ev)
+        if not cine:
+            lugar = str((ev.get("Location") or {}).get("locationName") or "sin lugar")
+            if lugar not in sin_sede:
+                sin_sede.append(lugar)
+            continue
+        url = CCC_EVENTO.format(slug=ev["slug"]) if ev.get("slug") else f"https://{CCC_HOST}/"
+        for d in ev.get("Dates") or []:
+            try:
+                inicio = datetime.fromisoformat(str(d.get("start")).replace("Z", "+00:00")).astimezone(_CCC_TZ)
+            except (AttributeError, ValueError):
+                continue
+            crudas.append((cine, titulo, anio, inicio, url))
+
+    # El mismo título a veces va con año y a veces sin ("ETERNO RESPLANDOR DE
+    # UNA MENTE.." el sábado, con "(2004)" el domingo): se completa.
+    anios = {titulo_norm(t): a for _, t, a, _, _ in crudas if a}
+    result: list[Screening] = []
+    vistas: set[tuple] = set()
+    for cine, titulo, anio, inicio, url in crudas:
+        clave = (cine, titulo_norm(titulo), inicio)
+        if clave in vistas:
+            continue
+        vistas.add(clave)
+        result.append(Screening(
+            cine=cine, title=titulo, fecha=inicio.date().isoformat(),
+            hora=inicio.strftime("%H:%M"), ticket_url=url,
+            year=anio or anios.get(titulo_norm(titulo)),
+        ))
+    return result, sin_sede
+
+
+def scrape_cinema_club(semanas: int = 9) -> list[Screening]:
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    eventos: list = []
+    total = None
+    try:
+        # Tope de 25 páginas: 300 funciones, diez veces lo que publican.
+        for pagina in range(25):
+            url = (f"{CCC_API}?offset={len(eventos)}&limit={CCC_PAGINA}"
+                   f"&hostname={CCC_HOST}")
+            d = json.loads(fetch_bytes(url).decode("utf-8", errors="replace"))
+            tanda = d.get("events") if isinstance(d, dict) else None
+            if not isinstance(tanda, list):
+                raise ValueError("la respuesta no trae la lista de eventos")
+            eventos.extend(tanda)
+            total = d.get("count") if isinstance(d.get("count"), int) else total
+            if not tanda or (total is not None and len(eventos) >= total):
+                break
+    except Exception as e:
+        # Sin la lista entera no se publica media grilla.
+        for cine in CCC_SEDES.values():
+            marcar_fuente_caida(cine, f"la ticketera (Fanz) no contestó ({type(e).__name__})")
+        return []
+
+    funciones, sin_sede = _ccc_funciones(eventos)
+    if sin_sede:
+        aviso = "hay funciones en un lugar que el scraper no conoce: " + ", ".join(sin_sede)
+        for cine in CCC_SEDES.values():
+            marcar_fuente_caida(cine, aviso)
+    return [s for s in funciones if today <= date.fromisoformat(s.fecha) <= cutoff]
+
+
+# ---------------------------------------------------------------------------
+# Espacio INCAA Morón — Teatro Municipal Gregorio de Laferrere
+# ---------------------------------------------------------------------------
+# El teatro publica la programación del mes en una nota de su web que va
+# reescribiendo (la dirección dice 2024/08/16, la última edición es de este
+# mes). Un <h1> con el mes, un <h2> por sección y un párrafo por película:
+#
+#   <h1>Noviembre</h1>
+#   <h2>Mirada documental</h2>
+#   <p><strong><mark>Jueves 19, 20hs</mark></strong><br>
+#      <strong>Militante</strong>, de Federico Sosa | Argentina | 2025 |
+#      Documental | Duración 61 minutos | G | Con Pablo Ayala.</p>
+#
+# Lo resaltado son los días y las horas (uno o varios, separados por "|"); el
+# resto, título, director y una ficha de campos sueltos de la que salen el
+# año, la duración y el país.
+#
+# La nota no dice el año. Sale de la fecha de edición de la nota y se confirma
+# con el día de la semana: "Jueves 19" tiene que caer jueves. Si no coincide
+# en ningún año cercano, esa función no sale: es un mes viejo o un error de
+# tipeo, y no hay forma de saber cuál.
+
+MORON_CINE = "Espacio INCAA Morón"
+MORON_URL = "https://ellaferrere.com.ar/2024/08/16/agenda-espacio-incaa-moron-programacion/"
+_MORON_DIAS = {"lunes": 0, "martes": 1, "miercoles": 2, "jueves": 3, "viernes": 4,
+               "sabado": 5, "domingo": 6}
+_MORON_CUANDO_RE = re.compile(
+    r"(lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})\s*,?\s*"
+    r"(\d{1,2})(?:[:.](\d{2}))?\s*hs?\b", re.IGNORECASE)
+_MORON_DUR_RE = re.compile(r"(?:Duraci[óo]n\s+)?(\d{2,3})\s*min(?:utos?|s|\.)?", re.IGNORECASE)
+_MORON_PAISES = {"argentina", "uruguay", "chile", "brasil", "paraguay", "bolivia", "peru",
+                 "colombia", "mexico", "venezuela", "ecuador", "cuba", "espana", "francia",
+                 "italia", "alemania", "estados unidos", "portugal"}
+# Secciones que no son un ciclo: lo que se estrena, a secas.
+_MORON_NO_CICLO = {"estrenos", "estreno"}
+
+
+def _moron_fecha(mes: int, dia: int, dia_semana: int, referencia: date) -> Optional[date]:
+    """El día `dia` del `mes` que cae en `dia_semana`, en el año de la edición
+    de la nota o en los de al lado. None si en ninguno."""
+    for anio in (referencia.year, referencia.year + 1, referencia.year - 1):
+        try:
+            d = date(anio, mes, dia)
+        except ValueError:
+            continue
+        if d.weekday() == dia_semana and abs((d - referencia).days) <= 200:
+            return d
+    return None
+
+
+def _moron_ficha(resto: str) -> dict:
+    """", de Federico Sosa | Argentina | 2025 | Documental | Duración 61 minutos | G"
+    → {director, country, year, duration}."""
+    campos = [c.strip() for c in resto.split("|")]
+    out: dict = {"director": "", "country": "", "year": None, "duration": None}
+    cabeza = re.sub(r"^[\s,]+", "", campos[0]) if campos else ""
+    m = re.match(r"de\s+(.+)$", cabeza, re.IGNORECASE)
+    if m:
+        out["director"] = m.group(1).strip().rstrip(",.")
+    for c in campos[1:]:
+        if re.fullmatch(r"(?:19|20)\d{2}", c):
+            out["year"] = out["year"] or int(c)
+        elif _MORON_DUR_RE.fullmatch(c):
+            out["duration"] = out["duration"] or int(_MORON_DUR_RE.fullmatch(c).group(1))
+        elif c and not out["country"]:
+            partes = [p.strip() for p in re.split(r"\s*[,/–-]\s*|\s+y\s+", c) if p.strip()]
+            if partes and all(_sin_acentos(p).lower() in _MORON_PAISES for p in partes):
+                out["country"] = ", ".join(partes)
+    return out
+
+
+def _moron_funciones(html: str, hoy: Optional[date] = None) -> list[Screening]:
+    """Las funciones de la nota, sin filtrar por fecha."""
+    soup = BeautifulSoup(html, "html.parser")
+    cont = soup.select_one(".entry-content") or soup
+    referencia = hoy or date.today()
+    edit = soup.find("meta", attrs={"property": "article:modified_time"})
+    if edit and edit.get("content"):
+        try:
+            referencia = date.fromisoformat(edit["content"][:10])
+        except ValueError:
+            pass
+
+    mes = None
+    ciclo = ""
+    result: list[Screening] = []
+    vistas: set[tuple] = set()
+    for el in cont.find_all(["h1", "h2", "h3", "p"]):
+        texto = re.sub(r"\s+", " ", el.get_text(" ", strip=True))
+        if el.name == "h1":
+            mes = MESES_ES.get(_sin_acentos(texto).lower().strip(" .:")) or mes
+            ciclo = ""
+            continue
+        if el.name in ("h2", "h3"):
+            ciclo = "" if _sin_acentos(texto).lower() in _MORON_NO_CICLO else texto
+            continue
+        marca = el.find("mark")
+        if not marca or not mes:
+            continue
+        # Las horas, del resaltado entero y sin espacios de más ("20h s").
+        cuando = re.sub(r"\s+", " ", marca.get_text("", strip=False))
+        cuando = re.sub(r"(\d)\s*h\s*s\b", r"\1hs", cuando)
+        horarios = _MORON_CUANDO_RE.findall(cuando)
+        # El título es la primera negrita que no está dentro del resaltado.
+        fuerte = next((s for s in el.find_all("strong")
+                       if not s.find("mark") and not s.find_parent("mark")
+                       and s.get_text(strip=True)), None)
+        if not horarios or fuerte is None:
+            continue
+        titulo = re.sub(r"\s+", " ", fuerte.get_text(" ", strip=True)).strip(" ,")
+        resto = "".join(str(t) for t in fuerte.next_siblings
+                        if not getattr(t, "name", None)) if titulo else ""
+        ficha = _moron_ficha(re.sub(r"\s+", " ", resto))
+        if not titulo:
+            continue
+        for nombre_dia, dia, hh, mm in horarios:
+            fecha = _moron_fecha(mes, int(dia), _MORON_DIAS[_sin_acentos(nombre_dia).lower()],
+                                 referencia)
+            if not fecha or not (0 <= int(hh) <= 23):
+                continue
+            clave = (titulo.lower(), fecha, hh, mm)
+            if clave in vistas:
+                continue
+            vistas.add(clave)
+            result.append(Screening(
+                cine=MORON_CINE, title=titulo, fecha=fecha.isoformat(),
+                hora=f"{int(hh):02d}:{mm or '00'}", ticket_url=MORON_URL, ciclo=ciclo,
+                director=ficha["director"], country=ficha["country"],
+                year=ficha["year"], duration=ficha["duration"],
+            ))
+    return result
+
+
+def scrape_moron(semanas: int = 9) -> list[Screening]:
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    try:
+        html = fetch_bytes(MORON_URL).decode("utf-8", errors="replace")
+    except Exception as e:
+        marcar_fuente_caida(MORON_CINE, f"ellaferrere.com.ar no contestó ({type(e).__name__})")
+        return []
+    funciones = _moron_funciones(html, today)
+    if not funciones:
+        marcar_fuente_caida(MORON_CINE, "la nota de la programación no trae ninguna función "
+                                        "que el scraper sepa leer")
+        return []
+    return [s for s in funciones if today <= date.fromisoformat(s.fecha) <= cutoff]
+
+
+# ---------------------------------------------------------------------------
+# Cineclub Turdera — por Instagram (@cineclubturdera)
+# ---------------------------------------------------------------------------
+# Proyecta los viernes en el Rotary Club de Turdera y no tiene web ni
+# boletería: todo lo anuncia en Instagram. Se lee con la Business Discovery
+# API de Meta y el token de las stories, igual que el plan B del Cosmos
+# (instagram.com no: pide login y arriesga esa cuenta).
+#
+# Publican dos clases de post, siempre con el mismo armado (sonda del
+# 18/11/2026, dos meses de posts):
+#
+#   El de la semana:                    El del mes:
+#     VIERNES 20/11                       : Noviembre en CiNe Club TurDeRa
+#                                         Viernes 6/11: Bad Apples (Jonatan
+#     Stéphane (Timothée Hochet y         Etzler, Inglaterra, 2025). Thriller.
+#     Lucas Pastor, Francia, 2023,        Viernes 13/11: Milán, calibre 9 (…
+#     78min). Comedia negra.              …
+#     …                                   21hs BUFFET / 22hs PELÍCULA
+#     21hs buffet
+#     22hs proyección
+#
+# El paréntesis es la ficha: director, país y año, a veces con el título
+# original adelante ('"A bucket of blood", Roger Corman, EEUU, 1959') y la
+# duración atrás. La hora de la función es la de "proyección" o "película",
+# no la del buffet.
+#
+# Suben cada post tres o cuatro veces, y el del mes repite lo del semanal: por
+# cada viernes manda el post más nuevo que lo nombra. El año sale de la fecha
+# del post y se confirma con el día de la semana.
+
+TURDERA_CINE = "Cineclub Turdera"
+TURDERA_IG = "cineclubturdera"
+_TURDERA_DIA_RE = re.compile(
+    r"^\s*(lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})/(\d{1,2})"
+    r"\s*:?\s*(.*)$", re.IGNORECASE)
+_TURDERA_PELI_RE = re.compile(r"^(?P<titulo>[^()]+?)\s*\((?P<ficha>[^()]+)\)")
+_TURDERA_HORA_RE = re.compile(
+    r"(\d{1,2})(?:[:.](\d{2}))?\s*hs?\.?\s*(?:proyecci[óo]n|pel[íi]cula)", re.IGNORECASE)
+
+
+def _turdera_ficha(ficha: str) -> Optional[dict]:
+    """"Timothée Hochet y Lucas Pastor, Francia, 2023, 78min" →
+    {director, country, year, duration, original_title}. None si no termina en
+    director, país y año: sin eso no se sabe qué es cada campo."""
+    campos = [c.strip() for c in ficha.split(",") if c.strip()]
+    duracion = None
+    if campos:
+        m = re.fullmatch(r"(\d{2,3})\s*min(?:utos?|s|\.)?", campos[-1], re.IGNORECASE)
+        if m:
+            duracion = int(m.group(1))
+            campos.pop()
+    if len(campos) < 3 or not re.fullmatch(r"(?:18|19|20)\d{2}", campos[-1]):
+        return None
+    return {"year": int(campos[-1]), "country": campos[-2], "director": campos[-3],
+            "duration": duracion,
+            "original_title": ", ".join(campos[:-3]).strip(' "“”«»\'')}
+
+
+def _turdera_post(caption: str, publicado: date, permalink: str = "") -> list[Screening]:
+    """Las funciones que anuncia un post."""
+    lineas = [l.strip() for l in (caption or "").split("\n")]
+    hora = _TURDERA_HORA_RE.search(caption or "")
+    if not hora or not (0 <= int(hora.group(1)) <= 23):
+        return []              # sin la hora de la proyección no se publica
+    hh = f"{int(hora.group(1)):02d}:{hora.group(2) or '00'}"
+    out: list[Screening] = []
+    for i, linea in enumerate(lineas):
+        m = _TURDERA_DIA_RE.match(linea)
+        if not m:
+            continue
+        # La película va en el mismo renglón (post del mes) o en el primero
+        # con texto que le sigue (post de la semana).
+        resto = m.group(4).strip() or next((l for l in lineas[i + 1:i + 4] if l), "")
+        peli = _TURDERA_PELI_RE.match(resto)
+        ficha = _turdera_ficha(peli.group("ficha")) if peli else None
+        if not ficha:
+            continue
+        dia, mes = int(m.group(2)), int(m.group(3))
+        fecha = _moron_fecha(mes, dia, _MORON_DIAS[_sin_acentos(m.group(1)).lower()], publicado)
+        if not fecha:
+            continue           # el día de la semana no coincide: error de tipeo
+        out.append(Screening(
+            cine=TURDERA_CINE, title=peli.group("titulo").strip(), fecha=fecha.isoformat(),
+            hora=hh, ticket_url=permalink, director=ficha["director"],
+            country=ficha["country"], year=ficha["year"], duration=ficha["duration"],
+            original_title=ficha["original_title"],
+        ))
+    return out
+
+
+def _turdera_funciones(posts: list) -> list[Screening]:
+    """De todos los posts, una función por viernes: la del post más nuevo."""
+    cubiertas: set[str] = set()
+    result: list[Screening] = []
+    for p in sorted((p for p in posts if isinstance(p, dict)),
+                    key=lambda p: p.get("timestamp", ""), reverse=True):
+        try:
+            publicado = datetime.strptime(p["timestamp"], "%Y-%m-%dT%H:%M:%S%z").astimezone(_ART).date()
+        except (KeyError, ValueError):
+            continue
+        funciones = _turdera_post(p.get("caption") or "", publicado, p.get("permalink", ""))
+        nuevas = {s.fecha for s in funciones} - cubiertas
+        cubiertas |= nuevas
+        result += [s for s in funciones if s.fecha in nuevas]
+    result.sort(key=lambda s: (s.fecha, s.hora))
+    return result
+
+
+def scrape_turdera(semanas: int = 9) -> list[Screening]:
+    token = os.environ.get("IG_ACCESS_TOKEN", "").strip()
+    if not token:
+        marcar_fuente_caida(TURDERA_CINE, "falta IG_ACCESS_TOKEN para leer su Instagram")
+        return []
+    consulta = os.environ.get("IG_USER_ID", "").strip() or COSMOS_IG_CONSULTA
+    campos = (f"business_discovery.username({TURDERA_IG})"
+              "{media.limit(30){caption,timestamp,permalink}}")
+    try:
+        data = _graph_get(consulta, {"fields": campos, "access_token": token})
+    except Exception as e:
+        marcar_fuente_caida(TURDERA_CINE, f"Instagram no contestó: {e}")
+        return []
+    posts = data.get("business_discovery", {}).get("media", {}).get("data", [])
+    funciones = _turdera_funciones(posts)
+    if posts and not funciones:
+        marcar_fuente_caida(TURDERA_CINE, f"ninguno de sus {len(posts)} posts trae una función "
+                                          f"con el formato de siempre")
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    return [s for s in funciones if today <= date.fromisoformat(s.fecha) <= cutoff]
+
+
+# ---------------------------------------------------------------------------
 # Madrid
 # ---------------------------------------------------------------------------
 # La web tiene una cartelera por ciudad (la perilla de arriba a la derecha de
@@ -11210,7 +11838,12 @@ RENOIR_CINES = {
     "renoir-retiro": "Renoir Retiro",
 }
 
-_RENOIR_PASE_RE = re.compile(r"/pase/(\d+)")
+# El id del pase es el último tramo numérico del link a la butaca. Hasta
+# mediados de noviembre de 2026 venía pegado ("/pase/1089142/"); desde entonces
+# pillalas.com mete en el medio la ciudad, el cine y la película
+# ("/pase/madrid/cines-princesa/wildwood/1096523/"), y con el patrón viejo las
+# tres salas de Renoir estuvieron cuatro días en cero.
+_RENOIR_PASE_RE = re.compile(r"/pase/(?:[^?#]*/)?(\d+)/?(?:[?#]|$)")
 _RENOIR_DUR_RE = re.compile(r"Duraci[óo]n\s+(\d{1,3})\s*minutos", re.I)
 _RENOIR_DIR_RE = re.compile(r"^de\s+(.+)$", re.I)
 
