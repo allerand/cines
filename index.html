@@ -386,6 +386,58 @@
       color: var(--text);
       border-color: var(--text);
     }
+    /* "Solo CABA": otra clase de botón, una casilla que se tilda con una X.
+       No prende ni apaga un grupo de chips: recorta la cartelera a las salas
+       de la Ciudad. */
+    .filter-check {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: none;
+      border: 0;
+      padding: 0.3rem 0.2rem;
+      margin-left: 0.4rem;
+      color: var(--muted);
+      font-family: inherit;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: color 0.12s;
+    }
+    .filter-check .check-box {
+      position: relative;
+      flex: none;
+      width: 0.95rem;
+      height: 0.95rem;
+      border: 1.5px solid var(--muted);
+      border-radius: 2px;
+      transition: border-color 0.12s;
+    }
+    /* La X: dos diagonales, sólo con la casilla tildada. */
+    .filter-check .check-box::before,
+    .filter-check .check-box::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 120%;
+      height: 2px;
+      margin: -1px 0 0 -60%;
+      background: var(--accent);
+      display: none;
+    }
+    .filter-check .check-box::before { transform: rotate(45deg); }
+    .filter-check .check-box::after { transform: rotate(-45deg); }
+    .filter-check:hover { color: var(--text); }
+    .filter-check:hover .check-box { border-color: var(--text); }
+    .filter-check[aria-checked="true"] { color: var(--accent); }
+    .filter-check[aria-checked="true"] .check-box { border-color: var(--accent); overflow: hidden; }
+    .filter-check[aria-checked="true"] .check-box::before,
+    .filter-check[aria-checked="true"] .check-box::after { display: block; }
+    /* Chips de las salas de afuera de la Ciudad con "Solo CABA" tildado. */
+    .fuera-caba { display: none !important; }
     /* Chips de cines comerciales — mismos estilos que .filter-btn pero
        con borde punteado para que se vean visualmente "agregados" */
     .filter-btn.commercial-chip {
@@ -1050,6 +1102,10 @@
   <button id="toggle-commercial" class="filter-toggle" type="button" aria-pressed="false">
     + Comerciales
   </button>
+  <!-- Casilla, no toggle de grupo: tildada deja sólo las salas de la Ciudad -->
+  <button id="toggle-caba" class="filter-check" type="button" role="checkbox" aria-checked="false">
+    <span class="check-box" aria-hidden="true"></span>Solo CABA
+  </button>
   </div>
   <input type="search" id="search-input" class="search-input" placeholder="Buscar película, director…" autocomplete="off">
   <button id="share-btn" class="share-btn" title="Copiar link a esta vista"><svg class="icon-share" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg><svg class="icon-check" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span>Compartir esta búsqueda</span><span class="share-toast">Link copiado ✓</span></button>
@@ -1176,6 +1232,28 @@ function isCineclub(cine) {
   return CINECLUBES.has(cine);
 }
 
+// Las salas de Buenos Aires que NO están en la Ciudad (Gran Buenos Aires):
+// son las que saca "Solo CABA". Va por nombre exacto de sala, así de una
+// cadena quedan las sucursales porteñas ("Multiplex Belgrano") y se van las
+// otras ("Multiplex Pilar"). Una sala nueva de afuera de la Ciudad se anota
+// acá además de en CINE_ADDRESSES.
+const FUERA_DE_CABA = new Set([
+  'Cine York',                          // Olivos
+  'Centro Cultural Munro', 'Lumiton',   // Munro
+  'CEA',                                // Avellaneda
+  'Centro Cultural Leopoldo Marechal',  // Hurlingham
+  'Cine Helios',                        // El Palomar
+  'Espacio INCAA Morón',
+  'Cineclub Turdera',
+  'Cinema Club Lomas de Zamora',
+  'Multiplex Canning',                  // Ezeiza
+  'Multiplex Pilar',
+  'Cines Pixel',                        // Adrogué
+]);
+function fueraDeCaba(cine) {
+  return FUERA_DE_CABA.has(cine);
+}
+
 // ── Ciudades ───────────────────────────────────────────────────────────
 // Una cartelera por ciudad, cada una en su archivo: Madrid va aparte para que
 // las stories, el feed y el newsletter, que leen cartelera.json, sigan siendo
@@ -1278,6 +1356,7 @@ function applyCiudad() {
   });
   document.getElementById('toggle-commercial').classList.toggle('otra-ciudad', ciudad !== 'ba');
   document.getElementById('toggle-cineclubes').classList.toggle('otra-ciudad', ciudad !== 'ba');
+  document.getElementById('toggle-caba').classList.toggle('otra-ciudad', ciudad !== 'ba');
 }
 
 let allScreenings = [];
@@ -1432,6 +1511,8 @@ function applyHashState() {
       // esté apagado en este dispositivo.
       if (isCommercial(cine)) showCommercial = true;
       if (isCineclub(cine)) showCineclubes = true;
+      // Y un link a una sala de afuera de la Ciudad destilda "Solo CABA".
+      if (!enFestival && fueraDeCaba(cine)) soloCaba = false;
     }
   }
   syncCineButtons();
@@ -1741,16 +1822,27 @@ let showCineclubes = (() => {
   catch (_) { return true; }
 })();
 
+// "Solo CABA": destildado por defecto; tildado queda guardado.
+let soloCaba = (() => {
+  try { return localStorage.getItem('sd:soloCaba') === '1'; }
+  catch (_) { return false; }
+})();
+
 function visibleScreenings() {
   // Aplica el filtro global del toggle comerciales. Usado por todo el
   // resto de la UI (tabs por día, conteos, render, etc.). Un festival se
   // muestra entero, pase donde pase.
+  if (seccion === 'festivales') return allScreenings;
+  // "Solo CABA" vale también para la búsqueda: quien la tildó no quiere que
+  // la película le aparezca en Pilar.
+  const pool = soloCaba && ciudad === 'ba'
+    ? allScreenings.filter(s => !fueraDeCaba(s.cine)) : allScreenings;
   // Con una búsqueda (la del buscador o la de un festival) entran también las
   // cadenas comerciales: quien busca una película la quiere encontrar donde sea.
   // Lo mismo vale para los cineclubes cuando están apagados.
-  if ((showCommercial && showCineclubes) || seccion === 'festivales' || searchQuery) return allScreenings;
-  return allScreenings.filter(s => (showCommercial || !isCommercial(s.cine))
-                                   && (showCineclubes || !isCineclub(s.cine)));
+  if ((showCommercial && showCineclubes) || searchQuery) return pool;
+  return pool.filter(s => (showCommercial || !isCommercial(s.cine))
+                          && (showCineclubes || !isCineclub(s.cine)));
 }
 
 function applyCommercialToggle() {
@@ -1772,11 +1864,19 @@ function applyCommercialToggle() {
     tglClubes.setAttribute('aria-pressed', showCineclubes ? 'true' : 'false');
     tglClubes.textContent = showCineclubes ? '− Cineclubes' : '+ Cineclubes';
   }
+  // "Solo CABA": la casilla, y afuera los chips de las salas que no son de la
+  // Ciudad (en Madrid no corre: ahí no hay casilla).
+  const tglCaba = document.getElementById('toggle-caba');
+  if (tglCaba) tglCaba.setAttribute('aria-checked', soloCaba ? 'true' : 'false');
+  document.querySelectorAll('#cine-btns .filter-btn[data-cine]').forEach(b => {
+    b.classList.toggle('fuera-caba', soloCaba && ciudad === 'ba' && fueraDeCaba(b.dataset.cine));
+  });
   // Si había comerciales o cineclubes elegidos y se ocultaron, los sacamos de
   // la selección (las demás salas que estuvieran elegidas se mantienen).
   let saco = false;
   for (const c of [...activeCines]) {
-    if ((!showCommercial && isCommercial(c)) || (!showCineclubes && isCineclub(c))) {
+    if ((!showCommercial && isCommercial(c)) || (!showCineclubes && isCineclub(c))
+        || (soloCaba && ciudad === 'ba' && seccion !== 'festivales' && fueraDeCaba(c))) {
       activeCines.delete(c); saco = true;
     }
   }
@@ -2394,6 +2494,14 @@ document.getElementById('toggle-commercial').addEventListener('click', () => {
 document.getElementById('toggle-cineclubes').addEventListener('click', () => {
   showCineclubes = !showCineclubes;
   try { localStorage.setItem('sd:showCineclubes', showCineclubes ? '1' : '0'); } catch (_) {}
+  resetSort();
+  applyCommercialToggle();
+});
+
+// Casilla "Solo CABA": deja sólo las salas de la Ciudad.
+document.getElementById('toggle-caba').addEventListener('click', () => {
+  soloCaba = !soloCaba;
+  try { localStorage.setItem('sd:soloCaba', soloCaba ? '1' : '0'); } catch (_) {}
   resetSort();
   applyCommercialToggle();
 });
