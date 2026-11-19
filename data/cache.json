@@ -38415,5 +38415,107 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "fatherland": {
+    "url": "https://letterboxd.com/film/fatherland-2026/",
+    "title_en": "Fatherland",
+    "director": "Paweł Pawlikowski",
+    "country": "Poland, Germany",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Drama, Historia",
+    "title_es": "Tierra de Mi Padre",
+    "original_title": "Ojczyzna"
+  },
+  "hiedra": {
+    "url": "https://letterboxd.com/film/the-ivy-2025/",
+    "title_en": "The Ivy",
+    "director": "Ana Cristina Barragán",
+    "country": "Ecuador, Mexico",
+    "year": 2025,
+    "duration": 99,
+    "genre": "Drama",
+    "original_title": "Hiedra"
+  },
+  "luna de papel (paper moon)": {
+    "url": "",
+    "title_en": "Luna de papel (Paper Moon)",
+    "director": "Peter Bogdanovich",
+    "country": "United States of America",
+    "year": 1973,
+    "duration": 102,
+    "genre": "Comedia, Crimen",
+    "title_es": "Luna de papel",
+    "original_title": "Paper Moon"
+  },
+  "ensayo final para utopía": {
+    "url": "",
+    "title_en": "Ensayo final para utopía",
+    "director": "Andrés Duque",
+    "country": "",
+    "year": 2012,
+    "duration": 75,
+    "genre": "Documental",
+    "original_title": "Ensayo final para Utopía"
+  },
+  "hermanas": {
+    "url": "",
+    "title_en": "Hermanas",
+    "director": "Ione Hernández",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 101,
+    "genre": "Drama",
+    "title_es": "Sisters",
+    "original_title": "Hermanas"
+  },
+  "hester street": {
+    "url": "https://letterboxd.com/film/hester-street/",
+    "title_en": "Hester Street",
+    "director": "Joan Micklin Silver",
+    "country": "USA",
+    "year": 1975,
+    "duration": 90,
+    "genre": "Romance, Drama",
+    "original_title": "Hester Street"
+  },
+  "screening lav #36. no vi que se movieran los pétalos": {
+    "url": "",
+    "title_en": "Screening LAV #36. No vi que se movieran los pétalos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el rayo verde: el séptimo cielo, de frank borzage": {
+    "url": "",
+    "title_en": "El rayo verde: El séptimo cielo, de Frank Borzage",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "espantapájaros (scarecrow)": {
+    "url": "",
+    "title_en": "Espantapájaros (Scarecrow)",
+    "director": "Jerry Schatzberg",
+    "country": "United States of America",
+    "year": 1973,
+    "duration": 112,
+    "genre": "Drama",
+    "title_es": "El espantapájaros",
+    "original_title": "Scarecrow"
+  },
+  "salta conmigo": {
+    "url": "",
+    "title_en": "Salta Conmigo",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "hay películas que se llaman así: Salta Conmigo (None); Stand by Me (1986) sólo se le parece",
+    "fecha": "2026-11-19",
+    "con_duracion": false,
+    "desempate": ""
   }
 }

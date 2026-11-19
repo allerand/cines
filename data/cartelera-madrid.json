@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-19T05:03:35",
+  "updated": "2026-11-19T13:09:53",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 41,
@@ -10,12 +10,12 @@
       "publicadas": 39
     },
     "Cine Estudio": {
-      "scrapeadas": 14,
-      "publicadas": 14
+      "scrapeadas": 30,
+      "publicadas": 30
     },
     "Cines Callao": {
-      "scrapeadas": 3,
-      "publicadas": 3
+      "scrapeadas": 39,
+      "publicadas": 39
     },
     "Cines Ideal": {
       "scrapeadas": 0,
@@ -35,8 +35,8 @@
       "publicadas": 90
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 99,
-      "publicadas": 99
+      "scrapeadas": 100,
+      "publicadas": 101
     },
     "Golem Madrid": {
       "scrapeadas": 120,
@@ -1134,22 +1134,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-11-19",
-      "hora": "19:30",
-      "title_es": "La bola negra",
-      "title_en": "La Bola Negra",
-      "original_title": "",
-      "director": "Javier Ambrossi, Javier Calvo",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 155,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39664/",
-      "ciclo": ""
-    },
-    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-19",
       "hora": "19:30",
@@ -1195,6 +1179,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-19",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-bola-negra/39664/",
       "ciclo": ""
     },
     {
@@ -2446,6 +2446,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-20",
+      "hora": "16:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/ruega-por-nosotras/568?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-20",
       "hora": "17:00",
@@ -3134,6 +3150,22 @@
       "ciclo": "31 QueerCineMad. Festival Internacional de Cine LGBTIAQ+ de Madrid"
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-20",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-20",
       "hora": "19:50",
@@ -3489,7 +3521,7 @@
       "cine": "Cines Princesa",
       "fecha": "2026-11-20",
       "hora": "20:30",
-      "title_es": "Bailar la Muerte",
+      "title_es": "Bailar la muerte",
       "title_en": "Bailar la muerte",
       "original_title": "Bailar la muerte",
       "director": "Luis E. Parés",
@@ -4011,6 +4043,22 @@
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/wild-horse-nine-vose/39741/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-20",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -4702,6 +4750,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-21",
+      "hora": "16:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/ruega-por-nosotras/568?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-21",
       "hora": "17:00",
@@ -5358,6 +5422,22 @@
       "ciclo": "31 QueerCineMad. Festival Internacional de Cine LGBTIAQ+ de Madrid"
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-21",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-11-21",
       "hora": "19:30",
@@ -5729,7 +5809,7 @@
       "cine": "Cines Princesa",
       "fecha": "2026-11-21",
       "hora": "20:30",
-      "title_es": "Bailar la Muerte",
+      "title_es": "Bailar la muerte",
       "title_en": "Bailar la muerte",
       "original_title": "Bailar la muerte",
       "director": "Luis E. Parés",
@@ -6187,6 +6267,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/sacamantecas/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sacamantecas-vose/20789/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-21",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -6926,6 +7022,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-22",
+      "hora": "16:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/ruega-por-nosotras/568?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-22",
       "hora": "17:00",
@@ -7550,6 +7662,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-22",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-22",
       "hora": "20:00",
@@ -7809,7 +7937,7 @@
       "cine": "Cines Princesa",
       "fecha": "2026-11-22",
       "hora": "20:30",
-      "title_es": "Bailar la Muerte",
+      "title_es": "Bailar la muerte",
       "title_en": "Bailar la muerte",
       "original_title": "Bailar la muerte",
       "director": "Luis E. Parés",
@@ -8283,6 +8411,22 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/el-mal-padre/",
       "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/el-mal-padre/1097350/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-22",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -8830,6 +8974,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-23",
+      "hora": "16:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/ruega-por-nosotras/568?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-23",
       "hora": "17:00",
@@ -8843,6 +9003,22 @@
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100917&eventCode=112974",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-23",
+      "hora": "17:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro, Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/el-tren-fluvial/",
       "ciclo": ""
     },
     {
@@ -9422,6 +9598,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-23",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-23",
       "hora": "19:35",
@@ -9761,7 +9953,7 @@
       "cine": "Cines Princesa",
       "fecha": "2026-11-23",
       "hora": "20:30",
-      "title_es": "Bailar la Muerte",
+      "title_es": "Bailar la muerte",
       "title_en": "Bailar la muerte",
       "original_title": "Bailar la muerte",
       "director": "Luis E. Parés",
@@ -10171,6 +10363,22 @@
       "genre": "Romance, Drama",
       "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/la-invitacion-vose/39776/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-23",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -10798,6 +11006,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-24",
+      "hora": "16:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/ruega-por-nosotras/568?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-24",
       "hora": "17:00",
@@ -11390,6 +11614,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-24",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-11-24",
       "hora": "19:30",
@@ -11729,7 +11969,7 @@
       "cine": "Cines Princesa",
       "fecha": "2026-11-24",
       "hora": "20:30",
-      "title_es": "Bailar la Muerte",
+      "title_es": "Bailar la muerte",
       "title_en": "Bailar la muerte",
       "original_title": "Bailar la muerte",
       "director": "Luis E. Parés",
@@ -11998,6 +12238,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-24",
+      "hora": "22:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro, Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/el-tren-fluvial/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-11-24",
       "hora": "22:00",
@@ -12187,6 +12443,22 @@
       "genre": "Terror, Comedia",
       "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/adolescencia-sexo-y-muerte-en-campamento-miasma-vose/39808/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-24",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -12750,6 +13022,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-25",
+      "hora": "16:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/ruega-por-nosotras/568?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Golem Madrid",
       "fecha": "2026-11-25",
       "hora": "17:00",
@@ -12763,6 +13051,22 @@
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100952&eventCode=112974",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-25",
+      "hora": "17:00",
+      "title_es": "El tren fluvial",
+      "title_en": "The River Train",
+      "original_title": "El Tren Fluvial",
+      "director": "Lorenzo Ferro, Lucas A. Vignale",
+      "country": "Argentina",
+      "year": 2026,
+      "duration": 75,
+      "genre": "Drama, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/el-tren-fluvial/",
       "ciclo": ""
     },
     {
@@ -13326,6 +13630,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-25",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-11-25",
       "hora": "19:30",
@@ -13502,6 +13822,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-25",
+      "hora": "20:00",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-25",
       "hora": "20:10",
@@ -13665,7 +14001,7 @@
       "cine": "Cines Princesa",
       "fecha": "2026-11-25",
       "hora": "20:30",
-      "title_es": "Bailar la Muerte",
+      "title_es": "Bailar la muerte",
       "title_en": "Bailar la muerte",
       "original_title": "Bailar la muerte",
       "director": "Luis E. Parés",
@@ -13691,6 +14027,22 @@
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/wild-horse-nine/1097337/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-25",
+      "hora": "20:30",
+      "title_es": "Fatherland",
+      "title_en": "Fatherland",
+      "original_title": "Ojczyzna",
+      "director": "Pawel Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/fatherland-vose/20856/",
       "ciclo": ""
     },
     {
@@ -14158,6 +14510,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-25",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-25",
       "hora": "22:35",
@@ -14318,6 +14686,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-26",
+      "hora": "16:45",
+      "title_es": "Ruega por nosotras",
+      "title_en": "Pray for Us",
+      "original_title": "Ruega por nosotras",
+      "director": "Daniel Monzón",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 136,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/ruega-por-nosotras/568?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-26",
       "hora": "17:00",
@@ -14331,6 +14715,22 @@
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/wild-horse-nine-vose/39794/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-26",
+      "hora": "17:00",
+      "title_es": "Hiedra",
+      "title_en": "The Ivy",
+      "original_title": "Hiedra",
+      "director": "Ana Cristina Barragán",
+      "country": "Ecuador, México",
+      "year": 2025,
+      "duration": 99,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/the-ivy-2025/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/hiedra/",
       "ciclo": ""
     },
     {
@@ -14430,6 +14830,22 @@
       "ciclo": "Márgenes 2026"
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-26",
+      "hora": "19:00",
+      "title_es": "Fatherland",
+      "title_en": "Fatherland",
+      "original_title": "Ojczyzna",
+      "director": "Pawel Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/fatherland/",
+      "ciclo": ""
+    },
+    {
       "cine": "Museo Reina Sofía",
       "fecha": "2026-11-26",
       "hora": "19:00",
@@ -14510,6 +14926,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-26",
+      "hora": "19:15",
+      "title_es": "Luna de papel (Paper Moon)",
+      "title_en": "Luna de papel (Paper Moon)",
+      "original_title": "Paper Moon",
+      "director": "Peter Bogdanovich y Polly Platt",
+      "country": "Estados Unidos",
+      "year": 1973,
+      "duration": 102,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/luna-de-papel-paper-moon/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-26",
       "hora": "19:30",
@@ -14539,6 +14971,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/you-can-see-everything-puedes-verlo-todo-vose/39790/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-26",
+      "hora": "19:30",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-bola-negra/565?proximamente=true&",
       "ciclo": ""
     },
     {
@@ -14603,6 +15051,22 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/el-mal-padre/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-mal-padre/20830/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-26",
+      "hora": "21:30",
+      "title_es": "Ensayo final para utopía",
+      "title_en": "Ensayo final para utopía",
+      "original_title": "Ensayo final para Utopía",
+      "director": "Andrés Duque",
+      "country": "",
+      "year": 2012,
+      "duration": 75,
+      "genre": "Documental",
+      "letterboxd": "",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/ensayo-final-para-utopia/",
       "ciclo": ""
     },
     {
@@ -14718,6 +15182,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-26",
+      "hora": "22:30",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/la-invitacion/566?proximamente=true&",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-26",
       "hora": "22:40",
@@ -14747,6 +15227,22 @@
       "genre": "Thriller, Terror",
       "letterboxd": "https://letterboxd.com/film/crawlspace/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-2-el-atico-1986-v-o-s-e/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-27",
+      "hora": "17:00",
+      "title_es": "Hermanas",
+      "title_en": "Hermanas",
+      "original_title": "Hermanas",
+      "director": "Ione Hernández Sáenz",
+      "country": "España",
+      "year": 2026,
+      "duration": 101,
+      "genre": "Drama",
+      "letterboxd": "",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/hermanas/",
       "ciclo": ""
     },
     {
@@ -14812,6 +15308,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hechizo-bienvenidos-a-hexe-doblada-al-espanol/20720/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-27",
+      "hora": "19:00",
+      "title_es": "Hester Street",
+      "title_en": "Hester Street",
+      "original_title": "Hester Street",
+      "director": "Joan Micklin Silver",
+      "country": "Estados Unidos",
+      "year": 1975,
+      "duration": 90,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/hester-street/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/hester-street/",
+      "ciclo": "El rayo verde: carta blanca a Amalia Ulman"
     },
     {
       "cine": "Museo Reina Sofía",
@@ -14900,8 +15412,8 @@
       "title_es": "The Dreamed Adventure",
       "title_en": "The Dreamed Adventure",
       "original_title": "Das geträumte Abenteuer",
-      "director": "Valeska Grisebch",
-      "country": "Bulgaria",
+      "director": "Valeska Grisebach",
+      "country": "Alemania, Francia, Bulgaria, Austria",
       "year": 2026,
       "duration": 164,
       "genre": "Crimen, Drama",
@@ -14924,6 +15436,22 @@
       "letterboxd": "https://letterboxd.com/film/pusher/",
       "ticket_url": "https://entradasfilmoteca.sacatuentrada.es/es/productos/descripcion/pusher-un-paseo-por-el-abismo-27-nov",
       "ciclo": "Trilogía Pusher"
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-27",
+      "hora": "21:30",
+      "title_es": "La libertad doble",
+      "title_en": "Double Freedom",
+      "original_title": "La libertad doble",
+      "director": "Lisandro Alonso",
+      "country": "Chile, Argentina",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-libertad-doble/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/la-libertad-doble/",
+      "ciclo": ""
     },
     {
       "cine": "Embajadores Ercilla",
@@ -14958,7 +15486,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Ercilla",
+      "cine": "Embajadores Glorieta",
       "fecha": "2026-11-28",
       "hora": "16:00",
       "title_es": "Hechizo: Bienvenidos a Hexe",
@@ -14970,7 +15498,23 @@
       "duration": 90,
       "genre": "Aventura, Animación",
       "letterboxd": "",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hechizo-bienvenidos-a-hexe-doblada-al-espanol/20721/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/hechizo-bienvenidos-a-hexe-doblada-al-espanol/39824/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-28",
+      "hora": "16:00",
+      "title_es": "Hadoota",
+      "title_en": "Hadota",
+      "original_title": "حدوتة",
+      "director": "Mazen Ashraf",
+      "country": "Egipto",
+      "year": 2026,
+      "duration": 120,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/hadota/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hadoota-vosi/20865/",
       "ciclo": ""
     },
     {
@@ -14988,6 +15532,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/escaner-sesion-de-cortometrajes-0",
       "ciclo": "Márgenes 2026"
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-28",
+      "hora": "17:00",
+      "title_es": "Bailar la muerte",
+      "title_en": "Bailar la muerte",
+      "original_title": "Bailar la muerte",
+      "director": "Luis E. Parés",
+      "country": "",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/bailar-la-muerte/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/bailar-la-muerte/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -15022,7 +15582,7 @@
       "ciclo": "Guerra Civil. 90 Años"
     },
     {
-      "cine": "Embajadores Ercilla",
+      "cine": "Embajadores Glorieta",
       "fecha": "2026-11-28",
       "hora": "18:10",
       "title_es": "Hechizo: Bienvenidos a Hexe",
@@ -15034,7 +15594,7 @@
       "duration": 90,
       "genre": "Aventura, Animación",
       "letterboxd": "",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hechizo-bienvenidos-a-hexe-doblada-al-espanol/20722/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/hechizo-bienvenidos-a-hexe-doblada-al-espanol/39825/",
       "ciclo": ""
     },
     {
@@ -15044,7 +15604,7 @@
       "title_es": "Un arbre és un arbre",
       "title_en": "A tree is a tree",
       "original_title": "Un arbre és un arbre",
-      "director": "Carlos Marques-Marcet, Aleix Plademunt",
+      "director": "Carlos Marqués-Marcet, Aleix Plademunt",
       "country": "España",
       "year": 2026,
       "duration": 87,
@@ -15102,6 +15662,22 @@
       "ciclo": "¡Al Hollywood Parisino! Multiversiones en la II República"
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-28",
+      "hora": "19:30",
+      "title_es": "Screening LAV #36. No vi que se movieran los pétalos",
+      "title_en": "Screening LAV #36. No vi que se movieran los pétalos",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/screening-lav-36-no-vi-que-se-movieran-los-petalos/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-11-28",
       "hora": "19:30",
@@ -15150,6 +15726,22 @@
       "ciclo": "Márgenes 2026"
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-28",
+      "hora": "21:30",
+      "title_es": "La libertad doble",
+      "title_en": "Double Freedom",
+      "original_title": "La libertad doble",
+      "director": "Lisandro Alonso",
+      "country": "Chile, Argentina",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-libertad-doble/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/la-libertad-doble/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-11-28",
       "hora": "22:00",
@@ -15163,6 +15755,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/esta-soledad/",
       "ticket_url": "https://kinetike.com:83/views/sesionesFuturas.aspx?idPelicula=2993&cine=EQUIS",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-29",
+      "hora": "12:00",
+      "title_es": "Recuerdo tu nombre",
+      "title_en": "Recuerdo tu nombre",
+      "original_title": "Recuerdo tu nombre",
+      "director": "Silvia Venegas Venegas",
+      "country": "",
+      "year": null,
+      "duration": 80,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/recuerdo-tu-nombre/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/recuerdo-tu-nombre/39241/",
       "ciclo": ""
     },
     {
@@ -15200,22 +15808,6 @@
     {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-29",
-      "hora": "12:00",
-      "title_es": "Recuerdo tu nombre",
-      "title_en": "Recuerdo tu nombre",
-      "original_title": "Recuerdo tu nombre",
-      "director": "Silvia Venegas Venegas",
-      "country": "",
-      "year": null,
-      "duration": 80,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/recuerdo-tu-nombre/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/recuerdo-tu-nombre/39241/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-11-29",
       "hora": "16:00",
       "title_es": "Hechizo: Bienvenidos a Hexe",
       "title_en": "Hechizo: Bienvenidos a Hexe",
@@ -15230,22 +15822,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-29",
-      "hora": "16:00",
-      "title_es": "Hadoota",
-      "title_en": "Hadota",
-      "original_title": "حدوتة",
-      "director": "Mazen Ashraf",
-      "country": "Egipto",
-      "year": 2026,
-      "duration": 120,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/hadota/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hadoota-vosi/20854/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-29",
       "hora": "16:30",
@@ -15255,7 +15831,7 @@
       "director": "Carlos Reygadas",
       "country": "México",
       "year": 2026,
-      "duration": 168,
+      "duration": 150,
       "genre": "Fantasía, Drama",
       "letterboxd": "https://letterboxd.com/film/heil-jupiter-2026/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/heil-jupiter",
@@ -15276,6 +15852,22 @@
       "letterboxd": "https://letterboxd.com/film/the-end-of-it/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/end-it",
       "ciclo": "Márgenes 2026"
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-29",
+      "hora": "17:00",
+      "title_es": "La libertad doble",
+      "title_en": "Double Freedom",
+      "original_title": "La libertad doble",
+      "director": "Lisandro Alonso",
+      "country": "Chile, Argentina",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-libertad-doble/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/la-libertad-doble/",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -15310,6 +15902,22 @@
       "ciclo": "Guerra Civil. 90 Años"
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-11-29",
+      "hora": "18:00",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-29",
       "hora": "18:10",
@@ -15323,6 +15931,22 @@
       "genre": "Aventura, Animación",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/hechizo-bienvenidos-a-hexe-doblada-al-espanol/39702/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Estudio",
+      "fecha": "2026-11-29",
+      "hora": "19:15",
+      "title_es": "El rayo verde: El séptimo cielo, de Frank Borzage",
+      "title_en": "El rayo verde: El séptimo cielo, de Frank Borzage",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/el-rayo-verde-el-septimo-cielo-de-frank-borzage/",
       "ciclo": ""
     },
     {
@@ -15550,6 +16174,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-12-03",
+      "hora": "19:00",
+      "title_es": "Espantapájaros (Scarecrow)",
+      "title_en": "Espantapájaros (Scarecrow)",
+      "original_title": "Scarecrow",
+      "director": "Jerry Schatzberg",
+      "country": "Estados Unidos",
+      "year": 1973,
+      "duration": 112,
+      "genre": "Drama",
+      "letterboxd": "",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/espantapajaros-scarecrow/",
+      "ciclo": "El rayo verde: carta blanca a Amalia Ulman"
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-12-03",
       "hora": "20:15",
@@ -15630,6 +16270,22 @@
       "ciclo": "Domingo de clásicos"
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-06",
+      "hora": "17:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-06",
       "hora": "20:00",
@@ -15646,6 +16302,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-06",
+      "hora": "21:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-12-07",
       "hora": "12:00",
@@ -15659,6 +16331,54 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/put-your-soul-on-your-hand-and-walk/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/palestina-en-pantalla-pon-tu-alma-en-la-mano-y-anda-vose/39558/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-07",
+      "hora": "17:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-07",
+      "hora": "21:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-08",
+      "hora": "18:00",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
       "ciclo": ""
     },
     {
@@ -16046,6 +16766,22 @@
       "ciclo": "La Animación de Estonia"
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-12",
+      "hora": "17:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
       "cine": "Museo Reina Sofía",
       "fecha": "2026-12-12",
       "hora": "18:00",
@@ -16124,6 +16860,22 @@
       "letterboxd": "https://letterboxd.com/film/son-of-a-bitch/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/o-filho-da-puta",
       "ciclo": "Sesiones Especiales - Animario 2026"
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-12",
+      "hora": "21:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -16252,6 +17004,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/mirando-al-futuro",
       "ciclo": "La Animación de Estonia"
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-13",
+      "hora": "18:00",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -16718,6 +17486,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-18",
+      "hora": "17:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-12-18",
       "hora": "18:30",
@@ -16795,6 +17579,22 @@
       "genre": "Drama, Aventura",
       "letterboxd": "https://letterboxd.com/film/far-from-the-trees-2026/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/lejos-de-los-arboles-1",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-18",
+      "hora": "21:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
       "ciclo": ""
     },
     {
@@ -16878,6 +17678,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-19",
+      "hora": "17:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-12-19",
       "hora": "18:30",
@@ -16939,6 +17755,22 @@
       "genre": "Drama, Aventura",
       "letterboxd": "https://letterboxd.com/film/far-from-the-trees-2026/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/lejos-de-los-arboles-1",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-19",
+      "hora": "21:30",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
       "ciclo": ""
     },
     {
@@ -17035,6 +17867,22 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36952",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cines Callao",
+      "fecha": "2026-12-20",
+      "hora": "18:00",
+      "title_es": "Salta Conmigo",
+      "title_en": "Salta Conmigo",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.entradas.com/artist/salta-conmigo-el-show-musical/?affiliate=3XP&_gl=1*17pmn0d*_gcl_au*MTk0Njk4NzYzNy4xNzk0NTY3MzA3*_ga*MTU0NTgxMzMwOC4xNzk0NTY3MzA3*_ga_00HSTK1ETL*czE3OTUwNzkyNzckbzQkZzAkdDE3OTUwNzkyNzckajYwJGwwJGgw",
       "ciclo": ""
     },
     {
@@ -17164,6 +18012,22 @@
       "letterboxd": "https://letterboxd.com/film/the-dark-crystal/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/cristal-oscuro-1",
       "ciclo": "Navidad en Familia: 90 Años de Jim Henson"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-22",
+      "hora": "20:15",
+      "title_es": "Sesión de cortometrajes: El día más corto 2026",
+      "title_en": "Sesión de cortometrajes: El día más corto 2026",
+      "original_title": "",
+      "director": "César F. Calvillo, Guillermo Polo, J. Cánovas, Polo Menárguez, Rubén Guindo, Teresa Bellón",
+      "country": "",
+      "year": null,
+      "duration": 86,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sesion-de-cortometrajes-el-dia-mas-corto-2026/20864/",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
