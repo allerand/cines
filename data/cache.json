@@ -22171,15 +22171,13 @@
   },
   "la casa": {
     "url": "",
-    "title_en": "La Casa",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "la única que se llama así es La casa (2012), y puede ser otra",
-    "fecha": "2026-11-16",
-    "con_duracion": false,
-    "desempate": ""
+    "title_en": "LA CASA",
+    "director": "Gustavo Triviño",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Drama",
+    "original_title": "La casa"
   },
   "ficuba": {
     "url": "",
@@ -31965,7 +31963,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: The Omen (1976, 111 min)",
-    "fecha": "2026-11-15",
+    "fecha": "2026-11-19",
     "con_duracion": true,
     "desempate": ""
   },
@@ -36018,10 +36016,10 @@
   "olivera y corman: hollywood en argentina|2026": {
     "url": "",
     "title_en": "Olivera y Corman: Hollywood en Argentina",
-    "director": "José Tripodero, Martìn Cataldi",
+    "director": "José Tripodero, Martín Cataldi",
     "country": "",
     "year": 2026,
-    "duration": null,
+    "duration": 71,
     "genre": "Documental",
     "original_title": "Olivera & Corman: Hollywood en Argentina"
   },
@@ -38057,12 +38055,14 @@
     "original_title": "Autopista América 2000"
   },
   "militante|2025": {
-    "url": "",
+    "url": "https://letterboxd.com/film/militante/",
     "title_en": "Militante",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Federico Sosa",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 61,
+    "genre": "Documental",
+    "original_title": "Militante"
   },
   "indómita luz": {
     "url": "https://letterboxd.com/film/untamed-light/",
@@ -38210,5 +38210,210 @@
     "duration": 95,
     "genre": "Drama, Romance",
     "clase_titulo": "distinto"
+  },
+  "la violinista|2025": {
+    "url": "https://letterboxd.com/film/the-violinist-2026/",
+    "title_en": "The Violinist",
+    "director": "Ervin Han, Raúl García",
+    "country": "Singapore, Spain",
+    "year": 2026,
+    "duration": 114,
+    "genre": "Animación, Drama",
+    "title_es": "El Violinista",
+    "original_title": "The Violinist"
+  },
+  "inauguración: ¡viva carmen! + daughters of the late colonel|2026": {
+    "url": "",
+    "title_en": "Inauguración: ¡Viva Carmen! + Daughters of the Late Colonel",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sesión 3 / animario 26": {
+    "url": "",
+    "title_en": "Sesión 3 / ANIMARIO 26",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "amor, azar y otras anomalías: priit y olga pärn": {
+    "url": "",
+    "title_en": "Amor, azar y otras anomalías: Priit y Olga Pärn",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sesión 1 / animario 26": {
+    "url": "",
+    "title_en": "Sesión 1 / ANIMARIO 26",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "trazando el camino": {
+    "url": "",
+    "title_en": "Trazando el camino",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "contemporáneos: nuevas voces": {
+    "url": "",
+    "title_en": "Contemporáneos: Nuevas voces",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cuando el guion impulsa la tecnología: seminario impartido por priit y olga pärn": {
+    "url": "",
+    "title_en": "Cuando el guion impulsa la tecnología: Seminario impartido por Priit y Olga Pärn",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el personaje animado: taller para familias": {
+    "url": "",
+    "title_en": "El personaje animado: Taller para familias",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mu-ki-ra|2023": {
+    "url": "",
+    "title_en": "Mu-Ki-Ra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el personaje animado: taller dirigido a adultos": {
+    "url": "",
+    "title_en": "El personaje animado: Taller dirigido a adultos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "panorama de animación española / animario 26": {
+    "url": "",
+    "title_en": "Panorama de animación española / ANIMARIO 26",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "ülo pikkov: objetos contra el olvido": {
+    "url": "",
+    "title_en": "Ülo Pikkov: Objetos contra el olvido",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "sesión 2 / animario 26": {
+    "url": "",
+    "title_en": "Sesión 2 / ANIMARIO 26",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "contemporáneos: cuerpos, instintos y otros monstruos": {
+    "url": "",
+    "title_en": "Contemporáneos: Cuerpos, instintos y otros monstruos",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "o filho da puta|2026": {
+    "url": "https://letterboxd.com/film/son-of-a-bitch/",
+    "title_en": "Son of a Bitch",
+    "director": "Otto Guerra, Erica Maradona, Sávio Leite",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 72,
+    "genre": "Comedia, Drama",
+    "original_title": "O Filho da Puta"
+  },
+  "el personaje animado: taller para jóvenes": {
+    "url": "",
+    "title_en": "El personaje animado: Taller para jóvenes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "iron boy|2024": {
+    "url": "https://letterboxd.com/film/iron-boy/",
+    "title_en": "Iron Boy",
+    "director": "Louis Clichy",
+    "country": "France, Belgium",
+    "year": 2026,
+    "duration": 90,
+    "genre": "Animación, Familiar",
+    "title_es": "Chico de hierro",
+    "original_title": "Le Corset"
+  },
+  "clásicos deliciosos para peques": {
+    "url": "",
+    "title_en": "Clásicos deliciosos para peques",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mirando al futuro": {
+    "url": "",
+    "title_en": "Mirando al futuro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "clausura: blaise + cuatro perros": {
+    "url": "",
+    "title_en": "Clausura: Blaise + Cuatro perros",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "virginia woolf: noche y día v.o.s.e. sesión teta|2026": {
+    "url": "",
+    "title_en": "VIRGINIA WOOLF: NOCHE Y DÍA V.O.S.E. Sesión Teta",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la nueva focker": {
+    "url": "https://letterboxd.com/film/focker-in-law/",
+    "title_en": "Focker-in-Law",
+    "director": "John Hamburg",
+    "country": "USA",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Comedia, Romance",
+    "clase_titulo": "exacto",
+    "title_es": "Ahora los suegros son ellos",
+    "original_title": "Focker-in-Law",
+    "sin_hints": "título y duración"
+  },
+  "helmut": {
+    "url": "",
+    "title_en": "HELMUT",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
