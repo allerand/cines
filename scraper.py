@@ -11080,6 +11080,221 @@ def scrape_moron(semanas: int = 9) -> list[Screening]:
 
 
 # ---------------------------------------------------------------------------
+# Casa de la Lectura y la Escritura — Cine para Lectores (agendacultural15.com)
+# ---------------------------------------------------------------------------
+# La biblioteca de la Red porteña (Lavalleja 924, Villa Crespo) da todos los
+# jueves a las 18 el ciclo "Cine para Lectores": introducción, película y
+# debate, gratis. Ni buenosaires.gob.ar ni la biblioteca publican la grilla; la
+# agenda cultural de la Comuna 15 sube un post por mes con el programa entero,
+# siempre armado igual:
+#
+#   La Red de Bibliotecas presenta el último ciclo del año de Cine para
+#   Lectores: Muestra de cine argentino reciente. Desde el 5 de noviembre …
+#   Noviembre
+#   Jueves 19 a las 18hs: “Mixtape La Pampa” (Argentina-Chile, 2023, 104´), de Andrés Di Tella.
+#   Diciembre
+#   Jueves 3 a las 18hs: “La gruta continua” (Argentina, 2023, 85´), de Julián D’Angiolillo.
+#
+# Se lee por la API de WordPress del sitio (/wp-json/wp/v2/posts?search=…).
+#
+# El mes no siempre está: a veces hay un renglón "Noviembre", a veces no
+# (agosto de 2026 arrancó el 6/8 y siguió el 3/9 sin decirlo). Se resuelve
+# como en Morón: el primer mes, desde el del post, en que "Jueves 3" cae
+# jueves, y nunca antes de la función anterior. Si no cae en ninguno, no sale.
+#
+# Entre paréntesis viene el título original (si es extranjera), el país, el
+# año y la duración, en el orden que se le ocurra a quien carga ("2018, Chile,
+# 75´"; "Chile, Argentina, España, Francia-2024, 77´"; "Citizen Langlois, 1995,
+# 69´").
+#
+# El ciclo es "Cine para Lectores - <lo que va después de los dos puntos>",
+# como en el flyer ("Cine para Lectores: Muestra de cine argentino reciente" →
+# "Cine para Lectores - Cine argentino reciente"). Pedido de Mateo, 19/11/2026,
+# con la story de Andrés Di Tella.
+
+LECTORES_CINE = "Casa de la Lectura y la Escritura"
+LECTORES_PROGRAMA = "Cine para Lectores"
+LECTORES_API = ("https://agendacultural15.com/wp-json/wp/v2/posts?search=cine%20para%20lectores"
+                "&per_page=4&_fields=date,modified,link,title,content")
+_LECTORES_FUNCION_RE = re.compile(
+    r"(lunes|martes|mi[ée]rcoles|jueves|viernes|s[áa]bado|domingo)\s+(\d{1,2})\s+a\s+las\s+"
+    r"(\d{1,2})(?:[:.](\d{2}))?\s*(?:hs?|horas)?\.?\s*:\s*[“\"«](.+?)[”\"»]\s*"
+    r"(?:\(([^)]*)\))?\s*,?\s*(?:de\s+(.+?))?\s*\.?\s*$", re.IGNORECASE)
+_LECTORES_CICLO_RE = re.compile(r"Cine\s+para\s+Lectores\s*:\s*([^.,:\n]+)", re.IGNORECASE)
+_LECTORES_DUR_RE = re.compile(r"(\d{2,3})\s*(?:[´'’′]|min(?:utos?|s|\.)?)\s*$", re.IGNORECASE)
+_LECTORES_PAISES = _MORON_PAISES | {
+    "peru", "reino unido", "japon", "corea del sur", "china", "rusia", "suecia", "dinamarca",
+    "noruega", "finlandia", "polonia", "hungria", "grecia", "belgica", "holanda", "paises bajos",
+    "suiza", "austria", "irlanda", "canada", "iran", "india", "israel", "turquia", "taiwan",
+    "rumania", "senegal", "egipto", "marruecos", "luxemburgo", "republica dominicana",
+    "guatemala", "costa rica", "panama", "nicaragua", "el salvador", "honduras", "uruguay",
+}
+
+
+def _lectores_ciclo(texto: str) -> str:
+    """"Cine para Lectores: Muestra de cine argentino reciente" →
+    "Cine para Lectores - Cine argentino reciente"."""
+    m = _LECTORES_CICLO_RE.search(texto)
+    if not m:
+        return LECTORES_PROGRAMA
+    sub = re.sub(r"^(?:muestra|ciclo|selecci[óo]n)\s+de\s+", "", m.group(1).strip(), flags=re.IGNORECASE)
+    sub = re.sub(r"\s+", " ", sub).strip(" .")
+    if not sub:
+        return LECTORES_PROGRAMA
+    return f"{LECTORES_PROGRAMA} - {sub[0].upper()}{sub[1:]}"
+
+
+def _lectores_es_pais(txt: str) -> list[str]:
+    partes = [p.strip() for p in re.split(r"\s*[/–-]\s*|\s+y\s+", txt) if p.strip()]
+    if partes and all(_sin_acentos(p).lower() in _LECTORES_PAISES for p in partes):
+        return partes
+    return []
+
+
+def _lectores_ficha(parentesis: str) -> dict:
+    """"Le beau Serge, Francia, 1959, 99´" → {original_title, country, year, duration}."""
+    out: dict = {"original_title": "", "country": "", "year": None, "duration": None}
+    paises: list[str] = []
+    resto: list[str] = []
+    for item in (c.strip() for c in (parentesis or "").split(",")):
+        if not item:
+            continue
+        # "Francia-2024": el país y el año pegados.
+        pegado = re.fullmatch(r"(.+?)\s*[-–]\s*((?:18|19|20)\d{2})", item)
+        if pegado and _lectores_es_pais(pegado.group(1)):
+            paises += _lectores_es_pais(pegado.group(1))
+            out["year"] = out["year"] or int(pegado.group(2))
+        elif re.fullmatch(r"(?:18|19|20)\d{2}", item):
+            out["year"] = out["year"] or int(item)
+        elif _LECTORES_DUR_RE.fullmatch(item):
+            out["duration"] = out["duration"] or int(_LECTORES_DUR_RE.fullmatch(item).group(1))
+        elif _lectores_es_pais(item):
+            paises += _lectores_es_pais(item)
+        else:
+            resto.append(item)
+    out["country"] = ", ".join(dict.fromkeys(paises))
+    # Lo que no es país, año ni duración y va adelante es el título original.
+    if resto:
+        out["original_title"] = ", ".join(resto)
+    return out
+
+
+def _lectores_fecha(mes_desde: int, anio_desde: int, dia: int, dia_semana: int,
+                    no_antes: date) -> Optional[date]:
+    """El primer `dia` desde `mes_desde` (ese mes y los dos siguientes) que cae
+    en `dia_semana` y no es anterior a `no_antes`."""
+    for k in range(3):
+        mes = (mes_desde - 1 + k) % 12 + 1
+        anio = anio_desde + (mes_desde - 1 + k) // 12
+        try:
+            d = date(anio, mes, dia)
+        except ValueError:
+            continue
+        if d.weekday() == dia_semana and d >= no_antes:
+            return d
+    return None
+
+
+def _lectores_funciones(post: dict) -> list[Screening]:
+    """Las funciones de un post de la agenda, sin filtrar por fecha."""
+    cuerpo = str((post.get("content") or {}).get("rendered") or "")
+    # Un renglón por párrafo o <br>: las negritas parten la línea por la mitad
+    # ("<strong>Jueves 5 a las 18hs</strong>: “Los ríos” …").
+    cuerpo = re.sub(r"(?i)<br\s*/?>|</(?:p|h\d|li|div)\s*>", "\n", cuerpo)
+    texto = BeautifulSoup(cuerpo, "html.parser").get_text("")
+    try:
+        publicado = date.fromisoformat(str(post.get("date") or "")[:10])
+    except ValueError:
+        return []
+    link = str(post.get("link") or "")
+
+    # El post sale a fin del mes anterior o en los primeros días del mes.
+    mes, anio = publicado.month, publicado.year
+    no_antes = publicado - timedelta(days=10)
+    ciclo = LECTORES_PROGRAMA
+    out: list[Screening] = []
+    for renglon in texto.split("\n"):
+        renglon = re.sub(r"\s+", " ", renglon).strip()
+        if not renglon:
+            continue
+        if _LECTORES_CICLO_RE.search(renglon):
+            ciclo = _lectores_ciclo(renglon)
+            continue
+        solo_mes = MESES_ES.get(_sin_acentos(renglon).lower().strip(" .:"))
+        if solo_mes and len(renglon) > 3:
+            # Un renglón "Diciembre": de acá en adelante, ese mes.
+            anio += 1 if solo_mes < mes else 0
+            mes = solo_mes
+            continue
+        m = _LECTORES_FUNCION_RE.match(renglon)
+        if not m:
+            continue
+        nombre_dia, dia, hh, mm, titulo, parentesis, director = m.groups()
+        titulo = re.sub(r"\s+", " ", titulo).strip(" ,.")
+        if not titulo or not (0 <= int(hh) <= 23):
+            continue
+        # Desde el mes del renglón o, si la función anterior ya es más tarde, desde el de ésa.
+        desde = max((anio, mes), (no_antes.year, no_antes.month))
+        fecha = _lectores_fecha(desde[1], desde[0], int(dia),
+                                DIAS_ES[_sin_acentos(nombre_dia).lower()], no_antes)
+        if not fecha:
+            continue
+        no_antes = fecha
+        ficha = _lectores_ficha(parentesis or "")
+        out.append(Screening(
+            cine=LECTORES_CINE, title=titulo, fecha=fecha.isoformat(),
+            hora=f"{int(hh):02d}:{mm or '00'}", ticket_url=link, ciclo=ciclo,
+            director=(director or "").strip(" .,"), country=ficha["country"],
+            year=ficha["year"], duration=ficha["duration"],
+            original_title=ficha["original_title"],
+        ))
+    return out
+
+
+def _lectores_posts(data) -> list[dict]:
+    """Los posts del ciclo en la Casa de la Lectura, del más nuevo al más viejo."""
+    if not isinstance(data, list):
+        return []
+    posts = []
+    for p in data:
+        if not isinstance(p, dict):
+            continue
+        titulo = _sin_acentos(str((p.get("title") or {}).get("rendered") or "")).lower()
+        if "cine para lectores" in titulo and "casa de la lectura" in titulo:
+            posts.append(p)
+    return sorted(posts, key=lambda p: str(p.get("date") or ""), reverse=True)
+
+
+def scrape_lectores(semanas: int = 9) -> list[Screening]:
+    today = date.today()
+    cutoff = today + timedelta(weeks=semanas)
+    try:
+        data = json.loads(fetch_bytes(LECTORES_API).decode("utf-8", errors="replace"))
+    except Exception as e:
+        marcar_fuente_caida(LECTORES_CINE, f"agendacultural15.com no contestó ({type(e).__name__})")
+        return []
+    posts = _lectores_posts(data)
+    if not posts:
+        marcar_fuente_caida(LECTORES_CINE, "la agenda de la Comuna 15 ya no trae los posts "
+                                           "de Cine para Lectores")
+        return []
+    if not _lectores_funciones(posts[0]):
+        marcar_fuente_caida(LECTORES_CINE, "el último post de Cine para Lectores no trae "
+                                           "ninguna función que el scraper sepa leer")
+    # Del post más nuevo al más viejo: si dos dicen otra cosa para el mismo
+    # día y hora, vale el último que salió.
+    result: list[Screening] = []
+    vistas: set[tuple] = set()
+    for p in posts:
+        for s in _lectores_funciones(p):
+            if (s.fecha, s.hora) in vistas or not (today <= date.fromisoformat(s.fecha) <= cutoff):
+                continue
+            vistas.add((s.fecha, s.hora))
+            result.append(s)
+    return sorted(result, key=lambda s: (s.fecha, s.hora))
+
+
+# ---------------------------------------------------------------------------
 # Cineclub Turdera — por Instagram (@cineclubturdera)
 # ---------------------------------------------------------------------------
 # Proyecta los viernes en el Rotary Club de Turdera y no tiene web ni

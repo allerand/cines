@@ -41,6 +41,10 @@
       "scrapeadas": 70,
       "publicadas": 70
     },
+    "Casa de la Lectura y la Escritura": {
+      "scrapeadas": 4,
+      "publicadas": 4
+    },
     "Casa del Bicentenario": {
       "scrapeadas": 9,
       "publicadas": 9,
@@ -4632,6 +4636,22 @@
       "letterboxd": "https://letterboxd.com/film/the-african-queen/",
       "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
       "ciclo": "Homenaje a John Huston"
+    },
+    {
+      "cine": "Casa de la Lectura y la Escritura",
+      "fecha": "2026-11-19",
+      "hora": "18:00",
+      "title_es": "Mixtape La Pampa",
+      "title_en": "Mixtape La Pampa",
+      "original_title": "Mixtape La Pampa",
+      "director": "Andrés Di Tella",
+      "country": "Argentina, Chile",
+      "year": 2023,
+      "duration": 104,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/mixtape-la-pampa/",
+      "ticket_url": "https://agendacultural15.com/cine-para-lectores-en-casa-de-la-lectura-y-la-escritura-2/",
+      "ciclo": "Cine para Lectores - Cine argentino reciente"
     },
     {
       "cine": "Multiplex Lavalle",
@@ -49066,6 +49086,22 @@
       "ciclo": "Desde Finlandia con amor"
     },
     {
+      "cine": "Casa de la Lectura y la Escritura",
+      "fecha": "2026-11-26",
+      "hora": "18:00",
+      "title_es": "Martín García",
+      "title_en": "Martín García",
+      "original_title": "Martín García",
+      "director": "Aníbal “Corcho” Garisto",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 83,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/martin-garcia/",
+      "ticket_url": "https://agendacultural15.com/cine-para-lectores-en-casa-de-la-lectura-y-la-escritura-2/",
+      "ciclo": "Cine para Lectores - Cine argentino reciente"
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-26",
       "hora": "18:10",
@@ -55242,6 +55278,22 @@
       "ciclo": "Homenaje a John Huston"
     },
     {
+      "cine": "Casa de la Lectura y la Escritura",
+      "fecha": "2026-12-03",
+      "hora": "18:00",
+      "title_es": "La gruta continua",
+      "title_en": "La gruta continua",
+      "original_title": "La gruta continua",
+      "director": "Julián D’Angiolillo",
+      "country": "Argentina",
+      "year": 2023,
+      "duration": 85,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/ongoing-cave/",
+      "ticket_url": "https://agendacultural15.com/cine-para-lectores-en-casa-de-la-lectura-y-la-escritura-2/",
+      "ciclo": "Cine para Lectores - Cine argentino reciente"
+    },
+    {
       "cine": "Sala Lugones",
       "fecha": "2026-12-03",
       "hora": "20:30",
@@ -55576,6 +55628,22 @@
       "letterboxd": "https://letterboxd.com/film/carmen-comes-home/",
       "ticket_url": "",
       "ciclo": "Grandes actrices de la época dorada del cine japonés"
+    },
+    {
+      "cine": "Casa de la Lectura y la Escritura",
+      "fecha": "2026-12-10",
+      "hora": "18:00",
+      "title_es": "Ciudad oculta",
+      "title_en": "Ciudad oculta",
+      "original_title": "Ciudad oculta",
+      "director": "Francisco Bouzas",
+      "country": "Argentina",
+      "year": 2024,
+      "duration": 95,
+      "genre": "",
+      "letterboxd": "https://letterboxd.com/film/hidden-city-2024/",
+      "ticket_url": "https://agendacultural15.com/cine-para-lectores-en-casa-de-la-lectura-y-la-escritura-2/",
+      "ciclo": "Cine para Lectores - Cine argentino reciente"
     },
     {
       "cine": "Sala Lugones",

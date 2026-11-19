@@ -144,6 +144,11 @@ PROBES = {
     # por venir, no funciones: un programa doble es una sola, y las charlas de
     # cine también tienen entrada. Ver probe(): "@lucero".
     "Club Lucero":              ("https://www.clublucero.com/", "@lucero"),
+    # Cine para Lectores: el post del mes en la agenda de la Comuna 15. Cuenta
+    # las funciones por venir del post más nuevo. Ver probe(): "@lectores".
+    "Casa de la Lectura y la Escritura": (
+        "https://agendacultural15.com/wp-json/wp/v2/posts?search=cine%20para%20lectores"
+        "&per_page=4&_fields=date,title,content", "@lectores"),
     # La nota del mes: cada película es un párrafo con sus días resaltados. Cuenta
     # películas del mes entero, las que ya pasaron incluidas.
     "Espacio INCAA Morón":      ("https://ellaferrere.com.ar/2024/08/16/"
@@ -915,6 +920,43 @@ def probe(cine: str, url: str, pattern: str) -> tuple[str, int | None, str]:
                 and str(e.get("iso") or "") >= hoy
                 and str(e.get("link") or "").startswith("entradas.html?slug="))
         return cine, n, "entradas por venir en la agenda de la portada"
+
+    if pattern == "@lectores":
+        # El post más nuevo de Cine para Lectores ("Jueves 19 a las 18hs: …").
+        # El mes no siempre está escrito: se toma el primero, desde el del post,
+        # en que ese día cae en ese día de la semana, como hace el scraper.
+        try:
+            posts = json.loads(body)
+        except Exception:
+            return cine, None, "JSON inválido"
+        posts = sorted((p for p in posts if isinstance(p, dict) and re.search(
+            r"cine para lectores", str((p.get("title") or {}).get("rendered") or ""), re.I)),
+            key=lambda p: str(p.get("date") or ""), reverse=True)
+        if not posts:
+            return cine, None, "la agenda de la Comuna 15 ya no trae los posts del ciclo"
+        p = posts[0]
+        try:
+            desde = date.fromisoformat(str(p.get("date"))[:10]) - timedelta(days=10)
+        except ValueError:
+            return cine, None, "el post no tiene fecha"
+        dias = {"lunes": 0, "martes": 1, "miercoles": 2, "miércoles": 2, "jueves": 3,
+                "viernes": 4, "sabado": 5, "sábado": 5, "domingo": 6}
+        texto = re.sub(r"<[^>]+>", " ", str((p.get("content") or {}).get("rendered") or ""))
+        n = 0
+        for nombre, dia in re.findall(r"(?i)\b(lunes|martes|mi[ée]rcoles|jueves|viernes|"
+                                      r"s[áa]bado|domingo)\s+(\d{1,2})\s+a\s+las\s+\d", texto):
+            for k in range(3):
+                mes = (desde.month - 1 + k) % 12 + 1
+                anio = desde.year + (desde.month - 1 + k) // 12
+                try:
+                    d = date(anio, mes, int(dia))
+                except ValueError:
+                    continue
+                if d.weekday() == dias[nombre.lower()] and d >= desde:
+                    desde = d
+                    n += d >= date.today()
+                    break
+        return cine, n, "funciones por venir en el post del mes"
 
     return cine, len(set(re.findall(pattern, body))), "ítems en la listing"
 

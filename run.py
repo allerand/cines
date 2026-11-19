@@ -121,7 +121,7 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
         scrape_sala_lucida, scrape_manual, descartar_manual, aplicar_festivales,
         titulo_norm, misma_pelicula, limpiar_banderas,
         scrape_cinemark_hoyts, scrape_pena_sin_cadenas, scrape_multiplex, scrape_pixel, scrape_farus,
-        scrape_lucero, scrape_helios, scrape_cinema_club, scrape_moron, scrape_turdera, scrape_moderno,
+        scrape_lucero, scrape_helios, scrape_cinema_club, scrape_moron, scrape_turdera, scrape_moderno, scrape_lectores,
         scrape_dore, scrape_ideal, scrape_cineteca, scrape_renoir,
         scrape_embajadores, scrape_golem, scrape_metropol, scrape_cine_estudio,
         scrape_callao, scrape_reina_sofia, links_reina_sofia, scrape_sala_equis, CINES_MADRID, hoy_madrid,
@@ -408,6 +408,14 @@ async def run_scraper(semanas: int = 9, sin_proxy: bool = False) -> None:
     print("🎬 Scrapeando Espacio INCAA Morón...", end=" ", flush=True)
     try:
         r = scrape_moron(semanas)
+        all_screenings.extend(r)
+        print(f"{len(r)} funciones")
+    except Exception as e:
+        print(f"error — {e}")
+
+    print("🎬 Scrapeando Casa de la Lectura (Cine para Lectores)...", end=" ", flush=True)
+    try:
+        r = scrape_lectores(semanas)
         all_screenings.extend(r)
         print(f"{len(r)} funciones")
     except Exception as e:
