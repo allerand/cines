@@ -1909,6 +1909,12 @@
     "titulo": "Cine Estudio: el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y…",
     "efimero": false
    },
+   "categorias/madrid/titulo-con-ciclo/Cineteca Madrid": {
+    "desde": "2026-11-19",
+    "sev": "ERROR",
+    "titulo": "Cineteca Madrid: el título trae el ciclo pegado adelante (3 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
+    "efimero": false
+   },
    "categorias/madrid/titulo-con-ciclo/Embajadores Ercilla": {
     "desde": "2026-11-16",
     "sev": "ERROR",
@@ -1931,6 +1937,12 @@
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Sala Equis: el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
+    "efimero": false
+   },
+   "categorias/madrid/titulo-con-director/Cine Estudio": {
+    "desde": "2026-11-19",
+    "sev": "ERROR",
+    "titulo": "Cine Estudio: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
     "efimero": false
    },
    "categorias/madrid/titulo-con-etiqueta/-": {
@@ -1975,6 +1987,18 @@
     "titulo": "Infinito Super 8: 8 programas sin lista de películas («Rescates: sesión 1», «Competencia Internacional»,…",
     "efimero": false
    },
+   "festivales/-/suelto/Semana del 41° Festival Internacional MDQ en Gaumont": {
+    "desde": "2026-11-19",
+    "sev": "AVISO",
+    "titulo": "Semana del 41° Festival Internacional MDQ en Gaumont (7 funciones en Cine Gaumont) aparece en la pestaña…",
+    "efimero": false
+   },
+   "festivales/-/web-cambio/FIDBA": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "FIDBA: su web cambió desde el 17/11: 1 que ya no está. Revisar la grilla contra lo cargado:…",
+    "efimero": true
+   },
    "festivales/-/web-cambio/Infinito Super 8": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -1983,8 +2007,8 @@
    },
    "festivales/-/web-cambio/MASS": {
     "desde": "2026-11-17",
-    "sev": "AVISO",
-    "titulo": "MASS: su web cambió desde el 16/11: 99 líneas nuevas y 1 que ya no está. Lo nuevo: «Lo mejor de los…",
+    "sev": "ERROR",
+    "titulo": "MASS: su web cambió desde el 16/11: 99 líneas nuevas y 1 que ya no está. Lo nuevo: «Lo mejor de los festivales…",
     "efimero": true
    },
    "festivales/-/web-no-abre/Festival de Cine Indígena BAIn": {
@@ -2023,12 +2047,6 @@
     "titulo": "10 títulos sin ningún dato (ni director, ni año, ni duración, ni Letterboxd): puede que no sean películas.…",
     "efimero": false
    },
-   "fichas/ba/titulo-que-son-varias-peliculas/Filo Cine": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Filo Cine: hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean…",
-    "efimero": false
-   },
    "fichas/madrid/dos-titulos-en-el-mismo-horario/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -2065,12 +2083,6 @@
     "titulo": "Centro Cultural Borges: publica 14 funciones pero su fuente no contesta hace 3 días: la API no contesta; se publica el caché de la…",
     "efimero": false
    },
-   "fuentes/ba/floja/Cine Cosmos": {
-    "desde": "2026-11-18",
-    "sev": "AVISO",
-    "titulo": "Cine Cosmos está por debajo de lo habitual: 8 funciones de 7 películas, contra ~24 de siempre.",
-    "efimero": false
-   },
    "fuentes/ba/floja/Cine Lorca": {
     "desde": "2026-11-18",
     "sev": "AVISO",
@@ -2083,34 +2095,22 @@
     "titulo": "Casa del Bicentenario: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.",
     "efimero": false
    },
-   "fuentes/ba/horizonte/-": {
-    "desde": "2026-11-17",
-    "sev": "AVISO",
-    "titulo": "Se quedan sin programación entre hoy y mañana: Cine Gaumont (hasta el 18/11; suele tener ~5 días por…",
-    "efimero": false
-   },
    "fuentes/ba/scraper-avisa/Casa del Bicentenario": {
     "desde": "2026-11-16",
     "sev": "AVISO",
     "titulo": "Casa del Bicentenario publica 9 funciones, pero su scraper avisa: el listado no contesta (HTTP Error 403:…",
     "efimero": false
    },
-   "fuentes/ba/scraper-avisa/Cine Cosmos": {
+   "fuentes/ba/sin-funciones/Centro Cultural de la Cooperación": {
     "desde": "2026-11-16",
     "sev": "AVISO",
-    "titulo": "Cine Cosmos publica 24 funciones, pero su scraper avisa: cosmos.uba.ar no contesta (HTTP Error 503:…",
+    "titulo": "Centro Cultural de la Cooperación lleva 1 día sin ninguna función (traía ~2 por día); entra y sale del…",
     "efimero": false
    },
    "fuentes/madrid/de-cache/Cines Ideal": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Cines Ideal: publica 30 funciones pero su fuente no contesta hace 25 días: yelmocines.es no devolvió la cartelera…",
-    "efimero": false
-   },
-   "fuentes/madrid/floja/Cines Callao": {
-    "desde": "2026-11-17",
-    "sev": "AVISO",
-    "titulo": "Cines Callao está por debajo de lo habitual: 6 funciones de 3 películas, contra ~28 de siempre.",
     "efimero": false
    }
   },
@@ -2164,12 +2164,12 @@
     "efimero": false,
     "cerrado": "2026-11-18"
    },
-   "festivales/-/web-cambio/FIDBA": {
+   "fichas/ba/titulo-que-son-varias-peliculas/Filo Cine": {
     "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "FIDBA: su web cambió desde el 16/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Older than Israel».…",
-    "efimero": true,
-    "cerrado": "2026-11-17"
+    "sev": "ERROR",
+    "titulo": "Filo Cine: hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean…",
+    "efimero": false,
+    "cerrado": "2026-11-19"
    },
    "fichas/ba/titulo-todo-en-mayusculas/-": {
     "desde": "2026-11-16",
@@ -2178,12 +2178,33 @@
     "efimero": false,
     "cerrado": "2026-11-17"
    },
+   "fuentes/ba/floja/Cine Cosmos": {
+    "desde": "2026-11-18",
+    "sev": "AVISO",
+    "titulo": "Cine Cosmos está por debajo de lo habitual: 8 funciones de 7 películas, contra ~24 de siempre.",
+    "efimero": false,
+    "cerrado": "2026-11-19"
+   },
    "fuentes/ba/floja/Cine Gaumont": {
     "desde": "2026-11-17",
     "sev": "AVISO",
     "titulo": "Cine Gaumont está por debajo de lo habitual: 24 funciones de 13 películas, contra ~62 de siempre.",
     "efimero": false,
     "cerrado": "2026-11-17"
+   },
+   "fuentes/ba/horizonte/-": {
+    "desde": "2026-11-17",
+    "sev": "AVISO",
+    "titulo": "Se quedan sin programación entre hoy y mañana: Cine Gaumont (hasta el 18/11; suele tener ~5 días por…",
+    "efimero": false,
+    "cerrado": "2026-11-19"
+   },
+   "fuentes/ba/scraper-avisa/Cine Cosmos": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Cine Cosmos publica 24 funciones, pero su scraper avisa: cosmos.uba.ar no contesta (HTTP Error 503:…",
+    "efimero": false,
+    "cerrado": "2026-11-19"
    },
    "fuentes/ba/sin-funciones/CEA": {
     "desde": "2026-11-16",
@@ -2192,12 +2213,12 @@
     "efimero": false,
     "cerrado": "2026-11-18"
    },
-   "fuentes/ba/sin-funciones/Centro Cultural de la Cooperación": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Centro Cultural de la Cooperación: lleva 3 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
+   "fuentes/madrid/floja/Cines Callao": {
+    "desde": "2026-11-17",
+    "sev": "AVISO",
+    "titulo": "Cines Callao está por debajo de lo habitual: 6 funciones de 3 películas, contra ~28 de siempre.",
     "efimero": false,
-    "cerrado": "2026-11-17"
+    "cerrado": "2026-11-19"
    },
    "fuentes/madrid/sin-funciones/Cines Princesa": {
     "desde": "2026-11-16",
