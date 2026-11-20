@@ -163,8 +163,8 @@
       "publicadas": 2
     },
     "MALBA": {
-      "scrapeadas": 25,
-      "publicadas": 25
+      "scrapeadas": 24,
+      "publicadas": 24
     },
     "Multiplex Belgrano": {
       "scrapeadas": 408,
@@ -46240,27 +46240,11 @@
     {
       "cine": "MALBA",
       "fecha": "2026-11-28",
-      "hora": "23:50",
+      "hora": "24:00",
       "title_es": "¿Qué clase de joven le abre la puerta a un vampiro?",
       "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?",
-      "original_title": "",
-      "director": "Boom Boom Kid y Zurita",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://malba.org.ar/evento/que-clase-de-joven-le-abre-la-puerta-a-un-vampiro/",
-      "ciclo": "Cineclub Nocturna"
-    },
-    {
-      "cine": "MALBA",
-      "fecha": "2026-11-28",
-      "hora": "24:00",
-      "title_es": "¿Qué clase de joven le abre la puerta a un vampiro?, de Boom Boom Kid y Zurita",
-      "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?, de Boom Boom Kid y Zurita",
       "original_title": "¿Qué clase de joven le abre la puerta a un vampiro?",
-      "director": "Boom Boom Kid, Green Martino",
+      "director": "Boom Boom Kid y Zurita",
       "country": "Argentina",
       "year": 2026,
       "duration": 115,

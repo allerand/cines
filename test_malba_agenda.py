@@ -141,4 +141,13 @@ assert [(f.title, f.director) for f in funcs] == [
     ("Orar Orbil & viceversa", "Diego Trerotola"), ("Fahrenheit 451", "François Truffaut")], funcs
 print("✓ el (*) de 'Función gratuita' no queda pegado al director")
 
+noct = BeautifulSoup(programacion("Cineclub Nocturna", "Cineclub Nocturna", [
+    ("SÁBADO 28", ['24:00 <a href="x">¿Qué clase de joven le abre la puerta a un vampiro?</a>, de&nbsp;Boom Boom Kid y Zurita'])]),
+    "html.parser")
+funcs = scraper._parse_malba_evento(noct, f"{BASE}/evento/cineclub-nocturna-5/",
+                                    date(2026, 11, 20), date(2026, 12, 4))
+assert [(f.title, f.director) for f in funcs] == [
+    ("¿Qué clase de joven le abre la puerta a un vampiro?", "Boom Boom Kid y Zurita")], funcs
+print("✓ ', de&nbsp;Director' también separa el director del título")
+
 print("\nTodo OK")

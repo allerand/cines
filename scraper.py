@@ -647,7 +647,13 @@ def _parse_malba_evento(soup, url: str, today: date, cutoff: date,
     for p in h3.find_all_next("p"):
         for br in p.find_all("br"):
             br.replace_with("\n")
-        lines = [ln.strip() for ln in p.get_text().split("\n") if ln.strip()]
+        # \s+ → " ": el MALBA escribe a veces ", de&nbsp;Director" y el
+        # split por ", de " no lo veía. Cineclub Nocturna del 28/11/2026 salió
+        # dos veces: a las 24 con el título "¿Qué clase de joven…?, de Boom
+        # Boom Kid y Zurita" y a las 23:50 desde la agenda, porque con ese
+        # título la Programación no tapaba la tarjeta de la agenda.
+        lines = [re.sub(r"\s+", " ", ln).strip() for ln in p.get_text().split("\n")
+                 if ln.strip()]
         if not lines:
             continue
         # ¿Primera línea es encabezado de día? (setea el día actual)
