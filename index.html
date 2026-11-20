@@ -649,7 +649,10 @@
       border-color: var(--accent);
       border-style: solid;
     }
-    .add-btn .add-icon { font-weight: 700; }
+    /* El + va en el mismo verde que el punteado del borde. */
+    .add-btn .add-icon { font-weight: 700; color: rgba(0, 208, 96, 0.45); }
+    .add-btn:hover .add-icon { color: inherit; }
+    .add-btn.starred .add-icon { color: inherit; }
     .add-btn .add-count { font-size: 0.7rem; opacity: 0.85; }
 
     .hora-tag {
@@ -1018,6 +1021,8 @@
   <a class="seccion-link activa" data-seccion="cartelera" href="#buenos-aires">Cartelera</a>
   <a class="seccion-link" data-seccion="festivales" href="#festivales">Festivales<span class="seccion-n" id="festivales-n" hidden></span></a>
   <!-- Página aparte (newsletter.html, que Cloudflare sirve en /newsletter). -->
+  <!-- Páginas aparte, como el newsletter. -->
+  <a class="seccion-link" href="agendadas">Más agendadas</a>
   <a class="seccion-link" href="newsletter">Newsletter</a>
 </nav>
 

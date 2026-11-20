@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G1XHLBZZY6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G1XHLBZZY6');
+</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Las más agendadas - Si te digo</title>
+  <link rel="icon" type="image/png" href="favicon.png?v=3">
+  <link rel="apple-touch-icon" href="favicon.png?v=3">
+
+  <!-- sitedigo.com/agendadas: el encabezado y las pestañas son los de
+       index.html (mismos colores y medidas), como en newsletter.html. Si
+       cambia el header allá, cambiarlo acá. -->
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    [hidden] { display: none !important; }
+    :root {
+      --bg:        #0a0a0a;
+      --bg3:       #1a1a1a;
+      --border:    #2a2a2a;
+      --text:      #e0e0e0;
+      --muted:     #666;
+      --accent:    #00d060;
+      --font:      -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    html { font-size: 14px; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      min-height: 100vh;
+    }
+
+    header { border-bottom: 1px solid var(--border); padding: 0.35rem 2rem; }
+    .header-left { display: flex; align-items: center; }
+    .home-link { display: block; line-height: 0; }
+    .logo-img { height: 85px; width: auto; display: block; }
+    .header-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 4px;
+      margin-left: 8px;
+    }
+    header h1 { font-size: 1.15rem; font-weight: 600; line-height: 1; letter-spacing: 0.02em; }
+    header .subtitle { font-size: 0.85rem; line-height: 1; color: var(--muted); }
+    .insta-link {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      line-height: 1;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .secciones {
+      display: flex;
+      gap: 1.6rem;
+      padding: 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .seccion-link {
+      padding: 0.6rem 0 0.55rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.15s, border-color 0.15s;
+    }
+    .seccion-link:hover { color: var(--text); }
+    .seccion-link:focus { outline: none; }
+    .seccion-link:focus-visible { outline: 1px dotted var(--muted); outline-offset: 3px; }
+    .seccion-link.activa { color: var(--text); border-bottom-color: var(--text); }
+    .seccion-n {
+      display: inline-block;
+      margin-left: 0.4rem;
+      padding: 0 0.35rem;
+      border-radius: 2px;
+      background: var(--accent);
+      color: #000;
+      font-size: 0.65rem;
+      letter-spacing: 0;
+      vertical-align: 1px;
+    }
+
+
+    /* La lista habla el idioma del tablero de días de la portada: letra
+       monoespaciada para números, el verde para lo que importa. */
+    main { padding: 2.6rem 2rem 4rem; max-width: 52rem; }
+    main h2 { font-size: 1.7rem; font-weight: 600; line-height: 1.25; letter-spacing: 0.01em; }
+
+
+    .estado { margin-top: 2rem; color: var(--muted); font-size: 1rem; }
+    .estado.error { color: #e06060; }
+
+    .ranking { list-style: none; margin-top: 1.2rem; border-top: 1px solid var(--border); }
+    .fila {
+      display: grid;
+      grid-template-columns: 2rem minmax(0, 1fr) auto;
+      gap: 0 0.8rem;
+      align-items: baseline;
+      padding: 0.55rem 0 0.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .puesto, .cuenta {
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-variant-numeric: tabular-nums;
+    }
+    .puesto { font-size: 0.9rem; color: var(--muted); }
+    .fila.podio .puesto { color: var(--accent); }
+    .titulo { font-size: 1.05rem; font-weight: 600; line-height: 1.3; }
+    .titulo a { color: inherit; text-decoration: none; }
+    .titulo a:hover { color: var(--accent); }
+    .anio { margin-left: 0.3rem; color: var(--muted); font-weight: 400; font-size: 0.9rem; }
+    .festival {
+      display: inline-block;
+      margin-left: 0.35rem;
+      padding: 0.1rem 0.35rem;
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      color: #bbb;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      vertical-align: 2px;
+      white-space: nowrap;
+    }
+    .proxima { margin-top: 0.1rem; font-size: 0.82rem; }
+    .proxima a { color: var(--accent); text-decoration: none; }
+    .proxima a:hover { text-decoration: underline; }
+    .barra { grid-column: 2 / 4; height: 2px; margin-top: 0.4rem; background: var(--bg3); }
+    .barra span { display: block; height: 100%; background: rgba(0, 208, 96, 0.55); }
+    .fila.podio .barra span { background: var(--accent); }
+    .cuenta { font-size: 1.15rem; font-weight: 600; text-align: right; white-space: nowrap; }
+
+    .ver-mas {
+      margin-top: 1.4rem;
+      height: 40px;
+      padding: 0 1.2rem;
+      background: var(--bg3);
+      border: 1px solid var(--border);
+      border-radius: 0;
+      color: var(--text);
+      font-family: ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+    }
+    .ver-mas:hover, .ver-mas:focus-visible { outline: none; border-color: var(--accent); color: var(--accent); }
+    .nota { margin-top: 2.2rem; color: var(--muted); font-size: 0.85rem; line-height: 1.5; max-width: 40rem; }
+
+    @media (max-width: 768px) {
+      header { padding: 0.6rem 1rem; }
+      .secciones { padding: 0 1rem; gap: 1.2rem; overflow-x: auto; }
+      .seccion-link { white-space: nowrap; }
+      main { padding: 1.8rem 1rem 3rem; }
+      main h2 { font-size: 1.45rem; }
+      .fila { grid-template-columns: 1.6rem minmax(0, 1fr) auto; gap: 0 0.6rem; }
+      .titulo { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header-left">
+    <a href="./" class="home-link" title="Volver al inicio" aria-label="Volver al inicio"><img src="logo.png" alt="Si te digo" class="logo-img"></a>
+    <div class="header-text">
+      <h1>Si te digo</h1>
+      <span class="subtitle">Cartelera de cines - Buenos Aires</span>
+      <a href="https://www.instagram.com/sitedigocine/" target="_blank" rel="noopener" class="insta-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+        <span>@sitedigocine</span>
+      </a>
+    </div>
+  </div>
+</header>
+<nav class="secciones" aria-label="Secciones">
+  <a class="seccion-link" href="./#buenos-aires">Cartelera</a>
+  <a class="seccion-link" href="./#festivales">Festivales<span class="seccion-n" id="festivales-n" hidden></span></a>
+  <a class="seccion-link activa" href="agendadas" aria-current="page">Más agendadas</a>
+  <a class="seccion-link" href="newsletter">Newsletter</a>
+</nav>
+<main>
+  <h2>Las más agendadas</h2>
+  <p class="estado" id="estado" role="status" aria-live="polite">Sumando los agendados…</p>
+  <ol class="ranking" id="ranking"></ol>
+  <button type="button" class="ver-mas" id="ver-mas" hidden>Ver más</button>
+</main>
+<script>
+// ── El número de festivales en curso, en la pestaña ────────────────────
+// La portada lo deja anotado cada vez que lo calcula (sd:fest-n). Si la nota
+// es de hoy se usa esa; si no (entraron directo acá, o es de otro día) se
+// hace la misma cuenta que actualizarContadorFestivales en index.html: los
+// de Buenos Aires por sus funciones en la cartelera, los de afuera por las
+// fechas del registro. Si cambia la cuenta allá, cambiarla acá.
+function hoyISO() {
+  const n = new Date();
+  return `${n.getFullYear()}-${String(n.getMonth() + 1).padStart(2, '0')}-${String(n.getDate()).padStart(2, '0')}`;
+}
+
+function mostrarContadorFestivales(n) {
+  const el = document.getElementById('festivales-n');
+  el.textContent = n;
+  el.hidden = !n;
+}
+
+async function contarFestivales() {
+  const baja = url => fetch(url + '?t=' + Date.now()).then(r => (r.ok ? r.json() : {}));
+  const [reg, cart] = await Promise.all([baja('data/festivales.json'), baja('data/cartelera.json')]);
+  const registro = (reg.festivales || []).filter(f => f.slug && f.nombre);
+  const funciones = cart.screenings || [];
+  const busquedaDe = f => (f.ciclo || '').trim().toLowerCase();
+  const coincide = (s, q) => [s.title_es, s.title_en, s.original_title, s.director, s.ciclo]
+    .join(' ').toLowerCase().includes(q);
+
+  // Los del registro, más los ciclos que dicen "Festival" y no están en él.
+  const lista = registro.slice();
+  const sueltos = new Set();
+  for (const s of funciones) {
+    if (!s.ciclo) continue;
+    const ciclo = s.ciclo.toLowerCase();
+    if (registro.some(f => !f.archivo && busquedaDe(f) && ciclo.includes(busquedaDe(f)))) continue;
+    if (/\bfestival\b/i.test(s.ciclo) && !sueltos.has(ciclo)) {
+      sueltos.add(ciclo);
+      lista.push({ ciclo: s.ciclo });
+    }
+  }
+
+  const hoy = hoyISO();
+  return lista.filter(f => {
+    const q = busquedaDe(f);
+    const fechas = f.archivo || !q ? []
+      : funciones.filter(s => coincide(s, q)).map(s => s.fecha).filter(Boolean).sort();
+    const desde = f.desde || fechas[0] || '';
+    const hasta = f.hasta || fechas[fechas.length - 1] || '';
+    return !(hasta && hasta < hoy) && !!desde && desde <= hoy;
+  }).length;
+}
+
+(async () => {
+  try {
+    const nota = JSON.parse(localStorage.getItem('sd:fest-n') || 'null');
+    if (nota && nota.dia === hoyISO()) { mostrarContadorFestivales(nota.n); return; }
+  } catch (_) {}
+  try { mostrarContadorFestivales(await contarFestivales()); } catch (_) {}
+})();
+
+
+// ── Las más agendadas ──────────────────────────────────────────────────
+// Los contadores son los mismos del botón "Agendar" de la portada: el web app
+// de Apps Script (scripts/newsletter.gs) devuelve, por función
+// (cine|título|fecha|hora), cuántas personas distintas la agendaron. Acá se
+// suman por película, y sólo cuentan las funciones de ahora en adelante: una
+// película entra si tiene funciones por venir en la cartelera.
+// ⚠️ Si cambia STAR_ENDPOINT en index.html, cambiarlo acá también.
+const ENDPOINT = 'https://script.google.com/macros/s/AKfycbw3wbhTtknasBwkgky4ogkM6s3Gt1K1I7giZdyX5KhvMIKUIsATNQL8VT6pPLG9mjAs/exec';
+const POR_TANDA = 20;
+
+let mostrar = POR_TANDA;
+let datos = null;  // { conteos, cartelera, cache, madrid }
+
+
+// Mismo título escrito distinto en cada sala: sin tildes, mayúsculas ni signos.
+function normal(t) {
+  return String(t || '').normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+}
+
+function esc(t) {
+  return String(t).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+}
+
+const DIAS = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+function fechaCorta(iso) {
+  const [y, m, d] = iso.split('-').map(Number);
+  return `${DIAS[new Date(y, m - 1, d).getDay()]} ${d}/${m}`;
+}
+
+// La ficha (director, año, Letterboxd) sale de la cartelera de ahora y, para
+// las que ya no están, del caché de Letterboxd del scraper.
+function indiceDeFichas(cartelera, cache) {
+  const fichas = new Map();
+  for (const [titulo, f] of Object.entries(cache || {})) {
+    if (f && (f.director || f.year)) fichas.set(normal(titulo), { director: f.director, year: f.year, letterboxd: f.url });
+  }
+  for (const s of cartelera) {
+    const f = { director: s.director, year: s.year, letterboxd: s.letterboxd };
+    for (const t of [s.title_es, s.title_en, s.original_title]) if (t && (f.director || f.year)) fichas.set(normal(t), f);
+  }
+  return fichas;
+}
+
+// El festival de una función, por su ciclo: primero los del registro
+// (data/festivales.json), después cualquier ciclo que diga "Festival" (lo que
+// va antes del " - " de la sección). Se muestra el ciclo del registro si es
+// corto ("Festival FIDBA", nunca "FIDBA" a secas) y si no, el nombre.
+function festivalDe(s, registro) {
+  const ciclo = (s.ciclo || '').trim();
+  if (!ciclo) return '';
+  const c = ciclo.toLowerCase();
+  const f = registro.find(f => !f.archivo && f.ciclo && c.includes(f.ciclo.toLowerCase()));
+  if (f) return f.ciclo.length <= 30 ? f.ciclo : f.nombre;
+  if (/\bfestival\b/i.test(ciclo)) return ciclo.split(' - ')[0].trim();
+  return '';
+}
+
+function armarRanking() {
+  const { conteos, cartelera, cache, madrid, festivales } = datos;
+  // "Desde el presente": de hoy, sólo lo que todavía no empezó (las 24:00 y
+  // 01:30 de trasnoche quedan después de cualquier hora del día).
+  const ahora = new Date();
+  const hoy = hoyISO();
+  const hora = `${String(ahora.getHours()).padStart(2, '0')}:${String(ahora.getMinutes()).padStart(2, '0')}`;
+  const porVenir = (fecha, h) => fecha > hoy || (fecha === hoy && (h || '') >= hora);
+
+  // 1. Por título normalizado.
+  const grupos = new Map();
+  for (const [clave, n] of Object.entries(conteos)) {
+    const partes = clave.split('|');
+    if (partes.length !== 4 || !(n > 0)) continue;
+    const [cine, titulo, fecha, h] = partes;
+    if (madrid.has(cine) || !/^\d{4}-\d{2}-\d{2}$/.test(fecha) || !porVenir(fecha, h)) continue;
+    const k = normal(titulo);
+    if (!k) continue;
+    const g = grupos.get(k) || { k, total: 0, funciones: 0, salas: new Map(), titulos: new Map(), claves: [] };
+    g.claves.push(clave);
+    g.total += n;
+    g.funciones += 1;
+    g.salas.set(cine, (g.salas.get(cine) || 0) + n);
+    g.titulos.set(titulo, (g.titulos.get(titulo) || 0) + n);
+    grupos.set(k, g);
+  }
+
+  // 2. "Alphaville, una extraña aventura" y "... de Lemmy Caution" son la
+  // misma: un título de tres palabras o más que empieza otro se le suma.
+  const claves = [...grupos.keys()].sort((a, b) => a.length - b.length);
+  for (const largo of claves) {
+    const corto = claves.find(c => c !== largo && c.split(' ').length >= 3 && largo.startsWith(c + ' ') && grupos.has(c));
+    if (!corto || !grupos.has(largo)) continue;
+    const a = grupos.get(corto), b = grupos.get(largo);
+    a.total += b.total;
+    a.funciones += b.funciones;
+    for (const [s, n] of b.salas) a.salas.set(s, (a.salas.get(s) || 0) + n);
+    for (const [t, n] of b.titulos) a.titulos.set(t, (a.titulos.get(t) || 0) + n);
+    a.claves.push(...b.claves);
+    grupos.delete(largo);
+  }
+
+  // 3. Ficha y próxima función en la cartelera.
+  const fichas = indiceDeFichas(cartelera, cache);
+  const porClave = new Map(cartelera.map(s => [`${s.cine}|${s.title_es || s.title_en}|${s.fecha}|${s.hora}`, s]));
+  let lista = [...grupos.values()].map(g => {
+    const titulos = [...g.titulos.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]);
+    const ficha = [g.k, ...titulos.map(normal)].map(t => fichas.get(t)).find(Boolean) || {};
+    const proximas = cartelera
+      .filter(s => porVenir(s.fecha, s.hora) && [s.title_es, s.title_en, s.original_title].some(t => t && (normal(t) === g.k || normal(t).startsWith(g.k + ' '))))
+      .sort((a, b) => (a.fecha + a.hora).localeCompare(b.fecha + b.hora));
+    // El festival sale de las funciones que se agendaron. Si ninguna está en
+    // la cartelera tal cual, de las que vienen, pero sólo si son todas del
+    // mismo festival (una de estreno que pasa también en un festival no es
+    // "del festival").
+    const agendadas = g.claves.map(c => porClave.get(c)).filter(Boolean);
+    const fests = new Map();
+    for (const s of agendadas.length ? agendadas : proximas) {
+      const f = festivalDe(s, festivales);
+      fests.set(f, (fests.get(f) || 0) + 1);
+    }
+    if (!agendadas.length && fests.size > 1) fests.clear();
+    fests.delete('');
+    return {
+      titulo: titulos[0],
+      festival: [...fests.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0])[0] || '',
+      total: g.total,
+      funciones: g.funciones,
+      salas: [...g.salas.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]),
+      director: ficha.director || '',
+      year: ficha.year || '',
+      letterboxd: ficha.letterboxd || '',
+      proxima: proximas[0] || null,
+      masFunciones: Math.max(0, proximas.length - 1),
+    };
+  });
+  // Una que ya no figura en la cartelera (se bajó, cambió de fecha) no entra:
+  // mejor una fila menos que una película que no se puede ir a ver.
+  lista = lista.filter(p => p.proxima);
+  // Empates: primero la que se agendó en más funciones, después por título.
+  lista.sort((a, b) => b.total - a.total || b.funciones - a.funciones || a.titulo.localeCompare(b.titulo, 'es'));
+  return lista;
+}
+
+function pintar() {
+  const ol = document.getElementById('ranking');
+  const estado = document.getElementById('estado');
+  const verMas = document.getElementById('ver-mas');
+  const lista = armarRanking();
+  if (!lista.length) {
+    ol.innerHTML = '';
+    estado.textContent = 'Todavía nadie agendó funciones de lo que viene.';
+    estado.className = 'estado';
+    estado.hidden = false;
+    verMas.hidden = true;
+    return;
+  }
+  estado.hidden = true;
+  const max = lista[0].total;
+  let puesto = 0, anterior = null;
+  ol.innerHTML = lista.slice(0, mostrar).map((p, i) => {
+    // Mismo número, mismo puesto (1, 2, 2, 4).
+    if (p.total !== anterior) { puesto = i + 1; anterior = p.total; }
+    const titulo = p.letterboxd
+      ? `<a href="${esc(p.letterboxd)}" target="_blank" rel="noopener">${esc(p.titulo)}</a>`
+      : esc(p.titulo);
+    // Director y año al lado del título, en gris: la fila sigue en dos renglones.
+    const ficha = [p.director, p.year].filter(Boolean).join(', ');
+    let proxima = '';
+    if (p.proxima) {
+      const s = p.proxima;
+      const q = encodeURIComponent(s.title_es || s.title_en);
+      const mas = p.masFunciones ? ` (y ${p.masFunciones} más)` : '';
+      proxima = `<div class="proxima"><a href="./#buenos-aires/q=${q}">Próxima: ${fechaCorta(s.fecha)}, ${esc(s.hora)} en ${esc(s.cine)}${mas}</a></div>`;
+    }
+    return `<li class="fila${puesto <= 3 ? ' podio' : ''}">
+      <span class="puesto">${puesto}</span>
+      <div>
+        <div class="titulo">${titulo}${p.festival ? ` <span class="festival">${esc(p.festival)}</span>` : ''}${ficha ? ` <span class="anio">${esc(ficha)}</span>` : ''}</div>
+        ${proxima}
+      </div>
+      <div class="cuenta" title="${p.total} ${p.total === 1 ? 'persona la agendó' : 'personas la agendaron'}">${p.total}</div>
+      <div class="barra" aria-hidden="true"><span style="width:${Math.max(2, Math.round(100 * p.total / max))}%"></span></div>
+    </li>`;
+  }).join('');
+  verMas.hidden = lista.length <= mostrar;
+}
+
+document.getElementById('ver-mas').addEventListener('click', () => { mostrar += POR_TANDA; pintar(); });
+
+
+(async () => {
+  const baja = url => fetch(url).then(r => (r.ok ? r.json() : {})).catch(() => ({}));
+  try {
+    const [conteos, cart, cache, mad, fest] = await Promise.all([
+      fetch(ENDPOINT + '?action=counts', { cache: 'no-store' }).then(r => {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      }),
+      baja('data/cartelera.json?t=' + Date.now()),
+      baja('data/cache.json'),
+      baja('data/cartelera-madrid.json'),
+      baja('data/festivales.json?t=' + Date.now()),
+    ]);
+    datos = {
+      conteos: conteos.counts || {},
+      cartelera: cart.screenings || [],
+      cache,
+      madrid: new Set((mad.screenings || []).map(s => s.cine)),
+      festivales: (fest.festivales || []).filter(f => f.nombre),
+    };
+    pintar();
+  } catch (_) {
+    const estado = document.getElementById('estado');
+    estado.textContent = 'No se pudo traer el conteo. Probá de nuevo en un rato.';
+    estado.className = 'estado error';
+  }
+})();
+</script>
+</body>
+</html>
