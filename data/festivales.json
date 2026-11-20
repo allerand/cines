@@ -1,5 +1,5 @@
 {
-  "_comment": "Festivales de la sección Festivales de la web (index.html). Los de Buenos Aires no tienen grilla propia: son una búsqueda en la cartelera por el nombre LITERAL de su `ciclo`, y tocar el festival lleva a #buenos-aires/q=<ciclo>. Para que esa búsqueda sea exhaustiva, el scraper le pone ese mismo ciclo a las funciones del festival de todas las salas (unificar_ciclos_festivales en scraper.py): cualquier ciclo que contenga un `alias` —palabras enteras, sin caja ni tildes— pasa a ser `ciclo`, conservando la sección (\"Asterisco - Competencia\" → \"<ciclo> - Competencia\"). El alias tiene que ser específico: si aparece en el ciclo de otra cosa, esa función queda con el nombre del festival. Un ciclo que dice 'Festival' y no está acá aparece igual en la web, con su nombre. Los de otro lugar llevan `lugar` y `archivo` (mismo formato que cartelera.json, cargado a mano), tienen su propia página y no entran a cartelera.json, así no se mezclan con Buenos Aires ni con las stories. Un `lugar` sin `archivo` sólo cambia el texto del listado: el FESTIHUR está en la cartelera, pero es en Hurlingham. Opcionales: `bajada`, `web`, `desde`/`hasta` (si no, salen de las funciones), `cuando` (texto mientras no haya fechas), `sedes` ({sala: dirección}, para las que la web no conoce), `logo` (ruta a la imagen, cuadrada; se muestra en un círculo a la izquierda), `gratis` (true: sus funciones dicen \"Entrada gratis\" en lugar del link). El listado los ordena por fecha de inicio; con la misma fecha, en el orden de este archivo.",
+  "_comment": "Festivales de la sección Festivales de la web (index.html). Por ahora sólo de Argentina. Los de Buenos Aires no tienen grilla propia: son una búsqueda en la cartelera por el nombre LITERAL de su `ciclo`, y tocar el festival lleva a #buenos-aires/q=<ciclo>. Para que esa búsqueda sea exhaustiva, el scraper le pone ese mismo ciclo a las funciones del festival de todas las salas (unificar_ciclos_festivales en scraper.py): cualquier ciclo que contenga un `alias` —palabras enteras, sin caja ni tildes— pasa a ser `ciclo`, conservando la sección (\"Asterisco - Competencia\" → \"<ciclo> - Competencia\"). El alias tiene que ser específico: si aparece en el ciclo de otra cosa, esa función queda con el nombre del festival. Un ciclo que dice 'Festival' y no está acá aparece igual en la web, con su nombre. Los de otro lugar llevan `lugar` y `archivo` (mismo formato que cartelera.json, cargado a mano), tienen su propia página y no entran a cartelera.json, así no se mezclan con Buenos Aires ni con las stories. Un `lugar` sin `archivo` sólo cambia el texto del listado: el FESTIHUR está en la cartelera, pero es en Hurlingham. Opcionales: `bajada`, `web`, `desde`/`hasta` (si no, salen de las funciones), `cuando` (texto mientras no haya fechas), `sedes` ({sala: dirección}, para las que la web no conoce), `logo` (ruta a la imagen, cuadrada; se muestra en un círculo a la izquierda), `gratis` (true: sus funciones dicen \"Entrada gratis\" en lugar del link). El listado los ordena por fecha de inicio; con la misma fecha, en el orden de este archivo.",
   "festivales": [
     {
       "slug": "cine-inusual",
@@ -153,19 +153,6 @@
       "gratis": true,
       "logo": "data/logos/bain.png",
       "web": "https://www.facebook.com/FestivalDeCineBuenosAiresIndigenaBaIn/"
-    },
-    {
-      "slug": "margenes",
-      "nombre": "Márgenes",
-      "bajada": "Festival Internacional de Cine de Madrid, 16.ª edición",
-      "lugar": "Madrid",
-      "desde": "2026-11-20",
-      "hasta": "2026-11-29",
-      "archivo": "data/festival-margenes.json",
-      "sedes": {
-        "La Casa Encendida": "Ronda de Valencia 2"
-      },
-      "web": "https://www.margenes.org/es/festival/horarios.html"
     }
   ]
 }
