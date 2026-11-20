@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T04:48:33",
+  "updated": "2026-11-20T13:04:24",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 32,
@@ -23,8 +23,8 @@
       "fuente_caida": "yelmocines.es no devolvió la cartelera (¿Cloudflare?)"
     },
     "Cines Princesa": {
-      "scrapeadas": 279,
-      "publicadas": 279
+      "scrapeadas": 278,
+      "publicadas": 278
     },
     "Cineteca Madrid": {
       "scrapeadas": 89,
@@ -39,8 +39,8 @@
       "publicadas": 91
     },
     "Golem Madrid": {
-      "scrapeadas": 121,
-      "publicadas": 121
+      "scrapeadas": 88,
+      "publicadas": 88
     },
     "Museo Reina Sofía": {
       "scrapeadas": 12,
@@ -52,7 +52,7 @@
     },
     "Renoir Retiro": {
       "scrapeadas": 97,
-      "publicadas": 97
+      "publicadas": 96
     },
     "Sala Equis": {
       "scrapeadas": 23,
@@ -3815,7 +3815,7 @@
       "director": "",
       "country": "",
       "year": null,
-      "duration": 101,
+      "duration": 102,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/entrega-de-premios-live-av-jaydee-y-josephine-soundscapes",
@@ -8910,6 +8910,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Golem Madrid",
+      "fecha": "2026-11-24",
+      "hora": "16:00",
+      "title_es": "La bola negra",
+      "title_en": "La Bola Negra",
+      "original_title": "",
+      "director": "Javier Ambrossi, Javier Calvo",
+      "country": "España, Francia",
+      "year": 2026,
+      "duration": 155,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
+      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100933&eventCode=112109",
+      "ciclo": ""
+    },
+    {
       "cine": "Artistic Metropol",
       "fecha": "2026-11-24",
       "hora": "16:00",
@@ -8987,22 +9003,6 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100922&eventCode=115798",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-24",
-      "hora": "16:10",
-      "title_es": "La bola negra",
-      "title_en": "La Bola Negra",
-      "original_title": "",
-      "director": "Javier Ambrossi, Javier Calvo",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 155,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100933&eventCode=112109",
       "ciclo": ""
     },
     {
@@ -10926,22 +10926,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "16:00",
-      "title_es": "La bola negra",
-      "title_en": "La Bola Negra",
-      "original_title": "",
-      "director": "Javier Ambrossi, Javier Calvo",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 155,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100949&eventCode=112109",
-      "ciclo": ""
-    },
-    {
       "cine": "Artistic Metropol",
       "fecha": "2026-11-25",
       "hora": "16:00",
@@ -10990,54 +10974,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "16:10",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100961&eventCode=116223",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "16:10",
-      "title_es": "Sacamantecas",
-      "title_en": "The Harvester",
-      "original_title": "Sacamantecas",
-      "director": "David Pérez Sañudo",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 105,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100942&eventCode=116768",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "16:10",
-      "title_es": "La voz quebrada",
-      "title_en": "The Broken Voice",
-      "original_title": "La voz quebrada",
-      "director": "Manuel Menchón Romero",
-      "country": "España",
-      "year": 2026,
-      "duration": 88,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100939&eventCode=115798",
-      "ciclo": ""
-    },
-    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-25",
       "hora": "16:15",
@@ -11067,22 +11003,6 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
       "ticket_url": "https://www.reservaentradas.com/sesiones/madrid/callao/ruega-por-nosotras/568?proximamente=true&",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "17:00",
-      "title_es": "Wild Horse Nine",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 116,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100952&eventCode=112974",
       "ciclo": ""
     },
     {
@@ -11227,6 +11147,22 @@
       "genre": "Animación, Familiar",
       "letterboxd": "https://letterboxd.com/film/iron-boy/",
       "ticket_url": "https://www.pillalas.com/pase/madrid/cines-princesa/iron-boy/1097707/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Renoir Retiro",
+      "fecha": "2026-11-25",
+      "hora": "17:45",
+      "title_es": "La invitación",
+      "title_en": "The Invite",
+      "original_title": "",
+      "director": "Olivia Wilde",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/the-invite-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/la-invitacion/1098094/",
       "ciclo": ""
     },
     {
@@ -11406,22 +11342,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "18:10",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100960&eventCode=116223",
-      "ciclo": ""
-    },
-    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-25",
       "hora": "18:15",
@@ -11483,38 +11403,6 @@
       "genre": "Fantasía, Aventura",
       "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-gato-con-sombrero-doblada-al-espanol/20819/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "18:15",
-      "title_es": "¡Qué cojones es un hombre?",
-      "title_en": "¡Qué cojones es un hombre?",
-      "original_title": "",
-      "director": "Nacho Rubio",
-      "country": "España",
-      "year": null,
-      "duration": 85,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100938&eventCode=117278",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "18:15",
-      "title_es": "El tren fluvial",
-      "title_en": "The River Train",
-      "original_title": "El Tren Fluvial",
-      "director": "Lorenzo Ferro, Lucas A. Vignale",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 75,
-      "genre": "Drama, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100950&eventCode=115457",
       "ciclo": ""
     },
     {
@@ -11662,22 +11550,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "19:30",
-      "title_es": "Wild Horse Nine",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 116,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100940&eventCode=112974",
-      "ciclo": ""
-    },
-    {
       "cine": "Cines Callao",
       "fecha": "2026-11-25",
       "hora": "19:30",
@@ -11723,22 +11595,6 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/ruega-por-nosotras/39780/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cines Princesa",
-      "fecha": "2026-11-25",
-      "hora": "19:50",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.pillalas.com/pase/madrid/cines-princesa/rose/1097750/",
       "ciclo": ""
     },
     {
@@ -11838,22 +11694,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "20:00",
-      "title_es": "Sucia",
-      "title_en": "Filthy",
-      "original_title": "",
-      "director": "Bàrbara Mestanza",
-      "country": "España",
-      "year": 2026,
-      "duration": 82,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/sucia/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100953&eventCode=117066",
-      "ciclo": ""
-    },
-    {
       "cine": "Artistic Metropol",
       "fecha": "2026-11-25",
       "hora": "20:00",
@@ -11931,22 +11771,6 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/naza/",
       "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-plaza-espana/naza/1097517/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "20:10",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100957&eventCode=116223",
       "ciclo": ""
     },
     {
@@ -12062,6 +11886,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cines Princesa",
+      "fecha": "2026-11-25",
+      "hora": "20:30",
+      "title_es": "Tierra de Mi Padre",
+      "title_en": "Fatherland",
+      "original_title": "Ojczyzna",
+      "director": "Pawel Pawlikowski",
+      "country": "Polonia, Alemania",
+      "year": 2026,
+      "duration": 82,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
+      "ticket_url": "https://www.pillalas.com/pase/madrid/cines-princesa/fatherland/1098096/",
+      "ciclo": ""
+    },
+    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-25",
       "hora": "20:30",
@@ -12090,23 +11930,7 @@
       "duration": 82,
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
-      "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/fatherland/1098079/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Renoir Retiro",
-      "fecha": "2026-11-25",
-      "hora": "20:30",
-      "title_es": "Wild Horse Nine",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 116,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/wild-horse-nine/1097337/",
+      "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/fatherland/1098095/",
       "ciclo": ""
     },
     {
@@ -12238,54 +12062,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "21:45",
-      "title_es": "El tren fluvial",
-      "title_en": "The River Train",
-      "original_title": "El Tren Fluvial",
-      "director": "Lorenzo Ferro, Lucas A. Vignale",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 75,
-      "genre": "Drama, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100959&eventCode=115457",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "21:45",
-      "title_es": "Ruega por nosotras",
-      "title_en": "Pray for Us",
-      "original_title": "Ruega por nosotras",
-      "director": "Daniel Monzón",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 136,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100956&eventCode=116921",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "21:45",
-      "title_es": "Sacamantecas",
-      "title_en": "The Harvester",
-      "original_title": "Sacamantecas",
-      "director": "David Pérez Sañudo",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 105,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100955&eventCode=116768",
-      "ciclo": ""
-    },
-    {
       "cine": "Artistic Metropol",
       "fecha": "2026-11-25",
       "hora": "21:45",
@@ -12384,22 +12160,6 @@
     {
       "cine": "Cines Princesa",
       "fecha": "2026-11-25",
-      "hora": "22:05",
-      "title_es": "El Ser Querido",
-      "title_en": "The Beloved",
-      "original_title": "",
-      "director": "Rodrigo Sorogoyen",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 135,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/the-beloved-2026/",
-      "ticket_url": "https://www.pillalas.com/pase/madrid/cines-princesa/el-ser-querido/1097752/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cines Princesa",
-      "fecha": "2026-11-25",
       "hora": "22:10",
       "title_es": "Adolescencia, sexo y muerte en campamento Miasma",
       "title_en": "Teenage Sex and Death at Camp Miasma",
@@ -12443,38 +12203,6 @@
       "genre": "Terror, Comedia",
       "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/adolescencia-sexo-y-muerte-en-campamento-miasma-vose/39816/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "22:15",
-      "title_es": "¡Qué cojones es un hombre?",
-      "title_en": "¡Qué cojones es un hombre?",
-      "original_title": "",
-      "director": "Nacho Rubio",
-      "country": "España",
-      "year": null,
-      "duration": 85,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100954&eventCode=117278",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-25",
-      "hora": "22:15",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100958&eventCode=116223",
       "ciclo": ""
     },
     {
@@ -12667,22 +12395,6 @@
       "genre": "Terror, Thriller",
       "letterboxd": "https://letterboxd.com/film/victorian-psycho/",
       "ticket_url": "https://www.pillalas.com/pase/madrid/cines-princesa/victorian-psycho/1097985/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Renoir Retiro",
-      "fecha": "2026-11-25",
-      "hora": "22:45",
-      "title_es": "Wild Horse Nine",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 116,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/wild-horse-nine/1097339/",
       "ciclo": ""
     },
     {
@@ -13022,22 +12734,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "16:00",
-      "title_es": "La bola negra",
-      "title_en": "La Bola Negra",
-      "original_title": "",
-      "director": "Javier Ambrossi, Javier Calvo",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 155,
-      "genre": "Drama, Bélica",
-      "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100973&eventCode=112109",
-      "ciclo": ""
-    },
-    {
       "cine": "Artistic Metropol",
       "fecha": "2026-11-26",
       "hora": "16:00",
@@ -13051,54 +12747,6 @@
       "genre": "Bélica, Drama",
       "letterboxd": "https://letterboxd.com/film/palestine-36/",
       "ticket_url": "https://artisticmetropol.es/sesion/sala-2-palestina-36-2025-doblada-al-espanol-33/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "16:10",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100976&eventCode=116223",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "16:10",
-      "title_es": "Sacamantecas",
-      "title_en": "The Harvester",
-      "original_title": "Sacamantecas",
-      "director": "David Pérez Sañudo",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 105,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100974&eventCode=116768",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "16:10",
-      "title_es": "La voz quebrada",
-      "title_en": "The Broken Voice",
-      "original_title": "La voz quebrada",
-      "director": "Manuel Menchón Romero",
-      "country": "España",
-      "year": 2026,
-      "duration": 88,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/the-broken-voice/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100965&eventCode=115798",
       "ciclo": ""
     },
     {
@@ -13131,22 +12779,6 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/ruega-por-nosotras/20828/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "16:30",
-      "title_es": "Wild Horse Nine",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 116,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100972&eventCode=112974",
       "ciclo": ""
     },
     {
@@ -13422,22 +13054,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "18:10",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100970&eventCode=116223",
-      "ciclo": ""
-    },
-    {
       "cine": "Cines Princesa",
       "fecha": "2026-11-26",
       "hora": "18:15",
@@ -13486,38 +13102,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "18:15",
-      "title_es": "¡Qué cojones es un hombre?",
-      "title_en": "¡Qué cojones es un hombre?",
-      "original_title": "",
-      "director": "Nacho Rubio",
-      "country": "España",
-      "year": null,
-      "duration": 85,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100964&eventCode=117278",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "18:15",
-      "title_es": "El tren fluvial",
-      "title_en": "The River Train",
-      "original_title": "El Tren Fluvial",
-      "director": "Lorenzo Ferro, Lucas A. Vignale",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 75,
-      "genre": "Drama, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100966&eventCode=115457",
-      "ciclo": ""
-    },
-    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-11-26",
       "hora": "18:30",
@@ -13537,7 +13121,7 @@
       "cine": "Renoir Retiro",
       "fecha": "2026-11-26",
       "hora": "18:30",
-      "title_es": "Puedes verlo todo",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
       "title_en": "You Can See Everything",
       "original_title": "You Can See Everything",
       "director": "Lance Oppenheim, Nathan Fielder",
@@ -13601,7 +13185,7 @@
       "cine": "Cines Princesa",
       "fecha": "2026-11-26",
       "hora": "19:00",
-      "title_es": "Puedes verlo todo",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
       "title_en": "You Can See Everything",
       "original_title": "You Can See Everything",
       "director": "Lance Oppenheim, Nathan Fielder",
@@ -13627,38 +13211,6 @@
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://www.pillalas.com/pase/madrid/cines-princesa/wild-horse-nine/1097719/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "19:00",
-      "title_es": "Puedes verlo todo",
-      "title_en": "You Can See Everything",
-      "original_title": "You Can See Everything",
-      "director": "Lance Oppenheim, Nathan Fielder",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 174,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100848&eventCode=117170",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "19:00",
-      "title_es": "XXVII Ciclo de cine foro: Soulèvements",
-      "title_en": "XXVII Ciclo de cine foro: Soulèvements",
-      "original_title": "",
-      "director": "Thomas Lacoste",
-      "country": "Francia",
-      "year": null,
-      "duration": 106,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100480&eventCode=116401",
       "ciclo": ""
     },
     {
@@ -13697,7 +13249,7 @@
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-26",
       "hora": "19:05",
-      "title_es": "Puedes verlo todo",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
       "title_en": "You Can See Everything",
       "original_title": "You Can See Everything",
       "director": "Lance Oppenheim, Nathan Fielder",
@@ -13713,7 +13265,7 @@
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-26",
       "hora": "19:10",
-      "title_es": "Puedes verlo todo",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
       "title_en": "You Can See Everything",
       "original_title": "You Can See Everything",
       "director": "Lance Oppenheim, Nathan Fielder",
@@ -13729,7 +13281,7 @@
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-26",
       "hora": "19:15",
-      "title_es": "Puedes verlo todo",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
       "title_en": "You Can See Everything",
       "original_title": "You Can See Everything",
       "director": "Lance Oppenheim, Nathan Fielder",
@@ -13793,7 +13345,7 @@
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-26",
       "hora": "19:30",
-      "title_es": "Puedes verlo todo",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
       "title_en": "You Can See Everything",
       "original_title": "You Can See Everything",
       "director": "Lance Oppenheim, Nathan Fielder",
@@ -13918,38 +13470,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "20:00",
-      "title_es": "Sucia",
-      "title_en": "Filthy",
-      "original_title": "",
-      "director": "Bàrbara Mestanza",
-      "country": "España",
-      "year": 2026,
-      "duration": 82,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/sucia/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100963&eventCode=117066",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "20:00",
-      "title_es": "El tren fluvial",
-      "title_en": "The River Train",
-      "original_title": "El Tren Fluvial",
-      "director": "Lorenzo Ferro, Lucas A. Vignale",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 75,
-      "genre": "Drama, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/el-tren-fluvial/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100967&eventCode=115457",
-      "ciclo": ""
-    },
-    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-26",
       "hora": "20:10",
@@ -13979,22 +13499,6 @@
       "genre": "Comedia, Drama",
       "letterboxd": "https://letterboxd.com/film/just-an-illusion-2026/",
       "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-plaza-espana/tiempos-de-ilusion/1097423/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "20:10",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100975&eventCode=116223",
       "ciclo": ""
     },
     {
@@ -14190,22 +13694,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "21:45",
-      "title_es": "Ruega por nosotras",
-      "title_en": "Pray for Us",
-      "original_title": "Ruega por nosotras",
-      "director": "Daniel Monzón",
-      "country": "España, Francia",
-      "year": 2026,
-      "duration": 136,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/ruega-por-nosotras/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100968&eventCode=116921",
-      "ciclo": ""
-    },
-    {
       "cine": "Renoir Plaza de España",
       "fecha": "2026-11-26",
       "hora": "22:00",
@@ -14299,54 +13787,6 @@
       "genre": "Terror, Comedia",
       "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
       "ticket_url": "https://www.pillalas.com/pase/madrid/cines-princesa/adolescencia-sexo-y-muerte-en-campamento-miasma/1098067/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "22:15",
-      "title_es": "¡Qué cojones es un hombre?",
-      "title_en": "¡Qué cojones es un hombre?",
-      "original_title": "",
-      "director": "Nacho Rubio",
-      "country": "España",
-      "year": null,
-      "duration": 85,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100962&eventCode=117278",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "22:15",
-      "title_es": "Rose",
-      "title_en": "Rose",
-      "original_title": "Rose",
-      "director": "Markus Schleinzer",
-      "country": "Austria, Alemania",
-      "year": 2026,
-      "duration": 93,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/rose-2026/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100969&eventCode=116223",
-      "ciclo": ""
-    },
-    {
-      "cine": "Golem Madrid",
-      "fecha": "2026-11-26",
-      "hora": "22:15",
-      "title_es": "Sacamantecas",
-      "title_en": "The Harvester",
-      "original_title": "Sacamantecas",
-      "director": "David Pérez Sañudo",
-      "country": "Bélgica, España",
-      "year": 2026,
-      "duration": 105,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/sacamantecas/",
-      "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=100971&eventCode=116768",
       "ciclo": ""
     },
     {
@@ -14513,7 +13953,7 @@
       "cine": "Embajadores Ercilla",
       "fecha": "2026-11-26",
       "hora": "22:30",
-      "title_es": "Puedes verlo todo",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
       "title_en": "You Can See Everything",
       "original_title": "You Can See Everything",
       "director": "Lance Oppenheim, Nathan Fielder",

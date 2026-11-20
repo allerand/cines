@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20T04:48:33",
+  "updated": "2026-11-20T13:04:24",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 14,
@@ -21,17 +21,14 @@
       "scrapeadas": 3,
       "publicadas": 3
     },
-    "Biblioteca Nacional": {
-      "scrapeadas": 1,
-      "publicadas": 1
-    },
     "Biblioteca del Congreso": {
       "scrapeadas": 2,
       "publicadas": 2
     },
     "CCK": {
       "scrapeadas": 0,
-      "publicadas": 9
+      "publicadas": 9,
+      "fuente_caida": "no se pudo leer palaciolibertad.gob.ar/cine/"
     },
     "CEA": {
       "scrapeadas": 2,
@@ -56,7 +53,8 @@
     },
     "Centro Cultural Borges": {
       "scrapeadas": 0,
-      "publicadas": 10
+      "publicadas": 10,
+      "fuente_caida": "la API no contesta; se publica el caché de la última corrida buena"
     },
     "Centro Cultural Munro": {
       "scrapeadas": 8,
@@ -123,12 +121,12 @@
       "publicadas": 101
     },
     "Cinépolis Houssay": {
-      "scrapeadas": 17,
-      "publicadas": 17
+      "scrapeadas": 16,
+      "publicadas": 16
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 40,
-      "publicadas": 40
+      "scrapeadas": 41,
+      "publicadas": 41
     },
     "Club Lucero": {
       "scrapeadas": 6,
@@ -350,6 +348,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-20",
+      "hora": "12:20",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Hoyts Abasto",
       "fecha": "2026-11-20",
       "hora": "12:30",
@@ -474,6 +488,22 @@
       "duration": 148,
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-20",
+      "hora": "12:45",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -1009,22 +1039,6 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-20",
       "hora": "13:30",
-      "title_es": "El gato con sombrero",
-      "title_en": "The Cat in the Hat",
-      "original_title": "The Cat in the Hat",
-      "director": "Erica Rivinoja, Alessandro Carloni",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 108,
-      "genre": "Fantasía, Aventura",
-      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-20",
-      "hora": "13:30",
       "title_es": "Yo soy Rocky",
       "title_en": "I Play Rocky",
       "original_title": "I Play Rocky",
@@ -1265,22 +1279,6 @@
       "cine": "Cinépolis Houssay",
       "fecha": "2026-11-20",
       "hora": "14:00",
-      "title_es": "El gato con sombrero",
-      "title_en": "The Cat in the Hat",
-      "original_title": "The Cat in the Hat",
-      "director": "Erica Rivinoja, Alessandro Carloni",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 108,
-      "genre": "Fantasía, Aventura",
-      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-20",
-      "hora": "14:00",
       "title_es": "Caballo salvaje nueve",
       "title_en": "Wild Horse Nine",
       "original_title": "Wild Horse Nine",
@@ -1290,22 +1288,6 @@
       "duration": 118,
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-20",
-      "hora": "14:00",
-      "title_es": "El gato con sombrero",
-      "title_en": "The Cat in the Hat",
-      "original_title": "The Cat in the Hat",
-      "director": "Erica Rivinoja, Alessandro Carloni",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 108,
-      "genre": "Fantasía, Aventura",
-      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -1915,6 +1897,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/colours-of-time/",
       "ticket_url": "https://cosmos.uba.ar/pelicula?idPelicula=452",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-20",
+      "hora": "14:50",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3073,22 +3071,6 @@
       "cine": "Cinépolis Houssay",
       "fecha": "2026-11-20",
       "hora": "16:30",
-      "title_es": "El gato con sombrero",
-      "title_en": "The Cat in the Hat",
-      "original_title": "The Cat in the Hat",
-      "director": "Erica Rivinoja, Alessandro Carloni",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 108,
-      "genre": "Fantasía, Aventura",
-      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-20",
-      "hora": "16:30",
       "title_es": "Recen por mí: la historia de Francisco",
       "title_en": "Pray for me: Pope Francis' story",
       "original_title": "Recen por mí: la historia de Francisco",
@@ -3675,6 +3657,22 @@
       "genre": "Drama",
       "letterboxd": "https://letterboxd.com/film/la-casa-2025/",
       "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6347",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-20",
+      "hora": "17:15",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Erica Rivinoja, Alessandro Carloni",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -26515,7 +26513,7 @@
       "hora": "20:00",
       "title_es": "Hijos",
       "title_en": "Hijos",
-      "original_title": "",
+      "original_title": "Hijos",
       "director": "Javier Altholz",
       "country": "Argentina",
       "year": 2025,
@@ -31884,22 +31882,6 @@
       "letterboxd": "",
       "ticket_url": "https://www.infinitosuper8.com.ar/",
       "ciclo": "Infinito Super 8 - Competencia Internacional"
-    },
-    {
-      "cine": "Biblioteca Nacional",
-      "fecha": "2026-11-24",
-      "hora": "18:30",
-      "title_es": "Vlasta, el recuerdo no es eterno",
-      "title_en": "Vlasta, el recuerdo no es eterno",
-      "original_title": "Vlasta, el recuerdo no es eterno",
-      "director": "Candela Vey y Tino Pereira",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 70,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/vlasta-el-recuerdo-no-es-eterno/",
-      "ticket_url": "https://www.bn.gov.ar/agenda-cultural/la-nave-de-los-suenos-29",
-      "ciclo": "La Nave de los Sueños"
     },
     {
       "cine": "Biblioteca del Congreso",
@@ -46243,11 +46225,11 @@
       "hora": "24:00",
       "title_es": "¿Qué clase de joven le abre la puerta a un vampiro?",
       "title_en": "¿Qué clase de joven le abre la puerta a un vampiro?",
-      "original_title": "¿Qué clase de joven le abre la puerta a un vampiro?",
+      "original_title": "",
       "director": "Boom Boom Kid y Zurita",
-      "country": "Argentina",
-      "year": 2026,
-      "duration": 115,
+      "country": "",
+      "year": null,
+      "duration": null,
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://malba.org.ar/evento/cineclub-nocturna-5",
