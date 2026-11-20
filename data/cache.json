@@ -34761,7 +34761,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-16",
+    "fecha": "2026-11-20",
     "con_duracion": true,
     "desempate": ""
   },
@@ -34931,7 +34931,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-16",
+    "fecha": "2026-11-20",
     "con_duracion": true,
     "desempate": ""
   },
@@ -35053,7 +35053,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-16",
+    "fecha": "2026-11-20",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38194,12 +38194,16 @@
     "original_title": "Recuerdo tu nombre"
   },
   "virginia woolfs, noche y dia|2026": {
-    "url": "",
-    "title_en": "VIRGINIA WOOLFS, NOCHE Y DIA",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/virginia-woolfs-night-day/",
+    "title_en": "Virginia Woolf's Night & Day",
+    "director": "Tina Gharavi",
+    "country": "UK, USA",
+    "year": 2026,
+    "duration": 95,
+    "genre": "Drama, Romance",
+    "clase_titulo": "distinto",
+    "title_es": "Noche y día, de Virginia Woolf",
+    "original_title": "Virginia Woolf's Night & Day"
   },
   "virginia woolf: noche y día|2026": {
     "url": "https://letterboxd.com/film/virginia-woolfs-night-day/",
@@ -38517,5 +38521,89 @@
     "fecha": "2026-11-19",
     "con_duracion": false,
     "desempate": ""
+  },
+  "incendies": {
+    "url": "https://letterboxd.com/film/incendies/",
+    "title_en": "Incendies",
+    "director": "Denis Villeneuve",
+    "country": "Canada, France",
+    "year": 2010,
+    "duration": 131,
+    "genre": "Misterio, Drama",
+    "title_es": "Incendios",
+    "original_title": "Incendies"
+  },
+  "¿quién puede matar a un niño? [obscura visión]": {
+    "url": "",
+    "title_en": "¿QUIÉN PUEDE MATAR A UN NIÑO? [OBSCURA VISIÓN]",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el maquinista de la general con música en directo": {
+    "url": "",
+    "title_en": "EL MAQUINISTA DE LA GENERAL CON MÚSICA EN DIRECTO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el séptimo cielo": {
+    "url": "",
+    "title_en": "El séptimo cielo",
+    "director": "Frank Borzage",
+    "country": "United States of America",
+    "year": 1927,
+    "duration": 119,
+    "genre": "Drama, Romance",
+    "title_es": "El séptimo cielo",
+    "original_title": "7th Heaven"
+  },
+  "martín garcía|2024": {
+    "url": "https://letterboxd.com/film/martin-garcia/",
+    "title_en": "Martín García",
+    "director": "Aníbal Garisto",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 83,
+    "genre": "Comedia, Romance",
+    "original_title": "Martín García"
+  },
+  "la gruta continua|2023": {
+    "url": "https://letterboxd.com/film/la-gruta-continua/",
+    "title_en": "Ongoing Cave",
+    "director": "Julián D'Angiolillo",
+    "country": "Argentina, Cuba",
+    "year": 2023,
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "La gruta continua"
+  },
+  "ciudad oculta|2024": {
+    "url": "https://letterboxd.com/film/ciudad-oculta/",
+    "title_en": "Hidden City",
+    "director": "Francisco Bouzas",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 95,
+    "genre": "Documental",
+    "original_title": "Ciudad Oculta"
+  },
+  "pulsando la vida + juan falú": {
+    "url": "",
+    "title_en": "Pulsando la vida + Juan Falú",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "41° festival internacional mdq en gaumont - borges and me": {
+    "url": "",
+    "title_en": "41° Festival Internacional MDQ en Gaumont - BORGES AND ME",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
