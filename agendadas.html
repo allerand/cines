@@ -200,6 +200,14 @@
   <button type="button" class="ver-mas" id="ver-mas" hidden>Ver más</button>
 </main>
 <script>
+// Cada archivo de data/ se baja una sola vez: el contador de festivales de la
+// pestaña y el ranking usan los mismos.
+const bajados = {};
+function bajarJSON(path) {
+  return bajados[path] || (bajados[path] = fetch(path + '?t=' + Date.now())
+    .then(r => (r.ok ? r.json() : {})).catch(() => ({})));
+}
+
 // ── El número de festivales en curso, en la pestaña ────────────────────
 // La portada lo deja anotado cada vez que lo calcula (sd:fest-n). Si la nota
 // es de hoy se usa esa; si no (entraron directo acá, o es de otro día) se
@@ -218,8 +226,7 @@ function mostrarContadorFestivales(n) {
 }
 
 async function contarFestivales() {
-  const baja = url => fetch(url + '?t=' + Date.now()).then(r => (r.ok ? r.json() : {}));
-  const [reg, cart] = await Promise.all([baja('data/festivales.json'), baja('data/cartelera.json')]);
+  const [reg, cart] = await Promise.all([bajarJSON('data/festivales.json'), bajarJSON('data/cartelera.json')]);
   const registro = (reg.festivales || []).filter(f => f.slug && f.nombre);
   const funciones = cart.screenings || [];
   const busquedaDe = f => (f.ciclo || '').trim().toLowerCase();
@@ -270,7 +277,7 @@ const ENDPOINT = 'https://script.google.com/macros/s/AKfycbw3wbhTtknasBwkgky4ogk
 const POR_TANDA = 20;
 
 let mostrar = POR_TANDA;
-let datos = null;  // { conteos, cartelera, cache, madrid }
+let datos = null;  // { conteos, cartelera, cinesBA, festivales }
 
 
 // Mismo título escrito distinto en cada sala: sin tildes, mayúsculas ni signos.
@@ -289,13 +296,10 @@ function fechaCorta(iso) {
   return `${DIAS[new Date(y, m - 1, d).getDay()]} ${d}/${m}`;
 }
 
-// La ficha (director, año, Letterboxd) sale de la cartelera de ahora y, para
-// las que ya no están, del caché de Letterboxd del scraper.
-function indiceDeFichas(cartelera, cache) {
+// La ficha (director, año, Letterboxd) sale de la cartelera: todas las que
+// entran tienen funciones por venir ahí.
+function indiceDeFichas(cartelera) {
   const fichas = new Map();
-  for (const [titulo, f] of Object.entries(cache || {})) {
-    if (f && (f.director || f.year)) fichas.set(normal(titulo), { director: f.director, year: f.year, letterboxd: f.url });
-  }
   for (const s of cartelera) {
     const f = { director: s.director, year: s.year, letterboxd: s.letterboxd };
     for (const t of [s.title_es, s.title_en, s.original_title]) if (t && (f.director || f.year)) fichas.set(normal(t), f);
@@ -318,7 +322,7 @@ function festivalDe(s, registro) {
 }
 
 function armarRanking() {
-  const { conteos, cartelera, cache, madrid, festivales } = datos;
+  const { conteos, cartelera, cinesBA, festivales } = datos;
   // "Desde el presente": de hoy, sólo lo que todavía no empezó (las 24:00 y
   // 01:30 de trasnoche quedan después de cualquier hora del día).
   const ahora = new Date();
@@ -332,7 +336,8 @@ function armarRanking() {
     const partes = clave.split('|');
     if (partes.length !== 4 || !(n > 0)) continue;
     const [cine, titulo, fecha, h] = partes;
-    if (madrid.has(cine) || !/^\d{4}-\d{2}-\d{2}$/.test(fecha) || !porVenir(fecha, h)) continue;
+    // Las salas de Madrid (y cualquiera que no esté en la cartelera de BA) no.
+    if (!cinesBA.has(cine) || !/^\d{4}-\d{2}-\d{2}$/.test(fecha) || !porVenir(fecha, h)) continue;
     const k = normal(titulo);
     if (!k) continue;
     const g = grupos.get(k) || { k, total: 0, funciones: 0, salas: new Map(), titulos: new Map(), claves: [] };
@@ -360,7 +365,7 @@ function armarRanking() {
   }
 
   // 3. Ficha y próxima función en la cartelera.
-  const fichas = indiceDeFichas(cartelera, cache);
+  const fichas = indiceDeFichas(cartelera);
   const porClave = new Map(cartelera.map(s => [`${s.cine}|${s.title_es || s.title_en}|${s.fecha}|${s.hora}`, s]));
   let lista = [...grupos.values()].map(g => {
     const titulos = [...g.titulos.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0]);
@@ -448,28 +453,44 @@ function pintar() {
 document.getElementById('ver-mas').addEventListener('click', () => { mostrar += POR_TANDA; pintar(); });
 
 
-(async () => {
-  const baja = url => fetch(url).then(r => (r.ok ? r.json() : {})).catch(() => ({}));
+// El conteo viene de Apps Script, que tarda entre 2 y 8 segundos. Para no
+// dejar la página en blanco, se muestra al instante el último conteo que vio
+// este navegador (lo guarda también la cartelera cada vez que baja los
+// contadores, en sd:conteos) y se reemplaza cuando llega el nuevo.
+// ⚠️ Mismo nombre que en index.html (fetchStarCounts).
+const CONTEOS = 'sd:conteos';
+function conteosGuardados() {
   try {
-    const [conteos, cart, cache, mad, fest] = await Promise.all([
-      fetch(ENDPOINT + '?action=counts', { cache: 'no-store' }).then(r => {
-        if (!r.ok) throw new Error(r.status);
-        return r.json();
-      }),
-      baja('data/cartelera.json?t=' + Date.now()),
-      baja('data/cache.json'),
-      baja('data/cartelera-madrid.json'),
-      baja('data/festivales.json?t=' + Date.now()),
-    ]);
+    const g = JSON.parse(localStorage.getItem(CONTEOS) || 'null');
+    return g && g.counts && typeof g.counts === 'object' ? g.counts : null;
+  } catch (_) { return null; }
+}
+
+(async () => {
+  const frescos = fetch(ENDPOINT + '?action=counts', { cache: 'no-store' }).then(r => {
+    if (!r.ok) throw new Error(r.status);
+    return r.json();
+  }).then(d => d.counts || {});
+  frescos.catch(() => {});
+  const [cart, fest] = await Promise.all([bajarJSON('data/cartelera.json'), bajarJSON('data/festivales.json')]);
+  const cartelera = cart.screenings || [];
+  const armar = conteos => {
     datos = {
-      conteos: conteos.counts || {},
-      cartelera: cart.screenings || [],
-      cache,
-      madrid: new Set((mad.screenings || []).map(s => s.cine)),
+      conteos,
+      cartelera,
+      cinesBA: new Set(cartelera.map(s => s.cine)),
       festivales: (fest.festivales || []).filter(f => f.nombre),
     };
     pintar();
+  };
+  const guardados = conteosGuardados();
+  if (guardados) armar(guardados);
+  try {
+    const conteos = await frescos;
+    try { localStorage.setItem(CONTEOS, JSON.stringify({ t: Date.now(), counts: conteos })); } catch (_) {}
+    armar(conteos);
   } catch (_) {
+    if (guardados) return;  // queda el último conteo en pantalla
     const estado = document.getElementById('estado');
     estado.textContent = 'No se pudo traer el conteo. Probá de nuevo en un rato.';
     estado.className = 'estado error';

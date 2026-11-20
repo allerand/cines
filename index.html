@@ -1671,6 +1671,9 @@ async function fetchStarCounts() {
     const res = await fetch(STAR_ENDPOINT + '?action=counts', { cache: 'no-store' });
     if (!res.ok) return;
     const data = await res.json();
+    // Para la pestaña Más agendadas (agendadas.html): con esto la lista sale al
+    // instante en vez de esperar de nuevo al Apps Script. Mismo nombre allá.
+    try { localStorage.setItem('sd:conteos', JSON.stringify({ t: Date.now(), counts: data.counts || {} })); } catch (_) {}
     // Lo que se agendó mientras esto bajaba ya está sumado en pantalla: no se pisa.
     starCounts = Object.assign(data.counts || {}, conteosDeEstaVisita);
   } catch (_) {}
