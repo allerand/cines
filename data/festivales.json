@@ -49,7 +49,8 @@
       "alias": ["Bazofi"],
       "desde": "2026-11-05",
       "hasta": "2026-11-26",
-      "web": "https://malba.org.ar/evento/bazofi-2026/"
+      "web": "https://malba.org.ar/evento/bazofi-2026/",
+      "logo": "data/logos/bazofi.png"
     },
     {
       "slug": "fuera-de-campo",
