@@ -677,6 +677,9 @@ def _parse_malba_evento(soup, url: str, today: date, cutoff: date,
             if ", de " in rest:
                 title, director = rest.rsplit(", de ", 1)
                 title, director = title.strip().rstrip(","), director.strip().rstrip(".")
+                # "de Diego Trerotola (*)": el asterisco remite a la nota al
+                # pie "* Función gratuita" (Bazofi, nov. 2026), no al nombre.
+                director = re.sub(r"\s*\(?\*+\)?$", "", director)
             else:
                 title, director = rest.strip().rstrip(","), cycle_director
             key = (title, d.isoformat(), hora)

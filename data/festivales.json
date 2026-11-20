@@ -42,6 +42,16 @@
       "web": "https://bitbangclub.com/es/programacion-bitbang12/"
     },
     {
+      "slug": "bazofi",
+      "nombre": "Bazofi",
+      "bajada": "Festival de rarezas de Filmoteca Buenos Aires",
+      "ciclo": "Bazofi",
+      "alias": ["Bazofi"],
+      "desde": "2026-11-05",
+      "hasta": "2026-11-26",
+      "web": "https://malba.org.ar/evento/bazofi-2026/"
+    },
+    {
       "slug": "fuera-de-campo",
       "nombre": "Fuera de Campo",
       "bajada": "Muestra de cine argentino",

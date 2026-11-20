@@ -132,4 +132,13 @@ assert scraper._malba_fecha_cercana(3, 1, date(2026, 10, 21)) == date(2026, 10, 
 assert scraper._malba_fecha_cercana(3, 22, date(2026, 10, 21)) == date(2026, 10, 22)
 print("✓ 'JUEVES 1' es el 1/10 que pasó; 'JUEVES 22', el de mañana")
 
+bazofi = BeautifulSoup(programacion("Bazofi", "Festival de rarezas", [
+    ("JUEVES 26", ["20:30 Orar Orbil &amp; viceversa, de Diego Trerotola (*)",
+                   "21:30 Fahrenheit 451, de François Truffaut"])]), "html.parser")
+funcs = scraper._parse_malba_evento(bazofi, f"{BASE}/evento/bazofi-2026/",
+                                    date(2026, 11, 20), date(2026, 12, 4))
+assert [(f.title, f.director) for f in funcs] == [
+    ("Orar Orbil & viceversa", "Diego Trerotola"), ("Fahrenheit 451", "François Truffaut")], funcs
+print("✓ el (*) de 'Función gratuita' no queda pegado al director")
+
 print("\nTodo OK")
