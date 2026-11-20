@@ -1831,12 +1831,6 @@
     "titulo": "Amorina: la columna Ciclo trae el tipo de actividad («Cine») (1 caso, 10 funciones). No es un ciclo: va vacío. Por…",
     "efimero": false
    },
-   "categorias/ba/ciclo-escrito-distinto/-": {
-    "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "Un mismo ciclo escrito de dos maneras (1 caso) en Sala Lúcida. La búsqueda por ciclo los separa: unificar…",
-    "efimero": false
-   },
    "categorias/ba/ciclo-igual-al-titulo/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -1849,12 +1843,6 @@
     "titulo": "Ciclos con la puntuación rota (2 casos, 4 funciones) en CCK, Sala Lúcida. Arreglar la escritura en el…",
     "efimero": false
    },
-   "categorias/ba/director-con-numeros/-": {
-    "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "Directores con años o duraciones adentro (2 casos) en Sala Lúcida (2). El scraper leyó la ficha entera.…",
-    "efimero": false
-   },
    "categorias/ba/director-relleno/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -1865,12 +1853,6 @@
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Centro Cultural 25 de Mayo: el título trae al director pegado (2 casos). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
-    "efimero": false
-   },
-   "categorias/ba/titulo-con-director/MALBA": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "MALBA: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
     "efimero": false
    },
    "categorias/ba/titulo-con-etiqueta/-": {
@@ -1889,6 +1871,12 @@
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Amorina: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por…",
+    "efimero": false
+   },
+   "categorias/ba/titulo-parece-ciclo/Cine Gaumont": {
+    "desde": "2026-11-20",
+    "sev": "ERROR",
+    "titulo": "Cine Gaumont: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso, 7…",
     "efimero": false
    },
    "categorias/madrid/director-con-de/-": {
@@ -1939,10 +1927,10 @@
     "titulo": "Sala Equis: el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
     "efimero": false
    },
-   "categorias/madrid/titulo-con-director/Cine Estudio": {
-    "desde": "2026-11-19",
+   "categorias/madrid/titulo-con-director/Artistic Metropol": {
+    "desde": "2026-11-20",
     "sev": "ERROR",
-    "titulo": "Cine Estudio: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
+    "titulo": "Artistic Metropol: el título trae al director pegado (1 caso, 4 funciones). El scraper tiene que partirlo: sin eso no…",
     "efimero": false
    },
    "categorias/madrid/titulo-con-etiqueta/-": {
@@ -1985,12 +1973,6 @@
     "desde": "2026-11-16",
     "sev": "AVISO",
     "titulo": "Infinito Super 8: 8 programas sin lista de películas («Rescates: sesión 1», «Competencia Internacional»,…",
-    "efimero": false
-   },
-   "festivales/-/suelto/Semana del 41° Festival Internacional MDQ en Gaumont": {
-    "desde": "2026-11-19",
-    "sev": "AVISO",
-    "titulo": "Semana del 41° Festival Internacional MDQ en Gaumont (7 funciones en Cine Gaumont) aparece en la pestaña…",
     "efimero": false
    },
    "festivales/-/web-cambio/FIDBA": {
@@ -2089,16 +2071,16 @@
     "titulo": "Cine Lorca está por debajo de lo habitual: 11 funciones de 6 películas, contra ~42 de siempre.",
     "efimero": false
    },
-   "fuentes/ba/fuente-inestable/Casa del Bicentenario": {
-    "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "Casa del Bicentenario: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.",
-    "efimero": false
-   },
    "fuentes/ba/scraper-avisa/Casa del Bicentenario": {
     "desde": "2026-11-16",
     "sev": "AVISO",
     "titulo": "Casa del Bicentenario publica 9 funciones, pero su scraper avisa: el listado no contesta (HTTP Error 403:…",
+    "efimero": false
+   },
+   "fuentes/ba/sin-funciones/Biblioteca Nacional": {
+    "desde": "2026-11-20",
+    "sev": "ERROR",
+    "titulo": "Biblioteca Nacional: lleva 1 día sin ninguna función (traía ~1 por día), pero la fuente publica 2 ítems en la listing. El…",
     "efimero": false
    },
    "fuentes/ba/sin-funciones/Centro Cultural de la Cooperación": {
@@ -2115,12 +2097,26 @@
    }
   },
   "cerrados": {
+   "categorias/ba/ciclo-escrito-distinto/-": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Un mismo ciclo escrito de dos maneras (1 caso) en Sala Lúcida. La búsqueda por ciclo los separa: unificar…",
+    "efimero": false,
+    "cerrado": "2026-11-20"
+   },
    "categorias/ba/ciclo-gritado/Sala Lúcida": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Sala Lúcida: hay ciclos con palabras en mayúsculas (1 caso). Ningún ciclo va gritado: pasarlo por run._fix_caps. Por…",
     "efimero": false,
     "cerrado": "2026-11-17"
+   },
+   "categorias/ba/director-con-numeros/-": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Directores con años o duraciones adentro (2 casos) en Sala Lúcida (2). El scraper leyó la ficha entera.…",
+    "efimero": false,
+    "cerrado": "2026-11-20"
    },
    "categorias/ba/titulo-con-ciclo/Centro Cultural Borges": {
     "desde": "2026-11-16",
@@ -2129,12 +2125,26 @@
     "efimero": false,
     "cerrado": "2026-11-16"
    },
+   "categorias/ba/titulo-con-director/MALBA": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "MALBA: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
+    "efimero": false,
+    "cerrado": "2026-11-20"
+   },
    "categorias/ba/titulo-parece-ciclo/Centro Cultural 25 de Mayo": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Centro Cultural 25 de Mayo: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso). Confirmar…",
     "efimero": false,
     "cerrado": "2026-11-16"
+   },
+   "categorias/madrid/titulo-con-director/Cine Estudio": {
+    "desde": "2026-11-19",
+    "sev": "ERROR",
+    "titulo": "Cine Estudio: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
+    "efimero": false,
+    "cerrado": "2026-11-20"
    },
    "festivales/-/radar-inminente/Buenos Aires Rojo Sangre": {
     "desde": "2026-11-16",
@@ -2164,6 +2174,13 @@
     "efimero": false,
     "cerrado": "2026-11-18"
    },
+   "festivales/-/suelto/Semana del 41° Festival Internacional MDQ en Gaumont": {
+    "desde": "2026-11-19",
+    "sev": "AVISO",
+    "titulo": "Semana del 41° Festival Internacional MDQ en Gaumont (7 funciones en Cine Gaumont) aparece en la pestaña…",
+    "efimero": false,
+    "cerrado": "2026-11-20"
+   },
    "fichas/ba/titulo-que-son-varias-peliculas/Filo Cine": {
     "desde": "2026-11-16",
     "sev": "ERROR",
@@ -2191,6 +2208,13 @@
     "titulo": "Cine Gaumont está por debajo de lo habitual: 24 funciones de 13 películas, contra ~62 de siempre.",
     "efimero": false,
     "cerrado": "2026-11-17"
+   },
+   "fuentes/ba/fuente-inestable/Casa del Bicentenario": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Casa del Bicentenario: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.",
+    "efimero": false,
+    "cerrado": "2026-11-20"
    },
    "fuentes/ba/horizonte/-": {
     "desde": "2026-11-17",
