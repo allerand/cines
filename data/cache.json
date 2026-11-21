@@ -15157,7 +15157,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Así es la vida (1939), Thus is Life (1930), That's life (1977)",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-21",
     "con_duracion": false,
     "desempate": ""
   },
@@ -27460,7 +27460,8 @@
     "year": 2026,
     "duration": 97,
     "genre": "Fantasía, Documental",
-    "original_title": "Uchronia"
+    "original_title": "Uchronia",
+    "clase_titulo": "exacto"
   },
   "barbara forever|2026": {
     "url": "https://letterboxd.com/film/barbara-forever/",
@@ -30776,7 +30777,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-21",
     "con_duracion": false,
     "desempate": ""
   },
@@ -31085,13 +31086,13 @@
     "genre": "Western, Romance"
   },
   "el juez del patíbulo|1972": {
-    "url": "",
-    "title_en": "El juez del patíbulo",
+    "url": "https://letterboxd.com/film/the-life-and-times-of-judge-roy-bean/",
+    "title_en": "The Life and Times of Judge Roy Bean",
     "director": "John Huston",
-    "country": "United States of America",
+    "country": "USA",
     "year": 1972,
     "duration": 120,
-    "genre": "Western, Comedia",
+    "genre": "Comedia, Western",
     "title_es": "El juez de la horca",
     "original_title": "The Life and Times of Judge Roy Bean"
   },
@@ -32271,7 +32272,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: The Apartment (2023), The Apartment (1960)",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-21",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33943,7 +33944,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Your Name. (2016), y puede ser otra",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-21",
     "con_duracion": false,
     "desempate": ""
   },
@@ -35981,7 +35982,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Long Weekend (1978)",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-21",
     "con_duracion": true,
     "desempate": ""
   },
@@ -36150,7 +36151,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The House by the Lake (1976)",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-21",
     "con_duracion": true,
     "desempate": ""
   },
@@ -36362,7 +36363,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: The House by the Lake (1976)",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-21",
     "con_duracion": true,
     "desempate": ""
   },
@@ -36530,7 +36531,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Long Weekend (1978)",
-    "fecha": "2026-11-17",
+    "fecha": "2026-11-21",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38606,5 +38607,88 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "los días posibles + la moto (2026)|2026": {
+    "url": "",
+    "title_en": "LOS DÍAS POSIBLES + LA MOTO (2026)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "revenke": {
+    "url": "https://letterboxd.com/film/revenke/",
+    "title_en": "Revenke",
+    "director": "Leandro Sánchez",
+    "country": "",
+    "year": 2025,
+    "duration": 83,
+    "genre": "Documental, Música",
+    "original_title": "Revenke"
+  },
+  "la muerte es algo que les sucede a los demás": {
+    "url": "https://letterboxd.com/film/la-muerte-es-algo-que-les-sucede-a-los-demas/",
+    "title_en": "Death Is Something That Happens to Others",
+    "director": "Ana García Blaya",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 72,
+    "genre": "Documental",
+    "original_title": "La muerte es algo que les sucede a los demás"
+  },
+  "voces de posguerra|2026": {
+    "url": "",
+    "title_en": "Voces de Posguerra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "alemania madre pálida": {
+    "url": "https://letterboxd.com/film/deutschland-bleiche-mutter/",
+    "title_en": "Germany Pale Mother",
+    "director": "Helma Sanders-Brahms",
+    "country": "Germany",
+    "year": 1980,
+    "duration": 151,
+    "genre": "Drama",
+    "title_es": "Alemania madre pálida",
+    "original_title": "Deutschland bleiche Mutter"
+  },
+  "“alemania, madre pálida” es una de las películas más importantes de la historia del cine feminista. en efecto, el reconocimiento que obtuviera eva mattes en el festival de berlín dio reconocimiento internacional al “movimiento de las mujeres trabajadoras por el cine”, agrupación casi contemporánea al llamado “nuevo cine alemán”, nacido de la impronta del manifiesto de oberhausen y que, sin embrago, poseía una muy marcada otra": {
+    "url": "",
+    "title_en": "“Alemania, madre pálida” es una de las películas más importantes de la historia del cine feminista. En efecto, el reconocimiento que obtuviera Eva Mattes en el Festival de Berlín dio reconocimiento internacional al “Movimiento de las Mujeres Trabajadoras por el Cine”, agrupación casi contemporánea al llamado “Nuevo Cine Alemán”, nacido de la impronta del Manifiesto de Oberhausen y que, sin embrago, poseía una muy marcada otra",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "vidrios": {
+    "url": "",
+    "title_en": "Vidrios",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "mrs green apple zenjin mito to in/mutable": {
+    "url": "",
+    "title_en": "Mrs Green Apple ZENJIN MITO TO IN/MUTABLE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "cuento de verano": {
+    "url": "https://letterboxd.com/film/a-summer-tale-2025/",
+    "title_en": "A Summer Tale",
+    "director": "Matías Szulanski",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 79,
+    "genre": "Comedia",
+    "clase_titulo": "exacto",
+    "original_title": "Cuento de verano",
+    "sin_hints": "el único estreno entre varias que se llaman así"
   }
 }
