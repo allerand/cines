@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T04:45:56",
+  "updated": "2026-11-21T12:38:12",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 12,
@@ -31,7 +31,8 @@
     },
     "CCK": {
       "scrapeadas": 0,
-      "publicadas": 9
+      "publicadas": 9,
+      "fuente_caida": "no se pudo leer palaciolibertad.gob.ar/cine/"
     },
     "CEA": {
       "scrapeadas": 3,
@@ -56,7 +57,8 @@
     },
     "Centro Cultural Borges": {
       "scrapeadas": 0,
-      "publicadas": 9
+      "publicadas": 9,
+      "fuente_caida": "la API no contesta; se publica el caché de la última corrida buena"
     },
     "Centro Cultural Munro": {
       "scrapeadas": 7,
@@ -167,8 +169,8 @@
       "publicadas": 20
     },
     "Multiplex Belgrano": {
-      "scrapeadas": 366,
-      "publicadas": 366
+      "scrapeadas": 370,
+      "publicadas": 370
     },
     "Multiplex Canning": {
       "scrapeadas": 310,
@@ -179,7 +181,7 @@
       "publicadas": 378
     },
     "Multiplex Pilar": {
-      "scrapeadas": 414,
+      "scrapeadas": 413,
       "publicadas": 424
     },
     "Museo del Cine": {
@@ -22542,22 +22544,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Multiplex Pilar",
-      "fecha": "2026-11-24",
-      "hora": "13:30",
-      "title_es": "Scrooge y los fantasmas de la Navidad",
-      "title_en": "Ebenezer",
-      "original_title": "Ebenezer",
-      "director": "Ti West",
-      "country": "Estados Unidos, Reino Unido",
-      "year": 2026,
-      "duration": 115,
-      "genre": "Comedia, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
-      "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
-      "ciclo": ""
-    },
-    {
       "cine": "Multiplex Belgrano",
       "fecha": "2026-11-24",
       "hora": "13:30",
@@ -22587,6 +22573,22 @@
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/wildwood-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/wildwood-el-bosque-salvaje/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Pilar",
+      "fecha": "2026-11-24",
+      "hora": "13:30",
+      "title_es": "Scrooge y los fantasmas de la Navidad",
+      "title_en": "Ebenezer",
+      "original_title": "Ebenezer",
+      "director": "Ti West",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 115,
+      "genre": "Comedia, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
       "ciclo": ""
     },
     {
@@ -39742,6 +39744,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-29",
+      "hora": "13:00",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-11-29",
       "hora": "13:00",
@@ -39995,6 +40013,22 @@
       "genre": "Comedia, Romance",
       "letterboxd": "https://letterboxd.com/film/focker-in-law/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-29",
+      "hora": "16:15",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
       "ciclo": ""
     },
     {
@@ -40460,6 +40494,22 @@
       "letterboxd": "https://letterboxd.com/film/wild-strawberries/",
       "ticket_url": "https://centroculturalborges.gob.ar/evento/627",
       "ciclo": "Ingmar Bergman: seis ensayos"
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-29",
+      "hora": "19:30",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
+      "ciclo": ""
     },
     {
       "cine": "Multiplex Lavalle",
@@ -40955,6 +41005,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-11-29",
+      "hora": "22:00",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
       "ciclo": ""
     },
     {

@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-21T04:45:56",
+  "updated": "2026-11-21T12:38:12",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 31,
@@ -31,8 +31,8 @@
       "publicadas": 85
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 76,
-      "publicadas": 76
+      "scrapeadas": 77,
+      "publicadas": 77
     },
     "Embajadores Glorieta": {
       "scrapeadas": 82,
@@ -13563,6 +13563,22 @@
       "genre": "Documental, Drama",
       "letterboxd": "https://letterboxd.com/film/la-carn/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/la-carn",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-05",
+      "hora": "12:00",
+      "title_es": "Laca y Palomitas: The Doom Generation",
+      "title_en": "Laca y Palomitas: The Doom Generation",
+      "original_title": "",
+      "director": "Gregg Araki",
+      "country": "",
+      "year": null,
+      "duration": 85,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/laca-y-palomitas-the-doom-generation-vose/20853/",
       "ciclo": ""
     },
     {
