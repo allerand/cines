@@ -1915,12 +1915,6 @@
     "titulo": "Golem Madrid: el título trae el ciclo pegado adelante (7 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
     "efimero": false
    },
-   "categorias/madrid/titulo-con-ciclo/Sala Equis": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Sala Equis: el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
-    "efimero": false
-   },
    "categorias/madrid/titulo-con-director/Artistic Metropol": {
     "desde": "2026-11-20",
     "sev": "ERROR",
@@ -1945,16 +1939,10 @@
     "titulo": "Títulos con un tramo en mayúsculas (3 casos, 6 funciones) en Artistic Metropol (3). Pasarlos por…",
     "efimero": false
    },
-   "categorias/madrid/titulo-no-es-pelicula/Cines Ideal": {
+   "categorias/madrid/titulo-parece-ciclo/Sala Equis": {
     "desde": "2026-11-16",
     "sev": "ERROR",
-    "titulo": "Cines Ideal: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por…",
-    "efimero": false
-   },
-   "categorias/madrid/titulo-no-es-pelicula/Cineteca Madrid": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Cineteca Madrid: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por…",
+    "titulo": "Sala Equis: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (3 casos). Confirmar…",
     "efimero": false
    },
    "festivales/-/sin-lista/Buenos Aires Rojo Sangre": {
@@ -1969,16 +1957,10 @@
     "titulo": "Infinito Super 8: 8 programas sin lista de películas («Rescates: sesión 1», «Competencia Internacional»,…",
     "efimero": false
    },
-   "festivales/-/web-cambio/Bazofi": {
-    "desde": "2026-11-21",
-    "sev": "ERROR",
-    "titulo": "Bazofi: su web cambió desde el 20/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy abierto de 12:00 a 20:00».…",
-    "efimero": true
-   },
    "festivales/-/web-cambio/FIDBA": {
     "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "FIDBA: su web cambió desde el 17/11: 1 que ya no está. Revisar la grilla contra lo cargado:…",
+    "sev": "ERROR",
+    "titulo": "FIDBA: su web cambió desde el 17/11: 2 líneas nuevas y 3 que ya no están. Lo nuevo: «22/11 17:30hs Sala Lúcida»;…",
     "efimero": true
    },
    "festivales/-/web-cambio/Infinito Super 8": {
@@ -2134,6 +2116,13 @@
     "efimero": false,
     "cerrado": "2026-11-16"
    },
+   "categorias/madrid/titulo-con-ciclo/Sala Equis": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Sala Equis: el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
+    "efimero": false,
+    "cerrado": "2026-11-22"
+   },
    "categorias/madrid/titulo-con-director/Cine Estudio": {
     "desde": "2026-11-19",
     "sev": "ERROR",
@@ -2141,12 +2130,19 @@
     "efimero": false,
     "cerrado": "2026-11-20"
    },
-   "categorias/madrid/titulo-parece-ciclo/Sala Equis": {
+   "categorias/madrid/titulo-no-es-pelicula/Cines Ideal": {
     "desde": "2026-11-16",
     "sev": "ERROR",
-    "titulo": "Sala Equis: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (4 casos). Confirmar…",
+    "titulo": "Cines Ideal: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por…",
     "efimero": false,
-    "cerrado": "2026-11-21"
+    "cerrado": "2026-11-22"
+   },
+   "categorias/madrid/titulo-no-es-pelicula/Cineteca Madrid": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Cineteca Madrid: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por…",
+    "efimero": false,
+    "cerrado": "2026-11-22"
    },
    "festivales/-/radar-inminente/Buenos Aires Rojo Sangre": {
     "desde": "2026-11-16",
@@ -2182,6 +2178,13 @@
     "titulo": "Semana del 41° Festival Internacional MDQ en Gaumont (7 funciones en Cine Gaumont) aparece en la pestaña…",
     "efimero": false,
     "cerrado": "2026-11-20"
+   },
+   "festivales/-/web-cambio/Bazofi": {
+    "desde": "2026-11-21",
+    "sev": "ERROR",
+    "titulo": "Bazofi: su web cambió desde el 20/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy abierto de 12:00 a 20:00».…",
+    "efimero": true,
+    "cerrado": "2026-11-22"
    },
    "fichas/ba/titulo-que-son-varias-peliculas/Filo Cine": {
     "desde": "2026-11-16",
