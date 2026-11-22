@@ -32841,7 +32841,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-18",
+    "fecha": "2026-11-22",
     "con_duracion": false,
     "desempate": ""
   },
@@ -37485,14 +37485,16 @@
     "original_title": "Bailar la muerte"
   },
   "el director": {
-    "url": "https://letterboxd.com/film/el-director-2026/",
+    "url": "https://letterboxd.com/film/el-director/",
     "title_en": "El Director",
-    "director": "Dani de la Orden",
-    "country": "Spain",
-    "year": 2026,
-    "duration": 113,
-    "genre": "Drama",
-    "original_title": "El Director"
+    "director": "León Alvarado Guerrero, Huerta Carlos Reyes",
+    "country": "Mexico",
+    "year": 2020,
+    "duration": null,
+    "genre": "Thriller, Terror",
+    "clase_titulo": "exacto",
+    "original_title": "El Director",
+    "sin_hints": "título"
   },
   "viva": {
     "url": "https://letterboxd.com/film/viva-2026/",
@@ -37682,7 +37684,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-18",
+    "fecha": "2026-11-22",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38698,5 +38700,182 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "sexo y revolución": {
+    "url": "https://letterboxd.com/film/sexo-y-revolucion/",
+    "title_en": "Sex and Revolution",
+    "director": "Ernesto Ardito",
+    "country": "Argentina",
+    "year": 2021,
+    "duration": 103,
+    "genre": "Documental",
+    "original_title": "Sexo y revolución"
+  },
+  "bichos del mar": {
+    "url": "https://letterboxd.com/film/bichos-del-mar/",
+    "title_en": "Bichos del mar",
+    "director": "Tatiana Lichtensztein, Francisco Bendomir",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 81,
+    "genre": "Historia, Acción",
+    "original_title": "Bichos del mar"
+  },
+  "mia": {
+    "url": "https://letterboxd.com/film/mia/",
+    "title_en": "Mía",
+    "director": "Javier van de Couter",
+    "country": "Argentina",
+    "year": 2011,
+    "duration": 106,
+    "genre": "Drama, Comedia"
+  },
+  "bts world tour 'arirang' in kaohsiung: live viewing": {
+    "url": "https://letterboxd.com/film/bts-world-tour-arirang-in-kaohsiung-live/",
+    "title_en": "BTS WORLD TOUR 'ARIRANG' IN KAOHSIUNG: LIVE VIEWING",
+    "director": "Ha Jung-jae",
+    "country": "",
+    "year": 2026,
+    "duration": 195,
+    "genre": "Música",
+    "clase_titulo": "exacto",
+    "original_title": "BTS WORLD TOUR 'ARIRANG' IN KAOHSIUNG: LIVE VIEWING",
+    "sin_hints": "título"
+  },
+  "dune (1984) - reestreno": {
+    "url": "",
+    "title_en": "Dune (1984) - Reestreno",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "scrooge y los fantasmas de la navidad": {
+    "url": "https://letterboxd.com/film/ebenezer-2026/",
+    "title_en": "Ebenezer",
+    "director": "Ti West",
+    "country": "USA, UK",
+    "year": 2026,
+    "duration": 115,
+    "genre": "Comedia, Fantasía",
+    "title_es": "Scrooge y los fantasmas de la Navidad",
+    "original_title": "Ebenezer"
+  },
+  "tesis": {
+    "url": "",
+    "title_en": "Tesis",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 119 min: Thesis (1996, 125 min)",
+    "fecha": "2026-11-22",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "los anillos de poder": {
+    "url": "",
+    "title_en": "Los Anillos de Poder",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-22",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "the fifth step - national theatre 26-27": {
+    "url": "",
+    "title_en": "The Fifth Step - National Theatre 26-27",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; National Theatre Live: The Fifth Step (2025) sólo se le parece",
+    "fecha": "2026-11-22",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "buscando a lisette": {
+    "url": "",
+    "title_en": "Buscando a Lisette",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 90 min: Buscando a Lisette (2025, 65 min)",
+    "fecha": "2026-11-22",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "madoka magica": {
+    "url": "",
+    "title_en": "Madoka Magica",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-22",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "ahora los suegros son ellos": {
+    "url": "https://letterboxd.com/film/focker-in-law/",
+    "title_en": "Focker In-Law",
+    "director": "John Hamburg",
+    "country": "USA",
+    "year": 2026,
+    "duration": 105,
+    "genre": "Comedia, Romance",
+    "title_es": "Ahora los suegros son ellos",
+    "original_title": "Focker In-Law"
+  },
+  "dune": {
+    "url": "https://letterboxd.com/film/dune-part-three/",
+    "title_en": "Dune: Part Three",
+    "director": "Denis Villeneuve",
+    "country": "USA, United Arab Emirates",
+    "year": 2026,
+    "duration": 150,
+    "genre": "Ciencia ficción, Aventura",
+    "title_es": "Dune: Parte dos",
+    "original_title": "Dune: Part Two"
+  },
+  "dune: parte dos": {
+    "url": "https://letterboxd.com/film/dune-part-two/",
+    "title_en": "Dune: Part Two",
+    "director": "Denis Villeneuve",
+    "country": "USA",
+    "year": 2024,
+    "duration": 167,
+    "genre": "Aventura, Ciencia ficción",
+    "title_es": "Dune: Parte dos",
+    "original_title": "Dune: Part Two"
+  },
+  "bts world tour arirang in jakarta: live viewing": {
+    "url": "",
+    "title_en": "BTS WORLD TOUR ARIRANG IN JAKARTA: LIVE VIEWING",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 180 min: BTS WORLD TOUR 'ARIRANG' IN JAKARTA: LIVE VIEWING (2026, 195 min)",
+    "fecha": "2026-11-22",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "hamlet - national theatre 26-27": {
+    "url": "",
+    "title_en": "Hamlet - National Theatre 26-27",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 180 min: National Theatre Live: Hamlet (2015, 217 min), National Theatre Live: Hamlet (2026, 160 min), National Theatre Live: Hamlet (2010, 210 min)",
+    "fecha": "2026-11-22",
+    "con_duracion": true,
+    "desempate": ""
   }
 }
