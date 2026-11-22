@@ -34607,12 +34607,14 @@
     "original_title": "Hombres Perdidos"
   },
   "partes de mí|2026": {
-    "url": "",
+    "url": "https://letterboxd.com/film/partes-de-mi/",
     "title_en": "Partes de mí",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "director": "Wen Saldaña",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 25,
+    "genre": "Drama, Documental",
+    "original_title": "Partes de mí"
   },
   "amilcar|2026": {
     "url": "https://letterboxd.com/film/amilcar/",
@@ -37485,16 +37487,15 @@
     "original_title": "Bailar la muerte"
   },
   "el director": {
-    "url": "https://letterboxd.com/film/el-director/",
+    "url": "https://letterboxd.com/film/el-director-2026/",
     "title_en": "El Director",
-    "director": "León Alvarado Guerrero, Huerta Carlos Reyes",
-    "country": "Mexico",
-    "year": 2020,
-    "duration": null,
-    "genre": "Thriller, Terror",
-    "clase_titulo": "exacto",
-    "original_title": "El Director",
-    "sin_hints": "título"
+    "director": "Dani de la Orden",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 113,
+    "genre": "Drama",
+    "title_es": "El director",
+    "original_title": "El Director"
   },
   "viva": {
     "url": "https://letterboxd.com/film/viva-2026/",
@@ -37568,12 +37569,14 @@
     "original_title": "A berni követ"
   },
   "¡qué cojones es un hombre?": {
-    "url": "",
+    "url": "https://letterboxd.com/film/que-cojones-es-un-hombre/",
     "title_en": "¡Qué cojones es un hombre?",
-    "director": "",
+    "director": "Nacho Rubio",
     "country": "",
     "year": null,
-    "duration": null
+    "duration": 85,
+    "genre": "Documental",
+    "original_title": "¡Qué cojones es un hombre?"
   },
   "dune|1984": {
     "url": "https://letterboxd.com/film/dune/",
