@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T04:12:20",
+  "updated": "2026-11-23T14:16:23",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 10,
@@ -27,7 +27,8 @@
     },
     "CCK": {
       "scrapeadas": 0,
-      "publicadas": 5
+      "publicadas": 5,
+      "fuente_caida": "no se pudo leer palaciolibertad.gob.ar/cine/"
     },
     "CEA": {
       "scrapeadas": 1,
@@ -52,7 +53,8 @@
     },
     "Centro Cultural Borges": {
       "scrapeadas": 0,
-      "publicadas": 5
+      "publicadas": 5,
+      "fuente_caida": "la API no contesta; se publica el caché de la última corrida buena"
     },
     "Centro Cultural Munro": {
       "scrapeadas": 4,
@@ -123,8 +125,8 @@
       "publicadas": 16
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 43,
-      "publicadas": 43
+      "scrapeadas": 44,
+      "publicadas": 44
     },
     "Club Lucero": {
       "scrapeadas": 6,
@@ -159,12 +161,12 @@
       "publicadas": 1
     },
     "MALBA": {
-      "scrapeadas": 14,
-      "publicadas": 14
+      "scrapeadas": 15,
+      "publicadas": 15
     },
     "Multiplex Belgrano": {
-      "scrapeadas": 282,
-      "publicadas": 282
+      "scrapeadas": 286,
+      "publicadas": 286
     },
     "Multiplex Canning": {
       "scrapeadas": 258,
@@ -220,6 +222,22 @@
     {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-23",
+      "hora": "00:50",
+      "title_es": "Los juegos del hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-23",
       "hora": "01:00",
       "title_es": "Scrooge y los fantasmas de la Navidad",
       "title_en": "Ebenezer",
@@ -246,22 +264,6 @@
       "duration": 158,
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-23",
-      "hora": "11:50",
-      "title_es": "Your Name",
-      "title_en": "Your Name",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -1802,6 +1804,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-23",
+      "hora": "14:40",
+      "title_es": "Your Name",
+      "title_en": "Your Name",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cinemark Puerto Madero",
       "fecha": "2026-11-23",
       "hora": "14:45",
@@ -2762,6 +2780,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-23",
+      "hora": "16:00",
+      "title_es": "Minotauro",
+      "title_en": "Minotaur",
+      "original_title": "",
+      "director": "Andrey Zvyagintsev",
+      "country": "Francia, Latvia",
+      "year": 2026,
+      "duration": 142,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-23",
       "hora": "16:00",
@@ -3501,22 +3535,6 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-23",
       "hora": "17:00",
-      "title_es": "Your Name",
-      "title_en": "Your Name",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-23",
-      "hora": "17:00",
       "title_es": "Caballo salvaje nueve",
       "title_en": "Wild Horse Nine",
       "original_title": "Wild Horse Nine",
@@ -3645,15 +3663,15 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-23",
       "hora": "17:10",
-      "title_es": "Minotauro",
-      "title_en": "Minotaur",
+      "title_es": "Your Name",
+      "title_en": "Your Name",
       "original_title": "",
-      "director": "Andrey Zvyagintsev",
-      "country": "Francia, Latvia",
-      "year": 2026,
-      "duration": 142,
-      "genre": "Crimen, Thriller",
-      "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -5725,6 +5743,22 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-23",
       "hora": "19:45",
+      "title_es": "Your Name",
+      "title_en": "Your Name",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-23",
+      "hora": "19:45",
       "title_es": "Caballo salvaje nueve",
       "title_en": "Wild Horse Nine",
       "original_title": "Wild Horse Nine",
@@ -6231,22 +6265,6 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-23",
-      "hora": "20:10",
-      "title_es": "Your Name",
-      "title_en": "Your Name",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7386,6 +7404,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-23",
+      "hora": "22:15",
+      "title_es": "Minotauro",
+      "title_en": "Minotaur",
+      "original_title": "",
+      "director": "Andrey Zvyagintsev",
+      "country": "Francia, Latvia",
+      "year": 2026,
+      "duration": 142,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-23",
       "hora": "22:15",
@@ -7963,22 +7997,6 @@
     },
     {
       "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-23",
-      "hora": "22:40",
-      "title_es": "Minotauro",
-      "title_en": "Minotaur",
-      "original_title": "",
-      "director": "Andrey Zvyagintsev",
-      "country": "Francia, Latvia",
-      "year": 2026,
-      "duration": 142,
-      "genre": "Crimen, Thriller",
-      "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-23",
       "hora": "22:40",
       "title_es": "Minotauro",
@@ -24317,6 +24335,22 @@
       "cine": "MALBA",
       "fecha": "2026-11-27",
       "hora": "20:30",
+      "title_es": "Orar Orbil & viceversa",
+      "title_en": "Orar Orbil & viceversa",
+      "original_title": "",
+      "director": "Diego Trerotola",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://malba.org.ar/evento/orar-orbil-viceversa/",
+      "ciclo": "Bazofi"
+    },
+    {
+      "cine": "MALBA",
+      "fecha": "2026-11-27",
+      "hora": "20:30",
       "title_es": "Machado",
       "title_en": "Machado",
       "original_title": "Machado",
@@ -28698,6 +28732,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-12-01",
+      "hora": "13:00",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
+      "ciclo": ""
+    },
+    {
       "cine": "Multiplex Lavalle",
       "fecha": "2026-12-01",
       "hora": "13:00",
@@ -28839,6 +28889,22 @@
       "genre": "Comedia, Romance",
       "letterboxd": "https://letterboxd.com/film/focker-in-law/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-12-01",
+      "hora": "16:15",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
       "ciclo": ""
     },
     {
@@ -29031,6 +29097,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6426",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-12-01",
+      "hora": "19:30",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
       "ciclo": ""
     },
     {
@@ -29271,6 +29353,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
       "ticket_url": "https://www.cinemark.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Multiplex Belgrano",
+      "fecha": "2026-12-01",
+      "hora": "22:00",
+      "title_es": "Puedes verlo todo",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Nathan Fielder, Lance Oppenheim",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://multiplex.com.ar/peliculas/puedes-verlo-todo/",
       "ciclo": ""
     },
     {
