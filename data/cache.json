@@ -31964,7 +31964,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: The Omen (1976, 111 min)",
-    "fecha": "2026-11-19",
+    "fecha": "2026-11-23",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38525,7 +38525,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así: Salta Conmigo (None); Stand by Me (1986) sólo se le parece",
-    "fecha": "2026-11-19",
+    "fecha": "2026-11-23",
     "con_duracion": false,
     "desempate": ""
   },
@@ -38880,5 +38880,33 @@
     "fecha": "2026-11-22",
     "con_duracion": true,
     "desempate": ""
+  },
+  "the others / los otros|2001": {
+    "url": "https://letterboxd.com/film/the-others/",
+    "title_en": "The Others",
+    "director": "Alejandro Amenábar",
+    "country": "Spain, USA",
+    "year": 2001,
+    "duration": 101,
+    "genre": "Thriller, Misterio",
+    "title_es": "Los otros",
+    "original_title": "The Others"
+  },
+  "artacho jurado, sinfonia de un arquitecto": {
+    "url": "https://letterboxd.com/film/artacho-jurado-sinfonia-de-um-arquiteto/",
+    "title_en": "Artacho Jurado: Sinfonia de um Arquiteto",
+    "director": "Teresa Eça, Pedro Gorski",
+    "country": "Brazil",
+    "year": 2026,
+    "duration": 81,
+    "genre": "Documental"
+  },
+  "la ricarda, melodia de una casa": {
+    "url": "",
+    "title_en": "LA RICARDA, MELODIA DE UNA CASA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
