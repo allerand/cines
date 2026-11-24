@@ -22172,12 +22172,10 @@
   "la casa": {
     "url": "",
     "title_en": "LA CASA",
-    "director": "Gustavo Triviño",
-    "country": "Argentina",
-    "year": 2026,
-    "duration": 95,
-    "genre": "Drama",
-    "original_title": "La casa"
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   },
   "ficuba": {
     "url": "",
@@ -27734,7 +27732,8 @@
     "duration": 103,
     "genre": "Familiar, Comedia",
     "title_es": "Solo en casa",
-    "original_title": "Home Alone"
+    "original_title": "Home Alone",
+    "clase_titulo": "exacto"
   },
   "tove|2020": {
     "url": "https://letterboxd.com/film/tove/",
@@ -34059,15 +34058,17 @@
     "genre": "Drama"
   },
   "hechizo: bienvenidos a hexe": {
-    "url": "",
-    "title_en": "Hechizo: Bienvenidos a Hexe",
+    "url": "https://letterboxd.com/film/hexed-2026/",
+    "title_en": "Hexed",
     "director": "Jason Hand, Fawn Veerasunthorn",
-    "country": "United States of America",
+    "country": "USA",
     "year": 2026,
     "duration": 103,
-    "genre": "Aventura, Animación",
+    "genre": "Familiar, Animación",
+    "clase_titulo": "exacto",
     "title_es": "Hechizo: Bienvenidos a Hexe",
-    "original_title": "Hexed"
+    "original_title": "Hexed",
+    "sin_hints": "título"
   },
   "queercinemad: camp": {
     "url": "https://letterboxd.com/film/camp-2025/",
@@ -34934,7 +34935,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-24",
     "con_duracion": true,
     "desempate": ""
   },
@@ -35056,7 +35057,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-20",
+    "fecha": "2026-11-24",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38722,7 +38723,9 @@
     "year": 2026,
     "duration": 81,
     "genre": "Historia, Acción",
-    "original_title": "Bichos del mar"
+    "clase_titulo": "exacto",
+    "original_title": "Bichos del mar",
+    "sin_hints": "título"
   },
   "mia": {
     "url": "https://letterboxd.com/film/mia/",
@@ -38904,6 +38907,182 @@
   "la ricarda, melodia de una casa": {
     "url": "",
     "title_en": "LA RICARDA, MELODIA DE UNA CASA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "kotodama, el camino del espejo": {
+    "url": "https://letterboxd.com/film/kotodama-el-camino-del-espejo/",
+    "title_en": "Kotodama, The Way of the Mirror",
+    "director": "Eugenio Tardón, Carla Cañellas",
+    "country": "",
+    "year": null,
+    "duration": 76,
+    "genre": "",
+    "original_title": "Kotodama, el Camino del Espejo"
+  },
+  "primavera": {
+    "url": "https://letterboxd.com/film/primavera-2025/",
+    "title_en": "Primavera",
+    "director": "Damiano Michieletto",
+    "country": "France, Italy",
+    "year": 2025,
+    "duration": 111,
+    "genre": "Música, Historia",
+    "title_es": "Primavera",
+    "original_title": "Primavera"
+  },
+  "música en la oscuridad: 22, a million": {
+    "url": "",
+    "title_en": "Música en la oscuridad: 22, A million",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "ninguna película se llama así",
+    "fecha": "2026-11-24",
+    "con_duracion": true,
+    "desempate": ""
+  },
+  "el pezón de elena|2026": {
+    "url": "https://letterboxd.com/film/el-pezon-de-elena/",
+    "title_en": "El pezón de Elena",
+    "director": "Esteban Magaz",
+    "country": "",
+    "year": 2026,
+    "duration": 80,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "original_title": "El pezón de Elena"
+  },
+  "kotodama|2026": {
+    "url": "https://letterboxd.com/film/motherfckers/",
+    "title_en": "Motherf*ckers",
+    "director": "Max Del Río",
+    "country": "Mexico",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Comedia, Drama",
+    "clase_titulo": "distinto"
+  },
+  "gestación": {
+    "url": "",
+    "title_en": "GESTACIÓN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Gestation (2009), y puede ser otra",
+    "fecha": "2026-11-24",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "cadiz madrid|2026": {
+    "url": "",
+    "title_en": "CADIZ MADRID",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "rose v.o.s.e. sesión teta|2026": {
+    "url": "",
+    "title_en": "ROSE V.O.S.E. Sesión Teta",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "telma, el cine y el soldado|2022": {
+    "url": "https://letterboxd.com/film/telma-el-cine-y-el-soldado/",
+    "title_en": "Telma, The Cinema & The Soldier",
+    "director": "Brenda Taubin",
+    "country": "Argentina",
+    "year": 2022,
+    "duration": 79,
+    "genre": "Documental",
+    "original_title": "Telma, el cine y el soldado"
+  },
+  "el exilio de gardel|1986": {
+    "url": "https://letterboxd.com/film/tangos-the-exile-of-gardel/",
+    "title_en": "Tangos, the Exile of Gardel",
+    "director": "Fernando E. Solanas",
+    "country": "Argentina, France",
+    "year": 1985,
+    "duration": 119,
+    "genre": "Drama, Música",
+    "original_title": "El exilio de Gardel: Tangos"
+  },
+  "el exorcista (the exorcist)|1973": {
+    "url": "https://letterboxd.com/film/the-exorcist/",
+    "title_en": "The Exorcist",
+    "director": "William Friedkin",
+    "country": "USA",
+    "year": 1973,
+    "duration": 122,
+    "genre": "Terror",
+    "title_es": "El exorcista",
+    "original_title": "The Exorcist"
+  },
+  "el heroe de berlin": {
+    "url": "",
+    "title_en": "El Heroe De Berlin",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es Race (2016), y puede ser otra",
+    "fecha": "2026-11-24",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "ramayana: el nacimiento de una leyenda": {
+    "url": "https://letterboxd.com/film/ramayana-rise-of-a-legend/",
+    "title_en": "Ramayana: Rise of a Legend",
+    "director": "Nitesh Tiwari",
+    "country": "India, UK",
+    "year": 2026,
+    "duration": 195,
+    "genre": "Acción, Aventura",
+    "clase_titulo": "exacto",
+    "title_es": "Ramayana: El Nacimiento de una Leyenda",
+    "original_title": "रामायणम्",
+    "sin_hints": "título"
+  },
+  "love actually|2003": {
+    "url": "https://letterboxd.com/film/love-actually/",
+    "title_en": "Love Actually",
+    "director": "Richard Curtis",
+    "country": "France, UK",
+    "year": 2003,
+    "duration": 135,
+    "genre": "Romance, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "Realmente amor",
+    "original_title": "Love Actually"
+  },
+  "winnipeg, el barco de la esperanza": {
+    "url": "https://letterboxd.com/film/winnipeg-seeds-of-hope/",
+    "title_en": "Winnipeg, Seeds of Hope",
+    "director": "Elio Quiroga, Beñat Beitia",
+    "country": "Chile, France",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Drama, Historia",
+    "original_title": "Winnipeg, El Barco de la Esperanza"
+  },
+  "maurice y yo / maurice and i": {
+    "url": "",
+    "title_en": "Maurice y yo / Maurice and I",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la realidad te espera: un documental argentino sobre los strokes": {
+    "url": "",
+    "title_en": "La realidad te espera: un documental argentino sobre Los Strokes",
     "director": "",
     "country": "",
     "year": null,
