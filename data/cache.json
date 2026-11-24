@@ -30230,8 +30230,8 @@
     "original_title": "陸軍"
   },
   "la belle marinière|1932": {
-    "url": "",
-    "title_en": "La belle marinière",
+    "url": "https://letterboxd.com/film/la-belle-mariniere/",
+    "title_en": "The Beautiful Sailor",
     "director": "Harry Lachman",
     "country": "France",
     "year": 1932,
@@ -39083,6 +39083,76 @@
   "la realidad te espera: un documental argentino sobre los strokes": {
     "url": "",
     "title_en": "La realidad te espera: un documental argentino sobre Los Strokes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "gazelle": {
+    "url": "https://letterboxd.com/film/gazelle-2025/",
+    "title_en": "Gazelle",
+    "director": "Nadir Sarıbacak, Samy Pioneer",
+    "country": "USA",
+    "year": 2025,
+    "duration": 100,
+    "genre": "Drama",
+    "original_title": "Gazelle"
+  },
+  "ruega por nosotras (sps)": {
+    "url": "https://letterboxd.com/film/ruega-por-nosotras/",
+    "title_en": "Pray for Us",
+    "director": "Daniel Monzón",
+    "country": "Spain, France",
+    "year": 2026,
+    "duration": 136,
+    "genre": "Drama",
+    "original_title": "Ruega por nosotras"
+  },
+  "la gran fiesta del cine": {
+    "url": "https://letterboxd.com/film/la-gran-fiesta-del-cine/",
+    "title_en": "La gran fiesta del cine",
+    "director": "Toni Agustí, María Sánchez Torregrosa",
+    "country": "",
+    "year": 2026,
+    "duration": null,
+    "genre": "Comedia",
+    "original_title": "La gran fiesta del cine"
+  },
+  "para vivir: el implacable tiempo de pablo milanés": {
+    "url": "https://letterboxd.com/film/para-vivir-the-implacable-times-of-pablo/",
+    "title_en": "PARA VIVIR: The Implacable Times of Pablo Milanés",
+    "director": "Fabien Pisani",
+    "country": "Mexico, Spain",
+    "year": 2025,
+    "duration": 106,
+    "genre": "Música, Documental",
+    "original_title": "Para vivir. El implacable tiempo de Pablo Milanés"
+  },
+  "pride (orgullo)": {
+    "url": "",
+    "title_en": "Pride (Orgullo)",
+    "director": "Matthew Warchus",
+    "country": "France, United Kingdom",
+    "year": 2014,
+    "duration": 120,
+    "genre": "Drama, Comedia",
+    "title_es": "Pride (Orgullo)",
+    "original_title": "Pride"
+  },
+  "recen por m��: la historia de francisco": {
+    "url": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
+    "title_en": "Pray for me: Pope Francis' story",
+    "director": "Facundo Bartucci",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 110,
+    "genre": "Documental",
+    "clase_titulo": "distinto",
+    "sin_hints": "título local de un estreno"
+  },
+  "encuentro con el buda (meeting the buddha) de marta györgy-kessler|2025": {
+    "url": "",
+    "title_en": "Encuentro con el Buda (Meeting the Buddha) de Marta György-Kessler",
     "director": "",
     "country": "",
     "year": null,

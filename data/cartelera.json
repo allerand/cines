@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24T07:28:19",
+  "updated": "2026-11-24T14:49:34",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 10,
@@ -27,7 +27,8 @@
     },
     "CCK": {
       "scrapeadas": 0,
-      "publicadas": 5
+      "publicadas": 5,
+      "fuente_caida": "no se pudo leer palaciolibertad.gob.ar/cine/"
     },
     "CEA": {
       "scrapeadas": 4,
@@ -52,7 +53,8 @@
     },
     "Centro Cultural Borges": {
       "scrapeadas": 0,
-      "publicadas": 5
+      "publicadas": 5,
+      "fuente_caida": "la API no contesta; se publica el caché de la última corrida buena"
     },
     "Centro Cultural Munro": {
       "scrapeadas": 4,
@@ -123,8 +125,8 @@
       "publicadas": 15
     },
     "Cinépolis Recoleta": {
-      "scrapeadas": 41,
-      "publicadas": 41
+      "scrapeadas": 39,
+      "publicadas": 40
     },
     "Club Lucero": {
       "scrapeadas": 6,
@@ -204,22 +206,6 @@
     {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-24",
-      "hora": "00:45",
-      "title_es": "Yo soy Rocky",
-      "title_en": "I Play Rocky",
-      "original_title": "I Play Rocky",
-      "director": "Peter Farrelly",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 127,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-24",
       "hora": "11:50",
       "title_es": "Los juegos del hambre: Amanecer en la cosecha",
       "title_en": "The Hunger Games: Sunrise on the Reaping",
@@ -230,22 +216,6 @@
       "duration": 158,
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-24",
-      "hora": "11:50",
-      "title_es": "Your Name",
-      "title_en": "Your Name",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -1751,6 +1721,22 @@
       "genre": "Animación, Fantasía",
       "letterboxd": "https://letterboxd.com/film/wildwood-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/wildwood-el-bosque-salvaje/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-24",
+      "hora": "14:40",
+      "title_es": "Your Name",
+      "title_en": "Your Name",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3421,22 +3407,6 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-24",
       "hora": "17:00",
-      "title_es": "Scrooge y los fantasmas de la Navidad",
-      "title_en": "Ebenezer",
-      "original_title": "Ebenezer",
-      "director": "Ti West",
-      "country": "Estados Unidos, Reino Unido",
-      "year": 2026,
-      "duration": 115,
-      "genre": "Comedia, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-24",
-      "hora": "17:00",
       "title_es": "Caballo salvaje nueve",
       "title_en": "Wild Horse Nine",
       "original_title": "Wild Horse Nine",
@@ -3446,22 +3416,6 @@
       "duration": 118,
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-24",
-      "hora": "17:00",
-      "title_es": "Your Name",
-      "title_en": "Your Name",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -3479,6 +3433,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-24",
+      "hora": "17:00",
+      "title_es": "Scrooge y los fantasmas de la Navidad",
+      "title_en": "Ebenezer",
+      "original_title": "Ebenezer",
+      "director": "Ti West",
+      "country": "Estados Unidos, Reino Unido",
+      "year": 2026,
+      "duration": 115,
+      "genre": "Comedia, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3575,6 +3545,22 @@
       "genre": "Acción, Terror",
       "letterboxd": "https://letterboxd.com/film/godzilla-minus-zero/",
       "ticket_url": "https://multiplex.com.ar/peliculas/godzilla-minus-zero/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-24",
+      "hora": "17:10",
+      "title_es": "Your Name",
+      "title_en": "Your Name",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -5469,6 +5455,22 @@
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-24",
       "hora": "19:45",
+      "title_es": "Your Name",
+      "title_en": "Your Name",
+      "original_title": "",
+      "director": "",
+      "country": "",
+      "year": null,
+      "duration": null,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-24",
+      "hora": "19:45",
       "title_es": "Sentido y sensibilidad",
       "title_en": "Sense and Sensibility",
       "original_title": "Sense and Sensibility",
@@ -5959,22 +5961,6 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://multiplex.com.ar/peliculas/ebenezer-los-fantasmas-de-navidad/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-24",
-      "hora": "20:10",
-      "title_es": "Your Name",
-      "title_en": "Your Name",
-      "original_title": "",
-      "director": "",
-      "country": "",
-      "year": null,
-      "duration": null,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7562,6 +7548,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cinépolis Recoleta",
+      "fecha": "2026-11-24",
+      "hora": "22:30",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-24",
       "hora": "22:30",
@@ -7846,22 +7848,6 @@
       "duration": 158,
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cinépolis Recoleta",
-      "fecha": "2026-11-24",
-      "hora": "22:45",
-      "title_es": "Yo soy Rocky",
-      "title_en": "I Play Rocky",
-      "original_title": "I Play Rocky",
-      "director": "Peter Farrelly",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 127,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -39389,8 +39375,8 @@
       "cine": "Centro Cultural 25 de Mayo",
       "fecha": "2026-12-03",
       "hora": "19:00",
-      "title_es": "Encuentro con un Buda (Meeting the Buddha) de Marta György-Kessler",
-      "title_en": "Encuentro con un Buda (Meeting the Buddha) de Marta György-Kessler",
+      "title_es": "Encuentro con el Buda (Meeting the Buddha) de Marta György-Kessler",
+      "title_en": "Encuentro con el Buda (Meeting the Buddha) de Marta György-Kessler",
       "original_title": "",
       "director": "",
       "country": "Unido",
