@@ -2008,24 +2008,6 @@
     "titulo": "Festival Internacional de Cine de Arquitectura y Diseño de Buenos Aires (2 funciones en Sala Lúcida)…",
     "efimero": false
    },
-   "festivales/-/web-cambio/Bazofi": {
-    "desde": "2026-11-21",
-    "sev": "ERROR",
-    "titulo": "Bazofi: su web cambió desde el 20/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy abierto de 12:00 a 20:00».…",
-    "efimero": true
-   },
-   "festivales/-/web-cambio/Infinito Super 8": {
-    "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "Infinito Super 8: su web cambió desde el 17/11: 1 línea nueva. Lo nuevo: «DEL MÁS ALLÁ». Revisar la grilla…",
-    "efimero": true
-   },
-   "festivales/-/web-cambio/MASS": {
-    "desde": "2026-11-17",
-    "sev": "ERROR",
-    "titulo": "MASS: su web cambió desde el 16/11: 99 líneas nuevas y 1 que ya no está. Lo nuevo: «Lo mejor de los festivales…",
-    "efimero": true
-   },
    "festivales/-/web-no-abre/Festival de Cine Indígena BAIn": {
     "desde": "2026-11-18",
     "sev": "AVISO",
@@ -2298,10 +2280,31 @@
     "efimero": false,
     "cerrado": "2026-11-20"
    },
+   "festivales/-/web-cambio/Bazofi": {
+    "desde": "2026-11-21",
+    "sev": "ERROR",
+    "titulo": "Bazofi: su web cambió desde el 20/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy abierto de 12:00 a 20:00».…",
+    "efimero": true,
+    "cerrado": "2026-11-24"
+   },
    "festivales/-/web-cambio/FIDBA": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "FIDBA: su web cambió desde el 17/11: 2 líneas nuevas y 3 que ya no están. Lo nuevo: «22/11 17:30hs Sala Lúcida»;…",
+    "efimero": true,
+    "cerrado": "2026-11-24"
+   },
+   "festivales/-/web-cambio/Infinito Super 8": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Infinito Super 8: su web cambió desde el 17/11: 1 línea nueva. Lo nuevo: «DEL MÁS ALLÁ». Revisar la grilla…",
+    "efimero": true,
+    "cerrado": "2026-11-24"
+   },
+   "festivales/-/web-cambio/MASS": {
+    "desde": "2026-11-17",
+    "sev": "ERROR",
+    "titulo": "MASS: su web cambió desde el 16/11: 99 líneas nuevas y 1 que ya no está. Lo nuevo: «Lo mejor de los festivales…",
     "efimero": true,
     "cerrado": "2026-11-24"
    },
