@@ -1,54 +1,30 @@
 {
- "fecha": "2026-11-17",
- "generado": "2026-11-17T03:03:20",
- "veredicto": "🔴 Hay 22 cosas para mirar",
- "contexto": "Datos de hace 15 h. Buenos Aires: 39 salas y 3.934 funciones. Madrid: 11 salas y 372 funciones.",
+ "fecha": "2026-11-24",
+ "generado": "2026-11-24T00:15:26",
+ "veredicto": "🔴 Hay 18 cosas para mirar, 7 nuevas",
+ "contexto": "Datos de hace 10 h. Buenos Aires: 45 salas y 3.083 funciones. Madrid: 14 salas y 742 funciones.",
  "hallazgos": [
   {
-   "id": "fuentes/ba/floja/Cine Gaumont",
+   "id": "frescura/-/workflow-fallas/Post to Instagram",
    "sev": "AVISO",
-   "agente": "fuentes",
-   "ciudad": "ba",
-   "cine": "Cine Gaumont",
-   "regla": "floja",
-   "msg": "**Cine Gaumont** está por debajo de lo habitual: 24 funciones de 13 películas, contra ~62 de siempre.",
-   "desde": "2026-11-17",
+   "agente": "frescura",
+   "ciudad": "",
+   "cine": "Post to Instagram",
+   "regla": "workflow-fallas",
+   "msg": "**Post to Instagram** (workflow): fallaron 3 de 34 corridas de la semana, la última el 23/11.",
+   "desde": "2026-11-18",
    "nuevo": true,
    "ejemplos": []
   },
   {
-   "id": "fuentes/ba/scraper-avisa/Cine Cosmos",
-   "sev": "AVISO",
-   "agente": "fuentes",
-   "ciudad": "ba",
-   "cine": "Cine Cosmos",
-   "regla": "scraper-avisa",
-   "msg": "**Cine Cosmos** publica 16 funciones, pero su scraper avisa: cosmos.uba.ar no contesta (HTTP Error 503: Service Temporarily Unavailable); la cartelera sale de Instagram (@cinecosmos.uba).",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "fuentes/ba/de-cache/Centro Cultural Borges",
+   "id": "fuentes/ba/faltantes/Sala Lúcida",
    "sev": "ERROR",
    "agente": "fuentes",
    "ciudad": "ba",
-   "cine": "Centro Cultural Borges",
-   "regla": "de-cache",
-   "msg": "publica 14 funciones pero su fuente no contesta hace 3 días: la API no contesta; se publica el caché de la última corrida buena. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "fuentes/ba/de-cache/CCK",
-   "sev": "ERROR",
-   "agente": "fuentes",
-   "ciudad": "ba",
-   "cine": "CCK",
-   "regla": "de-cache",
-   "msg": "publica 9 funciones pero su fuente no contesta hace 3 días: no se pudo leer palaciolibertad.gob.ar/cine/. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.",
-   "desde": "2026-11-16",
+   "cine": "Sala Lúcida",
+   "regla": "faltantes",
+   "msg": "la fuente publica 22 ítems en la listing y nosotros tenemos 7 película(s). Puede estar faltando programación.",
+   "desde": "2026-11-24",
    "nuevo": true,
    "ejemplos": []
   },
@@ -59,20 +35,80 @@
    "ciudad": "ba",
    "cine": "Casa del Bicentenario",
    "regla": "scraper-avisa",
-   "msg": "**Casa del Bicentenario** publica 9 funciones, pero su scraper avisa: el listado no contesta (HTTP Error 403: Forbidden); sólo queda lo que haya en data/cb_manual.json.",
+   "msg": "**Casa del Bicentenario** publica 7 funciones, pero su scraper avisa: el listado no contesta (HTTP Error 403: Forbidden); sólo queda lo que haya en data/cb_manual.json.",
    "desde": "2026-11-16",
+   "nuevo": false,
+   "ejemplos": []
+  },
+  {
+   "id": "fuentes/ba/de-cache/CCK",
+   "sev": "ERROR",
+   "agente": "fuentes",
+   "ciudad": "ba",
+   "cine": "CCK",
+   "regla": "de-cache",
+   "msg": "publica 5 funciones pero su fuente no contesta hace 10 días: no se pudo leer palaciolibertad.gob.ar/cine/. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.",
+   "desde": "2026-11-16",
+   "nuevo": false,
+   "ejemplos": []
+  },
+  {
+   "id": "fuentes/ba/de-cache/Centro Cultural Borges",
+   "sev": "ERROR",
+   "agente": "fuentes",
+   "ciudad": "ba",
+   "cine": "Centro Cultural Borges",
+   "regla": "de-cache",
+   "msg": "publica 5 funciones pero su fuente no contesta hace 10 días: la API no contesta; se publica el caché de la última corrida buena. Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.",
+   "desde": "2026-11-16",
+   "nuevo": false,
+   "ejemplos": []
+  },
+  {
+   "id": "fuentes/ba/floja/Centro Cultural Borges",
+   "sev": "AVISO",
+   "agente": "fuentes",
+   "ciudad": "ba",
+   "cine": "Centro Cultural Borges",
+   "regla": "floja",
+   "msg": "**Centro Cultural Borges** está por debajo de lo habitual: 5 funciones de 5 películas, contra ~14 de siempre.",
+   "desde": "2026-11-24",
    "nuevo": true,
    "ejemplos": []
   },
   {
-   "id": "fuentes/ba/sin-funciones/CEA",
+   "id": "fuentes/ba/faltantes/Espacio INCAA Morón",
    "sev": "ERROR",
    "agente": "fuentes",
    "ciudad": "ba",
-   "cine": "CEA",
-   "regla": "sin-funciones",
-   "msg": "lleva 31 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
-   "desde": "2026-11-16",
+   "cine": "Espacio INCAA Morón",
+   "regla": "faltantes",
+   "msg": "la fuente publica 15 ítems en la listing y nosotros tenemos 5 película(s). Puede estar faltando programación.",
+   "desde": "2026-11-24",
+   "nuevo": true,
+   "ejemplos": []
+  },
+  {
+   "id": "fuentes/ba/floja/La Tomada",
+   "sev": "AVISO",
+   "agente": "fuentes",
+   "ciudad": "ba",
+   "cine": "La Tomada",
+   "regla": "floja",
+   "msg": "**La Tomada** está por debajo de lo habitual: 3 funciones de 3 películas, contra ~17 de siempre.",
+   "desde": "2026-11-24",
+   "nuevo": true,
+   "ejemplos": []
+  },
+  {
+   "id": "fuentes/ba/floja/Arthaus",
+   "sev": "AVISO",
+   "agente": "fuentes",
+   "ciudad": "ba",
+   "cine": "Arthaus",
+   "regla": "floja",
+   "msg": "**Arthaus** está por debajo de lo habitual: 2 funciones de 2 películas, contra ~6 de siempre.",
+   "desde": "2026-11-24",
    "nuevo": true,
    "ejemplos": []
   },
@@ -83,21 +119,9 @@
    "ciudad": "ba",
    "cine": "Centro Cultural de la Cooperación",
    "regla": "sin-funciones",
-   "msg": "lleva 3 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
+   "msg": "lleva 5 días sin ninguna función (traía ~1 por día). Revisá su scraper.",
    "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "fuentes/ba/fuente-inestable/Casa del Bicentenario",
-   "sev": "AVISO",
-   "agente": "fuentes",
-   "ciudad": "ba",
-   "cine": "Casa del Bicentenario",
-   "regla": "fuente-inestable",
-   "msg": "**Casa del Bicentenario**: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.",
-   "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": []
   },
   {
@@ -107,10 +131,24 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "horizonte",
-   "msg": "Se quedan sin programación entre hoy y mañana: Cine Gaumont (hasta el 18/11; suele tener ~5 días por delante). Si su web ya publicó lo que sigue, el scraper no lo está viendo.",
+   "msg": "Se quedan sin programación entre hoy y mañana: Lumiton (hasta el 25/11; suele tener ~16 días por delante). Si su web ya publicó lo que sigue, el scraper no lo está viendo.",
    "desde": "2026-11-17",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": []
+  },
+  {
+   "id": "categorias/ba/titulo-parece-ciclo/Cine Gaumont",
+   "sev": "ERROR",
+   "agente": "categorias",
+   "ciudad": "ba",
+   "cine": "Cine Gaumont",
+   "regla": "titulo-parece-ciclo",
+   "msg": "hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso, 7 funciones). Confirmar contra la fuente si es una película; si es un ciclo, cargar sus películas una por una. Por ejemplo: 26/11 19:00: «41° Festival Internacional MDQ en Gaumont - BORGES AND ME»",
+   "desde": "2026-11-20",
+   "nuevo": true,
+   "ejemplos": [
+    "26/11 19:00: «41° Festival Internacional MDQ en Gaumont - BORGES AND ME»"
+   ]
   },
   {
    "id": "categorias/ba/titulo-con-director/Centro Cultural 25 de Mayo",
@@ -121,38 +159,10 @@
    "regla": "titulo-con-director",
    "msg": "el título trae al director pegado (2 casos). El scraper tiene que partirlo: sin eso no encuentra la ficha. Por ejemplo: 01/12 18:00: «El príncipe de Nanawa de Clarisa Navas»; 03/12 19:00: «Encuentro con un Buda (Meeting the Buddha) de Marta György-Kessler»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
     "01/12 18:00: «El príncipe de Nanawa de Clarisa Navas»",
     "03/12 19:00: «Encuentro con un Buda (Meeting the Buddha) de Marta György-Kessler»"
-   ]
-  },
-  {
-   "id": "categorias/ba/titulo-con-director/MALBA",
-   "sev": "ERROR",
-   "agente": "categorias",
-   "ciudad": "ba",
-   "cine": "MALBA",
-   "regla": "titulo-con-director",
-   "msg": "el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha. Por ejemplo: 28/11 24:00: «¿Qué clase de joven le abre la puerta a un vampiro?, de Boom Boom Kid y Zurita»",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": [
-    "28/11 24:00: «¿Qué clase de joven le abre la puerta a un vampiro?, de Boom Boom Kid y Zurita»"
-   ]
-  },
-  {
-   "id": "categorias/ba/titulo-no-es-pelicula/Amorina",
-   "sev": "ERROR",
-   "agente": "categorias",
-   "ciudad": "ba",
-   "cine": "Amorina",
-   "regla": "titulo-no-es-pelicula",
-   "msg": "hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por ejemplo: 20/11 20:00: «Torneo de ajedrez»",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": [
-    "20/11 20:00: «Torneo de ajedrez»"
    ]
   },
   {
@@ -162,12 +172,12 @@
    "ciudad": "ba",
    "cine": "Filo Cine",
    "regla": "ciclo-es-genero",
-   "msg": "la columna Ciclo trae el género de la película (2 casos, 10 funciones). El género no es un ciclo: va vacío o con el ciclo de verdad. Por ejemplo: «Documental» («Bajo sospecha: Zokunentu»); «Ficción» («Pizza, birra, faso»)",
+   "msg": "la columna Ciclo trae el género de la película (2 casos, 5 funciones). El género no es un ciclo: va vacío o con el ciclo de verdad. Por ejemplo: «Documental» («¡ABRAN LOS ARCHIVOS! Proyección de cortometrajes del colectivo Antes Muerto Cine»); «Ficción» («Movimiento»)",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "«Documental» («Bajo sospecha: Zokunentu»)",
-    "«Ficción» («Pizza, birra, faso»)"
+    "«Documental» («¡ABRAN LOS ARCHIVOS! Proyección de cortometrajes del colectivo Antes Muerto Cine»)",
+    "«Ficción» («Movimiento»)"
    ]
   },
   {
@@ -177,9 +187,9 @@
    "ciudad": "ba",
    "cine": "Amorina",
    "regla": "ciclo-es-tipo",
-   "msg": "la columna Ciclo trae el tipo de actividad («Cine») (1 caso, 10 funciones). No es un ciclo: va vacío. Por ejemplo: «Cine» («Twin Peaks»)",
+   "msg": "la columna Ciclo trae el tipo de actividad («Cine») (1 caso, 6 funciones). No es un ciclo: va vacío. Por ejemplo: «Cine» («Twin Peaks»)",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
     "«Cine» («Twin Peaks»)"
    ]
@@ -193,7 +203,7 @@
    "regla": "titulo-con-etiqueta",
    "msg": "Títulos con la versión o el tipo de sesión pegados (VOSE, 35 mm) (1 caso) en Cine York. Limpiar en el scraper. Por ejemplo: 25/11 20:30: «Vladimir en Buenos Aires en 35 Mm»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
     "Cine York: 25/11 20:30: «Vladimir en Buenos Aires en 35 Mm»"
    ]
@@ -205,42 +215,13 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "titulo-gritado",
-   "msg": "Títulos con un tramo en mayúsculas (4 casos, 5 funciones) en Arthaus, Bellas Artes (2), Sala Lúcida. Pasarlos por run._fix_caps. Por ejemplo: 19/11 18:00: «RECEN POR MÍ: La historia de Francisco»; 21/11 18:00: «Smyrna (ΣΜΥΡΝΗ ΜΟΥ ΑΓΑΠΗΜΕΝΗ)»",
+   "msg": "Títulos con un tramo en mayúsculas (3 casos, 9 funciones) en Bellas Artes, Cine Gaumont, Filo Cine. Pasarlos por run._fix_caps. Por ejemplo: 24/11 18:00: «¡ABRAN LOS ARCHIVOS! Proyección de cortometrajes del colectivo Antes Muerto Cine»; 26/11 19:00: «41° Festival Internacional MDQ en Gaumont - BORGES AND ME»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Sala Lúcida: 19/11 18:00: «RECEN POR MÍ: La historia de Francisco»",
-    "Bellas Artes: 21/11 18:00: «Smyrna (ΣΜΥΡΝΗ ΜΟΥ ΑΓΑΠΗΜΕΝΗ)»",
-    "Bellas Artes: 27/11 18:00: «Dignity (ΜΕ ΑΞΙΟΠΡΕΠΕΙΑ)»",
-    "Arthaus: 29/11 20:00: «RECEN POR MÍ: La historia de Francisco»"
-   ]
-  },
-  {
-   "id": "categorias/ba/ciclo-igual-al-titulo/-",
-   "sev": "AVISO",
-   "agente": "categorias",
-   "ciudad": "ba",
-   "cine": "",
-   "regla": "ciclo-igual-al-titulo",
-   "msg": "Funciones cuyo ciclo es el mismo título (1 caso) en Amorina. El ciclo va vacío. Por ejemplo: 20/11 20:00: «Torneo de ajedrez»",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": [
-    "Amorina: 20/11 20:00: «Torneo de ajedrez»"
-   ]
-  },
-  {
-   "id": "categorias/ba/ciclo-escrito-distinto/-",
-   "sev": "AVISO",
-   "agente": "categorias",
-   "ciudad": "ba",
-   "cine": "",
-   "regla": "ciclo-escrito-distinto",
-   "msg": "Un mismo ciclo escrito de dos maneras (1 caso) en Sala Lúcida. La búsqueda por ciclo los separa: unificar la escritura. Por ejemplo: «Ruido y Furia . 50 Años de Punk» y «Ruido y Furia. 50 Años de Punk»",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": [
-    "Sala Lúcida: «Ruido y Furia . 50 Años de Punk» y «Ruido y Furia. 50 Años de Punk»"
+    "Filo Cine: 24/11 18:00: «¡ABRAN LOS ARCHIVOS! Proyección de cortometrajes del colectivo Antes Muerto Cine»",
+    "Cine Gaumont: 26/11 19:00: «41° Festival Internacional MDQ en Gaumont - BORGES AND ME»",
+    "Bellas Artes: 27/11 18:00: «Dignity (ΜΕ ΑΞΙΟΠΡΕΠΕΙΑ)»"
    ]
   },
   {
@@ -250,11 +231,10 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "ciclo-mal-escrito",
-   "msg": "Ciclos con la puntuación rota (2 casos, 4 funciones) en CCK, Sala Lúcida. Arreglar la escritura en el scraper. Por ejemplo: «Ruido y Furia . 50 Años de Punk»; «Miradas contemporáneas:Luis Ortega / Federico Luis»",
+   "msg": "Ciclos con la puntuación rota (1 caso, 2 funciones) en CCK. Arreglar la escritura en el scraper. Por ejemplo: «Miradas contemporáneas:Luis Ortega / Federico Luis»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Sala Lúcida: «Ruido y Furia . 50 Años de Punk»",
     "CCK: «Miradas contemporáneas:Luis Ortega / Federico Luis»"
    ]
   },
@@ -265,12 +245,12 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "director-relleno",
-   "msg": "Directores de relleno («Desconocido», «Varios») (2 casos, 12 funciones) en Atlas Caballito, Hasta Trilce. Mejor vacío. Por ejemplo: «Película sorpresa»: «Desconocido»; «El vuelo del moscardón»: «Varios directores»",
+   "msg": "Directores de relleno («Desconocido», «Varios») (2 casos, 7 funciones) en Atlas Caballito, Hasta Trilce. Mejor vacío. Por ejemplo: «Película sorpresa»: «Desconocido»; «Yumemonogatari: The living Dragon»: «Varios directores»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
     "Hasta Trilce: «Película sorpresa»: «Desconocido»",
-    "Atlas Caballito: «El vuelo del moscardón»: «Varios directores»"
+    "Atlas Caballito: «Yumemonogatari: The living Dragon»: «Varios directores»"
    ]
   },
   {
@@ -280,26 +260,26 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "director-con-numeros",
-   "msg": "Directores con años o duraciones adentro (2 casos) en Sala Lúcida (2). El scraper leyó la ficha entera. Por ejemplo: «Ricky Espinosa: El Documental»: «Juan Pablo Duarte. Argentina. 2015. 83 min»; «Nuestra Juventud»: «Roland Steiner. RDA. 1989. 88 min»",
+   "msg": "Directores con años o duraciones adentro (2 casos) en Sala Lúcida (2). El scraper leyó la ficha entera. Por ejemplo: «Artacho Jurado, Sinfonia de un Arquitecto»: «Teresa Eça y Pedro Gorski - Brasil - 82 min - 2026»; «La Ricarda, Melodia de una Casa»: «Morrosko Vila-San-Juan - España - 70 min - 2026»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Sala Lúcida: «Ricky Espinosa: El Documental»: «Juan Pablo Duarte. Argentina. 2015. 83 min»",
-    "Sala Lúcida: «Nuestra Juventud»: «Roland Steiner. RDA. 1989. 88 min»"
+    "Sala Lúcida: «Artacho Jurado, Sinfonia de un Arquitecto»: «Teresa Eça y Pedro Gorski - Brasil - 82 min - 2026»",
+    "Sala Lúcida: «La Ricarda, Melodia de una Casa»: «Morrosko Vila-San-Juan - España - 70 min - 2026»"
    ]
   },
   {
-   "id": "fichas/ba/titulo-que-son-varias-peliculas/Filo Cine",
-   "sev": "ERROR",
+   "id": "fichas/ba/director-que-no-es-un-nombre/-",
+   "sev": "AVISO",
    "agente": "fichas",
    "ciudad": "ba",
-   "cine": "Filo Cine",
-   "regla": "titulo-que-son-varias-peliculas",
-   "msg": "hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean contra la fuente ni contra Letterboxd y quedan sin director, año ni link. Hay que desagregarlas en una fila por película. Ejemplo: 'La pasarela + El invisible sustento de la frontera'",
-   "desde": "2026-11-16",
+   "cine": "",
+   "regla": "director-que-no-es-un-nombre",
+   "msg": "Director que no es un nombre: Sala Lúcida ×2. Ejemplo (Sala Lúcida): Artacho Jurado, Sinfonia de un Arquitecto: 'Teresa Eça y Pedro Gorski - Brasil - 82 min - 2026'",
+   "desde": "2026-11-24",
    "nuevo": true,
    "ejemplos": [
-    "'La pasarela + El invisible sustento de la frontera'"
+    "Sala Lúcida: Artacho Jurado, Sinfonia de un Arquitecto: 'Teresa Eça y Pedro Gorski - Brasil - 82 min - 2026'"
    ]
   },
   {
@@ -309,13 +289,14 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "dos-titulos-en-el-mismo-horario",
-   "msg": "Dos títulos en el mismo horario: Atlas Caballito ×41, Centro Cultural Borges ×3, Cacodelphia ×1. Ejemplo (Atlas Caballito): 2026-11-19 18:00: 'Manifesto' vs 'Isa'",
+   "msg": "Dos títulos en el mismo horario: Atlas Caballito ×23, Cacodelphia ×1, Espacio INCAA Morón ×1, MALBA ×1. Ejemplo (Atlas Caballito): 2026-11-24 16:00: 'Juego maldito' vs 'Jingle Hell'",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Atlas Caballito: 2026-11-19 18:00: 'Manifesto' vs 'Isa'",
-    "Centro Cultural Borges: 2026-11-18 19:00: 'Piazzolla, los años del tiburón' vs 'Ánima Buenos Aires'",
-    "Cacodelphia: 2026-11-26 19:00: 'Plata Quemada' vs 'Los Nadadores'"
+    "Atlas Caballito: 2026-11-24 16:00: 'Juego maldito' vs 'Jingle Hell'",
+    "Cacodelphia: 2026-11-26 19:00: 'Plata Quemada' vs 'Los Nadadores'",
+    "Espacio INCAA Morón: 2026-11-27 20:00: 'El tren fluvial' vs 'Neyen Mapu, el llamado del Lanin'",
+    "MALBA: 2026-11-27 20:30: 'Orar Orbil & viceversa' vs 'Machado'"
    ]
   },
   {
@@ -325,25 +306,11 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "sin-link-de-entradas",
-   "msg": "Sin link de entradas: Sala Lugones ×25. Ejemplo (Sala Lugones): Je’vida",
+   "msg": "Sin link de entradas: Sala Lugones ×19. Ejemplo (Sala Lugones): El pecado de Cluny Brown",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Sala Lugones: Je’vida"
-   ]
-  },
-  {
-   "id": "fichas/ba/titulo-todo-en-mayusculas/-",
-   "sev": "AVISO",
-   "agente": "fichas",
-   "ciudad": "ba",
-   "cine": "",
-   "regla": "titulo-todo-en-mayusculas",
-   "msg": "Título todo en mayúsculas: Atlas Caballito ×2. Ejemplo (Atlas Caballito): 'C.Y.N.D.'",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": [
-    "Atlas Caballito: 'C.Y.N.D.'"
+    "Sala Lugones: El pecado de Cluny Brown"
    ]
   },
   {
@@ -353,9 +320,9 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "sin-director",
-   "msg": "1 funciones sin director: Museo del Cine (1/1).",
+   "msg": "6 funciones sin director: CEA (1/1), La Tomada (3/3), Lumiton (1/1), Museo del Cine (1/1).",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": []
   },
   {
@@ -365,9 +332,9 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "sin-letterboxd",
-   "msg": "37 funciones sin link de Letterboxd: Arthaus (7/9), Casa del Bicentenario (7/9), Hasta Trilce (8/8), LABA (1/1), La Tomada (13/17), Museo del Cine (1/1).",
+   "msg": "18 funciones sin link de Letterboxd: CEA (1/1), Casa del Bicentenario (6/7), Hasta Trilce (6/6), La Tomada (3/3), Lumiton (1/1), Museo del Cine (1/1).",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": []
   },
   {
@@ -377,14 +344,11 @@
    "ciudad": "ba",
    "cine": "",
    "regla": "sin-ningun-dato",
-   "msg": "6 títulos sin ningún dato (ni director, ni año, ni duración, ni Letterboxd): puede que no sean películas. MALBA: «Perfume», «¡Película sorpresa!»; Amorina: «Torneo de ajedrez»; Filo Cine: «Proyección de cortometrajes del colectivo Antes Muerto Cine»; Lumiton: «Lo Queer en el Cine de Oro Argentino»; Centro Cultural Borges: «ALIENTO - 10 años del Programa de Cine UTDT».",
+   "msg": "3 títulos sin ningún dato (ni director, ni año, ni duración, ni Letterboxd): puede que no sean películas. Filo Cine: «¡ABRAN LOS ARCHIVOS! Proyección de cortometrajes del colectivo Antes Muerto Cine»; Lumiton: «Lo Queer en el Cine de Oro Argentino»; Centro Cultural Borges: «ALIENTO - 10 años del Programa de Cine UTDT».",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Amorina: Torneo de ajedrez",
-    "MALBA: Perfume",
-    "MALBA: ¡Película sorpresa!",
-    "Filo Cine: Proyección de cortometrajes del colectivo Antes Muerto Cine",
+    "Filo Cine: ¡ABRAN LOS ARCHIVOS! Proyección de cortometrajes del colectivo Antes Muerto Cine",
     "Lumiton: Lo Queer en el Cine de Oro Argentino",
     "Centro Cultural Borges: ALIENTO - 10 años del Programa de Cine UTDT"
    ]
@@ -396,71 +360,25 @@
    "ciudad": "madrid",
    "cine": "Cines Ideal",
    "regla": "de-cache",
-   "msg": "publica 30 funciones pero su fuente no contesta hace 25 días: yelmocines.es no devolvió la cartelera (¿Cloudflare?). Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.",
+   "msg": "publica 210 funciones pero no scrapeó ninguna en la última corrida: yelmocines.es no devolvió la cartelera (¿Cloudflare?). Lo que se ve es lo último bueno, y se vacía solo a medida que pasan las fechas.",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": []
   },
   {
-   "id": "fuentes/madrid/floja/Cines Callao",
-   "sev": "AVISO",
-   "agente": "fuentes",
-   "ciudad": "madrid",
-   "cine": "Cines Callao",
-   "regla": "floja",
-   "msg": "**Cines Callao** está por debajo de lo habitual: 6 funciones de 3 películas, contra ~28 de siempre.",
-   "desde": "2026-11-17",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "fuentes/madrid/sin-funciones/Cines Princesa",
-   "sev": "ERROR",
-   "agente": "fuentes",
-   "ciudad": "madrid",
-   "cine": "Cines Princesa",
-   "regla": "sin-funciones",
-   "msg": "lleva 4 días sin ninguna función (traía ~164 por día). Revisá su scraper.",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "fuentes/madrid/sin-funciones/Renoir Plaza de España",
-   "sev": "ERROR",
-   "agente": "fuentes",
-   "ciudad": "madrid",
-   "cine": "Renoir Plaza de España",
-   "regla": "sin-funciones",
-   "msg": "lleva 4 días sin ninguna función (traía ~86 por día). Revisá su scraper.",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "fuentes/madrid/sin-funciones/Renoir Retiro",
-   "sev": "ERROR",
-   "agente": "fuentes",
-   "ciudad": "madrid",
-   "cine": "Renoir Retiro",
-   "regla": "sin-funciones",
-   "msg": "lleva 4 días sin ninguna función (traía ~58 por día). Revisá su scraper.",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "categorias/madrid/titulo-con-ciclo/Cine Estudio",
+   "id": "categorias/madrid/titulo-con-ciclo/Cineteca Madrid",
    "sev": "ERROR",
    "agente": "categorias",
    "ciudad": "madrid",
-   "cine": "Cine Estudio",
+   "cine": "Cineteca Madrid",
    "regla": "titulo-con-ciclo",
-   "msg": "el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 23/11 18:30: «16º Festival Márgenes: Biografía de Jorge Luis Borges»",
-   "desde": "2026-11-16",
+   "msg": "el título trae el ciclo pegado adelante (3 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 12/12 11:30: «El personaje animado: Taller para familias»; 12/12 16:00: «El personaje animado: Taller dirigido a adultos»; 13/12 11:00: «El personaje animado: Taller para jóvenes»",
+   "desde": "2026-11-19",
    "nuevo": true,
    "ejemplos": [
-    "23/11 18:30: «16º Festival Márgenes: Biografía de Jorge Luis Borges»"
+    "12/12 11:30: «El personaje animado: Taller para familias»",
+    "12/12 16:00: «El personaje animado: Taller dirigido a adultos»",
+    "13/12 11:00: «El personaje animado: Taller para jóvenes»"
    ]
   },
   {
@@ -472,7 +390,7 @@
    "regla": "titulo-con-ciclo",
    "msg": "el título trae el ciclo pegado adelante (3 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 24/11 20:15: «Universo Villenueve: Incendies»; 01/12 20:15: «Universo Villenueve: La llegada»; 08/12 20:15: «Universo Villenueve: Prisioneros»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
     "24/11 20:15: «Universo Villenueve: Incendies»",
     "01/12 20:15: «Universo Villenueve: La llegada»",
@@ -486,12 +404,10 @@
    "ciudad": "madrid",
    "cine": "Embajadores Glorieta",
    "regla": "titulo-con-ciclo",
-   "msg": "el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 23/11 17:45: «Ciclo de Cine Peruano: Vino la noche»; 23/11 19:30: «Palestina en pantalla: Con Hasan en Gaza»; 24/11 17:45: «Ciclo de Cine Peruano: Reinas»",
+   "msg": "el título trae el ciclo pegado adelante (7 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 24/11 17:45: «Ciclo de Cine Peruano: Reinas»; 25/11 17:45: «Ciclo de Cine Peruano: Yana Wara»; 26/11 17:45: «Ciclo de Cine Peruano: Manco Cápac»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "23/11 17:45: «Ciclo de Cine Peruano: Vino la noche»",
-    "23/11 19:30: «Palestina en pantalla: Con Hasan en Gaza»",
     "24/11 17:45: «Ciclo de Cine Peruano: Reinas»",
     "25/11 17:45: «Ciclo de Cine Peruano: Yana Wara»",
     "26/11 17:45: «Ciclo de Cine Peruano: Manco Cápac»",
@@ -508,84 +424,25 @@
    "ciudad": "madrid",
    "cine": "Golem Madrid",
    "regla": "titulo-con-ciclo",
-   "msg": "el título trae el ciclo pegado adelante (7 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 17/11 22:00: «QueerCineMad: Test»; 19/11 19:00: «XXVII Ciclo de cine foro: Ellas en la ciudad»; 19/11 22:00: «QueerCineMad: Taiga»",
+   "msg": "el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 26/11 19:00: «XXVII Ciclo de cine foro: Soulèvements»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "17/11 22:00: «QueerCineMad: Test»",
-    "19/11 19:00: «XXVII Ciclo de cine foro: Ellas en la ciudad»",
-    "19/11 22:00: «QueerCineMad: Taiga»",
-    "20/11 22:00: «QueerCineMad: Camp»",
-    "21/11 22:00: «QueerCineMad: Seis meses en el edificio rosa con azul»",
-    "22/11 20:00: «QueerCineMad: Ephemera»",
-    "22/11 22:00: «QueerCineMad: El espejo»"
+    "26/11 19:00: «XXVII Ciclo de cine foro: Soulèvements»"
    ]
   },
   {
-   "id": "categorias/madrid/titulo-con-ciclo/Sala Equis",
+   "id": "categorias/madrid/titulo-con-director/Artistic Metropol",
    "sev": "ERROR",
    "agente": "categorias",
    "ciudad": "madrid",
-   "cine": "Sala Equis",
-   "regla": "titulo-con-ciclo",
-   "msg": "el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y el título solo. Por ejemplo: 17/11 19:00: «Festival Rizoma-de Brisa y de Sol»; 17/11 21:00: «Festival Rizoma-muchedumbre»; 18/11 17:30: «Festival Rizoma-cherri»",
-   "desde": "2026-11-16",
+   "cine": "Artistic Metropol",
+   "regla": "titulo-con-director",
+   "msg": "el título trae al director pegado (1 caso, 2 funciones). El scraper tiene que partirlo: sin eso no encuentra la ficha. Por ejemplo: 24/11 16:00: «Noche y día, de Virginia Woolf»",
+   "desde": "2026-11-20",
    "nuevo": true,
    "ejemplos": [
-    "17/11 19:00: «Festival Rizoma-de Brisa y de Sol»",
-    "17/11 21:00: «Festival Rizoma-muchedumbre»",
-    "18/11 17:30: «Festival Rizoma-cherri»",
-    "18/11 22:00: «Festival Rizoma-casi Todo Bien»",
-    "20/11 18:30: «Festival Rizoma-siemprevivas»",
-    "20/11 20:00: «Festival Rizoma-calada»",
-    "21/11 13:00: «Festival Rizoma-océano Titánico»",
-    "22/11 13:00: «Festival Rizoma-la Muerte de Drácula»",
-    "22/11 22:00: «Festival Rizoma-la Gran Fiesta del Cine»"
-   ]
-  },
-  {
-   "id": "categorias/madrid/titulo-parece-ciclo/Sala Equis",
-   "sev": "ERROR",
-   "agente": "categorias",
-   "ciudad": "madrid",
-   "cine": "Sala Equis",
-   "regla": "titulo-parece-ciclo",
-   "msg": "hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (4 casos). Confirmar contra la fuente si es una película; si es un ciclo, cargar sus películas una por una. Por ejemplo: 19/11 22:00: «Festival Rizomalos Días Libres»; 20/11 22:00: «Festival Rizomaperò Abans D’això Hi Haurà Set»; 21/11 19:30: «Ffestival Rizoma-las Mantis»",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": [
-    "19/11 22:00: «Festival Rizomalos Días Libres»",
-    "20/11 22:00: «Festival Rizomaperò Abans D’això Hi Haurà Set»",
-    "21/11 19:30: «Ffestival Rizoma-las Mantis»",
-    "22/11 18:00: «Ffestival Rizoma-simulacro»"
-   ]
-  },
-  {
-   "id": "categorias/madrid/titulo-no-es-pelicula/Cines Ideal",
-   "sev": "ERROR",
-   "agente": "categorias",
-   "ciudad": "madrid",
-   "cine": "Cines Ideal",
-   "regla": "titulo-no-es-pelicula",
-   "msg": "hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por ejemplo: 01/12 20:15: «El Cascanueces- Ballet Live Roh 26-27»",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": [
-    "01/12 20:15: «El Cascanueces- Ballet Live Roh 26-27»"
-   ]
-  },
-  {
-   "id": "categorias/madrid/titulo-no-es-pelicula/Cineteca Madrid",
-   "sev": "ERROR",
-   "agente": "categorias",
-   "ciudad": "madrid",
-   "cine": "Cineteca Madrid",
-   "regla": "titulo-no-es-pelicula",
-   "msg": "hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por ejemplo: 21/11 20:30: «Entrega de premios + Live A/V: JayDee y Josephine’ Soundscapes»",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": [
-    "21/11 20:30: «Entrega de premios + Live A/V: JayDee y Josephine’ Soundscapes»"
+    "24/11 16:00: «Noche y día, de Virginia Woolf»"
    ]
   },
   {
@@ -595,12 +452,25 @@
    "ciudad": "madrid",
    "cine": "",
    "regla": "titulo-con-etiqueta",
-   "msg": "Títulos con la versión o el tipo de sesión pegados (VOSE, 35 mm) (2 casos) en Artistic Metropol (2). Limpiar en el scraper. Por ejemplo: 18/11 12:00: «CINCO SEGUNDOS V.O.S.E. Sesión Teta»; 19/11 12:00: «EL SER QUERIDO Sesión Teta»",
+   "msg": "Títulos con la versión o el tipo de sesión pegados (VOSE, 35 mm) (1 caso) en Artistic Metropol. Limpiar en el scraper. Por ejemplo: 26/11 12:00: «VIRGINIA WOOLF: NOCHE Y DÍA V.O.S.E. Sesión Teta»",
    "desde": "2026-11-16",
+   "nuevo": false,
+   "ejemplos": [
+    "Artistic Metropol: 26/11 12:00: «VIRGINIA WOOLF: NOCHE Y DÍA V.O.S.E. Sesión Teta»"
+   ]
+  },
+  {
+   "id": "categorias/madrid/titulo-con-ficha/-",
+   "sev": "AVISO",
+   "agente": "categorias",
+   "ciudad": "madrid",
+   "cine": "",
+   "regla": "titulo-con-ficha",
+   "msg": "Títulos con el año o la duración pegados (1 caso) en Cines Ideal. Limpiar en el scraper. Por ejemplo: 24/11 21:30: «Dune (1984) - Reestreno»",
+   "desde": "2026-11-21",
    "nuevo": true,
    "ejemplos": [
-    "Artistic Metropol: 18/11 12:00: «CINCO SEGUNDOS V.O.S.E. Sesión Teta»",
-    "Artistic Metropol: 19/11 12:00: «EL SER QUERIDO Sesión Teta»"
+    "Cines Ideal: 24/11 21:30: «Dune (1984) - Reestreno»"
    ]
   },
   {
@@ -610,13 +480,12 @@
    "ciudad": "madrid",
    "cine": "",
    "regla": "titulo-gritado",
-   "msg": "Títulos con un tramo en mayúsculas (3 casos, 6 funciones) en Artistic Metropol (3). Pasarlos por run._fix_caps. Por ejemplo: 17/11 20:00: «ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes»; 18/11 12:00: «CINCO SEGUNDOS V.O.S.E. Sesión Teta»",
+   "msg": "Títulos con un tramo en mayúsculas (2 casos, 3 funciones) en Artistic Metropol (2). Pasarlos por run._fix_caps. Por ejemplo: 24/11 20:00: «ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes»; 26/11 12:00: «VIRGINIA WOOLF: NOCHE Y DÍA V.O.S.E. Sesión Teta»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Artistic Metropol: 17/11 20:00: «ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes»",
-    "Artistic Metropol: 18/11 12:00: «CINCO SEGUNDOS V.O.S.E. Sesión Teta»",
-    "Artistic Metropol: 19/11 12:00: «EL SER QUERIDO Sesión Teta»"
+    "Artistic Metropol: 24/11 20:00: «ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes»",
+    "Artistic Metropol: 26/11 12:00: «VIRGINIA WOOLF: NOCHE Y DÍA V.O.S.E. Sesión Teta»"
    ]
   },
   {
@@ -626,12 +495,13 @@
    "ciudad": "madrid",
    "cine": "",
    "regla": "director-relleno",
-   "msg": "Directores de relleno («Desconocido», «Varios») (2 casos) en Cineteca Madrid (2). Mejor vacío. Por ejemplo: «CIMA Proyecta: 25-N Cortos contra las violencias»: «Varias autoras»; «Colores primarios»: «Varios autores»",
+   "msg": "Directores de relleno («Desconocido», «Varios») (3 casos, 5 funciones) en Cineteca Madrid (3). Mejor vacío. Por ejemplo: «CIMA Proyecta: 25-N Cortos contra las violencias»: «Varias autoras»; «Escáner - Sesión de cortometrajes»: «Varios autores»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
     "Cineteca Madrid: «CIMA Proyecta: 25-N Cortos contra las violencias»: «Varias autoras»",
-    "Cineteca Madrid: «Colores primarios»: «Varios autores»"
+    "Cineteca Madrid: «Escáner - Sesión de cortometrajes»: «Varios autores»",
+    "Cineteca Madrid: «Le vertige + Unidentified Nonflying Objects (UNO)»: «Varios directores»"
    ]
   },
   {
@@ -643,9 +513,25 @@
    "regla": "director-con-de",
    "msg": "Directores que empiezan con «de» (1 caso) en Embajadores Glorieta. Limpiar en el scraper. Por ejemplo: «Ciclo de Cine Peruano: Reinas»: «de Klaudia Reynicke, Diego Vega»",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
     "Embajadores Glorieta: «Ciclo de Cine Peruano: Reinas»: «de Klaudia Reynicke, Diego Vega»"
+   ]
+  },
+  {
+   "id": "fichas/madrid/titulo-con-copete-pegado/Cineteca Madrid",
+   "sev": "ERROR",
+   "agente": "fichas",
+   "ciudad": "madrid",
+   "cine": "Cineteca Madrid",
+   "regla": "titulo-con-copete-pegado",
+   "msg": "el título en realidad es el copete del ciclo o una actividad, no una película (×6). Ejemplo: 'Relatos de los relatos. Historias y genealogías de las músicas experimentales y el arte sonoro en España'",
+   "desde": "2026-11-18",
+   "nuevo": true,
+   "ejemplos": [
+    "'Relatos de los relatos. Historias y genealogías de las músicas experimentales y el arte sonoro en España'",
+    "'Relatos de los relatos. Historias y genealogías de las músicas experimentales y el arte sonoro en España'",
+    "'Sostener el ruido. Estrategias para el apoyo y la difusión del arte sonoro y las músicas experimentales en España'"
    ]
   },
   {
@@ -655,16 +541,44 @@
    "ciudad": "madrid",
    "cine": "",
    "regla": "dos-titulos-en-el-mismo-horario",
-   "msg": "Dos títulos en el mismo horario: Golem Madrid ×13, Artistic Metropol ×8, Embajadores Ercilla ×7, Embajadores Glorieta ×4, Cineteca Madrid ×2. Ejemplo (Golem Madrid): 2026-11-17 16:10: 'El tren fluvial' vs 'La voz quebrada'",
+   "msg": "Dos títulos en el mismo horario: Cines Princesa ×48, Golem Madrid ×17, Renoir Plaza de España ×17, Cines Ideal ×12, Artistic Metropol ×5, Cineteca Madrid ×5, Renoir Retiro ×5, Embajadores Ercilla ×4, Embajadores Glorieta ×2. Ejemplo (Cines Princesa): 2026-11-24 15:50: 'El Director' vs 'La bola negra'",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Golem Madrid: 2026-11-17 16:10: 'El tren fluvial' vs 'La voz quebrada'",
-    "Artistic Metropol: 2026-11-17 18:00: 'Dorita' vs 'Palestina 36'",
-    "Embajadores Ercilla: 2026-11-17 16:00: 'Ruega por nosotras' vs 'El gato con sombrero'",
-    "Embajadores Glorieta: 2026-11-17 16:00: 'Sacamantecas' vs 'La bola negra'",
-    "Cineteca Madrid: 2026-12-09 19:00: '¡Ya verás!' vs 'Colores primarios'"
+    "Cines Princesa: 2026-11-24 15:50: 'El Director' vs 'La bola negra'",
+    "Golem Madrid: 2026-11-24 16:10: 'Rose' vs 'Sacamantecas'",
+    "Renoir Plaza de España: 2026-11-24 15:50: 'El mal padre' vs 'La violinista'",
+    "Cines Ideal: 2026-11-24 17:00: 'Los juegos del hambre: Amanecer en la cosecha' vs 'La bola negra'",
+    "Artistic Metropol: 2026-11-24 16:00: 'Huellas de sangre' vs 'Noche y día, de Virginia Woolf'",
+    "Cineteca Madrid: 2026-11-25 20:00: 'CIMA Proyecta: 25-N Cortos contra las violencias' vs 'A Day in the Life of Jo: Chapter Phaedra + Normal Planet'",
+    "Renoir Retiro: 2026-11-24 15:45: 'El mal padre' vs 'La invitación'",
+    "Embajadores Ercilla: 2026-11-24 16:00: 'El mal padre' vs 'Rose'",
+    "Embajadores Glorieta: 2026-11-25 17:15: 'Ruega por nosotras' vs 'La bola negra'"
    ]
+  },
+  {
+   "id": "fichas/madrid/sin-director/-",
+   "sev": "AVISO",
+   "agente": "fichas",
+   "ciudad": "madrid",
+   "cine": "",
+   "regla": "sin-director",
+   "msg": "15 funciones sin director: Cines Callao (15/24).",
+   "desde": "2026-11-24",
+   "nuevo": true,
+   "ejemplos": []
+  },
+  {
+   "id": "fichas/madrid/sin-letterboxd/-",
+   "sev": "AVISO",
+   "agente": "fichas",
+   "ciudad": "madrid",
+   "cine": "",
+   "regla": "sin-letterboxd",
+   "msg": "15 funciones sin link de Letterboxd: Cines Callao (15/24).",
+   "desde": "2026-11-24",
+   "nuevo": true,
+   "ejemplos": []
   },
   {
    "id": "fichas/madrid/sin-ningun-dato/-",
@@ -673,29 +587,36 @@
    "ciudad": "madrid",
    "cine": "",
    "regla": "sin-ningun-dato",
-   "msg": "18 títulos sin ningún dato (ni director, ni año, ni duración, ni Letterboxd): puede que no sean películas. Sala Equis: «Festival Rizoma-de Brisa y de Sol», «Festival Rizoma-muchedumbre» y 10 más; Artistic Metropol: «ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes», «Cineclub Garabato»; Cine Estudio: «Película sorpresa»; Cine Doré: «Cortos latinos: Raíces, aromas y color»; Cineteca Madrid: «Capítulo XXXVI: Carta blanca a María Castro y Álvaro Cáceres»; Embajadores Ercilla: «El Apartamento».",
+   "msg": "13 títulos sin ningún dato (ni director, ni año, ni duración, ni Letterboxd): puede que no sean películas. Cineteca Madrid: «Capítulo XXXVI: Carta blanca a María Castro y Álvaro Cáceres», «Cuando el guion impulsa la tecnología: Seminario impartido por Priit y Olga Pärn» y 6 más; Artistic Metropol: «ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes»; Sala Equis: «Vespertine-björk»; Cines Callao: «Salta Conmigo»; Cine Estudio: «Screening LAV #36. No vi que se movieran los pétalos»; Embajadores Ercilla: «El Apartamento».",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": [
-    "Sala Equis: Festival Rizoma-de Brisa y de Sol",
-    "Sala Equis: Festival Rizoma-muchedumbre",
-    "Sala Equis: Festival Rizomalos Días Libres",
-    "Sala Equis: Festival Rizoma-siemprevivas",
-    "Sala Equis: Festival Rizoma-calada",
-    "Sala Equis: Festival Rizomaperò Abans D’això Hi Haurà Set",
-    "Sala Equis: Festival Rizoma-océano Titánico",
-    "Sala Equis: Ffestival Rizoma-las Mantis",
-    "Sala Equis: Festival Rizoma-la Muerte de Drácula",
-    "Sala Equis: Ffestival Rizoma-simulacro",
-    "Sala Equis: Festival Rizoma-la Gran Fiesta del Cine",
-    "Sala Equis: Vespertine-björk",
     "Artistic Metropol: ESTUDIOS DE CINE Noviembre 2026 con Alejandro Mucientes",
-    "Artistic Metropol: Cineclub Garabato",
-    "Cine Estudio: Película sorpresa",
-    "Cine Doré: Cortos latinos: Raíces, aromas y color",
+    "Sala Equis: Vespertine-björk",
+    "Cines Callao: Salta Conmigo",
+    "Cine Estudio: Screening LAV #36. No vi que se movieran los pétalos",
     "Cineteca Madrid: Capítulo XXXVI: Carta blanca a María Castro y Álvaro Cáceres",
+    "Cineteca Madrid: Cuando el guion impulsa la tecnología: Seminario impartido por Priit y Olga Pärn",
+    "Cineteca Madrid: El personaje animado: Taller para familias",
+    "Cineteca Madrid: El personaje animado: Taller dirigido a adultos",
+    "Cineteca Madrid: El personaje animado: Taller para jóvenes",
+    "Cineteca Madrid: Relatos de los relatos. Historias y genealogías de las músicas experimentales y el arte sonoro en España",
+    "Cineteca Madrid: Sostener el ruido. Estrategias para el apoyo y la difusión del arte sonoro y las músicas experimentales en España",
+    "Cineteca Madrid: La historia por venir. La escucha del archivo en la creación y la investigación artística",
     "Embajadores Ercilla: El Apartamento"
    ]
+  },
+  {
+   "id": "festivales/-/fuera-de-fechas/Bazofi",
+   "sev": "AVISO",
+   "agente": "festivales",
+   "ciudad": "",
+   "cine": "Bazofi",
+   "regla": "fuera-de-fechas",
+   "msg": "**Bazofi**: 1 función fuera de sus fechas (5 al 26 nov): MALBA, 2026-11-27, «Orar Orbil & viceversa». O el registro tiene mal las fechas o la función no es del festival",
+   "desde": "2026-11-24",
+   "nuevo": true,
+   "ejemplos": []
   },
   {
    "id": "festivales/-/sin-lista/Infinito Super 8",
@@ -704,9 +625,9 @@
    "ciudad": "",
    "cine": "Infinito Super 8",
    "regla": "sin-lista",
-   "msg": "**Infinito Super 8**: 8 programas sin lista de películas («Rescates: sesión 1», «Competencia Internacional», «Panorama Internacional», «Muestra invitada Curta 8»…): mirar si el festival ya la publicó para cargarlas una por una",
+   "msg": "**Infinito Super 8**: 7 programas sin lista de películas («Competencia Internacional», «Panorama Internacional», «Muestra invitada Curta 8», «Muestra de talleres: Cine Oculta y Moira Lacowicz»…): mirar si el festival ya la publicó para cargarlas una por una",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": []
   },
   {
@@ -716,44 +637,20 @@
    "ciudad": "",
    "cine": "Buenos Aires Rojo Sangre",
    "regla": "sin-lista",
-   "msg": "**Buenos Aires Rojo Sangre**: 7 programas sin lista de películas («Fin de semana sangriento: bloque 1», «Fin de semana sangriento: bloque 2», «Fin de semana sangriento: bloque 3», «Fin de semana sangriento: bloque 4»…): mirar si el festival ya la publicó para cargarlas una por una",
+   "msg": "**Buenos Aires Rojo Sangre**: 2 programas sin lista de películas («Fin de semana sangriento: bloque 6», «Muestra Federal de Cine de Terror»): mirar si el festival ya la publicó para cargarlas una por una",
    "desde": "2026-11-16",
-   "nuevo": true,
+   "nuevo": false,
    "ejemplos": []
   },
   {
-   "id": "festivales/-/registro-incompleto/Buenos Aires Rojo Sangre",
-   "sev": "AVISO",
+   "id": "festivales/-/web-cambio/Bazofi",
+   "sev": "ERROR",
    "agente": "festivales",
    "ciudad": "",
-   "cine": "Buenos Aires Rojo Sangre",
-   "regla": "registro-incompleto",
-   "msg": "**Buenos Aires Rojo Sangre**: en el registro le falta el logo",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "festivales/-/registro-incompleto/MASS",
-   "sev": "AVISO",
-   "agente": "festivales",
-   "ciudad": "",
-   "cine": "MASS",
-   "regla": "registro-incompleto",
-   "msg": "**MASS**: en el registro le falta el logo",
-   "desde": "2026-11-16",
-   "nuevo": true,
-   "ejemplos": []
-  },
-  {
-   "id": "festivales/-/web-cambio/FIDBA",
-   "sev": "AVISO",
-   "agente": "festivales",
-   "ciudad": "",
-   "cine": "FIDBA",
+   "cine": "Bazofi",
    "regla": "web-cambio",
-   "msg": "**FIDBA**: su web cambió desde el 16/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Older than Israel». Revisar la grilla contra lo cargado: https://fidba.org/2026/programacion/",
-   "desde": "2026-11-16",
+   "msg": "su web cambió desde el 20/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy abierto de 12:00 a 20:00». Revisar la grilla contra lo cargado: https://malba.org.ar/evento/bazofi-2026/",
+   "desde": "2026-11-21",
    "nuevo": true,
    "ejemplos": []
   },
@@ -764,74 +661,123 @@
    "ciudad": "",
    "cine": "Infinito Super 8",
    "regla": "web-cambio",
-   "msg": "**Infinito Super 8**: su web cambió desde el 16/11: 1 línea nueva. Lo nuevo: «Foco JULIO FERMEPÍN». Revisar la grilla contra lo cargado: https://www.infinitosuper8.com.ar/",
+   "msg": "**Infinito Super 8**: su web cambió desde el 17/11: 1 línea nueva. Lo nuevo: «DEL MÁS ALLÁ». Revisar la grilla contra lo cargado: https://www.infinitosuper8.com.ar/",
    "desde": "2026-11-16",
+   "nuevo": false,
+   "ejemplos": []
+  },
+  {
+   "id": "festivales/-/web-cambio/MASS",
+   "sev": "ERROR",
+   "agente": "festivales",
+   "ciudad": "",
+   "cine": "MASS",
+   "regla": "web-cambio",
+   "msg": "su web cambió desde el 16/11: 97 líneas nuevas y 1 que ya no está. Lo nuevo: «Lo mejor de los festivales de Málaga y San Sebastián llega al Centro Cultural 25 de Mayo.»; «Del 26 al 28 de noviembre, la muestra MASS 2026 reunirá seis películas del cine español co»; «– YO NO MORIRÉ DE AMOR, de Mɑrtɑ Mɑtute – 26 de noviembre a las 18hs». Revisar la grilla contra lo cargado: https://cc25.org/eventos/mass-2026/",
+   "desde": "2026-11-17",
+   "nuevo": false,
+   "ejemplos": []
+  },
+  {
+   "id": "festivales/-/web-no-abre/Festival de Cine Indígena BAIn",
+   "sev": "AVISO",
+   "agente": "festivales",
+   "ciudad": "",
+   "cine": "Festival de Cine Indígena BAIn",
+   "regla": "web-no-abre",
+   "msg": "**Festival de Cine Indígena BAIn**: no se pudo leer su web (HTTP 400): esta semana no se sabe si cambió la grilla. https://www.facebook.com/FestivalDeCineBuenosAiresIndigenaBaIn/",
+   "desde": "2026-11-18",
+   "nuevo": true,
+   "ejemplos": []
+  },
+  {
+   "id": "festivales/-/suelto/Festival Internacional de Cine de Arquitectura y Diseño de Buenos Aires",
+   "sev": "AVISO",
+   "agente": "festivales",
+   "ciudad": "",
+   "cine": "Festival Internacional de Cine de Arquitectura y Diseño de Buenos Aires",
+   "regla": "suelto",
+   "msg": "**Festival Internacional de Cine de Arquitectura y Diseño de Buenos Aires** (2 funciones en Sala Lúcida) aparece en la pestaña Festivales con el nombre del ciclo, porque dice «festival» y no está en data/festivales.json. Si es un festival, registrarlo con nombre, fechas y logo.",
+   "desde": "2026-11-24",
    "nuevo": true,
    "ejemplos": []
   }
  ],
  "resueltos": [
-  "Centro Cultural Borges: el título trae el ciclo pegado adelante (5 casos, 6 funciones). El scraper tiene que partirlo: el ciclo a… (estaba desde el 16/11)",
-  "Centro Cultural 25 de Mayo: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso). Confirmar… (estaba desde el 16/11)",
-  "Buenos Aires Rojo Sangre: empieza en 3 días (19 al 29 nov, en Atlas Caballito, Av. Rivadavia 5071) y no está cargado. Fuente:… (estaba desde el 16/11)",
-  "MASS, Semana de los Festivales de Cine de Málaga y San Sebastián: empieza en 10 días (26 al 28 nov, en Centro Cultural 25 de Mayo) y no está cargado. Fuente:… (estaba desde el 16/11)",
-  "Sala Lúcida: hay ciclos con palabras en mayúsculas (1 caso). Ningún ciclo va gritado: pasarlo por run._fix_caps. Por… (estaba desde el 16/11)"
+  "CEA: lleva 30 días sin ninguna función (traía ~2 por día). Revisá su scraper. (estaba desde el 16/11)",
+  "Cines Princesa: lleva 4 días sin ninguna función (traía ~164 por día). Revisá su scraper. (estaba desde el 16/11)",
+  "Renoir Plaza de España: lleva 4 días sin ninguna función (traía ~86 por día). Revisá su scraper. (estaba desde el 16/11)",
+  "Renoir Retiro: lleva 4 días sin ninguna función (traía ~58 por día). Revisá su scraper. (estaba desde el 16/11)",
+  "Filo Cine: hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean… (estaba desde el 16/11)",
+  "MALBA: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.… (estaba desde el 16/11)",
+  "Cine Estudio: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.… (estaba desde el 19/11)",
+  "Amorina: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por… (estaba desde el 16/11)",
+  "Biblioteca Nacional: lleva 1 día sin ninguna función (traía ~1 por día), pero la fuente publica 2 ítems en la listing. El… (estaba desde el 20/11)",
+  "Sala Equis: el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y… (estaba desde el 16/11)",
+  "Cines Ideal: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por… (estaba desde el 16/11)",
+  "Cineteca Madrid: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por… (estaba desde el 16/11)",
+  "Sala Lúcida: hay ciclos con palabras en mayúsculas (1 caso). Ningún ciclo va gritado: pasarlo por run._fix_caps. Por… (estaba desde el 16/11)",
+  "Cine Estudio: el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y… (estaba desde el 16/11)",
+  "Sala Equis: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (3 casos). Confirmar… (estaba desde el 16/11)"
  ],
  "cambios": [
-  "**Showcase Belgrano** desapareció: 39 → 0 funciones.",
-  "**Cinépolis Recoleta** desapareció: 28 → 0 funciones.",
-  "**Cinépolis Houssay** desapareció: 17 → 0 funciones.",
-  "**Centro Cultural de la Cooperación** desapareció: 2 → 0 funciones.",
-  "**Atlas Caballito** volvió a la cartelera: 0 → 254 funciones.",
-  "**Cines Pixel** volvió a la cartelera: 0 → 35 funciones.",
-  "**Universidad del Cine** volvió a la cartelera: 0 → 26 funciones.",
-  "**La Tomada** volvió a la cartelera: 0 → 17 funciones.",
-  "…y 6 cines más con cambios de tamaño parecido (corré `python3 scripts/audit.py` para verlos).",
-  "**Cines Princesa** (Madrid) desapareció: 109 → 0 funciones.",
-  "**Renoir Plaza de España** (Madrid) desapareció: 57 → 0 funciones.",
-  "**Renoir Retiro** (Madrid) desapareció: 39 → 0 funciones."
+  "**Cinépolis Recoleta** desapareció: 45 → 0 funciones.",
+  "**Showcase Belgrano** desapareció: 40 → 0 funciones.",
+  "**Cine Lorca** desapareció: 22 → 0 funciones.",
+  "**Cinépolis Houssay** desapareció: 18 → 0 funciones.",
+  "**Avalon** desapareció: 5 → 0 funciones.",
+  "**Centro Cultural de la Cooperación** desapareció: 1 → 0 funciones.",
+  "**LABA** desapareció: 1 → 0 funciones.",
+  "**Multiplex Belgrano** bajó bastante: 545 → 240 funciones.",
+  "…y 17 cines más con cambios de tamaño parecido (corré `python3 scripts/audit.py` para verlos).",
+  "**Sala Equis** (Madrid) bajó bastante: 28 → 12 funciones.",
+  "**Cines Princesa** (Madrid) volvió a la cartelera: 0 → 111 funciones.",
+  "**Renoir Plaza de España** (Madrid) volvió a la cartelera: 0 → 57 funciones.",
+  "**Renoir Retiro** (Madrid) volvió a la cartelera: 0 → 36 funciones.",
+  "**Cines Ideal** (Madrid) subió bastante: 30 → 210 funciones."
  ],
  "festivales": [
-  "**FIDBA** (17 al 22 nov, en curso, quedan 5 días): 34 funciones por delante en 5 salas. Tiene 1 cosa para mirar.",
-  "**Buenos Aires Rojo Sangre** (19 al 29 nov, empieza en 2 días): 254 funciones por delante en 1 sala. Tiene 2 cosas para mirar.",
-  "**Infinito Super 8** (22 al 29 nov, empieza en 5 días): 53 funciones por delante en 4 salas. Tiene 2 cosas para mirar.",
-  "**MASS** (26 al 28 nov, empieza en 9 días): 6 funciones por delante en 1 sala. Tiene 1 cosa para mirar.",
-  "Terminaron hace poco: Fuera de Campo (el 10/11), Festival Internacional de Cine de Mar del Plata (el 15/11)."
+  "**Bazofi** (5 al 26 nov, en curso, quedan 2 días): 4 funciones por delante en 1 sala. Tiene 2 cosas para mirar.",
+  "**Buenos Aires Rojo Sangre** (19 al 29 nov, en curso, quedan 5 días): 122 funciones por delante en 1 sala. Tiene 1 cosa para mirar.",
+  "**Infinito Super 8** (22 al 29 nov, en curso, quedan 5 días): 37 funciones por delante en 4 salas. Tiene 2 cosas para mirar.",
+  "**Festival de Cine Indígena BAIn** (25 al 29 nov, empieza mañana): 1 función por delante en 1 sala. Tiene 1 cosa para mirar.",
+  "**MASS** (26 al 28 nov, empieza en 2 días): 6 funciones por delante en 1 sala. Tiene 1 cosa para mirar.",
+  "Terminaron hace poco: Fuera de Campo (el 10/11), Festival Internacional de Cine de Mar del Plata (el 15/11), FIDBA (el 22/11)."
  ],
  "partes": {
   "frescura": {
    "reviso": [
     "2 carteleras",
     "las stories de 7 días",
-    "54 corridas de 5 workflows en la semana"
+    "83 corridas de 5 workflows en la semana"
    ],
    "caido": ""
   },
   "fuentes": {
    "reviso": [
-    "51 salas de Buenos Aires con 13 sondas y 120 días de historial",
-    "14 salas de Madrid y 56 días de historial"
+    "58 salas de Buenos Aires con 17 sondas y 120 días de historial",
+    "14 salas de Madrid y 63 días de historial"
    ],
    "caido": ""
   },
   "categorias": {
    "reviso": [
-    "3.934 funciones de Buenos Aires contra 25 reglas",
-    "372 funciones de Madrid contra 25 reglas",
-    "el padrón de index.html (52 salas)"
+    "3.083 funciones de Buenos Aires contra 25 reglas",
+    "742 funciones de Madrid contra 25 reglas",
+    "el padrón de index.html (59 salas)"
    ],
    "caido": ""
   },
   "festivales": {
    "reviso": [
-    "12 festivales del registro (4 vigentes), 24 del radar y 4 webs"
+    "14 festivales del registro (5 vigentes), 24 del radar y 4 webs"
    ],
    "caido": ""
   },
   "fichas": {
    "reviso": [
-    "3.934 funciones de Buenos Aires",
-    "372 funciones de Madrid"
+    "3.083 funciones de Buenos Aires",
+    "742 funciones de Madrid"
    ],
    "caido": ""
   }
@@ -840,369 +786,369 @@
   "ba": [
    {
     "sala": "Atlas Caballito",
-    "funciones": 254,
-    "titulos": 202,
+    "funciones": 122,
+    "titulos": 106,
     "hasta": "2026-11-29",
-    "hace_7_dias": 0,
-    "scrapeadas": 254,
-    "publicadas": 254,
-    "a_mano": 254,
-    "fuente_viva": "1 de 1 días",
+    "hace_7_dias": 254,
+    "scrapeadas": 147,
+    "publicadas": 147,
+    "a_mano": 122,
+    "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "___________________________█"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "____________________████▇▇▆▅"
    },
    {
     "sala": "Sala Lugones",
-    "funciones": 65,
-    "titulos": 33,
+    "funciones": 47,
+    "titulos": 26,
     "hasta": "2026-12-13",
-    "hace_7_dias": 51,
-    "scrapeadas": 65,
-    "publicadas": 65,
+    "hace_7_dias": 65,
+    "scrapeadas": 47,
+    "publicadas": 47,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▆▅▅▅▅▄▄▄▄▄▃▃████▇▇▇▆▆▆▇▇▇▆▆█"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄▄▄▃▃████▇▇▇▆▆▆▇▇▇▆▆██▇▇▇▆▆▆"
+   },
+   {
+    "sala": "Cine Gaumont",
+    "funciones": 32,
+    "titulos": 15,
+    "hasta": "2026-12-02",
+    "hace_7_dias": 54,
+    "scrapeadas": 43,
+    "publicadas": 43,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "██▇▆▅▄▄█▇▆▅▄▄▃▃▇▇▆▅▄▄▅██▇▅▅▄"
    },
    {
     "sala": "Cacodelphia",
-    "funciones": 31,
-    "titulos": 15,
-    "hasta": "2026-11-29",
+    "funciones": 29,
+    "titulos": 14,
+    "hasta": "2026-12-17",
     "hace_7_dias": 31,
-    "scrapeadas": 31,
-    "publicadas": 31,
+    "scrapeadas": 40,
+    "publicadas": 40,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▃▇▆▅▅▄▄▃▇▆▆▅▄▃▂██▇▇▆▅▄▇▇▆▆▅▄"
-   },
-   {
-    "sala": "Cine York",
-    "funciones": 31,
-    "titulos": 31,
-    "hasta": "2026-11-29",
-    "hace_7_dias": 37,
-    "scrapeadas": 31,
-    "publicadas": 31,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▅▅▅▅▄▄▄▄███▇▇▇▇▇██▇▇▇▇▇▇▇▆▆▆"
-   },
-   {
-    "sala": "MALBA",
-    "funciones": 28,
-    "titulos": 20,
-    "hasta": "2026-12-05",
-    "hace_7_dias": 39,
-    "scrapeadas": 28,
-    "publicadas": 28,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇▆▆▅▄▃▃▃▄▄▇▇▆▆▇███▇▇▆▆▆▆▆▅▅▅"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃▇▆▆▅▄▃▂██▇▇▆▅▄▇▇▆▆▅▄▄█▇▇▇▆▅"
    },
    {
     "sala": "Universidad del Cine",
     "funciones": 26,
     "titulos": 26,
     "hasta": "2026-11-27",
-    "hace_7_dias": 0,
+    "hace_7_dias": 26,
     "scrapeadas": 26,
     "publicadas": 26,
     "a_mano": 26,
-    "fuente_viva": "2 de 2 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "__________________________██"
-   },
-   {
-    "sala": "Cine Gaumont",
-    "funciones": 24,
-    "titulos": 13,
-    "hasta": "2026-11-18",
-    "hace_7_dias": 23,
-    "scrapeadas": 37,
-    "publicadas": 37,
-    "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "█▇▇▆▅▄▃▇▇▆▅▅▄▃▇▆▅▅▄▄▃▂▆▆▅▅▄▃"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "___________________█████████"
    },
    {
-    "sala": "Cine Lorca",
-    "funciones": 22,
-    "titulos": 6,
-    "hasta": "2026-11-18",
-    "hace_7_dias": 20,
-    "scrapeadas": 33,
-    "publicadas": 33,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▃▂▇▆▆▅▄▃▂▇▆▆▅▄▃▂▇▆▆▅▄▃▂█▇▆▅▄"
-   },
-   {
-    "sala": "Sala Lúcida",
-    "funciones": 22,
-    "titulos": 21,
-    "hasta": "2026-11-22",
-    "hace_7_dias": 12,
+    "sala": "Cine York",
+    "funciones": 23,
+    "titulos": 23,
+    "hasta": "2026-11-29",
+    "hace_7_dias": 33,
     "scrapeadas": 23,
     "publicadas": 23,
-    "a_mano": 13,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▄▄▄▄▃▄▄▄▄▄▄▄▄▄▄▄▄▄▄▅▅▅▅▅▅▅██"
-   },
-   {
-    "sala": "Amorina",
-    "funciones": 17,
-    "titulos": 13,
-    "hasta": "2026-12-19",
-    "hace_7_dias": 21,
-    "scrapeadas": 18,
-    "publicadas": 17,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▃▃▇██▇▇▇▇▇▇▇▇▆██▇▇▇▇▇▆▆▆▆▆▆▅"
-   },
-   {
-    "sala": "La Tomada",
-    "funciones": 17,
-    "titulos": 17,
-    "hasta": "2026-11-28",
-    "hace_7_dias": 0,
-    "scrapeadas": 17,
-    "publicadas": 17,
-    "a_mano": 17,
-    "fuente_viva": "2 de 2 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "__________________________██"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄███▇▇▇▇▇██▇▇▇▇▇▇▇▆▆▆▆▆▆▆▅▅▅"
    },
    {
     "sala": "Cine Cosmos",
     "funciones": 16,
-    "titulos": 7,
-    "hasta": "2026-11-18",
-    "hace_7_dias": 8,
+    "titulos": 6,
+    "hasta": "2026-11-25",
+    "hace_7_dias": 16,
     "scrapeadas": 24,
     "publicadas": 24,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
-    "motivo": "cosmos.uba.ar no contesta (HTTP Error 503: Service Temporarily Unavailable); la cartelera sale de Instagram (@cinecosmos.uba)",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▃▂___▅▄▃▂█▇▆▅▄▃▂▆▅▄▃▂▂▂█▇▆▅▄"
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃▂█▇▆▅▄▃▂▆▅▄▃▂▂▂█▇▆▅▄▃▂█▇▆▅▄"
    },
    {
-    "sala": "Centro Cultural Borges",
-    "funciones": 14,
-    "titulos": 10,
-    "hasta": "2026-12-13",
-    "hace_7_dias": 26,
-    "scrapeadas": 0,
-    "publicadas": 14,
+    "sala": "MALBA",
+    "funciones": 15,
+    "titulos": 14,
+    "hasta": "2026-12-05",
+    "hace_7_dias": 28,
+    "scrapeadas": 15,
+    "publicadas": 15,
     "a_mano": 0,
-    "fuente_viva": "4 de 7 días",
-    "dias_sin_contestar": 3,
-    "motivo": "la API no contesta; se publica el caché de la última corrida buena",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▃▃▃▃▃▃▃▃▃█▇▆▃▃▃▃▃▃▃▃▃▃▃▃▂▂▂▂"
-   },
-   {
-    "sala": "Centro Cultural Recoleta",
-    "funciones": 11,
-    "titulos": 11,
-    "hasta": "2026-11-29",
-    "hace_7_dias": 6,
-    "scrapeadas": 11,
-    "publicadas": 11,
-    "a_mano": 8,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇▇▇▆▅▅▃▃▅▆▇▇▆▅▅▅▅▅▆▆▅▅▅▅▅▄█▇"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃▄▄▇▇▆▆▇███▇▇▆▆▆▆▆▅▅▅▅▅▅▄▄▃▃"
    },
    {
-    "sala": "Filo Cine",
+    "sala": "Amorina",
     "funciones": 10,
-    "titulos": 10,
-    "hasta": "2026-11-27",
-    "hace_7_dias": 10,
+    "titulos": 8,
+    "hasta": "2026-12-24",
+    "hace_7_dias": 17,
     "scrapeadas": 10,
     "publicadas": 10,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "█▇▇▇▅▅▅▅▄▇▇▇▇▇▇▇▇▇▇▇▇██▇▇███"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "███▇▇▇▇██▇▇▇▇▇▇▆▆▆▆▆▆▆▆▅▅▄▄▄"
    },
    {
-    "sala": "Arthaus",
+    "sala": "Sala Lúcida",
     "funciones": 9,
-    "titulos": 9,
-    "hasta": "2026-11-29",
-    "hace_7_dias": 4,
-    "scrapeadas": 9,
-    "publicadas": 9,
-    "a_mano": 7,
+    "titulos": 7,
+    "hasta": "2026-11-28",
+    "hace_7_dias": 22,
+    "scrapeadas": 12,
+    "publicadas": 11,
+    "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▄▄▄▄▃▂▂▂▂▂▂▂▂▂▂▂▄▄▄▄▄▄▄▄▄▃█▇"
-   },
-   {
-    "sala": "CCK",
-    "funciones": 9,
-    "titulos": 7,
-    "hasta": "2026-11-29",
-    "hace_7_dias": 16,
-    "scrapeadas": 0,
-    "publicadas": 9,
-    "a_mano": 0,
-    "fuente_viva": "4 de 7 días",
-    "dias_sin_contestar": 3,
-    "motivo": "no se pudo leer palaciolibertad.gob.ar/cine/",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▅▅▅▅▄▃▂▂▅███▇▆▆▆▆▆▆▆▆▆▆▆▆▆▄▄"
-   },
-   {
-    "sala": "Casa del Bicentenario",
-    "funciones": 9,
-    "titulos": 9,
-    "hasta": "2026-11-29",
-    "hace_7_dias": 0,
-    "scrapeadas": 9,
-    "publicadas": 9,
-    "a_mano": 9,
-    "fuente_viva": "2 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "el listado no contesta (HTTP Error 403: Forbidden); sólo queda lo que haya en data/cb_manual.json",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "_____█▇▇▇▇▇▆▅▁▁▁▁▁▁_______▅▅"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄▄▄▄▄▄▄▄▄▄▄▄▅▅▅▅▅▅▅███▇▇▇▆▅▄"
    },
    {
     "sala": "Centro Cultural 25 de Mayo",
-    "funciones": 9,
-    "titulos": 9,
+    "funciones": 8,
+    "titulos": 8,
     "hasta": "2026-12-03",
-    "hace_7_dias": 5,
-    "scrapeadas": 4,
-    "publicadas": 9,
+    "hace_7_dias": 9,
+    "scrapeadas": 8,
+    "publicadas": 8,
     "a_mano": 6,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▃▃▃▂_▂▂▂▂▄▄▅▅▅▅▅▅▅▅▅▅▅▅▅▄▄_█"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▂▂▄▄▅▅▅▅▅▅▅▅▅▅▅▅▅▄▄_████▇▇▇▇"
    },
    {
-    "sala": "Centro Cultural Munro",
-    "funciones": 9,
-    "titulos": 9,
-    "hasta": "2026-12-06",
-    "hace_7_dias": 12,
-    "scrapeadas": 9,
-    "publicadas": 9,
-    "a_mano": 0,
+    "sala": "Casa del Bicentenario",
+    "funciones": 7,
+    "titulos": 7,
+    "hasta": "2026-11-29",
+    "hace_7_dias": 9,
+    "scrapeadas": 7,
+    "publicadas": 7,
+    "a_mano": 7,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▃▃▃▃▃▃▂▂▇▇▇▇▇▆▆▆████▇▇▆▆▆▆▆▅"
+    "motivo": "el listado no contesta (HTTP Error 403: Forbidden); sólo queda lo que haya en data/cb_manual.json",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "████▇▅▂▂▂▂▂▂_______▆▆▆▆▆▆▆▆▅"
    },
    {
-    "sala": "Hasta Trilce",
-    "funciones": 8,
-    "titulos": 1,
-    "hasta": "2026-12-08",
-    "hace_7_dias": 8,
+    "sala": "Cinema Club Lomas de Zamora",
+    "funciones": 6,
+    "titulos": 6,
+    "hasta": "2026-11-29",
+    "hace_7_dias": 0,
+    "scrapeadas": 6,
+    "publicadas": 6,
+    "a_mano": 0,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "______________________█▇▆▆▆▅"
+   },
+   {
+    "sala": "Cinema Club Recoleta",
+    "funciones": 6,
+    "titulos": 5,
+    "hasta": "2026-11-30",
+    "hace_7_dias": 0,
     "scrapeadas": 8,
     "publicadas": 8,
     "a_mano": 0,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "______________________█▇▇▆▇▆"
+   },
+   {
+    "sala": "Club Lucero",
+    "funciones": 6,
+    "titulos": 6,
+    "hasta": "2026-11-27",
+    "hace_7_dias": 0,
+    "scrapeadas": 6,
+    "publicadas": 6,
+    "a_mano": 0,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "__█▄__________________▃▃▂▂▂▂"
+   },
+   {
+    "sala": "Hasta Trilce",
+    "funciones": 6,
+    "titulos": 1,
+    "hasta": "2026-12-08",
+    "hace_7_dias": 8,
+    "scrapeadas": 6,
+    "publicadas": 6,
+    "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▆▅▅▆▆▆▆▆▆▆▆▆▆▆▆▅▆▆▆▆▆█▆▆▆▆▆█"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▆▆▆▆▆▆▆▆▅▆▆▆▆▆█▆▆▆▆▆██▆▆▆▆▆▆"
    },
    {
-    "sala": "Avalon",
+    "sala": "CCK",
     "funciones": 5,
     "titulos": 5,
-    "hasta": "2026-11-21",
+    "hasta": "2026-11-29",
+    "hace_7_dias": 9,
+    "scrapeadas": 0,
+    "publicadas": 5,
+    "a_mano": 0,
+    "fuente_viva": "0 de 7 días",
+    "dias_sin_contestar": 10,
+    "motivo": "no se pudo leer palaciolibertad.gob.ar/cine/",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▂▅███▇▆▆▆▆▆▆▆▆▆▆▆▆▆▄▄▄▄▄▄▄▃▃"
+   },
+   {
+    "sala": "Centro Cultural Borges",
+    "funciones": 5,
+    "titulos": 5,
+    "hasta": "2026-12-13",
+    "hace_7_dias": 14,
+    "scrapeadas": 0,
+    "publicadas": 5,
+    "a_mano": 0,
+    "fuente_viva": "0 de 7 días",
+    "dias_sin_contestar": 10,
+    "motivo": "la API no contesta; se publica el caché de la última corrida buena",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃▃█▇▆▃▃▃▃▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂▁▁"
+   },
+   {
+    "sala": "Espacio INCAA Morón",
+    "funciones": 5,
+    "titulos": 5,
+    "hasta": "2026-11-29",
     "hace_7_dias": 0,
     "scrapeadas": 5,
     "publicadas": 5,
-    "a_mano": 5,
-    "fuente_viva": "2 de 2 días",
+    "a_mano": 0,
+    "fuente_viva": "6 de 6 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "__________________________██"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "______________________█▇▇▅▅▅"
    },
    {
-    "sala": "Cineclub Farus",
+    "sala": "Filo Cine",
     "funciones": 5,
     "titulos": 5,
-    "hasta": "2026-11-27",
-    "hace_7_dias": 0,
+    "hasta": "2026-12-03",
+    "hace_7_dias": 10,
     "scrapeadas": 5,
     "publicadas": 5,
-    "a_mano": 2,
-    "fuente_viva": "2 de 2 días",
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇▇▄▄▄▄▄▄▄_________________██"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▅▄▇▇▇▇▇▇▇▇▇▇▇▇██▇▇████▇▇▆▅▅▅"
    },
    {
-    "sala": "Biblioteca del Congreso",
+    "sala": "Centro Cultural Munro",
     "funciones": 4,
     "titulos": 4,
-    "hasta": "2026-11-26",
-    "hace_7_dias": 5,
+    "hasta": "2026-12-06",
+    "hace_7_dias": 9,
     "scrapeadas": 4,
     "publicadas": 4,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▆▅▅▃▃_▃▃▂▂_██████▇▇▇▇▇▇▇▆▆▆▆"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▂▇▇▇▇▇▆▆▆████▇▇▆▆▆▆▆▅▅▅▅▅▄▄▃"
    },
    {
-    "sala": "Bellas Artes",
+    "sala": "Cineclub Farus",
+    "funciones": 4,
+    "titulos": 4,
+    "hasta": "2026-11-27",
+    "hace_7_dias": 5,
+    "scrapeadas": 4,
+    "publicadas": 4,
+    "a_mano": 2,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄▄_________________████████▇"
+   },
+   {
+    "sala": "Cinema Club Palermo",
+    "funciones": 4,
+    "titulos": 4,
+    "hasta": "2026-11-29",
+    "hace_7_dias": 0,
+    "scrapeadas": 4,
+    "publicadas": 4,
+    "a_mano": 0,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "______________________█▇▇▆▅▄"
+   },
+   {
+    "sala": "Biblioteca Nacional",
     "funciones": 3,
     "titulos": 3,
-    "hasta": "2026-11-28",
+    "hasta": "2026-12-15",
+    "hace_7_dias": 1,
+    "scrapeadas": 3,
+    "publicadas": 3,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▆▆▆▆▆▆▆▆▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃_███"
+   },
+   {
+    "sala": "Casa de la Lectura y la Escritura",
+    "funciones": 3,
+    "titulos": 3,
+    "hasta": "2026-12-10",
     "hace_7_dias": 0,
     "scrapeadas": 3,
     "publicadas": 3,
@@ -1210,14 +1156,59 @@
     "fuente_viva": "5 de 5 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "████▇▆▆▆▆▆▆▅▃▃▃▃▃▃▃____▅▅▄▃▃"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "_______________________▆████"
    },
    {
-    "sala": "Lumiton",
+    "sala": "Centro Cultural Recoleta",
+    "funciones": 3,
+    "titulos": 3,
+    "hasta": "2026-11-29",
+    "hace_7_dias": 11,
+    "scrapeadas": 3,
+    "publicadas": 3,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃▅▆▇▇▆▅▅▅▅▅▆▆▅▅▅▅▅▄█▇▇▇▇▆▅▄▃"
+   },
+   {
+    "sala": "La Tomada",
+    "funciones": 3,
+    "titulos": 3,
+    "hasta": "2026-11-28",
+    "hace_7_dias": 17,
+    "scrapeadas": 17,
+    "publicadas": 17,
+    "a_mano": 3,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "___________________█████████"
+   },
+   {
+    "sala": "Arthaus",
     "funciones": 2,
     "titulos": 2,
-    "hasta": "2026-11-25",
+    "hasta": "2026-11-29",
+    "hace_7_dias": 9,
+    "scrapeadas": 2,
+    "publicadas": 2,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▂▂▂▂▂▂▂▂▂▄▄▄▄▄▄▄▄▄▃█▇▇▇▇▇▆▄▂"
+   },
+   {
+    "sala": "Bellas Artes",
+    "funciones": 2,
+    "titulos": 2,
+    "hasta": "2026-11-28",
     "hace_7_dias": 3,
     "scrapeadas": 2,
     "publicadas": 2,
@@ -1225,53 +1216,98 @@
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▅▅▅▃▃▃▃████▆▆▆▆▆▅▅▆▆▆▆▆▆▆▆▅▅"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "████▇▅▅▅▅▅▅▃____▇▇▆▅▅▅▅▅▅▅▃▃"
    },
    {
-    "sala": "Biblioteca Nacional",
+    "sala": "Biblioteca del Congreso",
+    "funciones": 2,
+    "titulos": 2,
+    "hasta": "2026-11-26",
+    "hace_7_dias": 4,
+    "scrapeadas": 2,
+    "publicadas": 2,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃▂▂_██████▇▇▇▇▇▇▇▆▆▆▆▆▅▅▃▃▃▃"
+   },
+   {
+    "sala": "CEA",
+    "funciones": 1,
+    "titulos": 1,
+    "hasta": "2026-11-27",
+    "hace_7_dias": 0,
+    "scrapeadas": 1,
+    "publicadas": 1,
+    "a_mano": 0,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "______________________██▆█▆▃"
+   },
+   {
+    "sala": "Cine Helios",
     "funciones": 1,
     "titulos": 1,
     "hasta": "2026-11-24",
-    "hace_7_dias": 1,
+    "hace_7_dias": 0,
+    "scrapeadas": 1,
+    "publicadas": 1,
+    "a_mano": 0,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "______________________█▃▃▃▃▃"
+   },
+   {
+    "sala": "Cineclub Turdera",
+    "funciones": 1,
+    "titulos": 1,
+    "hasta": "2026-11-27",
+    "hace_7_dias": 0,
+    "scrapeadas": 1,
+    "publicadas": 1,
+    "a_mano": 0,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "______________________███▅▅▅"
+   },
+   {
+    "sala": "Lumiton",
+    "funciones": 1,
+    "titulos": 1,
+    "hasta": "2026-11-25",
+    "hace_7_dias": 2,
     "scrapeadas": 1,
     "publicadas": 1,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "____███████████▅▅▅▅▅▅▅▅▅▅▅▅▅"
-   },
-   {
-    "sala": "LABA",
-    "funciones": 1,
-    "titulos": 1,
-    "hasta": "2026-11-17",
-    "hace_7_dias": 0,
-    "scrapeadas": 1,
-    "publicadas": 1,
-    "a_mano": 1,
-    "fuente_viva": "2 de 2 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "__________________________██"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "████▆▆▆▆▆▅▅▆▆▆▆▆▆▆▆▅▅▅▅▅▅▅▃▃"
    },
    {
     "sala": "Museo del Cine",
     "funciones": 1,
     "titulos": 1,
     "hasta": "2026-11-29",
-    "hace_7_dias": 0,
+    "hace_7_dias": 1,
     "scrapeadas": 1,
     "publicadas": 1,
     "a_mano": 1,
-    "fuente_viva": "2 de 2 días",
+    "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "__________________________██"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "___________________█████████"
    },
    {
     "sala": "Archivo General de la Nación",
@@ -1289,19 +1325,19 @@
     "cuatro_semanas": "____________________________"
    },
    {
-    "sala": "CEA",
+    "sala": "Avalon",
     "funciones": 0,
     "titulos": 0,
     "hasta": "",
-    "hace_7_dias": 0,
+    "hace_7_dias": 5,
     "scrapeadas": null,
     "publicadas": null,
     "a_mano": 0,
-    "fuente_viva": "",
+    "fuente_viva": "5 de 5 días",
     "dias_sin_contestar": null,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-10-17",
-    "cuatro_semanas": "____________________________"
+    "ultima_vez_con_funciones": "2026-11-21",
+    "cuatro_semanas": "___________________██████▅__"
    },
    {
     "sala": "Centro Cultural Leopoldo Marechal",
@@ -1316,37 +1352,37 @@
     "dias_sin_contestar": null,
     "motivo": "",
     "ultima_vez_con_funciones": "2026-11-08",
-    "cuatro_semanas": "____________██████▇▄________"
+    "cuatro_semanas": "_____██████▇▄_______________"
    },
    {
     "sala": "Centro Cultural de la Cooperación",
     "funciones": 0,
     "titulos": 0,
     "hasta": "",
-    "hace_7_dias": 2,
+    "hace_7_dias": 1,
     "scrapeadas": null,
     "publicadas": null,
     "a_mano": 0,
-    "fuente_viva": "5 de 5 días",
+    "fuente_viva": "2 de 2 días",
     "dias_sin_contestar": null,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-13",
-    "cuatro_semanas": "▅▅▃▃█████_▆▆▆▆▆▆▅▅▅▅▅▅▅▃▃___"
+    "ultima_vez_con_funciones": "2026-11-18",
+    "cuatro_semanas": "██_▆▆▆▆▆▆▅▅▅▅▅▅▅▃▃___▃▃_____"
    },
    {
-    "sala": "Club Lucero",
+    "sala": "Cine Lorca",
     "funciones": 0,
     "titulos": 0,
     "hasta": "",
-    "hace_7_dias": 0,
-    "scrapeadas": null,
-    "publicadas": null,
+    "hace_7_dias": 22,
+    "scrapeadas": 33,
+    "publicadas": 11,
     "a_mano": 0,
-    "fuente_viva": "",
-    "dias_sin_contestar": null,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-10-30",
-    "cuatro_semanas": "_________█▄_________________"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃▂▇▆▆▅▄▃▂▇▆▆▅▄▃▂█▇▆▅▄▃▂▂▂▂▂▂"
    },
    {
     "sala": "Escuela Da Vinci",
@@ -1361,7 +1397,7 @@
     "dias_sin_contestar": null,
     "motivo": "",
     "ultima_vez_con_funciones": "2026-10-31",
-    "cuatro_semanas": "_________███________________"
+    "cuatro_semanas": "__███_______________________"
    },
    {
     "sala": "FADU",
@@ -1379,6 +1415,21 @@
     "cuatro_semanas": "____________________________"
    },
    {
+    "sala": "LABA",
+    "funciones": 0,
+    "titulos": 0,
+    "hasta": "",
+    "hace_7_dias": 1,
+    "scrapeadas": null,
+    "publicadas": null,
+    "a_mano": 0,
+    "fuente_viva": "2 de 2 días",
+    "dias_sin_contestar": null,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-17",
+    "cuatro_semanas": "___________________███______"
+   },
+   {
     "sala": "Museo Moderno",
     "funciones": 0,
     "titulos": 0,
@@ -1391,7 +1442,7 @@
     "dias_sin_contestar": null,
     "motivo": "",
     "ultima_vez_con_funciones": "2026-10-25",
-    "cuatro_semanas": "█████▅______________________"
+    "cuatro_semanas": "____________________________"
    },
    {
     "sala": "Sala Mario Soffici",
@@ -1410,410 +1461,410 @@
    },
    {
     "sala": "Hoyts Abasto",
-    "funciones": 506,
-    "titulos": 23,
+    "funciones": 431,
+    "titulos": 16,
     "hasta": "2026-12-29",
-    "hace_7_dias": 488,
-    "scrapeadas": 512,
-    "publicadas": 556,
+    "hace_7_dias": 677,
+    "scrapeadas": 435,
+    "publicadas": 474,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▅▇▇▇▆▆▆▅█▇▇▆▆▆▅▇█▇▇▆▆▅██▇▇▆▆"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▅█▇▇▆▆▆▅▇█▇▇▆▆▅██▇▇▆▆▇▇▇▆▆▆▅"
    },
    {
     "sala": "Cinemark Palermo",
-    "funciones": 457,
-    "titulos": 18,
+    "funciones": 348,
+    "titulos": 13,
     "hasta": "2026-12-23",
-    "hace_7_dias": 428,
-    "scrapeadas": 457,
-    "publicadas": 496,
+    "hace_7_dias": 608,
+    "scrapeadas": 347,
+    "publicadas": 386,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▅▇▇▇▆▆▅▅█▇▇▆▆▅▅▇█▇▇▆▆▆███▇▇▆"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▅█▇▇▆▆▅▅▇█▇▇▆▆▆███▇▇▆▇▇▇▆▆▆▅"
    },
    {
     "sala": "Hoyts Dot",
-    "funciones": 393,
-    "titulos": 18,
+    "funciones": 330,
+    "titulos": 14,
     "hasta": "2026-12-29",
-    "hace_7_dias": 370,
-    "scrapeadas": 391,
-    "publicadas": 432,
+    "hace_7_dias": 383,
+    "scrapeadas": 320,
+    "publicadas": 363,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▅▇█▇▇▆▆▅█▇▇▇▆▅▅▇▇▇▆▆▆▅▅█▇▇▆▆"
-   },
-   {
-    "sala": "Multiplex Pilar",
-    "funciones": 377,
-    "titulos": 18,
-    "hasta": "2026-12-23",
-    "hace_7_dias": 690,
-    "scrapeadas": 418,
-    "publicadas": 425,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇▇▇▇▆▆▅▇▇▆▆▅▅▄▄▇▆▇▆▆▅██▇▇▆▆▅"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▅█▇▇▇▆▅▅▇▇▇▆▆▆▅▅█▇▇▆▆▅▆▆▆▆▅▅"
    },
    {
     "sala": "Cinemark Puerto Madero",
-    "funciones": 351,
-    "titulos": 18,
+    "funciones": 291,
+    "titulos": 12,
     "hasta": "2026-12-29",
-    "hace_7_dias": 334,
-    "scrapeadas": 344,
-    "publicadas": 383,
+    "hace_7_dias": 337,
+    "scrapeadas": 280,
+    "publicadas": 319,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇▇▇▇▆▆▅▅██▇▇▆▆███▇▇▆▆▆███▇▇▆"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▅██▇▇▆▆███▇▇▆▆▆███▇▇▆▆▇▇▇▆▆▅"
    },
    {
-    "sala": "Multiplex Belgrano",
-    "funciones": 316,
-    "titulos": 19,
+    "sala": "Multiplex Pilar",
+    "funciones": 289,
+    "titulos": 17,
     "hasta": "2026-12-23",
-    "hace_7_dias": 291,
-    "scrapeadas": 366,
-    "publicadas": 366,
+    "hace_7_dias": 594,
+    "scrapeadas": 327,
+    "publicadas": 334,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇▇▆▆▆▅▄█▇▇▆▆▅▄█▇▇▇▆▆▅▄██▇▆▆▅"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▇▇▆▆▅▅▄▄▇▆▇▆▆▅██▇▇▆▆▅▇▇▆▆▅▅▄"
    },
    {
     "sala": "Multiplex Lavalle",
-    "funciones": 315,
-    "titulos": 18,
+    "funciones": 267,
+    "titulos": 15,
     "hasta": "2026-12-23",
-    "hace_7_dias": 523,
-    "scrapeadas": 349,
-    "publicadas": 351,
+    "hace_7_dias": 476,
+    "scrapeadas": 292,
+    "publicadas": 304,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇▇█▇▇▆▇█▇▇▆▆▆▅▇▇▆▇▆▆▅███▇▇▆▆"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "█▇▇▆▆▆▅▇▇▆▇▆▆▅███▇▇▆▆▇▇▇▇▆▆▅"
+   },
+   {
+    "sala": "Multiplex Belgrano",
+    "funciones": 240,
+    "titulos": 16,
+    "hasta": "2026-12-23",
+    "hace_7_dias": 545,
+    "scrapeadas": 286,
+    "publicadas": 286,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "█▇▇▆▆▅▄█▇▇▇▆▆▅▄██▇▆▆▅█▇▆▆▅▅▄"
    },
    {
     "sala": "Multiplex Canning",
-    "funciones": 291,
-    "titulos": 15,
+    "funciones": 234,
+    "titulos": 12,
     "hasta": "2026-12-23",
-    "hace_7_dias": 464,
-    "scrapeadas": 321,
-    "publicadas": 322,
+    "hace_7_dias": 291,
+    "scrapeadas": 258,
+    "publicadas": 261,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇▇█▇▇▆▆▆█▇▇▇▆▆█▇▇▇▇▆▆███▇▇▆▆"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▆█▇▇▇▆▆█▇▇▇▇▆▆███▇▇▆▆▅▇▆▆▆▅▅"
    },
    {
     "sala": "Cinemark Caballito",
-    "funciones": 230,
-    "titulos": 14,
+    "funciones": 191,
+    "titulos": 12,
     "hasta": "2026-12-29",
-    "hace_7_dias": 232,
-    "scrapeadas": 241,
-    "publicadas": 254,
+    "hace_7_dias": 214,
+    "scrapeadas": 201,
+    "publicadas": 213,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▅▇█▇▇▆▆▅█▇▇▆▆▅▅▇█▇▇▆▆▅██▇▇▆▆"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▅█▇▇▆▆▅▅▇█▇▇▆▆▅██▇▇▆▆▅▆▇▆▆▅▅"
    },
    {
     "sala": "Cines Pixel",
-    "funciones": 35,
-    "titulos": 13,
-    "hasta": "2026-11-22",
-    "hace_7_dias": 0,
-    "scrapeadas": 49,
-    "publicadas": 52,
+    "funciones": 39,
+    "titulos": 11,
+    "hasta": "2026-12-02",
+    "hace_7_dias": 40,
+    "scrapeadas": 55,
+    "publicadas": 55,
     "a_mano": 0,
-    "fuente_viva": "1 de 1 días",
+    "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "___________________________█"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "____________________▄▃██▇▆▅▄"
    },
    {
     "sala": "Cinépolis Houssay",
     "funciones": 0,
     "titulos": 0,
     "hasta": "",
-    "hace_7_dias": 17,
-    "scrapeadas": 18,
-    "publicadas": 18,
+    "hace_7_dias": 18,
+    "scrapeadas": 16,
+    "publicadas": 16,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "███▆▄▂_▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "███▇▇▇▇▇▆▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇▇"
    },
    {
     "sala": "Cinépolis Recoleta",
     "funciones": 0,
     "titulos": 0,
     "hasta": "",
-    "hace_7_dias": 28,
-    "scrapeadas": 49,
-    "publicadas": 49,
+    "hace_7_dias": 45,
+    "scrapeadas": 44,
+    "publicadas": 44,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▇█▇██▇█▇▇▇▇▇▇█▇▇▆▅▅▅▅▅▅▆██▇█"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▇▇▇▇▇▇█▇▇▆▅▅▅▅▅▅▅▇▇▇█▇▇█▇▇▇▇"
    },
    {
     "sala": "Showcase Belgrano",
     "funciones": 0,
     "titulos": 0,
     "hasta": "",
-    "hace_7_dias": 39,
-    "scrapeadas": 40,
-    "publicadas": 40,
+    "hace_7_dias": 40,
+    "scrapeadas": 36,
+    "publicadas": 36,
     "a_mano": 0,
     "fuente_viva": "7 de 7 días",
     "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "████▇▇▇▇▇▇███████▇▇▇▇▇▇▇█▇▇▇"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▇▇▇█▇▇▇▇▇▇▇▇▇▇▇▇▇█▇▇▇▇▇█▇▇▇▇"
    }
   ],
   "madrid": [
    {
-    "sala": "Embajadores Glorieta",
-    "funciones": 55,
-    "titulos": 34,
-    "hasta": "2026-12-27",
-    "hace_7_dias": 45,
-    "scrapeadas": 64,
-    "publicadas": 64,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▄█▇▇▆▅▅▄█▇▇▆▅▄▄▇▇▆▆▅▄▄▇▇▇▇▆▅"
-   },
-   {
-    "sala": "Golem Madrid",
-    "funciones": 53,
-    "titulos": 17,
-    "hasta": "2026-11-22",
-    "hace_7_dias": 33,
-    "scrapeadas": 70,
-    "publicadas": 70,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▄██▇▆▅▄▄▇▇▇▆▆▅▄███▇▆▅▃▇▇█▇▆▅"
-   },
-   {
-    "sala": "Embajadores Ercilla",
-    "funciones": 51,
-    "titulos": 31,
-    "hasta": "2026-12-15",
-    "hace_7_dias": 48,
-    "scrapeadas": 58,
-    "publicadas": 58,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▅█▇▇▆▅▄▄█▇▇▆▅▄▄██▇▇▆▅▄█▇▇▆▆▅"
-   },
-   {
-    "sala": "Cineteca Madrid",
-    "funciones": 47,
-    "titulos": 41,
-    "hasta": "2027-01-03",
-    "hace_7_dias": 50,
-    "scrapeadas": 47,
-    "publicadas": 47,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▆▆▆▆▅▅▅▅▇▆███▇▇▇▇▆▆▆▅▆▆▆▇▆▆▅"
-   },
-   {
-    "sala": "Cine Doré",
-    "funciones": 46,
-    "titulos": 45,
-    "hasta": "2026-12-16",
-    "hace_7_dias": 63,
-    "scrapeadas": 50,
-    "publicadas": 46,
-    "a_mano": 18,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▄▄▄▃▂▃▃▃▂▂▇▇██▂▂▂▂▂████▇▇▆▆▆"
-   },
-   {
     "sala": "Cines Ideal",
-    "funciones": 30,
-    "titulos": 3,
-    "hasta": "2026-12-20",
+    "funciones": 210,
+    "titulos": 29,
+    "hasta": "2027-01-19",
     "hace_7_dias": 30,
     "scrapeadas": 0,
-    "publicadas": 30,
+    "publicadas": 237,
     "a_mano": 0,
-    "fuente_viva": "0 de 7 días",
-    "dias_sin_contestar": 25,
+    "fuente_viva": "1 de 7 días",
+    "dias_sin_contestar": 1,
     "motivo": "yelmocines.es no devolvió la cartelera (¿Cloudflare?)",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "█▇▅▄▄▃▃▃▃▃▃▃▃▃▃▃▃▃▃▂▂▂▂▂▂▂▂▂"
-   },
-   {
-    "sala": "Sala Equis",
-    "funciones": 28,
-    "titulos": 24,
-    "hasta": "2026-11-29",
-    "hace_7_dias": 45,
-    "scrapeadas": 31,
-    "publicadas": 31,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "___________██▇▇▇▇▇▆▆▆▆▆▆▅▅▅▄"
-   },
-   {
-    "sala": "Artistic Metropol",
-    "funciones": 25,
-    "titulos": 17,
-    "hasta": "2026-11-26",
-    "hace_7_dias": 33,
-    "scrapeadas": 30,
-    "publicadas": 30,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▄▇▆▅▅▅▄▅▅▆▅▅▅▅▅▅▇▇▆▅▆▅█▇▆▅▅▅"
-   },
-   {
-    "sala": "Cine Estudio",
-    "funciones": 17,
-    "titulos": 17,
-    "hasta": "2026-11-25",
-    "hace_7_dias": 28,
-    "scrapeadas": 17,
-    "publicadas": 17,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▄▄▆▅▅▅▄▄▅▆▆▅▅▄▄▄██▇▇▆▆▆▆▅▅▄▄"
-   },
-   {
-    "sala": "Museo Reina Sofía",
-    "funciones": 14,
-    "titulos": 14,
-    "hasta": "2026-12-12",
-    "hace_7_dias": 12,
-    "scrapeadas": 14,
-    "publicadas": 14,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "_____█▅▅▅▅▅▅▅▅▅▅▅▅▄▄▄▄▄▄▃▂▂▄"
-   },
-   {
-    "sala": "Cines Callao",
-    "funciones": 6,
-    "titulos": 3,
-    "hasta": "2026-11-19",
-    "hace_7_dias": 7,
-    "scrapeadas": 13,
-    "publicadas": 13,
-    "a_mano": 0,
-    "fuente_viva": "7 de 7 días",
-    "dias_sin_contestar": 0,
-    "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-16",
-    "cuatro_semanas": "▄▃█▇▆▅▄▃▇▆▆▅▅▃▂▇▆▆▅▄▃▂▇▆▆▅▄▃"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂▂█▇"
    },
    {
     "sala": "Cines Princesa",
-    "funciones": 0,
-    "titulos": 0,
-    "hasta": "",
-    "hace_7_dias": 109,
-    "scrapeadas": null,
-    "publicadas": null,
+    "funciones": 111,
+    "titulos": 27,
+    "hasta": "2026-11-26",
+    "hace_7_dias": 0,
+    "scrapeadas": 152,
+    "publicadas": 152,
     "a_mano": 0,
-    "fuente_viva": "0 de 3 días",
-    "dias_sin_contestar": null,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-12",
-    "cuatro_semanas": "▄███▇▆▅▄███▇▆▅▄███▇▆▅▄▃▂____"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄███▇▆▅▄█▇▇▇▆▅▄▃▂_____███▇▆▅"
+   },
+   {
+    "sala": "Cineteca Madrid",
+    "funciones": 78,
+    "titulos": 64,
+    "hasta": "2027-01-03",
+    "hace_7_dias": 47,
+    "scrapeadas": 78,
+    "publicadas": 78,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄▆▅▇▇▆▆▆▆▆▅▅▅▅▅▅▅▆▅▅▅▅▆██▇▇▇"
    },
    {
     "sala": "Renoir Plaza de España",
-    "funciones": 0,
-    "titulos": 0,
-    "hasta": "",
-    "hace_7_dias": 57,
-    "scrapeadas": null,
-    "publicadas": null,
+    "funciones": 57,
+    "titulos": 8,
+    "hasta": "2026-11-26",
+    "hace_7_dias": 0,
+    "scrapeadas": 77,
+    "publicadas": 77,
     "a_mano": 0,
-    "fuente_viva": "0 de 3 días",
-    "dias_sin_contestar": null,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-12",
-    "cuatro_semanas": "▄███▇▆▅▄███▇▆▅▄███▇▆▅▄▃▂____"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄███▇▆▅▄███▇▆▅▄▃▂_____███▇▆▅"
+   },
+   {
+    "sala": "Golem Madrid",
+    "funciones": 49,
+    "titulos": 11,
+    "hasta": "2026-11-26",
+    "hace_7_dias": 53,
+    "scrapeadas": 67,
+    "publicadas": 67,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄▇▇▇▆▅▄▄▇▇▇▇▆▅▃▇▇█▇▆▅▄██▆▇▆▅"
+   },
+   {
+    "sala": "Embajadores Glorieta",
+    "funciones": 47,
+    "titulos": 26,
+    "hasta": "2026-12-27",
+    "hace_7_dias": 55,
+    "scrapeadas": 56,
+    "publicadas": 56,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄█▇▇▆▅▄▄▇▇▇▇▆▅▄▇▇▇▇▆▅▅██▇▆▅▅"
+   },
+   {
+    "sala": "Embajadores Ercilla",
+    "funciones": 45,
+    "titulos": 32,
+    "hasta": "2026-12-22",
+    "hace_7_dias": 53,
+    "scrapeadas": 54,
+    "publicadas": 54,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄█▇▇▆▅▄▄██▇▇▆▅▄█▇▇▆▆▅▅█▇▇▆▅▅"
    },
    {
     "sala": "Renoir Retiro",
-    "funciones": 0,
-    "titulos": 0,
-    "hasta": "",
-    "hace_7_dias": 39,
-    "scrapeadas": null,
-    "publicadas": null,
+    "funciones": 36,
+    "titulos": 8,
+    "hasta": "2026-11-26",
+    "hace_7_dias": 0,
+    "scrapeadas": 52,
+    "publicadas": 51,
     "a_mano": 0,
-    "fuente_viva": "0 de 3 días",
-    "dias_sin_contestar": null,
+    "fuente_viva": "6 de 6 días",
+    "dias_sin_contestar": 0,
     "motivo": "",
-    "ultima_vez_con_funciones": "2026-11-12",
-    "cuatro_semanas": "▄███▇▆▅▄███▇▆▅▄▇▇█▇▆▅▄▃▂____"
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄███▇▆▅▄▇▇▇▇▆▅▄▃▂_____███▇▆▅"
+   },
+   {
+    "sala": "Cine Doré",
+    "funciones": 28,
+    "titulos": 28,
+    "hasta": "2026-12-16",
+    "hace_7_dias": 46,
+    "scrapeadas": 30,
+    "publicadas": 28,
+    "a_mano": 14,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃▂▂▇▇██▂▂▂▂▂████▇▇▆▆▆▆▆▅▅▅▄▄"
+   },
+   {
+    "sala": "Cines Callao",
+    "funciones": 24,
+    "titulos": 4,
+    "hasta": "2026-12-20",
+    "hace_7_dias": 6,
+    "scrapeadas": 27,
+    "publicadas": 27,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▃█▇▆▅▅▄▃▇▇▇▅▄▃▂█▆▆▅▄▃▂▁▇▇▆▆▅"
+   },
+   {
+    "sala": "Cine Estudio",
+    "funciones": 19,
+    "titulos": 16,
+    "hasta": "2026-12-03",
+    "hace_7_dias": 17,
+    "scrapeadas": 21,
+    "publicadas": 21,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▄▅▆▆▅▅▄▄▄██▇▇▆▆▆▆▅▅▄▄▄▄▆▆▅▅▅"
+   },
+   {
+    "sala": "Artistic Metropol",
+    "funciones": 18,
+    "titulos": 12,
+    "hasta": "2026-11-26",
+    "hace_7_dias": 25,
+    "scrapeadas": 24,
+    "publicadas": 24,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "▅▅▆▅▅▅▅▅▅▇▇▆▅▆▅█▇▆▅▅▅▄▇▆▅▅▅▄"
+   },
+   {
+    "sala": "Sala Equis",
+    "funciones": 12,
+    "titulos": 8,
+    "hasta": "2026-11-29",
+    "hace_7_dias": 28,
+    "scrapeadas": 12,
+    "publicadas": 12,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "____██▇▇▇▇▇▆▆▆▆▆▆▅▅▅▄▄▄▄▄▃▃▂"
+   },
+   {
+    "sala": "Museo Reina Sofía",
+    "funciones": 8,
+    "titulos": 8,
+    "hasta": "2026-12-12",
+    "hace_7_dias": 14,
+    "scrapeadas": 8,
+    "publicadas": 8,
+    "a_mano": 0,
+    "fuente_viva": "7 de 7 días",
+    "dias_sin_contestar": 0,
+    "motivo": "",
+    "ultima_vez_con_funciones": "2026-11-23",
+    "cuatro_semanas": "████▇▇▇▇▇▇▇▆▅▅▅▅▅▄▃▃▆▆▆▆▅▅▄▄"
    }
   ]
  },
@@ -1831,16 +1882,16 @@
     "titulo": "Amorina: la columna Ciclo trae el tipo de actividad («Cine») (1 caso, 10 funciones). No es un ciclo: va vacío. Por…",
     "efimero": false
    },
-   "categorias/ba/ciclo-gritado/Sala Lúcida": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Sala Lúcida: hay ciclos con palabras en mayúsculas (1 caso). Ningún ciclo va gritado: pasarlo por run._fix_caps. Por…",
-    "efimero": false
-   },
    "categorias/ba/ciclo-mal-escrito/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
     "titulo": "Ciclos con la puntuación rota (2 casos, 4 funciones) en CCK, Sala Lúcida. Arreglar la escritura en el…",
+    "efimero": false
+   },
+   "categorias/ba/director-con-numeros/-": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Directores con años o duraciones adentro (2 casos) en Sala Lúcida (2). El scraper leyó la ficha entera.…",
     "efimero": false
    },
    "categorias/ba/director-relleno/-": {
@@ -1883,12 +1934,6 @@
     "desde": "2026-11-16",
     "sev": "AVISO",
     "titulo": "Directores de relleno («Desconocido», «Varios») (2 casos) en Cineteca Madrid (2). Mejor vacío. Por…",
-    "efimero": false
-   },
-   "categorias/madrid/titulo-con-ciclo/Cine Estudio": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Cine Estudio: el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y…",
     "efimero": false
    },
    "categorias/madrid/titulo-con-ciclo/Cineteca Madrid": {
@@ -1939,10 +1984,10 @@
     "titulo": "Títulos con un tramo en mayúsculas (3 casos, 6 funciones) en Artistic Metropol (3). Pasarlos por…",
     "efimero": false
    },
-   "categorias/madrid/titulo-parece-ciclo/Sala Equis": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Sala Equis: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (3 casos). Confirmar…",
+   "festivales/-/fuera-de-fechas/Bazofi": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "Bazofi: 1 función fuera de sus fechas (5 al 26 nov): MALBA, 2026-11-27, «Orar Orbil & viceversa». O el…",
     "efimero": false
    },
    "festivales/-/sin-lista/Buenos Aires Rojo Sangre": {
@@ -1957,10 +2002,16 @@
     "titulo": "Infinito Super 8: 8 programas sin lista de películas («Rescates: sesión 1», «Competencia Internacional»,…",
     "efimero": false
    },
-   "festivales/-/web-cambio/FIDBA": {
-    "desde": "2026-11-16",
+   "festivales/-/suelto/Festival Internacional de Cine de Arquitectura y Diseño de Buenos Aires": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "Festival Internacional de Cine de Arquitectura y Diseño de Buenos Aires (2 funciones en Sala Lúcida)…",
+    "efimero": false
+   },
+   "festivales/-/web-cambio/Bazofi": {
+    "desde": "2026-11-21",
     "sev": "ERROR",
-    "titulo": "FIDBA: su web cambió desde el 17/11: 2 líneas nuevas y 3 que ya no están. Lo nuevo: «22/11 17:30hs Sala Lúcida»;…",
+    "titulo": "Bazofi: su web cambió desde el 20/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy abierto de 12:00 a 20:00».…",
     "efimero": true
    },
    "festivales/-/web-cambio/Infinito Super 8": {
@@ -1980,6 +2031,12 @@
     "sev": "AVISO",
     "titulo": "Festival de Cine Indígena BAIn: no se pudo leer su web (HTTP 400): esta semana no se sabe si cambió la…",
     "efimero": true
+   },
+   "fichas/ba/director-que-no-es-un-nombre/-": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "Director que no es un nombre: Sala Lúcida ×2. Ejemplo (Sala Lúcida): Artacho Jurado, Sinfonia de un…",
+    "efimero": false
    },
    "fichas/ba/dos-titulos-en-el-mismo-horario/-": {
     "desde": "2026-11-16",
@@ -2017,6 +2074,18 @@
     "titulo": "Dos títulos en el mismo horario: Golem Madrid ×20, Artistic Metropol ×10, Embajadores Ercilla ×9,…",
     "efimero": false
    },
+   "fichas/madrid/sin-director/-": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "15 funciones sin director: Cines Callao (15/24).",
+    "efimero": false
+   },
+   "fichas/madrid/sin-letterboxd/-": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "15 funciones sin link de Letterboxd: Cines Callao (15/24).",
+    "efimero": false
+   },
    "fichas/madrid/sin-ningun-dato/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -2047,6 +2116,42 @@
     "titulo": "Centro Cultural Borges: publica 14 funciones pero su fuente no contesta hace 3 días: la API no contesta; se publica el caché de la…",
     "efimero": false
    },
+   "fuentes/ba/faltantes/Espacio INCAA Morón": {
+    "desde": "2026-11-24",
+    "sev": "ERROR",
+    "titulo": "Espacio INCAA Morón: la fuente publica 15 ítems en la listing y nosotros tenemos 5 película(s). Puede estar faltando programación.",
+    "efimero": false
+   },
+   "fuentes/ba/faltantes/Sala Lúcida": {
+    "desde": "2026-11-24",
+    "sev": "ERROR",
+    "titulo": "Sala Lúcida: la fuente publica 22 ítems en la listing y nosotros tenemos 7 película(s). Puede estar faltando programación.",
+    "efimero": false
+   },
+   "fuentes/ba/floja/Arthaus": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "Arthaus está por debajo de lo habitual: 2 funciones de 2 películas, contra ~6 de siempre.",
+    "efimero": false
+   },
+   "fuentes/ba/floja/Centro Cultural Borges": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "Centro Cultural Borges está por debajo de lo habitual: 5 funciones de 5 películas, contra ~14 de siempre.",
+    "efimero": false
+   },
+   "fuentes/ba/floja/La Tomada": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "La Tomada está por debajo de lo habitual: 3 funciones de 3 películas, contra ~17 de siempre.",
+    "efimero": false
+   },
+   "fuentes/ba/horizonte/-": {
+    "desde": "2026-11-17",
+    "sev": "AVISO",
+    "titulo": "Se quedan sin programación entre hoy y mañana: Lumiton (hasta el 25/11; suele tener ~16 días por delante).…",
+    "efimero": false
+   },
    "fuentes/ba/scraper-avisa/Casa del Bicentenario": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -2074,19 +2179,19 @@
     "efimero": false,
     "cerrado": "2026-11-20"
    },
+   "categorias/ba/ciclo-gritado/Sala Lúcida": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Sala Lúcida: hay ciclos con palabras en mayúsculas (1 caso). Ningún ciclo va gritado: pasarlo por run._fix_caps. Por…",
+    "efimero": false,
+    "cerrado": "2026-11-24"
+   },
    "categorias/ba/ciclo-igual-al-titulo/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
     "titulo": "Funciones cuyo ciclo es el mismo título (1 caso) en Amorina. El ciclo va vacío. Por ejemplo: 20/11 20:00:…",
     "efimero": false,
     "cerrado": "2026-11-21"
-   },
-   "categorias/ba/director-con-numeros/-": {
-    "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "Directores con años o duraciones adentro (2 casos) en Sala Lúcida (2). El scraper leyó la ficha entera.…",
-    "efimero": false,
-    "cerrado": "2026-11-20"
    },
    "categorias/ba/titulo-con-ciclo/Centro Cultural Borges": {
     "desde": "2026-11-16",
@@ -2116,6 +2221,13 @@
     "efimero": false,
     "cerrado": "2026-11-16"
    },
+   "categorias/madrid/titulo-con-ciclo/Cine Estudio": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Cine Estudio: el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y…",
+    "efimero": false,
+    "cerrado": "2026-11-24"
+   },
    "categorias/madrid/titulo-con-ciclo/Sala Equis": {
     "desde": "2026-11-16",
     "sev": "ERROR",
@@ -2143,6 +2255,13 @@
     "titulo": "Cineteca Madrid: hay actividades que no son películas (1 caso). Se descartan en el scraper o en manual_screenings.json. Por…",
     "efimero": false,
     "cerrado": "2026-11-22"
+   },
+   "categorias/madrid/titulo-parece-ciclo/Sala Equis": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Sala Equis: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (3 casos). Confirmar…",
+    "efimero": false,
+    "cerrado": "2026-11-24"
    },
    "festivales/-/radar-inminente/Buenos Aires Rojo Sangre": {
     "desde": "2026-11-16",
@@ -2179,12 +2298,12 @@
     "efimero": false,
     "cerrado": "2026-11-20"
    },
-   "festivales/-/web-cambio/Bazofi": {
-    "desde": "2026-11-21",
+   "festivales/-/web-cambio/FIDBA": {
+    "desde": "2026-11-16",
     "sev": "ERROR",
-    "titulo": "Bazofi: su web cambió desde el 20/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy abierto de 12:00 a 20:00».…",
+    "titulo": "FIDBA: su web cambió desde el 17/11: 2 líneas nuevas y 3 que ya no están. Lo nuevo: «22/11 17:30hs Sala Lúcida»;…",
     "efimero": true,
-    "cerrado": "2026-11-22"
+    "cerrado": "2026-11-24"
    },
    "fichas/ba/titulo-que-son-varias-peliculas/Filo Cine": {
     "desde": "2026-11-16",
@@ -2227,13 +2346,6 @@
     "titulo": "Casa del Bicentenario: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.",
     "efimero": false,
     "cerrado": "2026-11-20"
-   },
-   "fuentes/ba/horizonte/-": {
-    "desde": "2026-11-17",
-    "sev": "AVISO",
-    "titulo": "Se quedan sin programación entre hoy y mañana: Cine Gaumont (hasta el 18/11; suele tener ~5 días por…",
-    "efimero": false,
-    "cerrado": "2026-11-19"
    },
    "fuentes/ba/scraper-avisa/Cine Cosmos": {
     "desde": "2026-11-16",
