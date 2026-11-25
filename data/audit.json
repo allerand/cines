@@ -1918,16 +1918,22 @@
     "titulo": "Títulos con un tramo en mayúsculas (7 casos, 8 funciones) en Arthaus, Bellas Artes (2), Centro Cultural…",
     "efimero": false
    },
+   "categorias/ba/titulo-parece-ciclo/Cacodelphia": {
+    "desde": "2026-11-25",
+    "sev": "ERROR",
+    "titulo": "Cacodelphia: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso). Confirmar…",
+    "efimero": false
+   },
    "categorias/ba/titulo-parece-ciclo/Cine Gaumont": {
     "desde": "2026-11-20",
     "sev": "ERROR",
     "titulo": "Cine Gaumont: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso, 7…",
     "efimero": false
    },
-   "categorias/madrid/director-con-de/-": {
-    "desde": "2026-11-16",
+   "categorias/ba/titulo-quizas-con-director/-": {
+    "desde": "2026-11-25",
     "sev": "AVISO",
-    "titulo": "Directores que empiezan con «de» (1 caso) en Embajadores Glorieta. Limpiar en el scraper. Por ejemplo:…",
+    "titulo": "Títulos que quizás traen al director pegado (terminan en «de Nombre Apellido») (1 caso) en Cacodelphia.…",
     "efimero": false
    },
    "categorias/madrid/director-relleno/-": {
@@ -1936,16 +1942,16 @@
     "titulo": "Directores de relleno («Desconocido», «Varios») (2 casos) en Cineteca Madrid (2). Mejor vacío. Por…",
     "efimero": false
    },
+   "categorias/madrid/titulo-con-ciclo/Cines Ideal": {
+    "desde": "2026-11-25",
+    "sev": "ERROR",
+    "titulo": "Cines Ideal: el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y…",
+    "efimero": false
+   },
    "categorias/madrid/titulo-con-ciclo/Cineteca Madrid": {
     "desde": "2026-11-19",
     "sev": "ERROR",
     "titulo": "Cineteca Madrid: el título trae el ciclo pegado adelante (3 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
-    "efimero": false
-   },
-   "categorias/madrid/titulo-con-ciclo/Embajadores Ercilla": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Embajadores Ercilla: el título trae el ciclo pegado adelante (3 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
     "efimero": false
    },
    "categorias/madrid/titulo-con-ciclo/Embajadores Glorieta": {
@@ -1970,12 +1976,6 @@
     "desde": "2026-11-16",
     "sev": "AVISO",
     "titulo": "Títulos con la versión o el tipo de sesión pegados (VOSE, 35 mm) (2 casos) en Artistic Metropol (2).…",
-    "efimero": false
-   },
-   "categorias/madrid/titulo-con-ficha/-": {
-    "desde": "2026-11-21",
-    "sev": "AVISO",
-    "titulo": "Títulos con el año o la duración pegados (1 caso) en Artistic Metropol. Limpiar en el scraper. Por…",
     "efimero": false
    },
    "categorias/madrid/titulo-gritado/-": {
@@ -2062,18 +2062,6 @@
     "titulo": "Dos títulos en el mismo horario: Golem Madrid ×20, Artistic Metropol ×10, Embajadores Ercilla ×9,…",
     "efimero": false
    },
-   "fichas/madrid/sin-director/-": {
-    "desde": "2026-11-24",
-    "sev": "AVISO",
-    "titulo": "15 funciones sin director: Cines Callao (15/24).",
-    "efimero": false
-   },
-   "fichas/madrid/sin-letterboxd/-": {
-    "desde": "2026-11-24",
-    "sev": "AVISO",
-    "titulo": "15 funciones sin link de Letterboxd: Cines Callao (15/24).",
-    "efimero": false
-   },
    "fichas/madrid/sin-ningun-dato/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -2104,6 +2092,12 @@
     "titulo": "Centro Cultural Borges: publica 14 funciones pero su fuente no contesta hace 3 días: la API no contesta; se publica el caché de la…",
     "efimero": false
    },
+   "fuentes/ba/de-cache/Cinépolis Houssay": {
+    "desde": "2026-11-25",
+    "sev": "ERROR",
+    "titulo": "Cinépolis Houssay: publica 15 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
+    "efimero": false
+   },
    "fuentes/ba/faltantes/Espacio INCAA Morón": {
     "desde": "2026-11-24",
     "sev": "ERROR",
@@ -2120,6 +2114,12 @@
     "desde": "2026-11-24",
     "sev": "AVISO",
     "titulo": "Centro Cultural Borges está por debajo de lo habitual: 5 funciones de 5 películas, contra ~14 de siempre.",
+    "efimero": false
+   },
+   "fuentes/ba/floja/Cine Cosmos": {
+    "desde": "2026-11-18",
+    "sev": "AVISO",
+    "titulo": "Cine Cosmos está por debajo de lo habitual: 8 funciones de 6 películas, contra ~32 de siempre.",
     "efimero": false
    },
    "fuentes/ba/floja/La Tomada": {
@@ -2140,16 +2140,22 @@
     "titulo": "Casa del Bicentenario publica 9 funciones, pero su scraper avisa: el listado no contesta (HTTP Error 403:…",
     "efimero": false
    },
+   "fuentes/ba/scraper-avisa/Cine Gaumont": {
+    "desde": "2026-11-25",
+    "sev": "AVISO",
+    "titulo": "Cine Gaumont publica 123 funciones, pero su scraper avisa: la API no contestó el 05/12.",
+    "efimero": false
+   },
    "fuentes/ba/sin-funciones/Centro Cultural de la Cooperación": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Centro Cultural de la Cooperación: lleva 3 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
     "efimero": false
    },
-   "fuentes/madrid/de-cache/Cines Ideal": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Cines Ideal: publica 30 funciones pero su fuente no contesta hace 25 días: yelmocines.es no devolvió la cartelera…",
+   "fuentes/madrid/fuente-inestable/Cines Ideal": {
+    "desde": "2026-11-25",
+    "sev": "AVISO",
+    "titulo": "Cines Ideal: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.",
     "efimero": false
    }
   },
@@ -2203,12 +2209,26 @@
     "efimero": false,
     "cerrado": "2026-11-16"
    },
+   "categorias/madrid/director-con-de/-": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Directores que empiezan con «de» (1 caso) en Embajadores Glorieta. Limpiar en el scraper. Por ejemplo:…",
+    "efimero": false,
+    "cerrado": "2026-11-25"
+   },
    "categorias/madrid/titulo-con-ciclo/Cine Estudio": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Cine Estudio: el título trae el ciclo pegado adelante (1 caso). El scraper tiene que partirlo: el ciclo a su columna y…",
     "efimero": false,
     "cerrado": "2026-11-24"
+   },
+   "categorias/madrid/titulo-con-ciclo/Embajadores Ercilla": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Embajadores Ercilla: el título trae el ciclo pegado adelante (3 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
+    "efimero": false,
+    "cerrado": "2026-11-25"
    },
    "categorias/madrid/titulo-con-ciclo/Sala Equis": {
     "desde": "2026-11-16",
@@ -2223,6 +2243,13 @@
     "titulo": "Cine Estudio: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
     "efimero": false,
     "cerrado": "2026-11-20"
+   },
+   "categorias/madrid/titulo-con-ficha/-": {
+    "desde": "2026-11-21",
+    "sev": "AVISO",
+    "titulo": "Títulos con el año o la duración pegados (1 caso) en Artistic Metropol. Limpiar en el scraper. Por…",
+    "efimero": false,
+    "cerrado": "2026-11-25"
    },
    "categorias/madrid/titulo-no-es-pelicula/Cines Ideal": {
     "desde": "2026-11-16",
@@ -2315,19 +2342,26 @@
     "efimero": false,
     "cerrado": "2026-11-17"
    },
+   "fichas/madrid/sin-director/-": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "15 funciones sin director: Cines Callao (15/24).",
+    "efimero": false,
+    "cerrado": "2026-11-25"
+   },
+   "fichas/madrid/sin-letterboxd/-": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "15 funciones sin link de Letterboxd: Cines Callao (15/24).",
+    "efimero": false,
+    "cerrado": "2026-11-25"
+   },
    "fuentes/ba/faltantes/Sala Lúcida": {
     "desde": "2026-11-24",
     "sev": "ERROR",
     "titulo": "Sala Lúcida: la fuente publica 22 ítems en la listing y nosotros tenemos 7 película(s). Puede estar faltando programación.",
     "efimero": false,
     "cerrado": "2026-11-24"
-   },
-   "fuentes/ba/floja/Cine Cosmos": {
-    "desde": "2026-11-18",
-    "sev": "AVISO",
-    "titulo": "Cine Cosmos está por debajo de lo habitual: 8 funciones de 7 películas, contra ~24 de siempre.",
-    "efimero": false,
-    "cerrado": "2026-11-19"
    },
    "fuentes/ba/floja/Cine Gaumont": {
     "desde": "2026-11-17",
@@ -2370,6 +2404,13 @@
     "titulo": "CEA: lleva 30 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
     "efimero": false,
     "cerrado": "2026-11-18"
+   },
+   "fuentes/madrid/de-cache/Cines Ideal": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Cines Ideal: publica 30 funciones pero su fuente no contesta hace 25 días: yelmocines.es no devolvió la cartelera…",
+    "efimero": false,
+    "cerrado": "2026-11-25"
    },
    "fuentes/madrid/floja/Cines Callao": {
     "desde": "2026-11-17",
