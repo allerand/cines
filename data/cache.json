@@ -15156,8 +15156,8 @@
     "country": "",
     "year": null,
     "duration": null,
-    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), Así es la vida (1939), Thus is Life (1930), That's life (1977)",
-    "fecha": "2026-11-21",
+    "sin_ficha": "ninguna se llama así y lo que aparece no es estreno: Such is Life (2000), That's life (1977), Así es la vida (1939)",
+    "fecha": "2026-11-25",
     "con_duracion": false,
     "desempate": ""
   },
@@ -16666,16 +16666,17 @@
     "sin_hints": "título local de un estreno"
   },
   "el héroe de berlín": {
-    "url": "",
-    "title_en": "El héroe de Berlín",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null,
-    "sin_ficha": "la única que se llama así es Race (2016), y puede ser otra",
-    "fecha": "2026-09-19",
-    "con_duracion": false,
-    "desempate": ""
+    "url": "https://letterboxd.com/film/race-2016/",
+    "title_en": "Race",
+    "director": "Stephen Hopkins",
+    "country": "Canada, Germany",
+    "year": 2016,
+    "duration": 134,
+    "genre": "Drama, Historia",
+    "clase_titulo": "exacto",
+    "title_es": "El héroe de Berlín",
+    "original_title": "Race",
+    "sin_hints": "la más nueva que se llama así"
   },
   "la invitaci��n": {
     "url": "https://letterboxd.com/film/the-invite-2026/",
@@ -27962,7 +27963,7 @@
     "url": "",
     "title_en": "ALGO HA CAMBIADO: UN VIAJE QUIJOTESCO AL PAPPO'S BLUES",
     "director": "Sergio Bonacci Lapalma",
-    "country": "Argentina, United States of America",
+    "country": "Argentina, United States",
     "year": 2025,
     "duration": 130,
     "genre": "Documental",
@@ -29821,15 +29822,14 @@
     "sin_hints": "la más nueva que se llama así"
   },
   "perfume": {
-    "url": "https://letterboxd.com/film/perfume-2018/",
-    "title_en": "Perfume",
-    "director": "Philipp Kadelbach",
-    "country": "Germany",
-    "year": 2018,
-    "duration": null,
-    "genre": "Crimen",
-    "clase_titulo": "exacto",
-    "sin_hints": "título"
+    "url": "",
+    "title_en": "PERFUME",
+    "director": "Lucía S. Ruiz, Andrea Testa",
+    "country": "Argentina",
+    "year": 2026,
+    "duration": 97,
+    "genre": "Documental",
+    "original_title": "Perfume"
   },
   "tu me abrasas|2024": {
     "url": "https://letterboxd.com/film/you-burn-me/",
@@ -30230,8 +30230,8 @@
     "original_title": "陸軍"
   },
   "la belle marinière|1932": {
-    "url": "https://letterboxd.com/film/la-belle-mariniere/",
-    "title_en": "The Beautiful Sailor",
+    "url": "",
+    "title_en": "La belle marinière",
     "director": "Harry Lachman",
     "country": "France",
     "year": 1932,
@@ -30776,7 +30776,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-21",
+    "fecha": "2026-11-25",
     "con_duracion": false,
     "desempate": ""
   },
@@ -32271,7 +32271,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "varias se llaman así: The Apartment (2023), The Apartment (1960)",
-    "fecha": "2026-11-21",
+    "fecha": "2026-11-25",
     "con_duracion": false,
     "desempate": ""
   },
@@ -33943,7 +33943,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Your Name. (2016), y puede ser otra",
-    "fecha": "2026-11-21",
+    "fecha": "2026-11-25",
     "con_duracion": false,
     "desempate": ""
   },
@@ -38453,7 +38453,7 @@
     "url": "",
     "title_en": "Luna de papel (Paper Moon)",
     "director": "Peter Bogdanovich",
-    "country": "United States of America",
+    "country": "United States",
     "year": 1973,
     "duration": 102,
     "genre": "Comedia, Crimen",
@@ -38511,7 +38511,7 @@
     "url": "",
     "title_en": "Espantapájaros (Scarecrow)",
     "director": "Jerry Schatzberg",
-    "country": "United States of America",
+    "country": "United States",
     "year": 1973,
     "duration": 112,
     "genre": "Drama",
@@ -38561,7 +38561,7 @@
     "url": "",
     "title_en": "El séptimo cielo",
     "director": "Frank Borzage",
-    "country": "United States of America",
+    "country": "United States",
     "year": 1927,
     "duration": 119,
     "genre": "Drama, Romance",
@@ -39153,6 +39153,159 @@
   "encuentro con el buda (meeting the buddha) de marta györgy-kessler|2025": {
     "url": "",
     "title_en": "Encuentro con el Buda (Meeting the Buddha) de Marta György-Kessler",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "oro sin ley: el peso de la libertad": {
+    "url": "https://letterboxd.com/film/the-weight-2026/",
+    "title_en": "The Weight",
+    "director": "Padraic McKinley",
+    "country": "USA, Germany",
+    "year": 2026,
+    "duration": 112,
+    "genre": "Drama, Thriller"
+  },
+  "sanguine": {
+    "url": "https://letterboxd.com/film/species-2026/",
+    "title_en": "Species",
+    "director": "Marion Le Corroller",
+    "country": "France, Belgium",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Terror, Ciencia ficción",
+    "title_es": "Species (Sanguine)",
+    "original_title": "Sanguine"
+  },
+  "un hombre en un puente": {
+    "url": "https://letterboxd.com/film/un-hombre-en-un-puente/",
+    "title_en": "A Man on a Bridge",
+    "director": "David Martín de los Santos",
+    "country": "Spain, Peru",
+    "year": 2026,
+    "duration": 116,
+    "genre": "Drama",
+    "original_title": "Un hombre en un puente"
+  },
+  "la ciudad de las estrellas (la la land)": {
+    "url": "",
+    "title_en": "La ciudad de las estrellas (La La Land)",
+    "director": "Damien Chazelle",
+    "country": "United States",
+    "year": 2016,
+    "duration": 129,
+    "genre": "Comedia, Drama",
+    "title_es": "La ciudad de las estrellas (La La Land)",
+    "original_title": "La La Land"
+  },
+  "salen las lobas": {
+    "url": "",
+    "title_en": "Salen las lobas",
+    "director": "Claudia Estrada Tarascó",
+    "country": "Spain, Belgium",
+    "year": 2026,
+    "duration": 94,
+    "genre": "Drama",
+    "original_title": "Salen las lobas"
+  },
+  "el cerebro|1988": {
+    "url": "https://letterboxd.com/film/the-brain/",
+    "title_en": "The Brain",
+    "director": "Ed Hunt",
+    "country": "Canada",
+    "year": 1988,
+    "duration": 92,
+    "genre": "Ciencia ficción, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "El cerebro",
+    "original_title": "The Brain"
+  },
+  "érase una vez el diablo|1985": {
+    "url": "https://letterboxd.com/film/devil-story/",
+    "title_en": "Devil Story",
+    "director": "Bernard Launois",
+    "country": "France",
+    "year": 1986,
+    "duration": 76,
+    "genre": "Terror, Fantasía",
+    "clase_titulo": "exacto",
+    "title_es": "Erase una vez el diablo",
+    "original_title": "Il était une fois le Diable"
+  },
+  "ramayana": {
+    "url": "https://letterboxd.com/film/ramayana-part-two/",
+    "title_en": "Ramayana: Part Two",
+    "director": "Nitesh Tiwari",
+    "country": "India, UK",
+    "year": 2028,
+    "duration": 195,
+    "genre": "Fantasía, Aventura",
+    "clase_titulo": "exacto",
+    "title_es": "Ramayana: El Nacimiento de una Leyenda",
+    "original_title": "रामायणम्",
+    "sin_hints": "el único estreno entre varias que se llaman así"
+  },
+  "recen por mi": {
+    "url": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
+    "title_en": "Pray for me: Pope Francis' story",
+    "director": "Facundo Bartucci",
+    "country": "Argentina",
+    "year": 2025,
+    "duration": 110,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "Recen por mí: la historia de Francisco",
+    "sin_hints": "título y duración"
+  },
+  "41° festival internacional mdq en gaumont - the night arezou disappeared": {
+    "url": "",
+    "title_en": "41° Festival Internacional MDQ en Gaumont - THE NIGHT AREZOU DISAPPEARED",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "neyen mapu. el llamado de lanin": {
+    "url": "",
+    "title_en": "NEYEN MAPU. EL LLAMADO DE LANIN",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "prince": {
+    "url": "",
+    "title_en": "PRINCE",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "qonoq: lo que comemos nosotros": {
+    "url": "",
+    "title_en": "QONOQ: LO QUE COMEMOS NOSOTROS",
+    "director": "Mario Caporali",
+    "country": "Argentina",
+    "year": 2024,
+    "duration": 73,
+    "genre": "Fantasía, Drama",
+    "original_title": "QONOQ: Lo Que Comemos Nosotros"
+  },
+  "estación zombie: península": {
+    "url": "https://letterboxd.com/film/peninsula/",
+    "title_en": "Peninsula",
+    "director": "Yeon Sang-ho",
+    "country": "South Korea",
+    "year": 2020,
+    "duration": 116,
+    "genre": "Terror, Thriller",
+    "title_es": "Península",
+    "original_title": "반도"
+  },
+  "7 semana de cine latinoamericano": {
+    "url": "",
+    "title_en": "7 SEMANA DE CINE LATINOAMERICANO",
     "director": "",
     "country": "",
     "year": null,
