@@ -37488,15 +37488,16 @@
     "original_title": "Bailar la muerte"
   },
   "el director": {
-    "url": "https://letterboxd.com/film/el-director-2026/",
+    "url": "https://letterboxd.com/film/el-director/",
     "title_en": "El Director",
-    "director": "Dani de la Orden",
-    "country": "Spain",
-    "year": 2026,
-    "duration": 113,
-    "genre": "Drama",
-    "title_es": "El director",
-    "original_title": "El Director"
+    "director": "León Alvarado Guerrero, Huerta Carlos Reyes",
+    "country": "Mexico",
+    "year": 2020,
+    "duration": null,
+    "genre": "Thriller, Terror",
+    "clase_titulo": "exacto",
+    "original_title": "El Director",
+    "sin_hints": "título"
   },
   "viva": {
     "url": "https://letterboxd.com/film/viva-2026/",
@@ -39310,5 +39311,87 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "the scent of things remembered|2025": {
+    "url": "https://letterboxd.com/film/the-scent-of-things-remembered/",
+    "title_en": "The Scent of Things Remembered",
+    "director": "António Ferreira",
+    "country": "Portugal, Brazil",
+    "year": 2025,
+    "duration": 96,
+    "genre": "Drama",
+    "clase_titulo": "exacto",
+    "original_title": "A Memória do Cheiro das Coisas"
+  },
+  "estudios de cine diciembre 2026 con alejandro mucientes": {
+    "url": "",
+    "title_en": "ESTUDIOS DE CINE Diciembre 2026 con Alejandro Mucientes",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el samurái y el prisionero": {
+    "url": "https://letterboxd.com/film/the-samurai-and-the-prisoner/",
+    "title_en": "The Samurai and the Prisoner",
+    "director": "Kiyoshi Kurosawa",
+    "country": "Japan",
+    "year": 2026,
+    "duration": 147,
+    "genre": "Drama, Misterio",
+    "title_es": "El samurai y el prisionero",
+    "original_title": "黒牢城"
+  },
+  "fomos ficando sós": {
+    "url": "https://letterboxd.com/film/fomos-ficando-sos/",
+    "title_en": "We Were Left Alone",
+    "director": "Adrián Canoura",
+    "country": "Spain",
+    "year": 2025,
+    "duration": 82,
+    "genre": "Documental",
+    "original_title": "Fomos ficando sós"
+  },
+  "out of the blue": {
+    "url": "https://letterboxd.com/film/out-of-the-blue/",
+    "title_en": "Out of the Blue",
+    "director": "Dennis Hopper",
+    "country": "USA, Canada",
+    "year": 1980,
+    "duration": 94,
+    "genre": "Drama",
+    "title_es": "Caído del cielo",
+    "original_title": "Out of the Blue"
+  },
+  "estación zombie": {
+    "url": "https://letterboxd.com/film/peninsula/",
+    "title_en": "Peninsula",
+    "director": "Yeon Sang-ho",
+    "country": "South Korea",
+    "year": 2020,
+    "duration": 116,
+    "genre": "Terror, Thriller",
+    "title_es": "Península",
+    "original_title": "반도"
+  },
+  "festival rizoma: hermanas": {
+    "url": "",
+    "title_en": "Festival RIZOMA: Hermanas",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "la maleta de álex": {
+    "url": "https://letterboxd.com/film/la-maleta-de-alex/",
+    "title_en": "My Father Alex",
+    "director": "Alejandro Cortés Calahorra",
+    "country": "Spain",
+    "year": 2026,
+    "duration": 92,
+    "genre": "Documental",
+    "clase_titulo": "exacto",
+    "original_title": "La maleta de Álex",
+    "sin_hints": "título y duración"
   }
 }

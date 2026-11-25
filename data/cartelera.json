@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T05:53:12",
+  "updated": "2026-11-25T14:15:11",
   "fuentes": {
     "Amorina": {
       "scrapeadas": 9,
@@ -27,7 +27,8 @@
     },
     "CCK": {
       "scrapeadas": 0,
-      "publicadas": 5
+      "publicadas": 5,
+      "fuente_caida": "no se pudo leer palaciolibertad.gob.ar/cine/"
     },
     "CEA": {
       "scrapeadas": 4,
@@ -52,7 +53,8 @@
     },
     "Centro Cultural Borges": {
       "scrapeadas": 0,
-      "publicadas": 5
+      "publicadas": 5,
+      "fuente_caida": "la API no contesta; se publica el caché de la última corrida buena"
     },
     "Centro Cultural Munro": {
       "scrapeadas": 4,
@@ -67,8 +69,9 @@
       "publicadas": 8
     },
     "Cine Gaumont": {
-      "scrapeadas": 136,
-      "publicadas": 136
+      "scrapeadas": 123,
+      "publicadas": 123,
+      "fuente_caida": "la API no contestó el 05/12"
     },
     "Cine Lorca": {
       "scrapeadas": 11,
@@ -115,7 +118,7 @@
       "publicadas": 126
     },
     "Cinépolis Houssay": {
-      "scrapeadas": 15,
+      "scrapeadas": 0,
       "publicadas": 15
     },
     "Cinépolis Recoleta": {
@@ -1270,22 +1273,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "14:00",
-      "title_es": "Caballo salvaje nueve",
-      "title_en": "Wild Horse Nine",
-      "original_title": "Wild Horse Nine",
-      "director": "Martin McDonagh",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 118,
-      "genre": "Comedia, Crimen",
-      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-25",
       "hora": "14:00",
@@ -1315,6 +1302,22 @@
       "genre": "Crimen, Thriller",
       "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "14:00",
+      "title_es": "Caballo salvaje nueve",
+      "title_en": "Wild Horse Nine",
+      "original_title": "Wild Horse Nine",
+      "director": "Martin McDonagh",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 118,
+      "genre": "Comedia, Crimen",
+      "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -1446,22 +1449,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "14:15",
-      "title_es": "Wildwood: El bosque salvaje",
-      "title_en": "Wildwood",
-      "original_title": "Wildwood",
-      "director": "Travis Knight",
-      "country": "Estados Unidos",
-      "year": 2026,
-      "duration": 132,
-      "genre": "Animación, Fantasía",
-      "letterboxd": "https://letterboxd.com/film/wildwood-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-25",
       "hora": "14:15",
@@ -1507,6 +1494,22 @@
       "genre": "Comedia, Fantasía",
       "letterboxd": "https://letterboxd.com/film/ebenezer-2026/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "14:15",
+      "title_es": "Wildwood: El bosque salvaje",
+      "title_en": "Wildwood",
+      "original_title": "Wildwood",
+      "director": "Travis Knight",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 132,
+      "genre": "Animación, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/wildwood-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -2646,22 +2649,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "16:00",
-      "title_es": "Los juegos del hambre: Amanecer en la cosecha",
-      "title_en": "The Hunger Games: Sunrise on the Reaping",
-      "original_title": "The Hunger Games: Sunrise on the Reaping",
-      "director": "Francis Lawrence",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 158,
-      "genre": "Acción, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-25",
       "hora": "16:00",
@@ -2707,6 +2694,22 @@
       "genre": "Comedia, Crimen",
       "letterboxd": "https://letterboxd.com/film/wild-horse-nine/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/892d8aaf61cd521816d13e35ad6a77b0",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "16:00",
+      "title_es": "Los juegos del hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -3014,22 +3017,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "16:30",
-      "title_es": "Recen por mí: la historia de Francisco",
-      "title_en": "Pray for me: Pope Francis' story",
-      "original_title": "Recen por mí: la historia de Francisco",
-      "director": "Facundo Bartucci",
-      "country": "Argentina",
-      "year": 2025,
-      "duration": 110,
-      "genre": "Documental",
-      "letterboxd": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-25",
       "hora": "16:30",
@@ -3042,6 +3029,22 @@
       "duration": 158,
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "16:30",
+      "title_es": "Recen por mí: la historia de Francisco",
+      "title_en": "Pray for me: Pope Francis' story",
+      "original_title": "Recen por mí: la historia de Francisco",
+      "director": "Facundo Bartucci",
+      "country": "Argentina",
+      "year": 2025,
+      "duration": 110,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/pray-for-me-pope-francis-story/",
       "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
@@ -4630,7 +4633,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-25",
       "hora": "18:30",
       "title_es": "Los juegos del hambre: Amanecer en la cosecha",
@@ -4646,7 +4649,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
+      "cine": "Cinépolis Houssay",
       "fecha": "2026-11-25",
       "hora": "18:30",
       "title_es": "Los juegos del hambre: Amanecer en la cosecha",
@@ -4950,22 +4953,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "19:00",
-      "title_es": "Los juegos del hambre: Amanecer en la cosecha",
-      "title_en": "The Hunger Games: Sunrise on the Reaping",
-      "original_title": "The Hunger Games: Sunrise on the Reaping",
-      "director": "Francis Lawrence",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 158,
-      "genre": "Acción, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-25",
       "hora": "19:00",
@@ -5011,6 +4998,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
       "ticket_url": "https://cineartecacodelphia.com.ar/pelicula/86/c9c9614e79ca15457eb0c957ffabb9ba",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "19:00",
+      "title_es": "Los juegos del hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -5158,7 +5161,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
+      "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-25",
       "hora": "19:10",
       "title_es": "Yo soy Rocky",
@@ -5174,7 +5177,7 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Recoleta",
+      "cine": "Cinépolis Houssay",
       "fecha": "2026-11-25",
       "hora": "19:10",
       "title_es": "Yo soy Rocky",
@@ -5478,22 +5481,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "19:30",
-      "title_es": "El sonido al caer",
-      "title_en": "Sound of Falling",
-      "original_title": "In die Sonne schauen",
-      "director": "Mascha Schilinski",
-      "country": "Alemania",
-      "year": 2025,
-      "duration": 148,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-25",
       "hora": "19:30",
@@ -5507,6 +5494,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "19:30",
+      "title_es": "El sonido al caer",
+      "title_en": "Sound of Falling",
+      "original_title": "In die Sonne schauen",
+      "director": "Mascha Schilinski",
+      "country": "Alemania",
+      "year": 2025,
+      "duration": 148,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/sound-of-falling/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7046,22 +7049,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinema Club Recoleta",
-      "fecha": "2026-11-25",
-      "hora": "21:45",
-      "title_es": "El Cadaver de la Novia",
-      "title_en": "Corpse Bride",
-      "original_title": "Corpse Bride",
-      "director": "Mike Johnson, Tim Burton",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2005,
-      "duration": 77,
-      "genre": "Fantasía, Animación",
-      "letterboxd": "https://letterboxd.com/film/corpse-bride/",
-      "ticket_url": "https://www.cinemaclubcompany.com/event/181541-el-cadaver-de-la-novia-2005-miercoles-411-2145hs",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinema Club Palermo",
       "fecha": "2026-11-25",
       "hora": "21:45",
@@ -7075,6 +7062,22 @@
       "genre": "Drama, Romance",
       "letterboxd": "https://letterboxd.com/film/meet-joe-black/",
       "ticket_url": "https://www.cinemaclubcompany.com/event/184040-meet-joe-black-1998-miercoles-2511-2145hs",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinema Club Recoleta",
+      "fecha": "2026-11-25",
+      "hora": "21:45",
+      "title_es": "El Cadaver de la Novia",
+      "title_en": "Corpse Bride",
+      "original_title": "Corpse Bride",
+      "director": "Mike Johnson, Tim Burton",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2005,
+      "duration": 77,
+      "genre": "Fantasía, Animación",
+      "letterboxd": "https://letterboxd.com/film/corpse-bride/",
+      "ticket_url": "https://www.cinemaclubcompany.com/event/181541-el-cadaver-de-la-novia-2005-miercoles-411-2145hs",
       "ciclo": ""
     },
     {
@@ -7350,22 +7353,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "22:00",
-      "title_es": "Yo soy Rocky",
-      "title_en": "I Play Rocky",
-      "original_title": "I Play Rocky",
-      "director": "Peter Farrelly",
-      "country": "Estados Unidos, Australia",
-      "year": 2026,
-      "duration": 127,
-      "genre": "Drama, Historia",
-      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-25",
       "hora": "22:00",
@@ -7395,6 +7382,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "22:00",
+      "title_es": "Yo soy Rocky",
+      "title_en": "I Play Rocky",
+      "original_title": "I Play Rocky",
+      "director": "Peter Farrelly",
+      "country": "Estados Unidos, Australia",
+      "year": 2026,
+      "duration": 127,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -7542,22 +7545,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "22:15",
-      "title_es": "Los juegos del hambre: Amanecer en la cosecha",
-      "title_en": "The Hunger Games: Sunrise on the Reaping",
-      "original_title": "The Hunger Games: Sunrise on the Reaping",
-      "director": "Francis Lawrence",
-      "country": "Estados Unidos, Alemania",
-      "year": 2026,
-      "duration": 158,
-      "genre": "Acción, Ciencia ficción",
-      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Cinépolis Recoleta",
       "fecha": "2026-11-25",
       "hora": "22:15",
@@ -7587,6 +7574,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/i-play-rocky/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "22:15",
+      "title_es": "Los juegos del hambre: Amanecer en la cosecha",
+      "title_en": "The Hunger Games: Sunrise on the Reaping",
+      "original_title": "The Hunger Games: Sunrise on the Reaping",
+      "director": "Francis Lawrence",
+      "country": "Estados Unidos, Alemania",
+      "year": 2026,
+      "duration": 158,
+      "genre": "Acción, Ciencia ficción",
+      "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -8198,22 +8201,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cinépolis Houssay",
-      "fecha": "2026-11-25",
-      "hora": "22:40",
-      "title_es": "Minotauro",
-      "title_en": "Minotaur",
-      "original_title": "",
-      "director": "Andrey Zvyagintsev",
-      "country": "Francia, Latvia",
-      "year": 2026,
-      "duration": 142,
-      "genre": "Crimen, Thriller",
-      "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
-      "ticket_url": "https://www.cinepolis.com.ar/",
-      "ciclo": ""
-    },
-    {
       "cine": "Showcase Belgrano",
       "fecha": "2026-11-25",
       "hora": "22:40",
@@ -8227,6 +8214,22 @@
       "genre": "Acción, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/the-hunger-games-sunrise-on-the-reaping/",
       "ticket_url": "https://www.todoshowcase.com/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cinépolis Houssay",
+      "fecha": "2026-11-25",
+      "hora": "22:40",
+      "title_es": "Minotauro",
+      "title_en": "Minotaur",
+      "original_title": "",
+      "director": "Andrey Zvyagintsev",
+      "country": "Francia, Latvia",
+      "year": 2026,
+      "duration": 142,
+      "genre": "Crimen, Thriller",
+      "letterboxd": "https://letterboxd.com/film/minotaur-2026/",
+      "ticket_url": "https://www.cinepolis.com.ar/",
       "ciclo": ""
     },
     {
@@ -12189,7 +12192,7 @@
       "title_en": "Winnipeg, Seeds of Hope",
       "original_title": "Winnipeg, El Barco de la Esperanza",
       "director": "Elio Quiroga, Beñat Beitia",
-      "country": "España",
+      "country": "España, Chile, Argentina",
       "year": 2026,
       "duration": 81,
       "genre": "Drama, Historia",
@@ -17485,7 +17488,7 @@
       "title_en": "Winnipeg, Seeds of Hope",
       "original_title": "Winnipeg, El Barco de la Esperanza",
       "director": "Elio Quiroga, Beñat Beitia",
-      "country": "España",
+      "country": "España, Chile, Argentina",
       "year": 2026,
       "duration": 81,
       "genre": "Drama, Historia",
@@ -22861,7 +22864,7 @@
       "title_en": "Winnipeg, Seeds of Hope",
       "original_title": "Winnipeg, El Barco de la Esperanza",
       "director": "Elio Quiroga, Beñat Beitia",
-      "country": "España",
+      "country": "España, Chile, Argentina",
       "year": 2026,
       "duration": 81,
       "genre": "Drama, Historia",
@@ -23549,7 +23552,7 @@
       "title_en": "Winnipeg, Seeds of Hope",
       "original_title": "Winnipeg, El Barco de la Esperanza",
       "director": "Elio Quiroga, Beñat Beitia",
-      "country": "España",
+      "country": "España, Chile, Argentina",
       "year": 2026,
       "duration": 81,
       "genre": "Drama, Historia",
@@ -28157,7 +28160,7 @@
       "title_en": "Winnipeg, Seeds of Hope",
       "original_title": "Winnipeg, El Barco de la Esperanza",
       "director": "Elio Quiroga, Beñat Beitia",
-      "country": "España",
+      "country": "España, Chile, Argentina",
       "year": 2026,
       "duration": 81,
       "genre": "Drama, Historia",
@@ -32861,7 +32864,7 @@
       "title_en": "Winnipeg, Seeds of Hope",
       "original_title": "Winnipeg, El Barco de la Esperanza",
       "director": "Elio Quiroga, Beñat Beitia",
-      "country": "España",
+      "country": "España, Chile, Argentina",
       "year": 2026,
       "duration": 81,
       "genre": "Drama, Historia",
@@ -37405,7 +37408,7 @@
       "title_en": "Winnipeg, Seeds of Hope",
       "original_title": "Winnipeg, El Barco de la Esperanza",
       "director": "Elio Quiroga, Beñat Beitia",
-      "country": "España",
+      "country": "España, Chile, Argentina",
       "year": 2026,
       "duration": 81,
       "genre": "Drama, Historia",
@@ -41885,7 +41888,7 @@
       "title_en": "Winnipeg, Seeds of Hope",
       "original_title": "Winnipeg, El Barco de la Esperanza",
       "director": "Elio Quiroga, Beñat Beitia",
-      "country": "España",
+      "country": "España, Chile, Argentina",
       "year": 2026,
       "duration": 81,
       "genre": "Drama, Historia",
@@ -43516,30 +43519,14 @@
       "title_es": "Perfume",
       "title_en": "Perfume",
       "original_title": "",
-      "director": "Philipp Kadelbach",
-      "country": "Alemania",
-      "year": 2018,
+      "director": "",
+      "country": "",
+      "year": null,
       "duration": null,
-      "genre": "Crimen",
-      "letterboxd": "https://letterboxd.com/film/perfume-2018/",
+      "genre": "",
+      "letterboxd": "",
       "ticket_url": "https://malba.org.ar/evento/perfume/",
       "ciclo": "Estreno"
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-05",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
-      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -43604,22 +43591,6 @@
       "letterboxd": "https://letterboxd.com/film/the-merry-widow-1934/",
       "ticket_url": "",
       "ciclo": "Cinco tardes con Ernst Lubitsch"
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-06",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
-      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -43702,22 +43673,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-08",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
-      "ciclo": ""
-    },
-    {
       "cine": "Hasta Trilce",
       "fecha": "2026-12-08",
       "hora": "19:00",
@@ -43766,22 +43721,6 @@
       "ciclo": "Cine"
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-09",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
-      "ciclo": ""
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-12-09",
       "hora": "15:00",
@@ -43828,22 +43767,6 @@
       "letterboxd": "https://letterboxd.com/film/tokyo-story/",
       "ticket_url": "",
       "ciclo": "Grandes actrices de la época dorada del cine japonés"
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-10",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
-      "ciclo": ""
     },
     {
       "cine": "Sala Lugones",
@@ -43990,22 +43913,6 @@
       "ciclo": "Grandes actrices de la época dorada del cine japonés"
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-12",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
-      "ciclo": ""
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-12-12",
       "hora": "14:30",
@@ -44070,22 +43977,6 @@
       "ciclo": "Grandes actrices de la época dorada del cine japonés"
     },
     {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-13",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
-      "ciclo": ""
-    },
-    {
       "cine": "Sala Lugones",
       "fecha": "2026-12-13",
       "hora": "14:30",
@@ -44148,22 +44039,6 @@
       "letterboxd": "https://letterboxd.com/film/tokyo-story/",
       "ticket_url": "",
       "ciclo": "Grandes actrices de la época dorada del cine japonés"
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-14",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
-      "ciclo": ""
     },
     {
       "cine": "Hoyts Abasto",
@@ -45075,22 +44950,6 @@
       "genre": "Ciencia ficción, Aventura",
       "letterboxd": "https://letterboxd.com/film/dune-part-three/",
       "ticket_url": "https://multiplex.com.ar/peliculas/duna-parte-tres/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-15",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
       "ciclo": ""
     },
     {
@@ -46931,22 +46790,6 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://multiplex.com.ar/peliculas/avengersdoomsday/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-16",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
       "ciclo": ""
     },
     {
@@ -50163,22 +50006,6 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://multiplex.com.ar/peliculas/avengersdoomsday/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-17",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
       "ciclo": ""
     },
     {
@@ -53475,22 +53302,6 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://multiplex.com.ar/peliculas/avengersdoomsday/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-18",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
       "ciclo": ""
     },
     {
@@ -56819,22 +56630,6 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://multiplex.com.ar/peliculas/avengersdoomsday/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Gaumont",
-      "fecha": "2026-12-19",
-      "hora": "14:30",
-      "title_es": "La cena",
-      "title_en": "The Dinner",
-      "original_title": "La cena",
-      "director": "Manuel Gómez Pereia",
-      "country": "España",
-      "year": 2025,
-      "duration": 106,
-      "genre": "Drama, Comedia",
-      "letterboxd": "https://letterboxd.com/film/the-dinner-2025/",
-      "ticket_url": "https://www.cinegaumont.ar/es-AR/programacion/6434",
       "ciclo": ""
     },
     {
