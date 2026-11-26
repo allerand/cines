@@ -34059,7 +34059,7 @@
     "url": "https://letterboxd.com/film/hexed-2026/",
     "title_en": "Hexed",
     "director": "Jason Hand, Fawn Veerasunthorn",
-    "country": "USA",
+    "country": "USA, Canada",
     "year": 2026,
     "duration": 103,
     "genre": "Familiar, Animación",
@@ -38774,7 +38774,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 119 min: Thesis (1996, 125 min)",
-    "fecha": "2026-11-22",
+    "fecha": "2026-11-26",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38798,7 +38798,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así fuera de Letterboxd; National Theatre Live: The Fifth Step (2025) sólo se le parece",
-    "fecha": "2026-11-22",
+    "fecha": "2026-11-26",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38810,7 +38810,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 90 min: Buscando a Lisette (2025, 65 min)",
-    "fecha": "2026-11-22",
+    "fecha": "2026-11-26",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38822,7 +38822,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-22",
+    "fecha": "2026-11-26",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38867,7 +38867,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 180 min: BTS WORLD TOUR 'ARIRANG' IN JAKARTA: LIVE VIEWING (2026, 195 min)",
-    "fecha": "2026-11-22",
+    "fecha": "2026-11-26",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38879,7 +38879,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 180 min: National Theatre Live: Hamlet (2015, 217 min), National Theatre Live: Hamlet (2026, 160 min), National Theatre Live: Hamlet (2010, 210 min)",
-    "fecha": "2026-11-22",
+    "fecha": "2026-11-26",
     "con_duracion": true,
     "desempate": ""
   },
@@ -40044,5 +40044,95 @@
     "country": "",
     "year": null,
     "duration": null
+  },
+  "jaleos|2026": {
+    "url": "https://letterboxd.com/film/jaleos/",
+    "title_en": "Jaleos",
+    "director": "Isaki Lacuesta",
+    "country": "",
+    "year": null,
+    "duration": 78,
+    "genre": "Documental",
+    "original_title": "Jaleos"
+  },
+  "leviticus|2026": {
+    "url": "https://letterboxd.com/film/leviticus-2026/",
+    "title_en": "Leviticus",
+    "director": "Adrian Chiarella",
+    "country": "Australia, USA",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Terror, Romance",
+    "title_es": "Leviticus: Ritual de sangre",
+    "original_title": "Leviticus"
+  },
+  "sanguine|2026": {
+    "url": "https://letterboxd.com/film/species-2026/",
+    "title_en": "Species",
+    "director": "Marion Le Corroller",
+    "country": "France, Belgium",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Terror, Ciencia ficción",
+    "title_es": "Species (Sanguine)",
+    "original_title": "Sanguine"
+  },
+  "bailar la muerte|2026": {
+    "url": "https://letterboxd.com/film/bailar-la-muerte/",
+    "title_en": "Bailar la muerte",
+    "director": "Luis E. Parés",
+    "country": "",
+    "year": 2026,
+    "duration": 80,
+    "genre": "Documental",
+    "original_title": "Bailar la muerte"
+  },
+  "la voz quebarada|2026": {
+    "url": "https://letterboxd.com/film/the-broken-voice/",
+    "title_en": "The Broken Voice",
+    "director": "Manuel Menchón",
+    "country": "Spain, Argentina",
+    "year": 2026,
+    "duration": 88,
+    "genre": "Documental"
+  },
+  "el activista|2026": {
+    "url": "",
+    "title_en": "EL ACTIVISTA",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "fatherland|2026": {
+    "url": "https://letterboxd.com/film/fatherland-2026/",
+    "title_en": "Fatherland",
+    "director": "Paweł Pawlikowski",
+    "country": "Poland, Germany",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Drama, Historia",
+    "title_es": "Tierra de Mi Padre",
+    "original_title": "Ojczyzna"
+  },
+  "salen las lobas|2026": {
+    "url": "",
+    "title_en": "SALEN LAS LOBAS",
+    "director": "Claudia Estrada Tarascó",
+    "country": "Spain, Belgium",
+    "year": 2026,
+    "duration": 94,
+    "genre": "Drama",
+    "original_title": "Salen las lobas"
+  },
+  "club kid|2026": {
+    "url": "https://letterboxd.com/film/club-kid/",
+    "title_en": "Club Kid",
+    "director": "Jordan Firstman",
+    "country": "USA",
+    "year": 2026,
+    "duration": 121,
+    "genre": "Comedia, Drama",
+    "original_title": "Club Kid"
   }
 }
