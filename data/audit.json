@@ -1900,18 +1900,6 @@
     "titulo": "Directores de relleno («Desconocido», «Varios») (1 caso, 8 funciones) en Hasta Trilce. Mejor vacío. Por…",
     "efimero": false
    },
-   "categorias/ba/titulo-con-director/Centro Cultural 25 de Mayo": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Centro Cultural 25 de Mayo: el título trae al director pegado (2 casos). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
-    "efimero": false
-   },
-   "categorias/ba/titulo-con-etiqueta/-": {
-    "desde": "2026-11-16",
-    "sev": "AVISO",
-    "titulo": "Títulos con la versión o el tipo de sesión pegados (VOSE, 35 mm) (1 caso) en Cine York. Limpiar en el…",
-    "efimero": false
-   },
    "categorias/ba/titulo-gritado/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -1928,6 +1916,12 @@
     "desde": "2026-11-20",
     "sev": "ERROR",
     "titulo": "Cine Gaumont: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso, 7…",
+    "efimero": false
+   },
+   "categorias/ba/titulo-parece-ciclo/Filo Cine": {
+    "desde": "2026-11-26",
+    "sev": "ERROR",
+    "titulo": "Filo Cine: hay títulos que parecen el nombre de un ciclo o de un festival, sin director ni ficha (1 caso). Confirmar…",
     "efimero": false
    },
    "categorias/ba/titulo-quizas-con-director/-": {
@@ -1964,12 +1958,6 @@
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Golem Madrid: el título trae el ciclo pegado adelante (7 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
-    "efimero": false
-   },
-   "categorias/madrid/titulo-con-director/Artistic Metropol": {
-    "desde": "2026-11-20",
-    "sev": "ERROR",
-    "titulo": "Artistic Metropol: el título trae al director pegado (1 caso, 4 funciones). El scraper tiene que partirlo: sin eso no…",
     "efimero": false
    },
    "categorias/madrid/titulo-con-etiqueta/-": {
@@ -2056,6 +2044,12 @@
     "titulo": "10 títulos sin ningún dato (ni director, ni año, ni duración, ni Letterboxd): puede que no sean películas.…",
     "efimero": false
    },
+   "fichas/ba/titulo-con-copete-pegado/Cine York": {
+    "desde": "2026-11-26",
+    "sev": "ERROR",
+    "titulo": "Cine York: el título en realidad es el copete del ciclo o una actividad, no una película. Ejemplo: 'La Hora de los…",
+    "efimero": false
+   },
    "fichas/madrid/dos-titulos-en-el-mismo-horario/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -2080,10 +2074,22 @@
     "titulo": "Post to Instagram (workflow): fallaron 1 de 40 corridas de la semana, la última el 18/11.",
     "efimero": false
    },
+   "fuentes/ba/de-cache/Bellas Artes": {
+    "desde": "2026-11-26",
+    "sev": "ERROR",
+    "titulo": "Bellas Artes: publica 2 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
+    "efimero": false
+   },
    "fuentes/ba/de-cache/CCK": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "CCK: publica 9 funciones pero su fuente no contesta hace 3 días: no se pudo leer palaciolibertad.gob.ar/cine/.…",
+    "efimero": false
+   },
+   "fuentes/ba/de-cache/Casa de la Lectura y la Escritura": {
+    "desde": "2026-11-26",
+    "sev": "ERROR",
+    "titulo": "Casa de la Lectura y la Escritura: publica 1 función pero no scrapeó ninguna en la última corrida: agendacultural15.com no contestó…",
     "efimero": false
    },
    "fuentes/ba/de-cache/Centro Cultural Borges": {
@@ -2096,6 +2102,12 @@
     "desde": "2026-11-25",
     "sev": "ERROR",
     "titulo": "Cinépolis Houssay: publica 15 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
+    "efimero": false
+   },
+   "fuentes/ba/de-cache/Sala Lugones": {
+    "desde": "2026-11-26",
+    "sev": "ERROR",
+    "titulo": "Sala Lugones: publica 41 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
     "efimero": false
    },
    "fuentes/ba/faltantes/Espacio INCAA Morón": {
@@ -2116,16 +2128,16 @@
     "titulo": "Centro Cultural Borges está por debajo de lo habitual: 5 funciones de 5 películas, contra ~14 de siempre.",
     "efimero": false
    },
-   "fuentes/ba/floja/Cine Cosmos": {
-    "desde": "2026-11-18",
-    "sev": "AVISO",
-    "titulo": "Cine Cosmos está por debajo de lo habitual: 8 funciones de 6 películas, contra ~32 de siempre.",
-    "efimero": false
-   },
    "fuentes/ba/floja/La Tomada": {
     "desde": "2026-11-24",
     "sev": "AVISO",
     "titulo": "La Tomada está por debajo de lo habitual: 3 funciones de 3 películas, contra ~17 de siempre.",
+    "efimero": false
+   },
+   "fuentes/ba/floja/Universidad del Cine": {
+    "desde": "2026-11-26",
+    "sev": "AVISO",
+    "titulo": "Universidad del Cine está por debajo de lo habitual: 10 funciones de 10 películas, contra ~26 de siempre.",
     "efimero": false
    },
    "fuentes/ba/horizonte/-": {
@@ -2144,6 +2156,24 @@
     "desde": "2026-11-25",
     "sev": "AVISO",
     "titulo": "Cine Gaumont publica 123 funciones, pero su scraper avisa: la API no contestó el 05/12.",
+    "efimero": false
+   },
+   "fuentes/ba/scraper-avisa/Cinema Club Lomas de Zamora": {
+    "desde": "2026-11-26",
+    "sev": "AVISO",
+    "titulo": "Cinema Club Lomas de Zamora publica 4 funciones, pero su scraper avisa: hay funciones en un lugar que el…",
+    "efimero": false
+   },
+   "fuentes/ba/scraper-avisa/Cinema Club Palermo": {
+    "desde": "2026-11-26",
+    "sev": "AVISO",
+    "titulo": "Cinema Club Palermo publica 2 funciones, pero su scraper avisa: hay funciones en un lugar que el scraper…",
+    "efimero": false
+   },
+   "fuentes/ba/scraper-avisa/Cinema Club Recoleta": {
+    "desde": "2026-11-26",
+    "sev": "AVISO",
+    "titulo": "Cinema Club Recoleta publica 4 funciones, pero su scraper avisa: hay funciones en un lugar que el scraper…",
     "efimero": false
    },
    "fuentes/ba/sin-funciones/Centro Cultural de la Cooperación": {
@@ -2188,12 +2218,26 @@
     "efimero": false,
     "cerrado": "2026-11-16"
    },
+   "categorias/ba/titulo-con-director/Centro Cultural 25 de Mayo": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Centro Cultural 25 de Mayo: el título trae al director pegado (2 casos). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
+    "efimero": false,
+    "cerrado": "2026-11-26"
+   },
    "categorias/ba/titulo-con-director/MALBA": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "MALBA: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
     "efimero": false,
     "cerrado": "2026-11-20"
+   },
+   "categorias/ba/titulo-con-etiqueta/-": {
+    "desde": "2026-11-16",
+    "sev": "AVISO",
+    "titulo": "Títulos con la versión o el tipo de sesión pegados (VOSE, 35 mm) (1 caso) en Cine York. Limpiar en el…",
+    "efimero": false,
+    "cerrado": "2026-11-26"
    },
    "categorias/ba/titulo-no-es-pelicula/Amorina": {
     "desde": "2026-11-16",
@@ -2236,6 +2280,13 @@
     "titulo": "Sala Equis: el título trae el ciclo pegado adelante (9 casos). El scraper tiene que partirlo: el ciclo a su columna y…",
     "efimero": false,
     "cerrado": "2026-11-22"
+   },
+   "categorias/madrid/titulo-con-director/Artistic Metropol": {
+    "desde": "2026-11-20",
+    "sev": "ERROR",
+    "titulo": "Artistic Metropol: el título trae al director pegado (1 caso, 4 funciones). El scraper tiene que partirlo: sin eso no…",
+    "efimero": false,
+    "cerrado": "2026-11-26"
    },
    "categorias/madrid/titulo-con-director/Cine Estudio": {
     "desde": "2026-11-19",
@@ -2362,6 +2413,13 @@
     "titulo": "Sala Lúcida: la fuente publica 22 ítems en la listing y nosotros tenemos 7 película(s). Puede estar faltando programación.",
     "efimero": false,
     "cerrado": "2026-11-24"
+   },
+   "fuentes/ba/floja/Cine Cosmos": {
+    "desde": "2026-11-18",
+    "sev": "AVISO",
+    "titulo": "Cine Cosmos está por debajo de lo habitual: 8 funciones de 6 películas, contra ~32 de siempre.",
+    "efimero": false,
+    "cerrado": "2026-11-26"
    },
    "fuentes/ba/floja/Cine Gaumont": {
     "desde": "2026-11-17",
