@@ -29807,16 +29807,16 @@
     "original_title": "El Fantasma"
   },
   "biografía de jorge luis borges": {
-    "url": "https://letterboxd.com/film/biografia-de-jorge-luis-borges/",
-    "title_en": "Life of Jorge Luis Borges",
-    "director": "Mariano Llinás",
-    "country": "Argentina",
-    "year": 2026,
-    "duration": 330,
-    "genre": "Documental",
-    "clase_titulo": "exacto",
-    "original_title": "Biografía de Jorge Luis Borges",
-    "sin_hints": "la más nueva que se llama así"
+    "url": "",
+    "title_en": "BIOGRAFÍA DE JORGE LUIS BORGES",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 323 min: Life of Jorge Luis Borges (2026, 330 min)",
+    "fecha": "2026-11-27",
+    "con_duracion": true,
+    "desempate": ""
   },
   "perfume": {
     "url": "",
@@ -31961,7 +31961,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "se llama así pero no dura 300 min: The Omen (1976, 111 min)",
-    "fecha": "2026-11-23",
+    "fecha": "2026-11-27",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38525,7 +38525,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "hay películas que se llaman así: Salta Conmigo (None); Stand by Me (1986) sólo se le parece",
-    "fecha": "2026-11-23",
+    "fecha": "2026-11-27",
     "con_duracion": false,
     "desempate": ""
   },
@@ -39561,12 +39561,13 @@
     "duration": null
   },
   "reestreno - duna: parte dos (2024)|2024": {
-    "url": "",
-    "title_en": "REESTRENO - DUNA: PARTE DOS (2024)",
-    "director": "",
-    "country": "",
-    "year": null,
-    "duration": null
+    "url": "https://letterboxd.com/film/dune-part-two/",
+    "title_en": "Dune: Part Two",
+    "director": "Denis Villeneuve",
+    "country": "USA",
+    "year": 2024,
+    "duration": 167,
+    "genre": "Aventura, Ciencia ficción"
   },
   "seret 2026 el anillo": {
     "url": "",
@@ -40134,5 +40135,83 @@
     "duration": 121,
     "genre": "Comedia, Drama",
     "original_title": "Club Kid"
+  },
+  "presentación de las residencias de cine 2026 (centro residencias artísticas/cineteca)": {
+    "url": "",
+    "title_en": "Presentación de las Residencias de Cine 2026 (Centro residencias artísticas/Cineteca)",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "tokyo godfathers": {
+    "url": "https://letterboxd.com/film/tokyo-godfathers/",
+    "title_en": "Tokyo Godfathers",
+    "director": "Satoshi Kon",
+    "country": "Japan",
+    "year": 2003,
+    "duration": 92,
+    "genre": "Drama, Comedia",
+    "title_es": "Tokyo Godfathers",
+    "original_title": "東京ゴッドファーザーズ"
+  },
+  "la pietà": {
+    "url": "https://letterboxd.com/film/la-pieta-2026/",
+    "title_en": "La Pietà",
+    "director": "Rafa Molés, Pepe Andreu",
+    "country": "Spain, Iceland",
+    "year": 2026,
+    "duration": 82,
+    "genre": "Documental",
+    "original_title": "La Pietà"
+  },
+  "ensayo sobre la vejez: proyección y conversatorio": {
+    "url": "",
+    "title_en": "Ensayo sobre la vejez: proyección y conversatorio",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "los amantes del círculo polar|1998": {
+    "url": "https://letterboxd.com/film/lovers-of-the-arctic-circle/",
+    "title_en": "Lovers of the Arctic Circle",
+    "director": "Julio Medem",
+    "country": "Spain",
+    "year": 1998,
+    "duration": 112,
+    "genre": "Misterio, Drama",
+    "original_title": "Los amantes del Círculo Polar"
+  },
+  "coraline|2009": {
+    "url": "https://letterboxd.com/film/coraline/",
+    "title_en": "Coraline",
+    "director": "Henry Selick",
+    "country": "USA",
+    "year": 2009,
+    "duration": 100,
+    "genre": "Animación, Terror",
+    "clase_titulo": "exacto",
+    "title_es": "Los mundos de Coraline",
+    "original_title": "Coraline",
+    "sin_hints": "título y duración"
+  },
+  "adentro mío estoy bailando": {
+    "url": "https://letterboxd.com/film/adentro-mio-estoy-bailando/",
+    "title_en": "The Klezmer Project",
+    "director": "Paloma Schachmann, Leandro Koch",
+    "country": "Argentina, Austria",
+    "year": 2023,
+    "duration": 117,
+    "genre": "Drama, Documental",
+    "original_title": "Adentro mío estoy bailando"
+  },
+  "neyen mapu, el llamado del lanín": {
+    "url": "",
+    "title_en": "Neyen mapu, el llamado del Lanín",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
