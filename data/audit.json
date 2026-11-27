@@ -1882,6 +1882,12 @@
     "titulo": "Amorina: la columna Ciclo trae el tipo de actividad («Cine») (1 caso, 10 funciones). No es un ciclo: va vacío. Por…",
     "efimero": false
    },
+   "categorias/ba/ciclo-es-tipo/Biblioteca del Congreso": {
+    "desde": "2026-11-27",
+    "sev": "ERROR",
+    "titulo": "Biblioteca del Congreso: la columna Ciclo trae el tipo de actividad («Cine») (1 caso). No es un ciclo: va vacío. Por ejemplo:…",
+    "efimero": false
+   },
    "categorias/ba/ciclo-mal-escrito/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -1898,6 +1904,12 @@
     "desde": "2026-11-16",
     "sev": "AVISO",
     "titulo": "Directores de relleno («Desconocido», «Varios») (1 caso, 8 funciones) en Hasta Trilce. Mejor vacío. Por…",
+    "efimero": false
+   },
+   "categorias/ba/titulo-con-director/Centro Cultural 25 de Mayo": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Centro Cultural 25 de Mayo: el título trae al director pegado (1 caso). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
     "efimero": false
    },
    "categorias/ba/titulo-gritado/-": {
@@ -1928,6 +1940,12 @@
     "desde": "2026-11-25",
     "sev": "AVISO",
     "titulo": "Títulos que quizás traen al director pegado (terminan en «de Nombre Apellido») (1 caso) en Cacodelphia.…",
+    "efimero": false
+   },
+   "categorias/madrid/director-con-numeros/-": {
+    "desde": "2026-11-27",
+    "sev": "AVISO",
+    "titulo": "Directores con años o duraciones adentro (1 caso) en Cine Doré. El scraper leyó la ficha entera. Por…",
     "efimero": false
    },
    "categorias/madrid/director-relleno/-": {
@@ -1990,16 +2008,16 @@
     "titulo": "Festival Internacional de Cine de Arquitectura y Diseño de Buenos Aires (2 funciones en Sala Lúcida)…",
     "efimero": false
    },
-   "festivales/-/web-cambio/Bazofi": {
-    "desde": "2026-11-21",
+   "festivales/-/suelto/Semana del Festival de Biarritz en Buenos Aires": {
+    "desde": "2026-11-27",
     "sev": "AVISO",
-    "titulo": "Bazofi: su web cambió desde el 24/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy martes el museo…",
-    "efimero": true
+    "titulo": "Semana del Festival de Biarritz en Buenos Aires (6 funciones en Sala Lugones) aparece en la pestaña…",
+    "efimero": false
    },
    "festivales/-/web-cambio/MASS": {
     "desde": "2026-11-17",
-    "sev": "AVISO",
-    "titulo": "MASS: su web cambió desde el 24/11: 4 líneas nuevas y 4 que ya no están. Lo nuevo: «Añadir a Google…",
+    "sev": "ERROR",
+    "titulo": "MASS: su web cambió desde el 24/11: 7 líneas nuevas y 8 que ya no están. Lo nuevo: «04/12/2026». Revisar la…",
     "efimero": true
    },
    "festivales/-/web-no-abre/Festival de Cine Indígena BAIn": {
@@ -2050,6 +2068,12 @@
     "titulo": "Cine York: el título en realidad es el copete del ciclo o una actividad, no una película. Ejemplo: 'La Hora de los…",
     "efimero": false
    },
+   "fichas/ba/titulo-que-son-varias-peliculas/Biblioteca del Congreso": {
+    "desde": "2026-11-27",
+    "sev": "ERROR",
+    "titulo": "Biblioteca del Congreso: hay funciones cuyo título son varias películas juntas (o una película más una charla): así no matchean…",
+    "efimero": false
+   },
    "fichas/madrid/dos-titulos-en-el-mismo-horario/-": {
     "desde": "2026-11-16",
     "sev": "AVISO",
@@ -2074,40 +2098,16 @@
     "titulo": "Post to Instagram (workflow): fallaron 1 de 40 corridas de la semana, la última el 18/11.",
     "efimero": false
    },
-   "fuentes/ba/de-cache/Bellas Artes": {
-    "desde": "2026-11-26",
-    "sev": "ERROR",
-    "titulo": "Bellas Artes: publica 2 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
-    "efimero": false
-   },
    "fuentes/ba/de-cache/CCK": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "CCK: publica 9 funciones pero su fuente no contesta hace 3 días: no se pudo leer palaciolibertad.gob.ar/cine/.…",
     "efimero": false
    },
-   "fuentes/ba/de-cache/Casa de la Lectura y la Escritura": {
-    "desde": "2026-11-26",
-    "sev": "ERROR",
-    "titulo": "Casa de la Lectura y la Escritura: publica 1 función pero no scrapeó ninguna en la última corrida: agendacultural15.com no contestó…",
-    "efimero": false
-   },
    "fuentes/ba/de-cache/Centro Cultural Borges": {
     "desde": "2026-11-16",
     "sev": "ERROR",
     "titulo": "Centro Cultural Borges: publica 14 funciones pero su fuente no contesta hace 3 días: la API no contesta; se publica el caché de la…",
-    "efimero": false
-   },
-   "fuentes/ba/de-cache/Cinépolis Houssay": {
-    "desde": "2026-11-25",
-    "sev": "ERROR",
-    "titulo": "Cinépolis Houssay: publica 15 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
-    "efimero": false
-   },
-   "fuentes/ba/de-cache/Sala Lugones": {
-    "desde": "2026-11-26",
-    "sev": "ERROR",
-    "titulo": "Sala Lugones: publica 41 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
     "efimero": false
    },
    "fuentes/ba/faltantes/Espacio INCAA Morón": {
@@ -2122,10 +2122,16 @@
     "titulo": "Arthaus está por debajo de lo habitual: 2 funciones de 2 películas, contra ~6 de siempre.",
     "efimero": false
    },
-   "fuentes/ba/floja/Centro Cultural Borges": {
-    "desde": "2026-11-24",
+   "fuentes/ba/floja/Atlas Caballito": {
+    "desde": "2026-11-27",
     "sev": "AVISO",
-    "titulo": "Centro Cultural Borges está por debajo de lo habitual: 5 funciones de 5 películas, contra ~14 de siempre.",
+    "titulo": "Atlas Caballito está por debajo de lo habitual: 52 funciones de 48 películas, contra ~161 de siempre.",
+    "efimero": false
+   },
+   "fuentes/ba/floja/Club Lucero": {
+    "desde": "2026-11-27",
+    "sev": "AVISO",
+    "titulo": "Club Lucero está por debajo de lo habitual: 1 función de 1 película, contra ~6 de siempre.",
     "efimero": false
    },
    "fuentes/ba/floja/La Tomada": {
@@ -2182,10 +2188,10 @@
     "titulo": "Centro Cultural de la Cooperación: lleva 3 días sin ninguna función (traía ~2 por día). Revisá su scraper.",
     "efimero": false
    },
-   "fuentes/madrid/fuente-inestable/Cines Ideal": {
-    "desde": "2026-11-25",
-    "sev": "AVISO",
-    "titulo": "Cines Ideal: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.",
+   "fuentes/madrid/de-cache/Cines Ideal": {
+    "desde": "2026-11-16",
+    "sev": "ERROR",
+    "titulo": "Cines Ideal: publica 318 funciones pero no scrapeó ninguna en la última corrida: yelmocines.es no devolvió la cartelera…",
     "efimero": false
    }
   },
@@ -2217,13 +2223,6 @@
     "titulo": "Centro Cultural Borges: el título trae el ciclo pegado adelante (5 casos, 6 funciones). El scraper tiene que partirlo: el ciclo a…",
     "efimero": false,
     "cerrado": "2026-11-16"
-   },
-   "categorias/ba/titulo-con-director/Centro Cultural 25 de Mayo": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Centro Cultural 25 de Mayo: el título trae al director pegado (2 casos). El scraper tiene que partirlo: sin eso no encuentra la ficha.…",
-    "efimero": false,
-    "cerrado": "2026-11-26"
    },
    "categorias/ba/titulo-con-director/MALBA": {
     "desde": "2026-11-16",
@@ -2365,6 +2364,13 @@
     "efimero": false,
     "cerrado": "2026-11-20"
    },
+   "festivales/-/web-cambio/Bazofi": {
+    "desde": "2026-11-21",
+    "sev": "AVISO",
+    "titulo": "Bazofi: su web cambió desde el 24/11: 1 línea nueva y 1 que ya no está. Lo nuevo: «Hoy martes el museo…",
+    "efimero": true,
+    "cerrado": "2026-11-27"
+   },
    "festivales/-/web-cambio/FIDBA": {
     "desde": "2026-11-16",
     "sev": "ERROR",
@@ -2407,12 +2413,47 @@
     "efimero": false,
     "cerrado": "2026-11-25"
    },
+   "fuentes/ba/de-cache/Bellas Artes": {
+    "desde": "2026-11-26",
+    "sev": "ERROR",
+    "titulo": "Bellas Artes: publica 2 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
+    "efimero": false,
+    "cerrado": "2026-11-27"
+   },
+   "fuentes/ba/de-cache/Casa de la Lectura y la Escritura": {
+    "desde": "2026-11-26",
+    "sev": "ERROR",
+    "titulo": "Casa de la Lectura y la Escritura: publica 1 función pero no scrapeó ninguna en la última corrida: agendacultural15.com no contestó…",
+    "efimero": false,
+    "cerrado": "2026-11-27"
+   },
+   "fuentes/ba/de-cache/Cinépolis Houssay": {
+    "desde": "2026-11-25",
+    "sev": "ERROR",
+    "titulo": "Cinépolis Houssay: publica 15 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
+    "efimero": false,
+    "cerrado": "2026-11-27"
+   },
+   "fuentes/ba/de-cache/Sala Lugones": {
+    "desde": "2026-11-26",
+    "sev": "ERROR",
+    "titulo": "Sala Lugones: publica 41 funciones pero no scrapeó ninguna en la última corrida: la fuente no contestó. Lo que se ve es…",
+    "efimero": false,
+    "cerrado": "2026-11-27"
+   },
    "fuentes/ba/faltantes/Sala Lúcida": {
     "desde": "2026-11-24",
     "sev": "ERROR",
     "titulo": "Sala Lúcida: la fuente publica 22 ítems en la listing y nosotros tenemos 7 película(s). Puede estar faltando programación.",
     "efimero": false,
     "cerrado": "2026-11-24"
+   },
+   "fuentes/ba/floja/Centro Cultural Borges": {
+    "desde": "2026-11-24",
+    "sev": "AVISO",
+    "titulo": "Centro Cultural Borges está por debajo de lo habitual: 5 funciones de 5 películas, contra ~14 de siempre.",
+    "efimero": false,
+    "cerrado": "2026-11-27"
    },
    "fuentes/ba/floja/Cine Cosmos": {
     "desde": "2026-11-18",
@@ -2463,19 +2504,19 @@
     "efimero": false,
     "cerrado": "2026-11-18"
    },
-   "fuentes/madrid/de-cache/Cines Ideal": {
-    "desde": "2026-11-16",
-    "sev": "ERROR",
-    "titulo": "Cines Ideal: publica 30 funciones pero su fuente no contesta hace 25 días: yelmocines.es no devolvió la cartelera…",
-    "efimero": false,
-    "cerrado": "2026-11-25"
-   },
    "fuentes/madrid/floja/Cines Callao": {
     "desde": "2026-11-17",
     "sev": "AVISO",
     "titulo": "Cines Callao está por debajo de lo habitual: 6 funciones de 3 películas, contra ~28 de siempre.",
     "efimero": false,
     "cerrado": "2026-11-19"
+   },
+   "fuentes/madrid/fuente-inestable/Cines Ideal": {
+    "desde": "2026-11-25",
+    "sev": "AVISO",
+    "titulo": "Cines Ideal: su fuente contestó 2 de los últimos 7 días. Hoy anda, pero viene fallando seguido.",
+    "efimero": false,
+    "cerrado": "2026-11-27"
    },
    "fuentes/madrid/sin-funciones/Cines Princesa": {
     "desde": "2026-11-16",
