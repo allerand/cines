@@ -1,13 +1,13 @@
 {
-  "updated": "2026-11-27T05:17:12",
+  "updated": "2026-11-27T14:01:30",
   "fuentes": {
     "Artistic Metropol": {
       "scrapeadas": 38,
       "publicadas": 38
     },
     "Cine Doré": {
-      "scrapeadas": 18,
-      "publicadas": 18
+      "scrapeadas": 69,
+      "publicadas": 68
     },
     "Cine Estudio": {
       "scrapeadas": 24,
@@ -27,16 +27,16 @@
       "publicadas": 281
     },
     "Cineteca Madrid": {
-      "scrapeadas": 67,
-      "publicadas": 67
+      "scrapeadas": 77,
+      "publicadas": 77
     },
     "Embajadores Ercilla": {
-      "scrapeadas": 87,
-      "publicadas": 87
+      "scrapeadas": 95,
+      "publicadas": 95
     },
     "Embajadores Glorieta": {
-      "scrapeadas": 81,
-      "publicadas": 81
+      "scrapeadas": 82,
+      "publicadas": 82
     },
     "Golem Madrid": {
       "scrapeadas": 120,
@@ -2926,6 +2926,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-11-28",
+      "hora": "15:45",
+      "title_es": "El gato con sombrero",
+      "title_en": "The Cat in the Hat",
+      "original_title": "The Cat in the Hat",
+      "director": "Alessandro Carloni, Erica Rivinoja",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2026,
+      "duration": 108,
+      "genre": "Fantasía, Aventura",
+      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/el-gato-con-sombrero-doblada-al-espanol/39963/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-11-28",
       "hora": "15:45",
@@ -3230,6 +3246,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-28",
+      "hora": "16:00",
+      "title_es": "Hechizo: Bienvenidos a Hexe",
+      "title_en": "Hechizo: Bienvenidos a Hexe",
+      "original_title": "Hexed",
+      "director": "Fawn Veerasunthorn, Jason Hand",
+      "country": "Estados Unidos, Canadá",
+      "year": 2026,
+      "duration": 90,
+      "genre": "Animación, Fantasía",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/hechizo-bienvenidos-a-hexe-doblada-al-espanol/21049/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-28",
       "hora": "16:00",
@@ -3243,38 +3275,6 @@
       "genre": "Drama",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/hermanas/39870/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-28",
-      "hora": "16:00",
-      "title_es": "El gato con sombrero",
-      "title_en": "The Cat in the Hat",
-      "original_title": "The Cat in the Hat",
-      "director": "Alessandro Carloni, Erica Rivinoja",
-      "country": "Reino Unido, Estados Unidos",
-      "year": 2026,
-      "duration": 108,
-      "genre": "Fantasía, Aventura",
-      "letterboxd": "https://letterboxd.com/film/the-cat-in-the-hat-2026/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/el-gato-con-sombrero-doblada-al-espanol/20938/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Embajadores Glorieta",
-      "fecha": "2026-11-28",
-      "hora": "16:00",
-      "title_es": "Stand by me",
-      "title_en": "Stand by Me",
-      "original_title": "Stand by Me",
-      "director": "Rob Reiner",
-      "country": "Estados Unidos",
-      "year": 1986,
-      "duration": 86,
-      "genre": "Aventura, Drama",
-      "letterboxd": "https://letterboxd.com/film/stand-by-me/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/stand-by-me-vose/39933/",
       "ciclo": ""
     },
     {
@@ -5502,22 +5502,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-11-29",
-      "hora": "12:00",
-      "title_es": "Pioneras: Solo querían jugar",
-      "title_en": "Another League",
-      "original_title": "Pioneras: solo querían jugar",
-      "director": "Marta Díaz de Lope Díaz",
-      "country": "España, Portugal",
-      "year": 2026,
-      "duration": 106,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/pioneras-solo-querian-jugar/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/pioneras-solo-querian-jugar/20700/",
-      "ciclo": ""
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-11-29",
       "hora": "12:00",
@@ -5532,6 +5516,22 @@
       "letterboxd": "https://letterboxd.com/film/millers-crossing/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-muerte-entre-las-flores-vose/39815/",
       "ciclo": "Domingo de clásicos"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-11-29",
+      "hora": "12:00",
+      "title_es": "Pioneras: Solo querían jugar",
+      "title_en": "Another League",
+      "original_title": "Pioneras: solo querían jugar",
+      "director": "Marta Díaz de Lope Díaz",
+      "country": "España, Portugal",
+      "year": 2026,
+      "duration": 106,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/pioneras-solo-querian-jugar/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/pioneras-solo-querian-jugar/20700/",
+      "ciclo": ""
     },
     {
       "cine": "Cines Ideal",
@@ -11838,6 +11838,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-01",
+      "hora": "19:00",
+      "title_es": "Sección Oficial Fescimed 2026 - Sesión 1",
+      "title_en": "Sección Oficial Fescimed 2026 - Sesión 1",
+      "original_title": "",
+      "director": "Varios/as autores/as",
+      "country": "",
+      "year": null,
+      "duration": 90,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/seccion-oficial-fescimed-2026-sesion-1",
+      "ciclo": "Fescimed 2026"
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-12-01",
       "hora": "19:00",
@@ -11884,6 +11900,22 @@
       "letterboxd": "https://letterboxd.com/film/el-director-2026/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=38809",
       "ciclo": ""
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-01",
+      "hora": "19:30",
+      "title_es": "Hogar dulce hogar",
+      "title_en": "Home Sweet Home",
+      "original_title": "Dom dobry",
+      "director": "Wojciech Smarzowski",
+      "country": "Polonia",
+      "year": 2025,
+      "duration": 107,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/dom-dobry/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/hogar-dulce-hogar-0",
+      "ciclo": "Cine Polska 2026"
     },
     {
       "cine": "Golem Madrid",
@@ -12379,6 +12411,22 @@
       "genre": "Drama",
       "letterboxd": "",
       "ticket_url": "https://www.golem.es/golem/urlcheck.php?idCine=8&perfCode=101005&eventCode=116565",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-01",
+      "hora": "20:30",
+      "title_es": "Angelina o el Honor de un Brigadier",
+      "title_en": "Angelina, o El honor de un brigadier",
+      "original_title": "Angelina, o El honor de un brigadier",
+      "director": "Louis King, Miguel de Zárraga",
+      "country": "Estados Unidos",
+      "year": 1935,
+      "duration": 79,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/angelina-o-el-honor-de-un-brigadier/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -13633,22 +13681,6 @@
       "cine": "Cine Estudio",
       "fecha": "2026-12-02",
       "hora": "17:00",
-      "title_es": "La libertad doble",
-      "title_en": "Double Freedom",
-      "original_title": "La libertad doble",
-      "director": "Lisandro Alonso",
-      "country": "Chile, Argentina",
-      "year": 2026,
-      "duration": 100,
-      "genre": "Drama",
-      "letterboxd": "https://letterboxd.com/film/la-libertad-doble/",
-      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/la-libertad-doble/",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cine Estudio",
-      "fecha": "2026-12-02",
-      "hora": "17:00",
       "title_es": "Bailar la muerte",
       "title_en": "Bailar la muerte",
       "original_title": "Bailar la muerte",
@@ -14225,6 +14257,22 @@
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-02",
       "hora": "19:00",
+      "title_es": "Sección Oficial Fescimed 2026 - Sesión 2",
+      "title_en": "Sección Oficial Fescimed 2026 - Sesión 2",
+      "original_title": "",
+      "director": "Varios/as autores/as",
+      "country": "",
+      "year": null,
+      "duration": 90,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/seccion-oficial-fescimed-2026-sesion-2",
+      "ciclo": "Fescimed 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-02",
+      "hora": "19:00",
       "title_es": "Capítulo XXXVI: Carta blanca a María Castro y Álvaro Cáceres",
       "title_en": "Capítulo XXXVI: Carta blanca a María Castro y Álvaro Cáceres",
       "original_title": "",
@@ -14270,6 +14318,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Estudio",
+      "fecha": "2026-12-02",
+      "hora": "19:00",
+      "title_es": "La libertad doble",
+      "title_en": "Double Freedom",
+      "original_title": "La libertad doble",
+      "director": "Lisandro Alonso",
+      "country": "Chile, Argentina",
+      "year": 2026,
+      "duration": 100,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-libertad-doble/",
+      "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/la-libertad-doble/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-02",
+      "hora": "19:00",
+      "title_es": "Marichi Tukulpan",
+      "title_en": "MARICHI TUKULPAN",
+      "original_title": "",
+      "director": "Paula Rodríguez Sickert",
+      "country": "",
+      "year": 2024,
+      "duration": 93,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-12-02",
       "hora": "19:05",
@@ -14284,6 +14364,22 @@
       "letterboxd": "https://letterboxd.com/film/el-director-2026/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=38826",
       "ciclo": ""
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-02",
+      "hora": "19:30",
+      "title_es": "Los monaguillos",
+      "title_en": "The Altar Boys",
+      "original_title": "Ministranci",
+      "director": "Piotr Domalewski",
+      "country": "Polonia",
+      "year": 2025,
+      "duration": 106,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/ministranci/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/los-monaguillos",
+      "ciclo": "Cine Polska 2026"
     },
     {
       "cine": "Embajadores Glorieta",
@@ -14827,6 +14923,22 @@
       "genre": "Drama",
       "letterboxd": "",
       "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/hermanas/1098442/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-02",
+      "hora": "20:30",
+      "title_es": "El seductor",
+      "title_en": "The Beguiled",
+      "original_title": "The Beguiled",
+      "director": "Don Siegel",
+      "country": "Estados Unidos",
+      "year": 1971,
+      "duration": 109,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-beguiled/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -16254,6 +16366,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-03",
+      "hora": "17:30",
+      "title_es": "Tierra y libertad",
+      "title_en": "Land and Freedom",
+      "original_title": "Land and Freedom",
+      "director": "Ken Loach",
+      "country": "Reino Unido, España",
+      "year": 1995,
+      "duration": 104,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/land-and-freedom/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Princesa",
       "fecha": "2026-12-03",
       "hora": "17:35",
@@ -16670,6 +16798,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-03",
+      "hora": "19:00",
+      "title_es": "Sección Oficial Fescimed 2026 - Sesión 3",
+      "title_en": "Sección Oficial Fescimed 2026 - Sesión 3",
+      "original_title": "",
+      "director": "Varios/as autores/as",
+      "country": "",
+      "year": null,
+      "duration": 94,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/seccion-oficial-fescimed-2026-sesion-3",
+      "ciclo": "Fescimed 2026"
+    },
+    {
       "cine": "Renoir Retiro",
       "fecha": "2026-12-03",
       "hora": "19:00",
@@ -16718,6 +16862,22 @@
       "ciclo": "El rayo verde: carta blanca a Amalia Ulman"
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-03",
+      "hora": "19:00",
+      "title_es": "Aurora de Esperanza",
+      "title_en": "Dawn of Hope",
+      "original_title": "Aurora de esperanza",
+      "director": "Antonio Sau Olite",
+      "country": "",
+      "year": 1937,
+      "duration": 60,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/aurora-de-esperanza/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-12-03",
       "hora": "19:05",
@@ -16732,6 +16892,22 @@
       "letterboxd": "https://letterboxd.com/film/el-director-2026/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=38852",
       "ciclo": ""
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-03",
+      "hora": "19:30",
+      "title_es": "Minghun + Posdata. Reflexiones sobre mi oficio",
+      "title_en": "Minghun + Posdata. Reflexiones sobre mi oficio",
+      "original_title": "",
+      "director": "Jan P. Matuszyński",
+      "country": "Polonia",
+      "year": 2023,
+      "duration": 91,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/minghun-posdata-reflexiones-sobre-mi-oficio",
+      "ciclo": "Cine Polska 2026"
     },
     {
       "cine": "Embajadores Glorieta",
@@ -17243,6 +17419,22 @@
       "genre": "Drama",
       "letterboxd": "",
       "ticket_url": "https://www.pillalas.com/pase/madrid/renoir-retiro/hermanas/1098483/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-03",
+      "hora": "20:30",
+      "title_es": "Por un puñado de dólares",
+      "title_en": "A Fistful of Dollars",
+      "original_title": "Per un pugno di dollari",
+      "director": "Sergio Leone",
+      "country": "Alemania, Italia",
+      "year": 1964,
+      "duration": 95,
+      "genre": "Western",
+      "letterboxd": "https://letterboxd.com/film/a-fistful-of-dollars/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -17934,6 +18126,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-04",
+      "hora": "17:30",
+      "title_es": "Simona Kossak",
+      "title_en": "Simona Kossak",
+      "original_title": "Simona Kossak",
+      "director": "Adrian Panek",
+      "country": "Polonia",
+      "year": 2024,
+      "duration": 100,
+      "genre": "Historia, Drama",
+      "letterboxd": "https://letterboxd.com/film/simona-kossak/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/simona-kossak",
+      "ciclo": "Cine Polska 2026"
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-04",
       "hora": "18:00",
@@ -17950,6 +18158,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-04",
+      "hora": "19:00",
+      "title_es": "Mucha mierda",
+      "title_en": "Break a Leg",
+      "original_title": "Mucha mierda",
+      "director": "Alba Sotorra",
+      "country": "España",
+      "year": 2025,
+      "duration": 84,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/break-a-leg-2025/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/mucha-mierda",
+      "ciclo": "Fescimed 2026"
+    },
+    {
       "cine": "Cine Estudio",
       "fecha": "2026-12-04",
       "hora": "19:00",
@@ -17964,6 +18188,22 @@
       "letterboxd": "https://letterboxd.com/film/out-of-the-blue/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/out-of-the-blue/",
       "ciclo": "El rayo verde: carta blanca a Amalia Ulman"
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-04",
+      "hora": "19:00",
+      "title_es": "La Dolorosa",
+      "title_en": "La Dolorosa",
+      "original_title": "La dolorosa",
+      "director": "Jean Grémillon",
+      "country": "España",
+      "year": 1934,
+      "duration": 85,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-dolorosa/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
     },
     {
       "cine": "Embajadores Ercilla",
@@ -18027,6 +18267,22 @@
       "genre": "Ciencia ficción, Aventura",
       "letterboxd": "https://letterboxd.com/film/dune-part-three/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=38157",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-04",
+      "hora": "20:30",
+      "title_es": "La muerte tenía un precio",
+      "title_en": "For a Few Dollars More",
+      "original_title": "Per qualche dollaro in più",
+      "director": "Sergio Leone",
+      "country": "Alemania, Italia",
+      "year": 1965,
+      "duration": 130,
+      "genre": "Western",
+      "letterboxd": "https://letterboxd.com/film/for-a-few-dollars-more/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -18110,6 +18366,38 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-05",
+      "hora": "17:30",
+      "title_es": "La Père Noël Est Une Ordure",
+      "title_en": "Santa Claus Is a Stinker",
+      "original_title": "",
+      "director": "Jean-marie Poiré",
+      "country": "Francia",
+      "year": 1982,
+      "duration": 88,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/santa-claus-is-a-stinker/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-05",
+      "hora": "19:00",
+      "title_es": "Pasos perdidos",
+      "title_en": "Pasos perdidos",
+      "original_title": "Pasos perdidos",
+      "director": "José Antonio Torres",
+      "country": "España",
+      "year": 2015,
+      "duration": 60,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/pasos-perdidos",
+      "ciclo": "Fescimed 2026"
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-05",
       "hora": "19:00",
@@ -18123,6 +18411,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://kinetike.com/pelicula.html?cine=EQUIS&id=2969",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-05",
+      "hora": "19:00",
+      "title_es": "La hora de los valientes",
+      "title_en": "A Time for Defiance",
+      "original_title": "La hora de los valientes",
+      "director": "Antonio Mercero",
+      "country": "España",
+      "year": 1998,
+      "duration": 117,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/a-time-for-defiance/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -18144,6 +18448,22 @@
     {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-05",
+      "hora": "19:30",
+      "title_es": "Sonata",
+      "title_en": "Sonata",
+      "original_title": "Sonata",
+      "director": "Bartosz Blaschke",
+      "country": "Polonia",
+      "year": 2021,
+      "duration": 118,
+      "genre": "Drama, Música",
+      "letterboxd": "https://letterboxd.com/film/sonata-2021-3/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/sonata",
+      "ciclo": "Cine Polska 2026"
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-05",
       "hora": "20:00",
       "title_es": "La Carn",
       "title_en": "La Carn",
@@ -18155,6 +18475,22 @@
       "genre": "Documental, Drama",
       "letterboxd": "https://letterboxd.com/film/la-carn/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/la-carn",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-05",
+      "hora": "20:00",
+      "title_es": "El bueno, el feo y el malo",
+      "title_en": "The Good, the Bad and the Ugly",
+      "original_title": "Il buono, il brutto, il cattivo",
+      "director": "Sergio Leone",
+      "country": "Estados Unidos, Italia",
+      "year": 1966,
+      "duration": 162,
+      "genre": "Western",
+      "letterboxd": "https://letterboxd.com/film/the-good-the-bad-and-the-ugly/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -18332,6 +18668,22 @@
       "letterboxd": "https://letterboxd.com/film/club-kid/",
       "ticket_url": "https://www.circulobellasartes.com/ciclos-cine/peliculas/club-kid/",
       "ciclo": ""
+    },
+    {
+      "cine": "Cineteca Madrid",
+      "fecha": "2026-12-06",
+      "hora": "19:30",
+      "title_es": "Pérdida de equilibrio",
+      "title_en": "Loss of Balance",
+      "original_title": "Utrata równowagi",
+      "director": "Korek Bojanowski",
+      "country": "Polonia",
+      "year": 2024,
+      "duration": 94,
+      "genre": "Thriller, Drama",
+      "letterboxd": "https://letterboxd.com/film/utrata-rownowagi/",
+      "ticket_url": "https://www.cinetecamadrid.com/programacion/perdida-de-equilibrio",
+      "ciclo": "Cine Polska 2026"
     },
     {
       "cine": "Sala Equis",
@@ -18625,22 +18977,6 @@
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-09",
       "hora": "19:00",
-      "title_es": "¡Ya verás!",
-      "title_en": "¡Ya verás!",
-      "original_title": "",
-      "director": "Viacheslav Kotiónochkin",
-      "country": "URSS",
-      "year": 1969,
-      "duration": 158,
-      "genre": "",
-      "letterboxd": "",
-      "ticket_url": "https://www.cinetecamadrid.com/programacion/ya-veras",
-      "ciclo": ""
-    },
-    {
-      "cine": "Cineteca Madrid",
-      "fecha": "2026-12-09",
-      "hora": "19:00",
       "title_es": "Colores primarios",
       "title_en": "Colores primarios",
       "original_title": "",
@@ -18651,6 +18987,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/colores-primarios",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-09",
+      "hora": "19:00",
+      "title_es": "El Amor Solfeando",
+      "title_en": "El amor solfeando",
+      "original_title": "El amor solfeando",
+      "director": "Robert Florey",
+      "country": "Francia, Alemania",
+      "year": 1930,
+      "duration": 85,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/el-amor-solfeando/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -18702,6 +19054,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-09",
+      "hora": "20:30",
+      "title_es": "Por un puñado de dólares",
+      "title_en": "A Fistful of Dollars",
+      "original_title": "Per un pugno di dollari",
+      "director": "Sergio Leone",
+      "country": "Alemania, Italia",
+      "year": 1964,
+      "duration": 95,
+      "genre": "Western",
+      "letterboxd": "https://letterboxd.com/film/a-fistful-of-dollars/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-09",
       "hora": "22:00",
@@ -18750,6 +19118,22 @@
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-10",
+      "hora": "19:00",
+      "title_es": "Mala Junta",
+      "title_en": "Bad Influence",
+      "original_title": "Mala junta",
+      "director": "Claudia Huaiquimilla",
+      "country": "Chile",
+      "year": 2016,
+      "duration": 89,
+      "genre": "Comedia, Drama",
+      "letterboxd": "https://letterboxd.com/film/mala-junta/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-10",
       "hora": "19:30",
@@ -18795,6 +19179,22 @@
       "genre": "Aventura, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/dune-part-two/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=38163",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-10",
+      "hora": "20:30",
+      "title_es": "La muerte tenía un precio",
+      "title_en": "For a Few Dollars More",
+      "original_title": "Per qualche dollaro in più",
+      "director": "Sergio Leone",
+      "country": "Alemania, Italia",
+      "year": 1965,
+      "duration": 130,
+      "genre": "Western",
+      "letterboxd": "https://letterboxd.com/film/for-a-few-dollars-more/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -18846,6 +19246,22 @@
       "ciclo": "La Animación de Estonia"
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-11",
+      "hora": "17:30",
+      "title_es": "Ciudad sin Sueño",
+      "title_en": "Sleepless City",
+      "original_title": "Ciudad sin sueño",
+      "director": "Guillermo Galoe",
+      "country": "España, Francia",
+      "year": 2025,
+      "duration": 97,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/ciudad-sin-sueno/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-11",
       "hora": "18:00",
@@ -18878,6 +19294,22 @@
       "ciclo": "El presente en escena. Cine argentino del siglo XXI"
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-11",
+      "hora": "19:00",
+      "title_es": "Angelina o el Honor de un Brigadier",
+      "title_en": "Angelina, o El honor de un brigadier",
+      "original_title": "Angelina, o El honor de un brigadier",
+      "director": "Louis King, Miguel de Zárraga",
+      "country": "Estados Unidos",
+      "year": 1935,
+      "duration": 79,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/angelina-o-el-honor-de-un-brigadier/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-11",
       "hora": "19:30",
@@ -18892,6 +19324,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/sesion-1-animario-26",
       "ciclo": "Competición Internacional de Cortometrajes - Animario 2026"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-11",
+      "hora": "19:30",
+      "title_es": "The Holiday (Vacaciones)",
+      "title_en": "The Holiday (Vacaciones)",
+      "original_title": "The Holiday",
+      "director": "Nancy Meyers",
+      "country": "Estados Unidos",
+      "year": 2006,
+      "duration": 138,
+      "genre": "Comedia, Romance",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/the-holiday-vacaciones-vose/21050/",
+      "ciclo": ""
     },
     {
       "cine": "Cineteca Madrid",
@@ -18940,6 +19388,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/contemporaneos-nuevas-voces",
       "ciclo": "La Animación de Estonia"
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-11",
+      "hora": "20:30",
+      "title_es": "Occidente y Sabotaje",
+      "title_en": "Occidente y sabotaje",
+      "original_title": "Occidente y sabotaje",
+      "director": "Ana Mariscal",
+      "country": "España",
+      "year": 1962,
+      "duration": 110,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/occidente-y-sabotaje/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -19118,6 +19582,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-12",
+      "hora": "17:30",
+      "title_es": "Pelísky",
+      "title_en": "Cosy Dens",
+      "original_title": "Pelíšky",
+      "director": "Jan Hrebejk",
+      "country": "República Checa",
+      "year": 1999,
+      "duration": 115,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/pelisky/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Museo Reina Sofía",
       "fecha": "2026-12-12",
       "hora": "18:00",
@@ -19182,6 +19662,22 @@
       "ciclo": "Competición Internacional de Cortometrajes - Animario 2026"
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-12",
+      "hora": "19:00",
+      "title_es": "Romancero Marroquí Carlos Velo, Enrique Domínguez",
+      "title_en": "ROMANCERO MARROQUÍ CARLOS VELO, ENRIQUE DOMÍNGUEZ",
+      "original_title": "",
+      "director": "Rodiño",
+      "country": "",
+      "year": 1939,
+      "duration": 85,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-12",
       "hora": "19:30",
@@ -19228,6 +19724,22 @@
       "letterboxd": "https://letterboxd.com/film/son-of-a-bitch/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/o-filho-da-puta",
       "ciclo": "Sesiones Especiales - Animario 2026"
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-12",
+      "hora": "20:30",
+      "title_es": "Gipsy Queen",
+      "title_en": "Gipsy Queen",
+      "original_title": "Gipsy Queen",
+      "director": "Hüseyin Tabak",
+      "country": "Austria, Alemania",
+      "year": 2019,
+      "duration": 113,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/gipsy-queen/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
     },
     {
       "cine": "Cines Callao",
@@ -19390,6 +19902,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-13",
+      "hora": "17:30",
+      "title_es": "Naquerar",
+      "title_en": "Naquerar",
+      "original_title": "Naquerar",
+      "director": "José Romero, Patricio Hidalgo",
+      "country": "",
+      "year": 2026,
+      "duration": 78,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/naquerar/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-13",
       "hora": "18:00",
@@ -19486,6 +20014,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-13",
+      "hora": "20:30",
+      "title_es": "Mientras dure la guerra",
+      "title_en": "While at War",
+      "original_title": "Mientras dure la guerra",
+      "director": "Alejandro Amenábar",
+      "country": "Argentina, España",
+      "year": 2019,
+      "duration": 107,
+      "genre": "Drama, Historia",
+      "letterboxd": "https://letterboxd.com/film/mientras-dure-la-guerra/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-13",
       "hora": "22:00",
@@ -19534,6 +20078,22 @@
       "ciclo": "Clásicos al detalle"
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-15",
+      "hora": "17:30",
+      "title_es": "Función de Noche",
+      "title_en": "Evening Performance",
+      "original_title": "Función de noche",
+      "director": "Josefina Molina",
+      "country": "España",
+      "year": 1981,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/funcion-de-noche/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-15",
       "hora": "18:00",
@@ -19548,6 +20108,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/relatos-de-los-relatos-historias-y-genealogias-de-las-musicas-experimentales-y-el-arte",
       "ciclo": "Jornadas Relatos del Ruido"
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-15",
+      "hora": "19:00",
+      "title_es": "Fragmentos desde el Exilio + el Perro que No Calla",
+      "title_en": "FRAGMENTOS DESDE EL EXILIO + EL PERRO QUE NO CALLA",
+      "original_title": "",
+      "director": "Pablo Martín Weber, Ana Katz, 2018",
+      "country": "",
+      "year": 2021,
+      "duration": 73,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -19710,6 +20286,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-16",
+      "hora": "19:00",
+      "title_es": "La lengua de las mariposas",
+      "title_en": "Butterfly",
+      "original_title": "La lengua de las mariposas",
+      "director": "José Luis Cuerda",
+      "country": "España",
+      "year": 1999,
+      "duration": 95,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/la-lengua-de-las-mariposas/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-16",
       "hora": "19:30",
@@ -19756,6 +20348,22 @@
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/sostener-el-ruido-estrategias-para-el-apoyo-y-la-difusion-del-arte-sonoro-y-las",
       "ciclo": "Jornadas Relatos del Ruido"
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-16",
+      "hora": "20:30",
+      "title_es": "Memorias del subdesarrollo",
+      "title_en": "Memories of Underdevelopment",
+      "original_title": "Memorias del subdesarrollo",
+      "director": "Tomás Gutiérrez Alea",
+      "country": "Cuba",
+      "year": 1968,
+      "duration": 97,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/memorias-del-subdesarrollo/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -19838,6 +20446,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-17",
+      "hora": "19:00",
+      "title_es": "Bajo Sospecha: Zokunentu",
+      "title_en": "Bajo sospecha: Zokunentu",
+      "original_title": "Bajo sospecha: Zokunentu",
+      "director": "Daniel Díaz",
+      "country": "Chile",
+      "year": 2022,
+      "duration": 68,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/bajo-sospecha-zokunentu/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-17",
       "hora": "19:30",
@@ -19851,6 +20475,22 @@
       "genre": "Documental",
       "letterboxd": "https://letterboxd.com/film/el-milagro-2026/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/el-milagro-0",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-17",
+      "hora": "19:30",
+      "title_es": "Love Actually",
+      "title_en": "Love Actually",
+      "original_title": "Love Actually",
+      "director": "Richard Curtis",
+      "country": "Francia, Reino Unido",
+      "year": 2003,
+      "duration": 128,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/love-actually/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/love-actually-vose/21051/",
       "ciclo": ""
     },
     {
@@ -19899,6 +20539,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/pinito-del-oro-ras-de-cielo",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-17",
+      "hora": "20:00",
+      "title_es": "El bueno, el feo y el malo",
+      "title_en": "The Good, the Bad and the Ugly",
+      "original_title": "Il buono, il brutto, il cattivo",
+      "director": "Sergio Leone",
+      "country": "Estados Unidos, Italia",
+      "year": 1966,
+      "duration": 162,
+      "genre": "Western",
+      "letterboxd": "https://letterboxd.com/film/the-good-the-bad-and-the-ugly/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -20078,6 +20734,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-18",
+      "hora": "17:30",
+      "title_es": "Un botín de 500.000 dólares",
+      "title_en": "Thunderbolt and Lightfoot",
+      "original_title": "Thunderbolt and Lightfoot",
+      "director": "Michael Cimino",
+      "country": "Estados Unidos",
+      "year": 1974,
+      "duration": 115,
+      "genre": "Crimen, Drama",
+      "letterboxd": "https://letterboxd.com/film/thunderbolt-and-lightfoot/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-12-18",
       "hora": "18:30",
@@ -20091,6 +20763,22 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36943",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-18",
+      "hora": "19:00",
+      "title_es": "Aurora de Esperanza",
+      "title_en": "Dawn of Hope",
+      "original_title": "Aurora de esperanza",
+      "director": "Antonio Sau Olite",
+      "country": "",
+      "year": 1937,
+      "duration": 60,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/aurora-de-esperanza/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -20171,6 +20859,22 @@
       "genre": "Drama, Aventura",
       "letterboxd": "https://letterboxd.com/film/far-from-the-trees-2026/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/lejos-de-los-arboles-1",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-18",
+      "hora": "20:30",
+      "title_es": "¿Qué es el Cine? (3 Caps.) Alejandro G. Calvo, Verónica",
+      "title_en": "¿QUÉ ES EL CINE? (3 CAPS.) ALEJANDRO G. CALVO, VERÓNICA",
+      "original_title": "",
+      "director": "Melguizo",
+      "country": "",
+      "year": 2026,
+      "duration": 92,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -20382,6 +21086,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-19",
+      "hora": "19:00",
+      "title_es": "El libro de imágenes",
+      "title_en": "The Image Book",
+      "original_title": "Le Livre d'image",
+      "director": "Jean-luc Godard",
+      "country": "Francia, Suiza",
+      "year": 2018,
+      "duration": 90,
+      "genre": "Drama, Documental",
+      "letterboxd": "https://letterboxd.com/film/the-image-book/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-12-19",
       "hora": "19:00",
@@ -20459,6 +21179,22 @@
       "genre": "Drama, Aventura",
       "letterboxd": "https://letterboxd.com/film/far-from-the-trees-2026/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/lejos-de-los-arboles-1",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-19",
+      "hora": "20:30",
+      "title_es": "Escalofrío en la noche",
+      "title_en": "Play Misty for Me",
+      "original_title": "Play Misty for Me",
+      "director": "Clint Eastwood",
+      "country": "Estados Unidos",
+      "year": 1971,
+      "duration": 102,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/play-misty-for-me/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -20542,22 +21278,6 @@
       "ciclo": ""
     },
     {
-      "cine": "Embajadores Ercilla",
-      "fecha": "2026-12-20",
-      "hora": "12:00",
-      "title_es": "La oveja Shaun: Misión calabaza",
-      "title_en": "Shaun the Sheep: The Beast of Mossy Bottom",
-      "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
-      "director": "Matthew Walker, Steve Cox",
-      "country": "Reino Unido, Francia",
-      "year": 2026,
-      "duration": 80,
-      "genre": "Comedia, Animación",
-      "letterboxd": "https://letterboxd.com/film/shaun-the-sheep-the-beast-of-mossy-bottom/",
-      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-oveja-shaun-mision-calabaza-doblada-al-espanol/20928/",
-      "ciclo": ""
-    },
-    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-12-20",
       "hora": "12:00",
@@ -20572,6 +21292,22 @@
       "letterboxd": "https://letterboxd.com/film/dancer-in-the-dark/",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/domingo-de-clasicos-bailar-en-la-oscuridad-vose/39244/",
       "ciclo": "Domingo de clásicos"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-20",
+      "hora": "12:00",
+      "title_es": "La oveja Shaun: Misión calabaza",
+      "title_en": "Shaun the Sheep: The Beast of Mossy Bottom",
+      "original_title": "Shaun the Sheep: The Beast of Mossy Bottom",
+      "director": "Matthew Walker, Steve Cox",
+      "country": "Reino Unido, Francia",
+      "year": 2026,
+      "duration": 80,
+      "genre": "Comedia, Animación",
+      "letterboxd": "https://letterboxd.com/film/shaun-the-sheep-the-beast-of-mossy-bottom/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-oveja-shaun-mision-calabaza-doblada-al-espanol/20928/",
+      "ciclo": ""
     },
     {
       "cine": "Cines Ideal",
@@ -20651,6 +21387,22 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=36952",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-20",
+      "hora": "17:30",
+      "title_es": "Bajo los techos de París",
+      "title_en": "Under the Roofs of Paris",
+      "original_title": "Sous les toits de Paris",
+      "director": "René Clair",
+      "country": "Francia",
+      "year": 1930,
+      "duration": 96,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/under-the-roofs-of-paris/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -20782,6 +21534,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-20",
+      "hora": "20:30",
+      "title_es": "Ejecución inminente",
+      "title_en": "True Crime",
+      "original_title": "True Crime",
+      "director": "Clint Eastwood",
+      "country": "Estados Unidos",
+      "year": 1999,
+      "duration": 127,
+      "genre": "Misterio, Drama",
+      "letterboxd": "https://letterboxd.com/film/true-crime-1999/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-20",
       "hora": "21:30",
@@ -20910,6 +21678,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-21",
+      "hora": "20:00",
+      "title_es": "Los que se quedan",
+      "title_en": "The Holdovers",
+      "original_title": "The Holdovers",
+      "director": "Alexander Payne",
+      "country": "Estados Unidos",
+      "year": 2023,
+      "duration": 133,
+      "genre": "Drama, Comedia",
+      "letterboxd": "https://letterboxd.com/film/the-holdovers/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/los-que-se-quedan-vose/21052/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-12-21",
       "hora": "20:00",
@@ -20990,6 +21774,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-22",
+      "hora": "17:30",
+      "title_es": "Escalofrío en la noche",
+      "title_en": "Play Misty for Me",
+      "original_title": "Play Misty for Me",
+      "director": "Clint Eastwood",
+      "country": "Estados Unidos",
+      "year": 1971,
+      "duration": 102,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/play-misty-for-me/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-22",
       "hora": "18:00",
@@ -21004,6 +21804,22 @@
       "letterboxd": "https://letterboxd.com/film/the-dark-crystal/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/cristal-oscuro-1",
       "ciclo": "Navidad en Familia: 90 Años de Jim Henson"
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-22",
+      "hora": "18:00",
+      "title_es": "La gran familia",
+      "title_en": "La gran familia",
+      "original_title": "La gran familia",
+      "director": "Fernando Palacios",
+      "country": "España",
+      "year": 1962,
+      "duration": 104,
+      "genre": "Familiar, Drama",
+      "letterboxd": "",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/la-gran-familia/21053/",
+      "ciclo": ""
     },
     {
       "cine": "Cines Ideal",
@@ -21067,6 +21883,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/sesion-de-cortometrajes-el-dia-mas-corto-2026/20864/",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-22",
+      "hora": "20:30",
+      "title_es": "La hora de los valientes",
+      "title_en": "A Time for Defiance",
+      "original_title": "La hora de los valientes",
+      "director": "Antonio Mercero",
+      "country": "España",
+      "year": 1998,
+      "duration": 117,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/a-time-for-defiance/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -21150,6 +21982,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-23",
+      "hora": "17:30",
+      "title_es": "Allo Berlin? Ici Paris!",
+      "title_en": "Here's Berlin",
+      "original_title": "Allo Berlin? Ici Paris!",
+      "director": "Julien Duvivier",
+      "country": "Francia, Alemania",
+      "year": 1932,
+      "duration": 85,
+      "genre": "Comedia, Romance",
+      "letterboxd": "https://letterboxd.com/film/heres-berlin/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cineteca Madrid",
       "fecha": "2026-12-23",
       "hora": "18:00",
@@ -21163,7 +22011,7 @@
       "genre": "Familiar, Animación",
       "letterboxd": "https://letterboxd.com/film/the-nightmare-before-christmas/",
       "ticket_url": "https://www.cinetecamadrid.com/programacion/pesadilla-antes-de-navidad-0",
-      "ciclo": "Navidad en Familia: 90 Años de Jim Henson"
+      "ciclo": ""
     },
     {
       "cine": "Sala Equis",
@@ -21179,6 +22027,22 @@
       "genre": "Drama, Bélica",
       "letterboxd": "https://letterboxd.com/film/la-bola-negra/",
       "ticket_url": "https://kinetike.com/pelicula.html?cine=EQUIS&id=2969",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-23",
+      "hora": "19:00",
+      "title_es": "Romancero Marroquí Carlos Velo, Enrique Domínguez",
+      "title_en": "ROMANCERO MARROQUÍ CARLOS VELO, ENRIQUE DOMÍNGUEZ",
+      "original_title": "",
+      "director": "Rodiño",
+      "country": "",
+      "year": 1939,
+      "duration": 85,
+      "genre": "",
+      "letterboxd": "",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -21211,6 +22075,22 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=37572",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-23",
+      "hora": "20:30",
+      "title_es": "Plácido",
+      "title_en": "Placido",
+      "original_title": "",
+      "director": "Luis García Berlanga",
+      "country": "España",
+      "year": 1960,
+      "duration": 85,
+      "genre": "Comedia",
+      "letterboxd": "https://letterboxd.com/film/placido/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -21326,6 +22206,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Glorieta",
+      "fecha": "2026-12-25",
+      "hora": "22:00",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Lance Oppenheim, Nathan Fielder",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadores/you-can-see-everything-puedes-verlo-todo-vose/39942/",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-25",
       "hora": "22:00",
@@ -21339,6 +22235,22 @@
       "genre": "Terror, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/species-2026/",
       "ticket_url": "https://kinetike.com/pelicula.html?cine=EQUIS&id=3017",
+      "ciclo": ""
+    },
+    {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-26",
+      "hora": "11:45",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Lance Oppenheim, Nathan Fielder",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/you-can-see-everything-puedes-verlo-todo-vose/21034/",
       "ciclo": ""
     },
     {
@@ -21390,6 +22302,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-26",
+      "hora": "19:00",
+      "title_es": "Memorias del subdesarrollo",
+      "title_en": "Memories of Underdevelopment",
+      "original_title": "Memorias del subdesarrollo",
+      "director": "Tomás Gutiérrez Alea",
+      "country": "Cuba",
+      "year": 1968,
+      "duration": 97,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/memorias-del-subdesarrollo/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-26",
       "hora": "19:30",
@@ -21403,6 +22331,22 @@
       "genre": "Terror, Comedia",
       "letterboxd": "https://letterboxd.com/film/teenage-sex-and-death-at-camp-miasma/",
       "ticket_url": "https://kinetike.com/pelicula.html?cine=EQUIS&id=3011",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-26",
+      "hora": "20:30",
+      "title_es": "El seductor",
+      "title_en": "The Beguiled",
+      "original_title": "The Beguiled",
+      "director": "Don Siegel",
+      "country": "Estados Unidos",
+      "year": 1971,
+      "duration": 109,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/the-beguiled/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -21438,6 +22382,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-27",
+      "hora": "11:45",
+      "title_es": "You Can See Everything (Puedes verlo todo)",
+      "title_en": "You Can See Everything",
+      "original_title": "You Can See Everything",
+      "director": "Lance Oppenheim, Nathan Fielder",
+      "country": "Estados Unidos",
+      "year": 2026,
+      "duration": 174,
+      "genre": "Documental",
+      "letterboxd": "https://letterboxd.com/film/you-can-see-everything/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/you-can-see-everything-puedes-verlo-todo-vose/21035/",
+      "ciclo": ""
+    },
+    {
       "cine": "Embajadores Glorieta",
       "fecha": "2026-12-27",
       "hora": "12:00",
@@ -21454,6 +22414,22 @@
       "ciclo": "Domingo de clásicos"
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-27",
+      "hora": "12:00",
+      "title_es": "¡Qué bello es vivir!",
+      "title_en": "It's a Wonderful Life",
+      "original_title": "It's a Wonderful Life",
+      "director": "Frank Capra",
+      "country": "Estados Unidos",
+      "year": 1946,
+      "duration": 130,
+      "genre": "Familiar, Fantasía",
+      "letterboxd": "https://letterboxd.com/film/its-a-wonderful-life/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/domingo-de-clasicos-que-bello-es-vivir-vose/21054/",
+      "ciclo": "Domingo de clásicos"
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-27",
       "hora": "17:30",
@@ -21467,6 +22443,22 @@
       "genre": "Drama, Historia",
       "letterboxd": "https://letterboxd.com/film/fatherland-2026/",
       "ticket_url": "https://kinetike.com/pelicula.html?cine=EQUIS&id=3010",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-27",
+      "hora": "17:30",
+      "title_es": "Libertarias",
+      "title_en": "Freedomfighters",
+      "original_title": "Libertarias",
+      "director": "Vicente Aranda",
+      "country": "Bélgica, Italia",
+      "year": 1996,
+      "duration": 125,
+      "genre": "Drama, Bélica",
+      "letterboxd": "https://letterboxd.com/film/libertarias/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -21534,6 +22526,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-27",
+      "hora": "20:30",
+      "title_es": "Un botín de 500.000 dólares",
+      "title_en": "Thunderbolt and Lightfoot",
+      "original_title": "Thunderbolt and Lightfoot",
+      "director": "Michael Cimino",
+      "country": "Estados Unidos",
+      "year": 1974,
+      "duration": 115,
+      "genre": "Crimen, Drama",
+      "letterboxd": "https://letterboxd.com/film/thunderbolt-and-lightfoot/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-12-27",
       "hora": "21:45",
@@ -21598,6 +22606,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Embajadores Ercilla",
+      "fecha": "2026-12-28",
+      "hora": "20:00",
+      "title_es": "Carol",
+      "title_en": "Carol",
+      "original_title": "Carol",
+      "director": "Todd Haynes",
+      "country": "Reino Unido, Estados Unidos",
+      "year": 2015,
+      "duration": 118,
+      "genre": "Drama, Romance",
+      "letterboxd": "https://letterboxd.com/film/carol-2015/",
+      "ticket_url": "https://www.reservaentradas.com/entrada/madrid/cineembajadoresrio/carol-vose/21055/",
+      "ciclo": ""
+    },
+    {
       "cine": "Cines Ideal",
       "fecha": "2026-12-28",
       "hora": "21:45",
@@ -21643,6 +22667,22 @@
       "genre": "",
       "letterboxd": "",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=38144",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-29",
+      "hora": "17:30",
+      "title_es": "Ejecución inminente",
+      "title_en": "True Crime",
+      "original_title": "True Crime",
+      "director": "Clint Eastwood",
+      "country": "Estados Unidos",
+      "year": 1999,
+      "duration": 127,
+      "genre": "Misterio, Drama",
+      "letterboxd": "https://letterboxd.com/film/true-crime-1999/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -21694,6 +22734,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-29",
+      "hora": "20:30",
+      "title_es": "Occidente y Sabotaje",
+      "title_en": "Occidente y sabotaje",
+      "original_title": "Occidente y sabotaje",
+      "director": "Ana Mariscal",
+      "country": "España",
+      "year": 1962,
+      "duration": 110,
+      "genre": "Drama, Thriller",
+      "letterboxd": "https://letterboxd.com/film/occidente-y-sabotaje/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-29",
       "hora": "21:30",
@@ -21723,6 +22779,22 @@
       "genre": "Acción, Aventura",
       "letterboxd": "https://letterboxd.com/film/avengers-doomsday/",
       "ticket_url": "https://compra.yelmocines.es/?cinemaVistaId=780&showtimeVistaId=38678",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-30",
+      "hora": "17:30",
+      "title_es": "Bajo los techos de París",
+      "title_en": "Under the Roofs of Paris",
+      "original_title": "Sous les toits de Paris",
+      "director": "René Clair",
+      "country": "Francia",
+      "year": 1930,
+      "duration": 96,
+      "genre": "Romance, Drama",
+      "letterboxd": "https://letterboxd.com/film/under-the-roofs-of-paris/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {
@@ -21758,6 +22830,22 @@
       "ciclo": ""
     },
     {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-30",
+      "hora": "19:00",
+      "title_es": "Función de Noche",
+      "title_en": "Evening Performance",
+      "original_title": "Función de noche",
+      "director": "Josefina Molina",
+      "country": "España",
+      "year": 1981,
+      "duration": 90,
+      "genre": "Drama",
+      "letterboxd": "https://letterboxd.com/film/funcion-de-noche/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
+      "ciclo": ""
+    },
+    {
       "cine": "Sala Equis",
       "fecha": "2026-12-30",
       "hora": "19:30",
@@ -21771,6 +22859,22 @@
       "genre": "Terror, Ciencia ficción",
       "letterboxd": "https://letterboxd.com/film/species-2026/",
       "ticket_url": "https://kinetike.com/pelicula.html?cine=EQUIS&id=3017",
+      "ciclo": ""
+    },
+    {
+      "cine": "Cine Doré",
+      "fecha": "2026-12-30",
+      "hora": "20:30",
+      "title_es": "El libro de imágenes",
+      "title_en": "The Image Book",
+      "original_title": "Le Livre d'image",
+      "director": "Jean-luc Godard",
+      "country": "Francia, Suiza",
+      "year": 2018,
+      "duration": 90,
+      "genre": "Drama, Documental",
+      "letterboxd": "https://letterboxd.com/film/the-image-book/",
+      "ticket_url": "https://www.cultura.gob.es/cultura/areas/cine/mc/fe/programacion-actividades/proyecciones.html",
       "ciclo": ""
     },
     {

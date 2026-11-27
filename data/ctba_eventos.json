@@ -1,1 +1,32 @@
-{}
+{
+  "https://complejoteatral.gob.ar/produccion/andrzej-wajda-bis/": {
+    "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/ba5cc4b5-682c-45ea-bba0-2be0e8293e6f",
+    "titulo": "Andrzej Wajda bis",
+    "visto": "2026-11-27"
+  },
+  "https://complejoteatral.gob.ar/produccion/cinco-tardes-con-ernst-lubitsch/": {
+    "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/0b20ba06-ca69-4c2e-a31f-810abcaf70ce",
+    "titulo": "Cinco tardes con Ernst Lubitsch",
+    "visto": "2026-11-27"
+  },
+  "https://complejoteatral.gob.ar/produccion/desde-finlandia-con-amor-3/": {
+    "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/1aeddd4d-fa23-4a8e-a271-067be381f03d",
+    "titulo": "Desde Finlandia con amor",
+    "visto": "2026-11-27"
+  },
+  "https://complejoteatral.gob.ar/produccion/grandes-actrices-de-la-epoca-dorada-del-cine-japones/": {
+    "ticket_url": "",
+    "titulo": "Grandes actrices de la época dorada del cine japonés",
+    "visto": "2026-11-27"
+  },
+  "https://complejoteatral.gob.ar/produccion/homenaje-a-john-huston/": {
+    "ticket_url": "https://entradasba.buenosaires.gob.ar/evento/b1a10d07-57fd-443d-9aca-f72a5cae2c2b",
+    "titulo": "Homenaje a John Huston",
+    "visto": "2026-11-27"
+  },
+  "https://complejoteatral.gob.ar/produccion/semana-del-festival-de-biarritz-en-buenos-aires/": {
+    "ticket_url": "",
+    "titulo": "Semana del Festival de Biarritz en Buenos Aires",
+    "visto": "2026-11-27"
+  }
+}
