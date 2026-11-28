@@ -20224,13 +20224,14 @@
     "original_title": "Local Hero"
   },
   "cinema paradiso|1988": {
-    "url": "",
-    "title_en": "CINEMA PARADISO",
+    "url": "https://letterboxd.com/film/cinema-paradiso/",
+    "title_en": "Cinema Paradiso",
     "director": "Giuseppe Tornatore",
     "country": "Italy, France",
     "year": 1988,
-    "duration": 124,
+    "duration": 155,
     "genre": "Drama, Romance",
+    "clase_titulo": "exacto",
     "title_es": "Cinema Paradiso",
     "original_title": "Nuovo Cinema Paradiso"
   },
@@ -24899,17 +24900,16 @@
     "sin_hints": "título y duración"
   },
   "avengers: doomsday": {
-    "url": "https://letterboxd.com/film/avengers-doomsday/",
-    "title_en": "Avengers: Doomsday",
-    "director": "Joe Russo, Anthony Russo",
-    "country": "USA",
-    "year": 2026,
-    "duration": 165,
-    "genre": "Acción, Aventura",
-    "clase_titulo": "exacto",
-    "title_es": "Vengadores: Doomsday",
-    "original_title": "Avengers: Doomsday",
-    "sin_hints": "título y duración"
+    "url": "",
+    "title_en": "AVENGERS: DOOMSDAY",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "se llama así pero no dura 150 min: Avengers: Doomsday (2026, 165 min)",
+    "fecha": "2026-11-28",
+    "con_duracion": true,
+    "desempate": ""
   },
   "escuela de monstruos": {
     "url": "https://letterboxd.com/film/monster-mia/",
@@ -29819,14 +29819,15 @@
     "sin_hints": "la más nueva que se llama así"
   },
   "perfume": {
-    "url": "",
-    "title_en": "PERFUME",
-    "director": "Lucía S. Ruiz, Andrea Testa",
-    "country": "Argentina",
-    "year": 2026,
-    "duration": 97,
-    "genre": "Documental",
-    "original_title": "Perfume"
+    "url": "https://letterboxd.com/film/perfume-2018/",
+    "title_en": "Perfume",
+    "director": "Philipp Kadelbach",
+    "country": "Germany",
+    "year": 2018,
+    "duration": null,
+    "genre": "Crimen",
+    "clase_titulo": "exacto",
+    "sin_hints": "título"
   },
   "tu me abrasas|2024": {
     "url": "https://letterboxd.com/film/you-burn-me/",
@@ -30128,8 +30129,8 @@
     "original_title": "Heller Wahn"
   },
   "melodía de arrabal|1933": {
-    "url": "",
-    "title_en": "Melodía de arrabal",
+    "url": "https://letterboxd.com/film/melodia-de-arrabal/",
+    "title_en": "Suburban Melody",
     "director": "Louis J. Gasnier",
     "country": "France",
     "year": 1933,
@@ -35055,7 +35056,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-24",
+    "fecha": "2026-11-28",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38940,7 +38941,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "ninguna película se llama así",
-    "fecha": "2026-11-24",
+    "fecha": "2026-11-28",
     "con_duracion": true,
     "desempate": ""
   },
@@ -38973,7 +38974,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Gestation (2009), y puede ser otra",
-    "fecha": "2026-11-24",
+    "fecha": "2026-11-28",
     "con_duracion": false,
     "desempate": ""
   },
@@ -39032,7 +39033,7 @@
     "year": null,
     "duration": null,
     "sin_ficha": "la única que se llama así es Race (2016), y puede ser otra",
-    "fecha": "2026-11-24",
+    "fecha": "2026-11-28",
     "con_duracion": false,
     "desempate": ""
   },
@@ -40754,5 +40755,143 @@
     "duration": 60,
     "genre": "Comedia, Drama",
     "original_title": "La caminera"
+  },
+  "forqué. el oficio de hacer cine": {
+    "url": "https://letterboxd.com/film/forque-el-oficio-de-hacer-cine/",
+    "title_en": "Forqué. El oficio de hacer cine",
+    "director": "Gaizka Urresti, Rafael Maluenda",
+    "country": "",
+    "year": 2026,
+    "duration": 103,
+    "genre": "Documental",
+    "original_title": "Forqué. El oficio de hacer cine"
+  },
+  "coraline - doblada|2009": {
+    "url": "",
+    "title_en": "Coraline - Doblada",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "medianoche en paris|2011": {
+    "url": "https://letterboxd.com/film/midnight-in-paris/",
+    "title_en": "Midnight in Paris",
+    "director": "Woody Allen",
+    "country": "France, Spain",
+    "year": 2011,
+    "duration": 94,
+    "genre": "Comedia, Fantasía",
+    "clase_titulo": "exacto",
+    "title_es": "Medianoche en París",
+    "original_title": "Midnight in Paris"
+  },
+  "10 cosas que odio de ti|1999": {
+    "url": "https://letterboxd.com/film/10-things-i-hate-about-you/",
+    "title_en": "10 Things I Hate About You",
+    "director": "Gil Junger",
+    "country": "USA",
+    "year": 1999,
+    "duration": 97,
+    "genre": "Comedia, Drama",
+    "clase_titulo": "exacto",
+    "title_es": "10 razones para odiarte",
+    "original_title": "10 Things I Hate About You"
+  },
+  "amelie|2001": {
+    "url": "https://letterboxd.com/film/amelie/",
+    "title_en": "Amélie",
+    "director": "Jean-Pierre Jeunet",
+    "country": "France, Germany",
+    "year": 2001,
+    "duration": 122,
+    "genre": "Romance, Comedia",
+    "clase_titulo": "exacto",
+    "title_es": "Amelie",
+    "original_title": "Le Fabuleux Destin d'Amélie Poulain"
+  },
+  "orgullo y prejuicio|2005": {
+    "url": "https://letterboxd.com/film/orgullo-y-prejuicio/",
+    "title_en": "Orgullo y prejuicio",
+    "director": "Joe Wright",
+    "country": "France, United Kingdom",
+    "year": 2005,
+    "duration": 128,
+    "genre": "Drama, Romance",
+    "clase_titulo": "exacto",
+    "title_es": "Orgullo y prejuicio",
+    "original_title": "Pride & Prejudice"
+  },
+  "10° semana de sitges en buenos aires|2025": {
+    "url": "",
+    "title_en": "10° Semana de Sitges en Buenos Aires",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "soy ella + show con lakalo": {
+    "url": "",
+    "title_en": "SOY ELLA + SHOW CON LAKALO",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "el enemigo está adentro": {
+    "url": "",
+    "title_en": "El enemigo está adentro",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "blanca navidad|1954": {
+    "url": "https://letterboxd.com/film/white-christmas/",
+    "title_en": "White Christmas",
+    "director": "Michael Curtiz",
+    "country": "USA",
+    "year": 1954,
+    "duration": 120,
+    "genre": "Comedia, Música"
+  },
+  "los fantasmas contraatacan|1988": {
+    "url": "https://letterboxd.com/film/scrooged/",
+    "title_en": "Scrooged",
+    "director": "Richard Donner",
+    "country": "USA",
+    "year": 1988,
+    "duration": 101,
+    "genre": "Fantasía, Drama",
+    "title_es": "Los fantasmas atacan al jefe",
+    "original_title": "Scrooged"
+  },
+  "la fiesta inolvidable": {
+    "url": "",
+    "title_en": "La fiesta inolvidable",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null,
+    "sin_ficha": "la única que se llama así es The Party (1968), y puede ser otra",
+    "fecha": "2026-11-28",
+    "con_duracion": false,
+    "desempate": ""
+  },
+  "el campo en mí + proyección del cortometraje extraordinaria": {
+    "url": "",
+    "title_en": "El campo en mí + Proyección del cortometraje Extraordinaria",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
+  },
+  "yorushika: \"plagiarism\" en concierto": {
+    "url": "",
+    "title_en": "Yorushika: \"Plagiarism\" en Concierto",
+    "director": "",
+    "country": "",
+    "year": null,
+    "duration": null
   }
 }
